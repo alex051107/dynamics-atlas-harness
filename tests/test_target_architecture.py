@@ -41,6 +41,76 @@ class TargetArchitectureTests(unittest.TestCase):
         self.assertEqual(fixture_registry["runtime_scope"], "RUN_FIXTURE_COMMAND_ONLY")
         self.assertIs(fixture_registry["case_routing_allowed"], False)
 
+    def test_registered_operator_loader_enforces_lifecycle_invariants(self):
+        current = load_registered_operator_registry(
+            REPO_ROOT / "config" / "registered_operators.json"
+        )
+        self.assertEqual(
+            current["registry_id"], "dynamics-atlas-registered-operators/v0.2"
+        )
+
+        valid_roster = {
+            "operator_id": "fixture.roster.v1",
+            "status": "ROSTER_PASS",
+            "routable": True,
+            "output_contract": "fixture-output/v1",
+            "route_match": {"gap_classes": ["NOT_EVALUATED"]},
+            "claim_ceiling": "Fixture-only bounded claim.",
+        }
+        invalid_specs = (
+            (
+                "NON_ROSTER_ROUTABLE",
+                {**valid_roster, "status": "CANARY_PASS", "routable": True},
+            ),
+            (
+                "ROSTER_NOT_ROUTABLE",
+                {**valid_roster, "routable": False},
+            ),
+            (
+                "ROSTER_PROMOTION_BLOCKERS_PRESENT",
+                {**valid_roster, "promotion_blockers": ["OUTPUT_SCHEMA_PENDING"]},
+            ),
+            (
+                "ROSTER_MISSING_OUTPUT_CONTRACT",
+                {**valid_roster, "output_contract": ""},
+            ),
+            (
+                "ROSTER_MISSING_ROUTE_MATCH",
+                {**valid_roster, "route_match": {}},
+            ),
+            (
+                "ROSTER_MISSING_CLAIM_CEILING",
+                {**valid_roster, "claim_ceiling": ""},
+            ),
+        )
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            registry_path = Path(temp_dir) / "registered_operators.json"
+
+            def write_registry(spec):
+                registry_path.write_text(
+                    json.dumps(
+                        {
+                            "schema_version": "scientific-operator-registry/v0.2",
+                            "registry_id": "lifecycle-fixture/v0.1",
+                            "operators": {"fixture.roster.v1": spec},
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+
+            write_registry(valid_roster)
+            loaded = load_registered_operator_registry(registry_path)
+            self.assertEqual(
+                loaded["operators"]["fixture.roster.v1"]["status"], "ROSTER_PASS"
+            )
+
+            for reason, spec in invalid_specs:
+                with self.subTest(reason=reason):
+                    write_registry(spec)
+                    with self.assertRaisesRegex(ValueError, reason):
+                        load_registered_operator_registry(registry_path)
+
     def test_only_roster_pass_and_routable_operator_can_route(self):
         case_graph = {
             "evidence_items": [

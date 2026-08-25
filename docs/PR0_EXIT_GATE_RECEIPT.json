@@ -1,0 +1,40 @@
+{
+  "schema_version": "pr0-exit-gate-receipt/v0.1",
+  "receipt_id": "pr0-lifecycle-hardening-local-20260825",
+  "observed_at": "2026-08-25T17:27:24Z",
+  "repository": "alex051107/dynamics-atlas-harness",
+  "branch": "fix/baseline-boundary-normalization",
+  "base_commit": "ba318e5216b1f6cc617178c8e964ca63b9b6dfd9",
+  "pre_hardening_head": "253a7b4347d2cdb8c8be08b5c921ec25f02b4f01",
+  "test_command": "PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_target_architecture.py' -v",
+  "result": "PASS",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "duration_seconds": 0.418,
+  "workspace_assets_available": true,
+  "verified_boundaries": [
+    "CURRENT_REGISTERED_OPERATOR_REGISTRY_ACCEPTED",
+    "NON_ROSTER_OPERATOR_MUST_SET_ROUTABLE_FALSE",
+    "ROSTER_PASS_MUST_SET_ROUTABLE_TRUE",
+    "ROSTER_PASS_MUST_HAVE_NO_PROMOTION_BLOCKERS",
+    "ROSTER_PASS_MUST_HAVE_OUTPUT_CONTRACT",
+    "ROSTER_PASS_MUST_HAVE_ROUTE_MATCH",
+    "ROSTER_PASS_MUST_HAVE_CLAIM_CEILING",
+    "LEGACY_FIXTURE_REGISTRY_NOT_CASE_ROUTABLE",
+    "CANARY_REMAINS_EXPLICIT_OPT_IN",
+    "X_EISD_59_OBLIGATIONS_15_UNRESOLVED_16_BLOCKED_0_ROUTED",
+    "HSP90_INDEPENDENT_CANARY_SUCCEEDED"
+  ],
+  "claim_ceiling": "Local PR0 development evidence for registry admission, routing boundaries and unchanged exposed workspace counts only.",
+  "forbidden_upgrades": [
+    "OPERATOR_ROSTER_COMPLETE",
+    "REAL_RULE_TO_OPERATOR_ROUTE_COMPLETE",
+    "RULES_PROTOTYPE_APPROVED",
+    "SEMANTIC_CORRECTNESS_ESTABLISHED",
+    "TRANSFER_ESTABLISHED",
+    "AGENT_VALUE_ESTABLISHED",
+    "PRODUCTION_READY"
+  ]
+}
