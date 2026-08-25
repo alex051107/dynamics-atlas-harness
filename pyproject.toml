@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dynamics-atlas-harness"
-version = "0.1.0"
-description = "Minimal proposal-only profile and scientific-operator bridge for Dynamics Atlas"
+version = "0.2.0"
+description = "Typed Profile-to-Rules-to-registered-operator harness for Dynamics Atlas"
 requires-python = ">=3.11"
 dependencies = []
 

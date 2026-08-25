@@ -1,59 +1,110 @@
 # dynamics-atlas-harness
 
-这是 Dynamics Atlas 的最小 profile/operator bridge。它验证两个接口。模型或 recorded provider 提出的 case profile 必须先通过确定性 admission；selector 已选出的一个 `ReviewObligation` 才能请求已登记的只读 operator。
+这是 Dynamics Atlas 的目标架构 prototype。它把已有的 rich CaseGraph、Rules Table selector、Evaluation Contract、持久 RunPlan 和 registered operator 接成一条可审计的数据流。
 
-当前代码只使用 Python 标准库。它没有复制或修改冻结的 33-row Rules Registry、17-binding v0.3 package、compiler 或 selector。测试中的 selector output 是明确标记的 exposed synthetic deterministic fixture。
-
-## 当前数据流
+2026-08-25 的本地 run 已经完成以下路径：
 
 ```text
-CaseProfileProposal
-  -> profile admission
-  -> recorded deterministic selector output
-  -> one ReviewObligation
-  -> ProposalProvider
-  -> deterministic operator authorization
-  -> OperatorRunReceipt + EvidenceResult
-  -> HUMAN_REVIEW_REQUIRED
+Question + Papers + Data
+  → Profile Agent proposal
+  → deterministic CaseGraph admission
+  → existing v0.3 Rules selector
+  → Evaluation Contract
+  → direct bounded result OR persistent RunPlan
+  → registered operator
+  → EvidenceResult
+  → human review / abstain
 ```
 
-`ProposalProvider` 当前由 `RecordedProposalProvider` 实现。`subagent_resolution_proposal.json` 保存了一次只看单个 synthetic obligation 与 operator summary 的 Codex subagent 输出；它仍要经过同一确定性 validator。未来廉价模型只需要产生相同的 `resolution-proposal/v0.1`，不会获得 rule selection 或 operator authorization 权限。
+模型只提出 CaseGraph。它不能选择 Rule、授权 operator、读取 reference answer 或给出最终科学 verdict。
 
-method-profile approval 不能由 CLI 调用者自由声明。`config/method_profiles.json` 是当前版本化 registry；它现在为空，所以所有 `MD_TRAJECTORY` proposal 都会停在 `NEEDS_METHOD_PROFILE`。将来只有带 reviewer、approval time 和 source artifact 的 `HUMAN_APPROVED` profile 才能进入 admission allowlist。
+## 当前实跑结果
 
-首版 CLI 固定读取 repo 内的 `config/operators.json`、`config/method_profiles.json` 和 `tests/fixtures` allowed root。调用者不能用命令行替换 allowlist 或扩大文件根。以后接入真实 case 时，应由受信 orchestrator 绑定新的版本化 registry 和 case-owned input root，而不是把这些值重新开放成模型参数。
+本地 `runs/target_architecture_v0_2_20260825/` 保存完整 trace，但该目录包含本机路径和 scientific payload，不进入 Git。仓库只保留脱敏后的 `evidence/target_architecture_v0_2/`：
 
-## Operators
+- rich X-EISD CaseGraph 通过 `PROFILE_READY`；
+- 现有 v0.3 compiled rule index 与 selector 被真实调用，产生 59 个 obligations 和 15 个 unresolved inputs；
+- 当前 bundle 缺少 59 个 obligation 的显式 EvaluationResults，因此 Evaluation Contract 走 `RUN_PLAN_REQUIRED`；
+- RunPlan 持久化了 16 个 gap，但没有与 X-EISD gaps 匹配的 registered operator，所以 case route 为 `RUN_PLAN_BLOCKED`；
+- `hsp90.directional_time_anatomy.v0` 作为独立 registry canary 成功执行。它证明 operator adapter 可运行，不代表它解决了 X-EISD gaps；
+- semantic correctness、cross-paper transfer、Agent value 和 production readiness 均为 `NOT_EVALUATED`。
 
-`evidence.json_pointer_lookup.v1` 是 fixture-only 的只读 canary。它只能读取显式 `allowed_root` 下的 JSON，不能越界，不做科学计算，也不输出科学 verdict。
+这个 blocked route 是有效结果：它把下一步定位为 gap classification、source lookup、rule-specific EvaluationResults 和合法 capability routing，而不是让模型临时发明分析步骤。
 
-`trajectory.structural_state_projection.v1` 只是 `CANARY_BLOCKED` design proposal。MDAnalysis 被记录为 backend candidate；依赖、输入 fixture、method profile、metric、参数和 scientific scope 都没有冻结，因此代码不会导入或运行它。
+## Profile Agent
+
+Profile Prompt 位于 `prompts/profile_case_v1.md`。当前 `RecordedCaseGraphProvider` 用已有 rich CaseGraph 重放同一个接口；未来廉价模型只需实现 `ProfileProvider.propose_profile()`。
+
+Profile proposal 使用既有 `protein-dynamics-metadata/v0.3-development` contract。deterministic admission 会执行 JSON Schema、answer isolation、source ID 和 EvidenceEdge endpoint 检查。通过后，proposal 才能进入 selector。
+
+## Rules Table 接入
+
+Rules 的 authoring truth 仍在上游原路径。仓库中的 `config/workspace_assets.json` 只保存 read-only references：
+
+- 33-row frozen Rule Registry；
+- 17 个 baseline bindings 加 2 个 modality-repair injections；
+- v0.3 compiled rule index；
+- existing typed selector；
+- protein-dynamics method scope；
+- rich development CaseGraph。
+
+Harness 不复制、不改写这些资产。`workspace.py` 以固定参数调用现有 selector，并保存 native receipt 和 adapter receipt。
+
+Typed binding 的作用不是再建一张规则表。它把人类可读 Rule row 编译成可执行的 `scope + predicate + required fields + claim scope + gap checks`。Rule row 保存科学来源和边界；binding 保存机器何时实例化它。详见 `docs/RULES_TABLE_AND_TYPED_BINDINGS_ZH.md`。
+
+## Registered operators
+
+目标 registry 位于 `config/registered_operators.json`。每个 OperatorSpec 至少冻结：
+
+- `skill_ref` 或已有分析来源；
+- implementation 与 backend/runtime；
+- fixed inputs 和 parameters；
+- input/output contract；
+- route match；
+- claim ceiling 与 forbidden claims；
+- runtime probe 和 canary receipt。
+
+当前有两个明确状态：
+
+| operator | 状态 | 说明 |
+|---|---|---|
+| `hsp90.directional_time_anatomy.v0` | `CANARY_SUCCEEDED / OUTPUT_SCHEMA_VALIDATION_PENDING` | 复用现有标准库脚本、冻结输入和 `[5,20,50]` persistence grid；尚未达到 `ROSTER_PASS` |
+| `trajectory.structural_state_projection.v1` | `REGISTERED_BLOCKED` | spec 来自 installed `molecular-dynamics` skill 与 AdK 旧分析；当前 runtime 无 MDAnalysis，且新 case 的 input/mapping/method profile 未冻结 |
+
+Skill 是程序性知识和 OperatorSpec 的来源，不等于 backend 已安装。Operator runtime 必须单独 probe。完整注册规则见 `docs/OPERATOR_REGISTRATION_ZH.md`。
 
 ## 本地运行
 
-从 repo 根目录运行下面的命令。
+从 repo 根目录运行现有 workspace integration：
+
+```bash
+PYTHONPATH=src python3 -m dynamics_atlas_harness run-prototype \
+  --workspace-root "/path/to/Soojung-Dynamic data" \
+  --output-dir /tmp/dynamics-atlas-target-run \
+  --run-id example-target-run
+```
+
+运行测试：
 
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-下面是暴露 fixture 的 CLI 示例。
+旧的 `run-fixture` 命令和 v0.1 fixture registry 保留为 Milestone 0 回归，不再代表目标架构。
 
-```bash
-PYTHONPATH=src python3 -m dynamics_atlas_harness run-fixture \
-  --profile-proposal tests/fixtures/case_profile_valid.json \
-  --selector-output tests/fixtures/recorded_selector_output.json \
-  --resolution-proposal tests/fixtures/subagent_resolution_proposal.json \
-  --output-dir /tmp/dynamics-atlas-harness-fixture
-```
+## 暂不实现
 
-成功只表示 contract path 和 receipt behavior 按 fixture 运行。它不证明 Rules 完整、operator 科学有效、HSP90/ADK 结果正确、跨论文 transfer、Agent 增量价值或 production readiness。
+- DataFlow-Harness 风格的 Request–Validate–Commit transaction；
+- SQLite、LangGraph、FastAPI、WebUI、RAG 或通用 tool knowledge graph；
+- 模型自动注册 operator 或修改 Rules；
+- 任意 shell/Python 执行；
+- semantic-correctness benchmark、最终科学 verdict、held-out/transfer 或 Agent-value claim。
 
-## 明确不做
+这些功能只有在当前 trace 暴露重复需求后才进入设计。目标架构和当前边界见 `docs/TARGET_ARCHITECTURE_ZH.md`。
 
-- 不安装依赖，不运行 MDAnalysis、MDTraj、GROMACS 或数值科学 payload；
-- 不提供任意 shell、任意 Python、网络、MCP 或路径访问；
-- 不建设 DAG、SQLite、LangGraph、FastAPI、WebUI、RAG、swarm 或事务平台；
-- 不输出 `SUPPORT`、`CANNOT_SUPPORT` 或最终科学结论。
+## Frozen baseline 与 PR 约定
 
-项目级实时状态仍在上游 workspace 的 `autoresearch/DYNAMICS_ATLAS_STATUS.md`。这个 repo 的 README 只描述代码边界。
+- 当前 baseline 的范围、非版本化资产和 claim boundary 见 `BASELINE.md`；
+- 上游 Rules、selector、CaseGraph 和 HSP90 inputs 的冻结身份见 `config/frozen_assets_v0_1.json`；
+- 初始 baseline 进入 `main` 后，后续修改一律从新分支提交 Pull Request；
+- PR 的最小检查和科学边界见 `CONTRIBUTING.md`。

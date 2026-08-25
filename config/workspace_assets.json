@@ -1,0 +1,17 @@
+{
+  "schema_version": "workspace-asset-registry/v0.1",
+  "registry_id": "dynamics-atlas-workspace-assets/v0.1",
+  "freeze_manifest": "config/frozen_assets_v0_1.json",
+  "bundles": {
+    "protein_dynamics_rules_v0_3": {
+      "authority": "UPSTREAM_READ_ONLY_REFERENCE",
+      "profile_schema": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/contracts/protein_dynamics_metadata_contract_v0_3_candidate.json",
+      "selector_entrypoint": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/scripts/select_review_obligations.py",
+      "rule_registry": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/ruleset/v0_1/rule_registry.tsv",
+      "typed_bindings": "autoresearch/tasks/dynamics_atlas_cryoem_modality_predicate_repair_20260823/outputs/contracts/registry_bound_typed_bindings_v0_3.json",
+      "compiled_rule_index": "autoresearch/tasks/dynamics_atlas_cryoem_modality_predicate_repair_20260823/outputs/contracts/compiled_registry_rule_index_v0_3.json",
+      "method_scope": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/contracts/protein_dynamics_method_scope_v1.json",
+      "example_case_graph": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "frozen-workspace-assets/v0.1",
+  "manifest_id": "dynamics-atlas-target-architecture-baseline/v0.2",
+  "frozen_at": "2026-08-25",
+  "path_base": "DYNAMICS_ATLAS_WORKSPACE_ROOT",
+  "vendored": false,
+  "change_policy": "Update locators or hashes only through a reviewed Pull Request; upstream files remain the scientific authority.",
+  "assets": [
+    {
+      "asset_id": "protein-dynamics-profile-schema-v0.3",
+      "role": "PROFILE_ADMISSION_SCHEMA",
+      "path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/contracts/protein_dynamics_metadata_contract_v0_3_candidate.json",
+      "sha256": "3bcac372dbc9c106a4d7e15c472dc6954bc62a1888b632f59368c620aa5da1ef"
+    },
+    {
+      "asset_id": "protein-dynamics-selector-entrypoint-v0.3",
+      "role": "DETERMINISTIC_RULE_SELECTOR",
+      "path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/scripts/select_review_obligations.py",
+      "sha256": "f77fcf2fcad8fb3db48326b19785c5af7c1ba035e6959cea338b561fc6d7c792"
+    },
+    {
+      "asset_id": "rule-authoring-registry-v0.1",
+      "role": "UPSTREAM_RULE_AUTHORITY",
+      "path": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/ruleset/v0_1/rule_registry.tsv",
+      "sha256": "5ac5b7602d3601b4c7505538c962f2bc1ec38f20179f1d1f1e19015d450fb01a"
+    },
+    {
+      "asset_id": "typed-bindings-v0.3",
+      "role": "RUNTIME_APPLICABILITY_COMPILER_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_cryoem_modality_predicate_repair_20260823/outputs/contracts/registry_bound_typed_bindings_v0_3.json",
+      "sha256": "6a42f6540ce218f76c2fb7e016f3178836bd3986e2064e19b62de38a50146c3e"
+    },
+    {
+      "asset_id": "compiled-rule-index-v0.3",
+      "role": "SELECTOR_RUNTIME_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_cryoem_modality_predicate_repair_20260823/outputs/contracts/compiled_registry_rule_index_v0_3.json",
+      "sha256": "6067208f1f87fd52ca84675ab4910131550a81d92be0e29ad37bf7e1c112d855"
+    },
+    {
+      "asset_id": "protein-dynamics-method-scope-v1",
+      "role": "METHOD_SCOPE",
+      "path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/contracts/protein_dynamics_method_scope_v1.json",
+      "sha256": "23cff2053dcded98835346171c0ed0ac82b558b9d5c61c8c7d82d7283e012d43"
+    },
+    {
+      "asset_id": "xeisd-rich-casegraph-v0.3",
+      "role": "EXPOSED_DEVELOPMENT_CASE",
+      "path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json",
+      "sha256": "9235717c7bbc900c02f26d3214be332fc196356a706e82c97f700d9c7042774a"
+    },
+    {
+      "asset_id": "hsp90-time-anatomy-implementation-v0",
+      "role": "REGISTERED_EXISTING_ANALYSIS_IMPLEMENTATION",
+      "path": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py",
+      "sha256": "c7b4f333c8b8386106d4121c578845b686ff4c41e6240d9ecfadb8bda31a83e8"
+    },
+    {
+      "asset_id": "hsp90-frame-state-assignments-round2",
+      "role": "REGISTERED_OPERATOR_FIXED_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv",
+      "sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46"
+    },
+    {
+      "asset_id": "hsp90-route-predictions-round2",
+      "role": "REGISTERED_OPERATOR_FIXED_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv",
+      "sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446"
+    }
+  ]
+}

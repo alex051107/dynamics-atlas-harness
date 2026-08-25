@@ -1,0 +1,35 @@
+{
+  "schema_version": "published-target-architecture-summary/v0.1",
+  "source_run_id": "atlas-target-v0.2-20260825",
+  "case_id": "lincoff_2020_xeisd_maintext",
+  "status": "LOCAL_VERTICAL_SLICE_EXECUTED_WITH_BLOCKED_CASE_ROUTE",
+  "profile_status": "PROFILE_READY",
+  "rules_selector": "EXISTING_SELECTOR_INVOKED",
+  "obligation_count": 59,
+  "selector_unresolved_input_count": 15,
+  "total_gap_count": 16,
+  "gap_breakdown": {
+    "comparison_bridge_status": 3,
+    "case_evidence_role": 1,
+    "source_detection_boundary_or_uncertainty": 11,
+    "aggregate_evaluation_result_missing": 1
+  },
+  "evaluation_branch": "RUN_PLAN_REQUIRED",
+  "run_plan": {
+    "status": "BLOCKED",
+    "node_count": 21,
+    "execution_edge_count": 35,
+    "case_gap_resolution_operator_count": 0
+  },
+  "registered_operator_canary": {
+    "operator_id": "hsp90.directional_time_anatomy.v0",
+    "status": "SUCCEEDED",
+    "relation_to_case_plan": "INDEPENDENT_REGISTRY_CANARY_NOT_ROUTED_FROM_CASE_PLAN",
+    "evaluation_status": "PENDING_HUMAN_VALIDATION",
+    "exact_output_schema_validation": "PENDING"
+  },
+  "semantic_correctness": "NOT_EVALUATED",
+  "scientific_final_authority": "HUMAN_REVIEW_REQUIRED",
+  "claim_ceiling": "Local development architecture behavior only.",
+  "payload_policy": "Raw and derived scientific payloads are intentionally not versioned in this repository."
+}

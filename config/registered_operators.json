@@ -1,0 +1,90 @@
+{
+  "schema_version": "scientific-operator-registry/v0.2",
+  "registry_id": "dynamics-atlas-registered-operators/v0.2",
+  "authority": "VERSIONED_LOCAL_ALLOWLIST",
+  "operators": {
+    "hsp90.directional_time_anatomy.v0": {
+      "operator_id": "hsp90.directional_time_anatomy.v0",
+      "version": "0.1.0-existing-analysis-adapter",
+      "status": "REGISTERED_AVAILABLE",
+      "capability": "Describe persistent two-readout directional departure and return candidates under a fixed horizon grid.",
+      "skill_ref": "repo:rapid-dynamics-research",
+      "handler": "existing_hsp90_time_anatomy_v0",
+      "implementation_ref": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py",
+      "runtime": {
+        "kind": "python-standard-library",
+        "required_python_packages": []
+      },
+      "fixed_inputs": {
+        "frame_state_assignments": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv",
+        "route_predictions": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv"
+      },
+      "fixed_parameters": {
+        "persistence_saved_frames": [5, 20, 50],
+        "state_rule": "existing zero-sign two-readout rule"
+      },
+      "input_contract": {
+        "statistical_unit": "trajectory (n=40); frame runs are within-trajectory descriptive objects",
+        "read_only": true
+      },
+      "output_contract": "hsp90-time-anatomy-results/v0-existing",
+      "expected_outputs": [
+        "directional_runs.tsv",
+        "trajectory_time_anatomy.tsv",
+        "trajectory_time_bins_50ns.tsv",
+        "results_summary.json"
+      ],
+      "route_match": {
+        "gap_classes": ["NOT_EVALUATED", "PARTIAL", "MISSING"],
+        "target_types": ["SOURCE"],
+        "method_ids": ["MD_TRAJECTORY"],
+        "input_path_contains": ["time_semantics", "sampling", "trajectory"]
+      },
+      "claim_ceiling": "Descriptive same-packet directional time-anatomy diagnostic under the frozen two-readout rule and horizon grid; human validation required.",
+      "forbidden_claims": [
+        "TRANSITION_RATE",
+        "EQUILIBRIUM_POPULATION",
+        "FREE_ENERGY",
+        "COMPLETE_PATHWAY",
+        "MECHANISM",
+        "MUTATION_EFFECT"
+      ]
+    },
+    "trajectory.structural_state_projection.v1": {
+      "operator_id": "trajectory.structural_state_projection.v1",
+      "version": "0.1.0-spec-only",
+      "status": "REGISTERED_BLOCKED",
+      "capability": "Project a registered trajectory onto frozen structural-state coordinates and report descriptive observables.",
+      "skill_ref": "skill:molecular-dynamics",
+      "handler": "mdanalysis_structural_state_projection",
+      "implementation_ref": "autoresearch/tasks/dynamics_atlas_execution_wave1_20260715/sources/adk_bundle/dynamics_atlas_adk_pilot/run_pilot.py",
+      "runtime": {
+        "kind": "python-package",
+        "required_python_packages": ["MDAnalysis", "numpy", "scipy", "sklearn"]
+      },
+      "fixed_inputs": {},
+      "fixed_parameters": {
+        "metric": "UNFROZEN_FOR_NEW_CASE",
+        "alignment_selection": "UNFROZEN_FOR_NEW_CASE"
+      },
+      "input_contract": {
+        "required": ["topology", "trajectory", "reference_states", "mapping", "method_profile"]
+      },
+      "output_contract": "structural-state-projection-evidence/v0.1-proposed",
+      "expected_outputs": [],
+      "route_match": {
+        "gap_classes": ["NOT_EVALUATED"],
+        "target_types": ["SOURCE"],
+        "method_ids": ["MD_TRAJECTORY"]
+      },
+      "blockers": [
+        "MDANALYSIS_RUNTIME_UNAVAILABLE_IN_PROBED_ENVS",
+        "NEW_CASE_INPUT_FIXTURE_NOT_FROZEN",
+        "MD_METHOD_PROFILE_NEEDS_DEFINITION",
+        "CASE_SPECIFIC_METRIC_AND_MAPPING_NOT_FROZEN"
+      ],
+      "claim_ceiling": "No execution or scientific claim until the runtime, case inputs, method profile, mapping, metric and parameters are frozen.",
+      "forbidden_claims": ["ANY_OUTPUT_BEFORE_CANARY_PASS"]
+    }
+  }
+}
