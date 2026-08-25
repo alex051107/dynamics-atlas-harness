@@ -1,5 +1,11 @@
 # Contribution and Pull Request policy
 
+## Controlling execution plan
+
+后续工作受 [DA-HARNESS-FROZEN-PLAN-v1.0](docs/DA_HARNESS_FROZEN_EXECUTION_PLAN_V1_0_ZH.md) 控制。创建分支前，先读取 [current_execution_status.json](governance/current_execution_status.json)，确认当前阶段、下一允许动作和停止点。
+
+只有上一阶段的 Exit Gate 已有文件证据，并获得计划要求的人工批准，才能进入下一阶段。缺少批准时保留 blocked receipt，不用更小的旁支任务绕开 gate。计划偏差追加到 [deviations.jsonl](governance/deviations.jsonl)，不得改写成追溯合规。
+
 ## Branch policy
 
 Initial baseline push完成后，所有修改都通过 Pull Request：
@@ -15,13 +21,20 @@ main
 
 ## PR 必须写清楚
 
-- 改了什么；
-- 解决哪个 observed gap 或风险；
-- 哪些 frozen/public contracts 改变；
-- 实际运行了哪些 checks；
-- 哪些 checks 有意跳过以及原因；
-- allowed claim、forbidden upgrade 和 remaining risk；
-- 是否修改 `config/frozen_assets_v0_1.json`。
+每个 PR 使用固定的报告结构：
+
+1. `Observed gap`
+2. `Change made`
+3. `Contracts affected`
+4. `Assets kept frozen`
+5. `Validation actually run`
+6. `Validation intentionally skipped`
+7. `Allowed claim`
+8. `Forbidden upgrade`
+9. `Remaining risk`
+10. `Next authorized action`
+
+同时说明是否修改 `config/frozen_assets_v0_1.json`。如果当前动作没有写在机器可读状态的 allowlist 中，先停下并请求人工决定。
 
 ## Validation
 
@@ -45,4 +58,4 @@ Workspace-dependent tests 在独立 GitHub runner 上会明确 skip；它们只�
 
 ## Merge boundary
 
-PR tests通过仍只证明声明的 structural/execution boundary。涉及 Rules、method profile、operator claim ceiling、threshold 或 scientific interpretation 的修改，需要明确 human review 才能合并。
+PR tests通过仍只证明声明的 structural/execution boundary。涉及 Rules、method profile、operator claim ceiling、threshold 或 scientific interpretation 的修改，需要完成对应 Exit Gate 和明确 human review 才能合并。合并一个阶段不会自动授权下一阶段。

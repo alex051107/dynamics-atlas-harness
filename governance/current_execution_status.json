@@ -1,0 +1,46 @@
+{
+  "schema_version": "frozen-plan-execution-status/v1",
+  "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260825-v1",
+  "as_of": "2026-08-25T14:43:40Z",
+  "overall_status": "PLAN_ACTIVE_PR1_RECONCILIATION_REQUIRED",
+  "repository_baseline": {
+    "main_commit": "ba318e5216b1f6cc617178c8e964ca63b9b6dfd9",
+    "baseline_tag": "v0.2.0-baseline",
+    "accurate_name": "Harness Control-Plane Smoke v0.2"
+  },
+  "open_work": {
+    "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
+    "head_branch": "codex/rules-prototype-v1",
+    "head_commit_at_adoption": "2f9422a0a6ff3c72b8bfb0426d0e7c70b53d525f",
+    "observed_scope": "COMBINED_PRE_ADOPTION_PR0_AND_PARTIAL_PR1",
+    "merge_status": "OPEN_UNMERGED_AT_LAST_VERIFIED_STATUS_V0_43"
+  },
+  "stages": [
+    {
+      "stage": "PR0_BASELINE_BOUNDARY_NORMALIZATION",
+      "status": "IMPLEMENTED_IN_COMBINED_OPEN_PR_NOT_EXIT_GATE_AUDITED",
+      "known_present": ["HSP90_CANARY_PASS_NOT_ROUTABLE", "RUNPLAN_ROSTER_PASS_GATE", "CANARY_OPT_IN", "CONTROL_PLANE_SMOKE_NAMING"],
+      "known_unresolved": ["LEGACY_OPERATORS_JSON_FIXTURE_ONLY_MARKER", "FORMAL_PR0_EXIT_GATE_REPORT", "SEPARATE_PR0_BRANCH_REQUIREMENT_DEVIATED"]
+    },
+    {
+      "stage": "PR1_RULES_PROTOTYPE_V1",
+      "status": "PARTIAL_IMPLEMENTATION_IN_OPEN_PR_NOT_EXIT_GATE_AUDITED",
+      "known_present": ["EIGHT_SEED_FAMILIES", "LEGACY_33_RULE_AUDIT_COPY", "SEED_BINDINGS", "RESOLUTION_POLICIES", "EVALUATION_CONTRACTS", "POSITIVE_AND_ONE_FIELD_NEGATIVE_FIXTURES"],
+      "known_unresolved": ["PLAN_NAMED_DIRECTORY_LAYOUT", "COVERAGE_GAP_REGISTER", "EXPLICIT_RULE_FAMILY_OVERLAY", "MISSING_EVIDENCE_FIXTURES", "WRONG_TARGET_FIXTURES", "RULES_PROTOTYPE_V1_REVIEW_PACKET", "HUMAN_SCIENTIFIC_APPROVAL"]
+    },
+    {
+      "stage": "PR2_THROUGH_PR8",
+      "status": "NOT_AUTHORIZED",
+      "known_present": [],
+      "known_unresolved": ["ALL_STAGE_EXIT_GATES"]
+    }
+  ],
+  "next_allowed_action": {
+    "action": "AUDIT_OPEN_PR_1_AGAINST_PR0_AND_PR1_EXIT_GATES",
+    "deliverable": "ONE_REVIEW_PACKET_WITH_EXACT_PASS_PARTIAL_FAIL_AND_DEVIATION_TABLE",
+    "automatic_code_changes": false,
+    "exit_gate": "HUMAN_DISPOSITION_REQUIRED_BEFORE_ANY_PR2_WORK"
+  },
+  "claim_ceiling": "Governance adoption and observed repository reconciliation only; no scientific or runtime completion claim."
+}

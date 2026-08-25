@@ -1,0 +1,75 @@
+{
+  "schema_version": "frozen-execution-plan-adoption/v1",
+  "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
+  "effective_at": "2026-08-25T14:43:40Z",
+  "status": "ACTIVE_PROSPECTIVE_EXECUTION_AUTHORITY",
+  "repository": "alex051107/dynamics-atlas-harness",
+  "canonical_plan_path": "docs/DA_HARNESS_FROZEN_EXECUTION_PLAN_V1_0_ZH.md",
+  "source_path_at_adoption": "/Users/liuzhenpeng/Downloads/Dynamics_Atlas_Frozen_Execution_Plan_for_Codex_ZH.md",
+  "source_sha256": "36034b8db124bb95669c76a6aa78adeda251278f3539bc1f9f6764060a19530b",
+  "import_policy": "BYTE_IDENTICAL_SOURCE_IMPORT",
+  "authority": {
+    "adopted_by": "PROJECT_LEAD_USER_DIRECT_REQUEST",
+    "adoption_request": "固定好自己的计划，以后严格按照这个计划去进行",
+    "applies_prospectively": true,
+    "instructions_in_source_before_adoption": "REFERENCE_INPUT_ONLY",
+    "instructions_after_adoption": "CONTROLLING_PROJECT_EXECUTION_PLAN_SUBJECT_TO_SYSTEM_DEVELOPER_AND_NEW_DIRECT_USER_INSTRUCTIONS",
+    "precedence": [
+      "SYSTEM_AND_DEVELOPER_INSTRUCTIONS",
+      "NEW_DIRECT_USER_INSTRUCTION",
+      "PROJECT_MEMORY_PERMANENT_BOUNDARIES",
+      "LIVE_STATUS_AND_APPEND_ONLY_HUMAN_DECISIONS",
+      "DA-HARNESS-FROZEN-PLAN-v1.0",
+      "TASK_LOCAL_IMPLEMENTATION_NOTES"
+    ]
+  },
+  "frozen_pr_sequence": [
+    "PR0_BASELINE_BOUNDARY_NORMALIZATION",
+    "PR1_RULES_PROTOTYPE_V1",
+    "PR2_GAP_TAXONOMY_AND_RULE_EVALUATION",
+    "PR3_HSP90_REAL_RULE_TO_OPERATOR_ROUTE",
+    "PR4_THREE_ROUTE_VERTICAL_SLICE",
+    "PR5_RVC_LITE_CASEWORKFLOW",
+    "PR6_LIVE_LOW_COST_PROFILE_AGENT",
+    "PR7_ADK_PORTABILITY",
+    "PR8_FROZEN_HELDOUT_V1"
+  ],
+  "current_authorization": {
+    "plan_scope": ["PR0_BASELINE_BOUNDARY_NORMALIZATION", "PR1_RULES_PROTOTYPE_V1"],
+    "next_allowed_action": "AUDIT_OPEN_PR_1_AGAINST_PR0_AND_PR1_EXIT_GATES",
+    "allowed_actions": [
+      "READ_ONLY_DIFF_AND_ARTIFACT_AUDIT",
+      "PR0_EXIT_GATE_COMPARISON",
+      "PR1_EXIT_GATE_COMPARISON",
+      "REVIEW_PACKET_PREPARATION_WITHOUT_FUNCTIONAL_CHANGES",
+      "REQUEST_HUMAN_DISPOSITION"
+    ],
+    "stop_after": "HUMAN_DISPOSITION_OF_OPEN_PR_1_AND_PR1_REVIEW_PACKET",
+    "blocked_stages": [
+      "PR2_GAP_TAXONOMY_AND_RULE_EVALUATION",
+      "PR3_HSP90_REAL_RULE_TO_OPERATOR_ROUTE",
+      "PR4_THREE_ROUTE_VERTICAL_SLICE",
+      "PR5_RVC_LITE_CASEWORKFLOW",
+      "PR6_LIVE_LOW_COST_PROFILE_AGENT",
+      "PR7_ADK_PORTABILITY",
+      "PR8_FROZEN_HELDOUT_V1"
+    ]
+  },
+  "historical_reconciliation": {
+    "deviation_id": "DA-DEV-20260825-001",
+    "observed_fact": "Open PR #1 was created before plan adoption and combines PR0 lifecycle/baseline changes with a partial PR1 Rules Prototype package.",
+    "treatment": "RECORDED_PRE_ADOPTION_DEVIATION_NOT_RETROACTIVE_COMPLIANCE",
+    "automatic_remediation_authorized": false,
+    "human_options_not_decided": ["ACCEPT_COMBINED_PR_WITH_EXPLICIT_DEVIATION", "REQUEST_BOUNDED_COMPLETION", "REQUEST_SPLIT_OR_REPLACEMENT", "CLOSE_WITHOUT_MERGE"]
+  },
+  "claim_boundary": {
+    "allowed": "The plan is adopted prospectively and constrains the next allowed action to PR0/PR1 Exit-Gate audit and human disposition.",
+    "forbidden": [
+      "PR1_IS_PLAN_COMPLIANT",
+      "PR1_IS_SCIENTIFICALLY_APPROVED",
+      "PR2_IS_AUTHORIZED",
+      "HARNESS_PROTOTYPE_IS_COMPLETE",
+      "SEMANTIC_CORRECTNESS_IS_ESTABLISHED"
+    ]
+  }
+}
