@@ -55,7 +55,7 @@ Registry 是 allowlist。Agent 可以提出 `RUN_OPERATOR`，deterministic resol
 4. 冻结 input/output/parameter/claim ceiling；
 5. runtime probe；
 6. 一个最小 canary；
-7. canary PASS 后才把 status 改为 `REGISTERED_AVAILABLE`。
+7. canary PASS 后保留 `CANARY_PASS / NOT_ROUTABLE`；只有完整 output schema、exact case/input binding 和 route-specific evaluation contract 都通过后，才能由人工提升为 `ROSTER_PASS / routable=true`。
 
 ## 怎样增加下一个 operator
 

@@ -2,7 +2,7 @@
 
 > 版本：v2.0
 > 日期：2026-08-25
-> 状态：目标架构已冻结；本地 vertical slice 已运行，真实 case route 仍受阻
+> 状态：目标架构已冻结；当前实现为 Harness Control-Plane Smoke v0.2；Rules Prototype v1 已进入 PR 阶段
 > 适用范围：Dynamics Atlas prototype、Rules runtime、Profile Agent、Harness、registered operators 与科学验证路线
 
 ## 文档边界
@@ -23,12 +23,12 @@ Dynamics Atlas 是一个 **scientific workflow compiler**：系统把用户问�
 
 当前执行决定如下：
 
-1. 直接实现目标架构的 thin vertical slice，不再另建 proposal-only 小系统。
+1. 保留已经跑通的 control-plane smoke，不继续扩展通用 Harness。
 2. `CaseWorkflow` 是平台持有的 canonical artifact；CaseGraph 和 RunPlan 都属于它。
 3. Rules 的 authoring truth 留在原 registry；typed binding 继续作为 runtime compiler 输入。
 4. Harness 负责状态、routing、执行限制、receipt 和重新评估。
 5. Operator 按 scientific capability 注册，再绑定 MDAnalysis、现有脚本或其他 backend。
-6. 先接通一条真实 gap-resolution route，再扩充工具数量和规则覆盖面。
+6. 先从已有 14-family 与 33-rule 审查资产冻结八类 Rules Prototype v1，再用单独 PR 接通一条真实 gap-resolution route。
 7. Request–Validate–Commit、并发编辑、WebUI 和 general scientific correctness 属于 Future。
 
 贯穿所有阶段的约束：
@@ -172,15 +172,16 @@ CaseWorkflow
 | Profile provider | `RECORDED_FIXTURE_ONLY` | stable provider interface | 尚未接真实便宜模型 |
 | CaseGraph admission | `IMPLEMENTED` | `profile/case_graph_admission.json` | structural admission only |
 | Rules selector | `EXISTING_V0_3_SELECTOR_INVOKED` | 59 obligations / 15 unresolved inputs | review obligations only |
+| Rules Prototype v1 | `PROPOSAL_IN_PR` | 14-family map、33-rule lineage、8 seed families、policies/contracts | 尚未进入 frozen runtime |
 | Evaluation Contract | `IMPLEMENTED_FOR_BUNDLE_ROUTING` | `evaluation/evaluation_contract.json` | 不产生 general scientific verdict |
 | Persistent RunPlan | `IMPLEMENTED` | `run_plan.json` | execution state only |
 | X-EISD case route | `RUN_PLAN_BLOCKED` | 16 gaps，0 个匹配 operator | 没有 case-resolution claim |
-| HSP90 time-anatomy operator | `CANARY_SUCCEEDED` | `operator_canary/operator_run_receipt.json` | frozen descriptive diagnostic only |
+| HSP90 time-anatomy operator | `CANARY_PASS / NOT_ROUTABLE` | `operator_canary/operator_run_receipt.json` | frozen descriptive diagnostic only |
 | HSP90 canary 与 X-EISD 的关系 | `INDEPENDENT_CANARY` | run summary 明确标记未被 case plan 路由 | 不能用来关闭 X-EISD gaps |
 | Structural-state projection | `REGISTERED_BLOCKED` | MDAnalysis runtime、method profile、inputs 和 metric 未冻结 | 不得执行或报告 output |
 | Request–Validate–Commit | `FUTURE` | 仅保留接口方向 | 无当前能力声明 |
 | General semantic correctness | `NOT_EVALUATED` | human review required | 无泛化结论 |
-| GitHub | `LOCAL_CHANGES_PRESENT` | 本地 nested repo | 未完成远端 readback 时不写“已上传” |
+| GitHub | `PRIVATE_BASELINE_AND_REMOTE_CI_PASS` | `main@ba318e5`、`v0.2.0-baseline`、Actions run `32853872659` | private repo delivery only |
 
 当前 run 的精确摘要：
 
@@ -956,4 +957,4 @@ answer-blind question + source/data manifest
 - 没有为了完整感增加当前不需要的平台层；
 - 每项结论都能回到 source、Rule、EvidenceResult 或明确 human decision。
 
-下一个允许动作已经固定：对当前 16 个真实 gaps 分类，选择一项已有输入且可由现有能力解决的 gap，完成一条 `RuleInstance → registered capability → EvidenceResult → reevaluation` 路由。若 prerequisite 不满足，保留 blocked receipt 并转向 source lookup 或另一项真实 gap。
+下一个允许动作已经固定：先完成并人工审查 `rules_prototype/v1/`。它从现有 14-family 方法学地图和 33-rule 复核中冻结八类 seed proposal，不激活 RF02、RF07 或 RF12，也不修改 v0.3 runtime。通过审查后再开一个独立 PR，选择一项已有输入且可由现有能力解决的 gap，完成 `RuleInstance → ROSTER_PASS operator → EvidenceResult → reevaluation`。若 prerequisite 不满足，保留 blocked receipt并转向 source lookup 或另一项真实 gap。live cheap Profile Agent 排在这条真实 route 之后。

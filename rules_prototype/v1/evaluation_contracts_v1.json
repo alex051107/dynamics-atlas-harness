@@ -1,0 +1,111 @@
+{
+  "schema_version": "seed-evaluation-contracts/v1",
+  "registry_id": "protein-dynamics-seed-evaluation-contracts/v1",
+  "status": "PROPOSAL_ONLY",
+  "shared_evidence_result_fields": ["evaluation_id", "seed_id", "target_ref", "status", "evidence_refs", "observed_result", "reason_codes", "claim_ceiling", "review_status"],
+  "allowed_statuses": ["PASS", "FAIL", "UNRESOLVED"],
+  "global_rules": [
+    "PASS means the declared contract is satisfied by cited evidence; it is not a terminal scientific verdict.",
+    "FAIL preserves the observed conflict or unsupported claim and applies the declared ceiling.",
+    "UNRESOLVED must retain missing inputs and route through the referenced Resolution Policy.",
+    "Every result requires human review before terminal scientific wording."
+  ],
+  "contracts": [
+    {
+      "evaluation_contract_id": "EC_SP01_CLAIM_CONTRACT",
+      "seed_id": "SP01",
+      "evaluation_target": "CASE",
+      "pass_evidence": ["all required case fields are nonempty and mutually consistent"],
+      "fail_evidence": ["requested claim level exceeds declared intended use or observability target"],
+      "unresolved_evidence": ["one or more required case fields lack a source or declared value"],
+      "pass_effect": "CONTINUE_TO_SOURCE_CONTRACTS",
+      "fail_effect": "ABSTAIN_CLAIM_SCOPE_UNSUPPORTED",
+      "unresolved_effect": "APPLY_RP01_METADATA_OR_SOURCE_REVIEW",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP02_SOURCE_MEASUREMENT",
+      "seed_id": "SP02",
+      "evaluation_target": "SOURCE",
+      "pass_evidence": ["native observable, estimand, support, averaging, and statistical unit are source-linked"],
+      "fail_evidence": ["the proposed claim substitutes a different estimand or support for the source-native measurement"],
+      "unresolved_evidence": ["one or more measurement-contract fields are missing or unlocated"],
+      "pass_effect": "PRESERVE_SOURCE_NATIVE_REPRESENTATION",
+      "fail_effect": "BLOCK_INCOMPATIBLE_MEASUREMENT_CLAIM",
+      "unresolved_effect": "APPLY_RP01_METADATA_OR_SOURCE_REVIEW",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP03_SOURCE_RELIABILITY",
+      "seed_id": "SP03",
+      "evaluation_target": "SOURCE",
+      "pass_evidence": ["method-appropriate calibration, uncertainty, controls, and detection boundary are source-linked"],
+      "fail_evidence": ["a material artifact or alternative explanation remains supported and contradicts the proposed reliability claim"],
+      "unresolved_evidence": ["a required control, uncertainty component, method profile, or source locator is absent"],
+      "pass_effect": "ALLOW_BOUNDED_SOURCE_LOCAL_RELIABILITY_STATEMENT",
+      "fail_effect": "BLOCK_RELIABILITY_UPGRADE",
+      "unresolved_effect": "APPLY_RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP04_SUPPORT_AND_BRIDGE",
+      "seed_id": "SP04",
+      "evaluation_target": "SOURCE_OR_EDGE",
+      "pass_evidence": ["candidate support and model lineage are complete and the bridge is validated within its declared domain"],
+      "fail_evidence": ["required states are absent from support or the bridge is applied outside its validated domain"],
+      "unresolved_evidence": ["support lineage, model domain, error model, validation, or source locator is missing"],
+      "pass_effect": "ALLOW_MODEL_BASED_COMPARISON_WITHIN_DECLARED_DOMAIN",
+      "fail_effect": "REVISE_SUPPORT_OR_ABSTAIN_MODEL_BASED_INFERENCE",
+      "unresolved_effect": "APPLY_RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP05_COMPARABILITY",
+      "seed_id": "SP05",
+      "evaluation_target": "EDGE",
+      "pass_evidence": ["condition, estimand, support, and bridge evidence justify one declared relation type"],
+      "fail_evidence": ["the sources are not comparable for the requested relation or a required bridge is invalid"],
+      "unresolved_evidence": ["relation, condition comparison, or bridge status is missing"],
+      "pass_effect": "EMIT_DECLARED_RELATION_TYPE_ONLY",
+      "fail_effect": "NOT_COMPARABLE_PRESERVE_DISAGREEMENT",
+      "unresolved_effect": "APPLY_RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP06_EVIDENCE_ROLE",
+      "seed_id": "SP06",
+      "evaluation_target": "SOURCE_OR_EDGE",
+      "pass_evidence": ["source role, lineage, independence, condition match, and shared-error status are explicit"],
+      "fail_evidence": ["the asserted validation role is contradicted by shared data, same-data evaluation, condition mismatch, or material shared error"],
+      "unresolved_evidence": ["role, lineage, independence, condition match, or shared-error assessment is absent"],
+      "pass_effect": "PRESERVE_EXACT_ROLE_AND_INDEPENDENCE_STATUS",
+      "fail_effect": "DOWNGRADE_VALIDATION_ROLE",
+      "unresolved_effect": "APPLY_RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP07_IDENTIFIABILITY",
+      "seed_id": "SP07",
+      "evaluation_target": "CASE",
+      "pass_evidence": ["remaining hypotheses, prior sensitivity, missing-state checks, independent evidence, and discriminating action are explicit"],
+      "fail_evidence": ["multiple hypotheses remain compatible or candidate support is missing a required state"],
+      "unresolved_evidence": ["the hypothesis set or a discriminating action is not defined"],
+      "pass_effect": "REPORT_REMAINING_HYPOTHESIS_SET",
+      "fail_effect": "NON_IDENTIFIABLE_OR_MISSING_SUPPORT",
+      "unresolved_effect": "APPLY_RP04_HUMAN_CLAIM_CEILING",
+      "human_review_required": true
+    },
+    {
+      "evaluation_contract_id": "EC_SP08_CLAIM_CEILING",
+      "seed_id": "SP08",
+      "evaluation_target": "CASE_AND_HUMAN",
+      "pass_evidence": ["evidence status, allowed claim, forbidden upgrades, uncertainty, next action, and human decision are recorded"],
+      "fail_evidence": ["requested wording exceeds the evidence status or violates a forbidden upgrade"],
+      "unresolved_evidence": ["human decision or another terminal claim-boundary field is absent"],
+      "pass_effect": "EMIT_HUMAN_APPROVED_BOUNDED_CLAIM",
+      "fail_effect": "LOWER_CLAIM_CEILING_OR_ABSTAIN",
+      "unresolved_effect": "APPLY_RP04_HUMAN_CLAIM_CEILING",
+      "human_review_required": true
+    }
+  ]
+}

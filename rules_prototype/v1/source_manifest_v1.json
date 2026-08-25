@@ -1,0 +1,51 @@
+{
+  "schema_version": "rules-prototype-source-manifest/v1",
+  "manifest_id": "rules-prototype-v1-sources/2026-08-25",
+  "path_base": "DYNAMICS_ATLAS_WORKSPACE_ROOT",
+  "vendoring_policy": "Only the exact legacy re-audit is copied for review. Methodology and literature authoring assets remain upstream read-only authority.",
+  "assets": [
+    {
+      "asset_id": "review-methodology-framework",
+      "role": "FOURTEEN_FAMILY_METHOD_MAP_AUTHORITY",
+      "path": "autoresearch/tasks/dynamics_atlas_review_led_rule_reaudit_cheap_agent_pilot_20260824/outputs/review_methodology_framework.csv",
+      "sha256": "3dbdc3b9af25966837e01854f5a876e35954def5453ba16445304e4078f00fa6",
+      "vendored": false
+    },
+    {
+      "asset_id": "legacy-thirty-three-rule-reaudit",
+      "role": "LEGACY_RULE_LINEAGE_AUTHORITY",
+      "path": "autoresearch/tasks/dynamics_atlas_review_led_rule_reaudit_cheap_agent_pilot_20260824/outputs/current_33_rule_reaudit.csv",
+      "sha256": "0d6d0e606213ac69e511e8fee0f991d0b43406baee99d6309813368983376516",
+      "vendored_copy": "rules_prototype/v1/legacy_33_rule_reaudit.csv",
+      "vendored_copy_sha256": "0d6d0e606213ac69e511e8fee0f991d0b43406baee99d6309813368983376516"
+    },
+    {
+      "asset_id": "layered-rules-table-proposal",
+      "role": "FOURTEEN_FAMILY_RULE_QUESTION_AND_ROUTE_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_review_led_rule_reaudit_cheap_agent_pilot_20260824/outputs/layered_rules_table_proposal.csv",
+      "sha256": "7eebf369462025b287f59adb95dca0ce15a9d6edac3038f1bc83ccb440e21767",
+      "vendored": false
+    },
+    {
+      "asset_id": "executable-binding-recommendations",
+      "role": "LEGACY_BINDING_REDESIGN_INPUT",
+      "path": "autoresearch/tasks/dynamics_atlas_review_led_rule_reaudit_cheap_agent_pilot_20260824/outputs/executable_binding_recommendations.csv",
+      "sha256": "e5625fb8d546e65d0d70c47f5b6fcc288a9c8b2059b578fb874605b19bcba265",
+      "vendored": false
+    },
+    {
+      "asset_id": "frozen-runtime-rule-registry-v0.1",
+      "role": "UNCHANGED_UPSTREAM_RUNTIME_AUTHORITY",
+      "path": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/ruleset/v0_1/rule_registry.tsv",
+      "sha256": "5ac5b7602d3601b4c7505538c962f2bc1ec38f20179f1d1f1e19015d450fb01a",
+      "vendored": false
+    },
+    {
+      "asset_id": "frozen-runtime-typed-bindings-v0.3",
+      "role": "UNCHANGED_UPSTREAM_RUNTIME_AUTHORITY",
+      "path": "autoresearch/tasks/dynamics_atlas_cryoem_modality_predicate_repair_20260823/outputs/contracts/registry_bound_typed_bindings_v0_3.json",
+      "sha256": "6a42f6540ce218f76c2fb7e016f3178836bd3986e2064e19b62de38a50146c3e",
+      "vendored": false
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dynamics_atlas_harness.cli import main
+from dynamics_atlas_harness.cli import build_parser, main
 from dynamics_atlas_harness.evaluation import (
     build_evaluation_contract,
     evaluate_current_bundle,
@@ -20,6 +20,18 @@ HAS_WORKSPACE_ASSETS = (WORKSPACE_ROOT / "autoresearch").is_dir()
 
 
 class TargetArchitectureTests(unittest.TestCase):
+    def test_operator_canary_is_opt_in(self):
+        args = build_parser().parse_args(
+            [
+                "run-prototype",
+                "--workspace-root",
+                str(WORKSPACE_ROOT),
+                "--output-dir",
+                "/tmp/unused-target-run",
+            ]
+        )
+        self.assertIsNone(args.canary_operator_id)
+
     def test_sufficient_contract_takes_direct_bounded_route(self):
         case_graph = {
             "case": {
@@ -85,6 +97,8 @@ class TargetArchitectureTests(unittest.TestCase):
                     str(output),
                     "--run-id",
                     "test-target-architecture",
+                    "--canary-operator-id",
+                    "hsp90.directional_time_anatomy.v0",
                 ]
             )
             self.assertEqual(code, 0)

@@ -1,6 +1,6 @@
 # dynamics-atlas-harness
 
-这是 Dynamics Atlas 的目标架构 prototype。它把已有的 rich CaseGraph、Rules Table selector、Evaluation Contract、持久 RunPlan 和 registered operator 接成一条可审计的数据流。
+这是 Dynamics Atlas 的 Harness Control-Plane Smoke v0.2。它把已有的 rich CaseGraph、Rules Table selector、Evaluation Contract、持久 RunPlan 和 registered operator 接成一条可审计的数据流。当前仓库证明控制面可运行并能正确停下，还没有完成 Rules 语义冻结或真实 case 的 Rule 到 Operator 到 reevaluation 路径。
 
 2026-08-25 的本地 run 已经完成以下路径：
 
@@ -52,6 +52,12 @@ Harness 不复制、不改写这些资产。`workspace.py` 以固定参数调用
 
 Typed binding 的作用不是再建一张规则表。它把人类可读 Rule row 编译成可执行的 `scope + predicate + required fields + claim scope + gap checks`。Rule row 保存科学来源和边界；binding 保存机器何时实例化它。详见 `docs/RULES_TABLE_AND_TYPED_BINDINGS_ZH.md`。
 
+### Rules Prototype v1
+
+当前 PR 在 `rules_prototype/v1/` 增加一个 proposal-only review package。它复用已有 14-family 方法学地图和完整 33-rule 复核，冻结八个 seed families 供人工审查。每个 seed family 都有 source locator、可复用问题、positive 与 one-field negative fixture、blocking priority、required evidence、Resolution Policy、Evaluation Contract、三态 effect 和 claim ceiling。
+
+`RF02` 与 `RF07` 继续等待 primary-case 或 MD replay，`RF12` 保持 Harness action router。这个目录不替换上游 Rules authority，也不进入当前 v0.3 selector runtime。
+
 ## Registered operators
 
 目标 registry 位于 `config/registered_operators.json`。每个 OperatorSpec 至少冻结：
@@ -68,7 +74,7 @@ Typed binding 的作用不是再建一张规则表。它把人类可读 Rule row
 
 | operator | 状态 | 说明 |
 |---|---|---|
-| `hsp90.directional_time_anatomy.v0` | `CANARY_SUCCEEDED / OUTPUT_SCHEMA_VALIDATION_PENDING` | 复用现有标准库脚本、冻结输入和 `[5,20,50]` persistence grid；尚未达到 `ROSTER_PASS` |
+| `hsp90.directional_time_anatomy.v0` | `CANARY_PASS / NOT_ROUTABLE` | 复用现有标准库脚本、冻结输入和 `[5,20,50]` persistence grid；完整 output schema 和 case/input binding 未完成 |
 | `trajectory.structural_state_projection.v1` | `REGISTERED_BLOCKED` | spec 来自 installed `molecular-dynamics` skill 与 AdK 旧分析；当前 runtime 无 MDAnalysis，且新 case 的 input/mapping/method profile 未冻结 |
 
 Skill 是程序性知识和 OperatorSpec 的来源，不等于 backend 已安装。Operator runtime 必须单独 probe。完整注册规则见 `docs/OPERATOR_REGISTRATION_ZH.md`。
@@ -83,6 +89,8 @@ PYTHONPATH=src python3 -m dynamics_atlas_harness run-prototype \
   --output-dir /tmp/dynamics-atlas-target-run \
   --run-id example-target-run
 ```
+
+独立 HSP90 canary 只在显式传入 `--canary-operator-id hsp90.directional_time_anatomy.v0` 时运行。它不会进入 case RunPlan。
 
 运行测试：
 

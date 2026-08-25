@@ -1,0 +1,44 @@
+{
+  "schema_version": "resolution-policies/v1",
+  "registry_id": "protein-dynamics-resolution-policies/v1",
+  "status": "PROPOSAL_ONLY",
+  "authority_boundary": "A policy may classify the next action. It cannot mark scientific evidence true, register an operator, or execute an operator without a separately frozen contract.",
+  "policies": [
+    {
+      "resolution_policy_id": "RP01_METADATA_OR_SOURCE_REVIEW",
+      "purpose": "Resolve missing declarative case or source fields before numerical analysis is considered.",
+      "allowed_routes": ["METADATA_REQUEST", "SOURCE_LOOKUP", "DIRECT_HUMAN_REVIEW", "ABSTAIN"],
+      "operator_route_allowed": false,
+      "fail_closed_route": "ABSTAIN_MISSING_DECLARATIVE_EVIDENCE",
+      "completion_evidence": ["source_locator", "typed_field_value", "provenance_receipt"],
+      "forbidden_actions": ["INFER_MISSING_VALUE_AS_FACT", "AUTO_PASS_RULE", "RUN_SCIENTIFIC_OPERATOR"]
+    },
+    {
+      "resolution_policy_id": "RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "purpose": "Resolve method-specific reliability, support, or representation-bridge gaps.",
+      "allowed_routes": ["METHOD_PROFILE_REVIEW", "SOURCE_LOOKUP", "REGISTERED_OPERATOR_PROPOSAL", "EXTRA_EXPERIMENT", "ABSTAIN"],
+      "operator_route_allowed": "ONLY_AFTER_ROSTER_PASS_AND_EXACT_CASE_INPUT_BINDING",
+      "fail_closed_route": "ABSTAIN_METHOD_OR_OPERATOR_CONTRACT_UNRESOLVED",
+      "completion_evidence": ["method_profile_id", "source_locator_or_operator_receipt", "evaluation_result"],
+      "forbidden_actions": ["MODEL_WRITES_ANALYSIS_CODE", "AUTO_REGISTER_OPERATOR", "TREAT_CANARY_PASS_AS_ROUTABLE", "AUTO_PASS_RULE"]
+    },
+    {
+      "resolution_policy_id": "RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "purpose": "Resolve an edge relation or validation-role gap while preserving non-comparability and dependence as valid outcomes.",
+      "allowed_routes": ["DIRECT_HUMAN_REVIEW", "SOURCE_LOOKUP", "REGISTERED_OPERATOR_PROPOSAL", "NOT_COMPARABLE", "ABSTAIN"],
+      "operator_route_allowed": "ONLY_FOR_A_FROZEN_BRIDGE_OR_DIAGNOSTIC_CONTRACT",
+      "fail_closed_route": "NOT_COMPARABLE_OR_HUMAN_REVIEW",
+      "completion_evidence": ["edge_id", "source_roles", "relation_type", "independence_status", "provenance_receipt"],
+      "forbidden_actions": ["AVERAGE_UNLIKE_OBSERVABLES", "UPGRADE_SAME_DATA_EVALUATION_TO_HELD_OUT", "AUTO_PASS_RULE"]
+    },
+    {
+      "resolution_policy_id": "RP04_HUMAN_CLAIM_CEILING",
+      "purpose": "Freeze the remaining hypothesis set, allowed wording, forbidden upgrades, and next human decision.",
+      "allowed_routes": ["LOWER_CLAIM_CEILING", "REQUEST_DISCRIMINATING_EVIDENCE", "HUMAN_REVIEW", "ABSTAIN"],
+      "operator_route_allowed": false,
+      "fail_closed_route": "HUMAN_REVIEW_OR_ABSTAIN",
+      "completion_evidence": ["evaluation_bundle_id", "allowed_claim", "forbidden_upgrades", "human_decision_receipt"],
+      "forbidden_actions": ["AUTONOMOUS_FINAL_VERDICT", "UPGRADE_COMPATIBILITY_TO_UNIQUENESS", "UPGRADE_ASSOCIATION_TO_MECHANISM"]
+    }
+  ]
+}

@@ -4,13 +4,15 @@
 
 ```text
 project: Dynamics Atlas Harness
-baseline: target-architecture-v0.2
+baseline: harness-control-plane-smoke-v0.2
 frozen_at: 2026-08-25
 primary_branch: main
 delivery_visibility: private
 ```
 
 这个 baseline 固定当前 Master Plan、Harness contracts、provider boundary、Rules workspace adapter、Evaluation Contract、RunPlan、registered-operator specs、tests 和一份脱敏的 milestone evidence summary。
+
+`target architecture` 是设计目标。这个 baseline 的已观察证据只到 control-plane smoke：一个真实旧 selector 被调用、case route 正确 blocked、一个独立 operator canary 成功。它不是完整 Agent Harness 或 Rules semantic prototype。
 
 ## Versioned in this repository
 

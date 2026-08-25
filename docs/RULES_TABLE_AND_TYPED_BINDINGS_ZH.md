@@ -67,3 +67,5 @@ Registry 中旧的 `integration_operator` 适合作为 action hint，不应直�
 3. `compiled_registry_rule_index_v0_3.json`：selector 运行输入与 compile receipt。
 
 未来 vNext 可以把重复的 paper-specific rows 合并成 generic family，并把 method-specific 差异下放到 method/operator profile；在人工冻结前，不改当前运行包。
+
+当前 `rules_prototype/v1/` 已把这个方向固定成八类 proposal。它同时保留 14-family 方法学地图、33-rule audit lineage、seed bindings、Resolution Policies 与 Evaluation Contracts。RF02 和 RF07 没有因为进入地图就自动升级为 active rule，RF12 也没有进入 scientific registry。该 package 通过人工审查以前，不编译进 v0.3 runtime。

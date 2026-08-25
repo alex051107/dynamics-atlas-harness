@@ -1,0 +1,484 @@
+{
+  "schema_version": "seed-rule-registry/v1",
+  "registry_id": "protein-dynamics-seed-rules/v1",
+  "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+  "scientific_authority": "HUMAN_REVIEW_REQUIRED",
+  "active_seed_family_count": 8,
+  "excluded_methodology_families": [
+    {
+      "family_id": "RF02",
+      "status": "CANDIDATE_PENDING_PRIMARY_CASE",
+      "reason": "Sample-composition admission needs a source-located primary-case replay before its applicability contract can be frozen."
+    },
+    {
+      "family_id": "RF07",
+      "status": "CANDIDATE_PENDING_MD_REPLAY",
+      "reason": "Claim-conditioned MD sampling needs an observable-specific replay before it can become an executable method profile."
+    },
+    {
+      "family_id": "RF12",
+      "status": "SYSTEM_COMPONENT",
+      "reason": "Post-selection action routing belongs to the Harness and registered-operator registry, not the scientific Rules Registry."
+    }
+  ],
+  "seed_families": [
+    {
+      "seed_id": "SP01",
+      "family_name": "Claim contract",
+      "source_family_ids": ["RF01"],
+      "runtime_targets": ["CASE"],
+      "reusable_question": "What exact scientific claim, intended use, observability target, and requested claim level are being evaluated?",
+      "source_anchors": [
+        {
+          "rule_id": "C010-RULE-001",
+          "paper_id": "sanabria_2020_transient_states",
+          "source_locator": "SAN-S02; SAN-S03; SAN-S04",
+          "source_passage_summary": "State existence, population, timescale, and function occupy distinct claim levels and require different supporting evidence.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C012-RULE-001",
+          "paper_id": "wankowicz_bonomi_2026_ensemble_prediction",
+          "source_locator": "WAN-S02; WAN-S03; WAN-S04",
+          "source_passage_summary": "An ensemble comparison unit is conditioned on claim, intended use, observable, forward model, and uncertainty rather than a universal structural score.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "scientific_claim": "Are the declared sources compatible with a two-state ensemble under their reported conditions?",
+          "requested_claim_level": "ENSEMBLE_COMPATIBILITY",
+          "intended_use": "SOURCE_LOCAL_REVIEW",
+          "observability_target": "TWO_STATE_COMPATIBILITY"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "intended_use",
+        "input": {
+          "scientific_claim": "Are the declared sources compatible with a two-state ensemble under their reported conditions?",
+          "requested_claim_level": "ENSEMBLE_COMPATIBILITY",
+          "intended_use": null,
+          "observability_target": "TWO_STATE_COMPATIBILITY"
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_ADMISSION",
+      "required_evidence": ["scientific_claim", "requested_claim_level", "intended_use", "observability_target"],
+      "resolution_policy_id": "RP01_METADATA_OR_SOURCE_REVIEW",
+      "evaluation_contract_id": "EC_SP01_CLAIM_CONTRACT",
+      "outcome_effects": {
+        "PASS": "CONTINUE_TO_SOURCE_CONTRACTS_WITHOUT_SCIENTIFIC_VERDICT",
+        "FAIL": "ABSTAIN_CLAIM_SCOPE_UNSUPPORTED",
+        "UNRESOLVED": "REQUEST_MISSING_CASE_METADATA"
+      },
+      "claim_ceiling": "The case question and intended use are well specified; no source evidence or scientific conclusion is validated."
+    },
+    {
+      "seed_id": "SP02",
+      "family_name": "Source measurement contract",
+      "source_family_ids": ["RF03", "RF04"],
+      "runtime_targets": ["SOURCE", "EDGE"],
+      "reusable_question": "What native observable and estimand does the source provide, under what time, spatial, averaging, and statistical support?",
+      "source_anchors": [
+        {
+          "rule_id": "C005-RULE-001",
+          "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+          "source_locator": "FUE-S01; FUE-S02; FUE-S04",
+          "source_passage_summary": "A global radius of gyration and a terminal dye-distance observable have different spatial support, averaging, and inverse-model assumptions.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C010-RULE-002",
+          "paper_id": "sanabria_2020_transient_states",
+          "source_locator": "SAN-S03; SAN-S04",
+          "source_passage_summary": "State inference remains tied to the declared pair coverage, time window, and model semantics.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "data_object_type": "ENSEMBLE_AVERAGED_OBSERVABLE",
+          "native_observable": "RADIUS_OF_GYRATION",
+          "estimand": "ENSEMBLE_MEAN_RG",
+          "correction_or_calibration_semantics": "SOURCE_REPORTED",
+          "time_semantics": "ENSEMBLE_AVERAGE",
+          "observation_window": "SOURCE_REPORTED",
+          "spatial_support": "GLOBAL_PROTEIN",
+          "averaging_assumption": "ENSEMBLE_AVERAGE",
+          "unit_or_aggregation": "ONE_SOURCE_LEVEL_ESTIMATE"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "time_semantics",
+        "input": {
+          "data_object_type": "ENSEMBLE_AVERAGED_OBSERVABLE",
+          "native_observable": "RADIUS_OF_GYRATION",
+          "estimand": "ENSEMBLE_MEAN_RG",
+          "correction_or_calibration_semantics": "SOURCE_REPORTED",
+          "time_semantics": null,
+          "observation_window": "SOURCE_REPORTED",
+          "spatial_support": "GLOBAL_PROTEIN",
+          "averaging_assumption": "ENSEMBLE_AVERAGE",
+          "unit_or_aggregation": "ONE_SOURCE_LEVEL_ESTIMATE"
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_SOURCE_CONTRACT",
+      "required_evidence": ["data_object_type", "native_observable", "estimand", "correction_or_calibration_semantics", "time_semantics", "observation_window", "spatial_support", "averaging_assumption", "unit_or_aggregation"],
+      "resolution_policy_id": "RP01_METADATA_OR_SOURCE_REVIEW",
+      "evaluation_contract_id": "EC_SP02_SOURCE_MEASUREMENT",
+      "outcome_effects": {
+        "PASS": "PRESERVE_SOURCE_NATIVE_REPRESENTATION",
+        "FAIL": "BLOCK_INCOMPATIBLE_MEASUREMENT_CLAIM",
+        "UNRESOLVED": "REQUEST_SOURCE_MEASUREMENT_METADATA"
+      },
+      "claim_ceiling": "The source measurement contract is explicit; equivalence to another source or a biological interpretation is not established."
+    },
+    {
+      "seed_id": "SP03",
+      "family_name": "Source reliability contract",
+      "source_family_ids": ["RF05", "RF06"],
+      "runtime_targets": ["SOURCE"],
+      "reusable_question": "Are calibration, uncertainty, material artifacts, and alternative explanations source-linked and appropriate to the method?",
+      "source_anchors": [
+        {
+          "rule_id": "C001-RULE-002",
+          "paper_id": "hellenkamp_2018_smfret_benchmark",
+          "source_locator": "HEL-S01; HEL-S03; HEL-S05",
+          "source_passage_summary": "Uncertainty must include method-specific correction and model components; this anchor is smFRET-specific and cannot support a generic cross-modality predicate alone.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C008-RULE-002",
+          "paper_id": "hoff_2024_emmivox_cryoem",
+          "source_locator": "HOF-S03; HOF-S05",
+          "source_passage_summary": "Conformational heterogeneity must be distinguished from noise and preprocessing alternatives with method-specific controls.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "calibration_status": "SOURCE_LINKED",
+          "measurement_uncertainty": "REPORTED",
+          "systematic_or_model_uncertainty": "REPORTED",
+          "source_locator": "SOURCE-LOCATOR-001",
+          "method_specific_controls": "METHOD_PROFILE_DECLARED",
+          "perturbation_checks": "SOURCE_REPORTED",
+          "negative_controls": "SOURCE_REPORTED",
+          "detection_boundary": "DECLARED"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "source_locator",
+        "input": {
+          "calibration_status": "SOURCE_LINKED",
+          "measurement_uncertainty": "REPORTED",
+          "systematic_or_model_uncertainty": "REPORTED",
+          "source_locator": null,
+          "method_specific_controls": "METHOD_PROFILE_DECLARED",
+          "perturbation_checks": "SOURCE_REPORTED",
+          "negative_controls": "SOURCE_REPORTED",
+          "detection_boundary": "DECLARED"
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "REQUIRED_BEFORE_SOURCE_RELIABILITY_CLAIM",
+      "required_evidence": ["calibration_status", "measurement_uncertainty", "systematic_or_model_uncertainty", "source_locator", "method_specific_controls", "perturbation_checks", "negative_controls", "detection_boundary"],
+      "resolution_policy_id": "RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "evaluation_contract_id": "EC_SP03_SOURCE_RELIABILITY",
+      "outcome_effects": {
+        "PASS": "ALLOW_BOUNDED_SOURCE_LOCAL_RELIABILITY_STATEMENT",
+        "FAIL": "BLOCK_RELIABILITY_UPGRADE_AND_PRESERVE_ALTERNATIVE_EXPLANATION",
+        "UNRESOLVED": "REQUEST_METHOD_PROFILE_OR_SOURCE_CONTROL_EVIDENCE"
+      },
+      "claim_ceiling": "Controls and uncertainty are documented for the declared method; they do not prove absence of all artifacts or validate another modality."
+    },
+    {
+      "seed_id": "SP04",
+      "family_name": "Candidate support and representation bridge contract",
+      "source_family_ids": ["RF08", "RF09"],
+      "runtime_targets": ["CASE", "SOURCE", "EDGE"],
+      "reusable_question": "What generated the candidate support, and what validated model connects that support to the measured observable within its declared domain?",
+      "source_anchors": [
+        {
+          "rule_id": "C003-RULE-002",
+          "paper_id": "dimura_2020_fret_assisted_modeling",
+          "source_locator": "DIM-S03; DIM-S05",
+          "source_passage_summary": "A good fit cannot create a fold or state absent from the initial candidate support.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C006-RULE-001",
+          "paper_id": "shevchuk_2017_bayesian_saxs_refinement",
+          "source_locator": "SH-S02; SH-S04",
+          "source_passage_summary": "Ensemble refinement requires an explicit forward model, physical prior, nuisance-error model, and uncertainty description.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "generator": "SOURCE_REPORTED_PRIOR",
+          "support_lineage": "TRACEABLE",
+          "prior_weights_or_exposure": "DECLARED",
+          "missing_state_audit": "PERFORMED",
+          "model_name_and_version": "FORWARD_MODEL_V1",
+          "model_inputs": "DECLARED",
+          "model_domain": "DECLARED",
+          "averaging_law": "DECLARED",
+          "nuisance_or_error_model": "DECLARED",
+          "validation": "SOURCE_REPORTED",
+          "source_locator": "SOURCE-LOCATOR-002"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "validation",
+        "input": {
+          "generator": "SOURCE_REPORTED_PRIOR",
+          "support_lineage": "TRACEABLE",
+          "prior_weights_or_exposure": "DECLARED",
+          "missing_state_audit": "PERFORMED",
+          "model_name_and_version": "FORWARD_MODEL_V1",
+          "model_inputs": "DECLARED",
+          "model_domain": "DECLARED",
+          "averaging_law": "DECLARED",
+          "nuisance_or_error_model": "DECLARED",
+          "validation": null,
+          "source_locator": "SOURCE-LOCATOR-002"
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_MODEL_BASED_INFERENCE",
+      "required_evidence": ["generator", "support_lineage", "prior_weights_or_exposure", "missing_state_audit", "model_name_and_version", "model_inputs", "model_domain", "averaging_law", "nuisance_or_error_model", "validation", "source_locator"],
+      "resolution_policy_id": "RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "evaluation_contract_id": "EC_SP04_SUPPORT_AND_BRIDGE",
+      "outcome_effects": {
+        "PASS": "ALLOW_COMPARISON_WITHIN_DECLARED_SUPPORT_AND_MODEL_DOMAIN",
+        "FAIL": "BLOCK_MODEL_BASED_INFERENCE_OR_REVISE_SUPPORT",
+        "UNRESOLVED": "REQUEST_SUPPORT_LINEAGE_OR_MODEL_CONTRACT"
+      },
+      "claim_ceiling": "The candidate support and representation bridge are traceable within their declared domain; unique-state discovery and population truth are not established."
+    },
+    {
+      "seed_id": "SP05",
+      "family_name": "Cross-source comparability contract",
+      "source_family_ids": ["RF10"],
+      "runtime_targets": ["EDGE"],
+      "reusable_question": "Which relation is scientifically valid between the two source-native measurements under their declared conditions and bridge?",
+      "source_anchors": [
+        {
+          "rule_id": "C005-RULE-002",
+          "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+          "source_locator": "FUE-S03; FUE-S04; FUE-S05",
+          "source_passage_summary": "A reproducible cross-modal discrepancy can be informative and should not be erased by averaging unlike observables.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C009-RULE-001",
+          "paper_id": "peter_2022_deer_smfret_crossvalidation",
+          "source_locator": "PET-S01; PET-S02; PET-S05",
+          "source_passage_summary": "Nominally similar distance measurements remain conditioned on probe chemistry, physical state, averaging law, and protocol.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "shared_claim": "DECLARED",
+          "condition_comparison": "MATCHED_OR_EXPLICITLY_DIFFERENT",
+          "estimand_time_spatial_comparison": "DECLARED",
+          "bridge_type": "QUALITATIVE_TRIANGULATION",
+          "bridge_status": "AVAILABLE"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "bridge_status",
+        "input": {
+          "shared_claim": "DECLARED",
+          "condition_comparison": "MATCHED_OR_EXPLICITLY_DIFFERENT",
+          "estimand_time_spatial_comparison": "DECLARED",
+          "bridge_type": "QUALITATIVE_TRIANGULATION",
+          "bridge_status": null
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_CROSS_SOURCE_CLAIM",
+      "required_evidence": ["shared_claim", "condition_comparison", "estimand_time_spatial_comparison", "bridge_type", "bridge_status"],
+      "resolution_policy_id": "RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "evaluation_contract_id": "EC_SP05_COMPARABILITY",
+      "outcome_effects": {
+        "PASS": "EMIT_DECLARED_RELATION_TYPE_ONLY",
+        "FAIL": "NOT_COMPARABLE_PRESERVE_SOURCES_SEPARATELY",
+        "UNRESOLVED": "REQUEST_EDGE_METADATA_OR_BRIDGE_REVIEW"
+      },
+      "claim_ceiling": "The declared relation type is admissible for this edge; numeric equivalence, shared population, or causal agreement is not implied."
+    },
+    {
+      "seed_id": "SP06",
+      "family_name": "Evidence role and validation-independence contract",
+      "source_family_ids": ["RF11"],
+      "runtime_targets": ["CASE", "SOURCE", "EDGE"],
+      "reusable_question": "What role does each source play, is validation independent, and could shared data or errors inflate apparent agreement?",
+      "source_anchors": [
+        {
+          "rule_id": "C003-RULE-003",
+          "paper_id": "dimura_2020_fret_assisted_modeling",
+          "source_locator": "DIM-S03; DIM-S04; DIM-S05",
+          "source_passage_summary": "Fit agreement, model uncertainty, and independent validation are separate quantities and must retain separate roles.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C007-RULE-003",
+          "paper_id": "bengtsen_2020_multimodal_nanodisc",
+          "source_locator": "BEN-S03; BEN-S05",
+          "source_passage_summary": "Joint evidence requires explicit source independence, condition matching, and shared-error assessment; agreement alone can be overconfident.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "evidence_roles": "CONSTRUCTION_AND_HELD_OUT_VALIDATION_DISTINCT",
+          "data_lineage": "TRACEABLE",
+          "validation_independence": "HELD_OUT",
+          "condition_match": "MATCHED",
+          "shared_error_assessment": "NO_MATERIAL_SHARED_ERROR_IDENTIFIED"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "validation_independence",
+        "input": {
+          "evidence_roles": "CONSTRUCTION_AND_HELD_OUT_VALIDATION_DISTINCT",
+          "data_lineage": "TRACEABLE",
+          "validation_independence": null,
+          "condition_match": "MATCHED",
+          "shared_error_assessment": "NO_MATERIAL_SHARED_ERROR_IDENTIFIED"
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_VALIDATION_UPGRADE",
+      "required_evidence": ["evidence_roles", "data_lineage", "validation_independence", "condition_match", "shared_error_assessment"],
+      "resolution_policy_id": "RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "evaluation_contract_id": "EC_SP06_EVIDENCE_ROLE",
+      "outcome_effects": {
+        "PASS": "PRESERVE_EXACT_ROLE_AND_INDEPENDENCE_STATUS",
+        "FAIL": "DOWNGRADE_VALIDATION_ROLE_AND_BLOCK_INDEPENDENCE_CLAIM",
+        "UNRESOLVED": "REQUEST_LINEAGE_OR_SHARED_ERROR_REVIEW"
+      },
+      "claim_ceiling": "The recorded role and independence status may be reported; only explicit held-out evidence may support a held-out label."
+    },
+    {
+      "seed_id": "SP07",
+      "family_name": "Identifiability and hypothesis-set contract",
+      "source_family_ids": ["RF13"],
+      "runtime_targets": ["CASE"],
+      "reusable_question": "Can current evidence discriminate the candidate hypotheses after prior sensitivity, missing support, and independent evidence are considered?",
+      "source_anchors": [
+        {
+          "rule_id": "C012-RULE-002",
+          "paper_id": "wankowicz_bonomi_2026_ensemble_prediction",
+          "source_locator": "WAN-S04; WAN-S05",
+          "source_passage_summary": "Multimodal agreement can remain non-identifying because shared errors, prior dominance, and missing states preserve multiple compatible ensembles.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C006-RULE-003",
+          "paper_id": "shevchuk_2017_bayesian_saxs_refinement",
+          "source_locator": "SH-S02; SH-S05",
+          "source_passage_summary": "Inference can quantify uncertainty within candidate support but cannot create an omitted state.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "candidate_hypotheses": "EXPLICIT_SET",
+          "prior_sensitivity": "ASSESSED",
+          "missing_state_check": "ASSESSED",
+          "independent_evidence": "ROLE_DECLARED",
+          "discriminating_action": "DECLARED"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "discriminating_action",
+        "input": {
+          "candidate_hypotheses": "EXPLICIT_SET",
+          "prior_sensitivity": "ASSESSED",
+          "missing_state_check": "ASSESSED",
+          "independent_evidence": "ROLE_DECLARED",
+          "discriminating_action": null
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "BLOCKING_UNIQUE_STATE_OR_MECHANISM_CLAIM",
+      "required_evidence": ["candidate_hypotheses", "prior_sensitivity", "missing_state_check", "independent_evidence", "discriminating_action"],
+      "resolution_policy_id": "RP04_HUMAN_CLAIM_CEILING",
+      "evaluation_contract_id": "EC_SP07_IDENTIFIABILITY",
+      "outcome_effects": {
+        "PASS": "REPORT_DISCRIMINATED_OR_REMAINING_HYPOTHESIS_SET",
+        "FAIL": "NON_IDENTIFIABLE_OR_MISSING_SUPPORT",
+        "UNRESOLVED": "REQUEST_DISCRIMINATING_EVIDENCE_OR_ABSTAIN"
+      },
+      "claim_ceiling": "The remaining hypothesis set and its limits may be reported; a compatible ensemble cannot be labeled as unique truth."
+    },
+    {
+      "seed_id": "SP08",
+      "family_name": "Claim ceiling and human-decision contract",
+      "source_family_ids": ["RF14"],
+      "runtime_targets": ["CASE", "HUMAN"],
+      "reusable_question": "Given the evidence status, what wording is allowed, what upgrades are forbidden, and what decision remains with a human?",
+      "source_anchors": [
+        {
+          "rule_id": "C010-RULE-003",
+          "paper_id": "sanabria_2020_transient_states",
+          "source_locator": "SAN-S04; SAN-S05",
+          "source_passage_summary": "Compatibility screening can reveal an unexplained residual but cannot determine an unknown state's coordinates or mechanism without more evidence.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        },
+        {
+          "rule_id": "C012-RULE-003",
+          "paper_id": "wankowicz_bonomi_2026_ensemble_prediction",
+          "source_locator": "WAN-S03; WAN-S05",
+          "source_passage_summary": "A benchmark output should retain evidence lineage, uncertainty, allowed and forbidden claims, validation status, and the next discriminating action.",
+          "passage_kind": "UPSTREAM_AUTHORING_SUMMARY_NOT_VERBATIM"
+        }
+      ],
+      "positive_fixture": {
+        "input": {
+          "evidence_status": "BOUNDED_DEVELOPMENT_EVIDENCE",
+          "allowed_claim": "SOURCE_LOCAL_COMPATIBILITY_ONLY",
+          "forbidden_upgrades": "DECLARED",
+          "uncertainty": "VISIBLE",
+          "next_action": "HUMAN_REVIEW",
+          "human_decision": "RECORDED"
+        },
+        "expected_outcome": "PASS"
+      },
+      "one_field_negative_fixture": {
+        "changed_path": "human_decision",
+        "input": {
+          "evidence_status": "BOUNDED_DEVELOPMENT_EVIDENCE",
+          "allowed_claim": "SOURCE_LOCAL_COMPATIBILITY_ONLY",
+          "forbidden_upgrades": "DECLARED",
+          "uncertainty": "VISIBLE",
+          "next_action": "HUMAN_REVIEW",
+          "human_decision": null
+        },
+        "expected_outcome": "UNRESOLVED"
+      },
+      "blocking_priority": "TERMINAL_HUMAN_GATE",
+      "required_evidence": ["evidence_status", "allowed_claim", "forbidden_upgrades", "uncertainty", "next_action", "human_decision"],
+      "resolution_policy_id": "RP04_HUMAN_CLAIM_CEILING",
+      "evaluation_contract_id": "EC_SP08_CLAIM_CEILING",
+      "outcome_effects": {
+        "PASS": "EMIT_HUMAN_APPROVED_BOUNDED_CLAIM",
+        "FAIL": "ABSTAIN_OR_LOWER_CLAIM_CEILING",
+        "UNRESOLVED": "HUMAN_REVIEW_REQUIRED"
+      },
+      "claim_ceiling": "Only the human-approved bounded wording may be emitted; the Harness cannot promote the claim or replace scientific judgment."
+    }
+  ]
+}

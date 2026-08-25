@@ -1,0 +1,88 @@
+{
+  "schema_version": "seed-bindings/v1",
+  "package_id": "protein-dynamics-seed-bindings/v1",
+  "status": "PROPOSAL_ONLY_NOT_COMPILED",
+  "binding_semantics": "Bindings declare typed applicability and required paths. They do not contain scientific source authority and do not execute operators.",
+  "bindings": [
+    {
+      "binding_id": "SB01_CASE_CLAIM_CONTRACT",
+      "seed_id": "SP01",
+      "scope": "CASE",
+      "applicability": {"operator": "ALWAYS", "path": "case"},
+      "required_paths": ["case.scientific_claim", "case.requested_claim_level", "case.intended_use", "case.observability_target"],
+      "resolution_policy_id": "RP01_METADATA_OR_SOURCE_REVIEW",
+      "evaluation_contract_id": "EC_SP01_CLAIM_CONTRACT",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB02_SOURCE_MEASUREMENT_CONTRACT",
+      "seed_id": "SP02",
+      "scope": "SOURCE",
+      "applicability": {"operator": "FOR_EACH", "path": "evidence_items"},
+      "required_paths": ["source.data_object_type", "source.native_observable", "source.estimand", "source.correction_or_calibration_semantics", "source.time_semantics", "source.observation_window", "source.spatial_support", "source.averaging_assumption", "source.unit_or_aggregation"],
+      "resolution_policy_id": "RP01_METADATA_OR_SOURCE_REVIEW",
+      "evaluation_contract_id": "EC_SP02_SOURCE_MEASUREMENT",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB03_SOURCE_RELIABILITY_CONTRACT",
+      "seed_id": "SP03",
+      "scope": "SOURCE",
+      "applicability": {"operator": "FOR_EACH_EVIDENTIARY_SOURCE", "path": "evidence_items", "method_profile_required": true},
+      "required_paths": ["source.calibration_status", "source.measurement_uncertainty", "source.systematic_or_model_uncertainty", "source.source_locator", "source.method_specific_controls", "source.perturbation_checks", "source.negative_controls", "source.detection_boundary"],
+      "resolution_policy_id": "RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "evaluation_contract_id": "EC_SP03_SOURCE_RELIABILITY",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB04_SUPPORT_AND_BRIDGE_CONTRACT",
+      "seed_id": "SP04",
+      "scope": "SOURCE",
+      "applicability": {"operator": "ANY", "conditions": [{"path": "source.evidence_role", "in": ["CANDIDATE_SUPPORT", "PRIOR", "MODEL_PREDICTION", "REFINEMENT"]}, {"path": "source.forward_or_inverse_model", "exists": true}]},
+      "required_paths": ["source.generator", "source.support_lineage", "source.prior_weights_or_exposure", "source.missing_state_audit", "source.model_name_and_version", "source.model_inputs", "source.model_domain", "source.averaging_law", "source.nuisance_or_error_model", "source.validation", "source.source_locator"],
+      "resolution_policy_id": "RP02_METHOD_PROFILE_REVIEW_OR_OPERATOR_PROPOSAL",
+      "evaluation_contract_id": "EC_SP04_SUPPORT_AND_BRIDGE",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB05_EDGE_COMPARABILITY_CONTRACT",
+      "seed_id": "SP05",
+      "scope": "EDGE",
+      "applicability": {"operator": "FOR_EACH", "path": "comparisons"},
+      "required_paths": ["edge.shared_claim", "edge.condition_comparison", "edge.estimand_time_spatial_comparison", "edge.bridge_type", "edge.bridge_status"],
+      "resolution_policy_id": "RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "evaluation_contract_id": "EC_SP05_COMPARABILITY",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB06_EVIDENCE_ROLE_AND_INDEPENDENCE_CONTRACT",
+      "seed_id": "SP06",
+      "scope": "EDGE",
+      "applicability": {"operator": "ANY", "conditions": [{"path": "case.source_count", "greater_than": 1}, {"path": "edge.claims_validation", "equals": true}]},
+      "required_paths": ["edge.evidence_roles", "edge.data_lineage", "edge.validation_independence", "edge.condition_match", "edge.shared_error_assessment"],
+      "resolution_policy_id": "RP03_COMPARABILITY_OR_HUMAN_STOP",
+      "evaluation_contract_id": "EC_SP06_EVIDENCE_ROLE",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB07_CASE_IDENTIFIABILITY_CONTRACT",
+      "seed_id": "SP07",
+      "scope": "CASE",
+      "applicability": {"operator": "ANY", "conditions": [{"path": "case.requested_claim_level", "in": ["STATE_IDENTIFICATION", "ENSEMBLE_INFERENCE", "POPULATION", "KINETICS", "MECHANISM"]}, {"path": "case.candidate_hypothesis_count", "greater_than": 1}]},
+      "required_paths": ["case.candidate_hypotheses", "case.prior_sensitivity", "case.missing_state_check", "case.independent_evidence", "case.discriminating_action"],
+      "resolution_policy_id": "RP04_HUMAN_CLAIM_CEILING",
+      "evaluation_contract_id": "EC_SP07_IDENTIFIABILITY",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "binding_id": "SB08_CASE_CLAIM_CEILING_CONTRACT",
+      "seed_id": "SP08",
+      "scope": "CASE",
+      "applicability": {"operator": "AFTER_EVALUATION", "path": "evaluation_bundle"},
+      "required_paths": ["evaluation.evidence_status", "evaluation.allowed_claim", "evaluation.forbidden_upgrades", "evaluation.uncertainty", "evaluation.next_action", "evaluation.human_decision"],
+      "resolution_policy_id": "RP04_HUMAN_CLAIM_CEILING",
+      "evaluation_contract_id": "EC_SP08_CLAIM_CEILING",
+      "activation_status": "HUMAN_REVIEW_REQUIRED"
+    }
+  ]
+}

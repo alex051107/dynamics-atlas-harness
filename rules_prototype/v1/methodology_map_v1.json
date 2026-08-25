@@ -1,0 +1,152 @@
+{
+  "schema_version": "rules-methodology-map/v1",
+  "map_id": "protein-dynamics-review-led-methodology/v1",
+  "status": "PROPOSAL_ONLY",
+  "source_authority": "UPSTREAM_REVIEW_LED_AUDIT",
+  "design_rule": "Keep scientific reasoning order separate from runtime target type.",
+  "families": [
+    {
+      "family_id": "RF01",
+      "layer_id": "M0",
+      "family_name": "Claim contract and intended use",
+      "scientific_question": "What exact scientific claim, intended use, observability target, and claim level are being evaluated?",
+      "runtime_scope": ["CASE"],
+      "minimum_evidence": ["scientific_claim", "requested_claim_level", "intended_use", "observability_target"],
+      "fail_closed_route": ["CLAIM_CONTRACT_UNDEFINED"],
+      "prototype_disposition": "ACTIVE_AS_SP01"
+    },
+    {
+      "family_id": "RF02",
+      "layer_id": "M0",
+      "family_name": "System condition and sample-composition admission",
+      "scientific_question": "Do sources represent the same construct, chemical species, sample composition, and relevant condition?",
+      "runtime_scope": ["CASE", "SOURCE", "EDGE"],
+      "minimum_evidence": ["construct", "sequence_or_modification", "sample_composition", "buffer", "temperature", "label_or_probe", "physical_state"],
+      "fail_closed_route": ["SAMPLE_COMPOSITION_UNRESOLVED", "CONDITION_MISMATCH"],
+      "prototype_disposition": "CANDIDATE_PENDING_PRIMARY_CASE",
+      "exclusion_reason": "The review supports a candidate stop route, but no primary-case replay has frozen its applicability contract."
+    },
+    {
+      "family_id": "RF03",
+      "layer_id": "M1",
+      "family_name": "Native observable and estimand",
+      "scientific_question": "What data object, native observable, and estimand does each source provide?",
+      "runtime_scope": ["SOURCE", "EDGE"],
+      "minimum_evidence": ["data_object_type", "native_observable", "estimand", "correction_or_calibration_semantics"],
+      "fail_closed_route": ["OBSERVABLE_OR_ESTIMAND_UNDEFINED"],
+      "prototype_disposition": "MERGED_INTO_SP02"
+    },
+    {
+      "family_id": "RF04",
+      "layer_id": "M1",
+      "family_name": "Time spatial and statistical support",
+      "scientific_question": "What time semantics, spatial support, averaging law, and statistical unit apply?",
+      "runtime_scope": ["SOURCE", "EDGE"],
+      "minimum_evidence": ["time_semantics", "observation_window", "spatial_support", "averaging_assumption", "unit_or_aggregation"],
+      "fail_closed_route": ["SUPPORT_OR_TIME_SEMANTICS_UNDEFINED"],
+      "prototype_disposition": "MERGED_INTO_SP02"
+    },
+    {
+      "family_id": "RF05",
+      "layer_id": "M2",
+      "family_name": "Calibration and uncertainty provenance",
+      "scientific_question": "Are calibration and uncertainty components source-linked and appropriate to the method?",
+      "runtime_scope": ["SOURCE"],
+      "minimum_evidence": ["calibration_status", "measurement_uncertainty", "systematic_or_model_uncertainty", "source_locator"],
+      "fail_closed_route": ["UNCERTAINTY_PROVENANCE_UNRESOLVED"],
+      "prototype_disposition": "MERGED_INTO_SP03"
+    },
+    {
+      "family_id": "RF06",
+      "layer_id": "M2",
+      "family_name": "Artifact and alternative-explanation controls",
+      "scientific_question": "Have material artifacts and alternative explanations been checked for this modality?",
+      "runtime_scope": ["SOURCE"],
+      "minimum_evidence": ["method_specific_controls", "perturbation_checks", "negative_controls", "detection_boundary"],
+      "fail_closed_route": ["ALTERNATIVE_EXPLANATION_UNRESOLVED"],
+      "prototype_disposition": "MERGED_INTO_SP03"
+    },
+    {
+      "family_id": "RF07",
+      "layer_id": "M2",
+      "family_name": "Claim-conditioned sampling and observability",
+      "scientific_question": "Is a simulation source observable for the claim within the available window and sampling design?",
+      "runtime_scope": ["SOURCE"],
+      "minimum_evidence": ["observation_window", "equilibration_basis", "replicate_identity", "recurrence", "claim_conditioned_autocorrelation_or_ess"],
+      "fail_closed_route": ["SAMPLING_ADEQUACY_UNRESOLVED"],
+      "prototype_disposition": "CANDIDATE_PENDING_MD_REPLAY",
+      "exclusion_reason": "The review supports a method-profile candidate, but no MD replay has frozen its observable-specific contract."
+    },
+    {
+      "family_id": "RF08",
+      "layer_id": "M3",
+      "family_name": "Candidate support and prior lineage",
+      "scientific_question": "Does the candidate support contain the states needed for the inference, and what prior generated it?",
+      "runtime_scope": ["CASE", "SOURCE"],
+      "minimum_evidence": ["generator", "support_lineage", "prior_weights_or_exposure", "missing_state_audit"],
+      "fail_closed_route": ["CANDIDATE_SUPPORT_UNVERIFIED", "MISSING_STATE_SUPPORT"],
+      "prototype_disposition": "MERGED_INTO_SP04"
+    },
+    {
+      "family_id": "RF09",
+      "layer_id": "M3",
+      "family_name": "Forward or inverse model contract",
+      "scientific_question": "What model connects the latent representation to the measured observable, and where is it valid?",
+      "runtime_scope": ["SOURCE", "EDGE"],
+      "minimum_evidence": ["model_name_and_version", "inputs", "domain", "averaging_law", "nuisance_or_error_model", "validation", "source_locator"],
+      "fail_closed_route": ["FORWARD_MODEL_UNVERIFIED", "INVERSE_MODEL_UNSUPPORTED"],
+      "prototype_disposition": "MERGED_INTO_SP04"
+    },
+    {
+      "family_id": "RF10",
+      "layer_id": "M4",
+      "family_name": "Cross-source comparability and relation type",
+      "scientific_question": "What scientific relation is valid between the two sources?",
+      "runtime_scope": ["EDGE"],
+      "minimum_evidence": ["shared_claim", "condition_comparison", "estimand_time_spatial_comparison", "bridge_type_and_status"],
+      "fail_closed_route": ["NOT_COMPARABLE", "BRIDGE_UNAVAILABLE"],
+      "prototype_disposition": "ACTIVE_AS_SP05"
+    },
+    {
+      "family_id": "RF11",
+      "layer_id": "M4",
+      "family_name": "Evidence role independence and shared error",
+      "scientific_question": "Which evidence role does each source play, is validation independent, and are errors shared?",
+      "runtime_scope": ["CASE", "SOURCE", "EDGE"],
+      "minimum_evidence": ["evidence_roles", "data_lineage", "validation_independence", "condition_match", "shared_error_assessment"],
+      "fail_closed_route": ["VALIDATION_NOT_INDEPENDENT", "SHARED_ERROR_UNRESOLVED"],
+      "prototype_disposition": "ACTIVE_AS_SP06"
+    },
+    {
+      "family_id": "RF12",
+      "layer_id": "M5",
+      "family_name": "Action and registered-operator contract",
+      "scientific_question": "Can an unresolved obligation be answered directly, by a registered analysis, by a new experiment, or not at all?",
+      "runtime_scope": ["POST_SELECTION_ACTION"],
+      "minimum_evidence": ["action_type", "operator_id", "allowed_inputs", "output_schema", "resource_and_safety_limits", "failure_path"],
+      "fail_closed_route": ["NEEDS_REGISTERED_OPERATOR", "EXTRA_EXPERIMENT_REQUIRED"],
+      "prototype_disposition": "SYSTEM_COMPONENT",
+      "exclusion_reason": "Routing is a Harness responsibility and must not masquerade as a scientific rule."
+    },
+    {
+      "family_id": "RF13",
+      "layer_id": "M6",
+      "family_name": "Identifiability and hypothesis set",
+      "scientific_question": "Can current evidence distinguish compatible hypotheses under prior, support, and shared-error limits?",
+      "runtime_scope": ["CASE"],
+      "minimum_evidence": ["candidate_hypotheses", "prior_sensitivity", "missing_state_check", "independent_evidence", "discriminating_action"],
+      "fail_closed_route": ["NON_IDENTIFIABLE_OR_MISSING_SUPPORT"],
+      "prototype_disposition": "ACTIVE_AS_SP07"
+    },
+    {
+      "family_id": "RF14",
+      "layer_id": "M6",
+      "family_name": "Claim ceiling next action and human decision",
+      "scientific_question": "What conclusion is allowed, which upgrades are forbidden, and who decides the next action?",
+      "runtime_scope": ["CASE", "HUMAN"],
+      "minimum_evidence": ["evidence_status", "allowed_claim", "forbidden_upgrades", "uncertainty", "next_action", "human_decision"],
+      "fail_closed_route": ["HUMAN_REQUIRED", "ABSTAIN"],
+      "prototype_disposition": "ACTIVE_AS_SP08"
+    }
+  ]
+}
