@@ -1,64 +1,72 @@
 # Dynamics Atlas 当前执行计划与停止点
 
-`DA-HARNESS-FROZEN-PLAN-v1.0` 已成为本仓库后续工作的控制计划。现在只允许核对开放中的 PR #1 是否满足 PR0 和 PR1 的 Exit Gate，并整理一份 `PASS / PARTIAL / FAIL / DEVIATION` 审查包。PR2 至 PR8 均未获授权。
+`DA-HARNESS-FROZEN-PLAN-v1.0` 继续控制本仓库的后续工作。原合并 PR #1 已收到 `CHANGES_REQUESTED`，改名为 proposal 并在未合并的情况下关闭，branch 与 commit 保留。独立 PR0 已提交为 GitHub [PR #3](https://github.com/alex051107/dynamics-atlas-harness/pull/3)，当前为 OPEN/CLEAN，远端 unit CI 通过。
 
 ## 第一屏结论
 
 | 问题 | 当前答案 |
 | --- | --- |
-| 现在在做什么 | 固化执行计划，并把 PR #1 放回 PR0、PR1 Exit Gate 下审查 |
-| 为什么停在这里 | PR #1 在计划采纳前创建，合并了 PR0 边界修正和部分 PR1 Rules Prototype 工作，不能追溯声明为按计划分支执行 |
-| 已经固定什么 | 计划原文、PR 顺序、当前授权、停止点、偏差记录和 PR 报告字段 |
-| 现有证据支持什么 | 支持“计划已经前瞻生效，下一动作只限 PR0/PR1 审查” |
-| 尚未解决什么 | PR0、PR1 的完整 Exit Gate，PR #1 的人工处置，以及 PR1 的科学批准 |
+| 现在在做什么 | 等待人工审查独立 PR0 的 baseline 与 Operator lifecycle 修正 |
+| 为什么停在这里 | Frozen Plan 要求 PR0 先独立审查和合并，修订 PR1 不能提前创建 |
+| 已经固定什么 | CHANGES_REQUESTED、原 PR 的 superseded 状态、PR0 diff、测试结果和 PR1 修复清单 |
+| 现有证据支持什么 | 支持 control-plane smoke 命名、canary 隔离和 ROSTER-only routing gate |
+| 尚未解决什么 | PR0 人工 merge decision，以及 PR1 的 source、scope、schema、policy、Human Gate、behavioral fixtures 和科学批准 |
+
+GitHub PR #3 是平台自动编号，不代表 Frozen Plan 阶段 PR3。Frozen Plan PR2 至 PR8 仍为 `NOT_AUTHORIZED`。
 
 ## 当前授权
 
 | 阶段 | 状态 | 当前处理 |
 | --- | --- | --- |
-| PR0 Baseline Boundary Normalization | 合并在开放 PR #1 中，尚未按 Exit Gate 完整审查 | 只读核对并记录缺口 |
-| PR1 Rules Prototype v1 | 部分实现在开放 PR #1 中，尚未按 Exit Gate 完整审查 | 生成统一审查包，交给人工决定 |
+| PR0 Baseline Boundary Normalization | 独立 PR #3 已开放，本地 focused tests 和远端 CI 通过 | 只读审查并作出人工 merge decision |
+| PR1 Rules Prototype v1 | `CHANGES_REQUESTED`，原合并 PR 已关闭且未合并 | 只保留修复清单，不创建 replacement branch |
 | PR2 至 PR8 | `NOT_AUTHORIZED` | 不建分支，不改代码，不运行对应实验 |
 
-允许的下一动作只有以下四项。
+允许的下一动作只有以下三项。
 
-1. 对照计划核对 PR #1 的 diff、产物和验证记录。
-2. 分别给 PR0、PR1 的 Exit Gate 标记 `PASS`、`PARTIAL`、`FAIL` 或 `DEVIATION`。
-3. 列出缺失产物、已知风险和可选人工处置。
-4. 提交审查包，停下等待项目负责人决定。
+1. 阅读 PR #3 的 diff、PR0 Exit Gate 报告和 CI。
+2. 对 PR0 提出修改，或由人工决定是否合并。
+3. 在 PR0 合并后更新 `main`，再决定是否创建修订 PR1。
 
-未经新的直接授权，不得自动拆分、关闭、合并、替换或强推 PR #1，也不得开始 PR2。
+当前自动代码修改权限已经停止。不得提前创建修订 PR1，也不得合并治理 PR #2 或 PR0 #3，除非项目负责人直接作出 merge decision。
 
-## 已登记的历史偏差
+## PR0 当前证据
 
-`DA-DEV-20260825-001` 记录了一项事实。PR #1 早于本计划，分支 `codex/rules-prototype-v1` 同时包含 PR0 生命周期与 baseline 调整，以及部分 PR1 Rules Prototype。该记录保存真实历史，不替代 Exit Gate，也不预先选择接受、补齐、拆分或关闭方案。
+独立 PR0 从 `main@ba318e5` 创建，head 为 `253a7b4`。它不含 `rules_prototype/v1` 文件，改动只覆盖 baseline、Operator registries、RunPlan admission、CLI canary 默认值、直接相关文档和 `test_target_architecture.py`。
 
-## 已知未闭合项
+本地一个 focused invocation 运行 6 项 tests，结果为 6/6 PASS。workspace assets 可用，因此实际 selector、MDAnalysis blocked probe 和 HSP90 canary tests 均未 skip。X-EISD 保持 59 obligations、15 unresolved inputs、16 blocked gaps 和 0 个 case-routed Operators。GitHub Actions run `32867680634` 的 unit job 也已通过。
 
-PR0 目前至少需要核对以下三项。
+这些结果只证明 PR0 的 structural 和 execution boundary。HSP90 仍为 `CANARY_PASS / routable=false`，MDAnalysis projection 仍为 `REGISTERED_BLOCKED / routable=false`。
 
-- `config/operators.json` 是否明确标为 `LEGACY_FIXTURE_ONLY`；
-- 是否有正式 PR0 Exit Gate 报告；
-- 合并分支与计划要求的独立 PR0 分支之间如何处置。
+## 原 PR #1 的处置
 
-PR1 目前至少需要核对以下七项。
+`DA-DEV-20260825-001-DISPOSITION-001` 记录了人工结论。原 PR #1 在计划采纳前混合 PR0 与部分 PR1，现已改名为 `Propose review-led Rules Prototype v1`，状态为 CLOSED，`mergedAt=null`，branch `codex/rules-prototype-v1@2f9422a` 保留。
 
-- 计划指定的目录布局；
-- coverage gap register；
-- 显式 rule-family overlay；
-- missing-evidence fixture；
-- wrong-target fixture；
-- `RULES_PROTOTYPE_V1_REVIEW_PACKET.md`；
-- 人工科学审查与批准。
+这一处置保存了历史，也恢复了 Frozen Plan 的阶段隔离。它不表示旧 PR 已满足 PR1 Exit Gate。
 
-这些条目是待审查清单，不等于最终失败判定。最终状态以审查包中的文件证据和人工处置为准。
+## 修订 PR1 必须解决什么
+
+- proposal 命名和机器状态
+- plan-defined 目录、coverage gap register 和 family overlay
+- source-grounding evidence packet 与 atomic paper statement
+- SP02、SP04、SP06、SP08 的 multi-target sub-bindings 和 contracts
+- binding grammar、JSON Schema 和 current/vNext CaseGraph path mapping
+- Resolution Policy 字段类型与 action vocabulary
+- scientific claim-ceiling contract 与独立 `HumanDecisionGate`
+- SP03 method-profile boundary 和 SP04 两类 failure mode
+- positive、one-field negative、missing-evidence 和 wrong-target behavioral runner
+- remote CI 与 local workspace integration 的分开报告
+- `RULES_PROTOTYPE_V1_REVIEW_PACKET.md` 和人工 approve、revise、reject 字段
+
+修订 PR1 仍需 human scientific review。source passage 可以进入 review evidence packet 或通过 locator 解析，但不能复制进 runtime overlay 形成第二套 scientific authority。
 
 ## 状态归属与优先级
 
 - 控制计划见 [DA-HARNESS-FROZEN-PLAN-v1.0](DA_HARNESS_FROZEN_EXECUTION_PLAN_V1_0_ZH.md)
 - 机器可读计划状态见 [frozen_execution_plan_v1_0.json](../governance/frozen_execution_plan_v1_0.json)
 - 机器可读当前执行点见 [current_execution_status.json](../governance/current_execution_status.json)
-- 追加式偏差记录见 [deviations.jsonl](../governance/deviations.jsonl)
+- 追加式偏差与处置记录见 [deviations.jsonl](../governance/deviations.jsonl)
+- PR0 Exit Gate 报告将在独立 PR0 中维护
 - 项目唯一 live status 见 [DYNAMICS_ATLAS_STATUS.md](../../autoresearch/DYNAMICS_ATLAS_STATUS.md)
 
 新的直接用户指令、项目永久边界和 live Status 中已登记的人工决定优先于本计划。设计说明和任务笔记只能补充实现细节，不能自行扩大授权。

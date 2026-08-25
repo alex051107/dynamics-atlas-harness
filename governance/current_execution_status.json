@@ -1,33 +1,50 @@
 {
-  "schema_version": "frozen-plan-execution-status/v1",
+  "schema_version": "frozen-plan-execution-status/v2",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260825-v1",
-  "as_of": "2026-08-25T14:43:40Z",
-  "overall_status": "PLAN_ACTIVE_PR1_RECONCILIATION_REQUIRED",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260825-v2",
+  "as_of": "2026-08-25T15:44:57Z",
+  "overall_status": "PLAN_ACTIVE_PR0_REPLACEMENT_OPEN_PR1_SUPERSEDED",
   "repository_baseline": {
     "main_commit": "ba318e5216b1f6cc617178c8e964ca63b9b6dfd9",
     "baseline_tag": "v0.2.0-baseline",
     "accurate_name": "Harness Control-Plane Smoke v0.2"
   },
-  "open_work": {
-    "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
-    "head_branch": "codex/rules-prototype-v1",
-    "head_commit_at_adoption": "2f9422a0a6ff3c72b8bfb0426d0e7c70b53d525f",
-    "observed_scope": "COMBINED_PRE_ADOPTION_PR0_AND_PARTIAL_PR1",
-    "merge_status": "OPEN_UNMERGED_AT_LAST_VERIFIED_STATUS_V0_43"
-  },
+  "work_items": [
+    {
+      "role": "FROZEN_PLAN_GOVERNANCE",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/2",
+      "head_branch": "governance/frozen-execution-plan-v1",
+      "head_commit_before_this_status_update": "b18f500be5cffbdf5d3fbfe1606bf5228dc18459",
+      "state": "OPEN_CI_PASS"
+    },
+    {
+      "role": "ISOLATED_FROZEN_PLAN_PR0",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/3",
+      "head_branch": "fix/baseline-boundary-normalization",
+      "head_commit": "253a7b4347d2cdb8c8be08b5c921ec25f02b4f01",
+      "state": "OPEN_CLEAN_REMOTE_CI_PASS"
+    },
+    {
+      "role": "SUPERSEDED_COMBINED_PRE_ADOPTION_PR",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
+      "head_branch": "codex/rules-prototype-v1",
+      "head_commit": "2f9422a0a6ff3c72b8bfb0426d0e7c70b53d525f",
+      "state": "CLOSED_UNMERGED_BRANCH_PRESERVED",
+      "human_disposition": "CHANGES_REQUESTED"
+    }
+  ],
   "stages": [
     {
       "stage": "PR0_BASELINE_BOUNDARY_NORMALIZATION",
-      "status": "IMPLEMENTED_IN_COMBINED_OPEN_PR_NOT_EXIT_GATE_AUDITED",
-      "known_present": ["HSP90_CANARY_PASS_NOT_ROUTABLE", "RUNPLAN_ROSTER_PASS_GATE", "CANARY_OPT_IN", "CONTROL_PLANE_SMOKE_NAMING"],
-      "known_unresolved": ["LEGACY_OPERATORS_JSON_FIXTURE_ONLY_MARKER", "FORMAL_PR0_EXIT_GATE_REPORT", "SEPARATE_PR0_BRANCH_REQUIREMENT_DEVIATED"]
+      "status": "ISOLATED_PR_OPEN_CI_PASS_AWAITING_HUMAN_REVIEW",
+      "known_present": ["HSP90_CANARY_PASS_NOT_ROUTABLE", "RUNPLAN_ROSTER_PASS_AND_ROUTABLE_GATE", "CANARY_OPT_IN", "CONTROL_PLANE_SMOKE_NAMING", "LEGACY_OPERATORS_JSON_FIXTURE_ONLY_MARKER", "FORMAL_PR0_EXIT_GATE_REPORT", "LOCAL_XEISD_59_15_16_PASS", "REMOTE_UNIT_CI_PASS"],
+      "known_unresolved": ["HUMAN_REVIEW_AND_MERGE_DECISION"]
     },
     {
       "stage": "PR1_RULES_PROTOTYPE_V1",
-      "status": "PARTIAL_IMPLEMENTATION_IN_OPEN_PR_NOT_EXIT_GATE_AUDITED",
+      "status": "CHANGES_REQUESTED_NO_REPLACEMENT_BRANCH_AUTHORIZED_YET",
       "known_present": ["EIGHT_SEED_FAMILIES", "LEGACY_33_RULE_AUDIT_COPY", "SEED_BINDINGS", "RESOLUTION_POLICIES", "EVALUATION_CONTRACTS", "POSITIVE_AND_ONE_FIELD_NEGATIVE_FIXTURES"],
-      "known_unresolved": ["PLAN_NAMED_DIRECTORY_LAYOUT", "COVERAGE_GAP_REGISTER", "EXPLICIT_RULE_FAMILY_OVERLAY", "MISSING_EVIDENCE_FIXTURES", "WRONG_TARGET_FIXTURES", "RULES_PROTOTYPE_V1_REVIEW_PACKET", "HUMAN_SCIENTIFIC_APPROVAL"]
+      "known_unresolved": ["PROPOSAL_NAMING", "PLAN_NAMED_DIRECTORY_LAYOUT", "COVERAGE_GAP_REGISTER", "EXPLICIT_RULE_FAMILY_OVERLAY", "SOURCE_GROUNDING_REVIEW_ARTIFACT", "MULTI_TARGET_SUB_BINDINGS_AND_CONTRACTS", "BINDING_GRAMMAR_AND_JSON_SCHEMA", "V0_3_TO_VNEXT_PATH_MAPPING", "NORMALIZED_RESOLUTION_POLICY_TYPES_AND_ACTION_VOCABULARY", "SEPARATE_HUMAN_DECISION_GATE", "SP03_METHOD_PROFILE_BOUNDARY", "SP04_DISTINCT_RUNTIME_OBLIGATIONS", "POSITIVE_NEGATIVE_MISSING_WRONG_TARGET_BEHAVIORAL_RUNNER", "REMOTE_AND_LOCAL_VALIDATION_REPORTING", "RULES_PROTOTYPE_V1_REVIEW_PACKET", "HUMAN_SCIENTIFIC_APPROVAL"]
     },
     {
       "stage": "PR2_THROUGH_PR8",
@@ -37,10 +54,11 @@
     }
   ],
   "next_allowed_action": {
-    "action": "AUDIT_OPEN_PR_1_AGAINST_PR0_AND_PR1_EXIT_GATES",
-    "deliverable": "ONE_REVIEW_PACKET_WITH_EXACT_PASS_PARTIAL_FAIL_AND_DEVIATION_TABLE",
+    "action": "HUMAN_REVIEW_AND_MERGE_DECISION_FOR_ISOLATED_PR0",
+    "deliverable": "PR0_REVIEW_DISPOSITION",
     "automatic_code_changes": false,
-    "exit_gate": "HUMAN_DISPOSITION_REQUIRED_BEFORE_ANY_PR2_WORK"
+    "merge_authority": "HUMAN_ONLY",
+    "exit_gate": "PR0_MUST_BE_APPROVED_AND_MERGED_BEFORE_REVISED_PR1_BRANCH"
   },
-  "claim_ceiling": "Governance adoption and observed repository reconciliation only; no scientific or runtime completion claim."
+  "claim_ceiling": "Observed PR split, PR0 development checks and repository delivery only; no PR1 scientific freeze, later-stage authorization or semantic-correctness claim."
 }
