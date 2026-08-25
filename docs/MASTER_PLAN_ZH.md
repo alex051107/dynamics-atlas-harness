@@ -2,7 +2,7 @@
 
 > 版本：v2.0
 > 日期：2026-08-25
-> 状态：目标架构已冻结；本地 vertical slice 已运行，真实 case route 仍受阻
+> 状态：目标架构已冻结；当前实现为 Harness Control-Plane Smoke v0.2，真实 case route 仍受阻
 > 适用范围：Dynamics Atlas prototype、Rules runtime、Profile Agent、Harness、registered operators 与科学验证路线
 
 ## 文档边界
@@ -175,12 +175,12 @@ CaseWorkflow
 | Evaluation Contract | `IMPLEMENTED_FOR_BUNDLE_ROUTING` | `evaluation/evaluation_contract.json` | 不产生 general scientific verdict |
 | Persistent RunPlan | `IMPLEMENTED` | `run_plan.json` | execution state only |
 | X-EISD case route | `RUN_PLAN_BLOCKED` | 16 gaps，0 个匹配 operator | 没有 case-resolution claim |
-| HSP90 time-anatomy operator | `CANARY_SUCCEEDED` | `operator_canary/operator_run_receipt.json` | frozen descriptive diagnostic only |
+| HSP90 time-anatomy operator | `CANARY_PASS / NOT_ROUTABLE` | `operator_canary/operator_run_receipt.json` | frozen descriptive diagnostic only |
 | HSP90 canary 与 X-EISD 的关系 | `INDEPENDENT_CANARY` | run summary 明确标记未被 case plan 路由 | 不能用来关闭 X-EISD gaps |
 | Structural-state projection | `REGISTERED_BLOCKED` | MDAnalysis runtime、method profile、inputs 和 metric 未冻结 | 不得执行或报告 output |
 | Request–Validate–Commit | `FUTURE` | 仅保留接口方向 | 无当前能力声明 |
 | General semantic correctness | `NOT_EVALUATED` | human review required | 无泛化结论 |
-| GitHub | `LOCAL_CHANGES_PRESENT` | 本地 nested repo | 未完成远端 readback 时不写“已上传” |
+| GitHub | `PRIVATE_BASELINE_AND_REMOTE_CI_PASS` | `main@ba318e5`、`v0.2.0-baseline`、Actions run `32853872659` | private repo delivery only |
 
 当前 run 的精确摘要：
 
@@ -956,4 +956,4 @@ answer-blind question + source/data manifest
 - 没有为了完整感增加当前不需要的平台层；
 - 每项结论都能回到 source、Rule、EvidenceResult 或明确 human decision。
 
-下一个允许动作已经固定：对当前 16 个真实 gaps 分类，选择一项已有输入且可由现有能力解决的 gap，完成一条 `RuleInstance → registered capability → EvidenceResult → reevaluation` 路由。若 prerequisite 不满足，保留 blocked receipt 并转向 source lookup 或另一项真实 gap。
+本文只保存目标架构与已观察边界，不自行授权下一阶段。当前 PR 只做 baseline 与 Operator lifecycle normalization；后续 Rules、Operator 或 Agent 工作必须服从独立的项目控制计划和人工 gate。

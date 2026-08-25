@@ -328,7 +328,9 @@ def build_parser() -> argparse.ArgumentParser:
         "--bundle-id", default="protein_dynamics_rules_v0_3"
     )
     prototype_parser.add_argument(
-        "--canary-operator-id", default="hsp90.directional_time_anatomy.v0"
+        "--canary-operator-id",
+        default=None,
+        help="Run one independent registry canary explicitly; it is never part of case routing.",
     )
     prototype_parser.set_defaults(handler=run_prototype)
     return parser

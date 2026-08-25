@@ -1,6 +1,9 @@
 {
   "schema_version": "scientific-operator-registry/v0.1",
   "registry_id": "dynamics-atlas-fixture-operators/v0.1",
+  "registry_role": "LEGACY_FIXTURE_ONLY",
+  "runtime_scope": "RUN_FIXTURE_COMMAND_ONLY",
+  "case_routing_allowed": false,
   "operators": {
     "evidence.json_pointer_lookup.v1": {
       "version": "1.0.0",
