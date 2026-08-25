@@ -92,6 +92,6 @@ Profile Agent 不是一个抽象框。`prompts/profile_case_v1.md` 明确规定�
 5. 不让 RunPlan node 细化到实现内部函数；一个 node 对应一个可审计科学动作或 deterministic gate。
 6. Request–Validate–Commit 在需要 editable concurrent workflow 时再加入；当前 JSON state 已足够证明 data flow。
 
-## 当前 prototype 的精确边界
+## 当前 control-plane smoke 的精确边界
 
-X-EISD case flow 已走到 `RUN_PLAN_BLOCKED`。HSP90 operator canary 已成功，但它不是 X-EISD plan 的下游 node。下一步应该针对 16 个真实 gap 选择一个高价值、可由现有包解决的 operator，或补充已有 EvidenceResults；不应该把无关 HSP90 canary 接上去让流程看似 complete。
+X-EISD case flow 已走到 `RUN_PLAN_BLOCKED`。HSP90 Operator canary 已成功，但它不是 X-EISD plan 的下游 node，也没有达到 `ROSTER_PASS`。当前变更只统一 baseline 和 Operator lifecycle，不连接新的 Rule、Operator 或 case route。后续阶段必须经过单独人工 gate，不能把无关 HSP90 canary 接上去让流程看似 complete。

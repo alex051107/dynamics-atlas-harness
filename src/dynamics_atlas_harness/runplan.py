@@ -20,7 +20,7 @@ def _source_methods(case_graph: Mapping[str, Any]) -> dict[str, str]:
 def _operator_matches(
     spec: Mapping[str, Any], gap: Mapping[str, Any], methods: Mapping[str, str]
 ) -> bool:
-    if spec.get("status") not in {"REGISTERED_AVAILABLE", "SOFTWARE_CANARY_PASS"}:
+    if spec.get("status") != "ROSTER_PASS" or spec.get("routable") is not True:
         return False
     match = spec.get("route_match", {})
     if not isinstance(match, Mapping):

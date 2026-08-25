@@ -6,7 +6,8 @@
     "hsp90.directional_time_anatomy.v0": {
       "operator_id": "hsp90.directional_time_anatomy.v0",
       "version": "0.1.0-existing-analysis-adapter",
-      "status": "REGISTERED_AVAILABLE",
+      "status": "CANARY_PASS",
+      "routable": false,
       "capability": "Describe persistent two-readout directional departure and return candidates under a fixed horizon grid.",
       "skill_ref": "repo:rapid-dynamics-research",
       "handler": "existing_hsp90_time_anatomy_v0",
@@ -28,6 +29,10 @@
         "read_only": true
       },
       "output_contract": "hsp90-time-anatomy-results/v0-existing",
+      "promotion_blockers": [
+        "FULL_OUTPUT_SCHEMA_VALIDATOR_NOT_IMPLEMENTED",
+        "CASE_AND_INPUT_MANIFEST_BINDING_NOT_IMPLEMENTED"
+      ],
       "expected_outputs": [
         "directional_runs.tsv",
         "trajectory_time_anatomy.tsv",
@@ -54,6 +59,7 @@
       "operator_id": "trajectory.structural_state_projection.v1",
       "version": "0.1.0-spec-only",
       "status": "REGISTERED_BLOCKED",
+      "routable": false,
       "capability": "Project a registered trajectory onto frozen structural-state coordinates and report descriptive observables.",
       "skill_ref": "skill:molecular-dynamics",
       "handler": "mdanalysis_structural_state_projection",

@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dynamics_atlas_harness.cli import main
+from dynamics_atlas_harness.cli import build_parser, main
 from dynamics_atlas_harness.evaluation import (
     build_evaluation_contract,
     evaluate_current_bundle,
@@ -12,6 +12,7 @@ from dynamics_atlas_harness.registered_operators import (
     load_registered_operator_registry,
     probe_operator,
 )
+from dynamics_atlas_harness.runplan import build_run_plan
 
 
 REPO_ROOT = Path(__file__).parents[1]
@@ -20,6 +21,98 @@ HAS_WORKSPACE_ASSETS = (WORKSPACE_ROOT / "autoresearch").is_dir()
 
 
 class TargetArchitectureTests(unittest.TestCase):
+    def test_operator_canary_is_opt_in(self):
+        args = build_parser().parse_args(
+            [
+                "run-prototype",
+                "--workspace-root",
+                str(WORKSPACE_ROOT),
+                "--output-dir",
+                "/tmp/unused-target-run",
+            ]
+        )
+        self.assertIsNone(args.canary_operator_id)
+
+    def test_legacy_fixture_registry_is_not_case_routing_registry(self):
+        fixture_registry = json.loads(
+            (REPO_ROOT / "config" / "operators.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(fixture_registry["registry_role"], "LEGACY_FIXTURE_ONLY")
+        self.assertEqual(fixture_registry["runtime_scope"], "RUN_FIXTURE_COMMAND_ONLY")
+        self.assertIs(fixture_registry["case_routing_allowed"], False)
+
+    def test_only_roster_pass_and_routable_operator_can_route(self):
+        case_graph = {
+            "evidence_items": [
+                {"source_id": "source-md", "method_id": "MD_TRAJECTORY"}
+            ]
+        }
+        evaluation = {
+            "branch": "RUN_PLAN_REQUIRED",
+            "case_id": "operator-lifecycle-test",
+            "gaps": [
+                {
+                    "gap_class": "NOT_EVALUATED",
+                    "input_path": "source.time_semantics",
+                    "target": {
+                        "target_type": "SOURCE",
+                        "source_ids": ["source-md"],
+                    },
+                }
+            ],
+        }
+        route_match = {
+            "gap_classes": ["NOT_EVALUATED"],
+            "target_types": ["SOURCE"],
+            "method_ids": ["MD_TRAJECTORY"],
+            "input_path_contains": ["time_semantics"],
+        }
+
+        for status, routable in (
+            ("CANARY_PASS", False),
+            ("CANARY_PASS", True),
+            ("REGISTERED_BLOCKED", False),
+            ("SOFTWARE_CANARY_PASS", True),
+            ("ROSTER_PASS", False),
+        ):
+            with self.subTest(status=status, routable=routable):
+                plan = build_run_plan(
+                    run_id=f"blocked-{status}-{routable}",
+                    case_graph=case_graph,
+                    evaluation=evaluation,
+                    operator_registry={
+                        "operators": {
+                            "candidate": {
+                                "status": status,
+                                "routable": routable,
+                                "route_match": route_match,
+                            }
+                        }
+                    },
+                )
+                self.assertEqual(plan["status"], "BLOCKED")
+                self.assertEqual(plan["blocked_gap_count"], 1)
+
+        ready = build_run_plan(
+            run_id="roster-pass-routable",
+            case_graph=case_graph,
+            evaluation=evaluation,
+            operator_registry={
+                "operators": {
+                    "candidate": {
+                        "status": "ROSTER_PASS",
+                        "routable": True,
+                        "route_match": route_match,
+                    }
+                }
+            },
+        )
+        self.assertEqual(ready["status"], "READY")
+        gap_node = next(
+            node for node in ready["nodes"] if node["node_type"] == "RESOLVE_GAP"
+        )
+        self.assertEqual(gap_node["operator_id"], "candidate")
+
     def test_sufficient_contract_takes_direct_bounded_route(self):
         case_graph = {
             "case": {
@@ -85,6 +178,8 @@ class TargetArchitectureTests(unittest.TestCase):
                     str(output),
                     "--run-id",
                     "test-target-architecture",
+                    "--canary-operator-id",
+                    "hsp90.directional_time_anatomy.v0",
                 ]
             )
             self.assertEqual(code, 0)
@@ -101,7 +196,12 @@ class TargetArchitectureTests(unittest.TestCase):
 
             plan = json.loads((output / "run_plan.json").read_text())
             self.assertEqual(plan["schema_version"], "run-plan/v0.1")
-            self.assertGreater(plan["blocked_gap_count"], 0)
+            self.assertEqual(plan["blocked_gap_count"], 16)
+            self.assertEqual(summary["case_gap_resolution_operator_count"], 0)
+            self.assertEqual(
+                summary["operator_canary_relation"],
+                "INDEPENDENT_REGISTRY_CANARY_NOT_ROUTED_FROM_CASE_PLAN",
+            )
             self.assertTrue(
                 all(
                     edge["edge_kind"] == "EXECUTION_DEPENDENCY"
