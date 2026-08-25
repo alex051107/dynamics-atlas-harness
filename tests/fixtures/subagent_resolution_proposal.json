@@ -1,0 +1,10 @@
+{
+  "schema_version": "resolution-proposal/v0.1",
+  "obligation_id": "obl-source-metadata-001",
+  "action": "RUN_OPERATOR",
+  "operator_id": "evidence.json_pointer_lookup.v1",
+  "operator_inputs": {
+    "source_path": "source_record.json",
+    "json_pointer": "/metadata/observation_window"
+  }
+}

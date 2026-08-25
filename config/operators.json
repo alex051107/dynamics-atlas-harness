@@ -1,0 +1,47 @@
+{
+  "schema_version": "scientific-operator-registry/v0.1",
+  "registry_id": "dynamics-atlas-fixture-operators/v0.1",
+  "operators": {
+    "evidence.json_pointer_lookup.v1": {
+      "version": "1.0.0",
+      "status": "SOFTWARE_CANARY_PASS",
+      "scope": "EXPOSED_SYNTHETIC_FIXTURE_ONLY",
+      "handler": "json_pointer_lookup",
+      "resolves_obligation_types": [
+        "SOURCE_METADATA_LOOKUP"
+      ],
+      "required_inputs": [
+        "source_path",
+        "json_pointer"
+      ],
+      "backend": {
+        "kind": "python-standard-library",
+        "package": "json"
+      },
+      "claim_ceiling": "Observed fixture field pending human validation; no scientific verdict."
+    },
+    "trajectory.structural_state_projection.v1": {
+      "version": "DESIGN_PROPOSAL",
+      "status": "CANARY_BLOCKED",
+      "scope": "NOT_EXECUTABLE",
+      "handler": null,
+      "resolves_obligation_types": [
+        "TRAJECTORY_REPRESENTATION_CHECK"
+      ],
+      "required_inputs": [],
+      "backend": {
+        "kind": "candidate",
+        "package": "MDAnalysis",
+        "version": "UNVERIFIED"
+      },
+      "blockers": [
+        "DEPENDENCY_NOT_AVAILABLE",
+        "INPUT_FIXTURE_NOT_FROZEN",
+        "METHOD_PROFILE_NOT_APPROVED",
+        "METRIC_AND_PARAMETERS_NOT_FROZEN",
+        "SCIENTIFIC_SCOPE_NOT_APPROVED"
+      ],
+      "claim_ceiling": "No output and no scientific claim until all blockers are cleared by a separate human decision."
+    }
+  }
+}

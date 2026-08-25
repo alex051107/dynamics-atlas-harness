@@ -1,0 +1,20 @@
+{
+  "schema_version": "recorded-selector-output/v0.1",
+  "case_id": "synthetic-metadata-case-001",
+  "source": "EXPOSED_SYNTHETIC_DETERMINISTIC_FIXTURE",
+  "obligations": [
+    {
+      "schema_version": "review-obligation/v0.1",
+      "obligation_id": "obl-source-metadata-001",
+      "obligation_type": "SOURCE_METADATA_LOOKUP",
+      "target_kind": "SOURCE",
+      "target_id": "source-metadata-001",
+      "question": "What declared observation window is present in the source metadata?",
+      "allowed_resolution_actions": [
+        "RUN_OPERATOR",
+        "ABSTAIN"
+      ],
+      "claim_ceiling": "Report the declared fixture field only; human validation required."
+    }
+  ]
+}

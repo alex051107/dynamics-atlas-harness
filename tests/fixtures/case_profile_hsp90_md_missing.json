@@ -1,0 +1,17 @@
+{
+  "schema_version": "case-profile-proposal/v0.1",
+  "case_id": "hsp90-md-profile-admission-001",
+  "question": "Can the declared trajectory support a bounded representation review?",
+  "sources": [
+    {
+      "source_id": "hsp90-md-trajectory",
+      "source_type": "MD_TRAJECTORY",
+      "method_profile_id": null,
+      "role": "FIT_TARGET"
+    }
+  ],
+  "edges": [],
+  "unknowns": [
+    "approved MD method profile"
+  ]
+}
