@@ -27,7 +27,8 @@ _UNKNOWN = "UNKNOWN"
 _STORED_RULE_RESULT_STATUSES = frozenset({"PASS", "FAIL", "UNRESOLVED", "NOT_APPLICABLE"})
 
 # These are deliberately explicit PR1B phases, not a dependency graph or a
-# general workflow scheduler. F06R02 declares only the producer results below.
+# general workflow scheduler. F02R02 and F06R02 declare only the producer
+# results below.
 _PR1B_PREREQUISITE_SUBRULE_IDS = (
     "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
     "F02R02_EDGE_CONDITION_COMPATIBILITY",
@@ -35,6 +36,7 @@ _PR1B_PREREQUISITE_SUBRULE_IDS = (
 )
 _PR1B_CONTEXT_PRODUCER_SUBRULE_IDS = frozenset(
     {
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
         "F02R02_EDGE_CONDITION_COMPATIBILITY",
         "F03R01_SOURCE_NATIVE_MEASUREMENT",
     }
@@ -87,7 +89,8 @@ class EvaluationContext:
     The scientific CaseGraph remains a record of CASE, SOURCE, and EDGE facts.
     Prior RuleResults are keyed separately by stable RuleInstance ID so dependency
     wiring cannot be mistaken for a scientific source or edge attribute. PR1B stores
-    only the F02R02/F03R01 producer results needed for its explicit F06 replay.
+    only F02R01, F02R02, and F03R01 Draft producer results needed for its explicit
+    F06 replay.
     """
 
     def __init__(self, rule_results_by_instance: Mapping[str, Any] | None = None):
@@ -661,10 +664,10 @@ def evaluate_active_rules(
 ) -> list[dict[str, Any]]:
     """Run the explicit PR1B prerequisite phase and its one F06 replay.
 
-    Phase one evaluates F02R01, F02R02, and F03R01. Only the F02R02 and F03R01
-    outputs are stored because F06R02 names them as dependencies. Phase two replays
-    the F01/F06 Draft slice against that fresh proposal-local context. This is not a
-    general dependency scheduler and does not store F06 or terminal conclusions.
+    Phase one evaluates and stores F02R01 for each SOURCE, F02R02 for the current
+    EDGE, and F03R01 for each SOURCE. Phase two replays the F01/F06 Draft slice
+    against that fresh proposal-local context. This is not a general dependency
+    scheduler and does not store F06 or terminal conclusions.
     """
 
     subrule_by_id = {

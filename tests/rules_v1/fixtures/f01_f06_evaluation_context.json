@@ -2,9 +2,11 @@
   "schema_version": "rules-prototype-evaluation-context/v1",
   "status": "FIXTURE_STAND_IN_ONLY",
   "rule_results_by_instance": {
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-construction": {"status": "PASS"},
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-held-out": {"status": "PASS"},
     "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::edge-construction-validation": {"status": "PASS"},
     "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-construction": {"status": "PASS"},
     "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-held-out": {"status": "PASS"}
   },
-  "fixture_boundary": "These synthetic RuleResult statuses support direct evaluate_rule_instance coverage only. evaluate_active_rules rejects nonempty Context and derives its F06 prerequisites from actual F02R02/F03R01 Draft results."
+  "fixture_boundary": "These synthetic RuleResult statuses support direct evaluate_rule_instance coverage only. They are freshly produced Draft RuleResult stand-ins derived from declared fixture fields, not scientific evidence. evaluate_active_rules rejects nonempty Context and derives F06 prerequisites from same-run Draft F02R01/F02R02/F03R01 results."
 }

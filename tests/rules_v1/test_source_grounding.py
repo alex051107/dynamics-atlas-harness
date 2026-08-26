@@ -29,7 +29,7 @@ class SourceGroundingTests(unittest.TestCase):
             if subrule["implementation_status"] == "COMPLETE_DRAFT"
         ]
         self.assertEqual(len(active), 8)
-        verified_packet_ids = {
+        locator_reviewed_packet_ids = {
             "SEP-F01-CLAIM-CONTRACT",
             "SEP-F02-CONSTRUCT",
             "SEP-F02-CONDITION",
@@ -41,12 +41,12 @@ class SourceGroundingTests(unittest.TestCase):
                 for packet_id in subrule["required_evidence_packet_ids"]:
                     packet = packet_by_id[packet_id]
                     expected_status = (
-                        "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"
-                        if packet_id in verified_packet_ids
+                        "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC"
+                        if packet_id in locator_reviewed_packet_ids
                         else "PENDING"
                     )
                     self.assertEqual(packet["human_review_status"], expected_status)
-                    if packet_id in verified_packet_ids:
+                    if packet_id in locator_reviewed_packet_ids:
                         self.assertIn("review_disposition_scope", packet)
                         self.assertIn("only", packet["review_disposition_scope"].lower())
                     self.assertEqual(
@@ -80,7 +80,7 @@ class SourceGroundingTests(unittest.TestCase):
         )
         self.assertEqual(
             schema["properties"]["human_review_status"]["enum"],
-            ["PENDING", "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"],
+            ["PENDING", "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC"],
         )
 
 

@@ -147,7 +147,7 @@ class BindingBehaviorTests(unittest.TestCase):
                         result["claim_effect"]["route"], scenario["expected"]["route"]
                     )
 
-    def test_active_slice_runs_real_f02_f03_prerequisites_before_f06_replay(self):
+    def test_active_slice_runs_fresh_draft_prerequisites_before_f06_replay(self):
         context = EvaluationContext()
         results = evaluate_active_rules(
             case_graph=self.base_case,
@@ -181,7 +181,7 @@ class BindingBehaviorTests(unittest.TestCase):
                 for result in results
             )
         )
-        self.assertEqual(len(context.rule_results_by_instance), 3)
+        self.assertEqual(len(context.rule_results_by_instance), 5)
         self.assertEqual(
             context.status_for(
                 runtime_subrule_id="F02R02_EDGE_CONDITION_COMPATIBILITY",
@@ -191,6 +191,14 @@ class BindingBehaviorTests(unittest.TestCase):
             "PASS",
         )
         for source_id in ("source-construction", "source-held-out"):
+            self.assertEqual(
+                context.status_for(
+                    runtime_subrule_id="F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                    target_kind="SOURCE",
+                    target_id=source_id,
+                ),
+                "PASS",
+            )
             self.assertEqual(
                 context.status_for(
                     runtime_subrule_id="F03R01_SOURCE_NATIVE_MEASUREMENT",
@@ -307,12 +315,66 @@ class BindingBehaviorTests(unittest.TestCase):
         self.assertEqual(
             f02r01_by_instance[
                 rule_instance_id(
+                    "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "UNRESOLVED",
+        )
+        self.assertEqual(
+            f02r01_by_instance[
+                rule_instance_id(
                     "F06R02_EDGE_COMPARABILITY",
                     "EDGE",
                     "edge-construction-validation",
                 )
             ]["status"],
-            "PASS",
+            "UNRESOLVED",
+        )
+
+        contradicted_f02r01 = copy.deepcopy(self.base_case)
+        contradicted_f02r01["evidence_items"][0][
+            "sample_system_composition_declaration_status"
+        ] = "CONTRADICTED"
+        contradicted_replay = evaluate_active_rules(
+            case_graph=contradicted_f02r01,
+            runtime_subrules={"runtime_subrules": list(self.subrules.values())},
+            bindings={"bindings": list(self.bindings.values())},
+            contracts={"contracts": list(self.contracts.values())},
+        )
+        contradicted_by_instance = {
+            result["rule_instance_id"]: result for result in contradicted_replay
+        }
+        self.assertEqual(
+            contradicted_by_instance[
+                rule_instance_id(
+                    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                    "SOURCE",
+                    "source-construction",
+                )
+            ]["status"],
+            "FAIL",
+        )
+        self.assertEqual(
+            contradicted_by_instance[
+                rule_instance_id(
+                    "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "UNRESOLVED",
+        )
+        self.assertEqual(
+            contradicted_by_instance[
+                rule_instance_id(
+                    "F06R02_EDGE_COMPARABILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "UNRESOLVED",
         )
 
     def test_evaluation_context_rejects_fallback_and_duplicate_rule_result_ids(self):

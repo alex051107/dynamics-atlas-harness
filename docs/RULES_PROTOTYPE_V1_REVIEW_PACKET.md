@@ -2,15 +2,15 @@
 
 ## Review disposition
 
-This is the first post-PR4 Rules Draft. It is ready for human scientific review after the final repository check and GitHub CI readback. It remains proposal-only: it does not activate a Rule, replace the active v0.3 runtime, authorize an Operator, or introduce an Agent.
+This is the first post-PR4 Rules Draft. This bounded remediation is ready for human merge review only after the final repository check and GitHub CI readback. It remains proposal-only: it does not activate a Rule, replace the active v0.3 runtime, authorize an Operator, introduce an Agent, or authorize its own merge.
 
 PR4 merged the architecture baseline at `main@7c0f602`. This Draft closes the next, tightly bounded prerequisite layer:
 
 - F02R01 was narrowed from a broad construct declaration to a SOURCE sample-system/composition declaration;
-- F02R02 classifies an explicitly declared EDGE condition relation;
+- F02R02 may classify an explicitly declared EDGE condition relation only after both endpoint F02R01 results pass;
 - F03R01 records SOURCE-native measurement semantics;
-- a guarded, proposal-local `EvaluationContext` stores the actual F02R02 and F03R01 results needed by F06R02; and
-- one explicit F06 replay proves that the declared prerequisites, rather than a seeded stand-in, control the F06R02 result.
+- a guarded, proposal-local `EvaluationContext` stores freshly produced Draft F02R01, F02R02, and F03R01 results derived from declared fixture fields; and
+- one explicit F06 replay proves that same-run Draft prerequisites, rather than a seeded stand-in, control the F06R02 result.
 
 The evaluator still emits no terminal scientific `SUPPORT` or `CANNOT_SUPPORT` verdict. Every result remains a local Draft classification for the HumanDecisionGate.
 
@@ -18,13 +18,13 @@ The evaluator still emits no terminal scientific `SUPPORT` or `CANNOT_SUPPORT` v
 
 | Family | Architecture decision | Source-grounding decision | Runtime readiness | Review disposition |
 | --- | --- | --- | --- | --- |
-| F01 Claim Contract and Ceiling | `APPROVE_AFTER_MINOR_FIX` — fixed in this commit; the registry records final `APPROVE` | `SEP-F01-CLAIM-CONTRACT` is `VERIFIED_FOR_PROPOSED_CONTROL_LOGIC`; F01's remaining packet is pending domain review | `NOT_READY` for active runtime | The intake contract and requested-wording scope are distinct from a future evidence-supported ceiling. |
+| F01 Claim Contract and Ceiling | `APPROVE_AFTER_MINOR_FIX` — fixed in this commit; the registry records final `APPROVE` | `SEP-F01-CLAIM-CONTRACT` is `LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC`; F01's remaining packet is pending domain review | `NOT_READY` for active runtime | The intake contract and requested-wording scope are distinct from a future evidence-supported ceiling. |
 | F02 System Construct and Condition | `APPROVE` | `PENDING_DOMAIN_REVIEW` | `NOT_READY` for active runtime | F02R01 now records only sample-system/composition context; F02R02 records a declared condition relation. |
 | F03 Source Measurement Semantics | `APPROVE` | `PENDING_DOMAIN_REVIEW` | `NOT_READY` for active runtime | F03R01 records native measurement semantics before a relation-level comparison. |
 | F04 Source Reliability and Uncertainty | `REVISE` | `PENDING_DOMAIN_REVIEW` | `DEFER` | Keep a generic provenance umbrella separate from method-specific profiles. |
 | F05 Representation Support and Forward Bridge | `REVISE` | `PENDING_DOMAIN_REVIEW` | `DEFER` | Keep candidate-support coverage and forward-bridge validity separate; determine the target in a later method profile. |
-| F06 Cross-source Comparability and Evidence Role | `REVISE` | `PENDING_DOMAIN_REVIEW` | `NOT_READY` for active runtime | F06R02 now replays real F02R02/F03R01 results; the SOURCE role / EDGE comparability / EDGE independence split remains proposal-only. |
-| F07 Identifiability and Next Discriminating Action | `DEFER` | `PENDING_DOMAIN_REVIEW` | `DEFER` | It belongs after the source and edge rules can supply real unresolved evidence. |
+| F06 Cross-source Comparability and Evidence Role | `REVISE` | `PENDING_DOMAIN_REVIEW` | `NOT_READY` for active runtime | F06R02 now replays same-run Draft F02R02/F03R01 results; the SOURCE role / EDGE comparability / EDGE independence split remains proposal-only. |
+| F07 Identifiability and Next Discriminating Action | `DEFER` | `PENDING_DOMAIN_REVIEW` | `DEFER` | It belongs after the source and edge rules can supply reviewable unresolved metadata. |
 
 No family is active. The source-packet dispositions below support narrow control logic only; family-level source grounding still awaits domain review.
 
@@ -36,10 +36,10 @@ No family is active. The source-packet dispositions below support narrow control
 | Candidate runtime sub-rules | 12 |
 | Complete Draft sub-rules | 8: F01R01, F01R02, F02R01, F02R02, F03R01, F06R01, F06R02, and F06R03 |
 | Candidate-map-only sub-rules | 4: F04R01, F05R01, F05R02, and F07R01 |
-| Source Evidence Packets | 12 review derivatives; four have narrow `VERIFIED_FOR_PROPOSED_CONTROL_LOGIC` dispositions and eight remain pending |
-| Behavioral scenarios | 47 cases across positive, one-field-negative, missing-evidence, wrong-target, conflict, request-scope, unknown-status, dependency, and mixed-failure conditions |
+| Source Evidence Packets | 12 review derivatives; four are `LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC` and eight remain pending |
+| Behavioral scenarios | 48 cases across positive, one-field-negative, missing-evidence, wrong-target, conflict, request-scope, unknown-status, dependency, and mixed-failure conditions |
 | Focused Rules-v1 validation | 15 of 15 tests passed |
-| Repository discovery validation | 39 of 39 tests passed through default unittest discovery |
+| Repository discovery validation | 39 discovered; 37 passed; 2 workspace-dependent tests skipped in GitHub CI |
 
 The evaluator never emits a terminal scientific `SUPPORT` or `CANNOT_SUPPORT` verdict in this PR. Each RuleResult instead carries a local route, decision class, and claim ceiling for human review.
 
@@ -57,9 +57,9 @@ Canonical CaseGraph
   -> HumanDecisionGate
 ```
 
-`CaseGraph` records CASE, SOURCE, and EDGE facts. `EvaluationContext.rule_results_by_instance` holds post-evaluation state keyed as `<runtime_subrule_id>::<target_kind>::<target_id>`. It is not a CaseGraph field and not scientific evidence.
+`CaseGraph` records CASE, SOURCE, and EDGE facts. `EvaluationContext.rule_results_by_instance` holds post-evaluation state keyed as `<runtime_subrule_id>::<target_kind>::<target_id>`. It is not a CaseGraph field and not scientific evidence. The two declaration-status fields are derived/attested Draft fields: synthetic fixtures provide them only as test inputs, and a future Agent may propose raw facts or locators but may not self-assign `DECLARED` as an authoritative input to F02R01 or F03R01.
 
-PR1B uses two fixed phases rather than a generic graph engine. The first phase runs F02R01, F02R02, and F03R01. It stores only F02R02 on the current EDGE and F03R01 on each SOURCE because F06R02 explicitly names those producer results. The second phase runs F01/F06 against that fresh Context. The Context accepts only emitted statuses with nonempty CASE, SOURCE, or EDGE IDs; it rejects `UNKNOWN` fallback IDs, mismatched identities, duplicate writes, and `NOT_RUN`. F06 results are not stored.
+PR1B uses two fixed phases rather than a generic graph engine. The first phase runs and stores F02R01 for each SOURCE, F02R02 on the current EDGE, and F03R01 for each SOURCE. The second phase runs F01/F06 against that fresh Context. The Context accepts only emitted statuses with nonempty CASE, SOURCE, or EDGE IDs; it rejects `UNKNOWN` fallback IDs, mismatched identities, duplicate writes, and `NOT_RUN`. F06 results are not stored.
 
 The evaluator uses this precedence for applicable targets:
 
@@ -84,11 +84,11 @@ The declared route vocabulary is:
 
 ## F06 dependency semantics
 
-F06R02 evaluates EDGE comparability. It may pass only after actual `PASS` results for F02R02 on the current EDGE and F03R01 on each source referenced by that EDGE. The dependency grammar is `PRIOR_RESULT_STATUS`; it reads `EvaluationContext` and does not write a result into CaseGraph.
+F06R02 evaluates EDGE comparability. It may pass only after same-run Draft `PASS` results for F02R02 on the current EDGE and F03R01 on each source referenced by that EDGE. F02R02 itself may pass only after both endpoint F02R01 results pass and the edge condition relation is explicitly `MATCHED`. The dependency grammar is `PRIOR_RESULT_STATUS`; it reads `EvaluationContext` and does not write a result into CaseGraph.
 
-The replay test begins with a fresh, empty Context. Complete F02/F03 fixture facts yield F02R02 `PASS`, two F03R01 `PASS` results, then F06R02 `PASS`. Deleting one F03 measurement field yields F03R01 `UNRESOLVED` and F06R02 `UNRESOLVED`; an F02R02 mismatch yields F06R02 `FAIL`. F02R01 is deliberately not a hidden F06 prerequisite: its unresolved state does not override a separately resolved F02R02/F03 relation.
+The replay test begins with a fresh, empty Context. Complete declared fixture fields yield two F02R01 `PASS` results, F02R02 `PASS`, two F03R01 `PASS` results, then F06R02 `PASS`. Deleting one sample-composition field yields its F02R01 `UNRESOLVED`, F02R02 `UNRESOLVED`, and F06R02 `UNRESOLVED`. A contradicted source declaration yields a source-local F02R01 `FAIL` but leaves F02R02 and F06R02 `UNRESOLVED` unless the edge itself explicitly records `MISMATCH`. Deleting one F03 measurement field yields F03R01 `UNRESOLVED` and F06R02 `UNRESOLVED`; an explicit F02R02 mismatch yields F06R02 `FAIL`.
 
-The legacy seeded Context fixture remains only for direct `evaluate_rule_instance` coverage. `evaluate_active_rules` rejects every nonempty Context, including a preseeded result for a phantom endpoint, so a caller cannot bypass F03 production.
+The legacy seeded Context fixture remains only for direct `evaluate_rule_instance` coverage. `evaluate_active_rules` rejects every nonempty Context, including a preseeded result for a phantom endpoint, so a caller cannot bypass F02/F03 production.
 
 F06R03 evaluates DATA / LINEAGE / SHARED-ERROR independence only. It reads `validation_independence`, `shared_error_status`, and `data_lineage_status`. It does not require condition compatibility or an F02/F03 result. A relation can therefore be independent but non-comparable: the fixture reports `F06R02 = FAIL` and `F06R03 = PASS` for that state.
 
@@ -98,7 +98,7 @@ A future Stage-2 aggregator may decide how a comparability result and an indepen
 
 Each Source Evidence Packet is a review derivative with a locator, atomic statement, proposed reusable use, and forbidden generalization. The runtime registry stores only packet IDs and does not copy source passages into executable bindings.
 
-`SEP-F01-CLAIM-CONTRACT`, `SEP-F02-CONSTRUCT`, `SEP-F02-CONDITION`, and `SEP-F03-MEASUREMENT` are marked `VERIFIED_FOR_PROPOSED_CONTROL_LOGIC`. Each disposition is narrow. It supports the stated Draft control rule and does not approve a full CaseGraph schema, a source's scientific correctness, a numerical threshold, reliability, validation, or a claim ceiling.
+`SEP-F01-CLAIM-CONTRACT`, `SEP-F02-CONSTRUCT`, `SEP-F02-CONDITION`, and `SEP-F03-MEASUREMENT` are marked `LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC`. Each disposition is narrow. It supports the stated Draft control rule and is not a domain-review decision, source-science verification, full CaseGraph-schema approval, numerical threshold, reliability determination, validation determination, or claim ceiling.
 
 The other eight packet records retain `PENDING`. At the family review layer, every family remains `PENDING_DOMAIN_REVIEW`; none of these packet dispositions is final scientific approval. This keeps the source-derivative boundary explicit.
 
@@ -148,9 +148,9 @@ Repository-discovery command:
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Result: 39 of 39 passed. Default discovery includes every `rules_v1.test_*` module, so the existing GitHub workflow can cover the Rules-v1 package without a special test command.
+GitHub result: 39 discovered; 37 passed; 2 workspace-dependent tests skipped; CI status `SUCCESS`. Default discovery includes every `rules_v1.test_*` module, so the existing GitHub workflow can cover the Rules-v1 package without a special test command. A local workspace run may execute the workspace-dependent tests; it is not reported as the GitHub result.
 
-The matrix exercises all eight complete sub-rules with positive, one-field-negative, missing-evidence, wrong-target, and conflict behavior. It also checks that `UNKNOWN`, `UNRESOLVED`, and unknown vocabulary do not become `PASS`; they remain `UNRESOLVED`. The mixed scenario preserves fatal-failure precedence. The replay checks prove that actual F02R02/F03R01 results drive F06R02 while F06R03 remains an independent lineage/shared-error decision.
+The matrix exercises all eight complete sub-rules with positive, one-field-negative, missing-evidence, wrong-target, and conflict behavior. It also checks that `UNKNOWN`, `UNRESOLVED`, and unknown vocabulary do not become `PASS`; they remain `UNRESOLVED`. The mixed scenario preserves fatal-failure precedence. The replay checks prove that freshly produced Draft F02R01/F02R02/F03R01 results derived from declared fixture fields drive F06R02 while F06R03 remains an independent lineage/shared-error decision. PR1B does not infer these fields from raw papers or data and does not validate source science.
 
 ## Stop point
 

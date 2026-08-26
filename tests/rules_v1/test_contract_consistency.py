@@ -101,12 +101,22 @@ class ContractConsistencyTests(unittest.TestCase):
             for contract in contracts
             if contract["runtime_subrule_id"] == "F06R02_EDGE_COMPARABILITY"
         )
+        f02r02 = next(
+            contract
+            for contract in contracts
+            if contract["runtime_subrule_id"] == "F02R02_EDGE_CONDITION_COMPATIBILITY"
+        )
         f06r03 = next(
             contract
             for contract in contracts
             if contract["runtime_subrule_id"] == "F06R03_EDGE_VALIDATION_INDEPENDENCE"
         )
         self.assertIn("PRIOR_RESULT_STATUS", json.dumps(f06r02))
+        self.assertIn(
+            "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", json.dumps(f02r02)
+        )
+        self.assertIn("EDGE_LEFT_SOURCE", json.dumps(f02r02))
+        self.assertIn("EDGE_RIGHT_SOURCE", json.dumps(f02r02))
         self.assertNotIn("condition_relation", json.dumps(f06r03))
         self.assertNotIn("F02R02_EDGE_CONDITION_COMPATIBILITY", json.dumps(f06r03))
         self.assertNotIn("F03R01_SOURCE_NATIVE_MEASUREMENT", json.dumps(f06r03))

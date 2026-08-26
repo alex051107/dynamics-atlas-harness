@@ -78,18 +78,19 @@
       "implementation_status": "COMPLETE_DRAFT",
       "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
       "pass_conditions": [
-        {"reason_code": "EDGE_CONDITION_RELATION_MATCHED", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["MATCHED"]}}
+        {"reason_code": "EDGE_CONDITION_RELATION_AND_SOURCE_CONTEXT_PREREQUISITES_MATCHED", "condition": {"op": "ALL", "args": [{"op": "IN", "path": "edge.condition_relation", "values": ["MATCHED"]}, {"op": "PRIOR_RESULT_STATUS", "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "target_selector": "EDGE_LEFT_SOURCE", "values": ["PASS"]}, {"op": "PRIOR_RESULT_STATUS", "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "target_selector": "EDGE_RIGHT_SOURCE", "values": ["PASS"]}]}}
       ],
       "fail_conditions": [
         {"reason_code": "EDGE_CONDITION_RELATION_MISMATCH", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["MISMATCH"]}}
       ],
       "unresolved_conditions": [
-        {"reason_code": "EDGE_CONDITION_RELATION_UNRESOLVED", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["UNKNOWN", "UNRESOLVED"]}}
+        {"reason_code": "EDGE_CONDITION_RELATION_UNRESOLVED", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["UNKNOWN", "UNRESOLVED"]}},
+        {"reason_code": "EDGE_SOURCE_CONTEXT_PREREQUISITES_UNRESOLVED", "condition": {"op": "ANY", "args": [{"op": "PRIOR_RESULT_STATUS", "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "target_selector": "EDGE_LEFT_SOURCE", "values": ["UNKNOWN", "UNRESOLVED", "NOT_APPLICABLE", "NOT_RUN", "FAIL"]}, {"op": "PRIOR_RESULT_STATUS", "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "target_selector": "EDGE_RIGHT_SOURCE", "values": ["UNKNOWN", "UNRESOLVED", "NOT_APPLICABLE", "NOT_RUN", "FAIL"]}]}}
       ],
       "result_effects": {
-        "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "EDGE_CONDITION_RELATION_DECLARED", "claim_ceiling": "The edge records a matched condition relation. It does not establish a universal comparability threshold or validation independence."},
+        "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "EDGE_CONDITION_RELATION_DECLARED", "claim_ceiling": "The edge records a matched condition relation only after both endpoint sample-system/composition declarations PASS. It does not establish a universal comparability threshold or validation independence."},
         "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "EDGE_CONDITION_RELATION_MISMATCH", "claim_ceiling": "An explicit mismatch blocks the declared relation until a human revises or separates it; neither source's local measurement is invalidated."},
-        "UNRESOLVED": {"route": "SOURCE_LOOKUP", "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED", "claim_ceiling": "Missing or unresolved condition evidence leaves the relation unresolved; this Draft has no lookup executor."},
+        "UNRESOLVED": {"route": "SOURCE_LOOKUP", "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED", "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."},
         "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "NO_RULE_INSTANCE", "claim_ceiling": "No edge condition-relation instance was selected for this target."}
       }
     },
