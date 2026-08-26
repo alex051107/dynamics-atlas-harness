@@ -15,7 +15,7 @@
       "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/2",
       "head_branch": "governance/frozen-execution-plan-v1",
       "head_commit_before_gate0b_sync": "7d04bdc2ddb30786f92f57052c27dc44e66e7bb7",
-      "state": "SYNCHRONIZED_TO_MERGED_PR0_MAIN_PENDING_FOCUSED_CONSISTENCY_TEST_AND_PUSH"
+      "state": "SYNCHRONIZED_TO_MERGED_PR0_MAIN_FOCUSED_CONSISTENCY_TEST_PASS_PENDING_PUSH"
     },
     {
       "role": "ISOLATED_FROZEN_PLAN_PR0",

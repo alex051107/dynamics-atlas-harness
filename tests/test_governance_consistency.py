@@ -36,7 +36,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             work_item(status, "FROZEN_PLAN_GOVERNANCE")["state"],
-            "SYNCHRONIZED_TO_MERGED_PR0_MAIN_PENDING_FOCUSED_CONSISTENCY_TEST_AND_PUSH",
+            "SYNCHRONIZED_TO_MERGED_PR0_MAIN_FOCUSED_CONSISTENCY_TEST_PASS_PENDING_PUSH",
         )
         self.assertEqual(
             status["next_allowed_action"]["action"],
