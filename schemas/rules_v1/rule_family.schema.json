@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.dynamics-atlas.invalid/schemas/rules-v1/rule-family",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["family_id", "display_name", "candidate_subrule_ids", "implementation_status", "human_decision"],
+  "properties": {
+    "family_id": {"type": "string", "pattern": "^F[0-9]{2}_"},
+    "display_name": {"type": "string", "minLength": 1},
+    "candidate_subrule_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "implementation_status": {"enum": ["COMPLETE_DRAFT_SLICE", "CANDIDATE_MAP_ONLY"]},
+    "human_decision": {"const": "PENDING"}
+  }
+}

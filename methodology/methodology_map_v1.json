@@ -1,0 +1,57 @@
+{
+  "schema_version": "rules-prototype-methodology-map/v1",
+  "map_id": "dynamics-atlas-rules-prototype-v1",
+  "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+  "authority_boundary": "This map is a review derivative. Packets retain locators and are not a second scientific authority; only SEP-F01-CLAIM-CONTRACT has a narrow proposed-control-logic verification, while all other packet dispositions remain pending domain review.",
+  "human_facing_families": [
+    {
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "question": "What claim is requested, what use is intended, and is the requested wording inside the intake-declared scope before any future evidence-supported ceiling is computed?",
+      "runtime_targets": ["CASE"],
+      "disposition": "COMPLETE_DRAFT_SLICE",
+      "source_derivative_ids": ["SEP-F01-CLAIM-CONTRACT", "SEP-F01-REQUESTED-WORDING-SCOPE"]
+    },
+    {
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "question": "Do the sources describe a compatible construct, chemical species, sample composition, and condition?",
+      "runtime_targets": ["SOURCE", "EDGE"],
+      "disposition": "CANDIDATE_MAP_ONLY",
+      "source_derivative_ids": ["SEP-F02-CONSTRUCT", "SEP-F02-CONDITION"]
+    },
+    {
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "question": "What source-native observable, estimand, support, time semantics, and aggregation does each source provide?",
+      "runtime_targets": ["SOURCE"],
+      "disposition": "CANDIDATE_MAP_ONLY",
+      "source_derivative_ids": ["SEP-F03-MEASUREMENT"]
+    },
+    {
+      "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+      "question": "Are uncertainty, controls, and material alternative explanations source-located for the declared method?",
+      "runtime_targets": ["SOURCE"],
+      "disposition": "CANDIDATE_MAP_ONLY",
+      "source_derivative_ids": ["SEP-F04-RELIABILITY"]
+    },
+    {
+      "family_id": "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE",
+      "question": "What candidate support and forward or inverse bridge make the proposed representation admissible within a declared domain?",
+      "runtime_targets": ["SOURCE"],
+      "disposition": "CANDIDATE_MAP_ONLY",
+      "source_derivative_ids": ["SEP-F05-SUPPORT", "SEP-F05-FORWARD-BRIDGE"]
+    },
+    {
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "question": "What evidence role does each source have, is the cross-source relation admissible after F02/F03 prerequisites resolve, and is validation independence separately supported by lineage and shared-error facts?",
+      "runtime_targets": ["SOURCE", "EDGE"],
+      "disposition": "COMPLETE_DRAFT_SLICE",
+      "source_derivative_ids": ["SEP-F06-SOURCE-ROLE", "SEP-F06-COMPARABILITY", "SEP-F06-INDEPENDENCE"]
+    },
+    {
+      "family_id": "F07_IDENTIFIABILITY_AND_NEXT_ACTION",
+      "question": "Can the current evidence distinguish the remaining hypotheses, and what discriminating action is still needed?",
+      "runtime_targets": ["CASE"],
+      "disposition": "CANDIDATE_MAP_ONLY",
+      "source_derivative_ids": ["SEP-F07-IDENTIFIABILITY"]
+    }
+  ]
+}

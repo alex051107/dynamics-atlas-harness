@@ -1,0 +1,10 @@
+{
+  "schema_version": "rules-prototype-evaluation-context/v1",
+  "status": "FIXTURE_STAND_IN_ONLY",
+  "rule_results_by_instance": {
+    "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::edge-construction-validation": {"status": "PASS"},
+    "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-construction": {"status": "PASS"},
+    "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-held-out": {"status": "PASS"}
+  },
+  "fixture_boundary": "These synthetic RuleResult statuses exercise PR1 dependency wiring only. They are stored outside CaseGraph and are not actual F02/F03 evaluations."
+}

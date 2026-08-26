@@ -1,0 +1,51 @@
+{
+  "case": {
+    "case_id": "rules-v1-f01-f06-fixture",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "Can the declared source roles and cross-source relation be reviewed without claiming a terminal scientific result?",
+    "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+    "intended_use": "CROSS_SOURCE_REVIEW",
+    "observability_target": {
+      "event_signature": "Source-role and relation audit",
+      "target_time_scale": "Source-reported",
+      "target_spatial_scale": "Source-reported"
+    },
+    "claim_contract": {
+      "internal_consistency": "CONSISTENT",
+      "declared_request_scope": ["SOURCE_LOCAL_CONSISTENCY", "CROSS_SOURCE_COMPARABILITY", "ENSEMBLE_SUPPORT"],
+      "forbidden_upgrades": ["KINETICS", "MECHANISM"]
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "source-construction",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "CONSTRUCTION",
+      "source_locator": "fixture:source-construction",
+      "data_lineage_status": "DECLARED"
+    },
+    {
+      "source_id": "source-held-out",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "HELD_OUT_VALIDATION",
+      "source_locator": "fixture:source-held-out",
+      "data_lineage_status": "DECLARED"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "edge-construction-validation",
+      "left_source_id": "source-construction",
+      "right_source_id": "source-held-out",
+      "shared_claim": "The declared sources can be reviewed as a qualitative relation.",
+      "validation_claim": "The held-out source is proposed as an independent validation relation.",
+      "condition_relation": "MATCHED",
+      "relation_type": "QUALITATIVE_TRIANGULATION",
+      "bridge_status": "DECLARED",
+      "validation_independence": "INDEPENDENT",
+      "shared_error_status": "NO_MATERIAL_SHARED_ERROR_IDENTIFIED",
+      "data_lineage_status": "DECLARED"
+    }
+  ],
+  "fixture_boundary": "This CaseGraph contains scientific CASE, SOURCE, and EDGE facts only. Synthetic F02/F03 prerequisite results live in the separate EvaluationContext fixture and do not establish a real F02 or F03 RuleResult."
+}

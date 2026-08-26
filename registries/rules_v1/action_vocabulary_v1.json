@@ -1,0 +1,31 @@
+{
+  "schema_version": "rules-prototype-action-vocabulary/v1",
+  "vocabulary_id": "dynamics-atlas-resolution-routes/v1",
+  "routes": [
+    {
+      "route": "DIRECT_EVALUATION",
+      "meaning": "Evaluate a declared CASE, SOURCE, or EDGE contract from already present typed evidence.",
+      "execution_allowed_in_pr1": true
+    },
+    {
+      "route": "SOURCE_LOOKUP",
+      "meaning": "A declared future read-only route for a Source Evidence Packet allowlist by exact packet ID or locator. This Draft has no lookup executor or EvidenceLookupResult implementation.",
+      "execution_allowed_in_pr1": false,
+      "implementation_status": "DECLARED_ONLY_NO_EXECUTOR_IN_PR1",
+      "lookup_boundary": "NO_NETWORK_SEARCH_NO_RAG_NO_UNDECLARED_SOURCE_DISCOVERY"
+    },
+    {
+      "route": "REGISTERED_OPERATOR",
+      "meaning": "A future route for an exact unresolved obligation with a separately frozen ROSTER_PASS Operator contract.",
+      "execution_allowed_in_pr1": false,
+      "lookup_boundary": "NO_OPERATOR_SELECTION_OR_EXECUTION_IN_THIS_DRAFT"
+    },
+    {
+      "route": "HUMAN_OR_NEW_DATA",
+      "meaning": "Stop for human interpretation, a new source, a new experiment, or an explicit abstention.",
+      "execution_allowed_in_pr1": true
+    }
+  ],
+  "terminal_dispositions": ["ABSTAIN", "CANNOT_SUPPORT_REQUESTED_WORDING", "HUMAN_REVIEW_REQUIRED"],
+  "forbidden_routes": ["GENERAL_WEB_SEARCH", "UNREGISTERED_OPERATOR", "LIVE_AGENT_PLANNING", "AUTONOMOUS_SCIENTIFIC_VERDICT"]
+}
