@@ -1,65 +1,106 @@
 {
-  "schema_version": "frozen-plan-execution-status/v3",
+  "schema_version": "frozen-plan-execution-status/v4",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260826-v3",
-  "as_of": "2026-08-26T00:01:35Z",
-  "overall_status": "PLAN_ACTIVE_PR0_MERGED_GATE0B_SYNC_IN_PROGRESS_PR1_FIRST_DRAFT_AUTHORIZED_AFTER_GOVERNANCE",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260826-v4",
+  "as_of": "2026-08-26T23:06:00Z",
+  "overall_status": "NO_AGENT_MILESTONE_A_MERGED_PASS_LIVE_AGENT_EXPOSED_CASES_V1_HUMAN_AUTHORIZED",
   "repository_baseline": {
-    "main_commit": "c9d115b937ece52eba4c42613dc5877839348851",
-    "baseline_tag": "v0.2.0-baseline",
-    "accurate_name": "Harness Control-Plane Smoke v0.2"
+    "main_commit": "dd189362c4186f256e1ebe3cf2e068cdcbd6f733",
+    "baseline_tag": "exposed-no-agent-route-integrity-baseline",
+    "accurate_name": "Exposed-development no-Agent route-integrity baseline"
   },
   "work_items": [
     {
-      "role": "FROZEN_PLAN_GOVERNANCE",
-      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/2",
-      "head_branch": "governance/frozen-execution-plan-v1",
-      "head_commit_before_gate0b_sync": "7d04bdc2ddb30786f92f57052c27dc44e66e7bb7",
-      "state": "SYNCHRONIZED_TO_MERGED_PR0_MAIN_FOCUSED_CONSISTENCY_TEST_PASS_PENDING_PUSH"
+      "role": "NO_AGENT_MILESTONE_A",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/6",
+      "reviewed_head": "5a58d4713bf9015cf058062e56bb7518e2c982d7",
+      "merge_commit": "dd189362c4186f256e1ebe3cf2e068cdcbd6f733",
+      "state": "MERGED_PASS_CLEAN_CI_56_DISCOVERED_54_PASSED_2_WORKSPACE_DEPENDENT_SKIPPED",
+      "scope": [
+        "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
+        "EXACT_CASE_BOUND_HSP90_OPERATOR",
+        "ROUTE_DISPOSITION_ONLY",
+        "SCIENTIFIC_DISPOSITION_NOT_EVALUATED"
+      ]
     },
     {
-      "role": "ISOLATED_FROZEN_PLAN_PR0",
-      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/3",
-      "head_branch": "fix/baseline-boundary-normalization",
-      "source_branch_head": "f99e4aa36b478296cb00728f19d326d69019a8a7",
-      "merge_commit": "c9d115b937ece52eba4c42613dc5877839348851",
-      "state": "MERGED_MAIN_READBACK_PASS"
+      "role": "LIVE_AGENT_EXPOSED_CASES_V1",
+      "head_branch": "feature/live-agent-exposed-cases-v1",
+      "state": "HUMAN_AUTHORIZED_NOT_STARTED",
+      "authorization": "USER_DECISION_DA-20260826-032",
+      "scope": [
+        "TWO_EXPOSED_CASES",
+        "ANSWER_BLIND_PROFILER",
+        "PROPOSAL_ONLY_PLANNER",
+        "DETERMINISTIC_ADMISSION_AND_AUTHORIZATION",
+        "ONE_LOW_COST_TOOLLESS_MODEL_CONFIGURATION"
+      ],
+      "forbidden": [
+        "RULE_EXPANSION",
+        "OPERATOR_EXPANSION",
+        "CLAIM_CEILING_CHANGE",
+        "STAGE2",
+        "RVC",
+        "MCP",
+        "SQLITE",
+        "GENERIC_SCHEDULER",
+        "ADK",
+        "HELD_OUT",
+        "AGENT_TOOL_EXECUTION"
+      ]
     },
     {
-      "role": "SUPERSEDED_COMBINED_PRE_ADOPTION_PR",
-      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
-      "head_branch": "codex/rules-prototype-v1",
-      "head_commit": "2f9422a0a6ff3c72b8bfb0426d0e7c70b53d525f",
-      "state": "CLOSED_UNMERGED_BRANCH_PRESERVED",
-      "human_disposition": "CHANGES_REQUESTED"
+      "role": "HISTORICAL_FROZEN_PLAN",
+      "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
+      "authority_note": "The frozen plan is not rewritten to imply its earlier micro-stage sequence is current live authorization. The append-only deviation record holds the user-approved case-driven exception."
     }
   ],
   "stages": [
     {
-      "stage": "PR0_BASELINE_BOUNDARY_NORMALIZATION",
-      "status": "MERGED_MAIN_READBACK_PASS",
-      "known_present": ["HSP90_CANARY_PASS_NOT_ROUTABLE", "RUNPLAN_ROSTER_PASS_AND_ROUTABLE_GATE", "CANARY_OPT_IN", "CONTROL_PLANE_SMOKE_NAMING", "LEGACY_OPERATORS_JSON_FIXTURE_ONLY_MARKER", "FORMAL_PR0_EXIT_GATE_REPORT", "LOCAL_XEISD_59_15_16_PASS", "REMOTE_UNIT_CI_PASS"],
-      "known_unresolved": []
+      "stage": "NO_AGENT_MILESTONE_A",
+      "status": "MERGED_PASS",
+      "known_present": [
+        "REPOSITORY_CONTAINED_FROZEN_INPUTS",
+        "EXACT_XEISD_ATTESTATION_ROUTE",
+        "EXACT_CASE_BOUND_HSP90_RULE_TO_OPERATOR_CLOSURE",
+        "ROUTE_AND_SCIENTIFIC_DISPOSITION_SEPARATION"
+      ],
+      "known_unresolved": [
+        "SOURCE_SCIENCE_APPROVAL",
+        "GENERAL_OPERATOR_SCOPE",
+        "SCIENTIFIC_STAGE2_VERDICT",
+        "AGENT_VALUE",
+        "TRANSFER"
+      ]
     },
     {
-      "stage": "PR1_RULES_PROTOTYPE_V1",
-      "status": "FIRST_DRAFT_AUTHORIZED_AFTER_GOVERNANCE_MERGE",
-      "known_present": ["EIGHT_SEED_FAMILIES", "LEGACY_33_RULE_AUDIT_COPY", "SEED_BINDINGS", "RESOLUTION_POLICIES", "EVALUATION_CONTRACTS", "POSITIVE_AND_ONE_FIELD_NEGATIVE_FIXTURES"],
-      "known_unresolved": ["PROPOSAL_NAMING", "PLAN_NAMED_DIRECTORY_LAYOUT", "COVERAGE_GAP_REGISTER", "EXPLICIT_RULE_FAMILY_OVERLAY", "SOURCE_GROUNDING_REVIEW_ARTIFACT", "MULTI_TARGET_SUB_BINDINGS_AND_CONTRACTS", "BINDING_GRAMMAR_AND_JSON_SCHEMA", "V0_3_TO_VNEXT_PATH_MAPPING", "NORMALIZED_RESOLUTION_POLICY_TYPES_AND_ACTION_VOCABULARY", "SEPARATE_HUMAN_DECISION_GATE", "SP03_METHOD_PROFILE_BOUNDARY", "SP04_DISTINCT_RUNTIME_OBLIGATIONS", "POSITIVE_NEGATIVE_MISSING_WRONG_TARGET_BEHAVIORAL_RUNNER", "REMOTE_AND_LOCAL_VALIDATION_REPORTING", "RULES_PROTOTYPE_V1_REVIEW_PACKET", "HUMAN_SCIENTIFIC_APPROVAL"]
+      "stage": "LIVE_AGENT_EXPOSED_CASES_V1",
+      "status": "HUMAN_AUTHORIZED_NOT_STARTED",
+      "known_present": [
+        "SEPARATE_PROFILER_AND_PLANNER_REQUIREMENT",
+        "ANSWER_BLIND_MODEL_VISIBLE_WORKSPACE_REQUIREMENT",
+        "SEALED_REFERENCE_COMPARISON_REQUIREMENT"
+      ],
+      "known_unresolved": [
+        "PROFILER_BEHAVIOR",
+        "PLANNER_BEHAVIOR",
+        "END_TO_END_BEHAVIOR",
+        "AGENT_VALUE"
+      ]
     },
     {
-      "stage": "PR2_THROUGH_PR8",
+      "stage": "STAGE2_ADK_HELD_OUT",
       "status": "NOT_AUTHORIZED",
       "known_present": [],
       "known_unresolved": ["ALL_STAGE_EXIT_GATES"]
     }
   ],
   "next_allowed_action": {
-    "action": "COMPLETE_GATE0B_GOVERNANCE_SYNC_AND_MERGE",
-    "deliverable": "GOVERNANCE_PR2_POST_PR0_CONSISTENCY_UPDATE",
-    "automatic_code_changes": true,
-    "merge_authority": "USER_DECISION_DA-20260825-025",
-    "exit_gate": "PR2_MUST_BE_REBASED_TO_MAIN_C9D115B_AND_PASS_THE_GOVERNANCE_CONSISTENCY_TEST_BEFORE_MERGE"
+    "action": "CREATE_FEATURE_LIVE_AGENT_EXPOSED_CASES_V1",
+    "deliverable": "TWO_CASE_SEPARATE_PROFILER_PLANNER_COMPARISON_REPORT",
+    "automatic_code_changes": false,
+    "authorization": "USER_DECISION_DA-20260826-032",
+    "exit_gate": "CURRENT_CONTEXT_RECEIPT_THEN_TYPED_PROPOSAL_VALIDATION_DETERMINISTIC_COMPARISON_AND_HUMAN_REVIEW"
   },
-  "claim_ceiling": "Observed PR0 merge, Gate 0B governance synchronization, and authorization for a proposal-only revised PR1 first draft; no scientific freeze, HSP90 route, live Agent, later-stage authorization, or semantic-correctness claim."
+  "claim_ceiling": "Development-only evaluation of two exposed cases. No source-science approval, final scientific disposition, general Operator route, Agent value, transfer, production, Stage 2, ADK, or held-out claim."
 }
