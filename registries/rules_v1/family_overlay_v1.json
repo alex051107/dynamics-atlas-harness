@@ -15,20 +15,20 @@
     {
       "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
       "display_name": "System Construct and Condition",
-      "candidate_subrule_ids": ["F02R01_SOURCE_CONSTRUCT_DECLARATION", "F02R02_EDGE_CONDITION_COMPATIBILITY"],
-      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "candidate_subrule_ids": ["F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "F02R02_EDGE_CONDITION_COMPATIBILITY"],
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
       "architecture_decision": "APPROVE",
       "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
-      "runtime_readiness": "READY_FOR_NEXT_DRAFT"
+      "runtime_readiness": "NOT_READY"
     },
     {
       "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
       "display_name": "Source Measurement Semantics",
       "candidate_subrule_ids": ["F03R01_SOURCE_NATIVE_MEASUREMENT"],
-      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
       "architecture_decision": "APPROVE",
       "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
-      "runtime_readiness": "READY_FOR_NEXT_DRAFT"
+      "runtime_readiness": "NOT_READY"
     },
     {
       "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",

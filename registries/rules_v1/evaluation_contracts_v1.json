@@ -50,51 +50,69 @@
       }
     },
     {
-      "evaluation_contract_id": "EC-F02R01-SOURCE-CONSTRUCT",
-      "runtime_subrule_id": "F02R01_SOURCE_CONSTRUCT_DECLARATION",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
       "target_kind": "SOURCE",
-      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "implementation_status": "COMPLETE_DRAFT",
       "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
-      "pass_conditions": [],
-      "fail_conditions": [],
-      "unresolved_conditions": [{"reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED", "condition": {"op": "EQ", "path": "target.kind", "value": "SOURCE"}}],
+      "pass_conditions": [
+        {"reason_code": "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED", "condition": {"op": "IN", "path": "source.sample_system_composition_declaration_status", "values": ["DECLARED"]}}
+      ],
+      "fail_conditions": [
+        {"reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_CONTRADICTED", "condition": {"op": "IN", "path": "source.sample_system_composition_declaration_status", "values": ["CONTRADICTED"]}}
+      ],
+      "unresolved_conditions": [
+        {"reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED", "condition": {"op": "IN", "path": "source.sample_system_composition_declaration_status", "values": ["UNKNOWN", "UNRESOLVED"]}}
+      ],
       "result_effects": {
-        "PASS": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable construct conclusion is frozen."},
-        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable construct conclusion is frozen."},
-        "UNRESOLVED": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable construct conclusion is frozen."},
-        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable construct conclusion is frozen."}
+        "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED", "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."},
+        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "REQUEST_SOURCE_CONTEXT_RESOLUTION", "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it is not a verdict on the source's science."},
+        "UNRESOLVED": {"route": "SOURCE_LOOKUP", "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED", "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."},
+        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "NO_RULE_INSTANCE", "claim_ceiling": "No source sample-system/composition instance was selected for this target."}
       }
     },
     {
       "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
       "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
       "target_kind": "EDGE",
-      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "implementation_status": "COMPLETE_DRAFT",
       "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
-      "pass_conditions": [],
-      "fail_conditions": [],
-      "unresolved_conditions": [{"reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED", "condition": {"op": "EQ", "path": "target.kind", "value": "EDGE"}}],
+      "pass_conditions": [
+        {"reason_code": "EDGE_CONDITION_RELATION_MATCHED", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["MATCHED"]}}
+      ],
+      "fail_conditions": [
+        {"reason_code": "EDGE_CONDITION_RELATION_MISMATCH", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["MISMATCH"]}}
+      ],
+      "unresolved_conditions": [
+        {"reason_code": "EDGE_CONDITION_RELATION_UNRESOLVED", "condition": {"op": "IN", "path": "edge.condition_relation", "values": ["UNKNOWN", "UNRESOLVED"]}}
+      ],
       "result_effects": {
-        "PASS": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable condition conclusion is frozen."},
-        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable condition conclusion is frozen."},
-        "UNRESOLVED": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable condition conclusion is frozen."},
-        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable condition conclusion is frozen."}
+        "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "EDGE_CONDITION_RELATION_DECLARED", "claim_ceiling": "The edge records a matched condition relation. It does not establish a universal comparability threshold or validation independence."},
+        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "EDGE_CONDITION_RELATION_MISMATCH", "claim_ceiling": "An explicit mismatch blocks the declared relation until a human revises or separates it; neither source's local measurement is invalidated."},
+        "UNRESOLVED": {"route": "SOURCE_LOOKUP", "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED", "claim_ceiling": "Missing or unresolved condition evidence leaves the relation unresolved; this Draft has no lookup executor."},
+        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "NO_RULE_INSTANCE", "claim_ceiling": "No edge condition-relation instance was selected for this target."}
       }
     },
     {
       "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
       "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
       "target_kind": "SOURCE",
-      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "implementation_status": "COMPLETE_DRAFT",
       "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
-      "pass_conditions": [],
-      "fail_conditions": [],
-      "unresolved_conditions": [{"reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED", "condition": {"op": "EQ", "path": "target.kind", "value": "SOURCE"}}],
+      "pass_conditions": [
+        {"reason_code": "SOURCE_NATIVE_MEASUREMENT_DECLARED", "condition": {"op": "IN", "path": "source.native_measurement_declaration_status", "values": ["DECLARED"]}}
+      ],
+      "fail_conditions": [
+        {"reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_CONTRADICTED", "condition": {"op": "IN", "path": "source.native_measurement_declaration_status", "values": ["CONTRADICTED"]}}
+      ],
+      "unresolved_conditions": [
+        {"reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_UNRESOLVED", "condition": {"op": "IN", "path": "source.native_measurement_declaration_status", "values": ["UNKNOWN", "UNRESOLVED"]}}
+      ],
       "result_effects": {
-        "PASS": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable measurement conclusion is frozen."},
-        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable measurement conclusion is frozen."},
-        "UNRESOLVED": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable measurement conclusion is frozen."},
-        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "CANDIDATE_ONLY", "claim_ceiling": "No executable measurement conclusion is frozen."}
+        "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED", "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."},
+        "FAIL": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "REQUEST_SOURCE_MEASUREMENT_RESOLUTION", "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it does not invalidate the source's science."},
+        "UNRESOLVED": {"route": "SOURCE_LOOKUP", "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED", "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."},
+        "NOT_APPLICABLE": {"route": "HUMAN_OR_NEW_DATA", "decision_class": "NO_RULE_INSTANCE", "claim_ceiling": "No source-native measurement instance was selected for this target."}
       }
     },
     {

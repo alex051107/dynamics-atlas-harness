@@ -37,7 +37,7 @@ class ContractConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             sum(subrule["implementation_status"] == "COMPLETE_DRAFT" for subrule in subrules),
-            5,
+            8,
         )
 
         binding_by_subrule = {binding["runtime_subrule_id"]: binding for binding in bindings}

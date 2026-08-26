@@ -4,6 +4,8 @@ import unittest
 from pathlib import Path
 
 from dynamics_atlas_harness.rules_prototype_v1 import (
+    EvaluationContext,
+    RulePrototypeError,
     evaluate_active_rules,
     evaluate_rule_instance,
     rule_instance_id,
@@ -92,6 +94,9 @@ class BindingBehaviorTests(unittest.TestCase):
         required_ids = {
             "F01R01_CASE_CLAIM_DECLARATION",
             "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+            "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+            "F02R02_EDGE_CONDITION_COMPATIBILITY",
+            "F03R01_SOURCE_NATIVE_MEASUREMENT",
             "F06R01_SOURCE_EVIDENCE_ROLE",
             "F06R02_EDGE_COMPARABILITY",
             "F06R03_EDGE_VALIDATION_INDEPENDENCE",
@@ -142,19 +147,25 @@ class BindingBehaviorTests(unittest.TestCase):
                         result["claim_effect"]["route"], scenario["expected"]["route"]
                     )
 
-    def test_active_slice_evaluates_only_f01_and_f06(self):
+    def test_active_slice_runs_real_f02_f03_prerequisites_before_f06_replay(self):
+        context = EvaluationContext()
         results = evaluate_active_rules(
             case_graph=self.base_case,
             runtime_subrules={"runtime_subrules": list(self.subrules.values())},
             bindings={"bindings": list(self.bindings.values())},
             contracts={"contracts": list(self.contracts.values())},
-            evaluation_context=self.evaluation_context,
+            evaluation_context=context,
         )
-        self.assertEqual(len(results), 6)
-        self.assertEqual({result["family_id"] for result in results}, {
-            "F01_CLAIM_CONTRACT_AND_CEILING",
-            "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
-        })
+        self.assertEqual(len(results), 11)
+        self.assertEqual(
+            {result["family_id"] for result in results},
+            {
+                "F01_CLAIM_CONTRACT_AND_CEILING",
+                "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+                "F03_SOURCE_MEASUREMENT_SEMANTICS",
+                "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+            },
+        )
         self.assertTrue(all(result["status"] == "PASS" for result in results))
         self.assertTrue(
             all(result["claim_effect"]["route"] != "REGISTERED_OPERATOR" for result in results)
@@ -170,23 +181,65 @@ class BindingBehaviorTests(unittest.TestCase):
                 for result in results
             )
         )
+        self.assertEqual(len(context.rule_results_by_instance), 3)
+        self.assertEqual(
+            context.status_for(
+                runtime_subrule_id="F02R02_EDGE_CONDITION_COMPATIBILITY",
+                target_kind="EDGE",
+                target_id="edge-construction-validation",
+            ),
+            "PASS",
+        )
+        for source_id in ("source-construction", "source-held-out"):
+            self.assertEqual(
+                context.status_for(
+                    runtime_subrule_id="F03R01_SOURCE_NATIVE_MEASUREMENT",
+                    target_kind="SOURCE",
+                    target_id=source_id,
+                ),
+                "PASS",
+            )
         self.assertNotIn("prerequisite_rule_results", json.dumps(self.base_case))
 
-        without_context = evaluate_active_rules(
-            case_graph=self.base_case,
+        missing_measurement = copy.deepcopy(self.base_case)
+        missing_measurement["evidence_items"][0].pop("estimand")
+        missing_replay = evaluate_active_rules(
+            case_graph=missing_measurement,
             runtime_subrules={"runtime_subrules": list(self.subrules.values())},
             bindings={"bindings": list(self.bindings.values())},
             contracts={"contracts": list(self.contracts.values())},
         )
-        without_context_by_subrule = {
-            result["runtime_subrule_id"]: result for result in without_context
+        missing_by_instance = {
+            result["rule_instance_id"]: result for result in missing_replay
         }
         self.assertEqual(
-            without_context_by_subrule["F06R02_EDGE_COMPARABILITY"]["status"],
+            missing_by_instance[
+                rule_instance_id(
+                    "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                    "SOURCE",
+                    "source-construction",
+                )
+            ]["status"],
             "UNRESOLVED",
         )
         self.assertEqual(
-            without_context_by_subrule["F06R03_EDGE_VALIDATION_INDEPENDENCE"]["status"],
+            missing_by_instance[
+                rule_instance_id(
+                    "F06R02_EDGE_COMPARABILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "UNRESOLVED",
+        )
+        self.assertEqual(
+            missing_by_instance[
+                rule_instance_id(
+                    "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
             "PASS",
         )
 
@@ -197,14 +250,130 @@ class BindingBehaviorTests(unittest.TestCase):
             runtime_subrules={"runtime_subrules": list(self.subrules.values())},
             bindings={"bindings": list(self.bindings.values())},
             contracts={"contracts": list(self.contracts.values())},
-            evaluation_context=self.evaluation_context,
         )
-        replay_by_subrule = {result["runtime_subrule_id"]: result for result in replay_results}
-        self.assertEqual(replay_by_subrule["F06R02_EDGE_COMPARABILITY"]["status"], "FAIL")
+        replay_by_instance = {result["rule_instance_id"]: result for result in replay_results}
         self.assertEqual(
-            replay_by_subrule["F06R03_EDGE_VALIDATION_INDEPENDENCE"]["status"],
+            replay_by_instance[
+                rule_instance_id(
+                    "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "FAIL",
+        )
+        self.assertEqual(
+            replay_by_instance[
+                rule_instance_id(
+                    "F06R02_EDGE_COMPARABILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "FAIL",
+        )
+        self.assertEqual(
+            replay_by_instance[
+                rule_instance_id(
+                    "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
             "PASS",
         )
+
+        f02r01_unresolved = copy.deepcopy(self.base_case)
+        f02r01_unresolved["evidence_items"][0].pop("sample_composition")
+        f02r01_replay = evaluate_active_rules(
+            case_graph=f02r01_unresolved,
+            runtime_subrules={"runtime_subrules": list(self.subrules.values())},
+            bindings={"bindings": list(self.bindings.values())},
+            contracts={"contracts": list(self.contracts.values())},
+        )
+        f02r01_by_instance = {
+            result["rule_instance_id"]: result for result in f02r01_replay
+        }
+        self.assertEqual(
+            f02r01_by_instance[
+                rule_instance_id(
+                    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                    "SOURCE",
+                    "source-construction",
+                )
+            ]["status"],
+            "UNRESOLVED",
+        )
+        self.assertEqual(
+            f02r01_by_instance[
+                rule_instance_id(
+                    "F06R02_EDGE_COMPARABILITY",
+                    "EDGE",
+                    "edge-construction-validation",
+                )
+            ]["status"],
+            "PASS",
+        )
+
+    def test_evaluation_context_rejects_fallback_and_duplicate_rule_result_ids(self):
+        result = {
+            "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+            "target": {"kind": "SOURCE", "id": "source-record-1"},
+            "rule_instance_id": rule_instance_id(
+                "F03R01_SOURCE_NATIVE_MEASUREMENT", "SOURCE", "source-record-1"
+            ),
+            "status": "PASS",
+        }
+        context = EvaluationContext()
+        context.record(result)
+        self.assertEqual(
+            context.status_for(
+                runtime_subrule_id="F03R01_SOURCE_NATIVE_MEASUREMENT",
+                target_kind="SOURCE",
+                target_id="source-record-1",
+            ),
+            "PASS",
+        )
+        with self.assertRaisesRegex(RulePrototypeError, "duplicate"):
+            context.record(result)
+
+        unknown_target = copy.deepcopy(result)
+        unknown_target["target"]["id"] = "UNKNOWN"
+        unknown_target["rule_instance_id"] = rule_instance_id(
+            "F03R01_SOURCE_NATIVE_MEASUREMENT", "SOURCE", "UNKNOWN"
+        )
+        with self.assertRaisesRegex(RulePrototypeError, "nonempty, non-UNKNOWN"):
+            EvaluationContext().record(unknown_target)
+
+        mismatched_id = copy.deepcopy(result)
+        mismatched_id["rule_instance_id"] = "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::other"
+        with self.assertRaisesRegex(RulePrototypeError, "does not match"):
+            EvaluationContext().record(mismatched_id)
+
+        not_run = copy.deepcopy(result)
+        not_run["status"] = "NOT_RUN"
+        with self.assertRaisesRegex(RulePrototypeError, "emitted RuleResult statuses"):
+            EvaluationContext().record(not_run)
+
+        phantom_case = copy.deepcopy(self.base_case)
+        phantom_case["comparisons"][0]["right_source_id"] = "phantom-source"
+        preseeded = EvaluationContext(
+            {
+                rule_instance_id(
+                    "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                    "SOURCE",
+                    "phantom-source",
+                ): {"status": "PASS"}
+            }
+        )
+        with self.assertRaisesRegex(RulePrototypeError, "fresh empty"):
+            evaluate_active_rules(
+                case_graph=phantom_case,
+                runtime_subrules={"runtime_subrules": list(self.subrules.values())},
+                bindings={"bindings": list(self.bindings.values())},
+                contracts={"contracts": list(self.contracts.values())},
+                evaluation_context=preseeded,
+            )
 
 
 if __name__ == "__main__":

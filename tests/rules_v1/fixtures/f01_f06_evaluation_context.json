@@ -6,5 +6,5 @@
     "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-construction": {"status": "PASS"},
     "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-held-out": {"status": "PASS"}
   },
-  "fixture_boundary": "These synthetic RuleResult statuses exercise PR1 dependency wiring only. They are stored outside CaseGraph and are not actual F02/F03 evaluations."
+  "fixture_boundary": "These synthetic RuleResult statuses support direct evaluate_rule_instance coverage only. evaluate_active_rules rejects nonempty Context and derives its F06 prerequisites from actual F02R02/F03R01 Draft results."
 }

@@ -24,6 +24,28 @@ _ITERATION_OPS = frozenset({"FOR_EACH_SOURCE", "FOR_EACH_EDGE"})
 _TRUE = "TRUE"
 _FALSE = "FALSE"
 _UNKNOWN = "UNKNOWN"
+_STORED_RULE_RESULT_STATUSES = frozenset({"PASS", "FAIL", "UNRESOLVED", "NOT_APPLICABLE"})
+
+# These are deliberately explicit PR1B phases, not a dependency graph or a
+# general workflow scheduler. F06R02 declares only the producer results below.
+_PR1B_PREREQUISITE_SUBRULE_IDS = (
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+    "F02R02_EDGE_CONDITION_COMPATIBILITY",
+    "F03R01_SOURCE_NATIVE_MEASUREMENT",
+)
+_PR1B_CONTEXT_PRODUCER_SUBRULE_IDS = frozenset(
+    {
+        "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT",
+    }
+)
+_PR1B_REPLAY_SUBRULE_IDS = (
+    "F01R01_CASE_CLAIM_DECLARATION",
+    "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+    "F06R01_SOURCE_EVIDENCE_ROLE",
+    "F06R02_EDGE_COMPARABILITY",
+    "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -60,11 +82,12 @@ def rule_instance_id(
 
 
 class EvaluationContext:
-    """Read-only post-evaluation state that is deliberately outside CaseGraph.
+    """Proposal-local post-evaluation state that is deliberately outside CaseGraph.
 
     The scientific CaseGraph remains a record of CASE, SOURCE, and EDGE facts.
     Prior RuleResults are keyed separately by stable RuleInstance ID so dependency
-    wiring cannot be mistaken for a scientific source or edge attribute.
+    wiring cannot be mistaken for a scientific source or edge attribute. PR1B stores
+    only the F02R02/F03R01 producer results needed for its explicit F06 replay.
     """
 
     def __init__(self, rule_results_by_instance: Mapping[str, Any] | None = None):
@@ -101,6 +124,53 @@ class EvaluationContext:
         )
         status = record.get("status") if isinstance(record, Mapping) else record
         return status if isinstance(status, str) and status else "NOT_RUN"
+
+    def record(self, result: Mapping[str, Any]) -> None:
+        """Store one validated RuleResult without allowing fallback-ID collisions.
+
+        This deliberately stores a narrow identity-and-status record rather than an
+        arbitrary caller object. ``NOT_RUN`` is a lookup sentinel and may not be
+        stored. Callers must use a fresh context for a replay: an existing RuleResult
+        with the same stable ID is rejected rather than silently overwritten.
+        """
+
+        if not isinstance(result, Mapping):
+            raise RulePrototypeError("EvaluationContext.record requires a RuleResult mapping")
+        runtime_subrule_id = result.get("runtime_subrule_id")
+        target = result.get("target")
+        if not isinstance(runtime_subrule_id, str) or not runtime_subrule_id.strip():
+            raise RulePrototypeError("RuleResult runtime_subrule_id must be a nonempty string")
+        if not isinstance(target, Mapping):
+            raise RulePrototypeError("RuleResult target must be a mapping")
+        target_kind = target.get("kind")
+        target_id = target.get("id")
+        if target_kind not in {"CASE", "SOURCE", "EDGE"}:
+            raise RulePrototypeError("RuleResult target.kind must be CASE, SOURCE, or EDGE")
+        if not isinstance(target_id, str) or not target_id.strip() or target_id == "UNKNOWN":
+            raise RulePrototypeError("RuleResult target.id must be a nonempty, non-UNKNOWN string")
+        expected_rule_instance_id = rule_instance_id(
+            runtime_subrule_id, target_kind, target_id
+        )
+        supplied_rule_instance_id = result.get("rule_instance_id")
+        if "::UNKNOWN" in expected_rule_instance_id or "::UNKNOWN" in str(
+            supplied_rule_instance_id
+        ):
+            raise RulePrototypeError("RuleResult IDs may not use the UNKNOWN fallback")
+        if supplied_rule_instance_id != expected_rule_instance_id:
+            raise RulePrototypeError("RuleResult rule_instance_id does not match its identity")
+        status = result.get("status")
+        if status not in _STORED_RULE_RESULT_STATUSES:
+            raise RulePrototypeError(
+                "EvaluationContext may store only emitted RuleResult statuses"
+            )
+        if expected_rule_instance_id in self.rule_results_by_instance:
+            raise RulePrototypeError("EvaluationContext refuses duplicate RuleResult IDs")
+        self.rule_results_by_instance[expected_rule_instance_id] = {
+            "rule_instance_id": expected_rule_instance_id,
+            "runtime_subrule_id": runtime_subrule_id,
+            "target": {"kind": target_kind, "id": target_id},
+            "status": status,
+        }
 
 
 def resolve_path(
@@ -589,7 +659,13 @@ def evaluate_active_rules(
     contracts: Mapping[str, Any],
     evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
-    """Evaluate only the F01/F06 Draft slice; candidate-map rules are not executed."""
+    """Run the explicit PR1B prerequisite phase and its one F06 replay.
+
+    Phase one evaluates F02R01, F02R02, and F03R01. Only the F02R02 and F03R01
+    outputs are stored because F06R02 names them as dependencies. Phase two replays
+    the F01/F06 Draft slice against that fresh proposal-local context. This is not a
+    general dependency scheduler and does not store F06 or terminal conclusions.
+    """
 
     subrule_by_id = {
         item["runtime_subrule_id"]: item
@@ -598,21 +674,61 @@ def evaluate_active_rules(
     contract_by_id = {
         item["evaluation_contract_id"]: item for item in contracts.get("contracts", [])
     }
+    binding_by_subrule_id = {
+        item["runtime_subrule_id"]: item for item in bindings.get("bindings", [])
+    }
+    planned_subrule_ids = set(_PR1B_PREREQUISITE_SUBRULE_IDS) | set(
+        _PR1B_REPLAY_SUBRULE_IDS
+    )
+    unplanned_complete_drafts = {
+        runtime_subrule_id
+        for runtime_subrule_id, subrule in subrule_by_id.items()
+        if subrule.get("implementation_status") == "COMPLETE_DRAFT"
+        and runtime_subrule_id not in planned_subrule_ids
+    }
+    if unplanned_complete_drafts:
+        raise RulePrototypeError(
+            "PR1B evaluator has no explicit phase for complete Draft sub-rules: "
+            + ", ".join(sorted(unplanned_complete_drafts))
+        )
+
+    context = EvaluationContext.from_mapping(evaluation_context)
+    if context.rule_results_by_instance:
+        raise RulePrototypeError(
+            "PR1B active replay requires a fresh empty EvaluationContext"
+        )
     results: list[dict[str, Any]] = []
-    for binding in bindings.get("bindings", []):
-        subrule = subrule_by_id[binding["runtime_subrule_id"]]
-        if subrule.get("implementation_status") != "COMPLETE_DRAFT":
-            continue
-        contract = contract_by_id[binding["evaluation_contract_id"]]
-        for target in expand_targets(binding, case_graph):
-            results.append(
-                evaluate_rule_instance(
+
+    for phase_subrule_ids in (
+        _PR1B_PREREQUISITE_SUBRULE_IDS,
+        _PR1B_REPLAY_SUBRULE_IDS,
+    ):
+        for runtime_subrule_id in phase_subrule_ids:
+            subrule = subrule_by_id.get(runtime_subrule_id)
+            binding = binding_by_subrule_id.get(runtime_subrule_id)
+            if subrule is None or binding is None:
+                raise RulePrototypeError(
+                    f"PR1B evaluator cannot resolve configured sub-rule: {runtime_subrule_id}"
+                )
+            if subrule.get("implementation_status") != "COMPLETE_DRAFT":
+                raise RulePrototypeError(
+                    f"PR1B evaluator requires a complete Draft sub-rule: {runtime_subrule_id}"
+                )
+            contract = contract_by_id.get(binding["evaluation_contract_id"])
+            if contract is None:
+                raise RulePrototypeError(
+                    f"PR1B evaluator cannot resolve contract for: {runtime_subrule_id}"
+                )
+            for target in expand_targets(binding, case_graph):
+                result = evaluate_rule_instance(
                     subrule=subrule,
                     binding=binding,
                     contract=contract,
                     case_graph=case_graph,
                     target=target,
-                    evaluation_context=evaluation_context,
+                    evaluation_context=context,
                 )
-            )
+                results.append(result)
+                if runtime_subrule_id in _PR1B_CONTEXT_PRODUCER_SUBRULE_IDS:
+                    context.record(result)
     return results
