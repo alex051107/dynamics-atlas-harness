@@ -1,0 +1,29 @@
+{
+  "schema_version": "exact-review-derivative-excerpt/v1-alpha",
+  "fixture_kind": "SANITIZED_REVIEW_DERIVATIVE_EXCERPT",
+  "reference_kind": "PAPER_DERIVED_DEVELOPMENT_REFERENCE",
+  "case_id": "lincoff_2020_xeisd_maintext",
+  "paper_identity": {
+    "title": "Extended experimental inferential structure determination method in determining the structural ensembles of disordered protein states",
+    "doi": "10.1038/s42004-020-0323-0",
+    "version": "Communications Chemistry 3:74 (2020), publisher main article only"
+  },
+  "source_reference": {
+    "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/paper_references/lincoff_2020_xeisd_maintext_reference.json",
+    "upstream_sha256": "49d751931d4a2fc4f41b0289a3edc0da7d80156bbd07d10441ca5404556bece6"
+  },
+  "extraction_boundary": "Retains only the two predeclared locator records used by the exposed attestation route. Local PDF paths, all other locators, and all source-science judgment are excluded.",
+  "locators": [
+    {
+      "locator_id": "XEI-M03",
+      "locator": "Main article pages 2-5, Theory, equations 2-12",
+      "supports": "Forward calculations, averaging laws and uncertainty components for J-coupling, chemical shifts, NOE, PRE, RDC, hydrodynamic radius, smFRET and SAXS; SAXS correlation correction; limitations of static NOE/PRE models."
+    },
+    {
+      "locator_id": "XEI-M04",
+      "locator": "Main article page 5, section 'X-EISD applied to the unfolded state of the drkN SH3 domain'",
+      "supports": "Construct and buffer scope; separation of folded and unfolded NMR signals; SAXS subtraction; smFRET peak assignment; experimental data inventory."
+    }
+  ],
+  "attestation_boundary": "This fixture permits exact marker checks before applying predeclared field updates. It does not parse paper text, infer facts, establish passage entailment, validate source science, or retrieve undeclared sources."
+}

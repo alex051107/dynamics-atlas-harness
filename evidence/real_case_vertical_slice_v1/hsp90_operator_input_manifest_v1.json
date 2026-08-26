@@ -1,0 +1,47 @@
+{
+  "schema_version": "case-bound-operator-input-manifest/v1-alpha",
+  "manifest_id": "hsp90-directional-time-anatomy-inputs/v1-alpha",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "source_id": "hsp90_md_round2_directional_packet",
+  "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+  "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+  "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+  "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+  "capability_id": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
+  "implementation": {
+    "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/run_time_anatomy_v0_frozen.py",
+    "sha256": "84e47d7abf6ab786f6b7125d1a130f28196b2cc7f301b28674c5a7277b303292",
+    "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py",
+    "upstream_sha256": "c7b4f333c8b8386106d4121c578845b686ff4c41e6240d9ecfadb8bda31a83e8",
+    "fixture_kind": "SANITIZED_FROZEN_IMPLEMENTATION"
+  },
+  "fixed_inputs": {
+    "frame_state_assignments": {
+      "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/frame_state_assignments.tsv",
+      "sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv",
+      "upstream_sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+      "fixture_kind": "BYTE_IDENTICAL_FROZEN_INPUT"
+    },
+    "route_predictions": {
+      "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/route_predictions.tsv",
+      "sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv",
+      "upstream_sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446",
+      "fixture_kind": "BYTE_IDENTICAL_FROZEN_INPUT"
+    }
+  },
+  "expected_time_contract": {
+    "analysis_window_ns": [20, 1020],
+    "saved_stride_ns": 1,
+    "trajectory_count": 40,
+    "frames_per_trajectory": 1001,
+    "statistical_unit": "TRAJECTORY",
+    "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY"
+  },
+  "fixed_parameters": {
+    "persistence_saved_frames": [5, 20, 50],
+    "state_rule": "existing zero-sign two-readout rule"
+  },
+  "claim_ceiling": "Same-packet, trajectory-level descriptive directional-block diagnostic only."
+}

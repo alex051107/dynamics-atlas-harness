@@ -1,0 +1,35 @@
+{
+  "schema_version": "xeisd-base-projection-manifest/v1-alpha",
+  "fixture_kind": "SANITIZED_BASE_PROJECTION_MANIFEST",
+  "base_asset_id": "xeisd-rich-casegraph-v0.3",
+  "source_asset": {
+    "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json",
+    "upstream_sha256": "9235717c7bbc900c02f26d3214be332fc196356a706e82c97f700d9c7042774a"
+  },
+  "extraction_boundary": "Retains only the parent case ID, the two selected source records' four preserved fields, and the one selected comparison claim. It is not the full v0.3 CaseGraph and does not validate the source records or their scientific interpretation.",
+  "case": {
+    "case_id": "lincoff_2020_xeisd_maintext"
+  },
+  "evidence_items": [
+    {
+      "source_id": "xeisd_random_candidate_pool",
+      "native_observable": "Candidate conformer coordinates and their available structural support",
+      "estimand": "The region of conformational space available to X-EISD selection from this starting pool",
+      "spatial_support": "Whole-domain conformational coordinates, including local secondary structure and global compactness",
+      "unit_or_aggregation": "Candidate conformer pool used to assemble fixed-size sub-ensembles"
+    },
+    {
+      "source_id": "xeisd_j_coupling_fit",
+      "native_observable": "Scalar J-couplings",
+      "estimand": "Ensemble-averaged local backbone-angle support under the Karplus relation",
+      "spatial_support": "Local backbone-angle support across measured residues",
+      "unit_or_aggregation": "J-coupling in Hz, aggregated through a source-specific likelihood"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "xeisd_random_pool_vs_j_coupling_question",
+      "shared_claim": "Local backbone-angle support available within the declared RANDOM candidate pool"
+    }
+  ]
+}

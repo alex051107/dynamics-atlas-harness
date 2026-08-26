@@ -6,24 +6,55 @@ from collections.abc import Mapping
 from typing import Any
 
 
-def _source_methods(case_graph: Mapping[str, Any]) -> dict[str, str]:
-    result: dict[str, str] = {}
+def _source_attributes(case_graph: Mapping[str, Any]) -> tuple[dict[str, str], dict[str, str]]:
+    methods: dict[str, str] = {}
+    method_profiles: dict[str, str] = {}
     for source in case_graph.get("evidence_items", []):
         if isinstance(source, Mapping):
             source_id = source.get("source_id")
             method_id = source.get("method_id")
             if isinstance(source_id, str) and isinstance(method_id, str):
-                result[source_id] = method_id
-    return result
+                methods[source_id] = method_id
+            method_profile_id = source.get("method_profile_id")
+            if isinstance(source_id, str) and isinstance(method_profile_id, str):
+                method_profiles[source_id] = method_profile_id
+    return methods, method_profiles
+
+
+def _case_id(case_graph: Mapping[str, Any]) -> str | None:
+    case = case_graph.get("case")
+    if isinstance(case, Mapping) and isinstance(case.get("case_id"), str):
+        return case["case_id"]
+    value = case_graph.get("case_id")
+    return value if isinstance(value, str) else None
+
+
+def _target_source_ids(target: Mapping[str, Any]) -> set[str]:
+    values = target.get("source_ids", [])
+    source_ids = {value for value in values if isinstance(value, str)} if isinstance(values, list) else set()
+    source_id = target.get("source_id")
+    if isinstance(source_id, str):
+        source_ids.add(source_id)
+    return source_ids
 
 
 def _operator_matches(
-    spec: Mapping[str, Any], gap: Mapping[str, Any], methods: Mapping[str, str]
+    spec: Mapping[str, Any],
+    gap: Mapping[str, Any],
+    methods: Mapping[str, str],
+    method_profiles: Mapping[str, str],
+    case_id: str | None,
 ) -> bool:
     if spec.get("status") != "ROSTER_PASS" or spec.get("routable") is not True:
         return False
     match = spec.get("route_match", {})
     if not isinstance(match, Mapping):
+        return False
+    case_ids = set(match.get("case_ids", []))
+    if case_ids and case_id not in case_ids:
+        return False
+    runtime_subrule_ids = set(match.get("runtime_subrule_ids", []))
+    if runtime_subrule_ids and gap.get("runtime_subrule_id") not in runtime_subrule_ids:
         return False
     gap_classes = match.get("gap_classes", [])
     if gap_classes and gap.get("gap_class") not in gap_classes:
@@ -32,11 +63,19 @@ def _operator_matches(
     target_types = match.get("target_types", [])
     if target_types and target.get("target_type") not in target_types:
         return False
+    source_ids = _target_source_ids(target)
+    allowed_source_ids = set(match.get("source_ids", []))
+    if allowed_source_ids and (not source_ids or not source_ids.issubset(allowed_source_ids)):
+        return False
     allowed_methods = set(match.get("method_ids", []))
     if allowed_methods:
-        source_ids = target.get("source_ids", [])
         actual_methods = {methods.get(source_id) for source_id in source_ids}
         if not actual_methods.intersection(allowed_methods):
+            return False
+    allowed_method_profiles = set(match.get("method_profile_ids", []))
+    if allowed_method_profiles:
+        actual_profiles = {method_profiles.get(source_id) for source_id in source_ids}
+        if not actual_profiles.intersection(allowed_method_profiles):
             return False
     path_terms = match.get("input_path_contains", [])
     input_path = str(gap.get("input_path") or "")
@@ -54,7 +93,8 @@ def build_run_plan(
 ) -> dict[str, Any]:
     if evaluation.get("branch") != "RUN_PLAN_REQUIRED":
         raise ValueError("RUN_PLAN_REQUIRES_GAP_BRANCH")
-    methods = _source_methods(case_graph)
+    methods, method_profiles = _source_attributes(case_graph)
+    case_id = _case_id(case_graph)
     operators = operator_registry.get("operators", {})
     nodes: list[dict[str, Any]] = [
         {"node_id": "profile", "node_type": "PROFILE", "status": "SUCCEEDED"},
@@ -70,7 +110,8 @@ def build_run_plan(
         matches = [
             operator_id
             for operator_id, spec in operators.items()
-            if isinstance(spec, Mapping) and _operator_matches(spec, gap, methods)
+            if isinstance(spec, Mapping)
+            and _operator_matches(spec, gap, methods, method_profiles, case_id)
         ]
         node_id = f"resolve-gap-{index:03d}"
         status = "READY" if len(matches) == 1 else "BLOCKED"

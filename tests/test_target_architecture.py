@@ -183,6 +183,52 @@ class TargetArchitectureTests(unittest.TestCase):
         )
         self.assertEqual(gap_node["operator_id"], "candidate")
 
+    def test_exact_case_bound_operator_cannot_route_another_case(self):
+        registry = load_registered_operator_registry(
+            REPO_ROOT / "config" / "registered_operators.json"
+        )
+        case_graph = {
+            "case": {"case_id": "unrelated-md-development-case"},
+            "evidence_items": [
+                {
+                    "source_id": "hsp90_md_round2_directional_packet",
+                    "method_id": "MD_TRAJECTORY",
+                    "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+                }
+            ],
+        }
+        evaluation = {
+            "branch": "RUN_PLAN_REQUIRED",
+            "gaps": [
+                {
+                    "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+                    "gap_class": "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING",
+                    "input_path": "source.time_semantics.time_anatomy_control",
+                    "target": {
+                        "target_type": "SOURCE",
+                        "source_ids": ["hsp90_md_round2_directional_packet"],
+                    },
+                }
+            ],
+        }
+        plan = build_run_plan(
+            run_id="wrong-case-must-not-route",
+            case_graph=case_graph,
+            evaluation=evaluation,
+            operator_registry={
+                "operators": {
+                    "hsp90.directional_time_anatomy.v1_case_bound": registry[
+                        "operators"
+                    ]["hsp90.directional_time_anatomy.v1_case_bound"]
+                }
+            },
+        )
+        self.assertEqual(plan["status"], "BLOCKED")
+        gap_node = next(
+            node for node in plan["nodes"] if node["node_type"] == "RESOLVE_GAP"
+        )
+        self.assertEqual(gap_node["reason_codes"], ["NO_REGISTERED_OPERATOR_FOR_GAP"])
+
     def test_sufficient_contract_takes_direct_bounded_route(self):
         case_graph = {
             "case": {

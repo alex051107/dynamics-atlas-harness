@@ -1,0 +1,19 @@
+{
+  "boundary": "One exact case-bound registered Operator execution. The result is same-packet and subject to the HumanDecisionGate; it emits a route-contract outcome, not a scientific disposition.",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+  "live_agent_run": false,
+  "network_accessed": false,
+  "operator_scope": {
+    "activation_scope": "EXPOSED_DEVELOPMENT_ACTIVE",
+    "deployment_status": "NOT_PRODUCTION",
+    "generalization_status": "NOT_GENERAL",
+    "routing_scope": "EXACT_CASE_BOUND"
+  },
+  "post_operator_rule_status": "PASS",
+  "pre_operator_rule_status": "UNRESOLVED",
+  "route_disposition": "RULE_CONTRACT_PASS",
+  "run_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_VERTICAL_SLICE_V1_ALPHA",
+  "scientific_disposition": "NOT_EVALUATED",
+  "unregistered_tool_calls": 0
+}

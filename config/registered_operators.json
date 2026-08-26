@@ -55,6 +55,68 @@
         "MUTATION_EFFECT"
       ]
     },
+    "hsp90.directional_time_anatomy.v1_case_bound": {
+      "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+      "version": "1.0.0-exposed-case-bound-adapter",
+      "status": "ROSTER_PASS",
+      "routable": true,
+      "activation_scope": "EXPOSED_DEVELOPMENT_ACTIVE",
+      "routing_scope": "EXACT_CASE_BOUND",
+      "generalization_status": "NOT_GENERAL",
+      "deployment_status": "NOT_PRODUCTION",
+      "capability": "Produce the exact HSP90 trajectory-level directional-time-anatomy control record for the one declared same-packet diagnostic obligation.",
+      "capability_id": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
+      "skill_ref": "repo:rapid-dynamics-research",
+      "handler": "case_bound_hsp90_time_anatomy_v1",
+      "implementation_ref": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/run_time_anatomy_v0_frozen.py",
+      "runtime": {
+        "kind": "python-standard-library",
+        "required_python_packages": []
+      },
+      "fixed_inputs": {
+        "frame_state_assignments": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/frame_state_assignments.tsv",
+        "route_predictions": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/route_predictions.tsv"
+      },
+      "fixed_parameters": {
+        "persistence_saved_frames": [5, 20, 50],
+        "state_rule": "existing zero-sign two-readout rule"
+      },
+      "input_contract": {
+        "statistical_unit": "trajectory (n=40); frame runs are within-trajectory descriptive objects",
+        "read_only": true,
+        "case_binding_manifest_ref": "evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json",
+        "method_profile_id": "hsp90_md_directional_time_anatomy_v0"
+      },
+      "output_contract": "hsp90-time-anatomy-results/v1-case-bound",
+      "output_schema_ref": "schemas/rules_v1/hsp90_time_anatomy_output_v1.schema.json",
+      "promotion_blockers": [],
+      "contract_review_boundary": "User-authorized exposed-development contract review after exact source, input-manifest, method-profile, and output-validator checks. It does not approve source science or a kinetic/equilibrium/mechanistic claim.",
+      "expected_outputs": [
+        "directional_runs.tsv",
+        "trajectory_time_anatomy.tsv",
+        "trajectory_time_bins_50ns.tsv",
+        "results_summary.json"
+      ],
+      "route_match": {
+        "runtime_subrule_ids": ["F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL"],
+        "gap_classes": ["COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING"],
+        "target_types": ["SOURCE"],
+        "method_ids": ["MD_TRAJECTORY"],
+        "case_ids": ["hsp90_directional_time_anatomy_development_v1_alpha"],
+        "source_ids": ["hsp90_md_round2_directional_packet"],
+        "method_profile_ids": ["hsp90_md_directional_time_anatomy_v0"],
+        "input_path_contains": ["time_semantics", "trajectory", "time_anatomy_control"]
+      },
+      "claim_ceiling": "Validated execution of one frozen same-packet trajectory-level directional-time-anatomy control record; human scientific validation remains required.",
+      "forbidden_claims": [
+        "TRANSITION_RATE",
+        "EQUILIBRIUM_POPULATION",
+        "FREE_ENERGY",
+        "COMPLETE_PATHWAY",
+        "MECHANISM",
+        "MUTATION_EFFECT"
+      ]
+    },
     "trajectory.structural_state_projection.v1": {
       "operator_id": "trajectory.structural_state_projection.v1",
       "version": "0.1.0-spec-only",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rules v1-alpha exact source lookup result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lookup_kind", "lookup_id", "case_id", "target", "requested_locator_id", "status", "route", "reason_code", "field_updates"],
+  "properties": {
+    "lookup_kind": {"const": "EXACT_REVIEW_DERIVATIVE_ATTESTATION"},
+    "lookup_id": {"type": "string", "minLength": 1},
+    "case_id": {"const": "lincoff_2020_xeisd_random_j_relation_v1_alpha"},
+    "target": {"type": "object", "additionalProperties": false, "required": ["kind", "id"], "properties": {"kind": {"enum": ["SOURCE", "EDGE"]}, "id": {"type": "string", "minLength": 1}}},
+    "requested_locator_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["FOUND", "NOT_FOUND", "NOT_ALLOWED", "SOURCE_UNAVAILABLE", "FIXTURE_HASH_MISMATCH", "LOCATOR_NOT_FOUND"]},
+    "route": {"enum": ["SOURCE_LOOKUP", "HUMAN_OR_NEW_DATA"]},
+    "next_evaluation": {"enum": ["DIRECT_EVALUATION"]},
+    "reason_code": {"type": "string", "minLength": 1},
+    "field_updates": {"type": "object"},
+    "workspace_relative_path": {"type": "string"},
+    "fixture_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "source_kind": {"type": "string"},
+    "raw_observation": {"type": ["string", "null"]},
+    "field_update_derivation": {"type": ["string", "null"]},
+    "attestation_boundary": {"type": "string"}
+  }
+}

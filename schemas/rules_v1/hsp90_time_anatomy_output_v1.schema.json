@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exact HSP90 directional time-anatomy output contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task", "evidence_level", "inputs", "statistical_unit", "persistence_grid_saved_frames", "display_bin", "summary", "allowed_wording", "forbidden_wording"],
+  "properties": {
+    "task": {"const": "dynamics_atlas_hsp90_time_anatomy_v0_20260730"},
+    "evidence_level": {"const": "v0_same_packet_diagnostic"},
+    "inputs": {"type": "object", "required": ["frame_state_assignments.tsv", "route_predictions.tsv"]},
+    "statistical_unit": {"type": "string", "minLength": 1},
+    "persistence_grid_saved_frames": {"const": [5, 20, 50]},
+    "display_bin": {"type": "string", "minLength": 1},
+    "summary": {"type": "object", "required": ["5", "20", "50"]},
+    "allowed_wording": {"type": "string", "minLength": 1},
+    "forbidden_wording": {"type": "string", "minLength": 1}
+  }
+}

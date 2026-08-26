@@ -1,0 +1,55 @@
+{
+  "schema_version": "exact-source-lookup-allowlist/v1-alpha",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "lookup_kind": "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
+  "boundary": "Predeclared review-derivative attestation only. No network search, RAG, free-text extraction, undeclared source discovery, source-science validation, or automatic claim upgrade.",
+  "entries": [
+    {
+      "lookup_id": "XEI-LOOKUP-RANDOM-DECLARATIONS",
+      "target_kind": "SOURCE",
+      "target_id": "xeisd_random_candidate_pool",
+      "locator_id": "XEI-M04",
+      "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/exact_review_derivative_excerpt_v1.json",
+      "fixture_sha256": "fa5e3c99adadb18b6387c774dd1bd9d8b6f82663d4f3f6b63acfd3ad88829c99",
+      "exact_locator_marker": "\"locator_id\": \"XEI-M04\"",
+      "source_kind": "PAPER_DERIVED_DEVELOPMENT_REFERENCE",
+      "raw_observation": "XEI-M04 records the construct and typical-buffer scope for the unfolded drkN SH3 case; the frozen v0.3 record contains no dedicated sample-composition status field.",
+      "field_update_derivation": "Exact-locator exposed-development attestation: produce DECLARED only as a Draft field-presence label. It does not certify sample homogeneity or source science.",
+      "field_updates": {
+        "sample_composition": "Declared unfolded drkN SH3 candidate-pool system under the reference's reported construct and typical-buffer scope; not a sample-homogeneity certificate."
+      }
+    },
+    {
+      "lookup_id": "XEI-LOOKUP-JCOUPLING-DECLARATIONS",
+      "target_kind": "SOURCE",
+      "target_id": "xeisd_j_coupling_fit",
+      "locator_id": "XEI-M03",
+      "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/exact_review_derivative_excerpt_v1.json",
+      "fixture_sha256": "fa5e3c99adadb18b6387c774dd1bd9d8b6f82663d4f3f6b63acfd3ad88829c99",
+      "exact_locator_marker": "\"locator_id\": \"XEI-M03\"",
+      "source_kind": "PAPER_DERIVED_DEVELOPMENT_REFERENCE",
+      "raw_observation": "XEI-M03 records source-specific J-coupling forward calculation and uncertainty context; the frozen v0.3 record contains no dedicated declaration-status field.",
+      "field_update_derivation": "Exact-locator exposed-development attestation: produce DECLARED only as a Draft field-presence label. It does not validate the Karplus model or measurement science.",
+      "field_updates": {
+        "sample_composition": "Declared unfolded drkN SH3 scalar-coupling source under the reference's reported construct and typical-buffer scope; not a sample-homogeneity certificate."
+      }
+    },
+    {
+      "lookup_id": "XEI-LOOKUP-RANDOM-JCOUPLING-EDGE",
+      "target_kind": "EDGE",
+      "target_id": "xeisd_random_pool_vs_j_coupling_question",
+      "locator_id": "XEI-M04",
+      "workspace_relative_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/exact_review_derivative_excerpt_v1.json",
+      "fixture_sha256": "fa5e3c99adadb18b6387c774dd1bd9d8b6f82663d4f3f6b63acfd3ad88829c99",
+      "exact_locator_marker": "\"locator_id\": \"XEI-M04\"",
+      "source_kind": "PAPER_DERIVED_DEVELOPMENT_REFERENCE",
+      "raw_observation": "The frozen v0.3 comparison has bridge_status DOCUMENTED for this candidate-pool/J-coupling relation and its assumptions retain source-specific forward calculation and no physical-time equivalence.",
+      "field_update_derivation": "Draft control-label mapping: raw DOCUMENTED bridge evidence is carried forward as DECLARED only for the F06 contract vocabulary; MATCHED condition and QUALITATIVE_TRIANGULATION are exposed relation labels, not scientific comparability or equivalence findings.",
+      "field_updates": {
+        "condition_relation": "MATCHED",
+        "relation_type": "QUALITATIVE_TRIANGULATION",
+        "bridge_status": "DECLARED"
+      }
+    }
+  ]
+}

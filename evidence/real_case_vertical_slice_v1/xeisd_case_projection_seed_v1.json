@@ -1,0 +1,72 @@
+{
+  "case": {
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "parent_case_id": "lincoff_2020_xeisd_maintext",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "Can the declared RANDOM candidate-pool and J-coupling relation be reviewed without claiming a shared population, independent validation, kinetics, or mechanism?",
+    "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+    "intended_use": "CROSS_SOURCE_REVIEW",
+    "observability_target": {
+      "event_signature": "Model-conditional local backbone-angle support available within the declared RANDOM candidate pool",
+      "target_time_scale": "Static candidate collection and population-averaged NMR observable; no kinetic interpretation",
+      "target_spatial_scale": "Candidate conformer coordinates and local backbone-angle support"
+    },
+    "claim_contract": {
+      "internal_consistency": "CONSISTENT",
+      "declared_request_scope": ["CROSS_SOURCE_COMPARABILITY", "ENSEMBLE_SUPPORT"],
+      "forbidden_upgrades": ["INDEPENDENT_VALIDATION", "POPULATION", "KINETICS", "MECHANISM"]
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "xeisd_random_candidate_pool",
+      "source_locator": "XEI-M04; XEI-M05",
+      "source_locator_ids": ["XEI-M04", "XEI-M05"],
+      "origin_case_id": "lincoff_2020_xeisd_maintext",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "CONSTRUCTION",
+      "data_lineage_status": "DECLARED",
+      "construct_and_condition": "Unfolded drkN SH3 candidate pool under the local paper-derived reference's reported construct and typical-buffer scope.",
+      "native_observable": "Candidate conformer coordinates and their available structural support",
+      "estimand": "The region of conformational space available to X-EISD selection from this starting pool",
+      "time_semantics": {
+        "kind": "STATIC_ENSEMBLE_AVERAGE"
+      },
+      "spatial_support": "Whole-domain conformational coordinates, including local secondary structure and global compactness",
+      "unit_or_aggregation": "Candidate conformer pool used to assemble fixed-size sub-ensembles"
+    },
+    {
+      "source_id": "xeisd_j_coupling_fit",
+      "source_locator": "XEI-M03; XEI-M04",
+      "source_locator_ids": ["XEI-M03", "XEI-M04"],
+      "origin_case_id": "lincoff_2020_xeisd_maintext",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "data_lineage_status": "DECLARED",
+      "construct_and_condition": "Unfolded-state drkN SH3 scalar-coupling dataset under the local paper-derived reference's reported construct and typical-buffer scope.",
+      "native_observable": "Scalar J-couplings",
+      "estimand": "Ensemble-averaged local backbone-angle support under the Karplus relation",
+      "time_semantics": {
+        "kind": "POPULATION_AVERAGE"
+      },
+      "spatial_support": "Local backbone-angle support across measured residues",
+      "unit_or_aggregation": "J-coupling in Hz, aggregated through a source-specific likelihood"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "xeisd_random_pool_vs_j_coupling_question",
+      "left_source_id": "xeisd_random_candidate_pool",
+      "right_source_id": "xeisd_j_coupling_fit",
+      "shared_claim": "Local backbone-angle support available within the declared RANDOM candidate pool"
+    }
+  ],
+  "projection_provenance": {
+    "base_asset_id": "xeisd-rich-casegraph-v0.3",
+    "workspace_relative_base_asset_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/base_projection_manifest_v1.json",
+    "base_asset_sha256": "9235717c7bbc900c02f26d3214be332fc196356a706e82c97f700d9c7042774a",
+    "base_asset_fixture_sha256": "32e802b31dbc175087248bfc548665aa7fa8708a3eb72c17ea2b6446598c746c",
+    "projection_kind": "HUMAN_AUTHORED_EXPOSED_DEVELOPMENT_SUBQUESTION"
+  },
+  "projection_boundary": "This human-authored exposed-development projection reuses local v0.3 source records and exact local review-derivative locators. Lookup-derived DECLARED statuses classify only the presence of declared fields; they do not validate source science, homogeneity, comparability, independence, or a terminal scientific claim."
+}
