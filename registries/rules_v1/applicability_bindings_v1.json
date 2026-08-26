@@ -30,15 +30,15 @@
       "implementation_status": "COMPLETE_DRAFT"
     },
     {
-      "binding_id": "B-F02R01-SOURCE-CONSTRUCT",
-      "runtime_subrule_id": "F02R01_SOURCE_CONSTRUCT_DECLARATION",
+      "binding_id": "B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
       "target_kind": "SOURCE",
       "iteration": {"op": "FOR_EACH_SOURCE"},
       "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "SOURCE"}, {"op": "EXISTS", "path": "source.source_id"}]},
-      "required_evidence_paths": ["source.construct_and_condition", "source.sample_composition"],
-      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
-      "evaluation_contract_id": "EC-F02R01-SOURCE-CONSTRUCT",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "required_evidence_paths": ["source.construct_and_condition", "source.sample_composition", "source.sample_system_composition_declaration_status"],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "binding_id": "B-F02R02-EDGE-CONDITION",
@@ -47,20 +47,20 @@
       "iteration": {"op": "FOR_EACH_EDGE"},
       "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.comparison_id"}]},
       "required_evidence_paths": ["edge.left_source_id", "edge.right_source_id", "edge.condition_relation"],
-      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
       "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "binding_id": "B-F03R01-SOURCE-MEASUREMENT",
       "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
       "target_kind": "SOURCE",
       "iteration": {"op": "FOR_EACH_SOURCE"},
-      "applicability": {"op": "EQ", "path": "target.kind", "value": "SOURCE"},
-      "required_evidence_paths": ["source.native_observable", "source.estimand", "source.time_semantics.kind", "source.spatial_support", "source.unit_or_aggregation"],
-      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "SOURCE"}, {"op": "EXISTS", "path": "source.source_id"}]},
+      "required_evidence_paths": ["source.native_observable", "source.estimand", "source.time_semantics.kind", "source.spatial_support", "source.unit_or_aggregation", "source.native_measurement_declaration_status"],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
       "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "binding_id": "B-F04R01-SOURCE-RELIABILITY",

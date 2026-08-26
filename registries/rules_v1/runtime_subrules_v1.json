@@ -24,34 +24,34 @@
       "implementation_status": "COMPLETE_DRAFT"
     },
     {
-      "runtime_subrule_id": "F02R01_SOURCE_CONSTRUCT_DECLARATION",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
       "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
       "target_kind": "SOURCE",
-      "scientific_question": "Is construct and sample-composition information declared for this source?",
+      "scientific_question": "Does this source declare the sample-system and composition context needed to avoid silently assuming a homogeneous single-species ensemble?",
       "required_evidence_packet_ids": ["SEP-F02-CONSTRUCT"],
-      "failure_mode": "CONSTRUCT_OR_SAMPLE_COMPOSITION_UNRESOLVED",
-      "claim_effect_summary": "Candidate only; no executable claim effect is frozen.",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "failure_mode": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_CONTRADICTED",
+      "claim_effect_summary": "A PASS records a source-local declaration only; it does not freeze a full construct schema or certify sample homogeneity.",
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
       "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
       "target_kind": "EDGE",
-      "scientific_question": "Are the two source conditions comparable for the declared relation?",
+      "scientific_question": "Are the two source conditions recorded as compatible for the declared relation?",
       "required_evidence_packet_ids": ["SEP-F02-CONDITION"],
-      "failure_mode": "CONDITION_MISMATCH_OR_UNRESOLVED",
-      "claim_effect_summary": "Candidate only; preserve sources separately when unresolved.",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "failure_mode": "EDGE_CONDITION_RELATION_MISMATCH",
+      "claim_effect_summary": "A PASS records an explicit relation label only; it does not establish a universal comparability threshold.",
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
       "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
       "target_kind": "SOURCE",
-      "scientific_question": "What native observable and estimand does this source provide?",
+      "scientific_question": "Does this source declare the native observable and measurement semantics needed to identify what it provides?",
       "required_evidence_packet_ids": ["SEP-F03-MEASUREMENT"],
-      "failure_mode": "OBSERVABLE_OR_ESTIMAND_UNDEFINED",
-      "claim_effect_summary": "Candidate only; preserve source-native representation.",
-      "implementation_status": "CANDIDATE_MAP_ONLY"
+      "failure_mode": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_CONTRADICTED",
+      "claim_effect_summary": "A PASS records source-native measurement semantics only; it does not certify reliability, comparability, validation, or a scientific conclusion.",
+      "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",

@@ -22,14 +22,32 @@
       "case_evidence_scope": "CLAIM_EVIDENCE",
       "evidence_role": "CONSTRUCTION",
       "source_locator": "fixture:source-construction",
-      "data_lineage_status": "DECLARED"
+      "data_lineage_status": "DECLARED",
+      "construct_and_condition": "Declared soluble protein system in the reviewed aqueous condition.",
+      "sample_composition": "Declared single protein species for this source record.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Global radius of gyration",
+      "estimand": "Ensemble-averaged global size",
+      "time_semantics": {"kind": "EQUILIBRIUM_ENSEMBLE"},
+      "spatial_support": "Whole-molecule scattering support",
+      "unit_or_aggregation": "All-molecule scattering average",
+      "native_measurement_declaration_status": "DECLARED"
     },
     {
       "source_id": "source-held-out",
       "case_evidence_scope": "CLAIM_EVIDENCE",
       "evidence_role": "HELD_OUT_VALIDATION",
       "source_locator": "fixture:source-held-out",
-      "data_lineage_status": "DECLARED"
+      "data_lineage_status": "DECLARED",
+      "construct_and_condition": "Declared soluble protein system in the reviewed aqueous condition.",
+      "sample_composition": "Declared single protein species for this source record.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Dye-to-dye transfer efficiency",
+      "estimand": "Probe-limited distance distribution summary",
+      "time_semantics": {"kind": "EQUILIBRIUM_ENSEMBLE"},
+      "spatial_support": "Labeled donor-acceptor probe pair",
+      "unit_or_aggregation": "Pair-specific fluorescence population average",
+      "native_measurement_declaration_status": "DECLARED"
     }
   ],
   "comparisons": [
@@ -47,5 +65,5 @@
       "data_lineage_status": "DECLARED"
     }
   ],
-  "fixture_boundary": "This CaseGraph contains scientific CASE, SOURCE, and EDGE facts only. Synthetic F02/F03 prerequisite results live in the separate EvaluationContext fixture and do not establish a real F02 or F03 RuleResult."
+  "fixture_boundary": "This CaseGraph contains synthetic CASE, SOURCE, and EDGE facts only. It can produce proposal-only F02/F03 prerequisite RuleResults, but establishes neither source reliability nor a scientific conclusion."
 }

@@ -28,21 +28,27 @@ class SourceGroundingTests(unittest.TestCase):
             for subrule in subrules
             if subrule["implementation_status"] == "COMPLETE_DRAFT"
         ]
-        self.assertEqual(len(active), 5)
+        self.assertEqual(len(active), 8)
+        locator_reviewed_packet_ids = {
+            "SEP-F01-CLAIM-CONTRACT",
+            "SEP-F02-CONSTRUCT",
+            "SEP-F02-CONDITION",
+            "SEP-F03-MEASUREMENT",
+        }
         for subrule in active:
             with self.subTest(subrule=subrule["runtime_subrule_id"]):
                 self.assertTrue(subrule["required_evidence_packet_ids"])
                 for packet_id in subrule["required_evidence_packet_ids"]:
                     packet = packet_by_id[packet_id]
                     expected_status = (
-                        "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"
-                        if packet_id == "SEP-F01-CLAIM-CONTRACT"
+                        "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC"
+                        if packet_id in locator_reviewed_packet_ids
                         else "PENDING"
                     )
                     self.assertEqual(packet["human_review_status"], expected_status)
-                    if packet_id == "SEP-F01-CLAIM-CONTRACT":
+                    if packet_id in locator_reviewed_packet_ids:
                         self.assertIn("review_disposition_scope", packet)
-                        self.assertIn("does not specify", packet["review_disposition_scope"])
+                        self.assertIn("only", packet["review_disposition_scope"].lower())
                     self.assertEqual(
                         packet["derivative_kind"],
                         "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
@@ -74,7 +80,7 @@ class SourceGroundingTests(unittest.TestCase):
         )
         self.assertEqual(
             schema["properties"]["human_review_status"]["enum"],
-            ["PENDING", "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"],
+            ["PENDING", "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC"],
         )
 
 
