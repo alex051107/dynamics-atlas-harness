@@ -17,8 +17,13 @@ class RulePrototypeError(ValueError):
 
 
 _MISSING = object()
-_PREDICATE_OPS = frozenset({"EQ", "IN", "EXISTS", "ALL", "ANY", "NOT"})
+_PREDICATE_OPS = frozenset(
+    {"EQ", "IN", "EXISTS", "ALL", "ANY", "NOT", "PRIOR_RESULT_STATUS"}
+)
 _ITERATION_OPS = frozenset({"FOR_EACH_SOURCE", "FOR_EACH_EDGE"})
+_TRUE = "TRUE"
+_FALSE = "FALSE"
+_UNKNOWN = "UNKNOWN"
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -44,6 +49,60 @@ def _walk(value: Any, parts: Iterable[str]) -> Any:
     return current
 
 
+def rule_instance_id(
+    runtime_subrule_id: str,
+    target_kind: str | None,
+    target_id: Any,
+) -> str:
+    """Return the stable identifier used for one post-evaluation RuleResult."""
+
+    return f"{runtime_subrule_id}::{target_kind or 'UNKNOWN'}::{target_id or 'UNKNOWN'}"
+
+
+class EvaluationContext:
+    """Read-only post-evaluation state that is deliberately outside CaseGraph.
+
+    The scientific CaseGraph remains a record of CASE, SOURCE, and EDGE facts.
+    Prior RuleResults are keyed separately by stable RuleInstance ID so dependency
+    wiring cannot be mistaken for a scientific source or edge attribute.
+    """
+
+    def __init__(self, rule_results_by_instance: Mapping[str, Any] | None = None):
+        if rule_results_by_instance is None:
+            rule_results_by_instance = {}
+        if not isinstance(rule_results_by_instance, Mapping):
+            raise RulePrototypeError("EvaluationContext rule_results_by_instance must be a mapping")
+        self.rule_results_by_instance = dict(rule_results_by_instance)
+
+    @classmethod
+    def from_mapping(
+        cls,
+        value: "EvaluationContext | Mapping[str, Any] | None",
+    ) -> "EvaluationContext":
+        if value is None:
+            return cls()
+        if isinstance(value, cls):
+            return value
+        if not isinstance(value, Mapping):
+            raise RulePrototypeError("evaluation_context must be a mapping or EvaluationContext")
+        return cls(value.get("rule_results_by_instance", {}))
+
+    def status_for(
+        self,
+        *,
+        runtime_subrule_id: str,
+        target_kind: str,
+        target_id: str,
+    ) -> str:
+        """Return a prior RuleResult status, or NOT_RUN when no result exists."""
+
+        record = self.rule_results_by_instance.get(
+            rule_instance_id(runtime_subrule_id, target_kind, target_id)
+        )
+        status = record.get("status") if isinstance(record, Mapping) else record
+        return status if isinstance(status, str) and status else "NOT_RUN"
+
+
 def resolve_path(
     case_graph: Mapping[str, Any],
     target: Mapping[str, Any],
@@ -67,16 +126,63 @@ def resolve_path(
     return _walk(value, remainder.split("."))
 
 
+def _prior_result_target(
+    expression: Mapping[str, Any],
+    case_graph: Mapping[str, Any],
+    target: Mapping[str, Any],
+) -> tuple[str, str] | None:
+    selector = expression.get("target_selector")
+    if selector == "CURRENT_EDGE":
+        if target.get("kind") != "EDGE":
+            raise RulePrototypeError("CURRENT_EDGE prior-result selector requires an EDGE target")
+        target_id = target.get("id")
+        target_kind = "EDGE"
+    elif selector == "EDGE_LEFT_SOURCE":
+        target_id = resolve_path(case_graph, target, "edge.left_source_id")
+        target_kind = "SOURCE"
+    elif selector == "EDGE_RIGHT_SOURCE":
+        target_id = resolve_path(case_graph, target, "edge.right_source_id")
+        target_kind = "SOURCE"
+    else:
+        raise RulePrototypeError(f"unknown prior-result target selector: {selector!r}")
+
+    if not isinstance(target_id, str) or not target_id:
+        return None
+    return target_kind, target_id
+
+
+def _prior_result_status(
+    expression: Mapping[str, Any],
+    case_graph: Mapping[str, Any],
+    target: Mapping[str, Any],
+    evaluation_context: EvaluationContext,
+) -> str:
+    runtime_subrule_id = expression.get("runtime_subrule_id")
+    if not isinstance(runtime_subrule_id, str) or not runtime_subrule_id:
+        raise RulePrototypeError("PRIOR_RESULT_STATUS requires a runtime_subrule_id")
+    prior_target = _prior_result_target(expression, case_graph, target)
+    if prior_target is None:
+        return "NOT_RUN"
+    target_kind, target_id = prior_target
+    return evaluation_context.status_for(
+        runtime_subrule_id=runtime_subrule_id,
+        target_kind=target_kind,
+        target_id=target_id,
+    )
+
+
 def evaluate_predicate(
     expression: Mapping[str, Any],
     case_graph: Mapping[str, Any],
     target: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
 ) -> bool:
     """Evaluate the compact, explicit binding grammar."""
 
     op = expression.get("op")
     if op not in _PREDICATE_OPS:
         raise RulePrototypeError(f"undefined predicate primitive: {op!r}")
+    context = EvaluationContext.from_mapping(evaluation_context)
 
     if op == "EXISTS":
         return _is_present(resolve_path(case_graph, target, str(expression["path"])))
@@ -92,11 +198,16 @@ def evaluate_predicate(
         if not isinstance(values, list):
             raise RulePrototypeError("IN requires a values list or values_path resolving to a list")
         return resolve_path(case_graph, target, str(expression["path"])) in values
+    if op == "PRIOR_RESULT_STATUS":
+        values = expression.get("values")
+        if not isinstance(values, list):
+            raise RulePrototypeError("PRIOR_RESULT_STATUS requires a values list")
+        return _prior_result_status(expression, case_graph, target, context) in values
     if op == "NOT":
         argument = expression.get("arg")
         if not isinstance(argument, Mapping):
             raise RulePrototypeError("NOT requires an arg object")
-        return not evaluate_predicate(argument, case_graph, target)
+        return not evaluate_predicate(argument, case_graph, target, context)
 
     arguments = expression.get("args")
     if not isinstance(arguments, list) or not arguments:
@@ -104,9 +215,88 @@ def evaluate_predicate(
     if not all(isinstance(argument, Mapping) for argument in arguments):
         raise RulePrototypeError(f"{op} arguments must be objects")
     outcomes = [
-        evaluate_predicate(argument, case_graph, target) for argument in arguments
+        evaluate_predicate(argument, case_graph, target, context) for argument in arguments
     ]
     return all(outcomes) if op == "ALL" else any(outcomes)
+
+
+def _evaluate_predicate_for_fail_scan(
+    expression: Mapping[str, Any],
+    case_graph: Mapping[str, Any],
+    target: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
+) -> str:
+    """Evaluate a fatal-failure predicate without treating missing facts as FALSE.
+
+    This three-valued scan is used only before generic missing-evidence handling.
+    It permits a known fatal contradiction in an ``ANY`` condition to win even if a
+    different field is missing, while a failure that itself depends on missing
+    evidence remains UNKNOWN and therefore cannot fabricate a FAIL outcome.
+    """
+
+    op = expression.get("op")
+    if op not in _PREDICATE_OPS:
+        raise RulePrototypeError(f"undefined predicate primitive: {op!r}")
+    context = EvaluationContext.from_mapping(evaluation_context)
+
+    if op == "EXISTS":
+        return (
+            _TRUE
+            if _is_present(resolve_path(case_graph, target, str(expression["path"])))
+            else _UNKNOWN
+        )
+    if op == "EQ":
+        value = resolve_path(case_graph, target, str(expression["path"]))
+        if not _is_present(value):
+            return _UNKNOWN
+        return _TRUE if value == expression.get("value") else _FALSE
+    if op == "IN":
+        values_path = expression.get("values_path")
+        values = (
+            resolve_path(case_graph, target, str(values_path))
+            if values_path is not None
+            else expression.get("values")
+        )
+        value = resolve_path(case_graph, target, str(expression["path"]))
+        if not _is_present(value) or values is _MISSING or values is None:
+            return _UNKNOWN
+        if not isinstance(values, list):
+            raise RulePrototypeError("IN requires a values list or values_path resolving to a list")
+        return _TRUE if value in values else _FALSE
+    if op == "PRIOR_RESULT_STATUS":
+        values = expression.get("values")
+        if not isinstance(values, list):
+            raise RulePrototypeError("PRIOR_RESULT_STATUS requires a values list")
+        return (
+            _TRUE
+            if _prior_result_status(expression, case_graph, target, context) in values
+            else _FALSE
+        )
+    if op == "NOT":
+        argument = expression.get("arg")
+        if not isinstance(argument, Mapping):
+            raise RulePrototypeError("NOT requires an arg object")
+        outcome = _evaluate_predicate_for_fail_scan(argument, case_graph, target, context)
+        if outcome == _UNKNOWN:
+            return _UNKNOWN
+        return _FALSE if outcome == _TRUE else _TRUE
+
+    arguments = expression.get("args")
+    if not isinstance(arguments, list) or not arguments:
+        raise RulePrototypeError(f"{op} requires a nonempty args list")
+    if not all(isinstance(argument, Mapping) for argument in arguments):
+        raise RulePrototypeError(f"{op} arguments must be objects")
+    outcomes = [
+        _evaluate_predicate_for_fail_scan(argument, case_graph, target, context)
+        for argument in arguments
+    ]
+    if op == "ALL":
+        if _FALSE in outcomes:
+            return _FALSE
+        return _TRUE if all(outcome == _TRUE for outcome in outcomes) else _UNKNOWN
+    if _TRUE in outcomes:
+        return _TRUE
+    return _FALSE if all(outcome == _FALSE for outcome in outcomes) else _UNKNOWN
 
 
 def expand_targets(
@@ -161,6 +351,11 @@ def _result(
     effect = contract["result_effects"][status]
     return {
         "schema_version": "rules-prototype-rule-result/v1",
+        "rule_instance_id": rule_instance_id(
+            subrule["runtime_subrule_id"],
+            target.get("kind"),
+            target.get("id"),
+        ),
         "runtime_subrule_id": subrule["runtime_subrule_id"],
         "family_id": subrule["family_id"],
         "target": {"kind": target.get("kind"), "id": target.get("id")},
@@ -183,6 +378,7 @@ def _first_matching_reason(
     condition_set_name: str,
     case_graph: Mapping[str, Any],
     target: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
 ) -> str | None:
     """Return the first matching reason from one explicit contract condition set."""
 
@@ -198,7 +394,36 @@ def _first_matching_reason(
             raise RulePrototypeError(
                 f"contract {condition_set_name} entries must include a condition object"
             )
-        if evaluate_predicate(condition, case_graph, target):
+        if evaluate_predicate(condition, case_graph, target, evaluation_context):
+            return str(entry.get("reason_code", "CONTRACT_CONDITION_MATCHED"))
+    return None
+
+
+def _first_known_fatal_reason(
+    *,
+    conditions: Any,
+    case_graph: Mapping[str, Any],
+    target: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
+) -> str | None:
+    """Return a confirmed fatal failure without converting missing facts to FAIL."""
+
+    if not isinstance(conditions, list):
+        raise RulePrototypeError("contract fail_conditions must be a list")
+    for entry in conditions:
+        if not isinstance(entry, Mapping):
+            raise RulePrototypeError("contract fail_conditions entries must be objects")
+        condition = entry.get("condition")
+        if not isinstance(condition, Mapping):
+            raise RulePrototypeError(
+                "contract fail_conditions entries must include a condition object"
+            )
+        if (
+            _evaluate_predicate_for_fail_scan(
+                condition, case_graph, target, evaluation_context
+            )
+            == _TRUE
+        ):
             return str(entry.get("reason_code", "CONTRACT_CONDITION_MATCHED"))
     return None
 
@@ -210,6 +435,7 @@ def evaluate_rule_instance(
     contract: Mapping[str, Any],
     case_graph: Mapping[str, Any],
     target: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Evaluate one already-targeted Draft RuleInstance with fail-closed outcomes.
 
@@ -218,6 +444,7 @@ def evaluate_rule_instance(
     matching frozen pass condition; every unmatched state defaults to UNRESOLVED.
     """
 
+    context = EvaluationContext.from_mapping(evaluation_context)
     if target.get("kind") != subrule.get("target_kind") or target.get("kind") != binding.get(
         "target_kind"
     ):
@@ -235,7 +462,7 @@ def evaluate_rule_instance(
     applicability = binding.get("applicability")
     if not isinstance(applicability, Mapping):
         raise RulePrototypeError("binding applicability must be a grammar object")
-    if not evaluate_predicate(applicability, case_graph, target):
+    if not evaluate_predicate(applicability, case_graph, target, context):
         return _result(
             subrule=subrule,
             binding=binding,
@@ -247,6 +474,13 @@ def evaluate_rule_instance(
             missing_paths=[],
         )
 
+    fatal_failure_reason = _first_known_fatal_reason(
+        conditions=contract.get("fail_conditions"),
+        case_graph=case_graph,
+        target=target,
+        evaluation_context=context,
+    )
+
     required_paths = binding.get("required_evidence_paths")
     if not isinstance(required_paths, list):
         raise RulePrototypeError("binding required_evidence_paths must be a list")
@@ -255,6 +489,17 @@ def evaluate_rule_instance(
         for path in required_paths
         if not _is_present(resolve_path(case_graph, target, str(path)))
     ]
+    if fatal_failure_reason is not None:
+        return _result(
+            subrule=subrule,
+            binding=binding,
+            contract=contract,
+            target=target,
+            status="FAIL",
+            applicability_status="MATCHED",
+            reason_codes=[fatal_failure_reason],
+            missing_paths=missing_paths,
+        )
     if missing_paths:
         return _result(
             subrule=subrule,
@@ -272,6 +517,7 @@ def evaluate_rule_instance(
         condition_set_name="fail_conditions",
         case_graph=case_graph,
         target=target,
+        evaluation_context=context,
     )
     if failure_reason is not None:
         return _result(
@@ -290,6 +536,7 @@ def evaluate_rule_instance(
         condition_set_name="unresolved_conditions",
         case_graph=case_graph,
         target=target,
+        evaluation_context=context,
     )
     if unresolved_reason is not None:
         return _result(
@@ -308,6 +555,7 @@ def evaluate_rule_instance(
         condition_set_name="pass_conditions",
         case_graph=case_graph,
         target=target,
+        evaluation_context=context,
     )
     if pass_reason is not None:
         return _result(
@@ -339,6 +587,7 @@ def evaluate_active_rules(
     runtime_subrules: Mapping[str, Any],
     bindings: Mapping[str, Any],
     contracts: Mapping[str, Any],
+    evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     """Evaluate only the F01/F06 Draft slice; candidate-map rules are not executed."""
 
@@ -363,6 +612,7 @@ def evaluate_active_rules(
                     contract=contract,
                     case_graph=case_graph,
                     target=target,
+                    evaluation_context=evaluation_context,
                 )
             )
     return results

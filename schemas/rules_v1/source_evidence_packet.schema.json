@@ -12,7 +12,8 @@
     "atomic_paper_statement": {"type": "string", "minLength": 1},
     "proposed_reusable_use": {"type": "string", "minLength": 1},
     "forbidden_generalization": {"type": "string", "minLength": 1},
-    "human_review_status": {"const": "PENDING"},
+    "human_review_status": {"enum": ["PENDING", "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"]},
+    "review_disposition_scope": {"type": "string", "minLength": 1},
     "derivative_kind": {"const": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM"}
   }
 }

@@ -3,7 +3,7 @@
   "registry_id": "dynamics-atlas-rules-bindings/v1",
   "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
   "grammar": {
-    "predicate_primitives": ["EQ", "IN", "EXISTS", "ALL", "ANY", "NOT"],
+    "predicate_primitives": ["EQ", "IN", "EXISTS", "ALL", "ANY", "NOT", "PRIOR_RESULT_STATUS"],
     "iteration_primitives": ["FOR_EACH_SOURCE", "FOR_EACH_EDGE"],
     "missing_value_semantics": "A matched binding with any absent required evidence path returns UNRESOLVED; it never infers a missing value.",
     "forbidden_freeform_operators": ["AFTER_EVALUATION", "FOR_EACH_EVIDENTIARY_SOURCE", "LOOKUP_WHATEVER_IS_RELEVANT"]
@@ -112,7 +112,7 @@
       "target_kind": "EDGE",
       "iteration": {"op": "FOR_EACH_EDGE"},
       "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.shared_claim"}]},
-      "required_evidence_paths": ["edge.left_source_id", "edge.right_source_id", "edge.shared_claim", "edge.condition_relation", "edge.relation_type", "edge.bridge_status", "edge.prerequisite_rule_results.F02R02_EDGE_CONDITION_COMPATIBILITY", "edge.prerequisite_rule_results.F03R01_LEFT_SOURCE_NATIVE_MEASUREMENT", "edge.prerequisite_rule_results.F03R01_RIGHT_SOURCE_NATIVE_MEASUREMENT"],
+      "required_evidence_paths": ["edge.left_source_id", "edge.right_source_id", "edge.shared_claim", "edge.condition_relation", "edge.relation_type", "edge.bridge_status"],
       "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
       "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
       "implementation_status": "COMPLETE_DRAFT"
@@ -123,7 +123,7 @@
       "target_kind": "EDGE",
       "iteration": {"op": "FOR_EACH_EDGE"},
       "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.validation_claim"}]},
-      "required_evidence_paths": ["edge.validation_claim", "edge.validation_independence", "edge.shared_error_status", "edge.data_lineage_status", "edge.condition_relation", "edge.prerequisite_rule_results.F02R02_EDGE_CONDITION_COMPATIBILITY", "edge.prerequisite_rule_results.F03R01_LEFT_SOURCE_NATIVE_MEASUREMENT", "edge.prerequisite_rule_results.F03R01_RIGHT_SOURCE_NATIVE_MEASUREMENT"],
+      "required_evidence_paths": ["edge.validation_claim", "edge.validation_independence", "edge.shared_error_status", "edge.data_lineage_status"],
       "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
       "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
       "implementation_status": "COMPLETE_DRAFT"

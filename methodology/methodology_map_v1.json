@@ -2,7 +2,7 @@
   "schema_version": "rules-prototype-methodology-map/v1",
   "map_id": "dynamics-atlas-rules-prototype-v1",
   "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
-  "authority_boundary": "This map is a review derivative. Source Evidence Packets retain locators and pending human review; the map is not a second scientific authority.",
+  "authority_boundary": "This map is a review derivative. Packets retain locators and are not a second scientific authority; only SEP-F01-CLAIM-CONTRACT has a narrow proposed-control-logic verification, while all other packet dispositions remain pending domain review.",
   "human_facing_families": [
     {
       "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
@@ -41,7 +41,7 @@
     },
     {
       "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
-      "question": "What evidence role does each source have, and are a cross-source relation and validation-independence claim admissible only after F02 condition and F03 measurement prerequisites resolve?",
+      "question": "What evidence role does each source have, is the cross-source relation admissible after F02/F03 prerequisites resolve, and is validation independence separately supported by lineage and shared-error facts?",
       "runtime_targets": ["SOURCE", "EDGE"],
       "disposition": "COMPLETE_DRAFT_SLICE",
       "source_derivative_ids": ["SEP-F06-SOURCE-ROLE", "SEP-F06-COMPARABILITY", "SEP-F06-INDEPENDENCE"]

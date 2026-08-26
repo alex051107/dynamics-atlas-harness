@@ -17,7 +17,7 @@ def read_jsonl(path: Path):
 
 
 class SourceGroundingTests(unittest.TestCase):
-    def test_all_active_subrules_have_pending_review_derivative_packets(self):
+    def test_all_active_subrules_have_review_bounded_derivative_packets(self):
         subrules = read_json(RULES_ROOT / "runtime_subrules_v1.json")["runtime_subrules"]
         packets = read_jsonl(EVIDENCE_PATH)
         packet_by_id = {packet["evidence_packet_id"]: packet for packet in packets}
@@ -34,7 +34,15 @@ class SourceGroundingTests(unittest.TestCase):
                 self.assertTrue(subrule["required_evidence_packet_ids"])
                 for packet_id in subrule["required_evidence_packet_ids"]:
                     packet = packet_by_id[packet_id]
-                    self.assertEqual(packet["human_review_status"], "PENDING")
+                    expected_status = (
+                        "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"
+                        if packet_id == "SEP-F01-CLAIM-CONTRACT"
+                        else "PENDING"
+                    )
+                    self.assertEqual(packet["human_review_status"], expected_status)
+                    if packet_id == "SEP-F01-CLAIM-CONTRACT":
+                        self.assertIn("review_disposition_scope", packet)
+                        self.assertIn("does not specify", packet["review_disposition_scope"])
                     self.assertEqual(
                         packet["derivative_kind"],
                         "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
@@ -63,6 +71,10 @@ class SourceGroundingTests(unittest.TestCase):
                 "forbidden_generalization",
                 "human_review_status",
             }.issubset(required)
+        )
+        self.assertEqual(
+            schema["properties"]["human_review_status"]["enum"],
+            ["PENDING", "VERIFIED_FOR_PROPOSED_CONTROL_LOGIC"],
         )
 
 

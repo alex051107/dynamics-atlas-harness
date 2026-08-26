@@ -90,10 +90,26 @@ class ContractConsistencyTests(unittest.TestCase):
                     for entry in contract[field]:
                         self.assertTrue(entry["reason_code"])
                         self.assertIn("condition", entry)
+                self.assertNotIn("edge.prerequisite_rule_results", json.dumps(contract))
                 if contract["implementation_status"] == "COMPLETE_DRAFT":
                     self.assertTrue(contract["pass_conditions"])
                     self.assertTrue(contract["fail_conditions"])
                     self.assertTrue(contract["unresolved_conditions"])
+
+        f06r02 = next(
+            contract
+            for contract in contracts
+            if contract["runtime_subrule_id"] == "F06R02_EDGE_COMPARABILITY"
+        )
+        f06r03 = next(
+            contract
+            for contract in contracts
+            if contract["runtime_subrule_id"] == "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+        )
+        self.assertIn("PRIOR_RESULT_STATUS", json.dumps(f06r02))
+        self.assertNotIn("condition_relation", json.dumps(f06r03))
+        self.assertNotIn("F02R02_EDGE_CONDITION_COMPATIBILITY", json.dumps(f06r03))
+        self.assertNotIn("F03R01_SOURCE_NATIVE_MEASUREMENT", json.dumps(f06r03))
 
     def test_human_gate_separates_architecture_source_grounding_and_runtime_readiness(self):
         gates = {

@@ -107,10 +107,10 @@
       "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
       "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
       "target_kind": "EDGE",
-      "scientific_question": "Is a validation-independence label admissible after F02/F03 prerequisites resolve and without shared-data or shared-error conflict?",
+      "scientific_question": "Is a validation-independence label supported by declared lineage, data-sharing, and shared-error facts?",
       "required_evidence_packet_ids": ["SEP-F06-INDEPENDENCE"],
       "failure_mode": "VALIDATION_INDEPENDENCE_CONTRADICTED",
-      "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks only the independence label and retains the relation for human review.",
+      "claim_effect_summary": "A PASS records independence only. Comparability and F02/F03 prerequisites remain separate questions; a FAIL blocks only the independence label and retains the relation for human review.",
       "implementation_status": "COMPLETE_DRAFT"
     },
     {

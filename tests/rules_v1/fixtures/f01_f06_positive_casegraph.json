@@ -44,13 +44,8 @@
       "bridge_status": "DECLARED",
       "validation_independence": "INDEPENDENT",
       "shared_error_status": "NO_MATERIAL_SHARED_ERROR_IDENTIFIED",
-      "data_lineage_status": "DECLARED",
-      "prerequisite_rule_results": {
-        "F02R02_EDGE_CONDITION_COMPATIBILITY": "PASS",
-        "F03R01_LEFT_SOURCE_NATIVE_MEASUREMENT": "PASS",
-        "F03R01_RIGHT_SOURCE_NATIVE_MEASUREMENT": "PASS"
-      }
+      "data_lineage_status": "DECLARED"
     }
   ],
-  "fixture_boundary": "The F02/F03 prerequisite PASS values are synthetic stand-ins that exercise dependency wiring only. PR1 does not produce real F02 or F03 RuleResults."
+  "fixture_boundary": "This CaseGraph contains scientific CASE, SOURCE, and EDGE facts only. Synthetic F02/F03 prerequisite results live in the separate EvaluationContext fixture and do not establish a real F02 or F03 RuleResult."
 }

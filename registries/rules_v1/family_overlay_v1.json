@@ -8,7 +8,7 @@
       "display_name": "Claim Contract and Ceiling",
       "candidate_subrule_ids": ["F01R01_CASE_CLAIM_DECLARATION", "F01R02_CASE_REQUESTED_WORDING_SCOPE"],
       "implementation_status": "COMPLETE_DRAFT_SLICE",
-      "architecture_decision": "REVISE",
+      "architecture_decision": "APPROVE",
       "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
       "runtime_readiness": "NOT_READY"
     },
@@ -19,7 +19,7 @@
       "implementation_status": "CANDIDATE_MAP_ONLY",
       "architecture_decision": "APPROVE",
       "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
-      "runtime_readiness": "DEFER"
+      "runtime_readiness": "READY_FOR_NEXT_DRAFT"
     },
     {
       "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
@@ -28,7 +28,7 @@
       "implementation_status": "CANDIDATE_MAP_ONLY",
       "architecture_decision": "APPROVE",
       "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
-      "runtime_readiness": "DEFER"
+      "runtime_readiness": "READY_FOR_NEXT_DRAFT"
     },
     {
       "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",

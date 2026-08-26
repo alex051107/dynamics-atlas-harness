@@ -42,6 +42,13 @@ class PathRegistryTests(unittest.TestCase):
         bindings = read_json(RULES_ROOT / "applicability_bindings_v1.json")
         contracts = read_json(RULES_ROOT / "evaluation_contracts_v1.json")
         known_paths = {item["canonical_path"] for item in registry["paths"]}
+        self.assertIn("evaluation_context.rule_results_by_instance", known_paths)
+        self.assertFalse(
+            any(
+                path.startswith("edge.prerequisite_rule_results")
+                for path in known_paths
+            )
+        )
         self.assertTrue(
             {
                 "CURRENT_CASEGRAPH_FIELD",
@@ -75,6 +82,7 @@ class PathRegistryTests(unittest.TestCase):
         bindings = read_json(RULES_ROOT / "applicability_bindings_v1.json")
         grammar = bindings["grammar"]
         allowed_predicates = set(grammar["predicate_primitives"])
+        self.assertIn("PRIOR_RESULT_STATUS", allowed_predicates)
         for binding in bindings["bindings"]:
             self.assertTrue(
                 collect_predicate_ops(binding["applicability"]).issubset(allowed_predicates)
