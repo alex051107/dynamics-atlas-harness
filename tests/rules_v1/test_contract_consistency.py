@@ -68,17 +68,77 @@ class ContractConsistencyTests(unittest.TestCase):
                     "human_decision",
                     json.dumps(contract["fail_conditions"]),
                 )
+                self.assertNotIn(
+                    "human_decision",
+                    json.dumps(contract["pass_conditions"]),
+                )
+                self.assertNotIn(
+                    "human_decision",
+                    json.dumps(contract["unresolved_conditions"]),
+                )
 
         for policy in policies:
             self.assertIsInstance(policy["operator_route_allowed"], bool)
             self.assertTrue(set(policy["allowed_routes"]).issubset(action_ids))
 
-    def test_human_gate_is_separate_from_scientific_evaluation(self):
-        gate = read_json("human_decision_gates_v1.json")["gates"][0]
-        self.assertEqual(gate["status"], "PENDING_HUMAN_SCIENTIFIC_REVIEW")
-        self.assertEqual(gate["allowed_decisions"], ["APPROVE", "REVISE", "REJECT", "DEFER"])
-        self.assertIn("rule_status", gate["does_not_control"])
-        self.assertIn("scientific_claim_ceiling", gate["does_not_control"])
+    def test_contracts_are_explicit_and_fail_closed(self):
+        contracts = read_json("evaluation_contracts_v1.json")["contracts"]
+        for contract in contracts:
+            with self.subTest(contract=contract["evaluation_contract_id"]):
+                for field in ("pass_conditions", "fail_conditions", "unresolved_conditions"):
+                    self.assertIsInstance(contract[field], list)
+                    for entry in contract[field]:
+                        self.assertTrue(entry["reason_code"])
+                        self.assertIn("condition", entry)
+                if contract["implementation_status"] == "COMPLETE_DRAFT":
+                    self.assertTrue(contract["pass_conditions"])
+                    self.assertTrue(contract["fail_conditions"])
+                    self.assertTrue(contract["unresolved_conditions"])
+
+    def test_human_gate_separates_architecture_source_grounding_and_runtime_readiness(self):
+        gates = {
+            gate["human_decision_gate_id"]: gate
+            for gate in read_json("human_decision_gates_v1.json")["gates"]
+        }
+        architecture = gates["HDG-RULES-V1-SCIENTIFIC-REVIEW"]
+        source_science = gates["HDG-RULES-V1-SOURCE-SCIENCE-REVIEW"]
+        self.assertEqual(architecture["gate_role"], "ARCHITECTURE_AND_RUNTIME_READINESS")
+        self.assertEqual(
+            architecture["review_dimensions"]["architecture_decision"]["allowed_decisions"],
+            ["APPROVE", "REVISE", "REJECT", "DEFER"],
+        )
+        self.assertEqual(
+            architecture["review_dimensions"]["runtime_readiness"]["allowed_decisions"],
+            ["READY_FOR_NEXT_DRAFT", "NOT_READY", "DEFER"],
+        )
+        self.assertEqual(
+            source_science["review_dimensions"]["source_grounding_decision"]["allowed_decisions"],
+            ["VERIFIED", "PENDING_DOMAIN_REVIEW", "REJECTED"],
+        )
+        self.assertIn("rule_status", architecture["does_not_control"])
+        self.assertIn("scientific_claim_ceiling", architecture["does_not_control"])
+
+    def test_family_overlay_records_three_review_dimensions(self):
+        families = read_json("family_overlay_v1.json")["families"]
+        for family in families:
+            with self.subTest(family=family["family_id"]):
+                self.assertIn(
+                    family["architecture_decision"], {"APPROVE", "REVISE", "REJECT", "DEFER"}
+                )
+                self.assertEqual(family["source_grounding_decision"], "PENDING_DOMAIN_REVIEW")
+                self.assertIn(
+                    family["runtime_readiness"],
+                    {"READY_FOR_NEXT_DRAFT", "NOT_READY", "DEFER"},
+                )
+
+    def test_source_lookup_is_declared_only_in_this_draft(self):
+        actions = {
+            item["route"]: item
+            for item in read_json("action_vocabulary_v1.json")["routes"]
+        }
+        lookup = actions["SOURCE_LOOKUP"]
+        self.assertFalse(lookup["execution_allowed_in_pr1"])
+        self.assertEqual(lookup["implementation_status"], "DECLARED_ONLY_NO_EXECUTOR_IN_PR1")
 
     def test_coverage_gap_register_is_candidate_only(self):
         records = [

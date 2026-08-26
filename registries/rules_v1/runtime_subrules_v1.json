@@ -14,13 +14,13 @@
       "implementation_status": "COMPLETE_DRAFT"
     },
     {
-      "runtime_subrule_id": "F01R02_CASE_CLAIM_CEILING_ALIGNMENT",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
       "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
       "target_kind": "CASE",
-      "scientific_question": "Does the requested wording remain within the declared claim ceiling?",
-      "required_evidence_packet_ids": ["SEP-F01-CLAIM-CEILING"],
-      "failure_mode": "REQUESTED_WORDING_EXCEEDS_DECLARED_CEILING",
-      "claim_effect_summary": "A FAIL blocks only the requested wording and preserves a human review route.",
+      "scientific_question": "Is the requested wording inside the CASE intake's declared request scope?",
+      "required_evidence_packet_ids": ["SEP-F01-REQUESTED-WORDING-SCOPE"],
+      "failure_mode": "REQUESTED_WORDING_OUTSIDE_DECLARED_SCOPE",
+      "claim_effect_summary": "A PASS records intake scope only. It does not calculate an evidence-supported claim ceiling, which is deferred to Stage 2.",
       "implementation_status": "COMPLETE_DRAFT"
     },
     {
@@ -89,7 +89,7 @@
       "target_kind": "SOURCE",
       "scientific_question": "What exact evidence role and lineage does this source have?",
       "required_evidence_packet_ids": ["SEP-F06-SOURCE-ROLE"],
-      "failure_mode": "SOURCE_EVIDENCE_ROLE_UNDECLARED",
+      "failure_mode": "SOURCE_EVIDENCE_ROLE_OR_LINEAGE_CONTRADICTED",
       "claim_effect_summary": "A PASS records a role; it does not establish validation independence.",
       "implementation_status": "COMPLETE_DRAFT"
     },
@@ -97,20 +97,20 @@
       "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
       "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
       "target_kind": "EDGE",
-      "scientific_question": "Is the declared cross-source relation admissible under the stated condition and bridge?",
+      "scientific_question": "Is the declared cross-source relation admissible after F02 condition and F03 measurement prerequisites resolve?",
       "required_evidence_packet_ids": ["SEP-F06-COMPARABILITY"],
       "failure_mode": "EDGE_NOT_COMPARABLE_FOR_DECLARED_RELATION",
-      "claim_effect_summary": "A FAIL blocks the declared comparison, not either source's local measurement.",
+      "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks the declared comparison, not either source's local measurement.",
       "implementation_status": "COMPLETE_DRAFT"
     },
     {
       "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
       "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
       "target_kind": "EDGE",
-      "scientific_question": "Is a validation-independence label supported without shared-data or shared-error conflict?",
+      "scientific_question": "Is a validation-independence label admissible after F02/F03 prerequisites resolve and without shared-data or shared-error conflict?",
       "required_evidence_packet_ids": ["SEP-F06-INDEPENDENCE"],
       "failure_mode": "VALIDATION_INDEPENDENCE_CONTRADICTED",
-      "claim_effect_summary": "A FAIL blocks only the independence label and retains the relation for human review.",
+      "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks only the independence label and retains the relation for human review.",
       "implementation_status": "COMPLETE_DRAFT"
     },
     {

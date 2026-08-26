@@ -22,10 +22,25 @@ def collect_predicate_ops(expression):
     return operations
 
 
+def collect_predicate_paths(expression):
+    paths = {
+        expression[key]
+        for key in ("path", "values_path")
+        if isinstance(expression.get(key), str)
+    }
+    if expression["op"] in {"ALL", "ANY"}:
+        for argument in expression["args"]:
+            paths.update(collect_predicate_paths(argument))
+    elif expression["op"] == "NOT":
+        paths.update(collect_predicate_paths(expression["arg"]))
+    return paths
+
+
 class PathRegistryTests(unittest.TestCase):
     def test_every_binding_path_has_a_classified_owner(self):
         registry = read_json(RULES_ROOT / "path_registry_v1.json")
         bindings = read_json(RULES_ROOT / "applicability_bindings_v1.json")
+        contracts = read_json(RULES_ROOT / "evaluation_contracts_v1.json")
         known_paths = {item["canonical_path"] for item in registry["paths"]}
         self.assertTrue(
             {
@@ -42,7 +57,19 @@ class PathRegistryTests(unittest.TestCase):
             self.assertTrue(item["migration_or_derivation"])
         for binding in bindings["bindings"]:
             with self.subTest(binding=binding["binding_id"]):
-                self.assertTrue(set(binding["required_evidence_paths"]).issubset(known_paths))
+                binding_paths = set(binding["required_evidence_paths"])
+                binding_paths.update(collect_predicate_paths(binding["applicability"]))
+                binding_paths.discard("target.kind")
+                self.assertTrue(binding_paths.issubset(known_paths))
+
+        for contract in contracts["contracts"]:
+            with self.subTest(contract=contract["evaluation_contract_id"]):
+                condition_paths = set()
+                for field in ("pass_conditions", "fail_conditions", "unresolved_conditions"):
+                    for entry in contract[field]:
+                        condition_paths.update(collect_predicate_paths(entry["condition"]))
+                condition_paths.discard("target.kind")
+                self.assertTrue(condition_paths.issubset(known_paths))
 
     def test_binding_grammar_uses_only_implemented_primitives(self):
         bindings = read_json(RULES_ROOT / "applicability_bindings_v1.json")
@@ -57,6 +84,15 @@ class PathRegistryTests(unittest.TestCase):
             else:
                 self.assertIn(binding["iteration"]["op"], grammar["iteration_primitives"])
 
+        contracts = read_json(RULES_ROOT / "evaluation_contracts_v1.json")
+        for contract in contracts["contracts"]:
+            with self.subTest(contract=contract["evaluation_contract_id"]):
+                for field in ("pass_conditions", "fail_conditions", "unresolved_conditions"):
+                    for entry in contract[field]:
+                        self.assertTrue(
+                            collect_predicate_ops(entry["condition"]).issubset(allowed_predicates)
+                        )
+
     def test_requested_schema_files_exist_and_name_required_fields(self):
         expected = {
             "rule_family.schema.json": "family_id",
@@ -70,6 +106,13 @@ class PathRegistryTests(unittest.TestCase):
             with self.subTest(schema=filename):
                 schema = read_json(SCHEMAS_ROOT / filename)
                 self.assertIn(field, schema["required"])
+
+        contract_schema = read_json(SCHEMAS_ROOT / "evaluation_contract.schema.json")
+        self.assertTrue(
+            {"pass_conditions", "fail_conditions", "unresolved_conditions"}.issubset(
+                set(contract_schema["required"])
+            )
+        )
 
 
 if __name__ == "__main__":

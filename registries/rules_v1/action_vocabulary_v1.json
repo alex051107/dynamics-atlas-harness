@@ -9,8 +9,9 @@
     },
     {
       "route": "SOURCE_LOOKUP",
-      "meaning": "Read only a declared Source Evidence Packet allowlist by exact packet ID or locator.",
-      "execution_allowed_in_pr1": true,
+      "meaning": "A declared future read-only route for a Source Evidence Packet allowlist by exact packet ID or locator. This Draft has no lookup executor or EvidenceLookupResult implementation.",
+      "execution_allowed_in_pr1": false,
+      "implementation_status": "DECLARED_ONLY_NO_EXECUTOR_IN_PR1",
       "lookup_boundary": "NO_NETWORK_SEARCH_NO_RAG_NO_UNDECLARED_SOURCE_DISCOVERY"
     },
     {

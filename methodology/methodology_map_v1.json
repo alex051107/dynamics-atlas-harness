@@ -6,10 +6,10 @@
   "human_facing_families": [
     {
       "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
-      "question": "What claim is requested, what use is intended, and what wording ceiling follows from the declared contract?",
+      "question": "What claim is requested, what use is intended, and is the requested wording inside the intake-declared scope before any future evidence-supported ceiling is computed?",
       "runtime_targets": ["CASE"],
       "disposition": "COMPLETE_DRAFT_SLICE",
-      "source_derivative_ids": ["SEP-F01-CLAIM-CONTRACT", "SEP-F01-CLAIM-CEILING"]
+      "source_derivative_ids": ["SEP-F01-CLAIM-CONTRACT", "SEP-F01-REQUESTED-WORDING-SCOPE"]
     },
     {
       "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
@@ -41,7 +41,7 @@
     },
     {
       "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
-      "question": "What evidence role does each source have, and are a cross-source relation and validation-independence claim admissible?",
+      "question": "What evidence role does each source have, and are a cross-source relation and validation-independence claim admissible only after F02 condition and F03 measurement prerequisites resolve?",
       "runtime_targets": ["SOURCE", "EDGE"],
       "disposition": "COMPLETE_DRAFT_SLICE",
       "source_derivative_ids": ["SEP-F06-SOURCE-ROLE", "SEP-F06-COMPARABILITY", "SEP-F06-INDEPENDENCE"]

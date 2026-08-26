@@ -5,14 +5,14 @@
   "policies": [
     {
       "resolution_policy_id": "RP_F01_CASE_CONTRACT",
-      "purpose": "Resolve CASE contract and wording-ceiling gaps before any source or edge claim is evaluated.",
-      "allowed_routes": ["DIRECT_EVALUATION", "SOURCE_LOOKUP", "HUMAN_OR_NEW_DATA"],
+      "purpose": "Resolve CASE contract and intake-declared wording-scope gaps before any source or edge claim is evaluated.",
+      "allowed_routes": ["DIRECT_EVALUATION", "HUMAN_OR_NEW_DATA"],
       "operator_route_allowed": false,
       "operator_route_conditions": [],
-      "unresolved_route": "SOURCE_LOOKUP",
+      "unresolved_route": "HUMAN_OR_NEW_DATA",
       "fail_route": "HUMAN_OR_NEW_DATA",
-      "completion_evidence": ["typed_case_field", "source_evidence_packet_id"],
-      "forbidden_actions": ["INFER_MISSING_CASE_FACT", "AUTO_APPROVE_WORDING", "RUN_OPERATOR"]
+      "completion_evidence": ["typed_case_field", "human_case_clarification"],
+      "forbidden_actions": ["INFER_MISSING_CASE_FACT", "LOOKUP_CASE_INTENT_IN_SOURCE", "AUTO_APPROVE_WORDING", "RUN_OPERATOR"]
     },
     {
       "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
@@ -22,6 +22,7 @@
       "operator_route_conditions": [],
       "unresolved_route": "SOURCE_LOOKUP",
       "fail_route": "HUMAN_OR_NEW_DATA",
+      "lookup_execution_state": "DECLARED_ONLY_NO_EXECUTOR_IN_PR1",
       "completion_evidence": ["source_or_edge_typed_field", "source_evidence_packet_id", "provenance_locator"],
       "forbidden_actions": ["AVERAGE_UNLIKE_OBSERVABLES", "UPGRADE_SAME_DATA_TO_HELD_OUT", "RUN_OPERATOR"]
     },

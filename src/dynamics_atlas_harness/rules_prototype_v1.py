@@ -177,6 +177,32 @@ def _result(
     }
 
 
+def _first_matching_reason(
+    *,
+    conditions: Any,
+    condition_set_name: str,
+    case_graph: Mapping[str, Any],
+    target: Mapping[str, Any],
+) -> str | None:
+    """Return the first matching reason from one explicit contract condition set."""
+
+    if not isinstance(conditions, list):
+        raise RulePrototypeError(f"contract {condition_set_name} must be a list")
+    for entry in conditions:
+        if not isinstance(entry, Mapping):
+            raise RulePrototypeError(
+                f"contract {condition_set_name} entries must be objects"
+            )
+        condition = entry.get("condition")
+        if not isinstance(condition, Mapping):
+            raise RulePrototypeError(
+                f"contract {condition_set_name} entries must include a condition object"
+            )
+        if evaluate_predicate(condition, case_graph, target):
+            return str(entry.get("reason_code", "CONTRACT_CONDITION_MATCHED"))
+    return None
+
+
 def evaluate_rule_instance(
     *,
     subrule: Mapping[str, Any],
@@ -185,7 +211,12 @@ def evaluate_rule_instance(
     case_graph: Mapping[str, Any],
     target: Mapping[str, Any],
 ) -> dict[str, Any]:
-    """Evaluate one already-targeted Draft RuleInstance."""
+    """Evaluate one already-targeted Draft RuleInstance with fail-closed outcomes.
+
+    A confirmed failure blocks the RuleInstance even if another field remains
+    unresolved. Otherwise an explicit unresolved condition wins. PASS requires a
+    matching frozen pass condition; every unmatched state defaults to UNRESOLVED.
+    """
 
     if target.get("kind") != subrule.get("target_kind") or target.get("kind") != binding.get(
         "target_kind"
@@ -236,28 +267,68 @@ def evaluate_rule_instance(
             missing_paths=missing_paths,
         )
 
-    for failure in contract.get("fail_conditions", []):
-        condition = failure.get("condition")
-        if isinstance(condition, Mapping) and evaluate_predicate(condition, case_graph, target):
-            return _result(
-                subrule=subrule,
-                binding=binding,
-                contract=contract,
-                target=target,
-                status="FAIL",
-                applicability_status="MATCHED",
-                reason_codes=[str(failure.get("reason_code", "CONTRACT_CONFLICT"))],
-                missing_paths=[],
-            )
+    failure_reason = _first_matching_reason(
+        conditions=contract.get("fail_conditions"),
+        condition_set_name="fail_conditions",
+        case_graph=case_graph,
+        target=target,
+    )
+    if failure_reason is not None:
+        return _result(
+            subrule=subrule,
+            binding=binding,
+            contract=contract,
+            target=target,
+            status="FAIL",
+            applicability_status="MATCHED",
+            reason_codes=[failure_reason],
+            missing_paths=[],
+        )
+
+    unresolved_reason = _first_matching_reason(
+        conditions=contract.get("unresolved_conditions"),
+        condition_set_name="unresolved_conditions",
+        case_graph=case_graph,
+        target=target,
+    )
+    if unresolved_reason is not None:
+        return _result(
+            subrule=subrule,
+            binding=binding,
+            contract=contract,
+            target=target,
+            status="UNRESOLVED",
+            applicability_status="MATCHED",
+            reason_codes=[unresolved_reason],
+            missing_paths=[],
+        )
+
+    pass_reason = _first_matching_reason(
+        conditions=contract.get("pass_conditions"),
+        condition_set_name="pass_conditions",
+        case_graph=case_graph,
+        target=target,
+    )
+    if pass_reason is not None:
+        return _result(
+            subrule=subrule,
+            binding=binding,
+            contract=contract,
+            target=target,
+            status="PASS",
+            applicability_status="MATCHED",
+            reason_codes=[pass_reason],
+            missing_paths=[],
+        )
 
     return _result(
         subrule=subrule,
         binding=binding,
         contract=contract,
         target=target,
-        status="PASS",
+        status="UNRESOLVED",
         applicability_status="MATCHED",
-        reason_codes=[],
+        reason_codes=["NO_EXPLICIT_CONTRACT_OUTCOME"],
         missing_paths=[],
     )
 

@@ -62,20 +62,21 @@ class BindingBehaviorTests(unittest.TestCase):
 
     def test_fixture_runner_exercises_all_required_behavior_classes(self):
         categories = {scenario["category"] for scenario in self.matrix["scenarios"]}
-        self.assertEqual(
-            categories,
+        self.assertTrue(
             {
                 "positive",
                 "one_field_negative",
                 "missing_evidence",
                 "wrong_target",
                 "conflict",
-                "claim_ceiling",
-            },
+                "request_scope",
+                "unknown_status",
+                "dependency",
+            }.issubset(categories),
         )
         required_ids = {
             "F01R01_CASE_CLAIM_DECLARATION",
-            "F01R02_CASE_CLAIM_CEILING_ALIGNMENT",
+            "F01R02_CASE_REQUESTED_WORDING_SCOPE",
             "F06R01_SOURCE_EVIDENCE_ROLE",
             "F06R02_EDGE_COMPARABILITY",
             "F06R03_EDGE_VALIDATION_INDEPENDENCE",
@@ -116,6 +117,10 @@ class BindingBehaviorTests(unittest.TestCase):
                     self.assertEqual(
                         result["claim_effect"]["decision_class"],
                         scenario["expected"]["decision_class"],
+                    )
+                if "route" in scenario["expected"]:
+                    self.assertEqual(
+                        result["claim_effect"]["route"], scenario["expected"]["route"]
                     )
 
     def test_active_slice_evaluates_only_f01_and_f06(self):
