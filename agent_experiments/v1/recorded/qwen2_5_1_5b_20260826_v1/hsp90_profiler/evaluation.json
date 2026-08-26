@@ -1,0 +1,37 @@
+{
+  "schema_version": "profiler-evaluation/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "free_form": {
+    "schema_version": "free-form-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "PASS",
+    "reason_codes": []
+  },
+  "vocabulary_assisted": {
+    "schema_version": "profiler-proposal-validation/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "MISSING_SOURCE_FIELD:hsp90_md_round2_directional_packet:sample_system_composition",
+      "MISSING_OR_FABRICATED_UNKNOWN:hsp90_md_round2_directional_packet:sample_system_composition"
+    ],
+    "source_count": 1,
+    "edge_count": 0
+  },
+  "bounded_harness": {
+    "schema_version": "bounded-profiler-harness-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "TYPED_VALIDATION_OR_SEALED_COMPARISON_FAILED"
+    ],
+    "comparison": {
+      "schema_version": "profiler-reference-comparison/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "PASS",
+      "reason_codes": [],
+      "critical_differences": []
+    }
+  },
+  "comparison_sampling_boundary": "The three views evaluate the same recorded model proposal; they are not independent model samples."
+}

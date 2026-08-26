@@ -1,0 +1,42 @@
+{
+  "schema_version": "agent-model-visible-planner-packet/v1",
+  "visibility": "MODEL_VISIBLE_ONLY",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "canonical_case_graph": {
+    "case_summary": "One declared HSP90 MD source has an unresolved same-packet trajectory-level directional-control record. No kinetic, equilibrium, population, free-energy, pathway, mechanism, mutation, or scientific conclusion is in scope.",
+    "sources": [
+      {"source_id": "hsp90_md_round2_directional_packet", "method_or_modality": "MD_TRAJECTORY", "evidence_role": "DIAGNOSTIC", "method_profile_id": "hsp90_md_directional_time_anatomy_v0"}
+    ],
+    "edges": []
+  },
+  "selected_rule_instances": [
+    {
+      "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "current_status": "UNRESOLVED",
+      "target": "hsp90_md_round2_directional_packet",
+      "gap": "computable same-packet trajectory-level directional-control evidence is missing"
+    }
+  ],
+  "resolution_constraints": {
+    "allowed_actions": ["DIRECT_EVALUATION", "EXACT_ATTESTATION", "REGISTERED_OPERATOR", "HUMAN_OR_NEW_DATA"],
+    "execution_boundary": "Propose only. Deterministic authorization owns any later action.",
+    "scientific_disposition": "NOT_EVALUATED"
+  },
+  "permitted_action_cards": [
+    {
+      "card_id": "hsp90-exact-time-anatomy-control",
+      "action": "REGISTERED_OPERATOR",
+      "target_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+      "scope": "EXPOSED_DEVELOPMENT_ACTIVE / EXACT_CASE_BOUND / NOT_GENERAL / NOT_PRODUCTION",
+      "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+      "claim_ceiling": "Same-packet trajectory-level control only; no scientific disposition."
+    }
+  ],
+  "output_contract": {
+    "schema_version": "agent-planner-proposal/v1",
+    "required_top_level_fields": ["schema_version", "case_id", "proposed_actions", "execution_requested", "scientific_disposition", "claim_ceiling_acknowledgement"],
+    "action_fields": ["card_id", "action", "target_rule_instance_id", "operator_id", "rationale"],
+    "required_values": {"execution_requested": false, "scientific_disposition": "NOT_EVALUATED", "claim_ceiling_acknowledgement": "NO_SCIENTIFIC_DISPOSITION"}
+  }
+}

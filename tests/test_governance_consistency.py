@@ -25,7 +25,7 @@ def work_item(status: dict, role: str) -> dict:
 
 
 class GovernanceConsistencyTests(unittest.TestCase):
-    def test_current_status_records_merged_baseline_and_authorized_slice(self) -> None:
+    def test_current_status_records_merged_baseline_and_bounded_slice_result(self) -> None:
         status = load_json("governance/current_execution_status.json")
         deviations = [
             json.loads(line)
@@ -39,9 +39,13 @@ class GovernanceConsistencyTests(unittest.TestCase):
             ["MERGED", "PASS"],
         )
         live_agent = work_item(status, "LIVE_AGENT_EXPOSED_CASES_V1")
-        self.assertEqual(live_agent["state"], "HUMAN_AUTHORIZED_NOT_STARTED")
+        self.assertEqual(live_agent["state"], "EXPOSED_EVALUATION_COMPLETE_HARD_GATES_FAILED")
         self.assertEqual(live_agent["authorization"], "USER_DECISION_DA-20260826-032")
-        self.assertEqual(status["next_allowed_action"]["action"], "CREATE_FEATURE_LIVE_AGENT_EXPOSED_CASES_V1")
+        self.assertEqual(
+            status["next_allowed_action"]["action"],
+            "HUMAN_REVIEW_LIVE_AGENT_EXPOSED_CASES_V1_COMPARISON_REPORT",
+        )
+        self.assertEqual(live_agent["observed_result"]["result"], "NO_TYPED_BOUNDED_HARNESS_PASS")
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "STAGE2_ADK_HELD_OUT")["status"],
             "NOT_AUTHORIZED",

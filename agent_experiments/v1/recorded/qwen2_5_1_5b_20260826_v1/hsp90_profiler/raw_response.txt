@@ -1,0 +1,39 @@
+{
+  "schema_version": "agent-profiler-proposal/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "sources": [
+    {
+      "source_id": "hsp90_md_round2_directional_packet",
+      "source_locator": "HSP90-METHOD-01",
+      "source_type": "MD_TRAJECTORY",
+      "method_or_modality": "MD_TRAJECTORY",
+      "evidence_role": "DIAGNOSTIC",
+      "native_observable_kind": "TWO_READOUT_DIRECTIONAL_SIGNS",
+      "estimand_kind": "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE",
+      "time_semantics": "ORDERED_TRAJECTORY"
+    }
+  ],
+  "edges": [],
+  "unknowns": [
+    {
+      "path": "sources.hsp90_md_round2_directional_packet.sample_system_composition",
+      "reason": "The sample system composition is not provided in the packet.",
+      "evidence_pointer": "The packet does not contain information about the sample system composition."
+    },
+    {
+      "path": "case.experimental_comparator",
+      "reason": "No experimental comparator is provided in the packet.",
+      "evidence_pointer": "The packet does not contain information about an experimental comparator."
+    },
+    {
+      "path": "case.kinetic_interpretation",
+      "reason": "No kinetic interpretation is provided in the packet.",
+      "evidence_pointer": "The packet does not contain information about a kinetic interpretation."
+    },
+    {
+      "path": "case.mechanism_interpretation",
+      "reason": "No mechanism interpretation is provided in the packet.",
+      "evidence_pointer": "The packet does not contain information about a mechanism interpretation."
+    }
+  ]
+}

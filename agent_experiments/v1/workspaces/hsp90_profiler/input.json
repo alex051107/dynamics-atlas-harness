@@ -1,0 +1,45 @@
+{
+  "schema_version": "agent-model-visible-profiler-packet/v1",
+  "visibility": "MODEL_VISIBLE_ONLY",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "scientific_question": "For a declared HSP90 molecular-dynamics packet, describe a fixed two-readout directional-block catalogue only as a same-packet trajectory-level diagnostic; do not infer a transition rate, equilibrium, population, free energy, pathway, mechanism, or mutation effect.",
+  "source_material": [
+    {
+      "source_id": "hsp90_md_round2_directional_packet",
+      "source_locator": "HSP90-METHOD-01",
+      "source_type": "MD_TRAJECTORY",
+      "allowed_method_excerpt": "The packet contains 40 ordered trajectories with 1001 saved frames per trajectory. Per-frame two-readout directional signs are derived from geometry and contact readouts under a fixed persistence grid.",
+      "provided_facts": [
+        "The statistical unit is trajectory; frames are correlated within a trajectory.",
+        "The requested output is a same-packet descriptive directional catalogue.",
+        "No experimental comparator, sample-composition declaration, kinetic estimate, equilibrium estimate, or mechanism evidence is supplied in this packet."
+      ]
+    }
+  ],
+  "edge_material": [],
+  "controlled_vocabulary": {
+    "method_or_modality": ["STRUCTURAL_CANDIDATE_POOL", "NMR_SCALAR_COUPLING", "MD_TRAJECTORY"],
+    "evidence_role": ["CONSTRUCTION", "FIT_TARGET", "DIAGNOSTIC"],
+    "native_observable_kind": ["CANDIDATE_CONFORMER_COORDINATES", "SCALAR_J_COUPLINGS", "TWO_READOUT_DIRECTIONAL_SIGNS"],
+    "estimand_kind": ["CANDIDATE_SPACE_SUPPORT", "LOCAL_BACKBONE_ANGLE_SUPPORT", "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE"],
+    "time_semantics": ["STATIC_ENSEMBLE_AVERAGE", "POPULATION_AVERAGE", "ORDERED_TRAJECTORY"],
+    "unknown_token": "UNKNOWN"
+  },
+  "unknown_policy": {
+    "required_unknown_paths": [
+      "sources.hsp90_md_round2_directional_packet.sample_system_composition",
+      "case.experimental_comparator",
+      "case.kinetic_interpretation",
+      "case.mechanism_interpretation"
+    ],
+    "rule": "If a fact is not supplied, write UNKNOWN and include an evidence pointer."
+  },
+  "output_contract": {
+    "schema_version": "agent-profiler-proposal/v1",
+    "required_top_level_fields": ["schema_version", "case_id", "sources", "edges", "unknowns"],
+    "required_source_fields": ["source_id", "method_or_modality", "evidence_role", "native_observable_kind", "estimand_kind", "time_semantics", "source_locator", "sample_system_composition"],
+    "required_edge_fields": ["edge_id", "left_source_id", "right_source_id", "condition_relation"],
+    "unknown_item_fields": ["path", "reason", "evidence_pointer"],
+    "forbidden_output_topics": ["Rules", "operators", "routes", "expected outcomes", "tests", "scientific conclusions"]
+  }
+}

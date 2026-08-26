@@ -1,0 +1,24 @@
+{
+  "proposed_actions": [
+    {
+      "card_id": "xeisd-attest-random-composition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "rationale": "The composition of the random candidate pool is not specified, and it is necessary to ensure that the composition is consistent with the expected composition."
+    },
+    {
+      "card_id": "xeisd-attest-jcoupling-composition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_j_coupling_fit",
+      "rationale": "The composition of the J-coupling measurement is not specified, and it is necessary to ensure that the composition is consistent with the expected composition."
+    },
+    {
+      "card_id": "xeisd-attest-edge-condition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+      "rationale": "The condition relation between the random pool and the J-coupling measurement is not specified, and it is necessary to ensure that the condition is consistent with the expected condition."
+    }
+  ],
+  "execution_requested": false,
+  "scientific_disposition": "NOT_EVALUATED"
+}

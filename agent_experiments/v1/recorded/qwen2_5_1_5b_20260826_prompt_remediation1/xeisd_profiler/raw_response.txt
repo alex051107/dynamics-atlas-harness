@@ -1,0 +1,99 @@
+{
+  "schema_version": "agent-model-visible-profiler-packet/v1",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "sources": [
+    {
+      "source_id": "xeisd_random_candidate_pool",
+      "source_locator": "XEI-M04",
+      "source_type": "STRUCTURAL_CANDIDATE_POOL",
+      "provided_facts": [
+        "The system is unfolded drkN SH3.",
+        "The source supplies structural candidates rather than a physical-time trajectory.",
+        "No sample-composition declaration is supplied in this packet."
+      ],
+      "native_observable_kind": [
+        "CANDIDATE_CONFORMER_COORDINATES"
+      ],
+      "estimand_kind": [
+        "CANDIDATE_SPACE_SUPPORT"
+      ],
+      "time_semantics": [
+        "STATIC_ENSEMBLE_AVERAGE"
+      ],
+      "method_or_modality": [
+        "STRUCTURAL_CANDIDATE_POOL"
+      ],
+      "evidence_role": [
+        "CONSTRUCTION"
+      ],
+      "unknowns": [
+        {
+          "path": "sources.xeisd_random_candidate_pool.sample_system_composition",
+          "reason": "No sample-composition declaration is supplied in this packet.",
+          "evidence_pointer": "UNKNOWN"
+        },
+        {
+          "path": "sources.xeisd_j_coupling_fit.sample_system_composition",
+          "reason": "No sample-composition declaration is supplied in this packet.",
+          "evidence_pointer": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "source_id": "xeisd_j_coupling_fit",
+      "source_locator": "XEI-M03",
+      "source_type": "NMR_SCALAR_COUPLING",
+      "provided_facts": [
+        "The system is unfolded drkN SH3.",
+        "The observable is an ensemble-averaged NMR measurement, not a trajectory time series.",
+        "No sample-composition declaration is supplied in this packet."
+      ],
+      "native_observable_kind": [
+        "SCALAR_J_COUPLINGS"
+      ],
+      "estimand_kind": [
+        "LOCAL_BACKBONE-ANGLE_SUPPORT"
+      ],
+      "time_semantics": [
+        "STATIC_ENSEMBLE_AVERAGE"
+      ],
+      "method_or_modality": [
+        "NMR_SCALAR_COUPLING"
+      ],
+      "evidence_role": [
+        "FIT_TARGET"
+      ],
+      "unknowns": [
+        {
+          "path": "sources.xeisd_j_coupling_fit.sample_system_composition",
+          "reason": "No sample-composition declaration is supplied in this packet.",
+          "evidence_pointer": "UNKNOWN"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "xeisd_random_pool_vs_j_coupling_question",
+      "left_source_id": "xeisd_random_candidate_pool",
+      "right_source_id": "xeisd_j_coupling_fit",
+      "provided_facts": [
+        "No condition relation is supplied in this packet.",
+        "No common population or physical-time equivalence is supplied in this packet."
+      ],
+      "shared_question": "local backbone-angle support available within the declared candidate pool"
+    }
+  ],
+  "unknowns": [
+    {
+      "path": "sources.xeisd_random_candidate_pool.sample_system_composition",
+      "reason": "No sample-composition declaration is supplied in this packet.",
+      "evidence_pointer": "UNKNOWN"
+    },
+    {
+      "path": "sources.xeisd_j_coupling_fit.sample_system_composition",
+      "reason": "No sample-composition declaration is supplied in this packet.",
+      "evidence_pointer": "UNKNOWN"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "proposed_actions": [
+    {
+      "card_id": "hsp90-exact-time-anatomy-control",
+      "action": "REGISTERED_OPERATOR",
+      "target_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "rationale": "The evidence role is DIAGNOSTIC, and the method profile ID is hsp90_md_directional_time_anatomy_v0. This card is allowed to be executed due to the claim ceiling being 'Same-packet trajectory-level control only; no scientific disposition.'"
+    }
+  ],
+  "execution_requested": false,
+  "scientific_disposition": "NOT_EVALUATED"
+}

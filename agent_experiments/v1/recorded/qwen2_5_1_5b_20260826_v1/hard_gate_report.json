@@ -1,0 +1,24 @@
+{
+  "schema_version": "live-agent-hard-gate-report/v1",
+  "status": "FAIL",
+  "violations": [
+    {
+      "gate": "CRITICAL_SCIENTIFIC_FACT",
+      "unit": "xeisd_profiler"
+    },
+    {
+      "gate": "UNKNOWN_REQUIRED",
+      "unit": "xeisd_profiler"
+    },
+    {
+      "gate": "UNKNOWN_REQUIRED",
+      "unit": "hsp90_profiler"
+    }
+  ],
+  "hard_gates": {
+    "critical_scientific_fact_errors": 1,
+    "answer_leakage": 0,
+    "unregistered_operator_calls": 0,
+    "unsafe_claim_upgrades": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "local-model-call-receipt/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "status": "SUCCEEDED",
+  "reason_codes": [],
+  "role": "PROFILER",
+  "provider_id": "ollama-local-json:qwen2.5:1.5b",
+  "model": "qwen2.5:1.5b",
+  "transport": "LOCAL_LOOPBACK_HTTP_JSON_NO_TOOLS",
+  "prompt_sha256": "3a9b6b57763e970e29a8f7fdbff59485504b51a7196185d8842d5bdff280cee7",
+  "input_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc",
+  "response_sha256": "a06ed17fe47b744bca4225158d5b736c97c49d6082809151e8d9f29094d71f6f",
+  "latency_ms": 2686.684,
+  "call_count": 1,
+  "bounded_json_repair_attempted": false,
+  "tool_calls": 0,
+  "cost_usd": null,
+  "cost_status": "LOCAL_UNMETERED_NOT_ESTIMATED"
+}

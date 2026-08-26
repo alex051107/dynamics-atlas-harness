@@ -1,0 +1,32 @@
+{
+  "schema_version": "sealed-profiler-reference/v1",
+  "purpose": "Deterministic exposed-development comparison only. This file is not model-visible.",
+  "cases": {
+    "lincoff_2020_xeisd_random_j_relation_v1_alpha": {
+      "critical_sources": [
+        {"source_id": "xeisd_random_candidate_pool", "method_or_modality": "STRUCTURAL_CANDIDATE_POOL", "evidence_role": "CONSTRUCTION", "native_observable_kind": "CANDIDATE_CONFORMER_COORDINATES", "estimand_kind": "CANDIDATE_SPACE_SUPPORT", "time_semantics": "STATIC_ENSEMBLE_AVERAGE", "source_locator": "XEI-M04"},
+        {"source_id": "xeisd_j_coupling_fit", "method_or_modality": "NMR_SCALAR_COUPLING", "evidence_role": "FIT_TARGET", "native_observable_kind": "SCALAR_J_COUPLINGS", "estimand_kind": "LOCAL_BACKBONE_ANGLE_SUPPORT", "time_semantics": "POPULATION_AVERAGE", "source_locator": "XEI-M03"}
+      ],
+      "critical_edges": [
+        {"edge_id": "xeisd_random_pool_vs_j_coupling_question", "left_source_id": "xeisd_random_candidate_pool", "right_source_id": "xeisd_j_coupling_fit"}
+      ],
+      "required_unknown_paths": [
+        "sources.xeisd_random_candidate_pool.sample_system_composition",
+        "sources.xeisd_j_coupling_fit.sample_system_composition",
+        "edges.xeisd_random_pool_vs_j_coupling_question.condition_relation"
+      ]
+    },
+    "hsp90_directional_time_anatomy_development_v1_alpha": {
+      "critical_sources": [
+        {"source_id": "hsp90_md_round2_directional_packet", "method_or_modality": "MD_TRAJECTORY", "evidence_role": "DIAGNOSTIC", "native_observable_kind": "TWO_READOUT_DIRECTIONAL_SIGNS", "estimand_kind": "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE", "time_semantics": "ORDERED_TRAJECTORY", "source_locator": "HSP90-METHOD-01"}
+      ],
+      "critical_edges": [],
+      "required_unknown_paths": [
+        "sources.hsp90_md_round2_directional_packet.sample_system_composition",
+        "case.experimental_comparator",
+        "case.kinetic_interpretation",
+        "case.mechanism_interpretation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "planner-evaluation/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "free_form": {
+    "schema_version": "free-form-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "PASS",
+    "reason_codes": []
+  },
+  "vocabulary_assisted": {
+    "schema_version": "planner-proposal-validation/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "INVALID_PLANNER_PROPOSAL_SCHEMA",
+      "CASE_ID_MISMATCH",
+      "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT",
+      "UNREGISTERED_OR_WRONG_OPERATOR:0"
+    ],
+    "proposed_card_ids": [
+      "hsp90-exact-time-anatomy-control"
+    ],
+    "execution_performed": false
+  },
+  "bounded_harness": {
+    "schema_version": "bounded-planner-harness-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "TYPED_VALIDATION_OR_COMPARISON_OR_AUTHORIZATION_FAILED"
+    ],
+    "comparison": {
+      "schema_version": "planner-reference-comparison/v1",
+      "case_id": null,
+      "status": "FAIL",
+      "reason_codes": [
+        "SEALED_REFERENCE_CASE_MISSING"
+      ],
+      "differences": []
+    },
+    "deterministic_authorization": {
+      "schema_version": "planner-deterministic-authorization/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "REJECTED",
+      "reason_codes": [
+        "INVALID_PLANNER_PROPOSAL_SCHEMA",
+        "CASE_ID_MISMATCH",
+        "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT",
+        "UNREGISTERED_OR_WRONG_OPERATOR:0"
+      ],
+      "execution_performed": false,
+      "registered_operator_calls": 0
+    }
+  },
+  "comparison_sampling_boundary": "The three views evaluate the same recorded model proposal; they are not independent model samples."
+}

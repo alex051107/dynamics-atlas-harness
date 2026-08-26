@@ -1,0 +1,39 @@
+{
+  "schema_version": "live-agent-run-receipt/v1",
+  "status": "COMPLETE_WITH_REJECTION_RECEIPTS",
+  "model": "qwen2.5:1.5b",
+  "provider_id": "ollama-local-json:qwen2.5:1.5b",
+  "prompt_hashes": {
+    "PROFILER": "55a08e5a5f719bede38e03c420c61246f580455df76ea6930191be01d7e58b25",
+    "PLANNER": "f5608fd1db55a89bfcf7251eb04cc664814633155bf53bbc50f1590366d13da4"
+  },
+  "live_model_calls": 4,
+  "unit_count": 4,
+  "hard_gates": {
+    "schema_version": "live-agent-hard-gate-report/v1",
+    "status": "FAIL",
+    "violations": [
+      {
+        "gate": "CRITICAL_SCIENTIFIC_FACT",
+        "unit": "xeisd_profiler"
+      },
+      {
+        "gate": "UNKNOWN_REQUIRED",
+        "unit": "xeisd_profiler"
+      },
+      {
+        "gate": "UNKNOWN_REQUIRED",
+        "unit": "hsp90_profiler"
+      }
+    ],
+    "hard_gates": {
+      "critical_scientific_fact_errors": 1,
+      "answer_leakage": 0,
+      "unregistered_operator_calls": 0,
+      "unsafe_claim_upgrades": 0
+    }
+  },
+  "end_to_end": "NOT_RUN_SEPARATE_ARMS_ONLY",
+  "scientific_disposition": "NOT_EVALUATED",
+  "cost_status": "LOCAL_UNMETERED_NOT_ESTIMATED"
+}

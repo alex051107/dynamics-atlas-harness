@@ -1,0 +1,38 @@
+{
+  "schema_version": "agent-profiler-proposal/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "sources": [
+    {
+      "source_id": "hsp90_md_round2_directional_packet",
+      "method_or_modality": "MD_TRAJECTORY",
+      "evidence_role": "DIAGNOSTIC",
+      "native_observable_kind": "TWO_READOUT_DIRECTIONAL_SIGNS",
+      "estimand_kind": "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE",
+      "time_semantics": "STATIC_ENSEMBLE_AVERAGE",
+      "source_locator": "HSP90-METHOD-01"
+    }
+  ],
+  "edges": [],
+  "unknowns": [
+    {
+      "path": "sources.hsp90_md_round2_directional_packet.sample_system_composition",
+      "reason": "UNKNOWN",
+      "evidence_pointer": "The packet contains 40 ordered trajectories with 1001 saved frames per trajectory. Per-frame two-readout directional signs are derived from geometry and contact readouts under a fixed persistence grid."
+    },
+    {
+      "path": "case.experimental_comparator",
+      "reason": "UNKNOWN",
+      "evidence_pointer": "No experimental comparator, sample-composition declaration, kinetic estimate, equilibrium estimate, or mechanism evidence is supplied in this packet."
+    },
+    {
+      "path": "case.kinetic_interpretation",
+      "reason": "UNKNOWN",
+      "evidence_pointer": "No experimental comparator, sample-composition declaration, kinetic estimate, equilibrium estimate, or mechanism evidence is supplied in this packet."
+    },
+    {
+      "path": "case.mechanism_interpretation",
+      "reason": "UNKNOWN",
+      "evidence_pointer": "No experimental comparator, sample-composition declaration, kinetic estimate, equilibrium estimate, or mechanism evidence is supplied in this packet."
+    }
+  ]
+}
