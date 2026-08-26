@@ -1,12 +1,15 @@
 {
-  "boundary": "Proposal-only route receipts. No source-science validation, final scientific verdict, registered Operator, or Agent run occurred.",
+  "boundary": "Exact predeclared review-derivative attestation receipts. No free-text source extraction, source-science validation, scientific disposition, registered Operator, or Agent run occurred.",
   "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+  "lookup_kind": "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
   "network_accessed": false,
   "operator_results": [],
+  "route_dispositions": {
+    "A1": "RELATION_REVIEWABLE",
+    "A2": "ABSTAIN",
+    "A3": "RELATION_BLOCKED"
+  },
   "run_kind": "EXPOSED_X_EISD_VERTICAL_SLICE_V1_ALPHA",
-  "scenarios": {
-    "A1": "SUPPORT_WITHIN_CEILING",
-    "A2": "ABSTAIN_OR_HUMAN_REVIEW",
-    "A3": "CANNOT_SUPPORT_REQUESTED_CLAIM"
-  }
+  "scientific_disposition": "NOT_EVALUATED"
 }

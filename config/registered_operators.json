@@ -60,18 +60,22 @@
       "version": "1.0.0-exposed-case-bound-adapter",
       "status": "ROSTER_PASS",
       "routable": true,
+      "activation_scope": "EXPOSED_DEVELOPMENT_ACTIVE",
+      "routing_scope": "EXACT_CASE_BOUND",
+      "generalization_status": "NOT_GENERAL",
+      "deployment_status": "NOT_PRODUCTION",
       "capability": "Produce the exact HSP90 trajectory-level directional-time-anatomy control record for the one declared same-packet diagnostic obligation.",
       "capability_id": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
       "skill_ref": "repo:rapid-dynamics-research",
       "handler": "case_bound_hsp90_time_anatomy_v1",
-      "implementation_ref": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py",
+      "implementation_ref": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/run_time_anatomy_v0_frozen.py",
       "runtime": {
         "kind": "python-standard-library",
         "required_python_packages": []
       },
       "fixed_inputs": {
-        "frame_state_assignments": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv",
-        "route_predictions": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv"
+        "frame_state_assignments": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/frame_state_assignments.tsv",
+        "route_predictions": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/route_predictions.tsv"
       },
       "fixed_parameters": {
         "persistence_saved_frames": [5, 20, 50],
@@ -80,11 +84,11 @@
       "input_contract": {
         "statistical_unit": "trajectory (n=40); frame runs are within-trajectory descriptive objects",
         "read_only": true,
-        "case_binding_manifest_ref": "dynamics-atlas-harness/evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json",
+        "case_binding_manifest_ref": "evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json",
         "method_profile_id": "hsp90_md_directional_time_anatomy_v0"
       },
       "output_contract": "hsp90-time-anatomy-results/v1-case-bound",
-      "output_schema_ref": "dynamics-atlas-harness/schemas/rules_v1/hsp90_time_anatomy_output_v1.schema.json",
+      "output_schema_ref": "schemas/rules_v1/hsp90_time_anatomy_output_v1.schema.json",
       "promotion_blockers": [],
       "contract_review_boundary": "User-authorized exposed-development contract review after exact source, input-manifest, method-profile, and output-validator checks. It does not approve source science or a kinetic/equilibrium/mechanistic claim.",
       "expected_outputs": [

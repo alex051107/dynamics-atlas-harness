@@ -111,8 +111,11 @@ def main() -> None:
                 "unregistered_tool_calls": 0,
                 "pre_operator_rule_status": pre_rule["status"],
                 "post_operator_rule_status": post_rule["status"],
-                "terminal_disposition": packet["terminal_disposition"],
-                "boundary": "One exact case-bound registered Operator execution. The result remains proposal-only, same-packet, and subject to the HumanDecisionGate; it emits no final scientific verdict."
+                "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+                "operator_scope": resolution["operator_scope"],
+                "route_disposition": packet["route_disposition"],
+                "scientific_disposition": "NOT_EVALUATED",
+                "boundary": "One exact case-bound registered Operator execution. The result is same-packet and subject to the HumanDecisionGate; it emits a route-contract outcome, not a scientific disposition."
             },
             indent=2,
             sort_keys=True,

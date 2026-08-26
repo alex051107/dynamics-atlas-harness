@@ -119,12 +119,15 @@ def main() -> None:
             "case_id": X_EISD_CASE_ID,
             "network_accessed": False,
             "operator_results": [],
-            "scenarios": {
-                "A1": a1_packet["terminal_disposition"],
-                "A2": a2_packet["terminal_disposition"],
-                "A3": a3_packet["terminal_disposition"],
+            "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+            "scientific_disposition": "NOT_EVALUATED",
+            "lookup_kind": "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
+            "route_dispositions": {
+                "A1": a1_packet["route_disposition"],
+                "A2": a2_packet["route_disposition"],
+                "A3": a3_packet["route_disposition"],
             },
-            "boundary": "Proposal-only route receipts. No source-science validation, final scientific verdict, registered Operator, or Agent run occurred."
+            "boundary": "Exact predeclared review-derivative attestation receipts. No free-text source extraction, source-science validation, scientific disposition, registered Operator, or Agent run occurred."
         },
     )
 

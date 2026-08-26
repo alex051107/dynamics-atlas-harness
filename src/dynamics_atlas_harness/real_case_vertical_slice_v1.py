@@ -30,6 +30,13 @@ X_EISD_SOURCE_IDS = (
     "xeisd_j_coupling_fit",
 )
 X_EISD_EDGE_ID = "xeisd_random_pool_vs_j_coupling_question"
+X_EISD_FROZEN_BASE_PROJECTION_PATH = (
+    "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/"
+    "base_projection_manifest_v1.json"
+)
+X_EISD_FROZEN_BASE_PROJECTION_SHA256 = (
+    "32e802b31dbc175087248bfc548665aa7fa8708a3eb72c17ea2b6446598c746c"
+)
 HSP90_CASE_ID = "hsp90_directional_time_anatomy_development_v1_alpha"
 HSP90_SOURCE_ID = "hsp90_md_round2_directional_packet"
 HSP90_RUNTIME_SUBRULE_ID = "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL"
@@ -69,6 +76,13 @@ _ALLOWED_LOOKUP_FIELDS = {
     "SOURCE": frozenset({"sample_composition"}),
     "EDGE": frozenset({"condition_relation", "relation_type", "bridge_status"}),
 }
+_EXACT_REVIEW_DERIVATIVE_ATTESTATION = "EXACT_REVIEW_DERIVATIVE_ATTESTATION"
+_EXACT_HSP90_EXPOSED_DEVELOPMENT_SCOPE = {
+    "activation_scope": "EXPOSED_DEVELOPMENT_ACTIVE",
+    "routing_scope": "EXACT_CASE_BOUND",
+    "generalization_status": "NOT_GENERAL",
+    "deployment_status": "NOT_PRODUCTION",
+}
 
 
 class VerticalSliceError(ValueError):
@@ -90,18 +104,20 @@ def _mapping(value: Any, label: str) -> Mapping[str, Any]:
     return value
 
 
-def _project_root(workspace_root: Path) -> Path:
+def _harness_root(workspace_root: Path) -> Path:
+    """Return the checked repository root; never permit a parent-workspace asset."""
+
     workspace_root = workspace_root.resolve()
     if workspace_root.name != "dynamics-atlas-harness":
         raise VerticalSliceError("workspace_root must be the dynamics-atlas-harness repository")
-    return workspace_root.parent
+    return workspace_root
 
 
 def _safe_local_source_path(workspace_root: Path, relative_path: str) -> Path:
-    project_root = _project_root(workspace_root)
-    candidate = (workspace_root / relative_path).resolve()
-    if not candidate.is_relative_to(project_root):
-        raise VerticalSliceError("allowlisted lookup path escapes the local project root")
+    harness_root = _harness_root(workspace_root)
+    candidate = (harness_root / relative_path).resolve()
+    if not candidate.is_relative_to(harness_root):
+        raise VerticalSliceError("allowlisted lookup path escapes the harness repository")
     return candidate
 
 
@@ -117,8 +133,10 @@ def validate_xeisd_projection(case_graph: Mapping[str, Any]) -> None:
     provenance = _mapping(case_graph.get("projection_provenance"), "projection_provenance")
     if provenance.get("base_asset_id") != "xeisd-rich-casegraph-v0.3":
         raise VerticalSliceError("X-EISD projection must identify its frozen v0.3 asset")
-    if not isinstance(provenance.get("workspace_relative_base_asset_path"), str):
-        raise VerticalSliceError("X-EISD projection must retain a relative base-asset path")
+    if provenance.get("workspace_relative_base_asset_path") != X_EISD_FROZEN_BASE_PROJECTION_PATH:
+        raise VerticalSliceError("X-EISD projection must retain the frozen base-projection path")
+    if provenance.get("base_asset_fixture_sha256") != X_EISD_FROZEN_BASE_PROJECTION_SHA256:
+        raise VerticalSliceError("X-EISD projection must retain the frozen base-projection hash")
 
     sources = case_graph.get("evidence_items")
     edges = case_graph.get("comparisons")
@@ -156,13 +174,15 @@ def execute_exact_source_lookup(
     """Resolve one declared field mapping from a local exact-locator allowlist.
 
     The executor never searches the network, discovers documents, or infers a
-    scientific value from free text.  It verifies that a predeclared local review
-    derivative exists and still contains the exact locator marker before returning
-    its predeclared field update as an attested Draft input.
+    scientific value from free text. It verifies a hash-bound, predeclared review
+    derivative and exact locator marker before returning a predeclared field update
+    as an attested Draft input.
     """
 
     allowlist = _mapping(allowlist, "allowlist")
     request = _mapping(request, "request")
+    if allowlist.get("lookup_kind") != _EXACT_REVIEW_DERIVATIVE_ATTESTATION:
+        raise VerticalSliceError("allowlist must declare exact review-derivative attestation")
     lookup_id = request.get("lookup_id")
     case_id = request.get("case_id")
     target_kind = request.get("target_kind")
@@ -173,6 +193,7 @@ def execute_exact_source_lookup(
 
     if case_id != X_EISD_CASE_ID or allowlist.get("case_id") != X_EISD_CASE_ID:
         return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
             "lookup_id": lookup_id,
             "case_id": case_id,
             "target": {"kind": target_kind, "id": target_id},
@@ -190,6 +211,7 @@ def execute_exact_source_lookup(
     entry = next((item for item in entries if isinstance(item, Mapping) and item.get("lookup_id") == lookup_id), None)
     if entry is None:
         return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
             "lookup_id": lookup_id,
             "case_id": case_id,
             "target": {"kind": target_kind, "id": target_id},
@@ -205,6 +227,7 @@ def execute_exact_source_lookup(
         or entry.get("locator_id") != locator_id
     ):
         return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
             "lookup_id": lookup_id,
             "case_id": case_id,
             "target": {"kind": target_kind, "id": target_id},
@@ -218,12 +241,15 @@ def execute_exact_source_lookup(
     relative_path = entry.get("workspace_relative_path")
     locator_marker = entry.get("exact_locator_marker")
     field_updates = entry.get("field_updates")
+    expected_fixture_sha256 = entry.get("fixture_sha256")
     if not isinstance(relative_path, str) or not relative_path:
         raise VerticalSliceError("allowlist entry lacks workspace_relative_path")
     if not isinstance(locator_marker, str) or not locator_marker:
         raise VerticalSliceError("allowlist entry lacks exact_locator_marker")
     if not isinstance(field_updates, Mapping) or not field_updates:
         raise VerticalSliceError("allowlist entry lacks field_updates")
+    if not isinstance(expected_fixture_sha256, str) or len(expected_fixture_sha256) != 64:
+        raise VerticalSliceError("allowlist entry lacks a fixture_sha256")
     allowed_fields = _ALLOWED_LOOKUP_FIELDS.get(target_kind)
     if allowed_fields is None or not set(field_updates).issubset(allowed_fields):
         raise VerticalSliceError("allowlist attempts an unauthorized target-field update")
@@ -231,6 +257,7 @@ def execute_exact_source_lookup(
     source_path = _safe_local_source_path(workspace_root, relative_path)
     if not source_path.is_file():
         return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
             "lookup_id": lookup_id,
             "case_id": case_id,
             "target": {"kind": target_kind, "id": target_id},
@@ -241,8 +268,23 @@ def execute_exact_source_lookup(
             "field_updates": {},
             "workspace_relative_path": relative_path,
         }
+    observed_fixture_sha256 = _sha256(source_path)
+    if observed_fixture_sha256 != expected_fixture_sha256:
+        return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
+            "lookup_id": lookup_id,
+            "case_id": case_id,
+            "target": {"kind": target_kind, "id": target_id},
+            "requested_locator_id": locator_id,
+            "status": "FIXTURE_HASH_MISMATCH",
+            "route": "HUMAN_OR_NEW_DATA",
+            "reason_code": "ALLOWLISTED_FIXTURE_HASH_MISMATCH",
+            "field_updates": {},
+            "workspace_relative_path": relative_path,
+        }
     if locator_marker not in source_path.read_text(encoding="utf-8"):
         return {
+            "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
             "lookup_id": lookup_id,
             "case_id": case_id,
             "target": {"kind": target_kind, "id": target_id},
@@ -255,6 +297,7 @@ def execute_exact_source_lookup(
         }
 
     return {
+        "lookup_kind": _EXACT_REVIEW_DERIVATIVE_ATTESTATION,
         "lookup_id": lookup_id,
         "case_id": case_id,
         "target": {"kind": target_kind, "id": target_id},
@@ -262,9 +305,10 @@ def execute_exact_source_lookup(
         "status": "FOUND",
         "route": "SOURCE_LOOKUP",
         "next_evaluation": "DIRECT_EVALUATION",
-        "reason_code": "EXACT_ALLOWLISTED_LOCATOR_FOUND",
+        "reason_code": "EXACT_REVIEW_DERIVATIVE_ATTESTATION_FOUND",
         "field_updates": dict(field_updates),
         "workspace_relative_path": relative_path,
+        "fixture_sha256": observed_fixture_sha256,
         "source_kind": entry.get("source_kind"),
         "raw_observation": entry.get("raw_observation"),
         "field_update_derivation": entry.get("field_update_derivation"),
@@ -282,6 +326,8 @@ def apply_lookup_result(
     lookup_result = _mapping(lookup_result, "lookup_result")
     if lookup_result.get("status") != "FOUND":
         return case_graph
+    if lookup_result.get("lookup_kind") != _EXACT_REVIEW_DERIVATIVE_ATTESTATION:
+        raise VerticalSliceError("successful lookup result must be an exact review-derivative attestation")
     target = _mapping(lookup_result.get("target"), "lookup_result.target")
     target_kind = target.get("kind")
     target_id = target.get("id")
@@ -338,6 +384,8 @@ def derive_declaration_attestations(
     for result in lookup_results:
         if not isinstance(result, Mapping) or result.get("status") != "FOUND":
             continue
+        if result.get("lookup_kind") != _EXACT_REVIEW_DERIVATIVE_ATTESTATION:
+            raise VerticalSliceError("declaration statuses require exact review-derivative attestations")
         target = result.get("target")
         if isinstance(target, Mapping) and target.get("kind") == "SOURCE":
             target_id = target.get("id")
@@ -427,12 +475,12 @@ def materialize_xeisd_conclusion_packet(
 
     if blocking:
         first = blocking[0]
-        terminal_disposition = "CANNOT_SUPPORT_REQUESTED_CLAIM"
+        route_disposition = "RELATION_BLOCKED"
         terminal_route = "HUMAN_OR_NEW_DATA"
         claim_ceiling = "The declared cross-source relation is blocked; neither source-local observation is invalidated. Human scientific review remains required."
     elif unresolved:
         first = unresolved[0]
-        terminal_disposition = "ABSTAIN_OR_HUMAN_REVIEW"
+        route_disposition = "ABSTAIN"
         terminal_route = (
             "HUMAN_OR_NEW_DATA"
             if any(item.get("status") != "FOUND" for item in lookup_results)
@@ -441,21 +489,21 @@ def materialize_xeisd_conclusion_packet(
         claim_ceiling = "A missing declared field or exact source locator leaves the requested relation unresolved; no cross-source claim is emitted."
     else:
         first = None
-        terminal_disposition = "SUPPORT_WITHIN_CEILING"
+        route_disposition = "RELATION_REVIEWABLE"
         terminal_route = "DIRECT_EVALUATION"
         claim_ceiling = "Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion."
 
     packet = {
         "schema_version": "conclusion-packet/v1-alpha",
         "packet_kind": "EXPOSED_X_EISD_RULES_V1_ALPHA",
-        "proposal_status": "PROPOSAL_ONLY_EXPOSED_DEVELOPMENT",
+        "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
         "scenario_id": scenario_id,
         "case_id": X_EISD_CASE_ID,
         "parent_case_id": X_EISD_PARENT_CASE_ID,
         "edge_id": X_EISD_EDGE_ID,
         "terminal_route": terminal_route,
-        "terminal_disposition": terminal_disposition,
-        "scientific_verdict": "NOT_EMITTED_PROPOSAL_ONLY",
+        "route_disposition": route_disposition,
+        "scientific_disposition": "NOT_EVALUATED",
         "claim_ceiling": claim_ceiling,
         "human_decision_gate_required": True,
         "unsafe_claim_upgrade": False,
@@ -477,13 +525,13 @@ def materialize_xeisd_conclusion_packet(
         "evidence_lookup_results": lookup_results,
         "operator_results": [],
         "human_review_items": [
-            "Review whether the local paper-derived declaration attestations are sufficient for source-science use.",
+            "Review whether the local predeclared review-derivative attestations are sufficient for source-science use.",
             "Review the explicit DOCUMENTED-to-DECLARED bridge vocabulary mapping before treating it as any scientific comparability judgment.",
             "F06R03 is retained only as a nonblocking NOT_APPLICABLE result because this pair asserts no validation claim.",
         ],
         "next_action": (
             "Review the bounded relation gate."
-            if terminal_disposition == "SUPPORT_WITHIN_CEILING"
+            if route_disposition == "RELATION_REVIEWABLE"
             else "Resolve the first failed dependency through a human review or new data; do not infer a cross-source claim."
         ),
         "provenance": {
@@ -508,13 +556,13 @@ def validate_xeisd_conclusion_packet(packet: Mapping[str, Any]) -> None:
     required = {
         "schema_version",
         "packet_kind",
-        "proposal_status",
+        "development_status",
         "scenario_id",
         "case_id",
         "edge_id",
         "terminal_route",
-        "terminal_disposition",
-        "scientific_verdict",
+        "route_disposition",
+        "scientific_disposition",
         "claim_ceiling",
         "human_decision_gate_required",
         "unsafe_claim_upgrade",
@@ -535,14 +583,16 @@ def validate_xeisd_conclusion_packet(packet: Mapping[str, Any]) -> None:
         raise VerticalSliceError(f"ConclusionPacket missing required fields: {', '.join(missing)}")
     if packet["case_id"] != X_EISD_CASE_ID or packet["edge_id"] != X_EISD_EDGE_ID:
         raise VerticalSliceError("ConclusionPacket has an unexpected case or edge identity")
-    if packet["terminal_disposition"] not in {
-        "SUPPORT_WITHIN_CEILING",
-        "CANNOT_SUPPORT_REQUESTED_CLAIM",
-        "ABSTAIN_OR_HUMAN_REVIEW",
+    if packet["development_status"] != "EXPOSED_DEVELOPMENT_ACTIVE":
+        raise VerticalSliceError("ConclusionPacket has an invalid development status")
+    if packet["route_disposition"] not in {
+        "RELATION_REVIEWABLE",
+        "RELATION_BLOCKED",
+        "ABSTAIN",
     }:
-        raise VerticalSliceError("ConclusionPacket has an unknown terminal disposition")
-    if packet["scientific_verdict"] != "NOT_EMITTED_PROPOSAL_ONLY":
-        raise VerticalSliceError("ConclusionPacket must not emit a scientific verdict")
+        raise VerticalSliceError("ConclusionPacket has an unknown route disposition")
+    if packet["scientific_disposition"] != "NOT_EVALUATED":
+        raise VerticalSliceError("ConclusionPacket must not emit a scientific disposition")
     if packet["human_decision_gate_required"] is not True:
         raise VerticalSliceError("ConclusionPacket must retain the HumanDecisionGate")
     if packet["unsafe_claim_upgrade"] is not False:
@@ -579,14 +629,14 @@ def _sha256(path: Path) -> str:
 
 
 def _project_relative_path(workspace_root: Path, relative_path: str) -> Path:
-    """Resolve one manifest asset while forbidding a path escape."""
+    """Resolve one repository-contained manifest asset while forbidding an escape."""
 
     if not isinstance(relative_path, str) or not relative_path:
         raise VerticalSliceError("manifest path must be a nonempty string")
-    project_root = _project_root(workspace_root)
-    candidate = (project_root / relative_path).resolve()
-    if not candidate.is_relative_to(project_root):
-        raise VerticalSliceError("manifest path escapes the local project root")
+    harness_root = _harness_root(workspace_root)
+    candidate = (harness_root / relative_path).resolve()
+    if not candidate.is_relative_to(harness_root):
+        raise VerticalSliceError("manifest path escapes the harness repository")
     return candidate
 
 
@@ -1033,6 +1083,18 @@ def validate_hsp90_operator_input_manifest(
     }
 
 
+def _validate_exact_hsp90_exposed_development_scope(
+    operator_spec: Mapping[str, Any],
+) -> None:
+    """Reject any shared-registry record that loosens the exposed B1 boundary."""
+
+    for field, expected in _EXACT_HSP90_EXPOSED_DEVELOPMENT_SCOPE.items():
+        if operator_spec.get(field) != expected:
+            raise VerticalSliceError(
+                f"HSP90 exact Operator has an invalid {field}: expected {expected}"
+            )
+
+
 def resolve_hsp90_time_anatomy_obligation(
     *,
     rule_result: Mapping[str, Any],
@@ -1085,6 +1147,7 @@ def resolve_hsp90_time_anatomy_obligation(
             "status": "NOT_ROUTABLE",
             "reason_code": "EXACT_HSP90_OPERATOR_NOT_ROSTER_PASS_AND_ROUTABLE",
         }
+    _validate_exact_hsp90_exposed_development_scope(spec)
     if spec.get("handler") != "case_bound_hsp90_time_anatomy_v1":
         raise VerticalSliceError("HSP90 OperatorSpec has an unsafe handler")
     if spec.get("capability_id") != HSP90_CAPABILITY_ID:
@@ -1111,6 +1174,7 @@ def resolve_hsp90_time_anatomy_obligation(
         "route": "REGISTERED_OPERATOR",
         "status": "ROUTABLE",
         "operator_id": HSP90_OPERATOR_ID,
+        "operator_scope": dict(_EXACT_HSP90_EXPOSED_DEVELOPMENT_SCOPE),
         "affected_rule_instance_id": expected_rule_id,
         "resolution_policy_id": binding["resolution_policy_id"],
         "manifest_receipt": manifest_receipt,
@@ -1322,6 +1386,7 @@ def _exact_hsp90_roster_operator(
         raise VerticalSliceError("HSP90 exact Operator has an invalid identity")
     if spec.get("status") != "ROSTER_PASS" or spec.get("routable") is not True:
         raise VerticalSliceError("HSP90 exact Operator is not ROSTER_PASS and routable")
+    _validate_exact_hsp90_exposed_development_scope(spec)
     if spec.get("handler") != "case_bound_hsp90_time_anatomy_v1":
         raise VerticalSliceError("HSP90 exact Operator has an unsafe handler")
     if spec.get("capability_id") != HSP90_CAPABILITY_ID:
@@ -1501,7 +1566,7 @@ def run_hsp90_case_bound_operator(
     try:
         payload = execute_hsp90_time_anatomy_adapter(
             spec=spec,
-            workspace_root=_project_root(workspace_root),
+            workspace_root=workspace_root,
             output_dir=output_dir,
         )
         validation = validate_hsp90_time_anatomy_outputs(
@@ -1592,17 +1657,17 @@ def materialize_hsp90_conclusion_packet(
             "HSP90 PASS ConclusionPacket requires a validated exact Operator run"
         )
     if status == "PASS":
-        terminal_disposition = "SUPPORT_WITHIN_CEILING"
+        route_disposition = "RULE_CONTRACT_PASS"
         terminal_route = "REGISTERED_OPERATOR"
         first_failed = None
         next_action = "Human scientific review of the bounded same-packet diagnostic wording."
     elif status == "FAIL":
-        terminal_disposition = "CANNOT_SUPPORT_REQUESTED_CLAIM"
+        route_disposition = "ABSTAIN"
         terminal_route = "HUMAN_OR_NEW_DATA"
         first_failed = rule_result
         next_action = "Resolve the failed exact Operator contract; do not reuse its output as evidence."
     else:
-        terminal_disposition = "ABSTAIN_OR_HUMAN_REVIEW"
+        route_disposition = "ABSTAIN"
         terminal_route = "HUMAN_OR_NEW_DATA"
         first_failed = rule_result
         next_action = "Resolve the missing time-anatomy control evidence through an exact registered Operator or new data."
@@ -1611,12 +1676,12 @@ def materialize_hsp90_conclusion_packet(
     packet = {
         "schema_version": "conclusion-packet/v1-alpha",
         "packet_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_V1_ALPHA",
-        "proposal_status": "PROPOSAL_ONLY_EXPOSED_DEVELOPMENT",
+        "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
         "scenario_id": scenario_id,
         "case_id": HSP90_CASE_ID,
         "terminal_route": terminal_route,
-        "terminal_disposition": terminal_disposition,
-        "scientific_verdict": "NOT_EMITTED_PROPOSAL_ONLY",
+        "route_disposition": route_disposition,
+        "scientific_disposition": "NOT_EVALUATED",
         "claim_ceiling": "At most, the exact frozen same-packet diagnostic has a validated trajectory-level control record. No transition rate, equilibrium, population, free-energy, pathway, mechanism, or mutation claim is emitted.",
         "human_decision_gate_required": True,
         "unsafe_claim_upgrade": False,
@@ -1650,6 +1715,7 @@ def materialize_hsp90_conclusion_packet(
             "source_id": HSP90_SOURCE_ID,
             "runtime_subrule_id": HSP90_RUNTIME_SUBRULE_ID,
             "operator_id": HSP90_OPERATOR_ID,
+            "operator_scope": dict(_EXACT_HSP90_EXPOSED_DEVELOPMENT_SCOPE),
         },
     }
     validate_hsp90_conclusion_packet(packet)
@@ -1663,12 +1729,12 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
     required = {
         "schema_version",
         "packet_kind",
-        "proposal_status",
+        "development_status",
         "scenario_id",
         "case_id",
         "terminal_route",
-        "terminal_disposition",
-        "scientific_verdict",
+        "route_disposition",
+        "scientific_disposition",
         "claim_ceiling",
         "human_decision_gate_required",
         "unsafe_claim_upgrade",
@@ -1689,18 +1755,19 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
         raise VerticalSliceError("HSP90 ConclusionPacket missing: " + ", ".join(missing))
     if packet.get("case_id") != HSP90_CASE_ID:
         raise VerticalSliceError("HSP90 ConclusionPacket has an unexpected case")
-    if packet.get("scientific_verdict") != "NOT_EMITTED_PROPOSAL_ONLY":
-        raise VerticalSliceError("HSP90 ConclusionPacket must not emit a scientific verdict")
+    if packet.get("development_status") != "EXPOSED_DEVELOPMENT_ACTIVE":
+        raise VerticalSliceError("HSP90 ConclusionPacket has an invalid development status")
+    if packet.get("scientific_disposition") != "NOT_EVALUATED":
+        raise VerticalSliceError("HSP90 ConclusionPacket must not emit a scientific disposition")
     if packet.get("human_decision_gate_required") is not True:
         raise VerticalSliceError("HSP90 ConclusionPacket must retain a HumanDecisionGate")
     if packet.get("unsafe_claim_upgrade") is not False:
         raise VerticalSliceError("HSP90 ConclusionPacket must reject claim upgrades")
-    if packet.get("terminal_disposition") not in {
-        "SUPPORT_WITHIN_CEILING",
-        "CANNOT_SUPPORT_REQUESTED_CLAIM",
-        "ABSTAIN_OR_HUMAN_REVIEW",
+    if packet.get("route_disposition") not in {
+        "RULE_CONTRACT_PASS",
+        "ABSTAIN",
     }:
-        raise VerticalSliceError("HSP90 ConclusionPacket has an unknown terminal disposition")
+        raise VerticalSliceError("HSP90 ConclusionPacket has an unknown route disposition")
     expected_rule_id = rule_instance_id(
         HSP90_RUNTIME_SUBRULE_ID, "SOURCE", HSP90_SOURCE_ID
     )
@@ -1718,6 +1785,8 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
     if result.get("status") == "PASS":
         if packet.get("terminal_route") != "REGISTERED_OPERATOR":
             raise VerticalSliceError("HSP90 PASS ConclusionPacket has an invalid route")
+        if packet.get("route_disposition") != "RULE_CONTRACT_PASS":
+            raise VerticalSliceError("HSP90 PASS ConclusionPacket has an invalid route disposition")
         if len(operator_results) != 1:
             raise VerticalSliceError("HSP90 PASS ConclusionPacket needs one Operator run")
         run = _mapping(operator_results[0], "HSP90 ConclusionPacket Operator run")
@@ -1731,3 +1800,5 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
             or evidence.get("operator_run_receipt_id") != receipt.get("receipt_id")
         ):
             raise VerticalSliceError("HSP90 PASS ConclusionPacket lacks linked validated evidence")
+    elif packet.get("route_disposition") != "ABSTAIN":
+        raise VerticalSliceError("HSP90 non-PASS ConclusionPacket must abstain")

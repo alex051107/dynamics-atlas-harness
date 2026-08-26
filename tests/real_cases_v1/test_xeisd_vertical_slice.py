@@ -19,12 +19,10 @@ from dynamics_atlas_harness.rules_prototype_v1 import rule_instance_id
 
 
 REPO_ROOT = Path(__file__).parents[2]
-WORKSPACE_ROOT = REPO_ROOT.parent
 EVIDENCE_ROOT = REPO_ROOT / "evidence" / "real_case_vertical_slice_v1"
 RULES_ROOT = REPO_ROOT / "registries" / "rules_v1"
-RAW_XEISD_PATH = (
-    WORKSPACE_ROOT
-    / "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json"
+FROZEN_BASE_PROJECTION_PATH = (
+    EVIDENCE_ROOT / "frozen_inputs" / "xeisd" / "base_projection_manifest_v1.json"
 )
 
 
@@ -79,17 +77,33 @@ class XeisdVerticalSliceTests(unittest.TestCase):
         stable_id = rule_instance_id(subrule_id, target_kind, target_id)
         return next(result for result in results if result["rule_instance_id"] == stable_id)
 
-    def test_seed_is_a_provenance_preserving_subprojection_of_frozen_xeisd_v03(self):
+    def test_seed_is_a_provenance_preserving_subprojection_of_frozen_base_manifest(self):
         validate_xeisd_projection(self.seed)
-        raw = read_json(RAW_XEISD_PATH)
-        raw_sources = {item["source_id"]: item for item in raw["evidence_items"]}
-        raw_edges = {item["comparison_id"]: item for item in raw["comparisons"]}
+        base_manifest = read_json(FROZEN_BASE_PROJECTION_PATH)
+        raw_sources = {
+            item["source_id"]: item for item in base_manifest["evidence_items"]
+        }
+        raw_edges = {
+            item["comparison_id"]: item for item in base_manifest["comparisons"]
+        }
 
-        self.assertEqual(self.seed["case"]["parent_case_id"], raw["case"]["case_id"])
-        self.assertNotEqual(self.seed["case"]["case_id"], raw["case"]["case_id"])
+        self.assertEqual(
+            self.seed["case"]["parent_case_id"], base_manifest["case"]["case_id"]
+        )
+        self.assertNotEqual(
+            self.seed["case"]["case_id"], base_manifest["case"]["case_id"]
+        )
         self.assertEqual(
             self.seed["projection_provenance"]["base_asset_id"],
             "xeisd-rich-casegraph-v0.3",
+        )
+        self.assertEqual(
+            self.seed["projection_provenance"]["workspace_relative_base_asset_path"],
+            "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/base_projection_manifest_v1.json",
+        )
+        self.assertEqual(
+            self.seed["projection_provenance"]["base_asset_sha256"],
+            base_manifest["source_asset"]["upstream_sha256"],
         )
         for source in self.seed["evidence_items"]:
             raw_source = raw_sources[source["source_id"]]
@@ -113,10 +127,19 @@ class XeisdVerticalSliceTests(unittest.TestCase):
             REPO_ROOT / "schemas" / "rules_v1" / "conclusion_packet_v1.schema.json"
         )
         self.assertEqual(lookup_schema["properties"]["case_id"]["const"], X_EISD_CASE_ID)
+        self.assertEqual(
+            lookup_schema["properties"]["lookup_kind"]["const"],
+            "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
+        )
         self.assertIn("SOURCE_LOOKUP", lookup_schema["properties"]["route"]["enum"])
         self.assertIn("REGISTERED_OPERATOR", conclusion_schema["properties"]["terminal_route"]["enum"])
         self.assertNotIn("const", conclusion_schema["properties"]["case_id"])
         self.assertIn("operator_results", conclusion_schema["required"])
+        self.assertIn("route_disposition", conclusion_schema["required"])
+        self.assertEqual(
+            conclusion_schema["properties"]["scientific_disposition"]["const"],
+            "NOT_EVALUATED",
+        )
 
     def test_a0_raw_projection_fails_closed_before_lookup(self):
         pending = derive_declaration_attestations(case_graph=self.seed, lookup_results=[])
@@ -152,6 +175,12 @@ class XeisdVerticalSliceTests(unittest.TestCase):
     def test_a1_exact_lookup_then_direct_evaluation_reaches_bounded_review_gate(self):
         complete, lookup_results = self._complete_case()
         self.assertTrue(all(result["status"] == "FOUND" for result in lookup_results))
+        self.assertTrue(
+            all(
+                result["lookup_kind"] == "EXACT_REVIEW_DERIVATIVE_ATTESTATION"
+                for result in lookup_results
+            )
+        )
         self.assertTrue(all(result["route"] == "SOURCE_LOOKUP" for result in lookup_results))
         self.assertTrue(all(result["next_evaluation"] == "DIRECT_EVALUATION" for result in lookup_results))
 
@@ -175,8 +204,8 @@ class XeisdVerticalSliceTests(unittest.TestCase):
             scenario_id="A1_COMPLETE_LOOKUP_THEN_DIRECT",
         )
         self.assertEqual(packet["terminal_route"], "DIRECT_EVALUATION")
-        self.assertEqual(packet["terminal_disposition"], "SUPPORT_WITHIN_CEILING")
-        self.assertEqual(packet["scientific_verdict"], "NOT_EMITTED_PROPOSAL_ONLY")
+        self.assertEqual(packet["route_disposition"], "RELATION_REVIEWABLE")
+        self.assertEqual(packet["scientific_disposition"], "NOT_EVALUATED")
         self.assertFalse(packet["unsafe_claim_upgrade"])
         self.assertEqual(packet["operator_results"], [])
         self.assertEqual(len(packet["nonblocking_rule_results"]), 1)
@@ -205,7 +234,7 @@ class XeisdVerticalSliceTests(unittest.TestCase):
         )
         self.assertEqual(missing_lookup["status"], "NOT_FOUND")
         self.assertEqual(packet["terminal_route"], "HUMAN_OR_NEW_DATA")
-        self.assertEqual(packet["terminal_disposition"], "ABSTAIN_OR_HUMAN_REVIEW")
+        self.assertEqual(packet["route_disposition"], "ABSTAIN")
         self.assertEqual(
             packet["first_failed_dependency"]["rule_instance_id"],
             rule_instance_id(
@@ -252,7 +281,8 @@ class XeisdVerticalSliceTests(unittest.TestCase):
             lookup_results=lookup_results,
             scenario_id="A3_EXPLICIT_CONDITION_MISMATCH",
         )
-        self.assertEqual(packet["terminal_disposition"], "CANNOT_SUPPORT_REQUESTED_CLAIM")
+        self.assertEqual(packet["route_disposition"], "RELATION_BLOCKED")
+        self.assertEqual(packet["scientific_disposition"], "NOT_EVALUATED")
         self.assertEqual(packet["first_failed_dependency"]["status"], "FAIL")
 
     def test_lookup_rejects_wrong_target_duplicate_receipt_and_unsafe_patch(self):
@@ -265,6 +295,9 @@ class XeisdVerticalSliceTests(unittest.TestCase):
             workspace_root=REPO_ROOT,
         )
         self.assertEqual(wrong_target["status"], "NOT_ALLOWED")
+        self.assertEqual(
+            wrong_target["lookup_kind"], "EXACT_REVIEW_DERIVATIVE_ATTESTATION"
+        )
 
         receipt = self._lookup("XEI-LOOKUP-RANDOM-DECLARATIONS")
         applied = apply_lookup_result(case_graph=self.seed, lookup_result=receipt)
@@ -290,6 +323,20 @@ class XeisdVerticalSliceTests(unittest.TestCase):
                 request=self._request("XEI-LOOKUP-RANDOM-DECLARATIONS"),
                 workspace_root=REPO_ROOT,
             )
+
+    def test_lookup_fails_closed_when_the_frozen_derivative_hash_changes(self):
+        altered_allowlist = copy.deepcopy(self.allowlist)
+        altered_allowlist["entries"][0]["fixture_sha256"] = "0" * 64
+        result = execute_exact_source_lookup(
+            allowlist=altered_allowlist,
+            request=self._request("XEI-LOOKUP-RANDOM-DECLARATIONS"),
+            workspace_root=REPO_ROOT,
+        )
+        self.assertEqual(result["status"], "FIXTURE_HASH_MISMATCH")
+        self.assertEqual(result["route"], "HUMAN_OR_NEW_DATA")
+        self.assertEqual(
+            result["reason_code"], "ALLOWLISTED_FIXTURE_HASH_MISMATCH"
+        )
 
 
 if __name__ == "__main__":

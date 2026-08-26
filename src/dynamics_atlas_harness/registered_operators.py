@@ -213,12 +213,12 @@ def execute_hsp90_time_anatomy_adapter(
     frozen standard-library script with the registered fixed inputs and parameters.
     """
 
+    if spec.get("handler") != "case_bound_hsp90_time_anatomy_v1":
+        raise ValueError("UNSUPPORTED_HSP90_TIME_ANATOMY_HANDLER")
     probe = probe_operator(spec, workspace_root)
     reason_codes = probe["reason_codes"]
     if reason_codes:
         raise ValueError("OPERATOR_RUNTIME_PROBE_FAILED:" + ",".join(reason_codes))
-    if spec.get("handler") != "case_bound_hsp90_time_anatomy_v1":
-        raise ValueError("UNSUPPORTED_HSP90_TIME_ANATOMY_HANDLER")
     return _run_hsp90_time_anatomy(spec=spec, probe=probe, output_dir=output_dir)
 
 

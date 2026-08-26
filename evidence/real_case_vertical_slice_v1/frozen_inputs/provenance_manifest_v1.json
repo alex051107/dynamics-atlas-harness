@@ -1,0 +1,48 @@
+{
+  "schema_version": "real-case-frozen-input-provenance/v1-alpha",
+  "bundle_id": "real-case-vertical-slice-v1-frozen-inputs",
+  "bundle_status": "REPOSITORY_CONTAINED_EXPOSED_DEVELOPMENT",
+  "bundle_boundary": "These fixtures make the one exposed X-EISD attestation route and one exact HSP90 case-bound execution route reproducible from a clean checkout. They do not establish source-science validity, general Operator authority, generic source retrieval, or a scientific conclusion.",
+  "assets": [
+    {
+      "fixture_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/run_time_anatomy_v0_frozen.py",
+      "fixture_sha256": "84e47d7abf6ab786f6b7125d1a130f28196b2cc7f301b28674c5a7277b303292",
+      "fixture_kind": "SANITIZED_FROZEN_IMPLEMENTATION",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py",
+      "upstream_sha256": "c7b4f333c8b8386106d4121c578845b686ff4c41e6240d9ecfadb8bda31a83e8",
+      "extraction_boundary": "Byte-identical algorithm body with only machine-specific default ROOT/TASK/SOURCE initializers replaced by file-relative defaults. The registered adapter overrides FRAMES, ROUTES, SOURCE, OUT, and PERSISTENCE_FRAMES before execution."
+    },
+    {
+      "fixture_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/frame_state_assignments.tsv",
+      "fixture_sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+      "fixture_kind": "BYTE_IDENTICAL_FROZEN_INPUT",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv",
+      "upstream_sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+      "extraction_boundary": "Entire declared 40-trajectory frame-state input required by the frozen HSP90 control script; no new trajectory analysis or transformation was performed."
+    },
+    {
+      "fixture_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/hsp90/route_predictions.tsv",
+      "fixture_sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446",
+      "fixture_kind": "BYTE_IDENTICAL_FROZEN_INPUT",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv",
+      "upstream_sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446",
+      "extraction_boundary": "Entire declared 40-trajectory route-prediction input required by the frozen HSP90 control script; no new route inference or transformation was performed."
+    },
+    {
+      "fixture_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/exact_review_derivative_excerpt_v1.json",
+      "fixture_sha256": "fa5e3c99adadb18b6387c774dd1bd9d8b6f82663d4f3f6b63acfd3ad88829c99",
+      "fixture_kind": "SANITIZED_REVIEW_DERIVATIVE_EXCERPT",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/paper_references/lincoff_2020_xeisd_maintext_reference.json",
+      "upstream_sha256": "49d751931d4a2fc4f41b0289a3edc0da7d80156bbd07d10441ca5404556bece6",
+      "extraction_boundary": "Paper identity and only XEI-M03/XEI-M04 locator metadata are retained; local PDF paths and all non-required locator records are removed. This remains a predeclared-field attestation input, not paper parsing or source-science validation."
+    },
+    {
+      "fixture_path": "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/base_projection_manifest_v1.json",
+      "fixture_sha256": "32e802b31dbc175087248bfc548665aa7fa8708a3eb72c17ea2b6446598c746c",
+      "fixture_kind": "SANITIZED_BASE_PROJECTION_MANIFEST",
+      "upstream_workspace_relative_path": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json",
+      "upstream_sha256": "9235717c7bbc900c02f26d3214be332fc196356a706e82c97f700d9c7042774a",
+      "extraction_boundary": "Only the two source records' preserved field values and one relation claim used by this exposed CaseGraph are retained; no full v0.3 CaseGraph, source-science verdict, or generic retrieval corpus is included."
+    }
+  ]
+}

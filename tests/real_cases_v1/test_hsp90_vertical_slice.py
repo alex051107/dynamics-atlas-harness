@@ -81,6 +81,11 @@ class Hsp90VerticalSliceTests(unittest.TestCase):
         self.assertEqual(
             resolution["affected_rule_instance_id"], pre_rule["rule_instance_id"]
         )
+        exact_scope = self.registry["operators"][HSP90_OPERATOR_ID]
+        self.assertEqual(exact_scope["activation_scope"], "EXPOSED_DEVELOPMENT_ACTIVE")
+        self.assertEqual(exact_scope["routing_scope"], "EXACT_CASE_BOUND")
+        self.assertEqual(exact_scope["generalization_status"], "NOT_GENERAL")
+        self.assertEqual(exact_scope["deployment_status"], "NOT_PRODUCTION")
 
         canary_only = copy.deepcopy(self.registry)
         canary_only["operators"][HSP90_OPERATOR_ID]["status"] = "CANARY_PASS"
@@ -98,6 +103,18 @@ class Hsp90VerticalSliceTests(unittest.TestCase):
             blocked["reason_code"],
             "EXACT_HSP90_OPERATOR_NOT_ROSTER_PASS_AND_ROUTABLE",
         )
+
+        loosened_scope = copy.deepcopy(self.registry)
+        loosened_scope["operators"][HSP90_OPERATOR_ID]["routing_scope"] = "GENERAL"
+        with self.assertRaisesRegex(VerticalSliceError, "invalid routing_scope"):
+            resolve_hsp90_time_anatomy_obligation(
+                rule_result=pre_rule,
+                case_graph=self.bundle["case_graph"],
+                rule_overlay=self.bundle["rule_overlay"],
+                operator_registry=loosened_scope,
+                input_manifest=self.bundle["input_manifest"],
+                workspace_root=REPO_ROOT,
+            )
 
         with self.assertRaisesRegex(ValueError, "UNSUPPORTED_HSP90_TIME_ANATOMY_HANDLER"):
             execute_hsp90_time_anatomy_adapter(
@@ -201,8 +218,8 @@ class Hsp90VerticalSliceTests(unittest.TestCase):
         self.assertEqual(validation["observed_counts"]["trajectory_time_anatomy_rows"], 120)
         self.assertEqual(packet["case_id"], HSP90_CASE_ID)
         self.assertEqual(packet["terminal_route"], "REGISTERED_OPERATOR")
-        self.assertEqual(packet["terminal_disposition"], "SUPPORT_WITHIN_CEILING")
-        self.assertEqual(packet["scientific_verdict"], "NOT_EMITTED_PROPOSAL_ONLY")
+        self.assertEqual(packet["route_disposition"], "RULE_CONTRACT_PASS")
+        self.assertEqual(packet["scientific_disposition"], "NOT_EVALUATED")
         self.assertFalse(packet["unsafe_claim_upgrade"])
         self.assertIn("transition rate", packet["claim_ceiling"].lower())
         self.assertEqual(run["unregistered_tool_calls"], 0)
