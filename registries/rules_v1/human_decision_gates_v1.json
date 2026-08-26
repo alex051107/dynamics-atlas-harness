@@ -1,0 +1,15 @@
+{
+  "schema_version": "rules-prototype-human-decision-gates/v1",
+  "registry_id": "dynamics-atlas-human-decision-gates/v1",
+  "authority_boundary": "HumanDecisionGate records publication or scientific-review disposition after deterministic rule evaluation. It is not required scientific evidence and cannot change a RuleResult.",
+  "gates": [
+    {
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "trigger": "The proposal-only F01/F06 review packet and its behavioral fixtures are complete.",
+      "allowed_decisions": ["APPROVE", "REVISE", "REJECT", "DEFER"],
+      "required_review_fields": ["reviewer_identity", "decision", "rationale", "reviewed_family_ids"],
+      "does_not_control": ["applicability", "missing_evidence", "rule_status", "scientific_claim_ceiling"],
+      "status": "PENDING_HUMAN_SCIENTIFIC_REVIEW"
+    }
+  ]
+}

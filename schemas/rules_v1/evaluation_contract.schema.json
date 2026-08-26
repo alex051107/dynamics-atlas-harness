@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.dynamics-atlas.invalid/schemas/rules-v1/evaluation-contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evaluation_contract_id", "runtime_subrule_id", "target_kind", "implementation_status", "human_decision_gate_id", "fail_conditions", "result_effects"],
+  "properties": {
+    "evaluation_contract_id": {"type": "string", "minLength": 1},
+    "runtime_subrule_id": {"type": "string", "minLength": 1},
+    "target_kind": {"enum": ["CASE", "SOURCE", "EDGE"]},
+    "implementation_status": {"enum": ["COMPLETE_DRAFT", "CANDIDATE_MAP_ONLY"]},
+    "human_decision_gate_id": {"type": "string", "minLength": 1},
+    "fail_conditions": {"type": "array", "items": {"type": "object", "required": ["reason_code", "condition"]}},
+    "result_effects": {
+      "type": "object",
+      "required": ["PASS", "FAIL", "UNRESOLVED", "NOT_APPLICABLE"],
+      "additionalProperties": {"type": "object", "required": ["route", "decision_class", "claim_ceiling"]}
+    }
+  }
+}
