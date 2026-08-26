@@ -1,0 +1,88 @@
+{
+  "schema_version": "frozen-execution-plan-adoption/v1",
+  "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
+  "effective_at": "2026-08-25T14:43:40Z",
+  "status": "ACTIVE_PROSPECTIVE_EXECUTION_AUTHORITY",
+  "repository": "alex051107/dynamics-atlas-harness",
+  "canonical_plan_path": "docs/DA_HARNESS_FROZEN_EXECUTION_PLAN_V1_0_ZH.md",
+  "source_identity": {
+    "kind": "USER_SUPPLIED_LOCAL_FILE",
+    "display_name": "Dynamics Atlas Frozen Execution Plan for Codex (Chinese)",
+    "local_path_policy": "OMITTED_FROM_REPOSITORY"
+  },
+  "source_sha256": "36034b8db124bb95669c76a6aa78adeda251278f3539bc1f9f6764060a19530b",
+  "import_policy": "BYTE_IDENTICAL_SOURCE_IMPORT",
+  "authority": {
+    "adopted_by": "PROJECT_LEAD_USER_DIRECT_REQUEST",
+    "adoption_request": "固定好自己的计划，以后严格按照这个计划去进行",
+    "applies_prospectively": true,
+    "instructions_in_source_before_adoption": "REFERENCE_INPUT_ONLY",
+    "instructions_after_adoption": "CONTROLLING_PROJECT_EXECUTION_PLAN_SUBJECT_TO_SYSTEM_DEVELOPER_AND_NEW_DIRECT_USER_INSTRUCTIONS",
+    "precedence": [
+      "SYSTEM_AND_DEVELOPER_INSTRUCTIONS",
+      "NEW_DIRECT_USER_INSTRUCTION",
+      "PROJECT_MEMORY_PERMANENT_BOUNDARIES",
+      "LIVE_STATUS_AND_APPEND_ONLY_HUMAN_DECISIONS",
+      "DA-HARNESS-FROZEN-PLAN-v1.0",
+      "TASK_LOCAL_IMPLEMENTATION_NOTES"
+    ]
+  },
+  "frozen_pr_sequence": [
+    "PR0_BASELINE_BOUNDARY_NORMALIZATION",
+    "PR1_RULES_PROTOTYPE_V1",
+    "PR2_GAP_TAXONOMY_AND_RULE_EVALUATION",
+    "PR3_HSP90_REAL_RULE_TO_OPERATOR_ROUTE",
+    "PR4_THREE_ROUTE_VERTICAL_SLICE",
+    "PR5_RVC_LITE_CASEWORKFLOW",
+    "PR6_LIVE_LOW_COST_PROFILE_AGENT",
+    "PR7_ADK_PORTABILITY",
+    "PR8_FROZEN_HELDOUT_V1"
+  ],
+  "current_authorization": {
+    "plan_scope": ["PR0_BASELINE_BOUNDARY_NORMALIZATION", "PR1_RULES_PROTOTYPE_V1"],
+    "next_allowed_action": "COMPLETE_GATE0B_GOVERNANCE_SYNC_AND_MERGE",
+    "allowed_actions": [
+      "GATE0B_GOVERNANCE_SYNC_TO_MERGED_PR0_MAIN",
+      "MINIMAL_GOVERNANCE_CONSISTENCY_TEST",
+      "PRIVATE_GOVERNANCE_PR_PUSH_WITH_RATIONALE",
+      "USER_AUTHORIZED_GOVERNANCE_PR_MERGE",
+      "CREATE_REVISED_PR1_FIRST_DRAFT_AFTER_GOVERNANCE_MERGE"
+    ],
+    "stop_after": "HUMAN_SCIENTIFIC_REVIEW_OF_REVISED_PR1_FIRST_DRAFT",
+    "blocked_stages": [
+      "PR2_GAP_TAXONOMY_AND_RULE_EVALUATION",
+      "PR3_HSP90_REAL_RULE_TO_OPERATOR_ROUTE",
+      "PR4_THREE_ROUTE_VERTICAL_SLICE",
+      "PR5_RVC_LITE_CASEWORKFLOW",
+      "PR6_LIVE_LOW_COST_PROFILE_AGENT",
+      "PR7_ADK_PORTABILITY",
+      "PR8_FROZEN_HELDOUT_V1"
+    ]
+  },
+  "historical_reconciliation": {
+    "deviation_id": "DA-DEV-20260825-001",
+    "observed_fact": "Open PR #1 was created before plan adoption and combines PR0 lifecycle/baseline changes with a partial PR1 Rules Prototype package.",
+    "treatment": "CHANGES_REQUESTED_AND_SUPERSEDED_WITHOUT_MERGE",
+    "automatic_remediation_authorized": false,
+    "options_at_adoption": ["ACCEPT_COMBINED_PR_WITH_EXPLICIT_DEVIATION", "REQUEST_BOUNDED_COMPLETION", "REQUEST_SPLIT_OR_REPLACEMENT", "CLOSE_WITHOUT_MERGE"],
+    "human_disposition": {
+      "decision_id": "DA-20260825-022",
+      "result": "CHANGES_REQUESTED_SPLIT_REQUIRED",
+      "combined_pr": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
+      "combined_pr_state": "CLOSED_UNMERGED_BRANCH_PRESERVED",
+      "replacement_pr0": "https://github.com/alex051107/dynamics-atlas-harness/pull/3",
+      "replacement_pr0_state": "MERGED_MAIN_READBACK_PASS",
+      "revised_pr1_authorized_to_start": "AFTER_GOVERNANCE_PR2_MERGE"
+    }
+  },
+  "claim_boundary": {
+    "allowed": "The plan is active, PR0 merged to main, Gate 0B may synchronize and merge the governance PR, and then a proposal-only revised PR1 first draft may start.",
+    "forbidden": [
+      "PR1_IS_PLAN_COMPLIANT",
+      "PR1_IS_SCIENTIFICALLY_APPROVED",
+      "PR2_IS_AUTHORIZED",
+      "HARNESS_PROTOTYPE_IS_COMPLETE",
+      "SEMANTIC_CORRECTNESS_IS_ESTABLISHED"
+    ]
+  }
+}

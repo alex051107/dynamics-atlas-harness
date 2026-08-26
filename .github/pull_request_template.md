@@ -1,6 +1,17 @@
-## Change
+## Plan position
 
-Describe the bounded change and the observed gap or risk it addresses.
+- Plan ID:
+- Stage / PR number:
+- Current authorization source:
+- Required Exit Gate:
+
+## Observed gap
+
+State the observed repository, evidence, or workflow gap. Separate observation from inference.
+
+## Change made
+
+Describe the bounded change.
 
 ## Contracts affected
 
@@ -11,16 +22,36 @@ Describe the bounded change and the observed gap or risk it addresses.
 - [ ] OperatorSpec / execution authorization
 - [ ] Claim boundary or documentation
 
+## Assets kept frozen
+
+List the scientific evidence, rules authority, fixtures, manifests, schemas, or baseline assets deliberately left unchanged.
+
 ## Validation actually run
 
-List exact commands and results. Record intentionally skipped checks and why.
+List exact commands, invocation counts, and results.
 
-## Scientific boundary
+## Validation intentionally skipped
 
-State the allowed claim, forbidden upgrades, human decision required, and remaining risk.
+List duplicate or out-of-scope checks that were skipped and the risk-based reason.
+
+## Claim boundary
+
+- Allowed claim:
+- Forbidden upgrade:
+- Human decision required:
+
+## Remaining risk
+
+List unresolved evidence, implementation, portability, or scientific risks.
+
+## Next authorized action
+
+State the one next action allowed by the current execution status and the mandatory stop point.
 
 ## Data and repository safety
 
 - [ ] No credentials, `.env`, absolute personal paths, raw/derived scientific payload, or `runs/` content
 - [ ] Upstream Rules authority was referenced, not copied
 - [ ] Frozen asset hashes were updated only when inputs intentionally changed
+- [ ] No later frozen-plan stage was started without its prior Exit Gate and human authorization
+- [ ] Any plan deviation was appended to `governance/deviations.jsonl`
