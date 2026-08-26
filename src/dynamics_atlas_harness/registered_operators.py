@@ -20,14 +20,56 @@ def _read_json(path: Path) -> Any:
         return json.load(handle)
 
 
+def _validate_operator_lifecycle(operator_id: str, spec: Mapping[str, Any]) -> None:
+    status = spec.get("status")
+    routable = spec.get("routable")
+    if status != "ROSTER_PASS":
+        if routable is not False:
+            raise ValueError(
+                f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:NON_ROSTER_ROUTABLE"
+            )
+        return
+
+    if routable is not True:
+        raise ValueError(
+            f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:ROSTER_NOT_ROUTABLE"
+        )
+    if "promotion_blockers" in spec and spec["promotion_blockers"] != []:
+        raise ValueError(
+            f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:ROSTER_PROMOTION_BLOCKERS_PRESENT"
+        )
+    if not isinstance(spec.get("output_contract"), str) or not spec[
+        "output_contract"
+    ].strip():
+        raise ValueError(
+            f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:ROSTER_MISSING_OUTPUT_CONTRACT"
+        )
+    route_match = spec.get("route_match")
+    if not isinstance(route_match, Mapping) or not route_match:
+        raise ValueError(
+            f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:ROSTER_MISSING_ROUTE_MATCH"
+        )
+    if not isinstance(spec.get("claim_ceiling"), str) or not spec[
+        "claim_ceiling"
+    ].strip():
+        raise ValueError(
+            f"INVALID_OPERATOR_LIFECYCLE:{operator_id}:ROSTER_MISSING_CLAIM_CEILING"
+        )
+
+
 def load_registered_operator_registry(path: Path) -> dict[str, Any]:
     registry = _read_json(path)
     if registry.get("schema_version") != "scientific-operator-registry/v0.2":
         raise ValueError("INVALID_REGISTERED_OPERATOR_SCHEMA")
     if not isinstance(registry.get("registry_id"), str):
         raise ValueError("MISSING_REGISTERED_OPERATOR_REGISTRY_ID")
-    if not isinstance(registry.get("operators"), Mapping):
+    operators = registry.get("operators")
+    if not isinstance(operators, Mapping):
         raise ValueError("INVALID_REGISTERED_OPERATOR_ENTRIES")
+    for operator_id, spec in operators.items():
+        if not isinstance(spec, Mapping):
+            raise ValueError(f"INVALID_REGISTERED_OPERATOR_SPEC:{operator_id}")
+        _validate_operator_lifecycle(str(operator_id), spec)
     return registry
 
 

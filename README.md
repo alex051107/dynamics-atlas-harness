@@ -1,8 +1,14 @@
 # dynamics-atlas-harness
 
-这是 Dynamics Atlas 的目标架构 prototype。它把已有的 rich CaseGraph、Rules Table selector、Evaluation Contract、持久 RunPlan 和 registered operator 接成一条可审计的数据流。
+## CURRENT OBSERVED
 
-2026-08-25 的本地 run 已经完成以下路径：
+当前实现是 Dynamics Atlas Harness Control-Plane Smoke v0.2。它真实调用已有 v0.3 selector，在 exposed X-EISD development case 上产生 59 个 obligations、15 个 selector unresolved inputs 和 16 个 gaps。case RunPlan 没有匹配到可路由 Operator，因此正确停在 `RUN_PLAN_BLOCKED`。独立 HSP90 canary 可以显式运行，但不属于该 case route。
+
+这份证据只支持控制面接线和停止行为。Rules semantic freeze、真实 Rule 到 Operator 到 reevaluation 路径、semantic correctness、transfer、Agent value 和 production readiness 均未建立。
+
+## TARGET ARCHITECTURE
+
+目标架构把 rich CaseGraph、Rules Table selector、Evaluation Contract、持久 RunPlan 和 registered Operator 接成一条可审计的数据流。目标路径如下：
 
 ```text
 Question + Papers + Data
@@ -16,7 +22,7 @@ Question + Papers + Data
   → human review / abstain
 ```
 
-模型只提出 CaseGraph。它不能选择 Rule、授权 operator、读取 reference answer 或给出最终科学 verdict。
+模型只提出 CaseGraph。它不能选择 Rule、授权 Operator、读取 reference answer 或给出最终科学 verdict。当前 smoke 尚未完成这条目标路径中的真实 case resolution。
 
 ## 当前实跑结果
 
@@ -68,7 +74,7 @@ Typed binding 的作用不是再建一张规则表。它把人类可读 Rule row
 
 | operator | 状态 | 说明 |
 |---|---|---|
-| `hsp90.directional_time_anatomy.v0` | `CANARY_SUCCEEDED / OUTPUT_SCHEMA_VALIDATION_PENDING` | 复用现有标准库脚本、冻结输入和 `[5,20,50]` persistence grid；尚未达到 `ROSTER_PASS` |
+| `hsp90.directional_time_anatomy.v0` | `CANARY_PASS / NOT_ROUTABLE` | 复用现有标准库脚本、冻结输入和 `[5,20,50]` persistence grid；完整 output schema 和 case/input binding 未完成 |
 | `trajectory.structural_state_projection.v1` | `REGISTERED_BLOCKED` | spec 来自 installed `molecular-dynamics` skill 与 AdK 旧分析；当前 runtime 无 MDAnalysis，且新 case 的 input/mapping/method profile 未冻结 |
 
 Skill 是程序性知识和 OperatorSpec 的来源，不等于 backend 已安装。Operator runtime 必须单独 probe。完整注册规则见 `docs/OPERATOR_REGISTRATION_ZH.md`。
@@ -83,6 +89,14 @@ PYTHONPATH=src python3 -m dynamics_atlas_harness run-prototype \
   --output-dir /tmp/dynamics-atlas-target-run \
   --run-id example-target-run
 ```
+
+上面的默认命令不会运行独立 canary。只有显式添加以下参数才会执行 HSP90 canary：
+
+```text
+--canary-operator-id hsp90.directional_time_anatomy.v0
+```
+
+显式 canary 仍不会成为 case RunPlan node，也不会关闭 X-EISD gaps。
 
 运行测试：
 
