@@ -1,0 +1,43 @@
+{
+  "affected_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+  "manifest_receipt": {
+    "expected_time_contract": {
+      "analysis_window_ns": [
+        20,
+        1020
+      ],
+      "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY",
+      "frames_per_trajectory": 1001,
+      "saved_stride_ns": 1,
+      "statistical_unit": "TRAJECTORY",
+      "trajectory_count": 40
+    },
+    "fixed_parameters": {
+      "persistence_saved_frames": [
+        5,
+        20,
+        50
+      ],
+      "state_rule": "existing zero-sign two-readout rule"
+    },
+    "manifest_id": "hsp90-directional-time-anatomy-inputs/v1-alpha",
+    "resolved_assets": {
+      "frame_state_assignments": {
+        "sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+        "workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv"
+      },
+      "implementation": {
+        "sha256": "c7b4f333c8b8386106d4121c578845b686ff4c41e6240d9ecfadb8bda31a83e8",
+        "workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/scripts/run_time_anatomy_v0.py"
+      },
+      "route_predictions": {
+        "sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446",
+        "workspace_relative_path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/route_predictions.tsv"
+      }
+    }
+  },
+  "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+  "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+  "route": "REGISTERED_OPERATOR",
+  "status": "ROUTABLE"
+}

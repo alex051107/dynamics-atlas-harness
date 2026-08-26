@@ -1,0 +1,115 @@
+{
+  "affected_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "claim_ceiling": "Validated execution of one frozen same-packet trajectory-level directional-time-anatomy control record; human scientific validation remains required.",
+  "contract_status": "PASS",
+  "evidence_result_id": "HSP90-TIME-ANATOMY-EVIDENCE::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+  "forbidden_claims": [
+    "TRANSITION_RATE",
+    "EQUILIBRIUM_POPULATION",
+    "FREE_ENERGY",
+    "COMPLETE_PATHWAY",
+    "MECHANISM",
+    "MUTATION_EFFECT"
+  ],
+  "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+  "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+  "operator_run_receipt_id": "HSP90-TIME-ANATOMY-RECEIPT::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+  "operator_version": "1.0.0-exposed-case-bound-adapter",
+  "output_validation": {
+    "observed_counts": {
+      "directional_run_rows": 1175,
+      "trajectory_time_anatomy_rows": 120,
+      "trajectory_time_bin_rows": 840
+    },
+    "output_hashes": {
+      "directional_runs.tsv": "9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666",
+      "results_summary.json": "f285a33c63a59f1601f0aefa4f98afe62fb247121c575574cf1f42018d93e646",
+      "trajectory_time_anatomy.tsv": "fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb",
+      "trajectory_time_bins_50ns.tsv": "1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c"
+    },
+    "reason_codes": [],
+    "status": "PASS"
+  },
+  "result": {
+    "allowed_wording": "Describes persistent two-readout directional departure and return candidates under an explicit horizon grid.",
+    "display_bin": "50 saved frames (about 50 ns; the last bin has 51 frames)",
+    "evidence_level": "v0_same_packet_diagnostic",
+    "forbidden_wording": "Does not estimate a transition rate, equilibrium, population, free energy, complete pathway, mechanism, or mutation effect.",
+    "inputs": {
+      "frame_state_assignments.tsv": {
+        "sha256": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46"
+      },
+      "route_predictions.tsv": {
+        "sha256": "409164d01ec0d36ae2c74882e4eef669697a968544bdb24bbe1035b3ddfa2446"
+      }
+    },
+    "persistence_grid_saved_frames": [
+      5,
+      20,
+      50
+    ],
+    "statistical_unit": "trajectory (n=40); frame runs are within-trajectory descriptive objects",
+    "summary": {
+      "20": {
+        "by_seed_lineage": {
+          "closed_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 4,
+            "return_candidate_n": 0
+          },
+          "open_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 0,
+            "return_candidate_n": 0
+          }
+        },
+        "n_trajectories": 40,
+        "opposite_departure_candidate_n": 4,
+        "return_candidate_n": 0,
+        "strict_core_frame_count_total": 3
+      },
+      "5": {
+        "by_seed_lineage": {
+          "closed_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 5,
+            "return_candidate_n": 0
+          },
+          "open_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 0,
+            "return_candidate_n": 0
+          }
+        },
+        "n_trajectories": 40,
+        "opposite_departure_candidate_n": 5,
+        "return_candidate_n": 0,
+        "strict_core_frame_count_total": 3
+      },
+      "50": {
+        "by_seed_lineage": {
+          "closed_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 1,
+            "return_candidate_n": 0
+          },
+          "open_seeded": {
+            "n_trajectories": 20,
+            "opposite_departure_candidate_n": 0,
+            "return_candidate_n": 0
+          }
+        },
+        "n_trajectories": 40,
+        "opposite_departure_candidate_n": 1,
+        "return_candidate_n": 0,
+        "strict_core_frame_count_total": 3
+      }
+    },
+    "task": "dynamics_atlas_hsp90_time_anatomy_v0_20260730"
+  },
+  "schema_version": "evidence-result/v1-alpha",
+  "scientific_evaluation_status": "PENDING_HUMAN_VALIDATION",
+  "source_id": "hsp90_md_round2_directional_packet",
+  "status": "OBSERVED"
+}

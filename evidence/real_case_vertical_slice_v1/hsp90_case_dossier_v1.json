@@ -1,0 +1,66 @@
+{
+  "schema_version": "exposed-casegraph/v1-alpha",
+  "case": {
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "parent_task_id": "dynamics_atlas_hsp90_time_anatomy_v0_20260730",
+    "development_role": "EXPOSED_DEVELOPMENT",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "For the declared HSP90 round-2 MD packet, a fixed two-readout directional-block catalogue can be reported only as a same-packet, trajectory-level descriptive diagnostic under the declared persistence grid.",
+    "requested_claim_scope": "SAME_PACKET_DESCRIPTIVE_DIRECTIONAL_DIAGNOSTIC",
+    "forbidden_upgrades": [
+      "TRANSITION_RATE",
+      "EQUILIBRIUM_POPULATION",
+      "FREE_ENERGY",
+      "COMPLETE_PATHWAY",
+      "MECHANISM",
+      "MUTATION_EFFECT"
+    ],
+    "claim_contract": {
+      "human_attestation_source": "dynamics_atlas_hsp90_time_anatomy_v0_20260730/state/task_spec.md",
+      "allowed_wording": "Describe persistent two-readout directional departure and return candidates under the frozen 5/20/50 saved-frame grid.",
+      "forbidden_wording": "Do not infer a transition rate, equilibrium, population, free energy, complete pathway, mechanism, or mutation effect."
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "hsp90_md_round2_directional_packet",
+      "method_id": "MD_TRAJECTORY",
+      "evidence_role": "DIAGNOSTIC",
+      "source_locator": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/state/task_spec.md#inputs-and-statistical-unit",
+      "analysis_contract_id": "HSP90_ATLAS_V1_20260728",
+      "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+      "native_observable": "Ordered per-frame two-readout directional signs derived from geometry_delta_A and contact_margin_A.",
+      "estimand": "Within-trajectory catalogue of persistent directional blocks at fixed horizons; it is not an equilibrium or kinetic estimand.",
+      "time_semantics": {
+        "kind": "ORDERED_TRAJECTORY",
+        "analysis_window_ns": [20, 1020],
+        "saved_stride_ns": 1
+      },
+      "spatial_support": "Existing HSP90 round-2 trajectory-derived geometry/contact readouts under the frozen two-readout rule.",
+      "unit_or_aggregation": "trajectory (n=40); frames are correlated within-trajectory observations",
+      "trajectory_identity": {
+        "packet_id": "hsp90_round2_40_trajectory_directional_packet",
+        "trajectory_count": 40,
+        "frames_per_trajectory": 1001,
+        "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY"
+      },
+      "required_evidence_action": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
+      "time_anatomy_control": {
+        "analysis_window_ns": [20, 1020],
+        "saved_stride_ns": 1,
+        "statistical_unit": "TRAJECTORY",
+        "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY",
+        "trajectory_count": 40,
+        "persistence_saved_frames": [5, 20, 50],
+        "state_rule_id": "EXISTING_ZERO_SIGN_TWO_READOUT",
+        "claim_ceiling_id": "SAME_PACKET_DIRECTIONAL_ONLY"
+      }
+    }
+  ],
+  "comparisons": [],
+  "case_provenance": {
+    "source_task_spec": "autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/state/task_spec.md",
+    "source_protocol": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/protocol/hsp90_v1_protocol.json",
+    "admission_boundary": "Human-authored exposed-development CaseGraph. It admits only the existing same-packet descriptive question and does not validate source science or permit a kinetic, equilibrium, or mechanistic claim."
+  }
+}

@@ -199,6 +199,29 @@ def _run_hsp90_time_anatomy(
     }
 
 
+def execute_hsp90_time_anatomy_adapter(
+    *,
+    spec: Mapping[str, Any],
+    workspace_root: Path,
+    output_dir: Path,
+) -> dict[str, Any]:
+    """Run the existing HSP90 implementation after an exact caller-side binding.
+
+    This is intentionally a narrow implementation adapter, not a generic Operator
+    router.  The caller owns the case, RuleInstance, manifest, and output-contract
+    checks; this function only probes the registered implementation and invokes the
+    frozen standard-library script with the registered fixed inputs and parameters.
+    """
+
+    probe = probe_operator(spec, workspace_root)
+    reason_codes = probe["reason_codes"]
+    if reason_codes:
+        raise ValueError("OPERATOR_RUNTIME_PROBE_FAILED:" + ",".join(reason_codes))
+    if spec.get("handler") != "case_bound_hsp90_time_anatomy_v1":
+        raise ValueError("UNSUPPORTED_HSP90_TIME_ANATOMY_HANDLER")
+    return _run_hsp90_time_anatomy(spec=spec, probe=probe, output_dir=output_dir)
+
+
 def run_registered_operator_canary(
     *,
     registry: Mapping[str, Any],

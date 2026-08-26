@@ -1,0 +1,11 @@
+{
+  "boundary": "One exact case-bound registered Operator execution. The result remains proposal-only, same-packet, and subject to the HumanDecisionGate; it emits no final scientific verdict.",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "live_agent_run": false,
+  "network_accessed": false,
+  "post_operator_rule_status": "PASS",
+  "pre_operator_rule_status": "UNRESOLVED",
+  "run_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_VERTICAL_SLICE_V1_ALPHA",
+  "terminal_disposition": "SUPPORT_WITHIN_CEILING",
+  "unregistered_tool_calls": 0
+}

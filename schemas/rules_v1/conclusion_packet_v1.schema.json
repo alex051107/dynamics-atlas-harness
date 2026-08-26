@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exposed Rules v1-alpha conclusion packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "packet_kind", "proposal_status", "scenario_id", "case_id", "terminal_route", "terminal_disposition", "scientific_verdict", "claim_ceiling", "human_decision_gate_required", "unsafe_claim_upgrade", "first_failed_dependency", "requested_claim", "selected_rule_instance_ids", "blocking_rule_instance_ids", "rule_results", "nonblocking_rule_results", "evidence_lookup_results", "operator_results", "human_review_items", "next_action", "provenance"],
+  "properties": {
+    "schema_version": {"const": "conclusion-packet/v1-alpha"},
+    "packet_kind": {"type": "string", "minLength": 1},
+    "proposal_status": {"const": "PROPOSAL_ONLY_EXPOSED_DEVELOPMENT"},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "parent_case_id": {"type": "string", "minLength": 1},
+    "edge_id": {"type": "string", "minLength": 1},
+    "terminal_route": {"enum": ["DIRECT_EVALUATION", "SOURCE_LOOKUP", "REGISTERED_OPERATOR", "HUMAN_OR_NEW_DATA"]},
+    "terminal_disposition": {"enum": ["SUPPORT_WITHIN_CEILING", "CANNOT_SUPPORT_REQUESTED_CLAIM", "ABSTAIN_OR_HUMAN_REVIEW"]},
+    "scientific_verdict": {"const": "NOT_EMITTED_PROPOSAL_ONLY"},
+    "claim_ceiling": {"type": "string", "minLength": 1},
+    "human_decision_gate_required": {"const": true},
+    "unsafe_claim_upgrade": {"const": false},
+    "first_failed_dependency": {"type": ["object", "null"]},
+    "requested_claim": {"type": "string", "minLength": 1},
+    "selected_rule_instance_ids": {"type": "array", "items": {"type": "string"}},
+    "blocking_rule_instance_ids": {"type": "array", "items": {"type": "string"}},
+    "rule_results": {"type": "array", "minItems": 1},
+    "nonblocking_rule_results": {"type": "array"},
+    "evidence_lookup_results": {"type": "array"},
+    "operator_results": {"type": "array"},
+    "human_review_items": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "next_action": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object"}
+  }
+}
