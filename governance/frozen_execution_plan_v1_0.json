@@ -5,7 +5,11 @@
   "status": "ACTIVE_PROSPECTIVE_EXECUTION_AUTHORITY",
   "repository": "alex051107/dynamics-atlas-harness",
   "canonical_plan_path": "docs/DA_HARNESS_FROZEN_EXECUTION_PLAN_V1_0_ZH.md",
-  "source_path_at_adoption": "/Users/liuzhenpeng/Downloads/Dynamics_Atlas_Frozen_Execution_Plan_for_Codex_ZH.md",
+  "source_identity": {
+    "kind": "USER_SUPPLIED_LOCAL_FILE",
+    "display_name": "Dynamics Atlas Frozen Execution Plan for Codex (Chinese)",
+    "local_path_policy": "OMITTED_FROM_REPOSITORY"
+  },
   "source_sha256": "36034b8db124bb95669c76a6aa78adeda251278f3539bc1f9f6764060a19530b",
   "import_policy": "BYTE_IDENTICAL_SOURCE_IMPORT",
   "authority": {
@@ -36,14 +40,15 @@
   ],
   "current_authorization": {
     "plan_scope": ["PR0_BASELINE_BOUNDARY_NORMALIZATION", "PR1_RULES_PROTOTYPE_V1"],
-    "next_allowed_action": "HUMAN_REVIEW_AND_MERGE_DECISION_FOR_ISOLATED_PR0",
+    "next_allowed_action": "COMPLETE_GATE0B_GOVERNANCE_SYNC_AND_MERGE",
     "allowed_actions": [
-      "READ_ONLY_REVIEW_OF_PR0_DIFF_AND_VALIDATION",
-      "REQUEST_CHANGES_TO_PR0",
-      "HUMAN_MERGE_DECISION_FOR_PR0",
-      "PR1_REMEDIATION_BACKLOG_MAINTENANCE_WITHOUT_IMPLEMENTATION"
+      "GATE0B_GOVERNANCE_SYNC_TO_MERGED_PR0_MAIN",
+      "MINIMAL_GOVERNANCE_CONSISTENCY_TEST",
+      "PRIVATE_GOVERNANCE_PR_PUSH_WITH_RATIONALE",
+      "USER_AUTHORIZED_GOVERNANCE_PR_MERGE",
+      "CREATE_REVISED_PR1_FIRST_DRAFT_AFTER_GOVERNANCE_MERGE"
     ],
-    "stop_after": "HUMAN_DISPOSITION_OF_ISOLATED_PR0",
+    "stop_after": "HUMAN_SCIENTIFIC_REVIEW_OF_REVISED_PR1_FIRST_DRAFT",
     "blocked_stages": [
       "PR2_GAP_TAXONOMY_AND_RULE_EVALUATION",
       "PR3_HSP90_REAL_RULE_TO_OPERATOR_ROUTE",
@@ -66,12 +71,12 @@
       "combined_pr": "https://github.com/alex051107/dynamics-atlas-harness/pull/1",
       "combined_pr_state": "CLOSED_UNMERGED_BRANCH_PRESERVED",
       "replacement_pr0": "https://github.com/alex051107/dynamics-atlas-harness/pull/3",
-      "replacement_pr0_state": "OPEN_CI_PASS_AWAITING_HUMAN_REVIEW",
-      "revised_pr1_authorized_to_start": false
+      "replacement_pr0_state": "MERGED_MAIN_READBACK_PASS",
+      "revised_pr1_authorized_to_start": "AFTER_GOVERNANCE_PR2_MERGE"
     }
   },
   "claim_boundary": {
-    "allowed": "The plan is active, the combined PR received CHANGES_REQUESTED, and the next gate is human review of isolated PR0 before any revised PR1 branch starts.",
+    "allowed": "The plan is active, PR0 merged to main, Gate 0B may synchronize and merge the governance PR, and then a proposal-only revised PR1 first draft may start.",
     "forbidden": [
       "PR1_IS_PLAN_COMPLIANT",
       "PR1_IS_SCIENTIFICALLY_APPROVED",
