@@ -1,0 +1,170 @@
+{
+  "schema_version": "profiler-evaluation/v2",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "parse_and_leakage_view": {
+    "schema_version": "parse-and-leakage-view/v1",
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "status": "PASS",
+    "reason_codes": [],
+    "proposal_parse_status": "PARSED_OBJECT"
+  },
+  "typed_contract_view": {
+    "schema_version": "profiler-proposal-validation/v1",
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "INVALID_PROFILER_PROPOSAL_SCHEMA",
+      "MISSING_SOURCE_FIELD:xeisd_random_candidate_pool:sample_system_composition",
+      "OUT_OF_VOCABULARY:xeisd_random_candidate_pool:method_or_modality",
+      "OUT_OF_VOCABULARY:xeisd_random_candidate_pool:evidence_role",
+      "OUT_OF_VOCABULARY:xeisd_random_candidate_pool:native_observable_kind",
+      "OUT_OF_VOCABULARY:xeisd_random_candidate_pool:estimand_kind",
+      "OUT_OF_VOCABULARY:xeisd_random_candidate_pool:time_semantics",
+      "MISSING_OR_FABRICATED_UNKNOWN:xeisd_random_candidate_pool:sample_system_composition",
+      "MISSING_SOURCE_FIELD:xeisd_j_coupling_fit:sample_system_composition",
+      "OUT_OF_VOCABULARY:xeisd_j_coupling_fit:method_or_modality",
+      "OUT_OF_VOCABULARY:xeisd_j_coupling_fit:evidence_role",
+      "OUT_OF_VOCABULARY:xeisd_j_coupling_fit:native_observable_kind",
+      "OUT_OF_VOCABULARY:xeisd_j_coupling_fit:estimand_kind",
+      "OUT_OF_VOCABULARY:xeisd_j_coupling_fit:time_semantics",
+      "MISSING_OR_FABRICATED_UNKNOWN:xeisd_j_coupling_fit:sample_system_composition",
+      "MISSING_EDGE_FIELD:xeisd_random_pool_vs_j_coupling_question:condition_relation",
+      "MISSING_OR_FABRICATED_UNKNOWN:xeisd_random_pool_vs_j_coupling_question:condition_relation"
+    ],
+    "source_count": 2,
+    "edge_count": 1
+  },
+  "sealed_reference_and_authorization_view": {
+    "schema_version": "sealed-reference-and-authorization-profiler-view/v1",
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "TYPED_VALIDATION_OR_SEALED_COMPARISON_FAILED"
+    ],
+    "sealed_reference_comparison": {
+      "schema_version": "profiler-reference-comparison/v1",
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "status": "FAIL",
+      "reason_codes": [
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "CRITICAL_SOURCE_FACT_MISMATCH",
+        "REQUIRED_UNKNOWN_MISSING"
+      ],
+      "critical_differences": [
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_random_candidate_pool",
+          "field": "method_or_modality",
+          "expected": "STRUCTURAL_CANDIDATE_POOL",
+          "observed": [
+            "STRUCTURAL_CANDIDATE_POOL"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_random_candidate_pool",
+          "field": "evidence_role",
+          "expected": "CONSTRUCTION",
+          "observed": [
+            "CONSTRUCTION"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_random_candidate_pool",
+          "field": "native_observable_kind",
+          "expected": "CANDIDATE_CONFORMER_COORDINATES",
+          "observed": [
+            "CANDIDATE_CONFORMER_COORDINATES"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_random_candidate_pool",
+          "field": "estimand_kind",
+          "expected": "CANDIDATE_SPACE_SUPPORT",
+          "observed": [
+            "CANDIDATE_SPACE_SUPPORT"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_random_candidate_pool",
+          "field": "time_semantics",
+          "expected": "STATIC_ENSEMBLE_AVERAGE",
+          "observed": [
+            "STATIC_ENSEMBLE_AVERAGE"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_j_coupling_fit",
+          "field": "method_or_modality",
+          "expected": "NMR_SCALAR_COUPLING",
+          "observed": [
+            "NMR_SCALAR_COUPLING"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_j_coupling_fit",
+          "field": "evidence_role",
+          "expected": "FIT_TARGET",
+          "observed": [
+            "FIT_TARGET"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_j_coupling_fit",
+          "field": "native_observable_kind",
+          "expected": "SCALAR_J_COUPLINGS",
+          "observed": [
+            "SCALAR_J_COUPLINGS"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_j_coupling_fit",
+          "field": "estimand_kind",
+          "expected": "LOCAL_BACKBONE_ANGLE_SUPPORT",
+          "observed": [
+            "LOCAL_BACKBONE-ANGLE_SUPPORT"
+          ]
+        },
+        {
+          "kind": "CRITICAL_SOURCE_FACT_MISMATCH",
+          "source_id": "xeisd_j_coupling_fit",
+          "field": "time_semantics",
+          "expected": "POPULATION_AVERAGE",
+          "observed": [
+            "STATIC_ENSEMBLE_AVERAGE"
+          ]
+        },
+        {
+          "kind": "REQUIRED_UNKNOWN_MISSING",
+          "path": "edges.xeisd_random_pool_vs_j_coupling_question.condition_relation"
+        }
+      ]
+    },
+    "deterministic_authorization": {
+      "schema_version": "profiler-deterministic-authorization/v1",
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "PROFILER_PROPOSAL_DOES_NOT_REQUEST_ACTION_AUTHORIZATION"
+      ],
+      "execution_performed": false,
+      "registered_operator_calls": 0
+    }
+  },
+  "comparison_sampling_boundary": "The three views inspect one recorded proposal; they are not independent model arms or samples."
+}

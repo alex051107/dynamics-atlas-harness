@@ -1,0 +1,70 @@
+{
+  "schema_version": "planner-evaluation/v2",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "parse_and_leakage_view": {
+    "schema_version": "parse-and-leakage-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "PASS",
+    "reason_codes": [],
+    "proposal_parse_status": "PARSED_OBJECT"
+  },
+  "typed_contract_view": {
+    "schema_version": "planner-proposal-validation/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "INVALID_PLANNER_PROPOSAL_SCHEMA",
+      "CASE_ID_MISMATCH",
+      "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT",
+      "UNREGISTERED_OR_WRONG_OPERATOR:0"
+    ],
+    "proposed_card_ids": [
+      "hsp90-exact-time-anatomy-control"
+    ],
+    "execution_performed": false
+  },
+  "sealed_reference_and_authorization_view": {
+    "schema_version": "sealed-reference-and-authorization-planner-view/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "FAIL",
+    "reason_codes": [
+      "TYPED_VALIDATION_OR_COMPARISON_OR_AUTHORIZATION_FAILED"
+    ],
+    "required_card_selection": {
+      "schema_version": "planner-required-card-selection/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "PASS",
+      "reason_codes": [],
+      "differences": []
+    },
+    "typed_envelope": {
+      "schema_version": "planner-proposal-validation/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "FAIL",
+      "reason_codes": [
+        "INVALID_PLANNER_PROPOSAL_SCHEMA",
+        "CASE_ID_MISMATCH",
+        "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT",
+        "UNREGISTERED_OR_WRONG_OPERATOR:0"
+      ],
+      "proposed_card_ids": [
+        "hsp90-exact-time-anatomy-control"
+      ],
+      "execution_performed": false
+    },
+    "deterministic_authorization": {
+      "schema_version": "planner-deterministic-authorization/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "REJECTED",
+      "reason_codes": [
+        "INVALID_PLANNER_PROPOSAL_SCHEMA",
+        "CASE_ID_MISMATCH",
+        "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT",
+        "UNREGISTERED_OR_WRONG_OPERATOR:0"
+      ],
+      "execution_performed": false,
+      "registered_operator_calls": 0
+    }
+  },
+  "comparison_sampling_boundary": "The three views inspect one recorded proposal; they are not independent model arms or samples."
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "agent-profiler-proposal/v1",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "sources": [
+    {
+      "source_id": "xeisd_random_candidate_pool",
+      "source_locator": "XEI-M04",
+      "source_type": "STRUCTURAL_CANDIDATE_POOL",
+      "sample_system_composition": {
+        "structural_candidates": [
+          {
+            "conformer_coordinates": {
+              "coordinates": [
+                [0.1, 0.2, 0.3],
+                [0.4, 0.5, 0.6],
+                [0.7, 0.8, 0.9]
+              ]
+            }
+          },
+          {
+            "conformer_coordinates": {
+              "coordinates": [
+                [1.1, 1.2, 1.3],
+                [1.4, 1.5, 1.6],
+                [1.7, 1.8, 1.9]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "xeisd_j_coupling_fit",
+      "source_locator": "XEI-M03",
+      "source_type": "NMR_SCALAR_COUPLING",
+      "sample_system_composition": {
+        "observable": {
+          "ensemble_average": {
+            "j_couplings": [
+              [0.1, 0.2, 0.3],
+              [0.4, 0.5, 0.6],
+              [0.7, 0.8, 0.9]
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "xeisd_random_pool_vs_j_coupling_question",
+      "left_source_id": "xeisd_random_candidate_pool",
+      "right_source_id": "xeisd_j_coupling_fit",
+      "condition_relation": "UNKNOWN"
+    }
+  ],
+  "unknowns": [
+    {
+      "path": "sources.xeisd_random_candidate_pool.sample_system_composition",
+      "reason": "No sample-composition declaration is supplied in this packet.",
+      "evidence_pointer": "The system is unfolded drkN SH3."
+    },
+    {
+      "path": "sources.xeisd_j_coupling_fit.sample_system_composition",
+      "reason": "No sample-composition declaration is supplied in this packet.",
+      "evidence_pointer": "The observable is an ensemble-averaged NMR measurement, not a trajectory time series."
+    }
+  ]
+}

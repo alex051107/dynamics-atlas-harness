@@ -1,0 +1,19 @@
+{
+  "schema_version": "local-model-call-receipt/v1",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "status": "SUCCEEDED",
+  "reason_codes": [],
+  "role": "PLANNER",
+  "provider_id": "ollama-local-json:qwen2.5:1.5b",
+  "model": "qwen2.5:1.5b",
+  "transport": "LOCAL_LOOPBACK_HTTP_JSON_NO_TOOLS",
+  "prompt_sha256": "598fe22e2f8fa7d8920da4aadb27f527218335e48d9d07aa525fd52fbad5982d",
+  "input_sha256": "30f25c1ef05a9aaaeb4c23344a9a467503c342099bf13c9935e11ae1ab6e1948",
+  "response_sha256": "852e7b0a57a43164cba76ae5f6d785c176b638664c12a0975b318430a860a673",
+  "latency_ms": 2144.924,
+  "call_count": 1,
+  "bounded_json_repair_attempted": false,
+  "tool_calls": 0,
+  "cost_usd": null,
+  "cost_status": "LOCAL_UNMETERED_NOT_ESTIMATED"
+}

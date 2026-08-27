@@ -1,7 +1,7 @@
-"""Focused checks for the post-PR0 governance handoff.
+"""Focused checks for repository-owned current execution status.
 
-These tests deliberately validate repository-owned facts only. Live GitHub state is
-verified separately immediately before merge.
+The frozen execution plan remains historical. Current authorization lives in the
+machine-readable status overlay and the append-only deviation record.
 """
 
 from __future__ import annotations
@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MAIN_AFTER_PR0 = "c9d115b937ece52eba4c42613dc5877839348851"
+MAIN_AFTER_NO_AGENT_MILESTONE = "dd189362c4186f256e1ebe3cf2e068cdcbd6f733"
 
 
 def load_json(relative_path: str) -> dict:
@@ -25,41 +25,44 @@ def work_item(status: dict, role: str) -> dict:
 
 
 class GovernanceConsistencyTests(unittest.TestCase):
-    def test_post_pr0_handoff_is_explicit(self) -> None:
+    def test_current_status_records_merged_baseline_and_bounded_slice_result(self) -> None:
         status = load_json("governance/current_execution_status.json")
-        plan = load_json("governance/frozen_execution_plan_v1_0.json")
+        deviations = [
+            json.loads(line)
+            for line in (REPO_ROOT / "governance/deviations.jsonl").read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
 
-        self.assertEqual(status["repository_baseline"]["main_commit"], MAIN_AFTER_PR0)
+        self.assertEqual(status["repository_baseline"]["main_commit"], MAIN_AFTER_NO_AGENT_MILESTONE)
         self.assertEqual(
-            work_item(status, "ISOLATED_FROZEN_PLAN_PR0")["state"],
-            "MERGED_MAIN_READBACK_PASS",
+            work_item(status, "NO_AGENT_MILESTONE_A")["state"].split("_")[0:2],
+            ["MERGED", "PASS"],
         )
+        live_agent = work_item(status, "LIVE_AGENT_EXPOSED_CASES_V1")
         self.assertEqual(
-            work_item(status, "FROZEN_PLAN_GOVERNANCE")["state"],
-            "SYNCHRONIZED_TO_MERGED_PR0_MAIN_FOCUSED_CONSISTENCY_TEST_PASS_PENDING_PUSH",
+            live_agent["state"],
+            "EXPOSED_EVALUATION_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED",
         )
+        self.assertEqual(live_agent["authorization"], "USER_DECISION_DA-20260826-032")
         self.assertEqual(
             status["next_allowed_action"]["action"],
-            "COMPLETE_GATE0B_GOVERNANCE_SYNC_AND_MERGE",
+            "HUMAN_MERGE_REVIEW_PR7_EXPOSED_AGENT_CONTRACT_FAILURE_BASELINE",
         )
         self.assertEqual(
-            status["next_allowed_action"]["merge_authority"],
-            "USER_DECISION_DA-20260825-025",
+            live_agent["observed_result"]["result"],
+            "SAFE_BUT_CAPABILITY_REJECTED_NO_TYPED_CONTRACT_PASS",
         )
         self.assertEqual(
-            next(
-                stage for stage in status["stages"] if stage["stage"] == "PR1_RULES_PROTOTYPE_V1"
-            )["status"],
-            "FIRST_DRAFT_AUTHORIZED_AFTER_GOVERNANCE_MERGE",
+            next(stage for stage in status["stages"] if stage["stage"] == "STAGE2_ADK_HELD_OUT")["status"],
+            "NOT_AUTHORIZED",
         )
-        self.assertEqual(
-            plan["current_authorization"]["next_allowed_action"],
-            "COMPLETE_GATE0B_GOVERNANCE_SYNC_AND_MERGE",
+        authorization = next(
+            record
+            for record in deviations
+            if record.get("decision_id") == "DA-20260826-032"
         )
-        self.assertIn(
-            "CREATE_REVISED_PR1_FIRST_DRAFT_AFTER_GOVERNANCE_MERGE",
-            plan["current_authorization"]["allowed_actions"],
-        )
+        self.assertEqual(authorization["status"], "ACTIVE")
+        self.assertIn("RULES_EXPANSION", authorization["forbidden"])
 
     def test_governance_records_are_portable_and_document_links_resolve(self) -> None:
         repository_records = (

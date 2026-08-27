@@ -51,6 +51,7 @@ Workspace-dependent tests 在独立 GitHub runner 上会明确 skip；它们只�
 ## Data and authority boundary
 
 - 不提交 `runs/`、raw/derived scientific payload、absolute local paths、credentials 或 personal data；
+- 仅当 clean-checkout deterministic evaluation 必需、provenance 与 upstream hash 已记录、不含 credentials 或 personal data、范围明确为 `NOT_GENERAL` 与 `NOT_PRODUCTION`，且已有 append-only human authorization 时，可版本化最小 sanitized exposed-development fixture；其他 scientific payload 仍保持不提交；
 - 不复制上游 Rules Registry 形成第二套 authority；
 - frozen assets 只通过 manifest 与 SHA-256 引用；
 - operator output 不能直接写 scientific support；

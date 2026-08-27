@@ -1,0 +1,160 @@
+{
+  "schema_version": "live-agent-recorded-run-manifest/v1",
+  "recorded_run": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1",
+  "recorded_model": {
+    "model_tag": "qwen2.5:1.5b",
+    "provider_id": "ollama-local-json:qwen2.5:1.5b",
+    "model_digest": {
+      "status": "NOT_CAPTURED_AT_RUN_TIME"
+    },
+    "ollama_runtime_version": {
+      "status": "NOT_CAPTURED_AT_RUN_TIME"
+    },
+    "generation_options": {
+      "status": "REPLAY_ADAPTER_CONFIGURATION_ONLY",
+      "value": {
+        "temperature": 0,
+        "num_predict": 1200
+      },
+      "seed": {
+        "status": "NOT_CAPTURED_AT_RUN_TIME"
+      }
+    }
+  },
+  "prompt_snapshots": {
+    "PROFILER": {
+      "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+      "recorded_sha256": "55a08e5a5f719bede38e03c420c61246f580455df76ea6930191be01d7e58b25",
+      "available_snapshot_sha256": "83febacf3f303cf767e7c33f4e4e98973995fac5e8f0cd741c634199ecc452a0",
+      "note": "No prompt text matching the committed run-level hash is retained; no reconstruction was attempted."
+    },
+    "PLANNER": {
+      "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+      "recorded_sha256": "f5608fd1db55a89bfcf7251eb04cc664814633155bf53bbc50f1590366d13da4",
+      "available_snapshot_sha256": "b73cfab3cd63103610a5ad38e76f99076c7dcc20608e4f0c0306b3902c8164ba",
+      "note": "No prompt text matching the committed run-level hash is retained; no reconstruction was attempted."
+    }
+  },
+  "unit_integrity": {
+    "xeisd_profiler": {
+      "case_key": "xeisd",
+      "role": "PROFILER",
+      "packet": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/workspaces/xeisd_profiler/input.json",
+        "expected_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b",
+        "observed_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b"
+      },
+      "raw_response": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/xeisd_profiler/raw_response.txt",
+        "expected_sha256": "7a4cfcf3b2cb862a54487f4484df66c31d4dd0f9b26ba04a14fcd1cf37bd1fdf",
+        "observed_sha256": "7a4cfcf3b2cb862a54487f4484df66c31d4dd0f9b26ba04a14fcd1cf37bd1fdf"
+      },
+      "proposal_parse": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/xeisd_profiler/proposal.json",
+        "proposal_sha256": "1bc86ae4a65a1af7557e3bd9b10a8583021787a9ad59b14ad339778724b15d18"
+      },
+      "request_prompt": {
+        "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+        "expected_sha256": "6ed9a9e7aa392732ff999f4f5ec675ded30c0f5ac54c73f8a413365b182ba7dc",
+        "note": "The matching role prompt is not retained, so the full request hash was not reconstructed."
+      }
+    },
+    "hsp90_profiler": {
+      "case_key": "hsp90",
+      "role": "PROFILER",
+      "packet": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/workspaces/hsp90_profiler/input.json",
+        "expected_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc",
+        "observed_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc"
+      },
+      "raw_response": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/hsp90_profiler/raw_response.txt",
+        "expected_sha256": "a06ed17fe47b744bca4225158d5b736c97c49d6082809151e8d9f29094d71f6f",
+        "observed_sha256": "a06ed17fe47b744bca4225158d5b736c97c49d6082809151e8d9f29094d71f6f"
+      },
+      "proposal_parse": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/hsp90_profiler/proposal.json",
+        "proposal_sha256": "312dd0413abdf4b1f97c6977ee1a3619537fcfaece32c6c8c69f2a1d3fbcbac9"
+      },
+      "request_prompt": {
+        "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+        "expected_sha256": "3a9b6b57763e970e29a8f7fdbff59485504b51a7196185d8842d5bdff280cee7",
+        "note": "The matching role prompt is not retained, so the full request hash was not reconstructed."
+      }
+    },
+    "xeisd_planner": {
+      "case_key": "xeisd",
+      "role": "PLANNER",
+      "packet": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/workspaces/xeisd_planner/input.json",
+        "expected_sha256": "30f25c1ef05a9aaaeb4c23344a9a467503c342099bf13c9935e11ae1ab6e1948",
+        "observed_sha256": "30f25c1ef05a9aaaeb4c23344a9a467503c342099bf13c9935e11ae1ab6e1948"
+      },
+      "raw_response": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/xeisd_planner/raw_response.txt",
+        "expected_sha256": "6405b51a5a76c9793f5d210f2e30dde4792d524d9dd8dd0cd829d00e528c9298",
+        "observed_sha256": "6405b51a5a76c9793f5d210f2e30dde4792d524d9dd8dd0cd829d00e528c9298"
+      },
+      "proposal_parse": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/xeisd_planner/proposal.json",
+        "proposal_sha256": "51352f37d0764eec6d88575aa2acb581d60376a9b1307909ffb02ecf79416ec9"
+      },
+      "request_prompt": {
+        "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+        "expected_sha256": "3522157371142b7658525c164c600168ac95c44a62ed068041325f6ea0c29cd6",
+        "note": "The matching role prompt is not retained, so the full request hash was not reconstructed."
+      }
+    },
+    "hsp90_planner": {
+      "case_key": "hsp90",
+      "role": "PLANNER",
+      "packet": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/workspaces/hsp90_planner/input.json",
+        "expected_sha256": "3ab5c5f52a07667d71a89410b8a78582cac152a54e0599abeef053415c9815e2",
+        "observed_sha256": "3ab5c5f52a07667d71a89410b8a78582cac152a54e0599abeef053415c9815e2"
+      },
+      "raw_response": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/hsp90_planner/raw_response.txt",
+        "expected_sha256": "1fb0c8d9cf2925ff6ad0d12178342bd776a963e4f9eb9df793affa65f967698a",
+        "observed_sha256": "1fb0c8d9cf2925ff6ad0d12178342bd776a963e4f9eb9df793affa65f967698a"
+      },
+      "proposal_parse": {
+        "status": "PASS",
+        "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/hsp90_planner/proposal.json",
+        "proposal_sha256": "d73ebb8d4b1c381770ff8ddd08546c389c0bd974a41ae867f0bbd6abeeb7b48a"
+      },
+      "request_prompt": {
+        "status": "HASH_ONLY_NOT_REPRODUCIBLE",
+        "expected_sha256": "67d35b982365027358c11f9444813d04b35bfeccbcb1a89901d37858542d3804",
+        "note": "The matching role prompt is not retained, so the full request hash was not reconstructed."
+      }
+    }
+  },
+  "sealed_reference_hashes": {
+    "profiler_reference": {
+      "path": "agent_experiments/v1/sealed_references/profiler_reference_v1.json",
+      "sha256": "e5e27367844b23b3ca72fb6919f9df53b49e7dee8b9e011774682bbaffb32678"
+    },
+    "planner_reference": {
+      "path": "agent_experiments/v1/sealed_references/planner_reference_v1.json",
+      "sha256": "79abfccd672a353d81830e4e087aeae28486afc8a55e67986dcdd8c5183ed3f3"
+    }
+  },
+  "replay_evaluator": {
+    "recorded_commit": "NOT_CAPTURED_AT_RUN_TIME",
+    "source_path": "src/dynamics_atlas_harness/live_agent_exposed_v1.py",
+    "source_sha256": "54bb42315b94c84e33a55126f23e7f670b8b0d72652da05da1cb5ddfc62cec3f"
+  },
+  "replay_boundary": "DETERMINISTIC_REPLAY_NO_LIVE_MODEL"
+}

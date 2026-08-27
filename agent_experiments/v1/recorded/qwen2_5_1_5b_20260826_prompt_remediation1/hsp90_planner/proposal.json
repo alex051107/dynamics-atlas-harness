@@ -1,0 +1,12 @@
+{
+  "proposed_actions": [
+    {
+      "card_id": "hsp90-exact-time-anatomy-control",
+      "action": "REGISTERED_OPERATOR",
+      "target_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "rationale": "The evidence role is diagnostic, and the method profile is MD_TRAJECTORY, which aligns with the required action of registering an operator for the specified method and profile."
+    }
+  ],
+  "execution_requested": false,
+  "scientific_disposition": "NOT_EVALUATED"
+}

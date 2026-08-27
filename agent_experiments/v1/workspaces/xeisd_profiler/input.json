@@ -1,0 +1,66 @@
+{
+  "schema_version": "agent-model-visible-profiler-packet/v1",
+  "visibility": "MODEL_VISIBLE_ONLY",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "scientific_question": "Can a declared structural candidate pool and a scalar J-coupling measurement be described for a bounded cross-source review without claiming a shared population, independent validation, kinetics, or mechanism?",
+  "source_material": [
+    {
+      "source_id": "xeisd_random_candidate_pool",
+      "source_locator": "XEI-M04",
+      "source_type": "STRUCTURAL_CANDIDATE_POOL",
+      "allowed_method_excerpt": "A RANDOM starting pool supplies candidate conformer coordinates used to assemble fixed-size candidate sub-ensembles.",
+      "provided_facts": [
+        "The system is unfolded drkN SH3.",
+        "The source supplies structural candidates rather than a physical-time trajectory.",
+        "No sample-composition declaration is supplied in this packet."
+      ]
+    },
+    {
+      "source_id": "xeisd_j_coupling_fit",
+      "source_locator": "XEI-M03",
+      "source_type": "NMR_SCALAR_COUPLING",
+      "allowed_method_excerpt": "Scalar J-couplings are evaluated with a source-specific Karplus relation to provide local backbone-angle information.",
+      "provided_facts": [
+        "The system is unfolded drkN SH3.",
+        "The observable is an ensemble-averaged NMR measurement, not a trajectory time series.",
+        "No sample-composition declaration is supplied in this packet."
+      ]
+    }
+  ],
+  "edge_material": [
+    {
+      "edge_id": "xeisd_random_pool_vs_j_coupling_question",
+      "left_source_id": "xeisd_random_candidate_pool",
+      "right_source_id": "xeisd_j_coupling_fit",
+      "shared_question": "local backbone-angle support available within the declared candidate pool",
+      "provided_facts": [
+        "No condition relation is supplied in this packet.",
+        "No common population or physical-time equivalence is supplied in this packet."
+      ]
+    }
+  ],
+  "controlled_vocabulary": {
+    "method_or_modality": ["STRUCTURAL_CANDIDATE_POOL", "NMR_SCALAR_COUPLING", "MD_TRAJECTORY"],
+    "evidence_role": ["CONSTRUCTION", "FIT_TARGET", "DIAGNOSTIC"],
+    "native_observable_kind": ["CANDIDATE_CONFORMER_COORDINATES", "SCALAR_J_COUPLINGS", "TWO_READOUT_DIRECTIONAL_SIGNS"],
+    "estimand_kind": ["CANDIDATE_SPACE_SUPPORT", "LOCAL_BACKBONE_ANGLE_SUPPORT", "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE"],
+    "time_semantics": ["STATIC_ENSEMBLE_AVERAGE", "POPULATION_AVERAGE", "ORDERED_TRAJECTORY"],
+    "unknown_token": "UNKNOWN"
+  },
+  "unknown_policy": {
+    "required_unknown_paths": [
+      "sources.xeisd_random_candidate_pool.sample_system_composition",
+      "sources.xeisd_j_coupling_fit.sample_system_composition",
+      "edges.xeisd_random_pool_vs_j_coupling_question.condition_relation"
+    ],
+    "rule": "If a fact is not supplied, write UNKNOWN and include an evidence pointer."
+  },
+  "output_contract": {
+    "schema_version": "agent-profiler-proposal/v1",
+    "required_top_level_fields": ["schema_version", "case_id", "sources", "edges", "unknowns"],
+    "required_source_fields": ["source_id", "method_or_modality", "evidence_role", "native_observable_kind", "estimand_kind", "time_semantics", "source_locator", "sample_system_composition"],
+    "required_edge_fields": ["edge_id", "left_source_id", "right_source_id", "condition_relation"],
+    "unknown_item_fields": ["path", "reason", "evidence_pointer"],
+    "forbidden_output_topics": ["Rules", "operators", "routes", "expected outcomes", "tests", "scientific conclusions"]
+  }
+}

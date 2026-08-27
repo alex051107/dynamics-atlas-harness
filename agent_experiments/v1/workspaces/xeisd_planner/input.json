@@ -1,0 +1,69 @@
+{
+  "schema_version": "agent-model-visible-planner-packet/v1",
+  "visibility": "MODEL_VISIBLE_ONLY",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "canonical_case_graph": {
+    "case_summary": "A structural candidate pool and an NMR scalar J-coupling measurement are being reviewed for a bounded relation question. No scientific conclusion is requested here.",
+    "sources": [
+      {"source_id": "xeisd_random_candidate_pool", "method_or_modality": "STRUCTURAL_CANDIDATE_POOL", "evidence_role": "CONSTRUCTION"},
+      {"source_id": "xeisd_j_coupling_fit", "method_or_modality": "NMR_SCALAR_COUPLING", "evidence_role": "FIT_TARGET"}
+    ],
+    "edges": [
+      {"edge_id": "xeisd_random_pool_vs_j_coupling_question", "left_source_id": "xeisd_random_candidate_pool", "right_source_id": "xeisd_j_coupling_fit"}
+    ]
+  },
+  "selected_rule_instances": [
+    {
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "current_status": "UNRESOLVED",
+      "target": "xeisd_random_candidate_pool",
+      "gap": "declared sample-system/composition field is missing"
+    },
+    {
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_j_coupling_fit",
+      "current_status": "UNRESOLVED",
+      "target": "xeisd_j_coupling_fit",
+      "gap": "declared sample-system/composition field is missing"
+    },
+    {
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+      "current_status": "UNRESOLVED",
+      "target": "xeisd_random_pool_vs_j_coupling_question",
+      "gap": "declared condition relation is missing"
+    }
+  ],
+  "resolution_constraints": {
+    "allowed_actions": ["DIRECT_EVALUATION", "EXACT_ATTESTATION", "REGISTERED_OPERATOR", "HUMAN_OR_NEW_DATA"],
+    "execution_boundary": "Propose only. Deterministic authorization owns any later action.",
+    "scientific_disposition": "NOT_EVALUATED"
+  },
+  "permitted_action_cards": [
+    {
+      "card_id": "xeisd-attest-random-composition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "lookup_id": "XEI-LOOKUP-RANDOM-DECLARATIONS",
+      "scope": "EXACT_CASE_BOUND"
+    },
+    {
+      "card_id": "xeisd-attest-jcoupling-composition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_j_coupling_fit",
+      "lookup_id": "XEI-LOOKUP-JCOUPLING-DECLARATIONS",
+      "scope": "EXACT_CASE_BOUND"
+    },
+    {
+      "card_id": "xeisd-attest-edge-condition",
+      "action": "EXACT_ATTESTATION",
+      "target_rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+      "lookup_id": "XEI-LOOKUP-RANDOM-JCOUPLING-EDGE",
+      "scope": "EXACT_CASE_BOUND"
+    }
+  ],
+  "output_contract": {
+    "schema_version": "agent-planner-proposal/v1",
+    "required_top_level_fields": ["schema_version", "case_id", "proposed_actions", "execution_requested", "scientific_disposition", "claim_ceiling_acknowledgement"],
+    "action_fields": ["card_id", "action", "target_rule_instance_id", "rationale"],
+    "required_values": {"execution_requested": false, "scientific_disposition": "NOT_EVALUATED", "claim_ceiling_acknowledgement": "NO_SCIENTIFIC_DISPOSITION"}
+  }
+}

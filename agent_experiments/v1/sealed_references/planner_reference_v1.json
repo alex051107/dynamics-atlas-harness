@@ -1,0 +1,16 @@
+{
+  "schema_version": "sealed-planner-reference/v1",
+  "purpose": "Deterministic exposed-development comparison only. This file is not model-visible.",
+  "cases": {
+    "lincoff_2020_xeisd_random_j_relation_v1_alpha": {
+      "required_cards": ["xeisd-attest-random-composition", "xeisd-attest-jcoupling-composition", "xeisd-attest-edge-condition"],
+      "scientific_disposition": "NOT_EVALUATED",
+      "execution_requested": false
+    },
+    "hsp90_directional_time_anatomy_development_v1_alpha": {
+      "required_cards": ["hsp90-exact-time-anatomy-control"],
+      "scientific_disposition": "NOT_EVALUATED",
+      "execution_requested": false
+    }
+  }
+}

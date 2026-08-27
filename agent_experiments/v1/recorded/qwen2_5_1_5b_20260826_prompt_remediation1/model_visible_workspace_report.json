@@ -1,0 +1,13 @@
+{
+  "schema_version": "model-visible-workspace-report/v1",
+  "case_id": null,
+  "status": "PASS",
+  "reason_codes": [],
+  "files": [
+    "hsp90_planner/input.json",
+    "hsp90_profiler/input.json",
+    "xeisd_planner/input.json",
+    "xeisd_profiler/input.json"
+  ],
+  "filesystem_access": "NOT_EXPOSED_TO_MODEL_TRANSPORT"
+}
