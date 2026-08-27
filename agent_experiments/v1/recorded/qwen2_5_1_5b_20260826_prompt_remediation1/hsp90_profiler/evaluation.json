@@ -1,13 +1,14 @@
 {
-  "schema_version": "profiler-evaluation/v1",
+  "schema_version": "profiler-evaluation/v2",
   "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
-  "free_form": {
-    "schema_version": "free-form-view/v1",
+  "parse_and_leakage_view": {
+    "schema_version": "parse-and-leakage-view/v1",
     "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
     "status": "PASS",
-    "reason_codes": []
+    "reason_codes": [],
+    "proposal_parse_status": "PARSED_OBJECT"
   },
-  "vocabulary_assisted": {
+  "typed_contract_view": {
     "schema_version": "profiler-proposal-validation/v1",
     "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
     "status": "FAIL",
@@ -18,14 +19,14 @@
     "source_count": 1,
     "edge_count": 0
   },
-  "bounded_harness": {
-    "schema_version": "bounded-profiler-harness-view/v1",
+  "sealed_reference_and_authorization_view": {
+    "schema_version": "sealed-reference-and-authorization-profiler-view/v1",
     "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
     "status": "FAIL",
     "reason_codes": [
       "TYPED_VALIDATION_OR_SEALED_COMPARISON_FAILED"
     ],
-    "comparison": {
+    "sealed_reference_comparison": {
       "schema_version": "profiler-reference-comparison/v1",
       "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
       "status": "FAIL",
@@ -41,7 +42,17 @@
           "observed": "STATIC_ENSEMBLE_AVERAGE"
         }
       ]
+    },
+    "deterministic_authorization": {
+      "schema_version": "profiler-deterministic-authorization/v1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "PROFILER_PROPOSAL_DOES_NOT_REQUEST_ACTION_AUTHORIZATION"
+      ],
+      "execution_performed": false,
+      "registered_operator_calls": 0
     }
   },
-  "comparison_sampling_boundary": "The three views evaluate the same recorded model proposal; they are not independent model samples."
+  "comparison_sampling_boundary": "The three views inspect one recorded proposal; they are not independent model arms or samples."
 }

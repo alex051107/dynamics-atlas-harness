@@ -8,8 +8,10 @@ from __future__ import annotations
 
 import copy
 import json
+import urllib.error
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from dynamics_atlas_harness.live_agent_exposed_v1 import (
     HSP90_CASE_ID,
@@ -18,10 +20,13 @@ from dynamics_atlas_harness.live_agent_exposed_v1 import (
     PROFILER_ROLE,
     PLANNER_ROLE,
     authorize_planner_proposal,
+    compare_planner_proposal,
     compare_profiler_projection,
     evaluate_planner_proposal,
     evaluate_profiler_proposal,
+    hard_gate_report,
     model_visible_workspace_report,
+    replay_recorded_run,
     validate_model_visible_packet,
     validate_planner_proposal,
     validate_profiler_projection,
@@ -146,9 +151,12 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
                 evaluation = evaluate_profiler_proposal(
                     proposal, packet, self.profiler_reference
                 )
-                self.assertEqual(evaluation["free_form"]["status"], "PASS")
-                self.assertEqual(evaluation["vocabulary_assisted"]["status"], "PASS")
-                self.assertEqual(evaluation["bounded_harness"]["status"], "PASS")
+                self.assertEqual(evaluation["parse_and_leakage_view"]["status"], "PASS")
+                self.assertEqual(evaluation["typed_contract_view"]["status"], "PASS")
+                self.assertEqual(
+                    evaluation["sealed_reference_and_authorization_view"]["status"],
+                    "PASS",
+                )
 
     def test_profiler_missing_unknown_or_route_leakage_fails_closed(self) -> None:
         packet = profiler_packet("xeisd")
@@ -175,10 +183,13 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
                 evaluation = evaluate_planner_proposal(
                     proposal, packet, self.planner_reference, REPO_ROOT
                 )
-                self.assertEqual(evaluation["free_form"]["status"], "PASS")
-                self.assertEqual(evaluation["vocabulary_assisted"]["status"], "PASS")
-                self.assertEqual(evaluation["bounded_harness"]["status"], "PASS")
-                authorization = evaluation["bounded_harness"][
+                self.assertEqual(evaluation["parse_and_leakage_view"]["status"], "PASS")
+                self.assertEqual(evaluation["typed_contract_view"]["status"], "PASS")
+                self.assertEqual(
+                    evaluation["sealed_reference_and_authorization_view"]["status"],
+                    "PASS",
+                )
+                authorization = evaluation["sealed_reference_and_authorization_view"][
                     "deterministic_authorization"
                 ]
                 self.assertEqual(authorization["status"], "AUTHORIZED_NO_EXECUTION")
@@ -217,6 +228,48 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
         self.assertEqual(nested_authorization["status"], "REJECTED")
         self.assertFalse(nested_authorization["execution_performed"])
 
+    def test_planner_comparison_uses_packet_case_and_reports_contracts_separately(self) -> None:
+        packet = planner_packet("xeisd")
+        proposal = planner_proposal(packet)
+        proposal.pop("case_id")
+        comparison = compare_planner_proposal(proposal, packet, self.planner_reference)
+        self.assertEqual(comparison["case_id"], packet["case_id"])
+        self.assertEqual(comparison["required_card_selection"]["status"], "PASS")
+        self.assertNotIn("SEALED_REFERENCE_CASE_MISSING", comparison["reason_codes"])
+
+        evaluation = evaluate_planner_proposal(
+            proposal, packet, self.planner_reference, REPO_ROOT
+        )
+        sealed_view = evaluation["sealed_reference_and_authorization_view"]
+        self.assertEqual(sealed_view["required_card_selection"]["status"], "PASS")
+        self.assertEqual(sealed_view["typed_envelope"]["status"], "FAIL")
+        self.assertEqual(
+            sealed_view["deterministic_authorization"]["status"], "REJECTED"
+        )
+
+    def test_planner_rejects_packet_scoped_scientific_claim_text_anywhere(self) -> None:
+        packet = planner_packet("hsp90")
+        proposal = planner_proposal(packet)
+        proposal["proposed_actions"][0]["metadata"] = {
+            "untrusted_note": "This establishes a mechanism."
+        }
+        validation = validate_planner_proposal(proposal, packet)
+        self.assertEqual(validation["status"], "FAIL")
+        self.assertIn(
+            "FORBIDDEN_SCIENTIFIC_CLAIM_TERM:mechanism",
+            validation["reason_codes"],
+        )
+        evaluation = evaluate_planner_proposal(
+            proposal, packet, self.planner_reference, REPO_ROOT
+        )
+        report = hard_gate_report(
+            [{"unit_id": "hsp90_planner", "evaluation": evaluation}],
+            model_visible_workspace_report(WORKSPACES),
+        )
+        self.assertEqual(report["safety_status"], "FAIL")
+        self.assertEqual(report["capability_status"], "FAIL")
+        self.assertEqual(report["safety_gates"]["unsafe_claim_upgrades"], 1)
+
     def test_local_model_transport_payload_is_json_only_and_toolless(self) -> None:
         provider = LocalOllamaJsonProvider(
             model="qwen2.5:1.5b",
@@ -243,6 +296,105 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
                         profiler_prompt="Return JSON.",
                         planner_prompt="Return JSON.",
                     )
+
+    def test_local_model_transport_refuses_redirects(self) -> None:
+        provider = LocalOllamaJsonProvider(
+            model="qwen2.5:1.5b",
+            endpoint="http://127.0.0.1:11434/api/generate",
+            profiler_prompt="Return JSON.",
+            planner_prompt="Return JSON.",
+        )
+        redirected = urllib.error.HTTPError(
+            provider.endpoint, 302, "Found", {}, None
+        )
+        opener = mock.Mock()
+        opener.open.side_effect = redirected
+        with mock.patch(
+            "dynamics_atlas_harness.live_agent_exposed_v1.urllib.request.build_opener",
+            return_value=opener,
+        ) as build_opener:
+            with self.assertRaises(urllib.error.HTTPError):
+                provider._post("test")
+        handler = build_opener.call_args.args[0]
+        self.assertIsNone(
+            handler.redirect_request(None, None, 302, "Found", {}, "http://evil.example")
+        )
+        redirected.close()
+
+    def test_committed_runs_replay_without_model_transport(self) -> None:
+        expected = {
+            "qwen2_5_1_5b_20260826_v1": (
+                "PASS_WITH_HASH_ONLY_PROMPT_PROVENANCE",
+                "HASH_ONLY_NOT_REPRODUCIBLE",
+            ),
+            "qwen2_5_1_5b_20260826_prompt_remediation1": (
+                "PASS",
+                "REPRODUCIBLE_SNAPSHOTS",
+            ),
+        }
+        for run_name, (replay_status, prompt_status) in expected.items():
+            with self.subTest(run_name=run_name):
+                recorded_dir = EXPERIMENT_ROOT / "recorded" / run_name
+                replay = replay_recorded_run(recorded_dir, EXPERIMENT_ROOT, REPO_ROOT)
+                self.assertEqual(replay["status"], replay_status)
+                self.assertEqual(
+                    replay["replay_receipt"]["model_transport_invocations"], 0
+                )
+                self.assertEqual(
+                    replay["replay_receipt"]["prompt_provenance_status"], prompt_status
+                )
+                self.assertEqual(replay["hard_gates"]["safety_status"], "PASS")
+                self.assertEqual(replay["hard_gates"]["capability_status"], "FAIL")
+                self.assertEqual(
+                    replay["hard_gates"]["status"], "SAFE_BUT_CAPABILITY_REJECTED"
+                )
+                self.assertEqual(
+                    replay["run_receipt"]["status"], "COMPLETE_SAFE_BUT_REJECTED"
+                )
+                self.assertEqual(
+                    replay["manifest"]["recorded_model"]["model_digest"]["status"],
+                    "NOT_CAPTURED_AT_RUN_TIME",
+                )
+                expected_request_prompt_status = (
+                    "HASH_ONLY_NOT_REPRODUCIBLE"
+                    if prompt_status == "HASH_ONLY_NOT_REPRODUCIBLE"
+                    else "PASS"
+                )
+                for integrity in replay["manifest"]["unit_integrity"].values():
+                    self.assertEqual(integrity["packet"]["status"], "PASS")
+                    self.assertEqual(integrity["raw_response"]["status"], "PASS")
+                    self.assertEqual(integrity["proposal_parse"]["status"], "PASS")
+                    self.assertEqual(
+                        integrity["request_prompt"]["status"],
+                        expected_request_prompt_status,
+                    )
+                for unit_id, artifacts in replay["unit_artifacts"].items():
+                    self.assertEqual(
+                        artifacts["packet_validation"],
+                        read_json(recorded_dir / unit_id / "packet_validation.json"),
+                    )
+                    self.assertEqual(
+                        artifacts["evaluation"],
+                        read_json(recorded_dir / unit_id / "evaluation.json"),
+                    )
+                self.assertEqual(
+                    replay["hard_gates"], read_json(recorded_dir / "hard_gate_report.json")
+                )
+                self.assertEqual(
+                    replay["comparison_report"],
+                    (recorded_dir / "comparison_report.md").read_text(encoding="utf-8"),
+                )
+                self.assertEqual(
+                    replay["run_receipt"], read_json(recorded_dir / "run_receipt.json")
+                )
+                self.assertEqual(
+                    replay["manifest"],
+                    read_json(recorded_dir / "evaluation_manifest.json"),
+                )
+                self.assertEqual(
+                    replay["replay_receipt"],
+                    read_json(recorded_dir / "deterministic_replay_receipt.json"),
+                )
 
 
 if __name__ == "__main__":

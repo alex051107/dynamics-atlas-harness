@@ -39,13 +39,19 @@ class GovernanceConsistencyTests(unittest.TestCase):
             ["MERGED", "PASS"],
         )
         live_agent = work_item(status, "LIVE_AGENT_EXPOSED_CASES_V1")
-        self.assertEqual(live_agent["state"], "EXPOSED_EVALUATION_COMPLETE_HARD_GATES_FAILED")
+        self.assertEqual(
+            live_agent["state"],
+            "EXPOSED_EVALUATION_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED",
+        )
         self.assertEqual(live_agent["authorization"], "USER_DECISION_DA-20260826-032")
         self.assertEqual(
             status["next_allowed_action"]["action"],
-            "HUMAN_REVIEW_LIVE_AGENT_EXPOSED_CASES_V1_COMPARISON_REPORT",
+            "HUMAN_MERGE_REVIEW_PR7_EXPOSED_AGENT_CONTRACT_FAILURE_BASELINE",
         )
-        self.assertEqual(live_agent["observed_result"]["result"], "NO_TYPED_BOUNDED_HARNESS_PASS")
+        self.assertEqual(
+            live_agent["observed_result"]["result"],
+            "SAFE_BUT_CAPABILITY_REJECTED_NO_TYPED_CONTRACT_PASS",
+        )
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "STAGE2_ADK_HELD_OUT")["status"],
             "NOT_AUTHORIZED",

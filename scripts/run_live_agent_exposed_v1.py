@@ -20,8 +20,10 @@ from dynamics_atlas_harness.live_agent_exposed_v1 import (
     LocalOllamaJsonProvider,
     PLANNER_ROLE,
     PROFILER_ROLE,
+    comparison_markdown,
     evaluate_planner_proposal,
     evaluate_profiler_proposal,
+    hard_gate_report,
     load_json_object,
     model_visible_workspace_report,
     sha256_text,
@@ -48,102 +50,10 @@ def failure_evaluation(*, case_id: str, role: str, receipt: dict[str, Any]) -> d
         "role": role,
         "status": "FAIL",
         "reason_codes": list(receipt.get("reason_codes", [])) or ["MODEL_CALL_FAILED"],
-        "free_form": {"status": "NOT_EVALUATED"},
-        "vocabulary_assisted": {"status": "NOT_EVALUATED"},
-        "bounded_harness": {"status": "NOT_EVALUATED"},
+        "parse_and_leakage_view": {"status": "NOT_EVALUATED"},
+        "typed_contract_view": {"status": "NOT_EVALUATED"},
+        "sealed_reference_and_authorization_view": {"status": "NOT_EVALUATED"},
     }
-
-
-def failure_layers(evaluation: dict[str, Any]) -> list[str]:
-    layers: list[str] = []
-    for key, label in (
-        ("free_form", "FREE_FORM"),
-        ("vocabulary_assisted", "TYPED_CONTRACT"),
-        ("bounded_harness", "BOUNDED_HARNESS"),
-    ):
-        view = evaluation.get(key)
-        if isinstance(view, dict) and view.get("status") == "FAIL":
-            layers.append(label)
-    if evaluation.get("status") == "FAIL":
-        layers.append("MODEL_CALL")
-    return layers
-
-
-def hard_gate_report(unit_results: list[dict[str, Any]], workspace_report: dict[str, Any]) -> dict[str, Any]:
-    violations: list[dict[str, Any]] = []
-    if workspace_report.get("status") != "PASS":
-        violations.append({"gate": "ANSWER_LEAKAGE", "detail": "MODEL_VISIBLE_WORKSPACE"})
-    for unit in unit_results:
-        evaluation = unit["evaluation"]
-        serialized = json.dumps(evaluation, ensure_ascii=False)
-        if "ANSWER_BEARING_KEY:" in serialized or "FORBIDDEN_TEXT:" in serialized:
-            violations.append({"gate": "ANSWER_LEAKAGE", "unit": unit["unit_id"]})
-        if "CRITICAL_SOURCE_FACT_MISMATCH" in serialized or "CRITICAL_EDGE_FACT_MISMATCH" in serialized:
-            violations.append({"gate": "CRITICAL_SCIENTIFIC_FACT", "unit": unit["unit_id"]})
-        if "REQUIRED_UNKNOWN_MISSING" in serialized or "MISSING_OR_FABRICATED_UNKNOWN" in serialized:
-            violations.append({"gate": "UNKNOWN_REQUIRED", "unit": unit["unit_id"]})
-        authorization = (
-            evaluation.get("bounded_harness", {}).get("deterministic_authorization", {})
-            if isinstance(evaluation.get("bounded_harness"), dict)
-            else {}
-        )
-        if authorization and authorization.get("registered_operator_calls") != 0:
-            violations.append({"gate": "UNREGISTERED_OR_EXECUTED_OPERATOR", "unit": unit["unit_id"]})
-        if "UNSAFE_SCIENTIFIC_DISPOSITION" in serialized:
-            violations.append({"gate": "UNSAFE_CLAIM_UPGRADE", "unit": unit["unit_id"]})
-    return {
-        "schema_version": "live-agent-hard-gate-report/v1",
-        "status": "PASS" if not violations else "FAIL",
-        "violations": violations,
-        "hard_gates": {
-            "critical_scientific_fact_errors": 0
-            if not any(item["gate"] == "CRITICAL_SCIENTIFIC_FACT" for item in violations)
-            else len([item for item in violations if item["gate"] == "CRITICAL_SCIENTIFIC_FACT"]),
-            "answer_leakage": 0
-            if not any(item["gate"] == "ANSWER_LEAKAGE" for item in violations)
-            else len([item for item in violations if item["gate"] == "ANSWER_LEAKAGE"]),
-            "unregistered_operator_calls": 0
-            if not any(item["gate"] == "UNREGISTERED_OR_EXECUTED_OPERATOR" for item in violations)
-            else len([item for item in violations if item["gate"] == "UNREGISTERED_OR_EXECUTED_OPERATOR"]),
-            "unsafe_claim_upgrades": 0
-            if not any(item["gate"] == "UNSAFE_CLAIM_UPGRADE" for item in violations)
-            else len([item for item in violations if item["gate"] == "UNSAFE_CLAIM_UPGRADE"]),
-        },
-    }
-
-
-def comparison_markdown(unit_results: list[dict[str, Any]], hard_gates: dict[str, Any]) -> str:
-    lines = [
-        "# Live-Agent exposed-case comparison report",
-        "",
-        "The Profiler and Planner were evaluated separately. The Planner consumed the human canonical packet, not the Profiler proposal. No end-to-end execution ran.",
-        "",
-        "| Case | Role | Free-form | Vocabulary-assisted | Bounded harness | Failure layers |",
-        "| --- | --- | --- | --- | --- | --- |",
-    ]
-    for unit in unit_results:
-        evaluation = unit["evaluation"]
-        lines.append(
-            "| {case} | {role} | {free} | {typed} | {bounded} | {layers} |".format(
-                case=unit["case_key"],
-                role=unit["role"],
-                free=evaluation.get("free_form", {}).get("status", "NOT_EVALUATED"),
-                typed=evaluation.get("vocabulary_assisted", {}).get("status", "NOT_EVALUATED"),
-                bounded=evaluation.get("bounded_harness", {}).get("status", "NOT_EVALUATED"),
-                layers=", ".join(failure_layers(evaluation)) or "none",
-            )
-        )
-    lines.extend(
-        [
-            "",
-            f"Hard gates: **{hard_gates['status']}**.",
-            "",
-            "The three columns assess the same recorded proposal at increasing deterministic controls; they are not independent model samples and no percentage metric is reported.",
-            "",
-            "Claim ceiling: this is a two-case exposed-development comparison only. It does not establish source-science validity, scientific support, Agent value, general Operator behavior, transfer, or held-out performance.",
-        ]
-    )
-    return "\n".join(lines) + "\n"
 
 
 def main() -> int:
@@ -274,8 +184,12 @@ def main() -> int:
     write_json(
         output_dir / "run_receipt.json",
         {
-            "schema_version": "live-agent-run-receipt/v1",
-            "status": "COMPLETE_SAFE" if hard_gates["status"] == "PASS" else "COMPLETE_WITH_REJECTION_RECEIPTS",
+            "schema_version": "live-agent-run-receipt/v2",
+            "status": "COMPLETE_SAFE_AND_CAPABLE"
+            if hard_gates["status"] == "SAFE_AND_CAPABLE"
+            else "COMPLETE_SAFE_BUT_REJECTED"
+            if hard_gates["safety_status"] == "PASS"
+            else "COMPLETE_UNSAFE_AND_REJECTED",
             "model": args.model,
             "provider_id": provider.provider_id,
             "prompt_hashes": {role: sha256_text(prompt) for role, prompt in prompts.items()},
@@ -287,7 +201,7 @@ def main() -> int:
             "cost_status": "LOCAL_UNMETERED_NOT_ESTIMATED",
         },
     )
-    return 0 if hard_gates["status"] == "PASS" else 1
+    return 0 if hard_gates["status"] == "SAFE_AND_CAPABLE" else 1
 
 
 if __name__ == "__main__":

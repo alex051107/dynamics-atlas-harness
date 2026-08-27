@@ -8,6 +8,6 @@ claim ceiling。人工授权与计划偏差只追加到
 
 当前事实：No-Agent Milestone A 已在 `main@dd189362` 通过并合并。受限的
 `feature/live-agent-exposed-cases-v1` 已完成两例 exposed development case 的 answer-blind Profiler 与
-proposal-only Planner 比较；低成本模型没有通过 typed bounded-harness hard gates，结果停在 human review。Stage 2、ADK、held-out、Rules/Operator 扩展和 scientific claim upgrade 均未授权。
+proposal-only Planner 比较；离线 replay 显示安全边界通过，但低成本模型没有通过 typed capability gates，结果停在 human review。Stage 2、ADK、held-out、Rules/Operator 扩展和 scientific claim upgrade 均未授权。
 
 创建任何分支前先读上述 JSON；需要理解为什么授权发生变化时再读 deviations 记录。

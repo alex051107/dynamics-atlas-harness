@@ -1,13 +1,14 @@
 {
-  "schema_version": "planner-evaluation/v1",
+  "schema_version": "planner-evaluation/v2",
   "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
-  "free_form": {
-    "schema_version": "free-form-view/v1",
+  "parse_and_leakage_view": {
+    "schema_version": "parse-and-leakage-view/v1",
     "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
     "status": "PASS",
-    "reason_codes": []
+    "reason_codes": [],
+    "proposal_parse_status": "PARSED_OBJECT"
   },
-  "vocabulary_assisted": {
+  "typed_contract_view": {
     "schema_version": "planner-proposal-validation/v1",
     "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
     "status": "FAIL",
@@ -23,21 +24,35 @@
     ],
     "execution_performed": false
   },
-  "bounded_harness": {
-    "schema_version": "bounded-planner-harness-view/v1",
+  "sealed_reference_and_authorization_view": {
+    "schema_version": "sealed-reference-and-authorization-planner-view/v1",
     "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
     "status": "FAIL",
     "reason_codes": [
       "TYPED_VALIDATION_OR_COMPARISON_OR_AUTHORIZATION_FAILED"
     ],
-    "comparison": {
-      "schema_version": "planner-reference-comparison/v1",
-      "case_id": null,
+    "required_card_selection": {
+      "schema_version": "planner-required-card-selection/v1",
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "status": "PASS",
+      "reason_codes": [],
+      "differences": []
+    },
+    "typed_envelope": {
+      "schema_version": "planner-proposal-validation/v1",
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
       "status": "FAIL",
       "reason_codes": [
-        "SEALED_REFERENCE_CASE_MISSING"
+        "INVALID_PLANNER_PROPOSAL_SCHEMA",
+        "CASE_ID_MISMATCH",
+        "MISSING_CLAIM_CEILING_ACKNOWLEDGEMENT"
       ],
-      "differences": []
+      "proposed_card_ids": [
+        "xeisd-attest-edge-condition",
+        "xeisd-attest-jcoupling-composition",
+        "xeisd-attest-random-composition"
+      ],
+      "execution_performed": false
     },
     "deterministic_authorization": {
       "schema_version": "planner-deterministic-authorization/v1",
@@ -52,5 +67,5 @@
       "registered_operator_calls": 0
     }
   },
-  "comparison_sampling_boundary": "The three views evaluate the same recorded model proposal; they are not independent model samples."
+  "comparison_sampling_boundary": "The three views inspect one recorded proposal; they are not independent model arms or samples."
 }

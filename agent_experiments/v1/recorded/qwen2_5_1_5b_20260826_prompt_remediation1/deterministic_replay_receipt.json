@@ -1,0 +1,12 @@
+{
+  "schema_version": "live-agent-deterministic-replay-receipt/v1",
+  "status": "PASS",
+  "mode": "DETERMINISTIC_REPLAY_NO_LIVE_MODEL",
+  "model_transport_invocations": 0,
+  "unit_count": 4,
+  "workspace_status": "PASS",
+  "hard_gate_status": "SAFE_BUT_CAPABILITY_REJECTED",
+  "safety_status": "PASS",
+  "capability_status": "FAIL",
+  "prompt_provenance_status": "REPRODUCIBLE_SNAPSHOTS"
+}
