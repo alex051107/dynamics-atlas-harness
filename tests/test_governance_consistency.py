@@ -114,6 +114,13 @@ class GovernanceConsistencyTests(unittest.TestCase):
             "Open review invitation:",
             "Frozen Plan semantic milestone:",
             "GitHub delivery PR number:",
+            "## Advisory review handback",
+            "Review request exact head:",
+            "Reviewer transport state:",
+            "Accepted findings and verification evidence:",
+            "Rejected findings and contrary evidence:",
+            "Deferred findings and reason:",
+            "REVIEW_NOT_DELIVERED",
         ):
             with self.subTest(required_text=required_text):
                 self.assertIn(required_text, template)

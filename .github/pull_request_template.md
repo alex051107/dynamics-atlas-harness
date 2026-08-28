@@ -61,6 +61,22 @@ List duplicate or out-of-scope checks that were skipped and the risk-based reaso
 
 List unresolved evidence, implementation, portability, or scientific risks.
 
+## Advisory review handback
+
+Complete this after an advisory review is actually received. A missing or failed
+transport is not a review result.
+
+- Review request exact head:
+- Reviewer transport state: `NOT_REQUESTED | SENT_VISIBLE | RESPONSE_CAPTURED | DELIVERY_UNCERTAIN | BLOCKED_RUNTIME_FOR_EXACT_EVENT`
+- Concrete findings:
+- Accepted findings and verification evidence:
+- Rejected findings and contrary evidence:
+- Deferred findings and reason:
+- Review outcome for this PR: `NO_FINDINGS | REMEDIATION_PENDING | REMEDIATION_VERIFIED | REVIEW_NOT_DELIVERED`
+
+The handback is advisory methodology evidence only. It cannot approve source science,
+upgrade a claim, release a human gate, or authorize a merge by itself.
+
 ## Next authorized action
 
 State the one next action allowed by the current execution status and the mandatory stop point.
