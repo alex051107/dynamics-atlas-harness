@@ -20,11 +20,13 @@ from dynamics_atlas_harness.live_agent_exposed_v1 import (
     PROFILER_ROLE,
     PLANNER_ROLE,
     authorize_planner_proposal,
+    build_profiler_output_schema,
     compare_planner_proposal,
     compare_profiler_projection,
     evaluate_planner_proposal,
     evaluate_profiler_proposal,
     hard_gate_report,
+    materialize_planner_card_selection,
     model_visible_workspace_report,
     replay_recorded_run,
     validate_model_visible_packet,
@@ -104,6 +106,24 @@ def planner_proposal(packet: dict) -> dict:
     }
 
 
+def recorded_planner_proposal(case_key: str) -> dict:
+    return read_json(
+        EXPERIMENT_ROOT
+        / "recorded"
+        / "qwen2_5_1_5b_20260826_prompt_remediation1"
+        / f"{case_key}_planner"
+        / "raw_response.txt"
+    )
+
+
+def recorded_card_selection(case_key: str) -> dict:
+    actions = recorded_planner_proposal(case_key)["proposed_actions"]
+    return {
+        "selected_card_ids": [action["card_id"] for action in actions],
+        "rationales": {action["card_id"]: action["rationale"] for action in actions},
+    }
+
+
 class LiveAgentExposedV1Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -174,6 +194,57 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
             any(code.startswith("FORBIDDEN_TEXT:") for code in validation["reason_codes"])
         )
 
+    def test_profiler_schema_is_packet_derived_and_keeps_scientific_values_open(self) -> None:
+        for case_key in ("xeisd", "hsp90"):
+            packet = profiler_packet(case_key)
+            schema = build_profiler_output_schema(packet)
+            with self.subTest(case_key=case_key):
+                self.assertEqual(schema["required"], packet["output_contract"]["required_top_level_fields"])
+                self.assertFalse(schema["additionalProperties"])
+                sources_schema = schema["properties"]["sources"]
+                self.assertEqual(sources_schema["minItems"], len(packet["source_material"]))
+                self.assertEqual(sources_schema["maxItems"], len(packet["source_material"]))
+                source_items = (
+                    sources_schema["items"].get("oneOf", [sources_schema["items"]])
+                )
+                for source_schema in source_items:
+                    properties = source_schema["properties"]
+                    self.assertEqual(properties["sample_system_composition"], {"const": "UNKNOWN"})
+                    self.assertNotIn("const", properties["time_semantics"])
+                    self.assertEqual(
+                        properties["time_semantics"]["enum"],
+                        packet["controlled_vocabulary"]["time_semantics"],
+                    )
+                edges_schema = schema["properties"]["edges"]
+                self.assertEqual(edges_schema["maxItems"], len(packet["edge_material"]))
+                unknown_schema = schema["properties"]["unknowns"]
+                self.assertEqual(
+                    unknown_schema["minItems"],
+                    len(packet["unknown_policy"]["required_unknown_paths"]),
+                )
+
+    def test_schema_constrained_transport_uses_existing_local_provider(self) -> None:
+        packet = profiler_packet("xeisd")
+        schema = build_profiler_output_schema(packet)
+        provider = LocalOllamaJsonProvider(
+            model="qwen2.5:1.5b",
+            endpoint="http://127.0.0.1:11434/api/generate",
+            profiler_prompt="Return JSON.",
+            planner_prompt="Return JSON.",
+            allow_one_json_repair=False,
+        )
+        payload = provider.transport_payload(
+            model=provider.model, prompt="test", response_format=schema
+        )
+        self.assertEqual(payload["format"], schema)
+        expected = profiler_proposal(packet["case_id"], self.profiler_reference)
+        with mock.patch.object(provider, "_post", return_value=json.dumps(expected)) as post:
+            self.assertEqual(
+                provider.propose_profile_schema_constrained(packet, schema), expected
+            )
+        self.assertEqual(post.call_count, 1)
+        self.assertEqual(post.call_args.kwargs["response_format"], schema)
+
     def test_planner_reference_proposals_authorize_without_execution(self) -> None:
         for case_key in ("xeisd", "hsp90"):
             packet = planner_packet(case_key)
@@ -195,6 +266,111 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
                 self.assertEqual(authorization["status"], "AUTHORIZED_NO_EXECUTION")
                 self.assertFalse(authorization["execution_performed"])
                 self.assertEqual(authorization["registered_operator_calls"], 0)
+
+    def test_recorded_planner_selection_materializes_platform_owned_envelope(self) -> None:
+        for case_key in ("xeisd", "hsp90"):
+            packet = planner_packet(case_key)
+            materialization = materialize_planner_card_selection(
+                recorded_card_selection(case_key), packet
+            )
+            with self.subTest(case_key=case_key):
+                self.assertEqual(materialization["status"], "PASS")
+                self.assertEqual(materialization["model_transport_invocations"], 0)
+                proposal = materialization["canonical_proposal"]
+                self.assertIsInstance(proposal, dict)
+                evaluation = evaluate_planner_proposal(
+                    proposal, packet, self.planner_reference, REPO_ROOT
+                )
+                self.assertEqual(evaluation["typed_contract_view"]["status"], "PASS")
+                self.assertEqual(
+                    evaluation["sealed_reference_and_authorization_view"]["status"],
+                    "PASS",
+                )
+                self.assertEqual(
+                    evaluation["sealed_reference_and_authorization_view"]
+                    ["deterministic_authorization"]["status"],
+                    "AUTHORIZED_NO_EXECUTION",
+                )
+
+    def test_planner_materialization_derives_hsp90_operator_from_card_only(self) -> None:
+        packet = planner_packet("hsp90")
+        selection = {
+            "selected_card_ids": ["hsp90-exact-time-anatomy-control"],
+            "rationales": {
+                "hsp90-exact-time-anatomy-control": "Select the permitted exact card."
+            },
+        }
+        materialization = materialize_planner_card_selection(selection, packet)
+        self.assertEqual(materialization["status"], "PASS")
+        action = materialization["canonical_proposal"]["proposed_actions"][0]
+        self.assertEqual(
+            action["operator_id"], "hsp90.directional_time_anatomy.v1_case_bound"
+        )
+        self.assertNotIn("operator_id", selection)
+
+    def test_planner_materialization_rejects_untrusted_or_malformed_selection(self) -> None:
+        packet = planner_packet("xeisd")
+        valid = {
+            "selected_card_ids": ["xeisd-attest-random-composition"],
+            "rationales": {
+                "xeisd-attest-random-composition": "Select the declared card."
+            },
+        }
+        cases = {
+            "extra_platform_field": {
+                **valid,
+                "execution_requested": False,
+            },
+            "unknown_card": {
+                "selected_card_ids": ["unknown-card"],
+                "rationales": {"unknown-card": "No."},
+            },
+            "duplicate_card": {
+                "selected_card_ids": [
+                    "xeisd-attest-random-composition",
+                    "xeisd-attest-random-composition",
+                ],
+                "rationales": {
+                    "xeisd-attest-random-composition": "Duplicate selection."
+                },
+            },
+            "blank_rationale": {
+                "selected_card_ids": ["xeisd-attest-random-composition"],
+                "rationales": {"xeisd-attest-random-composition": "  "},
+            },
+        }
+        for label, selection in cases.items():
+            with self.subTest(label=label):
+                materialization = materialize_planner_card_selection(selection, packet)
+                self.assertEqual(materialization["status"], "FAIL")
+                self.assertIsNone(materialization["canonical_proposal"])
+
+    def test_incomplete_valid_planner_selection_fails_only_sealed_card_comparison(self) -> None:
+        packet = planner_packet("xeisd")
+        selection = {
+            "selected_card_ids": ["xeisd-attest-random-composition"],
+            "rationales": {
+                "xeisd-attest-random-composition": "Select one permitted card only."
+            },
+        }
+        materialization = materialize_planner_card_selection(selection, packet)
+        self.assertEqual(materialization["status"], "PASS")
+        evaluation = evaluate_planner_proposal(
+            materialization["canonical_proposal"],
+            packet,
+            self.planner_reference,
+            REPO_ROOT,
+        )
+        self.assertEqual(evaluation["typed_contract_view"]["status"], "PASS")
+        self.assertEqual(
+            evaluation["sealed_reference_and_authorization_view"]
+            ["required_card_selection"]["status"],
+            "FAIL",
+        )
+        self.assertEqual(
+            evaluation["sealed_reference_and_authorization_view"]["status"],
+            "FAIL",
+        )
 
     def test_planner_rejects_execution_and_unregistered_operator(self) -> None:
         packet = planner_packet("hsp90")
@@ -321,6 +497,23 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
         )
         redirected.close()
 
+    def test_blocked_profiler_diagnostic_cannot_claim_completed_generation(self) -> None:
+        diagnostic_root = (
+            EXPERIMENT_ROOT / "diagnostics" / "profiler_schema_constrained_v1_20260827"
+        )
+        receipt = read_json(diagnostic_root / "run_receipt.json")
+        self.assertEqual(receipt["status"], "BLOCKED_PRECONDITION")
+        self.assertEqual(receipt["model_generation_requests_attempted"], 0)
+        self.assertEqual(receipt["model_generation_calls_completed"], 0)
+        self.assertEqual(receipt["runtime_metadata"]["status"], "BLOCKED")
+        for case_key in ("xeisd", "hsp90"):
+            case_dir = diagnostic_root / f"{case_key}_profiler"
+            with self.subTest(case_key=case_key):
+                self.assertTrue((case_dir / "preflight.json").is_file())
+                self.assertTrue((case_dir / "output_schema.json").is_file())
+                for generated_name in ("raw_response.txt", "model_call_receipt.json", "proposal.json"):
+                    self.assertFalse((case_dir / generated_name).exists())
+
     def test_committed_runs_replay_without_model_transport(self) -> None:
         expected = {
             "qwen2_5_1_5b_20260826_v1": (
@@ -387,9 +580,30 @@ class LiveAgentExposedV1Tests(unittest.TestCase):
                 self.assertEqual(
                     replay["run_receipt"], read_json(recorded_dir / "run_receipt.json")
                 )
+                recorded_manifest = read_json(recorded_dir / "evaluation_manifest.json")
+                current_manifest = replay["manifest"]
+                # The recorded source hash is historical provenance.  A new helper in
+                # the same evaluator module may change the current replay hash without
+                # changing any replayed packet, proposal, evaluation, or receipt.
                 self.assertEqual(
-                    replay["manifest"],
-                    read_json(recorded_dir / "evaluation_manifest.json"),
+                    {
+                        key: value
+                        for key, value in current_manifest.items()
+                        if key != "replay_evaluator"
+                    },
+                    {
+                        key: value
+                        for key, value in recorded_manifest.items()
+                        if key != "replay_evaluator"
+                    },
+                )
+                self.assertEqual(
+                    current_manifest["replay_evaluator"]["source_path"],
+                    recorded_manifest["replay_evaluator"]["source_path"],
+                )
+                self.assertRegex(
+                    current_manifest["replay_evaluator"]["source_sha256"],
+                    r"^[0-9a-f]{64}$",
                 )
                 self.assertEqual(
                     replay["replay_receipt"],

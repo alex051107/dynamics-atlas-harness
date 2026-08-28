@@ -1,0 +1,15 @@
+{
+  "packet_validation": {
+    "schema_version": "model-visible-packet-validation/v1",
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "status": "PASS",
+    "reason_codes": [],
+    "role": "PROFILER",
+    "packet_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b"
+  },
+  "schema_status": "PASS",
+  "reason_codes": [],
+  "packet_path": "agent_experiments/v1/workspaces/xeisd_profiler/input.json",
+  "packet_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b",
+  "schema_sha256": "043f5fd72aea5ef2d51e1b4422eff2f293cb84fd3df4b7a9f2b98b9faf10fe0b"
+}

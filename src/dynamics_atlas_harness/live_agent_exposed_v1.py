@@ -343,19 +343,35 @@ class LocalOllamaJsonProvider(ProfileProvider, ProposalProvider):
         self.last_raw_response: str | None = None
 
     @staticmethod
-    def transport_payload(*, model: str, prompt: str) -> dict[str, Any]:
+    def transport_payload(
+        *,
+        model: str,
+        prompt: str,
+        response_format: str | Mapping[str, Any] = "json",
+    ) -> dict[str, Any]:
         """Return the exact tool-less local-transport request body."""
 
+        if response_format != "json" and not isinstance(response_format, Mapping):
+            raise LiveAgentExposedError(
+                "local Ollama response format must be 'json' or a JSON Schema object"
+            )
         return {
             "model": model,
             "prompt": prompt,
-            "format": "json",
+            "format": response_format,
             "stream": False,
             "options": {"temperature": 0, "num_predict": 1200},
         }
 
-    def _post(self, prompt: str) -> str:
-        payload = self.transport_payload(model=self.model, prompt=prompt)
+    def _post(
+        self,
+        prompt: str,
+        *,
+        response_format: str | Mapping[str, Any] = "json",
+    ) -> str:
+        payload = self.transport_payload(
+            model=self.model, prompt=prompt, response_format=response_format
+        )
         request = urllib.request.Request(
             self.endpoint,
             data=json.dumps(payload).encode("utf-8"),
@@ -378,7 +394,13 @@ class LocalOllamaJsonProvider(ProfileProvider, ProposalProvider):
             return None
         return value if isinstance(value, dict) else None
 
-    def _propose(self, role: str, packet: Mapping[str, Any]) -> dict[str, Any]:
+    def _propose(
+        self,
+        role: str,
+        packet: Mapping[str, Any],
+        *,
+        response_format: str | Mapping[str, Any] = "json",
+    ) -> dict[str, Any]:
         packet_validation = validate_model_visible_packet(packet, role)
         if packet_validation["status"] != "PASS":
             self.last_receipt = _status_receipt(
@@ -399,7 +421,7 @@ class LocalOllamaJsonProvider(ProfileProvider, ProposalProvider):
         started = time.perf_counter()
         error_code: str | None = None
         try:
-            raw_responses.append(self._post(prompt))
+            raw_responses.append(self._post(prompt, response_format=response_format))
         except (OSError, urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, LocalModelCallError) as exc:
             error_code = f"LOCAL_MODEL_TRANSPORT_ERROR:{type(exc).__name__}"
         proposal = self._parse_object(raw_responses[-1]) if raw_responses else None
@@ -412,7 +434,9 @@ class LocalOllamaJsonProvider(ProfileProvider, ProposalProvider):
                 "or new facts.\n\nTask packet:\n" + _canonical_json(packet)
             )
             try:
-                raw_responses.append(self._post(repair_prompt))
+                raw_responses.append(
+                    self._post(repair_prompt, response_format=response_format)
+                )
             except (OSError, urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, LocalModelCallError) as exc:
                 error_code = f"LOCAL_MODEL_REPAIR_TRANSPORT_ERROR:{type(exc).__name__}"
             proposal = self._parse_object(raw_responses[-1]) if raw_responses else None
@@ -449,8 +473,106 @@ class LocalOllamaJsonProvider(ProfileProvider, ProposalProvider):
     def propose_profile(self, request_view: Mapping[str, Any]) -> dict[str, Any]:
         return self._propose(PROFILER_ROLE, request_view)
 
+    def propose_profile_schema_constrained(
+        self,
+        packet: Mapping[str, Any],
+        output_schema: Mapping[str, Any],
+    ) -> dict[str, Any]:
+        """Send one Profiler request with a packet-derived JSON Schema.
+
+        This concrete helper deliberately does not change the general provider
+        protocol.  The schema is expected to be derived from model-visible packet
+        fields by ``build_profiler_output_schema``; it is never a sealed reference.
+        """
+
+        if not isinstance(output_schema, Mapping):
+            raise LiveAgentExposedError("Profiler response schema must be a JSON object")
+        return self._propose(
+            PROFILER_ROLE,
+            packet,
+            response_format=output_schema,
+        )
+
     def propose(self, bounded_view: Mapping[str, Any]) -> dict[str, Any]:
         return self._propose(PLANNER_ROLE, bounded_view)
+
+    def runtime_metadata(self) -> dict[str, Any]:
+        """Read the local Ollama version and exact model digest without generation.
+
+        These two loopback GET requests are an execution preflight only.  They do
+        not send a packet, prompt, tools, or model-generation request.
+        """
+
+        _validate_ollama_endpoint(self.endpoint)
+        parsed = urlsplit(self.endpoint)
+        base_url = f"{parsed.scheme}://{parsed.netloc}"
+        responses: dict[str, Mapping[str, Any]] = {}
+        requests_made = 0
+        try:
+            opener = urllib.request.build_opener(_NoRedirectHandler())
+            for label, path in (("version", "/api/version"), ("tags", "/api/tags")):
+                request = urllib.request.Request(
+                    base_url + path,
+                    headers={"Accept": "application/json"},
+                    method="GET",
+                )
+                with opener.open(request, timeout=self.timeout_seconds) as response:
+                    value = json.loads(response.read().decode("utf-8"))
+                requests_made += 1
+                if not isinstance(value, Mapping):
+                    raise LocalModelCallError("LOCAL_MODEL_METADATA_NOT_OBJECT")
+                responses[label] = value
+        except (
+            OSError,
+            urllib.error.URLError,
+            urllib.error.HTTPError,
+            json.JSONDecodeError,
+            LocalModelCallError,
+        ) as exc:
+            return _status_receipt(
+                schema_version="local-ollama-runtime-metadata/v1",
+                case_id=None,
+                status="BLOCKED",
+                reason_codes=[f"LOCAL_MODEL_METADATA_ERROR:{type(exc).__name__}"],
+                endpoint=base_url,
+                model=self.model,
+                metadata_requests=requests_made,
+                model_generation_calls=0,
+            )
+        version = responses["version"].get("version")
+        models = responses["tags"].get("models")
+        model_entry = next(
+            (
+                item
+                for item in models
+                if isinstance(item, Mapping) and item.get("name") == self.model
+            ),
+            None,
+        ) if isinstance(models, list) else None
+        if not isinstance(version, str) or not version or not isinstance(model_entry, Mapping):
+            return _status_receipt(
+                schema_version="local-ollama-runtime-metadata/v1",
+                case_id=None,
+                status="BLOCKED",
+                reason_codes=["LOCAL_MODEL_TAG_NOT_AVAILABLE"],
+                endpoint=base_url,
+                model=self.model,
+                metadata_requests=requests_made,
+                model_generation_calls=0,
+            )
+        digest = model_entry.get("digest")
+        return _status_receipt(
+            schema_version="local-ollama-runtime-metadata/v1",
+            case_id=None,
+            status="PASS" if isinstance(digest, str) and digest else "BLOCKED",
+            reason_codes=[] if isinstance(digest, str) and digest else ["LOCAL_MODEL_DIGEST_MISSING"],
+            endpoint=base_url,
+            model=self.model,
+            ollama_version=version,
+            model_digest=digest if isinstance(digest, str) and digest else None,
+            metadata_requests=requests_made,
+            model_generation_calls=0,
+        )
 
 
 def _source_index(proposal: Mapping[str, Any]) -> dict[str, Mapping[str, Any]]:
@@ -494,6 +616,207 @@ def _packet_edge_ids(packet: Mapping[str, Any]) -> set[str]:
         item["edge_id"]
         for item in material
         if isinstance(item, Mapping) and isinstance(item.get("edge_id"), str)
+    }
+
+
+def _schema_string_enum(
+    vocabulary: Mapping[str, Any], field: str
+) -> list[str]:
+    values = vocabulary.get(field)
+    if (
+        not isinstance(values, list)
+        or not values
+        or any(not isinstance(value, str) or not value for value in values)
+    ):
+        raise LiveAgentExposedError(
+            f"Profiler packet lacks a usable controlled vocabulary for {field}"
+        )
+    return list(values)
+
+
+def _schema_source_item(
+    source: Mapping[str, Any], vocabulary: Mapping[str, Any]
+) -> dict[str, Any]:
+    source_id = source.get("source_id")
+    locator = source.get("source_locator")
+    if not isinstance(source_id, str) or not source_id:
+        raise LiveAgentExposedError("Profiler source material lacks source_id")
+    if not isinstance(locator, str) or not locator:
+        raise LiveAgentExposedError(
+            f"Profiler source material lacks source_locator for {source_id}"
+        )
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": [
+            "source_id",
+            "method_or_modality",
+            "evidence_role",
+            "native_observable_kind",
+            "estimand_kind",
+            "time_semantics",
+            "source_locator",
+            "sample_system_composition",
+        ],
+        "properties": {
+            "source_id": {"const": source_id},
+            "method_or_modality": {
+                "type": "string",
+                "enum": _schema_string_enum(vocabulary, "method_or_modality"),
+            },
+            "evidence_role": {
+                "type": "string",
+                "enum": _schema_string_enum(vocabulary, "evidence_role"),
+            },
+            "native_observable_kind": {
+                "type": "string",
+                "enum": _schema_string_enum(vocabulary, "native_observable_kind"),
+            },
+            "estimand_kind": {
+                "type": "string",
+                "enum": _schema_string_enum(vocabulary, "estimand_kind"),
+            },
+            "time_semantics": {
+                "type": "string",
+                "enum": _schema_string_enum(vocabulary, "time_semantics"),
+            },
+            "source_locator": {"const": locator},
+            "sample_system_composition": {"const": "UNKNOWN"},
+        },
+    }
+
+
+def _schema_edge_item(edge: Mapping[str, Any]) -> dict[str, Any]:
+    edge_id = edge.get("edge_id")
+    left_source_id = edge.get("left_source_id")
+    right_source_id = edge.get("right_source_id")
+    if not all(
+        isinstance(value, str) and value
+        for value in (edge_id, left_source_id, right_source_id)
+    ):
+        raise LiveAgentExposedError("Profiler edge material lacks an exact endpoint")
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": [
+            "edge_id",
+            "left_source_id",
+            "right_source_id",
+            "condition_relation",
+        ],
+        "properties": {
+            "edge_id": {"const": edge_id},
+            "left_source_id": {"const": left_source_id},
+            "right_source_id": {"const": right_source_id},
+            "condition_relation": {"const": "UNKNOWN"},
+        },
+    }
+
+
+def _schema_unknown_item(path: str) -> dict[str, Any]:
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["path", "reason", "evidence_pointer"],
+        "properties": {
+            "path": {"const": path},
+            "reason": {"type": "string", "minLength": 1},
+            "evidence_pointer": {"type": "string", "minLength": 1},
+        },
+    }
+
+
+def build_profiler_output_schema(packet: Mapping[str, Any]) -> dict[str, Any]:
+    """Build a JSON Schema from only one model-visible Profiler packet.
+
+    This grammar fixes the output shape, known IDs, source locators, controlled
+    vocabulary, and explicit UNKNOWNs.  It intentionally leaves the scientific
+    values themselves as packet vocabulary enums; sealed references are never read
+    or encoded here.
+    """
+
+    packet = _json_object(packet, "profiler packet")
+    packet_validation = validate_model_visible_packet(packet, PROFILER_ROLE)
+    if packet_validation["status"] != "PASS":
+        raise LiveAgentExposedError("cannot build schema from an invalid Profiler packet")
+    case_id = _packet_case_id(packet)
+    if case_id is None:
+        raise LiveAgentExposedError("Profiler packet lacks case_id")
+    contract = packet.get("output_contract")
+    vocabulary = packet.get("controlled_vocabulary")
+    sources = packet.get("source_material")
+    edges = packet.get("edge_material")
+    unknown_policy = packet.get("unknown_policy")
+    if not isinstance(contract, Mapping) or not isinstance(vocabulary, Mapping):
+        raise LiveAgentExposedError("Profiler packet lacks output contract or vocabulary")
+    if not isinstance(sources, list) or not sources or not all(
+        isinstance(source, Mapping) for source in sources
+    ):
+        raise LiveAgentExposedError("Profiler packet lacks usable source material")
+    if not isinstance(edges, list) or not all(isinstance(edge, Mapping) for edge in edges):
+        raise LiveAgentExposedError("Profiler packet has invalid edge material")
+    if not isinstance(unknown_policy, Mapping):
+        raise LiveAgentExposedError("Profiler packet lacks unknown policy")
+    unknown_paths = unknown_policy.get("required_unknown_paths")
+    if (
+        not isinstance(unknown_paths, list)
+        or any(not isinstance(path, str) or not path for path in unknown_paths)
+        or len(set(unknown_paths)) != len(unknown_paths)
+    ):
+        raise LiveAgentExposedError("Profiler packet has invalid required unknown paths")
+    source_items = [_schema_source_item(source, vocabulary) for source in sources]
+    source_ids = [source["source_id"] for source in sources]
+    if len(set(source_ids)) != len(source_ids):
+        raise LiveAgentExposedError("Profiler packet has duplicate source IDs")
+    edge_items = [_schema_edge_item(edge) for edge in edges]
+    edge_ids = [edge["edge_id"] for edge in edges]
+    if len(set(edge_ids)) != len(edge_ids):
+        raise LiveAgentExposedError("Profiler packet has duplicate edge IDs")
+    if any(
+        edge["left_source_id"] not in source_ids
+        or edge["right_source_id"] not in source_ids
+        for edge in edges
+    ):
+        raise LiveAgentExposedError("Profiler packet edge endpoint is not model-visible")
+    output_schema_version = contract.get("schema_version")
+    if output_schema_version != PROFILER_PROPOSAL_SCHEMA:
+        raise LiveAgentExposedError("Profiler packet has an unsupported proposal schema")
+    required_top_level = contract.get("required_top_level_fields")
+    if required_top_level != ["schema_version", "case_id", "sources", "edges", "unknowns"]:
+        raise LiveAgentExposedError("Profiler packet has an unsupported top-level contract")
+    unknown_items = [_schema_unknown_item(path) for path in unknown_paths]
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": list(required_top_level),
+        "properties": {
+            "schema_version": {"const": output_schema_version},
+            "case_id": {"const": case_id},
+            "sources": {
+                "type": "array",
+                "minItems": len(source_items),
+                "maxItems": len(source_items),
+                "items": source_items[0]
+                if len(source_items) == 1
+                else {"oneOf": source_items},
+            },
+            "edges": {
+                "type": "array",
+                "minItems": len(edge_items),
+                "maxItems": len(edge_items),
+                "items": {"not": {}} if not edge_items else edge_items[0]
+                if len(edge_items) == 1
+                else {"oneOf": edge_items},
+            },
+            "unknowns": {
+                "type": "array",
+                "minItems": len(unknown_items),
+                "maxItems": len(unknown_items),
+                "items": unknown_items[0]
+                if len(unknown_items) == 1
+                else {"oneOf": unknown_items},
+            },
+        },
     }
 
 
@@ -745,6 +1068,105 @@ def _planner_cards(packet: Mapping[str, Any]) -> dict[str, Mapping[str, Any]]:
         for card in cards
         if isinstance(card, Mapping) and isinstance(card.get("card_id"), str)
     }
+
+
+def materialize_planner_card_selection(
+    selection: Any, packet: Mapping[str, Any]
+) -> dict[str, Any]:
+    """Turn a strict card-only selection into the platform-owned Planner envelope.
+
+    The model-owned selection cannot provide a case ID, route action, target,
+    operator ID, execution request, or scientific disposition.  Those values are
+    copied only from the packet and fixed contract values, then checked again by
+    the existing Planner evaluator.
+    """
+
+    packet = _json_object(packet, "planner packet")
+    case_id = _packet_case_id(packet)
+    reasons: list[str] = []
+    if not isinstance(selection, Mapping):
+        reasons.append("CARD_SELECTION_NOT_OBJECT")
+        selection = {}
+    expected_selection_fields = {"selected_card_ids", "rationales"}
+    selection_fields = {field for field in selection if isinstance(field, str)}
+    if len(selection_fields) != len(selection):
+        reasons.append("CARD_SELECTION_FIELD_NOT_STRING")
+    for field in sorted(expected_selection_fields - selection_fields):
+        reasons.append(f"CARD_SELECTION_FIELD_MISSING:{field}")
+    for field in sorted(selection_fields - expected_selection_fields):
+        reasons.append(f"CARD_SELECTION_FIELD_FORBIDDEN:{field}")
+    selected_card_ids = selection.get("selected_card_ids")
+    if not isinstance(selected_card_ids, list) or not selected_card_ids:
+        reasons.append("CARD_SELECTION_IDS_INVALID")
+        selected_card_ids = []
+    if any(not isinstance(card_id, str) or not card_id.strip() for card_id in selected_card_ids):
+        reasons.append("CARD_SELECTION_ID_NOT_NONEMPTY_STRING")
+    normalized_ids = [card_id for card_id in selected_card_ids if isinstance(card_id, str)]
+    if len(set(normalized_ids)) != len(normalized_ids):
+        reasons.append("CARD_SELECTION_ID_DUPLICATE")
+    rationales = selection.get("rationales")
+    if not isinstance(rationales, Mapping):
+        reasons.append("CARD_SELECTION_RATIONALES_INVALID")
+        rationales = {}
+    selected_id_set = set(normalized_ids)
+    rationale_id_set = set(rationales)
+    if rationale_id_set != selected_id_set:
+        reasons.append("CARD_SELECTION_RATIONALE_IDS_MISMATCH")
+    for card_id in selected_id_set:
+        rationale = rationales.get(card_id)
+        if not isinstance(rationale, str) or not rationale.strip():
+            reasons.append(f"CARD_SELECTION_RATIONALE_INVALID:{card_id}")
+
+    raw_cards = packet.get("permitted_action_cards")
+    cards = _planner_cards(packet)
+    if not isinstance(raw_cards, list) or not raw_cards or len(cards) != len(raw_cards):
+        reasons.append("PLANNER_PACKET_CARDS_INVALID")
+    for card_id in selected_id_set:
+        if card_id not in cards:
+            reasons.append(f"CARD_SELECTION_ID_NOT_PERMITTED:{card_id}")
+
+    expected_required_values = {
+        "execution_requested": False,
+        "scientific_disposition": "NOT_EVALUATED",
+        "claim_ceiling_acknowledgement": "NO_SCIENTIFIC_DISPOSITION",
+    }
+
+    canonical_proposal: dict[str, Any] | None = None
+    if not reasons:
+        actions: list[dict[str, Any]] = []
+        for card_id in normalized_ids:
+            card = cards[card_id]
+            action = {
+                "card_id": card_id,
+                "action": card.get("action"),
+                "target_rule_instance_id": card.get("target_rule_instance_id"),
+                "rationale": rationales[card_id],
+            }
+            if "operator_id" in card:
+                action["operator_id"] = card.get("operator_id")
+            actions.append(action)
+        canonical_proposal = {
+            "schema_version": PLANNER_PROPOSAL_SCHEMA,
+            "case_id": case_id,
+            "proposed_actions": actions,
+            **expected_required_values,
+        }
+        typed = validate_planner_proposal(canonical_proposal, packet)
+        if typed["status"] != "PASS":
+            reasons.extend(
+                f"PLATFORM_ENVELOPE_INVALID:{code}" for code in typed["reason_codes"]
+            )
+            canonical_proposal = None
+    return _status_receipt(
+        schema_version="planner-card-selection-materialization/v1",
+        case_id=case_id,
+        status="PASS" if canonical_proposal is not None else "FAIL",
+        reason_codes=reasons,
+        canonical_proposal=canonical_proposal,
+        selected_card_ids=normalized_ids,
+        execution_performed=False,
+        model_transport_invocations=0,
+    )
 
 
 def validate_planner_proposal(

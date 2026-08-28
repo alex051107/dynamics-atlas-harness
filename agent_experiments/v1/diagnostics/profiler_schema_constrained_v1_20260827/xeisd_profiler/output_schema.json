@@ -1,0 +1,262 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "sources",
+    "edges",
+    "unknowns"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent-profiler-proposal/v1"
+    },
+    "case_id": {
+      "const": "lincoff_2020_xeisd_random_j_relation_v1_alpha"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "method_or_modality",
+              "evidence_role",
+              "native_observable_kind",
+              "estimand_kind",
+              "time_semantics",
+              "source_locator",
+              "sample_system_composition"
+            ],
+            "properties": {
+              "source_id": {
+                "const": "xeisd_random_candidate_pool"
+              },
+              "method_or_modality": {
+                "type": "string",
+                "enum": [
+                  "STRUCTURAL_CANDIDATE_POOL",
+                  "NMR_SCALAR_COUPLING",
+                  "MD_TRAJECTORY"
+                ]
+              },
+              "evidence_role": {
+                "type": "string",
+                "enum": [
+                  "CONSTRUCTION",
+                  "FIT_TARGET",
+                  "DIAGNOSTIC"
+                ]
+              },
+              "native_observable_kind": {
+                "type": "string",
+                "enum": [
+                  "CANDIDATE_CONFORMER_COORDINATES",
+                  "SCALAR_J_COUPLINGS",
+                  "TWO_READOUT_DIRECTIONAL_SIGNS"
+                ]
+              },
+              "estimand_kind": {
+                "type": "string",
+                "enum": [
+                  "CANDIDATE_SPACE_SUPPORT",
+                  "LOCAL_BACKBONE_ANGLE_SUPPORT",
+                  "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE"
+                ]
+              },
+              "time_semantics": {
+                "type": "string",
+                "enum": [
+                  "STATIC_ENSEMBLE_AVERAGE",
+                  "POPULATION_AVERAGE",
+                  "ORDERED_TRAJECTORY"
+                ]
+              },
+              "source_locator": {
+                "const": "XEI-M04"
+              },
+              "sample_system_composition": {
+                "const": "UNKNOWN"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "method_or_modality",
+              "evidence_role",
+              "native_observable_kind",
+              "estimand_kind",
+              "time_semantics",
+              "source_locator",
+              "sample_system_composition"
+            ],
+            "properties": {
+              "source_id": {
+                "const": "xeisd_j_coupling_fit"
+              },
+              "method_or_modality": {
+                "type": "string",
+                "enum": [
+                  "STRUCTURAL_CANDIDATE_POOL",
+                  "NMR_SCALAR_COUPLING",
+                  "MD_TRAJECTORY"
+                ]
+              },
+              "evidence_role": {
+                "type": "string",
+                "enum": [
+                  "CONSTRUCTION",
+                  "FIT_TARGET",
+                  "DIAGNOSTIC"
+                ]
+              },
+              "native_observable_kind": {
+                "type": "string",
+                "enum": [
+                  "CANDIDATE_CONFORMER_COORDINATES",
+                  "SCALAR_J_COUPLINGS",
+                  "TWO_READOUT_DIRECTIONAL_SIGNS"
+                ]
+              },
+              "estimand_kind": {
+                "type": "string",
+                "enum": [
+                  "CANDIDATE_SPACE_SUPPORT",
+                  "LOCAL_BACKBONE_ANGLE_SUPPORT",
+                  "WITHIN_TRAJECTORY_DIRECTIONAL_BLOCK_CATALOGUE"
+                ]
+              },
+              "time_semantics": {
+                "type": "string",
+                "enum": [
+                  "STATIC_ENSEMBLE_AVERAGE",
+                  "POPULATION_AVERAGE",
+                  "ORDERED_TRAJECTORY"
+                ]
+              },
+              "source_locator": {
+                "const": "XEI-M03"
+              },
+              "sample_system_composition": {
+                "const": "UNKNOWN"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id",
+          "left_source_id",
+          "right_source_id",
+          "condition_relation"
+        ],
+        "properties": {
+          "edge_id": {
+            "const": "xeisd_random_pool_vs_j_coupling_question"
+          },
+          "left_source_id": {
+            "const": "xeisd_random_candidate_pool"
+          },
+          "right_source_id": {
+            "const": "xeisd_j_coupling_fit"
+          },
+          "condition_relation": {
+            "const": "UNKNOWN"
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "reason",
+              "evidence_pointer"
+            ],
+            "properties": {
+              "path": {
+                "const": "sources.xeisd_random_candidate_pool.sample_system_composition"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_pointer": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "reason",
+              "evidence_pointer"
+            ],
+            "properties": {
+              "path": {
+                "const": "sources.xeisd_j_coupling_fit.sample_system_composition"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_pointer": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "reason",
+              "evidence_pointer"
+            ],
+            "properties": {
+              "path": {
+                "const": "edges.xeisd_random_pool_vs_j_coupling_question.condition_relation"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_pointer": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

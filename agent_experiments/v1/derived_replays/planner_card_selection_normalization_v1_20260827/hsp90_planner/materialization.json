@@ -1,0 +1,27 @@
+{
+  "schema_version": "planner-card-selection-materialization/v1",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "status": "PASS",
+  "reason_codes": [],
+  "canonical_proposal": {
+    "schema_version": "agent-planner-proposal/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "proposed_actions": [
+      {
+        "card_id": "hsp90-exact-time-anatomy-control",
+        "action": "REGISTERED_OPERATOR",
+        "target_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+        "rationale": "The evidence role is diagnostic, and the method profile is MD_TRAJECTORY, which aligns with the required action of registering an operator for the specified method and profile.",
+        "operator_id": "hsp90.directional_time_anatomy.v1_case_bound"
+      }
+    ],
+    "execution_requested": false,
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_ceiling_acknowledgement": "NO_SCIENTIFIC_DISPOSITION"
+  },
+  "selected_card_ids": [
+    "hsp90-exact-time-anatomy-control"
+  ],
+  "execution_performed": false,
+  "model_transport_invocations": 0
+}
