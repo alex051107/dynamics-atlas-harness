@@ -1,26 +1,19 @@
-> Complete this as a reviewer-facing decision record. A reader should be able to
-> understand why the change exists, what it actually changes, and what remains
-> blocked without access to local task state.
-
-## Codex review brief
-
-- Original objective:
-- Why this is the smallest authorized action now:
-- Actual behavioral change:
-- Focused validation:
-- Deliberately excluded work:
-- Known limits and next authorized action:
-- Open review invitation: Independently challenge the framing, identify a better or
-  smaller solution, flag a missing risk, or recommend stopping/reverting if warranted.
-
-## Plan position and decision context
+## Plan position
 
 - Plan ID:
 - Frozen Plan semantic milestone:
 - GitHub delivery PR number:
 - Current authorization source:
 - Required Exit Gate:
-- Alternatives considered and not chosen:
+
+## Review context
+
+- Original objective and why now:
+- Actual behavioral change:
+- Focused validation:
+- Deliberately excluded work:
+- Open review invitation: Independently challenge the framing, identify a better or
+  smaller solution, flag a missing risk, or recommend stopping/reverting if warranted.
 
 ## Observed gap
 
@@ -60,22 +53,6 @@ List duplicate or out-of-scope checks that were skipped and the risk-based reaso
 ## Remaining risk
 
 List unresolved evidence, implementation, portability, or scientific risks.
-
-## Advisory review handback
-
-Complete this after an advisory review is actually received. A missing or failed
-transport is not a review result.
-
-- Review request exact head:
-- Reviewer transport state: `NOT_REQUESTED | SENT_VISIBLE | RESPONSE_CAPTURED | DELIVERY_UNCERTAIN | BLOCKED_RUNTIME_FOR_EXACT_EVENT`
-- Concrete findings:
-- Accepted findings and verification evidence:
-- Rejected findings and contrary evidence:
-- Deferred findings and reason:
-- Review outcome for this PR: `NO_FINDINGS | REMEDIATION_PENDING | REMEDIATION_VERIFIED | REVIEW_NOT_DELIVERED`
-
-The handback is advisory methodology evidence only. It cannot approve source science,
-upgrade a claim, release a human gate, or authorize a merge by itself.
 
 ## Next authorized action
 

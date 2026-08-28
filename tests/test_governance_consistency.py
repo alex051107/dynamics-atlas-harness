@@ -100,33 +100,35 @@ class GovernanceConsistencyTests(unittest.TestCase):
                 f"broken repository-relative link: {target}",
             )
 
-    def test_pr_template_carries_open_ended_reviewer_context(self) -> None:
+    def test_pr_template_keeps_minimal_open_ended_reviewer_context(self) -> None:
         template = (REPO_ROOT / ".github" / "pull_request_template.md").read_text(
             encoding="utf-8"
         )
         for required_text in (
-            "## Codex review brief",
-            "Original objective:",
-            "Why this is the smallest authorized action now:",
+            "## Review context",
+            "Original objective and why now:",
             "Actual behavioral change:",
+            "Focused validation:",
             "Deliberately excluded work:",
-            "Known limits and next authorized action:",
             "Open review invitation:",
             "Frozen Plan semantic milestone:",
             "GitHub delivery PR number:",
-            "## Advisory review handback",
-            "Review request exact head:",
-            "Reviewer transport state:",
-            "Accepted findings and verification evidence:",
-            "Rejected findings and contrary evidence:",
-            "Deferred findings and reason:",
-            "REVIEW_NOT_DELIVERED",
         ):
             with self.subTest(required_text=required_text):
                 self.assertIn(required_text, template)
+        self.assertNotIn("Advisory review handback", template)
 
         document = (REPO_ROOT / "docs" / "CURRENT_EXECUTION_STATUS_ZH.md").read_text(
             encoding="utf-8"
         )
         self.assertIn("GitHub PR 编号只是 delivery ID", document)
         self.assertIn("Frozen Plan 的 `PR 8`", document)
+
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("## Current execution status", readme)
+        self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", readme)
+        self.assertIn("Historical initial control-plane smoke v0.2", readme)
+
+        baseline = (REPO_ROOT / "BASELINE.md").read_text(encoding="utf-8")
+        self.assertIn("Historical initial baseline", baseline)
+        self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", baseline)
