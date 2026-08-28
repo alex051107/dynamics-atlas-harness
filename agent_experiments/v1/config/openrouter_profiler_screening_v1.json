@@ -1,0 +1,41 @@
+{
+  "schema_version": "openrouter-profiler-screening-config/v1",
+  "execution_status": "HUMAN_FREEZE_REQUIRED",
+  "run_kind": "SCREENING",
+  "role": "PROFILER",
+  "case_keys": [
+    "xeisd",
+    "hsp90"
+  ],
+  "prompt_path": "agent_experiments/v1/prompts/profiler_v1.md",
+  "sealed_reference_path": "agent_experiments/v1/sealed_references/profiler_reference_v1.json",
+  "temperature": 0,
+  "max_tokens": 1200,
+  "timeout_seconds": 90,
+  "calls_per_model_case": 1,
+  "client_side_reported_cost_stop_usd": null,
+  "account_spend_limit_readback": {
+    "status": "HUMAN_CONFIRMATION_REQUIRED",
+    "evidence_locator": null
+  },
+  "frozen_inputs": {
+    "prompt_sha256": null,
+    "sealed_reference_sha256": null,
+    "packet_sha256_by_case": {
+      "xeisd": null,
+      "hsp90": null
+    },
+    "schema_sha256_by_case": {
+      "xeisd": null,
+      "hsp90": null
+    }
+  },
+  "models": [],
+  "human_freeze_requirements": [
+    "Freeze three or four exact OpenRouter model IDs and one provider_only slug per model.",
+    "Record a finite client-side reported-cost stop and separately confirm an OpenRouter account/API-key spending limit or deliberately limited balance.",
+    "Freeze the prompt, sealed reference, packet, and derived-schema SHA-256 values before setting execution_status to HUMAN_FROZEN_FOR_EXECUTION.",
+    "Use no fallback, no prompt/schema changes, and no automatic repeat or stability run."
+  ],
+  "boundary": "This is a non-blocking, exposed-development Profiler screening configuration. It has no callable cell until a human freezes the model/provider matrix, frozen input hashes, client-side stop, and account-side spending boundary."
+}
