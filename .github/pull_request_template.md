@@ -1,9 +1,26 @@
-## Plan position
+> Complete this as a reviewer-facing decision record. A reader should be able to
+> understand why the change exists, what it actually changes, and what remains
+> blocked without access to local task state.
+
+## Codex review brief
+
+- Original objective:
+- Why this is the smallest authorized action now:
+- Actual behavioral change:
+- Focused validation:
+- Deliberately excluded work:
+- Known limits and next authorized action:
+- Open review invitation: Independently challenge the framing, identify a better or
+  smaller solution, flag a missing risk, or recommend stopping/reverting if warranted.
+
+## Plan position and decision context
 
 - Plan ID:
-- Stage / PR number:
+- Frozen Plan semantic milestone:
+- GitHub delivery PR number:
 - Current authorization source:
 - Required Exit Gate:
+- Alternatives considered and not chosen:
 
 ## Observed gap
 
