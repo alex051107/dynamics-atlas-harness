@@ -30,6 +30,22 @@ X_EISD_SOURCE_IDS = (
     "xeisd_j_coupling_fit",
 )
 X_EISD_EDGE_ID = "xeisd_random_pool_vs_j_coupling_question"
+X_EISD_FROZEN_REQUESTED_CLAIM = (
+    "Can the declared RANDOM candidate-pool and J-coupling relation be reviewed "
+    "without claiming a shared population, independent validation, kinetics, or mechanism?"
+)
+X_EISD_FROZEN_SELECTED_RULE_INSTANCE_IDS = (
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_j_coupling_fit",
+    "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+    "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::xeisd_random_candidate_pool",
+    "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::xeisd_j_coupling_fit",
+    "F01R01_CASE_CLAIM_DECLARATION::CASE::lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::xeisd_random_candidate_pool",
+    "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::xeisd_j_coupling_fit",
+    "F06R02_EDGE_COMPARABILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+)
 X_EISD_FROZEN_BASE_PROJECTION_PATH = (
     "evidence/real_case_vertical_slice_v1/frozen_inputs/xeisd/"
     "base_projection_manifest_v1.json"
@@ -108,9 +124,12 @@ def _harness_root(workspace_root: Path) -> Path:
     """Return the checked repository root; never permit a parent-workspace asset."""
 
     workspace_root = workspace_root.resolve()
-    if workspace_root.name != "dynamics-atlas-harness":
-        raise VerticalSliceError("workspace_root must be the dynamics-atlas-harness repository")
-    return workspace_root
+    module_repository_root = Path(__file__).resolve().parents[2]
+    if workspace_root != module_repository_root:
+        raise VerticalSliceError(
+            "workspace_root must match the checked-out dynamics-atlas-harness repository"
+        )
+    return module_repository_root
 
 
 def _safe_local_source_path(workspace_root: Path, relative_path: str) -> Path:
@@ -549,6 +568,61 @@ def materialize_xeisd_conclusion_packet(
     return packet
 
 
+def _validate_xeisd_route_inventory_and_scope(
+    packet: Mapping[str, Any], rule_results: Sequence[Mapping[str, Any]]
+) -> None:
+    """Keep the exact X-EISD relation contract from being relabeled or truncated."""
+
+    selected_ids = packet.get("selected_rule_instance_ids")
+    if not isinstance(selected_ids, list) or any(
+        not isinstance(rule_id, str) or not rule_id for rule_id in selected_ids
+    ):
+        raise VerticalSliceError("X-EISD ConclusionPacket has invalid selected RuleInstances")
+    if tuple(selected_ids) != X_EISD_FROZEN_SELECTED_RULE_INSTANCE_IDS:
+        raise VerticalSliceError(
+            "X-EISD ConclusionPacket selected RuleInstances must match the frozen inventory"
+        )
+
+    observed_ids: list[str] = []
+    failed_results: list[Mapping[str, Any]] = []
+    for result in rule_results:
+        result = _mapping(result, "X-EISD ConclusionPacket RuleResult")
+        rule_id = result.get("rule_instance_id")
+        if not isinstance(rule_id, str) or not rule_id:
+            raise VerticalSliceError("X-EISD RuleResult has no rule_instance_id")
+        observed_ids.append(rule_id)
+        if result.get("status") == "FAIL":
+            failed_results.append(result)
+
+    if len(set(observed_ids)) != len(observed_ids) or observed_ids != selected_ids:
+        raise VerticalSliceError(
+            "X-EISD ConclusionPacket RuleResult inventory must match selected RuleInstances exactly"
+        )
+
+    expected_blocking_ids = [result["rule_instance_id"] for result in failed_results]
+    if packet.get("blocking_rule_instance_ids") != expected_blocking_ids:
+        raise VerticalSliceError(
+            "X-EISD ConclusionPacket blocking RuleInstances must match failed RuleResults"
+        )
+
+    if packet.get("requested_claim") != X_EISD_FROZEN_REQUESTED_CLAIM:
+        raise VerticalSliceError(
+            "X-EISD ConclusionPacket requested claim must remain the exact frozen relation claim"
+        )
+
+    if failed_results:
+        if packet.get("route_disposition") != "RELATION_BLOCKED":
+            raise VerticalSliceError(
+                "X-EISD failed RuleResults must retain the relation-blocked route"
+            )
+        for result in failed_results:
+            target = _mapping(result.get("target"), "X-EISD failed RuleResult target")
+            if target.get("kind") != "EDGE" or target.get("id") != X_EISD_EDGE_ID:
+                raise VerticalSliceError(
+                    "X-EISD relation block may only be caused by the declared comparison edge"
+                )
+
+
 def validate_xeisd_conclusion_packet(packet: Mapping[str, Any]) -> None:
     """Validate only the narrow X-EISD ConclusionPacket contract."""
 
@@ -603,6 +677,7 @@ def validate_xeisd_conclusion_packet(packet: Mapping[str, Any]) -> None:
         raise VerticalSliceError("ConclusionPacket must retain nonblocking RuleResults")
     if not isinstance(packet["operator_results"], list):
         raise VerticalSliceError("ConclusionPacket must retain Operator results, even when empty")
+    _validate_xeisd_route_inventory_and_scope(packet, packet["rule_results"])
 
 
 def load_rules_v1_bundle(rules_root: Path) -> dict[str, Any]:
@@ -1797,6 +1872,7 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
             or evidence.get("affected_rule_instance_id") != expected_rule_id
             or receipt.get("status") != "SUCCEEDED"
             or evidence.get("contract_status") != "PASS"
+            or evidence.get("scientific_evaluation_status") != "PENDING_HUMAN_VALIDATION"
             or evidence.get("operator_run_receipt_id") != receipt.get("receipt_id")
         ):
             raise VerticalSliceError("HSP90 PASS ConclusionPacket lacks linked validated evidence")

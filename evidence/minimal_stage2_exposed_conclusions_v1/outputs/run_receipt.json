@@ -1,0 +1,23 @@
+{
+  "boundary": "A deterministic reduction over frozen exposed route artifacts. Source-grounding decisions remain PENDING_DOMAIN_REVIEW, and every packet retains human final authority.",
+  "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+  "input_family_overlay": "registries/rules_v1/family_overlay_v1.json",
+  "input_route_artifacts": [
+    "evidence/real_case_vertical_slice_v1/outputs/xeisd_a1_conclusion_packet.json",
+    "evidence/real_case_vertical_slice_v1/outputs/xeisd_a2_conclusion_packet.json",
+    "evidence/real_case_vertical_slice_v1/outputs/xeisd_a3_conclusion_packet.json",
+    "evidence/real_case_vertical_slice_v1/outputs/hsp90_b1_rule_to_operator/conclusion_packet.json"
+  ],
+  "lookup_calls": 0,
+  "model_calls": 0,
+  "network_accessed": false,
+  "operator_calls": 0,
+  "run_kind": "MINIMAL_STAGE2_EXPOSED_CONCLUSIONS_V1",
+  "scientific_claim_upgrade": false,
+  "terminal_dispositions": {
+    "HSP90_B1_OPERATOR_CONTRACT_PASS": "ABSTAIN_OR_HUMAN_REVIEW",
+    "XEISD_A1_COMPLETE_METADATA": "ABSTAIN_OR_HUMAN_REVIEW",
+    "XEISD_A2_MISSING_COMPOSITION": "ABSTAIN_OR_HUMAN_REVIEW",
+    "XEISD_A3_EXPLICIT_CONDITION_MISMATCH": "CANNOT_SUPPORT_REQUESTED_CLAIM"
+  }
+}
