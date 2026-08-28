@@ -1,0 +1,163 @@
+{
+  "schema_version": "narrow-source-science-review-packet/v1-alpha",
+  "packet_kind": "EXPOSED_CASES_NARROW_DOMAIN_REVIEW",
+  "review_status": "PENDING_DOMAIN_REVIEW",
+  "purpose": "Provide the smallest human-review queue needed to interpret the F01, F02, F03, F04, and F06 RuleResults consumed by the two exposed Stage-2 development cases. This packet does not approve source science, modify RuleResults, or issue a case-level scientific verdict.",
+  "case_scope": [
+    {
+      "case_id": "lincoff_2020_xeisd_development_v1_alpha",
+      "selected_runtime_subrules": [
+        "F01R01_CASE_CLAIM_CONTRACT_PRESENT",
+        "F01R02_CASE_REQUESTED_WORDING_IN_SCOPE",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT_DECLARATION",
+        "F06R01_SOURCE_EVIDENCE_ROLE_DECLARATION",
+        "F06R02_EDGE_CROSS_SOURCE_COMPARABILITY",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+      ],
+      "development_locator_boundary": "XEI-M03 and XEI-M04 are exact predeclared-field attestations from a local review derivative. They are not free-text retrieval, paper parsing, passage entailment, or independent source-fact validation."
+    },
+    {
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "selected_runtime_subrules": [
+        "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL"
+      ],
+      "development_locator_boundary": "The HSP90 route is a same-packet, trajectory-level control-contract review. Its EvidenceResult remains PENDING_HUMAN_VALIDATION and does not establish reliability, convergence, kinetics, equilibrium, population, free energy, mechanism, or mutation effect."
+    }
+  ],
+  "review_items": [
+    {
+      "review_item_id": "NDSR-F01R01",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_CONTRACT_PRESENT",
+      "evidence_packet_id": "SEP-F01-CLAIM-CONTRACT",
+      "paper_id": "wankowicz_bonomi_2026_ensemble_prediction",
+      "primary_locator": "WAN-S03; WAN-S05; review-methodology framework RF01 row",
+      "atomic_statement": "Intended use determines which evaluation criterion and evidence constraints are meaningful for an ensemble claim.",
+      "proposed_reusable_use": "Require a CASE claim contract before source or edge review begins.",
+      "forbidden_generalization": "A declared contract is not source validation, a prescribed Atlas schema or predicate, or a terminal scientific conclusion.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F01R02",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_IN_SCOPE",
+      "evidence_packet_id": "SEP-F01-REQUESTED-WORDING-SCOPE",
+      "paper_id": "sanabria_2020_transient_states",
+      "primary_locator": "SAN-S02; SAN-S03; SAN-S04; current 33-rule audit C010-RULE-001",
+      "atomic_statement": "Different claim levels require different supporting evidence and should not be conflated.",
+      "proposed_reusable_use": "Check that requested wording is within declared intake scope while leaving the evidence-supported ceiling to a later evaluator.",
+      "forbidden_generalization": "An intake scope check cannot infer kinetics, function, mechanism, or an evidence-supported claim ceiling.",
+      "source_packet_status": "PENDING",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F02R01",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "evidence_packet_id": "SEP-F02-CONSTRUCT",
+      "paper_id": "thomasen_lindorff_larsen_2022_integrative_dynamics_review",
+      "primary_locator": "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543 (local parsed derivative lines 118-125 and 151-161); Future perspectives p.548 (lines 450-458)",
+      "atomic_statement": "Whether a source can be interpreted as an isolated, chemically homogeneous single-species ensemble depends on declared sample-system and composition context.",
+      "proposed_reusable_use": "Use only for a SOURCE-local declaration; PASS records declared context and does not decide an EDGE relation.",
+      "forbidden_generalization": "Omitted metadata is neither proof of a mixture nor a universal construct-schema failure.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F02R02",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "evidence_packet_id": "SEP-F02-CONDITION",
+      "paper_id": "thomasen_lindorff_larsen_2022_integrative_dynamics_review",
+      "primary_locator": "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543 (local parsed derivative lines 151-161)",
+      "atomic_statement": "For an intended cross-source relation, conditions and known perturbations must be assessed before the sources are treated as measurements of one conformational ensemble.",
+      "proposed_reusable_use": "Use only for an EDGE condition-relation label: explicit compatibility may pass, explicit mismatch may fail, and absence or ambiguity remains unresolved.",
+      "forbidden_generalization": "No universal buffer or temperature tolerance is established, and condition compatibility is not validation independence.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F03R01",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT_DECLARATION",
+      "evidence_packet_id": "SEP-F03-MEASUREMENT",
+      "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+      "primary_locator": "Fuertes et al. 2017 local full-text derivative lines 18-38, 95-136, 245-260, 303-321, 587-640, and 749-761; reading-note anchors at PAPERFORGE_2026-08-06_Fuertes_2017_SAXS_smFRET_non_equivalence.md lines 25-31",
+      "atomic_statement": "A source's observable, probe or representation, spatial support, and averaging or interpretation model distinguish its native measurement from a differently supported or model-transformed quantity.",
+      "proposed_reusable_use": "Require SOURCE-local measurement-semantics declaration before relation-level evaluation.",
+      "forbidden_generalization": "A complete declaration does not prove reliability, comparability, validation, a claim ceiling, or a final scientific verdict.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F04R02",
+      "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+      "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+      "evidence_packet_id": "HSP90-CASE-DOSSIER-V1; HSP90-TIME-ANATOMY-CONTRACT-V1",
+      "paper_id": "CASE_BOUND_HSP90_DEVELOPMENT_RECORD",
+      "primary_locator": "evidence/real_case_vertical_slice_v1/hsp90_case_dossier_v1.json; evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json; evidence/real_case_vertical_slice_v1/hsp90_f04r02_rule_overlay_v1.json",
+      "atomic_statement": "A case-bound EvidenceResult can validate only the frozen same-packet trajectory-level control contract for the declared MD diagnostic.",
+      "proposed_reusable_use": "Review the exact F04R02 control contract and its bounded same-packet diagnostic wording for this exposed HSP90 case only.",
+      "forbidden_generalization": "Do not infer convergence, transition rate, equilibrium population, free energy, mechanism, mutation effect, general MD reliability, or source-science approval.",
+      "source_packet_status": "PENDING_SOURCE_TRACEABILITY_MAPPING",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "traceability_note": "The overlay names HSP90-CASE-DOSSIER-V1 and HSP90-TIME-ANATOMY-CONTRACT-V1, while the available repository artifacts are dossier and manifest files rather than packet records keyed by those exact identifiers. This mapping must be resolved during human review; it does not alter the Stage-2 abstention."
+    },
+    {
+      "review_item_id": "NDSR-F06R01",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE_DECLARATION",
+      "evidence_packet_id": "SEP-F06-SOURCE-ROLE",
+      "paper_id": "bengtsen_2020_multimodal_nanodisc",
+      "primary_locator": "BEN-S03; BEN-S05; current 33-rule audit C007-RULE-003",
+      "atomic_statement": "Evidence role is a source-level declaration rather than a synonym for independent validation.",
+      "proposed_reusable_use": "Require a SOURCE role and lineage declaration before edge-level validation claims are considered.",
+      "forbidden_generalization": "A validation label alone does not establish independence.",
+      "source_packet_status": "PENDING",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F06R02",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "runtime_subrule_id": "F06R02_EDGE_CROSS_SOURCE_COMPARABILITY",
+      "evidence_packet_id": "SEP-F06-COMPARABILITY",
+      "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+      "primary_locator": "FUE-S03; FUE-S04; FUE-S05; current 33-rule audit C005-RULE-002",
+      "atomic_statement": "A cross-source relation requires an explicit relation type and bridge; non-comparability is a valid outcome.",
+      "proposed_reusable_use": "Evaluate comparability at the EDGE while preserving source-local measurements.",
+      "forbidden_generalization": "Do not force numeric equivalence or remove disagreement by construction.",
+      "source_packet_status": "PENDING",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    },
+    {
+      "review_item_id": "NDSR-F06R03",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "evidence_packet_id": "SEP-F06-INDEPENDENCE",
+      "paper_id": "bengtsen_2020_multimodal_nanodisc",
+      "primary_locator": "BEN-S03; BEN-S05; review-methodology framework RF11 row",
+      "atomic_statement": "Agreement alone does not establish an independent validation relationship.",
+      "proposed_reusable_use": "Evaluate validation independence from lineage, shared-data, and shared-error facts separately from comparability.",
+      "forbidden_generalization": "Same-data evaluation or shared-error agreement cannot be upgraded to held-out validation.",
+      "source_packet_status": "PENDING",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "case_application": "The current X-EISD result is nonblocking NOT_APPLICABLE because the exposed case asserts no validation claim; it remains included so that a reviewer can confirm the boundary."
+    }
+  ],
+  "requested_human_decision_values": [
+    "APPROVE_FOR_NARROW_REUSABLE_USE",
+    "REVISE",
+    "REJECT"
+  ],
+  "decision_boundary": "A reviewer may approve or reject only the stated narrow reusable use. A positive review does not automatically change family_overlay_v1.json, source-grounding decisions, RuleResults, operator status, claim ceilings, or any Stage-2 ConclusionPacket.",
+  "forbidden_actions": [
+    "SELF_APPROVE_SOURCE_SCIENCE",
+    "PROMOTE_PENDING_DOMAIN_REVIEW_TO_VERIFIED",
+    "TREAT_XEISD_ATTESTATION_AS_GENERAL_RETRIEVAL",
+    "UPGRADE_HSP90_CONTRACT_PASS_TO_BIOLOGICAL_CONCLUSION",
+    "EXPAND_RULES_OR_OPERATORS_DURING_REVIEW"
+  ]
+}
