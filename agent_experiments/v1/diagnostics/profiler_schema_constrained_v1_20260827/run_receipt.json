@@ -1,0 +1,63 @@
+{
+  "schema_version": "profiler-schema-diagnostic-run-receipt/v1",
+  "status": "BLOCKED_PRECONDITION",
+  "reason_codes": [
+    "LOCAL_MODEL_METADATA_ERROR:URLError"
+  ],
+  "role_scope": "PROFILER_SCHEMA_DIAGNOSTIC_ONLY",
+  "planner_evaluation": "NOT_RUN",
+  "end_to_end": "NOT_RUN",
+  "scientific_disposition": "NOT_EVALUATED",
+  "model_generation_requests_attempted": 0,
+  "model_generation_calls_completed": 0,
+  "registered_operator_calls": 0,
+  "execution_performed": false,
+  "prompt": {
+    "path": "agent_experiments/v1/prompts/profiler_v1.md",
+    "sha256": "83febacf3f303cf767e7c33f4e4e98973995fac5e8f0cd741c634199ecc452a0"
+  },
+  "runtime_metadata": {
+    "schema_version": "local-ollama-runtime-metadata/v1",
+    "case_id": null,
+    "status": "BLOCKED",
+    "reason_codes": [
+      "LOCAL_MODEL_METADATA_ERROR:URLError"
+    ],
+    "endpoint": "http://127.0.0.1:11434",
+    "model": "qwen2.5:1.5b",
+    "metadata_requests": 0,
+    "model_generation_calls": 0
+  },
+  "case_preflights": {
+    "xeisd": {
+      "packet_validation": {
+        "schema_version": "model-visible-packet-validation/v1",
+        "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+        "status": "PASS",
+        "reason_codes": [],
+        "role": "PROFILER",
+        "packet_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b"
+      },
+      "schema_status": "PASS",
+      "reason_codes": [],
+      "packet_path": "agent_experiments/v1/workspaces/xeisd_profiler/input.json",
+      "packet_sha256": "914c0da43dc67e3f7c89481f92de78fb3157639760f49e66fd139728a057744b",
+      "schema_sha256": "043f5fd72aea5ef2d51e1b4422eff2f293cb84fd3df4b7a9f2b98b9faf10fe0b"
+    },
+    "hsp90": {
+      "packet_validation": {
+        "schema_version": "model-visible-packet-validation/v1",
+        "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+        "status": "PASS",
+        "reason_codes": [],
+        "role": "PROFILER",
+        "packet_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc"
+      },
+      "schema_status": "PASS",
+      "reason_codes": [],
+      "packet_path": "agent_experiments/v1/workspaces/hsp90_profiler/input.json",
+      "packet_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc",
+      "schema_sha256": "4ff44be4ef7b52d3d9ea7748525608bfcbb06cf1b823378f9c7bab7110206289"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "local-ollama-runtime-metadata/v1",
+  "case_id": null,
+  "status": "BLOCKED",
+  "reason_codes": [
+    "LOCAL_MODEL_METADATA_ERROR:URLError"
+  ],
+  "endpoint": "http://127.0.0.1:11434",
+  "model": "qwen2.5:1.5b",
+  "metadata_requests": 0,
+  "model_generation_calls": 0
+}

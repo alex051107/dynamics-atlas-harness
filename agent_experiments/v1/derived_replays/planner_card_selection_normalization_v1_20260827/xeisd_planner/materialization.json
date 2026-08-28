@@ -1,0 +1,40 @@
+{
+  "schema_version": "planner-card-selection-materialization/v1",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "status": "PASS",
+  "reason_codes": [],
+  "canonical_proposal": {
+    "schema_version": "agent-planner-proposal/v1",
+    "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+    "proposed_actions": [
+      {
+        "card_id": "xeisd-attest-random-composition",
+        "action": "EXACT_ATTESTATION",
+        "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+        "rationale": "The target RuleInstance is missing the declared sample-system/composition field, which is required for the exact attestation."
+      },
+      {
+        "card_id": "xeisd-attest-jcoupling-composition",
+        "action": "EXACT_ATTESTATION",
+        "target_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_j_coupling_fit",
+        "rationale": "The target RuleInstance is missing the declared sample-system/composition field, which is required for the exact attestation."
+      },
+      {
+        "card_id": "xeisd-attest-edge-condition",
+        "action": "EXACT_ATTESTATION",
+        "target_rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+        "rationale": "The target RuleInstance is missing the declared condition relation, which is required for the exact attestation."
+      }
+    ],
+    "execution_requested": false,
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_ceiling_acknowledgement": "NO_SCIENTIFIC_DISPOSITION"
+  },
+  "selected_card_ids": [
+    "xeisd-attest-random-composition",
+    "xeisd-attest-jcoupling-composition",
+    "xeisd-attest-edge-condition"
+  ],
+  "execution_performed": false,
+  "model_transport_invocations": 0
+}

@@ -1,0 +1,15 @@
+{
+  "packet_validation": {
+    "schema_version": "model-visible-packet-validation/v1",
+    "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+    "status": "PASS",
+    "reason_codes": [],
+    "role": "PROFILER",
+    "packet_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc"
+  },
+  "schema_status": "PASS",
+  "reason_codes": [],
+  "packet_path": "agent_experiments/v1/workspaces/hsp90_profiler/input.json",
+  "packet_sha256": "e6279f5fd9342a70a7665985ef4fc9dea287847468518b3b7a73604c7f195edc",
+  "schema_sha256": "4ff44be4ef7b52d3d9ea7748525608bfcbb06cf1b823378f9c7bab7110206289"
+}

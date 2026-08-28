@@ -1,0 +1,86 @@
+{
+  "schema_version": "planner-card-selection-normalization-replay/v1",
+  "status": "PASS",
+  "replay_kind": "RECORDED_SELECTION_EXTRACTION_AND_PLATFORM_NORMALIZATION_REPLAY",
+  "source_recorded_run": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1",
+  "historical_live_model_calls_in_source_run": 2,
+  "replay_model_transport_invocations": 0,
+  "registered_operator_calls": 0,
+  "execution_performed": false,
+  "scientific_disposition": "NOT_EVALUATED",
+  "cases": [
+    {
+      "case_key": "xeisd",
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "status": "PASS",
+      "source_integrity": {
+        "case_key": "xeisd",
+        "role": "PLANNER",
+        "packet": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/workspaces/xeisd_planner/input.json",
+          "expected_sha256": "30f25c1ef05a9aaaeb4c23344a9a467503c342099bf13c9935e11ae1ab6e1948",
+          "observed_sha256": "30f25c1ef05a9aaaeb4c23344a9a467503c342099bf13c9935e11ae1ab6e1948"
+        },
+        "raw_response": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/xeisd_planner/raw_response.txt",
+          "expected_sha256": "852e7b0a57a43164cba76ae5f6d785c176b638664c12a0975b318430a860a673",
+          "observed_sha256": "852e7b0a57a43164cba76ae5f6d785c176b638664c12a0975b318430a860a673"
+        },
+        "proposal_parse": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/xeisd_planner/proposal.json",
+          "proposal_sha256": "9c01a3c5361e2ee2e49ca203c452bf077b6a65f584433d12efba4c3981021e6c"
+        },
+        "request_prompt": {
+          "status": "PASS",
+          "expected_sha256": "598fe22e2f8fa7d8920da4aadb27f527218335e48d9d07aa525fd52fbad5982d",
+          "observed_sha256": "598fe22e2f8fa7d8920da4aadb27f527218335e48d9d07aa525fd52fbad5982d"
+        }
+      },
+      "extraction_status": "PASS",
+      "extraction_reason": null,
+      "materialization_status": "PASS",
+      "evaluation_status": "PASS",
+      "artifact_directory": "agent_experiments/v1/derived_replays/planner_card_selection_normalization_v1_20260827/xeisd_planner"
+    },
+    {
+      "case_key": "hsp90",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "status": "PASS",
+      "source_integrity": {
+        "case_key": "hsp90",
+        "role": "PLANNER",
+        "packet": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/workspaces/hsp90_planner/input.json",
+          "expected_sha256": "3ab5c5f52a07667d71a89410b8a78582cac152a54e0599abeef053415c9815e2",
+          "observed_sha256": "3ab5c5f52a07667d71a89410b8a78582cac152a54e0599abeef053415c9815e2"
+        },
+        "raw_response": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/hsp90_planner/raw_response.txt",
+          "expected_sha256": "699159250719d5d0e98f2bd40e3db3478d366c3244d2ad67c88912bf25768b79",
+          "observed_sha256": "699159250719d5d0e98f2bd40e3db3478d366c3244d2ad67c88912bf25768b79"
+        },
+        "proposal_parse": {
+          "status": "PASS",
+          "path": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/hsp90_planner/proposal.json",
+          "proposal_sha256": "a31d6ba05ec45f555bfb5b5c217087ed877dd690a3e0852387ccbe4a8535870a"
+        },
+        "request_prompt": {
+          "status": "PASS",
+          "expected_sha256": "fdc01b1fd2367c7f9440fb9749c52c06c364100bf8ead5df30dc863fbea3b1c8",
+          "observed_sha256": "fdc01b1fd2367c7f9440fb9749c52c06c364100bf8ead5df30dc863fbea3b1c8"
+        }
+      },
+      "extraction_status": "PASS",
+      "extraction_reason": null,
+      "materialization_status": "PASS",
+      "evaluation_status": "PASS",
+      "artifact_directory": "agent_experiments/v1/derived_replays/planner_card_selection_normalization_v1_20260827/hsp90_planner"
+    }
+  ],
+  "claim_boundary": "The model-owned fields are card IDs and rationales only; the platform copies case, route action, target, operator ID, no-execution, and scientific-disposition fields from the fixed packet. This replay does not validate a new live Planner contract, Agent value, scientific support, or execution authorization beyond the existing no-execution evaluator."
+}
