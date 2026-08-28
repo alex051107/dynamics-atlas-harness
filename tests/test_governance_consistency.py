@@ -49,6 +49,10 @@ class GovernanceConsistencyTests(unittest.TestCase):
             "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
         )
         self.assertEqual(
+            status["next_allowed_action"]["authorization"],
+            "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
+        )
+        self.assertEqual(
             live_agent["observed_result"]["result"],
             "SAFE_BUT_CAPABILITY_REJECTED_NO_TYPED_CONTRACT_PASS",
         )
@@ -123,6 +127,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
         )
         self.assertIn("GitHub PR 编号只是 delivery ID", document)
         self.assertIn("Frozen Plan 的 `PR 8`", document)
+        self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
 
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Current execution status", readme)

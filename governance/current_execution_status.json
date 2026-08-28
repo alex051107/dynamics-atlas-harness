@@ -105,7 +105,7 @@
     {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
-      "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. The live project Status and append-only human decisions govern current authorization."
+      "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
     }
   ],
   "stages": [
@@ -190,7 +190,7 @@
     "action": "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
     "deliverable": "COMPLETED_NARROW_SOURCE_GROUNDING_REVIEW_RECORD",
     "automatic_code_changes": false,
-    "authorization": "LIVE_STATUS_DA-STATUS-20260828-v0.98",
+    "authorization": "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
     "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
   "claim_ceiling": "Development-only exposed-case evidence. No source-science approval, final scientific support, general Operator route, Agent value, transfer, production, ADK portability, held-out result, or external model execution claim."

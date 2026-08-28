@@ -3,7 +3,8 @@
 仓库内的机器可读快照是
 [current_execution_status.json](../governance/current_execution_status.json)。它供创建分支、编写
 PR 和外部审查时快速了解已合并的 repository state；它不是新的科学权威，也不能单独释放下一阶段。
-当前 live gate 由项目控制面中的 live Status 和具名人类决定控制。
+live Status 只记录当前 gate 与已记录的人类决定；只有具名 human/domain review 或具名 project-owner
+direction 才能释放科学阶段。
 
 ## 当前已验证状态
 
