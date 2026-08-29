@@ -19,21 +19,32 @@ from .exposed_proposal_smoke_v1 import (
     materialize_exposed_planner_proposal,
 )
 from .live_agent_exposed_v1 import evaluate_planner_proposal
+from .minimal_stage2_exposed_conclusions_v1 import (
+    materialize_stage2_conclusion_packet,
+    source_grounding_by_family,
+)
 from .real_case_vertical_slice_v1 import (
     evaluate_hsp90_time_anatomy_f04r02,
     evaluate_xeisd_case,
     load_hsp90_case_bundle,
     load_json_object,
     load_rules_v1_bundle,
+    run_hsp90_reference_demo_route,
     validate_hsp90_case_dossier,
     validate_xeisd_projection,
 )
-from .runnable_reference_demo_v1 import run_reference_demo
+from .registered_operators import load_registered_operator_registry
+from .runnable_reference_demo_v1 import (
+    run_xeisd_a1_reference_route,
+    write_hsp90_reference_route_artifacts,
+)
 
 
 SMOKE_SCHEMA_VERSION = "exposed-end-to-end-smoke/v1"
 SMOKE_RUN_ID = "exposed_end_to_end_smoke_v1"
 _RECORDED_RUN = "qwen2_5_1_5b_20260826_prompt_remediation1"
+_XEISD_A1_TRACK = "EXACT_REVIEW_DERIVATIVE_ATTESTATION_THEN_DIRECT_EVALUATION"
+_HSP90_B1_TRACK = "EXACT_CASE_BOUND_REGISTERED_OPERATOR_THEN_RULE_REEVALUATION"
 
 
 class ExposedEndToEndSmokeError(ValueError):
@@ -266,7 +277,7 @@ def _bind_authorized_proposal(
             "selected_card_ids": sorted(actions),
             "selected_rule_instance_ids": sorted(action_rule_ids),
             "pre_agent_rule_selection": "rules/xeisd_pre_agent_rule_selection.json",
-            "selected_track": "EXACT_REVIEW_DERIVATIVE_ATTESTATION_THEN_DIRECT_EVALUATION",
+            "selected_track": _XEISD_A1_TRACK,
             "authorization_boundary": "EXACT_ALLOWLISTED_ATTESTATION_ONLY",
             "execution_performed_by_planner": False,
             "scientific_disposition": "NOT_EVALUATED",
@@ -289,7 +300,7 @@ def _bind_authorized_proposal(
             "selected_card_ids": sorted(actions),
             "selected_rule_instance_ids": sorted(action_rule_ids),
             "pre_agent_rule_selection": "rules/hsp90_pre_agent_rule_selection.json",
-            "selected_track": "EXACT_CASE_BOUND_REGISTERED_OPERATOR_THEN_RULE_REEVALUATION",
+            "selected_track": _HSP90_B1_TRACK,
             "operator_id": action.get("operator_id"),
             "authorization_boundary": "EXACT_CASE_BOUND_ROSTER_PASS_ONLY",
             "execution_performed_by_planner": False,
@@ -373,19 +384,138 @@ def _paper_question(repo_root: Path) -> dict[str, Any]:
 def _route_artifact_paths() -> dict[str, dict[str, str]]:
     return {
         "xeisd": {
-            "route_packet": "reference_demo/routes/xeisd_a1/conclusion_packet.json",
-            "lookup_receipts": "reference_demo/routes/xeisd_a1/lookup_receipts.json",
-            "stage2_packet": "reference_demo/stage2/xeisd_a1_complete_stage2_conclusion_packet.json",
+            "route_packet": "bound_execution/routes/xeisd_a1/conclusion_packet.json",
+            "lookup_receipts": "bound_execution/routes/xeisd_a1/lookup_receipts.json",
+            "stage2_packet": "bound_execution/stage2/xeisd_a1_complete_stage2_conclusion_packet.json",
         },
         "hsp90": {
-            "route_packet": "reference_demo/routes/hsp90_b1/conclusion_packet.json",
-            "pre_operator_rule": "reference_demo/routes/hsp90_b1/pre_operator_rule_result.json",
-            "operator_receipt": "reference_demo/routes/hsp90_b1/operator_run_receipt.json",
-            "evidence_result": "reference_demo/routes/hsp90_b1/evidence_result.json",
-            "post_operator_rule": "reference_demo/routes/hsp90_b1/post_operator_rule_result.json",
-            "stage2_packet": "reference_demo/stage2/hsp90_b1_operator_contract_stage2_conclusion_packet.json",
+            "route_packet": "bound_execution/routes/hsp90_b1/conclusion_packet.json",
+            "pre_operator_rule": "bound_execution/routes/hsp90_b1/pre_operator_rule_result.json",
+            "operator_receipt": "bound_execution/routes/hsp90_b1/operator_run_receipt.json",
+            "evidence_result": "bound_execution/routes/hsp90_b1/evidence_result.json",
+            "post_operator_rule": "bound_execution/routes/hsp90_b1/post_operator_rule_result.json",
+            "stage2_packet": "bound_execution/stage2/hsp90_b1_operator_contract_stage2_conclusion_packet.json",
         },
     }
+
+
+def _validate_exact_bound_tracks(bindings: Mapping[str, Mapping[str, Any]]) -> None:
+    """Reject before execution unless the two explicit bound tracks are intact.
+
+    This is intentionally an exact two-case check. It is not a reusable route
+    dispatcher: the smoke must execute only the bindings it already validated.
+    """
+
+    if set(bindings) != {"xeisd", "hsp90"}:
+        raise ExposedEndToEndSmokeError("EXACT_SMOKE_BINDINGS_MUST_CONTAIN_XEISD_AND_HSP90")
+    xeisd = bindings["xeisd"]
+    hsp90 = bindings["hsp90"]
+    if (
+        xeisd.get("case_key") != "xeisd"
+        or xeisd.get("selected_track") != _XEISD_A1_TRACK
+        or not xeisd.get("selected_rule_instance_ids")
+    ):
+        raise ExposedEndToEndSmokeError("XEISD_BOUND_TRACK_NOT_EXECUTABLE")
+    if (
+        hsp90.get("case_key") != "hsp90"
+        or hsp90.get("selected_track") != _HSP90_B1_TRACK
+        or not isinstance(hsp90.get("operator_id"), str)
+        or not hsp90.get("selected_rule_instance_ids")
+    ):
+        raise ExposedEndToEndSmokeError("HSP90_BOUND_TRACK_NOT_EXECUTABLE")
+
+
+def _write_stage2_packet(
+    *,
+    output_dir: Path,
+    relative_path: str,
+    route_packet: Mapping[str, Any],
+    route_artifact_path: str,
+    scenario_id: str,
+    source_grounding: Mapping[str, str],
+) -> None:
+    packet = materialize_stage2_conclusion_packet(
+        route_packet=route_packet,
+        source_grounding=source_grounding,
+        scenario_id=scenario_id,
+        route_artifact_path=route_artifact_path,
+    )
+    _write_json(output_dir / relative_path, packet)
+
+
+def _execute_exact_bound_routes(
+    *,
+    repo_root: Path,
+    output_dir: Path,
+    bindings: Mapping[str, Mapping[str, Any]],
+) -> dict[str, Any]:
+    """Execute only the two already-validated exposed bindings.
+
+    The implementation deliberately validates both bindings before any lookup or
+    Operator action. X-EISD A2/A3 remain runnable-reference-demo scenarios, not
+    implicit side effects of this question-to-human-decision smoke path.
+    """
+
+    _validate_exact_bound_tracks(bindings)
+    paths = _route_artifact_paths()
+    execution_root = output_dir / "bound_execution"
+    family_overlay = load_json_object(repo_root / "registries" / "rules_v1" / "family_overlay_v1.json")
+    source_grounding = source_grounding_by_family(family_overlay)
+
+    xeisd = run_xeisd_a1_reference_route(repo_root=repo_root)
+    xeisd_dir = execution_root / "routes" / "xeisd_a1"
+    _write_json(xeisd_dir / "case_graph.json", xeisd["case_graph"])
+    _write_json(xeisd_dir / "lookup_receipts.json", xeisd["lookup_receipts"])
+    _write_json(xeisd_dir / "conclusion_packet.json", xeisd["conclusion_packet"])
+    _write_stage2_packet(
+        output_dir=output_dir,
+        relative_path=paths["xeisd"]["stage2_packet"],
+        route_packet=xeisd["conclusion_packet"],
+        route_artifact_path=paths["xeisd"]["route_packet"],
+        scenario_id="XEISD_A1_COMPLETE_METADATA",
+        source_grounding=source_grounding,
+    )
+
+    hsp90 = run_hsp90_reference_demo_route(
+        evidence_root=repo_root / "evidence" / "real_case_vertical_slice_v1",
+        operator_registry=load_registered_operator_registry(
+            repo_root / "config" / "registered_operators.json"
+        ),
+        workspace_root=repo_root,
+        output_root=execution_root,
+    )
+    write_hsp90_reference_route_artifacts(output_root=execution_root, hsp90=hsp90)
+    _write_stage2_packet(
+        output_dir=output_dir,
+        relative_path=paths["hsp90"]["stage2_packet"],
+        route_packet=hsp90["conclusion_packet"],
+        route_artifact_path=paths["hsp90"]["route_packet"],
+        scenario_id="HSP90_B1_OPERATOR_CONTRACT_PASS",
+        source_grounding=source_grounding,
+    )
+
+    execution_manifest = {
+        "schema_version": "exact-bound-route-execution/v1",
+        "execution_authority": "VALIDATED_EXACT_ROUTE_BINDINGS",
+        "executed_tracks": [
+            {
+                "case_key": case_key,
+                "case_id": bindings[case_key]["case_id"],
+                "selected_track": bindings[case_key]["selected_track"],
+                "selected_rule_instance_ids": bindings[case_key]["selected_rule_instance_ids"],
+            }
+            for case_key in ("xeisd", "hsp90")
+        ],
+        "deliberately_unexecuted_reference_scenarios": [
+            "XEISD_A2_MISSING_COMPOSITION",
+            "XEISD_A3_EXPLICIT_CONDITION_MISMATCH",
+        ],
+        "network_accessed": False,
+        "model_calls": 0,
+        "scientific_disposition": "NOT_EVALUATED",
+    }
+    _write_json(execution_root / "execution_manifest.json", execution_manifest)
+    return {"execution_manifest": execution_manifest, "paths": paths}
 
 
 def _bind_fresh_route_artifacts(
@@ -416,7 +546,7 @@ def _bind_fresh_route_artifacts(
         ):
             raise ExposedEndToEndSmokeError("STAGE2_PACKET_ESCALATED_SCIENTIFIC_DISPOSITION")
 
-        if binding["selected_track"] == "EXACT_REVIEW_DERIVATIVE_ATTESTATION_THEN_DIRECT_EVALUATION":
+        if binding["selected_track"] == _XEISD_A1_TRACK:
             lookup_receipts = _read_json_value(output_dir / case_paths["lookup_receipts"])
             receipts = lookup_receipts if isinstance(lookup_receipts, list) else []
             if len(receipts) != len(proposed_rule_ids) or any(
@@ -428,7 +558,7 @@ def _bind_fresh_route_artifacts(
                 raise ExposedEndToEndSmokeError("FRESH_XEISD_ATTESTATION_ROUTE_INVALID")
             if route_disposition != "RELATION_REVIEWABLE":
                 raise ExposedEndToEndSmokeError("FRESH_XEISD_ROUTE_DISPOSITION_CHANGED")
-        else:
+        elif binding["selected_track"] == _HSP90_B1_TRACK:
             pre_rule = _read_json(output_dir / case_paths["pre_operator_rule"])
             operator_receipt = _read_json(output_dir / case_paths["operator_receipt"])
             evidence = _read_json(output_dir / case_paths["evidence_result"])
@@ -446,6 +576,8 @@ def _bind_fresh_route_artifacts(
                 or route_disposition != "RULE_CONTRACT_PASS"
             ):
                 raise ExposedEndToEndSmokeError("FRESH_HSP90_OPERATOR_ROUTE_INVALID")
+        else:
+            raise ExposedEndToEndSmokeError("BOUND_TRACK_HAS_NO_EXACT_ARTIFACT_VALIDATOR")
         if terminal_disposition != "ABSTAIN_OR_HUMAN_REVIEW":
             raise ExposedEndToEndSmokeError("FRESH_EXPOSED_ROUTE_MUST_REMAIN_HUMAN_REVIEW")
         results[case_key] = {
@@ -546,9 +678,16 @@ def run_exposed_end_to_end_smoke(*, output_dir: Path) -> dict[str, Any]:
         _write_json(output_dir / "tracks" / f"{case_key}_route_binding.json", case_artifacts["route_binding"])
     _write_json(output_dir / "inputs" / "xeisd_paper_question.json", paper_question)
 
-    # The Planner only proposes.  Existing deterministic code owns the actual
-    # attestation/Operator execution and writes fresh evidence receipts.
-    reference_demo = run_reference_demo(output_dir=output_dir / "reference_demo")
+    # The Planner only proposes. The two admitted exact bindings are the only
+    # inputs permitted to trigger attestation/Operator execution below.
+    bound_execution = _execute_exact_bound_routes(
+        repo_root=repo_root,
+        output_dir=output_dir,
+        bindings={
+            case_key: artifacts["route_binding"]
+            for case_key, artifacts in bound_cases.items()
+        },
+    )
     fresh_routes = _bind_fresh_route_artifacts(
         output_dir=output_dir,
         bindings={
@@ -572,10 +711,14 @@ def run_exposed_end_to_end_smoke(*, output_dir: Path) -> dict[str, Any]:
         "external_network_accessed": False,
         "credential_reads": 0,
         "external_spend": 0,
-        "reference_demo_manifest": "reference_demo/run_manifest.json",
+        "bound_execution_manifest": "bound_execution/execution_manifest.json",
+        "executed_tracks": bound_execution["execution_manifest"]["executed_tracks"],
+        "deliberately_unexecuted_reference_scenarios": bound_execution[
+            "execution_manifest"
+        ]["deliberately_unexecuted_reference_scenarios"],
         "human_decision_packet": "human_decision_packet.json",
         "scientific_disposition": "NOT_EVALUATED",
-        "boundary": "Replays existing exact routes only. It does not parse a paper, retrieve free text, validate source science, generalize the route, or produce a scientific conclusion.",
+        "boundary": "Runs only the two exact tracks validated from the recorded Planner proposal. It does not parse a paper, retrieve free text, validate source science, generalize the route, or produce a scientific conclusion.",
     }
     summary = {
         "schema_version": SMOKE_SCHEMA_VERSION,
@@ -596,6 +739,6 @@ def run_exposed_end_to_end_smoke(*, output_dir: Path) -> dict[str, Any]:
         "manifest": manifest,
         "summary": summary,
         "human_decision_packet": human_packet,
-        "reference_demo": reference_demo,
+        "bound_execution": bound_execution,
         "output_dir": str(output_dir),
     }

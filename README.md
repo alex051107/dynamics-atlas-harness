@@ -46,6 +46,8 @@ dynamics-atlas run-smoke --output-dir /tmp/dynamics-atlas-smoke
 claim ceiling 和具名 source-science review 所需的问题。当前两个 case 都正确停在
 `ABSTAIN_OR_HUMAN_REVIEW`；它们不产生 scientific support。该 smoke 使用提交的历史 Planner selection，
 不调用 live model、不解析 paper 全文，也不把 local review derivative 当成 source-science approval。
+它只执行已验证绑定的 X-EISD A1 和 HSP90 B1；runnable reference demo 中的 X-EISD A2/A3
+场景不会作为这个 smoke 的隐式副作用运行。
 
 ## Historical initial control-plane smoke v0.2
 

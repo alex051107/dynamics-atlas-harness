@@ -12,6 +12,7 @@ from dynamics_atlas_harness.cli import main
 from dynamics_atlas_harness.exposed_end_to_end_smoke_v1 import (
     ExposedEndToEndSmokeError,
     _bind_authorized_proposal,
+    _execute_exact_bound_routes,
     materialize_and_bind_exposed_case,
 )
 
@@ -41,6 +42,7 @@ class ExposedEndToEndSmokeV1Tests(unittest.TestCase):
             human = read_json(output_dir / "human_decision_packet.json")
             summary = read_json(output_dir / "run_summary.json")
             manifest = read_json(output_dir / "run_manifest.json")
+            execution = read_json(output_dir / "bound_execution/execution_manifest.json")
 
             self.assertEqual(question["paper_identity"]["doi"], "10.1038/s42004-020-0323-0")
             self.assertEqual(question["case_id"], xeisd_binding["case_id"])
@@ -79,13 +81,13 @@ class ExposedEndToEndSmokeV1Tests(unittest.TestCase):
                 "AUTHORIZED_NO_EXECUTION",
             )
             self.assertEqual(
-                read_json(output_dir / "reference_demo/routes/hsp90_b1/evidence_result.json")[
+                read_json(output_dir / "bound_execution/routes/hsp90_b1/evidence_result.json")[
                     "contract_status"
                 ],
                 "PASS",
             )
             self.assertEqual(
-                read_json(output_dir / "reference_demo/routes/hsp90_b1/post_operator_rule_result.json")[
+                read_json(output_dir / "bound_execution/routes/hsp90_b1/post_operator_rule_result.json")[
                     "status"
                 ],
                 "PASS",
@@ -96,6 +98,16 @@ class ExposedEndToEndSmokeV1Tests(unittest.TestCase):
             self.assertEqual(summary["source_science_review_status"], "PENDING_DOMAIN_REVIEW")
             self.assertEqual(manifest["live_model_calls"], 0)
             self.assertFalse(manifest["external_network_accessed"])
+            self.assertEqual(
+                [track["case_key"] for track in execution["executed_tracks"]],
+                ["xeisd", "hsp90"],
+            )
+            self.assertEqual(
+                execution["deliberately_unexecuted_reference_scenarios"],
+                ["XEISD_A2_MISSING_COMPOSITION", "XEISD_A3_EXPLICIT_CONDITION_MISMATCH"],
+            )
+            self.assertFalse((output_dir / "bound_execution/routes/xeisd_a2").exists())
+            self.assertFalse((output_dir / "bound_execution/routes/xeisd_a3").exists())
 
     def test_bind_rejects_card_target_mismatch_before_reference_tools_run(self):
         artifacts = materialize_and_bind_exposed_case(case_key="xeisd", repo_root=REPO_ROOT)
@@ -110,6 +122,32 @@ class ExposedEndToEndSmokeV1Tests(unittest.TestCase):
                 pre_agent_rule_selection=artifacts["pre_agent_rule_selection"],
                 materialization=altered,
                 evaluation=artifacts["evaluation"],
+            )
+
+    def test_invalid_bound_track_produces_no_operator_receipt(self):
+        bindings = {
+            case_key: materialize_and_bind_exposed_case(
+                case_key=case_key, repo_root=REPO_ROOT
+            )["route_binding"]
+            for case_key in ("xeisd", "hsp90")
+        }
+        bindings["hsp90"]["selected_track"] = "UNAUTHORIZED_TRACK"
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_dir = Path(temporary_directory) / "output"
+            with self.assertRaisesRegex(
+                ExposedEndToEndSmokeError, "HSP90_BOUND_TRACK_NOT_EXECUTABLE"
+            ):
+                _execute_exact_bound_routes(
+                    repo_root=REPO_ROOT,
+                    output_dir=output_dir,
+                    bindings=bindings,
+                )
+            self.assertFalse((output_dir / "bound_execution").exists())
+            self.assertFalse(
+                (
+                    output_dir
+                    / "bound_execution/routes/hsp90_b1/operator_run_receipt.json"
+                ).exists()
             )
 
     def test_nonempty_output_is_rejected_without_overwrite(self):
