@@ -86,16 +86,22 @@ def _lookup_request(allowlist: Mapping[str, Any], lookup_id: str) -> dict[str, s
     }
 
 
-def _run_xeisd_routes(repo_root: Path) -> dict[str, Any]:
-    """Reuse the frozen exact-attestation and deterministic evaluation path."""
+def run_xeisd_a1_reference_route(*, repo_root: Path) -> dict[str, Any]:
+    """Rerun only the exact complete-metadata X-EISD reference route.
+
+    This is the existing A1 attestation/direct-evaluation path extracted so a
+    caller that has already authorized A1 does not need to execute the separate
+    A2/A3 reference scenarios. It is still exact-case development code, not a
+    generic lookup or route executor.
+    """
 
     evidence_root = repo_root / "evidence" / "real_case_vertical_slice_v1"
     seed = load_json_object(evidence_root / "xeisd_case_projection_seed_v1.json")
     allowlist = load_json_object(evidence_root / "xeisd_source_lookup_allowlist_v1.json")
     bundle = load_rules_v1_bundle(repo_root / "registries" / "rules_v1")
 
-    a1_graph = copy.deepcopy(seed)
-    a1_lookups: list[dict[str, Any]] = []
+    case_graph = copy.deepcopy(seed)
+    lookup_receipts: list[dict[str, Any]] = []
     for lookup_id in (
         "XEI-LOOKUP-RANDOM-DECLARATIONS",
         "XEI-LOOKUP-JCOUPLING-DECLARATIONS",
@@ -108,18 +114,36 @@ def _run_xeisd_routes(repo_root: Path) -> dict[str, Any]:
         )
         if result.get("status") != "FOUND":
             raise ValueError(f"X_EISD_REFERENCE_LOOKUP_FAILED:{lookup_id}:{result.get('status')}")
-        a1_lookups.append(result)
-        a1_graph = apply_lookup_result(case_graph=a1_graph, lookup_result=result)
-    a1_graph = derive_declaration_attestations(
-        case_graph=a1_graph, lookup_results=a1_lookups
+        lookup_receipts.append(result)
+        case_graph = apply_lookup_result(case_graph=case_graph, lookup_result=result)
+    case_graph = derive_declaration_attestations(
+        case_graph=case_graph, lookup_results=lookup_receipts
     )
-    a1_results = evaluate_xeisd_case(case_graph=a1_graph, **bundle)
-    a1_packet = materialize_xeisd_conclusion_packet(
-        case_graph=a1_graph,
-        rule_results=a1_results,
-        lookup_results=a1_lookups,
+    rule_results = evaluate_xeisd_case(case_graph=case_graph, **bundle)
+    conclusion_packet = materialize_xeisd_conclusion_packet(
+        case_graph=case_graph,
+        rule_results=rule_results,
+        lookup_results=lookup_receipts,
         scenario_id="A1_COMPLETE_LOOKUP_THEN_DIRECT",
     )
+    return {
+        "case_graph": case_graph,
+        "lookup_receipts": lookup_receipts,
+        "conclusion_packet": conclusion_packet,
+    }
+
+
+def _run_xeisd_routes(repo_root: Path) -> dict[str, Any]:
+    """Reuse the frozen exact-attestation and deterministic evaluation paths."""
+
+    a1 = run_xeisd_a1_reference_route(repo_root=repo_root)
+    a1_graph = a1["case_graph"]
+    a1_lookups = a1["lookup_receipts"]
+    a1_packet = a1["conclusion_packet"]
+
+    evidence_root = repo_root / "evidence" / "real_case_vertical_slice_v1"
+    allowlist = load_json_object(evidence_root / "xeisd_source_lookup_allowlist_v1.json")
+    bundle = load_rules_v1_bundle(repo_root / "registries" / "rules_v1")
 
     a2_graph = copy.deepcopy(a1_graph)
     a2_graph["evidence_items"][0].pop("sample_composition")
@@ -176,8 +200,12 @@ def _write_xeisd_routes(output_dir: Path, xeisd: Mapping[str, Any]) -> dict[str,
     return paths
 
 
-def _write_hsp90_route(output_dir: Path, hsp90: Mapping[str, Any]) -> str:
-    route_dir = output_dir / "routes/hsp90_b1"
+def write_hsp90_reference_route_artifacts(
+    *, output_root: Path, hsp90: Mapping[str, Any]
+) -> str:
+    """Write the exact B1 route packet tree under one caller-owned output root."""
+
+    route_dir = output_root / "routes/hsp90_b1"
     for name in (
         "pre_operator_rule_result",
         "resolution_route",
@@ -259,7 +287,9 @@ def run_reference_demo(*, output_dir: Path) -> dict[str, Any]:
         workspace_root=repo_root,
         output_root=output_dir,
     )
-    hsp90_path = _write_hsp90_route(output_dir, hsp90)
+    hsp90_path = write_hsp90_reference_route_artifacts(
+        output_root=output_dir, hsp90=hsp90
+    )
     route_packets: dict[str, tuple[Mapping[str, Any], str]] = {
         "XEISD_A1_COMPLETE_METADATA": (xeisd["a1_conclusion_packet"], xeisd_paths["XEISD_A1_COMPLETE_METADATA"]),
         "XEISD_A2_MISSING_COMPOSITION": (xeisd["a2_conclusion_packet"], xeisd_paths["XEISD_A2_MISSING_COMPOSITION"]),

@@ -319,6 +319,15 @@ def run_demo(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_smoke(args: argparse.Namespace) -> int:
+    """Run the fixed paper-question-to-human-review exposed-development smoke test."""
+
+    from .exposed_end_to_end_smoke_v1 import run_exposed_end_to_end_smoke
+
+    run_exposed_end_to_end_smoke(output_dir=Path(args.output_dir))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -352,6 +361,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="A new or empty directory for fresh demo artifacts.",
     )
     demo_parser.set_defaults(handler=run_demo)
+    smoke_parser = subparsers.add_parser(
+        "run-smoke",
+        help="Run the exact X-EISD paper question plus HSP90 operator exposed-development smoke test.",
+    )
+    smoke_parser.add_argument(
+        "--output-dir",
+        required=True,
+        help="A new or empty directory for fresh smoke-test artifacts.",
+    )
+    smoke_parser.set_defaults(handler=run_smoke)
     return parser
 
 
