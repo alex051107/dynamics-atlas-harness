@@ -9,5 +9,8 @@ description = "Typed Profile-to-Rules-to-registered-operator harness for Dynamic
 requires-python = ">=3.11"
 dependencies = []
 
+[project.scripts]
+dynamics-atlas = "dynamics_atlas_harness.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]

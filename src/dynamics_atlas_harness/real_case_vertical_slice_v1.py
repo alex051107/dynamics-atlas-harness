@@ -11,6 +11,7 @@ import csv
 import hashlib
 import json
 from copy import deepcopy
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -65,6 +66,7 @@ HSP90_EXACT_OUTPUT_DIRECTORY = (
     "evidence/real_case_vertical_slice_v1/outputs/"
     "hsp90_b1_rule_to_operator/operator_outputs"
 )
+HSP90_REFERENCE_DEMO_OUTPUT_DIRECTORY = "routes/hsp90_b1/operator_outputs"
 _HSP90_EXACT_TIME_CONTRACT = {
     "analysis_window_ns": [20, 1020],
     "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY",
@@ -99,6 +101,14 @@ _EXACT_HSP90_EXPOSED_DEVELOPMENT_SCOPE = {
     "generalization_status": "NOT_GENERAL",
     "deployment_status": "NOT_PRODUCTION",
 }
+
+
+@dataclass(frozen=True)
+class _Hsp90OutputLocation:
+    """One of the two explicitly permitted locations for the exposed B1 output."""
+
+    output_dir: Path
+    receipt_output_directory: str
 
 
 class VerticalSliceError(ValueError):
@@ -937,11 +947,31 @@ class ExecutionEvidenceContext:
     ) -> None:
         """Admit one revalidated exact Case-B Operator run and no loose evidence."""
 
-        validated = validate_hsp90_operator_run_for_context(
+        self._record_validated_operator_run(
             operator_run=operator_run,
             operator_registry=operator_registry,
             input_manifest=input_manifest,
             workspace_root=workspace_root,
+            output_location=_hsp90_historical_output_location(workspace_root),
+        )
+
+    def _record_validated_operator_run(
+        self,
+        *,
+        operator_run: Mapping[str, Any],
+        operator_registry: Mapping[str, Any],
+        input_manifest: Mapping[str, Any],
+        workspace_root: Path,
+        output_location: _Hsp90OutputLocation,
+    ) -> None:
+        """Admit one exact receipt using a fixed historical or demo output binding."""
+
+        validated = _validate_hsp90_operator_run_for_context(
+            operator_run=operator_run,
+            operator_registry=operator_registry,
+            input_manifest=input_manifest,
+            workspace_root=workspace_root,
+            output_location=output_location,
         )
         rule_id = validated["evidence_result"]["affected_rule_instance_id"]
         if rule_id in self._evidence_results_by_rule_instance:
@@ -1469,12 +1499,33 @@ def _exact_hsp90_roster_operator(
     return spec
 
 
-def _hsp90_exact_output_directory(workspace_root: Path) -> Path:
+def _hsp90_historical_output_location(workspace_root: Path) -> _Hsp90OutputLocation:
     workspace_root = workspace_root.resolve()
     candidate = (workspace_root / HSP90_EXACT_OUTPUT_DIRECTORY).resolve()
     if not candidate.is_relative_to(workspace_root):
         raise VerticalSliceError("HSP90 exact output directory escapes the harness repository")
-    return candidate
+    return _Hsp90OutputLocation(
+        output_dir=candidate,
+        receipt_output_directory=HSP90_EXACT_OUTPUT_DIRECTORY,
+    )
+
+
+def _hsp90_reference_demo_output_location(output_root: Path) -> _Hsp90OutputLocation:
+    """Bind the rerunnable demo to its one documented output subdirectory.
+
+    This does not create a general output-routing mechanism.  It exists solely so
+    the existing exact Case-B adapter can rerun from frozen repository inputs
+    without touching the historical evidence directory.
+    """
+
+    output_root = output_root.resolve()
+    candidate = (output_root / HSP90_REFERENCE_DEMO_OUTPUT_DIRECTORY).resolve()
+    if not candidate.is_relative_to(output_root):
+        raise VerticalSliceError("HSP90 reference-demo output directory escapes its output root")
+    return _Hsp90OutputLocation(
+        output_dir=candidate,
+        receipt_output_directory=HSP90_REFERENCE_DEMO_OUTPUT_DIRECTORY,
+    )
 
 
 def validate_hsp90_operator_run_for_context(
@@ -1483,6 +1534,25 @@ def validate_hsp90_operator_run_for_context(
     operator_registry: Mapping[str, Any],
     input_manifest: Mapping[str, Any],
     workspace_root: Path,
+) -> dict[str, dict[str, Any]]:
+    """Revalidate the historical fixed-output Case-B receipt."""
+
+    return _validate_hsp90_operator_run_for_context(
+        operator_run=operator_run,
+        operator_registry=operator_registry,
+        input_manifest=input_manifest,
+        workspace_root=workspace_root,
+        output_location=_hsp90_historical_output_location(workspace_root),
+    )
+
+
+def _validate_hsp90_operator_run_for_context(
+    *,
+    operator_run: Mapping[str, Any],
+    operator_registry: Mapping[str, Any],
+    input_manifest: Mapping[str, Any],
+    workspace_root: Path,
+    output_location: _Hsp90OutputLocation,
 ) -> dict[str, dict[str, Any]]:
     """Revalidate receipt, exact files, and EvidenceResult before re-evaluation.
 
@@ -1522,8 +1592,8 @@ def validate_hsp90_operator_run_for_context(
     for field, expected in expected_receipt.items():
         if receipt.get(field) != expected:
             raise VerticalSliceError(f"HSP90 run receipt has an invalid {field}")
-    output_dir = _hsp90_exact_output_directory(workspace_root)
-    if receipt.get("output_directory") != HSP90_EXACT_OUTPUT_DIRECTORY:
+    output_dir = output_location.output_dir
+    if receipt.get("output_directory") != output_location.receipt_output_directory:
         raise VerticalSliceError("HSP90 run receipt has an unexpected output directory")
     validation = validate_hsp90_time_anatomy_outputs(
         output_dir=output_dir, input_manifest=input_manifest
@@ -1574,7 +1644,7 @@ def validate_hsp90_operator_run_for_context(
     }
 
 
-def run_hsp90_case_bound_operator(
+def _run_hsp90_case_bound_operator(
     *,
     resolution: Mapping[str, Any],
     case_graph: Mapping[str, Any],
@@ -1582,7 +1652,7 @@ def run_hsp90_case_bound_operator(
     operator_registry: Mapping[str, Any],
     input_manifest: Mapping[str, Any],
     workspace_root: Path,
-    output_dir: Path,
+    output_location: _Hsp90OutputLocation,
     request_id: str,
 ) -> dict[str, dict[str, Any]]:
     """Execute the one exact HSP90 Operator and materialize a receipt/EvidenceResult."""
@@ -1590,8 +1660,7 @@ def run_hsp90_case_bound_operator(
     resolution = _mapping(resolution, "HSP90 resolution")
     if request_id != HSP90_EXACT_REQUEST_ID:
         raise VerticalSliceError("HSP90 execution has an unexpected request ID")
-    if output_dir.resolve() != _hsp90_exact_output_directory(workspace_root):
-        raise VerticalSliceError("HSP90 execution has an unexpected output directory")
+    output_dir = output_location.output_dir
     fresh_rule_result = evaluate_hsp90_time_anatomy_f04r02(
         case_graph=case_graph,
         rule_overlay=rule_overlay,
@@ -1655,15 +1724,11 @@ def run_hsp90_case_bound_operator(
         }
         payload = {"output_files": [], "stdout_tail": ""}
     contract_status = "PASS" if validation["status"] == "PASS" else "FAIL"
-    try:
-        relative_output_dir = output_dir.resolve().relative_to(workspace_root.resolve())
-    except ValueError as exc:
-        raise VerticalSliceError("HSP90 output directory escapes the harness repository") from exc
     receipt = {
         **receipt_base,
         "status": "SUCCEEDED" if contract_status == "PASS" else "FAILED",
         "reason_codes": list(validation.get("reason_codes", [])),
-        "output_directory": str(relative_output_dir),
+        "output_directory": output_location.receipt_output_directory,
         "output_files": payload.get("output_files", []),
         "stdout_tail": payload.get("stdout_tail", ""),
         "output_validation": validation,
@@ -1689,13 +1754,42 @@ def run_hsp90_case_bound_operator(
     return {"operator_run_receipt": receipt, "evidence_result": evidence_result}
 
 
-def materialize_hsp90_conclusion_packet(
+def run_hsp90_case_bound_operator(
+    *,
+    resolution: Mapping[str, Any],
+    case_graph: Mapping[str, Any],
+    rule_overlay: Mapping[str, Any],
+    operator_registry: Mapping[str, Any],
+    input_manifest: Mapping[str, Any],
+    workspace_root: Path,
+    output_dir: Path,
+    request_id: str,
+) -> dict[str, dict[str, Any]]:
+    """Execute the historical fixed-output Case-B operator route unchanged."""
+
+    output_location = _hsp90_historical_output_location(workspace_root)
+    if output_dir.resolve() != output_location.output_dir:
+        raise VerticalSliceError("HSP90 execution has an unexpected output directory")
+    return _run_hsp90_case_bound_operator(
+        resolution=resolution,
+        case_graph=case_graph,
+        rule_overlay=rule_overlay,
+        operator_registry=operator_registry,
+        input_manifest=input_manifest,
+        workspace_root=workspace_root,
+        output_location=output_location,
+        request_id=request_id,
+    )
+
+
+def _materialize_hsp90_conclusion_packet(
     *,
     case_graph: Mapping[str, Any],
     rule_overlay: Mapping[str, Any],
     input_manifest: Mapping[str, Any],
     operator_registry: Mapping[str, Any],
     workspace_root: Path,
+    output_location: _Hsp90OutputLocation,
     rule_result: Mapping[str, Any],
     operator_run: Mapping[str, Any] | None,
     scenario_id: str,
@@ -1707,11 +1801,12 @@ def materialize_hsp90_conclusion_packet(
     context = ExecutionEvidenceContext()
     canonical_operator_run: Mapping[str, Any] | None = None
     if operator_run is not None:
-        context.record_validated_operator_run(
+        context._record_validated_operator_run(
             operator_run=operator_run,
             operator_registry=operator_registry,
             input_manifest=input_manifest,
             workspace_root=workspace_root,
+            output_location=output_location,
         )
         canonical_operator_run = context.operator_run_for(
             rule_instance_id(HSP90_RUNTIME_SUBRULE_ID, "SOURCE", HSP90_SOURCE_ID)
@@ -1795,6 +1890,118 @@ def materialize_hsp90_conclusion_packet(
     }
     validate_hsp90_conclusion_packet(packet)
     return packet
+
+
+def materialize_hsp90_conclusion_packet(
+    *,
+    case_graph: Mapping[str, Any],
+    rule_overlay: Mapping[str, Any],
+    input_manifest: Mapping[str, Any],
+    operator_registry: Mapping[str, Any],
+    workspace_root: Path,
+    rule_result: Mapping[str, Any],
+    operator_run: Mapping[str, Any] | None,
+    scenario_id: str,
+) -> dict[str, Any]:
+    """Materialize the historical fixed-output Case-B packet unchanged."""
+
+    return _materialize_hsp90_conclusion_packet(
+        case_graph=case_graph,
+        rule_overlay=rule_overlay,
+        input_manifest=input_manifest,
+        operator_registry=operator_registry,
+        workspace_root=workspace_root,
+        output_location=_hsp90_historical_output_location(workspace_root),
+        rule_result=rule_result,
+        operator_run=operator_run,
+        scenario_id=scenario_id,
+    )
+
+
+def run_hsp90_reference_demo_route(
+    *,
+    evidence_root: Path,
+    operator_registry: Mapping[str, Any],
+    workspace_root: Path,
+    output_root: Path,
+) -> dict[str, Any]:
+    """Rerun only the exposed B1 route into the documented demo output tree.
+
+    It reuses the existing case-bound resolution, adapter, receipt validation, and
+    same-Rule reevaluation.  It is intentionally limited to the one frozen HSP90
+    case and is not a reusable Operator router.
+    """
+
+    output_location = _hsp90_reference_demo_output_location(output_root)
+    bundle = load_hsp90_case_bundle(evidence_root)
+    pre_rule = evaluate_hsp90_time_anatomy_f04r02(
+        case_graph=bundle["case_graph"],
+        rule_overlay=bundle["rule_overlay"],
+        input_manifest=bundle["input_manifest"],
+    )
+    resolution = resolve_hsp90_time_anatomy_obligation(
+        rule_result=pre_rule,
+        case_graph=bundle["case_graph"],
+        rule_overlay=bundle["rule_overlay"],
+        operator_registry=operator_registry,
+        input_manifest=bundle["input_manifest"],
+        workspace_root=workspace_root,
+    )
+    operator_run = _run_hsp90_case_bound_operator(
+        resolution=resolution,
+        case_graph=bundle["case_graph"],
+        rule_overlay=bundle["rule_overlay"],
+        operator_registry=operator_registry,
+        input_manifest=bundle["input_manifest"],
+        workspace_root=workspace_root,
+        output_location=output_location,
+        request_id=HSP90_EXACT_REQUEST_ID,
+    )
+    evidence_context = ExecutionEvidenceContext()
+    evidence_context._record_validated_operator_run(
+        operator_run=operator_run,
+        operator_registry=operator_registry,
+        input_manifest=bundle["input_manifest"],
+        workspace_root=workspace_root,
+        output_location=output_location,
+    )
+    post_rule = evaluate_hsp90_time_anatomy_f04r02(
+        case_graph=bundle["case_graph"],
+        rule_overlay=bundle["rule_overlay"],
+        input_manifest=bundle["input_manifest"],
+        evidence_context=evidence_context,
+    )
+    conclusion_packet = _materialize_hsp90_conclusion_packet(
+        case_graph=bundle["case_graph"],
+        rule_overlay=bundle["rule_overlay"],
+        input_manifest=bundle["input_manifest"],
+        operator_registry=operator_registry,
+        workspace_root=workspace_root,
+        output_location=output_location,
+        rule_result=post_rule,
+        operator_run=operator_run,
+        scenario_id="HSP90_B1_OPERATOR_CONTRACT_PASS",
+    )
+    return {
+        "pre_operator_rule_result": pre_rule,
+        "resolution_route": resolution,
+        "operator_run_receipt": operator_run["operator_run_receipt"],
+        "evidence_result": operator_run["evidence_result"],
+        "post_operator_rule_result": post_rule,
+        "conclusion_packet": conclusion_packet,
+        "run_receipt": {
+            "run_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_REFERENCE_DEMO_V1",
+            "case_id": HSP90_CASE_ID,
+            "operator_id": HSP90_OPERATOR_ID,
+            "network_accessed": False,
+            "agent_calls": 0,
+            "unregistered_tool_calls": 0,
+            "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+            "scientific_disposition": "NOT_EVALUATED",
+            "output_directory": output_location.receipt_output_directory,
+            "boundary": "Exact case-bound rerun from frozen repository inputs; output-contract PASS remains PENDING_HUMAN_VALIDATION for science.",
+        },
+    }
 
 
 def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:

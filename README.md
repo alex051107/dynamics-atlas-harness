@@ -12,6 +12,25 @@ source-science review。
 这些 development artifacts 不构成 source-science approval、通用 runtime、transfer、Agent value 或
 production readiness。下面的 initial control-plane smoke 是历史基线，不是当前执行状态。
 
+## Runnable reference demo
+
+在新的或空的输出目录中，下面的命令会从仓库冻结输入重新运行 X-EISD A1/A2/A3、HSP90 B1，随后
+生成四份 development Stage-2 ConclusionPacket、manifest、summary 和简短报告：
+
+```bash
+python -m dynamics_atlas_harness run-demo --output-dir /tmp/dynamics-atlas-demo
+```
+
+安装为 editable package 后，同一命令也可以写成：
+
+```bash
+dynamics-atlas run-demo --output-dir /tmp/dynamics-atlas-demo
+```
+
+输出只写入指定目录，不访问网络、不调用模型、不读取凭据，也不会修改 tracked repository files。
+它复现的是两个 exposed development cases 的受限工程行为；F01/F02/F03/F04/F06 的具名
+source-science review 仍然是当前科学 gate。
+
 ## Historical initial control-plane smoke v0.2
 
 该历史基线真实调用已有 v0.3 selector，在 exposed X-EISD development case 上产生 59 个
