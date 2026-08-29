@@ -1,0 +1,134 @@
+{
+  "artifact_count": 25,
+  "artifacts": [
+    {
+      "bytes": 4788,
+      "relative_path": "adk/agent_visible_input.json",
+      "sha256": "014fc594a567c600e60dc4e3d6f3d7f77e5978289d2e719394b04a1d9f679e5c"
+    },
+    {
+      "bytes": 24995,
+      "relative_path": "adk/arm_a_development_reference_rules.json",
+      "sha256": "9a98d84e20a1b46e9958683585a0024819d76969f350764c77d27a2f7e0938c0"
+    },
+    {
+      "bytes": 26020,
+      "relative_path": "adk/arm_b_agent_profile_rules.json",
+      "sha256": "7d6e7ff89574497cc8a6893b7f4863614a6d90daabd39f99a67875f07dcdbaf3"
+    },
+    {
+      "bytes": 12034,
+      "relative_path": "adk/arm_c_full_harness.json",
+      "sha256": "5b4f66c8e8152dc641d14c49a3b8475bd61a530cd213beddd6b9b82d4f59981b"
+    },
+    {
+      "bytes": 365,
+      "relative_path": "adk/asset_identity_verification.json",
+      "sha256": "e8e9fd16ab91000c5bea175073159d262b6281d19c5f3715a0bfef59af9e0efe"
+    },
+    {
+      "bytes": 6330,
+      "relative_path": "adk/development_reference_comparison.json",
+      "sha256": "92ae9e0fdaa176df7e5a7e02eafc65481f5e2856b2e09e4a53e46b2bb55a0110"
+    },
+    {
+      "bytes": 29408,
+      "relative_path": "adk/human_decision_packet.json",
+      "sha256": "e7588f07ef9edae3db163a88b57937fd1176fabbb0fa740648a0a15f00dd6e7a"
+    },
+    {
+      "bytes": 508,
+      "relative_path": "adk/planner_proposal_admission.json",
+      "sha256": "58f911fb295ed7543696a194e7d252782ebfc15a77526fb319234ab6b819a737"
+    },
+    {
+      "bytes": 1684,
+      "relative_path": "adk/planner_visible_input.json",
+      "sha256": "ccb239194b2c1d442979b87c5c2fb1737e666219eaf0214622e350513cadbfca"
+    },
+    {
+      "bytes": 9804,
+      "relative_path": "adk/unresolved_obligation_classification.json",
+      "sha256": "a76596b818c0e0a7ba97742396df5ff3227b98fe4792db4313d88168d7b1267c"
+    },
+    {
+      "bytes": 1084,
+      "relative_path": "capsule_summary.json",
+      "sha256": "2fa226f8647f9ad760a519d537bc87ce2aa408b6b56ea398054e96090d1a87b0"
+    },
+    {
+      "bytes": 4153,
+      "relative_path": "hsp90/agent_visible_input.json",
+      "sha256": "aac70b2d36b143942b73fe008401128151476ce29531f5cb792229f829646498"
+    },
+    {
+      "bytes": 20196,
+      "relative_path": "hsp90/arm_a_development_reference_rules.json",
+      "sha256": "f72a074344a4fe3bcc1c0e7743270b33d92290b4b2dfac18d4a093085c9f3a86"
+    },
+    {
+      "bytes": 20465,
+      "relative_path": "hsp90/arm_b_agent_profile_rules.json",
+      "sha256": "6b77c7cad0e8aaa8967b0caf833a887ef2bfbde469a2c478e9e6c92614dd588a"
+    },
+    {
+      "bytes": 106891,
+      "relative_path": "hsp90/arm_c_full_harness/hsp90_exact_f04r02_control/routes/hsp90_b1/operator_outputs/directional_runs.tsv",
+      "sha256": "9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666"
+    },
+    {
+      "bytes": 2408,
+      "relative_path": "hsp90/arm_c_full_harness/hsp90_exact_f04r02_control/routes/hsp90_b1/operator_outputs/results_summary.json",
+      "sha256": "f285a33c63a59f1601f0aefa4f98afe62fb247121c575574cf1f42018d93e646"
+    },
+    {
+      "bytes": 12185,
+      "relative_path": "hsp90/arm_c_full_harness/hsp90_exact_f04r02_control/routes/hsp90_b1/operator_outputs/trajectory_time_anatomy.tsv",
+      "sha256": "fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb"
+    },
+    {
+      "bytes": 75840,
+      "relative_path": "hsp90/arm_c_full_harness/hsp90_exact_f04r02_control/routes/hsp90_b1/operator_outputs/trajectory_time_bins_50ns.tsv",
+      "sha256": "1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c"
+    },
+    {
+      "bytes": 57349,
+      "relative_path": "hsp90/arm_c_full_harness.json",
+      "sha256": "f2a96dc5ea8dfc774a1097107673a12b440282965588d31fd3d618c6eb1137c0"
+    },
+    {
+      "bytes": 362,
+      "relative_path": "hsp90/asset_identity_verification.json",
+      "sha256": "69273aeb2ea062033c31d2465fb720b8ff80aa2bfcffeee1930371038ef8125e"
+    },
+    {
+      "bytes": 5696,
+      "relative_path": "hsp90/development_reference_comparison.json",
+      "sha256": "2734ad639af522eb4926e4dbc16932e680d81a78d6eb3a3e65fa47a9b19119e3"
+    },
+    {
+      "bytes": 74236,
+      "relative_path": "hsp90/human_decision_packet.json",
+      "sha256": "ede0278d8214473c04ebcb71aa9db34c9c0c8cea6377bd06b6b2977aa076e081"
+    },
+    {
+      "bytes": 688,
+      "relative_path": "hsp90/planner_proposal_admission.json",
+      "sha256": "4489d6b22e19c6f7a7796867ee8b8fd0b6d52a69d8fa239d5fa37023865dfb8b"
+    },
+    {
+      "bytes": 2704,
+      "relative_path": "hsp90/planner_visible_input.json",
+      "sha256": "0c4e5a1d9db0643ddc527408c8ca18eaea9ab772978fe07bd9f0ea7c4a74d4c5"
+    },
+    {
+      "bytes": 10212,
+      "relative_path": "hsp90/unresolved_obligation_classification.json",
+      "sha256": "f93076b94d20af9b6370587874b3c583a4a751c74d6b65dee844f2b805451e58"
+    }
+  ],
+  "boundary": "Hashes identify this generated development run only; they do not establish scientific validity.",
+  "frozen_input_manifest_sha256": "2161fc8e1be30db27dc90a2ed92d0712f31e0158c0c0b3050b6f12b1ef0126cf",
+  "run_scope": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
+  "schema_version": "exposed-paper-blind-development-run-artifact-manifest/v1"
+}

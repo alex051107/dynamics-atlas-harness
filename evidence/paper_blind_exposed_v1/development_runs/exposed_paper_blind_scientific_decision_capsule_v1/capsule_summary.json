@@ -1,0 +1,28 @@
+{
+  "boundary": "One fixed development capsule; no generic scheduler, capability registry, Operator promotion, Rule activation, or portability claim.",
+  "capability_categories": [
+    "EXISTING_HSP90_DIRECTIONAL_TIME_ANATOMY_EXACT_CONTROL",
+    "GROUPED_OBSERVABLE_SAMPLING_DESCRIPTION",
+    "REFERENCE_RELATIVE_STRUCTURAL_PROXIMITY_DESCRIPTION"
+  ],
+  "case_packets": {
+    "ADK_EXPOSED_PORTABILITY_V1": "ABSTAIN_OR_HUMAN_REVIEW",
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1": "ABSTAIN_OR_HUMAN_REVIEW"
+  },
+  "cases": [
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "ADK_EXPOSED_PORTABILITY_V1"
+  ],
+  "development_status": "EXPOSED_DEVELOPMENT_ONLY",
+  "dhfr_accessed": false,
+  "external_model_transport": false,
+  "network_accessed": false,
+  "new_adapters": [
+    "GROUPED_OBSERVABLE_SAMPLING_DESCRIPTION",
+    "REFERENCE_RELATIVE_STRUCTURAL_PROXIMITY_DESCRIPTION"
+  ],
+  "schema_version": "exposed-paper-blind-scientific-decision-capsule/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "unsupported_support_packets": 0
+}

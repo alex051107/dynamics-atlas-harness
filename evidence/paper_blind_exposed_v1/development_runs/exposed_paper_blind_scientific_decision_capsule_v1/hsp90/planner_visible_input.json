@@ -1,0 +1,64 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "legal_action_cards": [
+    {
+      "action_kind": "DESCRIPTIVE_ANALYSIS_ONLY",
+      "addresses_ref": "HSP90_DEV_OBL_SAMPLING_DESCRIPTION",
+      "card_id": "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1",
+      "prerequisites": [
+        "Frozen trajectory group manifest validates against the 40-row observable."
+      ],
+      "prohibitions": [
+        "No RuleResult update",
+        "No global-equilibration claim",
+        "No population, rate, free-energy, or mechanism claim"
+      ]
+    },
+    {
+      "action_kind": "EXISTING_EXACT_CASE_BOUND_CONTROL_ROUTE",
+      "addresses_ref": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "card_id": "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE",
+      "prerequisites": [
+        "The exact frozen existing HSP90 case bundle and registered case-bound route validate."
+      ],
+      "prohibitions": [
+        "No general Operator selection",
+        "No public-packet Rule update",
+        "No scientific disposition"
+      ]
+    }
+  ],
+  "planner_boundary": "The Planner may select only listed card IDs and provide a short rationale. It may not create a Rule, choose an Operator, request execution, or state a scientific conclusion.",
+  "required_output": {
+    "case_id": "same as input",
+    "rationales": "object keyed by selected card ID",
+    "selected_card_ids": "list of listed card IDs only"
+  },
+  "schema_version": "paper-blind-planner-visible-input/v1",
+  "unresolved_items": [
+    {
+      "kind": "RULE_INSTANCE",
+      "reason": "The public facts leave source sample composition unknown.",
+      "ref": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS",
+      "status": "UNRESOLVED"
+    },
+    {
+      "kind": "RULE_INSTANCE",
+      "reason": "The public facts do not establish a condition or forward-model bridge.",
+      "ref": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_MD_CONFORMATIONAL_RELATION",
+      "status": "UNRESOLVED"
+    },
+    {
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason": "The candidate F04 reliability concern has no active generic RuleResult; a grouped, descriptive observable summary is permitted for development evidence only.",
+      "ref": "HSP90_DEV_OBL_SAMPLING_DESCRIPTION",
+      "status": "COMPUTABLE_EVIDENCE_MISSING"
+    },
+    {
+      "kind": "RULE_INSTANCE",
+      "reason": "A separate existing HSP90 case-bound control record has one exact frozen resolution route. It is not a general route for the public packet.",
+      "ref": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "status": "UNRESOLVED"
+    }
+  ]
+}

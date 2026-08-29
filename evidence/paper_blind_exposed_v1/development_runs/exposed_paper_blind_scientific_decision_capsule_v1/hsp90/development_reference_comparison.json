@@ -1,0 +1,113 @@
+{
+  "boundary": "Comparison can expose development differences only. It cannot adjudicate science, approve source grounding, or upgrade a claim.",
+  "casegraph_fact_comparison": {
+    "edge_endpoint_pairs": {
+      "extra_in_observed": [],
+      "matched": [
+        [
+          "HSP90_MD_DISTANCE_TRACE",
+          "HSP90_NMR_METHODS_RESULTS"
+        ]
+      ],
+      "observed": [
+        [
+          "HSP90_MD_DISTANCE_TRACE",
+          "HSP90_NMR_METHODS_RESULTS"
+        ]
+      ],
+      "omitted_from_observed": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "reference": [
+        [
+          "HSP90_MD_DISTANCE_TRACE",
+          "HSP90_NMR_METHODS_RESULTS"
+        ]
+      ]
+    },
+    "intended_use_match": true,
+    "observed_duplicate_edge_endpoint_pairs": [],
+    "observed_edge_count": 1,
+    "reference_edge_count": 1,
+    "requested_claim_level_match": true,
+    "source_identity": {
+      "extra_in_observed": [],
+      "matched": [
+        "HSP90_MD_DISTANCE_TRACE",
+        "HSP90_NMR_METHODS_RESULTS"
+      ],
+      "observed": [
+        "HSP90_MD_DISTANCE_TRACE",
+        "HSP90_NMR_METHODS_RESULTS"
+      ],
+      "omitted_from_observed": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "reference": [
+        "HSP90_MD_DISTANCE_TRACE",
+        "HSP90_NMR_METHODS_RESULTS"
+      ]
+    }
+  },
+  "comparison_status": "DEVELOPMENT_REFERENCE_COMPARISON_NOT_HUMAN_ADJUDICATION",
+  "expert_bounded_conclusion_draft": {
+    "status": "PENDING_NAMED_DOMAIN_REVIEW",
+    "text": "A local seeded-MD diagnostic can be described at trajectory level only. It cannot establish NMR agreement, population, kinetics, free energy, mechanism, mutation effect, or an independent validation relationship."
+  },
+  "paper_reported_conclusion_draft": {
+    "status": "SOURCE_LOCATED_DRAFT_NOT_ADJUDICATED",
+    "text": "The paper provides NMR-based context for ATP-lid conformational heterogeneity in HSP90alpha NTD. This development reference does not treat that context as a numerical MD target or a validated NMR-to-MD bridge."
+  },
+  "reference_expected_unresolved_development_obligations": [
+    "SOURCE_FACT_MISSING: sample-system composition and NMR-to-MD condition relation.",
+    "COMPUTABLE_EVIDENCE_MISSING: existing F04R02 exact directional-time-anatomy control before its existing route runs.",
+    "HUMAN_SCIENTIFIC_JUDGMENT: whether any source relation warrants a scientific interpretation.",
+    "RULE_COVERAGE_GAP: reliability, representation bridge, and identifiability remain candidate-only."
+  ],
+  "reference_status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+  "rule_applicability": {
+    "extra_in_observed": [],
+    "matched": [
+      "F01R01_CASE_CLAIM_DECLARATION::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS"
+    ],
+    "observed": [
+      "F01R01_CASE_CLAIM_DECLARATION::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS"
+    ],
+    "omitted_from_observed": [],
+    "precision": 1.0,
+    "recall": 1.0,
+    "reference": [
+      "F01R01_CASE_CLAIM_DECLARATION::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_MD_DISTANCE_TRACE",
+      "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:HSP90_NMR_METHODS_RESULTS",
+      "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:HSP90_MD_DISTANCE_TRACE|HSP90_NMR_METHODS_RESULTS"
+    ]
+  }
+}

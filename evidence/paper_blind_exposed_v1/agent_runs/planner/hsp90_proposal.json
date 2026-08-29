@@ -1,0 +1,11 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "selected_card_ids": [
+    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1",
+    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE"
+  ],
+  "rationales": {
+    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1": "Directly addresses the listed missing grouped sampling-description evidence.",
+    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE": "Directly addresses the listed unresolved case-bound time-anatomy control item."
+  }
+}

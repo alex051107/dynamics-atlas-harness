@@ -1,0 +1,13 @@
+{
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "execution_authorization": "AUTHORIZED_EXACT_CAPSULE_ACTIONS_ONLY",
+  "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+  "rationales": {
+    "ADK_NONREFERENCE_REFERENCE_PROJECTION_V1": "Directly addresses the listed missing reference-relative proximity evidence."
+  },
+  "schema_version": "paper-blind-planner-proposal-admission/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "selected_card_ids": [
+    "ADK_NONREFERENCE_REFERENCE_PROJECTION_V1"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "packet_id": "HSP90_PUBLIC_PACKET_V1",
+  "schema_version": "paper-blind-frozen-asset-verification/v1",
+  "verification_scope": "IDENTITY_AND_PUBLIC_PACKET_BOUNDARY_ONLY",
+  "verified_asset_ids": [
+    "HSP90_CA46_CA60_DISTANCE_40X1021",
+    "HSP90_TRAJECTORY_IDS",
+    "HSP90_TRAJECTORY_GROUP_MANIFEST"
+  ]
+}
