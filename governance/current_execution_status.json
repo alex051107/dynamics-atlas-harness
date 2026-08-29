@@ -1,13 +1,14 @@
 {
-  "schema_version": "frozen-plan-execution-status/v5",
+  "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260827-v5",
-  "as_of": "2026-08-27T15:10:55Z",
-  "overall_status": "NO_AGENT_MILESTONE_A_MERGED_PASS_LIVE_AGENT_EXPOSED_CASES_V1_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED_HUMAN_REVIEW_REQUIRED",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260828-v6",
+  "as_of": "2026-08-28T17:14:22Z",
+  "overall_status": "EXPOSED_DEVELOPMENT_BASELINE_STAGE2_AND_AGENT_DIAGNOSTICS_MERGED_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
-    "main_commit": "dd189362c4186f256e1ebe3cf2e068cdcbd6f733",
-    "baseline_tag": "exposed-no-agent-route-integrity-baseline",
-    "accurate_name": "Exposed-development no-Agent route-integrity baseline"
+    "main_commit": "00faf6f0d2f8916878dd37b57c2018dbfbd45020",
+    "baseline_tag": "post-pr10-exposed-development-control-plane",
+    "main_commit_semantics": "Verified development/runtime baseline through GitHub PR #10; not a literal current main HEAD assertion.",
+    "accurate_name": "Exposed-development control-plane baseline with bounded Stage-2 packets and non-callable Profiler screening setup"
   },
   "work_items": [
     {
@@ -25,8 +26,9 @@
     },
     {
       "role": "LIVE_AGENT_EXPOSED_CASES_V1",
-      "head_branch": "feature/live-agent-exposed-cases-v1",
-      "state": "EXPOSED_EVALUATION_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/9",
+      "merge_commit": "f126eafef774cbbe7a82c11aa53f05b118d98c8c",
+      "state": "MERGED_CONTRACT_FAILURE_BASELINE_SAFE_BUT_CAPABILITY_REJECTED",
       "authorization": "USER_DECISION_DA-20260826-032",
       "scope": [
         "TWO_EXPOSED_CASES",
@@ -35,7 +37,7 @@
         "DETERMINISTIC_ADMISSION_AND_AUTHORIZATION",
         "ONE_LOW_COST_TOOLLESS_MODEL_CONFIGURATION"
       ],
-      "forbidden": [
+      "diagnostic_forbidden_scope": [
         "RULE_EXPANSION",
         "OPERATOR_EXPANSION",
         "CLAIM_CEILING_CHANGE",
@@ -53,18 +55,58 @@
         "baseline_run": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/run_receipt.json",
         "bounded_prompt_remediation": "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/run_receipt.json",
         "result": "SAFE_BUT_CAPABILITY_REJECTED_NO_TYPED_CONTRACT_PASS",
+        "scientific_interpretation": "NOT_EVALUATED",
+        "sequence_classification": "POST_PLAN_CASE_DRIVEN_DIAGNOSTIC_NOT_FROZEN_AGENT_SEQUENCE_COMPLETION",
         "deterministic_replay": [
           "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_v1/deterministic_replay_receipt.json",
           "agent_experiments/v1/recorded/qwen2_5_1_5b_20260826_prompt_remediation1/deterministic_replay_receipt.json"
         ],
-        "safety_passes": ["NO_ANSWER_LEAKAGE", "NO_EXECUTION_BOUNDARY_VIOLATION", "NO_OPERATOR_EXECUTION", "NO_UNSAFE_CLAIM_UPGRADE"],
-        "blocking_failures": ["CRITICAL_PROFILER_FACT_ERRORS", "REQUIRED_UNKNOWN_MISSING", "PLANNER_TYPED_ENVELOPE_REJECTED", "DETERMINISTIC_AUTHORIZATION_REJECTED"]
+        "safety_passes": [
+          "NO_ANSWER_LEAKAGE",
+          "NO_EXECUTION_BOUNDARY_VIOLATION",
+          "NO_OPERATOR_EXECUTION",
+          "NO_UNSAFE_CLAIM_UPGRADE"
+        ],
+        "blocking_failures": [
+          "CRITICAL_PROFILER_FACT_ERRORS",
+          "REQUIRED_UNKNOWN_MISSING",
+          "PLANNER_TYPED_ENVELOPE_REJECTED",
+          "DETERMINISTIC_AUTHORIZATION_REJECTED"
+        ]
       }
+    },
+    {
+      "role": "MINIMAL_STAGE2_EXPOSED_CONCLUSIONS_V1",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/8",
+      "merge_commit": "3d03413558ec6328329c513e23758ac1979cffbf",
+      "state": "MERGED_DEVELOPMENT_ONLY_CASE_BOUND_CONCLUSION_PACKETS",
+      "scope": [
+        "TWO_EXPOSED_DEVELOPMENT_CASES",
+        "THREE_ABSTAIN_OR_HUMAN_REVIEW_PACKETS",
+        "ONE_RELATION_SCOPED_CANNOT_SUPPORT_PACKET",
+        "NO_SCIENTIFIC_SUPPORT_PACKET"
+      ],
+      "sequence_classification": "CASE_BOUND_REDUCER_NOT_FROZEN_PLAN_GENERIC_THREE_ROUTE_OR_PORTABILITY_COMPLETION"
+    },
+    {
+      "role": "OPENROUTER_PROFILER_SCREENING_SETUP_V1",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/10",
+      "merge_commit": "00faf6f0d2f8916878dd37b57c2018dbfbd45020",
+      "state": "MERGED_DEFAULT_NONCALLABLE_SETUP",
+      "scope": [
+        "ONE_STANDARD_LIBRARY_OPENAI_COMPATIBLE_CLIENT",
+        "PROFILER_ONLY_SCREENING_CONTRACT",
+        "NO_KEY_READ",
+        "NO_EXTERNAL_TRANSPORT",
+        "NO_CREDIT_SPEND",
+        "NO_MODEL_RESULT"
+      ],
+      "sequence_classification": "NON_BLOCKING_MODEL_ACCESS_SETUP_NOT_PROVIDER_FRAMEWORK_OR_AGENT_PHASE_COMPLETION"
     },
     {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
-      "authority_note": "The frozen plan is not rewritten to imply its earlier micro-stage sequence is current live authorization. The append-only deviation record holds the user-approved case-driven exception."
+      "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
     }
   ],
   "stages": [
@@ -80,14 +122,12 @@
       "known_unresolved": [
         "SOURCE_SCIENCE_APPROVAL",
         "GENERAL_OPERATOR_SCOPE",
-        "SCIENTIFIC_STAGE2_VERDICT",
-        "AGENT_VALUE",
         "TRANSFER"
       ]
     },
     {
       "stage": "LIVE_AGENT_EXPOSED_CASES_V1",
-      "status": "EXPOSED_EVALUATION_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED",
+      "status": "MERGED_SAFE_BUT_CAPABILITY_REJECTED_CONTRACT_BASELINE",
       "known_present": [
         "SEPARATE_PROFILER_AND_PLANNER_REQUIREMENT",
         "ANSWER_BLIND_MODEL_VISIBLE_WORKSPACE_REQUIREMENT",
@@ -96,24 +136,63 @@
       "known_unresolved": [
         "LOW_COST_PROFILER_DID_NOT_PASS_EXPOSED_CONTRACT",
         "LOW_COST_PLANNER_DID_NOT_PASS_TYPED_ENVELOPE",
-        "RECORDED_BASELINE_PROMPT_HASH_ONLY_NOT_REPRODUCIBLE",
         "END_TO_END_BEHAVIOR",
         "AGENT_VALUE"
       ]
     },
     {
-      "stage": "STAGE2_ADK_HELD_OUT",
+      "stage": "MINIMAL_STAGE2_EXPOSED_CONCLUSIONS_V1",
+      "status": "MERGED_DEVELOPMENT_ONLY",
+      "known_present": [
+        "CASE_LEVEL_THREE_STATE_DEVELOPMENT_PACKETS",
+        "SOURCE_REVIEW_AND_EVIDENCE_PENDING_STOPS",
+        "NO_SUPPORT_WITHOUT_REQUIRED_SOURCE_REVIEW"
+      ],
+      "known_unresolved": [
+        "NAMED_SOURCE_SCIENCE_REVIEW",
+        "GENERAL_CASEWORKFLOW_RUNTIME",
+        "SCIENTIFIC_APPROVAL"
+      ]
+    },
+    {
+      "stage": "OPENROUTER_PROFILER_SCREENING_SETUP_V1",
+      "status": "MERGED_DEFAULT_NONCALLABLE",
+      "known_present": [
+        "FAIL_CLOSED_NO_NETWORK_PREFLIGHT",
+        "FROZEN_PROFILER_SCREENING_CONTRACT"
+      ],
+      "known_unresolved": [
+        "HUMAN_EXECUTION_FREEZE",
+        "MODEL_MATRIX",
+        "ACCOUNT_SPEND_BOUNDARY",
+        "MODEL_RESULT"
+      ]
+    },
+    {
+      "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
+      "status": "PENDING_DOMAIN_REVIEW",
+      "known_present": ["F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET"],
+      "known_unresolved": ["REVIEWER_IDENTITY", "PRIMARY_PASSAGE_CHECK", "RECORDED_DISPOSITION"]
+    },
+    {
+      "stage": "ADK_PORTABILITY",
       "status": "NOT_AUTHORIZED",
       "known_present": [],
-      "known_unresolved": ["ALL_STAGE_EXIT_GATES"]
+      "known_unresolved": ["NAMED_SOURCE_SCIENCE_REVIEW_AND_SEPARATE_ADMISSION"]
+    },
+    {
+      "stage": "FROZEN_HELD_OUT",
+      "status": "NOT_AUTHORIZED",
+      "known_present": [],
+      "known_unresolved": ["PRIOR_EXIT_GATES_AND_INDEPENDENT_CURATOR"]
     }
   ],
   "next_allowed_action": {
-    "action": "HUMAN_MERGE_REVIEW_PR7_EXPOSED_AGENT_CONTRACT_FAILURE_BASELINE",
-    "deliverable": "TWO_CASE_SEPARATE_PROFILER_PLANNER_REPLAYED_COMPARISON_REPORT",
+    "action": "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
+    "deliverable": "COMPLETED_NARROW_SOURCE_GROUNDING_REVIEW_RECORD",
     "automatic_code_changes": false,
-    "authorization": "USER_DECISION_DA-20260826-032",
-    "exit_gate": "REVIEW_REPLAYED_SAFETY_AND_CAPABILITY_RECEIPTS_BEFORE_MERGE_OR_ANY_FURTHER_AGENT_MODEL_OR_WORKFLOW_CHANGE"
+    "authorization": "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
+    "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only evaluation of two exposed cases. No source-science approval, final scientific disposition, general Operator route, Agent value, transfer, production, Stage 2, ADK, or held-out claim."
+  "claim_ceiling": "Development-only exposed-case evidence. No source-science approval, final scientific support, general Operator route, Agent value, transfer, production, ADK portability, held-out result, or external model execution claim."
 }

@@ -1,9 +1,19 @@
 ## Plan position
 
 - Plan ID:
-- Stage / PR number:
+- Frozen Plan semantic milestone:
+- GitHub delivery PR number:
 - Current authorization source:
 - Required Exit Gate:
+
+## Review context
+
+- Original objective and why now:
+- Actual behavioral change:
+- Focused validation:
+- Deliberately excluded work:
+- Open review invitation: Independently challenge the framing, identify a better or
+  smaller solution, flag a missing risk, or recommend stopping/reverting if warranted.
 
 ## Observed gap
 

@@ -1,10 +1,26 @@
 # dynamics-atlas-harness
 
-## CURRENT OBSERVED
+## Current execution status
 
-当前实现是 Dynamics Atlas Harness Control-Plane Smoke v0.2。它真实调用已有 v0.3 selector，在 exposed X-EISD development case 上产生 59 个 obligations、15 个 selector unresolved inputs 和 16 个 gaps。case RunPlan 没有匹配到可路由 Operator，因此正确停在 `RUN_PLAN_BLOCKED`。独立 HSP90 canary 可以显式运行，但不属于该 case route。
+当前仓库状态、当前授权和下一允许动作以
+[仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
+[机器可读快照](governance/current_execution_status.json) 为准。它们记录的当前状态是：两个
+exposed development case 的 case-bound no-Agent routes 和最小 Stage-2 packets 已合并；Agent
+diagnostic 仍是 capability-rejected baseline；当前下一步是具名 F01/F02/F03/F04/F06
+source-science review。
 
-这份证据只支持控制面接线和停止行为。Rules semantic freeze、真实 Rule 到 Operator 到 reevaluation 路径、semantic correctness、transfer、Agent value 和 production readiness 均未建立。
+这些 development artifacts 不构成 source-science approval、通用 runtime、transfer、Agent value 或
+production readiness。下面的 initial control-plane smoke 是历史基线，不是当前执行状态。
+
+## Historical initial control-plane smoke v0.2
+
+该历史基线真实调用已有 v0.3 selector，在 exposed X-EISD development case 上产生 59 个
+obligations、15 个 selector unresolved inputs 和 16 个 gaps。case RunPlan 没有匹配到可路由
+Operator，因此正确停在 `RUN_PLAN_BLOCKED`。独立 HSP90 canary 可以显式运行，但不属于该 case
+route。
+
+这份历史证据只支持早期控制面接线和停止行为；它不覆盖后续已合并的 case-bound route、Stage-2
+packets 或当前 source-science gate。
 
 ## TARGET ARCHITECTURE
 

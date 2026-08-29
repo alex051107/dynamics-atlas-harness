@@ -1,4 +1,9 @@
-# Frozen baseline
+# Historical frozen initial baseline
+
+> **Historical initial baseline:** This document records the 2026-08-25
+> control-plane-smoke baseline. It is not the current execution state. Read
+> [the repository execution-status snapshot](docs/CURRENT_EXECUTION_STATUS_ZH.md)
+> before interpreting the scope or next action.
 
 ## Baseline identity
 

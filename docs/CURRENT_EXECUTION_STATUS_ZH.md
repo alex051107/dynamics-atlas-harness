@@ -1,13 +1,34 @@
-# Dynamics Atlas 仓库当前执行状态
+# Dynamics Atlas 仓库执行状态快照
 
-仓库内唯一机器可读的 current execution status 是
-[current_execution_status.json](../governance/current_execution_status.json)。它记录当前 main、下一允许动作和
-claim ceiling。人工授权与计划偏差只追加到
-[deviations.jsonl](../governance/deviations.jsonl)；冻结计划仍保留在
-[frozen_execution_plan_v1_0.json](../governance/frozen_execution_plan_v1_0.json)，不被重写为 live status。
+仓库内的机器可读快照是
+[current_execution_status.json](../governance/current_execution_status.json)。它供创建分支、编写
+PR 和外部审查时快速了解已合并的 repository state；它不是新的科学权威，也不能单独释放下一阶段。
+live Status 只记录当前 gate 与已记录的人类决定；只有具名 human/domain review 或具名 project-owner
+direction 才能释放科学阶段。
 
-当前事实：No-Agent Milestone A 已在 `main@dd189362` 通过并合并。受限的
-`feature/live-agent-exposed-cases-v1` 已完成两例 exposed development case 的 answer-blind Profiler 与
-proposal-only Planner 比较；离线 replay 显示安全边界通过，但低成本模型没有通过 typed capability gates，结果停在 human review。Stage 2、ADK、held-out、Rules/Operator 扩展和 scientific claim upgrade 均未授权。
+## 当前已验证状态
 
-创建任何分支前先读上述 JSON；需要理解为什么授权发生变化时再读 deviations 记录。
+- GitHub **PR #6**：exposed-development 的 no-Agent route-integrity baseline 已合并。
+- GitHub **PR #8**：两个 exposed development case 的最小 Stage-2 ConclusionPacket 已合并；
+  结果是三条 `ABSTAIN_OR_HUMAN_REVIEW` 和一条 relation-scoped
+  `CANNOT_SUPPORT_REQUESTED_CLAIM`，没有任何 scientific `SUPPORT`。
+- GitHub **PR #9**：两例 Agent contract diagnostic 已合并为安全但 capability-rejected 的
+  baseline；它不证明 Agent value，也不是 Frozen Plan 的 Agent 阶段完成。
+- GitHub **PR #10**：默认不可调用的 OpenRouter Profiler screening setup 已合并；默认配置
+  不读取 key、不发请求、不花费 credits，也没有 model result。
+
+`00faf6f0d2f8916878dd37b57c2018dbfbd45020` 是经 GitHub PR #10 验证的
+development/runtime baseline commit，不是对日后持续变化的 literal current `main` HEAD 的声明。
+当前真实的科学下一步仍是 F01/F02/F03/F04/F06 的具名 human/domain
+source-science review，而不是已完成的 PR #7 merge review。
+
+## 阅读与命名规则
+
+GitHub PR 编号只是 delivery ID；Frozen Plan 的 `PR 8` 指未来的 frozen-held-out semantic
+milestone，并不等于 GitHub PR #8。每个 PR 必须同时说明其 Frozen Plan position、当前授权、
+实际行为改变、刻意排除的工作、claim ceiling 和下一道 gate，避免把 case-bound development
+artifact 写成通用 runtime 或阶段完成。
+
+创建任何新分支前，先读 JSON 快照和当前 live Status。缺少具名 source-review disposition 时，
+不要启动 ADK、held-out、source-science claim upgrade、OpenRouter execution 或新的 scientific
+Agent work。

@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MAIN_AFTER_NO_AGENT_MILESTONE = "dd189362c4186f256e1ebe3cf2e068cdcbd6f733"
+PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT = "00faf6f0d2f8916878dd37b57c2018dbfbd45020"
 
 
 def load_json(relative_path: str) -> dict:
@@ -33,7 +33,23 @@ class GovernanceConsistencyTests(unittest.TestCase):
             if line.strip()
         ]
 
-        self.assertEqual(status["repository_baseline"]["main_commit"], MAIN_AFTER_NO_AGENT_MILESTONE)
+        baseline = status["repository_baseline"]
+        self.assertEqual(
+            baseline["main_commit"],
+            PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT,
+        )
+        self.assertEqual(
+            baseline["baseline_tag"],
+            "post-pr10-exposed-development-control-plane",
+        )
+        self.assertIn(
+            "Verified development/runtime baseline through GitHub PR #10",
+            baseline["main_commit_semantics"],
+        )
+        self.assertIn(
+            "not a literal current main HEAD assertion",
+            baseline["main_commit_semantics"],
+        )
         self.assertEqual(
             work_item(status, "NO_AGENT_MILESTONE_A")["state"].split("_")[0:2],
             ["MERGED", "PASS"],
@@ -41,19 +57,27 @@ class GovernanceConsistencyTests(unittest.TestCase):
         live_agent = work_item(status, "LIVE_AGENT_EXPOSED_CASES_V1")
         self.assertEqual(
             live_agent["state"],
-            "EXPOSED_EVALUATION_REPLAYED_SAFE_BUT_CAPABILITY_REJECTED",
+            "MERGED_CONTRACT_FAILURE_BASELINE_SAFE_BUT_CAPABILITY_REJECTED",
         )
         self.assertEqual(live_agent["authorization"], "USER_DECISION_DA-20260826-032")
         self.assertEqual(
             status["next_allowed_action"]["action"],
-            "HUMAN_MERGE_REVIEW_PR7_EXPOSED_AGENT_CONTRACT_FAILURE_BASELINE",
+            "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
+        )
+        self.assertEqual(
+            status["next_allowed_action"]["authorization"],
+            "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
         )
         self.assertEqual(
             live_agent["observed_result"]["result"],
             "SAFE_BUT_CAPABILITY_REJECTED_NO_TYPED_CONTRACT_PASS",
         )
         self.assertEqual(
-            next(stage for stage in status["stages"] if stage["stage"] == "STAGE2_ADK_HELD_OUT")["status"],
+            next(stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW")["status"],
+            "PENDING_DOMAIN_REVIEW",
+        )
+        self.assertEqual(
+            next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
         )
         authorization = next(
@@ -63,6 +87,15 @@ class GovernanceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(authorization["status"], "ACTIVE")
         self.assertIn("RULES_EXPANSION", authorization["forbidden"])
+        sequence_reconciliation = next(
+            record
+            for record in deviations
+            if record.get("deviation_id") == "DA-DEV-20260828-003"
+        )
+        self.assertEqual(
+            sequence_reconciliation["status"],
+            "RECORDED_NO_FURTHER_EXPANSION_AUTHORIZED",
+        )
 
     def test_governance_records_are_portable_and_document_links_resolve(self) -> None:
         repository_records = (
@@ -86,3 +119,39 @@ class GovernanceConsistencyTests(unittest.TestCase):
                 (document_path.parent / target).resolve().is_file(),
                 f"broken repository-relative link: {target}",
             )
+
+    def test_pr_template_keeps_minimal_open_ended_reviewer_context(self) -> None:
+        template = (REPO_ROOT / ".github" / "pull_request_template.md").read_text(
+            encoding="utf-8"
+        )
+        for required_text in (
+            "## Review context",
+            "Original objective and why now:",
+            "Actual behavioral change:",
+            "Focused validation:",
+            "Deliberately excluded work:",
+            "Open review invitation:",
+            "Frozen Plan semantic milestone:",
+            "GitHub delivery PR number:",
+        ):
+            with self.subTest(required_text=required_text):
+                self.assertIn(required_text, template)
+        self.assertNotIn("Advisory review handback", template)
+
+        document = (REPO_ROOT / "docs" / "CURRENT_EXECUTION_STATUS_ZH.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("GitHub PR 编号只是 delivery ID", document)
+        self.assertIn("Frozen Plan 的 `PR 8`", document)
+        self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
+        self.assertIn("development/runtime baseline commit", document)
+        self.assertIn("literal current `main` HEAD", document)
+
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("## Current execution status", readme)
+        self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", readme)
+        self.assertIn("Historical initial control-plane smoke v0.2", readme)
+
+        baseline = (REPO_ROOT / "BASELINE.md").read_text(encoding="utf-8")
+        self.assertIn("Historical initial baseline", baseline)
+        self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", baseline)
