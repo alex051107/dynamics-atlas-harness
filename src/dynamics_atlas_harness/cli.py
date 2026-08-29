@@ -310,6 +310,15 @@ def run_prototype(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_demo(args: argparse.Namespace) -> int:
+    """Rerun the fixed exposed-development reference artifacts into fresh output."""
+
+    from .runnable_reference_demo_v1 import run_reference_demo
+
+    run_reference_demo(output_dir=Path(args.output_dir))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -333,6 +342,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Run one independent registry canary explicitly; it is never part of case routing.",
     )
     prototype_parser.set_defaults(handler=run_prototype)
+    demo_parser = subparsers.add_parser(
+        "run-demo",
+        help="Rerun the fixed X-EISD/HSP90 exposed-development reference demo.",
+    )
+    demo_parser.add_argument(
+        "--output-dir",
+        required=True,
+        help="A new or empty directory for fresh demo artifacts.",
+    )
+    demo_parser.set_defaults(handler=run_demo)
     return parser
 
 
