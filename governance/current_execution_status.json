@@ -7,6 +7,7 @@
   "repository_baseline": {
     "main_commit": "00faf6f0d2f8916878dd37b57c2018dbfbd45020",
     "baseline_tag": "post-pr10-exposed-development-control-plane",
+    "main_commit_semantics": "Verified development/runtime baseline through GitHub PR #10; not a literal current main HEAD assertion.",
     "accurate_name": "Exposed-development control-plane baseline with bounded Stage-2 packets and non-callable Profiler screening setup"
   },
   "work_items": [

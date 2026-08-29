@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MAIN_AFTER_PR10 = "00faf6f0d2f8916878dd37b57c2018dbfbd45020"
+PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT = "00faf6f0d2f8916878dd37b57c2018dbfbd45020"
 
 
 def load_json(relative_path: str) -> dict:
@@ -33,7 +33,23 @@ class GovernanceConsistencyTests(unittest.TestCase):
             if line.strip()
         ]
 
-        self.assertEqual(status["repository_baseline"]["main_commit"], MAIN_AFTER_PR10)
+        baseline = status["repository_baseline"]
+        self.assertEqual(
+            baseline["main_commit"],
+            PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT,
+        )
+        self.assertEqual(
+            baseline["baseline_tag"],
+            "post-pr10-exposed-development-control-plane",
+        )
+        self.assertIn(
+            "Verified development/runtime baseline through GitHub PR #10",
+            baseline["main_commit_semantics"],
+        )
+        self.assertIn(
+            "not a literal current main HEAD assertion",
+            baseline["main_commit_semantics"],
+        )
         self.assertEqual(
             work_item(status, "NO_AGENT_MILESTONE_A")["state"].split("_")[0:2],
             ["MERGED", "PASS"],
@@ -128,6 +144,8 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("GitHub PR 编号只是 delivery ID", document)
         self.assertIn("Frozen Plan 的 `PR 8`", document)
         self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
+        self.assertIn("development/runtime baseline commit", document)
+        self.assertIn("literal current `main` HEAD", document)
 
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Current execution status", readme)

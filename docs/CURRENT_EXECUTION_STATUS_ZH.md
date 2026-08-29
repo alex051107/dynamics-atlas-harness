@@ -17,9 +17,10 @@ direction 才能释放科学阶段。
 - GitHub **PR #10**：默认不可调用的 OpenRouter Profiler screening setup 已合并；默认配置
   不读取 key、不发请求、不花费 credits，也没有 model result。
 
-当前 `main` 是 `00faf6f0d2f8916878dd37b57c2018dbfbd45020`。当前真实下一步是
-F01/F02/F03/F04/F06 的具名 human/domain source-science review，而不是已完成的 PR #7
-merge review。
+`00faf6f0d2f8916878dd37b57c2018dbfbd45020` 是经 GitHub PR #10 验证的
+development/runtime baseline commit，不是对日后持续变化的 literal current `main` HEAD 的声明。
+当前真实的科学下一步仍是 F01/F02/F03/F04/F06 的具名 human/domain
+source-science review，而不是已完成的 PR #7 merge review。
 
 ## 阅读与命名规则
 
