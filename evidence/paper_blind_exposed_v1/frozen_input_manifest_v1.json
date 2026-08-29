@@ -1,0 +1,29 @@
+{
+  "schema_version": "paper-blind-frozen-inputs/v1",
+  "assets": {
+    "ADK_1AKE_CHAIN_A_CA": {
+      "relative_path": "adk/1AKE_chain_A_ca.npy",
+      "sha256": "2245f0f36e08ef569e0d142e8ee015bd96460ece3d07e508b357669c454bb861",
+      "source_record": "Dynamics_Atlas_System_Audit_20260710_115646_CST/pilot_adk/raw/1AKE_current.pdb sha256=651e952f55f1317f50f4e82b7f0e99053397032cd8da5b2896f79d0af9f619a9",
+      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; no normal modes, trajectories, or prior result files."
+    },
+    "ADK_4AKE_CHAIN_A_CA": {
+      "relative_path": "adk/4AKE_chain_A_ca.npy",
+      "sha256": "f1331cd000d362f24e91eb33e652bece6c04f7842a8292b6b04375fa5a834fc8",
+      "source_record": "Dynamics_Atlas_System_Audit_20260710_115646_CST/pilot_adk/raw/4AKE_current.pdb sha256=ff798ee8791878eb58bac1c6bed32042f51b455512ac93b50bda8fa0ff0e7f78",
+      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; no normal modes, trajectories, or prior result files."
+    },
+    "HSP90_CA46_CA60_DISTANCE_40X1021": {
+      "relative_path": "hsp90/ca46_ca60_distance_40x1021.npy",
+      "sha256": "db85dec4c67b7c27fa1b190ec2e42d4f4a0ff87512d82a5e555b550f1d525dc7",
+      "source_record": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/work/hsp90_ca_coordinates.npz sha256=f6aaf6d8d3e3aa77571252c4281cdbd2acf86350faee6b3e94fc68cf6587803c",
+      "extraction_boundary": "Framewise Euclidean C-alpha distance between residue IDs 46 and 60 for each declared trajectory; shape 40 x 1021; no state assignment, threshold, clustering, or conclusion."
+    },
+    "HSP90_TRAJECTORY_IDS": {
+      "relative_path": "hsp90/trajectory_ids.txt",
+      "sha256": "77caeb2a3659ff35cd7315b6bf43796ea1d8bea5859396b97994de05b208f49a",
+      "source_record": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/work/hsp90_ca_coordinates.npz sha256=f6aaf6d8d3e3aa77571252c4281cdbd2acf86350faee6b3e94fc68cf6587803c",
+      "extraction_boundary": "Ordered identifiers for the 40 declared trajectory rows only; no observable values, state assignment, grouping, or conclusion."
+    }
+  }
+}

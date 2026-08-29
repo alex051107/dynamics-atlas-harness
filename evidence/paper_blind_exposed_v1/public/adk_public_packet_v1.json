@@ -1,0 +1,83 @@
+{
+  "schema_version": "paper-blind-public-packet/v1",
+  "packet_id": "ADK_PUBLIC_PACKET_V1",
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "case_role": "EXPOSED_PORTABILITY_PREPARATION",
+  "research_question": "Given the supplied adenylate-kinase endpoint structures and permitted source context, what source facts and uncertainties must be retained before any future system evaluates a trajectory, ensemble, or non-reference structure?",
+  "source_materials": [
+    {
+      "source_id": "ADK_METHODS_RESULTS",
+      "source_kind": "PRIMARY_PREPRINT_METHODS_RESULTS",
+      "source_locator": "Raghuram, DynaMune preprint 2026, DOI 10.21203/rs.3.rs-8999467/v1; local text derivative Section 3.1 lines 397-710.",
+      "permitted_facts": [
+        "The case uses closed PDB 1AKE and open PDB 4AKE adenylate-kinase endpoint structures.",
+        "The described system preparation removes solvent and heteroatoms and does not perform structural refinement before the endpoint comparison.",
+        "The public capsule supplies endpoint coordinates only; it does not supply an ADK trajectory, ensemble, or validated dynamical reference."
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Prior DynaMune result trees"
+      ]
+    },
+    {
+      "source_id": "ADK_ENDPOINT_COORDINATES",
+      "source_kind": "FROZEN_PDB_COORDINATE_DERIVATIVE",
+      "source_locator": "frozen_input_manifest_v1.json assets ADK_1AKE_CHAIN_A_CA and ADK_4AKE_CHAIN_A_CA.",
+      "permitted_facts": [
+        "Each supplied endpoint contains one Chain A C-alpha coordinate per residue 1-214.",
+        "The two frozen coordinate arrays have the same declared residue coverage for a future direct reference-relative comparison.",
+        "The arrays are static endpoint coordinates rather than trajectory samples."
+      ],
+      "excluded_sections": [
+        "Discussion",
+        "Conclusion",
+        "Prior ADK development scripts",
+        "Prior normal-mode outputs"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "ADK_1AKE_CHAIN_A_CA",
+      "asset_kind": "STATIC_REFERENCE_COORDINATES",
+      "public_description": "Closed-state endpoint derivative containing Chain A C-alpha coordinates only."
+    },
+    {
+      "asset_id": "ADK_4AKE_CHAIN_A_CA",
+      "asset_kind": "STATIC_REFERENCE_COORDINATES",
+      "public_description": "Open-state endpoint derivative containing Chain A C-alpha coordinates only."
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_source_ids",
+      "unknowns",
+      "rationale"
+    ]
+  },
+  "platform_authority_envelope": {
+    "execution_authorization": "NO_EXECUTION",
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_boundary": {
+      "allowed_descriptions": [
+        "publicly supplied source and data identities",
+        "explicit unresolved information proposed from the public packet"
+      ],
+      "forbidden_claims": [
+        "state population",
+        "transition rate",
+        "free energy",
+        "mechanism",
+        "general ADK portability",
+        "equilibrium interpretation"
+      ]
+    }
+  },
+  "hidden_reference_boundary": {
+    "status": "EXTERNAL_HUMAN_CURATED_REFERENCE_REQUIRED",
+    "repository_visibility": "NOT_PRESENT_IN_PUBLIC_PACKET_OR_RUNTIME"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "paper-blind-public-packet/v1",
+  "packet_id": "HSP90_PUBLIC_PACKET_V1",
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "case_role": "EXPOSED_DEVELOPMENT",
+  "research_question": "Given the permitted HSP90 NMR context and the supplied ordered MD observable, what source facts and uncertainties must be retained before any future system evaluates the relationship between simulated paths and experimentally characterized ATP-lid states?",
+  "source_materials": [
+    {
+      "source_id": "HSP90_NMR_METHODS_RESULTS",
+      "source_kind": "PRIMARY_PAPER_METHODS_RESULTS",
+      "source_locator": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623.",
+      "permitted_facts": [
+        "The source studies the HSP90alpha N-terminal domain and an ATP-lid segment using solution NMR measurements.",
+        "The Methods describe wild-type, R46A, and R60A construct-specific NMR measurements, including relaxation-dispersion experiments.",
+        "The public packet does not supply a validated numerical bridge from the NMR readouts to the MD observable."
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Supplementary interpretation"
+      ]
+    },
+    {
+      "source_id": "HSP90_MD_DISTANCE_TRACE",
+      "source_kind": "FROZEN_DERIVED_TRAJECTORY_OBSERVABLE",
+      "source_locator": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021 and HSP90_TRAJECTORY_IDS.",
+      "permitted_facts": [
+        "The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60.",
+        "A companion frozen table retains one declared trajectory identifier for each observable row.",
+        "This public packet does not aggregate trajectories, assign group semantics, estimate sampling, or provide a state assignment, population estimate, kinetic model, or NMR forward model."
+      ],
+      "excluded_sections": [
+        "Discussion",
+        "Conclusion",
+        "Prior trajectory result files",
+        "Precomputed route output"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "HSP90_CA46_CA60_DISTANCE_40X1021",
+      "asset_kind": "ORDERED_REPLICA_BY_TIME_OBSERVABLE",
+      "public_description": "A frozen derived C-alpha distance observable with source identity and extraction boundary recorded in the input manifest."
+    },
+    {
+      "asset_id": "HSP90_TRAJECTORY_IDS",
+      "asset_kind": "ROW_ALIGNED_TRAJECTORY_IDENTITY_TABLE",
+      "public_description": "One ordered trajectory identifier for each observable row; the packet does not aggregate or infer construct/seed groups."
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_source_ids",
+      "unknowns",
+      "rationale"
+    ]
+  },
+  "platform_authority_envelope": {
+    "execution_authorization": "NO_EXECUTION",
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_boundary": {
+      "allowed_descriptions": [
+        "publicly supplied source and data identities",
+        "explicit unresolved information proposed from the public packet"
+      ],
+      "forbidden_claims": [
+        "global equilibration",
+        "equilibrium population",
+        "kinetic rate",
+        "free energy",
+        "mechanism",
+        "numerical NMR-to-MD agreement"
+      ]
+    }
+  },
+  "hidden_reference_boundary": {
+    "status": "EXTERNAL_HUMAN_CURATED_REFERENCE_REQUIRED",
+    "repository_visibility": "NOT_PRESENT_IN_PUBLIC_PACKET_OR_RUNTIME"
+  }
+}
