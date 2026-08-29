@@ -9,6 +9,7 @@ from dynamics_atlas_harness.paper_blind_exposed_v1 import (
     PaperBlindPublicPacketError,
     build_agent_visible_packet,
     load_public_packet,
+    project_admitted_proposal_to_rules_casegraph,
     validate_agent_proposal,
     verify_declared_asset_hashes,
 )
@@ -16,13 +17,20 @@ from dynamics_atlas_harness.paper_blind_exposed_v1 import (
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_ROOT = REPO_ROOT / "evidence" / "paper_blind_exposed_v1" / "public"
+PROFILER_ROOT = REPO_ROOT / "evidence" / "paper_blind_exposed_v1" / "agent_runs" / "profiler"
 HSP90_PACKET = PUBLIC_ROOT / "hsp90_public_packet_v1.json"
 ADK_PACKET = PUBLIC_ROOT / "adk_public_packet_v1.json"
 HSP90_ASSET_IDS = [
     "HSP90_CA46_CA60_DISTANCE_40X1021",
     "HSP90_TRAJECTORY_IDS",
+    "HSP90_TRAJECTORY_GROUP_MANIFEST",
 ]
-ADK_ASSET_IDS = ["ADK_1AKE_CHAIN_A_CA", "ADK_4AKE_CHAIN_A_CA"]
+ADK_ASSET_IDS = [
+    "ADK_1AKE_CHAIN_A_CA",
+    "ADK_4AKE_CHAIN_A_CA",
+    "ADK_1E4V_G10V_SOURCE_PDB",
+    "ADK_1E4V_G10V_CHAIN_A_CA",
+]
 
 
 def _load(path: Path) -> dict:
@@ -70,7 +78,7 @@ class PaperBlindExposedV1Tests(unittest.TestCase):
         self.assertNotIn("claim_boundary", visible)
         self.assertEqual(
             visible["agent_proposal_schema"]["allowed_output_fields"],
-            ["case_id", "proposed_source_ids", "unknowns", "rationale"],
+            ["case_id", "proposed_case_facts", "unknowns", "rationale"],
         )
 
     def test_hidden_reference_and_expected_route_fields_are_rejected(self):
@@ -85,22 +93,58 @@ class PaperBlindExposedV1Tests(unittest.TestCase):
             finally:
                 path.unlink(missing_ok=True)
 
-    def test_agent_proposal_is_profile_only_and_cannot_select_capabilities(self):
-        proposal = {
-            "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
-            "proposed_source_ids": [
-                "HSP90_NMR_METHODS_RESULTS",
-                "HSP90_MD_DISTANCE_TRACE",
-            ],
-            "unknowns": ["NMR-to-MD condition compatibility is not supplied."],
-            "rationale": "The public material identifies source facts and unresolved links.",
-        }
+    def test_agent_proposal_is_fact_only_and_projects_declared_fields_without_authority(self):
+        proposal = _load(PROFILER_ROOT / "hsp90_proposal.json")
         admitted = validate_agent_proposal(HSP90_PACKET, proposal)
         self.assertEqual(admitted["proposal_status"], "ADMISSIBLE_NONAUTHORITATIVE")
-        self.assertEqual(set(admitted), {"schema_version", "proposal_status", "proposal"})
+        projected = project_admitted_proposal_to_rules_casegraph(HSP90_PACKET, admitted)
+        self.assertEqual(projected["case"]["intake_kind"], "SCIENTIFIC_CLAIM_REVIEW")
+        self.assertEqual(
+            projected["evidence_items"][0]["data_lineage_status"],
+            "AGENT_PROPOSED_UNVERIFIED",
+        )
+        self.assertEqual(
+            projected["evidence_items"][0]["sample_system_composition_declaration_status"],
+            "UNKNOWN",
+        )
         proposal["candidate_capability_ids"] = ["SAMPLING_DIAGNOSTICS_V1"]
         with self.assertRaisesRegex(PaperBlindPublicPacketError, "FORBIDDEN_FIELD"):
             validate_agent_proposal(HSP90_PACKET, proposal)
+
+    def test_agent_cannot_change_runtime_owned_claim_roles_or_comparison_semantics(self):
+        packet = _load(HSP90_PACKET)
+        proposal = _load(PROFILER_ROOT / "hsp90_proposal.json")
+        proposal["proposed_case_facts"]["case"]["scientific_claim"] = "Agent-invented claim"
+        proposal["proposed_case_facts"]["sources"][0]["evidence_role"] = "UNKNOWN"
+        proposal["proposed_case_facts"]["edges"][0]["edge_id"] = "AGENT_CHOSEN_ID"
+        proposal["proposed_case_facts"]["edges"][0]["condition_relation"] = "MISMATCH"
+        proposal["proposed_case_facts"]["edges"][0]["relation_type"] = "AGENT_INVENTED"
+        projected = project_admitted_proposal_to_rules_casegraph(
+            HSP90_PACKET, validate_agent_proposal(HSP90_PACKET, proposal)
+        )
+        authority = packet["platform_authority_envelope"]["rules_projection_authority"]
+        self.assertEqual(projected["case"]["scientific_claim"], authority["case"]["scientific_claim"])
+        self.assertEqual(
+            projected["evidence_items"][0]["evidence_role"],
+            authority["source_evidence_roles"]["HSP90_NMR_METHODS_RESULTS"],
+        )
+        self.assertEqual(projected["comparisons"][0]["comparison_id"], "HSP90_NMR_TO_MD_CONTEXT_EDGE")
+        self.assertEqual(
+            projected["comparisons"][0]["condition_relation"],
+            authority["comparisons"][0]["condition_relation"],
+        )
+
+    def test_duplicate_unordered_agent_edge_pair_is_rejected_before_rules_projection(self):
+        proposal = _load(PROFILER_ROOT / "adk_proposal.json")
+        duplicate = dict(proposal["proposed_case_facts"]["edges"][0])
+        duplicate["edge_id"] = "ADK_DUPLICATE_REVERSED_PAIR"
+        duplicate["left_source_id"] = "ADK_ENDPOINT_CONTEXT"
+        duplicate["right_source_id"] = "ADK_1E4V_G10V_STRUCTURE"
+        proposal["proposed_case_facts"]["edges"].append(duplicate)
+        with self.assertRaisesRegex(
+            PaperBlindPublicPacketError, "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR"
+        ):
+            validate_agent_proposal(ADK_PACKET, proposal)
 
     def test_hash_mismatch_fails_before_any_numeric_or_execution_path(self):
         manifest = _load(paper_blind_exposed_v1.FROZEN_INPUT_MANIFEST_PATH)

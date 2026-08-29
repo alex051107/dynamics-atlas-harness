@@ -1,0 +1,132 @@
+{
+  "reference_id": "ADK_SEALED_DEVELOPMENT_REFERENCE_DRAFT_V1",
+  "reference_status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "visibility_contract": {
+    "agent_visible_input": false,
+    "profiler_prompt": false,
+    "planner_input": false,
+    "runtime_authority": false,
+    "comparison_use": "DEVELOPMENT_ONLY_AFTER_ANSWER_BLIND_RUN"
+  },
+  "PaperReportedConclusionDraft": {
+    "status": "SOURCE_LOCATED_DRAFT_NOT_ADJUDICATED",
+    "text": "The supplied reference context labels 1AKE closed and 4AKE open. The newly admitted 1E4V G10V structure is a static non-reference sample and is not a paper-derived dynamic path."
+  },
+  "ExpertBoundedConclusionDraft": {
+    "status": "PENDING_NAMED_DOMAIN_REVIEW",
+    "text": "A rigidly aligned distance to two static anchors can describe reference-relative proximity only. It does not identify a dynamic state, wild-type equivalence, population, kinetic process, pathway, energy, mechanism, or portability."
+  },
+  "reference_case_facts": {
+    "case": {
+      "scientific_claim": "Describe one G10V static coordinate sample's whole-chain reference-relative proximity to the supplied 1AKE and 4AKE anchors, while retaining all dynamical interpretations as unsupported.",
+      "requested_claim_level": "SOURCE_LOCAL_CONSISTENCY",
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "declared_request_scope": ["SOURCE_LOCAL_CONSISTENCY"],
+      "forbidden_upgrades": [
+        "EQUILIBRIUM_POPULATION",
+        "KINETICS",
+        "FREE_ENERGY",
+        "MECHANISM",
+        "WILDTYPE_EQUIVALENCE",
+        "PORTABILITY"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "ADK_ENDPOINT_CONTEXT",
+        "evidence_role": "CONSTRUCTION",
+        "construct_and_condition": "E. coli adenylate-kinase endpoint context for 1AKE and 4AKE; relation to 1E4V G10V is a static structural comparison only.",
+        "sample_composition": "UNKNOWN",
+        "native_observable": "Static PDB endpoint coordinates.",
+        "estimand": "Reference coordinates, not a dynamical distribution.",
+        "time_semantics": {"kind": "STATIC_STRUCTURE"},
+        "spatial_support": "Chain A C-alpha coordinate anchors in residue order 1-214.",
+        "unit_or_aggregation": "One static endpoint structure per anchor."
+      },
+      {
+        "source_id": "ADK_1E4V_G10V_STRUCTURE",
+        "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "E. coli adenylate kinase G10V static PDB structure; condition comparability to both anchors is UNKNOWN.",
+        "sample_composition": "UNKNOWN",
+        "native_observable": "Static PDB coordinates from one non-reference G10V structure.",
+        "estimand": "One whole-chain rigidly aligned reference-relative proximity descriptor.",
+        "time_semantics": {"kind": "STATIC_STRUCTURE"},
+        "spatial_support": "Chain A C-alpha coordinates in residue order 1-214.",
+        "unit_or_aggregation": "One static non-reference structure."
+      },
+      {
+        "source_id": "ADK_COORDINATE_DERIVATIVES",
+        "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "Frozen coordinate derivatives preserve residue-order correspondence only; molecular condition comparison is UNKNOWN.",
+        "sample_composition": "UNKNOWN",
+        "native_observable": "Frozen Chain A C-alpha coordinate arrays.",
+        "estimand": "Whole-chain post-alignment RMSD to each named anchor.",
+        "time_semantics": {"kind": "STATIC_STRUCTURE"},
+        "spatial_support": "All mapped Chain A C-alpha coordinates, residues 1-214.",
+        "unit_or_aggregation": "One static array per structure."
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "left_source_id": "ADK_1E4V_G10V_STRUCTURE",
+        "right_source_id": "ADK_ENDPOINT_CONTEXT",
+        "relation_type": "QUALITATIVE_TRIANGULATION",
+        "condition_relation": "UNKNOWN",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "UNKNOWN",
+        "shared_error_status": "UNKNOWN"
+      }
+    ]
+  },
+  "expected_family_scope": {
+    "active_draft_families": ["F01", "F02", "F03", "F06"],
+    "candidate_only_families": ["F04", "F05", "F07"],
+    "new_development_adapter": "reference-relative structural projection only; not a Rule result or Operator"
+  },
+  "expected_unresolved_development_obligations": [
+    "SOURCE_FACT_MISSING: endpoint and 1E4V condition/construct comparability.",
+    "COMPUTABLE_EVIDENCE_MISSING: whole-chain reference-relative projection for the admitted non-reference static sample.",
+    "HUMAN_SCIENTIFIC_JUDGMENT: scientific relevance of a G10V static geometry.",
+    "RULE_COVERAGE_GAP: representation and identifiability remain candidate-only."
+  ],
+  "acceptable_evidence_actions": [
+    "Run one reference-relative rigid-alignment projection using the frozen 1E4V coordinates.",
+    "Report ambiguity or nearest-anchor geometry without a state assignment.",
+    "Keep dynamical and comparability claims unresolved."
+  ],
+  "allowed_claims": [
+    "Whole-chain reference-relative geometric proximity for one static non-reference coordinate sample.",
+    "Explicit unsupported dynamical interpretations."
+  ],
+  "forbidden_claims": [
+    "Scientific SUPPORT",
+    "state population",
+    "transition rate",
+    "free energy",
+    "mechanism",
+    "wild-type equivalence",
+    "general portability"
+  ],
+  "acceptable_next_actions": [
+    {
+      "action": "Acquire a traceable wild-type ADK trajectory or ensemble with condition metadata",
+      "type": "NEW_DATA_OR_COMPUTATION",
+      "resolves": "Dynamic and condition-aware coverage",
+      "stop_condition": "Keep static proximity descriptive if no non-reference time-resolved data are admitted."
+    },
+    {
+      "action": "Named source-science review of endpoint and mutant comparability",
+      "type": "HUMAN_REVIEW",
+      "resolves": "Whether a biological comparison is admissible",
+      "stop_condition": "Do not equate a G10V static sample with a wild-type state without a named review."
+    },
+    {
+      "action": "Specify a modality-appropriate observable and forward bridge",
+      "type": "NEW_EXPERIMENT",
+      "resolves": "Experimental relation to the reference anchors",
+      "stop_condition": "Abstain if the new observable cannot distinguish the open/closed interpretations."
+    }
+  ]
+}
