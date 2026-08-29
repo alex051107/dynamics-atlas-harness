@@ -14,7 +14,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT = "4028cc4be02465e0e19b5c733aa335b23618c4b5"
-PR15_EXPOSED_CAPSULE_IMPLEMENTATION_HEAD = "94f8b10c1781b8e3a82eb25f5dca2721ed0aa220"
+PR15_REVIEWED_IMPLEMENTATION_HEAD = "deb8a1379c973f09680425f6e640eea3ea1e337d"
 
 
 def load_json(relative_path: str) -> dict:
@@ -68,8 +68,16 @@ class GovernanceConsistencyTests(unittest.TestCase):
             PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
         )
         capsule = work_item(status, "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1")
-        self.assertEqual(capsule["state"], "DRAFT_CLEAN_CI_PASS_DEVELOPMENT_ONLY")
-        self.assertEqual(capsule["reviewed_head"], PR15_EXPOSED_CAPSULE_IMPLEMENTATION_HEAD)
+        self.assertEqual(
+            capsule["state"],
+            "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+        )
+        self.assertEqual(
+            capsule["reviewed_implementation_head"],
+            PR15_REVIEWED_IMPLEMENTATION_HEAD,
+        )
+        self.assertEqual(capsule["draft_pr_number"], 15)
+        self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
             "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",

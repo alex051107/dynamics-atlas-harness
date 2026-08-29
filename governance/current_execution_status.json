@@ -2,8 +2,9 @@
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
   "status_id": "DA-HARNESS-EXEC-STATUS-20260829-v7",
-  "as_of": "2026-08-29T21:34:07Z",
-  "overall_status": "EXPOSED_PAPER_BLIND_DEVELOPMENT_CAPSULE_DRAFT_CLEAN_CI_PASS_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
+  "as_of": "2026-08-29T22:58:01Z",
+  "status_snapshot_as_of": "2026-08-29T22:58:01Z",
+  "overall_status": "EXPOSED_PAPER_BLIND_DEVELOPMENT_CAPSULE_DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
     "main_commit": "4028cc4be02465e0e19b5c733aa335b23618c4b5",
     "baseline_tag": "post-pr14-paper-blind-public-packet-boundary",
@@ -121,19 +122,22 @@
     {
       "role": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
       "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/15",
-      "reviewed_head": "94f8b10c1781b8e3a82eb25f5dca2721ed0aa220",
-      "state": "DRAFT_CLEAN_CI_PASS_DEVELOPMENT_ONLY",
+      "reviewed_implementation_head": "deb8a1379c973f09680425f6e640eea3ea1e337d",
+      "draft_pr_number": 15,
+      "state": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
       "scope": [
         "HSP90_AND_ADK_EXPOSED_CASES_ONLY",
-        "ANSWER_BLIND_PROPOSAL_ADMISSION",
+        "RECORDED_PROPOSAL_REPLAY_ONLY",
         "SEALED_DEVELOPMENT_REFERENCE_DRAFT_COMPARISON",
-        "EXACT_HSP90_CONTROL_REUSE",
-        "GROUPED_DESCRIPTIVE_SAMPLING",
-        "REFERENCE_RELATIVE_STATIC_PROJECTION",
+        "FRESH_RULE_DERIVED_PLANNER_INPUT",
+        "SELECTED_ACTION_ONLY_EXECUTION",
+        "EXISTING_EXACT_HSP90_CONTROL_SIDECAR",
+        "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
         "ABSTAINING_HUMAN_PACKETS"
       ],
-      "validation": "GitHub unit CI run 33276456185 SUCCESS on reviewed implementation head; clean git-archive checkout regenerated the capsule and completed 131 tests with 2 pre-existing workspace-dependent skips.",
-      "delivery_review": "Draft PR contains the advisory Codex review brief. Any advisory finding remains non-authoritative and cannot substitute for named source-science review.",
+      "validation": "Local full-suite validation passed after the bounded causal repair. The final PR head and GitHub Actions readback belong in the PR body after push, not in this repository snapshot.",
+      "delivery_review": "The bounded causal repair awaits final GitHub CI and advisory methodology review. Neither can substitute for named source-science review.",
       "forbidden_scope": [
         "DHFR_ACCESS_OR_RUN",
         "SOURCE_SCIENCE_APPROVAL",
@@ -211,11 +215,13 @@
     },
     {
       "stage": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
-      "status": "DRAFT_CLEAN_CI_PASS_DEVELOPMENT_ONLY",
+      "status": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
       "known_present": [
-        "TWO_EXPOSED_ANSWER_BLIND_CASES",
+        "TWO_EXPOSED_RECORDED_PROPOSAL_CASES",
         "SEALED_DEVELOPMENT_REFERENCE_DRAFTS",
-        "THREE_CAPPED_CAPABILITY_CATEGORIES",
+        "FRESH_RULE_DERIVED_PLANNER_INPUT",
+        "SELECTED_ACTION_ONLY_EXECUTION",
+        "TWO_DESCRIPTIVE_ADAPTERS_AND_SEPARATE_EXACT_CONTROL",
         "BOUNDED_NOT_EVALUATED_HUMAN_PACKETS",
         "DEVELOPMENT_REFERENCE_COMPARISON"
       ],
@@ -254,5 +260,5 @@
     "authorization": "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
     "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only exposed-case evidence. Draft PR #15 adds answer-blind proposals, capped descriptive analyses, abstaining human packets, and comparison to AI-authored development reference drafts. It establishes no source-science approval, final scientific support, biological correctness, general Rule coverage, general Operator route, Agent value, transfer, production, ADK portability, held-out result, or external model execution claim."
+  "claim_ceiling": "Development-only exposed-case evidence. Draft PR #15 records proposal replay, fresh Draft-Rule-derived Planner input, legal card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, abstaining human packets, and comparison to AI-authored development reference drafts. It establishes no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
 }

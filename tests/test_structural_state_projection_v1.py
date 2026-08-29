@@ -58,7 +58,8 @@ class StructuralStateProjectionV1Tests(unittest.TestCase):
             classification_positions=list(range(214)),
         )
         self.assertEqual(result["sample_kind"], "NONREFERENCE_STATIC_COORDINATE_SAMPLE")
-        self.assertEqual(result["rule_effect"], "NO_RULE_RESULT_EMITTED")
+        self.assertEqual(result["rule_effect"], "NO_ACTIVE_RULE_EFFECT")
+        self.assertEqual(result["capability_kind"], "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION")
         self.assertEqual(result["nearest_reference_geometry"]["reference_id"], "ADK_1AKE_CLOSED_REFERENCE")
         self.assertIn("wild-type equivalence", result["forbidden_claims"])
 

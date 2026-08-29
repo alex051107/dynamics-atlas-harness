@@ -1,15 +1,14 @@
 {
   "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
-  "execution_authorization": "AUTHORIZED_EXACT_CAPSULE_ACTIONS_ONLY",
+  "decision": "SELECT_ACTIONS",
+  "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
   "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
   "rationales": {
-    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE": "Directly addresses the listed unresolved case-bound time-anatomy control item.",
-    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1": "Directly addresses the listed missing grouped sampling-description evidence."
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "Select the available descriptive action for the unresolved observable-dependence development item."
   },
-  "schema_version": "paper-blind-planner-proposal-admission/v1",
+  "schema_version": "paper-blind-planner-proposal-admission/v2",
   "scientific_disposition": "NOT_EVALUATED",
   "selected_card_ids": [
-    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1",
-    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE"
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
   ]
 }

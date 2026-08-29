@@ -29,8 +29,9 @@ class SamplingDiagnosticsV1Tests(unittest.TestCase):
             {item["group_id"]: item["trajectory_count"] for item in result["within_group_summaries"]},
             {"R46A_ES": 20, "R60A_GS": 20},
         )
-        self.assertEqual(result["rule_effect"], "NO_RULE_RESULT_EMITTED")
+        self.assertEqual(result["rule_effect"], "NO_ACTIVE_RULE_EFFECT")
         self.assertIn("simulation globally equilibrated", result["forbidden_claims"])
+        self.assertIn("does not establish global sampling adequacy", result["limitation"])
 
     def test_group_manifest_row_count_mismatch_fails_closed(self):
         manifest_path = FROZEN_ROOT / "trajectory_group_manifest_v1.json"

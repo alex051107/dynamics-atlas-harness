@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install package and declared scientific dependencies
-        run: python3 -m pip install .
+      - name: Install package and exposed-capsule scientific extra
+        run: python3 -m pip install '.[exposed-capsule-v1]'
       - name: Run unit tests
         run: PYTHONPATH=src python3 -m unittest discover -s tests -v

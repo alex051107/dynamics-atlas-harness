@@ -1,4 +1,4 @@
-"""Package-backed, group-preserving observable sampling descriptions.
+"""Package-backed, group-preserving observable-dependence descriptions.
 
 This is a narrow development analysis adapter, not a Rule evaluator, Operator, or
 equilibration detector. It uses PyMBAR's public timeseries estimator for each
@@ -99,7 +99,7 @@ def run_grouped_observable_sampling_diagnostics(
     observable_id: str,
     analysis_window_label: str,
 ) -> dict[str, Any]:
-    """Describe trajectory-local autocorrelation and effective sample size.
+    """Describe trajectory-local observable dependence and effective sample size.
 
     The result is intentionally descriptive. It never asserts global equilibration,
     population convergence, inter-group biological differences, or a Rule outcome.
@@ -171,8 +171,9 @@ def run_grouped_observable_sampling_diagnostics(
             )
 
     return {
-        "schema_version": "grouped-observable-sampling-diagnostics/v1",
+        "schema_version": "grouped-observable-dependence-description/v1",
         "development_status": "DESCRIPTIVE_DEVELOPMENT_ONLY",
+        "capability_kind": "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
         "observable_id": observable_id,
         "analysis_window_label": analysis_window_label,
         "method_provenance": {
@@ -188,10 +189,15 @@ def run_grouped_observable_sampling_diagnostics(
         "per_trajectory": per_trajectory,
         "within_group_summaries": groups,
         "between_group_descriptions": between_group,
-        "rule_effect": "NO_RULE_RESULT_EMITTED",
+        "rule_effect": "NO_ACTIVE_RULE_EFFECT",
         "claim_ceiling": (
             "Observable-specific descriptive autocorrelation and effective-sample-size "
             "estimates within the supplied window only."
+        ),
+        "limitation": (
+            "PyMBAR statistical inefficiency on this one supplied observable and finite "
+            "window may underestimate longer inherent timescales; it does not establish "
+            "global sampling adequacy."
         ),
         "forbidden_claims": [
             "simulation globally equilibrated",

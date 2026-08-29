@@ -1,0 +1,598 @@
+{
+  "boundary": "Only validated selected public development cards execute. Descriptive adapters do not update active RuleResults.",
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "planner_admission": {
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "decision": "SELECT_ACTIONS",
+    "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+    "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+    "rationales": {
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "Select the available descriptive action for the unresolved observable-dependence development item."
+    },
+    "schema_version": "paper-blind-planner-proposal-admission/v2",
+    "scientific_disposition": "NOT_EVALUATED",
+    "selected_card_ids": [
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+    ]
+  },
+  "planner_provenance": {
+    "answer_blindness_status": "ANSWER_BLINDNESS_NOT_INDEPENDENTLY_VERIFIED",
+    "boundary": "A metadata receipt without enforced workspace isolation is provenance only, not proof of an answer-blind Agent run or Agent performance.",
+    "filesystem_isolation_technically_enforced": false,
+    "provenance_status": "RECORDED_PROPOSAL_REPLAY_ONLY",
+    "raw_response_available": false,
+    "recorded_proposal_path": "evidence/paper_blind_exposed_v1/agent_runs/planner/hsp90_proposal.json",
+    "recorded_proposal_sha256": "1863528be922f78f45d586c0447b88e4ac35e8cbe7291da6f0b460ce4b86238d",
+    "role": "PLANNER",
+    "runtime_model_identity": "NOT_RECORDED_FOR_COMMITTED_FIXTURE",
+    "schema_version": "exposed-paper-blind-recorded-proposal-provenance/v1"
+  },
+  "profiler_provenance": {
+    "answer_blindness_status": "ANSWER_BLINDNESS_NOT_INDEPENDENTLY_VERIFIED",
+    "boundary": "A metadata receipt without enforced workspace isolation is provenance only, not proof of an answer-blind Agent run or Agent performance.",
+    "filesystem_isolation_technically_enforced": false,
+    "provenance_status": "RECORDED_PROPOSAL_REPLAY_ONLY",
+    "raw_response_available": false,
+    "recorded_proposal_path": "evidence/paper_blind_exposed_v1/agent_runs/profiler/hsp90_proposal.json",
+    "recorded_proposal_sha256": "50263a2e2c75cc437f5a1a347e6f184d3b7dd180c81d612cd2a4c75cd0fcdd62",
+    "role": "PROFILER",
+    "runtime_model_identity": "NOT_RECORDED_FOR_COMMITTED_FIXTURE",
+    "schema_version": "exposed-paper-blind-recorded-proposal-provenance/v1"
+  },
+  "schema_version": "exposed-paper-blind-full-harness-arm/v2",
+  "scientific_disposition": "NOT_EVALUATED",
+  "selected_execution": {
+    "boundary": "Only validated selected public development cards execute. Descriptive results have no active Rule effect.",
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "evidence_results": [
+      {
+        "action_kind": "DESCRIPTIVE_ANALYSIS_ONLY",
+        "active_rule_effect": null,
+        "addresses_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "card_id": "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1",
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "descriptive_result": {
+          "analysis_window_label": "FROZEN_1021_FRAME_OBSERVED_WINDOW",
+          "between_group_descriptions": [
+            {
+              "difference_of_trajectory_mean_observable": -0.011117132648782668,
+              "interpretation_boundary": "A descriptive difference of row-level means only; no biological group effect, population, or convergence claim is emitted.",
+              "left_group_id": "R46A_ES",
+              "right_group_id": "R60A_GS"
+            }
+          ],
+          "capability_kind": "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+          "claim_ceiling": "Observable-specific descriptive autocorrelation and effective-sample-size estimates within the supplied window only.",
+          "development_status": "DESCRIPTIVE_DEVELOPMENT_ONLY",
+          "forbidden_claims": [
+            "simulation globally equilibrated",
+            "equilibrium population",
+            "kinetic rate",
+            "free energy",
+            "mechanism",
+            "biological group effect"
+          ],
+          "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY",
+          "frames_per_trajectory": 1021,
+          "limitation": "PyMBAR statistical inefficiency on this one supplied observable and finite window may underestimate longer inherent timescales; it does not establish global sampling adequacy.",
+          "method_provenance": {
+            "function": "pymbar.timeseries.statistical_inefficiency",
+            "package": "pymbar",
+            "package_version": "4.0.3",
+            "parameters": {
+              "equilibration_detection": "NOT_RUN",
+              "per_trajectory": true
+            }
+          },
+          "observable_id": "HSP90_CA46_CA60_DISTANCE",
+          "per_trajectory": [
+            {
+              "effective_sample_size": 12.821075636880856,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0834160156978565,
+              "observable_standard_deviation": 0.04010340137544253,
+              "observed_window_maximum": 2.208324432373047,
+              "observed_window_minimum": 1.9704989194869995,
+              "statistical_inefficiency": 79.63450407101658,
+              "trajectory_id": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 115.58574766007972,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.083923554327065,
+              "observable_standard_deviation": 0.032424180835426315,
+              "observed_window_maximum": 2.200676441192627,
+              "observed_window_minimum": 1.9642465114593506,
+              "statistical_inefficiency": 8.833268985745606,
+              "trajectory_id": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 213.35934088185226,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.09034199625925,
+              "observable_standard_deviation": 0.034533131634836595,
+              "observed_window_maximum": 2.2252161502838135,
+              "observed_window_minimum": 1.9942835569381714,
+              "statistical_inefficiency": 4.785354115643705,
+              "trajectory_id": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 18.328487324417953,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0749253979158917,
+              "observable_standard_deviation": 0.036974678791728555,
+              "observed_window_maximum": 2.2051968574523926,
+              "observed_window_minimum": 1.9475258588790894,
+              "statistical_inefficiency": 55.70563363621298,
+              "trajectory_id": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 324.5890500368672,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.070893085901931,
+              "observable_standard_deviation": 0.033653301270758246,
+              "observed_window_maximum": 2.189697027206421,
+              "observed_window_minimum": 1.9683854579925537,
+              "statistical_inefficiency": 3.1455158449862486,
+              "trajectory_id": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 35.13119155404501,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.089061325374009,
+              "observable_standard_deviation": 0.036470204109316236,
+              "observed_window_maximum": 2.2259249687194824,
+              "observed_window_minimum": 1.9737402200698853,
+              "statistical_inefficiency": 29.062492754602907,
+              "trajectory_id": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 34.95959463204656,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0881768154467473,
+              "observable_standard_deviation": 0.03630979706655042,
+              "observed_window_maximum": 2.2304790019989014,
+              "observed_window_minimum": 1.9757314920425415,
+              "statistical_inefficiency": 29.20514413127879,
+              "trajectory_id": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 44.10433305727975,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.049628468031514,
+              "observable_standard_deviation": 0.03713020962291576,
+              "observed_window_maximum": 2.2094459533691406,
+              "observed_window_minimum": 1.9479138851165771,
+              "statistical_inefficiency": 23.149652862316128,
+              "trajectory_id": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.975283296320292,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.102257264582814,
+              "observable_standard_deviation": 0.036153967667815645,
+              "observed_window_maximum": 2.234684705734253,
+              "observed_window_minimum": 1.9749112129211426,
+              "statistical_inefficiency": 36.4965026157321,
+              "trajectory_id": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 173.9256502307592,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0842446723951067,
+              "observable_standard_deviation": 0.035986437573737075,
+              "observed_window_maximum": 2.22257924079895,
+              "observed_window_minimum": 1.9930862188339233,
+              "statistical_inefficiency": 5.870324467066063,
+              "trajectory_id": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 161.25397562007333,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0904944584021723,
+              "observable_standard_deviation": 0.03866009091727656,
+              "observed_window_maximum": 2.249671220779419,
+              "observed_window_minimum": 1.9688973426818848,
+              "statistical_inefficiency": 6.331626839424746,
+              "trajectory_id": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.866441474320197,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.1014281858076194,
+              "observable_standard_deviation": 0.036979556568131164,
+              "observed_window_maximum": 2.2373573780059814,
+              "observed_window_minimum": 2.003671407699585,
+              "statistical_inefficiency": 36.63905206342488,
+              "trajectory_id": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 44.34487387435352,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0997773038768863,
+              "observable_standard_deviation": 0.04110696777972127,
+              "observed_window_maximum": 2.243128776550293,
+              "observed_window_minimum": 2.001039505004883,
+              "statistical_inefficiency": 23.02408172121303,
+              "trajectory_id": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 49.18897950359309,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.090897987451656,
+              "observable_standard_deviation": 0.03659428231813887,
+              "observed_window_maximum": 2.2230587005615234,
+              "observed_window_minimum": 1.9838109016418457,
+              "statistical_inefficiency": 20.756681888987337,
+              "trajectory_id": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 33.355980484300595,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.07071773849435,
+              "observable_standard_deviation": 0.04475520782580553,
+              "observed_window_maximum": 2.2360219955444336,
+              "observed_window_minimum": 1.9474174976348877,
+              "statistical_inefficiency": 30.60920366231016,
+              "trajectory_id": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.432579287054505,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0861767268904745,
+              "observable_standard_deviation": 0.039199108800344114,
+              "observed_window_maximum": 2.2357382774353027,
+              "observed_window_minimum": 1.9840331077575684,
+              "statistical_inefficiency": 37.218519969130725,
+              "trajectory_id": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 165.46433522764482,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0929119976914246,
+              "observable_standard_deviation": 0.03782452272225532,
+              "observed_window_maximum": 2.2407310009002686,
+              "observed_window_minimum": 1.983628273010254,
+              "statistical_inefficiency": 6.170514017992545,
+              "trajectory_id": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 162.66538019153498,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.094475023893605,
+              "observable_standard_deviation": 0.035745380528769875,
+              "observed_window_maximum": 2.26914644241333,
+              "observed_window_minimum": 1.9852547645568848,
+              "statistical_inefficiency": 6.276688984452589,
+              "trajectory_id": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 110.86892774211825,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.1015599810761874,
+              "observable_standard_deviation": 0.0385772116148898,
+              "observed_window_maximum": 2.3059446811676025,
+              "observed_window_minimum": 2.000779151916504,
+              "statistical_inefficiency": 9.209072557956471,
+              "trajectory_id": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 90.99627382477892,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.117164158330725,
+              "observable_standard_deviation": 0.037673121636206716,
+              "observed_window_maximum": 2.2820732593536377,
+              "observed_window_minimum": 2.0119307041168213,
+              "statistical_inefficiency": 11.220239654714021,
+              "trajectory_id": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 119.63517001151197,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0820507760379505,
+              "observable_standard_deviation": 0.03391297243467918,
+              "observed_window_maximum": 2.1956703662872314,
+              "observed_window_minimum": 1.936699390411377,
+              "statistical_inefficiency": 8.534279676300486,
+              "trajectory_id": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 229.43849562217713,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.069224935320519,
+              "observable_standard_deviation": 0.03382925197923888,
+              "observed_window_maximum": 2.210362672805786,
+              "observed_window_minimum": 1.9626880884170532,
+              "statistical_inefficiency": 4.449994309940515,
+              "trajectory_id": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 146.9176078217806,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0780353044085826,
+              "observable_standard_deviation": 0.03343690845183097,
+              "observed_window_maximum": 2.2113780975341797,
+              "observed_window_minimum": 1.9885766506195068,
+              "statistical_inefficiency": 6.949473348616805,
+              "trajectory_id": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 45.55905963925022,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.082912335082903,
+              "observable_standard_deviation": 0.03520691789020438,
+              "observed_window_maximum": 2.203733205795288,
+              "observed_window_minimum": 1.9905298948287964,
+              "statistical_inefficiency": 22.410471332915396,
+              "trajectory_id": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 40.62756420049798,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0835707031197694,
+              "observable_standard_deviation": 0.035828071908077734,
+              "observed_window_maximum": 2.22340989112854,
+              "observed_window_minimum": 1.982048511505127,
+              "statistical_inefficiency": 25.130721471790462,
+              "trajectory_id": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 199.9164565805227,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0859285844061213,
+              "observable_standard_deviation": 0.037303101731961184,
+              "observed_window_maximum": 2.224114418029785,
+              "observed_window_minimum": 1.9894917011260986,
+              "statistical_inefficiency": 5.107133336913462,
+              "trajectory_id": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 256.9286023767487,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.087836432059995,
+              "observable_standard_deviation": 0.033793385980143205,
+              "observed_window_maximum": 2.2131600379943848,
+              "observed_window_minimum": 1.9818512201309204,
+              "statistical_inefficiency": 3.9738666328120638,
+              "trajectory_id": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 64.5481562799037,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0720845012543365,
+              "observable_standard_deviation": 0.035067309548724626,
+              "observed_window_maximum": 2.2262022495269775,
+              "observed_window_minimum": 1.9682155847549438,
+              "statistical_inefficiency": 15.817647766306166,
+              "trajectory_id": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 205.90539035385754,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.073777932144636,
+              "observable_standard_deviation": 0.03430777661222258,
+              "observed_window_maximum": 2.259053945541382,
+              "observed_window_minimum": 1.9535948038101196,
+              "statistical_inefficiency": 4.958588010956713,
+              "trajectory_id": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 186.48485581923083,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.058579070444322,
+              "observable_standard_deviation": 0.03437427675782365,
+              "observed_window_maximum": 2.1962881088256836,
+              "observed_window_minimum": 1.9681262969970703,
+              "statistical_inefficiency": 5.474975410280536,
+              "trajectory_id": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 102.28710365312264,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.081224559920308,
+              "observable_standard_deviation": 0.03713141298236319,
+              "observed_window_maximum": 2.2590110301971436,
+              "observed_window_minimum": 1.9780967235565186,
+              "statistical_inefficiency": 9.981707991873819,
+              "trajectory_id": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 25.365556064292026,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0568209233877126,
+              "observable_standard_deviation": 0.037012924317876846,
+              "observed_window_maximum": 2.185817241668701,
+              "observed_window_minimum": 1.9367239475250244,
+              "statistical_inefficiency": 40.251433771534664,
+              "trajectory_id": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 269.808741909347,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.080379401785153,
+              "observable_standard_deviation": 0.03454854964402358,
+              "observed_window_maximum": 2.2014365196228027,
+              "observed_window_minimum": 1.993892788887024,
+              "statistical_inefficiency": 3.784162042989124,
+              "trajectory_id": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 215.80102906000374,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0796483114113653,
+              "observable_standard_deviation": 0.03283972072309307,
+              "observed_window_maximum": 2.2764370441436768,
+              "observed_window_minimum": 1.9672794342041016,
+              "statistical_inefficiency": 4.731210061635571,
+              "trajectory_id": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 97.05921847863779,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.072979622910002,
+              "observable_standard_deviation": 0.037671823544930476,
+              "observed_window_maximum": 2.2130444049835205,
+              "observed_window_minimum": 1.9650229215621948,
+              "statistical_inefficiency": 10.519351134325449,
+              "trajectory_id": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 151.3995441269713,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0801027832255423,
+              "observable_standard_deviation": 0.035965817539417924,
+              "observed_window_maximum": 2.2266499996185303,
+              "observed_window_minimum": 1.952332854270935,
+              "statistical_inefficiency": 6.743745536933306,
+              "trajectory_id": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 26.361903103046966,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.087132678559665,
+              "observable_standard_deviation": 0.03455367590243524,
+              "observed_window_maximum": 2.2406463623046875,
+              "observed_window_minimum": 1.9969021081924438,
+              "statistical_inefficiency": 38.730132494948386,
+              "trajectory_id": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 31.66529391747675,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0741446839023405,
+              "observable_standard_deviation": 0.039874963101317225,
+              "observed_window_maximum": 2.2228760719299316,
+              "observed_window_minimum": 1.9573644399642944,
+              "statistical_inefficiency": 32.243503018188896,
+              "trajectory_id": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 60.46746804775747,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0824024879266885,
+              "observable_standard_deviation": 0.03963012169705518,
+              "observed_window_maximum": 2.2252936363220215,
+              "observed_window_minimum": 1.978355050086975,
+              "statistical_inefficiency": 16.885112490465282,
+              "trajectory_id": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 186.90221507966208,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0712934775637364,
+              "observable_standard_deviation": 0.04096601683621588,
+              "observed_window_maximum": 2.31387996673584,
+              "observed_window_minimum": 1.9633067846298218,
+              "statistical_inefficiency": 5.462749596439111,
+              "trajectory_id": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+            }
+          ],
+          "row_count": 40,
+          "rule_effect": "NO_ACTIVE_RULE_EFFECT",
+          "schema_version": "grouped-observable-dependence-description/v1",
+          "statistical_unit": "TRAJECTORY",
+          "within_group_summaries": [
+            {
+              "effective_sample_size_summary": {
+                "maximum": 324.5890500368672,
+                "mean": 93.71087507701604,
+                "median": 46.7669266889733,
+                "minimum": 12.821075636880856,
+                "trajectory_count": 20
+              },
+              "group_id": "R46A_ES",
+              "observable_mean_summary": {
+                "maximum": 2.117164158330725,
+                "mean": 2.0881236078923644,
+                "median": 2.0897016608166297,
+                "minimum": 2.049628468031514,
+                "trajectory_count": 20
+              },
+              "statistical_inefficiency_summary": {
+                "maximum": 79.63450407101658,
+                "mean": 23.16720374221038,
+                "median": 21.890381805100183,
+                "minimum": 3.1455158449862486,
+                "trajectory_count": 20
+              },
+              "trajectory_count": 20
+            },
+            {
+              "effective_sample_size_summary": {
+                "maximum": 269.808741909347,
+                "mean": 133.15397160728998,
+                "median": 133.27638891664628,
+                "minimum": 25.365556064292026,
+                "trajectory_count": 20
+              },
+              "group_id": "R60A_GS",
+              "observable_mean_summary": {
+                "maximum": 2.087836432059995,
+                "mean": 2.0770064752435817,
+                "median": 2.079875547318454,
+                "minimum": 2.0568209233877126,
+                "trajectory_count": 20
+              },
+              "statistical_inefficiency_summary": {
+                "maximum": 40.251433771534664,
+                "mean": 13.607012971808311,
+                "median": 7.741876512458646,
+                "minimum": 3.784162042989124,
+                "trajectory_count": 20
+              },
+              "trajectory_count": 20
+            }
+          ]
+        },
+        "rule_effect": "NO_ACTIVE_RULE_EFFECT",
+        "schema_version": "exposed-paper-blind-descriptive-evidence-result/v1",
+        "scientific_disposition": "NOT_EVALUATED"
+      }
+    ],
+    "execution_status": "SELECTED_ACTIONS_EXECUTED",
+    "schema_version": "exposed-paper-blind-selected-action-execution/v1",
+    "selected_card_ids": [
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+    ]
+  }
+}

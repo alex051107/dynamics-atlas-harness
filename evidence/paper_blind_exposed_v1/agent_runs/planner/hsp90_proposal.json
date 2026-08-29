@@ -1,11 +1,10 @@
 {
   "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "decision": "SELECT_ACTIONS",
   "selected_card_ids": [
-    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1",
-    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE"
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
   ],
   "rationales": {
-    "HSP90_GROUPED_SAMPLING_DESCRIPTION_V1": "Directly addresses the listed missing grouped sampling-description evidence.",
-    "HSP90_EXISTING_F04R02_EXACT_CONTROL_ROUTE": "Directly addresses the listed unresolved case-bound time-anatomy control item."
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "Select the available descriptive action for the unresolved observable-dependence development item."
   }
 }

@@ -1,0 +1,12 @@
+{
+  "answer_blindness_status": "ANSWER_BLINDNESS_NOT_INDEPENDENTLY_VERIFIED",
+  "boundary": "A metadata receipt without enforced workspace isolation is provenance only, not proof of an answer-blind Agent run or Agent performance.",
+  "filesystem_isolation_technically_enforced": false,
+  "provenance_status": "RECORDED_PROPOSAL_REPLAY_ONLY",
+  "raw_response_available": false,
+  "recorded_proposal_path": "evidence/paper_blind_exposed_v1/agent_runs/planner/adk_proposal.json",
+  "recorded_proposal_sha256": "9687415005b3d5b1f48348dede255f1def8ffc1cb4f5e5a1dfedbda99fd7b17b",
+  "role": "PLANNER",
+  "runtime_model_identity": "NOT_RECORDED_FOR_COMMITTED_FIXTURE",
+  "schema_version": "exposed-paper-blind-recorded-proposal-provenance/v1"
+}

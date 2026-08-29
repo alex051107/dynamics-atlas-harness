@@ -1,4 +1,4 @@
-"""Package-backed reference-relative structural proximity descriptions.
+"""Package-backed static reference-relative proximity descriptions.
 
 This narrow adapter uses SciPy's rigid alignment implementation for a named sample
 and named reference anchors. It reports geometry only; it does not assign a
@@ -123,8 +123,9 @@ def run_reference_relative_structural_projection(
     ambiguous = distance_gap <= float(ambiguity_tolerance_angstrom)
 
     return {
-        "schema_version": "reference-relative-structural-projection/v1",
+        "schema_version": "static-reference-relative-proximity-description/v1",
         "development_status": "DESCRIPTIVE_DEVELOPMENT_ONLY",
+        "capability_kind": "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
         "sample_id": sample_id.strip(),
         "sample_kind": "NONREFERENCE_STATIC_COORDINATE_SAMPLE",
         "method_provenance": {
@@ -151,7 +152,7 @@ def run_reference_relative_structural_projection(
             "reference_id": None if ambiguous else nearest["reference_id"],
             "distance_gap_to_second_reference_angstrom": distance_gap,
         },
-        "rule_effect": "NO_RULE_RESULT_EMITTED",
+        "rule_effect": "NO_ACTIVE_RULE_EFFECT",
         "claim_ceiling": "Whole-chain rigid-alignment reference-relative proximity for one static non-reference sample.",
         "forbidden_claims": [
             "state population",
