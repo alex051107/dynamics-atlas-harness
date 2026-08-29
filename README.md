@@ -31,6 +31,22 @@ dynamics-atlas run-demo --output-dir /tmp/dynamics-atlas-demo
 它复现的是两个 exposed development cases 的受限工程行为；F01/F02/F03/F04/F06 的具名
 source-science review 仍然是当前科学 gate。
 
+## Paper question → human review smoke test
+
+下面的命令把现有 Lincoff X-EISD paper-derived development question 接到一条可复现的受限流程：
+recorded answer-blind Planner card selection → deterministic admission → exact review-derivative attestation /
+direct evaluation → Stage-2 packet → human decision packet。它同时重跑既有 HSP90 case-bound Operator
+route，验证 Operator receipt、EvidenceResult 和同一 RuleInstance 的重评能出现在同一输出树中：
+
+```bash
+dynamics-atlas run-smoke --output-dir /tmp/dynamics-atlas-smoke
+```
+
+输出中的 `human_decision_packet.json` 会保留原始 paper question、已选 route、fresh evidence receipts、
+claim ceiling 和具名 source-science review 所需的问题。当前两个 case 都正确停在
+`ABSTAIN_OR_HUMAN_REVIEW`；它们不产生 scientific support。该 smoke 使用提交的历史 Planner selection，
+不调用 live model、不解析 paper 全文，也不把 local review derivative 当成 source-science approval。
+
 ## Historical initial control-plane smoke v0.2
 
 该历史基线真实调用已有 v0.3 selector，在 exposed X-EISD development case 上产生 59 个
