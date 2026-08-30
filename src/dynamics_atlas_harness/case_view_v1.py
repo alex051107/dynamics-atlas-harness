@@ -237,6 +237,34 @@ def _verify_proposal_receipt(
             raise CaseViewIntegrityError("STALE_PROPOSAL_RECEIPT_HASH", f"{role}.{label}")
 
 
+def _verify_repository_source_snapshot(
+    *, snapshot: dict[str, Any], source_path: Any, label: str
+) -> None:
+    if source_path is None:
+        return
+    source = _read_object(_safe_repository_reference(source_path, label), label)
+    assert source is not None
+    if source != snapshot:
+        raise CaseViewIntegrityError("REPOSITORY_SOURCE_SNAPSHOT_MISMATCH", label)
+
+
+def _public_packet_consistency(
+    *, manifest: dict[str, Any], public_packet: dict[str, Any]
+) -> None:
+    if manifest.get("research_question") != public_packet.get("research_question"):
+        raise CaseViewIntegrityError("PUBLIC_PACKET_QUESTION_MISMATCH")
+    authority = _require_object(
+        public_packet.get("platform_authority_envelope"),
+        "public_case_packet.platform_authority_envelope",
+    )
+    packet_claim_boundary = _require_object(
+        authority.get("claim_boundary"),
+        "public_case_packet.platform_authority_envelope.claim_boundary",
+    )
+    if manifest.get("claim_boundary") != packet_claim_boundary:
+        raise CaseViewIntegrityError("PUBLIC_PACKET_CLAIM_BOUNDARY_MISMATCH")
+
+
 def _evidence_lanes(evidence_results: Any, case_id: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     descriptive: list[dict[str, Any]] = []
     active: list[dict[str, Any]] = []
@@ -378,8 +406,21 @@ def _selected_card_consistency(
         card = _require_object(raw, f"legal_action_cards[{position}]")
         _assert_case_id(card.get("case_id"), case_id, f"legal_action_cards[{position}]")
         legal_ids.add(_require_string(card.get("card_id"), f"legal_action_cards[{position}].card_id"))
-    admitted = _require_list(planner_admission.get("selected_card_ids"), "planner_admission.selected_card_ids")
-    executed = _require_list(execution.get("selected_card_ids"), "execution.selected_card_ids")
+    admitted = [
+        _require_string(value, "planner_admission.selected_card_id")
+        for value in _require_list(
+            planner_admission.get("selected_card_ids"),
+            "planner_admission.selected_card_ids",
+        )
+    ]
+    executed = [
+        _require_string(value, "execution.selected_card_id")
+        for value in _require_list(
+            execution.get("selected_card_ids"), "execution.selected_card_ids"
+        )
+    ]
+    if len(admitted) != len(set(admitted)):
+        raise CaseViewIntegrityError("DUPLICATE_SELECTED_CARD_ID")
     if admitted != executed:
         raise CaseViewIntegrityError("STALE_SELECTED_CARD_REFERENCE")
     if any(card_id not in legal_ids for card_id in admitted):
@@ -391,6 +432,52 @@ def _selected_card_consistency(
     ]
     if admitted != evidence_card_ids:
         raise CaseViewIntegrityError("STALE_EXECUTED_ACTION_REFERENCE")
+    decision = planner_admission.get("decision")
+    if admitted:
+        if decision != "SELECT_ACTIONS" or len(admitted) != 1:
+            raise CaseViewIntegrityError("PLANNER_ADMISSION_SELECTION_STATE_MISMATCH")
+        expected_execution_status = "SELECTED_ACTIONS_EXECUTED"
+    else:
+        if decision != "ABSTAIN_NO_ACTION":
+            raise CaseViewIntegrityError("PLANNER_ADMISSION_SELECTION_STATE_MISMATCH")
+        expected_execution_status = "NO_ACTION_SELECTED"
+    if execution.get("execution_status") != expected_execution_status:
+        raise CaseViewIntegrityError("EXECUTION_STATUS_MISMATCH")
+
+
+def _authorization_consistency(
+    *,
+    case_id: str,
+    planner_admission: dict[str, Any],
+    authorization: dict[str, Any],
+    execution: dict[str, Any],
+) -> None:
+    _assert_case_id(authorization.get("case_id"), case_id, "planner_authorization")
+    admitted = _require_list(
+        planner_admission.get("selected_card_ids"), "planner_admission.selected_card_ids"
+    )
+    authorized = _require_list(
+        authorization.get("selected_card_ids"), "authorization.selected_card_ids"
+    )
+    if authorized != admitted:
+        raise CaseViewIntegrityError("AUTHORIZATION_SELECTION_MISMATCH")
+    expected_status = (
+        "AUTHORIZED_EXACTLY_ONE_SELECTED_CARD"
+        if admitted
+        else "AUTHORIZED_ABSTENTION_ZERO_ACTIONS"
+    )
+    if authorization.get("schema_version") != "case-runner-authorization/v1":
+        raise CaseViewIntegrityError("AUTHORIZATION_SCHEMA_VERSION_MISMATCH")
+    if authorization.get("status") != expected_status:
+        raise CaseViewIntegrityError("AUTHORIZATION_STATUS_MISMATCH")
+    evidence = _require_list(execution.get("evidence_results"), "execution.evidence_results")
+    executed_action_count = authorization.get("executed_action_count")
+    if (
+        not isinstance(executed_action_count, int)
+        or isinstance(executed_action_count, bool)
+        or executed_action_count != len(evidence)
+    ):
+        raise CaseViewIntegrityError("AUTHORIZATION_EXECUTED_ACTION_COUNT_MISMATCH")
 
 
 def _build_capsule_case_view(root: Path) -> CaseView:
@@ -659,6 +746,12 @@ def _build_case_run_view(root: Path) -> CaseView:
         planner_admission=planner_admission,
         execution=execution,
     )
+    _authorization_consistency(
+        case_id=case_id,
+        planner_admission=planner_admission,
+        authorization=authorization,
+        execution=execution,
+    )
 
     before, before_by_id = _rule_index(reevaluation.get("before_rule_results"), "before_rule_results")
     after, after_by_id = _rule_index(reevaluation.get("after_rule_results"), "after_rule_results")
@@ -689,6 +782,12 @@ def _build_case_run_view(root: Path) -> CaseView:
         snapshot_name="public_case_packet",
         case_id=case_id,
     )
+    _verify_repository_source_snapshot(
+        snapshot=public_packet,
+        source_path=input_provenance.get("public_case_packet"),
+        label="public_case_packet",
+    )
+    _public_packet_consistency(manifest=manifest, public_packet=public_packet)
     profiler_visible_input = _input_snapshot(
         loaded=loaded,
         input_provenance=input_provenance,

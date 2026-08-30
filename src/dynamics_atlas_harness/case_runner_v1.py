@@ -176,6 +176,7 @@ def reevaluate_explicitly_linked_rule_results(
 
     after = deepcopy(before)
     applied: set[str] = set()
+    active_evidence_result_ids: set[str] = set()
     links: list[dict[str, Any]] = []
     available_reevaluators = dict(reevaluators or {})
     for raw_evidence in evidence_results:
@@ -203,6 +204,9 @@ def reevaluate_explicitly_linked_rule_results(
         evidence_result_id = _require_string(
             evidence.get("evidence_result_id"), "evidence_result.evidence_result_id"
         )
+        if evidence_result_id in active_evidence_result_ids:
+            raise CaseRunnerV1Error("DUPLICATE_ACTIVE_EVIDENCE_RESULT_ID")
+        active_evidence_result_ids.add(evidence_result_id)
         if affected_id not in by_id:
             raise CaseRunnerV1Error("EVIDENCE_RESULT_AFFECTED_RULE_NOT_CURRENT")
         if affected_id in applied:
@@ -220,6 +224,8 @@ def reevaluate_explicitly_linked_rule_results(
             by_id[affected_id]
         ):
             raise CaseRunnerV1Error("REEVALUATOR_CHANGED_RULE_INSTANCE_IDENTITY")
+        if reevaluated_result == by_id[affected_id]:
+            raise CaseRunnerV1Error("ACTIVE_EVIDENCE_REEVALUATION_MUST_CHANGE_RULE_RESULT")
         after[positions[affected_id]] = reevaluated_result
         applied.add(affected_id)
         links.append(

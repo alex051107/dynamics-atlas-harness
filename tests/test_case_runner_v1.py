@@ -256,6 +256,87 @@ class CaseRunnerV1Tests(unittest.TestCase):
                 },
             )
 
+        with self.assertRaisesRegex(
+            CaseRunnerV1Error, "ACTIVE_EVIDENCE_REEVALUATION_MUST_CHANGE_RULE_RESULT"
+        ):
+            reevaluate_explicitly_linked_rule_results(
+                case_id="CASE::TEST",
+                before_rule_results=before,
+                evidence_results=[evidence],
+                reevaluators={"RULE::A": lambda rule_result, _: rule_result},
+            )
+
+        duplicate_id_evidence = {
+            **evidence,
+            "affected_rule_instance_id": "RULE::B",
+        }
+        with self.assertRaisesRegex(
+            CaseRunnerV1Error, "DUPLICATE_ACTIVE_EVIDENCE_RESULT_ID"
+        ):
+            reevaluate_explicitly_linked_rule_results(
+                case_id="CASE::TEST",
+                before_rule_results=before,
+                evidence_results=[evidence, duplicate_id_evidence],
+                reevaluators={
+                    "RULE::A": lambda rule_result, _: {**rule_result, "status": "PASS"},
+                    "RULE::B": lambda rule_result, _: {**rule_result, "status": "PASS"},
+                },
+            )
+
+    def test_active_evidence_round_trips_from_runner_into_case_view(self):
+        from dynamics_atlas_harness.case_view_v1 import build_case_view
+        from tests.test_case_view_v1 import CaseRunnerArtifactViewTests, _write_json
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = CaseRunnerArtifactViewTests()._build_run_root(
+                Path(temp_dir) / "active-run"
+            )
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            before = manifest["fresh_rule_state"]["rule_results"]
+            rule_id = before[0]["rule_instance_id"]
+            card_id = manifest["action_execution"]["selected_card_ids"][0]
+            active_evidence = {
+                "schema_version": "synthetic-active-evidence-result/v1",
+                "case_id": manifest["case_id"],
+                "card_id": card_id,
+                "action_kind": "ACTIVE_RULE_EVIDENCE_TEST_ONLY",
+                "rule_effect": "ACTIVE_RULE_EFFECT",
+                "active_rule_effect": "ACTIVE_RULE_EFFECT",
+                "evidence_result_id": "ACTIVE::SYNTH::1",
+                "affected_rule_instance_id": rule_id,
+            }
+            reevaluation = reevaluate_explicitly_linked_rule_results(
+                case_id=manifest["case_id"],
+                before_rule_results=before,
+                evidence_results=[active_evidence],
+                reevaluators={
+                    rule_id: lambda rule_result, _: {**rule_result, "status": "PASS"}
+                },
+            )
+            execution = deepcopy(manifest["action_execution"])
+            execution["evidence_results"] = [active_evidence]
+            manifest["action_execution"] = execution
+            manifest["rule_reevaluation"] = reevaluation
+            _write_json(root / "selected_action_execution.json", execution)
+            _write_json(root / "rule_reevaluation.json", reevaluation)
+            _write_json(root / "actions" / card_id / "evidence_result.json", active_evidence)
+            _write_json(manifest_path, manifest)
+
+            view = build_case_view(root)
+
+        self.assertEqual(view.integrity_status, "PASS")
+        self.assertEqual(view.descriptive_evidence_no_active_rule_effect, [])
+        self.assertEqual(
+            [item["evidence_result_id"] for item in view.active_rule_evidence],
+            ["ACTIVE::SYNTH::1"],
+        )
+        self.assertEqual(view.rule_results[0]["status"], "PASS")
+        self.assertEqual(
+            view.before_after_rule_result_links[0]["affected_rule_instance_id"],
+            rule_id,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

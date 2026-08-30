@@ -117,6 +117,10 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
         public_packet = {
             "case_id": case_id,
             "source_materials": [{"source_id": "SYNTH_SOURCE", "locator": "fixture"}],
+            "research_question": "Keep UNKNOWN explicit?",
+            "platform_authority_envelope": {
+                "claim_boundary": {"allowed": "fixture description only"}
+            },
         }
         profiler_visible_input = {
             "case_id": case_id,
@@ -174,11 +178,14 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
         }
         authorization = {
+            "schema_version": "case-runner-authorization/v1",
             "case_id": case_id,
             "status": "AUTHORIZED_EXACTLY_ONE_SELECTED_CARD",
             "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
+            "executed_action_count": 1,
         }
         execution = {
+            "execution_status": "SELECTED_ACTIONS_EXECUTED",
             "case_id": case_id,
             "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
             "evidence_results": [evidence],
@@ -419,6 +426,45 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
                 CaseViewIntegrityError, "EVIDENCE_EFFECT_CLASSIFICATION_UNKNOWN"
             ):
                 build_case_view(root)
+
+    def test_run_rejects_authorization_not_reconciled_to_admission_and_execution(self):
+        mutations = (
+            ("status", "DENIED"),
+            ("selected_card_ids", ["NOT_AUTHORIZED_CARD"]),
+            ("executed_action_count", 0),
+        )
+        for field, value in mutations:
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_run_root(Path(temp_dir) / "run")
+                authorization_path = root / "planner_authorization.json"
+                authorization = json.loads(authorization_path.read_text(encoding="utf-8"))
+                authorization[field] = value
+                _write_json(authorization_path, authorization)
+                manifest_path = root / "case_run_manifest_v1.json"
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest["authorization"] = authorization
+                _write_json(manifest_path, manifest)
+                with self.assertRaisesRegex(CaseViewIntegrityError, "AUTHORIZATION_"):
+                    build_case_view(root)
+
+    def test_run_rejects_manifest_question_or_claim_ceiling_not_in_public_packet(self):
+        mutations = (
+            ("research_question", "Forged question", "PUBLIC_PACKET_QUESTION_MISMATCH"),
+            (
+                "claim_boundary",
+                {"allowed": "Forged elevated scientific claim"},
+                "PUBLIC_PACKET_CLAIM_BOUNDARY_MISMATCH",
+            ),
+        )
+        for field, value, expected_error in mutations:
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_run_root(Path(temp_dir) / "run")
+                manifest_path = root / "case_run_manifest_v1.json"
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest[field] = value
+                _write_json(manifest_path, manifest)
+                with self.assertRaisesRegex(CaseViewIntegrityError, expected_error):
+                    build_case_view(root)
 
 
 if __name__ == "__main__":
