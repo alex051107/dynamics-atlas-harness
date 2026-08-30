@@ -18,7 +18,7 @@ H1 items and the F04R02 packet-label mapping remains `DATA_INSUFFICIENT`.
 - Exact fetched base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
 - Delivery branch: `feature/dynamics-atlas-autonomous-engineering-v1`
 - Exact review-repaired implementation head before final completion/status-only edits:
-  `fb4bdd15c3bc13bc1abecc8c3be6197868128b36`
+  `522fe7e2f07a5b08d0b2b73e5aa13bf7c609cdba`
 - Final delivery head: the Draft PR head recorded by GitHub after this completion
   file is committed and pushed. A Git commit cannot contain its own hash; use
   `git rev-parse HEAD` or the PR metadata for the exact final delivery object.
@@ -46,6 +46,8 @@ fixed manifest state (`NOT_CALCULATED_BY_CASE_RUNNER`, `NOT_EVALUATED`, and
 `PENDING_DOMAIN_REVIEW`), false network/credential/transport flags, repository
 binding for recorded proposals, exact proposal receipts, public-packet derivation of
 the Profiler-visible input, and Planner proposal/admission reconciliation.
+Commit `522fe7e` makes the three JSON transport booleans type-exact as well as
+value-exact, so integers such as `0` cannot stand in for `false`.
 
 ## Implemented end-to-end path
 
@@ -247,6 +249,10 @@ its proposal. Both preserved real runs again projected with integrity `PASS`. A
 Python 3.11 `-S` core import/CLI smoke passed with NumPy, SciPy, PyMBAR, and jsonschema
 absent.
 
+The final engineering consistency pass identified the JSON boolean `0 == false`
+edge. Commit `522fe7e` closed it; the affected manifest-invariant test passed with all
+three transport flags checked against both `true` and integer `0` mutations.
+
 Fresh release validation for the prior repaired implementation commit
 `5ed99b6158b483d234c13ec448d01253fb118f90` completed as follows:
 
@@ -259,7 +265,7 @@ Fresh release validation for the prior repaired implementation commit
   SciPy, PyMBAR, and jsonschema were all absent;
 - the repository CI matrix now runs the full declared optional-dependency suite on
   Python 3.11 and 3.12. That exact-final-head clean-checkout matrix is the full-suite
-  evidence for `fb4bdd1` and its completion/status commit; results belong to the Draft
+  evidence for `522fe7e` and its completion/status commit; results belong to the Draft
   PR check readback because a committed file cannot record its own commit hash;
 - both repaired `run-case` commands completed; each CaseView had integrity `PASS`,
   five content-addressed input snapshots, one descriptive EvidenceResult, zero
