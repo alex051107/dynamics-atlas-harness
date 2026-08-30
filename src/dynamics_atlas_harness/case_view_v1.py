@@ -15,10 +15,34 @@ from dataclasses import asdict, dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
 
-from .proposal_provenance_v1 import canonical_json_sha256
+from .paper_blind_exposed_v1 import PaperBlindPublicPacketError, validate_agent_proposal
+from .proposal_provenance_v1 import (
+    CALLER_SUPPLIED_IN_MEMORY,
+    RECORDED_PROPOSAL_REPLAY,
+    ProposalProvenanceV1Error,
+    build_proposal_provenance_v1,
+    canonical_json_sha256,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+_CASE_RUNNER_BOUNDARY = (
+    "This runner records deterministic exposed-development behavior only. "
+    "It does not compute a terminal verdict, source-science approval, broad "
+    "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
+)
+_CASE_RUNNER_MANIFEST_INVARIANTS = {
+    "schema_version": "dynamics-atlas-case-run/v1",
+    "run_scope": "EXPOSED_DEVELOPMENT_ONLY",
+    "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
+    "scientific_disposition": "NOT_EVALUATED",
+    "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+    "network_accessed": False,
+    "credentials_accessed": False,
+    "external_model_transport": False,
+    "boundary": _CASE_RUNNER_BOUNDARY,
+}
 
 
 class CaseViewIntegrityError(ValueError):
@@ -235,17 +259,122 @@ def _verify_proposal_receipt(
         )
         if canonical_json_sha256(value) != expected:
             raise CaseViewIntegrityError("STALE_PROPOSAL_RECEIPT_HASH", f"{role}.{label}")
+    if mode == RECORDED_PROPOSAL_REPLAY:
+        _verify_repository_source_snapshot(
+            snapshot=parsed_proposal,
+            source_path=source_path,
+            label=f"{role}.recorded_proposal",
+            source_required_code="RECORDED_PROPOSAL_SOURCE_REQUIRED",
+        )
+    elif mode == CALLER_SUPPLIED_IN_MEMORY:
+        if source_path is not None:
+            raise CaseViewIntegrityError("IN_MEMORY_PROPOSAL_SOURCE_FORBIDDEN", role)
+    else:
+        raise CaseViewIntegrityError("PROPOSAL_MODE_INVALID", role)
+    evaluator = (
+        "validate_agent_proposal" if role == "PROFILER" else "validate_planner_proposal"
+    )
+    try:
+        expected_receipt = build_proposal_provenance_v1(
+            role=role,
+            mode=mode,
+            visible_input=visible_input,
+            parsed_proposal=parsed_proposal,
+            contract_evaluator=evaluator,
+            contract_admission_evaluation=admission_evaluation,
+            source_path=source_path,
+        )
+    except ProposalProvenanceV1Error as error:
+        raise CaseViewIntegrityError("PROPOSAL_RECEIPT_CONTRACT_INVALID", role) from error
+    if receipt != expected_receipt:
+        raise CaseViewIntegrityError("PROPOSAL_RECEIPT_CONTENT_MISMATCH", role)
 
 
 def _verify_repository_source_snapshot(
-    *, snapshot: dict[str, Any], source_path: Any, label: str
-) -> None:
+    *,
+    snapshot: dict[str, Any],
+    source_path: Any,
+    label: str,
+    source_required_code: str,
+) -> Path:
     if source_path is None:
-        raise CaseViewIntegrityError("REPOSITORY_PUBLIC_PACKET_SOURCE_REQUIRED", label)
-    source = _read_object(_safe_repository_reference(source_path, label), label)
+        raise CaseViewIntegrityError(source_required_code, label)
+    source_path_resolved = _safe_repository_reference(source_path, label)
+    source = _read_object(source_path_resolved, label)
     assert source is not None
     if source != snapshot:
         raise CaseViewIntegrityError("REPOSITORY_SOURCE_SNAPSHOT_MISMATCH", label)
+    return source_path_resolved
+
+
+def _validate_case_runner_manifest(manifest: dict[str, Any]) -> None:
+    for field, expected in _CASE_RUNNER_MANIFEST_INVARIANTS.items():
+        if manifest.get(field) != expected:
+            raise CaseViewIntegrityError("CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH", field)
+
+
+def _expected_profiler_visible_input(public_packet: dict[str, Any]) -> dict[str, Any]:
+    required = (
+        "packet_id",
+        "case_id",
+        "research_question",
+        "source_materials",
+        "data_assets",
+        "agent_proposal_schema",
+    )
+    for field in required:
+        if field not in public_packet:
+            raise CaseViewIntegrityError("PUBLIC_PACKET_VISIBLE_INPUT_FIELD_MISSING", field)
+    return {
+        "schema_version": "paper-blind-agent-visible-input/v1",
+        **{field: deepcopy(public_packet[field]) for field in required},
+    }
+
+
+def _planner_admission_consistency(
+    *,
+    case_id: str,
+    planner_proposal: dict[str, Any],
+    planner_admission: dict[str, Any],
+) -> None:
+    required_proposal_fields = {"case_id", "decision", "selected_card_ids", "rationales"}
+    if set(planner_proposal) != required_proposal_fields:
+        raise CaseViewIntegrityError("PLANNER_PROPOSAL_FIELDS_INVALID")
+    _assert_case_id(planner_proposal.get("case_id"), case_id, "planner_proposal")
+    decision = planner_proposal.get("decision")
+    selected = [
+        _require_string(value, "planner_proposal.selected_card_id")
+        for value in _require_list(
+            planner_proposal.get("selected_card_ids"), "planner_proposal.selected_card_ids"
+        )
+    ]
+    if len(selected) != len(set(selected)):
+        raise CaseViewIntegrityError("DUPLICATE_SELECTED_CARD_ID")
+    if (decision == "SELECT_ACTIONS" and len(selected) != 1) or (
+        decision == "ABSTAIN_NO_ACTION" and selected
+    ):
+        raise CaseViewIntegrityError("PLANNER_PROPOSAL_SELECTION_STATE_MISMATCH")
+    if decision not in {"SELECT_ACTIONS", "ABSTAIN_NO_ACTION"}:
+        raise CaseViewIntegrityError("PLANNER_PROPOSAL_DECISION_INVALID")
+    rationales = _require_object(planner_proposal.get("rationales"), "planner_proposal.rationales")
+    if set(rationales) != set(selected):
+        raise CaseViewIntegrityError("PLANNER_PROPOSAL_RATIONALE_SET_MISMATCH")
+    normalized_rationales = {
+        card_id: _require_string(rationales[card_id], f"planner_proposal.rationale.{card_id}")
+        for card_id in selected
+    }
+    expected_admission = {
+        "schema_version": "paper-blind-planner-proposal-admission/v2",
+        "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+        "case_id": case_id,
+        "decision": decision,
+        "selected_card_ids": selected,
+        "rationales": normalized_rationales,
+        "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+        "scientific_disposition": "NOT_EVALUATED",
+    }
+    if planner_admission != expected_admission:
+        raise CaseViewIntegrityError("PLANNER_ADMISSION_PROPOSAL_MISMATCH")
 
 
 def _public_packet_consistency(
@@ -695,6 +824,7 @@ def _manifest_artifact_paths(root: Path, manifest: dict[str, Any]) -> dict[str, 
 def _build_case_run_view(root: Path) -> CaseView:
     manifest = _read_object(root / "case_run_manifest_v1.json", "case_run_manifest_v1")
     assert manifest is not None
+    _validate_case_runner_manifest(manifest)
     case_id = _require_string(manifest.get("case_id"), "manifest.case_id")
     loaded = _manifest_artifact_paths(root, manifest)
     profiler_provenance = loaded["profiler_proposal_provenance.json"]
@@ -782,10 +912,11 @@ def _build_case_run_view(root: Path) -> CaseView:
         snapshot_name="public_case_packet",
         case_id=case_id,
     )
-    _verify_repository_source_snapshot(
+    public_packet_source = _verify_repository_source_snapshot(
         snapshot=public_packet,
         source_path=input_provenance.get("public_case_packet"),
         label="public_case_packet",
+        source_required_code="REPOSITORY_PUBLIC_PACKET_SOURCE_REQUIRED",
     )
     _public_packet_consistency(manifest=manifest, public_packet=public_packet)
     profiler_visible_input = _input_snapshot(
@@ -816,6 +947,22 @@ def _build_case_run_view(root: Path) -> CaseView:
         raise CaseViewIntegrityError("STALE_PLANNER_VISIBLE_INPUT_SNAPSHOT")
     sources = deepcopy(public_packet.get("source_materials", []))
     admission = _require_object(fresh.get("admission"), "fresh_rule_state.admission")
+    expected_profiler_input = _expected_profiler_visible_input(public_packet)
+    if profiler_visible_input != expected_profiler_input:
+        raise CaseViewIntegrityError("PROFILER_VISIBLE_INPUT_PUBLIC_PACKET_MISMATCH")
+    try:
+        expected_profile_admission = validate_agent_proposal(
+            public_packet_source, profile_proposal
+        )
+    except PaperBlindPublicPacketError as error:
+        raise CaseViewIntegrityError("PROFILER_PROPOSAL_CONTRACT_INVALID") from error
+    if admission != expected_profile_admission:
+        raise CaseViewIntegrityError("PROFILER_ADMISSION_PROPOSAL_MISMATCH")
+    _planner_admission_consistency(
+        case_id=case_id,
+        planner_proposal=planner_proposal,
+        planner_admission=planner_admission,
+    )
     _verify_proposal_receipt(
         receipt=profiler_provenance,
         case_id=case_id,

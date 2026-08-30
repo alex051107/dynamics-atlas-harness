@@ -13,6 +13,11 @@ from dynamics_atlas_harness.case_view_v1 import (
     CaseViewIntegrityError,
     build_case_view,
 )
+from dynamics_atlas_harness.paper_blind_exposed_v1 import validate_agent_proposal
+from dynamics_atlas_harness.proposal_provenance_v1 import (
+    CALLER_SUPPLIED_IN_MEMORY,
+    build_proposal_provenance_v1,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -113,27 +118,43 @@ class RecordedCapsuleCaseViewTests(unittest.TestCase):
 
 class CaseRunnerArtifactViewTests(unittest.TestCase):
     def _build_run_root(self, root: Path) -> Path:
-        case_id = "SYNTHETIC_EXPOSED_DEVELOPMENT_CASE"
-        public_packet = {
-            "case_id": case_id,
-            "source_materials": [{"source_id": "SYNTH_SOURCE", "locator": "fixture"}],
-            "research_question": "Keep UNKNOWN explicit?",
-            "platform_authority_envelope": {
-                "claim_boundary": {"allowed": "fixture description only"}
-            },
-        }
+        case_id = "HSP90_NTD_EXPOSED_PAPER_BLIND_V1"
+        public_packet_path = (
+            REPO_ROOT
+            / "evidence"
+            / "paper_blind_exposed_v1"
+            / "public"
+            / "hsp90_public_packet_v1.json"
+        )
+        profile_proposal_path = (
+            REPO_ROOT
+            / "evidence"
+            / "paper_blind_exposed_v1"
+            / "agent_runs"
+            / "profiler"
+            / "hsp90_proposal.json"
+        )
+        public_packet = json.loads(public_packet_path.read_text(encoding="utf-8"))
+        profile_proposal = json.loads(profile_proposal_path.read_text(encoding="utf-8"))
         profiler_visible_input = {
-            "case_id": case_id,
-            "research_question": "Keep UNKNOWN explicit?",
-        }
-        profile_proposal = {
-            "case_id": case_id,
-            "proposed_case_facts": {"unknown": "UNKNOWN"},
+            "schema_version": "paper-blind-agent-visible-input/v1",
+            **{
+                field: public_packet[field]
+                for field in (
+                    "packet_id",
+                    "case_id",
+                    "research_question",
+                    "source_materials",
+                    "data_assets",
+                    "agent_proposal_schema",
+                )
+            },
         }
         planner_proposal = {
             "case_id": case_id,
             "decision": "SELECT_ACTIONS",
             "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
+            "rationales": {"SYNTH_DESCRIPTIVE_CARD": "Exercise the test-only card."},
         }
         rule = {
             "rule_instance_id": "F02R01::SOURCE::SYNTH_SOURCE",
@@ -156,10 +177,7 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             },
         }
         fresh = {
-            "admission": {
-                "proposal": {"case_id": case_id, "proposed_case_facts": {"unknown": "UNKNOWN"}},
-                "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
-            },
+            "admission": validate_agent_proposal(public_packet_path, profile_proposal),
             "projected_casegraph": {"case": {"case_id": case_id}},
             "rule_results": [rule],
             "development_obligations": [{"ref": rule["rule_instance_id"], "status": "UNKNOWN"}],
@@ -173,9 +191,14 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "unresolved_items": [{"ref": rule["rule_instance_id"], "status": "UNKNOWN"}],
         }
         planner_admission = {
+            "schema_version": "paper-blind-planner-proposal-admission/v2",
+            "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
             "case_id": case_id,
             "decision": "SELECT_ACTIONS",
             "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
+            "rationales": {"SYNTH_DESCRIPTIVE_CARD": "Exercise the test-only card."},
+            "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+            "scientific_disposition": "NOT_EVALUATED",
         }
         authorization = {
             "schema_version": "case-runner-authorization/v1",
@@ -198,18 +221,19 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "evidence_links": [],
         }
         def proposal_provenance(role, visible_input, proposal, evaluation):
-            return {
-                "schema_version": "dynamics-atlas-proposal-provenance/v1",
-                "case_id": case_id,
-                "role": role,
-                "mode": "CALLER_SUPPLIED_IN_MEMORY",
-                "source_path": None,
-                "visible_input": {"canonical_sha256": _canonical_sha256(visible_input)},
-                "parsed_proposal": {"canonical_sha256": _canonical_sha256(proposal)},
-                "contract_admission_evaluation": {
-                    "canonical_sha256": _canonical_sha256(evaluation)
-                },
-            }
+            return build_proposal_provenance_v1(
+                role=role,
+                mode=CALLER_SUPPLIED_IN_MEMORY,
+                visible_input=visible_input,
+                parsed_proposal=proposal,
+                contract_evaluator=(
+                    "validate_agent_proposal"
+                    if role == "PROFILER"
+                    else "validate_planner_proposal"
+                ),
+                contract_admission_evaluation=evaluation,
+                source_path=None,
+            )
 
         profiler_provenance = proposal_provenance(
             "PROFILER", profiler_visible_input, profile_proposal, fresh["admission"]
@@ -235,11 +259,14 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
         manifest = {
             "schema_version": "dynamics-atlas-case-run/v1",
             "case_id": case_id,
-            "research_question": "Keep UNKNOWN explicit?",
-            "claim_boundary": {"allowed": "fixture description only"},
+            "run_scope": "EXPOSED_DEVELOPMENT_ONLY",
+            "research_question": public_packet["research_question"],
+            "claim_boundary": public_packet["platform_authority_envelope"][
+                "claim_boundary"
+            ],
             "input_provenance": {
                 "public_case_packet": (
-                    "tests/fixtures/case_runner_v1/synthetic_public_packet_v1.json"
+                    "evidence/paper_blind_exposed_v1/public/hsp90_public_packet_v1.json"
                 ),
                 "profile_proposal": None,
                 "planner_proposal": None,
@@ -281,8 +308,15 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
             "scientific_disposition": "NOT_EVALUATED",
             "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+            "network_accessed": False,
+            "credentials_accessed": False,
+            "external_model_transport": False,
             "artifact_paths": artifact_paths,
-            "boundary": "Synthetic run fixture; no terminal scientific state is calculated.",
+            "boundary": (
+                "This runner records deterministic exposed-development behavior only. "
+                "It does not compute a terminal verdict, source-science approval, broad "
+                "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
+            ),
         }
         for name, value in (
             ("inputs/public_case_packet.json", public_packet),
@@ -493,6 +527,124 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
 
             with self.assertRaisesRegex(
                 CaseViewIntegrityError, "REPOSITORY_PUBLIC_PACKET_SOURCE_REQUIRED"
+            ):
+                build_case_view(root)
+
+    def test_run_rejects_non_runner_terminal_review_and_transport_state(self):
+        mutations = (
+            ("schema_version", "forged-run/v1"),
+            ("run_scope", "PRODUCTION"),
+            ("terminal_scientific_state", "FORGED_SCIENTIFIC_SUPPORT"),
+            ("scientific_disposition", "SUPPORTED"),
+            ("source_science_review_status", "APPROVED_BY_NAMED_REVIEWER"),
+            ("network_accessed", True),
+            ("credentials_accessed", True),
+            ("external_model_transport", True),
+            ("boundary", "Forged unrestricted scientific result."),
+        )
+        for field, value in mutations:
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_run_root(Path(temp_dir) / "run")
+                manifest_path = root / "case_run_manifest_v1.json"
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest[field] = value
+                _write_json(manifest_path, manifest)
+                with self.assertRaisesRegex(
+                    CaseViewIntegrityError,
+                    f"CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH:{field}",
+                ):
+                    build_case_view(root)
+
+    def test_run_rejects_recorded_proposal_diverging_from_repository_source(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            profile = manifest["proposal_provenance"]["profiler"]
+            profile_source = (
+                "evidence/paper_blind_exposed_v1/agent_runs/profiler/adk_proposal.json"
+            )
+            manifest["input_provenance"]["profile_mode"] = "RECORDED_PROPOSAL_REPLAY"
+            manifest["input_provenance"]["profile_proposal"] = profile_source
+            profiler_visible_input = json.loads(
+                (root / "inputs" / "profiler_visible_input.json").read_text(encoding="utf-8")
+            )
+            profile = build_proposal_provenance_v1(
+                role="PROFILER",
+                mode="RECORDED_PROPOSAL_REPLAY",
+                visible_input=profiler_visible_input,
+                parsed_proposal=json.loads(
+                    (root / "inputs" / "profile_proposal.json").read_text(encoding="utf-8")
+                ),
+                contract_evaluator="validate_agent_proposal",
+                contract_admission_evaluation=manifest["fresh_rule_state"]["admission"],
+                source_path=profile_source,
+            )
+            manifest["proposal_provenance"]["profiler"] = profile
+            _write_json(root / "profiler_proposal_provenance.json", profile)
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "REPOSITORY_SOURCE_SNAPSHOT_MISMATCH"
+            ):
+                build_case_view(root)
+
+    def test_run_rejects_profiler_input_not_derived_from_public_packet(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            visible_path = root / "inputs" / "profiler_visible_input.json"
+            visible = json.loads(visible_path.read_text(encoding="utf-8"))
+            visible["research_question"] = "Forged Profiler-visible question"
+            _write_json(visible_path, visible)
+
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["input_provenance"]["snapshot_artifacts"][
+                "profiler_visible_input"
+            ]["canonical_sha256"] = _canonical_sha256(visible)
+            profile = json.loads(
+                (root / "inputs" / "profile_proposal.json").read_text(encoding="utf-8")
+            )
+            receipt = build_proposal_provenance_v1(
+                role="PROFILER",
+                mode=CALLER_SUPPLIED_IN_MEMORY,
+                visible_input=visible,
+                parsed_proposal=profile,
+                contract_evaluator="validate_agent_proposal",
+                contract_admission_evaluation=manifest["fresh_rule_state"]["admission"],
+                source_path=None,
+            )
+            manifest["proposal_provenance"]["profiler"] = receipt
+            _write_json(root / "profiler_proposal_provenance.json", receipt)
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "PROFILER_VISIBLE_INPUT_PUBLIC_PACKET_MISMATCH"
+            ):
+                build_case_view(root)
+
+    def test_run_rejects_planner_admission_not_derived_from_proposal(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            admission = manifest["planner_admission"]
+            admission["scientific_disposition"] = "SUPPORTED"
+            proposal = json.loads(
+                (root / "inputs" / "planner_proposal.json").read_text(encoding="utf-8")
+            )
+            receipt = build_proposal_provenance_v1(
+                role="PLANNER",
+                mode=CALLER_SUPPLIED_IN_MEMORY,
+                visible_input=manifest["planner_visible_input"],
+                parsed_proposal=proposal,
+                contract_evaluator="validate_planner_proposal",
+                contract_admission_evaluation=admission,
+                source_path=None,
+            )
+            manifest["proposal_provenance"]["planner"] = receipt
+            _write_json(root / "planner_proposal_provenance.json", receipt)
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "PLANNER_ADMISSION_PROPOSAL_MISMATCH"
             ):
                 build_case_view(root)
 
