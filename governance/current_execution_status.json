@@ -1,15 +1,15 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v8",
-  "as_of": "2026-08-30T00:18:34Z",
-  "status_snapshot_as_of": "2026-08-30T00:18:34Z",
-  "overall_status": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE_DELIVERY_A_STATIC_REVIEW_SURFACE_DRAFT_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v9",
+  "as_of": "2026-08-30T02:19:15Z",
+  "status_snapshot_as_of": "2026-08-30T02:19:15Z",
+  "overall_status": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE_LOCAL_ENGINEERING_WORKBENCH_V1_IMPLEMENTED_FINAL_VALIDATION_PENDING_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
     "main_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
     "baseline_tag": "post-pr15-merged-development-causal-capsule",
-    "main_commit_semantics": "Verified literal GitHub main through merged PR #15. The Delivery A source-science workspace and static Review Console are an unmerged Draft surface and are deliberately not self-referenced as a final PR head in this snapshot.",
-    "accurate_name": "Merged two-case exposed-development causal capsule with a Draft, read-only source-science review surface; named domain review remains the only scientific gate"
+    "main_commit_semantics": "Verified literal GitHub main through merged PR #15. The engineering workbench v1 branch is an unmerged Draft surface; its final delivery head and CI belong in GitHub PR metadata rather than a self-referential committed status field.",
+    "accurate_name": "Merged two-case exposed-development causal capsule with an unmerged deterministic runner, CaseView, static review workbench, and advisory-only H1 preparation; named domain review remains the scientific gate"
   },
   "work_items": [
     {
@@ -150,6 +150,43 @@
       ]
     },
     {
+      "role": "AUTONOMOUS_ENGINEERING_WORKBENCH_V1",
+      "branch": "feature/dynamics-atlas-autonomous-engineering-v1",
+      "base_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
+      "implementation_head_before_status_docs": "576be635ee3aacbeb1136f21c5206ec117a741c2",
+      "state": "LOCAL_IMPLEMENTATION_COMPLETE_FINAL_VALIDATION_PENDING",
+      "integrated_prior_heads": {
+        "PR16": "1ee43e776d3e6e9529b1ed25a6b079335d21d48b",
+        "PR17": "055d80e0d5dfebb29d92168e456d98b18b8d8ed3"
+      },
+      "scope": [
+        "TWO_EXACT_REGISTERED_EXPOSED_DEVELOPMENT_CASES",
+        "RECORDED_PROPOSAL_REPLAY_DEFAULT",
+        "FRESH_RULE_DERIVED_LEGAL_CARDS",
+        "EXACT_CARD_AUTHORIZATION_OR_ABSTENTION",
+        "SAME_RULEINSTANCE_EVIDENCE_ATTACHMENT_CONTROL",
+        "ARTIFACT_ONLY_CASEVIEW",
+        "FOUR_VIEW_STATIC_LOCAL_WORKBENCH",
+        "NINE_ITEM_ADVISORY_SOURCE_RECONCILIATION",
+        "BLANK_NAMED_OFFICIAL_REVIEW_TEMPLATE"
+      ],
+      "observed_result": {
+        "current_cases": [
+          "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "ADK_EXPOSED_PORTABILITY_V1"
+        ],
+        "terminal_scientific_state_calculated_by_runner": false,
+        "official_source_science_status": "PENDING_DOMAIN_REVIEW",
+        "broad_same_rule_closure": "BLOCKED_BROAD_CLOSURE",
+        "f04_traceability": "DATA_INSUFFICIENT",
+        "adk_boundary": "ADK_STATIC_STRUCTURAL_CAPABILITY_EXPOSURE_DYNAMIC_PORTABILITY_NOT_EVALUATED",
+        "live_model_calls": 0,
+        "credential_reads": 0,
+        "external_credit_spend": 0
+      },
+      "authority_note": "This record reports local engineering behavior only. Advisory source reconciliation is not a named official review and does not activate a Rule, phase, Operator, or scientific conclusion."
+    },
+    {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
       "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
@@ -236,16 +273,41 @@
       ]
     },
     {
+      "stage": "AUTONOMOUS_ENGINEERING_WORKBENCH_V1",
+      "status": "LOCAL_IMPLEMENTATION_COMPLETE_FINAL_VALIDATION_PENDING",
+      "known_present": [
+        "REUSABLE_TWO_CASE_RECORDED_RUNNER",
+        "FRESH_RULE_AND_LEGAL_CARD_RECOMPUTATION",
+        "ONE_CARD_OR_ABSTENTION_AUTHORIZATION",
+        "RECORDED_PROFILER_AND_PLANNER_PROVENANCE",
+        "ARTIFACT_ONLY_CASEVIEW",
+        "FOUR_VIEW_STATIC_REVIEW_WORKBENCH",
+        "NINE_ITEM_H1_ADVISORY_PACKET",
+        "STRICT_DRAFT_VERSUS_COMPLETED_REVIEW_CONTRACT"
+      ],
+      "known_unresolved": [
+        "FINAL_RELEASE_VALIDATION_AND_GITHUB_CI",
+        "NAMED_SOURCE_SCIENCE_REVIEW",
+        "F04R02_TYPED_TRACEABILITY_MAPPING",
+        "BROAD_SAME_RULE_CLOSURE",
+        "ADK_DYNAMIC_PORTABILITY",
+        "LIVE_PLANNER_TRANSPORT",
+        "HELD_OUT_RESULT",
+        "AGENT_VALUE"
+      ]
+    },
+    {
       "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
       "status": "PENDING_DOMAIN_REVIEW",
       "known_present": [
         "F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET",
+        "NINE_ITEM_AUTOMATED_ADVISORY_RECONCILIATION",
         "SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT",
-        "STATIC_READ_ONLY_REVIEW_CONSOLE_V0_DRAFT"
+        "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT"
       ],
       "known_unresolved": [
         "REVIEWER_IDENTITY",
-        "PRIMARY_PASSAGE_CHECK",
+        "NAMED_REVIEWER_PRIMARY_PASSAGE_CHECK",
         "F04R02_CASE_BOUND_TRACEABILITY_MAPPING",
         "RECORDED_DISPOSITION"
       ]
@@ -270,5 +332,5 @@
     "authorization": "RECORDED_USER_DIRECTION_DA-20260830-052",
     "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only exposed-case evidence. Merged PR #15 records proposal replay, fresh Draft-Rule-derived Planner input, legal card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, abstaining human packets, and comparison to AI-authored development reference drafts. Delivery A adds only a blank named-review workspace and a static read-only trace. It establishes no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
+  "claim_ceiling": "Development-only exposed-case engineering evidence. Merged PR #15 and the unmerged workbench branch record proposal replay, fresh Draft-Rule-derived Planner input, legal-card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, same-Rule attachment controls, explicit replay provenance, artifact-only CaseView projection, a static four-view workbench, a blank named-review form, and advisory-only H1 reconciliation. They establish no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
 }
