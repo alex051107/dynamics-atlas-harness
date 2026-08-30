@@ -13,8 +13,9 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT = "4028cc4be02465e0e19b5c733aa335b23618c4b5"
-PR15_REVIEWED_IMPLEMENTATION_HEAD = "deb8a1379c973f09680425f6e640eea3ea1e337d"
+ENGINEERING_INTEGRATION_BASE_COMMIT = "03ae77efdfaabeaebbf2cf8cae5a490c15241be1"
+PR15_REVIEWED_IMPLEMENTATION_HEAD = "1c11b758388abe3e6023cfc714f172c203c15774"
+BOUNDED_ENGINEERING_IMPLEMENTATION_BASELINE = "522fe7e2f07a5b08d0b2b73e5aa13bf7c609cdba"
 
 
 def load_json(relative_path: str) -> dict:
@@ -36,20 +37,20 @@ class GovernanceConsistencyTests(unittest.TestCase):
 
         baseline = status["repository_baseline"]
         self.assertEqual(
-            baseline["main_commit"],
-            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
+            baseline["bounded_engineering_integration_base_commit"],
+            ENGINEERING_INTEGRATION_BASE_COMMIT,
         )
         self.assertEqual(
             baseline["baseline_tag"],
-            "post-pr14-paper-blind-public-packet-boundary",
+            "bounded-engineering-integration-baseline-v1",
         )
         self.assertIn(
-            "Verified literal GitHub main through merged PR #14",
-            baseline["main_commit_semantics"],
+            "not a live assertion about current main, delivery head, merge state, or CI result",
+            baseline["baseline_semantics"],
         )
-        self.assertIn(
-            "Draft PR #15 is reviewed separately and is not part of main",
-            baseline["main_commit_semantics"],
+        self.assertEqual(
+            baseline["delivery_state_authority"],
+            "GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE",
         )
         self.assertEqual(
             work_item(status, "NO_AGENT_MILESTONE_A")["state"].split("_")[0:2],
@@ -65,18 +66,19 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertEqual(consolidation["state"], "PR12_PR13_PR14_MERGED_CLEAN_CI")
         self.assertEqual(
             consolidation["merge_commits"]["PR14"],
-            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
+            "4028cc4be02465e0e19b5c733aa335b23618c4b5",
         )
         capsule = work_item(status, "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1")
         self.assertEqual(
             capsule["state"],
-            "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+            "MERGED_DEVELOPMENT_CAUSAL_CAPSULE",
         )
         self.assertEqual(
             capsule["reviewed_implementation_head"],
             PR15_REVIEWED_IMPLEMENTATION_HEAD,
         )
-        self.assertEqual(capsule["draft_pr_number"], 15)
+        self.assertEqual(capsule["delivery_pr_number"], 15)
+        self.assertEqual(capsule["merge_commit"], ENGINEERING_INTEGRATION_BASE_COMMIT)
         self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
@@ -84,7 +86,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             status["next_allowed_action"]["authorization"],
-            "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
+            "RECORDED_USER_DIRECTION_DA-20260830-052",
         )
         self.assertEqual(
             live_agent["observed_result"]["result"],
@@ -94,6 +96,70 @@ class GovernanceConsistencyTests(unittest.TestCase):
             next(stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW")["status"],
             "PENDING_DOMAIN_REVIEW",
         )
+        source_review = next(
+            stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW"
+        )
+        self.assertIn("SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT", source_review["known_present"])
+        self.assertIn(
+            "NINE_ITEM_AUTOMATED_ADVISORY_RECONCILIATION",
+            source_review["known_present"],
+        )
+        self.assertIn(
+            "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT",
+            source_review["known_present"],
+        )
+        self.assertIn("F04R02_CASE_BOUND_TRACEABILITY_MAPPING", source_review["known_unresolved"])
+        workbench = work_item(status, "AUTONOMOUS_ENGINEERING_WORKBENCH_V1")
+        self.assertEqual(workbench["base_commit"], ENGINEERING_INTEGRATION_BASE_COMMIT)
+        self.assertEqual(
+            workbench["bounded_engineering_integration_baseline"],
+            BOUNDED_ENGINEERING_IMPLEMENTATION_BASELINE,
+        )
+        self.assertEqual(workbench["state"], "BOUNDED_ENGINEERING_INTEGRATION_BASELINE_V1")
+        self.assertEqual(
+            workbench["observed_result"]["official_source_science_status"],
+            "PENDING_DOMAIN_REVIEW",
+        )
+        self.assertEqual(
+            workbench["observed_result"]["broad_same_rule_closure"],
+            "BLOCKED_BROAD_CLOSURE",
+        )
+        self.assertEqual(workbench["observed_result"]["f04_traceability"], "DATA_INSUFFICIENT")
+        self.assertFalse(
+            workbench["observed_result"]["terminal_scientific_state_calculated_by_runner"]
+        )
+        self.assertEqual(
+            workbench["observed_result"]["runner_terminal_state"],
+            "NOT_CALCULATED_BY_CASE_RUNNER",
+        )
+        self.assertIn(
+            "DYNAMIC_PORTABILITY_NOT_EVALUATED",
+            workbench["observed_result"]["adk_boundary"],
+        )
+        self.assertEqual(
+            workbench["observed_result"]["delivery_state_authority"],
+            "GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE",
+        )
+        workbench_stage = next(
+            stage for stage in status["stages"] if stage["stage"] == "AUTONOMOUS_ENGINEERING_WORKBENCH_V1"
+        )
+        self.assertEqual(workbench_stage["status"], "BOUNDED_ENGINEERING_INTEGRATION_BASELINE_V1")
+        for unresolved in (
+            "NAMED_SOURCE_SCIENCE_REVIEW",
+            "BROAD_SAME_RULE_CLOSURE",
+            "RUNNER_GENERATED_CONCLUSION_PACKET",
+            "ADK_DYNAMIC_PORTABILITY",
+            "LIVE_AGENT_EXECUTION",
+            "HELD_OUT_RESULT",
+        ):
+            with self.subTest(unresolved=unresolved):
+                self.assertIn(unresolved, workbench_stage["known_unresolved"])
+        serialized_status = json.dumps(status, sort_keys=True).upper()
+        self.assertNotRegex(
+            serialized_status,
+            r"EXACT_FINAL_HEAD|FINAL_DELIVERY_HEAD|GITHUB_CI_PENDING|CI_PENDING|FINAL_CI_MATRIX",
+        )
+        self.assertIn("separate exact HSP90 control regression", status["claim_ceiling"])
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
@@ -163,12 +229,38 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("Frozen Plan 的 `PR 8`", document)
         self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
         self.assertIn("development/runtime baseline commit", document)
-        self.assertIn("literal current `main` HEAD", document)
+        self.assertIn("literal `main`", document)
+        self.assertIn("engineering workbench v1", document)
+        self.assertIn("recorded-replay evidence execution and inspection path", document)
+        self.assertIn("GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE", document)
+        self.assertIn("internal adversarial subagent review passes", document)
 
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Current execution status", readme)
         self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", readme)
         self.assertIn("Historical initial control-plane smoke v0.2", readme)
+        self.assertIn("recorded-replay evidence execution and inspection path", readme)
+        self.assertIn("GitHub PR merge-ref CI", readme)
+
+        completion = (REPO_ROOT / "docs" / "ENGINEERING_V1_COMPLETION.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(
+            "## Implemented recorded-replay evidence execution and inspection path",
+            completion,
+        )
+        self.assertIn("Decision: `BOUNDED_ENGINEERING_WORKBENCH_V1_COMPLETE`", completion)
+        self.assertIn("--case-root /tmp/dynamics-atlas-hsp90-engineering-v1", completion)
+        self.assertIn("--case-root /tmp/dynamics-atlas-adk-engineering-v1", completion)
+        self.assertIn("internal adversarial subagent review passes", completion)
+        self.assertIn(
+            "GitHub PR checks validate a PR merge ref, not a direct checkout",
+            completion,
+        )
+        self.assertNotIn("## Implemented end-to-end path", completion)
+        self.assertNotIn("Final delivery head:", completion)
+        self.assertIn("--case-root /tmp/dynamics-atlas-hsp90-engineering-v1", readme)
+        self.assertIn("--case-root /tmp/dynamics-atlas-adk-engineering-v1", readme)
 
         baseline = (REPO_ROOT / "BASELINE.md").read_text(encoding="utf-8")
         self.assertIn("Historical initial baseline", baseline)

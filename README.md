@@ -4,13 +4,74 @@
 
 当前仓库状态、当前授权和下一允许动作以
 [仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
-[机器可读快照](governance/current_execution_status.json) 为准。它们记录的当前状态是：两个
-exposed development case 的 case-bound no-Agent routes 和最小 Stage-2 packets 已合并；Agent
-diagnostic 仍是 capability-rejected baseline；当前下一步是具名 F01/F02/F03/F04/F06
-source-science review。
+[机器可读快照](governance/current_execution_status.json) 为准。它们记录的工程状态是：PR #15 的
+two-case development causal capsule 提供冻结 integration base；bounded engineering integration
+baseline v1 整合并修复了 PR #16/#17，新增可复用两案例 runner、artifact-only CaseView、proposal provenance、
+九项 H1 advisory package，以及四视图静态 [Review Console](review_console/index.html)。当前科学下一步
+仍是具名 F01/F02/F03/F04/F06 source-science review。
 
-这些 development artifacts 不构成 source-science approval、通用 runtime、transfer、Agent value 或
-production readiness。下面的 initial control-plane smoke 是历史基线，不是当前执行状态。
+这个工程范围是 recorded-replay evidence execution and inspection path。它不执行 live Agent，不完成
+broad active-Rule closure，也不由 `run-case` 生成 terminal ConclusionPacket；H1、ADK dynamics portability
+和 held-out evaluation 仍未完成或未授权。internal adversarial subagent review passes 只属于工程审查，
+不构成 external 或 independent approval。精确 delivery SHA、merge state 与 GitHub PR merge-ref CI 结果
+由 GitHub PR metadata 记录，不写入 tracked status。
+
+这些 development artifacts 不构成 source-science approval、transfer、Agent value 或 production
+readiness。完整的工程行为、blocker 与复现记录见
+[ENGINEERING_V1_COMPLETION.md](docs/ENGINEERING_V1_COMPLETION.md)。下面的 initial control-plane smoke
+是历史基线，不是当前执行状态。
+
+## Engineering workbench v1 development path
+
+下面两个命令分别重放当前 HSP90 与静态 ADK public development case。输出目录必须是新的或空的；
+默认不读取凭据、不联网、不调用 live model，也不计算 terminal scientific state：
+
+```bash
+PYTHONPATH=src python3 -m dynamics_atlas_harness run-case \
+  --case-id HSP90_NTD_EXPOSED_PAPER_BLIND_V1 \
+  --output-dir /tmp/dynamics-atlas-hsp90-engineering-v1
+
+PYTHONPATH=src python3 -m dynamics_atlas_harness run-case \
+  --case-id ADK_EXPOSED_PORTABILITY_V1 \
+  --output-dir /tmp/dynamics-atlas-adk-engineering-v1
+```
+
+`build_case_view(case_or_run_root)` 可以读取上述 run root 或仓库内的 committed capsule case root。
+它只投影已有 artifact；required artifact 缺失、malformed、cross-case 或 stale reference 会抛出
+integrity error，optional absence 会显式显示为 `UNAVAILABLE`，`UNKNOWN` 不会被推断成其他值。
+
+## Source-science review workspace
+
+Delivery A 把现有窄范围 F01/F02/F03/F04/F06 evidence packet、当前 binding／contract／policy
+和 HSP90／ADK application 放入一个只读审查工作台。审查者可从
+[`review/source_science_v1/README.md`](review/source_science_v1/README.md) 开始，检查 primary
+passage 或 case-bound artifact，再在空白表单中记录具名、日期和 disposition。F04R02 的
+case-bound traceability mapping 仍待人工核对。
+
+下面的命令会从提交的 repository artifacts 重建 source-science workspace，并把上面两个 fresh
+run root 接入同一个静态页面：
+
+```bash
+PYTHONPATH=src python scripts/build_source_science_review_workspace_v1.py \
+  --output-dir review/source_science_v1
+
+PYTHONPATH=src python scripts/render_review_console_v0.py \
+  --status governance/current_execution_status.json \
+  --case-root /tmp/dynamics-atlas-hsp90-engineering-v1 \
+  --case-root /tmp/dynamics-atlas-adk-engineering-v1 \
+  --review-workspace review/source_science_v1 \
+  --output-dir review_console
+
+python3 -m http.server 8000 --directory review_console
+```
+
+`--case-root` 可以重复传入任何 CaseView-compatible committed capsule case 或 fresh `run-case`
+root；不传时仍可通过 `--capsule-root` 使用原有的 capsule directory discovery。
+
+随后打开 `http://127.0.0.1:8000/`。页面包含 Case Overview、Source → Rule → Evidence Trace、
+Conclusion and Provenance、Human Review 四个主视图；不调用模型、Operator、API 或数据库，也不会
+写回 Rule、threshold 或 source-science disposition。H1 advisory 与空白 official review template
+分开显示；F04 仍是 `DATA_INSUFFICIENT`。
 
 ## Runnable reference demo
 

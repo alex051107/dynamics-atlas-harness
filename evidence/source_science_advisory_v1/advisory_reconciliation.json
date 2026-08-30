@@ -1,0 +1,292 @@
+{
+  "schema_version": "dynamics-atlas-source-science-advisory/v1",
+  "packet_kind": "H1_AUTOMATED_ADVISORY_RECONCILIATION",
+  "packet_status": "ADVISORY_COMPLETE_OFFICIAL_DOMAIN_REVIEW_PENDING",
+  "authority_boundary": "This packet records bounded automated source reconciliation. It is not an official scientific disposition, does not activate a Rule or phase, and does not modify any RuleResult, Evaluation Contract, Resolution Policy, Operator, or ConclusionPacket.",
+  "official_review": {
+    "reviewer_identity": null,
+    "reviewer_role": null,
+    "review_date": null,
+    "official_disposition": null,
+    "official_note": null
+  },
+  "allowed_advisory_dispositions": [
+    "ADVISORY_APPROVE_AS_WRITTEN",
+    "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+    "ADVISORY_REJECT_OR_DEFER",
+    "DATA_INSUFFICIENT"
+  ],
+  "case_boundaries": {
+    "ADK_EXPOSED_PORTABILITY_V1": "ADK_STATIC_STRUCTURAL_CAPABILITY_EXPOSURE; DYNAMIC_PORTABILITY_NOT_EVALUATED. The public packet contains static structural context and a descriptive reference-relative comparison only.",
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1": "The separate exact time-anatomy control is EXISTING_EXACT_CONTROL_REGRESSION. It does not close the public HSP90 NMR-to-MD RuleInstances or establish broad HSP90 source science, reliability, convergence, kinetics, equilibrium, population, free energy, mechanism, or mutation effect."
+  },
+  "records": [
+    {
+      "review_item_id": "NDSR-F01R01",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "exact_source_locator_checked": [
+        "Wankowicz and Bonomi 2026, PDF p.5, intended-use evaluation passage; local parsed derivative lines 321-341",
+        "Wankowicz and Bonomi 2026, PDF p.5, Conclusion; local parsed derivative lines 388-392"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "The paper states that intended use changes what must be evaluated: experimental comparison emphasizes accurate conformer weights for measured observables, functional applications emphasize population differences above statistical uncertainty, and functional claims require identifying function-associated states and estimating their populations accurately.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Require a declared CASE claim contract before source or edge review begins. The paper motivates intended-use-first evaluation but does not mandate CASE-first ordering or define the Atlas schema."
+      },
+      "hsp90_adk_application": {
+        "ADK": "The declared CASE claim contract is PASS at the intake level; the public case remains NOT_EVALUATED and static-only.",
+        "HSP90": "The declared CASE claim contract is PASS at the intake level; the public case remains NOT_EVALUATED and is not closed by the exact control."
+      },
+      "reconciliation": {
+        "result": "MISMATCH",
+        "rationale": "Intended-use dependence is source supported; mandatory CASE-first ordering is repository methodology."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Pinned the exact locator and separated the primary observation from PROJECT_INTERPRETATION."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+      "unresolved_human_question": "Does the named reviewer accept intended-use dependence as support only for the bounded CASE declaration prerequisite?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F01R02",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "exact_source_locator_checked": [
+        "Sanabria et al. 2020, PDF pp.9-10, Discussion; local parsed derivative lines 785-835",
+        "Sanabria et al. 2020, PDF pp.9-10, concluding summary; local parsed derivative lines 915-930"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "For the studied T4 lysozyme variants, the authors separately report evidence for a third conformational state, relaxation times of about 4 and 230 microseconds, substrate- and mutation-associated population changes, and a proposed functional association with product release.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Record whether requested CASE wording concerns state existence, population, timescale, or functional association, while leaving the evidence-supported ceiling to a later evaluator. The paper does not state this as a universal claim taxonomy."
+      },
+      "hsp90_adk_application": {
+        "ADK": "Requested wording is intake-scope PASS, but static ADK evidence cannot support dynamics, population, kinetics, function, or portability.",
+        "HSP90": "Requested wording is intake-scope PASS, but neither the public descriptive result nor the exact control supports population, kinetics, mechanism, or broad closure."
+      },
+      "reconciliation": {
+        "result": "MISMATCH",
+        "rationale": "The four T4 lysozyme statements are source supported; the reusable claim-level taxonomy is repository methodology."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Narrowed the statement to the studied T4 lysozyme case, pinned the locator, and labeled the taxonomy PROJECT_INTERPRETATION."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+      "unresolved_human_question": "Does the named reviewer accept these four case-specific claim types as motivation for intake scope checking without transferring the T4 lysozyme findings?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F02R01",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "exact_source_locator_checked": [
+        "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543; local parsed derivative lines 118-125 and 151-161",
+        "Thomasen and Lindorff-Larsen 2022, Future perspectives p.548; local parsed derivative lines 450-458"
+      ],
+      "source_kind": "PRIMARY_REVIEW_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "The review describes current integrative approaches as refining ensembles of isolated protein species against measurements from chemically homogeneous pure-protein samples; heterogeneous or polydisperse mixtures require additional methods, and experimental perturbations remain part of interpretation.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Use these observations for a SOURCE-local sample-system and composition declaration. PASS records declared context only and does not decide an EDGE relation."
+      },
+      "hsp90_adk_application": {
+        "ADK": "The endpoint context, 1E4V/G10V structure, and coordinate derivatives have declaration-level PASS results; this does not establish wild-type equivalence or dynamics portability.",
+        "HSP90": "The NMR methods/results source and MD distance trace remain UNRESOLVED for sample-system or composition context."
+      },
+      "reconciliation": {
+        "result": "AGREEMENT",
+        "rationale": "The source supports the bounded sample-system and composition premise; the repository effect remains declaration only."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Clarified direct paper observation versus the repository declaration effect; no Rule status changed."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_AS_WRITTEN",
+      "unresolved_human_question": "Does the named reviewer accept the declaration-level use while leaving HSP90 source context unresolved?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F02R02",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "exact_source_locator_checked": [
+        "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543; local parsed derivative lines 151-161"
+      ],
+      "source_kind": "PRIMARY_REVIEW_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "The review states that data integrated as measurements of one conformational ensemble should use conditions such as buffer and temperature that are as similar as possible and should account for experiment-specific perturbations including fluorophore labelling, sample freezing, and alignment media.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Classify an EDGE condition relation only when explicit compatibility or mismatch evidence exists; absent or ambiguous evidence remains UNRESOLVED."
+      },
+      "hsp90_adk_application": {
+        "ADK": "ADK_NONREFERENCE_TO_ANCHORS_EDGE remains UNRESOLVED; static coordinates do not establish condition compatibility or dynamics portability.",
+        "HSP90": "HSP90_NMR_TO_MD_CONTEXT_EDGE remains UNRESOLVED; the exact-control sidecar does not resolve this public EDGE."
+      },
+      "reconciliation": {
+        "result": "AGREEMENT",
+        "rationale": "The source supports assessing conditions and perturbations before combining data; no universal numeric tolerance is claimed."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Clarified the direct condition statement and retained explicit UNKNOWN or UNRESOLVED outcomes."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_AS_WRITTEN",
+      "unresolved_human_question": "What case-specific condition relation, if any, can the named reviewer support for each public EDGE?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F03R01",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "exact_source_locator_checked": [
+        "Fuertes et al. 2017, PDF pp.1-4 / PNAS E6342-E6345, Abstract, Introduction, and Results measurement passages; local full-text derivative lines 18-38, 95-136, 245-260, and 303-321"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "Fuertes et al. distinguish global SAXS radius of gyration from the smFRET-inferred dye-to-dye distance: the measurements interrogate different length scales and averaging, and the distance inference depends on an assumed interdye-distance distribution.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Require a SOURCE-local native-measurement declaration before relation-level evaluation. PASS records measurement semantics only and does not decide comparability or reliability."
+      },
+      "hsp90_adk_application": {
+        "ADK": "All three static ADK sources have declaration-level PASS results; the result remains static capability exposure only.",
+        "HSP90": "The MD distance trace has declaration-level PASS; NMR methods/results remain UNRESOLVED."
+      },
+      "reconciliation": {
+        "result": "AGREEMENT",
+        "rationale": "The primary text supports preserving observable, spatial-support, averaging, label, and inverse-model semantics."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Pinned the exact PDF and derivative ranges and retained the declaration-only claim ceiling."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_AS_WRITTEN",
+      "unresolved_human_question": "Does the named reviewer accept this paper only as support for the declaration prerequisite while requiring the unresolved HSP90 NMR declaration?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F04R02",
+      "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+      "exact_source_locator_checked": [
+        "evidence/real_case_vertical_slice_v1/hsp90_case_dossier_v1.json",
+        "evidence/real_case_vertical_slice_v1/hsp90_f04r02_rule_overlay_v1.json",
+        "evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json",
+        "evidence/real_case_vertical_slice_v1/outputs/hsp90_b1_rule_to_operator/operator_run_receipt.json",
+        "evidence/real_case_vertical_slice_v1/outputs/hsp90_b1_rule_to_operator/evidence_result.json",
+        "evidence/real_case_vertical_slice_v1/outputs/hsp90_b1_rule_to_operator/post_operator_rule_result.json",
+        "evidence/real_case_vertical_slice_v1/outputs/hsp90_b1_rule_to_operator/conclusion_packet.json"
+      ],
+      "source_kind": "CASE_BOUND_REPOSITORY_EXECUTION_EVIDENCE_NO_PRIMARY_PAPER_PASSAGE",
+      "atomic_source_supported_statement": "The exact frozen HSP90 packet produced a contract-valid execution record for one same-packet, trajectory-level two-readout directional diagnostic using 40 trajectories, 1001 saved frames per trajectory, and persistence horizons of 5, 20, and 50 saved frames. Scientific evaluation remains PENDING_HUMAN_VALIDATION.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "The exact control may update only its exact case-bound RuleInstance. It cannot close the public HSP90 NMR-to-MD RuleInstances or emit a scientific verdict."
+      },
+      "hsp90_adk_application": {
+        "ADK": "NOT_SELECTED_IN_PUBLIC_CASE; no F04R02 active RuleInstance.",
+        "HSP90": "EXISTING_EXACT_CONTROL_REGRESSION only. The public HSP90 descriptive result remains NO_ACTIVE_RULE_EFFECT and the case remains NOT_EVALUATED."
+      },
+      "reconciliation": {
+        "result": "DATA_INSUFFICIENT",
+        "rationale": "The execution chain is auditable, but the overlay packet labels do not resolve to records keyed by those exact identifiers and no primary-paper passage supports broader F04 reuse."
+      },
+      "smallest_bounded_repair": {
+        "status": "BLOCKED_HUMAN",
+        "repair": "Clarified the exact artifact chain and blocker. A named reviewer must accept a typed mapping between the overlay labels and stable dossier, manifest, receipt, EvidenceResult, RuleResult, and ConclusionPacket identifiers."
+      },
+      "advisory_disposition": "DATA_INSUFFICIENT",
+      "unresolved_human_question": "Are HSP90-CASE-DOSSIER-V1 and HSP90-TIME-ANATOMY-CONTRACT-V1 intended aliases for the existing exact artifact chain, and is that chain accepted solely as exact execution-control evidence?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F06R01",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "exact_source_locator_checked": [
+        "Bengtsen et al. 2020, PDF pp.7-8, Molecular dynamics simulations and Integrating experiments and simulations; local parsed derivative lines 292-312 and 344-394"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "Bengtsen et al. used SAXS and NOE individually and jointly to refine the MD ensemble, then compared PRE and EPR data as validation because those data were not used directly as refinement inputs; the modalities report different structural information.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Require each SOURCE to declare its exact evidence role and lineage before an EDGE-level validation claim is considered. PASS records the role only and does not establish independence."
+      },
+      "hsp90_adk_application": {
+        "ADK": "Endpoint context, 1E4V/G10V structure, and coordinate derivatives remain UNRESOLVED for evidence role and lineage.",
+        "HSP90": "NMR methods/results and MD distance trace remain UNRESOLVED for evidence role and lineage."
+      },
+      "reconciliation": {
+        "result": "MISMATCH",
+        "rationale": "The paper supports case-specific data-use roles; the formal SOURCE field and source-versus-edge split are repository methodology."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Replaced the generic paper statement with the direct case-specific data-use statement and labeled the reusable control rule PROJECT_INTERPRETATION."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+      "unresolved_human_question": "What exact role and lineage should the named reviewer assign to each public ADK and HSP90 source?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F06R02",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "exact_source_locator_checked": [
+        "Fuertes et al. 2017, PDF pp.7-9 / PNAS E6348-E6350, Discussion, Working Hypothesis, and Conclusion and Perspective; local full-text derivative lines 587-603, 622-629, and 749-761"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "Fuertes et al. show that SAXS-derived radius of gyration and smFRET-inferred end-to-end distance can yield discrepant inferences because they interrogate different length scales and averaging, while joint use can constrain a mutually compatible ensemble.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Evaluate comparability at the EDGE after condition and measurement prerequisites resolve. Explicit relation types, bridges, prerequisites, and NOT_COMPARABLE are repository control semantics."
+      },
+      "hsp90_adk_application": {
+        "ADK": "ADK_NONREFERENCE_TO_ANCHORS_EDGE remains UNRESOLVED; static reference-relative proximity is not dynamics portability.",
+        "HSP90": "HSP90_NMR_TO_MD_CONTEXT_EDGE remains UNRESOLVED; the separate exact control does not resolve this EDGE."
+      },
+      "reconciliation": {
+        "result": "MISMATCH",
+        "rationale": "The paper supports discrepancy and complementary joint use; the formal EDGE relation and bridge contract are repository methodology."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Split the direct Fuertes observation from PROJECT_INTERPRETATION and retained the prohibition on forced numeric equivalence."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+      "unresolved_human_question": "For each public EDGE, do the case-specific prerequisites support qualitative triangulation, numeric comparison, or only NOT_COMPARABLE?",
+      "authoritative_effect": "NONE"
+    },
+    {
+      "review_item_id": "NDSR-F06R03",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "exact_source_locator_checked": [
+        "Bengtsen et al. 2020, PDF p.8, PRE/EPR consistency check and Integrating experiments and simulations; local parsed derivative lines 344-348 and 369-394"
+      ],
+      "source_kind": "PRIMARY_PAPER_CHECKED_AGAINST_LOCAL_DERIVATIVE",
+      "atomic_source_supported_statement": "Bengtsen et al. describe PRE and EPR as validation data not used directly in the BME refinement, while also stating that the reference NMR/EPR structure was derived using PRE, EPR, and remaining NMR data.",
+      "current_repository_interpretation": {
+        "classification": "PROJECT_INTERPRETATION",
+        "statement": "Evaluate validation independence as an EDGE obligation from lineage, shared-data, and shared-error facts. Not used directly in one refinement is not by itself held-out or fully independent."
+      },
+      "hsp90_adk_application": {
+        "ADK": "ADK_NONREFERENCE_TO_ANCHORS_EDGE remains UNRESOLVED; no independent or held-out label is admitted.",
+        "HSP90": "HSP90_NMR_TO_MD_CONTEXT_EDGE remains UNRESOLVED; no independent or held-out label is admitted."
+      },
+      "reconciliation": {
+        "result": "MISMATCH",
+        "rationale": "The paper illustrates why data-use history matters, but it does not perform the repository's generic lineage and shared-error audit."
+      },
+      "smallest_bounded_repair": {
+        "status": "IMPLEMENTED",
+        "repair": "Replaced held-out implications with not used directly in the current BME refinement and labeled the independence audit PROJECT_INTERPRETATION."
+      },
+      "advisory_disposition": "ADVISORY_APPROVE_WITH_BOUNDED_REVISION",
+      "unresolved_human_question": "After accounting for source derivation, reused data, shared models, and shared systematic errors, is either public EDGE independent at the level required by its proposed validation label?",
+      "authoritative_effect": "NONE"
+    }
+  ],
+  "global_result": {
+    "official_source_science_status": "PENDING_DOMAIN_REVIEW",
+    "broad_same_rule_closure": "BLOCKED_BROAD_CLOSURE",
+    "exact_blocker": "No named official domain disposition exists for the nine H1 items, and F04R02 source-traceability mapping remains DATA_INSUFFICIENT.",
+    "rule_or_phase_activation": "NONE"
+  }
+}

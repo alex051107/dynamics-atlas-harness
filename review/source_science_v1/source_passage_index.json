@@ -1,0 +1,1738 @@
+{
+  "entries": [
+    {
+      "atomic_scientific_statement": "The paper states that intended use changes what must be evaluated: experimental comparison emphasizes accurate conformer weights for measured observables, functional applications emphasize population differences above statistical uncertainty, and functional claims require identifying function-associated states and estimating their populations accurately.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "CASE"
+            },
+            {
+              "op": "EQ",
+              "path": "case.intake_kind",
+              "value": "SCIENTIFIC_CLAIM_REVIEW"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F01R01-CASE-CLAIM-DECLARATION",
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "implementation_status": "COMPLETE_DRAFT",
+        "required_evidence_paths": [
+          "case.scientific_claim",
+          "case.requested_claim_level",
+          "case.intended_use",
+          "case.observability_target.event_signature",
+          "case.claim_contract.internal_consistency"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "target_kind": "CASE"
+      },
+      "claim_ceiling": "Do not treat intended-use dependence as source validation, a prescribed Atlas CASE schema or predicate, an evidence-supported claim ceiling, or a terminal scientific conclusion.",
+      "claim_effect_summary": "A PASS only establishes a reviewable question; it emits no scientific verdict.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "CONTRADICTED"
+              ]
+            },
+            "reason_code": "CLAIM_CONTRACT_CONTRADICTED"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "CONSISTENT"
+              ]
+            },
+            "reason_code": "CLAIM_CONTRACT_CONSISTENT"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "Conflicting CASE contract metadata blocks the requested wording until a human resolves it.",
+            "decision_class": "REQUEST_CASE_CONTRACT_REVISION",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No claim-contract instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated.",
+            "decision_class": "REVIEWABLE_CASE_CONTRACT",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing CASE intent is an intake gap; it cannot be recovered from a source lookup.",
+            "decision_class": "REQUEST_CASE_CLARIFICATION",
+            "route": "HUMAN_OR_NEW_DATA"
+          }
+        },
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "target_kind": "CASE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "CLAIM_CONTRACT_STATUS_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F01-CLAIM-CONTRACT",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "family_overlay": {
+        "architecture_decision": "APPROVE",
+        "candidate_subrule_ids": [
+          "F01R01_CASE_CLAIM_DECLARATION",
+          "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+        ],
+        "display_name": "Claim Contract and Ceiling",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not treat intended-use dependence as source validation, a prescribed Atlas CASE schema or predicate, an evidence-supported claim ceiling, or a terminal scientific conclusion.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "wankowicz_bonomi_2026_ensemble_prediction",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Wankowicz and Bonomi 2026, PDF p.5, intended-use evaluation passage (local parsed derivative lines 321-341) and Conclusion (lines 388-392)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Require a declared CASE claim contract before source or edge review begins. The paper motivates intended-use-first evaluation but does not mandate CASE-first ordering or define the Atlas schema.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "typed_case_field",
+          "human_case_clarification"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "INFER_MISSING_CASE_FACT",
+          "LOOKUP_CASE_INTENT_IN_SOURCE",
+          "AUTO_APPROVE_WORDING",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve CASE contract and intake-declared wording-scope gaps before any source or edge claim is evaluated.",
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "unresolved_route": "HUMAN_OR_NEW_DATA"
+      },
+      "review_item_id": "NDSR-F01R01",
+      "review_packet_runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Is the requested claim contract declared and internally consistent?",
+      "short_source_passage": "Primary-source observation: whether conformer states and weights are adequate depends on intended use; experimental agreement, population shifts above uncertainty, and state-function association place different demands on an ensemble.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "For the studied T4 lysozyme variants, the authors separately report evidence for a third conformational state, relaxation times of about 4 and 230 microseconds, substrate- and mutation-associated population changes, and a proposed functional association with product release.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "CASE"
+            },
+            {
+              "op": "EQ",
+              "path": "case.intake_kind",
+              "value": "SCIENTIFIC_CLAIM_REVIEW"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "required_evidence_paths": [
+          "case.requested_claim_level",
+          "case.claim_contract.declared_request_scope",
+          "case.claim_contract.forbidden_upgrades"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "target_kind": "CASE"
+      },
+      "claim_ceiling": "Do not transfer the T4 lysozyme state, population, timescale, or proposed product-release association to another system, and do not infer kinetics, function, mechanism, or an evidence-supported ceiling from an intake scope check.",
+      "claim_effect_summary": "A PASS records intake scope only. It does not calculate an evidence-supported claim ceiling, which is deferred to Stage 2.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "case.requested_claim_level",
+              "values_path": "case.claim_contract.forbidden_upgrades"
+            },
+            "reason_code": "REQUESTED_WORDING_IS_FORBIDDEN"
+          },
+          {
+            "condition": {
+              "args": [
+                {
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values_path": "case.claim_contract.declared_request_scope"
+                  },
+                  "op": "NOT"
+                },
+                {
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values": [
+                      "UNKNOWN",
+                      "UNRESOLVED"
+                    ]
+                  },
+                  "op": "NOT"
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "REQUESTED_WORDING_OUTSIDE_DECLARED_SCOPE"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "case.requested_claim_level",
+                  "values_path": "case.claim_contract.declared_request_scope"
+                },
+                {
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values_path": "case.claim_contract.forbidden_upgrades"
+                  },
+                  "op": "NOT"
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "The requested wording is outside the intake-declared scope. This is not an evidence-derived scientific impossibility.",
+            "decision_class": "REQUEST_SCOPE_CONFLICT",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No requested-wording-scope instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented.",
+            "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing request-scope metadata prevents an intake decision and cannot be recovered from a source lookup.",
+            "decision_class": "REQUEST_CASE_CLARIFICATION",
+            "route": "HUMAN_OR_NEW_DATA"
+          }
+        },
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "target_kind": "CASE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "case.requested_claim_level",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "REQUESTED_WORDING_STATUS_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F01-REQUESTED-WORDING-SCOPE",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "family_overlay": {
+        "architecture_decision": "APPROVE",
+        "candidate_subrule_ids": [
+          "F01R01_CASE_CLAIM_DECLARATION",
+          "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+        ],
+        "display_name": "Claim Contract and Ceiling",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not transfer the T4 lysozyme state, population, timescale, or proposed product-release association to another system, and do not infer kinetics, function, mechanism, or an evidence-supported ceiling from an intake scope check.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "sanabria_2020_transient_states",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Sanabria et al. 2020, PDF pp.9-10, Discussion and concluding summary (local parsed derivative lines 785-835 and 915-930)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Record whether requested CASE wording concerns state existence, population, timescale, or functional association, while leaving the evidence-supported ceiling to a later evaluator. This reusable claim taxonomy is not stated as a universal scheme by the paper.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "typed_case_field",
+          "human_case_clarification"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "INFER_MISSING_CASE_FACT",
+          "LOOKUP_CASE_INTENT_IN_SOURCE",
+          "AUTO_APPROVE_WORDING",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve CASE contract and intake-declared wording-scope gaps before any source or edge claim is evaluated.",
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "unresolved_route": "HUMAN_OR_NEW_DATA"
+      },
+      "review_item_id": "NDSR-F01R02",
+      "review_packet_runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Is the requested wording inside the CASE intake's declared request scope?",
+      "short_source_passage": "Primary-source observation: in the T4 lysozyme case, evidence for a third state, its population changes, microsecond exchange, and its proposed association with product release are distinct case-specific statements.",
+      "source_packet_status": "PENDING",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "The review describes current integrative approaches as refining ensembles of isolated protein species against measurements from chemically homogeneous pure-protein samples; heterogeneous or polydisperse mixtures require additional methods, and experimental perturbations remain part of interpretation.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "source.source_id"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.construct_and_condition",
+          "source.sample_composition",
+          "source.sample_system_composition_declaration_status"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "target_kind": "SOURCE"
+      },
+      "claim_ceiling": "Do not infer a homogeneous chemical species from omitted metadata, treat missing metadata as proof of a mixture, or freeze a universal boundaries, mutations, or tags construct schema.",
+      "claim_effect_summary": "A PASS records a source-local declaration only; it does not freeze a full construct schema or certify sample homogeneity.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            },
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_CONTRADICTED"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "DECLARED"
+              ]
+            },
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it is not a verdict on the source's science.",
+            "decision_class": "REQUEST_SOURCE_CONTEXT_RESOLUTION",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No source sample-system/composition instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+            "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor.",
+            "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "target_kind": "SOURCE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F02-CONSTRUCT",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "family_overlay": {
+        "architecture_decision": "APPROVE",
+        "candidate_subrule_ids": [
+          "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+          "F02R02_EDGE_CONDITION_COMPATIBILITY"
+        ],
+        "display_name": "System Construct and Condition",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not infer a homogeneous chemical species from omitted metadata, treat missing metadata as proof of a mixture, or freeze a universal boundaries, mutations, or tags construct schema.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "thomasen_lindorff_larsen_2022_integrative_dynamics_review",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543 (local parsed derivative lines 118-125 and 151-161); Future perspectives p.548 (lines 450-458)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Use these observations only for F02R01's SOURCE-local sample-system and composition declaration. PASS records declared context; it neither prescribes every construct field nor decides an EDGE relation.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "INFER_HOMOGENEOUS_SAMPLE_FROM_OMISSION",
+          "INFER_MEASUREMENT_SEMANTICS",
+          "INFER_UNIVERSAL_CONDITION_THRESHOLD",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source-local sample-system or measurement declarations and declared edge condition relations before relation-level evaluation.",
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F02R01",
+      "review_packet_runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Does this source declare the sample-system and composition context needed to avoid silently assuming a homogeneous single-species ensemble?",
+      "short_source_passage": "Primary-source observation: integrative ensemble methods require observables that report on relevant structures and conditions, while the reviewed approaches assume isolated, chemically homogeneous pure-protein samples and require new methods for heterogeneous or polydisperse mixtures.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "The review states that data integrated as measurements of one conformational ensemble should use conditions such as buffer and temperature that are as similar as possible and should account for experiment-specific perturbations including fluorophore labelling, sample freezing, and alignment media.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.comparison_id"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F02R02-EDGE-CONDITION",
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "required_evidence_paths": [
+          "edge.left_source_id",
+          "edge.right_source_id",
+          "edge.condition_relation"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "target_kind": "EDGE"
+      },
+      "claim_ceiling": "Do not infer comparability from a common modality or nominal label, invent a universal buffer or temperature tolerance, or conflate condition compatibility with validation independence.",
+      "claim_effect_summary": "A PASS records an explicit relation label only; it does not establish a universal comparability threshold.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "edge.condition_relation",
+              "values": [
+                "MISMATCH"
+              ]
+            },
+            "reason_code": "EDGE_CONDITION_RELATION_MISMATCH"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MATCHED"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "EDGE_CONDITION_RELATION_AND_SOURCE_CONTEXT_PREREQUISITES_MATCHED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "An explicit mismatch blocks the declared relation until a human revises or separates it; neither source's local measurement is invalidated.",
+            "decision_class": "EDGE_CONDITION_RELATION_MISMATCH",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No edge condition-relation instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The edge records a matched condition relation only after both endpoint sample-system/composition declarations PASS. It does not establish a universal comparability threshold or validation independence.",
+            "decision_class": "EDGE_CONDITION_RELATION_DECLARED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor.",
+            "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "target_kind": "EDGE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "edge.condition_relation",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "EDGE_CONDITION_RELATION_UNRESOLVED"
+          },
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN",
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN",
+                    "FAIL"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "EDGE_SOURCE_CONTEXT_PREREQUISITES_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F02-CONDITION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "family_overlay": {
+        "architecture_decision": "APPROVE",
+        "candidate_subrule_ids": [
+          "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+          "F02R02_EDGE_CONDITION_COMPATIBILITY"
+        ],
+        "display_name": "System Construct and Condition",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not infer comparability from a common modality or nominal label, invent a universal buffer or temperature tolerance, or conflate condition compatibility with validation independence.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "thomasen_lindorff_larsen_2022_integrative_dynamics_review",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Thomasen and Lindorff-Larsen 2022, Experimental methods p.543 (local parsed derivative lines 151-161)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Use this observation only for F02R02's EDGE condition-relation classification: explicit compatibility may PASS, explicit mismatch may FAIL, and absent or ambiguous evidence remains UNRESOLVED.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "INFER_HOMOGENEOUS_SAMPLE_FROM_OMISSION",
+          "INFER_MEASUREMENT_SEMANTICS",
+          "INFER_UNIVERSAL_CONDITION_THRESHOLD",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source-local sample-system or measurement declarations and declared edge condition relations before relation-level evaluation.",
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F02R02",
+      "review_packet_runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Are the two source conditions recorded as compatible for the declared relation?",
+      "short_source_passage": "Primary-source observation: data combined as one conformational ensemble should use similar buffer and temperature where possible and assess perturbations from labels, freezing, and alignment media.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "Fuertes et al. distinguish global SAXS radius of gyration from the smFRET-inferred dye-to-dye distance: the measurements interrogate different length scales and averaging, and the distance inference depends on an assumed interdye-distance distribution.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "source.source_id"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F03R01-SOURCE-MEASUREMENT",
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.native_observable",
+          "source.estimand",
+          "source.time_semantics.kind",
+          "source.spatial_support",
+          "source.unit_or_aggregation",
+          "source.native_measurement_declaration_status"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "target_kind": "SOURCE"
+      },
+      "claim_ceiling": "Do not infer that different observables are automatically non-comparable, that all SAXS and smFRET pairs behave alike, or that a complete declaration establishes reliability, validation, a claim ceiling, or a final scientific verdict.",
+      "claim_effect_summary": "A PASS records source-native measurement semantics only; it does not certify reliability, comparability, validation, or a scientific conclusion.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            },
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_CONTRADICTED"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "DECLARED"
+              ]
+            },
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it does not invalidate the source's science.",
+            "decision_class": "REQUEST_SOURCE_MEASUREMENT_RESOLUTION",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No source-native measurement instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+            "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor.",
+            "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "target_kind": "SOURCE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F03-MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "family_overlay": {
+        "architecture_decision": "APPROVE",
+        "candidate_subrule_ids": [
+          "F03R01_SOURCE_NATIVE_MEASUREMENT"
+        ],
+        "display_name": "Source Measurement Semantics",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not infer that different observables are automatically non-comparable, that all SAXS and smFRET pairs behave alike, or that a complete declaration establishes reliability, validation, a claim ceiling, or a final scientific verdict.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Fuertes et al. 2017, PDF pp.1-4 / PNAS E6342-E6345, Abstract, Introduction, and Results measurement passages (local full-text derivative lines 18-38, 95-136, 245-260, and 303-321)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Use these observations only for F03R01's SOURCE-local native-measurement declaration. PASS records measurement semantics before relation-level evaluation; it does not decide comparability.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "INFER_HOMOGENEOUS_SAMPLE_FROM_OMISSION",
+          "INFER_MEASUREMENT_SEMANTICS",
+          "INFER_UNIVERSAL_CONDITION_THRESHOLD",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source-local sample-system or measurement declarations and declared edge condition relations before relation-level evaluation.",
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F03R01",
+      "review_packet_runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Does this source declare the native observable and measurement semantics needed to identify what it provides?",
+      "short_source_passage": "Primary-source observation: SAXS-derived radius of gyration and smFRET-inferred dye distance have different spatial support and averaging, and smFRET distance inference depends on a model for the interdye-distance distribution.",
+      "source_packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "The exact HSP90 EvidenceResult records contract-valid execution of one frozen same-packet trajectory-level directional control and remains PENDING_HUMAN_VALIDATION.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EQ",
+              "path": "source.method_id",
+              "value": "MD_TRAJECTORY"
+            },
+            {
+              "op": "EQ",
+              "path": "source.required_evidence_action",
+              "value": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+        "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+        "implementation_status": "CASE_BOUND_EXPOSED_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.method_profile_id",
+          "source.analysis_contract_id",
+          "source.time_semantics.kind",
+          "source.trajectory_identity.packet_id",
+          "source.trajectory_identity.trajectory_count",
+          "source.trajectory_identity.frames_per_trajectory",
+          "source.time_anatomy_control.analysis_window_ns",
+          "source.time_anatomy_control.saved_stride_ns",
+          "source.time_anatomy_control.statistical_unit",
+          "source.time_anatomy_control.persistence_saved_frames"
+        ],
+        "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+        "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+        "target_kind": "SOURCE"
+      },
+      "claim_ceiling": "A PASS establishes only that the frozen same-packet diagnostic has a validated control record. It never establishes convergence, a transition rate, equilibrium, population, free energy, mechanism, or mutation effect.",
+      "claim_effect_summary": "A PASS establishes only that the frozen same-packet diagnostic has a validated control record. It never establishes convergence, a transition rate, equilibrium, population, free energy, mechanism, or mutation effect.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+        "fail_conditions": [
+          "A fresh, exact-case-bound EvidenceResult for this RuleInstance has contract_status FAIL because its manifest, parameters, cohort, or output contract did not validate."
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "CASE_BOUND_EXPOSED_DRAFT",
+        "pass_conditions": [
+          "A fresh, exact-case-bound EvidenceResult has contract_status PASS, references this RuleInstance, and has scientific_evaluation_status PENDING_HUMAN_VALIDATION."
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "The requested same-packet diagnostic cannot support its declared control contract until a human resolves the manifest, parameter, cohort, or output failure.",
+            "decision_class": "CASE_BOUND_TIME_ANATOMY_CONTROL_CONTRACT_FAILED",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "This source does not declare the exact MD directional-time-anatomy question.",
+            "decision_class": "NO_CASE_BOUND_TIME_ANATOMY_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The frozen same-packet diagnostic has a validated trajectory-level control record; no broader scientific verdict is emitted.",
+            "decision_class": "CASE_BOUND_TIME_ANATOMY_CONTROL_VALIDATED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "A computable control record is missing; no directional, kinetic, equilibrium, or mechanistic inference is emitted.",
+            "decision_class": "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING",
+            "route": "REGISTERED_OPERATOR"
+          }
+        },
+        "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+        "target_kind": "SOURCE",
+        "unresolved_conditions": [
+          "No exact-case-bound EvidenceResult is available for this RuleInstance.",
+          "The selected Operator is not ROSTER_PASS/routable, does not match the declared capability/profile/manifest, or does not produce a valid receipt."
+        ]
+      },
+      "evidence_packet_id": "HSP90-CASE-DOSSIER-V1; HSP90-TIME-ANATOMY-CONTRACT-V1",
+      "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+      "family_overlay": {
+        "architecture_decision": "REVISE",
+        "candidate_subrule_ids": [
+          "F04R01_SOURCE_RELIABILITY_PROVENANCE"
+        ],
+        "display_name": "Source Reliability and Uncertainty",
+        "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "runtime_readiness": "DEFER",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not infer convergence, transition rate, equilibrium population, free energy, mechanism, mutation effect, general MD reliability, or source-science approval.",
+      "implementation_status": "CASE_BOUND_EXPOSED_DRAFT",
+      "paper_id": "CASE_BOUND_HSP90_DEVELOPMENT_RECORD",
+      "passage_kind": "CASE_BOUND_REPOSITORY_ARTIFACT_NOT_PRIMARY_PAPER_PASSAGE",
+      "primary_locator_status": "CASE_BOUND_TRACEABILITY_MAPPING_PENDING",
+      "primary_source_locator": "evidence/real_case_vertical_slice_v1/hsp90_case_dossier_v1.json; evidence/real_case_vertical_slice_v1/hsp90_operator_input_manifest_v1.json; evidence/real_case_vertical_slice_v1/hsp90_f04r02_rule_overlay_v1.json",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Review the exact F04R02 control contract and bounded same-packet diagnostic wording for this exposed HSP90 case only; exact-control PASS cannot close the public HSP90 NMR-to-MD RuleInstances.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "REGISTERED_OPERATOR",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "case_bound_operator_run_receipt",
+          "validated_evidence_result",
+          "affected_rule_reevaluation"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "ROUTE_BY_CASE_NAME_ONLY",
+          "TREAT_CANARY_AS_ROUTABLE",
+          "INFER_RATE_OR_EQUILIBRIUM",
+          "RUN_UNREGISTERED_TOOL"
+        ],
+        "operator_route_allowed": true,
+        "operator_route_conditions": [
+          "The RuleInstance must be UNRESOLVED with COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING.",
+          "The Operator must be ROSTER_PASS and routable.",
+          "The capability, source method profile, case ID, source ID, RuleInstance ID, fixed input manifest, and frozen output contract must match exactly."
+        ],
+        "purpose": "Resolve the one HSP90 trajectory-level directional-time-anatomy control gap through an exact case-bound registered Operator or a human/new-data stop.",
+        "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+        "unresolved_route": "REGISTERED_OPERATOR"
+      },
+      "review_item_id": "NDSR-F04R02",
+      "review_packet_runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+      "runtime_subrule_origin": "CASE_BOUND_OVERLAY_NOT_RUNTIME_SUBRULES_V1_MEMBER",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "For a declared MD source making only a same-packet two-readout directional-block claim, is a case-bound trajectory-level time-semantics and persistence-control evidence record available?",
+      "short_source_passage": "No primary-paper passage is currently mapped for this case-bound control. The named reviewer must resolve the dossier/manifest-to-packet mapping before deciding narrow reuse.",
+      "source_packet_status": "PENDING_SOURCE_TRACEABILITY_MAPPING",
+      "traceability_note": "The overlay names HSP90-CASE-DOSSIER-V1 and HSP90-TIME-ANATOMY-CONTRACT-V1, while the repository contains hsp90_case_dossier_v1.json and manifest_id hsp90-directional-time-anatomy-inputs/v1-alpha rather than records keyed by those exact labels. The mapping remains DATA_INSUFFICIENT and must be resolved during human review; it does not alter Stage-2 abstention, PENDING_HUMAN_VALIDATION, or the public-case NO_ACTIVE_RULE_EFFECT."
+    },
+    {
+      "atomic_scientific_statement": "Bengtsen et al. used SAXS and NOE individually and jointly to refine the MD ensemble, then compared PRE and EPR data as validation because those data were not used directly as refinement inputs; the modalities report different structural information.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EQ",
+              "path": "source.case_evidence_scope",
+              "value": "CLAIM_EVIDENCE"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F06R01-SOURCE-ROLE",
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.evidence_role",
+          "source.source_locator",
+          "source.data_lineage_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "target_kind": "SOURCE"
+      },
+      "claim_ceiling": "Do not call a source independent from its validation label alone, and do not transfer the paper's data-use roles to another case without a source-specific lineage record and EDGE audit.",
+      "claim_effect_summary": "A PASS records a role; it does not establish validation independence.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "fail_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.evidence_role",
+              "values": [
+                "ROLE_CONTRADICTED"
+              ]
+            },
+            "reason_code": "SOURCE_EVIDENCE_ROLE_CONTRADICTED"
+          },
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            },
+            "reason_code": "SOURCE_LINEAGE_CONTRADICTED"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "source.evidence_role",
+                  "values": [
+                    "CONSTRUCTION",
+                    "FIT_TARGET",
+                    "DIAGNOSTIC",
+                    "HELD_OUT_VALIDATION"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "source.data_lineage_status",
+                  "values": [
+                    "DECLARED",
+                    "REVIEWED"
+                  ]
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "SOURCE_EVIDENCE_ROLE_RECORDED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "An explicitly contradicted role or lineage cannot support a validation or integration label.",
+            "decision_class": "SOURCE_ROLE_CONTRADICTION",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No source-role instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The source role is recorded; independence is not established here.",
+            "decision_class": "SOURCE_ROLE_RECORDED",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+            "decision_class": "ABSTAIN",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "target_kind": "SOURCE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.evidence_role",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED",
+                "UNDECLARED"
+              ]
+            },
+            "reason_code": "SOURCE_EVIDENCE_ROLE_UNRESOLVED"
+          },
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            },
+            "reason_code": "SOURCE_LINEAGE_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F06-SOURCE-ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "family_overlay": {
+        "architecture_decision": "REVISE",
+        "candidate_subrule_ids": [
+          "F06R01_SOURCE_EVIDENCE_ROLE",
+          "F06R02_EDGE_COMPARABILITY",
+          "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+        ],
+        "display_name": "Cross-source Comparability and Evidence Role",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not call a source independent from its validation label alone, and do not transfer the paper's data-use roles to another case without a source-specific lineage record and EDGE audit.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "bengtsen_2020_multimodal_nanodisc",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Bengtsen et al. 2020, PDF pp.7-8, Molecular dynamics simulations and Integrating experiments and simulations (local parsed derivative lines 292-312 and 344-394)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Require a SOURCE role and lineage declaration before EDGE-level validation claims are considered. The formal SOURCE field and source-versus-edge split are repository methodology, not statements made by the paper.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "AVERAGE_UNLIKE_OBSERVABLES",
+          "UPGRADE_SAME_DATA_TO_HELD_OUT",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source role, comparability, and independence labels while retaining non-comparability and dependence as valid outcomes.",
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F06R01",
+      "review_packet_runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "What exact evidence role and lineage does this source have?",
+      "short_source_passage": "Primary-source observation: SAXS and NOE were used as refinement inputs, while PRE and EPR were later comparisons described as validation data not used directly in that refinement; the modalities constrain different structural properties.",
+      "source_packet_status": "PENDING",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "Fuertes et al. show that SAXS-derived radius of gyration and smFRET-inferred end-to-end distance can yield discrepant inferences because they interrogate different length scales and averaging, while joint use can constrain a mutually compatible ensemble.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.shared_claim"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F06R02-EDGE-COMPARABILITY",
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "required_evidence_paths": [
+          "edge.left_source_id",
+          "edge.right_source_id",
+          "edge.shared_claim",
+          "edge.condition_relation",
+          "edge.relation_type",
+          "edge.bridge_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "target_kind": "EDGE"
+      },
+      "claim_ceiling": "Do not force numeric equivalence, erase disagreement by construction, infer that every SAXS and smFRET pair is non-comparable, or transfer this IDP-specific result universally.",
+      "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks the declared comparison, not either source's local measurement.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "fail_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MISMATCH"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "NOT_COMPARABLE"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "UNAVAILABLE",
+                    "INVALID"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "FAIL"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "EDGE_NOT_COMPARABLE_FOR_DECLARED_RELATION"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MATCHED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "QUALITATIVE_TRIANGULATION"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "DECLARED"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "EDGE_COMPARABILITY_PREREQUISITES_AND_RELATION_RECORDED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "The declared cross-source comparison is blocked while source-local observations remain intact.",
+            "decision_class": "CANNOT_SUPPORT_CROSS_SOURCE_COMPARISON",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No comparability instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The declared edge relation is reviewable only after separately stored F02/F03 PASS prerequisites. Numeric equivalence and shared population are not implied.",
+            "decision_class": "DECLARED_RELATION_REVIEWABLE",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft.",
+            "decision_class": "ABSTAIN",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "target_kind": "EDGE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+          },
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "EDGE_COMPARABILITY_PREREQUISITES_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F06-COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "family_overlay": {
+        "architecture_decision": "REVISE",
+        "candidate_subrule_ids": [
+          "F06R01_SOURCE_EVIDENCE_ROLE",
+          "F06R02_EDGE_COMPARABILITY",
+          "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+        ],
+        "display_name": "Cross-source Comparability and Evidence Role",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not force numeric equivalence, erase disagreement by construction, infer that every SAXS and smFRET pair is non-comparable, or transfer this IDP-specific result universally.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "fuertes_2017_saxs_smfret_non_equivalence",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Fuertes et al. 2017, PDF pp.7-9 / PNAS E6348-E6350, Discussion, Working Hypothesis, and Conclusion and Perspective (local full-text derivative lines 587-603, 622-629, and 749-761)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Evaluate comparability at the EDGE while preserving source-local measurements. Explicit relation types, bridge fields, prerequisites, and NOT_COMPARABLE are repository control semantics, not paper-defined schema.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "AVERAGE_UNLIKE_OBSERVABLES",
+          "UPGRADE_SAME_DATA_TO_HELD_OUT",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source role, comparability, and independence labels while retaining non-comparability and dependence as valid outcomes.",
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F06R02",
+      "review_packet_runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Is the declared cross-source relation admissible after F02 condition and F03 measurement prerequisites resolve?",
+      "short_source_passage": "Primary-source observation: SAXS radius and smFRET distance can yield discrepant inferences because they probe different length scales and averaging; joint analysis can preserve complementary information.",
+      "source_packet_status": "PENDING",
+      "traceability_note": null
+    },
+    {
+      "atomic_scientific_statement": "Bengtsen et al. describe PRE and EPR as validation data not used directly in the BME refinement, while also stating that the reference NMR/EPR structure was derived using PRE, EPR, and remaining NMR data.",
+      "binding": {
+        "applicability": {
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.validation_claim"
+            }
+          ],
+          "op": "ALL"
+        },
+        "binding_id": "B-F06R03-EDGE-INDEPENDENCE",
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "required_evidence_paths": [
+          "edge.validation_claim",
+          "edge.validation_independence",
+          "edge.shared_error_status",
+          "edge.data_lineage_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "target_kind": "EDGE"
+      },
+      "claim_ceiling": "Do not upgrade not-used-directly data, same-data evaluation, or shared-error agreement to held-out or independent validation without the declared lineage and shared-error audit.",
+      "claim_effect_summary": "A PASS records independence only. Comparability and F02/F03 prerequisites remain separate questions; a FAIL blocks only the independence label and retains the relation for human review.",
+      "evaluation_contract": {
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "fail_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "SAME_DATA",
+                    "SHARED_DATA"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "MATERIAL_SHARED_ERROR"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "CONTRADICTED"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "VALIDATION_INDEPENDENCE_CONTRADICTED"
+          }
+        ],
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "implementation_status": "COMPLETE_DRAFT",
+        "pass_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "INDEPENDENT"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "NO_MATERIAL_SHARED_ERROR_IDENTIFIED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "DECLARED",
+                    "REVIEWED"
+                  ]
+                }
+              ],
+              "op": "ALL"
+            },
+            "reason_code": "EDGE_INDEPENDENCE_LABEL_RECORDED"
+          }
+        ],
+        "result_effects": {
+          "FAIL": {
+            "claim_ceiling": "The independence label is blocked; it does not invalidate either source measurement.",
+            "decision_class": "CANNOT_SUPPORT_INDEPENDENT_VALIDATION_LABEL",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "NOT_APPLICABLE": {
+            "claim_ceiling": "No validation-independence instance was selected for this target.",
+            "decision_class": "NO_RULE_INSTANCE",
+            "route": "HUMAN_OR_NEW_DATA"
+          },
+          "PASS": {
+            "claim_ceiling": "The independence label is reviewable from declared lineage, data-sharing, and shared-error facts only. Comparability remains a separate F06R02 question; human scientific approval is still required.",
+            "decision_class": "INDEPENDENCE_LABEL_REVIEWABLE",
+            "route": "DIRECT_EVALUATION"
+          },
+          "UNRESOLVED": {
+            "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft.",
+            "decision_class": "ABSTAIN",
+            "route": "SOURCE_LOOKUP"
+          }
+        },
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "target_kind": "EDGE",
+        "unresolved_conditions": [
+          {
+            "condition": {
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                }
+              ],
+              "op": "ANY"
+            },
+            "reason_code": "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+          }
+        ]
+      },
+      "evidence_packet_id": "SEP-F06-INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "family_overlay": {
+        "architecture_decision": "REVISE",
+        "candidate_subrule_ids": [
+          "F06R01_SOURCE_EVIDENCE_ROLE",
+          "F06R02_EDGE_COMPARABILITY",
+          "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+        ],
+        "display_name": "Cross-source Comparability and Evidence Role",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "runtime_readiness": "NOT_READY",
+        "source_grounding_decision": "PENDING_DOMAIN_REVIEW"
+      },
+      "family_overlay_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "forbidden_generalization": "Do not upgrade not-used-directly data, same-data evaluation, or shared-error agreement to held-out or independent validation without the declared lineage and shared-error audit.",
+      "implementation_status": "COMPLETE_DRAFT",
+      "paper_id": "bengtsen_2020_multimodal_nanodisc",
+      "passage_kind": "UPSTREAM_REVIEW_DERIVATIVE_NOT_PRIMARY_VERBATIM",
+      "primary_locator_status": "REVIEW_DERIVATIVE_LOCATOR_REQUIRES_PRIMARY_PASSAGE_CHECK",
+      "primary_source_locator": "Bengtsen et al. 2020, PDF p.8, PRE/EPR consistency check and Integrating experiments and simulations (local parsed derivative lines 344-348 and 369-394)",
+      "proposed_reusable_review_question": "PROJECT_INTERPRETATION: Evaluate validation independence as an EDGE obligation from lineage, shared-data, and shared-error facts, separately from comparability. Not used directly in one refinement is not by itself a held-out or fully independent designation.",
+      "resolution_policy": {
+        "allowed_routes": [
+          "DIRECT_EVALUATION",
+          "SOURCE_LOOKUP",
+          "HUMAN_OR_NEW_DATA"
+        ],
+        "completion_evidence": [
+          "source_or_edge_typed_field",
+          "source_evidence_packet_id",
+          "provenance_locator"
+        ],
+        "fail_route": "HUMAN_OR_NEW_DATA",
+        "forbidden_actions": [
+          "AVERAGE_UNLIKE_OBSERVABLES",
+          "UPGRADE_SAME_DATA_TO_HELD_OUT",
+          "RUN_OPERATOR"
+        ],
+        "operator_route_allowed": false,
+        "purpose": "Resolve source role, comparability, and independence labels while retaining non-comparability and dependence as valid outcomes.",
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "unresolved_route": "SOURCE_LOOKUP"
+      },
+      "review_item_id": "NDSR-F06R03",
+      "review_packet_runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "reviewer_status": "PENDING_DOMAIN_REVIEW",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+      "runtime_subrules_registry_status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+      "scientific_question": "Is a validation-independence label supported by declared lineage, data-sharing, and shared-error facts?",
+      "short_source_passage": "Primary-source observation: PRE and EPR were not direct BME refinement inputs, but the comparison reference NMR/EPR structure had itself been derived using PRE, EPR, and other NMR data.",
+      "source_packet_status": "PENDING",
+      "traceability_note": null
+    }
+  ],
+  "purpose": "Index narrow reusable-use evidence for named human/domain review; primary-passage checking remains a human action.",
+  "schema_version": "source-science-passage-index/v1",
+  "workspace_status": "PENDING_DOMAIN_REVIEW"
+}
