@@ -328,6 +328,18 @@ def run_smoke(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_case(args: argparse.Namespace) -> int:
+    """Run one exact registered exposed-development case by recorded replay."""
+
+    # The case runner imports the optional scientific capsule.  Keeping this
+    # import inside the handler lets the core CLI and parser load without NumPy,
+    # SciPy, or PyMBAR when another command is being used.
+    from .case_runner_v1 import run_case_v1
+
+    run_case_v1(case_id=args.case_id, output_dir=Path(args.output_dir))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -371,6 +383,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="A new or empty directory for fresh smoke-test artifacts.",
     )
     smoke_parser.set_defaults(handler=run_smoke)
+    case_parser = subparsers.add_parser(
+        "run-case",
+        help="Run one exact registered exposed-development case by recorded proposal replay.",
+    )
+    case_parser.add_argument(
+        "--case-id",
+        required=True,
+        help="Exact case ID from the exposed-development case registry.",
+    )
+    case_parser.add_argument(
+        "--output-dir",
+        required=True,
+        help="A new or empty directory for fresh case artifacts.",
+    )
+    case_parser.set_defaults(handler=run_case)
     return parser
 
 
