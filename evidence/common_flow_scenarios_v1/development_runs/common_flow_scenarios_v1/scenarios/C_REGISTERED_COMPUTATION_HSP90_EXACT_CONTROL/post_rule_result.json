@@ -6,6 +6,11 @@
     "route": "DIRECT_EVALUATION"
   },
   "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+  "evidence_ref": {
+    "affected_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+    "evidence_result_id": "HSP90-TIME-ANATOMY-EVIDENCE::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+    "operator_run_receipt_id": "HSP90-TIME-ANATOMY-RECEIPT::B1_EXACT_HSP90_RULE_TO_OPERATOR"
+  },
   "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
   "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
   "human_decision_gate_required": true,

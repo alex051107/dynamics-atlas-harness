@@ -264,11 +264,11 @@ class StaticReviewConsoleTests(unittest.TestCase):
         self.assertIn("LIVE_OPENROUTER_PROPOSAL", rendered)
         self.assertIn("LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE", rendered)
         self.assertIn("DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE", rendered)
-        self.assertIn("LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED", rendered)
-        self.assertIn("CORE_ADMISSION_PASS", rendered)
-        self.assertIn("FULL_ANNOTATION_ENVELOPE_FAIL", rendered)
-        self.assertIn("ONE_LEGAL_CARD_VERSUS_ABSTAIN", rendered)
-        self.assertIn("NOT_NONTRIVIAL_ROUTE_SELECTION", rendered)
+        self.assertIn("LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE", rendered)
+        self.assertIn("RECORDED_PROFILE_LIVE_PLANNER", rendered)
+        self.assertIn(
+            "PAIRED_CARD_PRESENT_VERSUS_CARD_REMOVED_COUNTERFACTUAL", rendered
+        )
         self.assertIn("minimax/minimax-m2.5", rendered)
         self.assertIn("StreamLake", rendered)
         self.assertIn('"prompt_tokens"', rendered.replace("&quot;", '"'))

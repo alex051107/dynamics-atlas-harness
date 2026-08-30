@@ -1,6 +1,21 @@
 {
   "affected_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
   "manifest_receipt": {
+    "artifact_lineage": {
+      "binding_id": "B-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+      "capability_id": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
+      "case_dossier_id": "HSP90-CASE-DOSSIER-V1",
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+      "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+      "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+      "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+      "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "rule_overlay_id": "hsp90-directional-time-anatomy-f04r02/v1-alpha",
+      "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+      "source_id": "hsp90_md_round2_directional_packet",
+      "trajectory_packet_id": "hsp90_round2_40_trajectory_directional_packet"
+    },
     "expected_time_contract": {
       "analysis_window_ns": [
         20,

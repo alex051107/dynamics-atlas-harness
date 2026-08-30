@@ -1,7 +1,20 @@
 {
+  "artifact_lineage": {
+    "binding_id": "B-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+    "case_dossier_id": "HSP90-CASE-DOSSIER-V1",
+    "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+    "evidence_result_id": "HSP90-TIME-ANATOMY-EVIDENCE::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+    "input_manifest_id": "hsp90-directional-time-anatomy-inputs/v1-alpha",
+    "operator_run_receipt_id": "HSP90-TIME-ANATOMY-RECEIPT::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+    "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+    "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+    "rule_overlay_id": "hsp90-directional-time-anatomy-f04r02/v1-alpha",
+    "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL"
+  },
   "blocking_rule_instance_ids": [],
   "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
   "claim_ceiling": "At most, the exact frozen same-packet diagnostic has a validated trajectory-level control record. No transition rate, equilibrium, population, free-energy, pathway, mechanism, or mutation claim is emitted.",
+  "conclusion_packet_id": "HSP90-CONCLUSION::B1_EXACT_HSP90_RULE_TO_OPERATOR",
   "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
   "evidence_lookup_results": [],
   "first_failed_dependency": null,
@@ -144,6 +157,21 @@
         },
         "input_manifest_id": "hsp90-directional-time-anatomy-inputs/v1-alpha",
         "manifest_receipt": {
+          "artifact_lineage": {
+            "binding_id": "B-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+            "capability_id": "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL",
+            "case_dossier_id": "HSP90-CASE-DOSSIER-V1",
+            "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+            "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+            "method_profile_id": "hsp90_md_directional_time_anatomy_v0",
+            "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+            "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+            "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+            "rule_overlay_id": "hsp90-directional-time-anatomy-f04r02/v1-alpha",
+            "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+            "source_id": "hsp90_md_round2_directional_packet",
+            "trajectory_packet_id": "hsp90_round2_40_trajectory_directional_packet"
+          },
           "expected_time_contract": {
             "analysis_window_ns": [
               20,
@@ -243,6 +271,11 @@
         "route": "DIRECT_EVALUATION"
       },
       "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+      "evidence_ref": {
+        "affected_rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+        "evidence_result_id": "HSP90-TIME-ANATOMY-EVIDENCE::B1_EXACT_HSP90_RULE_TO_OPERATOR",
+        "operator_run_receipt_id": "HSP90-TIME-ANATOMY-RECEIPT::B1_EXACT_HSP90_RULE_TO_OPERATOR"
+      },
       "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
       "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
       "human_decision_gate_required": true,

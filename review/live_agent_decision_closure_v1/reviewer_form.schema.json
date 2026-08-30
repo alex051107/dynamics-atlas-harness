@@ -1,0 +1,524 @@
+{
+  "$id": "source-science-reviewer-form/v2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "COMPLETED"
+          }
+        },
+        "required": [
+          "review_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "items": {
+            "items": {
+              "properties": {
+                "allowed_scope": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "case_application_dispositions": {
+                  "items": {
+                    "properties": {
+                      "disposition": {
+                        "enum": [
+                          "APPROVE_AS_WRITTEN",
+                          "APPROVE_WITH_BOUNDED_REVISION",
+                          "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+                          "REJECT_NOT_REUSABLE",
+                          "NOT_APPLICABLE_TO_CURRENT_CASE"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "claim_ceiling": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "passage_checked": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "review_date": {
+                  "format": "date",
+                  "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$",
+                  "type": "string"
+                },
+                "reviewer_name": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "reviewer_role": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "rule_disposition": {
+                  "enum": [
+                    "APPROVE_AS_WRITTEN",
+                    "APPROVE_WITH_BOUNDED_REVISION",
+                    "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+                    "REJECT_NOT_REUSABLE",
+                    "NOT_APPLICABLE_TO_CURRENT_CASE"
+                  ]
+                },
+                "supporting_note": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "allowed_dispositions": {
+      "const": [
+        "APPROVE_AS_WRITTEN",
+        "APPROVE_WITH_BOUNDED_REVISION",
+        "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+        "REJECT_NOT_REUSABLE",
+        "NOT_APPLICABLE_TO_CURRENT_CASE"
+      ],
+      "type": "array"
+    },
+    "instructions": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "rule_disposition": {
+                  "enum": [
+                    "APPROVE_AS_WRITTEN",
+                    "APPROVE_WITH_BOUNDED_REVISION"
+                  ]
+                }
+              },
+              "required": [
+                "rule_disposition"
+              ]
+            },
+            "then": {
+              "properties": {
+                "allowed_scope": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "claim_ceiling": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "passage_checked": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "review_date": {
+                  "format": "date",
+                  "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$",
+                  "type": "string"
+                },
+                "reviewer_name": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "reviewer_role": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "supporting_note": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "case_application_dispositions": {
+                  "contains": {
+                    "properties": {
+                      "disposition": {
+                        "enum": [
+                          "APPROVE_AS_WRITTEN",
+                          "APPROVE_WITH_BOUNDED_REVISION"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "disposition"
+                    ],
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "allowed_scope": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "claim_ceiling": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "passage_checked": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "review_date": {
+                  "format": "date",
+                  "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$",
+                  "type": "string"
+                },
+                "reviewer_name": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "reviewer_role": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                },
+                "supporting_note": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "rule_disposition": {
+                  "const": "APPROVE_WITH_BOUNDED_REVISION"
+                }
+              },
+              "required": [
+                "rule_disposition"
+              ]
+            },
+            "then": {
+              "properties": {
+                "required_revision": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "case_application_dispositions": {
+                  "contains": {
+                    "properties": {
+                      "disposition": {
+                        "const": "APPROVE_WITH_BOUNDED_REVISION"
+                      }
+                    },
+                    "required": [
+                      "disposition"
+                    ],
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "required_revision": {
+                  "minLength": 1,
+                  "pattern": ".*\\S.*",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "review_item_id": {
+                  "const": "NDSR-F04R02"
+                }
+              },
+              "required": [
+                "review_item_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "case_application_dispositions": {
+                  "items": {
+                    "properties": {
+                      "disposition": {
+                        "not": {
+                          "enum": [
+                            "APPROVE_AS_WRITTEN",
+                            "APPROVE_WITH_BOUNDED_REVISION"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "rule_disposition": {
+                  "not": {
+                    "enum": [
+                      "APPROVE_AS_WRITTEN",
+                      "APPROVE_WITH_BOUNDED_REVISION"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "allowed_scope": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "case_application_dispositions": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "case_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "disposition": {
+                  "enum": [
+                    null,
+                    "APPROVE_AS_WRITTEN",
+                    "APPROVE_WITH_BOUNDED_REVISION",
+                    "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+                    "REJECT_NOT_REUSABLE",
+                    "NOT_APPLICABLE_TO_CURRENT_CASE"
+                  ],
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reviewed_target": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "rule_instance_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array",
+                      "uniqueItems": true
+                    },
+                    "target_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array",
+                      "uniqueItems": true
+                    },
+                    "target_kind": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "target_kind",
+                    "target_ids",
+                    "rule_instance_ids"
+                  ],
+                  "type": "object"
+                }
+              },
+              "required": [
+                "case_id",
+                "reviewed_target",
+                "disposition"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "claim_ceiling": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "passage_checked": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "required_revision": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "review_date": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "format": "date",
+                "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$",
+                "type": "string"
+              }
+            ]
+          },
+          "review_item_id": {
+            "type": "string"
+          },
+          "reviewer_name": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "reviewer_role": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          },
+          "rule_disposition": {
+            "enum": [
+              null,
+              "APPROVE_AS_WRITTEN",
+              "APPROVE_WITH_BOUNDED_REVISION",
+              "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+              "REJECT_NOT_REUSABLE",
+              "NOT_APPLICABLE_TO_CURRENT_CASE"
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supporting_note": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "pattern": ".*\\S.*",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "required": [
+          "review_item_id",
+          "reviewer_name",
+          "reviewer_role",
+          "review_date",
+          "passage_checked",
+          "rule_disposition",
+          "case_application_dispositions",
+          "required_revision",
+          "allowed_scope",
+          "claim_ceiling",
+          "supporting_note"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "review_status": {
+      "enum": [
+        "DRAFT",
+        "COMPLETED"
+      ]
+    },
+    "schema_version": {
+      "const": "source-science-reviewer-form/v2"
+    }
+  },
+  "required": [
+    "schema_version",
+    "review_status",
+    "allowed_dispositions",
+    "instructions",
+    "items"
+  ],
+  "title": "Dynamics Atlas named source-science review form",
+  "type": "object"
+}

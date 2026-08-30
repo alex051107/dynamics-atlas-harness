@@ -1,5 +1,6 @@
 {
   "schema_version": "exposed-casegraph/v1-alpha",
+  "dossier_id": "HSP90-CASE-DOSSIER-V1",
   "case": {
     "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
     "parent_task_id": "dynamics_atlas_hsp90_time_anatomy_v0_20260730",

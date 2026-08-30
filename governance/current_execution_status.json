@@ -1,41 +1,88 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v19",
-  "as_of": "2026-08-30T18:32:54Z",
-  "status_snapshot_as_of": "2026-08-30T18:32:54Z",
-  "overall_status": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_AND_DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE_LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v20",
+  "as_of": "2026-08-30T19:09:27Z",
+  "status_snapshot_as_of": "2026-08-30T19:09:27Z",
+  "overall_status": "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE_DEVELOPMENT_ONLY_H1_PENDING",
   "repository_baseline": {
     "bounded_engineering_integration_base_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
     "live_agent_common_flows_base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
+    "live_agent_decision_closure_base_commit": "da584173ee64bfad9854132a3418ed1e871c69f5",
     "baseline_tag": "bounded-engineering-integration-baseline-v1",
     "baseline_semantics": "The recorded base and implementation commits identify the bounded engineering integration baseline; they are not a live assertion about current main, delivery head, merge state, or CI result.",
     "delivery_state_authority": "GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE",
-    "accurate_name": "One bounded real-model HSP90 proposal-to-descriptive-action transport path plus a separate no-Agent deterministic common-flow regression suite; the campaign is closed and frozen through its config-owned ledger and hash-bound completion receipt"
+    "accurate_name": "One development-only recorded-profile/live-Luna-Planner X-EISD exact-lookup counterfactual: card present closes the exact declaration Rule and reaches the existing ABSTAIN reducer; card removed abstains with zero execution. This is in addition to, not a relabeling of, the merged PR19 proposal-transport and no-Agent common-flow baselines."
   },
   "current_delivery_boundary": {
     "completion_states": [
       "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE",
       "DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE",
-      "LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED"
+      "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE"
     ],
     "profiler": {
-      "core_admission": "CORE_ADMISSION_PASS",
-      "full_annotation_envelope": "FULL_ANNOTATION_ENVELOPE_FAIL",
-      "field_annotation_error": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH"
+      "mode": "RECORDED_PROFILE_LIVE_PLANNER",
+      "full_live_profiler_result": "NOT_RUN_FOR_XEISD_DECISION_CLOSURE",
+      "capability_boundary": "NO_FULL_LIVE_PROFILER_CLAIM"
     },
     "planner": {
-      "decision_surface": "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
-      "capability_boundary": "NOT_NONTRIVIAL_ROUTE_SELECTION"
+      "model": "openai/gpt-5.6-luna",
+      "provider": "OpenAI",
+      "decision_surface": "PAIRED_CARD_PRESENT_VERSUS_CARD_REMOVED_COUNTERFACTUAL",
+      "positive_decision": "SELECT_EXACT_ALLOWLISTED_LOOKUP",
+      "stop_decision": "ABSTAIN_NO_ACTION"
     },
     "successful_live_path": {
-      "evidence_class": "DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT",
-      "same_rule_transition": "SAME_RULE_TRANSITION_COUNT_ZERO",
-      "conclusion_packet": "CONCLUSION_PACKET_NOT_CALCULATED"
+      "evidence_class": "ACTIVE_RULE_EFFECT_EXACT_SOURCE_LOOKUP",
+      "affected_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "same_rule_transition": "UNRESOLVED_TO_PASS",
+      "unrelated_rule_changes": [],
+      "declared_downstream_dependency_changes": [
+        "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+        "F06R02_EDGE_COMPARABILITY::EDGE::xeisd_random_pool_vs_j_coupling_question"
+      ],
+      "conclusion_packet": "EXISTING_STAGE2_CONCLUSION_PACKET_ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    "paired_stop_path": {
+      "planner_decision": "ABSTAIN_NO_ACTION",
+      "authorization": "AUTHORIZED_ABSTENTION_ZERO_EXECUTION",
+      "lookup_count": 0,
+      "operator_count": 0,
+      "evidence_result_count": 0,
+      "same_rule_transition": "UNRESOLVED_TO_UNRESOLVED",
+      "conclusion_packet": "EXISTING_STAGE2_CONCLUSION_PACKET_ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    "campaign": {
+      "http_attempts": 3,
+      "completed_calls": 2,
+      "provider_reported_completed_call_cost_usd": "0.00072385",
+      "pre_generation_schema_http_400": 1,
+      "pre_generation_failure_reported_usage_or_cost": false,
+      "schema_compatibility_repairs_used": 1,
+      "semantic_prompt_tuning_used": 0,
+      "state": "CLOSED_FROZEN"
+    },
+    "f04r02_engineering_mapping": {
+      "status": "ENGINEERING_TRACEABILITY_RESOLVED_HUMAN_SCIENCE_GATE_RETAINED",
+      "typed_chain": [
+        "CASE_DOSSIER",
+        "OPERATOR_INPUT_MANIFEST",
+        "RULE_OVERLAY_BINDING_EVALUATION_CONTRACT_RESOLUTION_POLICY",
+        "TRAJECTORY_PACKET",
+        "OPERATOR_RECEIPT",
+        "EVIDENCE_RESULT",
+        "SAME_RULE_RULE_RESULT",
+        "CONCLUSION_PACKET_ARTIFACT_LINEAGE"
+      ],
+      "legacy_label": "HSP90-TIME-ANATOMY-CONTRACT-V1",
+      "legacy_mapping_status": "PENDING_HUMAN_ALIAS_OR_DEPRECATION_DECISION",
+      "legacy_runtime_authority": "NONE",
+      "scientific_disposition": "NOT_EVALUATED"
     },
     "common_flows": {
       "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
-      "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE"
+      "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE",
+      "decision_closure_scope": "ONE_LIVE_XEISD_NARROW_LOOKUP_COUNTERFACTUAL_ONLY"
     }
   },
   "work_items": [
@@ -304,6 +351,67 @@
       "authority_note": "The artifacts establish one actual development-only real-model proposal transport path through an authorized descriptive action, plus a separate no-Agent deterministic common-flow regression suite. They do not establish live-Agent common-flow coverage, full Profiler grounding, nontrivial Planner utility, active Rule closure, a live-path ConclusionPacket, Agent value, source-science approval, ADK portability, or held-out behavior."
     },
     {
+      "role": "LIVE_AGENT_DECISION_CLOSURE_V1",
+      "branch": "feature/live-agent-decision-closure-v1",
+      "base_commit": "da584173ee64bfad9854132a3418ed1e871c69f5",
+      "state": "DEVELOPMENT_ONLY_COMPLETE_CAMPAIGN_CLOSED_FROZEN_AWAITING_DRAFT_PR_REVIEW",
+      "authorization": "USER_DECISION_DA_20260830_056_CHANGES_REQUESTED_BOUNDED",
+      "scope": [
+        "RECORDED_XEISD_PROFILE_LIVE_PLANNER",
+        "OPENAI_GPT_5_6_LUNA_THROUGH_EXACT_OPENAI_OPENROUTER_PROVIDER",
+        "PAIRED_EXACT_LOOKUP_CARD_PRESENT_AND_CARD_REMOVED_COUNTERFACTUAL",
+        "DETERMINISTIC_AUTHORIZATION_AND_EXACT_ALLOWLISTED_LOOKUP",
+        "ACTIVE_EVIDENCE_RESULT_BOUND_TO_EXACT_RULEINSTANCE",
+        "SAME_RULE_UNRESOLVED_TO_PASS_REEVALUATION",
+        "EXISTING_STAGE2_CONCLUSION_REDUCER",
+        "PAIRED_ZERO_EXECUTION_ABSTENTION",
+        "CASEVIEW_AND_READ_ONLY_WORKBENCH"
+      ],
+      "observed_result": {
+        "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+        "campaign_state": "CLOSED_FROZEN",
+        "profile_mode": "RECORDED_PROFILE_LIVE_PLANNER",
+        "model": "openai/gpt-5.6-luna",
+        "provider": "OpenAI",
+        "transport": "OPENROUTER_EXACT_OPENAI_PROVIDER_STRICT_JSON_SCHEMA_NO_TOOLS",
+        "http_attempts": 3,
+        "completed_calls": 2,
+        "pre_generation_schema_http_400": 1,
+        "pre_generation_failure_reported_usage_or_cost": false,
+        "schema_compatibility_repairs_used": 1,
+        "semantic_prompt_tuning_used": 0,
+        "provider_reported_completed_call_cost_usd": "0.00072385",
+        "positive_arm": {
+          "arm_id": "XEISD_LOOKUP_CARD_PRESENT",
+          "planner_decision": "SELECT_ACTIONS",
+          "authorization": "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP",
+          "selected_card_id": "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1",
+          "lookup_count": 1,
+          "operator_count": 0,
+          "evidence_result_count": 1,
+          "affected_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+          "target_transition": "UNRESOLVED_TO_PASS",
+          "unrelated_rule_changes": [],
+          "terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW"
+        },
+        "stop_arm": {
+          "arm_id": "XEISD_LOOKUP_CARD_REMOVED",
+          "planner_decision": "ABSTAIN_NO_ACTION",
+          "authorization": "AUTHORIZED_ABSTENTION_ZERO_EXECUTION",
+          "lookup_count": 0,
+          "operator_count": 0,
+          "evidence_result_count": 0,
+          "target_transition": "UNRESOLVED_TO_UNRESOLVED",
+          "terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW"
+        },
+        "completion_receipt": "evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/live_agent_decision_closure_manifest_v1.json",
+        "paired_matrix": "evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/paired_arm_matrix.json",
+        "held_out_accessed": false,
+        "scientific_support_established": false
+      },
+      "authority_note": "This establishes one development-only real-model Planner decision connected to an exact evidence action, same-Rule transition, existing bounded reducer, and paired zero-execution stop. It does not establish a full live Profiler, Agent value, source-science approval, scientific SUPPORT, broad HSP90 closure, four-route live-Agent coverage, transfer, or held-out behavior."
+    },
+    {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
       "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
@@ -461,18 +569,50 @@
       ]
     },
     {
+      "stage": "LIVE_AGENT_DECISION_CLOSURE_V1",
+      "status": "DEVELOPMENT_ONLY_COMPLETE_CAMPAIGN_CLOSED_FROZEN",
+      "known_present": [
+        "RECORDED_PROFILE_LIVE_PLANNER",
+        "LIVE_LUNA_PAIRED_CARD_COUNTERFACTUAL",
+        "EXACT_ALLOWLISTED_XEISD_SOURCE_LOOKUP",
+        "ACTIVE_EVIDENCE_RESULT_BOUND_TO_EXACT_RULEINSTANCE",
+        "TARGET_RULE_UNRESOLVED_TO_PASS",
+        "DECLARED_DOWNSTREAM_DEPENDENCY_REEVALUATION_ONLY",
+        "NO_UNRELATED_RULE_CHANGES",
+        "EXISTING_STAGE2_ABSTAIN_OR_HUMAN_REVIEW_CONCLUSION_PACKET",
+        "CARD_REMOVED_ABSTENTION_WITH_ZERO_EXECUTION",
+        "CASEVIEW_AND_READ_ONLY_PAIRED_WORKBENCH",
+        "THREE_HTTP_ATTEMPTS_TWO_COMPLETED_CALLS_USD_0_00072385_PROVIDER_REPORTED_COST",
+        "CLOSED_CAMPAIGN_GUARD",
+        "F04R02_TYPED_ENGINEERING_TRACEABILITY_WITH_FAIL_CLOSED_ARTIFACT_LINEAGE"
+      ],
+      "known_unresolved": [
+        "FULL_LIVE_PROFILER_ENVELOPE",
+        "MULTI_CARD_LIVE_PLANNER_SELECTION",
+        "LIVE_AGENT_COVERAGE_OF_ALL_FOUR_COMMON_ROUTES",
+        "AGENT_VALUE",
+        "NAMED_SOURCE_SCIENCE_REVIEW",
+        "BROAD_SAME_RULE_CLOSURE",
+        "PUBLIC_CASE_SCIENTIFIC_SUPPORT",
+        "ADK_DYNAMIC_PORTABILITY",
+        "TRANSFER",
+        "HELD_OUT_RESULT"
+      ]
+    },
+    {
       "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
       "status": "PENDING_DOMAIN_REVIEW",
       "known_present": [
         "F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET",
         "NINE_ITEM_AUTOMATED_ADVISORY_RECONCILIATION",
         "SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT",
-        "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT"
+        "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT",
+        "F04R02_TYPED_ENGINEERING_TRACEABILITY_RESOLVED"
       ],
       "known_unresolved": [
         "REVIEWER_IDENTITY",
         "NAMED_REVIEWER_PRIMARY_PASSAGE_CHECK",
-        "F04R02_CASE_BOUND_TRACEABILITY_MAPPING",
+        "F04R02_LEGACY_ALIAS_OR_DEPRECATION_DECISION",
         "RECORDED_DISPOSITION"
       ]
     },
@@ -490,18 +630,18 @@
     }
   ],
   "authorized_development_action": {
-    "action": "REPAIR_AND_CONDITIONALLY_MERGE_PR19_THEN_START_LIVE_AGENT_DECISION_CLOSURE_V1",
-    "deliverable": "ONE_REAL_MODEL_ACTIVE_RULE_TRANSITION_AND_PAIRED_ZERO_EXECUTION_STOP_ARM",
+    "action": "FREEZE_VALIDATE_AND_DELIVER_LIVE_AGENT_DECISION_CLOSURE_V1_DRAFT_PR",
+    "deliverable": "ONE_REAL_MODEL_ACTIVE_RULE_TRANSITION_AND_PAIRED_ZERO_EXECUTION_STOP_ARM_WITH_READ_ONLY_WORKBENCH",
     "automatic_code_changes": true,
     "authorization": "USER_DECISION_DA_20260830_056_CHANGES_REQUESTED_BOUNDED",
-    "exit_gate": "One authorized exact evidence action changes the same RuleInstance and the existing reducer emits a bounded ConclusionPacket; a paired card-removed arm records zero execution and ABSTAIN_OR_HUMAN_REVIEW."
+    "exit_gate": "The frozen paired artifacts, bounded F04 engineering mapping, validation evidence, exact-head review, and one unmerged Draft PR are complete. No further model calls are authorized."
   },
   "next_allowed_action": {
-    "action": "LIVE_AGENT_DECISION_CLOSURE_V1_XEISD_EXACT_LOOKUP_OR_EXACT_HSP90_CONTROL_FALLBACK",
-    "deliverable": "ACTIVE_RULE_POSITIVE_ARM_PAIRED_WITH_ZERO_EXECUTION_STOP_ARM",
-    "automatic_code_changes": true,
+    "action": "HUMAN_SELECT_NAMED_H1_BROAD_RULE_RELEASE_OR_INDEPENDENTLY_CURATED_NEW_HELD_OUT_CASE",
+    "deliverable": "ONE_SCIENTIFIC_MILESTONE_SELECTED_AFTER_LIVE_AGENT_DECISION_CLOSURE_V1",
+    "automatic_code_changes": false,
     "authorization": "RECORDED_USER_DIRECTION_DA-20260830-056",
-    "exit_gate": "The live Planner path owns an exact UNRESOLVED to PASS transition and an existing bounded ConclusionPacket; the counterfactual stop path executes nothing. H1 remains separately pending."
+    "exit_gate": "Either a named reviewer releases one broad computable Rule under H1, or an independent curator admits one new held-out case. Exposed-case prompt tuning, model panels, and additional infrastructure remain stopped."
   },
-  "claim_ceiling": "Development-only engineering evidence. A real model proposal entered one HSP90 deterministic runtime and triggered one authorized descriptive action. The Profiler passed core admission but failed the full annotation envelope with UNKNOWN_STATUS_CORE_VALUE_MISMATCH; the Planner chose between one legal card and abstention; no active Rule changed and no ConclusionPacket was calculated. Separately, six NO_AGENT_DETERMINISTIC_SCENARIO rows cover four route families and three engineering reducer behaviors. The historical campaign records 17 HTTP attempts, 13 completed calls, and USD 0.145264010 actual cost, with unique failures retained. These records establish no live-Agent common-flow coverage, full Profiler evidence-grounding capability, nontrivial Planner utility, live-Agent decision closure, Agent value, source-science approval, broad HSP90 closure, public-case scientific SUPPORT, ADK dynamics portability, generalization, transfer, production readiness, or held-out result."
+  "claim_ceiling": "Development-only engineering evidence. Using an existing recorded X-EISD profile, a real openai/gpt-5.6-luna Planner selected one current exact allowlisted lookup card. Deterministic authorization and execution produced one active EvidenceResult, changed the exact target F02R01 RuleInstance from UNRESOLVED to PASS, changed only its two declared downstream dependencies, and fed the existing Stage-2 reducer, which emitted ABSTAIN_OR_HUMAN_REVIEW. With the card removed from the same frozen unresolved state, Luna abstained and deterministic code executed zero lookup, operator, or evidence action; the target remained UNRESOLVED and the reducer again emitted ABSTAIN_OR_HUMAN_REVIEW. The campaign records three HTTP attempts, two completed calls, and USD 0.00072385 provider-reported completed-call cost; the initial pre-generation HTTP 400 reported no usage or cost. This establishes one live Planner narrow-lookup decision closure counterfactual, not a full live Profiler, live-Agent coverage of all common flows, Agent value, source-science approval, broad HSP90 closure, public-case scientific SUPPORT, ADK dynamics portability, generalization, transfer, production readiness, or held-out result."
 }
