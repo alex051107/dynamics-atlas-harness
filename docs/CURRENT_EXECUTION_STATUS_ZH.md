@@ -16,9 +16,19 @@ direction 才能释放科学阶段。
   baseline；它不证明 Agent value，也不是 Frozen Plan 的 Agent 阶段完成。
 - GitHub **PR #10**：默认不可调用的 OpenRouter Profiler screening setup 已合并；默认配置
   不读取 key、不发请求、不花费 credits，也没有 model result。
+- GitHub **PR #15**：two-case exposed development causal capsule 已合并为
+  `03ae77ef`。它证明 fresh Draft Rule state 可以物化受限的 Planner 输入，合法 card selection
+  或 abstention 才会触发选中的描述性 action；HSP90 的 exact F04R02 control 仍单独显示，不能
+  当作 broad public case 的 closure。该 PR 仍是 recorded proposal replay，不是独立 live Agent
+  result，也没有 source-science approval。
+- 当前 Delivery A 分支提供 [source-science review workspace](../review/source_science_v1/README.md)
+  和 [static Review Console](../review_console/index.html)。它们只展示现有 sources、RuleResults、
+  EvidenceResults、exact control 与空白审查字段；不调用模型、Operator、API 或数据库，也不写回
+  scientific state。
 
-`00faf6f0d2f8916878dd37b57c2018dbfbd45020` 是经 GitHub PR #10 验证的
-development/runtime baseline commit，不是对日后持续变化的 literal current `main` HEAD 的声明。
+`03ae77efdfaabeaebbf2cf8cae5a490c15241be1` 是当前 merged PR #15 后的
+development/runtime baseline commit；仓库内 Delivery A 文件在新的 Draft PR 合并前仍是审查表面，
+不是 literal current `main` HEAD 的声明。
 当前真实的科学下一步仍是 F01/F02/F03/F04/F06 的具名 human/domain
 source-science review，而不是已完成的 PR #7 merge review。
 

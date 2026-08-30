@@ -1,0 +1,122 @@
+{
+  "allowed_dispositions": [
+    "APPROVE_AS_WRITTEN",
+    "APPROVE_WITH_BOUNDED_REVISION",
+    "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+    "REJECT_NOT_REUSABLE",
+    "NOT_APPLICABLE_TO_CURRENT_CASE"
+  ],
+  "instructions": "Only a named human/domain reviewer may complete these fields after checking the referenced passage or case-bound artifact.",
+  "items": [
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F01R01",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F01R02",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F02R01",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F02R02",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F03R01",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F04R02",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F06R01",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F06R02",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    },
+    {
+      "case_application_disposition": null,
+      "claim_ceiling": null,
+      "notes": null,
+      "passage_checked": null,
+      "required_revision": null,
+      "review_date": null,
+      "review_item_id": "NDSR-F06R03",
+      "reviewer_name": null,
+      "reviewer_role": null,
+      "rule_disposition": null
+    }
+  ],
+  "review_status": "PENDING_DOMAIN_REVIEW",
+  "schema_version": "source-science-reviewer-form/v1"
+}

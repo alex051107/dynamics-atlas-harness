@@ -13,8 +13,8 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT = "4028cc4be02465e0e19b5c733aa335b23618c4b5"
-PR15_REVIEWED_IMPLEMENTATION_HEAD = "deb8a1379c973f09680425f6e640eea3ea1e337d"
+PR15_MERGED_DEVELOPMENT_CAUSAL_CAPSULE_COMMIT = "03ae77efdfaabeaebbf2cf8cae5a490c15241be1"
+PR15_REVIEWED_IMPLEMENTATION_HEAD = "1c11b758388abe3e6023cfc714f172c203c15774"
 
 
 def load_json(relative_path: str) -> dict:
@@ -37,18 +37,18 @@ class GovernanceConsistencyTests(unittest.TestCase):
         baseline = status["repository_baseline"]
         self.assertEqual(
             baseline["main_commit"],
-            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
+            PR15_MERGED_DEVELOPMENT_CAUSAL_CAPSULE_COMMIT,
         )
         self.assertEqual(
             baseline["baseline_tag"],
-            "post-pr14-paper-blind-public-packet-boundary",
+            "post-pr15-merged-development-causal-capsule",
         )
         self.assertIn(
-            "Verified literal GitHub main through merged PR #14",
+            "Verified literal GitHub main through merged PR #15",
             baseline["main_commit_semantics"],
         )
         self.assertIn(
-            "Draft PR #15 is reviewed separately and is not part of main",
+            "Delivery A source-science workspace and static Review Console are an unmerged Draft surface",
             baseline["main_commit_semantics"],
         )
         self.assertEqual(
@@ -65,18 +65,19 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertEqual(consolidation["state"], "PR12_PR13_PR14_MERGED_CLEAN_CI")
         self.assertEqual(
             consolidation["merge_commits"]["PR14"],
-            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
+            "4028cc4be02465e0e19b5c733aa335b23618c4b5",
         )
         capsule = work_item(status, "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1")
         self.assertEqual(
             capsule["state"],
-            "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+            "MERGED_DEVELOPMENT_CAUSAL_CAPSULE",
         )
         self.assertEqual(
             capsule["reviewed_implementation_head"],
             PR15_REVIEWED_IMPLEMENTATION_HEAD,
         )
-        self.assertEqual(capsule["draft_pr_number"], 15)
+        self.assertEqual(capsule["delivery_pr_number"], 15)
+        self.assertEqual(capsule["merge_commit"], PR15_MERGED_DEVELOPMENT_CAUSAL_CAPSULE_COMMIT)
         self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
@@ -84,7 +85,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
         )
         self.assertEqual(
             status["next_allowed_action"]["authorization"],
-            "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
+            "RECORDED_USER_DIRECTION_DA-20260830-052",
         )
         self.assertEqual(
             live_agent["observed_result"]["result"],
@@ -94,6 +95,12 @@ class GovernanceConsistencyTests(unittest.TestCase):
             next(stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW")["status"],
             "PENDING_DOMAIN_REVIEW",
         )
+        source_review = next(
+            stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW"
+        )
+        self.assertIn("SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT", source_review["known_present"])
+        self.assertIn("STATIC_READ_ONLY_REVIEW_CONSOLE_V0_DRAFT", source_review["known_present"])
+        self.assertIn("F04R02_CASE_BOUND_TRACEABILITY_MAPPING", source_review["known_unresolved"])
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
