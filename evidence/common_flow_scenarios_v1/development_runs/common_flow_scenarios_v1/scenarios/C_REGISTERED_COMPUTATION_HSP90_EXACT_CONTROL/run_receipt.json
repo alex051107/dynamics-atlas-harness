@@ -1,0 +1,12 @@
+{
+  "agent_calls": 0,
+  "boundary": "Exact case-bound rerun from frozen repository inputs; output-contract PASS remains PENDING_HUMAN_VALIDATION for science.",
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
+  "network_accessed": false,
+  "operator_id": "hsp90.directional_time_anatomy.v1_case_bound",
+  "output_directory": "routes/hsp90_b1/operator_outputs",
+  "run_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_REFERENCE_DEMO_V1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "unregistered_tool_calls": 0
+}

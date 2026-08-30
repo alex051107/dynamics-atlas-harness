@@ -1,0 +1,121 @@
+trajectory	seed_lineage	persistence_saved_frames	persistence_ns	first_persistent_direction	first_persistent_start_ns	opposite_direction_departure_candidate	opposite_departure_start_ns	return_candidate	return_start_ns	strict_core_frames
+R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	77.0	False		False		0
+R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	582.0	False		False		0
+R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	OPEN_CONSENSUS	37.0	False		False		0
+R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	OPEN_CONSENSUS	82.0	False		False		0
+R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	82.0	False		False		0
+R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	OPEN_CONSENSUS	53.0	False		False		0
+R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	OPEN_CONSENSUS	53.0	False		False		0
+R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	53.0	False		False		0
+R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	OPEN_CONSENSUS	114.0	False		False		0
+R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	OPEN_CONSENSUS	537.0	False		False		0
+R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	537.0	False		False		0
+R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	True	179.0	False		0
+R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	NO_PERSISTENT_CONSENSUS		False		False		0
+R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	NO_PERSISTENT_CONSENSUS		False		False		0
+R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	537.0	False		False		0
+R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	NO_PERSISTENT_CONSENSUS		False		False		0
+R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	NO_PERSISTENT_CONSENSUS		False		False		0
+R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		1
+R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		1
+R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	61.0	False		False		1
+R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	124.0	False		False		0
+R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	216.0	False		False		0
+R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	518.0	False		False		0
+R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	25.0	True	621.0	False		0
+R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	25.0	True	671.0	False		0
+R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	671.0	False		False		0
+R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	21.0	True	115.0	False		0
+R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	21.0	True	115.0	False		0
+R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	115.0	False		False		0
+R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	True	402.0	False		0
+R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	True	402.0	False		0
+R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	True	402.0	False		0
+R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	True	580.0	False		0
+R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	True	605.0	False		0
+R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	CLOSED_CONSENSUS	20.0	False		False		0
+R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	OPEN_CONSENSUS	59.0	False		False		0
+R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	OPEN_CONSENSUS	59.0	False		False		0
+R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	59.0	False		False		0
+R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	5	5	OPEN_CONSENSUS	45.0	False		False		0
+R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	20	20	OPEN_CONSENSUS	45.0	False		False		0
+R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay	closed_seeded	50	50	OPEN_CONSENSUS	45.0	False		False		0
+R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		1
+R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	5	5	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	20	20	OPEN_CONSENSUS	20.0	False		False		0
+R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay	open_seeded	50	50	OPEN_CONSENSUS	20.0	False		False		0

@@ -1,0 +1,93 @@
+{
+  "agent_value_status": "NOT_AGENT_VALUE_ESTABLISHED",
+  "comparison_arms": [
+    "NO_AGENT_PLATFORM_AUTHORITY_ONLY_NOT_EXECUTED",
+    "RECORDED_PROPOSAL_REPLAY",
+    "LIVE_OPENROUTER_BLOCKED"
+  ],
+  "development_evidence_status": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "rows": [
+    {
+      "actual_cost_usd": "0",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 0,
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 0,
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 2
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 0,
+      "model_profile": "deepseek",
+      "planned_calls": 2,
+      "requested_model": "deepseek/deepseek-v4-flash-0731",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 0,
+      "model_profile": "minimax",
+      "planned_calls": 2,
+      "requested_model": "minimax/minimax-m2.5",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 0,
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 0,
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 2
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 0,
+      "model_profile": "deepseek",
+      "planned_calls": 2,
+      "requested_model": "deepseek/deepseek-v4-flash-0731",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 0,
+      "model_profile": "minimax",
+      "planned_calls": 2,
+      "requested_model": "minimax/minimax-m2.5",
+      "result_status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL",
+      "trial": 1
+    }
+  ],
+  "schema_version": "live-agent-development-comparison-matrix/v1",
+  "status": "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL"
+}

@@ -1212,6 +1212,44 @@ def _render_review_queue(
     return "".join(cards)
 
 
+def _render_scenario_matrix(matrix: Mapping[str, Any]) -> str:
+    if matrix.get("schema_version") != "common-flow-scenario-matrix/v1":
+        raise ReviewConsoleError("SCENARIO_MATRIX_SCHEMA_INVALID")
+    scenarios = matrix.get("scenarios")
+    if not isinstance(scenarios, list) or not scenarios:
+        raise ReviewConsoleError("SCENARIO_MATRIX_ROWS_REQUIRED")
+    cards: list[str] = []
+    for position, row in enumerate(scenarios):
+        if not isinstance(row, Mapping):
+            raise ReviewConsoleError(f"SCENARIO_MATRIX_ROW_INVALID:{position}")
+        scenario_id = row.get("scenario_id")
+        case_id = row.get("case_id")
+        if not isinstance(scenario_id, str) or not isinstance(case_id, str):
+            raise ReviewConsoleError(f"SCENARIO_MATRIX_IDENTITY_INVALID:{position}")
+        cards.append(
+            f"""
+            <article class="control-card">
+              <div class="review-heading"><code>{_escape(scenario_id)}</code>{_badge(row.get('result_status', 'UNKNOWN'))}</div>
+              <p><strong>Case:</strong> <code>{_escape(case_id)}</code></p>
+              <p><strong>Expected route:</strong> {_badge(row.get('expected_route_family', 'UNKNOWN'))}<br><strong>Actual route:</strong> {_badge(row.get('actual_route', 'UNKNOWN'))}</p>
+              <p><strong>Authorization:</strong> {_escape(row.get('deterministic_authorization', 'UNKNOWN'))}<br><strong>Actions:</strong> {_escape(row.get('action_count', 'UNKNOWN'))}</p>
+              <p><strong>Evidence:</strong> {_badge(row.get('evidence_result_class', 'UNKNOWN'))}<br><strong>Affected RuleInstance:</strong> <code>{_escape(row.get('affected_rule_instance') or 'NONE')}</code></p>
+              <p><strong>Terminal reducer state:</strong> {_badge(row.get('terminal_reducer_state', 'UNKNOWN'))}</p>
+              <p><strong>Claim ceiling:</strong> {_escape(row.get('claim_ceiling', 'UNKNOWN'))}</p>
+              {_details('Exact scenario row', row, open_by_default=False)}
+            </article>
+            """
+        )
+    return f"""
+    <section class="primary-view" id="scenario-matrix">
+      <div class="eyebrow">COMMON FLOW SCENARIO MATRIX</div>
+      <h1>Four routes and three terminal behaviors</h1>
+      <p class="question">These are deterministic engineering-contract scenarios. Synthetic SUPPORT remains labeled synthetic; real HSP90 source-science approval and broad closure remain unavailable.</p>
+      <div class="card-grid">{''.join(cards)}</div>
+    </section>
+    """
+
+
 def render_review_console(
     *,
     status_path: Path,
@@ -1219,6 +1257,7 @@ def render_review_console(
     output_dir: Path,
     capsule_root: Path = DEFAULT_CAPSULE_ROOT,
     case_roots: Sequence[Path] | None = None,
+    scenario_matrix_path: Path | None = None,
 ) -> Path:
     """Render a static HTML review trace without a server, API, or mutation path.
 
@@ -1247,6 +1286,16 @@ def render_review_console(
     )
     conclusion_sections = "".join(_render_case_conclusion(view) for view in case_views)
     human_case_sections = "".join(_render_case_human_review(view) for view in case_views)
+    scenario_section = (
+        _render_scenario_matrix(_read_json(scenario_matrix_path))
+        if scenario_matrix_path is not None
+        else ""
+    )
+    scenario_nav = (
+        '<a href="#scenario-matrix">Common-flow matrix</a>'
+        if scenario_matrix_path is not None
+        else ""
+    )
     queue = _render_review_queue(source_index, matrix, form)
     next_action = status.get("next_allowed_action", {})
     html_document = f"""<!doctype html>
@@ -1332,6 +1381,7 @@ def render_review_console(
           <a href="#trace">2 · Source → Rule → Evidence Trace</a>
           <a href="#conclusion">3 · Conclusion and Provenance</a>
           <a href="#human-review">4 · Human Review</a>
+          {scenario_nav}
         </nav>
       </div>
       <aside class="gate-card">
@@ -1356,6 +1406,7 @@ def render_review_console(
       <p class="question">A recorded ConclusionPacket is displayed as an artifact. A case_runner_v1 run that records NOT_CALCULATED_BY_CASE_RUNNER remains explicitly unavailable rather than receiving a synthetic conclusion.</p>
       {conclusion_sections}
     </section>
+    {scenario_section}
     <section class="primary-view queue" id="human-review">
       <div class="eyebrow">PRIMARY VIEW 4</div>
       <h1>Human Review</h1>
@@ -1422,6 +1473,11 @@ def _render_main(argv: Sequence[str] | None = None) -> int:
         ),
     )
     parser.add_argument("--review-workspace", type=Path, default=DEFAULT_REVIEW_WORKSPACE)
+    parser.add_argument(
+        "--scenario-matrix",
+        type=Path,
+        help="Optional common_flow_matrix.json to render as a read-only scenario view.",
+    )
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args(argv)
     output_path = render_review_console(
@@ -1430,6 +1486,7 @@ def _render_main(argv: Sequence[str] | None = None) -> int:
         case_roots=args.case_roots,
         review_workspace=args.review_workspace,
         output_dir=args.output_dir,
+        scenario_matrix_path=args.scenario_matrix,
     )
     print(output_path)
     return 0

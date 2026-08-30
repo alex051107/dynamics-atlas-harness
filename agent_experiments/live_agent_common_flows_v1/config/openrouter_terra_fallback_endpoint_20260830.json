@@ -1,0 +1,36 @@
+{
+  "schema_version": "openrouter-endpoint-selection-snapshot/v1",
+  "observed_at": "2026-08-30T14:15:09Z",
+  "selection_purpose": "LIVE_AGENT_COMMON_FLOWS_V1_TERRA_DIAGNOSTIC_FALLBACK",
+  "records": [
+    {
+      "model_id": "openai/gpt-5.6-terra",
+      "canonical_returned_model_id": "openai/gpt-5.6-terra-20260709",
+      "model_name": "OpenAI: GPT-5.6 Terra",
+      "endpoint_name": "OpenAI | openai/gpt-5.6-terra-20260709",
+      "provider_endpoint_tag": "openai",
+      "provider_display_name": "OpenAI",
+      "prompt_price_per_million_usd": "2.00",
+      "completion_price_per_million_usd": "12.00",
+      "request_price_usd": "0",
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "quantization": "unknown",
+      "status": 0,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "reasoning_effort"
+      ],
+      "pricing_override_boundary": "PROMPTS_AT_OR_ABOVE_272000_TOKENS_EXCLUDED_BY_SERVER_MAX_PRICE",
+      "source_url": "https://openrouter.ai/api/v1/models/openai/gpt-5.6-terra/endpoints"
+    }
+  ],
+  "claim_ceiling": "TIME_STAMPED_CATALOG_SNAPSHOT_NOT_LIVE_ENDPOINT_ACCEPTANCE"
+}

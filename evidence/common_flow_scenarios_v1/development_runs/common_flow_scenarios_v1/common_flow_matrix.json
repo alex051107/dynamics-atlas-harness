@@ -1,0 +1,249 @@
+{
+  "agent_value_status": "NOT_AGENT_VALUE_ESTABLISHED",
+  "development_status": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "run_id": "common_flow_scenarios_v1",
+  "scenarios": [
+    {
+      "action_count": 0,
+      "actual_cost": 0.0,
+      "actual_route": "DIRECT_EVALUATION",
+      "affected_rule_instance": null,
+      "after_rule_result": {
+        "scope": "FROZEN_XEISD_REQUIRED_RULE_INVENTORY",
+        "status_counts": {
+          "PASS": 10
+        }
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/A_DIRECT_EVALUATION_XEISD_A1/input_casegraph.json",
+        "scenarios/A_DIRECT_EVALUATION_XEISD_A1/rule_results.json",
+        "scenarios/A_DIRECT_EVALUATION_XEISD_A1/route_packet.json",
+        "scenarios/A_DIRECT_EVALUATION_XEISD_A1/stage2_conclusion_packet.json",
+        "scenarios/A_DIRECT_EVALUATION_XEISD_A1/scenario_receipt.json"
+      ],
+      "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+      "before_rule_result": null,
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "claim_ceiling": "Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+      "deterministic_authorization": "NOT_REQUIRED_DIRECT_EVALUATION",
+      "evidence_result_class": "NONE_DIRECT_EVALUATION",
+      "expected_route_family": "DIRECT_EVALUATION",
+      "input_role": "EXISTING_STRUCTURED_EVIDENCE",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "A_DIRECT_EVALUATION_XEISD_A1",
+      "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    {
+      "action_count": 1,
+      "actual_cost": 0.0,
+      "actual_route": "SOURCE_LOOKUP_THEN_DIRECT_EVALUATION",
+      "affected_rule_instance": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "after_rule_result": {
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+        "status": "PASS"
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/input_casegraph_before.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/before_rule_results.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/lookup_request.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/lookup_result.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/input_casegraph_after.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/after_rule_results.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/rule_transition.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/route_packet.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/stage2_conclusion_packet.json",
+        "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/scenario_receipt.json"
+      ],
+      "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+      "before_rule_result": {
+        "missing_paths": [
+          "source.sample_composition",
+          "source.sample_system_composition_declaration_status"
+        ],
+        "reason_codes": [
+          "REQUIRED_EVIDENCE_MISSING"
+        ],
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+        "status": "UNRESOLVED"
+      },
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "claim_ceiling": "Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+      "deterministic_authorization": "AUTHORIZED_EXACT_ALLOWLIST_HASH_LOCATOR",
+      "evidence_result_class": "SOURCE_LOOKUP_RESULT",
+      "expected_route_family": "NARROW_LOOKUP",
+      "input_role": "MISSING_EXACT_SOURCE_FACT",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION",
+      "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    {
+      "action_count": 1,
+      "actual_cost": 0.0,
+      "actual_route": "REGISTERED_OPERATOR",
+      "affected_rule_instance": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+      "after_rule_result": {
+        "missing_paths": [],
+        "reason_codes": [
+          "CASE_BOUND_TIME_ANATOMY_CONTROL_EVIDENCE_VALIDATED"
+        ],
+        "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+        "status": "PASS"
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/pre_rule_result.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/resolution_route.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/operator_run_receipt.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/evidence_result.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/post_rule_result.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/conclusion_packet.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/stage2_conclusion_packet.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/run_receipt.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/scenario_receipt.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/directional_runs.tsv",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/results_summary.json",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/trajectory_time_anatomy.tsv",
+        "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/trajectory_time_bins_50ns.tsv"
+      ],
+      "authority_status": "PENDING_HUMAN_VALIDATION_EXACT_CONTROL_ONLY",
+      "before_rule_result": {
+        "missing_paths": [],
+        "reason_codes": [
+          "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING"
+        ],
+        "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+        "status": "UNRESOLVED"
+      },
+      "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+      "claim_ceiling": "EXACT_CONTROL_ONLY: At most, the exact frozen same-packet diagnostic has a validated trajectory-level control record. No transition rate, equilibrium, population, free-energy, pathway, mechanism, or mutation claim is emitted.",
+      "deterministic_authorization": "AUTHORIZED_EXACT_REGISTERED_OPERATOR",
+      "evidence_result_class": "OPERATOR_EVIDENCE_RESULT",
+      "expected_route_family": "REGISTERED_COMPUTATION",
+      "input_role": "COMPUTABLE_EXACT_CONTROL_EVIDENCE_MISSING",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL",
+      "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    {
+      "action_count": 1,
+      "actual_cost": 0.0,
+      "actual_route": "HUMAN_OR_NEW_DATA",
+      "affected_rule_instance": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+      "after_rule_result": {
+        "missing_paths": [
+          "source.sample_composition",
+          "source.sample_system_composition_declaration_status"
+        ],
+        "reason_codes": [
+          "REQUIRED_EVIDENCE_MISSING"
+        ],
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+        "status": "UNRESOLVED"
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/input_casegraph.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/before_rule_results.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/lookup_request.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/lookup_result.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/after_rule_results.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/rule_transition.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/route_packet.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/stage2_conclusion_packet.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/stop_receipt.json",
+        "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/scenario_receipt.json"
+      ],
+      "authority_status": "HUMAN_OR_NEW_DATA_REQUIRED",
+      "before_rule_result": {
+        "missing_paths": [
+          "source.sample_composition",
+          "source.sample_system_composition_declaration_status"
+        ],
+        "reason_codes": [
+          "REQUIRED_EVIDENCE_MISSING"
+        ],
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+        "status": "UNRESOLVED"
+      },
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "claim_ceiling": "A missing declared field or exact source locator leaves the requested relation unresolved; no cross-source claim is emitted.",
+      "deterministic_authorization": "AUTHORIZED_EXACT_LOOKUP_THEN_STOP",
+      "evidence_result_class": "SOURCE_LOOKUP_RESULT",
+      "expected_route_family": "EXPLICIT_STOP",
+      "input_role": "DATA_UNAVAILABLE_AFTER_EXACT_LOOKUP",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION",
+      "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+    },
+    {
+      "action_count": 0,
+      "actual_cost": 0.0,
+      "actual_route": "DIRECT_EVALUATION_THEN_SUPPORT_WITHIN_CEILING",
+      "affected_rule_instance": null,
+      "after_rule_result": {
+        "scope": "FROZEN_XEISD_REQUIRED_RULE_INVENTORY",
+        "status_counts": {
+          "PASS": 10
+        }
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/source_grounding_override.json",
+        "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/stage2_conclusion_packet.json",
+        "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/authority_receipt.json",
+        "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/scenario_receipt.json"
+      ],
+      "authority_status": "SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+      "before_rule_result": null,
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "claim_ceiling": "SYNTHETIC_CONTRACT_BEHAVIOR_ONLY: Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+      "deterministic_authorization": "NOT_APPLICABLE_SYNTHETIC_REDUCER_INPUT",
+      "evidence_result_class": "NONE_DIRECT_EVALUATION",
+      "expected_route_family": "TERMINAL_REDUCER_CONTRACT",
+      "input_role": "SYNTHETIC_VERIFIED_SOURCE_GATE",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+      "terminal_reducer_state": "SUPPORT_WITHIN_CEILING"
+    },
+    {
+      "action_count": 0,
+      "actual_cost": 0.0,
+      "actual_route": "HUMAN_OR_NEW_DATA_THEN_CANNOT_SUPPORT_REQUESTED_CLAIM",
+      "affected_rule_instance": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+      "after_rule_result": {
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_MISMATCH"
+        ],
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+        "status": "FAIL"
+      },
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "artifact_paths": [
+        "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/input_casegraph.json",
+        "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/rule_results.json",
+        "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/route_packet.json",
+        "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/stage2_conclusion_packet.json",
+        "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/scenario_receipt.json"
+      ],
+      "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+      "before_rule_result": null,
+      "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+      "claim_ceiling": "The declared cross-source relation is blocked; neither source-local observation is invalidated. Human scientific review remains required.",
+      "deterministic_authorization": "NOT_REQUIRED_DIRECT_EVALUATION",
+      "evidence_result_class": "NONE_DIRECT_EVALUATION",
+      "expected_route_family": "TERMINAL_REDUCER_CONTRACT",
+      "input_role": "DECLARED_EXACT_RELATION_MISMATCH",
+      "result_status": "SUCCEEDED",
+      "scenario_id": "T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH",
+      "terminal_reducer_state": "CANNOT_SUPPORT_REQUESTED_CLAIM"
+    }
+  ],
+  "schema_version": "common-flow-scenario-matrix/v1"
+}

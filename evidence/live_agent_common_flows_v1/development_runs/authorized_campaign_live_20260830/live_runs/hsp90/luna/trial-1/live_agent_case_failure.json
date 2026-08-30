@@ -1,0 +1,12 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "claim_upgrade": false,
+  "completed_roles": [
+    "PROFILER"
+  ],
+  "error_code": "ANNOTATION_TARGET_DANGLING_OR_NONCRITICAL",
+  "model_profile": "luna",
+  "schema_version": "live-agent-case-failure/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "status": "REJECTED_FAIL_CLOSED"
+}

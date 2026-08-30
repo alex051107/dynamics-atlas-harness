@@ -1,0 +1,10 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "decision": "SELECT_ACTIONS",
+  "rationales": {
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "Select the available descriptive action for the unresolved observable-dependence development item."
+  },
+  "selected_card_ids": [
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+  ]
+}

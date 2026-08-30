@@ -7,6 +7,8 @@ import hashlib
 import shutil
 import tempfile
 import unittest
+from copy import deepcopy
+from decimal import Decimal
 from pathlib import Path
 
 from dynamics_atlas_harness.case_view_v1 import (
@@ -14,9 +16,19 @@ from dynamics_atlas_harness.case_view_v1 import (
     build_case_view,
 )
 from dynamics_atlas_harness.paper_blind_exposed_v1 import validate_agent_proposal
+from dynamics_atlas_harness.openrouter_proposal_transport_v1 import (
+    OpenRouterBudgetLedger,
+    OpenRouterCredential,
+    OpenRouterModelSpec,
+    OpenRouterProposalClient,
+)
 from dynamics_atlas_harness.proposal_provenance_v1 import (
     CALLER_SUPPLIED_IN_MEMORY,
+    LIVE_OPENROUTER_PROPOSAL,
     build_proposal_provenance_v1,
+)
+from dynamics_atlas_harness.profile_proposal_envelope_v1 import (
+    build_profile_proposal_envelope_schema,
 )
 
 
@@ -54,6 +66,82 @@ def _all_strings(value):
     elif isinstance(value, (list, tuple)):
         for item in value:
             yield from _all_strings(item)
+
+
+def _contains_unknown(value) -> bool:
+    return any("UNKNOWN" in text.upper() for text in _all_strings(value))
+
+
+def _profile_envelope(core: dict) -> dict:
+    facts = core["proposed_case_facts"]
+    targets = [
+        ("CASE", core["case_id"], field, facts["case"][field])
+        for field in (
+            "scientific_claim",
+            "requested_claim_level",
+            "intended_use",
+            "declared_request_scope",
+            "forbidden_upgrades",
+        )
+    ]
+    for source in facts["sources"]:
+        for field in (
+            "construct_and_condition",
+            "sample_composition",
+            "native_observable",
+            "estimand",
+            "time_semantics.kind",
+            "spatial_support",
+            "unit_or_aggregation",
+        ):
+            value = (
+                source["time_semantics"]["kind"]
+                if field == "time_semantics.kind"
+                else source[field]
+            )
+            targets.append(("SOURCE", source["source_id"], field, value))
+    for edge in facts["edges"]:
+        for field in (
+            "relation_type",
+            "condition_relation",
+            "bridge_status",
+            "validation_independence",
+            "shared_error_status",
+        ):
+            targets.append(("EDGE", edge["edge_id"], field, edge[field]))
+    annotations = [
+        {
+            "target_type": target_type,
+            "target_id": target_id,
+            "field": field,
+            "status": "UNKNOWN" if _contains_unknown(value) else "EXTRACTED",
+            "evidence_pointers": [
+                {
+                    "pointer_type": "PACKET_POINTER",
+                    "source_id": "PACKET",
+                    "value": "/research_question",
+                }
+            ],
+            "confidence": 0.8,
+        }
+        for target_type, target_id, field, value in targets
+    ]
+    return {**deepcopy(core), "field_annotations": annotations}
+
+
+class _FakeHttpResponse:
+    def __init__(self, body: dict) -> None:
+        self.status = 200
+        self._body = json.dumps(body).encode("utf-8")
+
+    def read(self) -> bytes:
+        return self._body
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, traceback) -> bool:
+        return False
 
 
 class RecordedCapsuleCaseViewTests(unittest.TestCase):
@@ -299,6 +387,7 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
                 "profiler": profiler_provenance,
                 "planner": planner_provenance,
             },
+            "agent_mode": "RECORDED_OR_IN_MEMORY",
             "fresh_rule_state": fresh,
             "planner_visible_input": planner_input,
             "planner_admission": planner_admission,
@@ -313,7 +402,7 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "external_model_transport": False,
             "artifact_paths": artifact_paths,
             "boundary": (
-                "This runner records deterministic exposed-development behavior only. "
+                "This runner records exposed-development proposals and deterministic downstream behavior only. "
                 "It does not compute a terminal verdict, source-science approval, broad "
                 "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
             ),
@@ -335,6 +424,308 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
         ):
             _write_json(root / name, value)
         return root
+
+    def _build_live_profiler_root(self, root: Path) -> Path:
+        root = self._build_run_root(root)
+        manifest_path = root / "case_run_manifest_v1.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        visible_input = json.loads(
+            (root / "inputs/profiler_visible_input.json").read_text(encoding="utf-8")
+        )
+        core = json.loads(
+            (root / "inputs/profile_proposal.json").read_text(encoding="utf-8")
+        )
+        envelope = _profile_envelope(core)
+        response = {
+            "id": "gen-case-view-profiler-001",
+            "model": "test/model-exact",
+            "provider": "Test Provider",
+            "service_tier": "default",
+            "choices": [
+                {
+                    "finish_reason": "stop",
+                    "message": {
+                        "role": "assistant",
+                        "content": json.dumps(envelope),
+                    },
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 120,
+                "completion_tokens": 80,
+                "total_tokens": 200,
+                "completion_tokens_details": {"reasoning_tokens": 5},
+                "prompt_tokens_details": {"cached_tokens": 7},
+                "cost": 0.00012,
+            },
+        }
+        client = OpenRouterProposalClient(
+            credential=OpenRouterCredential(
+                "case-view-unit-test-credential", "INHERITED_ENVIRONMENT"
+            ),
+            budget=OpenRouterBudgetLedger(cap_usd=Decimal("5")),
+            open_call=lambda request, timeout: _FakeHttpResponse(response),
+        )
+        artifact = client.call(
+            role="PROFILER",
+            case_id=visible_input["case_id"],
+            model_spec=OpenRouterModelSpec(
+                model_id="test/model-exact",
+                provider_endpoint_tag="test-provider/fp8",
+                expected_provider_display_name="Test Provider",
+                prompt_price_per_token_usd=Decimal("0.0000002"),
+                completion_price_per_token_usd=Decimal("0.0000012"),
+                reasoning_effort="low",
+            ),
+            system_prompt="Return one answer-blind typed Profiler proposal.",
+            visible_input=visible_input,
+            output_schema=build_profile_proposal_envelope_schema(
+                REPO_ROOT
+                / "evidence/paper_blind_exposed_v1/public/hsp90_public_packet_v1.json"
+            ),
+            max_tokens=512,
+            prompt_version="CASE_VIEW_TEST_PROFILER_V1",
+        )
+        receipt = artifact["receipt"]
+        receipt["field_annotation_validation_status"] = "PASS"
+        receipt["field_annotation_error_code"] = None
+        receipt["routing_proposal_sha256"] = _canonical_sha256(core)
+        receipt["proposal_envelope_sha256"] = _canonical_sha256(envelope)
+        provenance = build_proposal_provenance_v1(
+            role="PROFILER",
+            mode=LIVE_OPENROUTER_PROPOSAL,
+            visible_input=visible_input,
+            parsed_proposal=core,
+            contract_evaluator="validate_agent_proposal",
+            contract_admission_evaluation=manifest["fresh_rule_state"]["admission"],
+            source_path=None,
+            live_call_receipt=receipt,
+        )
+        live_paths = (
+            "live_calls/profiler/request_payload.json",
+            "live_calls/profiler/raw_response.txt",
+            "live_calls/profiler/model_call_receipt.json",
+            "live_calls/profiler/proposal_envelope.json",
+        )
+        manifest["input_provenance"]["profile_mode"] = LIVE_OPENROUTER_PROPOSAL
+        manifest["proposal_provenance"]["profiler"] = provenance
+        manifest["agent_mode"] = "MIXED_RECORDED_OR_IN_MEMORY_AND_LIVE"
+        manifest["network_accessed"] = True
+        manifest["credentials_accessed"] = True
+        manifest["external_model_transport"] = True
+        manifest["artifact_paths"].extend(live_paths)
+        _write_json(root / live_paths[0], artifact["request_payload"])
+        raw_response = artifact["raw_response"]
+        assert isinstance(raw_response, str)
+        (root / live_paths[1]).write_text(raw_response, encoding="utf-8")
+        _write_json(root / live_paths[2], receipt)
+        _write_json(root / live_paths[3], envelope)
+        _write_json(root / "profiler_proposal_provenance.json", provenance)
+        _write_json(manifest_path, manifest)
+        return root
+
+    def _sync_live_profiler_artifacts(
+        self,
+        root: Path,
+        *,
+        request_payload: dict | None = None,
+        raw_response: str | None = None,
+        receipt: dict | None = None,
+    ) -> None:
+        manifest_path = root / "case_run_manifest_v1.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        request_path = root / "live_calls/profiler/request_payload.json"
+        raw_path = root / "live_calls/profiler/raw_response.txt"
+        receipt_path = root / "live_calls/profiler/model_call_receipt.json"
+        if request_payload is None:
+            request_payload = json.loads(request_path.read_text(encoding="utf-8"))
+        if raw_response is None:
+            raw_response = raw_path.read_text(encoding="utf-8")
+        if receipt is None:
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+
+        request_sha = _canonical_sha256(request_payload)
+        receipt["hashes"]["request_payload_sha256"] = request_sha
+        receipt["request_sha256"] = request_sha
+        schema = request_payload["response_format"]["json_schema"]["schema"]
+        schema_sha = _canonical_sha256(schema)
+        receipt["hashes"]["output_schema_sha256"] = schema_sha
+        receipt["schema_sha256"] = schema_sha
+        input_ceiling = len(
+            json.dumps(
+                request_payload,
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+            ).encode("utf-8")
+        )
+        prices = request_payload["provider"]["max_price"]
+        worst_cost = (
+            Decimal(str(prices["prompt"]))
+            * Decimal(input_ceiling)
+            / Decimal("1000000")
+            + Decimal(str(prices["completion"]))
+            * Decimal(request_payload["max_tokens"])
+            / Decimal("1000000")
+            + Decimal(str(prices["request"]))
+        )
+        receipt["preflight"]["input_token_ceiling"] = input_ceiling
+        receipt["preflight"]["max_completion_tokens"] = request_payload[
+            "max_tokens"
+        ]
+        receipt["preflight"]["worst_case_cost_usd"] = str(worst_cost)
+        raw_sha = hashlib.sha256(raw_response.encode("utf-8")).hexdigest()
+        receipt["hashes"]["raw_response_sha256"] = raw_sha
+        receipt["raw_response_sha256"] = raw_sha
+
+        visible_input = json.loads(
+            (root / "inputs/profiler_visible_input.json").read_text(encoding="utf-8")
+        )
+        core = json.loads(
+            (root / "inputs/profile_proposal.json").read_text(encoding="utf-8")
+        )
+        provenance = build_proposal_provenance_v1(
+            role="PROFILER",
+            mode=LIVE_OPENROUTER_PROPOSAL,
+            visible_input=visible_input,
+            parsed_proposal=core,
+            contract_evaluator="validate_agent_proposal",
+            contract_admission_evaluation=manifest["fresh_rule_state"]["admission"],
+            source_path=None,
+            live_call_receipt=receipt,
+        )
+        manifest["proposal_provenance"]["profiler"] = provenance
+        _write_json(request_path, request_payload)
+        raw_path.write_text(raw_response, encoding="utf-8")
+        _write_json(receipt_path, receipt)
+        _write_json(root / "profiler_proposal_provenance.json", provenance)
+        _write_json(manifest_path, manifest)
+
+    def test_live_profiler_receipt_is_semantically_bound_and_allows_historical_usage_flag(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_live_profiler_root(Path(temp_dir) / "run")
+            first_view = build_case_view(root)
+            request_path = root / "live_calls/profiler/request_payload.json"
+            request = json.loads(request_path.read_text(encoding="utf-8"))
+            request["usage"] = {"include": True}
+            self._sync_live_profiler_artifacts(root, request_payload=request)
+            second_view = build_case_view(root)
+
+        self.assertEqual(
+            first_view.agent_proposal["provenance"]["mode"],
+            LIVE_OPENROUTER_PROPOSAL,
+        )
+        self.assertEqual(second_view.integrity_status, "PASS")
+
+    def test_live_request_rejects_wrong_visible_packet_schema_provider_and_injection(self):
+        def wrong_visible(request):
+            request["messages"][1]["content"] = "Task packet:\n{}"
+
+        def wrong_schema(request):
+            request["response_format"]["json_schema"]["schema"]["title"] = (
+                "Tampered profile schema"
+            )
+
+        def wrong_provider(request):
+            request["provider"]["only"] = ["different-provider/fp8"]
+
+        def third_message(request):
+            request["messages"].append({"role": "user", "content": "Injected"})
+
+        def injected_tools(request):
+            request["tools"] = []
+
+        def injected_plugins(request):
+            request["plugins"] = []
+
+        mutations = (
+            (wrong_visible, "LIVE_REQUEST_VISIBLE_INPUT_MISMATCH"),
+            (wrong_schema, "LIVE_OUTPUT_SCHEMA_CURRENT_CONTRACT_MISMATCH"),
+            (wrong_provider, "LIVE_REQUEST_PROVIDER_ONLY_MISMATCH"),
+            (third_message, "LIVE_REQUEST_MESSAGE_STRUCTURE_INVALID"),
+            (injected_tools, "LIVE_REQUEST_FIELDS_INVALID_OR_TOOL_INJECTION"),
+            (injected_plugins, "LIVE_REQUEST_FIELDS_INVALID_OR_TOOL_INJECTION"),
+        )
+        for mutate, expected_error in mutations:
+            with self.subTest(expected_error=expected_error), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_live_profiler_root(Path(temp_dir) / "run")
+                request_path = root / "live_calls/profiler/request_payload.json"
+                request = json.loads(request_path.read_text(encoding="utf-8"))
+                mutate(request)
+                self._sync_live_profiler_artifacts(root, request_payload=request)
+                with self.assertRaisesRegex(CaseViewIntegrityError, expected_error):
+                    build_case_view(root)
+
+    def test_live_raw_response_and_receipt_mix_and_match_fail_closed(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_live_profiler_root(Path(temp_dir) / "mixed-raw")
+            raw_path = root / "live_calls/profiler/raw_response.txt"
+            raw = json.loads(raw_path.read_text(encoding="utf-8"))
+            raw["id"] = "gen-different-call"
+            raw["model"] = "different/model"
+            raw["provider"] = "Different Provider"
+            mixed_raw = json.dumps(raw)
+            self._sync_live_profiler_artifacts(root, raw_response=mixed_raw)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "LIVE_RAW_RESPONSE_ID_MISMATCH"
+            ):
+                build_case_view(root)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_live_profiler_root(Path(temp_dir) / "wrong-receipt")
+            receipt_path = root / "live_calls/profiler/model_call_receipt.json"
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+            receipt["response_id"] = "gen-receipt-from-another-call"
+            self._sync_live_profiler_artifacts(root, receipt=receipt)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "LIVE_RAW_RESPONSE_ID_MISMATCH"
+            ):
+                build_case_view(root)
+
+    def test_live_raw_model_provider_tier_finish_content_usage_and_cost_match_receipt(self):
+        def wrong_model(raw):
+            raw["model"] = "different/model"
+
+        def wrong_provider(raw):
+            raw["provider"] = "Different Provider"
+
+        def wrong_tier(raw):
+            raw["service_tier"] = "priority"
+
+        def wrong_finish(raw):
+            raw["choices"][0]["finish_reason"] = "length"
+
+        def wrong_content(raw):
+            raw["choices"][0]["message"]["content"] = json.dumps(
+                {"case_id": "MIXED_CONTENT"}
+            )
+
+        def wrong_usage(raw):
+            raw["usage"]["prompt_tokens"] += 1
+
+        def wrong_cost(raw):
+            raw["usage"]["cost"] = 0.00013
+
+        mutations = (
+            (wrong_model, "LIVE_RAW_RESPONSE_MODEL_MISMATCH"),
+            (wrong_provider, "LIVE_RAW_RESPONSE_PROVIDER_MISMATCH"),
+            (wrong_tier, "LIVE_RAW_RESPONSE_SERVICE_TIER_MISMATCH"),
+            (wrong_finish, "LIVE_RAW_RESPONSE_FINISH_REASON_MISMATCH"),
+            (wrong_content, "LIVE_RAW_RESPONSE_CONTENT_PROPOSAL_MISMATCH"),
+            (wrong_usage, "LIVE_RAW_RESPONSE_USAGE_MISMATCH"),
+            (wrong_cost, "LIVE_RAW_RESPONSE_USAGE_MISMATCH"),
+        )
+        for mutate, expected_error in mutations:
+            with self.subTest(expected_error=expected_error), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_live_profiler_root(Path(temp_dir) / "run")
+                raw_path = root / "live_calls/profiler/raw_response.txt"
+                raw = json.loads(raw_path.read_text(encoding="utf-8"))
+                mutate(raw)
+                self._sync_live_profiler_artifacts(
+                    root, raw_response=json.dumps(raw)
+                )
+                with self.assertRaisesRegex(CaseViewIntegrityError, expected_error):
+                    build_case_view(root)
 
     def test_run_projection_keeps_optional_absence_and_terminal_noncalculation_explicit(self):
         with tempfile.TemporaryDirectory() as temp_dir:

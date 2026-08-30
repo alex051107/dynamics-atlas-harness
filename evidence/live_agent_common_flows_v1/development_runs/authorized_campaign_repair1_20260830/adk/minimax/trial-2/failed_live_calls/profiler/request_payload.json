@@ -1,0 +1,358 @@
+{
+  "max_tokens": 16000,
+  "messages": [
+    {
+      "content": "You are the proposal-only Dynamics Atlas Profile Agent for an exposed development case.\n\nUse only the task packet in the user message. Return exactly one JSON object matching the supplied strict schema. Do not mention or infer a sealed reference, expected Rule, legal route, selected action, terminal disposition, or scientific approval. Do not request or use tools.\n\nThe four core proposal fields are unverified facts for deterministic admission. Preserve missing or conflicting information explicitly as UNKNOWN rather than inventing a value.\n\nCreate exactly one proposed edge for each unordered pair of proposed sources. Put all relation, condition, bridge, validation-independence, and shared-error statements for that pair in that one edge. Never create multiple edges for the same source pair.\n\nCreate exactly one field annotation for every critical CASE, SOURCE, and EDGE field. Annotation targets must use identifiers from your own proposal:\n\n- for a CASE annotation, target_id must equal the exact top-level case_id;\n- for a SOURCE annotation, target_id must equal one proposed source_id;\n- for an EDGE annotation, target_id must equal one proposed edge_id.\n\nEach annotation must use only the controlled status values and evidence pointers permitted by the schema. Evidence pointers must refer to an exact public source locator, an exact permitted fact, or a string-leaf JSON pointer in the visible packet.\n\nYour proposal has no Rule, execution, review, or scientific authority.",
+      "role": "system"
+    },
+    {
+      "content": "Task packet:\n{\"agent_proposal_schema\":{\"allowed_output_fields\":[\"case_id\",\"proposed_case_facts\",\"unknowns\",\"rationale\"],\"proposed_case_facts_contract\":{\"case\":[\"scientific_claim\",\"requested_claim_level\",\"intended_use\",\"declared_request_scope\",\"forbidden_upgrades\"],\"edges\":[\"edge_id\",\"left_source_id\",\"right_source_id\",\"relation_type\",\"condition_relation\",\"bridge_status\",\"validation_independence\",\"shared_error_status\"],\"sources\":[\"source_id\",\"evidence_role\",\"construct_and_condition\",\"sample_composition\",\"native_observable\",\"estimand\",\"time_semantics\",\"spatial_support\",\"unit_or_aggregation\"]}},\"case_id\":\"ADK_EXPOSED_PORTABILITY_V1\",\"data_assets\":[{\"asset_id\":\"ADK_1AKE_CHAIN_A_CA\",\"asset_kind\":\"STATIC_REFERENCE_COORDINATES\",\"public_description\":\"Closed-endpoint Chain A C-alpha coordinate derivative.\"},{\"asset_id\":\"ADK_4AKE_CHAIN_A_CA\",\"asset_kind\":\"STATIC_REFERENCE_COORDINATES\",\"public_description\":\"Open-endpoint Chain A C-alpha coordinate derivative.\"},{\"asset_id\":\"ADK_1E4V_G10V_SOURCE_PDB\",\"asset_kind\":\"STATIC_NONREFERENCE_SOURCE_PDB\",\"public_description\":\"Original frozen official RCSB PDB record for the G10V non-reference static sample.\"},{\"asset_id\":\"ADK_1E4V_G10V_CHAIN_A_CA\",\"asset_kind\":\"STATIC_NONREFERENCE_COORDINATES\",\"public_description\":\"G10V Chain A C-alpha coordinate derivative for one reference-relative static comparison.\"}],\"packet_id\":\"ADK_PUBLIC_PACKET_V1\",\"research_question\":\"Given open and closed ADK structural anchors and one supplied non-reference static structure, what reference-relative conformational coverage can be described, and which dynamical, population, kinetic, energetic, or mechanistic interpretations remain unsupported?\",\"schema_version\":\"paper-blind-agent-visible-input/v1\",\"source_materials\":[{\"excluded_sections\":[\"Abstract\",\"Discussion\",\"Conclusion\",\"Prior DynaMune result trees\"],\"permitted_facts\":[\"The source uses PDB 1AKE as a closed adenylate-kinase endpoint and PDB 4AKE as an open endpoint.\",\"The described endpoint preparation removes solvent and heteroatoms and does not perform structural refinement before comparison.\",\"The source is context for static structural anchors; it does not supply an independently deposited ADK trajectory or population estimate.\"],\"source_id\":\"ADK_ENDPOINT_CONTEXT\",\"source_kind\":\"PRIMARY_PREPRINT_METHODS_RESULTS\",\"source_locator\":\"Raghuram, DynaMune preprint 2026, DOI 10.21203/rs.3.rs-8999467/v1; local text derivative Section 3.1 lines 397-710.\"},{\"excluded_sections\":[\"Abstract\",\"Discussion\",\"Conclusion\",\"Unfrozen coordinate variants\"],\"permitted_facts\":[\"The admitted non-reference input is the static E. coli adenylate-kinase G10V PDB structure 1E4V.\",\"The frozen derivative retains Chain A C-alpha coordinates in residue order 1-214.\",\"This static mutant structure is a non-reference sample for a descriptive geometric comparison only; it is not a trajectory, ensemble, wild-type equivalence result, or dynamical state assignment.\"],\"source_id\":\"ADK_1E4V_G10V_STRUCTURE\",\"source_kind\":\"PUBLIC_RCSB_STATIC_STRUCTURE_RECORD\",\"source_locator\":\"RCSB PDB entry 1E4V, https://www.rcsb.org/structure/1E4V; official archive data usage policy https://www.rcsb.org/pages/usage-policy.\"},{\"excluded_sections\":[\"Discussion\",\"Conclusion\",\"Prior ADK development scripts\",\"Prior normal-mode outputs\"],\"permitted_facts\":[\"All three frozen Chain A coordinate arrays have declared residue-order coverage 1-214.\",\"The two endpoint arrays are references; 1E4V G10V is the only non-reference sample in this development packet.\",\"A rigidly aligned RMSD can describe whole-chain reference-relative proximity but cannot establish a transition path, population, kinetic process, free energy, mechanism, or portability.\"],\"source_id\":\"ADK_COORDINATE_DERIVATIVES\",\"source_kind\":\"FROZEN_PDB_COORDINATE_DERIVATIVES\",\"source_locator\":\"frozen_input_manifest_v1.json assets ADK_1AKE_CHAIN_A_CA, ADK_4AKE_CHAIN_A_CA, ADK_1E4V_G10V_SOURCE_PDB, and ADK_1E4V_G10V_CHAIN_A_CA.\"}]}",
+      "role": "user"
+    }
+  ],
+  "model": "minimax/minimax-m2.5",
+  "provider": {
+    "allow_fallbacks": false,
+    "max_price": {
+      "completion": 1.08,
+      "prompt": 0.27,
+      "request": 0.0
+    },
+    "only": [
+      "streamlake"
+    ],
+    "require_parameters": true
+  },
+  "response_format": {
+    "json_schema": {
+      "name": "dynamics_atlas_PROFILER_proposal",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "The existing four-field proposal is the only routing input. field_annotations are diagnostic-only.",
+        "properties": {
+          "case_id": {
+            "const": "ADK_EXPOSED_PORTABILITY_V1",
+            "type": "string"
+          },
+          "field_annotations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "confidence": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "evidence_pointers": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "pointer_type": {
+                        "enum": [
+                          "SOURCE_LOCATOR",
+                          "PERMITTED_FACT",
+                          "PACKET_POINTER"
+                        ],
+                        "type": "string"
+                      },
+                      "source_id": {
+                        "enum": [
+                          "ADK_ENDPOINT_CONTEXT",
+                          "ADK_1E4V_G10V_STRUCTURE",
+                          "ADK_COORDINATE_DERIVATIVES",
+                          "PACKET"
+                        ],
+                        "type": "string"
+                      },
+                      "value": {
+                        "minLength": 1,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "pointer_type",
+                      "source_id",
+                      "value"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "field": {
+                  "enum": [
+                    "bridge_status",
+                    "condition_relation",
+                    "construct_and_condition",
+                    "declared_request_scope",
+                    "estimand",
+                    "forbidden_upgrades",
+                    "intended_use",
+                    "native_observable",
+                    "relation_type",
+                    "requested_claim_level",
+                    "sample_composition",
+                    "scientific_claim",
+                    "shared_error_status",
+                    "spatial_support",
+                    "time_semantics.kind",
+                    "unit_or_aggregation",
+                    "validation_independence"
+                  ],
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "EXTRACTED",
+                    "INFERRED_WITH_SUPPORT",
+                    "UNKNOWN",
+                    "CONFLICTING_SOURCES",
+                    "HUMAN_CHECK_REQUIRED"
+                  ],
+                  "type": "string"
+                },
+                "target_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "target_type": {
+                  "enum": [
+                    "CASE",
+                    "SOURCE",
+                    "EDGE"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target_type",
+                "target_id",
+                "field",
+                "status",
+                "evidence_pointers",
+                "confidence"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "proposed_case_facts": {
+            "additionalProperties": false,
+            "properties": {
+              "case": {
+                "additionalProperties": false,
+                "properties": {
+                  "declared_request_scope": {
+                    "items": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "forbidden_upgrades": {
+                    "items": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "intended_use": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "requested_claim_level": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "scientific_claim": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scientific_claim",
+                  "requested_claim_level",
+                  "intended_use",
+                  "declared_request_scope",
+                  "forbidden_upgrades"
+                ],
+                "type": "object"
+              },
+              "edges": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "bridge_status": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "condition_relation": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "edge_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "left_source_id": {
+                      "enum": [
+                        "ADK_ENDPOINT_CONTEXT",
+                        "ADK_1E4V_G10V_STRUCTURE",
+                        "ADK_COORDINATE_DERIVATIVES"
+                      ],
+                      "type": "string"
+                    },
+                    "relation_type": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "right_source_id": {
+                      "enum": [
+                        "ADK_ENDPOINT_CONTEXT",
+                        "ADK_1E4V_G10V_STRUCTURE",
+                        "ADK_COORDINATE_DERIVATIVES"
+                      ],
+                      "type": "string"
+                    },
+                    "shared_error_status": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "validation_independence": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "edge_id",
+                    "left_source_id",
+                    "right_source_id",
+                    "relation_type",
+                    "condition_relation",
+                    "bridge_status",
+                    "validation_independence",
+                    "shared_error_status"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "sources": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "construct_and_condition": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "estimand": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "evidence_role": {
+                      "enum": [
+                        "CONSTRUCTION",
+                        "DIAGNOSTIC",
+                        "FIT_TARGET",
+                        "HELD_OUT_VALIDATION",
+                        "UNKNOWN"
+                      ],
+                      "type": "string"
+                    },
+                    "native_observable": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "sample_composition": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "source_id": {
+                      "enum": [
+                        "ADK_ENDPOINT_CONTEXT",
+                        "ADK_1E4V_G10V_STRUCTURE",
+                        "ADK_COORDINATE_DERIVATIVES"
+                      ],
+                      "type": "string"
+                    },
+                    "spatial_support": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "time_semantics": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "kind": {
+                          "minLength": 1,
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "kind"
+                      ],
+                      "type": "object"
+                    },
+                    "unit_or_aggregation": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_id",
+                    "evidence_role",
+                    "construct_and_condition",
+                    "sample_composition",
+                    "native_observable",
+                    "estimand",
+                    "time_semantics",
+                    "spatial_support",
+                    "unit_or_aggregation"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "case",
+              "sources",
+              "edges"
+            ],
+            "type": "object"
+          },
+          "rationale": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "unknowns": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "case_id",
+          "proposed_case_facts",
+          "unknowns",
+          "rationale",
+          "field_annotations"
+        ],
+        "title": "Dynamics Atlas compatible Profiler proposal envelope",
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "stream": false,
+  "temperature": 0
+}

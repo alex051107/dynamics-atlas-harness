@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +27,14 @@ from .workspace import (
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+LIVE_AGENT_CAMPAIGN_LEDGER_PATH = (
+    REPO_ROOT / "local" / "live_agent_common_flows_v1" / "budget_ledger.json"
+)
+LIVE_AGENT_CAMPAIGN_CLOSED_STATUS = "CLOSED_FROZEN_AFTER_13_COMPLETED_CALLS"
+LIVE_AGENT_CAMPAIGN_OPEN_STATUS = "AUTHORIZED_FOR_LIVE_CALLS"
+LIVE_AGENT_CAMPAIGN_CLOSED_ERROR = (
+    "LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION"
+)
 OPERATOR_REGISTRY_PATH = REPO_ROOT / "config" / "operators.json"
 METHOD_PROFILE_REGISTRY_PATH = REPO_ROOT / "config" / "method_profiles.json"
 FIXTURE_ALLOWED_ROOT = REPO_ROOT / "tests" / "fixtures"
@@ -340,6 +349,127 @@ def run_case(args: argparse.Namespace) -> int:
     return 0
 
 
+def _open_live_agent_campaign_budget(
+    config: dict[str, Any],
+    *,
+    requested_cap: Decimal | None = None,
+):
+    """Open the one persisted ledger shared by every live CLI entry point."""
+
+    from .openrouter_proposal_transport_v1 import OpenRouterBudgetLedger
+
+    frozen_cap = Decimal(str(config["budget_usd"]))
+    if requested_cap is not None and requested_cap != frozen_cap:
+        raise ValueError("LIVE_AGENT_BUDGET_MUST_MATCH_FROZEN_CAMPAIGN_CAP")
+    return OpenRouterBudgetLedger(
+        cap_usd=frozen_cap,
+        max_completed_calls=int(config["max_completed_calls"]),
+        max_attempts_per_cell=int(config["max_attempts_per_exact_role_case_model"]),
+        campaign_id=str(config["campaign_id"]),
+        state_path=LIVE_AGENT_CAMPAIGN_LEDGER_PATH,
+    )
+
+
+def _require_live_agent_campaign_open(config: dict[str, Any]) -> None:
+    """Reuse the runtime guard so CLI and Python APIs cannot drift."""
+
+    from .live_agent_common_flows_v1 import require_live_agent_campaign_open
+
+    require_live_agent_campaign_open(config)
+
+
+def run_agent_case(args: argparse.Namespace) -> int:
+    """Run the canonical recorded-default or explicit live proposal path."""
+
+    if args.agent_mode == "recorded":
+        from .case_runner_v1 import run_case_v1
+
+        run_case_v1(case_id=args.case_id, output_dir=Path(args.output_dir))
+        return 0
+
+    from .live_agent_common_flows_v1 import (
+        _model_entry,
+        load_campaign_config,
+        run_live_agent_case,
+    )
+    from .openrouter_proposal_transport_v1 import (
+        OpenRouterProposalClient,
+        read_openrouter_credential,
+    )
+
+    config = load_campaign_config()
+    _require_live_agent_campaign_open(config)
+    cap = Decimal(args.budget_usd)
+    _model_entry(config, args.model_profile)
+    credential = read_openrouter_credential(repo_root=REPO_ROOT)
+    client = OpenRouterProposalClient(
+        credential=credential,
+        budget=_open_live_agent_campaign_budget(config, requested_cap=cap),
+    )
+    result = run_live_agent_case(
+        case_id=args.case_id,
+        output_dir=Path(args.output_dir),
+        model_profile=args.model_profile,
+        client=client,
+        config=config,
+    )
+    return 0 if result["status"] == "SUCCEEDED" else 2
+
+
+def run_agent_campaign(args: argparse.Namespace) -> int:
+    """Run the frozen OpenRouter development matrix within the authorized cap."""
+
+    from .live_agent_common_flows_v1 import (
+        load_campaign_config,
+        run_live_agent_campaign,
+    )
+
+    config = load_campaign_config()
+    _require_live_agent_campaign_open(config)
+    budget = _open_live_agent_campaign_budget(config)
+    manifest = run_live_agent_campaign(
+        output_dir=Path(args.output_dir),
+        budget=budget,
+        config=config,
+    )
+    return 2 if manifest["status"] == "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL" else 0
+
+
+def run_scenario_suite(args: argparse.Namespace) -> int:
+    """Run the deterministic four-route, three-terminal engineering suite."""
+
+    from .common_flow_scenarios_v1 import run_common_flow_scenario_suite
+
+    run_common_flow_scenario_suite(output_dir=Path(args.output_dir))
+    return 0
+
+
+def build_workbench(args: argparse.Namespace) -> int:
+    """Render CaseView-compatible roots and an optional scenario matrix."""
+
+    from .review_console_v0 import (
+        DEFAULT_CAPSULE_ROOT,
+        DEFAULT_REVIEW_WORKSPACE,
+        render_review_console,
+    )
+
+    render_review_console(
+        status_path=Path(args.status),
+        capsule_root=Path(args.capsule_root) if args.capsule_root else DEFAULT_CAPSULE_ROOT,
+        case_roots=[Path(path) for path in args.artifact_roots]
+        if args.artifact_roots
+        else None,
+        review_workspace=Path(args.review_workspace)
+        if args.review_workspace
+        else DEFAULT_REVIEW_WORKSPACE,
+        scenario_matrix_path=(
+            Path(args.scenario_matrix) if args.scenario_matrix else None
+        ),
+        output_dir=Path(args.output_dir),
+    )
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -398,6 +528,55 @@ def build_parser() -> argparse.ArgumentParser:
         help="A new or empty directory for fresh case artifacts.",
     )
     case_parser.set_defaults(handler=run_case)
+    agent_case_parser = subparsers.add_parser(
+        "run-agent-case",
+        help=(
+            "Canonical exposed-case path. Recorded replay is the no-network default; "
+            "live OpenRouter must be selected explicitly."
+        ),
+    )
+    agent_case_parser.add_argument("--case-id", required=True)
+    agent_case_parser.add_argument("--output-dir", required=True)
+    agent_case_parser.add_argument(
+        "--agent-mode",
+        choices=("recorded", "live-openrouter"),
+        default="recorded",
+    )
+    agent_case_parser.add_argument(
+        "--model-profile",
+        choices=("luna", "deepseek", "minimax"),
+        default="luna",
+        help="Frozen OpenRouter model/provider profile; ignored in recorded mode.",
+    )
+    agent_case_parser.add_argument(
+        "--budget-usd",
+        default="5.00",
+        help="Live-only client-side cap, never above the authorized USD 5.00.",
+    )
+    agent_case_parser.set_defaults(handler=run_agent_case)
+    campaign_parser = subparsers.add_parser(
+        "run-agent-campaign",
+        help="Run the frozen 16-call-maximum OpenRouter comparison campaign.",
+    )
+    campaign_parser.add_argument("--output-dir", required=True)
+    campaign_parser.set_defaults(handler=run_agent_campaign)
+    scenario_parser = subparsers.add_parser(
+        "run-scenario-suite",
+        help="Run the deterministic direct/lookup/computation/stop scenarios.",
+    )
+    scenario_parser.add_argument("--output-dir", required=True)
+    scenario_parser.set_defaults(handler=run_scenario_suite)
+    workbench_parser = subparsers.add_parser(
+        "build-workbench",
+        help="Render a static read-only workbench from case/run roots.",
+    )
+    workbench_parser.add_argument("--status", required=True)
+    workbench_parser.add_argument("--artifact-root", dest="artifact_roots", action="append")
+    workbench_parser.add_argument("--scenario-matrix")
+    workbench_parser.add_argument("--capsule-root")
+    workbench_parser.add_argument("--review-workspace")
+    workbench_parser.add_argument("--output-dir", required=True)
+    workbench_parser.set_defaults(handler=build_workbench)
     return parser
 
 
@@ -405,3 +584,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     return int(args.handler(args))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

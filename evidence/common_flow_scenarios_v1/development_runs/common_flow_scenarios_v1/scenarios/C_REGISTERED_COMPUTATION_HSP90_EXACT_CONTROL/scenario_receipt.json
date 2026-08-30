@@ -1,0 +1,49 @@
+{
+  "action_count": 1,
+  "actual_cost": 0.0,
+  "actual_route": "REGISTERED_OPERATOR",
+  "affected_rule_instance": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+  "after_rule_result": {
+    "missing_paths": [],
+    "reason_codes": [
+      "CASE_BOUND_TIME_ANATOMY_CONTROL_EVIDENCE_VALIDATED"
+    ],
+    "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+    "status": "PASS"
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/pre_rule_result.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/resolution_route.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/operator_run_receipt.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/evidence_result.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/post_rule_result.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/conclusion_packet.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/stage2_conclusion_packet.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/run_receipt.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/scenario_receipt.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/directional_runs.tsv",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/results_summary.json",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/trajectory_time_anatomy.tsv",
+    "scenarios/C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL/routes/hsp90_b1/operator_outputs/trajectory_time_bins_50ns.tsv"
+  ],
+  "authority_status": "PENDING_HUMAN_VALIDATION_EXACT_CONTROL_ONLY",
+  "before_rule_result": {
+    "missing_paths": [],
+    "reason_codes": [
+      "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING"
+    ],
+    "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+    "status": "UNRESOLVED"
+  },
+  "case_id": "hsp90_directional_time_anatomy_development_v1_alpha",
+  "claim_ceiling": "EXACT_CONTROL_ONLY: At most, the exact frozen same-packet diagnostic has a validated trajectory-level control record. No transition rate, equilibrium, population, free-energy, pathway, mechanism, or mutation claim is emitted.",
+  "deterministic_authorization": "AUTHORIZED_EXACT_REGISTERED_OPERATOR",
+  "evidence_result_class": "OPERATOR_EVIDENCE_RESULT",
+  "expected_route_family": "REGISTERED_COMPUTATION",
+  "input_role": "COMPUTABLE_EXACT_CONTROL_EVIDENCE_MISSING",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+}

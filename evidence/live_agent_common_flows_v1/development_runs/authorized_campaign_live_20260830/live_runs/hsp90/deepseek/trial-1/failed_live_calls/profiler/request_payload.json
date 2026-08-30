@@ -1,0 +1,363 @@
+{
+  "max_tokens": 16000,
+  "messages": [
+    {
+      "content": "You are the proposal-only Dynamics Atlas Profile Agent for an exposed development case.\n\nUse only the task packet in the user message. Return exactly one JSON object matching the supplied strict schema. Do not mention or infer a sealed reference, expected Rule, legal route, selected action, terminal disposition, or scientific approval. Do not request or use tools.\n\nThe four core proposal fields are unverified facts for deterministic admission. Preserve missing or conflicting information explicitly as UNKNOWN rather than inventing a value. Create one field annotation for every critical CASE, SOURCE, and EDGE field. Each annotation must use only the controlled status values and evidence pointers permitted by the schema. Evidence pointers must refer to an exact public source locator, an exact permitted fact, or a string-leaf JSON pointer in the visible packet.\n\nYour proposal has no Rule, execution, review, or scientific authority.",
+      "role": "system"
+    },
+    {
+      "content": "Task packet:\n{\"agent_proposal_schema\":{\"allowed_output_fields\":[\"case_id\",\"proposed_case_facts\",\"unknowns\",\"rationale\"],\"proposed_case_facts_contract\":{\"case\":[\"scientific_claim\",\"requested_claim_level\",\"intended_use\",\"declared_request_scope\",\"forbidden_upgrades\"],\"edges\":[\"edge_id\",\"left_source_id\",\"right_source_id\",\"relation_type\",\"condition_relation\",\"bridge_status\",\"validation_independence\",\"shared_error_status\"],\"sources\":[\"source_id\",\"evidence_role\",\"construct_and_condition\",\"sample_composition\",\"native_observable\",\"estimand\",\"time_semantics\",\"spatial_support\",\"unit_or_aggregation\"]}},\"case_id\":\"HSP90_NTD_EXPOSED_PAPER_BLIND_V1\",\"data_assets\":[{\"asset_id\":\"HSP90_CA46_CA60_DISTANCE_40X1021\",\"asset_kind\":\"ORDERED_REPLICA_BY_TIME_OBSERVABLE\",\"public_description\":\"Frozen derived C-alpha distance observable; no state assignment or terminal conclusion.\"},{\"asset_id\":\"HSP90_TRAJECTORY_IDS\",\"asset_kind\":\"ROW_ALIGNED_TRAJECTORY_IDENTITY_TABLE\",\"public_description\":\"One ordered trajectory identifier per observable row.\"},{\"asset_id\":\"HSP90_TRAJECTORY_GROUP_MANIFEST\",\"asset_kind\":\"ROW_ALIGNED_SEED_LINEAGE_GROUP_TABLE\",\"public_description\":\"Declared R46A_ES and R60A_GS seed-lineage labels retained separately for descriptive group summaries.\"}],\"packet_id\":\"HSP90_PUBLIC_PACKET_V1\",\"research_question\":\"Given the available HSP90 NMR evidence and the supplied seeded MD trajectories, what aspects of the conformational relationship between the simulated paths and experimentally characterized ATP-lid states are supported descriptively, what remain unresolved, what stronger claims must be refused, and what additional evidence would discriminate the remaining interpretations?\",\"schema_version\":\"paper-blind-agent-visible-input/v1\",\"source_materials\":[{\"excluded_sections\":[\"Abstract\",\"Discussion\",\"Conclusion\",\"Supplementary interpretation\"],\"permitted_facts\":[\"The source studies the HSP90alpha N-terminal domain and ATP-lid segment using solution NMR measurements.\",\"The Methods describe wild-type, R46A, and R60A construct-specific NMR measurements, including relaxation-dispersion experiments.\",\"The public packet supplies no validated numerical forward model from the NMR readouts to a local MD-derived observable.\",\"The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand.\"],\"source_id\":\"HSP90_NMR_METHODS_RESULTS\",\"source_kind\":\"PRIMARY_PAPER_METHODS_RESULTS\",\"source_locator\":\"Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623.\"},{\"excluded_sections\":[\"Discussion\",\"Conclusion\",\"Prior trajectory result files\",\"Precomputed route output\"],\"permitted_facts\":[\"The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60.\",\"Each row has one frozen trajectory identifier and one declared seed-lineage label; 20 rows retain R46A_ES and 20 retain R60A_GS labels.\",\"Frames are correlated within a trajectory; the trajectory is the primary supplied statistical unit.\",\"The packet does not assign states, estimate populations or kinetics, evaluate global equilibration, or supply a validated NMR forward model.\"],\"source_id\":\"HSP90_MD_DISTANCE_TRACE\",\"source_kind\":\"FROZEN_DERIVED_TRAJECTORY_OBSERVABLE\",\"source_locator\":\"frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021, HSP90_TRAJECTORY_IDS, and HSP90_TRAJECTORY_GROUP_MANIFEST.\"}]}",
+      "role": "user"
+    }
+  ],
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "provider": {
+    "allow_fallbacks": false,
+    "max_price": {
+      "completion": 0.18,
+      "prompt": 0.065,
+      "request": 0.0
+    },
+    "only": [
+      "sail-research/fp4"
+    ],
+    "require_parameters": true
+  },
+  "response_format": {
+    "json_schema": {
+      "name": "dynamics_atlas_PROFILER_proposal",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "The existing four-field proposal is the only routing input. field_annotations are diagnostic-only.",
+        "properties": {
+          "case_id": {
+            "const": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+            "type": "string"
+          },
+          "field_annotations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "confidence": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "evidence_pointers": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "pointer_type": {
+                        "enum": [
+                          "SOURCE_LOCATOR",
+                          "PERMITTED_FACT",
+                          "PACKET_POINTER"
+                        ],
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      "source_id": {
+                        "enum": [
+                          "HSP90_NMR_METHODS_RESULTS",
+                          "HSP90_MD_DISTANCE_TRACE",
+                          "PACKET"
+                        ],
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      "value": {
+                        "minLength": 1,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "pointer_type",
+                      "source_id",
+                      "value"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "field": {
+                  "enum": [
+                    "bridge_status",
+                    "condition_relation",
+                    "construct_and_condition",
+                    "declared_request_scope",
+                    "estimand",
+                    "forbidden_upgrades",
+                    "intended_use",
+                    "native_observable",
+                    "relation_type",
+                    "requested_claim_level",
+                    "sample_composition",
+                    "scientific_claim",
+                    "shared_error_status",
+                    "spatial_support",
+                    "time_semantics.kind",
+                    "unit_or_aggregation",
+                    "validation_independence"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "EXTRACTED",
+                    "INFERRED_WITH_SUPPORT",
+                    "UNKNOWN",
+                    "CONFLICTING_SOURCES",
+                    "HUMAN_CHECK_REQUIRED"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "target_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "target_type": {
+                  "enum": [
+                    "CASE",
+                    "SOURCE",
+                    "EDGE"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target_type",
+                "target_id",
+                "field",
+                "status",
+                "evidence_pointers",
+                "confidence"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "proposed_case_facts": {
+            "additionalProperties": false,
+            "properties": {
+              "case": {
+                "additionalProperties": false,
+                "properties": {
+                  "declared_request_scope": {
+                    "items": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "forbidden_upgrades": {
+                    "items": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "intended_use": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "requested_claim_level": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "scientific_claim": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scientific_claim",
+                  "requested_claim_level",
+                  "intended_use",
+                  "declared_request_scope",
+                  "forbidden_upgrades"
+                ],
+                "type": "object"
+              },
+              "edges": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "bridge_status": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "condition_relation": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "edge_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "left_source_id": {
+                      "enum": [
+                        "HSP90_NMR_METHODS_RESULTS",
+                        "HSP90_MD_DISTANCE_TRACE"
+                      ],
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "relation_type": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "right_source_id": {
+                      "enum": [
+                        "HSP90_NMR_METHODS_RESULTS",
+                        "HSP90_MD_DISTANCE_TRACE"
+                      ],
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "shared_error_status": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "validation_independence": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "edge_id",
+                    "left_source_id",
+                    "right_source_id",
+                    "relation_type",
+                    "condition_relation",
+                    "bridge_status",
+                    "validation_independence",
+                    "shared_error_status"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "sources": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "construct_and_condition": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "estimand": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "evidence_role": {
+                      "enum": [
+                        "CONSTRUCTION",
+                        "DIAGNOSTIC",
+                        "FIT_TARGET",
+                        "HELD_OUT_VALIDATION",
+                        "UNKNOWN"
+                      ],
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "native_observable": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "sample_composition": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "source_id": {
+                      "enum": [
+                        "HSP90_NMR_METHODS_RESULTS",
+                        "HSP90_MD_DISTANCE_TRACE"
+                      ],
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "spatial_support": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "time_semantics": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "kind": {
+                          "minLength": 1,
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "kind"
+                      ],
+                      "type": "object"
+                    },
+                    "unit_or_aggregation": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_id",
+                    "evidence_role",
+                    "construct_and_condition",
+                    "sample_composition",
+                    "native_observable",
+                    "estimand",
+                    "time_semantics",
+                    "spatial_support",
+                    "unit_or_aggregation"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "case",
+              "sources",
+              "edges"
+            ],
+            "type": "object"
+          },
+          "rationale": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "unknowns": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "case_id",
+          "proposed_case_facts",
+          "unknowns",
+          "rationale",
+          "field_annotations"
+        ],
+        "title": "Dynamics Atlas compatible Profiler proposal envelope",
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "stream": false,
+  "temperature": 0
+}

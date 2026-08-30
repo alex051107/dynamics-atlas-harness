@@ -1,16 +1,17 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v15",
-  "as_of": "2026-08-30T12:11:03Z",
-  "status_snapshot_as_of": "2026-08-30T12:11:03Z",
-  "overall_status": "BOUNDED_ENGINEERING_INTEGRATION_BASELINE_V1_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v18",
+  "as_of": "2026-08-30T15:07:13Z",
+  "status_snapshot_as_of": "2026-08-30T15:07:13Z",
+  "overall_status": "LIVE_AGENT_COMMON_FLOWS_V1_COMPLETE_AWAITING_HUMAN_MERGE_REVIEW",
   "repository_baseline": {
     "bounded_engineering_integration_base_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
+    "live_agent_common_flows_base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
     "baseline_tag": "bounded-engineering-integration-baseline-v1",
     "baseline_semantics": "The recorded base and implementation commits identify the bounded engineering integration baseline; they are not a live assertion about current main, delivery head, merge state, or CI result.",
     "delivery_state_authority": "GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE",
-    "accurate_name": "Bounded recorded-replay evidence execution and inspection baseline for two exposed development cases; named domain review remains the scientific gate"
+    "accurate_name": "One bounded real OpenRouter HSP90 proposal-to-action development chain plus deterministic common-flow suite; the 13-call campaign is closed and frozen behind a persistent budget ledger and closed-campaign guard, human merge review is the delivery gate, and named domain review remains the scientific gate"
   },
   "work_items": [
     {
@@ -196,6 +197,82 @@
       "authority_note": "This record reports local engineering behavior only. Advisory source reconciliation is not a named official review and does not activate a Rule, phase, Operator, or scientific conclusion."
     },
     {
+      "role": "LIVE_AGENT_COMMON_FLOWS_V1",
+      "branch": "feature/live-agent-common-flows-v1",
+      "base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
+      "state": "ACTUAL_LIVE_CAMPAIGN_CLOSED_FROZEN_AFTER_13_CALLS_AND_ONE_FULL_CHAIN_SUCCESS",
+      "authorization": "USER_DIRECTION_20260830_LIVE_AGENT_AND_COMMON_FLOW_PHASE",
+      "scope": [
+        "OPENROUTER_STRICT_JSON_SCHEMA_PROPOSAL_TRANSPORT",
+        "LIVE_PROFILER_AND_PLANNER_SAME_DETERMINISTIC_RUNNER_PATH",
+        "TWO_EXPOSED_CASES",
+        "FROZEN_LUNA_DEEPSEEK_MINIMAX_PANEL_WITH_TERRA_DIAGNOSTIC_FALLBACK",
+        "USD_5_MAXIMUM_AND_16_COMPLETED_CALL_MAXIMUM",
+        "DIRECT_LOOKUP_REGISTERED_COMPUTATION_AND_STOP_SCENARIOS",
+        "THREE_ENGINEERING_REDUCER_BEHAVIORS",
+        "CASEVIEW_AND_STATIC_WORKBENCH_PROJECTION"
+      ],
+      "observed_result": {
+        "mocked_live_transport_and_runner_integration": "PASS",
+        "deterministic_common_flow_scenarios": 6,
+        "route_families": [
+          "DIRECT_EVALUATION",
+          "NARROW_LOOKUP",
+          "REGISTERED_COMPUTATION",
+          "EXPLICIT_STOP"
+        ],
+        "terminal_behaviors": [
+          "SUPPORT_WITHIN_CEILING_SYNTHETIC_ONLY",
+          "CANNOT_SUPPORT_REQUESTED_CLAIM",
+          "ABSTAIN_OR_HUMAN_REVIEW"
+        ],
+        "actual_live_openrouter_http_attempts": 17,
+        "actual_live_openrouter_completed_calls": 13,
+        "provider_http_400_before_completion": 4,
+        "actual_external_cost_usd": "0.145264010",
+        "campaign_max_completed_calls": 16,
+        "all_frozen_cells_executed": false,
+        "campaign_stop_reason": "ADAPTIVE_STOP_AFTER_FIRST_FULL_CHAIN_SUCCESS",
+        "live_call_status": "CAMPAIGN_CLOSED_FROZEN",
+        "credential_source": "AUTHORIZED_LOCAL_EXCEL_BENCHMARK_SECRET_INJECTED_TO_INHERITED_ENVIRONMENT",
+        "credential_value_printed": false,
+        "credential_value_logged": false,
+        "credential_value_hashed": false,
+        "credential_value_persisted": false,
+        "successful_full_chain_count": 1,
+        "successful_full_chain_artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
+        "successful_full_chain": {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "profiler": "FROZEN_CORE_ADMITTED_MINIMAX_M2_5_STREAMLAKE",
+          "planner": "LIVE_MINIMAX_M2_5_STREAMLAKE_ADMITTED",
+          "authorized_action_count": 1,
+          "evidence_result_class": "DESCRIPTIVE_ANALYSIS_ONLY",
+          "active_rule_effect_count": 0,
+          "rule_results_changed": false,
+          "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
+          "scientific_disposition": "NOT_EVALUATED"
+        },
+        "profiler_results": {
+          "hsp90_luna": "CORE_PASS_X2_ANNOTATION_DIAGNOSTIC_FAIL_X2",
+          "hsp90_minimax": "BOUNDED_REPAIR_CORE_PASS_FROZEN_FOR_SUCCESSFUL_FULL_CHAIN",
+          "hsp90_terra": "DIAGNOSTIC_FALLBACK_CORE_PASS_COMPATIBILITY_DIAGNOSTIC_FAIL",
+          "hsp90_deepseek": "JSON_SCHEMA_OR_PROVIDER_RESPONSE_FAILURE_NO_USABLE_CORE",
+          "adk_all_models": "CORE_FAIL_NO_LIVE_ADK_ROUTE"
+        },
+        "planner_results": {
+          "luna": "TWO_HTTP_400_SCHEMA_REQUEST_FAILURES_ZERO_COMPLETED_CALLS_ZERO_COST",
+          "minimax": "STRICT_TYPED_PROPOSAL_ADMITTED_AND_EXACTLY_ONE_CARD_AUTHORIZED"
+        },
+        "held_out_accessed": false,
+        "completion_receipt": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_campaign_manifest.json",
+        "development_matrix": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_development_matrix.json",
+        "persistent_budget_ledger": "IMPLEMENTED_WITH_RESERVATION_BEFORE_HTTP_AND_CROSS_PROCESS_ACCUMULATION",
+        "closed_campaign_guard": "CLI_AND_THREE_PUBLIC_RUNTIME_ENTRIES_FAIL_BEFORE_OUTPUT_CREDENTIAL_CLIENT_OR_NETWORK_WITHOUT_NEW_AUTHORIZATION",
+        "workbench_comparison": "RECORDED_AND_LIVE_HSP90_ROOTS_RENDERED_WITH_COMMON_FLOW_MATRIX"
+      },
+      "authority_note": "The artifacts establish one actual development-only OpenRouter Profiler-to-Planner-to-authorized-descriptive-action chain and bounded model failure diagnostics. They do not establish Agent value, source-science approval, broad scientific closure, ADK portability, or held-out behavior."
+    },
+    {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
       "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
@@ -319,6 +396,35 @@
       ]
     },
     {
+      "stage": "LIVE_AGENT_COMMON_FLOWS_V1",
+      "status": "ACTUAL_LIVE_FULL_CHAIN_OBSERVED_CAMPAIGN_CLOSED_FROZEN",
+      "known_present": [
+        "STRICT_TOOLLESS_OPENROUTER_TRANSPORT",
+        "FROZEN_MODEL_PROVIDER_AND_BUDGET_MATRIX",
+        "LIVE_PROFILER_COMPATIBILITY_ENVELOPE",
+        "LIVE_PLANNER_CURRENT_LEGAL_CARD_SCHEMA",
+        "SAME_RUNNER_ADMISSION_AUTHORIZATION_EXECUTION_AND_CASEVIEW_PATH",
+        "FOUR_COMMON_ROUTE_FAMILIES",
+        "THREE_ENGINEERING_REDUCER_BEHAVIORS",
+        "FAIL_CLOSED_LIVE_RECEIPT_AND_RAW_RESPONSE_INTEGRITY",
+        "READ_ONLY_WORKBENCH_SCENARIO_MATRIX",
+        "SEVENTEEN_HTTP_ATTEMPTS_THIRTEEN_COMPLETED_OPENROUTER_CALLS_WITH_EXACT_USAGE_AND_COST",
+        "ONE_HSP90_MINIMAX_FULL_PROPOSAL_TO_ACTION_CHAIN",
+        "ADAPTIVE_STOP_BEFORE_SIXTEEN_AFTER_FIRST_FULL_CHAIN_SUCCESS",
+        "PERSISTENT_PRE_REQUEST_BUDGET_RESERVATION_AND_CROSS_PROCESS_LEDGER",
+        "CLOSED_CAMPAIGN_GUARD_BEFORE_OUTPUT_CREDENTIAL_CLIENT_OR_NETWORK_ACROSS_CLI_AND_RUNTIME",
+        "RECORDED_VERSUS_LIVE_HSP90_WORKBENCH_COMPARISON"
+      ],
+      "known_unresolved": [
+        "AGENT_VALUE",
+        "NAMED_SOURCE_SCIENCE_REVIEW",
+        "BROAD_SAME_RULE_CLOSURE",
+        "RUNNER_GENERATED_PUBLIC_CASE_CONCLUSION_PACKET",
+        "ADK_DYNAMIC_PORTABILITY",
+        "HELD_OUT_RESULT"
+      ]
+    },
+    {
       "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
       "status": "PENDING_DOMAIN_REVIEW",
       "known_present": [
@@ -347,12 +453,19 @@
       "known_unresolved": ["PRIOR_EXIT_GATES_AND_INDEPENDENT_CURATOR"]
     }
   ],
+  "authorized_development_action": {
+    "action": "PRESERVE_CLOSED_CAMPAIGN_AND_DELIVER_DRAFT_PR_FOR_HUMAN_REVIEW",
+    "deliverable": "DRAFT_PR_WITH_CANONICAL_LIVE_PATH_COMMON_FLOW_SUITE_AND_FROZEN_RECEIPTS",
+    "automatic_code_changes": false,
+    "authorization": "USER_DIRECTION_20260830_LIVE_AGENT_AND_COMMON_FLOW_PHASE",
+    "exit_gate": "A human reviews and decides whether to merge the Draft PR; tracked status does not self-record an exact final SHA or CI state because GitHub PR metadata owns those facts."
+  },
   "next_allowed_action": {
     "action": "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
     "deliverable": "COMPLETED_NARROW_SOURCE_GROUNDING_REVIEW_RECORD",
     "automatic_code_changes": false,
     "authorization": "RECORDED_USER_DIRECTION_DA-20260830-052",
-    "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
+    "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only exposed-case engineering evidence. The bounded engineering integration baseline records a recorded-replay evidence execution and inspection path: fresh Draft-Rule-derived Planner input, legal-card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, same-Rule attachment controls, explicit replay provenance, artifact-only CaseView projection, a static four-view workbench, a blank named-review form, advisory-only H1 reconciliation, and internal adversarial subagent review passes. These records establish no external or independent approval, independent answer blindness, live-Agent execution or performance, paper understanding, source-science approval, final scientific support, biological correctness, broad active-Rule closure, runner-generated ConclusionPacket, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, or held-out result."
+  "claim_ceiling": "Development-only engineering evidence. The branch records 17 HTTP attempts, 13 completed bounded OpenRouter calls costing USD 0.145264010, and one actual HSP90 chain in which a frozen core-admitted MiniMax Profiler proposal entered the existing deterministic runner, a live MiniMax Planner selected one legal card, deterministic authorization released one descriptive action, one EvidenceResult was produced, and the unchanged same-Rule state ended at NOT_CALCULATED_BY_CASE_RUNNER and NOT_EVALUATED. The campaign stopped adaptively after this first full-chain success and is closed rather than completed across all 16 possible cells. Luna, MiniMax, Terra, DeepSeek, and ADK failures remain explicit development diagnostics. Four deterministic route families, three engineering reducer behaviors, the separate exact HSP90 control regression, and the read-only workbench are also present. Synthetic SUPPORT is contract behavior only. These records establish no Agent value, source-science approval, broad HSP90 closure, public-case scientific SUPPORT, ADK dynamics portability, generalization, transfer, production readiness, or held-out result."
 }

@@ -1,0 +1,92 @@
+{
+  "accepted_returned_model_ids": [
+    "deepseek/deepseek-v4-flash-0731",
+    "deepseek/deepseek-v4-flash-20260731"
+  ],
+  "actual_provider": "Sail Research",
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 2,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.027468492",
+    "cap_usd": "5.00",
+    "completed_calls": 9,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.972531508",
+    "reported_cost_available": true
+  },
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "cost_usd": "0",
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "Sail Research",
+  "finish_reason": "error",
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "aaafd9595fed4d5ed4bc25db26dbde5cf530c8a7b80a0a03bcc5ae1390f98856",
+    "parsed_proposal_sha256": null,
+    "raw_response_sha256": "b9b0aa91c2f3fe5fb70b80b978b37bc75be9a1066a9eba2843095e286dce9dc3",
+    "request_payload_sha256": "8718bcbca5d347fe4a6be4b6099e8b98ac5b57b400f0e329ae41685956f2a017",
+    "system_prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+    "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+  },
+  "http_status": 200,
+  "incomplete_status": "UNKNOWN_OR_FAILED",
+  "latency_ms": 304630.188,
+  "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "parsed_proposal_sha256": null,
+  "preflight": {
+    "input_token_ceiling": 10430,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 16000,
+    "remaining_budget_before_call_usd": "4.972531508",
+    "worst_case_cost_usd": "0.003557950"
+  },
+  "prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+  "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1",
+  "proposal_parse_status": "UNAVAILABLE",
+  "provider_provenance_status": "EXACT_MATCH",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "b9b0aa91c2f3fe5fb70b80b978b37bc75be9a1066a9eba2843095e286dce9dc3",
+  "reason_codes": [
+    "FINISH_REASON_NOT_STOP",
+    "MODEL_CONTENT_MISSING"
+  ],
+  "recorded_at": "2026-08-30T14:31:12.226606Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": "0",
+  "request_parameter_profile": {
+    "reasoning_effort": null,
+    "temperature_zero_included": true
+  },
+  "request_sha256": "8718bcbca5d347fe4a6be4b6099e8b98ac5b57b400f0e329ae41685956f2a017",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "requested_provider_endpoint_tag": "sail-research/fp4",
+  "response_id": "gen-1788099967-20fLajAwJNga1Emat4sp",
+  "returned_model": "deepseek/deepseek-v4-flash-0731",
+  "returned_model_provenance_status": "EXACT_REQUEST_ID",
+  "role": "PROFILER",
+  "schema_sha256": "aaafd9595fed4d5ed4bc25db26dbde5cf530c8a7b80a0a03bcc5ae1390f98856",
+  "schema_validation_status": "FAIL_OR_UNAVAILABLE",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": null,
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "REJECTED_FAIL_CLOSED",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "COMPLETED_RESPONSE",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 21600,
+    "prompt_tokens": 1366,
+    "reasoning_tokens": 21600,
+    "reported_cost_usd": "0",
+    "total_tokens": 22966
+  },
+  "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+}

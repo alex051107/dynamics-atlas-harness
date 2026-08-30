@@ -1,0 +1,65 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "proposed_case_facts": {
+    "case": {
+      "declared_request_scope": [
+        "SOURCE_LOCAL_CONSISTENCY",
+        "CROSS_SOURCE_COMPARABILITY"
+      ],
+      "forbidden_upgrades": [
+        "Treat the NMR and MD sources as measuring the same estimand without a validated bridge.",
+        "Infer a stronger conformational interpretation from the supplied facts alone."
+      ],
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+      "scientific_claim": "Describe, rather than establish, what the supplied NMR evidence and seeded MD paths indicate about their conformational relationship around experimentally characterized ATP-lid states."
+    },
+    "edges": [
+      {
+        "bridge_status": "UNKNOWN",
+        "condition_relation": "UNKNOWN",
+        "edge_id": "HSP90_NMR_MD_CONFORMATIONAL_RELATION",
+        "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+        "relation_type": "PROPOSED_CROSS_SOURCE_CONFORMATIONAL_RELATION",
+        "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+        "shared_error_status": "UNKNOWN",
+        "validation_independence": "UNKNOWN"
+      }
+    ],
+    "sources": [
+      {
+        "construct_and_condition": "HSP90alpha N-terminal domain and ATP-lid segment; wild-type, R46A, and R60A construct-specific measurements are described; exact physical conditions are UNKNOWN.",
+        "estimand": "UNKNOWN",
+        "evidence_role": "CONSTRUCTION",
+        "native_observable": "Solution NMR measurements, including relaxation-dispersion experiments.",
+        "sample_composition": "UNKNOWN",
+        "source_id": "HSP90_NMR_METHODS_RESULTS",
+        "spatial_support": "HSP90alpha N-terminal domain and ATP-lid segment.",
+        "time_semantics": {
+          "kind": "UNKNOWN"
+        },
+        "unit_or_aggregation": "UNKNOWN"
+      },
+      {
+        "construct_and_condition": "40 seeded MD trajectory rows with declared R46A_ES or R60A_GS seed-lineage labels; exact physical conditions are UNKNOWN.",
+        "estimand": "Per-frame distance values within each supplied trajectory.",
+        "evidence_role": "DIAGNOSTIC",
+        "native_observable": "Ordered C-alpha distance observable between residue IDs 46 and 60.",
+        "sample_composition": "UNKNOWN",
+        "source_id": "HSP90_MD_DISTANCE_TRACE",
+        "spatial_support": "Residue IDs 46 and 60.",
+        "time_semantics": {
+          "kind": "ORDERED_TRAJECTORY"
+        },
+        "unit_or_aggregation": "Trajectory is the primary supplied statistical unit; 40 trajectory rows are provided."
+      }
+    ]
+  },
+  "rationale": "The public materials identify an experimental NMR source and a trajectory-resolved MD distance source. They support representing a possible cross-source conformational relation while preserving the missing bridge, condition, and measurement-semantics facts as UNKNOWN.",
+  "unknowns": [
+    "The public packet does not establish a validated numerical forward model from the NMR readouts to the supplied MD distance observable.",
+    "The public packet does not establish that the NMR and seeded MD sources share physical conditions or an estimand.",
+    "The NMR source's exact estimand, time semantics, statistical unit, and sample composition are UNKNOWN from the permitted facts.",
+    "The exact physical conditions and sample composition of the seeded MD trajectories are UNKNOWN from the permitted facts."
+  ]
+}

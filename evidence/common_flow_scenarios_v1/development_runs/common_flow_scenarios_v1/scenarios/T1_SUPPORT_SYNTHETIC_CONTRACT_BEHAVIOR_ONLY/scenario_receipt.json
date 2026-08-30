@@ -1,0 +1,31 @@
+{
+  "action_count": 0,
+  "actual_cost": 0.0,
+  "actual_route": "DIRECT_EVALUATION_THEN_SUPPORT_WITHIN_CEILING",
+  "affected_rule_instance": null,
+  "after_rule_result": {
+    "scope": "FROZEN_XEISD_REQUIRED_RULE_INVENTORY",
+    "status_counts": {
+      "PASS": 10
+    }
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/source_grounding_override.json",
+    "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/stage2_conclusion_packet.json",
+    "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/authority_receipt.json",
+    "scenarios/T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY/scenario_receipt.json"
+  ],
+  "authority_status": "SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+  "before_rule_result": null,
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "SYNTHETIC_CONTRACT_BEHAVIOR_ONLY: Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+  "deterministic_authorization": "NOT_APPLICABLE_SYNTHETIC_REDUCER_INPUT",
+  "evidence_result_class": "NONE_DIRECT_EVALUATION",
+  "expected_route_family": "TERMINAL_REDUCER_CONTRACT",
+  "input_role": "SYNTHETIC_VERIFIED_SOURCE_GATE",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "SUPPORT_WITHIN_CEILING"
+}

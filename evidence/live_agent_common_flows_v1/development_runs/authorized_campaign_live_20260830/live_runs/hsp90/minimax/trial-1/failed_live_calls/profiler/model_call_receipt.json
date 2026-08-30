@@ -1,0 +1,89 @@
+{
+  "accepted_returned_model_ids": [
+    "minimax/minimax-m2.5",
+    "minimax/minimax-m2.5-20260211"
+  ],
+  "actual_provider": "StreamLake",
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 1,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.01016811",
+    "cap_usd": "5.00",
+    "completed_calls": 3,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.98983189",
+    "reported_cost_available": true
+  },
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "cost_usd": "0.00244053",
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "StreamLake",
+  "finish_reason": "stop",
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "b22220f55331e497e184aad65431f0c34d48162c5a871a38bebe9ddf93519bc8",
+    "parsed_proposal_sha256": "e9972980bf7874723de0382f79be0ad553851805c46cf0dc35b32f3d468826f7",
+    "raw_response_sha256": "207d42683ed60c4af8386b37f98a29b8908151a2604f5581b58eb578e49d9e1d",
+    "request_payload_sha256": "e17d8c8f7c653731bdc6a83d58ca2a8530027fcd3487b07936da13a5ab8f6a87",
+    "system_prompt_sha256": "dceb38179ca62c5a3fe5b5bc5e68c4c0b2845b089b2113f1029498dec2bba449",
+    "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+  },
+  "http_status": 200,
+  "incomplete_status": "NOT_INCOMPLETE",
+  "latency_ms": 17873.566,
+  "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "parsed_proposal_sha256": "e9972980bf7874723de0382f79be0ad553851805c46cf0dc35b32f3d468826f7",
+  "preflight": {
+    "input_token_ceiling": 9361,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 16000,
+    "remaining_budget_before_call_usd": "4.99227242",
+    "worst_case_cost_usd": "0.01980747"
+  },
+  "prompt_sha256": "dceb38179ca62c5a3fe5b5bc5e68c4c0b2845b089b2113f1029498dec2bba449",
+  "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V1",
+  "proposal_parse_status": "PARSED_JSON_OBJECT",
+  "provider_provenance_status": "EXACT_MATCH",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "207d42683ed60c4af8386b37f98a29b8908151a2604f5581b58eb578e49d9e1d",
+  "reason_codes": [],
+  "recorded_at": "2026-08-30T14:18:04.708388Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": "0.00244053",
+  "request_parameter_profile": {
+    "reasoning_effort": null,
+    "temperature_zero_included": true
+  },
+  "request_sha256": "e17d8c8f7c653731bdc6a83d58ca2a8530027fcd3487b07936da13a5ab8f6a87",
+  "requested_model": "minimax/minimax-m2.5",
+  "requested_provider_endpoint_tag": "streamlake",
+  "response_id": "gen-1788099466-GWYj8RErQFbVtaHaFyQY",
+  "returned_model": "minimax/minimax-m2.5",
+  "returned_model_provenance_status": "EXACT_REQUEST_ID",
+  "role": "PROFILER",
+  "schema_sha256": "b22220f55331e497e184aad65431f0c34d48162c5a871a38bebe9ddf93519bc8",
+  "schema_validation_status": "PASS",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": null,
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "ADMITTED_TYPED_PROPOSAL",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "COMPLETED_RESPONSE",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 2019,
+    "prompt_tokens": 963,
+    "reasoning_tokens": 530,
+    "reported_cost_usd": "0.00244053",
+    "total_tokens": 2982
+  },
+  "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+}

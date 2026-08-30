@@ -33,6 +33,21 @@ CAPSULE_ROOT = (
 )
 WORKSPACE = REPO_ROOT / "review" / "source_science_v1"
 STATUS = REPO_ROOT / "governance" / "current_execution_status.json"
+LIVE_EVIDENCE_ROOT = (
+    REPO_ROOT
+    / "evidence/live_agent_common_flows_v1/development_runs/"
+    "authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1"
+)
+RECORDED_EVIDENCE_ROOT = (
+    REPO_ROOT
+    / "evidence/live_agent_common_flows_v1/development_runs/"
+    "authorized_campaign_live_20260830/recorded_replay/hsp90"
+)
+COMMON_FLOW_MATRIX = (
+    REPO_ROOT
+    / "evidence/common_flow_scenarios_v1/development_runs/"
+    "common_flow_scenarios_v1/common_flow_matrix.json"
+)
 
 
 def _load(path: Path) -> dict:
@@ -233,6 +248,66 @@ class SourceScienceReviewWorkspaceTests(unittest.TestCase):
 
 
 class StaticReviewConsoleTests(unittest.TestCase):
+    def test_committed_live_and_recorded_roots_render_as_one_comparison_workbench(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = render_review_console(
+                status_path=STATUS,
+                case_roots=[RECORDED_EVIDENCE_ROOT, LIVE_EVIDENCE_ROOT],
+                capsule_root=CAPSULE_ROOT,
+                review_workspace=WORKSPACE,
+                scenario_matrix_path=COMMON_FLOW_MATRIX,
+                output_dir=Path(temp_dir),
+            )
+            rendered = output_path.read_text(encoding="utf-8")
+
+        self.assertIn("RECORDED_PROPOSAL_REPLAY", rendered)
+        self.assertIn("LIVE_OPENROUTER_PROPOSAL", rendered)
+        self.assertIn("minimax/minimax-m2.5", rendered)
+        self.assertIn("StreamLake", rendered)
+        self.assertIn('"prompt_tokens"', rendered.replace("&quot;", '"'))
+        self.assertIn("0.145264010", rendered)
+        self.assertIn("AUTHORIZED_EXACTLY_ONE_SELECTED_CARD", rendered)
+        self.assertIn("DESCRIPTIVE_ANALYSIS_ONLY", rendered)
+        self.assertIn(
+            "No broad public-case ACTIVE_RULE_EVIDENCE is recorded. "
+            "No active RuleResult update.",
+            rendered,
+        )
+        self.assertIn("NOT_CALCULATED_BY_CASE_RUNNER", rendered)
+        self.assertIn("T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY", rendered)
+
+    def test_console_renders_common_flow_matrix_with_fresh_run(self):
+        from dynamics_atlas_harness.case_runner_v1 import run_case_v1
+        from dynamics_atlas_harness.common_flow_scenarios_v1 import (
+            run_common_flow_scenario_suite,
+        )
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            run_root = temp_root / "run-hsp90"
+            suite_root = temp_root / "scenario-suite"
+            output_dir = temp_root / "workbench"
+            run_case_v1(case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1", output_dir=run_root)
+            run_common_flow_scenario_suite(output_dir=suite_root)
+            output_path = render_review_console(
+                status_path=STATUS,
+                case_roots=[run_root],
+                capsule_root=CAPSULE_ROOT,
+                review_workspace=WORKSPACE,
+                scenario_matrix_path=suite_root / "common_flow_matrix.json",
+                output_dir=output_dir,
+            )
+            rendered = output_path.read_text(encoding="utf-8")
+
+        self.assertIn("COMMON FLOW SCENARIO MATRIX", rendered)
+        self.assertIn("A_DIRECT_EVALUATION_XEISD_A1", rendered)
+        self.assertIn("B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION", rendered)
+        self.assertIn("C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL", rendered)
+        self.assertIn("D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION", rendered)
+        self.assertIn("SUPPORT_WITHIN_CEILING", rendered)
+        self.assertIn("CANNOT_SUPPORT_REQUESTED_CLAIM", rendered)
+        self.assertIn("ABSTAIN_OR_HUMAN_REVIEW", rendered)
+
     def test_console_renders_fresh_hsp90_and_adk_case_runner_roots(self):
         from dynamics_atlas_harness.case_runner_v1 import run_case_v1
 

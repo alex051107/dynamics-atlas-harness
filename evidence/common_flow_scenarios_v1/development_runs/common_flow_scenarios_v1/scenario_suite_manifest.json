@@ -1,0 +1,39 @@
+{
+  "boundary": "Four deterministic route families and three reducer behaviors over existing exact fixtures. The SUPPORT row is synthetic contract behavior only; no real scientific authority is upgraded.",
+  "credential_reads": 0,
+  "external_spend": 0.0,
+  "hsp90_broad_closure_status": "NOT_ESTABLISHED_EXACT_CONTROL_ONLY",
+  "input_artifacts": {
+    "hsp90_exact_control_inputs": "evidence/real_case_vertical_slice_v1",
+    "registered_operator_registry": "config/registered_operators.json",
+    "source_grounding_overlay": "registries/rules_v1/family_overlay_v1.json",
+    "xeisd_complete_casegraph": "evidence/real_case_vertical_slice_v1/outputs/xeisd_a1_complete_casegraph.json",
+    "xeisd_lookup_allowlist": "evidence/real_case_vertical_slice_v1/xeisd_source_lookup_allowlist_v1.json"
+  },
+  "model_calls": 0,
+  "network_accessed": false,
+  "real_scientific_support_packets": 0,
+  "run_id": "common_flow_scenarios_v1",
+  "run_kind": "DETERMINISTIC_COMMON_FLOW_CONTRACT_SUITE",
+  "scenario_ids": [
+    "A_DIRECT_EVALUATION_XEISD_A1",
+    "B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION",
+    "C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL",
+    "D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION",
+    "T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+    "T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH"
+  ],
+  "scenario_matrix_artifact": "common_flow_matrix.json",
+  "schema_version": "common-flow-scenario-suite/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "synthetic_contract_support_packets": 1,
+  "terminal_dispositions": {
+    "A_DIRECT_EVALUATION_XEISD_A1": "ABSTAIN_OR_HUMAN_REVIEW",
+    "B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION": "ABSTAIN_OR_HUMAN_REVIEW",
+    "C_REGISTERED_COMPUTATION_HSP90_EXACT_CONTROL": "ABSTAIN_OR_HUMAN_REVIEW",
+    "D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION": "ABSTAIN_OR_HUMAN_REVIEW",
+    "T1_SUPPORT_SYNTHETIC_CONTRACT_BEHAVIOR_ONLY": "SUPPORT_WITHIN_CEILING",
+    "T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH": "CANNOT_SUPPORT_REQUESTED_CLAIM"
+  }
+}

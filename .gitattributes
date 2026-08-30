@@ -1,0 +1,4 @@
+# Preserve byte-exact provider and registered-operator evidence. Their hashes are
+# part of the committed provenance, so whitespace is data rather than formatting.
+evidence/**/raw_response.txt -whitespace
+evidence/**/operator_outputs/*.tsv -whitespace

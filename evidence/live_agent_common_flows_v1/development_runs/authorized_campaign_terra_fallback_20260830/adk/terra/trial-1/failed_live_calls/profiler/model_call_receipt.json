@@ -1,0 +1,89 @@
+{
+  "accepted_returned_model_ids": [
+    "openai/gpt-5.6-terra",
+    "openai/gpt-5.6-terra-20260709"
+  ],
+  "actual_provider": "OpenAI",
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 1,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.143961260",
+    "cap_usd": "5.00",
+    "completed_calls": 12,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.856038740",
+    "reported_cost_available": true
+  },
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "cost_usd": "0.060308",
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "OpenAI",
+  "finish_reason": "stop",
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "aaafd9595fed4d5ed4bc25db26dbde5cf530c8a7b80a0a03bcc5ae1390f98856",
+    "parsed_proposal_sha256": "78b2ad3ebc52c77b3624208eff649e2c2a2a37281b30786491236b812d0c514f",
+    "raw_response_sha256": "0d9d2df0fbf23820a4140eba4d8d290642ca03282bf80aa78316ab209b6e851c",
+    "request_payload_sha256": "5860eea88949d724042a00e8cbf32a734b7d4780d9a297e325a73357910a1b9d",
+    "system_prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+    "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+  },
+  "http_status": 200,
+  "incomplete_status": "NOT_INCOMPLETE",
+  "latency_ms": 27554.419,
+  "model_metadata_sha256": "707ec451cc90e34f2dd3bdc3e8bf85d8385b038adb9430457c8a99485e0aba9a",
+  "parsed_proposal_sha256": "78b2ad3ebc52c77b3624208eff649e2c2a2a37281b30786491236b812d0c514f",
+  "preflight": {
+    "input_token_ceiling": 10419,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 16000,
+    "remaining_budget_before_call_usd": "4.916346740",
+    "worst_case_cost_usd": "0.212838"
+  },
+  "prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+  "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1",
+  "proposal_parse_status": "PARSED_JSON_OBJECT",
+  "provider_provenance_status": "EXACT_MATCH",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "0d9d2df0fbf23820a4140eba4d8d290642ca03282bf80aa78316ab209b6e851c",
+  "reason_codes": [],
+  "recorded_at": "2026-08-30T14:33:45.814676Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": "0.060308",
+  "request_parameter_profile": {
+    "reasoning_effort": "low",
+    "temperature_zero_included": false
+  },
+  "request_sha256": "5860eea88949d724042a00e8cbf32a734b7d4780d9a297e325a73357910a1b9d",
+  "requested_model": "openai/gpt-5.6-terra",
+  "requested_provider_endpoint_tag": "openai",
+  "response_id": "gen-1788100398-j8YR4xtVLT6jmQ2JWNbM",
+  "returned_model": "openai/gpt-5.6-terra",
+  "returned_model_provenance_status": "EXACT_REQUEST_ID",
+  "role": "PROFILER",
+  "schema_sha256": "aaafd9595fed4d5ed4bc25db26dbde5cf530c8a7b80a0a03bcc5ae1390f98856",
+  "schema_validation_status": "PASS",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": "default",
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "ADMITTED_TYPED_PROPOSAL",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "COMPLETED_RESPONSE",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 4621,
+    "prompt_tokens": 1943,
+    "reasoning_tokens": 220,
+    "reported_cost_usd": "0.060308",
+    "total_tokens": 6564
+  },
+  "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+}

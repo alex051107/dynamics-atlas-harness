@@ -1,0 +1,10 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "decision": "SELECT_ACTIONS",
+  "rationales": {
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "The card addresses the unresolved development obligation HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION (gap_type: COMPUTABLE_EVIDENCE_MISSING, reason: DESCRIPTIVE_CAPABILITY_ONLY). The card's descriptive analysis action provides a structured way to generate computable evidence from the required distance matrices and trajectory group manifest, creating the grouped observable dependence description that the case currently lacks. The prerequisites (identity-verified frozen observable matrix and trajectory/group manifest) are stated as satisfied, and the prohibitions align with the card's scope by avoiding claims that would go beyond descriptive analysis."
+  },
+  "selected_card_ids": [
+    "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+  ]
+}
