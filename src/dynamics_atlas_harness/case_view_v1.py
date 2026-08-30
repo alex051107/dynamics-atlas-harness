@@ -31,6 +31,15 @@ from .profile_proposal_envelope_v1 import (
     extract_core_proposal,
     validate_profile_proposal_envelope,
 )
+from .live_agent_decision_closure_v1 import (
+    ACTION_CARD_ID as DECISION_CLOSURE_ACTION_CARD_ID,
+    MANIFEST_SCHEMA as DECISION_CLOSURE_MANIFEST_SCHEMA,
+    POSITIVE_ARM_ID as DECISION_CLOSURE_POSITIVE_ARM_ID,
+    PROFILE_MODE as DECISION_CLOSURE_PROFILE_MODE,
+    STOP_ARM_ID as DECISION_CLOSURE_STOP_ARM_ID,
+    TARGET_RULE_INSTANCE_ID as DECISION_CLOSURE_TARGET_RULE_ID,
+    validate_planner_proposal as validate_decision_closure_planner_proposal,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -1653,6 +1662,323 @@ def _build_case_run_view(root: Path) -> CaseView:
     )
 
 
+def _read_text_artifact(path: Path, label: str) -> str:
+    if not path.is_file():
+        raise CaseViewIntegrityError("REQUIRED_ARTIFACT_MISSING", label)
+    try:
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        raise CaseViewIntegrityError("ARTIFACT_MALFORMED", label) from error
+
+
+def _validate_decision_closure_artifact_records(
+    campaign_root: Path, manifest: dict[str, Any]
+) -> set[str]:
+    records = _require_list(manifest.get("artifacts"), "manifest.artifacts")
+    declared: set[str] = set()
+    for position, raw_record in enumerate(records):
+        record = _require_object(raw_record, f"manifest.artifacts[{position}]")
+        if set(record) != {"path", "sha256", "kind"}:
+            raise CaseViewIntegrityError("DECISION_CLOSURE_ARTIFACT_RECORD_INVALID")
+        relative = _require_string(record.get("path"), "artifact.path")
+        posix = PurePosixPath(relative)
+        if posix.is_absolute() or ".." in posix.parts or relative in declared:
+            raise CaseViewIntegrityError("UNSAFE_OR_DUPLICATE_ARTIFACT_REFERENCE", relative)
+        path = (campaign_root / Path(*posix.parts)).resolve()
+        try:
+            path.relative_to(campaign_root.resolve())
+        except ValueError as error:
+            raise CaseViewIntegrityError("UNSAFE_ARTIFACT_REFERENCE", relative) from error
+        if not path.is_file():
+            raise CaseViewIntegrityError("REQUIRED_ARTIFACT_MISSING", relative)
+        expected_sha = _require_string(record.get("sha256"), f"artifact.sha256:{relative}")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != expected_sha:
+            raise CaseViewIntegrityError("STALE_ARTIFACT_REFERENCE_HASH", relative)
+        if record.get("kind") not in {"JSON", "TEXT"}:
+            raise CaseViewIntegrityError("DECISION_CLOSURE_ARTIFACT_KIND_INVALID", relative)
+        declared.add(relative)
+    return declared
+
+
+def _build_decision_closure_arm_view(root: Path) -> CaseView:
+    campaign_root = root.parent
+    manifest = _read_object(
+        campaign_root / "live_agent_decision_closure_manifest_v1.json",
+        "live_agent_decision_closure_manifest_v1",
+    )
+    assert manifest is not None
+    if manifest.get("schema_version") != DECISION_CLOSURE_MANIFEST_SCHEMA:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_MANIFEST_SCHEMA_INVALID")
+    case_id = _require_string(manifest.get("case_id"), "manifest.case_id")
+    if manifest.get("profile_mode") != DECISION_CLOSURE_PROFILE_MODE:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_PROFILE_MODE_INVALID")
+    arm_id = root.name
+    if arm_id not in {
+        DECISION_CLOSURE_POSITIVE_ARM_ID,
+        DECISION_CLOSURE_STOP_ARM_ID,
+    }:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_ARM_ID_INVALID", arm_id)
+    expected_manifest_arm = (
+        manifest.get("positive_arm_id")
+        if arm_id == DECISION_CLOSURE_POSITIVE_ARM_ID
+        else manifest.get("stop_arm_id")
+    )
+    if expected_manifest_arm != arm_id:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_MANIFEST_ARM_MISMATCH", arm_id)
+    declared = _validate_decision_closure_artifact_records(campaign_root, manifest)
+    required_root = {"recorded_profile.json", "before_rule_results.json"}
+    required_arm = {
+        "planner_visible_input.json",
+        "live_call/request_payload.json",
+        "live_call/raw_response.txt",
+        "live_call/model_call_receipt.json",
+        "live_call/parsed_proposal.json",
+        "planner_admission.json",
+        "planner_authorization.json",
+        "execution_receipt.json",
+        "evidence_results.json",
+        "after_casegraph.json",
+        "after_rule_results.json",
+        "rule_transition.json",
+        "route_packet.json",
+        "conclusion_packet.json",
+        "arm_receipt.json",
+    }
+    if arm_id == DECISION_CLOSURE_STOP_ARM_ID:
+        required_arm.add("stop_receipt.json")
+    required_declared = required_root | {f"{arm_id}/{relative}" for relative in required_arm}
+    missing = sorted(required_declared - declared)
+    if missing:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_REQUIRED_ARTIFACT_UNDECLARED", ",".join(missing))
+
+    recorded_profile = _read_object(campaign_root / "recorded_profile.json", "recorded_profile")
+    # The frozen RuleResult inventory is a JSON list; read it directly after its
+    # byte hash has already been checked against the manifest.
+    try:
+        before_value = json.loads((campaign_root / "before_rule_results.json").read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise CaseViewIntegrityError("ARTIFACT_MALFORMED", "before_rule_results") from error
+    if not isinstance(before_value, list):
+        raise CaseViewIntegrityError("LIST_REQUIRED", "before_rule_results")
+    before, before_by_id = _rule_index(before_value, "before_rule_results")
+    assert recorded_profile is not None
+
+    planner_input = _read_object(root / "planner_visible_input.json", "planner_visible_input")
+    request_payload = _read_object(root / "live_call" / "request_payload.json", "request_payload")
+    live_receipt = _read_object(root / "live_call" / "model_call_receipt.json", "model_call_receipt")
+    planner_proposal = _read_object(root / "live_call" / "parsed_proposal.json", "parsed_proposal")
+    planner_admission = _read_object(root / "planner_admission.json", "planner_admission")
+    authorization = _read_object(root / "planner_authorization.json", "planner_authorization")
+    execution = _read_object(root / "execution_receipt.json", "execution_receipt")
+    evidence_wrapper = _read_object(root / "evidence_results.json", "evidence_results")
+    transition = _read_object(root / "rule_transition.json", "rule_transition")
+    route_packet = _read_object(root / "route_packet.json", "route_packet")
+    conclusion = _read_object(root / "conclusion_packet.json", "conclusion_packet")
+    arm_receipt = _read_object(root / "arm_receipt.json", "arm_receipt")
+    assert all(
+        value is not None
+        for value in (
+            planner_input,
+            request_payload,
+            live_receipt,
+            planner_proposal,
+            planner_admission,
+            authorization,
+            execution,
+            evidence_wrapper,
+            transition,
+            route_packet,
+            conclusion,
+            arm_receipt,
+        )
+    )
+    for label, artifact in (
+        ("planner_input", planner_input),
+        ("planner_proposal", planner_proposal),
+        ("planner_admission", planner_admission),
+        ("authorization", authorization),
+        ("execution", execution),
+        ("evidence", evidence_wrapper),
+        ("arm_receipt", arm_receipt),
+    ):
+        _assert_case_id(artifact.get("case_id"), case_id, label)
+    if arm_receipt.get("arm_id") != arm_id or arm_receipt.get("campaign_id") != manifest.get("campaign_id"):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_ARM_RECEIPT_IDENTITY_MISMATCH")
+    base_state_sha = canonical_json_sha256(
+        {
+            "recorded_profile": recorded_profile,
+            "before_rule_results": before,
+            "unresolved_items": planner_input.get("unresolved_items"),
+        }
+    )
+    if base_state_sha != manifest.get("base_state_sha256") or base_state_sha != arm_receipt.get("base_state_sha256"):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_BASE_STATE_HASH_MISMATCH")
+
+    raw_response = _read_text_artifact(
+        root / "live_call" / "raw_response.txt", "raw_response"
+    )
+    _verify_live_openrouter_semantics(
+        role="PLANNER",
+        visible_input=planner_input,
+        parsed_proposal=planner_proposal,
+        request_payload=request_payload,
+        raw_response=raw_response,
+        live_receipt=live_receipt,
+        proposal_envelope=None,
+        public_packet_source=REPO_ROOT / "README.md",
+    )
+    try:
+        expected_admission = validate_decision_closure_planner_proposal(
+            planner_input, planner_proposal
+        )
+    except ValueError as error:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_PLANNER_PROPOSAL_INVALID") from error
+    if planner_admission != expected_admission:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_PLANNER_ADMISSION_MISMATCH")
+    selected = _require_list(planner_admission.get("selected_card_ids"), "selected_card_ids")
+    if authorization.get("selected_card_ids") != selected or execution.get("selected_card_ids") != selected:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_SELECTION_LINK_MISMATCH")
+
+    try:
+        after_value = json.loads((root / "after_rule_results.json").read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise CaseViewIntegrityError("ARTIFACT_MALFORMED", "after_rule_results") from error
+    after, after_by_id = _rule_index(after_value, "after_rule_results")
+    if set(before_by_id) != set(after_by_id):
+        raise CaseViewIntegrityError("RULE_INVENTORY_CHANGED_DURING_REEVALUATION")
+    for rule_id in before_by_id:
+        if _rule_identity(before_by_id[rule_id], "before") != _rule_identity(after_by_id[rule_id], "after"):
+            raise CaseViewIntegrityError("RULE_INSTANCE_IDENTITY_CHANGED", rule_id)
+    changed_ids = {
+        rule_id
+        for rule_id in before_by_id
+        if before_by_id[rule_id] != after_by_id[rule_id]
+    }
+    declared_transitions = {
+        item.get("rule_instance_id")
+        for item in _require_list(
+            transition.get("all_changed_rule_statuses"),
+            "all_changed_rule_statuses",
+        )
+        if isinstance(item, dict)
+    }
+    if changed_ids != declared_transitions:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_RULE_CHANGE_SET_MISMATCH")
+    target_before = before_by_id.get(DECISION_CLOSURE_TARGET_RULE_ID)
+    target_after = after_by_id.get(DECISION_CLOSURE_TARGET_RULE_ID)
+    if target_before is None or target_after is None:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_TARGET_RULE_MISSING")
+    if transition.get("before_rule_result") != target_before or transition.get("after_rule_result") != target_after:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_TARGET_RULE_LINK_MISMATCH")
+
+    evidence_results = _require_list(
+        evidence_wrapper.get("evidence_results"), "evidence_results"
+    )
+    descriptive, active = _evidence_lanes(evidence_results, case_id)
+    if route_packet.get("case_id") != case_id or route_packet.get("scenario_id") != arm_id:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_ROUTE_IDENTITY_MISMATCH")
+    if conclusion.get("case_id") != case_id or conclusion.get("scenario_id") != arm_id:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_CONCLUSION_IDENTITY_MISMATCH")
+    if conclusion.get("terminal_disposition") != "ABSTAIN_OR_HUMAN_REVIEW":
+        raise CaseViewIntegrityError("DECISION_CLOSURE_TERMINAL_DISPOSITION_INVALID")
+
+    if arm_id == DECISION_CLOSURE_POSITIVE_ARM_ID:
+        if (
+            selected != [DECISION_CLOSURE_ACTION_CARD_ID]
+            or authorization.get("status") != "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP"
+            or execution.get("executed_action_count") != 1
+            or len(active) != 1
+            or active[0].get("affected_rule_instance_id") != DECISION_CLOSURE_TARGET_RULE_ID
+            or target_before.get("status") != "UNRESOLVED"
+            or target_after.get("status") != "PASS"
+        ):
+            raise CaseViewIntegrityError("DECISION_CLOSURE_POSITIVE_ARM_INVALID")
+    else:
+        stop_receipt = _read_object(root / "stop_receipt.json", "stop_receipt")
+        assert stop_receipt is not None
+        if (
+            selected
+            or planner_admission.get("decision") != "ABSTAIN_NO_ACTION"
+            or authorization.get("status") != "AUTHORIZED_ABSTENTION_ZERO_EXECUTION"
+            or execution.get("executed_action_count") != 0
+            or evidence_results
+            or changed_ids
+            or stop_receipt.get("scientific_action_executions") != 0
+            or target_before.get("status") != "UNRESOLVED"
+            or target_after.get("status") != "UNRESOLVED"
+        ):
+            raise CaseViewIntegrityError("DECISION_CLOSURE_STOP_ARM_INVALID")
+
+    legal_cards = _require_list(planner_input.get("legal_action_cards"), "legal_action_cards")
+    unresolved = _require_list(planner_input.get("unresolved_items"), "unresolved_items")
+    links = [
+        {
+            "rule_instance_id": rule_id,
+            "before_status": before_by_id[rule_id].get("status"),
+            "after_status": after_by_id[rule_id].get("status"),
+            "evidence_result_id": (
+                active[0].get("evidence_result_id")
+                if active and rule_id == DECISION_CLOSURE_TARGET_RULE_ID
+                else None
+            ),
+            "relationship": (
+                "EXACT_AFFECTED_RULEINSTANCE"
+                if rule_id == DECISION_CLOSURE_TARGET_RULE_ID
+                else "DECLARED_DOWNSTREAM_DEPENDENCY"
+            ),
+        }
+        for rule_id in sorted(changed_ids)
+    ]
+    return CaseView(
+        schema_version="dynamics-atlas-case-view/v1",
+        case_id=case_id,
+        artifact_kind="LIVE_AGENT_DECISION_CLOSURE_V1_ARM",
+        artifact_root_name=arm_id,
+        integrity_status="PASS",
+        question="Can one exact allowlisted X-EISD declaration lookup resolve the current random-pool composition obligation?",
+        current_gate=manifest.get("source_science_review_status", "PENDING_DOMAIN_REVIEW"),
+        claim_ceiling=manifest.get("claim_ceiling"),
+        sources_and_locators=deepcopy(recorded_profile.get("evidence_items", [])),
+        agent_proposal={
+            "kind": "RECORDED_PROFILE",
+            "mode": DECISION_CLOSURE_PROFILE_MODE,
+            "proposal": deepcopy(recorded_profile),
+        },
+        admitted_facts={
+            "kind": "PLATFORM_ADMITTED_RECORDED_PROFILE",
+            "projected_casegraph": deepcopy(recorded_profile),
+        },
+        rule_instances=[_rule_identity(result, "rule_result") for result in after],
+        rule_results=after,
+        unresolved_obligations=deepcopy(unresolved),
+        legal_action_cards=deepcopy(legal_cards),
+        planner_proposal={
+            "kind": "LIVE_AGENT_PROPOSAL",
+            "proposal": deepcopy(planner_proposal),
+            "provenance": deepcopy(live_receipt),
+        },
+        authorization=deepcopy(authorization),
+        executed_actions=deepcopy(execution),
+        receipts={
+            "arm_receipt": deepcopy(arm_receipt),
+            "live_model_call": deepcopy(live_receipt),
+            "artifact_records": deepcopy(manifest.get("artifacts")),
+        },
+        descriptive_evidence_no_active_rule_effect=descriptive,
+        active_rule_evidence=active,
+        exact_control_regression=unavailable("This X-EISD route does not use the HSP90 exact control."),
+        before_after_rule_result_links=links,
+        conclusion_packet={"kind": "CONCLUSION_PACKET", "artifact": deepcopy(conclusion)},
+        human_review_state={
+            "kind": "HUMAN_REVIEW",
+            "status": manifest.get("source_science_review_status", "PENDING_DOMAIN_REVIEW"),
+        },
+        terminal_scientific_state=conclusion.get("terminal_disposition"),
+        boundary=_require_string(manifest.get("boundary"), "manifest.boundary"),
+    )
+
+
+
 def build_case_view(case_or_run_root: str | Path) -> CaseView:
     """Project a recorded case/run directory into a validated ``CaseView``.
 
@@ -1666,8 +1992,13 @@ def build_case_view(case_or_run_root: str | Path) -> CaseView:
         raise CaseViewIntegrityError("CASE_OR_RUN_ROOT_UNAVAILABLE", root.name or ".")
     is_run = (root / "case_run_manifest_v1.json").is_file()
     is_capsule_case = (root / "human_decision_packet.json").is_file()
-    if is_run and is_capsule_case:
+    is_decision_closure_arm = (root / "arm_receipt.json").is_file() and (
+        root.parent / "live_agent_decision_closure_manifest_v1.json"
+    ).is_file()
+    if sum((is_run, is_capsule_case, is_decision_closure_arm)) > 1:
         raise CaseViewIntegrityError("AMBIGUOUS_CASE_OR_RUN_ROOT", root.name)
+    if is_decision_closure_arm:
+        return _build_decision_closure_arm_view(root)
     if is_run:
         return _build_case_run_view(root)
     if is_capsule_case:
