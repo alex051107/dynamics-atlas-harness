@@ -13,8 +13,11 @@ import html
 import json
 import re
 from collections.abc import Mapping, Sequence
+from datetime import date
 from pathlib import Path
 from typing import Any
+
+from .case_view_v1 import CaseView, build_case_view, unavailable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -37,6 +40,12 @@ DEFAULT_CAPSULE_ROOT = (
     / "exposed_paper_blind_scientific_decision_capsule_v1"
 )
 DEFAULT_REVIEW_WORKSPACE = REPO_ROOT / "review" / "source_science_v1"
+SOURCE_SCIENCE_ADVISORY_PATH = (
+    REPO_ROOT
+    / "evidence"
+    / "source_science_advisory_v1"
+    / "advisory_reconciliation.json"
+)
 
 REVIEW_DISPOSITIONS = (
     "APPROVE_AS_WRITTEN",
@@ -45,6 +54,13 @@ REVIEW_DISPOSITIONS = (
     "REJECT_NOT_REUSABLE",
     "NOT_APPLICABLE_TO_CURRENT_CASE",
 )
+
+POSITIVE_REVIEW_DISPOSITIONS = (
+    "APPROVE_AS_WRITTEN",
+    "APPROVE_WITH_BOUNDED_REVISION",
+)
+
+REVIEW_FORM_STATUSES = ("DRAFT", "COMPLETED")
 
 # The older narrow review packet predates the final runtime names.  These aliases
 # only point reviewers to the current repository contracts; they do not change a
@@ -147,6 +163,10 @@ def _source_entry(
     bindings_by_subrule: Mapping[str, Mapping[str, Any]],
     contracts_by_subrule: Mapping[str, Mapping[str, Any]],
     policies_by_id: Mapping[str, Mapping[str, Any]],
+    runtime_subrules_by_id: Mapping[str, Mapping[str, Any]],
+    runtime_subrules_registry_status: str,
+    family_overlay_by_id: Mapping[str, Mapping[str, Any]],
+    family_overlay_registry_status: str,
     f04_overlay: Mapping[str, Any],
 ) -> dict[str, Any]:
     review_subrule = str(item["runtime_subrule_id"])
@@ -158,6 +178,7 @@ def _source_entry(
         binding = f04_overlay["binding"]
         contract = f04_overlay["evaluation_contract"]
         policy = f04_overlay["resolution_policy"]
+        family_overlay = family_overlay_by_id[str(item["family_id"])]
         return {
             "review_item_id": item["review_item_id"],
             "family_id": item["family_id"],
@@ -172,8 +193,15 @@ def _source_entry(
             "atomic_scientific_statement": item["atomic_statement"],
             "proposed_reusable_review_question": item["proposed_reusable_use"],
             "forbidden_generalization": item["forbidden_generalization"],
-            "source_packet_status": item["source_packet_status"],
+            "source_packet_status": "PENDING_SOURCE_TRACEABILITY_MAPPING",
             "traceability_note": item.get("traceability_note"),
+            "scientific_question": runtime_subrule["scientific_question"],
+            "claim_effect_summary": runtime_subrule["claim_effect_summary"],
+            "implementation_status": runtime_subrule["implementation_status"],
+            "runtime_subrules_registry_status": runtime_subrules_registry_status,
+            "runtime_subrule_origin": "CASE_BOUND_OVERLAY_NOT_RUNTIME_SUBRULES_V1_MEMBER",
+            "family_overlay_registry_status": family_overlay_registry_status,
+            "family_overlay": dict(family_overlay),
             "binding": dict(binding),
             "evaluation_contract": dict(contract),
             "resolution_policy": dict(policy),
@@ -194,7 +222,13 @@ def _source_entry(
         raise ReviewConsoleError(f"RESOLUTION_POLICY_NOT_FOUND:{policy_id}")
     if binding["evaluation_contract_id"] != contract["evaluation_contract_id"]:
         raise ReviewConsoleError(f"BINDING_CONTRACT_MISMATCH:{current_subrule}")
-    return {
+    runtime_subrule = runtime_subrules_by_id.get(current_subrule)
+    if runtime_subrule is None:
+        raise ReviewConsoleError(f"RUNTIME_SUBRULE_NOT_FOUND:{current_subrule}")
+    family_overlay = family_overlay_by_id.get(str(item["family_id"]))
+    if family_overlay is None:
+        raise ReviewConsoleError(f"FAMILY_OVERLAY_NOT_FOUND:{item['family_id']}")
+    entry = {
         "review_item_id": item["review_item_id"],
         "family_id": item["family_id"],
         "review_packet_runtime_subrule_id": review_subrule,
@@ -209,12 +243,21 @@ def _source_entry(
         "proposed_reusable_review_question": packet["proposed_reusable_use"],
         "forbidden_generalization": packet["forbidden_generalization"],
         "source_packet_status": packet["human_review_status"],
+        "traceability_note": packet.get("traceability_note"),
+        "scientific_question": runtime_subrule["scientific_question"],
+        "claim_effect_summary": runtime_subrule["claim_effect_summary"],
+        "implementation_status": runtime_subrule["implementation_status"],
+        "runtime_subrules_registry_status": runtime_subrules_registry_status,
+        "runtime_subrule_origin": "RUNTIME_SUBRULES_V1",
+        "family_overlay_registry_status": family_overlay_registry_status,
+        "family_overlay": dict(family_overlay),
         "binding": dict(binding),
         "evaluation_contract": _compact_contract(contract),
         "resolution_policy": _compact_policy(policy),
         "claim_ceiling": packet["forbidden_generalization"],
         "reviewer_status": "PENDING_DOMAIN_REVIEW",
     }
+    return entry
 
 
 def _case_application(
@@ -234,7 +277,7 @@ def _case_application(
         and _canonical_subrule_id(str(result.get("runtime_subrule_id", "")))
         == runtime_subrule_id
     ]
-    return {
+    application = {
         "case_id": packet["case_id"],
         "case_directory": case_dir.name,
         "public_case_terminal_disposition": packet["terminal_disposition"],
@@ -243,6 +286,10 @@ def _case_application(
         "active_rule_instances": matching,
         "application_status": "PRESENT_IN_PUBLIC_CASE" if matching else "NOT_SELECTED_IN_PUBLIC_CASE",
     }
+    application["reviewed_target"] = _reviewed_target(
+        application, str(entry["evaluation_contract"]["target_kind"])
+    )
+    return application
 
 
 def _f04_case_application(case_dir: Path, entry: Mapping[str, Any]) -> dict[str, Any]:
@@ -267,40 +314,146 @@ def _f04_case_application(case_dir: Path, entry: Mapping[str, Any]) -> dict[str,
                 "boundary": control.get("boundary"),
             }
         )
+    application["reviewed_target"] = _reviewed_target(
+        application, str(entry["evaluation_contract"]["target_kind"])
+    )
     return application
 
 
 def _reviewer_form_schema() -> dict[str, Any]:
-    nullable_string = {"type": ["string", "null"]}
+    nonempty_string = {"type": "string", "minLength": 1, "pattern": r".*\S.*"}
+    nullable_string = {"anyOf": [{"type": "null"}, nonempty_string]}
+    nullable_date = {
+        "anyOf": [
+            {"type": "null"},
+            {
+                "type": "string",
+                "format": "date",
+                "pattern": r"^\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])$",
+            },
+        ]
+    }
+    nullable_disposition = {
+        "type": ["string", "null"],
+        "enum": [None, *REVIEW_DISPOSITIONS],
+    }
+    reviewed_target_properties = {
+        "target_kind": {"type": "string", "minLength": 1},
+        "target_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": True},
+        "rule_instance_ids": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": True,
+        },
+    }
+    case_disposition_properties = {
+        "case_id": {"type": "string", "minLength": 1},
+        "reviewed_target": {
+            "type": "object",
+            "required": list(reviewed_target_properties),
+            "properties": reviewed_target_properties,
+            "additionalProperties": False,
+        },
+        "disposition": nullable_disposition,
+    }
     item_properties = {
         "review_item_id": {"type": "string"},
         "reviewer_name": nullable_string,
         "reviewer_role": nullable_string,
-        "review_date": nullable_string,
+        "review_date": nullable_date,
         "passage_checked": nullable_string,
-        "rule_disposition": {"type": ["string", "null"], "enum": [None, *REVIEW_DISPOSITIONS]},
-        "case_application_disposition": {
-            "type": ["string", "null"],
-            "enum": [None, *REVIEW_DISPOSITIONS],
+        "rule_disposition": nullable_disposition,
+        "case_application_dispositions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": list(case_disposition_properties),
+                "properties": case_disposition_properties,
+                "additionalProperties": False,
+            },
         },
         "required_revision": nullable_string,
+        "allowed_scope": nullable_string,
         "claim_ceiling": nullable_string,
-        "notes": nullable_string,
+        "supporting_note": nullable_string,
     }
+    completion_fields = (
+        "reviewer_name",
+        "reviewer_role",
+        "review_date",
+        "passage_checked",
+        "allowed_scope",
+        "claim_ceiling",
+        "supporting_note",
+    )
+    completion_properties = {field: nonempty_string for field in completion_fields}
+    completion_properties["review_date"] = {
+        "type": "string",
+        "format": "date",
+        "pattern": r"^\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])$",
+    }
+    positive_completion = {"properties": completion_properties}
+    item_conditions = [
+        {
+            "if": {
+                "properties": {"rule_disposition": {"enum": list(POSITIVE_REVIEW_DISPOSITIONS)}},
+                "required": ["rule_disposition"],
+            },
+            "then": positive_completion,
+        },
+        {
+            "if": {
+                "properties": {
+                    "case_application_dispositions": {
+                        "contains": {
+                            "type": "object",
+                            "properties": {
+                                "disposition": {"enum": list(POSITIVE_REVIEW_DISPOSITIONS)}
+                            },
+                            "required": ["disposition"],
+                        }
+                    }
+                }
+            },
+            "then": positive_completion,
+        },
+        {
+            "if": {
+                "properties": {"review_item_id": {"const": "NDSR-F04R02"}},
+                "required": ["review_item_id"],
+            },
+            "then": {
+                "properties": {
+                    "rule_disposition": {"not": {"enum": list(POSITIVE_REVIEW_DISPOSITIONS)}},
+                    "case_application_dispositions": {
+                        "items": {
+                            "properties": {
+                                "disposition": {
+                                    "not": {"enum": list(POSITIVE_REVIEW_DISPOSITIONS)}
+                                }
+                            }
+                        }
+                    },
+                }
+            },
+        },
+    ]
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$id": "source-science-reviewer-form/v1",
+        "$id": "source-science-reviewer-form/v2",
         "title": "Dynamics Atlas named source-science review form",
         "type": "object",
         "required": [
             "schema_version",
             "review_status",
             "allowed_dispositions",
+            "instructions",
             "items",
         ],
         "properties": {
-            "schema_version": {"const": "source-science-reviewer-form/v1"},
-            "review_status": {"const": "PENDING_DOMAIN_REVIEW"},
+            "schema_version": {"const": "source-science-reviewer-form/v2"},
+            "review_status": {"enum": list(REVIEW_FORM_STATUSES)},
             "allowed_dispositions": {"type": "array", "const": list(REVIEW_DISPOSITIONS)},
             "instructions": {"type": "string", "minLength": 1},
             "items": {
@@ -310,12 +463,176 @@ def _reviewer_form_schema() -> dict[str, Any]:
                     "type": "object",
                     "required": list(item_properties),
                     "properties": item_properties,
+                    "allOf": item_conditions,
                     "additionalProperties": False,
                 },
             },
         },
+        "allOf": [
+            {
+                "if": {
+                    "properties": {"review_status": {"const": "COMPLETED"}},
+                    "required": ["review_status"],
+                },
+                "then": {
+                    "properties": {
+                        "items": {
+                            "items": {
+                                "properties": {
+                                    **completion_properties,
+                                    "rule_disposition": {"enum": list(REVIEW_DISPOSITIONS)},
+                                    "case_application_dispositions": {
+                                        "items": {
+                                            "properties": {
+                                                "disposition": {"enum": list(REVIEW_DISPOSITIONS)}
+                                            }
+                                        }
+                                    },
+                                }
+                            }
+                        }
+                    }
+                },
+            }
+        ],
         "additionalProperties": False,
     }
+
+
+def _reviewed_target(application: Mapping[str, Any], target_kind: str) -> dict[str, Any]:
+    rule_instance_ids: list[str] = []
+    target_ids: list[str] = []
+    for result in application.get("active_rule_instances", []):
+        if not isinstance(result, Mapping):
+            continue
+        rule_id = result.get("rule_instance_id")
+        if isinstance(rule_id, str):
+            rule_instance_ids.append(rule_id)
+        target = result.get("target")
+        if isinstance(target, Mapping) and isinstance(target.get("id"), str):
+            target_ids.append(str(target["id"]))
+    exact_rule_id = application.get("exact_control_rule_instance_id")
+    if isinstance(exact_rule_id, str):
+        rule_instance_ids.append(exact_rule_id)
+        parts = exact_rule_id.split("::", 2)
+        if len(parts) == 3:
+            target_ids.append(parts[2])
+    return {
+        "target_kind": target_kind,
+        "target_ids": sorted(set(target_ids)),
+        "rule_instance_ids": sorted(set(rule_instance_ids)),
+    }
+
+
+def validate_source_science_review_form(
+    form: Mapping[str, Any], matrix: Mapping[str, Any]
+) -> None:
+    """Validate review identity, completion state, and exact matrix coverage."""
+
+    status = form.get("review_status")
+    if status not in REVIEW_FORM_STATUSES:
+        raise ReviewConsoleError("REVIEW_FORM_STATUS_INVALID")
+    form_items = form.get("items")
+    matrix_items = matrix.get("items")
+    if not isinstance(form_items, list) or not isinstance(matrix_items, list):
+        raise ReviewConsoleError("REVIEW_FORM_AND_MATRIX_ITEMS_REQUIRED")
+    matrix_by_id = {
+        str(item["review_item_id"]): item
+        for item in matrix_items
+        if isinstance(item, Mapping) and isinstance(item.get("review_item_id"), str)
+    }
+    form_by_id = {
+        str(item["review_item_id"]): item
+        for item in form_items
+        if isinstance(item, Mapping) and isinstance(item.get("review_item_id"), str)
+    }
+    if len(matrix_by_id) != len(matrix_items):
+        raise ReviewConsoleError("MATRIX_REVIEW_ITEM_IDS_INVALID")
+    if len(form_by_id) != len(form_items):
+        raise ReviewConsoleError("FORM_REVIEW_ITEM_IDS_INVALID")
+    missing = sorted(set(matrix_by_id) - set(form_by_id))
+    unknown = sorted(set(form_by_id) - set(matrix_by_id))
+    if missing:
+        raise ReviewConsoleError(f"FORM_CASE_COVERAGE_MISSING:{','.join(missing)}")
+    if unknown:
+        raise ReviewConsoleError(f"FORM_REVIEW_ITEM_UNKNOWN:{','.join(unknown)}")
+
+    for item_id, raw_form_item in form_by_id.items():
+        form_item = _require_mapping(raw_form_item, f"form.{item_id}")
+        matrix_item = _require_mapping(matrix_by_id[item_id], f"matrix.{item_id}")
+        applications = matrix_item.get("case_applications")
+        records = form_item.get("case_application_dispositions")
+        if not isinstance(applications, list) or not isinstance(records, list):
+            raise ReviewConsoleError(f"CASE_DISPOSITION_RECORDS_REQUIRED:{item_id}")
+        expected_by_case = {
+            str(application["case_id"]): {
+                "case_id": str(application["case_id"]),
+                "reviewed_target": _reviewed_target(
+                    _require_mapping(application, f"matrix.{item_id}.application"),
+                    str(matrix_item["target_kind"]),
+                ),
+            }
+            for application in applications
+            if isinstance(application, Mapping) and isinstance(application.get("case_id"), str)
+        }
+        records_by_case = {
+            str(record["case_id"]): record
+            for record in records
+            if isinstance(record, Mapping) and isinstance(record.get("case_id"), str)
+        }
+        if len(records_by_case) != len(records):
+            raise ReviewConsoleError(f"CASE_DISPOSITION_CASE_IDS_INVALID:{item_id}")
+        if set(records_by_case) != set(expected_by_case):
+            raise ReviewConsoleError(f"CASE_DISPOSITION_COVERAGE_MISMATCH:{item_id}")
+        dispositions = [form_item.get("rule_disposition")]
+        for case_id, expected in expected_by_case.items():
+            record = _require_mapping(records_by_case[case_id], f"form.{item_id}.{case_id}")
+            if record.get("reviewed_target") != expected["reviewed_target"]:
+                raise ReviewConsoleError(f"CASE_DISPOSITION_RULE_INSTANCE_MISMATCH:{item_id}:{case_id}")
+            disposition = record.get("disposition")
+            if disposition not in (None, *REVIEW_DISPOSITIONS):
+                raise ReviewConsoleError(f"CASE_DISPOSITION_INVALID:{item_id}:{case_id}")
+            dispositions.append(disposition)
+
+        rule_disposition = form_item.get("rule_disposition")
+        if rule_disposition not in (None, *REVIEW_DISPOSITIONS):
+            raise ReviewConsoleError(f"RULE_DISPOSITION_INVALID:{item_id}")
+        positive = any(value in POSITIVE_REVIEW_DISPOSITIONS for value in dispositions)
+        completed = status == "COMPLETED"
+        required_fields = (
+            "reviewer_name",
+            "reviewer_role",
+            "review_date",
+            "passage_checked",
+            "allowed_scope",
+            "claim_ceiling",
+            "supporting_note",
+        )
+        if positive or completed:
+            for field in required_fields:
+                value = form_item.get(field)
+                if not isinstance(value, str) or not value.strip():
+                    raise ReviewConsoleError(f"COMPLETED_REVIEW_FIELD_REQUIRED:{item_id}:{field}")
+            try:
+                parsed_date = date.fromisoformat(str(form_item["review_date"]))
+            except ValueError as error:
+                raise ReviewConsoleError(f"REVIEW_DATE_ISO_REQUIRED:{item_id}") from error
+            if parsed_date.isoformat() != form_item["review_date"]:
+                raise ReviewConsoleError(f"REVIEW_DATE_ISO_REQUIRED:{item_id}")
+        if completed and any(value is None for value in dispositions):
+            raise ReviewConsoleError(f"COMPLETED_REVIEW_DISPOSITION_REQUIRED:{item_id}")
+        if item_id == "NDSR-F04R02" and positive:
+            raise ReviewConsoleError("F04_POSITIVE_DISPOSITION_BLOCKED_BY_TRACEABILITY")
+        if "APPROVE_WITH_BOUNDED_REVISION" in dispositions:
+            revision = form_item.get("required_revision")
+            if not isinstance(revision, str) or not revision.strip():
+                raise ReviewConsoleError(f"BOUNDED_REVISION_TEXT_REQUIRED:{item_id}")
+
+
+def _require_mapping(value: Any, label: str) -> Mapping[str, Any]:
+    if not isinstance(value, Mapping):
+        raise ReviewConsoleError(f"MAPPING_REQUIRED:{label}")
+    return value
 
 
 def _workspace_readme() -> str:
@@ -332,12 +649,18 @@ For every row in `source_passage_index.json` and `case_application_matrix.json`:
 1. Open the recorded locator and check the primary passage or case-bound artifact.
 2. Decide whether the stated atomic claim supports only the stated reusable use.
 3. Check whether the listed HSP90 or ADK application stays inside its claim ceiling.
-4. Enter a named, dated disposition in `reviewer_form.json` without changing Rule or
-   runtime files.
+4. Copy `reviewer_form.json` to a local working file. Keep `review_status` as `DRAFT`
+   while any item or case record is incomplete.
+5. Record dispositions separately for the reusable Rule question and for each exact
+   `case_id` + reviewed target/RuleInstance record. Set `COMPLETED` only after all
+   records have a named reviewer, role, ISO date, checked passage, allowed scope,
+   claim ceiling, and supporting note.
 
-`F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL` intentionally begins with a pending
-traceability mapping. Its case dossier and manifest identify a bounded control record,
-but this workspace does not invent a primary-paper passage for it.
+`F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL` has
+`PENDING_SOURCE_TRACEABILITY_MAPPING`. The overlay-required packet labels do not map
+to repository records keyed by those labels. A positive F04 disposition is invalid
+until a human resolves that mapping; the existing record remains an exact-control
+regression with `NO_ACTIVE_RULE_EFFECT` on the public HSP90 case.
 
 ## Allowed dispositions
 
@@ -347,9 +670,18 @@ but this workspace does not invent a primary-paper passage for it.
 - `REJECT_NOT_REUSABLE`
 - `NOT_APPLICABLE_TO_CURRENT_CASE`
 
-A positive disposition does not automatically activate a Rule, Resolution Policy,
-Evaluation Contract, Operator, or scientific claim. A later human/project decision must
-explicitly select any allowed next action.
+A positive disposition requires nonempty reviewer identity, role, ISO review date,
+checked passage, allowed scope, claim ceiling, and supporting note. It does not
+activate a Rule, Resolution Policy, Evaluation Contract, Operator, or scientific claim.
+A later human/project decision must explicitly select any allowed next action.
+
+## Local review-template export
+
+The committed `reviewer_form.json` is a blank local template. Copy it to an untracked
+working file before editing. The static console links to the template but has no form,
+save endpoint, or scientific-state mutation path. Validate any completed record against
+`reviewer_form.schema.json` and the exact case-application matrix before treating it as
+a review record.
 
 ## Regeneration
 
@@ -372,6 +704,15 @@ PYTHONPATH=src python scripts/render_review_console_v0.py \\
 
 The resulting `review_console/index.html` is local and static. It contains no mutation
 endpoint, credential handling, model call, operator execution, or database.
+
+View the generated workbench with the standard-library static file server:
+
+```bash
+python3 -m http.server 8000 --directory review_console
+```
+
+Then open `http://127.0.0.1:8000/`. The server exposes files only; it does not add an
+execution, review-save, or scientific-state mutation endpoint.
 """
 
 
@@ -388,10 +729,19 @@ def build_source_science_review_workspace(
     bindings = _read_json(RULES_ROOT / "applicability_bindings_v1.json")["bindings"]
     contracts = _read_json(RULES_ROOT / "evaluation_contracts_v1.json")["contracts"]
     policies = _read_json(RULES_ROOT / "resolution_policies_v1.json")["policies"]
+    runtime_subrules_registry = _read_json(RULES_ROOT / "runtime_subrules_v1.json")
+    family_overlay_registry = _read_json(RULES_ROOT / "family_overlay_v1.json")
     f04_overlay = _read_json(F04R02_OVERLAY_PATH)
     bindings_by_subrule = {str(item["runtime_subrule_id"]): item for item in bindings}
     contracts_by_subrule = {str(item["runtime_subrule_id"]): item for item in contracts}
     policies_by_id = {str(item["resolution_policy_id"]): item for item in policies}
+    runtime_subrules_by_id = {
+        str(item["runtime_subrule_id"]): item
+        for item in runtime_subrules_registry["runtime_subrules"]
+    }
+    family_overlay_by_id = {
+        str(item["family_id"]): item for item in family_overlay_registry["families"]
+    }
     review_items = narrow_packet.get("review_items")
     if not isinstance(review_items, list) or not review_items:
         raise ReviewConsoleError("NARROW_REVIEW_ITEMS_REQUIRED")
@@ -403,6 +753,10 @@ def build_source_science_review_workspace(
             bindings_by_subrule=bindings_by_subrule,
             contracts_by_subrule=contracts_by_subrule,
             policies_by_id=policies_by_id,
+            runtime_subrules_by_id=runtime_subrules_by_id,
+            runtime_subrules_registry_status=str(runtime_subrules_registry["status"]),
+            family_overlay_by_id=family_overlay_by_id,
+            family_overlay_registry_status=str(family_overlay_registry["status"]),
             f04_overlay=f04_overlay,
         )
         for item in review_items
@@ -449,26 +803,41 @@ def build_source_science_review_workspace(
         "items": matrix_items,
     }
     form = {
-        "schema_version": "source-science-reviewer-form/v1",
-        "review_status": "PENDING_DOMAIN_REVIEW",
+        "schema_version": "source-science-reviewer-form/v2",
+        "review_status": "DRAFT",
         "allowed_dispositions": list(REVIEW_DISPOSITIONS),
-        "instructions": "Only a named human/domain reviewer may complete these fields after checking the referenced passage or case-bound artifact.",
+        "instructions": (
+            "This local DRAFT is non-authoritative. Only a named human/domain reviewer "
+            "may set COMPLETED after checking every referenced passage or case-bound "
+            "artifact. Positive dispositions require identity, ISO review date, checked "
+            "passage, allowed scope, claim ceiling, and supporting note. F04R02 cannot "
+            "receive a positive disposition while traceability remains pending."
+        ),
         "items": [
             {
-                "review_item_id": entry["review_item_id"],
+                "review_item_id": matrix_item["review_item_id"],
                 "reviewer_name": None,
                 "reviewer_role": None,
                 "review_date": None,
                 "passage_checked": None,
                 "rule_disposition": None,
-                "case_application_disposition": None,
+                "case_application_dispositions": [
+                    {
+                        "case_id": application["case_id"],
+                        "reviewed_target": application["reviewed_target"],
+                        "disposition": None,
+                    }
+                    for application in matrix_item["case_applications"]
+                ],
                 "required_revision": None,
+                "allowed_scope": None,
                 "claim_ceiling": None,
-                "notes": None,
+                "supporting_note": None,
             }
-            for entry in source_entries
+            for matrix_item in matrix_items
         ],
     }
+    validate_source_science_review_form(form, application_matrix)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_json(output_dir / "source_passage_index.json", source_index)
@@ -579,6 +948,13 @@ def _render_evidence(evidence: Mapping[str, Any]) -> str:
 
 
 def _render_exact_control(control: Mapping[str, Any]) -> str:
+    if control.get("availability") == "UNAVAILABLE":
+        return (
+            '<article class="control-card unavailable-card">'
+            f"<div class=\"evidence-heading\"><code>EXISTING_EXACT_CONTROL_REGRESSION</code>{_badge('UNAVAILABLE')}</div>"
+            f"<p>{_escape(control.get('reason', 'No exact-control artifact is recorded.'))}</p>"
+            "</article>"
+        )
     if control.get("status") == "NOT_RUN_IN_THIS_CAPSULE_INVOCATION":
         return '<p class="muted">No exact HSP90 control regression belongs to this case.</p>'
     return f"""
@@ -588,6 +964,126 @@ def _render_exact_control(control: Mapping[str, Any]) -> str:
       <p><strong>Public case effect:</strong> {_badge(control.get('public_case_rule_effect', 'UNKNOWN'))}</p>
       <p>{_escape(control.get('boundary', 'No boundary text recorded.'))}</p>
       {_details('Exact control trace', control)}
+    </article>
+    """
+
+
+def _render_active_evidence(evidence: Mapping[str, Any]) -> str:
+    return f"""
+    <article class="evidence-card active-evidence-card">
+      <div class="evidence-heading"><code>{_escape(evidence.get('evidence_result_id', evidence.get('card_id', 'ACTIVE_RULE_EVIDENCE')))}</code>{_badge('ACTIVE_RULE_EVIDENCE')}</div>
+      <p><strong>Affected RuleInstance:</strong> <code>{_escape(evidence.get('affected_rule_instance_id', 'NOT_RECORDED'))}</code></p>
+      {_details('Full active-Rule EvidenceResult', evidence)}
+    </article>
+    """
+
+
+def _render_optional(label: str, value: Any, *, open_by_default: bool = False) -> str:
+    if isinstance(value, Mapping) and value.get("availability") == "UNAVAILABLE":
+        return (
+            '<article class="unavailable-card">'
+            f"<div class=\"evidence-heading\"><code>{_escape(label)}</code>{_badge('UNAVAILABLE')}</div>"
+            f"<p>{_escape(value.get('reason', 'Optional artifact unavailable.'))}</p>"
+            "</article>"
+        )
+    return _details(label, value, open_by_default=open_by_default)
+
+
+def _render_case_overview(view: CaseView) -> str:
+    sources = view.sources_and_locators
+    if isinstance(sources, Sequence) and not isinstance(sources, (str, bytes)):
+        source_html = "".join(
+            _render_source(source)
+            for source in sources
+            if isinstance(source, Mapping)
+        )
+    else:
+        source_html = _render_optional("SOURCES_AND_LOCATORS", sources)
+    return f"""
+    <article class="case-section case-overview" id="overview-{_escape(view.artifact_root_name)}">
+      <div class="case-kicker">{_escape(view.artifact_kind)} · {_escape(view.artifact_root_name.upper())}</div>
+      <h2>{_escape(view.case_id)}</h2>
+      <p class="question">{_escape(view.question)}</p>
+      <div class="status-strip">
+        <div><span>Artifact integrity</span>{_badge(view.integrity_status)}</div>
+        <div><span>Current gate</span>{_badge(view.current_gate)}</div>
+        <div><span>Recorded terminal state</span>{_badge(view.terminal_scientific_state)}</div>
+      </div>
+      <div class="two-column">
+        <div><h3>Sources and locators</h3>{source_html}</div>
+        <div>
+          <h3>Authority boundary</h3>
+          <p>{_escape(view.boundary)}</p>
+          {_details('Claim ceiling', view.claim_ceiling, open_by_default=True)}
+          {_details('AGENT_PROPOSAL', view.agent_proposal)}
+          {_details('PLATFORM_ADMITTED_FACT', view.admitted_facts)}
+        </div>
+      </div>
+    </article>
+    """
+
+
+def _render_case_trace(
+    view: CaseView, matrix_by_subrule: Mapping[str, Mapping[str, Any]]
+) -> str:
+    descriptive = "".join(
+        _render_evidence(item)
+        for item in view.descriptive_evidence_no_active_rule_effect
+    ) or '<p class="muted">No descriptive evidence recorded.</p>'
+    active = "".join(_render_active_evidence(item) for item in view.active_rule_evidence)
+    if not active:
+        active = (
+            '<p class="muted">No broad public-case ACTIVE_RULE_EVIDENCE is recorded. '
+            "No active RuleResult update.</p>"
+        )
+    unresolved = [
+        {
+            "ref": item.get("ref", item.get("development_obligation_ref", "UNKNOWN")),
+            "status": item.get("status", "UNKNOWN"),
+            "reason_codes": item.get("reason_codes", []),
+        }
+        for item in view.unresolved_obligations
+        if isinstance(item, Mapping)
+    ]
+    return f"""
+    <article class="case-section trace-case" id="trace-{_escape(view.artifact_root_name)}">
+      <div class="case-kicker">SOURCE → RULE → EVIDENCE TRACE</div>
+      <h2>{_escape(view.case_id)}</h2>
+      <h3>RULE_RESULT</h3>
+      <p class="muted">UNKNOWN / unresolved is preserved verbatim. The workbench does not infer a replacement value.</p>
+      <div class="card-grid">{''.join(_render_rule(rule, matrix_by_subrule) for rule in view.rule_results)}</div>
+      <div class="two-column">
+        <div>{_details('RuleInstances', view.rule_instances, open_by_default=True)}{_details('Unresolved obligations', unresolved, open_by_default=True)}</div>
+        <div>{_details('Fresh legal action cards', view.legal_action_cards, open_by_default=True)}{_details('Planner AGENT_PROPOSAL', view.planner_proposal)}{_details('Deterministic authorization', view.authorization)}</div>
+      </div>
+      <h3>Evidence lanes</h3>
+      <div class="evidence-lanes">
+        <div><h4>DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT</h4>{descriptive}</div>
+        <div><h4>ACTIVE_RULE_EVIDENCE</h4>{active}</div>
+        <div><h4>EXISTING_EXACT_CONTROL_REGRESSION</h4>{_render_exact_control(view.exact_control_regression)}</div>
+      </div>
+    </article>
+    """
+
+
+def _render_case_conclusion(view: CaseView) -> str:
+    return f"""
+    <article class="case-section conclusion-case" id="conclusion-{_escape(view.artifact_root_name)}">
+      <div class="case-kicker">CONCLUSION AND PROVENANCE</div>
+      <h2>{_escape(view.case_id)}</h2>
+      <div class="two-column">
+        <div>{_render_optional('CONCLUSION_PACKET', view.conclusion_packet, open_by_default=True)}{_render_optional('Before/after same-Rule links', view.before_after_rule_result_links)}</div>
+        <div>{_details('Executed actions', view.executed_actions)}{_details('Receipts and provenance', view.receipts, open_by_default=True)}</div>
+      </div>
+    </article>
+    """
+
+
+def _render_case_human_review(view: CaseView) -> str:
+    return f"""
+    <article class="human-case-card">
+      <div class="review-heading"><code>{_escape(view.case_id)}</code>{_badge(view.current_gate)}</div>
+      {_details('HUMAN_REVIEW state', view.human_review_state, open_by_default=True)}
     </article>
     """
 
@@ -670,8 +1166,16 @@ def _render_review_queue(
               <p><strong>Family:</strong> {_escape(entry['family_id'])}<br><strong>Runtime subrule:</strong> <code>{_escape(entry['runtime_subrule_id'])}</code></p>
               <p><strong>Locator:</strong> {_linkify(entry['primary_source_locator'])}</p>
               <p><strong>Locator status:</strong> {_escape(entry['primary_locator_status'])}</p>
+              <p><strong>Passage kind:</strong> {_escape(entry['passage_kind'])}</p>
+              <p><strong>Source packet status:</strong> {_badge(entry['source_packet_status'])}</p>
+              <p><strong>Traceability note:</strong> {_escape(entry.get('traceability_note') or 'No separate traceability note recorded.')}</p>
               <p><strong>Short passage:</strong> {_escape(entry['short_source_passage'])}</p>
               <p><strong>Atomic statement:</strong> {_escape(entry['atomic_scientific_statement'])}</p>
+              <p><strong>Scientific question:</strong> {_escape(entry['scientific_question'])}</p>
+              <p><strong>Runtime claim effect:</strong> {_escape(entry['claim_effect_summary'])}</p>
+              <p><strong>Implementation status:</strong> {_badge(entry['implementation_status'])}</p>
+              <p><strong>Registry authority:</strong> {_badge(entry['runtime_subrules_registry_status'])}</p>
+              <p><strong>Family source grounding:</strong> {_badge(entry['family_overlay']['source_grounding_decision'])} · <strong>Runtime readiness:</strong> {_badge(entry['family_overlay']['runtime_readiness'])}</p>
               <p><strong>Narrow reusable use:</strong> {_escape(entry['proposed_reusable_review_question'])}</p>
               <p><strong>Forbidden generalization:</strong> {_escape(entry['forbidden_generalization'])}</p>
               <p><strong>Claim ceiling:</strong> {_escape(entry['claim_ceiling'])}</p>
@@ -696,13 +1200,20 @@ def render_review_console(
     source_index = _read_json(review_workspace / "source_passage_index.json")
     matrix = _read_json(review_workspace / "case_application_matrix.json")
     form = _read_json(review_workspace / "reviewer_form.json")
+    validate_source_science_review_form(form, matrix)
+    advisory = _read_json(SOURCE_SCIENCE_ADVISORY_PATH) if SOURCE_SCIENCE_ADVISORY_PATH.is_file() else unavailable(
+        "The optional nine-item source-science advisory reconciliation is not present in this checkout."
+    )
     matrix_by_subrule = {
         str(item["runtime_subrule_id"]): item for item in matrix.get("items", []) if isinstance(item, dict)
     }
-    case_sections = "".join(
-        _render_case(case_dir=case_dir, matrix_by_subrule=matrix_by_subrule)
-        for case_dir in _case_directories(capsule_root)
+    case_views = [build_case_view(case_dir) for case_dir in _case_directories(capsule_root)]
+    overview_sections = "".join(_render_case_overview(view) for view in case_views)
+    trace_sections = "".join(
+        _render_case_trace(view, matrix_by_subrule) for view in case_views
     )
+    conclusion_sections = "".join(_render_case_conclusion(view) for view in case_views)
+    human_case_sections = "".join(_render_case_human_review(view) for view in case_views)
     queue = _render_review_queue(source_index, matrix, form)
     next_action = status.get("next_allowed_action", {})
     html_document = f"""<!doctype html>
@@ -710,7 +1221,7 @@ def render_review_console(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dynamics Atlas · Source-science review</title>
+  <title>Dynamics Atlas · Static engineering workbench</title>
   <style>
     :root {{
       --ink: #16232f;
@@ -740,6 +1251,8 @@ def render_review_console(
     ul {{ margin: .45rem 0; padding-left: 1.2rem; }}
     li {{ margin: .22rem 0; }}
     .shell {{ max-width: 1520px; margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 4rem) 5rem; }}
+    .view-nav {{ display: flex; flex-wrap: wrap; gap: .55rem; margin: 1rem 0 0; }}
+    .view-nav a {{ background: var(--panel); border: 1px solid var(--line); padding: .45rem .7rem; text-decoration: none; font: 700 .72rem/1.2 var(--mono); }}
     .masthead {{ display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(15rem, .8fr); gap: 2rem; padding: 2rem 0 2.4rem; border-bottom: 5px solid var(--ink); }}
     .eyebrow, .case-kicker {{ color: var(--teal); font: 700 .72rem/1.2 var(--mono); letter-spacing: .13em; }}
     .thesis {{ font: 1.18rem/1.45 var(--serif); max-width: 48rem; }}
@@ -757,6 +1270,9 @@ def render_review_console(
     .two-column {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }}
     .card-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: .8rem; }}
     .source-card, .rule-card, .evidence-card, .control-card, .review-card {{ background: var(--panel); border: 1px solid var(--line); padding: 1rem; margin: .75rem 0; box-shadow: 0 1px 0 rgba(22,35,47,.04); }}
+    .human-case-card, .unavailable-card, .integrity-example {{ background: var(--panel); border: 1px solid var(--line); padding: 1rem; margin: .75rem 0; }}
+    .unavailable-card {{ border-left: 4px solid var(--muted); }}
+    .integrity-example {{ border-left: 5px solid var(--danger); background: #fff4f4; }}
     .source-heading, .rule-heading, .evidence-heading, .review-heading {{ display: flex; align-items: flex-start; justify-content: space-between; gap: .75rem; }}
     .locator {{ font-size: .88rem; color: var(--muted); }}
     .muted {{ color: var(--muted); }}
@@ -765,6 +1281,7 @@ def render_review_console(
     details {{ margin: .6rem 0; background: #f9fbfb; border: 1px solid var(--line); padding: .45rem .65rem; }}
     summary {{ cursor: pointer; color: var(--teal); font-weight: 650; }}
     .queue {{ margin-top: 4rem; border-top: 5px solid var(--ink); padding-top: 1.5rem; }}
+    .primary-view {{ margin-top: 4rem; border-top: 5px solid var(--ink); padding-top: 1.5rem; }}
     .queue-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); gap: .9rem; }}
     footer {{ margin-top: 4rem; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .85rem; }}
     @media (max-width: 860px) {{ .masthead, .two-column, .evidence-lanes, .status-strip {{ grid-template-columns: 1fr; }} .shell {{ padding: 1rem 1rem 3rem; }} }}
@@ -774,9 +1291,15 @@ def render_review_console(
   <main class="shell">
     <header class="masthead">
       <div>
-        <div class="eyebrow">DYNAMICS ATLAS · READ-ONLY EVIDENCE LEDGER</div>
-        <h1>Source-science review</h1>
-        <p class="thesis">A human trace of what the exposed HSP90 and ADK capsules recorded, what each Rule still leaves unresolved, and what a named domain reviewer must check before any scientific authority can move.</p>
+        <div class="eyebrow">DYNAMICS ATLAS · STATIC READ-ONLY WORKBENCH</div>
+        <h1>Case evidence and human review</h1>
+        <p class="thesis">Artifact-only CaseViews for the exposed HSP90 and ADK development cases: admitted facts, Rules, separate evidence lanes, recorded conclusions, provenance, and the still-pending named review gate.</p>
+        <nav class="view-nav" aria-label="Primary workbench views">
+          <a href="#case-overview">1 · Case Overview</a>
+          <a href="#trace">2 · Source → Rule → Evidence Trace</a>
+          <a href="#conclusion">3 · Conclusion and Provenance</a>
+          <a href="#human-review">4 · Human Review</a>
+        </nav>
       </div>
       <aside class="gate-card">
         <div class="eyebrow">CURRENT GATE</div>
@@ -784,11 +1307,39 @@ def render_review_console(
         <p>{_escape(next_action.get('exit_gate', 'No exit condition recorded.'))}</p>
       </aside>
     </header>
-    {case_sections}
-    <section class="queue">
+    <section class="primary-view" id="case-overview">
+      <div class="eyebrow">PRIMARY VIEW 1</div>
+      <h1>Case Overview</h1>
+      {overview_sections}
+    </section>
+    <section class="primary-view" id="trace">
+      <div class="eyebrow">PRIMARY VIEW 2</div>
+      <h1>Source → Rule → Evidence Trace</h1>
+      {trace_sections}
+    </section>
+    <section class="primary-view" id="conclusion">
+      <div class="eyebrow">PRIMARY VIEW 3</div>
+      <h1>Conclusion and Provenance</h1>
+      <p class="question">A recorded ConclusionPacket is displayed as an artifact. A case_runner_v1 run that records NOT_CALCULATED_BY_CASE_RUNNER remains explicitly unavailable rather than receiving a synthetic conclusion.</p>
+      {conclusion_sections}
+    </section>
+    <section class="primary-view queue" id="human-review">
+      <div class="eyebrow">PRIMARY VIEW 4</div>
+      <h1>Human Review</h1>
+      <div class="card-grid">{human_case_sections}</div>
+      <div class="two-column">
+        <div>{_render_optional('ADVISORY_RECONCILIATION_NOT_OFFICIAL_DISPOSITION', advisory, open_by_default=True)}</div>
+        <div>{_details('OFFICIAL_REVIEW_TEMPLATE_BLANK', form, open_by_default=True)}</div>
+      </div>
+      <p class="muted">The advisory packet is engineering/source-audit preparation only. It cannot populate the separate official named-review identity or disposition fields.</p>
       <div class="eyebrow">NAMED HUMAN / DOMAIN REVIEW QUEUE</div>
       <h2>Primary-passage and application checks</h2>
-      <p class="question">Every entry is pending. This view exposes the recorded locator, narrow proposed use, contract boundary, and blank reviewer fields. It does not make a disposition.</p>
+      <p class="question">Every entry is pending. This view exposes passage kind, source-packet status, traceability, narrow proposed use, registry authority, exact case/RuleInstance keys, and blank reviewer fields. It does not make a disposition.</p>
+      <p><a href="../review/source_science_v1/reviewer_form.json" download>Export/copy the local DRAFT review template</a> · the page cannot save or mutate it.</p>
+      <aside class="integrity-example">
+        <div class="review-heading"><code>INTEGRITY_ERROR_EXAMPLE</code>{_badge('REQUIRED_ARTIFACT_MISSING')}</div>
+        <p>If a required case/run artifact is absent, malformed, cross-case, or stale, <code>build_case_view</code> raises <code>CaseViewIntegrityError</code> and the case is not rendered. This example is a visible fail-closed state, not an active error in HSP90 or ADK.</p>
+      </aside>
       <div class="queue-grid">{queue}</div>
     </section>
     <footer>Generated locally from repository artifacts. Static HTML only: no model call, operator execution, API credential, database, mutation endpoint, or scientific approval.</footer>

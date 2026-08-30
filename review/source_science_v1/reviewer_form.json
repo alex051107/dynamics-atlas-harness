@@ -6,117 +6,383 @@
     "REJECT_NOT_REUSABLE",
     "NOT_APPLICABLE_TO_CURRENT_CASE"
   ],
-  "instructions": "Only a named human/domain reviewer may complete these fields after checking the referenced passage or case-bound artifact.",
+  "instructions": "This local DRAFT is non-authoritative. Only a named human/domain reviewer may set COMPLETED after checking every referenced passage or case-bound artifact. Positive dispositions require identity, ISO review date, checked passage, allowed scope, claim ceiling, and supporting note. F04R02 cannot receive a positive disposition while traceability remains pending.",
   "items": [
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F01R01_CASE_CLAIM_DECLARATION::CASE::ADK_EXPOSED_PORTABILITY_V1"
+            ],
+            "target_ids": [
+              "ADK_EXPOSED_PORTABILITY_V1"
+            ],
+            "target_kind": "CASE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F01R01_CASE_CLAIM_DECLARATION::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1"
+            ],
+            "target_ids": [
+              "HSP90_NTD_EXPOSED_PAPER_BLIND_V1"
+            ],
+            "target_kind": "CASE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F01R01",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::ADK_EXPOSED_PORTABILITY_V1"
+            ],
+            "target_ids": [
+              "ADK_EXPOSED_PORTABILITY_V1"
+            ],
+            "target_kind": "CASE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1"
+            ],
+            "target_ids": [
+              "HSP90_NTD_EXPOSED_PAPER_BLIND_V1"
+            ],
+            "target_kind": "CASE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F01R02",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+              "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_COORDINATE_DERIVATIVES",
+              "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_ids": [
+              "ADK_1E4V_G10V_STRUCTURE",
+              "ADK_COORDINATE_DERIVATIVES",
+              "ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_kind": "SOURCE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_MD_DISTANCE_TRACE",
+              "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_ids": [
+              "HSP90_MD_DISTANCE_TRACE",
+              "HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_kind": "SOURCE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F02R01",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_ids": [
+              "ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_ids": [
+              "HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F02R02",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+              "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_COORDINATE_DERIVATIVES",
+              "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_ids": [
+              "ADK_1E4V_G10V_STRUCTURE",
+              "ADK_COORDINATE_DERIVATIVES",
+              "ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_kind": "SOURCE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_MD_DISTANCE_TRACE",
+              "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_ids": [
+              "HSP90_MD_DISTANCE_TRACE",
+              "HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_kind": "SOURCE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F03R01",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [],
+            "target_ids": [],
+            "target_kind": "SOURCE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet"
+            ],
+            "target_ids": [
+              "hsp90_md_round2_directional_packet"
+            ],
+            "target_kind": "SOURCE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F04R02",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+              "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_COORDINATE_DERIVATIVES",
+              "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_ids": [
+              "ADK_1E4V_G10V_STRUCTURE",
+              "ADK_COORDINATE_DERIVATIVES",
+              "ADK_ENDPOINT_CONTEXT"
+            ],
+            "target_kind": "SOURCE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+              "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_ids": [
+              "HSP90_MD_DISTANCE_TRACE",
+              "HSP90_NMR_METHODS_RESULTS"
+            ],
+            "target_kind": "SOURCE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F06R01",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R02_EDGE_COMPARABILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_ids": [
+              "ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_ids": [
+              "HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F06R02",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     },
     {
-      "case_application_disposition": null,
+      "allowed_scope": null,
+      "case_application_dispositions": [
+        {
+          "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_ids": [
+              "ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        },
+        {
+          "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "disposition": null,
+          "reviewed_target": {
+            "rule_instance_ids": [
+              "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_ids": [
+              "HSP90_NMR_TO_MD_CONTEXT_EDGE"
+            ],
+            "target_kind": "EDGE"
+          }
+        }
+      ],
       "claim_ceiling": null,
-      "notes": null,
       "passage_checked": null,
       "required_revision": null,
       "review_date": null,
       "review_item_id": "NDSR-F06R03",
       "reviewer_name": null,
       "reviewer_role": null,
-      "rule_disposition": null
+      "rule_disposition": null,
+      "supporting_note": null
     }
   ],
-  "review_status": "PENDING_DOMAIN_REVIEW",
-  "schema_version": "source-science-reviewer-form/v1"
+  "review_status": "DRAFT",
+  "schema_version": "source-science-reviewer-form/v2"
 }

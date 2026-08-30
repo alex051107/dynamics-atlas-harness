@@ -11,12 +11,18 @@ For every row in `source_passage_index.json` and `case_application_matrix.json`:
 1. Open the recorded locator and check the primary passage or case-bound artifact.
 2. Decide whether the stated atomic claim supports only the stated reusable use.
 3. Check whether the listed HSP90 or ADK application stays inside its claim ceiling.
-4. Enter a named, dated disposition in `reviewer_form.json` without changing Rule or
-   runtime files.
+4. Copy `reviewer_form.json` to a local working file. Keep `review_status` as `DRAFT`
+   while any item or case record is incomplete.
+5. Record dispositions separately for the reusable Rule question and for each exact
+   `case_id` + reviewed target/RuleInstance record. Set `COMPLETED` only after all
+   records have a named reviewer, role, ISO date, checked passage, allowed scope,
+   claim ceiling, and supporting note.
 
-`F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL` intentionally begins with a pending
-traceability mapping. Its case dossier and manifest identify a bounded control record,
-but this workspace does not invent a primary-paper passage for it.
+`F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL` has
+`PENDING_SOURCE_TRACEABILITY_MAPPING`. The overlay-required packet labels do not map
+to repository records keyed by those labels. A positive F04 disposition is invalid
+until a human resolves that mapping; the existing record remains an exact-control
+regression with `NO_ACTIVE_RULE_EFFECT` on the public HSP90 case.
 
 ## Allowed dispositions
 
@@ -26,9 +32,18 @@ but this workspace does not invent a primary-paper passage for it.
 - `REJECT_NOT_REUSABLE`
 - `NOT_APPLICABLE_TO_CURRENT_CASE`
 
-A positive disposition does not automatically activate a Rule, Resolution Policy,
-Evaluation Contract, Operator, or scientific claim. A later human/project decision must
-explicitly select any allowed next action.
+A positive disposition requires nonempty reviewer identity, role, ISO review date,
+checked passage, allowed scope, claim ceiling, and supporting note. It does not
+activate a Rule, Resolution Policy, Evaluation Contract, Operator, or scientific claim.
+A later human/project decision must explicitly select any allowed next action.
+
+## Local review-template export
+
+The committed `reviewer_form.json` is a blank local template. Copy it to an untracked
+working file before editing. The static console links to the template but has no form,
+save endpoint, or scientific-state mutation path. Validate any completed record against
+`reviewer_form.schema.json` and the exact case-application matrix before treating it as
+a review record.
 
 ## Regeneration
 
@@ -51,3 +66,12 @@ PYTHONPATH=src python scripts/render_review_console_v0.py \
 
 The resulting `review_console/index.html` is local and static. It contains no mutation
 endpoint, credential handling, model call, operator execution, or database.
+
+View the generated workbench with the standard-library static file server:
+
+```bash
+python3 -m http.server 8000 --directory review_console
+```
+
+Then open `http://127.0.0.1:8000/`. The server exposes files only; it does not add an
+execution, review-save, or scientific-state mutation endpoint.
