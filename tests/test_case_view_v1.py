@@ -238,7 +238,9 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "research_question": "Keep UNKNOWN explicit?",
             "claim_boundary": {"allowed": "fixture description only"},
             "input_provenance": {
-                "public_case_packet": None,
+                "public_case_packet": (
+                    "tests/fixtures/case_runner_v1/synthetic_public_packet_v1.json"
+                ),
                 "profile_proposal": None,
                 "planner_proposal": None,
                 "profile_mode": "CALLER_SUPPLIED_IN_MEMORY",
@@ -465,6 +467,34 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
                 _write_json(manifest_path, manifest)
                 with self.assertRaisesRegex(CaseViewIntegrityError, expected_error):
                     build_case_view(root)
+
+    def test_run_rejects_forged_packet_claim_chain_when_source_anchor_is_removed(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            packet_path = root / "inputs" / "public_case_packet.json"
+            packet = json.loads(packet_path.read_text(encoding="utf-8"))
+            packet["research_question"] = "Forged elevated question"
+            packet["platform_authority_envelope"]["claim_boundary"] = {
+                "allowed": "FORGED_BROAD_SCIENTIFIC_SUPPORT"
+            }
+            _write_json(packet_path, packet)
+
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["research_question"] = packet["research_question"]
+            manifest["claim_boundary"] = packet["platform_authority_envelope"][
+                "claim_boundary"
+            ]
+            manifest["input_provenance"]["public_case_packet"] = None
+            manifest["input_provenance"]["snapshot_artifacts"]["public_case_packet"][
+                "canonical_sha256"
+            ] = _canonical_sha256(packet)
+            _write_json(manifest_path, manifest)
+
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "REPOSITORY_PUBLIC_PACKET_SOURCE_REQUIRED"
+            ):
+                build_case_view(root)
 
 
 if __name__ == "__main__":

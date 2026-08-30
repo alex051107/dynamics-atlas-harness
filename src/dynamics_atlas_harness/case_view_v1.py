@@ -241,7 +241,7 @@ def _verify_repository_source_snapshot(
     *, snapshot: dict[str, Any], source_path: Any, label: str
 ) -> None:
     if source_path is None:
-        return
+        raise CaseViewIntegrityError("REPOSITORY_PUBLIC_PACKET_SOURCE_REQUIRED", label)
     source = _read_object(_safe_repository_reference(source_path, label), label)
     assert source is not None
     if source != snapshot:
