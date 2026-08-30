@@ -1215,11 +1215,17 @@ def _render_review_queue(
 def render_review_console(
     *,
     status_path: Path,
-    capsule_root: Path,
     review_workspace: Path,
     output_dir: Path,
+    capsule_root: Path = DEFAULT_CAPSULE_ROOT,
+    case_roots: Sequence[Path] | None = None,
 ) -> Path:
-    """Render a static HTML review trace without a server, API, or mutation path."""
+    """Render a static HTML review trace without a server, API, or mutation path.
+
+    Explicit ``case_roots`` may point to any mix of CaseView-compatible capsule case
+    or ``case_runner_v1`` run directories.  When omitted, the existing
+    ``capsule_root`` discovery behavior is preserved.
+    """
 
     status = _read_json(status_path)
     source_index = _read_json(review_workspace / "source_passage_index.json")
@@ -1233,7 +1239,8 @@ def render_review_console(
     matrix_by_subrule = {
         str(item["runtime_subrule_id"]): item for item in matrix.get("items", []) if isinstance(item, dict)
     }
-    case_views = [build_case_view(case_dir) for case_dir in _case_directories(capsule_root)]
+    artifact_roots = list(case_roots) if case_roots else _case_directories(capsule_root)
+    case_views = [build_case_view(case_root) for case_root in artifact_roots]
     overview_sections = "".join(_render_case_overview(view) for view in case_views)
     trace_sections = "".join(
         _render_case_trace(view, matrix_by_subrule) for view in case_views
@@ -1398,13 +1405,29 @@ def _build_main(argv: Sequence[str] | None = None) -> int:
 def _render_main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render the static Dynamics Atlas Review Console v0.")
     parser.add_argument("--status", type=Path, required=True)
-    parser.add_argument("--capsule-root", type=Path, required=True)
+    parser.add_argument(
+        "--capsule-root",
+        type=Path,
+        default=DEFAULT_CAPSULE_ROOT,
+        help="Capsule parent directory used when no explicit --case-root is supplied.",
+    )
+    parser.add_argument(
+        "--case-root",
+        dest="case_roots",
+        action="append",
+        type=Path,
+        help=(
+            "Explicit CaseView-compatible capsule case or case-run root. "
+            "Repeat to render multiple roots instead of capsule-root discovery."
+        ),
+    )
     parser.add_argument("--review-workspace", type=Path, default=DEFAULT_REVIEW_WORKSPACE)
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args(argv)
     output_path = render_review_console(
         status_path=args.status,
         capsule_root=args.capsule_root,
+        case_roots=args.case_roots,
         review_workspace=args.review_workspace,
         output_dir=args.output_dir,
     )

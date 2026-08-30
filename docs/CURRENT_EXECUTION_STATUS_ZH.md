@@ -21,16 +21,24 @@ direction 才能释放科学阶段。
   或 abstention 才会触发选中的描述性 action；HSP90 的 exact F04R02 control 仍单独显示，不能
   当作 broad public case 的 closure。该 PR 仍是 recorded proposal replay，不是独立 live Agent
   result，也没有 source-science approval。
-- 当前未合并的 engineering workbench v1 分支整合并修复了 PR #16/#17，提供两案例 recorded-replay
+- engineering workbench v1 以 bounded engineering integration baseline v1 记录；它整合并修复了
+  PR #16/#17，提供两案例 recorded-replay
   runner、proposal provenance、artifact-only CaseView、九项 H1 advisory package、
   [source-science review workspace](../review/source_science_v1/README.md) 和四视图
   [static Review Console](../review_console/index.html)。它只执行受限描述性 action、投影已有 artifact，
   不调用 live model、读取凭据或写回 scientific state。F04R02 仍是 `DATA_INSUFFICIENT`，broad
   same-Rule closure 仍是 `BLOCKED_BROAD_CLOSURE`。
 
-`03ae77efdfaabeaebbf2cf8cae5a490c15241be1` 是当前 merged PR #15 后的 literal `main`
-development/runtime baseline commit。engineering workbench v1 在新的 Draft PR 合并前仍是未合并的
-工程表面；它不改变 `main` 的事实，也不释放 scientific gate。
+`03ae77efdfaabeaebbf2cf8cae5a490c15241be1` 是 bounded engineering integration 的冻结
+development/runtime baseline commit，不是对当前 literal `main`、delivery head、merge state 或 CI
+结果的实时断言。精确 delivery SHA 与 GitHub PR merge-ref CI 结果由 GitHub PR metadata 记录；tracked
+status 使用 `GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE`，因此不会因后续 merge 立即失真。
+
+当前工程面只覆盖 recorded-replay evidence execution and inspection path。它不执行 live Agent，不完成
+broad active-Rule closure，也不由 `run-case` 生成 terminal ConclusionPacket。H1 保持
+`PENDING_DOMAIN_REVIEW`，ADK dynamics portability 保持 `NOT_EVALUATED`，held-out evaluation 未授权。
+internal adversarial subagent review passes 是内部工程审查，不是 external 或 independent approval。
+
 当前真实的科学下一步仍是 F01/F02/F03/F04/F06 的具名 human/domain
 source-science review，而不是已完成的 PR #7 merge review。
 

@@ -16,6 +16,7 @@ from dynamics_atlas_harness.review_console_v0 import (
     POSITIVE_REVIEW_DISPOSITIONS,
     REVIEW_DISPOSITIONS,
     ReviewConsoleError,
+    _render_main,
     build_source_science_review_workspace,
     render_review_console,
     validate_source_science_review_form,
@@ -232,6 +233,61 @@ class SourceScienceReviewWorkspaceTests(unittest.TestCase):
 
 
 class StaticReviewConsoleTests(unittest.TestCase):
+    def test_console_renders_fresh_hsp90_and_adk_case_runner_roots(self):
+        from dynamics_atlas_harness.case_runner_v1 import run_case_v1
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            hsp90_root = temp_root / "run-hsp90"
+            adk_root = temp_root / "run-adk"
+            output_dir = temp_root / "review-console"
+            run_case_v1(
+                case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+                output_dir=hsp90_root,
+            )
+            run_case_v1(
+                case_id="ADK_EXPOSED_PORTABILITY_V1",
+                output_dir=adk_root,
+            )
+
+            result = _render_main(
+                [
+                    "--status",
+                    str(STATUS),
+                    "--case-root",
+                    str(hsp90_root),
+                    "--case-root",
+                    str(adk_root),
+                    "--review-workspace",
+                    str(WORKSPACE),
+                    "--output-dir",
+                    str(output_dir),
+                ]
+            )
+            rendered = (output_dir / "index.html").read_text(encoding="utf-8")
+
+        self.assertEqual(result, 0)
+        self.assertEqual(rendered.count("CASE_RUNNER_V1_RUN"), 2)
+        self.assertIn("HSP90_NTD_EXPOSED_PAPER_BLIND_V1", rendered)
+        self.assertIn("ADK_EXPOSED_PORTABILITY_V1", rendered)
+        self.assertGreaterEqual(rendered.count("NOT_CALCULATED_BY_CASE_RUNNER"), 2)
+        self.assertEqual(rendered.count('<article class="evidence-card">'), 2)
+        self.assertEqual(
+            rendered.count(
+                "No broad public-case ACTIVE_RULE_EVIDENCE is recorded. "
+                "No active RuleResult update."
+            ),
+            2,
+        )
+        self.assertNotIn("active-evidence-card", rendered)
+        self.assertEqual(
+            rendered.count(
+                '<code>CONCLUSION_PACKET</code><span class="badge badge-unavailable">'
+                "UNAVAILABLE</span>"
+            ),
+            2,
+        )
+
     def test_console_has_four_views_two_cases_unknown_integrity_state_and_evidence_lanes(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             output_dir = Path(temp_dir)

@@ -1,27 +1,29 @@
-# Dynamics Atlas engineering workbench v1 completion record
+# Dynamics Atlas bounded engineering workbench v1 completion record
 
 ## Decision
 
-Engineering workbench v1 is implemented for the two admitted exposed-development
-cases. The reusable path is deterministic, recorded-replay by default, static for
-review, and fail-closed on stale or cross-case references. It does not complete the
-scientific gate.
+Decision: `BOUNDED_ENGINEERING_WORKBENCH_V1_COMPLETE`.
+
+The two admitted exposed-development cases now have a deterministic,
+recorded-replay engineering workbench that is static for review and fail-closed on
+stale or cross-case references. This is an engineering integration baseline, not a
+complete Dynamics Atlas scientific-decision prototype.
 
 `HUMAN GATE H1` remains `PENDING_DOMAIN_REVIEW`. Broad same-Rule scientific closure
 is `BLOCKED_BROAD_CLOSURE` because no named official disposition exists for the nine
 H1 items and the F04R02 packet-label mapping remains `DATA_INSUFFICIENT`.
 
-## Exact repository identity
+## Bounded engineering integration identity
 
 - GitHub repository: `alex051107/dynamics-atlas-harness`
-- Base branch: `main`
-- Exact fetched base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
-- Delivery branch: `feature/dynamics-atlas-autonomous-engineering-v1`
-- Exact review-repaired implementation head before final completion/status-only edits:
+- Frozen integration base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
+- Bounded engineering implementation baseline:
   `522fe7e2f07a5b08d0b2b73e5aa13bf7c609cdba`
-- Final delivery head: the Draft PR head recorded by GitHub after this completion
-  file is committed and pushed. A Git commit cannot contain its own hash; use
-  `git rev-parse HEAD` or the PR metadata for the exact final delivery object.
+- Delivery-state authority: `GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE`
+
+These commits identify the stable engineering integration baseline. This tracked
+record does not assert the current `main`, exact delivery head, merge state, or CI
+result; GitHub PR metadata owns those delivery facts.
 
 The integrated prior work is exact and auditable:
 
@@ -33,8 +35,8 @@ The integrated prior work is exact and auditable:
 
 The engineering batches are `b89ca2f` (runner/provenance), `9902db5`
 (H1 claim narrowing/advisory), `576be63` (CaseView/static workbench), and
-`5ed99b6` (first final integrity-review repair). Exact-head re-review then found a
-second bounded contract gap; `c8ab96e` binds authorization to admission/execution,
+`5ed99b6` (first internal adversarial subagent review repair). A subsequent internal
+adversarial subagent review pass found a second bounded contract gap; `c8ab96e` binds authorization to admission/execution,
 binds question and claim ceiling to the repository-backed public packet, rejects
 duplicate active-evidence IDs and no-op active reevaluations, and adds an active
 runner-to-CaseView round trip. Commit `d615361` then makes that repository packet
@@ -49,7 +51,7 @@ the Profiler-visible input, and Planner proposal/admission reconciliation.
 Commit `522fe7e` makes the three JSON transport booleans type-exact as well as
 value-exact, so integers such as `0` cannot stand in for `false`.
 
-## Implemented end-to-end path
+## Implemented recorded-replay evidence execution and inspection path
 
 ```text
 admitted public HSP90 or ADK packet
@@ -73,6 +75,11 @@ Selected card IDs are the sole execution input. A stale or cross-case card fails
 before action artifacts. Descriptive evidence cannot create an active Rule effect or
 forge a Rule `PASS`. The current two selected actions are descriptive, so their
 before/after RuleResults remain unchanged.
+
+This path is not a complete live-Agent or scientific end-to-end system. It does not
+execute a live Agent, establish broad active-Rule closure, generate a terminal
+ConclusionPacket in `run-case`, complete H1, evaluate ADK dynamics portability, or
+evaluate a held-out case.
 
 ## Runtime commands
 
@@ -104,7 +111,8 @@ hash, stale action card, stale EvidenceResult, or mismatched RuleInstance link r
 an integrity error. Optional absence is represented as `UNAVAILABLE`; `UNKNOWN`
 remains `UNKNOWN`.
 
-Rebuild the source-science workspace and workbench from repository artifacts:
+Rebuild the source-science workspace, then render the two fresh `run-case` roots into
+one static workbench:
 
 ```bash
 PYTHONPATH=src python3 scripts/build_source_science_review_workspace_v1.py \
@@ -112,10 +120,15 @@ PYTHONPATH=src python3 scripts/build_source_science_review_workspace_v1.py \
 
 PYTHONPATH=src python3 scripts/render_review_console_v0.py \
   --status governance/current_execution_status.json \
-  --capsule-root evidence/paper_blind_exposed_v1/development_runs/exposed_paper_blind_scientific_decision_capsule_v1 \
+  --case-root /tmp/dynamics-atlas-hsp90-engineering-v1 \
+  --case-root /tmp/dynamics-atlas-adk-engineering-v1 \
   --review-workspace review/source_science_v1 \
   --output-dir review_console
 ```
+
+`--case-root` is repeatable and accepts any CaseView-compatible committed capsule
+case or fresh `run-case` root. If it is omitted, the renderer keeps the existing
+`--capsule-root` directory-discovery behavior.
 
 Serve the generated files locally:
 
@@ -205,6 +218,9 @@ therefore does not become an Agent-performance result.
 
 ## Validation results
 
+The review evidence below consists of internal adversarial subagent review passes.
+It is engineering review evidence, not external or independent approval.
+
 Focused implementation checks completed before the final campaign:
 
 - reusable runner: 6 tests passed;
@@ -215,13 +231,13 @@ Focused implementation checks completed before the final campaign:
   registry assumption for case-bound F04R02; after repair, the two affected tests
   passed.
 
-The first four-role final review found bounded integrity defects in same-Rule identity
+The first internal adversarial subagent review pass found bounded integrity defects in same-Rule identity
 checking, run-root proposal provenance, active-evidence classification, the published
 review Schema, and the local review-template link. Commit `5ed99b6` repaired all five
 and added the corresponding negative tests. The combined affected suite then ran 23
 tests: `OK`.
 
-Exact-head engineering re-review found that a mutually edited authorization copy and
+A subsequent internal adversarial subagent review pass found that a mutually edited authorization copy and
 manifest claim ceiling could still pass internal copy checks, and that duplicate or
 no-op active reevaluations were accepted by the producer but rejected by CaseView.
 Commit `c8ab96e` repaired those contracts. On that exact implementation state, all 11
@@ -232,7 +248,7 @@ the optional PyMBAR dependency; neither test executes a numerical action path. B
 previously generated real HSP90 and ADK run roots reprojected through the repaired
 CaseView with integrity `PASS`.
 
-Authority and reproducibility re-review then showed that removing the public-packet
+Another internal adversarial subagent review pass showed that removing the public-packet
 source path could downgrade the repository binding to internal self-consistency.
 Commit `d615361` requires that safe repository-relative source for every case-run
 artifact and moves the synthetic fixture to a real repository-backed packet. All 12
@@ -240,7 +256,7 @@ CaseView tests passed, including a mutually forged packet/manifest/hash plus nul
 regression; the preserved real HSP90 and ADK runs again reprojected with integrity
 `PASS`.
 
-Engineering re-review also showed that direct edits to runner-owned terminal and
+Internal adversarial subagent review also showed that direct edits to runner-owned terminal and
 human-review fields could still be projected. Commit `fb4bdd1` makes those fields and
 the replay provenance contract invariant for case-run artifacts. All 16 CaseView
 tests passed, including terminal/review/transport mutations, recorded-proposal source
@@ -249,7 +265,7 @@ its proposal. Both preserved real runs again projected with integrity `PASS`. A
 Python 3.11 `-S` core import/CLI smoke passed with NumPy, SciPy, PyMBAR, and jsonschema
 absent.
 
-The final engineering consistency pass identified the JSON boolean `0 == false`
+The final internal adversarial subagent review pass identified the JSON boolean `0 == false`
 edge. Commit `522fe7e` closed it; the affected manifest-invariant test passed with all
 three transport flags checked against both `true` and integer `0` mutations.
 
@@ -263,10 +279,10 @@ Fresh release validation for the prior repaired implementation commit
 - the same clean archive installed as a core package under Python `3.11.14` with
   `--no-deps --no-build-isolation`; CLI parser/import smoke passed while NumPy,
   SciPy, PyMBAR, and jsonschema were all absent;
-- the repository CI matrix now runs the full declared optional-dependency suite on
-  Python 3.11 and 3.12. That exact-final-head clean-checkout matrix is the full-suite
-  evidence for `522fe7e` and its completion/status commit; results belong to the Draft
-  PR check readback because a committed file cannot record its own commit hash;
+- the repository workflow declares the full optional-dependency suite on Python 3.11
+  and 3.12. GitHub PR checks validate a PR merge ref, not a direct checkout of the
+  exact PR head. The exact delivery SHA and merge-ref check result remain owned by
+  GitHub PR metadata;
 - both repaired `run-case` commands completed; each CaseView had integrity `PASS`,
   five content-addressed input snapshots, one descriptive EvidenceResult, zero
   active-Rule EvidenceResults, and terminal state
@@ -281,21 +297,22 @@ Fresh release validation for the prior repaired implementation commit
 - `git diff --check` passed.
 
 The earlier local receipt labeled its optional-dependency interpreter as Python 3.11;
-final reproducibility review identified that it was Python 3.14. The fresh results
+internal reproducibility review identified that it was Python 3.14. The fresh results
 above replace that receipt. PyMBAR emitted its standard statistical-inefficiency
 caution and reported that the optional JAX acceleration package is absent; neither
 message is a test failure.
 
 ## Known limitations and human-only remainder
 
-- Official H1 is still pending.
+- Official H1 remains `PENDING_DOMAIN_REVIEW`.
 - F04R02 traceability is still `DATA_INSUFFICIENT`.
 - The runner registry contains only the two explicitly curated public development
   packets. A future case requires independent curation and explicit registry
   admission; there is no protein-name verdict branch.
-- Current selected actions are descriptive and do not exercise an active broad
-  same-Rule EvidenceResult in either public case.
-- The runner does not calculate a terminal ConclusionPacket.
+- Current selected actions are descriptive and do not exercise broad active-Rule
+  closure in either public case.
+- The runner does not generate or calculate a terminal ConclusionPacket; its terminal
+  state remains `NOT_CALCULATED_BY_CASE_RUNNER`.
 - Optional scientific routes require a repository checkout because their frozen
   `evidence/`, `registries/`, and configuration artifacts are repository-owned rather
   than wheel package data. Core installed CLI behavior is independently smoke-tested;
@@ -303,8 +320,8 @@ message is a test failure.
   `PYTHONPATH=src`.
 - Provider/model/prompt/raw-response/timestamp/cost provenance cannot be recovered
   from older recorded proposal files that did not store it.
-- No current live Planner mode is admitted.
-- Dynamic ADK portability, held-out behavior, general Rule coverage, general Operator
+- No live Agent, Profiler, or Planner execution is admitted or evaluated.
+- Dynamic ADK portability remains `NOT_EVALUATED`; held-out behavior, general Rule coverage, general Operator
   routing, Agent value, transfer, production readiness, and biological correctness
   remain untested.
 
@@ -313,13 +330,16 @@ future public-case curation, and any later held-out authorization.
 
 ## Allowed claim and forbidden upgrade
 
-Allowed claim: this branch implements and tests a reproducible, bounded engineering
-workbench for recorded HSP90 and static-ADK development artifacts. It includes fresh
+Allowed claim: this baseline implements and tests a reproducible, bounded
+recorded-replay evidence execution and inspection path for HSP90 and static-ADK
+development artifacts. It includes fresh
 Rule-derived legal actions, exact authorization, descriptive action execution,
 same-Rule attachment controls, explicit proposal provenance, an artifact-only
-CaseView, a four-view static review console, and an advisory-only H1 package.
+CaseView, a four-view static review console, an advisory-only H1 package, and internal
+adversarial subagent review passes.
 
-Forbidden upgrade: none of those artifacts proves source-science approval, broad
-HSP90 closure, ADK dynamics portability, independent answer blindness, live-Agent
+Forbidden upgrade: none of those artifacts or internal review passes proves external
+or independent approval, source-science approval, broad HSP90 closure, ADK dynamics
+portability, independent answer blindness, live-Agent
 performance, semantic correctness, scientific support, biological correctness,
 transfer, production readiness, or held-out performance.
