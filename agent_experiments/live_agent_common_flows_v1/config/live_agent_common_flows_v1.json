@@ -1,0 +1,134 @@
+{
+  "schema_version": "live-agent-common-flows-campaign-config/v1",
+  "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
+  "execution_status": "CLOSED_FROZEN",
+  "completion_receipt_path": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_campaign_manifest.json",
+  "completion_receipt_sha256": "e90721df5464bead6647ee20336cef1c23ed2831d45d96d328f53cc0e2116223",
+  "budget_ledger_path": "local/live_agent_common_flows_v1/budget_ledger.json",
+  "provider_transport": "OPENROUTER_CHAT_COMPLETIONS_STRICT_JSON_SCHEMA_NO_TOOLS",
+  "catalog_observed_at": "2026-08-30",
+  "catalog_sources": [
+    "https://openrouter.ai/api/v1/models",
+    "https://openrouter.ai/docs/features/structured-outputs",
+    "https://openrouter.ai/docs/features/provider-routing"
+  ],
+  "catalog_snapshot_path": "agent_experiments/live_agent_common_flows_v1/config/openrouter_endpoint_selection_20260830.json",
+  "catalog_snapshot_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "budget_usd": "5.00",
+  "max_completed_calls": 16,
+  "max_attempts_per_exact_role_case_model": 2,
+  "max_output_tokens": 16000,
+  "automatic_retries": 0,
+  "prompt_repair_limit": 1,
+  "prompt_repairs_used": 1,
+  "planner_schema_repairs_used": 1,
+  "planner_schema_repair_description": "TOP_LEVEL_CONDITIONAL_BRANCHES_REMOVED; DETERMINISTIC_VALIDATE_PLANNER_PROPOSAL_PRESERVES_SELECT_OR_ABSTAIN_SEMANTICS",
+  "pre_repair_campaign_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_live_20260830",
+  "cases": [
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "ADK_EXPOSED_PORTABILITY_V1"
+  ],
+  "roles": [
+    "PROFILER",
+    "PLANNER"
+  ],
+  "prompts": {
+    "PROFILER": {
+      "path": "agent_experiments/live_agent_common_flows_v1/prompts/profiler_v2.md",
+      "version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1"
+    },
+    "PLANNER": {
+      "path": "agent_experiments/live_agent_common_flows_v1/prompts/planner_v1.md",
+      "version": "LIVE_AGENT_COMMON_FLOWS_PLANNER_V1"
+    }
+  },
+  "models": [
+    {
+      "profile_id": "luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "accepted_returned_model_ids": [
+        "openai/gpt-5.6-luna",
+        "openai/gpt-5.6-luna-20260709"
+      ],
+      "provider_endpoint_tag": "openai",
+      "expected_provider_display_name": "OpenAI",
+      "allowed_service_tiers": [null, "default"],
+      "catalog_snapshot_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+      "input_price_per_million_usd": "0.20",
+      "output_price_per_million_usd": "1.20",
+      "reasoning_effort": "low",
+      "include_temperature_zero": false,
+      "independent_trials_per_case": 2,
+      "role": "PRIMARY"
+    },
+    {
+      "profile_id": "deepseek",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "accepted_returned_model_ids": [
+        "deepseek/deepseek-v4-flash-0731",
+        "deepseek/deepseek-v4-flash-20260731"
+      ],
+      "provider_endpoint_tag": "sail-research/fp4",
+      "expected_provider_display_name": "Sail Research",
+      "allowed_service_tiers": [null, "default"],
+      "catalog_snapshot_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+      "input_price_per_million_usd": "0.065",
+      "output_price_per_million_usd": "0.18",
+      "reasoning_effort": null,
+      "include_temperature_zero": true,
+      "independent_trials_per_case": 1,
+      "role": "LOW_COST_COMPARISON"
+    },
+    {
+      "profile_id": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "accepted_returned_model_ids": [
+        "minimax/minimax-m2.5",
+        "minimax/minimax-m2.5-20260211"
+      ],
+      "provider_endpoint_tag": "streamlake",
+      "expected_provider_display_name": "StreamLake",
+      "allowed_service_tiers": [null, "default"],
+      "catalog_snapshot_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+      "input_price_per_million_usd": "0.27",
+      "output_price_per_million_usd": "1.08",
+      "reasoning_effort": null,
+      "include_temperature_zero": true,
+      "independent_trials_per_case": 1,
+      "role": "LOW_COST_COMPARISON"
+    }
+  ],
+  "diagnostic_fallback": {
+    "trigger": "TWO_LUNA_PROFILER_RESPONSES_FOR_THE_SAME_CASE_FAILED_THE_SAME_DETERMINISTIC_CONTRACT",
+    "profile_id": "terra",
+    "model_id": "openai/gpt-5.6-terra",
+    "accepted_returned_model_ids": [
+      "openai/gpt-5.6-terra",
+      "openai/gpt-5.6-terra-20260709"
+    ],
+    "provider_endpoint_tag": "openai",
+    "expected_provider_display_name": "OpenAI",
+    "allowed_service_tiers": [null, "default"],
+    "catalog_snapshot_path": "agent_experiments/live_agent_common_flows_v1/config/openrouter_terra_fallback_endpoint_20260830.json",
+    "catalog_snapshot_sha256": "14276b5d96fbfae0a29808db5d040d653b9d5b5f4daa40abe0c3d0e164e30a3a",
+    "input_price_per_million_usd": "2.00",
+    "output_price_per_million_usd": "12.00",
+    "reasoning_effort": "low",
+    "include_temperature_zero": false,
+    "maximum_trials_per_case": 1,
+    "role": "BOUNDED_DIAGNOSTIC_FALLBACK"
+  },
+  "catalog_reviewed_not_called": [
+    {
+      "model_id": "tencent/hunyuan-a13b-instruct",
+      "provider_endpoint_tag": "siliconflow",
+      "expected_provider_display_name": "SiliconFlow",
+      "reason": "Excluded from the frozen live matrix to preserve the 16-call campaign cap while retaining two independent Luna trials."
+    }
+  ],
+  "call_plan": "2 cases x 2 roles x (2 Luna + 1 DeepSeek + 1 MiniMax) = 16 maximum completed calls",
+  "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY; NOT_AGENT_VALUE_ESTABLISHED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "broad_hsp90_closure_status": "NOT_ESTABLISHED",
+  "held_out_status": "NOT_ACCESSED"
+}

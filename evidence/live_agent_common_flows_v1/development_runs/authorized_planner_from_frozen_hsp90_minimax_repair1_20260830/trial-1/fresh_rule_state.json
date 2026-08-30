@@ -1,0 +1,603 @@
+{
+  "admission": {
+    "proposal": {
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "proposed_case_facts": {
+        "case": {
+          "declared_request_scope": [
+            "R46A and R60A construct-specific trajectory observables",
+            "NMR-derived ATP-lid conformational descriptors",
+            "Descriptive correspondence between MD distance traces and NMR measurements"
+          ],
+          "forbidden_upgrades": [
+            "State assignment to ATP-lid conformations",
+            "Population estimation for any conformational states",
+            "Kinetic rate constant derivation",
+            "Validated NMR-to-MD forward model",
+            "Equilibration assessment for trajectory ensemble"
+          ],
+          "intended_use": "Descriptive characterization of the relationship between C-alpha distance observables from seeded MD trajectories and ATP-lid conformational descriptors reported in NMR experiments",
+          "requested_claim_level": "DESCRIPTIVE_ONLY",
+          "scientific_claim": "The available evidence supports only a descriptive correspondence between the C-alpha distance observable (residues 46-60) extracted from seeded MD trajectories and the ATP-lid conformational descriptors derived from solution NMR measurements. No validated forward model links the trajectory observables to NMR readouts. The physical conditions and estimand sampled by NMR experiments and MD simulations remain unestablished as congruent."
+        },
+        "edges": [
+          {
+            "bridge_status": "NO_VALIDATED_BRIDGE",
+            "condition_relation": "NMR_MD_CONDITION_UNESTABLISHED",
+            "edge_id": "EDGE_NMR_MD_DESCRIPTIVE_BRIDGE",
+            "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+            "relation_type": "DESCRIPTIVE_CORRESPONDENCE",
+            "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+            "shared_error_status": "UNKNOWN",
+            "validation_independence": "UNVALIDATED"
+          }
+        ],
+        "sources": [
+          {
+            "construct_and_condition": "Wild-type, R46A, and R60A HSP90alpha N-terminal domain constructs in solution NMR measurements",
+            "estimand": "UNKNOWN - not established as congruent with MD estimand",
+            "evidence_role": "CONSTRUCTION",
+            "native_observable": "Solution NMR chemical shifts and relaxation-dispersion profiles for ATP-lid segment",
+            "sample_composition": "Solution-phase protein constructs with nucleotide conditions as described in Methods",
+            "source_id": "HSP90_NMR_METHODS_RESULTS",
+            "spatial_support": "Solution-phase bulk ensemble",
+            "time_semantics": {
+              "kind": "STEADY_STATE_OR_EQUILIBRIUM"
+            },
+            "unit_or_aggregation": "Ensemble-averaged NMR parameters per construct"
+          },
+          {
+            "construct_and_condition": "R46A_ES and R60A_GS seed-lineage labeled trajectory ensembles",
+            "estimand": "UNKNOWN - not established as congruent with NMR estimand",
+            "evidence_role": "CONSTRUCTION",
+            "native_observable": "C-alpha distance between residues 46 and 60",
+            "sample_composition": "40 trajectories with 1021 frames each; 20 R46A_ES and 20 R60A_GS seed-lineage labels",
+            "source_id": "HSP90_MD_DISTANCE_TRACE",
+            "spatial_support": "Atomic coordinate trajectories",
+            "time_semantics": {
+              "kind": "CORRELATED_TIME_SERIES"
+            },
+            "unit_or_aggregation": "Frame-level distance values; trajectory as statistical unit"
+          }
+        ]
+      },
+      "rationale": "The permitted facts explicitly establish that (1) no validated numerical forward model exists from NMR readouts to MD-derived observables, and (2) the packet does not establish that NMR and seeded MD sample the same physical conditions or estimand. These constraints preclude any quantitative or inferential claims beyond descriptive correspondence. The trajectory observables (C-alpha distances) can be described in relation to the ATP-lid conformational descriptors from NMR, but no causal, predictive, or population-level claims are supported. Forbidden upgrades including state assignment, population estimation, and kinetic derivation must be explicitly refused. Additional evidence required to discriminate remaining interpretations would include: a validated forward model mapping NMR observables to MD distance metrics, demonstrated congruence of physical conditions (temperature, ionic strength, nucleotide state) between NMR and MD, and independent validation of the seed-lineage constructs against experimental measurements.",
+      "unknowns": [
+        "Whether NMR and MD sample the same physical conditions",
+        "Whether the C-alpha distance observable corresponds to the NMR estimand",
+        "ATP-lid conformational state assignments for trajectory frames",
+        "Population proportions of any conformational states",
+        "Kinetic rates for lid opening/closing transitions",
+        "Equilibration status of the trajectory ensemble",
+        "Validity of extrapolating R46A/R60A mutant behavior to wild-type HSP90"
+      ]
+    },
+    "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
+    "schema_version": "paper-blind-agent-proposal-admission/v1"
+  },
+  "asset_verification": {
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "packet_id": "HSP90_PUBLIC_PACKET_V1",
+    "schema_version": "paper-blind-frozen-asset-verification/v1",
+    "verification_scope": "IDENTITY_AND_PUBLIC_PACKET_BOUNDARY_ONLY",
+    "verified_asset_ids": [
+      "HSP90_CA46_CA60_DISTANCE_40X1021",
+      "HSP90_TRAJECTORY_IDS",
+      "HSP90_TRAJECTORY_GROUP_MANIFEST"
+    ]
+  },
+  "development_obligations": [
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+      },
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE"
+      },
+      "target": {
+        "id": "HSP90_MD_DISTANCE_TRACE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"
+      },
+      "target": {
+        "id": "HSP90_NMR_METHODS_RESULTS",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+      },
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+      },
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "claim_effect": "Candidate-only F04/F05/F07 concerns remain non-Rule lifecycle items until a reviewed evaluation contract exists.",
+      "development_obligation_ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "CANDIDATE_ONLY_FAMILY_NOT_ACTIVE"
+      ],
+      "source": {
+        "development_obligation_ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "A descriptive observable-dependence result may be recorded; no active RuleResult or scientific disposition changes.",
+      "development_obligation_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+      "gap_type": "COMPUTABLE_EVIDENCE_MISSING",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "DESCRIPTIVE_CAPABILITY_ONLY"
+      ],
+      "source": {
+        "development_obligation_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "The NMR-to-MD relation remains unresolved until a reviewed method or forward bridge is available.",
+      "development_obligation_ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+      "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "FORWARD_BRIDGE_NOT_REVIEWED"
+      ],
+      "source": {
+        "development_obligation_ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "Named source-science review remains required for scientific interpretation.",
+      "development_obligation_ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+      "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "PENDING_DOMAIN_REVIEW"
+      ],
+      "source": {
+        "development_obligation_ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    }
+  ],
+  "projected_casegraph": {
+    "case": {
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "claim_contract": {
+        "declared_request_scope": [
+          "SOURCE_LOCAL_CONSISTENCY",
+          "CROSS_SOURCE_COMPARABILITY"
+        ],
+        "forbidden_upgrades": [
+          "EQUILIBRIUM_POPULATION",
+          "KINETICS",
+          "FREE_ENERGY",
+          "MECHANISM",
+          "NUMERICAL_NMR_TO_MD_AGREEMENT"
+        ],
+        "internal_consistency": "CONSISTENT"
+      },
+      "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "observability_target": {
+        "event_signature": "Answer-blind public-packet fact proposal",
+        "target_spatial_scale": "Source-declared or UNKNOWN",
+        "target_time_scale": "Source-declared or UNKNOWN"
+      },
+      "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+      "scientific_claim": "Describe only source-local HSP90 NMR and seeded-MD information while retaining the cross-source conformational relation as unresolved."
+    },
+    "comparisons": [
+      {
+        "bridge_status": "UNRESOLVED",
+        "comparison_id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "condition_relation": "UNKNOWN",
+        "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT",
+        "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+        "relation_type": "QUALITATIVE_TRIANGULATION",
+        "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+        "shared_claim": "Describe only source-local HSP90 NMR and seeded-MD information while retaining the cross-source conformational relation as unresolved.",
+        "shared_error_status": "UNKNOWN",
+        "validation_claim": "No validation claim is emitted by a development profiling proposal.",
+        "validation_independence": "NOT_INDEPENDENT"
+      }
+    ],
+    "evidence_items": [
+      {
+        "case_evidence_scope": "CLAIM_EVIDENCE",
+        "construct_and_condition": "Wild-type, R46A, and R60A HSP90alpha N-terminal domain constructs in solution NMR measurements",
+        "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+        "estimand": "UNKNOWN - not established as congruent with MD estimand",
+        "evidence_role": "CONSTRUCTION",
+        "native_measurement_declaration_status": "DECLARED",
+        "native_observable": "Solution NMR chemical shifts and relaxation-dispersion profiles for ATP-lid segment",
+        "sample_composition": "Solution-phase protein constructs with nucleotide conditions as described in Methods",
+        "sample_system_composition_declaration_status": "DECLARED",
+        "source_id": "HSP90_NMR_METHODS_RESULTS",
+        "source_locator": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623.",
+        "spatial_support": "Solution-phase bulk ensemble",
+        "time_semantics": {
+          "kind": "STEADY_STATE_OR_EQUILIBRIUM"
+        },
+        "unit_or_aggregation": "Ensemble-averaged NMR parameters per construct"
+      },
+      {
+        "case_evidence_scope": "CLAIM_EVIDENCE",
+        "construct_and_condition": "R46A_ES and R60A_GS seed-lineage labeled trajectory ensembles",
+        "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+        "estimand": "UNKNOWN - not established as congruent with NMR estimand",
+        "evidence_role": "DIAGNOSTIC",
+        "native_measurement_declaration_status": "DECLARED",
+        "native_observable": "C-alpha distance between residues 46 and 60",
+        "sample_composition": "40 trajectories with 1021 frames each; 20 R46A_ES and 20 R60A_GS seed-lineage labels",
+        "sample_system_composition_declaration_status": "DECLARED",
+        "source_id": "HSP90_MD_DISTANCE_TRACE",
+        "source_locator": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021, HSP90_TRAJECTORY_IDS, and HSP90_TRAJECTORY_GROUP_MANIFEST.",
+        "spatial_support": "Atomic coordinate trajectories",
+        "time_semantics": {
+          "kind": "CORRELATED_TIME_SERIES"
+        },
+        "unit_or_aggregation": "Frame-level distance values; trajectory as statistical unit"
+      }
+    ],
+    "projection_boundary": "Agent-proposed factual fields are evaluated as unverified Draft inputs. Case claim, evidence roles, comparison identities, and comparison semantics come only from the platform-owned public-packet contract."
+  },
+  "rule_results": [
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_NMR_METHODS_RESULTS",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_MD_DISTANCE_TRACE",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_MD_DISTANCE_TRACE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor.",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "route": "SOURCE_LOOKUP"
+      },
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_NMR_METHODS_RESULTS",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_NMR_METHODS_RESULTS",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_MD_DISTANCE_TRACE",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_MD_DISTANCE_TRACE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated.",
+        "decision_class": "REVIEWABLE_CASE_CONTRACT",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "CLAIM_CONTRACT_CONSISTENT"
+      ],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "kind": "CASE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented.",
+        "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+        "route": "DIRECT_EVALUATION"
+      },
+      "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+      ],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "PASS",
+      "target": {
+        "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "kind": "CASE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+        "decision_class": "ABSTAIN",
+        "route": "SOURCE_LOOKUP"
+      },
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "HSP90_NMR_METHODS_RESULTS",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+        "decision_class": "ABSTAIN",
+        "route": "SOURCE_LOOKUP"
+      },
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "HSP90_MD_DISTANCE_TRACE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft.",
+        "decision_class": "ABSTAIN",
+        "route": "SOURCE_LOOKUP"
+      },
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "applicability_status": "MATCHED",
+      "claim_effect": {
+        "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft.",
+        "decision_class": "ABSTAIN",
+        "route": "SOURCE_LOOKUP"
+      },
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "human_decision_gate_required": true,
+      "missing_paths": [],
+      "reason_codes": [
+        "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "schema_version": "rules-prototype-rule-result/v1",
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "kind": "EDGE"
+      }
+    }
+  ]
+}

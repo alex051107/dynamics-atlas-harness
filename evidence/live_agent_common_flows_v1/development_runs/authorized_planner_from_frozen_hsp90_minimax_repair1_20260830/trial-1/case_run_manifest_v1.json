@@ -1,0 +1,2333 @@
+{
+  "action_execution": {
+    "boundary": "Only validated selected public development cards execute. Descriptive results have no active Rule effect.",
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "evidence_results": [
+      {
+        "action_kind": "DESCRIPTIVE_ANALYSIS_ONLY",
+        "active_rule_effect": null,
+        "addresses_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "card_id": "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1",
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "descriptive_result": {
+          "analysis_window_label": "FROZEN_1021_FRAME_OBSERVED_WINDOW",
+          "between_group_descriptions": [
+            {
+              "difference_of_trajectory_mean_observable": -0.011117132648782668,
+              "interpretation_boundary": "A descriptive difference of row-level means only; no biological group effect, population, or convergence claim is emitted.",
+              "left_group_id": "R46A_ES",
+              "right_group_id": "R60A_GS"
+            }
+          ],
+          "capability_kind": "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+          "claim_ceiling": "Observable-specific descriptive autocorrelation and effective-sample-size estimates within the supplied window only.",
+          "development_status": "DESCRIPTIVE_DEVELOPMENT_ONLY",
+          "forbidden_claims": [
+            "simulation globally equilibrated",
+            "equilibrium population",
+            "kinetic rate",
+            "free energy",
+            "mechanism",
+            "biological group effect"
+          ],
+          "frame_dependence": "CORRELATED_WITHIN_TRAJECTORY",
+          "frames_per_trajectory": 1021,
+          "limitation": "PyMBAR statistical inefficiency on this one supplied observable and finite window may underestimate longer inherent timescales; it does not establish global sampling adequacy.",
+          "method_provenance": {
+            "function": "pymbar.timeseries.statistical_inefficiency",
+            "package": "pymbar",
+            "package_version": "4.0.3",
+            "parameters": {
+              "equilibration_detection": "NOT_RUN",
+              "per_trajectory": true
+            }
+          },
+          "observable_id": "HSP90_CA46_CA60_DISTANCE",
+          "per_trajectory": [
+            {
+              "effective_sample_size": 12.821075636880856,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0834160156978565,
+              "observable_standard_deviation": 0.04010340137544253,
+              "observed_window_maximum": 2.208324432373047,
+              "observed_window_minimum": 1.9704989194869995,
+              "statistical_inefficiency": 79.63450407101658,
+              "trajectory_id": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 115.58574766007972,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.083923554327065,
+              "observable_standard_deviation": 0.032424180835426315,
+              "observed_window_maximum": 2.200676441192627,
+              "observed_window_minimum": 1.9642465114593506,
+              "statistical_inefficiency": 8.833268985745606,
+              "trajectory_id": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 213.35934088185226,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.09034199625925,
+              "observable_standard_deviation": 0.034533131634836595,
+              "observed_window_maximum": 2.2252161502838135,
+              "observed_window_minimum": 1.9942835569381714,
+              "statistical_inefficiency": 4.785354115643705,
+              "trajectory_id": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 18.328487324417953,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0749253979158917,
+              "observable_standard_deviation": 0.036974678791728555,
+              "observed_window_maximum": 2.2051968574523926,
+              "observed_window_minimum": 1.9475258588790894,
+              "statistical_inefficiency": 55.70563363621298,
+              "trajectory_id": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 324.5890500368672,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.070893085901931,
+              "observable_standard_deviation": 0.033653301270758246,
+              "observed_window_maximum": 2.189697027206421,
+              "observed_window_minimum": 1.9683854579925537,
+              "statistical_inefficiency": 3.1455158449862486,
+              "trajectory_id": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 35.13119155404501,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.089061325374009,
+              "observable_standard_deviation": 0.036470204109316236,
+              "observed_window_maximum": 2.2259249687194824,
+              "observed_window_minimum": 1.9737402200698853,
+              "statistical_inefficiency": 29.062492754602907,
+              "trajectory_id": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 34.95959463204656,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0881768154467473,
+              "observable_standard_deviation": 0.03630979706655042,
+              "observed_window_maximum": 2.2304790019989014,
+              "observed_window_minimum": 1.9757314920425415,
+              "statistical_inefficiency": 29.20514413127879,
+              "trajectory_id": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 44.10433305727975,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.049628468031514,
+              "observable_standard_deviation": 0.03713020962291576,
+              "observed_window_maximum": 2.2094459533691406,
+              "observed_window_minimum": 1.9479138851165771,
+              "statistical_inefficiency": 23.149652862316128,
+              "trajectory_id": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.975283296320292,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.102257264582814,
+              "observable_standard_deviation": 0.036153967667815645,
+              "observed_window_maximum": 2.234684705734253,
+              "observed_window_minimum": 1.9749112129211426,
+              "statistical_inefficiency": 36.4965026157321,
+              "trajectory_id": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 173.9256502307592,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0842446723951067,
+              "observable_standard_deviation": 0.035986437573737075,
+              "observed_window_maximum": 2.22257924079895,
+              "observed_window_minimum": 1.9930862188339233,
+              "statistical_inefficiency": 5.870324467066063,
+              "trajectory_id": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 161.25397562007333,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0904944584021723,
+              "observable_standard_deviation": 0.03866009091727656,
+              "observed_window_maximum": 2.249671220779419,
+              "observed_window_minimum": 1.9688973426818848,
+              "statistical_inefficiency": 6.331626839424746,
+              "trajectory_id": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.866441474320197,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.1014281858076194,
+              "observable_standard_deviation": 0.036979556568131164,
+              "observed_window_maximum": 2.2373573780059814,
+              "observed_window_minimum": 2.003671407699585,
+              "statistical_inefficiency": 36.63905206342488,
+              "trajectory_id": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 44.34487387435352,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0997773038768863,
+              "observable_standard_deviation": 0.04110696777972127,
+              "observed_window_maximum": 2.243128776550293,
+              "observed_window_minimum": 2.001039505004883,
+              "statistical_inefficiency": 23.02408172121303,
+              "trajectory_id": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 49.18897950359309,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.090897987451656,
+              "observable_standard_deviation": 0.03659428231813887,
+              "observed_window_maximum": 2.2230587005615234,
+              "observed_window_minimum": 1.9838109016418457,
+              "statistical_inefficiency": 20.756681888987337,
+              "trajectory_id": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 33.355980484300595,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.07071773849435,
+              "observable_standard_deviation": 0.04475520782580553,
+              "observed_window_maximum": 2.2360219955444336,
+              "observed_window_minimum": 1.9474174976348877,
+              "statistical_inefficiency": 30.60920366231016,
+              "trajectory_id": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 27.432579287054505,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0861767268904745,
+              "observable_standard_deviation": 0.039199108800344114,
+              "observed_window_maximum": 2.2357382774353027,
+              "observed_window_minimum": 1.9840331077575684,
+              "statistical_inefficiency": 37.218519969130725,
+              "trajectory_id": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 165.46433522764482,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.0929119976914246,
+              "observable_standard_deviation": 0.03782452272225532,
+              "observed_window_maximum": 2.2407310009002686,
+              "observed_window_minimum": 1.983628273010254,
+              "statistical_inefficiency": 6.170514017992545,
+              "trajectory_id": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 162.66538019153498,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.094475023893605,
+              "observable_standard_deviation": 0.035745380528769875,
+              "observed_window_maximum": 2.26914644241333,
+              "observed_window_minimum": 1.9852547645568848,
+              "statistical_inefficiency": 6.276688984452589,
+              "trajectory_id": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 110.86892774211825,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.1015599810761874,
+              "observable_standard_deviation": 0.0385772116148898,
+              "observed_window_maximum": 2.3059446811676025,
+              "observed_window_minimum": 2.000779151916504,
+              "statistical_inefficiency": 9.209072557956471,
+              "trajectory_id": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 90.99627382477892,
+              "frame_count": 1021,
+              "group_id": "R46A_ES",
+              "observable_mean": 2.117164158330725,
+              "observable_standard_deviation": 0.037673121636206716,
+              "observed_window_maximum": 2.2820732593536377,
+              "observed_window_minimum": 2.0119307041168213,
+              "statistical_inefficiency": 11.220239654714021,
+              "trajectory_id": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 119.63517001151197,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0820507760379505,
+              "observable_standard_deviation": 0.03391297243467918,
+              "observed_window_maximum": 2.1956703662872314,
+              "observed_window_minimum": 1.936699390411377,
+              "statistical_inefficiency": 8.534279676300486,
+              "trajectory_id": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 229.43849562217713,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.069224935320519,
+              "observable_standard_deviation": 0.03382925197923888,
+              "observed_window_maximum": 2.210362672805786,
+              "observed_window_minimum": 1.9626880884170532,
+              "statistical_inefficiency": 4.449994309940515,
+              "trajectory_id": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 146.9176078217806,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0780353044085826,
+              "observable_standard_deviation": 0.03343690845183097,
+              "observed_window_maximum": 2.2113780975341797,
+              "observed_window_minimum": 1.9885766506195068,
+              "statistical_inefficiency": 6.949473348616805,
+              "trajectory_id": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 45.55905963925022,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.082912335082903,
+              "observable_standard_deviation": 0.03520691789020438,
+              "observed_window_maximum": 2.203733205795288,
+              "observed_window_minimum": 1.9905298948287964,
+              "statistical_inefficiency": 22.410471332915396,
+              "trajectory_id": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 40.62756420049798,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0835707031197694,
+              "observable_standard_deviation": 0.035828071908077734,
+              "observed_window_maximum": 2.22340989112854,
+              "observed_window_minimum": 1.982048511505127,
+              "statistical_inefficiency": 25.130721471790462,
+              "trajectory_id": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 199.9164565805227,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0859285844061213,
+              "observable_standard_deviation": 0.037303101731961184,
+              "observed_window_maximum": 2.224114418029785,
+              "observed_window_minimum": 1.9894917011260986,
+              "statistical_inefficiency": 5.107133336913462,
+              "trajectory_id": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 256.9286023767487,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.087836432059995,
+              "observable_standard_deviation": 0.033793385980143205,
+              "observed_window_maximum": 2.2131600379943848,
+              "observed_window_minimum": 1.9818512201309204,
+              "statistical_inefficiency": 3.9738666328120638,
+              "trajectory_id": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 64.5481562799037,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0720845012543365,
+              "observable_standard_deviation": 0.035067309548724626,
+              "observed_window_maximum": 2.2262022495269775,
+              "observed_window_minimum": 1.9682155847549438,
+              "statistical_inefficiency": 15.817647766306166,
+              "trajectory_id": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 205.90539035385754,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.073777932144636,
+              "observable_standard_deviation": 0.03430777661222258,
+              "observed_window_maximum": 2.259053945541382,
+              "observed_window_minimum": 1.9535948038101196,
+              "statistical_inefficiency": 4.958588010956713,
+              "trajectory_id": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 186.48485581923083,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.058579070444322,
+              "observable_standard_deviation": 0.03437427675782365,
+              "observed_window_maximum": 2.1962881088256836,
+              "observed_window_minimum": 1.9681262969970703,
+              "statistical_inefficiency": 5.474975410280536,
+              "trajectory_id": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 102.28710365312264,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.081224559920308,
+              "observable_standard_deviation": 0.03713141298236319,
+              "observed_window_maximum": 2.2590110301971436,
+              "observed_window_minimum": 1.9780967235565186,
+              "statistical_inefficiency": 9.981707991873819,
+              "trajectory_id": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 25.365556064292026,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0568209233877126,
+              "observable_standard_deviation": 0.037012924317876846,
+              "observed_window_maximum": 2.185817241668701,
+              "observed_window_minimum": 1.9367239475250244,
+              "statistical_inefficiency": 40.251433771534664,
+              "trajectory_id": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 269.808741909347,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.080379401785153,
+              "observable_standard_deviation": 0.03454854964402358,
+              "observed_window_maximum": 2.2014365196228027,
+              "observed_window_minimum": 1.993892788887024,
+              "statistical_inefficiency": 3.784162042989124,
+              "trajectory_id": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 215.80102906000374,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0796483114113653,
+              "observable_standard_deviation": 0.03283972072309307,
+              "observed_window_maximum": 2.2764370441436768,
+              "observed_window_minimum": 1.9672794342041016,
+              "statistical_inefficiency": 4.731210061635571,
+              "trajectory_id": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 97.05921847863779,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.072979622910002,
+              "observable_standard_deviation": 0.037671823544930476,
+              "observed_window_maximum": 2.2130444049835205,
+              "observed_window_minimum": 1.9650229215621948,
+              "statistical_inefficiency": 10.519351134325449,
+              "trajectory_id": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 151.3995441269713,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0801027832255423,
+              "observable_standard_deviation": 0.035965817539417924,
+              "observed_window_maximum": 2.2266499996185303,
+              "observed_window_minimum": 1.952332854270935,
+              "statistical_inefficiency": 6.743745536933306,
+              "trajectory_id": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 26.361903103046966,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.087132678559665,
+              "observable_standard_deviation": 0.03455367590243524,
+              "observed_window_maximum": 2.2406463623046875,
+              "observed_window_minimum": 1.9969021081924438,
+              "statistical_inefficiency": 38.730132494948386,
+              "trajectory_id": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 31.66529391747675,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0741446839023405,
+              "observable_standard_deviation": 0.039874963101317225,
+              "observed_window_maximum": 2.2228760719299316,
+              "observed_window_minimum": 1.9573644399642944,
+              "statistical_inefficiency": 32.243503018188896,
+              "trajectory_id": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 60.46746804775747,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0824024879266885,
+              "observable_standard_deviation": 0.03963012169705518,
+              "observed_window_maximum": 2.2252936363220215,
+              "observed_window_minimum": 1.978355050086975,
+              "statistical_inefficiency": 16.885112490465282,
+              "trajectory_id": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+            },
+            {
+              "effective_sample_size": 186.90221507966208,
+              "frame_count": 1021,
+              "group_id": "R60A_GS",
+              "observable_mean": 2.0712934775637364,
+              "observable_standard_deviation": 0.04096601683621588,
+              "observed_window_maximum": 2.31387996673584,
+              "observed_window_minimum": 1.9633067846298218,
+              "statistical_inefficiency": 5.462749596439111,
+              "trajectory_id": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+            }
+          ],
+          "row_count": 40,
+          "rule_effect": "NO_ACTIVE_RULE_EFFECT",
+          "schema_version": "grouped-observable-dependence-description/v1",
+          "statistical_unit": "TRAJECTORY",
+          "within_group_summaries": [
+            {
+              "effective_sample_size_summary": {
+                "maximum": 324.5890500368672,
+                "mean": 93.71087507701604,
+                "median": 46.7669266889733,
+                "minimum": 12.821075636880856,
+                "trajectory_count": 20
+              },
+              "group_id": "R46A_ES",
+              "observable_mean_summary": {
+                "maximum": 2.117164158330725,
+                "mean": 2.0881236078923644,
+                "median": 2.0897016608166297,
+                "minimum": 2.049628468031514,
+                "trajectory_count": 20
+              },
+              "statistical_inefficiency_summary": {
+                "maximum": 79.63450407101658,
+                "mean": 23.16720374221038,
+                "median": 21.890381805100183,
+                "minimum": 3.1455158449862486,
+                "trajectory_count": 20
+              },
+              "trajectory_count": 20
+            },
+            {
+              "effective_sample_size_summary": {
+                "maximum": 269.808741909347,
+                "mean": 133.15397160728998,
+                "median": 133.27638891664628,
+                "minimum": 25.365556064292026,
+                "trajectory_count": 20
+              },
+              "group_id": "R60A_GS",
+              "observable_mean_summary": {
+                "maximum": 2.087836432059995,
+                "mean": 2.0770064752435817,
+                "median": 2.079875547318454,
+                "minimum": 2.0568209233877126,
+                "trajectory_count": 20
+              },
+              "statistical_inefficiency_summary": {
+                "maximum": 40.251433771534664,
+                "mean": 13.607012971808311,
+                "median": 7.741876512458646,
+                "minimum": 3.784162042989124,
+                "trajectory_count": 20
+              },
+              "trajectory_count": 20
+            }
+          ]
+        },
+        "rule_effect": "NO_ACTIVE_RULE_EFFECT",
+        "schema_version": "exposed-paper-blind-descriptive-evidence-result/v1",
+        "scientific_disposition": "NOT_EVALUATED"
+      }
+    ],
+    "execution_status": "SELECTED_ACTIONS_EXECUTED",
+    "schema_version": "exposed-paper-blind-selected-action-execution/v1",
+    "selected_card_ids": [
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+    ]
+  },
+  "agent_mode": "LIVE_OPENROUTER",
+  "artifact_paths": [
+    "inputs/public_case_packet.json",
+    "inputs/profiler_visible_input.json",
+    "inputs/profile_proposal.json",
+    "inputs/planner_proposal.json",
+    "profiler_proposal_provenance.json",
+    "planner_proposal_provenance.json",
+    "fresh_rule_state.json",
+    "planner_visible_input.json",
+    "planner_authorization.json",
+    "selected_action_execution.json",
+    "rule_reevaluation.json",
+    "live_calls/planner/raw_response.txt",
+    "live_calls/planner/model_call_receipt.json",
+    "live_calls/planner/request_payload.json",
+    "live_calls/profiler/raw_response.txt",
+    "live_calls/profiler/model_call_receipt.json",
+    "live_calls/profiler/request_payload.json",
+    "live_calls/profiler/proposal_envelope.json",
+    "actions/HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1/evidence_result.json",
+    "case_run_manifest_v1.json"
+  ],
+  "authorization": {
+    "boundary": "Authorized selected card IDs are the sole execution input.",
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "executed_action_count": 1,
+    "schema_version": "case-runner-authorization/v1",
+    "selected_card_ids": [
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+    ],
+    "status": "AUTHORIZED_EXACTLY_ONE_SELECTED_CARD"
+  },
+  "boundary": "This runner records exposed-development proposals and deterministic downstream behavior only. It does not compute a terminal verdict, source-science approval, broad HSP90 closure, ADK dynamics portability, or Agent effectiveness.",
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "claim_boundary": {
+    "allowed_descriptions": [
+      "public source and data identities",
+      "trajectory-level descriptive observable summaries",
+      "explicit unresolved information"
+    ],
+    "forbidden_claims": [
+      "global equilibration",
+      "equilibrium population",
+      "kinetic rate",
+      "free energy",
+      "mechanism",
+      "numerical NMR-to-MD agreement"
+    ]
+  },
+  "credentials_accessed": true,
+  "external_model_transport": true,
+  "fresh_rule_state": {
+    "admission": {
+      "proposal": {
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "proposed_case_facts": {
+          "case": {
+            "declared_request_scope": [
+              "R46A and R60A construct-specific trajectory observables",
+              "NMR-derived ATP-lid conformational descriptors",
+              "Descriptive correspondence between MD distance traces and NMR measurements"
+            ],
+            "forbidden_upgrades": [
+              "State assignment to ATP-lid conformations",
+              "Population estimation for any conformational states",
+              "Kinetic rate constant derivation",
+              "Validated NMR-to-MD forward model",
+              "Equilibration assessment for trajectory ensemble"
+            ],
+            "intended_use": "Descriptive characterization of the relationship between C-alpha distance observables from seeded MD trajectories and ATP-lid conformational descriptors reported in NMR experiments",
+            "requested_claim_level": "DESCRIPTIVE_ONLY",
+            "scientific_claim": "The available evidence supports only a descriptive correspondence between the C-alpha distance observable (residues 46-60) extracted from seeded MD trajectories and the ATP-lid conformational descriptors derived from solution NMR measurements. No validated forward model links the trajectory observables to NMR readouts. The physical conditions and estimand sampled by NMR experiments and MD simulations remain unestablished as congruent."
+          },
+          "edges": [
+            {
+              "bridge_status": "NO_VALIDATED_BRIDGE",
+              "condition_relation": "NMR_MD_CONDITION_UNESTABLISHED",
+              "edge_id": "EDGE_NMR_MD_DESCRIPTIVE_BRIDGE",
+              "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+              "relation_type": "DESCRIPTIVE_CORRESPONDENCE",
+              "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+              "shared_error_status": "UNKNOWN",
+              "validation_independence": "UNVALIDATED"
+            }
+          ],
+          "sources": [
+            {
+              "construct_and_condition": "Wild-type, R46A, and R60A HSP90alpha N-terminal domain constructs in solution NMR measurements",
+              "estimand": "UNKNOWN - not established as congruent with MD estimand",
+              "evidence_role": "CONSTRUCTION",
+              "native_observable": "Solution NMR chemical shifts and relaxation-dispersion profiles for ATP-lid segment",
+              "sample_composition": "Solution-phase protein constructs with nucleotide conditions as described in Methods",
+              "source_id": "HSP90_NMR_METHODS_RESULTS",
+              "spatial_support": "Solution-phase bulk ensemble",
+              "time_semantics": {
+                "kind": "STEADY_STATE_OR_EQUILIBRIUM"
+              },
+              "unit_or_aggregation": "Ensemble-averaged NMR parameters per construct"
+            },
+            {
+              "construct_and_condition": "R46A_ES and R60A_GS seed-lineage labeled trajectory ensembles",
+              "estimand": "UNKNOWN - not established as congruent with NMR estimand",
+              "evidence_role": "CONSTRUCTION",
+              "native_observable": "C-alpha distance between residues 46 and 60",
+              "sample_composition": "40 trajectories with 1021 frames each; 20 R46A_ES and 20 R60A_GS seed-lineage labels",
+              "source_id": "HSP90_MD_DISTANCE_TRACE",
+              "spatial_support": "Atomic coordinate trajectories",
+              "time_semantics": {
+                "kind": "CORRELATED_TIME_SERIES"
+              },
+              "unit_or_aggregation": "Frame-level distance values; trajectory as statistical unit"
+            }
+          ]
+        },
+        "rationale": "The permitted facts explicitly establish that (1) no validated numerical forward model exists from NMR readouts to MD-derived observables, and (2) the packet does not establish that NMR and seeded MD sample the same physical conditions or estimand. These constraints preclude any quantitative or inferential claims beyond descriptive correspondence. The trajectory observables (C-alpha distances) can be described in relation to the ATP-lid conformational descriptors from NMR, but no causal, predictive, or population-level claims are supported. Forbidden upgrades including state assignment, population estimation, and kinetic derivation must be explicitly refused. Additional evidence required to discriminate remaining interpretations would include: a validated forward model mapping NMR observables to MD distance metrics, demonstrated congruence of physical conditions (temperature, ionic strength, nucleotide state) between NMR and MD, and independent validation of the seed-lineage constructs against experimental measurements.",
+        "unknowns": [
+          "Whether NMR and MD sample the same physical conditions",
+          "Whether the C-alpha distance observable corresponds to the NMR estimand",
+          "ATP-lid conformational state assignments for trajectory frames",
+          "Population proportions of any conformational states",
+          "Kinetic rates for lid opening/closing transitions",
+          "Equilibration status of the trajectory ensemble",
+          "Validity of extrapolating R46A/R60A mutant behavior to wild-type HSP90"
+        ]
+      },
+      "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
+      "schema_version": "paper-blind-agent-proposal-admission/v1"
+    },
+    "asset_verification": {
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "packet_id": "HSP90_PUBLIC_PACKET_V1",
+      "schema_version": "paper-blind-frozen-asset-verification/v1",
+      "verification_scope": "IDENTITY_AND_PUBLIC_PACKET_BOUNDARY_ONLY",
+      "verified_asset_ids": [
+        "HSP90_CA46_CA60_DISTANCE_40X1021",
+        "HSP90_TRAJECTORY_IDS",
+        "HSP90_TRAJECTORY_GROUP_MANIFEST"
+      ]
+    },
+    "development_obligations": [
+      {
+        "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_UNRESOLVED"
+        ],
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE"
+        },
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"
+        },
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        ],
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+        "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        ],
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "claim_effect": "Candidate-only F04/F05/F07 concerns remain non-Rule lifecycle items until a reviewed evaluation contract exists.",
+        "development_obligation_ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "DEVELOPMENT_OBLIGATION",
+        "reason_codes": [
+          "CANDIDATE_ONLY_FAMILY_NOT_ACTIVE"
+        ],
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        }
+      },
+      {
+        "claim_effect": "A descriptive observable-dependence result may be recorded; no active RuleResult or scientific disposition changes.",
+        "development_obligation_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "gap_type": "COMPUTABLE_EVIDENCE_MISSING",
+        "kind": "DEVELOPMENT_OBLIGATION",
+        "reason_codes": [
+          "DESCRIPTIVE_CAPABILITY_ONLY"
+        ],
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        }
+      },
+      {
+        "claim_effect": "The NMR-to-MD relation remains unresolved until a reviewed method or forward bridge is available.",
+        "development_obligation_ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "DEVELOPMENT_OBLIGATION",
+        "reason_codes": [
+          "FORWARD_BRIDGE_NOT_REVIEWED"
+        ],
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        }
+      },
+      {
+        "claim_effect": "Named source-science review remains required for scientific interpretation.",
+        "development_obligation_ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+        "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+        "kind": "DEVELOPMENT_OBLIGATION",
+        "reason_codes": [
+          "PENDING_DOMAIN_REVIEW"
+        ],
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        }
+      }
+    ],
+    "projected_casegraph": {
+      "case": {
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "claim_contract": {
+          "declared_request_scope": [
+            "SOURCE_LOCAL_CONSISTENCY",
+            "CROSS_SOURCE_COMPARABILITY"
+          ],
+          "forbidden_upgrades": [
+            "EQUILIBRIUM_POPULATION",
+            "KINETICS",
+            "FREE_ENERGY",
+            "MECHANISM",
+            "NUMERICAL_NMR_TO_MD_AGREEMENT"
+          ],
+          "internal_consistency": "CONSISTENT"
+        },
+        "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "observability_target": {
+          "event_signature": "Answer-blind public-packet fact proposal",
+          "target_spatial_scale": "Source-declared or UNKNOWN",
+          "target_time_scale": "Source-declared or UNKNOWN"
+        },
+        "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+        "scientific_claim": "Describe only source-local HSP90 NMR and seeded-MD information while retaining the cross-source conformational relation as unresolved."
+      },
+      "comparisons": [
+        {
+          "bridge_status": "UNRESOLVED",
+          "comparison_id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "condition_relation": "UNKNOWN",
+          "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT",
+          "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+          "relation_type": "QUALITATIVE_TRIANGULATION",
+          "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+          "shared_claim": "Describe only source-local HSP90 NMR and seeded-MD information while retaining the cross-source conformational relation as unresolved.",
+          "shared_error_status": "UNKNOWN",
+          "validation_claim": "No validation claim is emitted by a development profiling proposal.",
+          "validation_independence": "NOT_INDEPENDENT"
+        }
+      ],
+      "evidence_items": [
+        {
+          "case_evidence_scope": "CLAIM_EVIDENCE",
+          "construct_and_condition": "Wild-type, R46A, and R60A HSP90alpha N-terminal domain constructs in solution NMR measurements",
+          "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+          "estimand": "UNKNOWN - not established as congruent with MD estimand",
+          "evidence_role": "CONSTRUCTION",
+          "native_measurement_declaration_status": "DECLARED",
+          "native_observable": "Solution NMR chemical shifts and relaxation-dispersion profiles for ATP-lid segment",
+          "sample_composition": "Solution-phase protein constructs with nucleotide conditions as described in Methods",
+          "sample_system_composition_declaration_status": "DECLARED",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "source_locator": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623.",
+          "spatial_support": "Solution-phase bulk ensemble",
+          "time_semantics": {
+            "kind": "STEADY_STATE_OR_EQUILIBRIUM"
+          },
+          "unit_or_aggregation": "Ensemble-averaged NMR parameters per construct"
+        },
+        {
+          "case_evidence_scope": "CLAIM_EVIDENCE",
+          "construct_and_condition": "R46A_ES and R60A_GS seed-lineage labeled trajectory ensembles",
+          "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+          "estimand": "UNKNOWN - not established as congruent with NMR estimand",
+          "evidence_role": "DIAGNOSTIC",
+          "native_measurement_declaration_status": "DECLARED",
+          "native_observable": "C-alpha distance between residues 46 and 60",
+          "sample_composition": "40 trajectories with 1021 frames each; 20 R46A_ES and 20 R60A_GS seed-lineage labels",
+          "sample_system_composition_declaration_status": "DECLARED",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "source_locator": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021, HSP90_TRAJECTORY_IDS, and HSP90_TRAJECTORY_GROUP_MANIFEST.",
+          "spatial_support": "Atomic coordinate trajectories",
+          "time_semantics": {
+            "kind": "CORRELATED_TIME_SERIES"
+          },
+          "unit_or_aggregation": "Frame-level distance values; trajectory as statistical unit"
+        }
+      ],
+      "projection_boundary": "Agent-proposed factual fields are evaluated as unverified Draft inputs. Case claim, evidence roles, comparison identities, and comparison semantics come only from the platform-owned public-packet contract."
+    },
+    "rule_results": [
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor.",
+          "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated.",
+          "decision_class": "REVIEWABLE_CASE_CONTRACT",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "CLAIM_CONTRACT_CONSISTENT"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented.",
+          "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      }
+    ]
+  },
+  "input_provenance": {
+    "planner_mode": "LIVE_OPENROUTER_PROPOSAL",
+    "planner_proposal": null,
+    "profile_mode": "LIVE_OPENROUTER_PROPOSAL",
+    "profile_proposal": null,
+    "public_case_packet": "evidence/paper_blind_exposed_v1/public/hsp90_public_packet_v1.json",
+    "snapshot_artifacts": {
+      "planner_proposal": {
+        "canonical_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+        "path": "inputs/planner_proposal.json"
+      },
+      "planner_visible_input": {
+        "canonical_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec",
+        "path": "planner_visible_input.json"
+      },
+      "profile_proposal": {
+        "canonical_sha256": "161f3608d1b53eda4cb531d8f39364e436a2f465945e2594e8cb6b482cd1d751",
+        "path": "inputs/profile_proposal.json"
+      },
+      "profiler_visible_input": {
+        "canonical_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b",
+        "path": "inputs/profiler_visible_input.json"
+      },
+      "public_case_packet": {
+        "canonical_sha256": "dba5769d1cf62d7233a857dfa036a001233a5598adde88d1725cba641a160ca7",
+        "path": "inputs/public_case_packet.json"
+      }
+    }
+  },
+  "network_accessed": true,
+  "planner_admission": {
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "decision": "SELECT_ACTIONS",
+    "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+    "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+    "rationales": {
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": "The card addresses the unresolved development obligation HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION (gap_type: COMPUTABLE_EVIDENCE_MISSING, reason: DESCRIPTIVE_CAPABILITY_ONLY). The card's descriptive analysis action provides a structured way to generate computable evidence from the required distance matrices and trajectory group manifest, creating the grouped observable dependence description that the case currently lacks. The prerequisites (identity-verified frozen observable matrix and trajectory/group manifest) are stated as satisfied, and the prohibitions align with the card's scope by avoiding claims that would go beyond descriptive analysis."
+    },
+    "schema_version": "paper-blind-planner-proposal-admission/v2",
+    "scientific_disposition": "NOT_EVALUATED",
+    "selected_card_ids": [
+      "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+    ]
+  },
+  "planner_visible_input": {
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "legal_action_cards": [
+      {
+        "action_kind": "DESCRIPTIVE_ANALYSIS_ONLY",
+        "addresses_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "card_id": "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1",
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "prerequisites": [
+          "The frozen observable matrix and trajectory/group manifest are identity-verified."
+        ],
+        "prohibitions": [
+          "No active RuleResult update.",
+          "No global-equilibration, population, rate, free-energy, mechanism, or mutation-effect claim."
+        ],
+        "required_asset_ids": [
+          "HSP90_CA46_CA60_DISTANCE_40X1021",
+          "HSP90_TRAJECTORY_GROUP_MANIFEST"
+        ]
+      }
+    ],
+    "planner_boundary": "The Planner may select only listed card IDs or abstain. It may not create a Rule, choose an Operator, request execution, or state a scientific conclusion.",
+    "required_output": {
+      "case_id": "same as input",
+      "decision": "SELECT_ACTIONS or ABSTAIN_NO_ACTION",
+      "rationales": "object keyed exactly by selected card ID",
+      "selected_card_ids": "listed card IDs only; empty only for ABSTAIN_NO_ACTION"
+    },
+    "schema_version": "paper-blind-planner-visible-input/v2",
+    "unresolved_items": [
+      {
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_UNRESOLVED"
+        ],
+        "ref": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "status": "UNRESOLVED"
+      },
+      {
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "ref": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE"
+        },
+        "status": "UNRESOLVED"
+      },
+      {
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "ref": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"
+        },
+        "status": "UNRESOLVED"
+      },
+      {
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        ],
+        "ref": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "status": "UNRESOLVED"
+      },
+      {
+        "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+        "kind": "ACTIVE_RULE_INSTANCE",
+        "reason_codes": [
+          "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        ],
+        "ref": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "source": {
+          "kind": "FRESH_ACTIVE_RULE_RESULT",
+          "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE"
+        },
+        "status": "UNRESOLVED"
+      },
+      {
+        "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM",
+        "reason_codes": [
+          "CANDIDATE_ONLY_FAMILY_NOT_ACTIVE"
+        ],
+        "ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        },
+        "status": "UNRESOLVED_DEVELOPMENT_ITEM"
+      },
+      {
+        "gap_type": "COMPUTABLE_EVIDENCE_MISSING",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM",
+        "reason_codes": [
+          "DESCRIPTIVE_CAPABILITY_ONLY"
+        ],
+        "ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        },
+        "status": "UNRESOLVED_DEVELOPMENT_ITEM"
+      },
+      {
+        "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM",
+        "reason_codes": [
+          "FORWARD_BRIDGE_NOT_REVIEWED"
+        ],
+        "ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        },
+        "status": "UNRESOLVED_DEVELOPMENT_ITEM"
+      },
+      {
+        "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM",
+        "reason_codes": [
+          "PENDING_DOMAIN_REVIEW"
+        ],
+        "ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+        "source": {
+          "development_obligation_ref": "HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+          "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+        },
+        "status": "UNRESOLVED_DEVELOPMENT_ITEM"
+      }
+    ]
+  },
+  "proposal_provenance": {
+    "planner": {
+      "answer_blindness_status": "PUBLIC_PACKET_ONLY_INPUT_HASH_RECORDED",
+      "boundary": "This receipt proves the recorded proposal input and deterministic admission. For live mode it also records one bounded OpenRouter proposal transport. It does not prove independent answer-blind isolation, Agent value, or scientific correctness.",
+      "campaign_budget": {
+        "actual_cost_usd": "0.145264010",
+        "cap_usd": "5",
+        "completed_calls": 13,
+        "max_attempts_per_cell": 2,
+        "max_completed_calls": 16,
+        "remaining_budget_usd": "4.854735990",
+        "reported_cost_available": true
+      },
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "contract_admission_evaluation": {
+        "canonical_sha256": "f8c3d9ac8b29f08bac399bd01c266de5b1f2ac03fce712a92a184bc5d041051a",
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "evaluator": "validate_planner_proposal",
+        "result": {
+          "decision": "SELECT_ACTIONS",
+          "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+          "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+          "schema_version": "paper-blind-planner-proposal-admission/v2",
+          "scientific_disposition": "NOT_EVALUATED",
+          "selected_card_ids": [
+            "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+          ]
+        },
+        "status": "ADMISSIBLE_CARD_SELECTION_ONLY"
+      },
+      "filesystem_isolation_technically_enforced": false,
+      "finish_reason": "stop",
+      "latency_ms": 8707.9,
+      "live_call_receipt": {
+        "accepted_returned_model_ids": [
+          "minimax/minimax-m2.5",
+          "minimax/minimax-m2.5-20260211"
+        ],
+        "actual_provider": "StreamLake",
+        "allowed_service_tiers": [
+          null,
+          "default"
+        ],
+        "attempt_number": 1,
+        "automatic_retries": 0,
+        "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+        "campaign_budget": {
+          "actual_cost_usd": "0.145264010",
+          "cap_usd": "5",
+          "completed_calls": 13,
+          "max_attempts_per_cell": 2,
+          "max_completed_calls": 16,
+          "remaining_budget_usd": "4.854735990",
+          "reported_cost_available": true
+        },
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "cost_usd": "0.00130275",
+        "credential_source": "INHERITED_ENVIRONMENT",
+        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+        "expected_provider_display_name": "StreamLake",
+        "finish_reason": "stop",
+        "hashes": {
+          "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+          "output_schema_sha256": "ca5a6087b5a2e8e32f6843d287eb4714057d2c76587065c919d2172bace0df26",
+          "parsed_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+          "raw_response_sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+          "request_payload_sha256": "36008148960b677ffcd64101d610197c96e9edad6b421aabd2f09514bab860ea",
+          "system_prompt_sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+          "visible_input_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec"
+        },
+        "http_status": 200,
+        "incomplete_status": "NOT_INCOMPLETE",
+        "latency_ms": 8707.9,
+        "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+        "parsed_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+        "preflight": {
+          "input_token_ceiling": 6832,
+          "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+          "max_completion_tokens": 16000,
+          "remaining_budget_before_call_usd": "4.856038740",
+          "worst_case_cost_usd": "0.01912464"
+        },
+        "prompt_sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+        "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PLANNER_V1",
+        "proposal_envelope_sha256": null,
+        "proposal_parse_status": "PARSED_JSON_OBJECT",
+        "provider_provenance_status": "EXACT_MATCH",
+        "raw_response_persistence_status": "SAFE_TO_PERSIST",
+        "raw_response_sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+        "reason_codes": [],
+        "recorded_at": "2026-08-30T14:44:33.094977Z",
+        "refusal_status": "NOT_REPORTED",
+        "reported_cost_usd": "0.00130275",
+        "request_parameter_profile": {
+          "reasoning_effort": null,
+          "temperature_zero_included": true
+        },
+        "request_sha256": "36008148960b677ffcd64101d610197c96e9edad6b421aabd2f09514bab860ea",
+        "requested_model": "minimax/minimax-m2.5",
+        "requested_provider_endpoint_tag": "streamlake",
+        "response_id": "gen-1788101064-UVTieugdefjudlTy28oW",
+        "returned_model": "minimax/minimax-m2.5",
+        "returned_model_provenance_status": "EXACT_REQUEST_ID",
+        "role": "PLANNER",
+        "routing_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+        "schema_sha256": "ca5a6087b5a2e8e32f6843d287eb4714057d2c76587065c919d2172bace0df26",
+        "schema_validation_status": "PASS",
+        "schema_version": "openrouter-proposal-call-receipt/v1",
+        "service_tier": null,
+        "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+        "status": "ADMITTED_TYPED_PROPOSAL",
+        "tool_calls": 0,
+        "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+        "transport_status": "COMPLETED_RESPONSE",
+        "usage": {
+          "cached_tokens": 0,
+          "completion_tokens": 851,
+          "prompt_tokens": 1421,
+          "reasoning_tokens": 662,
+          "reported_cost_usd": "0.00130275",
+          "total_tokens": 2272
+        },
+        "visible_input_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec"
+      },
+      "mode": "LIVE_OPENROUTER_PROPOSAL",
+      "model": {
+        "model_id": "minimax/minimax-m2.5",
+        "requested_model_id": "minimax/minimax-m2.5",
+        "status": "VERIFIED_AGAINST_FROZEN_ACCEPTED_MODEL_IDS"
+      },
+      "parsed_proposal": {
+        "canonical_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+        "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+      },
+      "prompt": {
+        "sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+        "status": "RECORDED_LIVE_CALL",
+        "version": "LIVE_AGENT_COMMON_FLOWS_PLANNER_V1"
+      },
+      "provider": {
+        "expected_provider_display_name": "StreamLake",
+        "provider_id": "StreamLake",
+        "requested_provider_endpoint_tag": "streamlake",
+        "service_tier": null,
+        "status": "VERIFIED_FROM_OPENROUTER_RESPONSE_METADATA"
+      },
+      "raw_response": {
+        "sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+        "status": "RECORDED_LIVE_CALL"
+      },
+      "recorded_timestamp": "2026-08-30T14:44:33.094977Z",
+      "recorded_timestamp_status": "RECORDED_LIVE_CALL",
+      "reported_cost": "0.00130275",
+      "reported_cost_status": "PROVIDER_REPORTED",
+      "response_id": "gen-1788101064-UVTieugdefjudlTy28oW",
+      "role": "PLANNER",
+      "schema_version": "dynamics-atlas-proposal-provenance/v1",
+      "source_path": null,
+      "source_path_status": "LIVE_CALL_ARTIFACT",
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 851,
+        "prompt_tokens": 1421,
+        "reasoning_tokens": 662,
+        "reported_cost_usd": "0.00130275",
+        "total_tokens": 2272
+      },
+      "visible_input": {
+        "canonical_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec",
+        "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+      }
+    },
+    "profiler": {
+      "answer_blindness_status": "PUBLIC_PACKET_ONLY_INPUT_HASH_RECORDED",
+      "boundary": "This receipt proves the recorded proposal input and deterministic admission. For live mode it also records one bounded OpenRouter proposal transport. It does not prove independent answer-blind isolation, Agent value, or scientific correctness.",
+      "campaign_budget": {
+        "actual_cost_usd": "0.027468492",
+        "cap_usd": "5.00",
+        "completed_calls": 8,
+        "max_attempts_per_cell": 2,
+        "max_completed_calls": 16,
+        "remaining_budget_usd": "4.972531508",
+        "reported_cost_available": true
+      },
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "contract_admission_evaluation": {
+        "canonical_sha256": "dbb92fe635e5244167ae4324f25fd5261fbe326b2d8d9a773059464e3fd74579",
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "evaluator": "validate_agent_proposal",
+        "result": {
+          "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
+          "schema_version": "paper-blind-agent-proposal-admission/v1"
+        },
+        "status": "ADMISSIBLE_NONAUTHORITATIVE"
+      },
+      "filesystem_isolation_technically_enforced": false,
+      "finish_reason": "stop",
+      "latency_ms": 23505.591,
+      "live_call_receipt": {
+        "accepted_returned_model_ids": [
+          "minimax/minimax-m2.5",
+          "minimax/minimax-m2.5-20260211"
+        ],
+        "actual_provider": "StreamLake",
+        "allowed_service_tiers": [
+          null,
+          "default"
+        ],
+        "attempt_number": 2,
+        "automatic_retries": 0,
+        "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+        "campaign_budget": {
+          "actual_cost_usd": "0.027468492",
+          "cap_usd": "5.00",
+          "completed_calls": 8,
+          "max_attempts_per_cell": 2,
+          "max_completed_calls": 16,
+          "remaining_budget_usd": "4.972531508",
+          "reported_cost_available": true
+        },
+        "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "cost_usd": "0.00328158",
+        "credential_source": "INHERITED_ENVIRONMENT",
+        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+        "expected_provider_display_name": "StreamLake",
+        "field_annotation_error_code": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
+        "field_annotation_validation_status": "REJECTED_DIAGNOSTIC_ONLY",
+        "finish_reason": "stop",
+        "hashes": {
+          "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+          "output_schema_sha256": "e6227a4e45ad1d44f1b2194cce7c6482796a8e53fa79adb675a21b0a20d6c08a",
+          "parsed_proposal_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+          "raw_response_sha256": "520a83be2e6e82f7ec8cf757487e7eaaa3dd465aef5929f7a10f2df8e7014d1b",
+          "request_payload_sha256": "7bab87d02fad06bdb9cb5f204b9a7a0b55cd9134741124754419478ceabb3e80",
+          "system_prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+          "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+        },
+        "http_status": 200,
+        "incomplete_status": "NOT_INCOMPLETE",
+        "latency_ms": 23505.591,
+        "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+        "parsed_proposal_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+        "preflight": {
+          "input_token_ceiling": 9791,
+          "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+          "max_completion_tokens": 16000,
+          "remaining_budget_before_call_usd": "4.975813088",
+          "worst_case_cost_usd": "0.01992357"
+        },
+        "prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+        "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1",
+        "proposal_envelope_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+        "proposal_parse_status": "PARSED_JSON_OBJECT",
+        "provider_provenance_status": "EXACT_MATCH",
+        "raw_response_persistence_status": "SAFE_TO_PERSIST",
+        "raw_response_sha256": "520a83be2e6e82f7ec8cf757487e7eaaa3dd465aef5929f7a10f2df8e7014d1b",
+        "reason_codes": [],
+        "recorded_at": "2026-08-30T14:26:07.568140Z",
+        "refusal_status": "NOT_REPORTED",
+        "reported_cost_usd": "0.00328158",
+        "request_parameter_profile": {
+          "reasoning_effort": null,
+          "temperature_zero_included": true
+        },
+        "request_sha256": "7bab87d02fad06bdb9cb5f204b9a7a0b55cd9134741124754419478ceabb3e80",
+        "requested_model": "minimax/minimax-m2.5",
+        "requested_provider_endpoint_tag": "streamlake",
+        "response_id": "gen-1788099944-Wky335S7UZDtFk7VZcIR",
+        "returned_model": "minimax/minimax-m2.5",
+        "returned_model_provenance_status": "EXACT_REQUEST_ID",
+        "role": "PROFILER",
+        "routing_proposal_sha256": "161f3608d1b53eda4cb531d8f39364e436a2f465945e2594e8cb6b482cd1d751",
+        "schema_sha256": "e6227a4e45ad1d44f1b2194cce7c6482796a8e53fa79adb675a21b0a20d6c08a",
+        "schema_validation_status": "PASS",
+        "schema_version": "openrouter-proposal-call-receipt/v1",
+        "service_tier": null,
+        "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+        "status": "ADMITTED_TYPED_PROPOSAL",
+        "tool_calls": 0,
+        "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+        "transport_status": "COMPLETED_RESPONSE",
+        "usage": {
+          "cached_tokens": 0,
+          "completion_tokens": 2771,
+          "prompt_tokens": 1070,
+          "reasoning_tokens": 479,
+          "reported_cost_usd": "0.00328158",
+          "total_tokens": 3841
+        },
+        "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+      },
+      "mode": "LIVE_OPENROUTER_PROPOSAL",
+      "model": {
+        "model_id": "minimax/minimax-m2.5",
+        "requested_model_id": "minimax/minimax-m2.5",
+        "status": "VERIFIED_AGAINST_FROZEN_ACCEPTED_MODEL_IDS"
+      },
+      "parsed_proposal": {
+        "canonical_sha256": "161f3608d1b53eda4cb531d8f39364e436a2f465945e2594e8cb6b482cd1d751",
+        "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+      },
+      "prompt": {
+        "sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+        "status": "RECORDED_LIVE_CALL",
+        "version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1"
+      },
+      "provider": {
+        "expected_provider_display_name": "StreamLake",
+        "provider_id": "StreamLake",
+        "requested_provider_endpoint_tag": "streamlake",
+        "service_tier": null,
+        "status": "VERIFIED_FROM_OPENROUTER_RESPONSE_METADATA"
+      },
+      "raw_response": {
+        "sha256": "520a83be2e6e82f7ec8cf757487e7eaaa3dd465aef5929f7a10f2df8e7014d1b",
+        "status": "RECORDED_LIVE_CALL"
+      },
+      "recorded_timestamp": "2026-08-30T14:26:07.568140Z",
+      "recorded_timestamp_status": "RECORDED_LIVE_CALL",
+      "reported_cost": "0.00328158",
+      "reported_cost_status": "PROVIDER_REPORTED",
+      "response_id": "gen-1788099944-Wky335S7UZDtFk7VZcIR",
+      "role": "PROFILER",
+      "schema_version": "dynamics-atlas-proposal-provenance/v1",
+      "source_path": null,
+      "source_path_status": "LIVE_CALL_ARTIFACT",
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 2771,
+        "prompt_tokens": 1070,
+        "reasoning_tokens": 479,
+        "reported_cost_usd": "0.00328158",
+        "total_tokens": 3841
+      },
+      "visible_input": {
+        "canonical_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b",
+        "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+      }
+    }
+  },
+  "research_question": "Given the available HSP90 NMR evidence and the supplied seeded MD trajectories, what aspects of the conformational relationship between the simulated paths and experimentally characterized ATP-lid states are supported descriptively, what remain unresolved, what stronger claims must be refused, and what additional evidence would discriminate the remaining interpretations?",
+  "rule_reevaluation": {
+    "after_rule_results": [
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor.",
+          "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated.",
+          "decision_class": "REVIEWABLE_CASE_CONTRACT",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "CLAIM_CONTRACT_CONSISTENT"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented.",
+          "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      }
+    ],
+    "before_rule_results": [
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+          "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor.",
+          "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_CONDITION_RELATION_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion.",
+          "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated.",
+          "decision_class": "REVIEWABLE_CASE_CONTRACT",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "CLAIM_CONTRACT_CONSISTENT"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented.",
+          "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+          "route": "DIRECT_EVALUATION"
+        },
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "PASS",
+        "target": {
+          "id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+          "kind": "CASE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_METHODS_RESULTS",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing role or lineage evidence prevents the requested label.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "NO_EXPLICIT_CONTRACT_OUTCOME"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_MD_DISTANCE_TRACE",
+          "kind": "SOURCE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      },
+      {
+        "applicability_status": "MATCHED",
+        "claim_effect": {
+          "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft.",
+          "decision_class": "ABSTAIN",
+          "route": "SOURCE_LOOKUP"
+        },
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "human_decision_gate_required": true,
+        "missing_paths": [],
+        "reason_codes": [
+          "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "schema_version": "rules-prototype-rule-result/v1",
+        "scientific_verdict": "NOT_EMITTED_IN_PR1",
+        "status": "UNRESOLVED",
+        "target": {
+          "id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "kind": "EDGE"
+        }
+      }
+    ],
+    "boundary": "Only an explicitly linked, contract-validated EvidenceResult may be reevaluated, and only its same RuleInstance may change.",
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "evidence_links": [],
+    "reevaluated_rule_instance_ids": [],
+    "schema_version": "case-runner-rule-reevaluation/v1"
+  },
+  "run_scope": "EXPOSED_DEVELOPMENT_ONLY",
+  "schema_version": "dynamics-atlas-case-run/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER"
+}

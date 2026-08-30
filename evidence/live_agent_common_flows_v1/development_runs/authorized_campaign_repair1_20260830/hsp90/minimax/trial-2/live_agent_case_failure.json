@@ -1,0 +1,12 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "claim_upgrade": false,
+  "completed_roles": [
+    "PROFILER"
+  ],
+  "error_code": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
+  "model_profile": "minimax",
+  "schema_version": "live-agent-case-failure/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "status": "REJECTED_FAIL_CLOSED"
+}

@@ -1,0 +1,26 @@
+{
+  "applicability_status": "MATCHED",
+  "claim_effect": {
+    "claim_ceiling": "A computable control record is missing; no directional, kinetic, equilibrium, or mechanistic inference is emitted.",
+    "decision_class": "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING",
+    "route": "REGISTERED_OPERATOR"
+  },
+  "evaluation_contract_id": "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY",
+  "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+  "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+  "human_decision_gate_required": true,
+  "missing_paths": [],
+  "reason_codes": [
+    "COMPUTABLE_TIME_ANATOMY_CONTROL_EVIDENCE_MISSING"
+  ],
+  "resolution_policy_id": "RP_F04R02_HSP90_TIME_ANATOMY",
+  "rule_instance_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL::SOURCE::hsp90_md_round2_directional_packet",
+  "runtime_subrule_id": "F04R02_SOURCE_DECLARED_TIME_ANATOMY_CONTROL",
+  "schema_version": "rules-prototype-rule-result/v1",
+  "scientific_verdict": "NOT_EMITTED_PROPOSAL_ONLY",
+  "status": "UNRESOLVED",
+  "target": {
+    "id": "hsp90_md_round2_directional_packet",
+    "kind": "SOURCE"
+  }
+}

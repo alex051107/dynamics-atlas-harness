@@ -1,0 +1,72 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "proposed_case_facts": {
+    "case": {
+      "declared_request_scope": [
+        "R46A and R60A construct-specific trajectory observables",
+        "NMR-derived ATP-lid conformational descriptors",
+        "Descriptive correspondence between MD distance traces and NMR measurements"
+      ],
+      "forbidden_upgrades": [
+        "State assignment to ATP-lid conformations",
+        "Population estimation for any conformational states",
+        "Kinetic rate constant derivation",
+        "Validated NMR-to-MD forward model",
+        "Equilibration assessment for trajectory ensemble"
+      ],
+      "intended_use": "Descriptive characterization of the relationship between C-alpha distance observables from seeded MD trajectories and ATP-lid conformational descriptors reported in NMR experiments",
+      "requested_claim_level": "DESCRIPTIVE_ONLY",
+      "scientific_claim": "The available evidence supports only a descriptive correspondence between the C-alpha distance observable (residues 46-60) extracted from seeded MD trajectories and the ATP-lid conformational descriptors derived from solution NMR measurements. No validated forward model links the trajectory observables to NMR readouts. The physical conditions and estimand sampled by NMR experiments and MD simulations remain unestablished as congruent."
+    },
+    "edges": [
+      {
+        "bridge_status": "NO_VALIDATED_BRIDGE",
+        "condition_relation": "NMR_MD_CONDITION_UNESTABLISHED",
+        "edge_id": "EDGE_NMR_MD_DESCRIPTIVE_BRIDGE",
+        "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+        "relation_type": "DESCRIPTIVE_CORRESPONDENCE",
+        "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+        "shared_error_status": "UNKNOWN",
+        "validation_independence": "UNVALIDATED"
+      }
+    ],
+    "sources": [
+      {
+        "construct_and_condition": "Wild-type, R46A, and R60A HSP90alpha N-terminal domain constructs in solution NMR measurements",
+        "estimand": "UNKNOWN - not established as congruent with MD estimand",
+        "evidence_role": "CONSTRUCTION",
+        "native_observable": "Solution NMR chemical shifts and relaxation-dispersion profiles for ATP-lid segment",
+        "sample_composition": "Solution-phase protein constructs with nucleotide conditions as described in Methods",
+        "source_id": "HSP90_NMR_METHODS_RESULTS",
+        "spatial_support": "Solution-phase bulk ensemble",
+        "time_semantics": {
+          "kind": "STEADY_STATE_OR_EQUILIBRIUM"
+        },
+        "unit_or_aggregation": "Ensemble-averaged NMR parameters per construct"
+      },
+      {
+        "construct_and_condition": "R46A_ES and R60A_GS seed-lineage labeled trajectory ensembles",
+        "estimand": "UNKNOWN - not established as congruent with NMR estimand",
+        "evidence_role": "CONSTRUCTION",
+        "native_observable": "C-alpha distance between residues 46 and 60",
+        "sample_composition": "40 trajectories with 1021 frames each; 20 R46A_ES and 20 R60A_GS seed-lineage labels",
+        "source_id": "HSP90_MD_DISTANCE_TRACE",
+        "spatial_support": "Atomic coordinate trajectories",
+        "time_semantics": {
+          "kind": "CORRELATED_TIME_SERIES"
+        },
+        "unit_or_aggregation": "Frame-level distance values; trajectory as statistical unit"
+      }
+    ]
+  },
+  "rationale": "The permitted facts explicitly establish that (1) no validated numerical forward model exists from NMR readouts to MD-derived observables, and (2) the packet does not establish that NMR and seeded MD sample the same physical conditions or estimand. These constraints preclude any quantitative or inferential claims beyond descriptive correspondence. The trajectory observables (C-alpha distances) can be described in relation to the ATP-lid conformational descriptors from NMR, but no causal, predictive, or population-level claims are supported. Forbidden upgrades including state assignment, population estimation, and kinetic derivation must be explicitly refused. Additional evidence required to discriminate remaining interpretations would include: a validated forward model mapping NMR observables to MD distance metrics, demonstrated congruence of physical conditions (temperature, ionic strength, nucleotide state) between NMR and MD, and independent validation of the seed-lineage constructs against experimental measurements.",
+  "unknowns": [
+    "Whether NMR and MD sample the same physical conditions",
+    "Whether the C-alpha distance observable corresponds to the NMR estimand",
+    "ATP-lid conformational state assignments for trajectory frames",
+    "Population proportions of any conformational states",
+    "Kinetic rates for lid opening/closing transitions",
+    "Equilibration status of the trajectory ensemble",
+    "Validity of extrapolating R46A/R60A mutant behavior to wild-type HSP90"
+  ]
+}

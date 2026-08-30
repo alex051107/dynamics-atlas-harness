@@ -1,0 +1,93 @@
+{
+  "accepted_returned_model_ids": [
+    "minimax/minimax-m2.5",
+    "minimax/minimax-m2.5-20260211"
+  ],
+  "actual_provider": "StreamLake",
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 2,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.027468492",
+    "cap_usd": "5.00",
+    "completed_calls": 8,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.972531508",
+    "reported_cost_available": true
+  },
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "cost_usd": "0.00328158",
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "StreamLake",
+  "field_annotation_error_code": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
+  "field_annotation_validation_status": "REJECTED_DIAGNOSTIC_ONLY",
+  "finish_reason": "stop",
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "e6227a4e45ad1d44f1b2194cce7c6482796a8e53fa79adb675a21b0a20d6c08a",
+    "parsed_proposal_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+    "raw_response_sha256": "520a83be2e6e82f7ec8cf757487e7eaaa3dd465aef5929f7a10f2df8e7014d1b",
+    "request_payload_sha256": "7bab87d02fad06bdb9cb5f204b9a7a0b55cd9134741124754419478ceabb3e80",
+    "system_prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+    "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+  },
+  "http_status": 200,
+  "incomplete_status": "NOT_INCOMPLETE",
+  "latency_ms": 23505.591,
+  "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "parsed_proposal_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+  "preflight": {
+    "input_token_ceiling": 9791,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 16000,
+    "remaining_budget_before_call_usd": "4.975813088",
+    "worst_case_cost_usd": "0.01992357"
+  },
+  "prompt_sha256": "44947fe8467d87470af9eaf7ec22c4d32f436b200566fb65ec144d17414ae9cb",
+  "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1",
+  "proposal_envelope_sha256": "e87e2121e0d92f982fc7f2b84ae229a06b31426fe1bebe5c44d18499bd7b192c",
+  "proposal_parse_status": "PARSED_JSON_OBJECT",
+  "provider_provenance_status": "EXACT_MATCH",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "520a83be2e6e82f7ec8cf757487e7eaaa3dd465aef5929f7a10f2df8e7014d1b",
+  "reason_codes": [],
+  "recorded_at": "2026-08-30T14:26:07.568140Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": "0.00328158",
+  "request_parameter_profile": {
+    "reasoning_effort": null,
+    "temperature_zero_included": true
+  },
+  "request_sha256": "7bab87d02fad06bdb9cb5f204b9a7a0b55cd9134741124754419478ceabb3e80",
+  "requested_model": "minimax/minimax-m2.5",
+  "requested_provider_endpoint_tag": "streamlake",
+  "response_id": "gen-1788099944-Wky335S7UZDtFk7VZcIR",
+  "returned_model": "minimax/minimax-m2.5",
+  "returned_model_provenance_status": "EXACT_REQUEST_ID",
+  "role": "PROFILER",
+  "routing_proposal_sha256": "161f3608d1b53eda4cb531d8f39364e436a2f465945e2594e8cb6b482cd1d751",
+  "schema_sha256": "e6227a4e45ad1d44f1b2194cce7c6482796a8e53fa79adb675a21b0a20d6c08a",
+  "schema_validation_status": "PASS",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": null,
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "ADMITTED_TYPED_PROPOSAL",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "COMPLETED_RESPONSE",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 2771,
+    "prompt_tokens": 1070,
+    "reasoning_tokens": 479,
+    "reported_cost_usd": "0.00328158",
+    "total_tokens": 3841
+  },
+  "visible_input_sha256": "6f3e226fbd900278096c7a0490913aa991fdbce95eccbd8c2293f98b1697502b"
+}

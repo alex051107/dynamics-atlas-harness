@@ -1,13 +1,15 @@
 """One-case execution boundary for the exposed development capsule.
 
 This module composes the causal primitives already implemented by
-``exposed_paper_blind_capsule_v1``.  It adds no scientific method and computes no
-terminal scientific verdict.  The default registry contains only the repository's
-HSP90 and ADK exposed-development packets and their recorded proposals.
+``exposed_paper_blind_capsule_v1``.  Recorded replay remains the default; optional
+proposal callbacks may supply live Profiler and Planner artifacts to the same path.
+It adds no scientific method and computes no terminal scientific verdict.  The
+registry contains only the repository's HSP90 and ADK exposed-development packets.
 """
 
 from __future__ import annotations
 
+import json
 from collections.abc import Callable, Mapping, Sequence
 from copy import deepcopy
 from pathlib import Path
@@ -16,6 +18,7 @@ from typing import Any
 from . import exposed_paper_blind_capsule_v1 as capsule
 from .proposal_provenance_v1 import (
     CALLER_SUPPLIED_IN_MEMORY,
+    LIVE_OPENROUTER_PROPOSAL,
     RECORDED_PROPOSAL_REPLAY,
     ProposalProvenanceV1Error,
     build_proposal_provenance_v1,
@@ -47,6 +50,68 @@ class CaseRunnerV1Error(ValueError):
 
 
 RuleReevaluator = Callable[[Mapping[str, Any], Mapping[str, Any]], Mapping[str, Any]]
+ProposalProvider = Callable[..., Mapping[str, Any]]
+
+
+def _live_proposal_artifact(
+    *,
+    role: str,
+    visible_input: Mapping[str, Any],
+    provider: ProposalProvider,
+) -> dict[str, Any]:
+    """Invoke one bounded proposal callback and validate its non-secret handoff.
+
+    The callback owns model transport only.  It receives a deep copy of the exact
+    model-visible packet and returns a parsed proposal plus a sanitized call receipt
+    and raw response.  No callback may execute a scientific action.
+    """
+
+    raw_artifact = provider(role=role, visible_input=deepcopy(dict(visible_input)))
+    if not isinstance(raw_artifact, Mapping):
+        raise CaseRunnerV1Error("LIVE_PROPOSAL_ARTIFACT_MAPPING_REQUIRED")
+    artifact = deepcopy(dict(raw_artifact))
+    proposal = artifact.get("parsed_proposal")
+    receipt = artifact.get("call_receipt")
+    raw_response = artifact.get("raw_response")
+    request_payload = artifact.get("request_payload")
+    if not isinstance(proposal, Mapping):
+        raise CaseRunnerV1Error("LIVE_PARSED_PROPOSAL_MAPPING_REQUIRED")
+    if not isinstance(receipt, Mapping):
+        raise CaseRunnerV1Error("LIVE_CALL_RECEIPT_MAPPING_REQUIRED")
+    if not isinstance(raw_response, str):
+        raise CaseRunnerV1Error("LIVE_RAW_RESPONSE_STRING_REQUIRED")
+    if not isinstance(request_payload, Mapping):
+        raise CaseRunnerV1Error("LIVE_REQUEST_PAYLOAD_MAPPING_REQUIRED")
+    if receipt.get("role") != role:
+        raise CaseRunnerV1Error("LIVE_CALL_RECEIPT_ROLE_MISMATCH")
+    if receipt.get("case_id") != visible_input.get("case_id"):
+        raise CaseRunnerV1Error("LIVE_CALL_RECEIPT_CASE_ID_MISMATCH")
+    envelope = artifact.get("proposal_envelope")
+    if envelope is not None and not isinstance(envelope, Mapping):
+        raise CaseRunnerV1Error("LIVE_PROPOSAL_ENVELOPE_MAPPING_REQUIRED")
+    if role == "PROFILER" and not isinstance(envelope, Mapping):
+        raise CaseRunnerV1Error("LIVE_PROFILER_ENVELOPE_REQUIRED")
+    if role == "PLANNER" and envelope is not None:
+        raise CaseRunnerV1Error("LIVE_PLANNER_ENVELOPE_FORBIDDEN")
+    receipt_value = deepcopy(dict(receipt))
+    receipt_hashes = receipt_value.get("hashes")
+    if not isinstance(receipt_hashes, Mapping):
+        raise CaseRunnerV1Error("LIVE_CALL_RECEIPT_HASHES_REQUIRED")
+    model_parsed_value = dict(envelope) if isinstance(envelope, Mapping) else dict(proposal)
+    if receipt_hashes.get("parsed_proposal_sha256") != canonical_json_sha256(
+        model_parsed_value
+    ):
+        raise CaseRunnerV1Error("LIVE_MODEL_PARSED_PROPOSAL_HASH_MISMATCH")
+    if receipt_hashes.get("request_payload_sha256") != canonical_json_sha256(
+        request_payload
+    ):
+        raise CaseRunnerV1Error("LIVE_REQUEST_PAYLOAD_HASH_MISMATCH")
+    receipt_value["routing_proposal_sha256"] = canonical_json_sha256(proposal)
+    receipt_value["proposal_envelope_sha256"] = (
+        canonical_json_sha256(envelope) if isinstance(envelope, Mapping) else None
+    )
+    artifact["call_receipt"] = receipt_value
+    return artifact
 
 
 def _require_string(value: Any, label: str) -> str:
@@ -259,6 +324,7 @@ def _write_run_artifacts(
     output_root: Path,
     manifest: Mapping[str, Any],
     input_snapshots: Mapping[str, Mapping[str, Any]],
+    live_call_artifacts: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> None:
     proposal_provenance = manifest["proposal_provenance"]
     capsule._write_json(
@@ -276,6 +342,35 @@ def _write_run_artifacts(
     capsule._write_json(output_root / "rule_reevaluation.json", manifest["rule_reevaluation"])
     for relative_path, snapshot in input_snapshots.items():
         capsule._write_json(output_root / relative_path, snapshot)
+    for role, raw_artifact in sorted((live_call_artifacts or {}).items()):
+        artifact = dict(raw_artifact)
+        raw_response = artifact.get("raw_response")
+        call_receipt = artifact.get("call_receipt")
+        request_payload = artifact.get("request_payload")
+        if (
+            not isinstance(raw_response, str)
+            or not isinstance(call_receipt, Mapping)
+            or not isinstance(request_payload, Mapping)
+        ):
+            raise CaseRunnerV1Error("LIVE_CALL_ARTIFACT_INVALID")
+        serialized_receipt = json.dumps(call_receipt, ensure_ascii=False, sort_keys=True)
+        serialized_request = json.dumps(
+            request_payload, ensure_ascii=False, sort_keys=True
+        )
+        combined = f"{raw_response}\n{serialized_receipt}\n{serialized_request}".lower()
+        if any(
+            marker in combined
+            for marker in ("openrouter_api_key", "authorization:", "bearer ", "sk-")
+        ):
+            raise CaseRunnerV1Error("LIVE_CALL_ARTIFACT_SECRET_PATTERN_DETECTED")
+        live_root = output_root / "live_calls" / role.lower()
+        live_root.mkdir(parents=True, exist_ok=False)
+        (live_root / "raw_response.txt").write_text(raw_response, encoding="utf-8")
+        capsule._write_json(live_root / "model_call_receipt.json", dict(call_receipt))
+        capsule._write_json(live_root / "request_payload.json", dict(request_payload))
+        envelope = artifact.get("proposal_envelope")
+        if isinstance(envelope, Mapping):
+            capsule._write_json(live_root / "proposal_envelope.json", dict(envelope))
     for evidence in manifest["action_execution"]["evidence_results"]:
         card_id = _require_string(evidence.get("card_id"), "evidence_result.card_id")
         capsule._write_json(output_root / "actions" / card_id / "evidence_result.json", evidence)
@@ -288,17 +383,25 @@ def run_case_v1(
     output_dir: str | Path,
     profile_proposal: Mapping[str, Any] | None = None,
     planner_proposal: Mapping[str, Any] | None = None,
+    profiler_provider: ProposalProvider | None = None,
+    planner_provider: ProposalProvider | None = None,
 ) -> dict[str, Any]:
     """Run one registered exposed-development case into an empty directory.
 
-    Mapping overrides are in-memory replay/test seams only.  They cannot add packet
-    paths, cards, executors, credentials, or network transport.
+    Mapping overrides remain in-memory replay/test seams only.  Explicit provider
+    callbacks are the sole live-development seam: the Profiler is called with only
+    the public packet projection, and the Planner is called only after fresh Rules,
+    obligations, and legal cards have been materialized.
     """
 
     normalized_case_id = _require_string(case_id, "case_id")
     spec = _CASE_PACKET_REGISTRY.get(normalized_case_id)
     if spec is None:
         raise CaseRunnerV1Error("CASE_NOT_IN_EXPOSED_DEVELOPMENT_REGISTRY")
+    if profile_proposal is not None and profiler_provider is not None:
+        raise CaseRunnerV1Error("PROFILE_OVERRIDE_AND_PROVIDER_MUTUALLY_EXCLUSIVE")
+    if planner_proposal is not None and planner_provider is not None:
+        raise CaseRunnerV1Error("PLANNER_OVERRIDE_AND_PROVIDER_MUTUALLY_EXCLUSIVE")
 
     try:
         output_root = capsule.create_clean_output_root(output_dir)
@@ -310,15 +413,23 @@ def run_case_v1(
             raise CaseRunnerV1Error("PUBLIC_PACKET_CASE_ID_MISMATCH")
         profiler_visible_input = capsule.build_agent_visible_packet(packet_path)
         capsule._assert_agent_visible_boundary(profiler_visible_input)
-        profile = (
-            deepcopy(dict(profile_proposal))
-            if profile_proposal is not None
-            else capsule._read_json(profile_path)
+        profiler_live_artifact = (
+            _live_proposal_artifact(
+                role="PROFILER",
+                visible_input=profiler_visible_input,
+                provider=profiler_provider,
+            )
+            if profiler_provider is not None
+            else None
         )
-        proposal = (
-            deepcopy(dict(planner_proposal))
-            if planner_proposal is not None
-            else capsule._read_json(planner_path)
+        profile = (
+            deepcopy(dict(profiler_live_artifact["parsed_proposal"]))
+            if profiler_live_artifact is not None
+            else (
+                deepcopy(dict(profile_proposal))
+                if profile_proposal is not None
+                else capsule._read_json(profile_path)
+            )
         )
 
         rules_bundle = capsule.load_rules_v1_bundle(capsule.RULES_ROOT)
@@ -339,6 +450,24 @@ def run_case_v1(
             asset_verification=asset_verification,
         )
         capsule._validate_planner_input(planner_input, case_id=normalized_case_id)
+        planner_live_artifact = (
+            _live_proposal_artifact(
+                role="PLANNER",
+                visible_input=planner_input,
+                provider=planner_provider,
+            )
+            if planner_provider is not None
+            else None
+        )
+        proposal = (
+            deepcopy(dict(planner_live_artifact["parsed_proposal"]))
+            if planner_live_artifact is not None
+            else (
+                deepcopy(dict(planner_proposal))
+                if planner_proposal is not None
+                else capsule._read_json(planner_path)
+            )
+        )
         _preflight_selected_cards(
             case_id=normalized_case_id,
             planner_input=planner_input,
@@ -368,14 +497,22 @@ def run_case_v1(
             reevaluators={},
         )
         profiler_mode = (
-            CALLER_SUPPLIED_IN_MEMORY
-            if profile_proposal is not None
-            else RECORDED_PROPOSAL_REPLAY
+            LIVE_OPENROUTER_PROPOSAL
+            if profiler_live_artifact is not None
+            else (
+                CALLER_SUPPLIED_IN_MEMORY
+                if profile_proposal is not None
+                else RECORDED_PROPOSAL_REPLAY
+            )
         )
         planner_mode = (
-            CALLER_SUPPLIED_IN_MEMORY
-            if planner_proposal is not None
-            else RECORDED_PROPOSAL_REPLAY
+            LIVE_OPENROUTER_PROPOSAL
+            if planner_live_artifact is not None
+            else (
+                CALLER_SUPPLIED_IN_MEMORY
+                if planner_proposal is not None
+                else RECORDED_PROPOSAL_REPLAY
+            )
         )
         profiler_provenance = build_proposal_provenance_v1(
             role="PROFILER",
@@ -386,8 +523,13 @@ def run_case_v1(
             contract_admission_evaluation=fresh_state["admission"],
             source_path=(
                 None
-                if profile_proposal is not None
+                if profile_proposal is not None or profiler_live_artifact is not None
                 else _relative_repository_path(profile_path)
+            ),
+            live_call_receipt=(
+                profiler_live_artifact["call_receipt"]
+                if profiler_live_artifact is not None
+                else None
             ),
         )
         planner_provenance = build_proposal_provenance_v1(
@@ -399,8 +541,13 @@ def run_case_v1(
             contract_admission_evaluation=admission,
             source_path=(
                 None
-                if planner_proposal is not None
+                if planner_proposal is not None or planner_live_artifact is not None
                 else _relative_repository_path(planner_path)
+            ),
+            live_call_receipt=(
+                planner_live_artifact["call_receipt"]
+                if planner_live_artifact is not None
+                else None
             ),
         )
     except (capsule.ExposedPaperBlindCapsuleError, ProposalProvenanceV1Error) as error:
@@ -421,6 +568,14 @@ def run_case_v1(
     claim_boundary = packet.get("platform_authority_envelope", {}).get("claim_boundary")
     if not isinstance(claim_boundary, Mapping):
         raise CaseRunnerV1Error("PUBLIC_PACKET_CLAIM_BOUNDARY_REQUIRED")
+    live_call_artifacts = {
+        role: artifact
+        for role, artifact in (
+            ("PROFILER", profiler_live_artifact),
+            ("PLANNER", planner_live_artifact),
+        )
+        if artifact is not None
+    }
     manifest = {
         "schema_version": "dynamics-atlas-case-run/v1",
         "case_id": normalized_case_id,
@@ -431,12 +586,12 @@ def run_case_v1(
             "public_case_packet": _relative_repository_path(packet_path),
             "profile_proposal": (
                 None
-                if profile_proposal is not None
+                if profile_proposal is not None or profiler_live_artifact is not None
                 else _relative_repository_path(profile_path)
             ),
             "planner_proposal": (
                 None
-                if planner_proposal is not None
+                if planner_proposal is not None or planner_live_artifact is not None
                 else _relative_repository_path(planner_path)
             ),
             "profile_mode": profiler_mode,
@@ -468,6 +623,11 @@ def run_case_v1(
             "profiler": profiler_provenance,
             "planner": planner_provenance,
         },
+        "agent_mode": (
+            "LIVE_OPENROUTER"
+            if len(live_call_artifacts) == 2
+            else ("MIXED_RECORDED_OR_IN_MEMORY_AND_LIVE" if live_call_artifacts else "RECORDED_OR_IN_MEMORY")
+        ),
         "fresh_rule_state": {
             "admission": deepcopy(fresh_state["admission"]),
             "projected_casegraph": deepcopy(fresh_state["projected_casegraph"]),
@@ -483,9 +643,9 @@ def run_case_v1(
         "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
         "scientific_disposition": "NOT_EVALUATED",
         "source_science_review_status": "PENDING_DOMAIN_REVIEW",
-        "network_accessed": False,
-        "credentials_accessed": False,
-        "external_model_transport": False,
+        "network_accessed": bool(live_call_artifacts),
+        "credentials_accessed": bool(live_call_artifacts),
+        "external_model_transport": bool(live_call_artifacts),
         "artifact_paths": [
             "inputs/public_case_packet.json",
             "inputs/profiler_visible_input.json",
@@ -498,6 +658,20 @@ def run_case_v1(
             "planner_authorization.json",
             "selected_action_execution.json",
             "rule_reevaluation.json",
+            *[
+                f"live_calls/{role.lower()}/{filename}"
+                for role, artifact in sorted(live_call_artifacts.items())
+                for filename in (
+                    "raw_response.txt",
+                    "model_call_receipt.json",
+                    "request_payload.json",
+                    *(
+                        ("proposal_envelope.json",)
+                        if isinstance(artifact.get("proposal_envelope"), Mapping)
+                        else ()
+                    ),
+                )
+            ],
             *(
                 [f"actions/{selected[0]}/evidence_result.json"]
                 if selected
@@ -506,7 +680,7 @@ def run_case_v1(
             "case_run_manifest_v1.json",
         ],
         "boundary": (
-            "This runner records deterministic exposed-development behavior only. "
+            "This runner records exposed-development proposals and deterministic downstream behavior only. "
             "It does not compute a terminal verdict, source-science approval, broad "
             "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
         ),
@@ -520,5 +694,6 @@ def run_case_v1(
             "inputs/profile_proposal.json": profile,
             "inputs/planner_proposal.json": proposal,
         },
+        live_call_artifacts,
     )
     return manifest

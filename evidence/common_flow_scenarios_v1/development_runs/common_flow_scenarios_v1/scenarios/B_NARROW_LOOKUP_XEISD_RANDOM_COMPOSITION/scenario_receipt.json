@@ -1,0 +1,49 @@
+{
+  "action_count": 1,
+  "actual_cost": 0.0,
+  "actual_route": "SOURCE_LOOKUP_THEN_DIRECT_EVALUATION",
+  "affected_rule_instance": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+  "after_rule_result": {
+    "missing_paths": [],
+    "reason_codes": [
+      "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+    ],
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "status": "PASS"
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/input_casegraph_before.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/before_rule_results.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/lookup_request.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/lookup_result.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/input_casegraph_after.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/after_rule_results.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/rule_transition.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/route_packet.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/stage2_conclusion_packet.json",
+    "scenarios/B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION/scenario_receipt.json"
+  ],
+  "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+  "before_rule_result": {
+    "missing_paths": [
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "reason_codes": [
+      "REQUIRED_EVIDENCE_MISSING"
+    ],
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "status": "UNRESOLVED"
+  },
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+  "deterministic_authorization": "AUTHORIZED_EXACT_ALLOWLIST_HASH_LOCATOR",
+  "evidence_result_class": "SOURCE_LOOKUP_RESULT",
+  "expected_route_family": "NARROW_LOOKUP",
+  "input_role": "MISSING_EXACT_SOURCE_FACT",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "B_NARROW_LOOKUP_XEISD_RANDOM_COMPOSITION",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+}

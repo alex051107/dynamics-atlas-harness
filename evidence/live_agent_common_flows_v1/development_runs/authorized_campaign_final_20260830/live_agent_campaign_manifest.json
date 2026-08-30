@@ -1,0 +1,101 @@
+{
+  "actual_cost_usd": "0.145264010",
+  "adk_dynamics_status": "NOT_ESTABLISHED_STATIC_EXPOSURE_ONLY",
+  "agent_value_status": "NOT_AGENT_VALUE_ESTABLISHED",
+  "base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
+  "broad_hsp90_closure_status": "NOT_ESTABLISHED",
+  "campaign_adaptation": {
+    "luna_planner_completed_or_charged_calls": 0,
+    "luna_planner_http_400_attempts": 2,
+    "planner_schema_repair": "REMOVED_TOP_LEVEL_CONDITIONAL_BRANCHES; DETERMINISTIC_VALIDATOR_RETAINS_SELECTION_SEMANTICS",
+    "profiler_prompt_versions": [
+      "LIVE_AGENT_COMMON_FLOWS_PROFILER_V1",
+      "LIVE_AGENT_COMMON_FLOWS_PROFILER_V2_BOUNDED_REPAIR_1"
+    ],
+    "prompt_repairs_used": 1,
+    "stop_reason": "FIRST_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_SUCCEEDED; NO_FURTHER_SPEND_NEEDED"
+  },
+  "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
+  "campaign_state": "CLOSED_FROZEN",
+  "catalog_snapshots": [
+    {
+      "canonical_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+      "path": "agent_experiments/live_agent_common_flows_v1/config/openrouter_endpoint_selection_20260830.json",
+      "scope": "LUNA_DEEPSEEK_MINIMAX"
+    },
+    {
+      "canonical_sha256": "707ec451cc90e34f2dd3bdc3e8bf85d8385b038adb9430457c8a99485e0aba9a",
+      "path": "agent_experiments/live_agent_common_flows_v1/config/openrouter_endpoint_selection_with_terra_20260830.json",
+      "scope": "HISTORICAL_TERRA_CALL_RECEIPT_BINDING"
+    }
+  ],
+  "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "common_flow_coverage": {
+    "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+    "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE",
+    "registered_computation_scope": "HSP90_EXACT_CONTROL_ONLY",
+    "route_families": [
+      "DIRECT_EVALUATION",
+      "NARROW_LOOKUP",
+      "REGISTERED_COMPUTATION",
+      "EXPLICIT_STOP"
+    ],
+    "scenario_count": 6,
+    "support_scope": "SYNTHETIC_CONTRACT_BEHAVIOR_ONLY",
+    "terminal_states": [
+      "SUPPORT_WITHIN_CEILING",
+      "CANNOT_SUPPORT_REQUESTED_CLAIM",
+      "ABSTAIN_OR_HUMAN_REVIEW"
+    ]
+  },
+  "common_flow_matrix": "evidence/common_flow_scenarios_v1/development_runs/common_flow_scenarios_v1/common_flow_matrix.json",
+  "completed_api_calls": 13,
+  "credential_handling": {
+    "authorized_local_secret_store_injected_into_inherited_environment": true,
+    "credential_source_recorded_by_calls": "INHERITED_ENVIRONMENT",
+    "key_value_persisted": false,
+    "key_value_printed": false,
+    "unrelated_locations_scanned": false
+  },
+  "head_commit_source": "GITHUB_PR_METADATA_AFTER_FINAL_COMMIT",
+  "held_out_status": "NOT_ACCESSED",
+  "http_attempts": 17,
+  "maximum_authorized_completed_calls": 16,
+  "maximum_authorized_cost_usd": "5.00",
+  "schema_version": "live-agent-common-flows-campaign-completion/v1",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "status": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_WITH_FAIL_CLOSED_REJECTIONS",
+  "successful_live_proposal_transport_runs": 1,
+  "successful_live_path": {
+    "action_count": 1,
+    "artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
+    "before_after_rule_results_identical": true,
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "deterministic_authorization": "AUTHORIZED_EXACTLY_ONE_SELECTED_CARD",
+    "evidence_class": "DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT",
+    "full_annotation_envelope": "FULL_ANNOTATION_ENVELOPE_FAIL",
+    "planner_model": "minimax/minimax-m2.5",
+    "planner_decision_surface": "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+    "planner_utility_boundary": "NOT_NONTRIVIAL_ROUTE_SELECTION",
+    "planner_transport": "LIVE_OPENROUTER_CALL",
+    "profiler_model": "minimax/minimax-m2.5",
+    "profiler_core_admission": "CORE_ADMISSION_PASS",
+    "profiler_field_annotation_error": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
+    "profiler_transport": "REUSED_FROZEN_ALREADY_PAID_RESPONSE",
+    "same_rule_transition_count": 0,
+    "same_rule_transition_status": "SAME_RULE_TRANSITION_COUNT_ZERO",
+    "conclusion_packet_status": "CONCLUSION_PACKET_NOT_CALCULATED",
+    "scientific_disposition": "NOT_EVALUATED",
+    "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER"
+  },
+  "transport_settings": {
+    "api": "OPENROUTER_CHAT_COMPLETIONS",
+    "automatic_retries": 0,
+    "exact_provider_routing": true,
+    "hosted_tools": false,
+    "max_output_tokens": 16000,
+    "model_tool_calls": false,
+    "server_side_max_price": true,
+    "structured_output": "STRICT_JSON_SCHEMA"
+  }
+}

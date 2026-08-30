@@ -12,23 +12,31 @@ import hashlib
 import json
 from copy import deepcopy
 from dataclasses import asdict, dataclass
+from decimal import Decimal, InvalidOperation
 from pathlib import Path, PurePosixPath
 from typing import Any
 
 from .paper_blind_exposed_v1 import PaperBlindPublicPacketError, validate_agent_proposal
 from .proposal_provenance_v1 import (
     CALLER_SUPPLIED_IN_MEMORY,
+    LIVE_OPENROUTER_PROPOSAL,
     RECORDED_PROPOSAL_REPLAY,
     ProposalProvenanceV1Error,
     build_proposal_provenance_v1,
     canonical_json_sha256,
+)
+from .profile_proposal_envelope_v1 import (
+    ProfileProposalEnvelopeV1Error,
+    build_profile_proposal_envelope_schema,
+    extract_core_proposal,
+    validate_profile_proposal_envelope,
 )
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 _CASE_RUNNER_BOUNDARY = (
-    "This runner records deterministic exposed-development behavior only. "
+    "This runner records exposed-development proposals and deterministic downstream behavior only. "
     "It does not compute a terminal verdict, source-science approval, broad "
     "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
 )
@@ -38,9 +46,6 @@ _CASE_RUNNER_MANIFEST_INVARIANTS = {
     "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
     "scientific_disposition": "NOT_EVALUATED",
     "source_science_review_status": "PENDING_DOMAIN_REVIEW",
-    "network_accessed": False,
-    "credentials_accessed": False,
-    "external_model_transport": False,
     "boundary": _CASE_RUNNER_BOUNDARY,
 }
 
@@ -132,6 +137,441 @@ def _require_string(value: Any, label: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise CaseViewIntegrityError("NONEMPTY_STRING_REQUIRED", label)
     return value.strip()
+
+
+def _canonical_json_text(value: Any) -> str:
+    try:
+        return json.dumps(
+            value,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+    except (TypeError, ValueError) as error:
+        raise CaseViewIntegrityError("LIVE_JSON_VALUE_INVALID") from error
+
+
+def _text_sha256(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def _planner_live_output_schema(planner_input: dict[str, Any]) -> dict[str, Any]:
+    """Independently rebuild the current strict Planner proposal schema."""
+
+    case_id = _require_string(planner_input.get("case_id"), "planner_input.case_id")
+    cards = _require_list(
+        planner_input.get("legal_action_cards"), "planner_input.legal_action_cards"
+    )
+    card_ids: list[str] = []
+    for position, raw_card in enumerate(cards):
+        card = _require_object(raw_card, f"planner_input.legal_action_cards[{position}]")
+        card_id = _require_string(card.get("card_id"), f"legal_action_cards[{position}].card_id")
+        if card_id in card_ids:
+            raise CaseViewIntegrityError("DUPLICATE_LIVE_PLANNER_CARD_ID", card_id)
+        card_ids.append(card_id)
+    rationale_variants: list[dict[str, Any]] = [
+        {
+            "type": "object",
+            "additionalProperties": False,
+            "required": [],
+            "properties": {},
+        }
+    ]
+    rationale_variants.extend(
+        {
+            "type": "object",
+            "additionalProperties": False,
+            "required": [card_id],
+            "properties": {card_id: {"type": "string", "minLength": 1}},
+        }
+        for card_id in card_ids
+    )
+    return {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["case_id", "decision", "selected_card_ids", "rationales"],
+        "properties": {
+            "case_id": {"type": "string", "const": case_id},
+            "decision": {
+                "type": "string",
+                "enum": ["SELECT_ACTIONS", "ABSTAIN_NO_ACTION"],
+            },
+            "selected_card_ids": {
+                "type": "array",
+                "uniqueItems": True,
+                "minItems": 0,
+                "maxItems": 1 if card_ids else 0,
+                "items": (
+                    {"type": "string", "enum": card_ids}
+                    if card_ids
+                    else {"type": "string"}
+                ),
+            },
+            "rationales": {"anyOf": rationale_variants},
+        },
+    }
+
+
+def _receipt_hash(
+    *,
+    receipt: dict[str, Any],
+    hashes: dict[str, Any],
+    hash_field: str,
+    alias_field: str,
+    observed: str,
+    code: str,
+) -> None:
+    if hashes.get(hash_field) != observed or receipt.get(alias_field) != observed:
+        raise CaseViewIntegrityError(code)
+
+
+def _nonnegative_decimal(value: Any, code: str) -> Decimal:
+    if isinstance(value, bool):
+        raise CaseViewIntegrityError(code)
+    try:
+        result = Decimal(str(value))
+    except (InvalidOperation, ValueError) as error:
+        raise CaseViewIntegrityError(code) from error
+    if not result.is_finite() or result < 0:
+        raise CaseViewIntegrityError(code)
+    return result
+
+
+def _raw_openrouter_provider(response: dict[str, Any]) -> str | None:
+    for candidate in (response.get("provider"), response.get("provider_name")):
+        if isinstance(candidate, str) and candidate.strip():
+            return candidate.strip()
+    metadata = response.get("openrouter_metadata")
+    if not isinstance(metadata, dict):
+        return None
+    for candidate in (metadata.get("provider"), metadata.get("provider_name")):
+        if isinstance(candidate, str) and candidate.strip():
+            return candidate.strip()
+    endpoints = metadata.get("endpoints")
+    available = endpoints.get("available") if isinstance(endpoints, dict) else None
+    if isinstance(available, list):
+        for endpoint in available:
+            if isinstance(endpoint, dict) and endpoint.get("selected") is True:
+                provider = endpoint.get("provider")
+                if isinstance(provider, str) and provider.strip():
+                    return provider.strip()
+    return None
+
+
+def _raw_usage_receipt(response: dict[str, Any]) -> dict[str, Any]:
+    usage = response.get("usage")
+    if not isinstance(usage, dict):
+        raise CaseViewIntegrityError("LIVE_RAW_USAGE_OBJECT_REQUIRED")
+
+    def required_count(field: str) -> int:
+        value = usage.get(field)
+        if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+            raise CaseViewIntegrityError("LIVE_RAW_USAGE_COUNT_INVALID", field)
+        return value
+
+    def optional_count(container_name: str, field: str) -> int | None:
+        container = usage.get(container_name)
+        if not isinstance(container, dict):
+            return None
+        value = container.get(field)
+        return (
+            value
+            if isinstance(value, int) and not isinstance(value, bool) and value >= 0
+            else None
+        )
+
+    cost = _nonnegative_decimal(usage.get("cost"), "LIVE_RAW_REPORTED_COST_INVALID")
+    return {
+        "prompt_tokens": required_count("prompt_tokens"),
+        "completion_tokens": required_count("completion_tokens"),
+        "total_tokens": required_count("total_tokens"),
+        "reasoning_tokens": optional_count(
+            "completion_tokens_details", "reasoning_tokens"
+        ),
+        "cached_tokens": optional_count("prompt_tokens_details", "cached_tokens"),
+        "reported_cost_usd": str(cost),
+    }
+
+
+def _verify_live_openrouter_semantics(
+    *,
+    role: str,
+    visible_input: dict[str, Any],
+    parsed_proposal: dict[str, Any],
+    request_payload: dict[str, Any],
+    raw_response: str,
+    live_receipt: dict[str, Any],
+    proposal_envelope: dict[str, Any] | None,
+    public_packet_source: Path,
+) -> None:
+    """Bind one live request, provider response, receipt, and routed proposal."""
+
+    hashes = _require_object(live_receipt.get("hashes"), f"{role}.live_call_hashes")
+    if hashes.get("canonicalization") != "SORTED_KEYS_COMPACT_JSON_UTF8_V1":
+        raise CaseViewIntegrityError("LIVE_HASH_CANONICALIZATION_INVALID", role)
+
+    messages = _require_list(request_payload.get("messages"), f"{role}.messages")
+    if len(messages) != 2:
+        raise CaseViewIntegrityError("LIVE_REQUEST_MESSAGE_STRUCTURE_INVALID", role)
+    system_message = _require_object(messages[0], f"{role}.messages[0]")
+    user_message = _require_object(messages[1], f"{role}.messages[1]")
+    if set(system_message) != {"role", "content"} or set(user_message) != {
+        "role",
+        "content",
+    }:
+        raise CaseViewIntegrityError("LIVE_REQUEST_MESSAGE_STRUCTURE_INVALID", role)
+    if system_message.get("role") != "system" or user_message.get("role") != "user":
+        raise CaseViewIntegrityError("LIVE_REQUEST_MESSAGE_STRUCTURE_INVALID", role)
+    system_prompt = _require_string(
+        system_message.get("content"), f"{role}.system_prompt"
+    )
+    expected_user_content = "Task packet:\n" + _canonical_json_text(visible_input)
+    if user_message.get("content") != expected_user_content:
+        raise CaseViewIntegrityError("LIVE_REQUEST_VISIBLE_INPUT_MISMATCH", role)
+
+    receipt_prompt_sha = hashes.get("system_prompt_sha256")
+    if receipt_prompt_sha != live_receipt.get("prompt_sha256") or receipt_prompt_sha not in {
+        _text_sha256(system_prompt),
+        # Early campaign prompts were read from newline-terminated text files;
+        # request construction stripped that one trailing newline before sending.
+        _text_sha256(system_prompt + "\n"),
+    }:
+        raise CaseViewIntegrityError("LIVE_SYSTEM_PROMPT_HASH_MISMATCH", role)
+    visible_sha = canonical_json_sha256(visible_input)
+    _receipt_hash(
+        receipt=live_receipt,
+        hashes=hashes,
+        hash_field="visible_input_sha256",
+        alias_field="visible_input_sha256",
+        observed=visible_sha,
+        code="LIVE_VISIBLE_INPUT_HASH_MISMATCH",
+    )
+
+    response_format = _require_object(
+        request_payload.get("response_format"), f"{role}.response_format"
+    )
+    if set(response_format) != {"type", "json_schema"} or response_format.get(
+        "type"
+    ) != "json_schema":
+        raise CaseViewIntegrityError("LIVE_RESPONSE_FORMAT_INVALID", role)
+    json_schema = _require_object(
+        response_format.get("json_schema"), f"{role}.response_format.json_schema"
+    )
+    if set(json_schema) != {"name", "strict", "schema"}:
+        raise CaseViewIntegrityError("LIVE_RESPONSE_FORMAT_INVALID", role)
+    if json_schema.get("name") != f"dynamics_atlas_{role}_proposal":
+        raise CaseViewIntegrityError("LIVE_RESPONSE_SCHEMA_NAME_MISMATCH", role)
+    if json_schema.get("strict") is not True:
+        raise CaseViewIntegrityError("LIVE_RESPONSE_SCHEMA_NOT_STRICT", role)
+    output_schema = _require_object(
+        json_schema.get("schema"), f"{role}.response_format.json_schema.schema"
+    )
+    expected_schema = (
+        build_profile_proposal_envelope_schema(public_packet_source)
+        if role == "PROFILER"
+        else _planner_live_output_schema(visible_input)
+    )
+    if output_schema != expected_schema:
+        raise CaseViewIntegrityError("LIVE_OUTPUT_SCHEMA_CURRENT_CONTRACT_MISMATCH", role)
+    schema_sha = canonical_json_sha256(output_schema)
+    _receipt_hash(
+        receipt=live_receipt,
+        hashes=hashes,
+        hash_field="output_schema_sha256",
+        alias_field="schema_sha256",
+        observed=schema_sha,
+        code="LIVE_OUTPUT_SCHEMA_HASH_MISMATCH",
+    )
+
+    parameter_profile = _require_object(
+        live_receipt.get("request_parameter_profile"),
+        f"{role}.request_parameter_profile",
+    )
+    if set(parameter_profile) != {"temperature_zero_included", "reasoning_effort"}:
+        raise CaseViewIntegrityError("LIVE_REQUEST_PARAMETER_PROFILE_INVALID", role)
+    temperature_included = parameter_profile.get("temperature_zero_included")
+    if not isinstance(temperature_included, bool):
+        raise CaseViewIntegrityError("LIVE_REQUEST_PARAMETER_PROFILE_INVALID", role)
+    reasoning_effort = parameter_profile.get("reasoning_effort")
+    if reasoning_effort is not None and (
+        not isinstance(reasoning_effort, str) or not reasoning_effort
+    ):
+        raise CaseViewIntegrityError("LIVE_REQUEST_PARAMETER_PROFILE_INVALID", role)
+
+    allowed_request_fields = {
+        "model",
+        "messages",
+        "max_tokens",
+        "stream",
+        "response_format",
+        "provider",
+    }
+    if temperature_included:
+        allowed_request_fields.add("temperature")
+        if (
+            isinstance(request_payload.get("temperature"), bool)
+            or request_payload.get("temperature") != 0
+        ):
+            raise CaseViewIntegrityError("LIVE_REQUEST_TEMPERATURE_MISMATCH", role)
+    elif "temperature" in request_payload:
+        raise CaseViewIntegrityError("LIVE_REQUEST_TEMPERATURE_MISMATCH", role)
+    if reasoning_effort is not None:
+        allowed_request_fields.add("reasoning")
+        if request_payload.get("reasoning") != {"effort": reasoning_effort}:
+            raise CaseViewIntegrityError("LIVE_REQUEST_REASONING_MISMATCH", role)
+    elif "reasoning" in request_payload:
+        raise CaseViewIntegrityError("LIVE_REQUEST_REASONING_MISMATCH", role)
+    if "usage" in request_payload:
+        allowed_request_fields.add("usage")
+        if request_payload.get("usage") != {"include": True}:
+            raise CaseViewIntegrityError("LIVE_REQUEST_USAGE_PARAMETER_INVALID", role)
+    if set(request_payload) != allowed_request_fields:
+        raise CaseViewIntegrityError("LIVE_REQUEST_FIELDS_INVALID_OR_TOOL_INJECTION", role)
+
+    if request_payload.get("model") != live_receipt.get("requested_model"):
+        raise CaseViewIntegrityError("LIVE_REQUEST_MODEL_MISMATCH", role)
+    if request_payload.get("stream") is not False:
+        raise CaseViewIntegrityError("LIVE_REQUEST_STREAMING_FORBIDDEN", role)
+    max_tokens = request_payload.get("max_tokens")
+    if not isinstance(max_tokens, int) or isinstance(max_tokens, bool) or max_tokens <= 0:
+        raise CaseViewIntegrityError("LIVE_REQUEST_MAX_TOKENS_INVALID", role)
+    provider = _require_object(request_payload.get("provider"), f"{role}.provider")
+    if set(provider) != {
+        "allow_fallbacks",
+        "require_parameters",
+        "only",
+        "max_price",
+    }:
+        raise CaseViewIntegrityError("LIVE_REQUEST_PROVIDER_FIELDS_INVALID", role)
+    if provider.get("allow_fallbacks") is not False or provider.get(
+        "require_parameters"
+    ) is not True:
+        raise CaseViewIntegrityError("LIVE_REQUEST_PROVIDER_POLICY_INVALID", role)
+    if provider.get("only") != [live_receipt.get("requested_provider_endpoint_tag")]:
+        raise CaseViewIntegrityError("LIVE_REQUEST_PROVIDER_ONLY_MISMATCH", role)
+    max_price = _require_object(provider.get("max_price"), f"{role}.provider.max_price")
+    if set(max_price) != {"prompt", "completion", "request"}:
+        raise CaseViewIntegrityError("LIVE_REQUEST_MAX_PRICE_INVALID", role)
+    prompt_price = _nonnegative_decimal(
+        max_price.get("prompt"), "LIVE_REQUEST_MAX_PRICE_INVALID"
+    )
+    completion_price = _nonnegative_decimal(
+        max_price.get("completion"), "LIVE_REQUEST_MAX_PRICE_INVALID"
+    )
+    request_price = _nonnegative_decimal(
+        max_price.get("request"), "LIVE_REQUEST_MAX_PRICE_INVALID"
+    )
+
+    request_sha = canonical_json_sha256(request_payload)
+    _receipt_hash(
+        receipt=live_receipt,
+        hashes=hashes,
+        hash_field="request_payload_sha256",
+        alias_field="request_sha256",
+        observed=request_sha,
+        code="LIVE_REQUEST_PAYLOAD_HASH_MISMATCH",
+    )
+    preflight = _require_object(live_receipt.get("preflight"), f"{role}.preflight")
+    input_ceiling = len(_canonical_json_text(request_payload).encode("utf-8"))
+    if (
+        preflight.get("input_token_ceiling_basis")
+        != "CANONICAL_REQUEST_UTF8_BYTE_COUNT"
+        or preflight.get("input_token_ceiling") != input_ceiling
+        or preflight.get("max_completion_tokens") != max_tokens
+    ):
+        raise CaseViewIntegrityError("LIVE_REQUEST_PREFLIGHT_MISMATCH", role)
+    expected_worst_cost = (
+        prompt_price * Decimal(input_ceiling) / Decimal("1000000")
+        + completion_price * Decimal(max_tokens) / Decimal("1000000")
+        + request_price
+    )
+    if _nonnegative_decimal(
+        preflight.get("worst_case_cost_usd"), "LIVE_REQUEST_PREFLIGHT_MISMATCH"
+    ) != expected_worst_cost:
+        raise CaseViewIntegrityError("LIVE_REQUEST_PREFLIGHT_MISMATCH", role)
+
+    try:
+        raw = json.loads(raw_response)
+    except json.JSONDecodeError as error:
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_JSON_INVALID", role) from error
+    if not isinstance(raw, dict):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_OBJECT_REQUIRED", role)
+    raw_sha = _text_sha256(raw_response)
+    _receipt_hash(
+        receipt=live_receipt,
+        hashes=hashes,
+        hash_field="raw_response_sha256",
+        alias_field="raw_response_sha256",
+        observed=raw_sha,
+        code="LIVE_RAW_RESPONSE_HASH_MISMATCH",
+    )
+    if raw.get("id") != live_receipt.get("response_id"):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_ID_MISMATCH", role)
+    if raw.get("model") != live_receipt.get("returned_model"):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_MODEL_MISMATCH", role)
+    if _raw_openrouter_provider(raw) != live_receipt.get("actual_provider"):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_PROVIDER_MISMATCH", role)
+    if raw.get("service_tier") != live_receipt.get("service_tier"):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_SERVICE_TIER_MISMATCH", role)
+    http_status = live_receipt.get("http_status")
+    if not isinstance(http_status, int) or isinstance(http_status, bool) or not 200 <= http_status < 300:
+        raise CaseViewIntegrityError("LIVE_RECEIPT_HTTP_STATUS_INVALID", role)
+
+    choices = raw.get("choices")
+    if not isinstance(choices, list) or len(choices) != 1:
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_CHOICE_STRUCTURE_INVALID", role)
+    choice = _require_object(choices[0], f"{role}.raw_response.choices[0]")
+    if choice.get("finish_reason") != live_receipt.get("finish_reason"):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_FINISH_REASON_MISMATCH", role)
+    message = _require_object(choice.get("message"), f"{role}.raw_response.message")
+    if message.get("role") != "assistant" or any(
+        field in message for field in ("tool_calls", "function_call")
+    ):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_MESSAGE_INVALID", role)
+    if message.get("refusal") not in (None, "") or live_receipt.get(
+        "refusal_status"
+    ) != "NOT_REPORTED":
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_REFUSAL_MISMATCH", role)
+    content = message.get("content")
+    if not isinstance(content, str):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_CONTENT_REQUIRED", role)
+    try:
+        parsed_content = json.loads(content)
+    except json.JSONDecodeError as error:
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_CONTENT_JSON_INVALID", role) from error
+    if not isinstance(parsed_content, dict):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_CONTENT_OBJECT_REQUIRED", role)
+    expected_content = proposal_envelope if role == "PROFILER" else parsed_proposal
+    if parsed_content != expected_content:
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_CONTENT_PROPOSAL_MISMATCH", role)
+    parsed_sha = canonical_json_sha256(parsed_content)
+    _receipt_hash(
+        receipt=live_receipt,
+        hashes=hashes,
+        hash_field="parsed_proposal_sha256",
+        alias_field="parsed_proposal_sha256",
+        observed=parsed_sha,
+        code="LIVE_RAW_PARSED_PROPOSAL_HASH_MISMATCH",
+    )
+    if live_receipt.get("routing_proposal_sha256") != canonical_json_sha256(
+        parsed_proposal
+    ):
+        raise CaseViewIntegrityError("LIVE_ROUTING_PROPOSAL_HASH_MISMATCH", role)
+    if role == "PROFILER" and live_receipt.get(
+        "proposal_envelope_sha256"
+    ) != canonical_json_sha256(proposal_envelope):
+        raise CaseViewIntegrityError("LIVE_PROFILER_ENVELOPE_HASH_MISMATCH", role)
+
+    raw_usage = _raw_usage_receipt(raw)
+    if live_receipt.get("usage") != raw_usage:
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_USAGE_MISMATCH", role)
+    reported_cost = raw_usage["reported_cost_usd"]
+    if (
+        live_receipt.get("reported_cost_usd") != reported_cost
+        or live_receipt.get("cost_usd") != reported_cost
+    ):
+        raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_COST_MISMATCH", role)
 
 
 def _assert_case_id(value: Any, case_id: str, label: str) -> None:
@@ -235,6 +675,8 @@ def _verify_proposal_receipt(
     visible_input: dict[str, Any],
     parsed_proposal: dict[str, Any],
     admission_evaluation: dict[str, Any],
+    loaded: dict[str, Any],
+    public_packet_source: Path,
 ) -> None:
     _assert_case_id(receipt.get("case_id"), case_id, f"{role}.proposal_provenance")
     if receipt.get("role") != role:
@@ -269,6 +711,96 @@ def _verify_proposal_receipt(
     elif mode == CALLER_SUPPLIED_IN_MEMORY:
         if source_path is not None:
             raise CaseViewIntegrityError("IN_MEMORY_PROPOSAL_SOURCE_FORBIDDEN", role)
+    elif mode == LIVE_OPENROUTER_PROPOSAL:
+        if source_path is not None:
+            raise CaseViewIntegrityError("LIVE_PROPOSAL_SOURCE_FORBIDDEN", role)
+        live_receipt = _require_object(
+            receipt.get("live_call_receipt"), f"{role}.live_call_receipt"
+        )
+        live_root = f"live_calls/{role.lower()}"
+        standalone_receipt = loaded.get(f"{live_root}/model_call_receipt.json")
+        if standalone_receipt != live_receipt:
+            raise CaseViewIntegrityError("LIVE_CALL_RECEIPT_ARTIFACT_MISMATCH", role)
+        request_payload = loaded.get(f"{live_root}/request_payload.json")
+        if not isinstance(request_payload, dict):
+            raise CaseViewIntegrityError("LIVE_REQUEST_PAYLOAD_ARTIFACT_MISSING", role)
+        expected_request_sha = _require_string(
+            _require_object(live_receipt.get("hashes"), f"{role}.live_call_hashes").get(
+                "request_payload_sha256"
+            ),
+            f"{role}.request_payload_sha256",
+        )
+        if canonical_json_sha256(request_payload) != expected_request_sha:
+            raise CaseViewIntegrityError("LIVE_REQUEST_PAYLOAD_HASH_MISMATCH", role)
+        raw_response = loaded.get(f"{live_root}/raw_response.txt")
+        if not isinstance(raw_response, str):
+            raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_ARTIFACT_MISSING", role)
+        observed_raw_sha = hashlib.sha256(raw_response.encode("utf-8")).hexdigest()
+        expected_raw_sha = _require_string(
+            _require_object(live_receipt.get("hashes"), f"{role}.live_call_hashes").get(
+                "raw_response_sha256"
+            ),
+            f"{role}.raw_response_sha256",
+        )
+        if observed_raw_sha != expected_raw_sha:
+            raise CaseViewIntegrityError("LIVE_RAW_RESPONSE_HASH_MISMATCH", role)
+        envelope = loaded.get(f"{live_root}/proposal_envelope.json")
+        if role == "PROFILER":
+            if not isinstance(envelope, dict):
+                raise CaseViewIntegrityError("LIVE_PROFILER_ENVELOPE_REQUIRED")
+            expected_envelope_sha = _require_string(
+                live_receipt.get("proposal_envelope_sha256"),
+                "PROFILER.proposal_envelope_sha256",
+            )
+            if canonical_json_sha256(envelope) != expected_envelope_sha:
+                raise CaseViewIntegrityError("LIVE_PROFILER_ENVELOPE_HASH_MISMATCH")
+            annotation_status = live_receipt.get(
+                "field_annotation_validation_status"
+            )
+            annotation_error = live_receipt.get("field_annotation_error_code")
+            try:
+                envelope_admission = validate_profile_proposal_envelope(
+                    public_packet_source, envelope
+                )
+            except ProfileProposalEnvelopeV1Error as error:
+                observed_error = str(error).split(":", 1)[0]
+                if (
+                    annotation_status != "REJECTED_DIAGNOSTIC_ONLY"
+                    or annotation_error != observed_error
+                ):
+                    raise CaseViewIntegrityError(
+                        "LIVE_PROFILER_ANNOTATION_DIAGNOSTIC_DIVERGED"
+                    ) from error
+                envelope_admission = None
+            else:
+                if annotation_status != "PASS" or annotation_error is not None:
+                    raise CaseViewIntegrityError(
+                        "LIVE_PROFILER_ANNOTATION_STATUS_DIVERGED"
+                    )
+            if extract_core_proposal(envelope) != parsed_proposal:
+                raise CaseViewIntegrityError("LIVE_PROFILER_ROUTING_CORE_MISMATCH")
+            observed_core_admission = validate_agent_proposal(
+                public_packet_source, parsed_proposal
+            )
+            if observed_core_admission != admission_evaluation:
+                raise CaseViewIntegrityError("LIVE_PROFILER_CORE_ADMISSION_MISMATCH")
+            if (
+                envelope_admission is not None
+                and envelope_admission.get("core_admission") != admission_evaluation
+            ):
+                raise CaseViewIntegrityError("LIVE_PROFILER_CORE_ADMISSION_MISMATCH")
+        elif envelope is not None or live_receipt.get("proposal_envelope_sha256") is not None:
+            raise CaseViewIntegrityError("LIVE_PLANNER_ENVELOPE_FORBIDDEN")
+        _verify_live_openrouter_semantics(
+            role=role,
+            visible_input=visible_input,
+            parsed_proposal=parsed_proposal,
+            request_payload=request_payload,
+            raw_response=raw_response,
+            live_receipt=live_receipt,
+            proposal_envelope=envelope if isinstance(envelope, dict) else None,
+            public_packet_source=public_packet_source,
+        )
     else:
         raise CaseViewIntegrityError("PROPOSAL_MODE_INVALID", role)
     evaluator = (
@@ -283,6 +815,11 @@ def _verify_proposal_receipt(
             contract_evaluator=evaluator,
             contract_admission_evaluation=admission_evaluation,
             source_path=source_path,
+            live_call_receipt=(
+                receipt.get("live_call_receipt")
+                if mode == LIVE_OPENROUTER_PROPOSAL
+                else None
+            ),
         )
     except ProposalProvenanceV1Error as error:
         raise CaseViewIntegrityError("PROPOSAL_RECEIPT_CONTRACT_INVALID", role) from error
@@ -312,6 +849,40 @@ def _validate_case_runner_manifest(manifest: dict[str, Any]) -> None:
         observed = manifest.get(field)
         if type(observed) is not type(expected) or observed != expected:
             raise CaseViewIntegrityError("CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH", field)
+    input_provenance = _require_object(
+        manifest.get("input_provenance"), "manifest.input_provenance"
+    )
+    modes = (
+        input_provenance.get("profile_mode"),
+        input_provenance.get("planner_mode"),
+    )
+    allowed_modes = {
+        RECORDED_PROPOSAL_REPLAY,
+        CALLER_SUPPLIED_IN_MEMORY,
+        LIVE_OPENROUTER_PROPOSAL,
+    }
+    if any(mode not in allowed_modes for mode in modes):
+        raise CaseViewIntegrityError("CASE_RUNNER_PROPOSAL_MODE_INVALID")
+    live_count = sum(mode == LIVE_OPENROUTER_PROPOSAL for mode in modes)
+    expected_agent_mode = (
+        "LIVE_OPENROUTER"
+        if live_count == 2
+        else (
+            "MIXED_RECORDED_OR_IN_MEMORY_AND_LIVE"
+            if live_count == 1
+            else "RECORDED_OR_IN_MEMORY"
+        )
+    )
+    if manifest.get("agent_mode") != expected_agent_mode:
+        raise CaseViewIntegrityError(
+            "CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH", "agent_mode"
+        )
+    for field in ("network_accessed", "credentials_accessed", "external_model_transport"):
+        observed = manifest.get(field)
+        if not isinstance(observed, bool) or observed is not bool(live_count):
+            raise CaseViewIntegrityError(
+                "CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH", field
+            )
 
 
 def _expected_profiler_visible_input(public_packet: dict[str, Any]) -> dict[str, Any]:
@@ -796,12 +1367,12 @@ _RUN_REQUIRED_ARTIFACTS = (
 )
 
 
-def _manifest_artifact_paths(root: Path, manifest: dict[str, Any]) -> dict[str, dict[str, Any]]:
+def _manifest_artifact_paths(root: Path, manifest: dict[str, Any]) -> dict[str, Any]:
     raw_paths = _require_list(manifest.get("artifact_paths"), "manifest.artifact_paths")
     if len(raw_paths) != len(set(raw_paths)):
         raise CaseViewIntegrityError("DUPLICATE_ARTIFACT_REFERENCE")
     path_set: set[str] = set()
-    loaded: dict[str, dict[str, Any]] = {}
+    loaded: dict[str, Any] = {}
     for position, raw_path in enumerate(raw_paths):
         relative = _require_string(raw_path, f"manifest.artifact_paths[{position}]")
         posix = PurePosixPath(relative)
@@ -813,8 +1384,16 @@ def _manifest_artifact_paths(root: Path, manifest: dict[str, Any]) -> dict[str, 
             path.relative_to(root.resolve())
         except ValueError as error:
             raise CaseViewIntegrityError("UNSAFE_ARTIFACT_REFERENCE", relative) from error
-        value = _read_object(path, relative)
-        assert value is not None
+        if posix.suffix == ".txt":
+            if not path.is_file():
+                raise CaseViewIntegrityError("REQUIRED_ARTIFACT_MISSING", relative)
+            try:
+                value = path.read_text(encoding="utf-8")
+            except (OSError, UnicodeError) as error:
+                raise CaseViewIntegrityError("ARTIFACT_MALFORMED", relative) from error
+        else:
+            value = _read_object(path, relative)
+            assert value is not None
         loaded[posix.as_posix()] = value
     missing = sorted(set(_RUN_REQUIRED_ARTIFACTS) - path_set)
     if missing:
@@ -973,6 +1552,8 @@ def _build_case_run_view(root: Path) -> CaseView:
         visible_input=profiler_visible_input,
         parsed_proposal=profile_proposal,
         admission_evaluation=admission,
+        loaded=loaded,
+        public_packet_source=public_packet_source,
     )
     _verify_proposal_receipt(
         receipt=planner_provenance,
@@ -983,6 +1564,8 @@ def _build_case_run_view(root: Path) -> CaseView:
         visible_input=planner_input,
         parsed_proposal=planner_proposal,
         admission_evaluation=planner_admission,
+        loaded=loaded,
+        public_packet_source=public_packet_source,
     )
     projected = _require_object(fresh.get("projected_casegraph"), "fresh_rule_state.projected_casegraph")
     projected_case = _require_object(projected.get("case"), "projected_casegraph.case")
@@ -990,6 +1573,28 @@ def _build_case_run_view(root: Path) -> CaseView:
     obligations = _require_list(fresh.get("development_obligations"), "development_obligations")
     legal_cards = _require_list(planner_input.get("legal_action_cards"), "legal_action_cards")
     rule_instances = [_rule_identity(result, "rule_result") for result in after]
+    profiler_envelope = loaded.get("live_calls/profiler/proposal_envelope.json")
+    if isinstance(profiler_envelope, dict):
+        profiler_live_receipt = _require_object(
+            profiler_provenance.get("live_call_receipt"),
+            "PROFILER.live_call_receipt",
+        )
+        if profiler_live_receipt.get("field_annotation_validation_status") == "PASS":
+            profiler_diagnostic = validate_profile_proposal_envelope(
+                public_packet_source, profiler_envelope
+            )["diagnostic_summary"]
+        else:
+            profiler_diagnostic = {
+                "status": "REJECTED_DIAGNOSTIC_ONLY",
+                "error_code": profiler_live_receipt.get(
+                    "field_annotation_error_code"
+                ),
+                "routing_effect": "NONE_CORE_ADMISSION_INDEPENDENT",
+            }
+    else:
+        profiler_diagnostic = unavailable(
+            "Profiler field annotations are unavailable outside live mode."
+        )
     return CaseView(
         schema_version="dynamics-atlas-case-view/v1",
         case_id=case_id,
@@ -1005,6 +1610,7 @@ def _build_case_run_view(root: Path) -> CaseView:
             "proposal": profile_proposal,
             "admission": deepcopy(admission),
             "provenance": deepcopy(profiler_provenance),
+            "field_annotation_diagnostic": deepcopy(profiler_diagnostic),
         },
         admitted_facts={
             "kind": "PLATFORM_ADMITTED_FACT",

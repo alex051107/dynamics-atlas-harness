@@ -1,0 +1,89 @@
+{
+  "accepted_returned_model_ids": [
+    "openai/gpt-5.6-luna",
+    "openai/gpt-5.6-luna-20260709"
+  ],
+  "actual_provider": "OpenAI",
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 1,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.01632241",
+    "cap_usd": "5.00",
+    "completed_calls": 4,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.98367759",
+    "reported_cost_available": true
+  },
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "cost_usd": "0.0061543",
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "OpenAI",
+  "finish_reason": "stop",
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "66fc1ab5d63e426057668920b0f351967e1339cf3865c7fee97b9d8285be27af",
+    "parsed_proposal_sha256": "9d2d32426d9c496f748eff96be25d9cfd55742f39b426291c6e821447193e88c",
+    "raw_response_sha256": "f44ab16d02ddea1c454f03f144aac5492ca4d1069079e45eda976a0c191a696a",
+    "request_payload_sha256": "bce4bce229fdcca44c6cc719f5379da644d998f0951a4ea0bad3a817ee897a1d",
+    "system_prompt_sha256": "dceb38179ca62c5a3fe5b5bc5e68c4c0b2845b089b2113f1029498dec2bba449",
+    "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+  },
+  "http_status": 200,
+  "incomplete_status": "NOT_INCOMPLETE",
+  "latency_ms": 30784.415,
+  "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "parsed_proposal_sha256": "9d2d32426d9c496f748eff96be25d9cfd55742f39b426291c6e821447193e88c",
+  "preflight": {
+    "input_token_ceiling": 9987,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 16000,
+    "remaining_budget_before_call_usd": "4.98983189",
+    "worst_case_cost_usd": "0.0211974"
+  },
+  "prompt_sha256": "dceb38179ca62c5a3fe5b5bc5e68c4c0b2845b089b2113f1029498dec2bba449",
+  "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PROFILER_V1",
+  "proposal_parse_status": "PARSED_JSON_OBJECT",
+  "provider_provenance_status": "EXACT_MATCH",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "f44ab16d02ddea1c454f03f144aac5492ca4d1069079e45eda976a0c191a696a",
+  "reason_codes": [],
+  "recorded_at": "2026-08-30T14:18:35.523875Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": "0.0061543",
+  "request_parameter_profile": {
+    "reasoning_effort": "low",
+    "temperature_zero_included": false
+  },
+  "request_sha256": "bce4bce229fdcca44c6cc719f5379da644d998f0951a4ea0bad3a817ee897a1d",
+  "requested_model": "openai/gpt-5.6-luna",
+  "requested_provider_endpoint_tag": "openai",
+  "response_id": "gen-1788099484-43a3h4tTr5AX8SzBfAx7",
+  "returned_model": "openai/gpt-5.6-luna",
+  "returned_model_provenance_status": "EXACT_REQUEST_ID",
+  "role": "PROFILER",
+  "schema_sha256": "66fc1ab5d63e426057668920b0f351967e1339cf3865c7fee97b9d8285be27af",
+  "schema_validation_status": "PASS",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": "default",
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "ADMITTED_TYPED_PROPOSAL",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "COMPLETED_RESPONSE",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 4746,
+    "prompt_tokens": 1837,
+    "reasoning_tokens": 175,
+    "reported_cost_usd": "0.0061543",
+    "total_tokens": 6583
+  },
+  "visible_input_sha256": "2912d6972bd689a9e23ee99022777ec776c5f3cd25ac46ef7bea6ac669bcbb2a"
+}

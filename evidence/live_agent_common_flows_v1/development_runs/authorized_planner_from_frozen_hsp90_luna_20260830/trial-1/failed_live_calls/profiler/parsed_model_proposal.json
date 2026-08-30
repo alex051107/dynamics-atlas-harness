@@ -1,0 +1,424 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "field_annotations": [
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/research_question"
+        }
+      ],
+      "field": "scientific_claim",
+      "status": "EXTRACTED",
+      "target_id": "CASE",
+      "target_type": "CASE"
+    },
+    {
+      "confidence": 0.9,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/research_question"
+        }
+      ],
+      "field": "requested_claim_level",
+      "status": "EXTRACTED",
+      "target_id": "CASE",
+      "target_type": "CASE"
+    },
+    {
+      "confidence": 0.9,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/research_question"
+        }
+      ],
+      "field": "intended_use",
+      "status": "EXTRACTED",
+      "target_id": "CASE",
+      "target_type": "CASE"
+    },
+    {
+      "confidence": 0.97,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/data_assets/0/public_description"
+        },
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/data_assets/1/public_description"
+        },
+        {
+          "pointer_type": "PACKET_POINTER",
+          "source_id": "PACKET",
+          "value": "/data_assets/2/public_description"
+        }
+      ],
+      "field": "declared_request_scope",
+      "status": "INFERRED_WITH_SUPPORT",
+      "target_id": "CASE",
+      "target_type": "CASE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "SOURCE_LOCATOR",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623."
+        },
+        {
+          "pointer_type": "SOURCE_LOCATOR",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021, HSP90_TRAJECTORY_IDS, and HSP90_TRAJECTORY_GROUP_MANIFEST."
+        }
+      ],
+      "field": "forbidden_upgrades",
+      "status": "INFERRED_WITH_SUPPORT",
+      "target_id": "CASE",
+      "target_type": "CASE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "SOURCE_LOCATOR",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623."
+        }
+      ],
+      "field": "construct_and_condition",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.95,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The source studies the HSP90alpha N-terminal domain and ATP-lid segment using solution NMR measurements."
+        }
+      ],
+      "field": "native_observable",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The Methods describe wild-type, R46A, and R60A construct-specific NMR measurements, including relaxation-dispersion experiments."
+        }
+      ],
+      "field": "spatial_support",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet supplies no validated numerical forward model from the NMR readouts to a local MD-derived observable."
+        }
+      ],
+      "field": "estimand",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
+        }
+      ],
+      "field": "sample_composition",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
+        }
+      ],
+      "field": "time_semantics.kind",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
+        }
+      ],
+      "field": "unit_or_aggregation",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_NMR_METHODS_RESULTS",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60."
+        }
+      ],
+      "field": "construct_and_condition",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60."
+        }
+      ],
+      "field": "native_observable",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "Each row has one frozen trajectory identifier and one declared seed-lineage label; 20 rows retain R46A_ES and 20 retain R60A_GS labels."
+        }
+      ],
+      "field": "sample_composition",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "Frames are correlated within a trajectory; the trajectory is the primary supplied statistical unit."
+        }
+      ],
+      "field": "time_semantics.kind",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60."
+        }
+      ],
+      "field": "spatial_support",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.98,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "The packet does not assign states, estimate populations or kinetics, evaluate global equilibration, or supply a validated NMR forward model."
+        }
+      ],
+      "field": "estimand",
+      "status": "UNKNOWN",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "Frames are correlated within a trajectory; the trajectory is the primary supplied statistical unit."
+        }
+      ],
+      "field": "unit_or_aggregation",
+      "status": "EXTRACTED",
+      "target_id": "HSP90_MD_DISTANCE_TRACE",
+      "target_type": "SOURCE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet supplies no validated numerical forward model from the NMR readouts to a local MD-derived observable."
+        }
+      ],
+      "field": "relation_type",
+      "status": "INFERRED_WITH_SUPPORT",
+      "target_id": "EDGE_NMR_MD",
+      "target_type": "EDGE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
+        }
+      ],
+      "field": "condition_relation",
+      "status": "UNKNOWN",
+      "target_id": "EDGE_NMR_MD",
+      "target_type": "EDGE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet supplies no validated numerical forward model from the NMR readouts to a local MD-derived observable."
+        }
+      ],
+      "field": "bridge_status",
+      "status": "UNKNOWN",
+      "target_id": "EDGE_NMR_MD",
+      "target_type": "EDGE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_MD_DISTANCE_TRACE",
+          "value": "Frames are correlated within a trajectory; the trajectory is the primary supplied statistical unit."
+        }
+      ],
+      "field": "validation_independence",
+      "status": "UNKNOWN",
+      "target_id": "EDGE_NMR_MD",
+      "target_type": "EDGE"
+    },
+    {
+      "confidence": 0.99,
+      "evidence_pointers": [
+        {
+          "pointer_type": "PERMITTED_FACT",
+          "source_id": "HSP90_NMR_METHODS_RESULTS",
+          "value": "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
+        }
+      ],
+      "field": "shared_error_status",
+      "status": "UNKNOWN",
+      "target_id": "EDGE_NMR_MD",
+      "target_type": "EDGE"
+    }
+  ],
+  "proposed_case_facts": {
+    "case": {
+      "declared_request_scope": [
+        "Describe supported relationships between the supplied MD C-alpha distance traces and experimentally characterized HSP90 ATP-lid observations.",
+        "Identify unresolved relationships and evidence needed to discriminate interpretations."
+      ],
+      "forbidden_upgrades": [
+        "Do not assign conformational states from the distance trace.",
+        "Do not estimate state populations, kinetics, equilibration, or global convergence from the supplied packet.",
+        "Do not claim quantitative agreement between NMR and MD without a validated forward model and condition/estimand alignment.",
+        "Do not treat correlated frames as independent observations.",
+        "Do not generalize seed-lineage summaries into experimentally validated state identities."
+      ],
+      "intended_use": "Descriptive cross-source assessment, uncertainty characterization, and specification of discriminating additional evidence.",
+      "requested_claim_level": "Descriptive relationship only; no validated quantitative or mechanistic correspondence.",
+      "scientific_claim": "The supplied NMR evidence characterizes HSP90alpha N-terminal-domain ATP-lid dynamics, while the seeded MD assets provide ordered local C-alpha distance traces; their conformational relationship can be assessed only descriptively from the visible packet."
+    },
+    "edges": [
+      {
+        "bridge_status": "Not established; no validated NMR-to-MD forward model is supplied.",
+        "condition_relation": "Unknown; shared physical conditions and estimands are not established.",
+        "edge_id": "EDGE_NMR_MD",
+        "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+        "relation_type": "Descriptive cross-source comparison",
+        "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+        "shared_error_status": "Unknown; no joint error model or common calibration is supplied.",
+        "validation_independence": "Unknown; independent validation status is not established."
+      }
+    ],
+    "sources": [
+      {
+        "construct_and_condition": "HSP90alpha N-terminal domain and ATP-lid segment; wild-type, R46A, and R60A construct-specific solution-NMR measurements are described, but complete condition alignment for comparison is not established.",
+        "estimand": "Unknown from the permitted packet; NMR relaxation-dispersion and related readouts are reported without a validated mapping to the supplied MD observable.",
+        "evidence_role": "DIAGNOSTIC",
+        "native_observable": "Solution NMR measurements, including relaxation-dispersion experiments.",
+        "sample_composition": "Wild-type, R46A, and R60A construct-specific NMR measurements; detailed comparable composition and condition relation to MD are unresolved.",
+        "source_id": "HSP90_NMR_METHODS_RESULTS",
+        "spatial_support": "HSP90alpha N-terminal domain and ATP-lid segment.",
+        "time_semantics": {
+          "kind": "Unknown; NMR dynamical readout semantics are not fully specified for cross-source comparison in the permitted packet."
+        },
+        "unit_or_aggregation": "Unknown; no directly comparable aggregation or unit mapping to the MD distance trace is supplied."
+      },
+      {
+        "construct_and_condition": "Seeded MD trajectories with R46A_ES and R60A_GS lineage labels; physical-condition equivalence to NMR is not established.",
+        "estimand": "Local C-alpha distance observable descriptive trace; state, population, kinetic, and equilibration estimands are not supplied.",
+        "evidence_role": "DIAGNOSTIC",
+        "native_observable": "Ordered C-alpha distance between residues 46 and 60 over 1021 frames for 40 trajectories.",
+        "sample_composition": "40 trajectories total: 20 R46A_ES and 20 R60A_GS seed-lineage labels.",
+        "source_id": "HSP90_MD_DISTANCE_TRACE",
+        "spatial_support": "Local residue-46/residue-60 C-alpha distance.",
+        "time_semantics": {
+          "kind": "Ordered trajectory frames with within-trajectory correlation; trajectory is the primary statistical unit."
+        },
+        "unit_or_aggregation": "40 trajectory-level units with 1021 ordered frames per trajectory; no state assignment or population aggregation."
+      }
+    ]
+  },
+  "rationale": "The packet supports a descriptive comparison between solution-NMR characterization of the HSP90alpha ATP-lid region and seeded MD local distance traces. It does not provide the condition alignment, common estimand, validated forward model, state labels, or independent validation needed for stronger correspondence claims. The trajectory, rather than individual correlated frames, is the appropriate supplied statistical unit.",
+  "unknowns": [
+    "NMR-to-distance forward model and calibration.",
+    "Whether NMR and MD represent the same physical conditions, construct context, and dynamical regime.",
+    "Comparable estimands, units, and aggregation rules across sources.",
+    "State definitions and thresholds for the residue-46/residue-60 distance.",
+    "State populations, kinetics, equilibration, and global sampling adequacy.",
+    "Independent validation design and shared-error characterization.",
+    "Whether seed-lineage labels correspond to experimentally characterized ATP-lid states."
+  ]
+}

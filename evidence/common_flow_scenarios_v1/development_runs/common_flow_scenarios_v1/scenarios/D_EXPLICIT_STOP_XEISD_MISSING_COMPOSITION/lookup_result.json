@@ -1,0 +1,14 @@
+{
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "field_updates": {},
+  "lookup_id": "XEI-LOOKUP-MISSING-COMPOSITION",
+  "lookup_kind": "EXACT_REVIEW_DERIVATIVE_ATTESTATION",
+  "reason_code": "EXACT_LOOKUP_ID_NOT_ALLOWLISTED",
+  "requested_locator_id": "XEI-M04",
+  "route": "HUMAN_OR_NEW_DATA",
+  "status": "NOT_FOUND",
+  "target": {
+    "id": "xeisd_random_candidate_pool",
+    "kind": "SOURCE"
+  }
+}

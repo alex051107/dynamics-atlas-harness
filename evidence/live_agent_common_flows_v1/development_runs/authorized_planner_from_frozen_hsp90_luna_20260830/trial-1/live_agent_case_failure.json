@@ -1,0 +1,14 @@
+{
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "claim_upgrade": false,
+  "completed_roles": [
+    "PLANNER",
+    "PROFILER"
+  ],
+  "error_code": "LIVE_PLANNER_RESPONSE_REJECTED",
+  "model_profile": "luna",
+  "profiler_transport_reused": true,
+  "schema_version": "live-agent-case-failure/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "status": "REJECTED_FAIL_CLOSED"
+}

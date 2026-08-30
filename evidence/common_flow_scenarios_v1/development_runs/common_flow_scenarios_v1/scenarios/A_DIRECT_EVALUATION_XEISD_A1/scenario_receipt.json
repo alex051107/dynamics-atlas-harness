@@ -1,0 +1,32 @@
+{
+  "action_count": 0,
+  "actual_cost": 0.0,
+  "actual_route": "DIRECT_EVALUATION",
+  "affected_rule_instance": null,
+  "after_rule_result": {
+    "scope": "FROZEN_XEISD_REQUIRED_RULE_INVENTORY",
+    "status_counts": {
+      "PASS": 10
+    }
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/A_DIRECT_EVALUATION_XEISD_A1/input_casegraph.json",
+    "scenarios/A_DIRECT_EVALUATION_XEISD_A1/rule_results.json",
+    "scenarios/A_DIRECT_EVALUATION_XEISD_A1/route_packet.json",
+    "scenarios/A_DIRECT_EVALUATION_XEISD_A1/stage2_conclusion_packet.json",
+    "scenarios/A_DIRECT_EVALUATION_XEISD_A1/scenario_receipt.json"
+  ],
+  "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+  "before_rule_result": null,
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "Only the declared X-EISD relation is reviewable from attested local fields. This is not evidence of numeric equivalence, a shared population, independent validation, or a final scientific conclusion.",
+  "deterministic_authorization": "NOT_REQUIRED_DIRECT_EVALUATION",
+  "evidence_result_class": "NONE_DIRECT_EVALUATION",
+  "expected_route_family": "DIRECT_EVALUATION",
+  "input_role": "EXISTING_STRUCTURED_EVIDENCE",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "A_DIRECT_EVALUATION_XEISD_A1",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+}

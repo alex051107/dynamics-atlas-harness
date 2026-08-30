@@ -1,0 +1,171 @@
+{
+  "answer_blindness_status": "PUBLIC_PACKET_ONLY_INPUT_HASH_RECORDED",
+  "boundary": "This receipt proves the recorded proposal input and deterministic admission. For live mode it also records one bounded OpenRouter proposal transport. It does not prove independent answer-blind isolation, Agent value, or scientific correctness.",
+  "campaign_budget": {
+    "actual_cost_usd": "0.145264010",
+    "cap_usd": "5",
+    "completed_calls": 13,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.854735990",
+    "reported_cost_available": true
+  },
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "contract_admission_evaluation": {
+    "canonical_sha256": "f8c3d9ac8b29f08bac399bd01c266de5b1f2ac03fce712a92a184bc5d041051a",
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "evaluator": "validate_planner_proposal",
+    "result": {
+      "decision": "SELECT_ACTIONS",
+      "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+      "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+      "schema_version": "paper-blind-planner-proposal-admission/v2",
+      "scientific_disposition": "NOT_EVALUATED",
+      "selected_card_ids": [
+        "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+      ]
+    },
+    "status": "ADMISSIBLE_CARD_SELECTION_ONLY"
+  },
+  "filesystem_isolation_technically_enforced": false,
+  "finish_reason": "stop",
+  "latency_ms": 8707.9,
+  "live_call_receipt": {
+    "accepted_returned_model_ids": [
+      "minimax/minimax-m2.5",
+      "minimax/minimax-m2.5-20260211"
+    ],
+    "actual_provider": "StreamLake",
+    "allowed_service_tiers": [
+      null,
+      "default"
+    ],
+    "attempt_number": 1,
+    "automatic_retries": 0,
+    "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+    "campaign_budget": {
+      "actual_cost_usd": "0.145264010",
+      "cap_usd": "5",
+      "completed_calls": 13,
+      "max_attempts_per_cell": 2,
+      "max_completed_calls": 16,
+      "remaining_budget_usd": "4.854735990",
+      "reported_cost_available": true
+    },
+    "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "cost_usd": "0.00130275",
+    "credential_source": "INHERITED_ENVIRONMENT",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "expected_provider_display_name": "StreamLake",
+    "finish_reason": "stop",
+    "hashes": {
+      "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+      "output_schema_sha256": "ca5a6087b5a2e8e32f6843d287eb4714057d2c76587065c919d2172bace0df26",
+      "parsed_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+      "raw_response_sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+      "request_payload_sha256": "36008148960b677ffcd64101d610197c96e9edad6b421aabd2f09514bab860ea",
+      "system_prompt_sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+      "visible_input_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec"
+    },
+    "http_status": 200,
+    "incomplete_status": "NOT_INCOMPLETE",
+    "latency_ms": 8707.9,
+    "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+    "parsed_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+    "preflight": {
+      "input_token_ceiling": 6832,
+      "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+      "max_completion_tokens": 16000,
+      "remaining_budget_before_call_usd": "4.856038740",
+      "worst_case_cost_usd": "0.01912464"
+    },
+    "prompt_sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+    "prompt_version": "LIVE_AGENT_COMMON_FLOWS_PLANNER_V1",
+    "proposal_envelope_sha256": null,
+    "proposal_parse_status": "PARSED_JSON_OBJECT",
+    "provider_provenance_status": "EXACT_MATCH",
+    "raw_response_persistence_status": "SAFE_TO_PERSIST",
+    "raw_response_sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+    "reason_codes": [],
+    "recorded_at": "2026-08-30T14:44:33.094977Z",
+    "refusal_status": "NOT_REPORTED",
+    "reported_cost_usd": "0.00130275",
+    "request_parameter_profile": {
+      "reasoning_effort": null,
+      "temperature_zero_included": true
+    },
+    "request_sha256": "36008148960b677ffcd64101d610197c96e9edad6b421aabd2f09514bab860ea",
+    "requested_model": "minimax/minimax-m2.5",
+    "requested_provider_endpoint_tag": "streamlake",
+    "response_id": "gen-1788101064-UVTieugdefjudlTy28oW",
+    "returned_model": "minimax/minimax-m2.5",
+    "returned_model_provenance_status": "EXACT_REQUEST_ID",
+    "role": "PLANNER",
+    "routing_proposal_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+    "schema_sha256": "ca5a6087b5a2e8e32f6843d287eb4714057d2c76587065c919d2172bace0df26",
+    "schema_validation_status": "PASS",
+    "schema_version": "openrouter-proposal-call-receipt/v1",
+    "service_tier": null,
+    "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+    "status": "ADMITTED_TYPED_PROPOSAL",
+    "tool_calls": 0,
+    "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+    "transport_status": "COMPLETED_RESPONSE",
+    "usage": {
+      "cached_tokens": 0,
+      "completion_tokens": 851,
+      "prompt_tokens": 1421,
+      "reasoning_tokens": 662,
+      "reported_cost_usd": "0.00130275",
+      "total_tokens": 2272
+    },
+    "visible_input_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec"
+  },
+  "mode": "LIVE_OPENROUTER_PROPOSAL",
+  "model": {
+    "model_id": "minimax/minimax-m2.5",
+    "requested_model_id": "minimax/minimax-m2.5",
+    "status": "VERIFIED_AGAINST_FROZEN_ACCEPTED_MODEL_IDS"
+  },
+  "parsed_proposal": {
+    "canonical_sha256": "2ae151a6a649e087b85d68c477473cb766b3f46ff143a334bb5c0804bcfd6d81",
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+  },
+  "prompt": {
+    "sha256": "5956091fc69c620588eea9e23d2ab196c3b74904d5b6d70031277eaecc6ac1e2",
+    "status": "RECORDED_LIVE_CALL",
+    "version": "LIVE_AGENT_COMMON_FLOWS_PLANNER_V1"
+  },
+  "provider": {
+    "expected_provider_display_name": "StreamLake",
+    "provider_id": "StreamLake",
+    "requested_provider_endpoint_tag": "streamlake",
+    "service_tier": null,
+    "status": "VERIFIED_FROM_OPENROUTER_RESPONSE_METADATA"
+  },
+  "raw_response": {
+    "sha256": "fb3108664a091eefbe9c7526010e89acf74a8db7e11b33243688626ec3084d87",
+    "status": "RECORDED_LIVE_CALL"
+  },
+  "recorded_timestamp": "2026-08-30T14:44:33.094977Z",
+  "recorded_timestamp_status": "RECORDED_LIVE_CALL",
+  "reported_cost": "0.00130275",
+  "reported_cost_status": "PROVIDER_REPORTED",
+  "response_id": "gen-1788101064-UVTieugdefjudlTy28oW",
+  "role": "PLANNER",
+  "schema_version": "dynamics-atlas-proposal-provenance/v1",
+  "source_path": null,
+  "source_path_status": "LIVE_CALL_ARTIFACT",
+  "usage": {
+    "cached_tokens": 0,
+    "completion_tokens": 851,
+    "prompt_tokens": 1421,
+    "reasoning_tokens": 662,
+    "reported_cost_usd": "0.00130275",
+    "total_tokens": 2272
+  },
+  "visible_input": {
+    "canonical_sha256": "cdf9f4a0632a78a8d25eafd0eebcf08725c923e8276e95a3d40a0b5c6f498fec",
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1"
+  }
+}

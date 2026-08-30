@@ -1,0 +1,132 @@
+{
+  "actual_cost_usd": "0.024186912",
+  "broad_hsp90_closure_status": "NOT_ESTABLISHED",
+  "budget": {
+    "actual_cost_usd": "0.024186912",
+    "cap_usd": "5.00",
+    "completed_calls": 6,
+    "max_attempts_per_cell": 2,
+    "max_completed_calls": 16,
+    "remaining_budget_usd": "4.975813088",
+    "reported_cost_available": true
+  },
+  "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY; NOT_AGENT_VALUE_ESTABLISHED",
+  "completed_api_calls": 6,
+  "credential_handling": {
+    "key_value_persisted": false,
+    "source": "INHERITED_ENVIRONMENT",
+    "unrelated_locations_scanned": false
+  },
+  "held_out_status": "NOT_ACCESSED",
+  "live_cells": [
+    {
+      "actual_cost_usd": "0.0043559",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "ANNOTATION_TARGET_DANGLING_OR_NONCRITICAL",
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0.00337168",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "ANNOTATION_TARGET_DANGLING_OR_NONCRITICAL",
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 2
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 0,
+      "deterministic_rejection_count": 1,
+      "error_code": "LIVE_PROFILER_RESPONSE_REJECTED",
+      "model_profile": "deepseek",
+      "planned_calls": 2,
+      "requested_model": "deepseek/deepseek-v4-flash-0731",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0.00244053",
+      "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR",
+      "model_profile": "minimax",
+      "planned_calls": 2,
+      "requested_model": "minimax/minimax-m2.5",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0.0061543",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR",
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0.00364208",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR",
+      "model_profile": "luna",
+      "planned_calls": 2,
+      "requested_model": "openai/gpt-5.6-luna",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 2
+    },
+    {
+      "actual_cost_usd": "0",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 0,
+      "deterministic_rejection_count": 1,
+      "error_code": "LIVE_PROFILER_RESPONSE_REJECTED",
+      "model_profile": "deepseek",
+      "planned_calls": 2,
+      "requested_model": "deepseek/deepseek-v4-flash-0731",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    },
+    {
+      "actual_cost_usd": "0.004222422",
+      "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+      "completed_calls": 1,
+      "deterministic_rejection_count": 1,
+      "error_code": "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR",
+      "model_profile": "minimax",
+      "planned_calls": 2,
+      "requested_model": "minimax/minimax-m2.5",
+      "result_status": "REJECTED_FAIL_CLOSED",
+      "scientific_authority": "NONE",
+      "trial": 1
+    }
+  ],
+  "planned_live_case_runs": 8,
+  "schema_version": "live-agent-common-flows-campaign/v1",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "status": "COMPLETE_WITH_FAIL_CLOSED_REJECTIONS",
+  "successful_live_case_runs": 0
+}

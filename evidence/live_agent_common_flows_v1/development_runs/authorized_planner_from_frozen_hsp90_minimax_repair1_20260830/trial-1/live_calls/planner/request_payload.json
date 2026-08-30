@@ -1,0 +1,94 @@
+{
+  "max_tokens": 16000,
+  "messages": [
+    {
+      "content": "You are the proposal-only Dynamics Atlas Planner for an exposed development case.\n\nUse only the fresh RuleResults, unresolved obligations, and same-case legal action cards in the task packet. Return exactly one JSON object matching the supplied strict schema. Select exactly one currently legal card, or return ABSTAIN_NO_ACTION with no selected cards and no rationales. Never create or modify a Rule, threshold, card, Operator, or applicability predicate. Never write code, request tools, execute an action, or emit a scientific conclusion.\n\nFor SELECT_ACTIONS, the rationale must explain why the selected legal card addresses the visible unresolved obligation without claiming that evidence already exists or that a scientific verdict follows. For ABSTAIN_NO_ACTION, return an empty rationale object.\n\nYour proposal has no authorization, execution, review, or scientific authority.",
+      "role": "system"
+    },
+    {
+      "content": "Task packet:\n{\"case_id\":\"HSP90_NTD_EXPOSED_PAPER_BLIND_V1\",\"legal_action_cards\":[{\"action_kind\":\"DESCRIPTIVE_ANALYSIS_ONLY\",\"addresses_ref\":\"HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION\",\"card_id\":\"HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1\",\"case_id\":\"HSP90_NTD_EXPOSED_PAPER_BLIND_V1\",\"prerequisites\":[\"The frozen observable matrix and trajectory/group manifest are identity-verified.\"],\"prohibitions\":[\"No active RuleResult update.\",\"No global-equilibration, population, rate, free-energy, mechanism, or mutation-effect claim.\"],\"required_asset_ids\":[\"HSP90_CA46_CA60_DISTANCE_40X1021\",\"HSP90_TRAJECTORY_GROUP_MANIFEST\"]}],\"planner_boundary\":\"The Planner may select only listed card IDs or abstain. It may not create a Rule, choose an Operator, request execution, or state a scientific conclusion.\",\"required_output\":{\"case_id\":\"same as input\",\"decision\":\"SELECT_ACTIONS or ABSTAIN_NO_ACTION\",\"rationales\":\"object keyed exactly by selected card ID\",\"selected_card_ids\":\"listed card IDs only; empty only for ABSTAIN_NO_ACTION\"},\"schema_version\":\"paper-blind-planner-visible-input/v2\",\"unresolved_items\":[{\"gap_type\":\"METHOD_OR_FORWARD_BRIDGE_MISSING\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"EDGE_CONDITION_RELATION_UNRESOLVED\"],\"ref\":\"F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\",\"source\":{\"kind\":\"FRESH_ACTIVE_RULE_RESULT\",\"rule_instance_id\":\"F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"NO_EXPLICIT_CONTRACT_OUTCOME\"],\"ref\":\"F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE\",\"source\":{\"kind\":\"FRESH_ACTIVE_RULE_RESULT\",\"rule_instance_id\":\"F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_MD_DISTANCE_TRACE\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"NO_EXPLICIT_CONTRACT_OUTCOME\"],\"ref\":\"F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS\",\"source\":{\"kind\":\"FRESH_ACTIVE_RULE_RESULT\",\"rule_instance_id\":\"F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"METHOD_OR_FORWARD_BRIDGE_MISSING\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"EDGE_COMPARABILITY_INPUT_UNRESOLVED\"],\"ref\":\"F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\",\"source\":{\"kind\":\"FRESH_ACTIVE_RULE_RESULT\",\"rule_instance_id\":\"F06R02_EDGE_COMPARABILITY::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"HUMAN_SCIENTIFIC_JUDGMENT\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED\"],\"ref\":\"F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\",\"source\":{\"kind\":\"FRESH_ACTIVE_RULE_RESULT\",\"rule_instance_id\":\"F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::HSP90_NMR_TO_MD_CONTEXT_EDGE\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\",\"reason_codes\":[\"CANDIDATE_ONLY_FAMILY_NOT_ACTIVE\"],\"ref\":\"HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE\",\"source\":{\"development_obligation_ref\":\"HSP90_DEV_OBL_CANDIDATE_F04_F05_F07_LIFECYCLE\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\"},\"status\":\"UNRESOLVED_DEVELOPMENT_ITEM\"},{\"gap_type\":\"COMPUTABLE_EVIDENCE_MISSING\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\",\"reason_codes\":[\"DESCRIPTIVE_CAPABILITY_ONLY\"],\"ref\":\"HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION\",\"source\":{\"development_obligation_ref\":\"HSP90_DEV_OBL_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\"},\"status\":\"UNRESOLVED_DEVELOPMENT_ITEM\"},{\"gap_type\":\"METHOD_OR_FORWARD_BRIDGE_MISSING\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\",\"reason_codes\":[\"FORWARD_BRIDGE_NOT_REVIEWED\"],\"ref\":\"HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE\",\"source\":{\"development_obligation_ref\":\"HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\"},\"status\":\"UNRESOLVED_DEVELOPMENT_ITEM\"},{\"gap_type\":\"HUMAN_SCIENTIFIC_JUDGMENT\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\",\"reason_codes\":[\"PENDING_DOMAIN_REVIEW\"],\"ref\":\"HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW\",\"source\":{\"development_obligation_ref\":\"HSP90_DEV_OBL_SOURCE_SCIENCE_REVIEW\",\"kind\":\"DECLARED_NONRULE_DEVELOPMENT_ITEM\"},\"status\":\"UNRESOLVED_DEVELOPMENT_ITEM\"}]}",
+      "role": "user"
+    }
+  ],
+  "model": "minimax/minimax-m2.5",
+  "provider": {
+    "allow_fallbacks": false,
+    "max_price": {
+      "completion": 1.08,
+      "prompt": 0.27,
+      "request": 0.0
+    },
+    "only": [
+      "streamlake"
+    ],
+    "require_parameters": true
+  },
+  "response_format": {
+    "json_schema": {
+      "name": "dynamics_atlas_PLANNER_proposal",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "const": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "SELECT_ACTIONS",
+              "ABSTAIN_NO_ACTION"
+            ],
+            "type": "string"
+          },
+          "rationales": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {},
+                "required": [],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "selected_card_ids": {
+            "items": {
+              "enum": [
+                "HSP90_GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION_V1"
+              ],
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "case_id",
+          "decision",
+          "selected_card_ids",
+          "rationales"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "stream": false,
+  "temperature": 0
+}

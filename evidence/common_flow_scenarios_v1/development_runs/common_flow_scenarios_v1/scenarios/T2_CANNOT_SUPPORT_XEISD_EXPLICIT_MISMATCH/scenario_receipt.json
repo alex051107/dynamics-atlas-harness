@@ -1,0 +1,34 @@
+{
+  "action_count": 0,
+  "actual_cost": 0.0,
+  "actual_route": "HUMAN_OR_NEW_DATA_THEN_CANNOT_SUPPORT_REQUESTED_CLAIM",
+  "affected_rule_instance": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+  "after_rule_result": {
+    "missing_paths": [],
+    "reason_codes": [
+      "EDGE_CONDITION_RELATION_MISMATCH"
+    ],
+    "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+    "status": "FAIL"
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/input_casegraph.json",
+    "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/rule_results.json",
+    "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/route_packet.json",
+    "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/stage2_conclusion_packet.json",
+    "scenarios/T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH/scenario_receipt.json"
+  ],
+  "authority_status": "REAL_REPOSITORY_SOURCE_REVIEW_STATUS_RETAINED",
+  "before_rule_result": null,
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "The declared cross-source relation is blocked; neither source-local observation is invalidated. Human scientific review remains required.",
+  "deterministic_authorization": "NOT_REQUIRED_DIRECT_EVALUATION",
+  "evidence_result_class": "NONE_DIRECT_EVALUATION",
+  "expected_route_family": "TERMINAL_REDUCER_CONTRACT",
+  "input_role": "DECLARED_EXACT_RELATION_MISMATCH",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "T2_CANNOT_SUPPORT_XEISD_EXPLICIT_MISMATCH",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "CANNOT_SUPPORT_REQUESTED_CLAIM"
+}

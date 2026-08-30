@@ -1,0 +1,52 @@
+{
+  "action_count": 1,
+  "actual_cost": 0.0,
+  "actual_route": "HUMAN_OR_NEW_DATA",
+  "affected_rule_instance": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+  "after_rule_result": {
+    "missing_paths": [
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "reason_codes": [
+      "REQUIRED_EVIDENCE_MISSING"
+    ],
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "status": "UNRESOLVED"
+  },
+  "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+  "artifact_paths": [
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/input_casegraph.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/before_rule_results.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/lookup_request.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/lookup_result.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/after_rule_results.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/rule_transition.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/route_packet.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/stage2_conclusion_packet.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/stop_receipt.json",
+    "scenarios/D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION/scenario_receipt.json"
+  ],
+  "authority_status": "HUMAN_OR_NEW_DATA_REQUIRED",
+  "before_rule_result": {
+    "missing_paths": [
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "reason_codes": [
+      "REQUIRED_EVIDENCE_MISSING"
+    ],
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "status": "UNRESOLVED"
+  },
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "A missing declared field or exact source locator leaves the requested relation unresolved; no cross-source claim is emitted.",
+  "deterministic_authorization": "AUTHORIZED_EXACT_LOOKUP_THEN_STOP",
+  "evidence_result_class": "SOURCE_LOOKUP_RESULT",
+  "expected_route_family": "EXPLICIT_STOP",
+  "input_role": "DATA_UNAVAILABLE_AFTER_EXACT_LOOKUP",
+  "result_status": "SUCCEEDED",
+  "scenario_id": "D_EXPLICIT_STOP_XEISD_MISSING_COMPOSITION",
+  "schema_version": "common-flow-scenario-receipt/v1",
+  "terminal_reducer_state": "ABSTAIN_OR_HUMAN_REVIEW"
+}

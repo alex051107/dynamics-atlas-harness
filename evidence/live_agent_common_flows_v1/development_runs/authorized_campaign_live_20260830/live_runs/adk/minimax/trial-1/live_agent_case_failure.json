@@ -1,0 +1,12 @@
+{
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "claim_upgrade": false,
+  "completed_roles": [
+    "PROFILER"
+  ],
+  "error_code": "DUPLICATE_PROPOSED_EDGE_ENDPOINT_PAIR",
+  "model_profile": "minimax",
+  "schema_version": "live-agent-case-failure/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "status": "REJECTED_FAIL_CLOSED"
+}
