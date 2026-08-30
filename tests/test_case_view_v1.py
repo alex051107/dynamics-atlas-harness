@@ -538,8 +538,11 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             ("scientific_disposition", "SUPPORTED"),
             ("source_science_review_status", "APPROVED_BY_NAMED_REVIEWER"),
             ("network_accessed", True),
+            ("network_accessed", 0),
             ("credentials_accessed", True),
+            ("credentials_accessed", 0),
             ("external_model_transport", True),
+            ("external_model_transport", 0),
             ("boundary", "Forged unrestricted scientific result."),
         )
         for field, value in mutations:

@@ -309,7 +309,8 @@ def _verify_repository_source_snapshot(
 
 def _validate_case_runner_manifest(manifest: dict[str, Any]) -> None:
     for field, expected in _CASE_RUNNER_MANIFEST_INVARIANTS.items():
-        if manifest.get(field) != expected:
+        observed = manifest.get(field)
+        if type(observed) is not type(expected) or observed != expected:
             raise CaseViewIntegrityError("CASE_RUNNER_MANIFEST_INVARIANT_MISMATCH", field)
 
 
