@@ -82,11 +82,32 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
-            "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
+            "LIVE_AGENT_DECISION_CLOSURE_V1_XEISD_EXACT_LOOKUP_OR_EXACT_HSP90_CONTROL_FALLBACK",
         )
         self.assertEqual(
             status["next_allowed_action"]["authorization"],
-            "RECORDED_USER_DIRECTION_DA-20260830-052",
+            "RECORDED_USER_DIRECTION_DA-20260830-056",
+        )
+        boundary = status["current_delivery_boundary"]
+        self.assertEqual(
+            boundary["completion_states"],
+            [
+                "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE",
+                "DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE",
+                "LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
+            ],
+        )
+        self.assertEqual(
+            boundary["profiler"]["full_annotation_envelope"],
+            "FULL_ANNOTATION_ENVELOPE_FAIL",
+        )
+        self.assertEqual(
+            boundary["planner"]["decision_surface"],
+            "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+        )
+        self.assertEqual(
+            boundary["common_flows"]["agent_mode"],
+            "NO_AGENT_DETERMINISTIC_SCENARIO",
         )
         self.assertEqual(
             live_agent["observed_result"]["result"],
@@ -159,7 +180,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
             serialized_status,
             r"EXACT_FINAL_HEAD|FINAL_DELIVERY_HEAD|GITHUB_CI_PENDING|CI_PENDING|FINAL_CI_MATRIX",
         )
-        self.assertIn("separate exact HSP90 control regression", status["claim_ceiling"])
+        self.assertIn("NO_AGENT_DETERMINISTIC_SCENARIO", status["claim_ceiling"])
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
