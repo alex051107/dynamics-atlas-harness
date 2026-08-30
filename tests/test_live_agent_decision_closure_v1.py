@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -25,6 +26,7 @@ from dynamics_atlas_harness.live_agent_decision_closure_v1 import (
     reconcile_schema_compatibility_repair,
     require_campaign_open,
     run_live_agent_decision_closure_campaign,
+    validate_campaign_completion_receipt,
     validate_campaign_config,
     validate_planner_proposal,
 )
@@ -120,6 +122,8 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
         config["execution_status"] = "OPEN_EXPLICITLY_AUTHORIZED_DEVELOPMENT"
         config["completion_receipt_path"] = None
         config["completion_receipt_sha256"] = None
+        config["schema_compatibility_repairs_used"] = 0
+        config["schema_compatibility_repair"] = None
         config["budget_ledger_path"] = cls.ledger_path.relative_to(REPO_ROOT).as_posix()
         cls.config = validate_campaign_config(config)
         cls.stub = _PlannerStub()
@@ -141,6 +145,17 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
         cls.temp.cleanup()
         cls.ledger_path.unlink(missing_ok=True)
         cls.ledger_path.with_name(cls.ledger_path.name + ".lock").unlink(missing_ok=True)
+
+    def _rewrite_declared_json(self, campaign_root: Path, relative: str, value) -> None:
+        path = campaign_root / relative
+        path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        manifest_path = campaign_root / "live_agent_decision_closure_manifest_v1.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        record = next(item for item in manifest["artifacts"] if item["path"] == relative)
+        record["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
 
     def test_exact_luna_calls_are_strict_toolless_and_no_retry(self):
         self.assertEqual(len(self.stub.calls), 2)
@@ -254,6 +269,44 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
         with self.assertRaisesRegex(CaseViewIntegrityError, "STALE_ARTIFACT_REFERENCE_HASH"):
             build_case_view(target / POSITIVE_ARM_ID)
 
+    def test_coordinated_manifest_and_arm_tampering_fails_closed(self):
+        source = self.root / "campaign"
+
+        manifest_target = self.root / "tampered-manifest"
+        shutil.copytree(source, manifest_target)
+        manifest_path = manifest_target / "live_agent_decision_closure_manifest_v1.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["source_science_review_status"] = "VERIFIED"
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
+        with self.assertRaisesRegex(
+            CaseViewIntegrityError, "DECISION_CLOSURE_MANIFEST_CONTRACT_MISMATCH"
+        ):
+            build_case_view(manifest_target / POSITIVE_ARM_ID)
+
+        positive_target = self.root / "tampered-positive-auth"
+        shutil.copytree(source, positive_target)
+        relative = f"{POSITIVE_ARM_ID}/planner_authorization.json"
+        authorization = json.loads((positive_target / relative).read_text(encoding="utf-8"))
+        authorization["authorized_action_count"] = 0
+        self._rewrite_declared_json(positive_target, relative, authorization)
+        with self.assertRaisesRegex(
+            CaseViewIntegrityError, "DECISION_CLOSURE_POSITIVE_ARM_INVALID"
+        ):
+            build_case_view(positive_target / POSITIVE_ARM_ID)
+
+        stop_target = self.root / "tampered-stop-execution"
+        shutil.copytree(source, stop_target)
+        relative = f"{STOP_ARM_ID}/execution_receipt.json"
+        execution = json.loads((stop_target / relative).read_text(encoding="utf-8"))
+        execution["lookup_execution_count"] = 1
+        self._rewrite_declared_json(stop_target, relative, execution)
+        with self.assertRaisesRegex(
+            CaseViewIntegrityError, "DECISION_CLOSURE_STOP_ARM_INVALID"
+        ):
+            build_case_view(stop_target / STOP_ARM_ID)
+
     def test_workbench_renders_both_live_decision_arms(self):
         output = self.root / "workbench"
         index = render_review_console(
@@ -292,8 +345,74 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
             validate_campaign_config(over_budget)
         wrong_model = json.loads(json.dumps(self.config))
         wrong_model["model"]["model_id"] = "minimax/minimax-m2.5"
-        with self.assertRaisesRegex(ValueError, "ONLY_EXACT_LUNA_OPENAI_PROVIDER_ALLOWED"):
+        with self.assertRaisesRegex(ValueError, "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"):
             validate_campaign_config(wrong_model)
+
+    def test_caller_config_cannot_rewrite_frozen_semantics(self):
+        mutations = (
+            (("claim_ceiling",), "SCIENTIFIC_SUPPORT", "CAMPAIGN_SCIENTIFIC_BOUNDARY_MISMATCH"),
+            (("source_science_review_status",), "VERIFIED", "CAMPAIGN_SCIENTIFIC_BOUNDARY_MISMATCH"),
+            (("held_out_status",), "ACCESSED", "CAMPAIGN_SCIENTIFIC_BOUNDARY_MISMATCH"),
+            (("planner_prompt", "version"), "MUTATED", "PLANNER_PROMPT_NOT_FROZEN"),
+            (("planner_prompt", "sha256"), "0" * 64, "PLANNER_PROMPT_NOT_FROZEN"),
+            (("model", "reasoning_effort"), "high", "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"),
+            (("model", "input_price_per_million_usd"), "0", "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"),
+            (("model", "accepted_returned_model_ids"), ["openai/gpt-5.6-luna"], "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"),
+            (("model", "allowed_service_tiers"), [None], "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"),
+            (("model", "metadata_sha256"), "0" * 64, "FROZEN_LUNA_MODEL_CONTRACT_MISMATCH"),
+            (("max_output_tokens",), 1024, "MAX_OUTPUT_TOKENS_INVALID"),
+        )
+        for path, value, code in mutations:
+            with self.subTest(path=path):
+                altered = json.loads(json.dumps(self.config))
+                target = altered
+                for key in path[:-1]:
+                    target = target[key]
+                target[path[-1]] = value
+                with self.assertRaisesRegex(ValueError, code):
+                    validate_campaign_config(altered)
+
+    def test_closed_campaign_receipt_totals_and_boundaries_are_reconciled(self):
+        source_path = (
+            REPO_ROOT
+            / "evidence"
+            / "live_agent_decision_closure_v1"
+            / "development_runs"
+            / "authorized_campaign_20260830_schema_repair1"
+            / "live_agent_decision_closure_manifest_v1.json"
+        )
+        source_receipt = json.loads(source_path.read_text(encoding="utf-8"))
+        evidence_root = source_path.parents[1]
+        mutations = (
+            ("h1", lambda receipt: receipt.__setitem__("source_science_review_status", "VERIFIED"), "CAMPAIGN_COMPLETION_RECEIPT_INVALID"),
+            ("calls", lambda receipt: receipt.__setitem__("completed_api_calls", 5), "CAMPAIGN_COMPLETION_CALL_TOTALS_INVALID"),
+            ("cost", lambda receipt: receipt.__setitem__("actual_cost_usd", "2.00"), "CAMPAIGN_COMPLETION_COST_INVALID"),
+            ("remaining", lambda receipt: receipt["budget"].__setitem__("remaining_budget_usd", "0.5"), "CAMPAIGN_COMPLETION_BUDGET_INVALID"),
+        )
+        for label, mutate, code in mutations:
+            with self.subTest(label=label):
+                temp_root = Path(
+                    tempfile.mkdtemp(prefix="test-closed-receipt-", dir=evidence_root)
+                )
+                try:
+                    receipt = json.loads(json.dumps(source_receipt))
+                    mutate(receipt)
+                    receipt_path = temp_root / "live_agent_decision_closure_manifest_v1.json"
+                    receipt_path.write_text(
+                        json.dumps(receipt, indent=2, sort_keys=True) + "\n",
+                        encoding="utf-8",
+                    )
+                    config = load_campaign_config()
+                    config["completion_receipt_path"] = receipt_path.relative_to(
+                        REPO_ROOT
+                    ).as_posix()
+                    config["completion_receipt_sha256"] = hashlib.sha256(
+                        receipt_path.read_bytes()
+                    ).hexdigest()
+                    with self.assertRaisesRegex(ValueError, code):
+                        validate_campaign_completion_receipt(config)
+                finally:
+                    shutil.rmtree(temp_root)
 
     def test_committed_campaign_is_closed_by_frozen_completion_receipt(self):
         closed = load_campaign_config()
@@ -301,6 +420,19 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
             ValueError, "LIVE_AGENT_DECISION_CLOSURE_CAMPAIGN_CLOSED"
         ):
             require_campaign_open(closed)
+
+    def test_committed_case_views_are_bound_to_closed_completion_hash(self):
+        root = (
+            REPO_ROOT
+            / "evidence"
+            / "live_agent_decision_closure_v1"
+            / "development_runs"
+            / "authorized_campaign_20260830_schema_repair1"
+        )
+        for arm_id in (POSITIVE_ARM_ID, STOP_ARM_ID):
+            with self.subTest(arm_id=arm_id):
+                view = build_case_view(root / arm_id)
+                self.assertEqual(view.integrity_status, "PASS")
 
 
 if __name__ == "__main__":

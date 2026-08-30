@@ -11,7 +11,7 @@ import copy
 import hashlib
 import json
 import re
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from pathlib import Path, PurePosixPath
 from typing import Any, Mapping, Sequence
 
@@ -57,6 +57,44 @@ ACTION_CARD_ID = "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
 LOOKUP_ID = "XEI-LOOKUP-RANDOM-DECLARATIONS"
 TARGET_RULE_INSTANCE_ID = X_EISD_FROZEN_SELECTED_RULE_INSTANCE_IDS[0]
 PROFILE_MODE = "RECORDED_PROFILE_LIVE_PLANNER"
+PLANNER_MODE = "LIVE_OPENROUTER_LUNA"
+TRANSPORT = "OPENROUTER_EXACT_OPENAI_PROVIDER_STRICT_JSON_SCHEMA_NO_TOOLS"
+CLAIM_CEILING = (
+    "DEVELOPMENT_DIAGNOSTIC_ONLY; one live Planner counterfactual over an existing "
+    "exact X-EISD lookup; NOT_AGENT_VALUE_ESTABLISHED; NOT_SCIENTIFIC_SUPPORT"
+)
+SOURCE_SCIENCE_REVIEW_STATUS = "PENDING_DOMAIN_REVIEW"
+HELD_OUT_STATUS = "NOT_ACCESSED"
+SCIENTIFIC_SUPPORT_STATUS = "NOT_ESTABLISHED"
+RESULT_STATUS = "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE"
+CAMPAIGN_BOUNDARY = (
+    "One development-only live Planner counterfactual over an existing exact X-EISD "
+    "lookup. The positive arm closes one declaration Rule and the existing reducer "
+    "remains ABSTAIN; the stop arm executes nothing. This is not source-science "
+    "approval, Agent value, transfer, or scientific support."
+)
+
+_FROZEN_PLANNER_PROMPT = {
+    "path": "agent_experiments/live_agent_decision_closure_v1/prompts/planner_v1.md",
+    "version": "LIVE_AGENT_DECISION_CLOSURE_PLANNER_V1_FROZEN",
+    "sha256": "167d27369c99bcdbd658584b9e01b3a7b275618bfc68322bb792a55fd8cb63ae",
+}
+_FROZEN_MODEL = {
+    "model_id": "openai/gpt-5.6-luna",
+    "accepted_returned_model_ids": [
+        "openai/gpt-5.6-luna",
+        "openai/gpt-5.6-luna-20260709",
+    ],
+    "provider_endpoint_tag": "openai",
+    "expected_provider_display_name": "OpenAI",
+    "allowed_service_tiers": [None, "default"],
+    "input_price_per_million_usd": "0.20",
+    "output_price_per_million_usd": "1.20",
+    "reasoning_effort": "low",
+    "include_temperature_zero": False,
+    "metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+}
+_FROZEN_MAX_OUTPUT_TOKENS = 4096
 
 _ALLOWED_DEPENDENT_TRANSITIONS = {
     TARGET_RULE_INSTANCE_ID,
@@ -121,6 +159,16 @@ def _require_string(value: Any, label: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise LiveAgentDecisionClosureV1Error(f"NONEMPTY_STRING_REQUIRED:{label}")
     return value.strip()
+
+
+def _require_decimal(value: Any, label: str) -> Decimal:
+    try:
+        parsed = Decimal(str(value))
+    except (InvalidOperation, ValueError) as error:
+        raise LiveAgentDecisionClosureV1Error(f"DECIMAL_REQUIRED:{label}") from error
+    if not parsed.is_finite():
+        raise LiveAgentDecisionClosureV1Error(f"FINITE_DECIMAL_REQUIRED:{label}")
+    return parsed
 
 
 def _validate_planner_input(value: Mapping[str, Any]) -> dict[str, Any]:
@@ -293,11 +341,12 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
     _require_exact_keys(config, required, "campaign_config")
     if config.get("schema_version") != CAMPAIGN_CONFIG_SCHEMA:
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_CONFIG_SCHEMA_INVALID")
+    _require_string(config.get("campaign_id"), "campaign_id")
     if config.get("case_id") != X_EISD_CASE_ID or config.get("profile_mode") != PROFILE_MODE:
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_CASE_OR_PROFILE_MODE_INVALID")
     if config.get("execution_status") not in {CAMPAIGN_OPEN_STATUS, CAMPAIGN_CLOSED_STATUS}:
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_EXECUTION_STATUS_INVALID")
-    budget = Decimal(str(config.get("budget_usd")))
+    budget = _require_decimal(config.get("budget_usd"), "budget_usd")
     if budget <= 0 or budget > Decimal("1.00"):
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_BUDGET_EXCEEDS_AUTHORITY")
     if (
@@ -381,12 +430,7 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
                 )
     if config.get("semantic_prompt_tuning_allowed") != 0:
         raise LiveAgentDecisionClosureV1Error("SEMANTIC_PROMPT_TUNING_FORBIDDEN")
-    max_output_tokens = config.get("max_output_tokens")
-    if (
-        not isinstance(max_output_tokens, int)
-        or isinstance(max_output_tokens, bool)
-        or not 1 <= max_output_tokens <= 4096
-    ):
+    if config.get("max_output_tokens") != _FROZEN_MAX_OUTPUT_TOKENS:
         raise LiveAgentDecisionClosureV1Error("MAX_OUTPUT_TOKENS_INVALID")
     ledger_path = _repository_path(config.get("budget_ledger_path"), "budget_ledger_path")
     allowed_ledger_root = (REPO_ROOT / "local" / "live_agent_decision_closure_v1").resolve()
@@ -398,6 +442,8 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
     if not isinstance(prompt, Mapping) or not isinstance(model, Mapping):
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_PROMPT_OR_MODEL_INVALID")
     _require_exact_keys(dict(prompt), {"path", "version", "sha256"}, "planner_prompt")
+    if dict(prompt) != _FROZEN_PLANNER_PROMPT:
+        raise LiveAgentDecisionClosureV1Error("PLANNER_PROMPT_NOT_FROZEN")
     prompt_path = _repository_path(prompt.get("path"), "planner_prompt")
     if not prompt_path.is_file() or text_sha256(prompt_path.read_text(encoding="utf-8")) != prompt.get("sha256"):
         raise LiveAgentDecisionClosureV1Error("PLANNER_PROMPT_HASH_MISMATCH")
@@ -417,8 +463,40 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
         },
         "model",
     )
-    if model.get("model_id") != "openai/gpt-5.6-luna" or model.get("provider_endpoint_tag") != "openai":
-        raise LiveAgentDecisionClosureV1Error("ONLY_EXACT_LUNA_OPENAI_PROVIDER_ALLOWED")
+    if dict(model) != _FROZEN_MODEL:
+        raise LiveAgentDecisionClosureV1Error("FROZEN_LUNA_MODEL_CONTRACT_MISMATCH")
+    if (
+        config.get("claim_ceiling") != CLAIM_CEILING
+        or config.get("source_science_review_status") != SOURCE_SCIENCE_REVIEW_STATUS
+        or config.get("held_out_status") != HELD_OUT_STATUS
+    ):
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_SCIENTIFIC_BOUNDARY_MISMATCH")
+
+    completion_path = config.get("completion_receipt_path")
+    completion_sha = config.get("completion_receipt_sha256")
+    if config["execution_status"] == CAMPAIGN_OPEN_STATUS:
+        if completion_path is not None or completion_sha is not None:
+            raise LiveAgentDecisionClosureV1Error("OPEN_CAMPAIGN_COMPLETION_RECEIPT_FORBIDDEN")
+    else:
+        completion_file = _repository_path(completion_path, "completion_receipt_path")
+        allowed_completion_root = (
+            REPO_ROOT
+            / "evidence"
+            / "live_agent_decision_closure_v1"
+            / "development_runs"
+        ).resolve()
+        try:
+            completion_file.relative_to(allowed_completion_root)
+        except ValueError as error:
+            raise LiveAgentDecisionClosureV1Error(
+                "COMPLETION_RECEIPT_OUTSIDE_EVIDENCE_ROOT"
+            ) from error
+        if completion_file.name != "live_agent_decision_closure_manifest_v1.json":
+            raise LiveAgentDecisionClosureV1Error("COMPLETION_RECEIPT_FILENAME_INVALID")
+        if not isinstance(completion_sha, str) or not re.fullmatch(
+            r"[0-9a-f]{64}", completion_sha
+        ):
+            raise LiveAgentDecisionClosureV1Error("COMPLETION_RECEIPT_HASH_INVALID")
     return copy.deepcopy(config)
 
 
@@ -430,29 +508,115 @@ def campaign_budget_ledger_path(config: Mapping[str, Any]) -> Path:
     return _repository_path(config.get("budget_ledger_path"), "budget_ledger_path")
 
 
-def require_campaign_open(config: Mapping[str, Any]) -> None:
-    if config.get("execution_status") == CAMPAIGN_OPEN_STATUS:
-        return
+def validate_campaign_completion_receipt(
+    config: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Bind one closed campaign config to its frozen aggregate receipt."""
+
+    config = validate_campaign_config(config)
     if config.get("execution_status") != CAMPAIGN_CLOSED_STATUS:
-        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_EXECUTION_STATUS_INVALID")
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_NOT_CLOSED")
     receipt_path = _repository_path(
         config.get("completion_receipt_path"), "completion_receipt_path"
     )
     receipt_hash = config.get("completion_receipt_sha256")
     if (
         not receipt_path.is_file()
-        or not isinstance(receipt_hash, str)
         or hashlib.sha256(receipt_path.read_bytes()).hexdigest() != receipt_hash
     ):
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_RECEIPT_INVALID")
     receipt = load_json_object(receipt_path)
     if (
-        receipt.get("campaign_id") != config.get("campaign_id")
+        receipt.get("schema_version") != MANIFEST_SCHEMA
+        or receipt.get("campaign_id") != config.get("campaign_id")
         or receipt.get("campaign_state") != "COMPLETED_CALLS_FROZEN"
-        or receipt.get("actual_cost_usd") is None
-        or receipt.get("completed_api_calls") is None
+        or receipt.get("case_id") != X_EISD_CASE_ID
+        or receipt.get("profile_mode") != PROFILE_MODE
+        or receipt.get("planner_mode") != PLANNER_MODE
+        or receipt.get("transport") != TRANSPORT
+        or receipt.get("affected_rule_instance_id") != TARGET_RULE_INSTANCE_ID
+        or receipt.get("positive_arm_id") != POSITIVE_ARM_ID
+        or receipt.get("stop_arm_id") != STOP_ARM_ID
+        or receipt.get("positive_transition") != "UNRESOLVED_TO_PASS"
+        or receipt.get("stop_transition") != "UNRESOLVED_TO_UNRESOLVED"
+        or receipt.get("positive_terminal_disposition")
+        != "ABSTAIN_OR_HUMAN_REVIEW"
+        or receipt.get("stop_terminal_disposition") != "ABSTAIN_OR_HUMAN_REVIEW"
+        or receipt.get("claim_ceiling") != CLAIM_CEILING
+        or receipt.get("source_science_review_status")
+        != SOURCE_SCIENCE_REVIEW_STATUS
+        or receipt.get("held_out_status") != HELD_OUT_STATUS
+        or receipt.get("scientific_support_status") != SCIENTIFIC_SUPPORT_STATUS
+        or receipt.get("result_status") != RESULT_STATUS
+        or receipt.get("boundary") != CAMPAIGN_BOUNDARY
     ):
         raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_RECEIPT_INVALID")
+
+    completed_calls = receipt.get("completed_api_calls")
+    http_attempts = receipt.get("http_attempts")
+    if (
+        not isinstance(completed_calls, int)
+        or isinstance(completed_calls, bool)
+        or not 1 <= completed_calls <= config["max_completed_calls"]
+        or not isinstance(http_attempts, int)
+        or isinstance(http_attempts, bool)
+        or not completed_calls <= http_attempts <= config["max_http_attempts"]
+        or (
+            config["schema_compatibility_repairs_used"] == 1
+            and http_attempts < completed_calls + 1
+        )
+    ):
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_CALL_TOTALS_INVALID")
+    actual_cost = _require_decimal(receipt.get("actual_cost_usd"), "actual_cost_usd")
+    cap = _require_decimal(config.get("budget_usd"), "budget_usd")
+    if actual_cost < 0 or actual_cost > cap:
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_COST_INVALID")
+
+    budget = receipt.get("budget")
+    if not isinstance(budget, Mapping):
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_BUDGET_INVALID")
+    _require_exact_keys(
+        dict(budget),
+        {
+            "actual_cost_usd",
+            "campaign_id",
+            "cap_usd",
+            "completed_calls",
+            "max_attempts_per_cell",
+            "max_completed_calls",
+            "persistence",
+            "remaining_budget_usd",
+            "reported_cost_available",
+            "unresolved_inflight_reservation",
+        },
+        "completion_receipt.budget",
+    )
+    remaining = _require_decimal(
+        budget.get("remaining_budget_usd"), "remaining_budget_usd"
+    )
+    if (
+        budget.get("campaign_id") != config["campaign_id"]
+        or _require_decimal(budget.get("cap_usd"), "budget.cap_usd") != cap
+        or _require_decimal(budget.get("actual_cost_usd"), "budget.actual_cost_usd")
+        != actual_cost
+        or budget.get("completed_calls") != completed_calls
+        or budget.get("max_completed_calls") != config["max_completed_calls"]
+        or budget.get("max_attempts_per_cell")
+        != config["max_attempts_per_exact_role_case_model"]
+        or budget.get("persistence") != "ATOMIC_JSON"
+        or remaining != cap - actual_cost
+        or budget.get("reported_cost_available") is not True
+        or budget.get("unresolved_inflight_reservation") is not False
+    ):
+        raise LiveAgentDecisionClosureV1Error("CAMPAIGN_COMPLETION_BUDGET_INVALID")
+    return copy.deepcopy(receipt)
+
+
+def require_campaign_open(config: Mapping[str, Any]) -> None:
+    config = validate_campaign_config(config)
+    if config.get("execution_status") == CAMPAIGN_OPEN_STATUS:
+        return
+    validate_campaign_completion_receipt(config)
     raise LiveAgentDecisionClosureV1Error(CAMPAIGN_CLOSED_ERROR)
 
 
@@ -1186,8 +1350,8 @@ def run_live_agent_decision_closure_campaign(
         "campaign_state": "COMPLETED_CALLS_FROZEN",
         "case_id": X_EISD_CASE_ID,
         "profile_mode": PROFILE_MODE,
-        "planner_mode": "LIVE_OPENROUTER_LUNA",
-        "transport": "OPENROUTER_EXACT_OPENAI_PROVIDER_STRICT_JSON_SCHEMA_NO_TOOLS",
+        "planner_mode": PLANNER_MODE,
+        "transport": TRANSPORT,
         "base_state_sha256": base_state_hash,
         "positive_arm_id": POSITIVE_ARM_ID,
         "stop_arm_id": STOP_ARM_ID,
@@ -1204,9 +1368,9 @@ def run_live_agent_decision_closure_campaign(
         "source_science_review_status": config["source_science_review_status"],
         "held_out_status": config["held_out_status"],
         "claim_ceiling": config["claim_ceiling"],
-        "scientific_support_status": "NOT_ESTABLISHED",
-        "result_status": "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE",
-        "boundary": "One development-only live Planner counterfactual over an existing exact X-EISD lookup. The positive arm closes one declaration Rule and the existing reducer remains ABSTAIN; the stop arm executes nothing. This is not source-science approval, Agent value, transfer, or scientific support.",
+        "scientific_support_status": SCIENTIFIC_SUPPORT_STATUS,
+        "result_status": RESULT_STATUS,
+        "boundary": CAMPAIGN_BOUNDARY,
     }
     _write_json(output_dir / "live_agent_decision_closure_manifest_v1.json", manifest)
     return {
@@ -1219,13 +1383,22 @@ def run_live_agent_decision_closure_campaign(
 __all__ = [
     "ACTION_CARD_ID",
     "CAMPAIGN_CONFIG_PATH",
+    "CAMPAIGN_BOUNDARY",
     "CAMPAIGN_CLOSED_ERROR",
     "CAMPAIGN_CLOSED_STATUS",
     "CAMPAIGN_OPEN_STATUS",
+    "CLAIM_CEILING",
+    "HELD_OUT_STATUS",
     "LiveAgentDecisionClosureV1Error",
+    "PLANNER_MODE",
     "POSITIVE_ARM_ID",
+    "PROFILE_MODE",
+    "RESULT_STATUS",
+    "SCIENTIFIC_SUPPORT_STATUS",
+    "SOURCE_SCIENCE_REVIEW_STATUS",
     "STOP_ARM_ID",
     "TARGET_RULE_INSTANCE_ID",
+    "TRANSPORT",
     "build_budget",
     "build_frozen_decision_state",
     "build_planner_input",
@@ -1233,6 +1406,7 @@ __all__ = [
     "load_campaign_config",
     "require_campaign_open",
     "run_live_agent_decision_closure_campaign",
+    "validate_campaign_completion_receipt",
     "validate_planner_proposal",
     "validate_campaign_config",
 ]

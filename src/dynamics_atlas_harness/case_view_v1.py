@@ -33,13 +33,42 @@ from .profile_proposal_envelope_v1 import (
 )
 from .live_agent_decision_closure_v1 import (
     ACTION_CARD_ID as DECISION_CLOSURE_ACTION_CARD_ID,
+    ARM_RECEIPT_SCHEMA as DECISION_CLOSURE_ARM_RECEIPT_SCHEMA,
+    CAMPAIGN_BOUNDARY as DECISION_CLOSURE_BOUNDARY,
+    CAMPAIGN_CLOSED_STATUS as DECISION_CLOSURE_CLOSED_STATUS,
+    CAMPAIGN_CONFIG_PATH as DECISION_CLOSURE_CONFIG_PATH,
+    CAMPAIGN_OPEN_STATUS as DECISION_CLOSURE_OPEN_STATUS,
+    CLAIM_CEILING as DECISION_CLOSURE_CLAIM_CEILING,
+    EVIDENCE_RESULT_SCHEMA as DECISION_CLOSURE_EVIDENCE_RESULT_SCHEMA,
+    HELD_OUT_STATUS as DECISION_CLOSURE_HELD_OUT_STATUS,
+    LOOKUP_ID as DECISION_CLOSURE_LOOKUP_ID,
     MANIFEST_SCHEMA as DECISION_CLOSURE_MANIFEST_SCHEMA,
+    PLANNER_MODE as DECISION_CLOSURE_PLANNER_MODE,
     POSITIVE_ARM_ID as DECISION_CLOSURE_POSITIVE_ARM_ID,
     PROFILE_MODE as DECISION_CLOSURE_PROFILE_MODE,
+    RESULT_STATUS as DECISION_CLOSURE_RESULT_STATUS,
+    SCIENTIFIC_SUPPORT_STATUS as DECISION_CLOSURE_SCIENTIFIC_SUPPORT_STATUS,
+    SOURCE_SCIENCE_REVIEW_STATUS as DECISION_CLOSURE_SOURCE_SCIENCE_STATUS,
     STOP_ARM_ID as DECISION_CLOSURE_STOP_ARM_ID,
     TARGET_RULE_INSTANCE_ID as DECISION_CLOSURE_TARGET_RULE_ID,
+    TRANSPORT as DECISION_CLOSURE_TRANSPORT,
+    build_frozen_decision_state as build_decision_closure_frozen_state,
+    build_planner_input as build_decision_closure_planner_input,
     build_planner_proposal_schema as build_decision_closure_planner_schema,
+    validate_campaign_completion_receipt as validate_decision_closure_completion,
+    validate_campaign_config as validate_decision_closure_campaign_config,
     validate_planner_proposal as validate_decision_closure_planner_proposal,
+)
+from .minimal_stage2_exposed_conclusions_v1 import (
+    materialize_stage2_conclusion_packet,
+    source_grounding_by_family,
+)
+from .real_case_vertical_slice_v1 import (
+    apply_lookup_result,
+    derive_declaration_attestations,
+    evaluate_xeisd_case,
+    execute_exact_source_lookup,
+    materialize_xeisd_conclusion_packet,
 )
 
 
@@ -1704,6 +1733,259 @@ def _validate_decision_closure_artifact_records(
     return declared
 
 
+_DECISION_CLOSURE_MANIFEST_FIELDS = {
+    "actual_cost_usd",
+    "affected_rule_instance_id",
+    "artifacts",
+    "base_state_sha256",
+    "boundary",
+    "budget",
+    "campaign_id",
+    "campaign_state",
+    "case_id",
+    "claim_ceiling",
+    "completed_api_calls",
+    "held_out_status",
+    "http_attempts",
+    "planner_mode",
+    "positive_arm_id",
+    "positive_terminal_disposition",
+    "positive_transition",
+    "profile_mode",
+    "result_status",
+    "schema_version",
+    "scientific_support_status",
+    "source_science_review_status",
+    "stop_arm_id",
+    "stop_terminal_disposition",
+    "stop_transition",
+    "transport",
+}
+
+
+def _validate_decision_closure_manifest_contract(
+    campaign_root: Path, manifest: dict[str, Any], declared: set[str]
+) -> dict[str, Any]:
+    """Bind the aggregate manifest to frozen campaign semantics and both calls."""
+
+    if set(manifest) != _DECISION_CLOSURE_MANIFEST_FIELDS:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_MANIFEST_FIELDS_INVALID")
+    expected_values = {
+        "schema_version": DECISION_CLOSURE_MANIFEST_SCHEMA,
+        "campaign_state": "COMPLETED_CALLS_FROZEN",
+        "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+        "profile_mode": DECISION_CLOSURE_PROFILE_MODE,
+        "planner_mode": DECISION_CLOSURE_PLANNER_MODE,
+        "transport": DECISION_CLOSURE_TRANSPORT,
+        "positive_arm_id": DECISION_CLOSURE_POSITIVE_ARM_ID,
+        "stop_arm_id": DECISION_CLOSURE_STOP_ARM_ID,
+        "affected_rule_instance_id": DECISION_CLOSURE_TARGET_RULE_ID,
+        "positive_transition": "UNRESOLVED_TO_PASS",
+        "stop_transition": "UNRESOLVED_TO_UNRESOLVED",
+        "positive_terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+        "stop_terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+        "claim_ceiling": DECISION_CLOSURE_CLAIM_CEILING,
+        "source_science_review_status": DECISION_CLOSURE_SOURCE_SCIENCE_STATUS,
+        "held_out_status": DECISION_CLOSURE_HELD_OUT_STATUS,
+        "scientific_support_status": DECISION_CLOSURE_SCIENTIFIC_SUPPORT_STATUS,
+        "result_status": DECISION_CLOSURE_RESULT_STATUS,
+        "boundary": DECISION_CLOSURE_BOUNDARY,
+    }
+    for field, expected in expected_values.items():
+        if manifest.get(field) != expected:
+            raise CaseViewIntegrityError(
+                "DECISION_CLOSURE_MANIFEST_CONTRACT_MISMATCH", field
+            )
+
+    required_aggregate = {
+        "campaign_config_snapshot.json",
+        "paired_arm_matrix.json",
+        f"{DECISION_CLOSURE_POSITIVE_ARM_ID}/arm_receipt.json",
+        f"{DECISION_CLOSURE_POSITIVE_ARM_ID}/live_call/model_call_receipt.json",
+        f"{DECISION_CLOSURE_STOP_ARM_ID}/arm_receipt.json",
+        f"{DECISION_CLOSURE_STOP_ARM_ID}/live_call/model_call_receipt.json",
+    }
+    missing = sorted(required_aggregate - declared)
+    if missing:
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_AGGREGATE_ARTIFACT_UNDECLARED", ",".join(missing)
+        )
+
+    config_snapshot = _read_object(
+        campaign_root / "campaign_config_snapshot.json", "campaign_config_snapshot"
+    )
+    assert config_snapshot is not None
+    try:
+        config_snapshot = validate_decision_closure_campaign_config(config_snapshot)
+    except ValueError as error:
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_CAMPAIGN_CONFIG_INVALID"
+        ) from error
+    if (
+        config_snapshot.get("execution_status") != DECISION_CLOSURE_OPEN_STATUS
+        or config_snapshot.get("completion_receipt_path") is not None
+        or config_snapshot.get("completion_receipt_sha256") is not None
+        or config_snapshot.get("campaign_id") != manifest.get("campaign_id")
+        or config_snapshot.get("case_id") != manifest.get("case_id")
+        or config_snapshot.get("profile_mode") != manifest.get("profile_mode")
+        or config_snapshot.get("claim_ceiling") != manifest.get("claim_ceiling")
+        or config_snapshot.get("source_science_review_status")
+        != manifest.get("source_science_review_status")
+        or config_snapshot.get("held_out_status") != manifest.get("held_out_status")
+    ):
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_CAMPAIGN_CONFIG_MANIFEST_MISMATCH"
+        )
+
+    arm_receipts: list[dict[str, Any]] = []
+    live_receipts: list[dict[str, Any]] = []
+    for arm_id in (
+        DECISION_CLOSURE_POSITIVE_ARM_ID,
+        DECISION_CLOSURE_STOP_ARM_ID,
+    ):
+        arm_receipt = _read_object(
+            campaign_root / arm_id / "arm_receipt.json", f"{arm_id}.arm_receipt"
+        )
+        live_receipt = _read_object(
+            campaign_root / arm_id / "live_call" / "model_call_receipt.json",
+            f"{arm_id}.model_call_receipt",
+        )
+        assert arm_receipt is not None and live_receipt is not None
+        if (
+            arm_receipt.get("schema_version")
+            != DECISION_CLOSURE_ARM_RECEIPT_SCHEMA
+            or arm_receipt.get("arm_id") != arm_id
+            or arm_receipt.get("campaign_id") != manifest.get("campaign_id")
+            or arm_receipt.get("case_id") != manifest.get("case_id")
+            or arm_receipt.get("profile_mode") != DECISION_CLOSURE_PROFILE_MODE
+            or arm_receipt.get("model")
+            != config_snapshot["model"]["model_id"]
+            or arm_receipt.get("provider")
+            != config_snapshot["model"]["expected_provider_display_name"]
+            or arm_receipt.get("response_id") != live_receipt.get("response_id")
+            or arm_receipt.get("reported_cost_usd")
+            != live_receipt.get("reported_cost_usd")
+            or arm_receipt.get("result_status") != "SUCCEEDED"
+        ):
+            raise CaseViewIntegrityError(
+                "DECISION_CLOSURE_AGGREGATE_ARM_RECEIPT_MISMATCH", arm_id
+            )
+        arm_receipts.append(arm_receipt)
+        live_receipts.append(live_receipt)
+
+    completed_calls = manifest.get("completed_api_calls")
+    http_attempts = manifest.get("http_attempts")
+    attempt_numbers = [receipt.get("attempt_number") for receipt in live_receipts]
+    if (
+        completed_calls != len(live_receipts)
+        or not all(
+            isinstance(value, int) and not isinstance(value, bool) and value > 0
+            for value in attempt_numbers
+        )
+        or len(set(attempt_numbers)) != len(attempt_numbers)
+        or http_attempts != max(attempt_numbers)
+        or http_attempts
+        != completed_calls + config_snapshot["schema_compatibility_repairs_used"]
+    ):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_AGGREGATE_CALL_TOTAL_MISMATCH")
+
+    actual_cost = _nonnegative_decimal(
+        manifest.get("actual_cost_usd"),
+        "DECISION_CLOSURE_AGGREGATE_COST_INVALID",
+    )
+    arm_cost = sum(
+        (
+            _nonnegative_decimal(
+                receipt.get("reported_cost_usd"),
+                "DECISION_CLOSURE_AGGREGATE_COST_INVALID",
+            )
+            for receipt in live_receipts
+        ),
+        Decimal("0"),
+    )
+    if actual_cost != arm_cost:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_AGGREGATE_COST_MISMATCH")
+    final_budget = _require_object(
+        live_receipts[-1].get("campaign_budget"), "final_live_receipt.campaign_budget"
+    )
+    if manifest.get("budget") != final_budget:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_AGGREGATE_BUDGET_MISMATCH")
+    if (
+        final_budget.get("campaign_id") != manifest.get("campaign_id")
+        or final_budget.get("completed_calls") != completed_calls
+        or _nonnegative_decimal(
+            final_budget.get("actual_cost_usd"),
+            "DECISION_CLOSURE_AGGREGATE_COST_INVALID",
+        )
+        != actual_cost
+        or _nonnegative_decimal(
+            final_budget.get("cap_usd"),
+            "DECISION_CLOSURE_AGGREGATE_BUDGET_INVALID",
+        )
+        != _nonnegative_decimal(
+            config_snapshot.get("budget_usd"),
+            "DECISION_CLOSURE_AGGREGATE_BUDGET_INVALID",
+        )
+    ):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_AGGREGATE_BUDGET_MISMATCH")
+
+    matrix = _read_object(campaign_root / "paired_arm_matrix.json", "paired_arm_matrix")
+    assert matrix is not None
+    if (
+        set(matrix)
+        != {
+            "schema_version",
+            "campaign_id",
+            "case_id",
+            "agent_mode",
+            "arms",
+            "paired_counterfactual_status",
+            "claim_ceiling",
+        }
+        or matrix.get("schema_version")
+        != "live-agent-decision-closure-paired-matrix/v1"
+        or matrix.get("campaign_id") != manifest.get("campaign_id")
+        or matrix.get("case_id") != manifest.get("case_id")
+        or matrix.get("agent_mode") != DECISION_CLOSURE_PROFILE_MODE
+        or matrix.get("arms") != arm_receipts
+        or matrix.get("paired_counterfactual_status") != "PASS"
+        or matrix.get("claim_ceiling") != DECISION_CLOSURE_CLAIM_CEILING
+    ):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_PAIRED_MATRIX_MISMATCH")
+
+    tracked_config_raw = _read_object(
+        DECISION_CLOSURE_CONFIG_PATH, "tracked_decision_closure_campaign_config"
+    )
+    assert tracked_config_raw is not None
+    try:
+        tracked_config = validate_decision_closure_campaign_config(tracked_config_raw)
+    except ValueError as error:
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_TRACKED_CONFIG_INVALID"
+        ) from error
+    tracked_completion = (
+        REPO_ROOT / str(tracked_config.get("completion_receipt_path"))
+    ).resolve()
+    manifest_path = (
+        campaign_root / "live_agent_decision_closure_manifest_v1.json"
+    ).resolve()
+    if (
+        tracked_config.get("execution_status") == DECISION_CLOSURE_CLOSED_STATUS
+        and manifest_path == tracked_completion
+    ):
+        try:
+            frozen_receipt = validate_decision_closure_completion(tracked_config)
+        except ValueError as error:
+            raise CaseViewIntegrityError(
+                "DECISION_CLOSURE_TRACKED_COMPLETION_BINDING_INVALID"
+            ) from error
+        if frozen_receipt != manifest:
+            raise CaseViewIntegrityError(
+                "DECISION_CLOSURE_TRACKED_COMPLETION_BINDING_INVALID"
+            )
+    return config_snapshot
+
+
 def _build_decision_closure_arm_view(root: Path) -> CaseView:
     campaign_root = root.parent
     manifest = _read_object(
@@ -1730,7 +2012,15 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
     if expected_manifest_arm != arm_id:
         raise CaseViewIntegrityError("DECISION_CLOSURE_MANIFEST_ARM_MISMATCH", arm_id)
     declared = _validate_decision_closure_artifact_records(campaign_root, manifest)
-    required_root = {"recorded_profile.json", "before_rule_results.json"}
+    config_snapshot = _validate_decision_closure_manifest_contract(
+        campaign_root, manifest, declared
+    )
+    required_root = {
+        "recorded_profile.json",
+        "before_rule_results.json",
+        "campaign_config_snapshot.json",
+        "paired_arm_matrix.json",
+    }
     required_arm = {
         "planner_visible_input.json",
         "live_call/request_payload.json",
@@ -1766,6 +2056,17 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
         raise CaseViewIntegrityError("LIST_REQUIRED", "before_rule_results")
     before, before_by_id = _rule_index(before_value, "before_rule_results")
     assert recorded_profile is not None
+    try:
+        frozen_state = build_decision_closure_frozen_state()
+    except ValueError as error:
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_FROZEN_STATE_INVALID"
+        ) from error
+    if (
+        recorded_profile != frozen_state.get("recorded_profile")
+        or before != frozen_state.get("before_rule_results")
+    ):
+        raise CaseViewIntegrityError("DECISION_CLOSURE_FROZEN_BASE_STATE_MISMATCH")
 
     planner_input = _read_object(root / "planner_visible_input.json", "planner_visible_input")
     request_payload = _read_object(root / "live_call" / "request_payload.json", "request_payload")
@@ -1779,6 +2080,7 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
     route_packet = _read_object(root / "route_packet.json", "route_packet")
     conclusion = _read_object(root / "conclusion_packet.json", "conclusion_packet")
     arm_receipt = _read_object(root / "arm_receipt.json", "arm_receipt")
+    after_graph = _read_object(root / "after_casegraph.json", "after_casegraph")
     assert all(
         value is not None
         for value in (
@@ -1794,6 +2096,7 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
             route_packet,
             conclusion,
             arm_receipt,
+            after_graph,
         )
     )
     for label, artifact in (
@@ -1808,6 +2111,12 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
         _assert_case_id(artifact.get("case_id"), case_id, label)
     if arm_receipt.get("arm_id") != arm_id or arm_receipt.get("campaign_id") != manifest.get("campaign_id"):
         raise CaseViewIntegrityError("DECISION_CLOSURE_ARM_RECEIPT_IDENTITY_MISMATCH")
+    expected_planner_input = build_decision_closure_planner_input(
+        frozen_state,
+        include_action_card=arm_id == DECISION_CLOSURE_POSITIVE_ARM_ID,
+    )
+    if planner_input != expected_planner_input:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_PLANNER_INPUT_NOT_FROZEN")
     base_state_sha = canonical_json_sha256(
         {
             "recorded_profile": recorded_profile,
@@ -1832,6 +2141,45 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
         public_packet_source=REPO_ROOT / "README.md",
         expected_output_schema=build_decision_closure_planner_schema(planner_input),
     )
+    frozen_model = _require_object(config_snapshot.get("model"), "campaign.model")
+    frozen_prompt = _require_object(
+        config_snapshot.get("planner_prompt"), "campaign.planner_prompt"
+    )
+    request_provider = _require_object(
+        request_payload.get("provider"), "request_payload.provider"
+    )
+    request_parameter_profile = _require_object(
+        live_receipt.get("request_parameter_profile"),
+        "live_receipt.request_parameter_profile",
+    )
+    if (
+        request_payload.get("model") != frozen_model.get("model_id")
+        or request_payload.get("max_tokens") != config_snapshot.get("max_output_tokens")
+        or request_provider.get("only")
+        != [frozen_model.get("provider_endpoint_tag")]
+        or request_parameter_profile.get("reasoning_effort")
+        != frozen_model.get("reasoning_effort")
+        or request_parameter_profile.get("temperature_zero_included")
+        != frozen_model.get("include_temperature_zero")
+        or live_receipt.get("requested_model") != frozen_model.get("model_id")
+        or live_receipt.get("accepted_returned_model_ids")
+        != frozen_model.get("accepted_returned_model_ids")
+        or live_receipt.get("requested_provider_endpoint_tag")
+        != frozen_model.get("provider_endpoint_tag")
+        or live_receipt.get("expected_provider_display_name")
+        != frozen_model.get("expected_provider_display_name")
+        or live_receipt.get("allowed_service_tiers")
+        != frozen_model.get("allowed_service_tiers")
+        or live_receipt.get("model_metadata_sha256")
+        != frozen_model.get("metadata_sha256")
+        or live_receipt.get("prompt_version") != frozen_prompt.get("version")
+        or live_receipt.get("prompt_sha256") != frozen_prompt.get("sha256")
+        or live_receipt.get("automatic_retries")
+        != config_snapshot.get("automatic_retries")
+    ):
+        raise CaseViewIntegrityError(
+            "DECISION_CLOSURE_LIVE_CALL_CONFIG_BINDING_MISMATCH"
+        )
     try:
         expected_admission = validate_decision_closure_planner_proposal(
             planner_input, planner_proposal
@@ -1888,31 +2236,198 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
         raise CaseViewIntegrityError("DECISION_CLOSURE_TERMINAL_DISPOSITION_INVALID")
 
     if arm_id == DECISION_CLOSURE_POSITIVE_ARM_ID:
+        expected_lookup = execute_exact_source_lookup(
+            allowlist=frozen_state["allowlist"],
+            request=frozen_state["lookup_request"],
+            workspace_root=REPO_ROOT,
+        )
+        expected_after_graph = apply_lookup_result(
+            case_graph=frozen_state["recorded_profile"],
+            lookup_result=expected_lookup,
+        )
+        expected_after_graph = derive_declaration_attestations(
+            case_graph=expected_after_graph,
+            lookup_results=[expected_lookup],
+        )
+        expected_after_results = evaluate_xeisd_case(
+            case_graph=expected_after_graph,
+            **frozen_state["rules_bundle"],
+        )
+        expected_authorization = {
+            "schema_version": "live-agent-decision-closure-authorization/v1",
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "status": "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP",
+            "selected_card_ids": [DECISION_CLOSURE_ACTION_CARD_ID],
+            "authorized_action_count": 1,
+            "authorization_basis": [
+                "CURRENT_UNRESOLVED_RULE_REQUESTS_SOURCE_LOOKUP",
+                "CURRENT_CARD_ADDRESSES_EXACT_RULEINSTANCE",
+                "EXACT_LOOKUP_ID_TARGET_LOCATOR_AND_HASH_PREDECLARED",
+            ],
+            "model_execution_authority": "NONE",
+            "scientific_disposition": "NOT_EVALUATED",
+        }
+        expected_execution = {
+            "schema_version": "live-agent-decision-closure-execution/v1",
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "execution_status": "ONE_EXACT_LOOKUP_EXECUTED",
+            "selected_card_ids": [DECISION_CLOSURE_ACTION_CARD_ID],
+            "executed_action_count": 1,
+            "operator_execution_count": 0,
+            "network_accessed_by_scientific_action": False,
+        }
+        expected_evidence = {
+            "schema_version": DECISION_CLOSURE_EVIDENCE_RESULT_SCHEMA,
+            "evidence_result_id": "XEISD-RANDOM-COMPOSITION-LOOKUP-EVIDENCE::LIVE_AGENT_DECISION_CLOSURE_V1",
+            "case_id": case_id,
+            "card_id": DECISION_CLOSURE_ACTION_CARD_ID,
+            "evidence_result_class": "SOURCE_LOOKUP_RESULT",
+            "route": "SOURCE_LOOKUP",
+            "rule_effect": "ACTIVE_RULE_EFFECT",
+            "affected_rule_instance_id": DECISION_CLOSURE_TARGET_RULE_ID,
+            "active_rule_effect": "ACTIVE_RULE_EFFECT",
+            "active_rule_transition": {
+                "before_status": "UNRESOLVED",
+                "after_status": "PASS",
+                "same_rule_identity": True,
+            },
+            "lookup_result": expected_lookup,
+            "validation_status": "PASS_EXACT_ALLOWLIST_HASH_LOCATOR",
+            "scientific_disposition": "NOT_EVALUATED",
+            "claim_ceiling": "Exact exposed-development declaration attestation only; no source-science approval or scientific support.",
+        }
+        expected_evidence_wrapper = {
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "evidence_results": [expected_evidence],
+        }
+        expected_lookup_results = [expected_lookup]
         if (
             selected != [DECISION_CLOSURE_ACTION_CARD_ID]
-            or authorization.get("status") != "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP"
-            or execution.get("executed_action_count") != 1
+            or planner_admission.get("decision") != "SELECT_ACTIONS"
+            or authorization != expected_authorization
+            or execution != expected_execution
+            or evidence_wrapper != expected_evidence_wrapper
             or len(active) != 1
-            or active[0].get("affected_rule_instance_id") != DECISION_CLOSURE_TARGET_RULE_ID
+            or descriptive
+            or active[0].get("affected_rule_instance_id")
+            != DECISION_CLOSURE_TARGET_RULE_ID
+            or expected_lookup.get("lookup_id") != DECISION_CLOSURE_LOOKUP_ID
             or target_before.get("status") != "UNRESOLVED"
             or target_after.get("status") != "PASS"
         ):
             raise CaseViewIntegrityError("DECISION_CLOSURE_POSITIVE_ARM_INVALID")
     else:
+        expected_after_graph = deepcopy(frozen_state["recorded_profile"])
+        expected_after_results = deepcopy(frozen_state["before_rule_results"])
+        expected_authorization = {
+            "schema_version": "live-agent-decision-closure-authorization/v1",
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "status": "AUTHORIZED_ABSTENTION_ZERO_EXECUTION",
+            "selected_card_ids": [],
+            "authorized_action_count": 0,
+            "authorization_basis": ["NO_CURRENT_LEGAL_ACTION_CARD_SELECTED"],
+            "model_execution_authority": "NONE",
+            "scientific_disposition": "NOT_EVALUATED",
+        }
+        expected_execution = {
+            "schema_version": "live-agent-decision-closure-execution/v1",
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "execution_status": "ABSTAINED_ZERO_EXECUTION",
+            "selected_card_ids": [],
+            "executed_action_count": 0,
+            "lookup_execution_count": 0,
+            "operator_execution_count": 0,
+            "network_accessed_by_scientific_action": False,
+        }
+        expected_evidence_wrapper = {
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "evidence_results": [],
+        }
+        expected_lookup_results = []
+        expected_stop_receipt = {
+            "schema_version": "live-agent-decision-closure-stop-receipt/v1",
+            "case_id": case_id,
+            "arm_id": arm_id,
+            "legal_action_card_count": 0,
+            "planner_decision": "ABSTAIN_NO_ACTION",
+            "scientific_action_executions": 0,
+            "lookup_executions": 0,
+            "operator_executions": 0,
+            "rule_status": "UNRESOLVED",
+            "terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+        }
         stop_receipt = _read_object(root / "stop_receipt.json", "stop_receipt")
         assert stop_receipt is not None
         if (
             selected
             or planner_admission.get("decision") != "ABSTAIN_NO_ACTION"
-            or authorization.get("status") != "AUTHORIZED_ABSTENTION_ZERO_EXECUTION"
-            or execution.get("executed_action_count") != 0
-            or evidence_results
+            or planner_input.get("legal_action_cards") != []
+            or authorization != expected_authorization
+            or execution != expected_execution
+            or evidence_wrapper != expected_evidence_wrapper
+            or descriptive
+            or active
             or changed_ids
-            or stop_receipt.get("scientific_action_executions") != 0
+            or stop_receipt != expected_stop_receipt
             or target_before.get("status") != "UNRESOLVED"
             or target_after.get("status") != "UNRESOLVED"
         ):
             raise CaseViewIntegrityError("DECISION_CLOSURE_STOP_ARM_INVALID")
+
+    if after_graph != expected_after_graph or after != expected_after_results:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_DETERMINISTIC_EXECUTION_MISMATCH")
+    expected_route_packet = materialize_xeisd_conclusion_packet(
+        case_graph=expected_after_graph,
+        rule_results=expected_after_results,
+        lookup_results=expected_lookup_results,
+        scenario_id=arm_id,
+    )
+    if route_packet != expected_route_packet:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_ROUTE_REDUCER_MISMATCH")
+    family_overlay = _read_object(
+        REPO_ROOT / "registries" / "rules_v1" / "family_overlay_v1.json",
+        "family_overlay_v1",
+    )
+    assert family_overlay is not None
+    expected_conclusion = materialize_stage2_conclusion_packet(
+        route_packet=expected_route_packet,
+        source_grounding=source_grounding_by_family(family_overlay),
+        scenario_id=arm_id,
+        route_artifact_path=f"{arm_id}/route_packet.json",
+    )
+    if conclusion != expected_conclusion:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_CONCLUSION_REDUCER_MISMATCH")
+
+    expected_arm_receipt = {
+        "schema_version": DECISION_CLOSURE_ARM_RECEIPT_SCHEMA,
+        "campaign_id": manifest["campaign_id"],
+        "case_id": case_id,
+        "arm_id": arm_id,
+        "profile_mode": DECISION_CLOSURE_PROFILE_MODE,
+        "base_state_sha256": base_state_sha,
+        "legal_action_card_count": len(planner_input["legal_action_cards"]),
+        "planner_decision": planner_admission["decision"],
+        "selected_card_ids": selected,
+        "authorization_status": authorization["status"],
+        "executed_action_count": execution["executed_action_count"],
+        "affected_rule_instance_id": DECISION_CLOSURE_TARGET_RULE_ID,
+        "before_status": target_before["status"],
+        "after_status": target_after["status"],
+        "terminal_disposition": conclusion["terminal_disposition"],
+        "model": live_receipt["requested_model"],
+        "provider": live_receipt["actual_provider"],
+        "response_id": live_receipt["response_id"],
+        "reported_cost_usd": live_receipt["reported_cost_usd"],
+        "result_status": "SUCCEEDED",
+    }
+    if arm_receipt != expected_arm_receipt:
+        raise CaseViewIntegrityError("DECISION_CLOSURE_ARM_RECEIPT_MISMATCH")
 
     legal_cards = _require_list(planner_input.get("legal_action_cards"), "legal_action_cards")
     unresolved = _require_list(planner_input.get("unresolved_items"), "unresolved_items")
