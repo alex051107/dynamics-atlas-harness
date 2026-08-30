@@ -4,13 +4,37 @@
 
 当前仓库状态、当前授权和下一允许动作以
 [仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
-[机器可读快照](governance/current_execution_status.json) 为准。它们记录的当前状态是：两个
-exposed development case 的 case-bound no-Agent routes 和最小 Stage-2 packets 已合并；Agent
-diagnostic 仍是 capability-rejected baseline；当前下一步是具名 F01/F02/F03/F04/F06
+[机器可读快照](governance/current_execution_status.json) 为准。它们记录的当前状态是：PR #15 的
+two-case development causal capsule 已合并；其后的 Delivery A 只提供
+[具名 source-science 审查工作台](review/source_science_v1/README.md) 和静态
+[Review Console](review_console/index.html)。当前下一步仍是具名 F01/F02/F03/F04/F06
 source-science review。
 
 这些 development artifacts 不构成 source-science approval、通用 runtime、transfer、Agent value 或
 production readiness。下面的 initial control-plane smoke 是历史基线，不是当前执行状态。
+
+## Source-science review workspace
+
+Delivery A 把现有窄范围 F01/F02/F03/F04/F06 evidence packet、当前 binding／contract／policy
+和 HSP90／ADK application 放入一个只读审查工作台。审查者可从
+[`review/source_science_v1/README.md`](review/source_science_v1/README.md) 开始，检查 primary
+passage 或 case-bound artifact，再在空白表单中记录具名、日期和 disposition。F04R02 的
+case-bound traceability mapping 仍待人工核对。
+
+下面的命令会从提交的 repository artifacts 重建该工作台和静态页面：
+
+```bash
+PYTHONPATH=src python scripts/build_source_science_review_workspace_v1.py \
+  --output-dir review/source_science_v1
+
+PYTHONPATH=src python scripts/render_review_console_v0.py \
+  --status governance/current_execution_status.json \
+  --capsule-root evidence/paper_blind_exposed_v1/development_runs/exposed_paper_blind_scientific_decision_capsule_v1 \
+  --review-workspace review/source_science_v1 \
+  --output-dir review_console
+```
+
+页面不调用模型、Operator、API 或数据库，也不会写回 Rule、threshold 或 source-science disposition。
 
 ## Runnable reference demo
 

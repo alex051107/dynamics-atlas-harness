@@ -1,15 +1,15 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260829-v7",
-  "as_of": "2026-08-29T22:58:01Z",
-  "status_snapshot_as_of": "2026-08-29T22:58:01Z",
-  "overall_status": "EXPOSED_PAPER_BLIND_DEVELOPMENT_CAPSULE_DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v8",
+  "as_of": "2026-08-30T00:18:34Z",
+  "status_snapshot_as_of": "2026-08-30T00:18:34Z",
+  "overall_status": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE_DELIVERY_A_STATIC_REVIEW_SURFACE_DRAFT_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
-    "main_commit": "4028cc4be02465e0e19b5c733aa335b23618c4b5",
-    "baseline_tag": "post-pr14-paper-blind-public-packet-boundary",
-    "main_commit_semantics": "Verified literal GitHub main through merged PR #14. Draft PR #15 is reviewed separately and is not part of main.",
-    "accurate_name": "Exposed-development control-plane baseline with bounded Stage-2 packets, non-callable Profiler screening setup, exact-execution smoke, and paper-blind public-packet boundary"
+    "main_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
+    "baseline_tag": "post-pr15-merged-development-causal-capsule",
+    "main_commit_semantics": "Verified literal GitHub main through merged PR #15. The Delivery A source-science workspace and static Review Console are an unmerged Draft surface and are deliberately not self-referenced as a final PR head in this snapshot.",
+    "accurate_name": "Merged two-case exposed-development causal capsule with a Draft, read-only source-science review surface; named domain review remains the only scientific gate"
   },
   "work_items": [
     {
@@ -122,9 +122,10 @@
     {
       "role": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
       "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/15",
-      "reviewed_implementation_head": "deb8a1379c973f09680425f6e640eea3ea1e337d",
-      "draft_pr_number": 15,
-      "state": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+      "reviewed_implementation_head": "1c11b758388abe3e6023cfc714f172c203c15774",
+      "delivery_pr_number": 15,
+      "merge_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
+      "state": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE",
       "scope": [
         "HSP90_AND_ADK_EXPOSED_CASES_ONLY",
         "RECORDED_PROPOSAL_REPLAY_ONLY",
@@ -136,8 +137,8 @@
         "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
         "ABSTAINING_HUMAN_PACKETS"
       ],
-      "validation": "Local full-suite validation passed after the bounded causal repair. The final PR head and GitHub Actions readback belong in the PR body after push, not in this repository snapshot.",
-      "delivery_review": "The bounded causal repair awaits final GitHub CI and advisory methodology review. Neither can substitute for named source-science review.",
+      "validation": "GitHub unit CI succeeded for exact implementation head 1c11b758388abe3e6023cfc714f172c203c15774 in run 33280059252. The current Delivery A Draft PR head and CI belong in its PR body/readback, not in this repository snapshot.",
+      "delivery_review": "PR #15 merged under explicit user approval. It does not substitute for named source-science review or establish live-Agent, source-science, or broad-case scientific closure.",
       "forbidden_scope": [
         "DHFR_ACCESS_OR_RUN",
         "SOURCE_SCIENCE_APPROVAL",
@@ -215,7 +216,7 @@
     },
     {
       "stage": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
-      "status": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+      "status": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE",
       "known_present": [
         "TWO_EXPOSED_RECORDED_PROPOSAL_CASES",
         "SEALED_DEVELOPMENT_REFERENCE_DRAFTS",
@@ -237,8 +238,17 @@
     {
       "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
       "status": "PENDING_DOMAIN_REVIEW",
-      "known_present": ["F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET"],
-      "known_unresolved": ["REVIEWER_IDENTITY", "PRIMARY_PASSAGE_CHECK", "RECORDED_DISPOSITION"]
+      "known_present": [
+        "F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET",
+        "SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT",
+        "STATIC_READ_ONLY_REVIEW_CONSOLE_V0_DRAFT"
+      ],
+      "known_unresolved": [
+        "REVIEWER_IDENTITY",
+        "PRIMARY_PASSAGE_CHECK",
+        "F04R02_CASE_BOUND_TRACEABILITY_MAPPING",
+        "RECORDED_DISPOSITION"
+      ]
     },
     {
       "stage": "ADK_PORTABILITY",
@@ -257,8 +267,8 @@
     "action": "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
     "deliverable": "COMPLETED_NARROW_SOURCE_GROUNDING_REVIEW_RECORD",
     "automatic_code_changes": false,
-    "authorization": "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
+    "authorization": "RECORDED_USER_DIRECTION_DA-20260830-052",
     "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only exposed-case evidence. Draft PR #15 records proposal replay, fresh Draft-Rule-derived Planner input, legal card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, abstaining human packets, and comparison to AI-authored development reference drafts. It establishes no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
+  "claim_ceiling": "Development-only exposed-case evidence. Merged PR #15 records proposal replay, fresh Draft-Rule-derived Planner input, legal card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, abstaining human packets, and comparison to AI-authored development reference drafts. Delivery A adds only a blank named-review workspace and a static read-only trace. It establishes no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
 }

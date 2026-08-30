@@ -1,0 +1,126 @@
+{
+  "$id": "source-science-reviewer-form/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allowed_dispositions": {
+      "const": [
+        "APPROVE_AS_WRITTEN",
+        "APPROVE_WITH_BOUNDED_REVISION",
+        "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+        "REJECT_NOT_REUSABLE",
+        "NOT_APPLICABLE_TO_CURRENT_CASE"
+      ],
+      "type": "array"
+    },
+    "items": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "case_application_disposition": {
+            "enum": [
+              null,
+              "APPROVE_AS_WRITTEN",
+              "APPROVE_WITH_BOUNDED_REVISION",
+              "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+              "REJECT_NOT_REUSABLE",
+              "NOT_APPLICABLE_TO_CURRENT_CASE"
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "claim_ceiling": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "passage_checked": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required_revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review_item_id": {
+            "type": "string"
+          },
+          "reviewer_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reviewer_role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rule_disposition": {
+            "enum": [
+              null,
+              "APPROVE_AS_WRITTEN",
+              "APPROVE_WITH_BOUNDED_REVISION",
+              "DEFER_INSUFFICIENT_SOURCE_GROUNDING",
+              "REJECT_NOT_REUSABLE",
+              "NOT_APPLICABLE_TO_CURRENT_CASE"
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "review_item_id",
+          "reviewer_name",
+          "reviewer_role",
+          "review_date",
+          "passage_checked",
+          "rule_disposition",
+          "case_application_disposition",
+          "required_revision",
+          "claim_ceiling",
+          "notes"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "review_status": {
+      "const": "PENDING_DOMAIN_REVIEW"
+    },
+    "schema_version": {
+      "const": "source-science-reviewer-form/v1"
+    }
+  },
+  "required": [
+    "schema_version",
+    "review_status",
+    "allowed_dispositions",
+    "items"
+  ],
+  "title": "Dynamics Atlas named source-science review form",
+  "type": "object"
+}
