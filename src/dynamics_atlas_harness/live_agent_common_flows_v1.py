@@ -318,6 +318,7 @@ def _require_campaign_bound_budget(
     if (
         not isinstance(budget, OpenRouterBudgetLedger)
         or not budget.persisted
+        or budget.state_path != campaign_budget_ledger_path(config)
         or budget.campaign_id != config.get("campaign_id")
         or budget.cap_usd != Decimal(str(config.get("budget_usd")))
         or budget.max_completed_calls != int(config.get("max_completed_calls", 0))

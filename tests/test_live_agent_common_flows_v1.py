@@ -28,6 +28,9 @@ from dynamics_atlas_harness.openrouter_proposal_transport_v1 import (
 )
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 def _contains_unknown(value):
     if isinstance(value, str):
         return "UNKNOWN" in value.upper()
@@ -168,9 +171,12 @@ class _ProposalHttpStub:
         return _FakeHttpResponse(response)
 
 
-def _authorized_test_config():
+def _authorized_test_config(*, state_path):
     config = load_campaign_config()
     config["execution_status"] = LIVE_AGENT_CAMPAIGN_OPEN_STATUS
+    config["budget_ledger_path"] = (
+        Path(state_path).resolve().relative_to(REPO_ROOT.resolve()).as_posix()
+    )
     return config
 
 
@@ -193,17 +199,22 @@ def _client(stub, *, state_path=None, campaign_id=None):
 class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.temp = tempfile.TemporaryDirectory()
+        local_root = REPO_ROOT / "local"
+        local_root.mkdir(parents=True, exist_ok=True)
+        cls.temp = tempfile.TemporaryDirectory(
+            prefix="test-live-agent-common-flows-", dir=local_root
+        )
         cls.root = Path(cls.temp.name)
         cls.stub = _ProposalHttpStub()
-        cls.config = _authorized_test_config()
+        budget_path = cls.root / "live-hsp90-budget.json"
+        cls.config = _authorized_test_config(state_path=budget_path)
         cls.result = run_live_agent_case(
             case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
             output_dir=cls.root / "live-hsp90",
             model_profile="luna",
             client=_client(
                 cls.stub,
-                state_path=cls.root / "live-hsp90-budget.json",
+                state_path=budget_path,
                 campaign_id=cls.config["campaign_id"],
             ),
             config=cls.config,
@@ -301,16 +312,18 @@ class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
 
     def test_planner_terminal_verdict_language_is_rejected_before_execution(self):
         stub = _ProposalHttpStub(smuggle_planner_verdict=True)
+        budget_path = self.root / "smuggled-verdict-budget.json"
+        config = _authorized_test_config(state_path=budget_path)
         result = run_live_agent_case(
             case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
             output_dir=self.root / "smuggled-verdict",
             model_profile="luna",
             client=_client(
                 stub,
-                state_path=self.root / "smuggled-verdict-budget.json",
-                campaign_id=self.config["campaign_id"],
+                state_path=budget_path,
+                campaign_id=config["campaign_id"],
             ),
-            config=self.config,
+            config=config,
         )
         self.assertEqual(result["status"], "REJECTED_FAIL_CLOSED")
         self.assertEqual(
@@ -321,18 +334,20 @@ class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
 
     def test_missing_credential_preserves_recorded_work_and_blocks_only_live_cells(self):
         output = self.root / "missing-credential-campaign"
+        budget_path = self.root / "missing-credential-budget.json"
+        config = _authorized_test_config(state_path=budget_path)
         budget = OpenRouterBudgetLedger(
             cap_usd=Decimal("5"),
             max_completed_calls=16,
             max_attempts_per_cell=2,
-            campaign_id=self.config["campaign_id"],
-            state_path=self.root / "missing-credential-budget.json",
+            campaign_id=config["campaign_id"],
+            state_path=budget_path,
         )
         manifest = run_live_agent_campaign(
             output_dir=output,
             environment={},
             budget=budget,
-            config=self.config,
+            config=config,
         )
         self.assertEqual(
             manifest["status"], "LIVE_CALL_BLOCKED_MISSING_CREDENTIAL"
@@ -427,6 +442,32 @@ class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
         self.assertEqual(stub.calls, [])
         self.assertFalse(case_output.exists())
         self.assertFalse(campaign_output.exists())
+
+    def test_open_runtime_rejects_persisted_ledger_at_an_alternate_path(self):
+        stub = _ProposalHttpStub()
+        expected_path = self.root / "expected-campaign-budget.json"
+        alternate_path = self.root / "alternate-campaign-budget.json"
+        config = _authorized_test_config(state_path=expected_path)
+        client = _client(
+            stub,
+            state_path=alternate_path,
+            campaign_id=config["campaign_id"],
+        )
+        output = self.root / "alternate-ledger-case"
+
+        with self.assertRaisesRegex(
+            ValueError, "CAMPAIGN_BOUND_PERSISTED_BUDGET_REQUIRED"
+        ):
+            run_live_agent_case(
+                case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+                output_dir=output,
+                model_profile="luna",
+                client=client,
+                config=config,
+            )
+
+        self.assertEqual(stub.calls, [])
+        self.assertFalse(output.exists())
 
     def test_call_plan_stays_within_configured_cap_and_new_config_needs_no_code_edit(self):
         config = load_campaign_config()

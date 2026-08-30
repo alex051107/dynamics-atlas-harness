@@ -35,7 +35,7 @@ direction 才能释放科学阶段。
   六行全部是 `NO_AGENT_DETERMINISTIC_SCENARIO`，状态为 `NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE`。三个
   terminal behavior 均出现；`SUPPORT_WITHIN_CEILING` 只属于
   `SYNTHETIC_CONTRACT_BEHAVIOR_ONLY`，real scientific support packet 数量为 0。
-- 同一 HSP90 case 的 recorded replay、实际 live full-chain run 与 common-flow matrix 已并列接入 read-only
+- 同一 HSP90 case 的 recorded replay、实际 live proposal-to-descriptive-action run 与独立 common-flow matrix 已并列接入 read-only
   [workbench](../review/live_agent_common_flows_v1/index.html)。
 - 本分支记录了 internal adversarial subagent review passes；它们是同一 Codex development campaign 的
   内部审查，不是独立 GitHub review、domain approval 或 scientific validation。

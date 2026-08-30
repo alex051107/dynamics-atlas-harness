@@ -257,16 +257,16 @@
         "actual_external_cost_usd": "0.145264010",
         "campaign_max_completed_calls": 16,
         "all_frozen_cells_executed": false,
-        "campaign_stop_reason": "ADAPTIVE_STOP_AFTER_FIRST_FULL_CHAIN_SUCCESS",
+        "campaign_stop_reason": "ADAPTIVE_STOP_AFTER_FIRST_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_SUCCESS",
         "live_call_status": "CAMPAIGN_CLOSED_FROZEN",
         "credential_source": "AUTHORIZED_LOCAL_EXCEL_BENCHMARK_SECRET_INJECTED_TO_INHERITED_ENVIRONMENT",
         "credential_value_printed": false,
         "credential_value_logged": false,
         "credential_value_hashed": false,
         "credential_value_persisted": false,
-        "successful_full_chain_count": 1,
-        "successful_full_chain_artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
-        "successful_full_chain": {
+        "successful_proposal_transport_count": 1,
+        "successful_proposal_transport_artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
+        "successful_proposal_transport": {
           "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
           "profiler": "CORE_ADMISSION_PASS_FULL_ANNOTATION_ENVELOPE_FAIL_UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
           "planner": "LIVE_MINIMAX_M2_5_STREAMLAKE_ONE_LEGAL_CARD_VERSUS_ABSTAIN_NOT_NONTRIVIAL_ROUTE_SELECTION",
@@ -282,7 +282,7 @@
         },
         "profiler_results": {
           "hsp90_luna": "CORE_PASS_X2_ANNOTATION_DIAGNOSTIC_FAIL_X2",
-          "hsp90_minimax": "BOUNDED_REPAIR_CORE_PASS_FROZEN_FOR_SUCCESSFUL_FULL_CHAIN",
+          "hsp90_minimax": "BOUNDED_REPAIR_CORE_PASS_FROZEN_FOR_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT",
           "hsp90_terra": "DIAGNOSTIC_FALLBACK_CORE_PASS_COMPATIBILITY_DIAGNOSTIC_FAIL",
           "hsp90_deepseek": "JSON_SCHEMA_OR_PROVIDER_RESPONSE_FAILURE_NO_USABLE_CORE",
           "adk_all_models": "CORE_FAIL_NO_LIVE_ADK_ROUTE"
@@ -441,7 +441,7 @@
         "READ_ONLY_WORKBENCH_SCENARIO_MATRIX",
         "SEVENTEEN_HTTP_ATTEMPTS_THIRTEEN_COMPLETED_OPENROUTER_CALLS_WITH_EXACT_USAGE_AND_COST",
         "ONE_HSP90_MINIMAX_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_CHAIN",
-        "ADAPTIVE_STOP_BEFORE_SIXTEEN_AFTER_FIRST_FULL_CHAIN_SUCCESS",
+        "ADAPTIVE_STOP_BEFORE_SIXTEEN_AFTER_FIRST_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_SUCCESS",
         "PERSISTENT_PRE_REQUEST_BUDGET_RESERVATION_AND_CROSS_PROCESS_LEDGER",
         "CLOSED_CAMPAIGN_GUARD_BEFORE_OUTPUT_CREDENTIAL_CLIENT_OR_NETWORK_ACROSS_CLI_AND_RUNTIME",
         "RECORDED_VERSUS_LIVE_HSP90_WORKBENCH_COMPARISON"

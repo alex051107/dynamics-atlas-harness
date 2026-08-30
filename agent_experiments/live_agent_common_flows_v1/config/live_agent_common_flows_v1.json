@@ -3,7 +3,7 @@
   "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
   "execution_status": "CLOSED_FROZEN",
   "completion_receipt_path": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_campaign_manifest.json",
-  "completion_receipt_sha256": "a748204eb534aa209cb8e0a4341832f5fc8f463d46d3c0cc1182883f8bcf28db",
+  "completion_receipt_sha256": "e90721df5464bead6647ee20336cef1c23ed2831d45d96d328f53cc0e2116223",
   "budget_ledger_path": "local/live_agent_common_flows_v1/budget_ledger.json",
   "provider_transport": "OPENROUTER_CHAT_COMPLETIONS_STRICT_JSON_SCHEMA_NO_TOOLS",
   "catalog_observed_at": "2026-08-30",

@@ -180,6 +180,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
             serialized_status,
             r"EXACT_FINAL_HEAD|FINAL_DELIVERY_HEAD|GITHUB_CI_PENDING|CI_PENDING|FINAL_CI_MATRIX",
         )
+        self.assertNotIn("FULL_CHAIN", serialized_status)
         self.assertIn("NO_AGENT_DETERMINISTIC_SCENARIO", status["claim_ceiling"])
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],

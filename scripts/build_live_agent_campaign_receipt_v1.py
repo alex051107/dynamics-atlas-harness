@@ -324,7 +324,10 @@ def build() -> dict[str, Any]:
                 "REMOVED_TOP_LEVEL_CONDITIONAL_BRANCHES; DETERMINISTIC_VALIDATOR_"
                 "RETAINS_SELECTION_SEMANTICS"
             ),
-            "stop_reason": "FIRST_FULL_LIVE_PATH_SUCCEEDED; NO_FURTHER_SPEND_NEEDED",
+            "stop_reason": (
+                "FIRST_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_SUCCEEDED; "
+                "NO_FURTHER_SPEND_NEEDED"
+            ),
         },
         "common_flow_matrix": (
             "evidence/common_flow_scenarios_v1/development_runs/"
