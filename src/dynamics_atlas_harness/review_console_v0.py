@@ -302,6 +302,7 @@ def _reviewer_form_schema() -> dict[str, Any]:
             "schema_version": {"const": "source-science-reviewer-form/v1"},
             "review_status": {"const": "PENDING_DOMAIN_REVIEW"},
             "allowed_dispositions": {"type": "array", "const": list(REVIEW_DISPOSITIONS)},
+            "instructions": {"type": "string", "minLength": 1},
             "items": {
                 "type": "array",
                 "minItems": 1,
