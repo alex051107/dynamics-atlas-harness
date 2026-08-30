@@ -48,7 +48,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
             baseline["main_commit_semantics"],
         )
         self.assertIn(
-            "Delivery A source-science workspace and static Review Console are an unmerged Draft surface",
+            "engineering workbench v1 branch is an unmerged Draft surface",
             baseline["main_commit_semantics"],
         )
         self.assertEqual(
@@ -99,8 +99,25 @@ class GovernanceConsistencyTests(unittest.TestCase):
             stage for stage in status["stages"] if stage["stage"] == "NAMED_SOURCE_SCIENCE_REVIEW"
         )
         self.assertIn("SOURCE_SCIENCE_REVIEW_WORKSPACE_V1_DRAFT", source_review["known_present"])
-        self.assertIn("STATIC_READ_ONLY_REVIEW_CONSOLE_V0_DRAFT", source_review["known_present"])
+        self.assertIn(
+            "NINE_ITEM_AUTOMATED_ADVISORY_RECONCILIATION",
+            source_review["known_present"],
+        )
+        self.assertIn(
+            "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT",
+            source_review["known_present"],
+        )
         self.assertIn("F04R02_CASE_BOUND_TRACEABILITY_MAPPING", source_review["known_unresolved"])
+        workbench = work_item(status, "AUTONOMOUS_ENGINEERING_WORKBENCH_V1")
+        self.assertEqual(workbench["base_commit"], PR15_MERGED_DEVELOPMENT_CAUSAL_CAPSULE_COMMIT)
+        self.assertEqual(
+            workbench["observed_result"]["official_source_science_status"],
+            "PENDING_DOMAIN_REVIEW",
+        )
+        self.assertEqual(
+            workbench["observed_result"]["broad_same_rule_closure"],
+            "BLOCKED_BROAD_CLOSURE",
+        )
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
@@ -170,7 +187,8 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("Frozen Plan 的 `PR 8`", document)
         self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
         self.assertIn("development/runtime baseline commit", document)
-        self.assertIn("literal current `main` HEAD", document)
+        self.assertIn("literal `main`", document)
+        self.assertIn("engineering workbench v1", document)
 
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Current execution status", readme)
