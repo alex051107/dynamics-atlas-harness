@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -27,6 +28,16 @@ CAPSULE_ROOT = (
 def _write_json(path: Path, value: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _canonical_sha256(value) -> str:
+    encoded = json.dumps(
+        value,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def _all_strings(value):
@@ -103,6 +114,23 @@ class RecordedCapsuleCaseViewTests(unittest.TestCase):
 class CaseRunnerArtifactViewTests(unittest.TestCase):
     def _build_run_root(self, root: Path) -> Path:
         case_id = "SYNTHETIC_EXPOSED_DEVELOPMENT_CASE"
+        public_packet = {
+            "case_id": case_id,
+            "source_materials": [{"source_id": "SYNTH_SOURCE", "locator": "fixture"}],
+        }
+        profiler_visible_input = {
+            "case_id": case_id,
+            "research_question": "Keep UNKNOWN explicit?",
+        }
+        profile_proposal = {
+            "case_id": case_id,
+            "proposed_case_facts": {"unknown": "UNKNOWN"},
+        }
+        planner_proposal = {
+            "case_id": case_id,
+            "decision": "SELECT_ACTIONS",
+            "selected_card_ids": ["SYNTH_DESCRIPTIVE_CARD"],
+        }
         rule = {
             "rule_instance_id": "F02R01::SOURCE::SYNTH_SOURCE",
             "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
@@ -162,19 +190,31 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "reevaluated_rule_instance_ids": [],
             "evidence_links": [],
         }
-        profiler_provenance = {
-            "schema_version": "dynamics-atlas-proposal-provenance/v1",
-            "case_id": case_id,
-            "role": "PROFILER",
-            "mode": "CALLER_SUPPLIED_IN_MEMORY",
-        }
-        planner_provenance = {
-            "schema_version": "dynamics-atlas-proposal-provenance/v1",
-            "case_id": case_id,
-            "role": "PLANNER",
-            "mode": "CALLER_SUPPLIED_IN_MEMORY",
-        }
+        def proposal_provenance(role, visible_input, proposal, evaluation):
+            return {
+                "schema_version": "dynamics-atlas-proposal-provenance/v1",
+                "case_id": case_id,
+                "role": role,
+                "mode": "CALLER_SUPPLIED_IN_MEMORY",
+                "source_path": None,
+                "visible_input": {"canonical_sha256": _canonical_sha256(visible_input)},
+                "parsed_proposal": {"canonical_sha256": _canonical_sha256(proposal)},
+                "contract_admission_evaluation": {
+                    "canonical_sha256": _canonical_sha256(evaluation)
+                },
+            }
+
+        profiler_provenance = proposal_provenance(
+            "PROFILER", profiler_visible_input, profile_proposal, fresh["admission"]
+        )
+        planner_provenance = proposal_provenance(
+            "PLANNER", planner_input, planner_proposal, planner_admission
+        )
         artifact_paths = [
+            "inputs/public_case_packet.json",
+            "inputs/profiler_visible_input.json",
+            "inputs/profile_proposal.json",
+            "inputs/planner_proposal.json",
             "profiler_proposal_provenance.json",
             "planner_proposal_provenance.json",
             "fresh_rule_state.json",
@@ -194,6 +234,30 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
                 "public_case_packet": None,
                 "profile_proposal": None,
                 "planner_proposal": None,
+                "profile_mode": "CALLER_SUPPLIED_IN_MEMORY",
+                "planner_mode": "CALLER_SUPPLIED_IN_MEMORY",
+                "snapshot_artifacts": {
+                    "public_case_packet": {
+                        "path": "inputs/public_case_packet.json",
+                        "canonical_sha256": _canonical_sha256(public_packet),
+                    },
+                    "profiler_visible_input": {
+                        "path": "inputs/profiler_visible_input.json",
+                        "canonical_sha256": _canonical_sha256(profiler_visible_input),
+                    },
+                    "profile_proposal": {
+                        "path": "inputs/profile_proposal.json",
+                        "canonical_sha256": _canonical_sha256(profile_proposal),
+                    },
+                    "planner_proposal": {
+                        "path": "inputs/planner_proposal.json",
+                        "canonical_sha256": _canonical_sha256(planner_proposal),
+                    },
+                    "planner_visible_input": {
+                        "path": "planner_visible_input.json",
+                        "canonical_sha256": _canonical_sha256(planner_input),
+                    },
+                },
             },
             "proposal_provenance": {
                 "profiler": profiler_provenance,
@@ -212,6 +276,10 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             "boundary": "Synthetic run fixture; no terminal scientific state is calculated.",
         }
         for name, value in (
+            ("inputs/public_case_packet.json", public_packet),
+            ("inputs/profiler_visible_input.json", profiler_visible_input),
+            ("inputs/profile_proposal.json", profile_proposal),
+            ("inputs/planner_proposal.json", planner_proposal),
             ("profiler_proposal_provenance.json", profiler_provenance),
             ("planner_proposal_provenance.json", planner_provenance),
             ("fresh_rule_state.json", fresh),
@@ -254,6 +322,102 @@ class CaseRunnerArtifactViewTests(unittest.TestCase):
             manifest["rule_reevaluation"] = reevaluation
             _write_json(manifest_path, manifest)
             with self.assertRaisesRegex(CaseViewIntegrityError, "STALE_RULE_RESULT_LINK"):
+                build_case_view(root)
+
+    def test_run_rejects_changed_rule_without_link_and_tampered_identity(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "changed")
+            reevaluation_path = root / "rule_reevaluation.json"
+            reevaluation = json.loads(reevaluation_path.read_text(encoding="utf-8"))
+            reevaluation["after_rule_results"][0]["status"] = "PASS"
+            _write_json(reevaluation_path, reevaluation)
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["rule_reevaluation"] = reevaluation
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "REEVALUATED_RULE_CHANGE_SET_MISMATCH"
+            ):
+                build_case_view(root)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "identity")
+            reevaluation_path = root / "rule_reevaluation.json"
+            reevaluation = json.loads(reevaluation_path.read_text(encoding="utf-8"))
+            reevaluation["after_rule_results"][0]["target"]["id"] = "TAMPERED_SOURCE"
+            _write_json(reevaluation_path, reevaluation)
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["rule_reevaluation"] = reevaluation
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(CaseViewIntegrityError, "RULE_INSTANCE_IDENTITY_CHANGED"):
+                build_case_view(root)
+
+    def test_run_rejects_stale_proposal_receipt_hashes_and_source_path(self):
+        mutations = (
+            ("visible_input", "canonical_sha256", "STALE_PROPOSAL_RECEIPT_HASH"),
+            ("parsed_proposal", "canonical_sha256", "STALE_PROPOSAL_RECEIPT_HASH"),
+            (
+                "contract_admission_evaluation",
+                "canonical_sha256",
+                "STALE_PROPOSAL_RECEIPT_HASH",
+            ),
+        )
+        for field, key, expected_error in mutations:
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as temp_dir:
+                root = self._build_run_root(Path(temp_dir) / "run")
+                receipt_path = root / "profiler_proposal_provenance.json"
+                receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+                receipt[field][key] = "0" * 64
+                _write_json(receipt_path, receipt)
+                manifest_path = root / "case_run_manifest_v1.json"
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest["proposal_provenance"]["profiler"] = receipt
+                _write_json(manifest_path, manifest)
+                with self.assertRaisesRegex(CaseViewIntegrityError, expected_error):
+                    build_case_view(root)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            receipt_path = root / "profiler_proposal_provenance.json"
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+            receipt["source_path"] = "tampered/proposal.json"
+            _write_json(receipt_path, receipt)
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["proposal_provenance"]["profiler"] = receipt
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "PROPOSAL_RECEIPT_SOURCE_PATH_MISMATCH"
+            ):
+                build_case_view(root)
+
+    def test_run_rejects_unclassified_evidence_instead_of_promoting_it(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = self._build_run_root(Path(temp_dir) / "run")
+            execution_path = root / "selected_action_execution.json"
+            execution = json.loads(execution_path.read_text(encoding="utf-8"))
+            unclassified = {
+                "case_id": execution["case_id"],
+                "card_id": execution["selected_card_ids"][0],
+                "evidence_result_id": "UNKNOWN_EFFECT_EVIDENCE",
+            }
+            execution["evidence_results"] = [unclassified]
+            _write_json(execution_path, execution)
+            _write_json(
+                root
+                / "actions"
+                / execution["selected_card_ids"][0]
+                / "evidence_result.json",
+                unclassified,
+            )
+            manifest_path = root / "case_run_manifest_v1.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["action_execution"] = execution
+            _write_json(manifest_path, manifest)
+            with self.assertRaisesRegex(
+                CaseViewIntegrityError, "EVIDENCE_EFFECT_CLASSIFICATION_UNKNOWN"
+            ):
                 build_case_view(root)
 
 

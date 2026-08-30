@@ -15,6 +15,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
 
+from .proposal_provenance_v1 import canonical_json_sha256
+
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -171,15 +173,68 @@ def _proposal_from_receipt(receipt: dict[str, Any], case_id: str, label: str) ->
     return proposal
 
 
-def _optional_repository_json(raw_path: Any, case_id: str, label: str) -> Any:
-    if raw_path is None:
-        return unavailable(f"{label} was caller-supplied in memory and was not persisted.")
-    path = _safe_repository_reference(raw_path, label)
-    value = _read_object(path, label)
-    assert value is not None
+def _input_snapshot(
+    *,
+    loaded: dict[str, dict[str, Any]],
+    input_provenance: dict[str, Any],
+    snapshot_name: str,
+    case_id: str,
+) -> dict[str, Any]:
+    records = _require_object(
+        input_provenance.get("snapshot_artifacts"), "input_provenance.snapshot_artifacts"
+    )
+    record = _require_object(
+        records.get(snapshot_name), f"input_provenance.snapshot_artifacts.{snapshot_name}"
+    )
+    path = _require_string(record.get("path"), f"snapshot_artifacts.{snapshot_name}.path")
+    value = loaded.get(path)
+    if value is None:
+        raise CaseViewIntegrityError("REQUIRED_INPUT_SNAPSHOT_MISSING", snapshot_name)
+    expected_sha = _require_string(
+        record.get("canonical_sha256"),
+        f"snapshot_artifacts.{snapshot_name}.canonical_sha256",
+    )
+    if canonical_json_sha256(value) != expected_sha:
+        raise CaseViewIntegrityError("STALE_INPUT_SNAPSHOT_HASH", snapshot_name)
     if "case_id" in value:
-        _assert_case_id(value.get("case_id"), case_id, label)
-    return value
+        _assert_case_id(value.get("case_id"), case_id, snapshot_name)
+    return deepcopy(value)
+
+
+def _verify_proposal_receipt(
+    *,
+    receipt: dict[str, Any],
+    case_id: str,
+    role: str,
+    mode: Any,
+    source_path: Any,
+    visible_input: dict[str, Any],
+    parsed_proposal: dict[str, Any],
+    admission_evaluation: dict[str, Any],
+) -> None:
+    _assert_case_id(receipt.get("case_id"), case_id, f"{role}.proposal_provenance")
+    if receipt.get("role") != role:
+        raise CaseViewIntegrityError("PROPOSAL_RECEIPT_ROLE_MISMATCH", role)
+    if receipt.get("mode") != mode:
+        raise CaseViewIntegrityError("PROPOSAL_RECEIPT_MODE_MISMATCH", role)
+    if receipt.get("source_path") != source_path:
+        raise CaseViewIntegrityError("PROPOSAL_RECEIPT_SOURCE_PATH_MISMATCH", role)
+    checks = (
+        (receipt.get("visible_input"), visible_input, "visible_input"),
+        (receipt.get("parsed_proposal"), parsed_proposal, "parsed_proposal"),
+        (
+            receipt.get("contract_admission_evaluation"),
+            admission_evaluation,
+            "contract_admission_evaluation",
+        ),
+    )
+    for raw_record, value, label in checks:
+        record = _require_object(raw_record, f"{role}.{label}")
+        expected = _require_string(
+            record.get("canonical_sha256"), f"{role}.{label}.canonical_sha256"
+        )
+        if canonical_json_sha256(value) != expected:
+            raise CaseViewIntegrityError("STALE_PROPOSAL_RECEIPT_HASH", f"{role}.{label}")
 
 
 def _evidence_lanes(evidence_results: Any, case_id: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -200,15 +255,111 @@ def _evidence_lanes(evidence_results: Any, case_id: str) -> tuple[list[dict[str,
             or nested_effect == "NO_ACTIVE_RULE_EFFECT"
             or evidence.get("action_kind") == "DESCRIPTIVE_ANALYSIS_ONLY"
         )
+        is_active = (
+            evidence.get("rule_effect") == "ACTIVE_RULE_EFFECT"
+            or evidence.get("active_rule_effect") == "ACTIVE_RULE_EFFECT"
+        )
+        if is_descriptive and is_active:
+            raise CaseViewIntegrityError("EVIDENCE_EFFECT_MARKERS_CONFLICT")
         if is_descriptive:
             if evidence.get("affected_rule_instance_id") is not None:
                 raise CaseViewIntegrityError("DESCRIPTIVE_EVIDENCE_LINKED_ACTIVE_RULE")
             if evidence.get("active_rule_effect") not in (None, "NO_ACTIVE_RULE_EFFECT"):
                 raise CaseViewIntegrityError("DESCRIPTIVE_EVIDENCE_HAS_ACTIVE_RULE_EFFECT")
             descriptive.append(deepcopy(evidence))
-        else:
+        elif is_active:
+            _require_string(
+                evidence.get("evidence_result_id"),
+                f"evidence_results[{position}].evidence_result_id",
+            )
+            _require_string(
+                evidence.get("affected_rule_instance_id"),
+                f"evidence_results[{position}].affected_rule_instance_id",
+            )
             active.append(deepcopy(evidence))
+        else:
+            raise CaseViewIntegrityError("EVIDENCE_EFFECT_CLASSIFICATION_UNKNOWN")
     return descriptive, active
+
+
+def _validated_reevaluation_links(
+    *,
+    reevaluation: dict[str, Any],
+    before_by_id: dict[str, dict[str, Any]],
+    after_by_id: dict[str, dict[str, Any]],
+    active_evidence: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    for rule_id in before_by_id:
+        if _rule_identity(before_by_id[rule_id], "before_rule_result") != _rule_identity(
+            after_by_id[rule_id], "after_rule_result"
+        ):
+            raise CaseViewIntegrityError("RULE_INSTANCE_IDENTITY_CHANGED", rule_id)
+
+    changed_ids = {
+        rule_id for rule_id in before_by_id if before_by_id[rule_id] != after_by_id[rule_id]
+    }
+    raw_reevaluated = _require_list(
+        reevaluation.get("reevaluated_rule_instance_ids"),
+        "rule_reevaluation.reevaluated_rule_instance_ids",
+    )
+    reevaluated_ids = [
+        _require_string(value, "reevaluated_rule_instance_id") for value in raw_reevaluated
+    ]
+    if len(reevaluated_ids) != len(set(reevaluated_ids)):
+        raise CaseViewIntegrityError("DUPLICATE_REEVALUATED_RULE_INSTANCE_ID")
+    if set(reevaluated_ids) != changed_ids:
+        raise CaseViewIntegrityError("REEVALUATED_RULE_CHANGE_SET_MISMATCH")
+
+    active_by_id: dict[str, dict[str, Any]] = {}
+    active_targets: dict[str, str] = {}
+    for evidence in active_evidence:
+        evidence_id = _require_string(
+            evidence.get("evidence_result_id"), "active_evidence.evidence_result_id"
+        )
+        affected = _require_string(
+            evidence.get("affected_rule_instance_id"),
+            "active_evidence.affected_rule_instance_id",
+        )
+        if evidence_id in active_by_id:
+            raise CaseViewIntegrityError("DUPLICATE_ACTIVE_EVIDENCE_RESULT_ID", evidence_id)
+        if affected in active_targets.values():
+            raise CaseViewIntegrityError("MULTIPLE_ACTIVE_EVIDENCE_FOR_RULE_INSTANCE", affected)
+        active_by_id[evidence_id] = evidence
+        active_targets[evidence_id] = affected
+
+    links: list[dict[str, Any]] = []
+    linked_rule_ids: set[str] = set()
+    linked_evidence_ids: set[str] = set()
+    for position, raw in enumerate(
+        _require_list(reevaluation.get("evidence_links"), "rule_reevaluation.evidence_links")
+    ):
+        link = _require_object(raw, f"evidence_links[{position}]")
+        affected = _require_string(
+            link.get("affected_rule_instance_id"),
+            f"evidence_links[{position}].affected_rule_instance_id",
+        )
+        evidence_id = _require_string(
+            link.get("evidence_result_id"), f"evidence_links[{position}].evidence_result_id"
+        )
+        if affected in linked_rule_ids or evidence_id in linked_evidence_ids:
+            raise CaseViewIntegrityError("DUPLICATE_RULE_REEVALUATION_LINK")
+        if affected not in before_by_id or affected not in after_by_id:
+            raise CaseViewIntegrityError("STALE_RULE_RESULT_LINK", affected)
+        if active_targets.get(evidence_id) != affected:
+            raise CaseViewIntegrityError("ACTIVE_EVIDENCE_LINK_MISMATCH", evidence_id)
+        if link.get("same_rule_instance") is not True:
+            raise CaseViewIntegrityError("SAME_RULE_INSTANCE_ATTESTATION_REQUIRED", affected)
+        if link.get("before_status") != before_by_id[affected].get("status"):
+            raise CaseViewIntegrityError("REEVALUATION_BEFORE_STATUS_MISMATCH", affected)
+        if link.get("after_status") != after_by_id[affected].get("status"):
+            raise CaseViewIntegrityError("REEVALUATION_AFTER_STATUS_MISMATCH", affected)
+        linked_rule_ids.add(affected)
+        linked_evidence_ids.add(evidence_id)
+        links.append(deepcopy(link))
+
+    if linked_rule_ids != changed_ids or linked_evidence_ids != set(active_by_id):
+        raise CaseViewIntegrityError("ACTIVE_EVIDENCE_REEVALUATION_LINK_SET_MISMATCH")
+    return links
 
 
 def _selected_card_consistency(
@@ -413,6 +564,10 @@ def _build_capsule_case_view(root: Path) -> CaseView:
 
 
 _RUN_REQUIRED_ARTIFACTS = (
+    "inputs/public_case_packet.json",
+    "inputs/profiler_visible_input.json",
+    "inputs/profile_proposal.json",
+    "inputs/planner_proposal.json",
     "profiler_proposal_provenance.json",
     "planner_proposal_provenance.json",
     "fresh_rule_state.json",
@@ -514,17 +669,13 @@ def _build_case_run_view(root: Path) -> CaseView:
         if before_by_id[rule_id] != fresh_by_id[rule_id]:
             raise CaseViewIntegrityError("STALE_RULE_RESULT_REFERENCE", rule_id)
 
-    links = _require_list(reevaluation.get("evidence_links"), "rule_reevaluation.evidence_links")
-    for position, raw in enumerate(links):
-        link = _require_object(raw, f"evidence_links[{position}]")
-        affected = _require_string(
-            link.get("affected_rule_instance_id"),
-            f"evidence_links[{position}].affected_rule_instance_id",
-        )
-        if affected not in before_by_id or affected not in after_by_id:
-            raise CaseViewIntegrityError("STALE_RULE_RESULT_LINK", affected)
-
     descriptive, active = _evidence_lanes(execution.get("evidence_results"), case_id)
+    links = _validated_reevaluation_links(
+        reevaluation=reevaluation,
+        before_by_id=before_by_id,
+        after_by_id=after_by_id,
+        active_evidence=active,
+    )
     selected_ids = _require_list(execution.get("selected_card_ids"), "execution.selected_card_ids")
     for card_id, evidence in zip(selected_ids, _require_list(execution.get("evidence_results"), "evidence_results")):
         relative = f"actions/{card_id}/evidence_result.json"
@@ -532,21 +683,60 @@ def _build_case_run_view(root: Path) -> CaseView:
             raise CaseViewIntegrityError("STALE_EVIDENCE_RESULT_REFERENCE", relative)
 
     input_provenance = _require_object(manifest.get("input_provenance"), "input_provenance")
-    public_packet = _optional_repository_json(
-        input_provenance.get("public_case_packet"), case_id, "public_case_packet"
+    public_packet = _input_snapshot(
+        loaded=loaded,
+        input_provenance=input_provenance,
+        snapshot_name="public_case_packet",
+        case_id=case_id,
     )
-    sources: Any
-    if isinstance(public_packet, dict) and public_packet.get("availability") != "UNAVAILABLE":
-        sources = deepcopy(public_packet.get("source_materials", []))
-    else:
-        sources = unavailable("The run did not persist a repository-backed public source packet.")
-    profile_proposal = _optional_repository_json(
-        input_provenance.get("profile_proposal"), case_id, "profile_proposal"
+    profiler_visible_input = _input_snapshot(
+        loaded=loaded,
+        input_provenance=input_provenance,
+        snapshot_name="profiler_visible_input",
+        case_id=case_id,
     )
-    planner_proposal = _optional_repository_json(
-        input_provenance.get("planner_proposal"), case_id, "planner_proposal"
+    profile_proposal = _input_snapshot(
+        loaded=loaded,
+        input_provenance=input_provenance,
+        snapshot_name="profile_proposal",
+        case_id=case_id,
     )
+    planner_proposal = _input_snapshot(
+        loaded=loaded,
+        input_provenance=input_provenance,
+        snapshot_name="planner_proposal",
+        case_id=case_id,
+    )
+    planner_input_snapshot = _input_snapshot(
+        loaded=loaded,
+        input_provenance=input_provenance,
+        snapshot_name="planner_visible_input",
+        case_id=case_id,
+    )
+    if planner_input_snapshot != planner_input:
+        raise CaseViewIntegrityError("STALE_PLANNER_VISIBLE_INPUT_SNAPSHOT")
+    sources = deepcopy(public_packet.get("source_materials", []))
     admission = _require_object(fresh.get("admission"), "fresh_rule_state.admission")
+    _verify_proposal_receipt(
+        receipt=profiler_provenance,
+        case_id=case_id,
+        role="PROFILER",
+        mode=input_provenance.get("profile_mode"),
+        source_path=input_provenance.get("profile_proposal"),
+        visible_input=profiler_visible_input,
+        parsed_proposal=profile_proposal,
+        admission_evaluation=admission,
+    )
+    _verify_proposal_receipt(
+        receipt=planner_provenance,
+        case_id=case_id,
+        role="PLANNER",
+        mode=input_provenance.get("planner_mode"),
+        source_path=input_provenance.get("planner_proposal"),
+        visible_input=planner_input,
+        parsed_proposal=planner_proposal,
+        admission_evaluation=planner_admission,
+    )
     projected = _require_object(fresh.get("projected_casegraph"), "fresh_rule_state.projected_casegraph")
     projected_case = _require_object(projected.get("case"), "projected_casegraph.case")
     _assert_case_id(projected_case.get("case_id"), case_id, "projected_casegraph.case")

@@ -19,6 +19,7 @@ from .proposal_provenance_v1 import (
     RECORDED_PROPOSAL_REPLAY,
     ProposalProvenanceV1Error,
     build_proposal_provenance_v1,
+    canonical_json_sha256,
 )
 
 
@@ -120,7 +121,6 @@ def _assert_descriptive_evidence_has_no_rule_effect(evidence: Mapping[str, Any])
         raise CaseRunnerV1Error("DESCRIPTIVE_EVIDENCE_ATTEMPTED_ACTIVE_RULE_EFFECT")
     if evidence.get("contract_status") == "PASS" or evidence.get("rule_status") == "PASS":
         raise CaseRunnerV1Error("DESCRIPTIVE_EVIDENCE_CANNOT_FORGE_RULE_PASS")
-
     result = evidence.get("descriptive_result")
     if not isinstance(result, Mapping):
         raise CaseRunnerV1Error("DESCRIPTIVE_EVIDENCE_RESULT_REQUIRED")
@@ -131,6 +131,22 @@ def _assert_descriptive_evidence_has_no_rule_effect(evidence: Mapping[str, Any])
     if result.get("contract_status") == "PASS" or result.get("rule_status") == "PASS":
         raise CaseRunnerV1Error("DESCRIPTIVE_EVIDENCE_CANNOT_FORGE_RULE_PASS")
 
+
+def _rule_instance_identity(result: Mapping[str, Any]) -> dict[str, Any]:
+    """Return the complete identity that a reevaluator is forbidden to change."""
+
+    target = result.get("target")
+    if not isinstance(target, Mapping):
+        raise CaseRunnerV1Error("RULE_INSTANCE_TARGET_REQUIRED")
+    return {
+        "rule_instance_id": _require_string(
+            result.get("rule_instance_id"), "rule_result.rule_instance_id"
+        ),
+        "runtime_subrule_id": _require_string(
+            result.get("runtime_subrule_id"), "rule_result.runtime_subrule_id"
+        ),
+        "target": deepcopy(dict(target)),
+    }
 
 def reevaluate_explicitly_linked_rule_results(
     *,
@@ -174,9 +190,18 @@ def reevaluate_explicitly_linked_rule_results(
             _assert_descriptive_evidence_has_no_rule_effect(evidence)
             continue
 
+        if (
+            evidence.get("rule_effect") != "ACTIVE_RULE_EFFECT"
+            and evidence.get("active_rule_effect") != "ACTIVE_RULE_EFFECT"
+        ):
+            raise CaseRunnerV1Error("ACTIVE_EVIDENCE_EFFECT_MARKER_REQUIRED")
+
         affected_id = _require_string(
             evidence.get("affected_rule_instance_id"),
             "evidence_result.affected_rule_instance_id",
+        )
+        evidence_result_id = _require_string(
+            evidence.get("evidence_result_id"), "evidence_result.evidence_result_id"
         )
         if affected_id not in by_id:
             raise CaseRunnerV1Error("EVIDENCE_RESULT_AFFECTED_RULE_NOT_CURRENT")
@@ -191,12 +216,16 @@ def reevaluate_explicitly_linked_rule_results(
         reevaluated_result = deepcopy(dict(reevaluated))
         if reevaluated_result.get("rule_instance_id") != affected_id:
             raise CaseRunnerV1Error("REEVALUATOR_CHANGED_RULE_INSTANCE_ID")
+        if _rule_instance_identity(reevaluated_result) != _rule_instance_identity(
+            by_id[affected_id]
+        ):
+            raise CaseRunnerV1Error("REEVALUATOR_CHANGED_RULE_INSTANCE_IDENTITY")
         after[positions[affected_id]] = reevaluated_result
         applied.add(affected_id)
         links.append(
             {
                 "affected_rule_instance_id": affected_id,
-                "evidence_result_id": evidence.get("evidence_result_id"),
+                "evidence_result_id": evidence_result_id,
                 "before_status": by_id[affected_id].get("status"),
                 "after_status": reevaluated_result.get("status"),
                 "same_rule_instance": True,
@@ -220,7 +249,11 @@ def reevaluate_explicitly_linked_rule_results(
     }
 
 
-def _write_run_artifacts(output_root: Path, manifest: Mapping[str, Any]) -> None:
+def _write_run_artifacts(
+    output_root: Path,
+    manifest: Mapping[str, Any],
+    input_snapshots: Mapping[str, Mapping[str, Any]],
+) -> None:
     proposal_provenance = manifest["proposal_provenance"]
     capsule._write_json(
         output_root / "profiler_proposal_provenance.json",
@@ -235,6 +268,8 @@ def _write_run_artifacts(output_root: Path, manifest: Mapping[str, Any]) -> None
     capsule._write_json(output_root / "planner_authorization.json", manifest["authorization"])
     capsule._write_json(output_root / "selected_action_execution.json", manifest["action_execution"])
     capsule._write_json(output_root / "rule_reevaluation.json", manifest["rule_reevaluation"])
+    for relative_path, snapshot in input_snapshots.items():
+        capsule._write_json(output_root / relative_path, snapshot)
     for evidence in manifest["action_execution"]["evidence_results"]:
         card_id = _require_string(evidence.get("card_id"), "evidence_result.card_id")
         capsule._write_json(output_root / "actions" / card_id / "evidence_result.json", evidence)
@@ -400,6 +435,28 @@ def run_case_v1(
             ),
             "profile_mode": profiler_mode,
             "planner_mode": planner_mode,
+            "snapshot_artifacts": {
+                "public_case_packet": {
+                    "path": "inputs/public_case_packet.json",
+                    "canonical_sha256": canonical_json_sha256(packet),
+                },
+                "profiler_visible_input": {
+                    "path": "inputs/profiler_visible_input.json",
+                    "canonical_sha256": canonical_json_sha256(profiler_visible_input),
+                },
+                "profile_proposal": {
+                    "path": "inputs/profile_proposal.json",
+                    "canonical_sha256": canonical_json_sha256(profile),
+                },
+                "planner_proposal": {
+                    "path": "inputs/planner_proposal.json",
+                    "canonical_sha256": canonical_json_sha256(proposal),
+                },
+                "planner_visible_input": {
+                    "path": "planner_visible_input.json",
+                    "canonical_sha256": canonical_json_sha256(planner_input),
+                },
+            },
         },
         "proposal_provenance": {
             "profiler": profiler_provenance,
@@ -424,6 +481,10 @@ def run_case_v1(
         "credentials_accessed": False,
         "external_model_transport": False,
         "artifact_paths": [
+            "inputs/public_case_packet.json",
+            "inputs/profiler_visible_input.json",
+            "inputs/profile_proposal.json",
+            "inputs/planner_proposal.json",
             "profiler_proposal_provenance.json",
             "planner_proposal_provenance.json",
             "fresh_rule_state.json",
@@ -444,5 +505,14 @@ def run_case_v1(
             "HSP90 closure, ADK dynamics portability, or Agent effectiveness."
         ),
     }
-    _write_run_artifacts(output_root, manifest)
+    _write_run_artifacts(
+        output_root,
+        manifest,
+        {
+            "inputs/public_case_packet.json": packet,
+            "inputs/profiler_visible_input.json": profiler_visible_input,
+            "inputs/profile_proposal.json": profile,
+            "inputs/planner_proposal.json": proposal,
+        },
+    )
     return manifest

@@ -11,11 +11,14 @@ permissions:
 jobs:
   unit:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
       - name: Install package and exposed-capsule scientific extra
         run: python3 -m pip install '.[exposed-capsule-v1]'
       - name: Run unit tests

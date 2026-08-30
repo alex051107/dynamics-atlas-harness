@@ -181,6 +181,32 @@ class SourceScienceReviewWorkspaceTests(unittest.TestCase):
         with self.assertRaisesRegex(ReviewConsoleError, "F04_POSITIVE_DISPOSITION_BLOCKED"):
             validate_source_science_review_form(form, matrix)
 
+    def test_bounded_revision_requires_text_in_schema_and_python_validator(self):
+        form = _load(WORKSPACE / "reviewer_form.json")
+        matrix = _load(WORKSPACE / "case_application_matrix.json")
+        schema = _load(WORKSPACE / "reviewer_form.schema.json")
+
+        for disposition_scope in ("rule", "case"):
+            with self.subTest(disposition_scope=disposition_scope):
+                bounded = deepcopy(form)
+                item = bounded["items"][0]
+                _complete_identity(item)
+                if disposition_scope == "rule":
+                    item["rule_disposition"] = "APPROVE_WITH_BOUNDED_REVISION"
+                else:
+                    item["case_application_dispositions"][0][
+                        "disposition"
+                    ] = "APPROVE_WITH_BOUNDED_REVISION"
+                self.assertTrue(list(Draft202012Validator(schema).iter_errors(bounded)))
+                with self.assertRaisesRegex(
+                    ReviewConsoleError, "BOUNDED_REVISION_TEXT_REQUIRED"
+                ):
+                    validate_source_science_review_form(bounded, matrix)
+
+                item["required_revision"] = "Use only the exact bounded wording."
+                Draft202012Validator(schema).validate(bounded)
+                validate_source_science_review_form(bounded, matrix)
+
     def test_unknown_missing_case_coverage_and_mismatched_rule_ids_are_rejected(self):
         form = _load(WORKSPACE / "reviewer_form.json")
         matrix = _load(WORKSPACE / "case_application_matrix.json")
@@ -208,13 +234,20 @@ class SourceScienceReviewWorkspaceTests(unittest.TestCase):
 class StaticReviewConsoleTests(unittest.TestCase):
     def test_console_has_four_views_two_cases_unknown_integrity_state_and_evidence_lanes(self):
         with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
             output_path = render_review_console(
                 status_path=STATUS,
                 capsule_root=CAPSULE_ROOT,
                 review_workspace=WORKSPACE,
-                output_dir=Path(temp_dir),
+                output_dir=output_dir,
             )
             rendered = output_path.read_text(encoding="utf-8")
+            self.assertTrue((output_dir / "reviewer_form.json").is_file())
+            self.assertTrue((output_dir / "reviewer_form.schema.json").is_file())
+            self.assertEqual(
+                (output_dir / "reviewer_form.json").read_bytes(),
+                (WORKSPACE / "reviewer_form.json").read_bytes(),
+            )
 
         self.assertEqual(rendered.count("PRIMARY VIEW "), 4)
         self.assertIn("Case Overview", rendered)
@@ -242,7 +275,8 @@ class StaticReviewConsoleTests(unittest.TestCase):
         self.assertIn("ADVISORY_RECONCILIATION_NOT_OFFICIAL_DISPOSITION", rendered)
         self.assertIn("ADVISORY_COMPLETE_OFFICIAL_DOMAIN_REVIEW_PENDING", rendered)
         self.assertIn("OFFICIAL_REVIEW_TEMPLATE_BLANK", rendered)
-        self.assertIn("../review/source_science_v1/reviewer_form.json", rendered)
+        self.assertIn('href="reviewer_form.json"', rendered)
+        self.assertIn('href="reviewer_form.schema.json"', rendered)
         self.assertIn('href="https://www.rcsb.org/structure/1E4V"', rendered)
 
     def test_console_is_static_read_only_and_status_consistent(self):

@@ -103,6 +103,13 @@ class CaseRunnerV1Tests(unittest.TestCase):
                 self.assertIn(
                     "planner_proposal_provenance.json", manifest["artifact_paths"]
                 )
+                for snapshot in manifest["input_provenance"]["snapshot_artifacts"].values():
+                    snapshot_path = root / snapshot["path"]
+                    self.assertTrue(snapshot_path.is_file())
+                    self.assertEqual(
+                        snapshot["canonical_sha256"],
+                        _canonical_sha256(json.loads(snapshot_path.read_text(encoding="utf-8"))),
+                    )
 
     def test_abstention_executes_zero_actions(self):
         proposal = {
@@ -181,13 +188,24 @@ class CaseRunnerV1Tests(unittest.TestCase):
 
     def test_active_evidence_reevaluates_only_its_explicit_same_rule_instance(self):
         before = [
-            {"rule_instance_id": "RULE::A", "status": "UNRESOLVED"},
-            {"rule_instance_id": "RULE::B", "status": "UNRESOLVED"},
+            {
+                "rule_instance_id": "RULE::A",
+                "runtime_subrule_id": "SUBRULE_A",
+                "target": {"kind": "SOURCE", "id": "SOURCE_A"},
+                "status": "UNRESOLVED",
+            },
+            {
+                "rule_instance_id": "RULE::B",
+                "runtime_subrule_id": "SUBRULE_B",
+                "target": {"kind": "SOURCE", "id": "SOURCE_B"},
+                "status": "UNRESOLVED",
+            },
         ]
         evidence = {
             "evidence_result_id": "EVIDENCE::A",
             "case_id": "CASE::TEST",
             "affected_rule_instance_id": "RULE::A",
+            "rule_effect": "ACTIVE_RULE_EFFECT",
             "contract_status": "PASS",
         }
 
@@ -217,6 +235,22 @@ class CaseRunnerV1Tests(unittest.TestCase):
                     "RULE::A": lambda rule_result, _: {
                         **rule_result,
                         "rule_instance_id": "RULE::B",
+                        "status": "PASS",
+                    }
+                },
+            )
+
+        with self.assertRaisesRegex(
+            CaseRunnerV1Error, "REEVALUATOR_CHANGED_RULE_INSTANCE_IDENTITY"
+        ):
+            reevaluate_explicitly_linked_rule_results(
+                case_id="CASE::TEST",
+                before_rule_results=before,
+                evidence_results=[evidence],
+                reevaluators={
+                    "RULE::A": lambda rule_result, _: {
+                        **rule_result,
+                        "target": {"kind": "SOURCE", "id": "SOURCE_TAMPERED"},
                         "status": "PASS",
                     }
                 },

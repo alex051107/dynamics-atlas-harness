@@ -420,6 +420,31 @@ def _reviewer_form_schema() -> dict[str, Any]:
         },
         {
             "if": {
+                "properties": {
+                    "rule_disposition": {"const": "APPROVE_WITH_BOUNDED_REVISION"}
+                },
+                "required": ["rule_disposition"],
+            },
+            "then": {"properties": {"required_revision": nonempty_string}},
+        },
+        {
+            "if": {
+                "properties": {
+                    "case_application_dispositions": {
+                        "contains": {
+                            "type": "object",
+                            "properties": {
+                                "disposition": {"const": "APPROVE_WITH_BOUNDED_REVISION"}
+                            },
+                            "required": ["disposition"],
+                        }
+                    }
+                }
+            },
+            "then": {"properties": {"required_revision": nonempty_string}},
+        },
+        {
+            "if": {
                 "properties": {"review_item_id": {"const": "NDSR-F04R02"}},
                 "required": ["review_item_id"],
             },
@@ -1200,6 +1225,7 @@ def render_review_console(
     source_index = _read_json(review_workspace / "source_passage_index.json")
     matrix = _read_json(review_workspace / "case_application_matrix.json")
     form = _read_json(review_workspace / "reviewer_form.json")
+    form_schema = _read_json(review_workspace / "reviewer_form.schema.json")
     validate_source_science_review_form(form, matrix)
     advisory = _read_json(SOURCE_SCIENCE_ADVISORY_PATH) if SOURCE_SCIENCE_ADVISORY_PATH.is_file() else unavailable(
         "The optional nine-item source-science advisory reconciliation is not present in this checkout."
@@ -1335,7 +1361,7 @@ def render_review_console(
       <div class="eyebrow">NAMED HUMAN / DOMAIN REVIEW QUEUE</div>
       <h2>Primary-passage and application checks</h2>
       <p class="question">Every entry is pending. This view exposes passage kind, source-packet status, traceability, narrow proposed use, registry authority, exact case/RuleInstance keys, and blank reviewer fields. It does not make a disposition.</p>
-      <p><a href="../review/source_science_v1/reviewer_form.json" download>Export/copy the local DRAFT review template</a> · the page cannot save or mutate it.</p>
+      <p><a href="reviewer_form.json" download>Export/copy the local DRAFT review template</a> · <a href="reviewer_form.schema.json" download>download its validation schema</a> · the page cannot save or mutate either file.</p>
       <aside class="integrity-example">
         <div class="review-heading"><code>INTEGRITY_ERROR_EXAMPLE</code>{_badge('REQUIRED_ARTIFACT_MISSING')}</div>
         <p>If a required case/run artifact is absent, malformed, cross-case, or stale, <code>build_case_view</code> raises <code>CaseViewIntegrityError</code> and the case is not rendered. This example is a visible fail-closed state, not an active error in HSP90 or ADK.</p>
@@ -1349,6 +1375,8 @@ def render_review_console(
 """
     html_document = "\n".join(line.rstrip() for line in html_document.splitlines()) + "\n"
     output_dir.mkdir(parents=True, exist_ok=True)
+    _write_json(output_dir / "reviewer_form.json", form)
+    _write_json(output_dir / "reviewer_form.schema.json", form_schema)
     output_path = output_dir / "index.html"
     output_path.write_text(html_document, encoding="utf-8")
     return output_path
