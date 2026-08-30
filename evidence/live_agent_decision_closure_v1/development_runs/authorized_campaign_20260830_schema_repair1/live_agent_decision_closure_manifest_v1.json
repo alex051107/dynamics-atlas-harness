@@ -1,0 +1,215 @@
+{
+  "actual_cost_usd": "0.00072385",
+  "affected_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+  "artifacts": [
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/after_casegraph.json",
+      "sha256": "f157a78321ed59c18b6d14f5c71268b55c2bcc1c513939bde1d3832e408ea144"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/after_rule_results.json",
+      "sha256": "5acdde84d0c14085088d736460010ff953947087f4d0f5fbb9fe71067d160418"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/arm_receipt.json",
+      "sha256": "fbec56ff3a78059a6cf4eacce4a5c3ce837550b974f35b27b078fb4a30d807be"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/conclusion_packet.json",
+      "sha256": "1bbd6c09bf4cb00468e09b0eddfa8bc433e0bea894d3ec8b862779e008dd20ff"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/evidence_results.json",
+      "sha256": "4d568b2de5e036a75736f394142bf62977b112f51dcd25623a79b17bec39d5dc"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/execution_receipt.json",
+      "sha256": "f8d97c521d92942eb37038a73471566ad60c6ac1a7399eddee34abd678b03c11"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/live_call/model_call_receipt.json",
+      "sha256": "f63f6c90d10b4ce9171cf64c570156410e493b0d9f2e2a42950b8c81efe69536"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/live_call/parsed_proposal.json",
+      "sha256": "8a88bbe4d1afe64b01b13c0e1b12a459ca6fb360be14d50ed986d7b548e1f439"
+    },
+    {
+      "kind": "TEXT",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/live_call/raw_response.txt",
+      "sha256": "ebc38cf265e36a5d1467f9c54f5a72a9522bed763c7e259af2f4d3347a0ec777"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/live_call/request_payload.json",
+      "sha256": "39a361bfcd5d5ddbf6c1b2ebcddf5b6c675aec23e8ef54a99b4e359b5b76d077"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/planner_admission.json",
+      "sha256": "fa504f9b04265957c67ee56422b955b3c644db3cbc844f71d52fa6e9bb2c14fc"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/planner_authorization.json",
+      "sha256": "4c83b243ddfa1dcdb50e70307f2e303bef1983a68958ccec7943af2fa863ac34"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/planner_visible_input.json",
+      "sha256": "79caab956f69ab1483ab9050cb12c61aa012cabcba8041055603bb116e2246ab"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/route_packet.json",
+      "sha256": "6c9a9a3c0d4fa83e7b2e5912b2bb6d93d74971a974d09a7080b634d1a9a193a4"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_PRESENT/rule_transition.json",
+      "sha256": "0a2baaf71e77f88d1204421ca05b8ccb0685511bb8aa62602e4ba404bf451913"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/after_casegraph.json",
+      "sha256": "a2ab4daad5a0eea5be79942633c93998f5bf7365df9a8fc31b86c1d6c4901d37"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/after_rule_results.json",
+      "sha256": "d65ca857705816eb3a5582405279163d3e9526d6212839bff2b906ec8d5dd472"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/arm_receipt.json",
+      "sha256": "be8eebea736b5932f9ed113eeecba31776da389d1a767540a6a9101303fb5eaf"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/conclusion_packet.json",
+      "sha256": "c2409630781a9c95c0a9c18abe1bc9fba027d1ff3ef5a5f07cb733b8a2951849"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/evidence_results.json",
+      "sha256": "2e3ea95dd65df59c1b024b5bdda6d8fa70fc3b9f52fd5d7ed7f419fd6cf8aea5"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/execution_receipt.json",
+      "sha256": "f9f81a48ae28e6d9285bff6cd2b3d595caf5d277871db804de2376f9580193cd"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/live_call/model_call_receipt.json",
+      "sha256": "f65eae1ecfa16485d27afdec832c23e77aa8dcb3b72519b26ecdbcf90807bf52"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/live_call/parsed_proposal.json",
+      "sha256": "a7a486397c1a01e9247b92ff5fe7d69770d44403891455680750a3bcaac82499"
+    },
+    {
+      "kind": "TEXT",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/live_call/raw_response.txt",
+      "sha256": "41a1dbf2e05a8173dbdf8e76e3d0e80392c8696961b7fa2d4d8b55ff729f1a39"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/live_call/request_payload.json",
+      "sha256": "c75db9837af11126c2a7214c1230ab5dec5dc8e5985875cac5957153f6c90e14"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/planner_admission.json",
+      "sha256": "42be6c022643f922fbdd9e791d32a640422a979615057965bd94337c4b2ed3fe"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/planner_authorization.json",
+      "sha256": "7118c2086edcf0e5f0d11aaa6af6b5fb0fa7496418b56af6f1d4abaa3304427a"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/planner_visible_input.json",
+      "sha256": "bd3e92927acdd66b07b3a390fa6845af20cb11164280544d1870e315758f2410"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/route_packet.json",
+      "sha256": "c391d406b756021c34e29ad4cbcb3e0a10faafe84ab453d96d22d47c07e66859"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/rule_transition.json",
+      "sha256": "3bdd1a3fcfdc47e300b62fa7ed638a137b6f966cff94e371889e89d9093a57bd"
+    },
+    {
+      "kind": "JSON",
+      "path": "XEISD_LOOKUP_CARD_REMOVED/stop_receipt.json",
+      "sha256": "098262a3dff1d0c82643fc2ef377fd447cb1ebf5336ea8f4779f71fab9fac113"
+    },
+    {
+      "kind": "JSON",
+      "path": "before_rule_results.json",
+      "sha256": "d65ca857705816eb3a5582405279163d3e9526d6212839bff2b906ec8d5dd472"
+    },
+    {
+      "kind": "JSON",
+      "path": "campaign_config_snapshot.json",
+      "sha256": "39fe7f06d82f4dc3aa4dbb8eed8cf6757a6e2162d1212863ff70d193af31a6a3"
+    },
+    {
+      "kind": "JSON",
+      "path": "paired_arm_matrix.json",
+      "sha256": "a9eb9f6bb62cba9b1877b31d31a111954d393266196adafd269c3e1953a62dfd"
+    },
+    {
+      "kind": "JSON",
+      "path": "recorded_profile.json",
+      "sha256": "a2ab4daad5a0eea5be79942633c93998f5bf7365df9a8fc31b86c1d6c4901d37"
+    }
+  ],
+  "base_state_sha256": "7d1fadaeb4bb69a1c51d2cd4ac0086ce438781ff1d5d936f7e394c3f3036419c",
+  "boundary": "One development-only live Planner counterfactual over an existing exact X-EISD lookup. The positive arm closes one declaration Rule and the existing reducer remains ABSTAIN; the stop arm executes nothing. This is not source-science approval, Agent value, transfer, or scientific support.",
+  "budget": {
+    "actual_cost_usd": "0.00072385",
+    "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+    "cap_usd": "1.00",
+    "completed_calls": 2,
+    "max_attempts_per_cell": 6,
+    "max_completed_calls": 4,
+    "persistence": "ATOMIC_JSON",
+    "remaining_budget_usd": "0.99927615",
+    "reported_cost_available": true,
+    "unresolved_inflight_reservation": false
+  },
+  "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+  "campaign_state": "COMPLETED_CALLS_FROZEN",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY; one live Planner counterfactual over an existing exact X-EISD lookup; NOT_AGENT_VALUE_ESTABLISHED; NOT_SCIENTIFIC_SUPPORT",
+  "completed_api_calls": 2,
+  "held_out_status": "NOT_ACCESSED",
+  "http_attempts": 3,
+  "planner_mode": "LIVE_OPENROUTER_LUNA",
+  "positive_arm_id": "XEISD_LOOKUP_CARD_PRESENT",
+  "positive_terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+  "positive_transition": "UNRESOLVED_TO_PASS",
+  "profile_mode": "RECORDED_PROFILE_LIVE_PLANNER",
+  "result_status": "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE",
+  "schema_version": "live-agent-decision-closure-manifest/v1",
+  "scientific_support_status": "NOT_ESTABLISHED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "stop_arm_id": "XEISD_LOOKUP_CARD_REMOVED",
+  "stop_terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+  "stop_transition": "UNRESOLVED_TO_UNRESOLVED",
+  "transport": "OPENROUTER_EXACT_OPENAI_PROVIDER_STRICT_JSON_SCHEMA_NO_TOOLS"
+}

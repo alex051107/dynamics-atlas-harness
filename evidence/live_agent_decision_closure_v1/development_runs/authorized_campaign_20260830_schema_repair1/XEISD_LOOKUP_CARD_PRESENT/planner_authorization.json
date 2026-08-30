@@ -1,0 +1,17 @@
+{
+  "arm_id": "XEISD_LOOKUP_CARD_PRESENT",
+  "authorization_basis": [
+    "CURRENT_UNRESOLVED_RULE_REQUESTS_SOURCE_LOOKUP",
+    "CURRENT_CARD_ADDRESSES_EXACT_RULEINSTANCE",
+    "EXACT_LOOKUP_ID_TARGET_LOCATOR_AND_HASH_PREDECLARED"
+  ],
+  "authorized_action_count": 1,
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "model_execution_authority": "NONE",
+  "schema_version": "live-agent-decision-closure-authorization/v1",
+  "scientific_disposition": "NOT_EVALUATED",
+  "selected_card_ids": [
+    "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+  ],
+  "status": "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP"
+}

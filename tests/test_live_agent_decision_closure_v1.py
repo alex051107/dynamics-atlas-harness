@@ -23,6 +23,7 @@ from dynamics_atlas_harness.live_agent_decision_closure_v1 import (
     build_planner_proposal_schema,
     load_campaign_config,
     reconcile_schema_compatibility_repair,
+    require_campaign_open,
     run_live_agent_decision_closure_campaign,
     validate_campaign_config,
     validate_planner_proposal,
@@ -116,6 +117,9 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
             / f"test-{uuid.uuid4().hex}.json"
         )
         config = load_campaign_config()
+        config["execution_status"] = "OPEN_EXPLICITLY_AUTHORIZED_DEVELOPMENT"
+        config["completion_receipt_path"] = None
+        config["completion_receipt_sha256"] = None
         config["budget_ledger_path"] = cls.ledger_path.relative_to(REPO_ROOT).as_posix()
         cls.config = validate_campaign_config(config)
         cls.stub = _PlannerStub()
@@ -290,6 +294,13 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
         wrong_model["model"]["model_id"] = "minimax/minimax-m2.5"
         with self.assertRaisesRegex(ValueError, "ONLY_EXACT_LUNA_OPENAI_PROVIDER_ALLOWED"):
             validate_campaign_config(wrong_model)
+
+    def test_committed_campaign_is_closed_by_frozen_completion_receipt(self):
+        closed = load_campaign_config()
+        with self.assertRaisesRegex(
+            ValueError, "LIVE_AGENT_DECISION_CLOSURE_CAMPAIGN_CLOSED"
+        ):
+            require_campaign_open(closed)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,10 @@
+{
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "decision": "SELECT_ACTIONS",
+  "rationales": {
+    "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1": "The targeted RuleInstance is unresolved with required source-context evidence missing, and the listed exact lookup is allowlisted for that target."
+  },
+  "selected_card_ids": [
+    "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+  ]
+}
