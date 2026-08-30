@@ -13,6 +13,10 @@
       ],
       "type": "array"
     },
+    "instructions": {
+      "minLength": 1,
+      "type": "string"
+    },
     "items": {
       "items": {
         "additionalProperties": false,

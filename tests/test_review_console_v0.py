@@ -8,6 +8,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from jsonschema import Draft202012Validator
+
 from dynamics_atlas_harness import review_console_v0
 from dynamics_atlas_harness.review_console_v0 import (
     REVIEW_DISPOSITIONS,
@@ -44,6 +46,8 @@ class SourceScienceReviewWorkspaceTests(unittest.TestCase):
         self.assertEqual(form["review_status"], "PENDING_DOMAIN_REVIEW")
         self.assertEqual(form["allowed_dispositions"], list(REVIEW_DISPOSITIONS))
         self.assertEqual(schema["properties"]["allowed_dispositions"]["const"], list(REVIEW_DISPOSITIONS))
+        Draft202012Validator.check_schema(schema)
+        Draft202012Validator(schema).validate(form)
         self.assertEqual(len(source_index["entries"]), 9)
         self.assertEqual(len(matrix["items"]), 9)
         self.assertEqual(len(form["items"]), 9)
