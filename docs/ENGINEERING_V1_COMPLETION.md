@@ -18,7 +18,7 @@ H1 items and the F04R02 packet-label mapping remains `DATA_INSUFFICIENT`.
 - Exact fetched base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
 - Delivery branch: `feature/dynamics-atlas-autonomous-engineering-v1`
 - Exact review-repaired implementation head before final completion/status-only edits:
-  `5ed99b6158b483d234c13ec448d01253fb118f90`
+  `c8ab96ea4883821e6a7c9d1714dd94f28e7c5793`
 - Final delivery head: the Draft PR head recorded by GitHub after this completion
   file is committed and pushed. A Git commit cannot contain its own hash; use
   `git rev-parse HEAD` or the PR metadata for the exact final delivery object.
@@ -33,7 +33,11 @@ The integrated prior work is exact and auditable:
 
 The engineering batches are `b89ca2f` (runner/provenance), `9902db5`
 (H1 claim narrowing/advisory), `576be63` (CaseView/static workbench), and
-`5ed99b6` (final integrity-review repair).
+`5ed99b6` (first final integrity-review repair). Exact-head re-review then found a
+second bounded contract gap; `c8ab96e` binds authorization to admission/execution,
+binds question and claim ceiling to the repository-backed public packet, rejects
+duplicate active-evidence IDs and no-op active reevaluations, and adds an active
+runner-to-CaseView round trip.
 
 ## Implemented end-to-end path
 
@@ -207,7 +211,18 @@ review Schema, and the local review-template link. Commit `5ed99b6` repaired all
 and added the corresponding negative tests. The combined affected suite then ran 23
 tests: `OK`.
 
-Fresh release validation for exact repaired implementation commit
+Exact-head engineering re-review found that a mutually edited authorization copy and
+manifest claim ceiling could still pass internal copy checks, and that duplicate or
+no-op active reevaluations were accepted by the producer but rejected by CaseView.
+Commit `c8ab96e` repaired those contracts. On that exact implementation state, all 11
+CaseView tests passed; two focused active-evidence runner tests passed, including a
+runner-to-CaseView round trip. The latter focused invocation used an import-only
+`pymbar.timeseries` stub because the retained local Python environment no longer had
+the optional PyMBAR dependency; neither test executes a numerical action path. Both
+previously generated real HSP90 and ADK run roots reprojected through the repaired
+CaseView with integrity `PASS`.
+
+Fresh release validation for the prior repaired implementation commit
 `5ed99b6158b483d234c13ec448d01253fb118f90` completed as follows:
 
 - a clean Git archive full discovery ran under Python `3.14.0` with
@@ -218,8 +233,9 @@ Fresh release validation for exact repaired implementation commit
   `--no-deps --no-build-isolation`; CLI parser/import smoke passed while NumPy,
   SciPy, PyMBAR, and jsonschema were all absent;
 - the repository CI matrix now runs the full declared optional-dependency suite on
-  Python 3.11 and 3.12. Exact final-delivery-head results belong to the Draft PR
-  check readback, because a committed file cannot record its own commit hash;
+  Python 3.11 and 3.12. That exact-final-head clean-checkout matrix is the full-suite
+  evidence for `c8ab96e` and its completion/status commit; results belong to the Draft
+  PR check readback because a committed file cannot record its own commit hash;
 - both repaired `run-case` commands completed; each CaseView had integrity `PASS`,
   five content-addressed input snapshots, one descriptive EvidenceResult, zero
   active-Rule EvidenceResults, and terminal state

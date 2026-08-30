@@ -1,9 +1,9 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v10",
-  "as_of": "2026-08-30T02:59:34Z",
-  "status_snapshot_as_of": "2026-08-30T02:59:34Z",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v11",
+  "as_of": "2026-08-30T03:18:03Z",
+  "status_snapshot_as_of": "2026-08-30T03:18:03Z",
   "overall_status": "MERGED_DEVELOPMENT_CAUSAL_CAPSULE_LOCAL_ENGINEERING_WORKBENCH_V1_REVIEW_FINDINGS_REPAIRED_EXACT_HEAD_REREVIEW_AND_GITHUB_CI_PENDING_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
     "main_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
@@ -153,8 +153,8 @@
       "role": "AUTONOMOUS_ENGINEERING_WORKBENCH_V1",
       "branch": "feature/dynamics-atlas-autonomous-engineering-v1",
       "base_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
-      "implementation_head_before_status_docs": "5ed99b6158b483d234c13ec448d01253fb118f90",
-      "state": "LOCAL_REPAIR_VALIDATION_PASS_EXACT_FINAL_HEAD_REREVIEW_AND_GITHUB_CI_PENDING",
+      "implementation_head_before_status_docs": "c8ab96ea4883821e6a7c9d1714dd94f28e7c5793",
+      "state": "SECOND_REPAIR_FOCUSED_VALIDATION_PASS_EXACT_FINAL_HEAD_REREVIEW_AND_GITHUB_CI_PENDING",
       "integrated_prior_heads": {
         "PR16": "1ee43e776d3e6e9529b1ed25a6b079335d21d48b",
         "PR17": "055d80e0d5dfebb29d92168e456d98b18b8d8ed3"
@@ -180,8 +180,8 @@
         "broad_same_rule_closure": "BLOCKED_BROAD_CLOSURE",
         "f04_traceability": "DATA_INSUFFICIENT",
         "adk_boundary": "ADK_STATIC_STRUCTURAL_CAPABILITY_EXPOSURE_DYNAMIC_PORTABILITY_NOT_EVALUATED",
-        "focused_final_review_repair_tests": "23_OK",
-        "clean_archive_full_tests": "170_OK_2_PARENT_WORKSPACE_SKIPS_PYTHON_3_14_EXACT_IMPLEMENTATION_HEAD",
+        "focused_final_review_repair_tests": "B5_23_OK_AT_5ED99B6_B6_CASEVIEW_11_OK_ACTIVE_CONTRACT_2_OK_AT_C8AB96E",
+        "clean_archive_full_tests": "B5_170_OK_2_PARENT_WORKSPACE_SKIPS_PYTHON_3_14_AT_5ED99B6_EXACT_C8AB96E_GITHUB_CI_PENDING",
         "core_clean_archive_install_smoke": "PYTHON_3_11_14_PASS_WITHOUT_NUMPY_SCIPY_PYMBAR_JSONSCHEMA",
         "current_caseview_integrity": "HSP90_PASS_ADK_PASS",
         "input_snapshots_per_current_run": 5,
@@ -281,14 +281,17 @@
     },
     {
       "stage": "AUTONOMOUS_ENGINEERING_WORKBENCH_V1",
-      "status": "LOCAL_REPAIR_VALIDATION_PASS_EXACT_FINAL_HEAD_REREVIEW_AND_GITHUB_CI_PENDING",
+      "status": "SECOND_REPAIR_FOCUSED_VALIDATION_PASS_EXACT_FINAL_HEAD_REREVIEW_AND_GITHUB_CI_PENDING",
       "known_present": [
         "REUSABLE_TWO_CASE_RECORDED_RUNNER",
         "FRESH_RULE_AND_LEGAL_CARD_RECOMPUTATION",
         "ONE_CARD_OR_ABSTENTION_AUTHORIZATION",
         "RECORDED_PROFILER_AND_PLANNER_PROVENANCE",
         "CONTENT_ADDRESSED_RUN_INPUT_SNAPSHOTS",
+        "REPOSITORY_BACKED_PUBLIC_PACKET_QUESTION_AND_CLAIM_BINDING",
+        "AUTHORIZATION_ADMISSION_EXECUTION_RECONCILIATION",
         "BIDIRECTIONAL_ACTIVE_EVIDENCE_REEVALUATION_LINK_CHECKS",
+        "DUPLICATE_AND_NOOP_ACTIVE_EVIDENCE_REJECTION",
         "FAIL_CLOSED_EVIDENCE_LANE_CLASSIFICATION",
         "ARTIFACT_ONLY_CASEVIEW",
         "FOUR_VIEW_STATIC_REVIEW_WORKBENCH",
