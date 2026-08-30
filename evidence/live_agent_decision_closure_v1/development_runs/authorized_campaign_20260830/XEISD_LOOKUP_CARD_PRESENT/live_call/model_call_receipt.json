@@ -1,0 +1,96 @@
+{
+  "accepted_returned_model_ids": [
+    "openai/gpt-5.6-luna",
+    "openai/gpt-5.6-luna-20260709"
+  ],
+  "actual_provider": null,
+  "allowed_service_tiers": [
+    null,
+    "default"
+  ],
+  "attempt_number": 1,
+  "automatic_retries": 0,
+  "boundary": "This receipt covers one proposal-only model call. The model did not authorize or execute a scientific action and emitted no scientific disposition.",
+  "campaign_budget": {
+    "actual_cost_usd": "0",
+    "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+    "cap_usd": "1.00",
+    "completed_calls": 0,
+    "max_attempts_per_cell": 6,
+    "max_completed_calls": 4,
+    "persistence": "ATOMIC_JSON",
+    "remaining_budget_usd": "1.00",
+    "reported_cost_available": false,
+    "unresolved_inflight_reservation": false
+  },
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "cost_usd": null,
+  "credential_source": "INHERITED_ENVIRONMENT",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "expected_provider_display_name": "OpenAI",
+  "finish_reason": null,
+  "hashes": {
+    "canonicalization": "SORTED_KEYS_COMPACT_JSON_UTF8_V1",
+    "output_schema_sha256": "ba450984b2c19ef57060add436a48e6a04b74d94772e8341a15776e76bf4ac9c",
+    "parsed_proposal_sha256": null,
+    "raw_response_sha256": "ebe889ca3a7f704631aa7050da166ca3335317f126d4dd716ea0483edd18b830",
+    "request_payload_sha256": "3edd44325acaaccb9929accb17ad92bebd0b5fde2f135b527f4bdb7ad108dc3a",
+    "system_prompt_sha256": "167d27369c99bcdbd658584b9e01b3a7b275618bfc68322bb792a55fd8cb63ae",
+    "visible_input_sha256": "2a582f58c69cecb67d338157d2b5453da51c1b63eb2c5aa49b6e01e8db0d5f4e"
+  },
+  "http_status": 400,
+  "incomplete_status": "UNKNOWN_OR_FAILED",
+  "latency_ms": 427.482,
+  "model_metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
+  "parsed_proposal_sha256": null,
+  "preflight": {
+    "input_token_ceiling": 5305,
+    "input_token_ceiling_basis": "CANONICAL_REQUEST_UTF8_BYTE_COUNT",
+    "max_completion_tokens": 4096,
+    "remaining_budget_before_call_usd": "1.00",
+    "worst_case_cost_usd": "0.0059762"
+  },
+  "prompt_sha256": "167d27369c99bcdbd658584b9e01b3a7b275618bfc68322bb792a55fd8cb63ae",
+  "prompt_version": "LIVE_AGENT_DECISION_CLOSURE_PLANNER_V1_FROZEN",
+  "proposal_envelope_sha256": null,
+  "proposal_parse_status": "UNAVAILABLE",
+  "provider_provenance_status": "UNAVAILABLE",
+  "raw_response_persistence_status": "SAFE_TO_PERSIST",
+  "raw_response_sha256": "ebe889ca3a7f704631aa7050da166ca3335317f126d4dd716ea0483edd18b830",
+  "reason_codes": [
+    "HTTP_ERROR:400"
+  ],
+  "recorded_at": "2026-08-30T19:02:27.941589Z",
+  "refusal_status": "NOT_REPORTED",
+  "reported_cost_usd": null,
+  "request_parameter_profile": {
+    "reasoning_effort": "low",
+    "temperature_zero_included": false
+  },
+  "request_sha256": "3edd44325acaaccb9929accb17ad92bebd0b5fde2f135b527f4bdb7ad108dc3a",
+  "requested_model": "openai/gpt-5.6-luna",
+  "requested_provider_endpoint_tag": "openai",
+  "response_id": null,
+  "returned_model": null,
+  "returned_model_provenance_status": "UNAVAILABLE",
+  "role": "PLANNER",
+  "routing_proposal_sha256": null,
+  "schema_sha256": "ba450984b2c19ef57060add436a48e6a04b74d94772e8341a15776e76bf4ac9c",
+  "schema_validation_status": "FAIL_OR_UNAVAILABLE",
+  "schema_version": "openrouter-proposal-call-receipt/v1",
+  "service_tier": null,
+  "service_tier_provenance_status": "EXACT_ALLOWED_VALUE",
+  "status": "REJECTED_FAIL_CLOSED",
+  "tool_calls": 0,
+  "transport": "OPENROUTER_CHAT_COMPLETIONS_JSON_SCHEMA_NO_TOOLS",
+  "transport_status": "TRANSPORT_FAILED",
+  "usage": {
+    "cached_tokens": null,
+    "completion_tokens": null,
+    "prompt_tokens": null,
+    "reasoning_tokens": null,
+    "reported_cost_usd": null,
+    "total_tokens": null
+  },
+  "visible_input_sha256": "2a582f58c69cecb67d338157d2b5453da51c1b63eb2c5aa49b6e01e8db0d5f4e"
+}

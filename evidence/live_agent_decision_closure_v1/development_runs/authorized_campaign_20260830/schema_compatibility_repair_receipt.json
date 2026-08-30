@@ -1,0 +1,37 @@
+{
+  "api_reported_cost_usd": null,
+  "api_reported_usage": null,
+  "attempt_count_preserved": 1,
+  "boundary": "The provider rejected the unsupported schema before generation and returned no response ID, usage, or cost. This receipt unlocks only the single documented schema-only repair; it does not claim an admitted model proposal.",
+  "budget_accounted_cost_usd": "0",
+  "budget_after_reconciliation": {
+    "actual_cost_usd": "0",
+    "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+    "cap_usd": "1.00",
+    "completed_calls": 0,
+    "max_attempts_per_cell": 6,
+    "max_completed_calls": 4,
+    "persistence": "ATOMIC_JSON",
+    "remaining_budget_usd": "1.00",
+    "reported_cost_available": true,
+    "unresolved_inflight_reservation": false
+  },
+  "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+  "http_status": 400,
+  "model": "openai/gpt-5.6-luna",
+  "prior_artifact_hashes": {
+    "model_call_receipt_file_sha256": "9e881ba79a95edbbbb66fbb2e06060da20b9e3489874cc852c2e5906537e51ae",
+    "raw_response_file_sha256": "ebe889ca3a7f704631aa7050da166ca3335317f126d4dd716ea0483edd18b830",
+    "request_payload_file_sha256": "ade36dbf5df3c8d511a06b9d1e96efc7ec66a911c1080151a4f03f4497b9b02b"
+  },
+  "prompt_changed": false,
+  "provider": "OpenAI",
+  "provider_error_code": "invalid_json_schema",
+  "repair_number": 1,
+  "response_id": null,
+  "schema_repair_scope": "OPENAI_STRICT_SCHEMA_SUBSET_NORMALIZATION_ONLY",
+  "schema_version": "live-agent-decision-closure-schema-repair/v1",
+  "semantic_expectation_changed": false,
+  "status": "RECONCILED_ONE_PRE_GENERATION_SCHEMA_REJECTION",
+  "unsupported_keyword": "uniqueItems"
+}

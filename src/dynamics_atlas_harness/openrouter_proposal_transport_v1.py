@@ -693,6 +693,42 @@ class OpenRouterBudgetLedger:
             self._inflight_reservation = None
             self._write_state_unlocked(self._state_from_memory())
 
+    def reconcile_first_pre_generation_schema_rejection(
+        self,
+        *,
+        role: str,
+        case_id: str,
+        model_id: str,
+    ) -> None:
+        """Unlock exactly one evidence-validated, pre-generation schema rejection.
+
+        The caller must first bind a persisted provider response proving HTTP 400,
+        no response ID, no token usage, no reported cost, and an
+        ``invalid_json_schema`` provider code.  This ledger method deliberately
+        cannot reconcile a second failure or any campaign that already completed
+        or incurred a reported cost.
+        """
+
+        cell = (
+            _nonempty_string(role, "role"),
+            _nonempty_string(case_id, "case_id"),
+            _nonempty_string(model_id, "model_id"),
+        )
+        with self._exclusive_lock():
+            self._reload_persisted_state_unlocked()
+            if (
+                self._inflight_reservation is not None
+                or self.reported_cost_available
+                or self.completed_calls != 0
+                or self.actual_cost_usd != Decimal("0")
+                or self.attempts_by_cell != {cell: 1}
+            ):
+                raise OpenRouterProposalTransportError(
+                    "PRE_GENERATION_SCHEMA_REJECTION_RECONCILIATION_FORBIDDEN"
+                )
+            self.reported_cost_available = True
+            self._write_state_unlocked(self._state_from_memory())
+
     def snapshot(self) -> dict[str, Any]:
         with self._exclusive_lock():
             self._reload_persisted_state_unlocked()

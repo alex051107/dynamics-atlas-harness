@@ -465,6 +465,7 @@ def run_agent_decision_closure(args: argparse.Namespace) -> int:
         build_planner_input,
         build_planner_proposal_schema,
         load_campaign_config,
+        reconcile_schema_compatibility_repair,
         require_campaign_open,
         run_live_agent_decision_closure_campaign,
     )
@@ -484,6 +485,7 @@ def run_agent_decision_closure(args: argparse.Namespace) -> int:
         )
         build_planner_proposal_schema(planner_input)
     budget = build_budget(config)
+    reconcile_schema_compatibility_repair(config=config, budget=budget)
     budget.snapshot()
     credential = read_openrouter_credential(repo_root=REPO_ROOT)
     client = OpenRouterProposalClient(credential=credential, budget=budget)

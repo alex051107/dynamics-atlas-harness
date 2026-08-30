@@ -11,7 +11,16 @@
   "max_attempts_per_exact_role_case_model": 6,
   "automatic_retries": 0,
   "schema_compatibility_repairs_allowed": 1,
-  "schema_compatibility_repairs_used": 0,
+  "schema_compatibility_repairs_used": 1,
+  "schema_compatibility_repair": {
+    "failure_root": "evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830",
+    "request_file_sha256": "ade36dbf5df3c8d511a06b9d1e96efc7ec66a911c1080151a4f03f4497b9b02b",
+    "raw_response_file_sha256": "ebe889ca3a7f704631aa7050da166ca3335317f126d4dd716ea0483edd18b830",
+    "receipt_file_sha256": "9e881ba79a95edbbbb66fbb2e06060da20b9e3489874cc852c2e5906537e51ae",
+    "provider_error_code": "invalid_json_schema",
+    "unsupported_keyword": "uniqueItems",
+    "repair_scope": "OPENAI_STRICT_SCHEMA_SUBSET_NORMALIZATION_ONLY"
+  },
   "semantic_prompt_tuning_allowed": 0,
   "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
   "profile_mode": "RECORDED_PROFILE_LIVE_PLANNER",

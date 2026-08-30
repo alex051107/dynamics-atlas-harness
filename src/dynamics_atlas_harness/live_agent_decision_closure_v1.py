@@ -50,6 +50,7 @@ CAMPAIGN_CLOSED_ERROR = "LIVE_AGENT_DECISION_CLOSURE_CAMPAIGN_CLOSED"
 MANIFEST_SCHEMA = "live-agent-decision-closure-manifest/v1"
 ARM_RECEIPT_SCHEMA = "live-agent-decision-closure-arm-receipt/v1"
 EVIDENCE_RESULT_SCHEMA = "live-agent-decision-closure-evidence-result/v1"
+SCHEMA_REPAIR_RECEIPT_SCHEMA = "live-agent-decision-closure-schema-repair/v1"
 POSITIVE_ARM_ID = "XEISD_LOOKUP_CARD_PRESENT"
 STOP_ARM_ID = "XEISD_LOOKUP_CARD_REMOVED"
 ACTION_CARD_ID = "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
@@ -233,24 +234,22 @@ def build_planner_proposal_schema(planner_input: Mapping[str, Any]) -> dict[str,
             "type": "object",
             "additionalProperties": False,
             "required": [card_id],
-            "properties": {card_id: {"type": "string", "minLength": 1}},
+            "properties": {card_id: {"type": "string"}},
         }
         for card_id in card_ids
     )
     return {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "additionalProperties": False,
         "required": ["case_id", "decision", "selected_card_ids", "rationales"],
         "properties": {
-            "case_id": {"type": "string", "const": X_EISD_CASE_ID},
+            "case_id": {"type": "string", "enum": [X_EISD_CASE_ID]},
             "decision": {
                 "type": "string",
                 "enum": ["SELECT_ACTIONS", "ABSTAIN_NO_ACTION"],
             },
             "selected_card_ids": {
                 "type": "array",
-                "uniqueItems": True,
                 "minItems": 0,
                 "maxItems": 1 if card_ids else 0,
                 "items": (
@@ -280,6 +279,7 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
         "automatic_retries",
         "schema_compatibility_repairs_allowed",
         "schema_compatibility_repairs_used",
+        "schema_compatibility_repair",
         "semantic_prompt_tuning_allowed",
         "case_id",
         "profile_mode",
@@ -313,6 +313,72 @@ def validate_campaign_config(config: Mapping[str, Any]) -> dict[str, Any]:
     repairs_used = config.get("schema_compatibility_repairs_used")
     if not isinstance(repairs_used, int) or isinstance(repairs_used, bool) or not 0 <= repairs_used <= 1:
         raise LiveAgentDecisionClosureV1Error("SCHEMA_REPAIR_COUNT_INVALID")
+    repair = config.get("schema_compatibility_repair")
+    if repairs_used == 0 and repair is not None:
+        raise LiveAgentDecisionClosureV1Error("UNUSED_SCHEMA_REPAIR_RECORD_FORBIDDEN")
+    if repairs_used == 1:
+        if not isinstance(repair, Mapping):
+            raise LiveAgentDecisionClosureV1Error("SCHEMA_REPAIR_RECORD_REQUIRED")
+        repair = dict(repair)
+        _require_exact_keys(
+            repair,
+            {
+                "failure_root",
+                "request_file_sha256",
+                "raw_response_file_sha256",
+                "receipt_file_sha256",
+                "provider_error_code",
+                "unsupported_keyword",
+                "repair_scope",
+            },
+            "schema_compatibility_repair",
+        )
+        if (
+            repair.get("provider_error_code") != "invalid_json_schema"
+            or repair.get("unsupported_keyword") != "uniqueItems"
+            or repair.get("repair_scope")
+            != "OPENAI_STRICT_SCHEMA_SUBSET_NORMALIZATION_ONLY"
+        ):
+            raise LiveAgentDecisionClosureV1Error("SCHEMA_REPAIR_RECORD_INVALID")
+        repair_root = _repository_path(repair.get("failure_root"), "failure_root")
+        allowed_failure_root = (
+            REPO_ROOT
+            / "evidence"
+            / "live_agent_decision_closure_v1"
+            / "development_runs"
+        ).resolve()
+        try:
+            repair_root.relative_to(allowed_failure_root)
+        except ValueError as error:
+            raise LiveAgentDecisionClosureV1Error(
+                "SCHEMA_REPAIR_FAILURE_ROOT_OUTSIDE_EVIDENCE"
+            ) from error
+        repair_files = {
+            "request_file_sha256": repair_root
+            / POSITIVE_ARM_ID
+            / "live_call"
+            / "request_payload.json",
+            "raw_response_file_sha256": repair_root
+            / POSITIVE_ARM_ID
+            / "live_call"
+            / "raw_response.txt",
+            "receipt_file_sha256": repair_root
+            / POSITIVE_ARM_ID
+            / "live_call"
+            / "model_call_receipt.json",
+        }
+        for hash_key, artifact_path in repair_files.items():
+            expected_hash = repair.get(hash_key)
+            if (
+                not isinstance(expected_hash, str)
+                or not re.fullmatch(r"[0-9a-f]{64}", expected_hash)
+                or not artifact_path.is_file()
+                or hashlib.sha256(artifact_path.read_bytes()).hexdigest()
+                != expected_hash
+            ):
+                raise LiveAgentDecisionClosureV1Error(
+                    f"SCHEMA_REPAIR_ARTIFACT_HASH_MISMATCH:{hash_key}"
+                )
     if config.get("semantic_prompt_tuning_allowed") != 0:
         raise LiveAgentDecisionClosureV1Error("SEMANTIC_PROMPT_TUNING_FORBIDDEN")
     max_output_tokens = config.get("max_output_tokens")
@@ -399,6 +465,149 @@ def build_budget(config: Mapping[str, Any]) -> OpenRouterBudgetLedger:
         campaign_id=str(config["campaign_id"]),
         state_path=campaign_budget_ledger_path(config),
     )
+
+
+def _contains_schema_keyword(value: Any, keyword: str) -> bool:
+    if isinstance(value, Mapping):
+        return keyword in value or any(
+            _contains_schema_keyword(item, keyword) for item in value.values()
+        )
+    if isinstance(value, list):
+        return any(_contains_schema_keyword(item, keyword) for item in value)
+    return False
+
+
+def reconcile_schema_compatibility_repair(
+    *,
+    config: Mapping[str, Any],
+    budget: OpenRouterBudgetLedger,
+) -> dict[str, Any] | None:
+    """Bind and reconcile the one observed pre-generation schema rejection."""
+
+    config = validate_campaign_config(config)
+    if config["schema_compatibility_repairs_used"] == 0:
+        return None
+    repair = dict(config["schema_compatibility_repair"])
+    repair_root = _repository_path(repair["failure_root"], "failure_root")
+    live_root = repair_root / POSITIVE_ARM_ID / "live_call"
+    request = load_json_object(live_root / "request_payload.json")
+    raw_response = load_json_object(live_root / "raw_response.txt")
+    receipt = load_json_object(live_root / "model_call_receipt.json")
+    raw_error = raw_response.get("error")
+    raw_metadata = raw_error.get("metadata") if isinstance(raw_error, Mapping) else None
+    nested_raw = raw_metadata.get("raw") if isinstance(raw_metadata, Mapping) else None
+    try:
+        nested_error = json.loads(nested_raw)["error"] if isinstance(nested_raw, str) else None
+    except (json.JSONDecodeError, KeyError, TypeError) as error:
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_PROVIDER_ERROR_UNREADABLE"
+        ) from error
+    request_schema = (
+        request.get("response_format", {})
+        .get("json_schema", {})
+        .get("schema")
+    )
+    if (
+        receipt.get("status") != "REJECTED_FAIL_CLOSED"
+        or receipt.get("transport_status") != "TRANSPORT_FAILED"
+        or receipt.get("http_status") != 400
+        or receipt.get("response_id") is not None
+        or receipt.get("reported_cost_usd") is not None
+        or receipt.get("reason_codes") != ["HTTP_ERROR:400"]
+        or receipt.get("requested_model") != "openai/gpt-5.6-luna"
+        or receipt.get("hashes", {}).get("request_payload_sha256")
+        != canonical_json_sha256(request)
+        or receipt.get("hashes", {}).get("raw_response_sha256")
+        != hashlib.sha256(
+            (live_root / "raw_response.txt").read_text(encoding="utf-8").encode("utf-8")
+        ).hexdigest()
+        or raw_response.get("id") is not None
+        or "choices" in raw_response
+        or "usage" in raw_response
+        or not isinstance(raw_metadata, Mapping)
+        or raw_metadata.get("provider_name") != "OpenAI"
+        or raw_metadata.get("provider_error_code") != "invalid_json_schema"
+        or not isinstance(nested_error, Mapping)
+        or nested_error.get("code") != "invalid_json_schema"
+        or "uniqueItems" not in str(nested_error.get("message"))
+        or not isinstance(request_schema, Mapping)
+        or not _contains_schema_keyword(request_schema, "uniqueItems")
+    ):
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_PRE_GENERATION_EVIDENCE_INVALID"
+        )
+    usage = receipt.get("usage")
+    if not isinstance(usage, Mapping) or any(value is not None for value in usage.values()):
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_PRE_GENERATION_USAGE_PRESENT"
+        )
+    current_schema = build_planner_proposal_schema(
+        build_planner_input(build_frozen_decision_state(), include_action_card=True)
+    )
+    if any(
+        _contains_schema_keyword(current_schema, keyword)
+        for keyword in ("uniqueItems", "minLength", "const", "$schema")
+    ):
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_CURRENT_SCHEMA_NOT_NORMALIZED"
+        )
+    before = budget.snapshot()
+    receipt_path = repair_root / "schema_compatibility_repair_receipt.json"
+    if before["reported_cost_available"] is False:
+        budget.reconcile_first_pre_generation_schema_rejection(
+            role="PLANNER",
+            case_id=X_EISD_CASE_ID,
+            model_id="openai/gpt-5.6-luna",
+        )
+    elif not receipt_path.is_file():
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_LEDGER_ALREADY_OPEN_WITHOUT_RECEIPT"
+        )
+    after = budget.snapshot()
+    if (
+        after["reported_cost_available"] is not True
+        or after["completed_calls"] != 0
+        or after["actual_cost_usd"] != "0"
+        or budget.attempts_by_cell
+        != {("PLANNER", X_EISD_CASE_ID, "openai/gpt-5.6-luna"): 1}
+    ):
+        raise LiveAgentDecisionClosureV1Error(
+            "SCHEMA_REPAIR_LEDGER_RECONCILIATION_INVALID"
+        )
+    reconciliation = {
+        "schema_version": SCHEMA_REPAIR_RECEIPT_SCHEMA,
+        "campaign_id": config["campaign_id"],
+        "status": "RECONCILED_ONE_PRE_GENERATION_SCHEMA_REJECTION",
+        "repair_number": 1,
+        "provider": "OpenAI",
+        "model": "openai/gpt-5.6-luna",
+        "http_status": 400,
+        "provider_error_code": "invalid_json_schema",
+        "unsupported_keyword": "uniqueItems",
+        "response_id": None,
+        "api_reported_usage": None,
+        "api_reported_cost_usd": None,
+        "budget_accounted_cost_usd": "0",
+        "attempt_count_preserved": 1,
+        "schema_repair_scope": repair["repair_scope"],
+        "prompt_changed": False,
+        "semantic_expectation_changed": False,
+        "prior_artifact_hashes": {
+            "request_payload_file_sha256": repair["request_file_sha256"],
+            "raw_response_file_sha256": repair["raw_response_file_sha256"],
+            "model_call_receipt_file_sha256": repair["receipt_file_sha256"],
+        },
+        "budget_after_reconciliation": after,
+        "boundary": "The provider rejected the unsupported schema before generation and returned no response ID, usage, or cost. This receipt unlocks only the single documented schema-only repair; it does not claim an admitted model proposal.",
+    }
+    if receipt_path.is_file():
+        if load_json_object(receipt_path) != reconciliation:
+            raise LiveAgentDecisionClosureV1Error(
+                "SCHEMA_REPAIR_RECONCILIATION_RECEIPT_MISMATCH"
+            )
+    else:
+        _write_json(receipt_path, reconciliation)
+    return reconciliation
 
 
 def _model_spec(config: Mapping[str, Any]) -> OpenRouterModelSpec:

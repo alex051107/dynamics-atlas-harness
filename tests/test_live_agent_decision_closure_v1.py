@@ -5,6 +5,7 @@ import shutil
 import tempfile
 import unittest
 import uuid
+from decimal import Decimal
 from pathlib import Path
 
 from dynamics_atlas_harness.case_view_v1 import (
@@ -21,6 +22,7 @@ from dynamics_atlas_harness.live_agent_decision_closure_v1 import (
     build_planner_input,
     build_planner_proposal_schema,
     load_campaign_config,
+    reconcile_schema_compatibility_repair,
     run_live_agent_decision_closure_campaign,
     validate_campaign_config,
     validate_planner_proposal,
@@ -147,8 +149,44 @@ class LiveAgentDecisionClosureV1Tests(unittest.TestCase):
             self.assertTrue(payload["response_format"]["json_schema"]["strict"])
             self.assertNotIn("tools", payload)
             self.assertNotIn("plugins", payload)
+            schema = payload["response_format"]["json_schema"]["schema"]
+            serialized_schema = json.dumps(schema, sort_keys=True)
+            for unsupported in ("uniqueItems", "minLength", '"const"', '"$schema"'):
+                self.assertNotIn(unsupported, serialized_schema)
         self.assertEqual(self.result["manifest"]["completed_api_calls"], 2)
         self.assertEqual(self.result["manifest"]["http_attempts"], 2)
+
+    def test_one_frozen_schema_repair_reconciles_first_pre_generation_failure(self):
+        ledger_path = (
+            REPO_ROOT
+            / "local"
+            / "live_agent_decision_closure_v1"
+            / f"repair-{uuid.uuid4().hex}.json"
+        )
+        config = load_campaign_config()
+        config["budget_ledger_path"] = ledger_path.relative_to(REPO_ROOT).as_posix()
+        config = validate_campaign_config(config)
+        budget = build_budget(config)
+        reservation = budget.reserve(
+            role="PLANNER",
+            case_id=config["case_id"],
+            model_id=config["model"]["model_id"],
+            worst_case_cost_usd=Decimal("0.0059762"),
+        )
+        budget.record_transport_failure(reservation)
+        try:
+            first = reconcile_schema_compatibility_repair(config=config, budget=budget)
+            second = reconcile_schema_compatibility_repair(config=config, budget=budget)
+        finally:
+            ledger_path.unlink(missing_ok=True)
+            ledger_path.with_name(ledger_path.name + ".lock").unlink(missing_ok=True)
+        self.assertEqual(
+            first["status"], "RECONCILED_ONE_PRE_GENERATION_SCHEMA_REJECTION"
+        )
+        self.assertEqual(second, first)
+        self.assertEqual(first["attempt_count_preserved"], 1)
+        self.assertIsNone(first["api_reported_cost_usd"])
+        self.assertTrue(first["budget_after_reconciliation"]["reported_cost_available"])
 
     def test_positive_arm_closes_exact_rule_and_preserves_unrelated_rules(self):
         root = self.root / "campaign" / POSITIVE_ARM_ID

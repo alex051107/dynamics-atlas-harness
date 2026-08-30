@@ -38,6 +38,7 @@ from .live_agent_decision_closure_v1 import (
     PROFILE_MODE as DECISION_CLOSURE_PROFILE_MODE,
     STOP_ARM_ID as DECISION_CLOSURE_STOP_ARM_ID,
     TARGET_RULE_INSTANCE_ID as DECISION_CLOSURE_TARGET_RULE_ID,
+    build_planner_proposal_schema as build_decision_closure_planner_schema,
     validate_planner_proposal as validate_decision_closure_planner_proposal,
 )
 
@@ -313,6 +314,7 @@ def _verify_live_openrouter_semantics(
     live_receipt: dict[str, Any],
     proposal_envelope: dict[str, Any] | None,
     public_packet_source: Path,
+    expected_output_schema: dict[str, Any] | None = None,
 ) -> None:
     """Bind one live request, provider response, receipt, and routed proposal."""
 
@@ -376,11 +378,13 @@ def _verify_live_openrouter_semantics(
     output_schema = _require_object(
         json_schema.get("schema"), f"{role}.response_format.json_schema.schema"
     )
-    expected_schema = (
-        build_profile_proposal_envelope_schema(public_packet_source)
-        if role == "PROFILER"
-        else _planner_live_output_schema(visible_input)
-    )
+    expected_schema = expected_output_schema
+    if expected_schema is None:
+        expected_schema = (
+            build_profile_proposal_envelope_schema(public_packet_source)
+            if role == "PROFILER"
+            else _planner_live_output_schema(visible_input)
+        )
     if output_schema != expected_schema:
         raise CaseViewIntegrityError("LIVE_OUTPUT_SCHEMA_CURRENT_CONTRACT_MISMATCH", role)
     schema_sha = canonical_json_sha256(output_schema)
@@ -1826,6 +1830,7 @@ def _build_decision_closure_arm_view(root: Path) -> CaseView:
         live_receipt=live_receipt,
         proposal_envelope=None,
         public_packet_source=REPO_ROOT / "README.md",
+        expected_output_schema=build_decision_closure_planner_schema(planner_input),
     )
     try:
         expected_admission = validate_decision_closure_planner_proposal(
