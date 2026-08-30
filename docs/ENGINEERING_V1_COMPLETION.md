@@ -18,7 +18,7 @@ H1 items and the F04R02 packet-label mapping remains `DATA_INSUFFICIENT`.
 - Exact fetched base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
 - Delivery branch: `feature/dynamics-atlas-autonomous-engineering-v1`
 - Exact review-repaired implementation head before final completion/status-only edits:
-  `c8ab96ea4883821e6a7c9d1714dd94f28e7c5793`
+  `d61536132ab23b509a1d2258f429e5180713150d`
 - Final delivery head: the Draft PR head recorded by GitHub after this completion
   file is committed and pushed. A Git commit cannot contain its own hash; use
   `git rev-parse HEAD` or the PR metadata for the exact final delivery object.
@@ -37,7 +37,9 @@ The engineering batches are `b89ca2f` (runner/provenance), `9902db5`
 second bounded contract gap; `c8ab96e` binds authorization to admission/execution,
 binds question and claim ceiling to the repository-backed public packet, rejects
 duplicate active-evidence IDs and no-op active reevaluations, and adds an active
-runner-to-CaseView round trip.
+runner-to-CaseView round trip. Commit `d615361` then makes that repository packet
+anchor mandatory for every case-run artifact and adds the full null-source downgrade
+regression.
 
 ## Implemented end-to-end path
 
@@ -222,6 +224,14 @@ the optional PyMBAR dependency; neither test executes a numerical action path. B
 previously generated real HSP90 and ADK run roots reprojected through the repaired
 CaseView with integrity `PASS`.
 
+Authority and reproducibility re-review then showed that removing the public-packet
+source path could downgrade the repository binding to internal self-consistency.
+Commit `d615361` requires that safe repository-relative source for every case-run
+artifact and moves the synthetic fixture to a real repository-backed packet. All 12
+CaseView tests passed, including a mutually forged packet/manifest/hash plus null-source
+regression; the preserved real HSP90 and ADK runs again reprojected with integrity
+`PASS`.
+
 Fresh release validation for the prior repaired implementation commit
 `5ed99b6158b483d234c13ec448d01253fb118f90` completed as follows:
 
@@ -234,7 +244,7 @@ Fresh release validation for the prior repaired implementation commit
   SciPy, PyMBAR, and jsonschema were all absent;
 - the repository CI matrix now runs the full declared optional-dependency suite on
   Python 3.11 and 3.12. That exact-final-head clean-checkout matrix is the full-suite
-  evidence for `c8ab96e` and its completion/status commit; results belong to the Draft
+  evidence for `d615361` and its completion/status commit; results belong to the Draft
   PR check readback because a committed file cannot record its own commit hash;
 - both repaired `run-case` commands completed; each CaseView had integrity `PASS`,
   five content-addressed input snapshots, one descriptive EvidenceResult, zero
