@@ -1,0 +1,631 @@
+{
+  "AGENT_AUTHORED_CONTENT_ASSESSMENT": {
+    "boundary": "Free-text construct and estimand fields remain side-by-side items for human semantic review; no numeric Agent-accuracy score is emitted.",
+    "critical_source_field_side_by_side": [
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "construct_and_condition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "E. coli adenylate-kinase G10V structure 1E4V; Chain A C-alpha coordinates retain residue order 1-214.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "E. coli adenylate kinase G10V static PDB structure; condition comparability to both anchors is UNKNOWN.",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "sample_composition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Static mutant PDB structure; further sample composition details are UNKNOWN.",
+        "reference_unknown_status": "UNKNOWN",
+        "reference_value": "UNKNOWN",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "native_observable",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Static Chain A C-alpha coordinates.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Static PDB coordinates from one non-reference G10V structure.",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "estimand",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Reference-relative geometric proximity only.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "One whole-chain rigidly aligned reference-relative proximity descriptor.",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "spatial_support",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Chain A C-alpha coordinates, residue order 1-214.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Chain A C-alpha coordinates in residue order 1-214.",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "unit_or_aggregation",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "One static coordinate set.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "One static non-reference structure.",
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "construct_and_condition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Frozen Chain A coordinate derivatives for 1AKE, 4AKE, and 1E4V G10V; all declare residue-order coverage 1-214.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Frozen coordinate derivatives preserve residue-order correspondence only; molecular condition comparison is UNKNOWN.",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "sample_composition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Coordinate derivatives; source-level composition details are UNKNOWN.",
+        "reference_unknown_status": "UNKNOWN",
+        "reference_value": "UNKNOWN",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "native_observable",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Frozen Chain A C-alpha coordinate arrays.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Frozen Chain A C-alpha coordinate arrays.",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "estimand",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Rigidly aligned whole-chain reference-relative RMSD, if calculated.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Whole-chain post-alignment RMSD to each named anchor.",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "spatial_support",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Chain A C-alpha residues 1-214.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "All mapped Chain A C-alpha coordinates, residues 1-214.",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "unit_or_aggregation",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "One coordinate array per structure.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "One static array per structure.",
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "construct_and_condition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Adenylate kinase structural endpoints 1AKE (closed) and 4AKE (open); endpoint preparation removes solvent and heteroatoms without structural refinement.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "E. coli adenylate-kinase endpoint context for 1AKE and 4AKE; relation to 1E4V G10V is a static structural comparison only.",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "sample_composition",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Prepared PDB endpoint coordinates after solvent and heteroatom removal; further composition details are UNKNOWN.",
+        "reference_unknown_status": "UNKNOWN",
+        "reference_value": "UNKNOWN",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "native_observable",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Static endpoint coordinate anchors.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Static PDB endpoint coordinates.",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "estimand",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Reference-relative structural comparison context.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Reference coordinates, not a dynamical distribution.",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "spatial_support",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "Endpoint structures 1AKE and 4AKE.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "Chain A C-alpha coordinate anchors in residue order 1-214.",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "unit_or_aggregation",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": "One static coordinate set per endpoint.",
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": "One static endpoint structure per anchor.",
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      }
+    ],
+    "downstream_rule_result_status_and_reason_agreement": [
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "CLAIM_CONTRACT_CONSISTENT"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "CLAIM_CONTRACT_CONSISTENT"
+          ],
+          "status": "PASS"
+        },
+        "semantic_rule_target": "F01R01_CASE_CLAIM_DECLARATION::CASE:ADK_EXPOSED_PORTABILITY_V1"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+          ],
+          "status": "PASS"
+        },
+        "semantic_rule_target": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:ADK_EXPOSED_PORTABILITY_V1"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "EDGE_CONDITION_RELATION_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "EDGE_CONDITION_RELATION_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "semantic_rule_target": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "semantic_rule_target": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "reference": {
+          "reason_codes": [
+            "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+          ],
+          "status": "PASS"
+        },
+        "semantic_rule_target": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "NO_EXPLICIT_CONTRACT_OUTCOME"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      },
+      {
+        "assessment": "PLATFORM_PROJECTED_RULE_COMPARISON_NOT_AGENT_ACCURACY",
+        "observed": {
+          "reason_codes": [
+            "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "reference": {
+          "reason_codes": [
+            "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+          ],
+          "status": "UNRESOLVED"
+        },
+        "semantic_rule_target": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      }
+    ],
+    "edge_inclusion_or_omission": {
+      "extra_in_observed": [],
+      "matched": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ],
+      "observed": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ],
+      "omitted_from_observed": [],
+      "reference": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ]
+    },
+    "forbidden_upgrade_violations": [],
+    "source_inclusion_or_omission": {
+      "extra_in_observed": [],
+      "matched": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ],
+      "observed": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ],
+      "omitted_from_observed": [],
+      "reference": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ]
+    },
+    "time_semantics_kind": [
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_1E4V_G10V_STRUCTURE"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_COORDINATE_DERIVATIVES"
+      },
+      {
+        "assessment": "HUMAN_SEMANTIC_REVIEW_REQUIRED",
+        "field": "time_semantics",
+        "observed_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "observed_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "reference_unknown_status": "DECLARED_OR_FREE_TEXT",
+        "reference_value": {
+          "kind": "STATIC_STRUCTURE"
+        },
+        "source_id": "ADK_ENDPOINT_CONTEXT"
+      }
+    ]
+  },
+  "BOUNDARY_CONSISTENCY": {
+    "boundary": "These are platform-constrained identity and projection checks, not Agent scientific-accuracy metrics.",
+    "edge_endpoint_pairs": {
+      "extra_in_observed": [],
+      "matched": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ],
+      "observed": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ],
+      "omitted_from_observed": [],
+      "reference": [
+        [
+          "ADK_1E4V_G10V_STRUCTURE",
+          "ADK_ENDPOINT_CONTEXT"
+        ]
+      ]
+    },
+    "observed_duplicate_edge_endpoint_pairs": [],
+    "rule_applicability_after_platform_projection": {
+      "extra_in_observed": [],
+      "matched": [
+        "F01R01_CASE_CLAIM_DECLARATION::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      ],
+      "observed": [
+        "F01R01_CASE_CLAIM_DECLARATION::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      ],
+      "omitted_from_observed": [],
+      "reference": [
+        "F01R01_CASE_CLAIM_DECLARATION::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE:ADK_EXPOSED_PORTABILITY_V1",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_1E4V_G10V_STRUCTURE",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_COORDINATE_DERIVATIVES",
+        "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE:ADK_ENDPOINT_CONTEXT",
+        "F06R02_EDGE_COMPARABILITY::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE_ENDPOINTS:ADK_1E4V_G10V_STRUCTURE|ADK_ENDPOINT_CONTEXT"
+      ]
+    },
+    "source_identity": {
+      "extra_in_observed": [],
+      "matched": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ],
+      "observed": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ],
+      "omitted_from_observed": [],
+      "reference": [
+        "ADK_1E4V_G10V_STRUCTURE",
+        "ADK_COORDINATE_DERIVATIVES",
+        "ADK_ENDPOINT_CONTEXT"
+      ]
+    }
+  },
+  "boundary": "Comparison exposes development differences only. It cannot adjudicate source science, paper understanding, or scientific correctness.",
+  "comparison_status": "DEVELOPMENT_REFERENCE_COMPARISON_NOT_HUMAN_ADJUDICATION",
+  "expert_bounded_conclusion_draft": {
+    "status": "PENDING_NAMED_DOMAIN_REVIEW",
+    "text": "A rigidly aligned distance to two static anchors can describe reference-relative proximity only. It does not identify a dynamic state, wild-type equivalence, population, kinetic process, pathway, energy, mechanism, or portability."
+  },
+  "paper_reported_conclusion_draft": {
+    "status": "SOURCE_LOCATED_DRAFT_NOT_ADJUDICATED",
+    "text": "The supplied reference context labels 1AKE closed and 4AKE open. The newly admitted 1E4V G10V structure is a static non-reference sample and is not a paper-derived dynamic path."
+  },
+  "reference_expected_unresolved_development_obligations": [
+    "SOURCE_FACT_MISSING: endpoint and 1E4V condition/construct comparability.",
+    "COMPUTABLE_EVIDENCE_MISSING: whole-chain reference-relative projection for the admitted non-reference static sample.",
+    "HUMAN_SCIENTIFIC_JUDGMENT: scientific relevance of a G10V static geometry.",
+    "RULE_COVERAGE_GAP: representation and identifiability remain candidate-only."
+  ],
+  "reference_status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED"
+}

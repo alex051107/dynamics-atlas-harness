@@ -1,0 +1,159 @@
+{
+  "artifact_count": 30,
+  "artifacts": [
+    {
+      "bytes": 4788,
+      "relative_path": "adk/agent_visible_input.json",
+      "sha256": "014fc594a567c600e60dc4e3d6f3d7f77e5978289d2e719394b04a1d9f679e5c"
+    },
+    {
+      "bytes": 24999,
+      "relative_path": "adk/arm_a_development_reference_rules.json",
+      "sha256": "e5d237854d2e7dd785caa0d3dff5b6f9c2309768f6ee48c7419a7732c6b601c0"
+    },
+    {
+      "bytes": 26020,
+      "relative_path": "adk/arm_b_recorded_profile_rules.json",
+      "sha256": "7d6e7ff89574497cc8a6893b7f4863614a6d90daabd39f99a67875f07dcdbaf3"
+    },
+    {
+      "bytes": 17534,
+      "relative_path": "adk/arm_c_selected_public_actions.json",
+      "sha256": "dfc2a112e73793b020884879cd40fba108f5dc708968e09d2f3ae747c5969372"
+    },
+    {
+      "bytes": 365,
+      "relative_path": "adk/asset_identity_verification.json",
+      "sha256": "e8e9fd16ab91000c5bea175073159d262b6281d19c5f3715a0bfef59af9e0efe"
+    },
+    {
+      "bytes": 25581,
+      "relative_path": "adk/development_reference_comparison.json",
+      "sha256": "9353298d6dbaeef3531f284fa9df2fce6f97d78aefd5ca65a9c244c793cb15cc"
+    },
+    {
+      "bytes": 58734,
+      "relative_path": "adk/human_decision_packet.json",
+      "sha256": "4bb70f4e04ddbcbb1debb026885829499a2943a0b04d85c3a8be59615f91bb34"
+    },
+    {
+      "bytes": 613,
+      "relative_path": "adk/planner_proposal_admission.json",
+      "sha256": "d0518280b2c550bec67817c8e8078f19dd00d0ef1994677a6ed62c96cf9731fd"
+    },
+    {
+      "bytes": 738,
+      "relative_path": "adk/planner_proposal_provenance.json",
+      "sha256": "11c54e942d95f97beb29451c2bc6c6d39e1d7fce330453449a690bd9df2386cd"
+    },
+    {
+      "bytes": 5930,
+      "relative_path": "adk/planner_visible_input.json",
+      "sha256": "79aa6e38069268ac0f3bd14b7c4d7c2bf4a7c5616a8d78b9eaad3127ce0b5a85"
+    },
+    {
+      "bytes": 740,
+      "relative_path": "adk/profiler_proposal_provenance.json",
+      "sha256": "68bda4c8e5117edf84a7004ef2c59e2360824f2e45703b905ccc1c4f76cad596"
+    },
+    {
+      "bytes": 12052,
+      "relative_path": "adk/unresolved_obligation_classification.json",
+      "sha256": "9bc20f531790be813b6a2797a8885b10b08867b5db0f6a63fda4fc59f4a6eadf"
+    },
+    {
+      "bytes": 1428,
+      "relative_path": "capsule_summary.json",
+      "sha256": "e1688ac0d462bf243dc01d0561e440c12a3f79e62176b80275b51f38ed74a42f"
+    },
+    {
+      "bytes": 4153,
+      "relative_path": "hsp90/agent_visible_input.json",
+      "sha256": "aac70b2d36b143942b73fe008401128151476ce29531f5cb792229f829646498"
+    },
+    {
+      "bytes": 20200,
+      "relative_path": "hsp90/arm_a_development_reference_rules.json",
+      "sha256": "d9b7a3ea0e7c78d1de3d5b0858524fd0a79793fff597e055d9eff5cdb3a6c132"
+    },
+    {
+      "bytes": 20465,
+      "relative_path": "hsp90/arm_b_recorded_profile_rules.json",
+      "sha256": "6b77c7cad0e8aaa8967b0caf833a887ef2bfbde469a2c478e9e6c92614dd588a"
+    },
+    {
+      "bytes": 28982,
+      "relative_path": "hsp90/arm_c_selected_public_actions.json",
+      "sha256": "ff30aa1fc4343c8cc373b8f7841587b749984bf85cb9e1074cc2ec97cf7402b2"
+    },
+    {
+      "bytes": 362,
+      "relative_path": "hsp90/asset_identity_verification.json",
+      "sha256": "69273aeb2ea062033c31d2465fb720b8ff80aa2bfcffeee1930371038ef8125e"
+    },
+    {
+      "bytes": 19857,
+      "relative_path": "hsp90/development_reference_comparison.json",
+      "sha256": "37e70b22f439284b77acb76d65b03d7a63d5c1f7a32693115dbe3c923d45d899"
+    },
+    {
+      "bytes": 106891,
+      "relative_path": "hsp90/existing_exact_hsp90_control_regression/routes/hsp90_b1/operator_outputs/directional_runs.tsv",
+      "sha256": "9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666"
+    },
+    {
+      "bytes": 2408,
+      "relative_path": "hsp90/existing_exact_hsp90_control_regression/routes/hsp90_b1/operator_outputs/results_summary.json",
+      "sha256": "f285a33c63a59f1601f0aefa4f98afe62fb247121c575574cf1f42018d93e646"
+    },
+    {
+      "bytes": 12185,
+      "relative_path": "hsp90/existing_exact_hsp90_control_regression/routes/hsp90_b1/operator_outputs/trajectory_time_anatomy.tsv",
+      "sha256": "fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb"
+    },
+    {
+      "bytes": 75840,
+      "relative_path": "hsp90/existing_exact_hsp90_control_regression/routes/hsp90_b1/operator_outputs/trajectory_time_bins_50ns.tsv",
+      "sha256": "1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c"
+    },
+    {
+      "bytes": 32650,
+      "relative_path": "hsp90/existing_exact_hsp90_control_regression.json",
+      "sha256": "1a2cd1e0e1d154f02970d37f346a6e5edc9ab4fbed19d8c593a709dfa43877cf"
+    },
+    {
+      "bytes": 99818,
+      "relative_path": "hsp90/human_decision_packet.json",
+      "sha256": "eb40bfa069b6fd252ccca1c8807c073c8d72241242ee222e554b2f79d2c2b248"
+    },
+    {
+      "bytes": 597,
+      "relative_path": "hsp90/planner_proposal_admission.json",
+      "sha256": "f4648693be0b6bf2c1f928be717dea6fbd6d0213d72d9138415c1dcde4822924"
+    },
+    {
+      "bytes": 740,
+      "relative_path": "hsp90/planner_proposal_provenance.json",
+      "sha256": "9213fc5fe2143a41f842bfe541ab47fdd77a5f75450230ad00f8cb8eaaed55ec"
+    },
+    {
+      "bytes": 6919,
+      "relative_path": "hsp90/planner_visible_input.json",
+      "sha256": "c7ec5f48a5b39345ad20822a25ce77155b4ad327186b02a9011d4626fb40d02f"
+    },
+    {
+      "bytes": 742,
+      "relative_path": "hsp90/profiler_proposal_provenance.json",
+      "sha256": "b3d77e492dedcdf1bcea32fb3552cacb4edf62f06318dff2ecf78bdf97780e8b"
+    },
+    {
+      "bytes": 12474,
+      "relative_path": "hsp90/unresolved_obligation_classification.json",
+      "sha256": "77296ed8ac711eb49139584c2e708f82127e81dedf38cea92b5eba642a0df7b1"
+    }
+  ],
+  "boundary": "Hashes identify this generated development run only; they do not establish scientific validity.",
+  "frozen_input_manifest_sha256": "2161fc8e1be30db27dc90a2ed92d0712f31e0158c0c0b3050b6f12b1ef0126cf",
+  "run_scope": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
+  "schema_version": "exposed-paper-blind-development-run-artifact-manifest/v1"
+}

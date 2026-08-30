@@ -1,0 +1,12 @@
+{
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "packet_id": "ADK_PUBLIC_PACKET_V1",
+  "schema_version": "paper-blind-frozen-asset-verification/v1",
+  "verification_scope": "IDENTITY_AND_PUBLIC_PACKET_BOUNDARY_ONLY",
+  "verified_asset_ids": [
+    "ADK_1AKE_CHAIN_A_CA",
+    "ADK_4AKE_CHAIN_A_CA",
+    "ADK_1E4V_G10V_SOURCE_PDB",
+    "ADK_1E4V_G10V_CHAIN_A_CA"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "decision": "SELECT_ACTIONS",
+  "execution_authorization": "AUTHORIZED_EXACT_SELECTED_CAPSULE_ACTIONS_ONLY",
+  "proposal_status": "ADMISSIBLE_CARD_SELECTION_ONLY",
+  "rationales": {
+    "ADK_STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION_V1": "Select the available descriptive action for the unresolved static reference-relative proximity development item."
+  },
+  "schema_version": "paper-blind-planner-proposal-admission/v2",
+  "scientific_disposition": "NOT_EVALUATED",
+  "selected_card_ids": [
+    "ADK_STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION_V1"
+  ]
+}

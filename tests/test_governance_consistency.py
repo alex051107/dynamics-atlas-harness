@@ -13,7 +13,8 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT = "00faf6f0d2f8916878dd37b57c2018dbfbd45020"
+PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT = "4028cc4be02465e0e19b5c733aa335b23618c4b5"
+PR15_REVIEWED_IMPLEMENTATION_HEAD = "deb8a1379c973f09680425f6e640eea3ea1e337d"
 
 
 def load_json(relative_path: str) -> dict:
@@ -36,18 +37,18 @@ class GovernanceConsistencyTests(unittest.TestCase):
         baseline = status["repository_baseline"]
         self.assertEqual(
             baseline["main_commit"],
-            PR10_DEVELOPMENT_RUNTIME_BASELINE_COMMIT,
+            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
         )
         self.assertEqual(
             baseline["baseline_tag"],
-            "post-pr10-exposed-development-control-plane",
+            "post-pr14-paper-blind-public-packet-boundary",
         )
         self.assertIn(
-            "Verified development/runtime baseline through GitHub PR #10",
+            "Verified literal GitHub main through merged PR #14",
             baseline["main_commit_semantics"],
         )
         self.assertIn(
-            "not a literal current main HEAD assertion",
+            "Draft PR #15 is reviewed separately and is not part of main",
             baseline["main_commit_semantics"],
         )
         self.assertEqual(
@@ -60,6 +61,23 @@ class GovernanceConsistencyTests(unittest.TestCase):
             "MERGED_CONTRACT_FAILURE_BASELINE_SAFE_BUT_CAPABILITY_REJECTED",
         )
         self.assertEqual(live_agent["authorization"], "USER_DECISION_DA-20260826-032")
+        consolidation = work_item(status, "DELIVERY_CONSOLIDATION_20260829")
+        self.assertEqual(consolidation["state"], "PR12_PR13_PR14_MERGED_CLEAN_CI")
+        self.assertEqual(
+            consolidation["merge_commits"]["PR14"],
+            PR14_PAPER_BLIND_PUBLIC_PACKET_BOUNDARY_COMMIT,
+        )
+        capsule = work_item(status, "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1")
+        self.assertEqual(
+            capsule["state"],
+            "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+        )
+        self.assertEqual(
+            capsule["reviewed_implementation_head"],
+            PR15_REVIEWED_IMPLEMENTATION_HEAD,
+        )
+        self.assertEqual(capsule["draft_pr_number"], 15)
+        self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
             "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",

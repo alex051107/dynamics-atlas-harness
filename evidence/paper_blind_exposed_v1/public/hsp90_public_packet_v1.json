@@ -3,16 +3,17 @@
   "packet_id": "HSP90_PUBLIC_PACKET_V1",
   "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
   "case_role": "EXPOSED_DEVELOPMENT",
-  "research_question": "Given the permitted HSP90 NMR context and the supplied ordered MD observable, what source facts and uncertainties must be retained before any future system evaluates the relationship between simulated paths and experimentally characterized ATP-lid states?",
+  "research_question": "Given the available HSP90 NMR evidence and the supplied seeded MD trajectories, what aspects of the conformational relationship between the simulated paths and experimentally characterized ATP-lid states are supported descriptively, what remain unresolved, what stronger claims must be refused, and what additional evidence would discriminate the remaining interpretations?",
   "source_materials": [
     {
       "source_id": "HSP90_NMR_METHODS_RESULTS",
       "source_kind": "PRIMARY_PAPER_METHODS_RESULTS",
       "source_locator": "Henot et al., Nature Communications 2022, DOI 10.1038/s41467-022-35399-8; local text derivative Results lines 113-340 and Methods lines 488-623.",
       "permitted_facts": [
-        "The source studies the HSP90alpha N-terminal domain and an ATP-lid segment using solution NMR measurements.",
+        "The source studies the HSP90alpha N-terminal domain and ATP-lid segment using solution NMR measurements.",
         "The Methods describe wild-type, R46A, and R60A construct-specific NMR measurements, including relaxation-dispersion experiments.",
-        "The public packet does not supply a validated numerical bridge from the NMR readouts to the MD observable."
+        "The public packet supplies no validated numerical forward model from the NMR readouts to a local MD-derived observable.",
+        "The public packet does not establish that NMR and seeded MD sample the same physical conditions or estimand."
       ],
       "excluded_sections": [
         "Abstract",
@@ -24,11 +25,12 @@
     {
       "source_id": "HSP90_MD_DISTANCE_TRACE",
       "source_kind": "FROZEN_DERIVED_TRAJECTORY_OBSERVABLE",
-      "source_locator": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021 and HSP90_TRAJECTORY_IDS.",
+      "source_locator": "frozen_input_manifest_v1.json assets HSP90_CA46_CA60_DISTANCE_40X1021, HSP90_TRAJECTORY_IDS, and HSP90_TRAJECTORY_GROUP_MANIFEST.",
       "permitted_facts": [
         "The input is an ordered 40-trajectory by 1021-frame C-alpha distance observable for residue IDs 46 and 60.",
-        "A companion frozen table retains one declared trajectory identifier for each observable row.",
-        "This public packet does not aggregate trajectories, assign group semantics, estimate sampling, or provide a state assignment, population estimate, kinetic model, or NMR forward model."
+        "Each row has one frozen trajectory identifier and one declared seed-lineage label; 20 rows retain R46A_ES and 20 retain R60A_GS labels.",
+        "Frames are correlated within a trajectory; the trajectory is the primary supplied statistical unit.",
+        "The packet does not assign states, estimate populations or kinetics, evaluate global equilibration, or supply a validated NMR forward model."
       ],
       "excluded_sections": [
         "Discussion",
@@ -42,29 +44,65 @@
     {
       "asset_id": "HSP90_CA46_CA60_DISTANCE_40X1021",
       "asset_kind": "ORDERED_REPLICA_BY_TIME_OBSERVABLE",
-      "public_description": "A frozen derived C-alpha distance observable with source identity and extraction boundary recorded in the input manifest."
+      "public_description": "Frozen derived C-alpha distance observable; no state assignment or terminal conclusion."
     },
     {
       "asset_id": "HSP90_TRAJECTORY_IDS",
       "asset_kind": "ROW_ALIGNED_TRAJECTORY_IDENTITY_TABLE",
-      "public_description": "One ordered trajectory identifier for each observable row; the packet does not aggregate or infer construct/seed groups."
+      "public_description": "One ordered trajectory identifier per observable row."
+    },
+    {
+      "asset_id": "HSP90_TRAJECTORY_GROUP_MANIFEST",
+      "asset_kind": "ROW_ALIGNED_SEED_LINEAGE_GROUP_TABLE",
+      "public_description": "Declared R46A_ES and R60A_GS seed-lineage labels retained separately for descriptive group summaries."
     }
   ],
   "agent_proposal_schema": {
     "allowed_output_fields": [
       "case_id",
-      "proposed_source_ids",
+      "proposed_case_facts",
       "unknowns",
       "rationale"
-    ]
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
   },
   "platform_authority_envelope": {
     "execution_authorization": "NO_EXECUTION",
     "scientific_disposition": "NOT_EVALUATED",
     "claim_boundary": {
       "allowed_descriptions": [
-        "publicly supplied source and data identities",
-        "explicit unresolved information proposed from the public packet"
+        "public source and data identities",
+        "trajectory-level descriptive observable summaries",
+        "explicit unresolved information"
       ],
       "forbidden_claims": [
         "global equilibration",
@@ -74,10 +112,44 @@
         "mechanism",
         "numerical NMR-to-MD agreement"
       ]
+    },
+    "rules_projection_authority": {
+      "case": {
+        "scientific_claim": "Describe only source-local HSP90 NMR and seeded-MD information while retaining the cross-source conformational relation as unresolved.",
+        "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "declared_request_scope": [
+          "SOURCE_LOCAL_CONSISTENCY",
+          "CROSS_SOURCE_COMPARABILITY"
+        ],
+        "forbidden_upgrades": [
+          "EQUILIBRIUM_POPULATION",
+          "KINETICS",
+          "FREE_ENERGY",
+          "MECHANISM",
+          "NUMERICAL_NMR_TO_MD_AGREEMENT"
+        ]
+      },
+      "source_evidence_roles": {
+        "HSP90_NMR_METHODS_RESULTS": "CONSTRUCTION",
+        "HSP90_MD_DISTANCE_TRACE": "DIAGNOSTIC"
+      },
+      "comparisons": [
+        {
+          "comparison_id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+          "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+          "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "QUALITATIVE_TRIANGULATION",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "NOT_INDEPENDENT",
+          "shared_error_status": "UNKNOWN"
+        }
+      ]
     }
   },
   "hidden_reference_boundary": {
-    "status": "EXTERNAL_HUMAN_CURATED_REFERENCE_REQUIRED",
-    "repository_visibility": "NOT_PRESENT_IN_PUBLIC_PACKET_OR_RUNTIME"
+    "status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+    "repository_visibility": "SEALED_NON_AGENT_INPUT"
   }
 }

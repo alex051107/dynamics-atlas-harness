@@ -1,0 +1,337 @@
+{
+  "active_rule_results": [
+    {
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_ENDPOINT_CONTEXT",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_ENDPOINT_CONTEXT",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_1E4V_G10V_STRUCTURE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::ADK_COORDINATE_DERIVATIVES",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_COORDINATE_DERIVATIVES",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_ENDPOINT_CONTEXT",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_ENDPOINT_CONTEXT",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_1E4V_G10V_STRUCTURE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::ADK_COORDINATE_DERIVATIVES",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_COORDINATE_DERIVATIVES",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "CLAIM_CONTRACT_CONSISTENT"
+      ],
+      "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::ADK_EXPOSED_PORTABILITY_V1",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_EXPOSED_PORTABILITY_V1",
+        "kind": "CASE"
+      }
+    },
+    {
+      "reason_codes": [
+        "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+      ],
+      "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::ADK_EXPOSED_PORTABILITY_V1",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "status": "PASS",
+      "target": {
+        "id": "ADK_EXPOSED_PORTABILITY_V1",
+        "kind": "CASE"
+      }
+    },
+    {
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_ENDPOINT_CONTEXT",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_ENDPOINT_CONTEXT",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_1E4V_G10V_STRUCTURE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_COORDINATE_DERIVATIVES",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_COORDINATE_DERIVATIVES",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "reason_codes": [
+        "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "status": "UNRESOLVED",
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    }
+  ],
+  "boundary": "Candidate-only F04/F05/F07 concerns remain declared non-Rule lifecycle items; no candidate RuleResult is emitted.",
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "development_obligations": [
+    {
+      "claim_effect": "Candidate-only representation and identifiability concerns remain non-Rule lifecycle items until a reviewed evaluation contract exists.",
+      "development_obligation_ref": "ADK_DEV_OBL_CANDIDATE_F05_F07_LIFECYCLE",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "CANDIDATE_ONLY_FAMILY_NOT_ACTIVE"
+      ],
+      "source": {
+        "development_obligation_ref": "ADK_DEV_OBL_CANDIDATE_F05_F07_LIFECYCLE",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "A trajectory, ensemble, or other dynamic sample is required before dynamical coverage can be assessed.",
+      "development_obligation_ref": "ADK_DEV_OBL_DYNAMIC_COVERAGE",
+      "gap_type": "NEW_DATA_REQUIRED",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "NONREFERENCE_SAMPLE_IS_STATIC"
+      ],
+      "source": {
+        "development_obligation_ref": "ADK_DEV_OBL_DYNAMIC_COVERAGE",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "Named source-science review remains required for biological interpretation.",
+      "development_obligation_ref": "ADK_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+      "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "PENDING_DOMAIN_REVIEW"
+      ],
+      "source": {
+        "development_obligation_ref": "ADK_DEV_OBL_SOURCE_SCIENCE_REVIEW",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "A static reference-relative geometry result may be recorded; no active RuleResult or scientific disposition changes.",
+      "development_obligation_ref": "ADK_DEV_OBL_STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
+      "gap_type": "COMPUTABLE_EVIDENCE_MISSING",
+      "kind": "DEVELOPMENT_OBLIGATION",
+      "reason_codes": [
+        "DESCRIPTIVE_CAPABILITY_ONLY"
+      ],
+      "source": {
+        "development_obligation_ref": "ADK_DEV_OBL_STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
+        "kind": "DECLARED_NONRULE_DEVELOPMENT_ITEM"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+      },
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_1E4V_G10V_STRUCTURE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_1E4V_G10V_STRUCTURE"
+      },
+      "target": {
+        "id": "ADK_1E4V_G10V_STRUCTURE",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_COORDINATE_DERIVATIVES",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_COORDINATE_DERIVATIVES"
+      },
+      "target": {
+        "id": "ADK_COORDINATE_DERIVATIVES",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "NO_EXPLICIT_CONTRACT_OUTCOME"
+      ],
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_ENDPOINT_CONTEXT",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::ADK_ENDPOINT_CONTEXT"
+      },
+      "target": {
+        "id": "ADK_ENDPOINT_CONTEXT",
+        "kind": "SOURCE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "METHOD_OR_FORWARD_BRIDGE_MISSING",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+      },
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    },
+    {
+      "claim_effect": "Active Draft Rule remains unresolved; no scientific conclusion is emitted.",
+      "gap_type": "HUMAN_SCIENTIFIC_JUDGMENT",
+      "kind": "ACTIVE_RULE_INSTANCE",
+      "reason_codes": [
+        "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      ],
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "source": {
+        "kind": "FRESH_ACTIVE_RULE_RESULT",
+        "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::ADK_NONREFERENCE_TO_ANCHORS_EDGE"
+      },
+      "target": {
+        "id": "ADK_NONREFERENCE_TO_ANCHORS_EDGE",
+        "kind": "EDGE"
+      }
+    }
+  ],
+  "schema_version": "exposed-paper-blind-obligation-classification/v2"
+}

@@ -1,0 +1,77 @@
+{
+  "case_id": "ADK_EXPOSED_PORTABILITY_V1",
+  "proposed_case_facts": {
+    "case": {
+      "scientific_claim": "Describe the reference-relative structural proximity of one non-reference static ADK structure to open and closed structural anchors.",
+            "requested_claim_level": "SOURCE_LOCAL_CONSISTENCY",
+            "intended_use": "CROSS_SOURCE_REVIEW",
+            "declared_request_scope": [
+                "SOURCE_LOCAL_CONSISTENCY"
+            ],
+      "forbidden_upgrades": [
+        "Treat a static non-reference structure as a trajectory, ensemble, or population estimate.",
+        "Infer a dynamical, kinetic, energetic, mechanistic, or wild-type-equivalence conclusion from the static comparison."
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "ADK_ENDPOINT_CONTEXT",
+                "evidence_role": "CONSTRUCTION",
+        "construct_and_condition": "Adenylate kinase structural endpoints 1AKE (closed) and 4AKE (open); endpoint preparation removes solvent and heteroatoms without structural refinement.",
+        "sample_composition": "Prepared PDB endpoint coordinates after solvent and heteroatom removal; further composition details are UNKNOWN.",
+        "native_observable": "Static endpoint coordinate anchors.",
+        "estimand": "Reference-relative structural comparison context.",
+                "time_semantics": {
+                    "kind": "STATIC_STRUCTURE"
+                },
+        "spatial_support": "Endpoint structures 1AKE and 4AKE.",
+        "unit_or_aggregation": "One static coordinate set per endpoint."
+      },
+      {
+        "source_id": "ADK_1E4V_G10V_STRUCTURE",
+                "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "E. coli adenylate-kinase G10V structure 1E4V; Chain A C-alpha coordinates retain residue order 1-214.",
+        "sample_composition": "Static mutant PDB structure; further sample composition details are UNKNOWN.",
+        "native_observable": "Static Chain A C-alpha coordinates.",
+        "estimand": "Reference-relative geometric proximity only.",
+                "time_semantics": {
+                    "kind": "STATIC_STRUCTURE"
+                },
+        "spatial_support": "Chain A C-alpha coordinates, residue order 1-214.",
+        "unit_or_aggregation": "One static coordinate set."
+      },
+      {
+        "source_id": "ADK_COORDINATE_DERIVATIVES",
+                "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "Frozen Chain A coordinate derivatives for 1AKE, 4AKE, and 1E4V G10V; all declare residue-order coverage 1-214.",
+        "sample_composition": "Coordinate derivatives; source-level composition details are UNKNOWN.",
+        "native_observable": "Frozen Chain A C-alpha coordinate arrays.",
+        "estimand": "Rigidly aligned whole-chain reference-relative RMSD, if calculated.",
+                "time_semantics": {
+                    "kind": "STATIC_STRUCTURE"
+                },
+        "spatial_support": "Chain A C-alpha residues 1-214.",
+        "unit_or_aggregation": "One coordinate array per structure."
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "ADK_G10V_TO_CLOSED_REFERENCE",
+        "left_source_id": "ADK_1E4V_G10V_STRUCTURE",
+        "right_source_id": "ADK_ENDPOINT_CONTEXT",
+        "relation_type": "PROPOSED_REFERENCE_RELATIVE_STATIC_COMPARISON",
+        "condition_relation": "UNKNOWN",
+        "bridge_status": "Rigidly aligned whole-chain coordinate comparison is described as available; its biological interpretation is UNKNOWN.",
+        "validation_independence": "UNKNOWN",
+        "shared_error_status": "UNKNOWN"
+      }
+    ]
+  },
+  "unknowns": [
+    "The public packet supplies no ADK trajectory, ensemble, population estimate, or kinetic information.",
+    "The public packet does not establish wild-type equivalence for the G10V static structure.",
+    "The physical condition relation between the endpoint structures and 1E4V G10V structure is UNKNOWN.",
+    "The biological interpretation of whole-chain reference-relative proximity is UNKNOWN."
+  ],
+  "rationale": "The public materials provide two static endpoint anchors and one explicitly static G10V non-reference structure. They support a geometric reference-relative comparison while preserving all dynamical and condition-comparability inferences as UNKNOWN."
+}

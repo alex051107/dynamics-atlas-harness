@@ -1,14 +1,15 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260828-v6",
-  "as_of": "2026-08-28T17:14:22Z",
-  "overall_status": "EXPOSED_DEVELOPMENT_BASELINE_STAGE2_AND_AGENT_DIAGNOSTICS_MERGED_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260829-v7",
+  "as_of": "2026-08-29T22:58:01Z",
+  "status_snapshot_as_of": "2026-08-29T22:58:01Z",
+  "overall_status": "EXPOSED_PAPER_BLIND_DEVELOPMENT_CAPSULE_DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_NAMED_SOURCE_SCIENCE_REVIEW_PENDING",
   "repository_baseline": {
-    "main_commit": "00faf6f0d2f8916878dd37b57c2018dbfbd45020",
-    "baseline_tag": "post-pr10-exposed-development-control-plane",
-    "main_commit_semantics": "Verified development/runtime baseline through GitHub PR #10; not a literal current main HEAD assertion.",
-    "accurate_name": "Exposed-development control-plane baseline with bounded Stage-2 packets and non-callable Profiler screening setup"
+    "main_commit": "4028cc4be02465e0e19b5c733aa335b23618c4b5",
+    "baseline_tag": "post-pr14-paper-blind-public-packet-boundary",
+    "main_commit_semantics": "Verified literal GitHub main through merged PR #14. Draft PR #15 is reviewed separately and is not part of main.",
+    "accurate_name": "Exposed-development control-plane baseline with bounded Stage-2 packets, non-callable Profiler screening setup, exact-execution smoke, and paper-blind public-packet boundary"
   },
   "work_items": [
     {
@@ -104,6 +105,50 @@
       "sequence_classification": "NON_BLOCKING_MODEL_ACCESS_SETUP_NOT_PROVIDER_FRAMEWORK_OR_AGENT_PHASE_COMPLETION"
     },
     {
+      "role": "DELIVERY_CONSOLIDATION_20260829",
+      "state": "PR12_PR13_PR14_MERGED_CLEAN_CI",
+      "scope": [
+        "PR12_CLEAN_CHECKOUT_REFERENCE_DEMO",
+        "PR13_AUTHORIZATION_TO_EXACT_EXECUTION_SMOKE",
+        "PR14_PUBLIC_PACKET_AND_FROZEN_ASSET_BOUNDARY"
+      ],
+      "merge_commits": {
+        "PR12": "a12e23f2e7fdfe96570d1ec0af9182c3a4d8539b",
+        "PR13": "e250a888692872870323652fa2d5efd948aa3279",
+        "PR14": "4028cc4be02465e0e19b5c733aa335b23618c4b5"
+      },
+      "authority_note": "These GitHub delivery PRs close reviewed engineering boundaries only; they do not release source-science review, a scientific claim upgrade, ADK portability, or DHFR work."
+    },
+    {
+      "role": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
+      "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/15",
+      "reviewed_implementation_head": "deb8a1379c973f09680425f6e640eea3ea1e337d",
+      "draft_pr_number": 15,
+      "state": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+      "scope": [
+        "HSP90_AND_ADK_EXPOSED_CASES_ONLY",
+        "RECORDED_PROPOSAL_REPLAY_ONLY",
+        "SEALED_DEVELOPMENT_REFERENCE_DRAFT_COMPARISON",
+        "FRESH_RULE_DERIVED_PLANNER_INPUT",
+        "SELECTED_ACTION_ONLY_EXECUTION",
+        "EXISTING_EXACT_HSP90_CONTROL_SIDECAR",
+        "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+        "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION",
+        "ABSTAINING_HUMAN_PACKETS"
+      ],
+      "validation": "Local full-suite validation passed after the bounded causal repair. The final PR head and GitHub Actions readback belong in the PR body after push, not in this repository snapshot.",
+      "delivery_review": "The bounded causal repair awaits final GitHub CI and advisory methodology review. Neither can substitute for named source-science review.",
+      "forbidden_scope": [
+        "DHFR_ACCESS_OR_RUN",
+        "SOURCE_SCIENCE_APPROVAL",
+        "SCIENTIFIC_SUPPORT_PACKET",
+        "RULE_PROMOTION",
+        "GENERAL_OR_PRODUCTION_OPERATOR",
+        "EXTERNAL_MODEL_OR_API_CALL",
+        "GENERIC_WORKFLOW_INFRASTRUCTURE"
+      ]
+    },
+    {
       "role": "HISTORICAL_FROZEN_PLAN",
       "state": "PRESERVED_AS_HISTORICAL_REFERENCE",
       "authority_note": "Frozen Plan PR numbers are semantic milestones, not GitHub delivery numbers. Live Status records current authorization; only recorded human decisions release a scientific phase."
@@ -169,6 +214,27 @@
       ]
     },
     {
+      "stage": "EXPOSED_PAPER_BLIND_SCIENTIFIC_DECISION_CAPSULE_V1",
+      "status": "DRAFT_FINAL_BOUNDED_CAUSAL_REPAIR_LOCAL_VALIDATION_PASS_DEVELOPMENT_ONLY",
+      "known_present": [
+        "TWO_EXPOSED_RECORDED_PROPOSAL_CASES",
+        "SEALED_DEVELOPMENT_REFERENCE_DRAFTS",
+        "FRESH_RULE_DERIVED_PLANNER_INPUT",
+        "SELECTED_ACTION_ONLY_EXECUTION",
+        "TWO_DESCRIPTIVE_ADAPTERS_AND_SEPARATE_EXACT_CONTROL",
+        "BOUNDED_NOT_EVALUATED_HUMAN_PACKETS",
+        "DEVELOPMENT_REFERENCE_COMPARISON"
+      ],
+      "known_unresolved": [
+        "NAMED_SOURCE_SCIENCE_REVIEW",
+        "SCIENTIFIC_VALIDITY",
+        "GENERAL_RULE_COVERAGE",
+        "ADK_PORTABILITY",
+        "HELD_OUT_RESULT",
+        "AGENT_VALUE"
+      ]
+    },
+    {
       "stage": "NAMED_SOURCE_SCIENCE_REVIEW",
       "status": "PENDING_DOMAIN_REVIEW",
       "known_present": ["F01_F02_F03_F04_F06_NARROW_REVIEW_PACKET"],
@@ -194,5 +260,5 @@
     "authorization": "LIVE_STATUS_RECORD_OF_RECORDED_HUMAN_DIRECTION_DA-STATUS-20260828-v0.98",
     "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no ChatGPT Pro advisory or automated result can substitute for this record."
   },
-  "claim_ceiling": "Development-only exposed-case evidence. No source-science approval, final scientific support, general Operator route, Agent value, transfer, production, ADK portability, held-out result, or external model execution claim."
+  "claim_ceiling": "Development-only exposed-case evidence. Draft PR #15 records proposal replay, fresh Draft-Rule-derived Planner input, legal card selection or abstention, selected descriptive actions, a separate exact HSP90 control regression, abstaining human packets, and comparison to AI-authored development reference drafts. It establishes no independent answer blindness, paper understanding, source-science approval, final scientific support, biological correctness, broad HSP90 Rule-to-evidence closure, ADK dynamics portability, general Rule coverage, general Operator route, Agent value, transfer, production, held-out result, or external model execution claim."
 }

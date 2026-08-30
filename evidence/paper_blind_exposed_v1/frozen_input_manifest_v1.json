@@ -5,13 +5,25 @@
       "relative_path": "adk/1AKE_chain_A_ca.npy",
       "sha256": "2245f0f36e08ef569e0d142e8ee015bd96460ece3d07e508b357669c454bb861",
       "source_record": "Dynamics_Atlas_System_Audit_20260710_115646_CST/pilot_adk/raw/1AKE_current.pdb sha256=651e952f55f1317f50f4e82b7f0e99053397032cd8da5b2896f79d0af9f619a9",
-      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; no normal modes, trajectories, or prior result files."
+      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; static reference endpoint, not a trajectory or ensemble."
     },
     "ADK_4AKE_CHAIN_A_CA": {
       "relative_path": "adk/4AKE_chain_A_ca.npy",
       "sha256": "f1331cd000d362f24e91eb33e652bece6c04f7842a8292b6b04375fa5a834fc8",
       "source_record": "Dynamics_Atlas_System_Audit_20260710_115646_CST/pilot_adk/raw/4AKE_current.pdb sha256=ff798ee8791878eb58bac1c6bed32042f51b455512ac93b50bda8fa0ff0e7f78",
-      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; no normal modes, trajectories, or prior result files."
+      "extraction_boundary": "Chain A C-alpha coordinates only; one coordinate per residue 1-214; static reference endpoint, not a trajectory or ensemble."
+    },
+    "ADK_1E4V_G10V_SOURCE_PDB": {
+      "relative_path": "adk/1E4V_G10V_source.pdb",
+      "sha256": "2f02b89febc555b472c9ce4c24065b04cf8e7ba090557390c79b1d589f22f981",
+      "source_record": "RCSB PDB entry 1E4V, https://www.rcsb.org/structure/1E4V, downloaded from the official RCSB archive; archive data are CC0 under https://www.rcsb.org/pages/usage-policy.",
+      "extraction_boundary": "Original source PDB retained unchanged for the one admitted non-reference static structure; no trajectory, ensemble, or inferred intermediate is supplied."
+    },
+    "ADK_1E4V_G10V_CHAIN_A_CA": {
+      "relative_path": "adk/1E4V_G10V_chain_A_ca.npy",
+      "sha256": "ce4557d86df74ffe0bd041fe48f3cc00e34925a95b07c0805616e4d4dc01b89e",
+      "source_record": "Derived once from frozen ADK_1E4V_G10V_SOURCE_PDB: Chain A C-alpha coordinate records in residue order 1-214; parent source sha256=2f02b89febc555b472c9ce4c24065b04cf8e7ba090557390c79b1d589f22f981.",
+      "extraction_boundary": "One Chain A C-alpha coordinate per residue 1-214 from the G10V static PDB entry; non-reference sample only. This derivative has no dynamical, population, or wild-type equivalence interpretation."
     },
     "HSP90_CA46_CA60_DISTANCE_40X1021": {
       "relative_path": "hsp90/ca46_ca60_distance_40x1021.npy",
@@ -23,7 +35,13 @@
       "relative_path": "hsp90/trajectory_ids.txt",
       "sha256": "77caeb2a3659ff35cd7315b6bf43796ea1d8bea5859396b97994de05b208f49a",
       "source_record": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/work/hsp90_ca_coordinates.npz sha256=f6aaf6d8d3e3aa77571252c4281cdbd2acf86350faee6b3e94fc68cf6587803c",
-      "extraction_boundary": "Ordered identifiers for the 40 declared trajectory rows only; no observable values, state assignment, grouping, or conclusion."
+      "extraction_boundary": "Ordered identifiers for the 40 declared trajectory rows only; no observable values, state assignment, grouping inference, or conclusion."
+    },
+    "HSP90_TRAJECTORY_GROUP_MANIFEST": {
+      "relative_path": "hsp90/trajectory_group_manifest_v1.json",
+      "sha256": "56bb372575ea2bc88c56806852ae479281f75ed2ca260270986206be6307100a",
+      "source_record": "Derived once from frozen HSP90_TRAJECTORY_IDS; preserves the row-aligned R46A_ES and R60A_GS seed-lineage labels without assigning biological state semantics.",
+      "extraction_boundary": "One group label per frozen trajectory row; enables separate descriptive within-group and between-group summaries only."
     }
   }
 }

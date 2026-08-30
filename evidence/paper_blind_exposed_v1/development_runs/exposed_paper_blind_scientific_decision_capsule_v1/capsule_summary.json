@@ -1,0 +1,31 @@
+{
+  "accurate_description": "A reproducible two-case development integration capsule with recorded fact proposals, active Draft Rule evaluation, two descriptive scientific adapters, and one separate exact HSP90 control.",
+  "answer_blindness_status": "ANSWER_BLINDNESS_NOT_INDEPENDENTLY_VERIFIED",
+  "boundary": "No generic scheduler, action registry, Operator promotion, Rule activation, paper-understanding claim, or portability claim is present.",
+  "capability_categories": [
+    "EXISTING_EXACT_HSP90_CONTROL_REGRESSION",
+    "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+    "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION"
+  ],
+  "case_packets": {
+    "ADK_EXPOSED_PORTABILITY_V1": "ABSTAIN_OR_HUMAN_REVIEW",
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1": "ABSTAIN_OR_HUMAN_REVIEW"
+  },
+  "cases": [
+    "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+    "ADK_EXPOSED_PORTABILITY_V1"
+  ],
+  "development_status": "EXPOSED_DEVELOPMENT_ONLY",
+  "dhfr_accessed": false,
+  "external_model_transport": false,
+  "network_accessed": false,
+  "new_adapters": [
+    "GROUPED_OBSERVABLE_DEPENDENCE_DESCRIPTION",
+    "STATIC_REFERENCE_RELATIVE_PROXIMITY_DESCRIPTION"
+  ],
+  "recorded_proposal_status": "RECORDED_PROPOSAL_REPLAY_ONLY",
+  "schema_version": "exposed-paper-blind-scientific-decision-capsule/v2",
+  "scientific_disposition": "NOT_EVALUATED",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "unsupported_support_packets": 0
+}

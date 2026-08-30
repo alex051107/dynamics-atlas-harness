@@ -1,0 +1,125 @@
+{
+  "reference_id": "HSP90_SEALED_DEVELOPMENT_REFERENCE_DRAFT_V1",
+  "reference_status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+  "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+  "visibility_contract": {
+    "agent_visible_input": false,
+    "profiler_prompt": false,
+    "planner_input": false,
+    "runtime_authority": false,
+    "comparison_use": "DEVELOPMENT_ONLY_AFTER_ANSWER_BLIND_RUN"
+  },
+  "PaperReportedConclusionDraft": {
+    "status": "SOURCE_LOCATED_DRAFT_NOT_ADJUDICATED",
+    "text": "The paper provides NMR-based context for ATP-lid conformational heterogeneity in HSP90alpha NTD. This development reference does not treat that context as a numerical MD target or a validated NMR-to-MD bridge."
+  },
+  "ExpertBoundedConclusionDraft": {
+    "status": "PENDING_NAMED_DOMAIN_REVIEW",
+    "text": "A local seeded-MD diagnostic can be described at trajectory level only. It cannot establish NMR agreement, population, kinetics, free energy, mechanism, mutation effect, or an independent validation relationship."
+  },
+  "reference_case_facts": {
+    "case": {
+      "scientific_claim": "Describe only the source-local and reference-relative relationship of supplied HSP90 seeded-MD paths to NMR-characterized ATP-lid context, retaining unresolved cross-source interpretation.",
+      "requested_claim_level": "CROSS_SOURCE_COMPARABILITY",
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "declared_request_scope": [
+        "SOURCE_LOCAL_CONSISTENCY",
+        "CROSS_SOURCE_COMPARABILITY"
+      ],
+      "forbidden_upgrades": [
+        "EQUILIBRIUM_POPULATION",
+        "KINETICS",
+        "FREE_ENERGY",
+        "MECHANISM",
+        "MUTATION_EFFECT",
+        "NUMERICAL_NMR_TO_MD_AGREEMENT"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "HSP90_NMR_METHODS_RESULTS",
+        "evidence_role": "CONSTRUCTION",
+        "construct_and_condition": "HSP90alpha N-terminal-domain NMR construct context; exact relation to the local seeded-MD analysis is UNKNOWN.",
+        "sample_composition": "UNKNOWN",
+        "native_observable": "Solution-NMR structural and relaxation-dispersion readouts.",
+        "estimand": "NMR-characterized conformational and exchange context; numerical bridge to local MD is UNKNOWN.",
+        "time_semantics": {"kind": "EXPERIMENTAL_OBSERVABLE"},
+        "spatial_support": "ATP-lid and N-terminal-domain NMR structural context.",
+        "unit_or_aggregation": "NMR measurement/readout; not an MD trajectory sample."
+      },
+      {
+        "source_id": "HSP90_MD_DISTANCE_TRACE",
+        "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "Seeded MD path cohorts with retained R46A_ES and R60A_GS seed-lineage labels; biological condition compatibility with NMR is UNKNOWN.",
+        "sample_composition": "UNKNOWN",
+        "native_observable": "Ordered per-frame C-alpha distance between residue IDs 46 and 60.",
+        "estimand": "Within-trajectory observable behavior across the supplied analysis window.",
+        "time_semantics": {"kind": "ORDERED_TRAJECTORY"},
+        "spatial_support": "C-alpha pairwise distance for residue IDs 46 and 60.",
+        "unit_or_aggregation": "Trajectory is the statistical unit; frames are correlated within trajectory."
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "HSP90_NMR_TO_MD_CONTEXT_EDGE",
+        "left_source_id": "HSP90_NMR_METHODS_RESULTS",
+        "right_source_id": "HSP90_MD_DISTANCE_TRACE",
+        "relation_type": "QUALITATIVE_TRIANGULATION",
+        "condition_relation": "UNKNOWN",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "NOT_INDEPENDENT",
+        "shared_error_status": "UNKNOWN"
+      }
+    ]
+  },
+  "expected_family_scope": {
+    "active_draft_families": ["F01", "F02", "F03", "F06"],
+    "candidate_only_families": ["F04", "F05", "F07"],
+    "existing_exact_rule_route": "F04R02 case-bound HSP90 directional-time-anatomy control only"
+  },
+  "expected_unresolved_development_obligations": [
+    "SOURCE_FACT_MISSING: sample-system composition and NMR-to-MD condition relation.",
+    "COMPUTABLE_EVIDENCE_MISSING: existing F04R02 exact directional-time-anatomy control before its existing route runs.",
+    "HUMAN_SCIENTIFIC_JUDGMENT: whether any source relation warrants a scientific interpretation.",
+    "RULE_COVERAGE_GAP: reliability, representation bridge, and identifiability remain candidate-only."
+  ],
+  "acceptable_evidence_actions": [
+    "Reuse the existing exact HSP90 F04R02 directional-time-anatomy route.",
+    "Run a group-preserving descriptive sampling diagnostic on the supplied observable.",
+    "Keep a missing NMR-to-MD forward bridge unresolved."
+  ],
+  "allowed_claims": [
+    "Trajectory-level descriptive observable and contract output.",
+    "Explicit unresolved source relation and human-review need."
+  ],
+  "forbidden_claims": [
+    "Scientific SUPPORT",
+    "equilibrium population",
+    "transition rate",
+    "free energy",
+    "mechanism",
+    "mutation effect",
+    "independent validation",
+    "generalization"
+  ],
+  "acceptable_next_actions": [
+    {
+      "action": "Named source-science review",
+      "type": "HUMAN_REVIEW",
+      "resolves": "NMR/MD condition and semantic bridge uncertainty",
+      "stop_condition": "Keep the relation unresolved if no bounded bridge is approved."
+    },
+    {
+      "action": "Independent trajectory/observable analysis under an approved method profile",
+      "type": "COMPUTATION_OR_NEW_SIMULATION",
+      "resolves": "Whether the supplied diagnostic is robust beyond its exact case-bound control",
+      "stop_condition": "Do not promote a descriptive result into a population or kinetic statement."
+    },
+    {
+      "action": "Acquire an experimental observable with a specified forward bridge",
+      "type": "NEW_EXPERIMENT",
+      "resolves": "NMR-to-MD comparability",
+      "stop_condition": "Abstain if the observable does not discriminate the claimed ATP-lid interpretations."
+    }
+  ]
+}
