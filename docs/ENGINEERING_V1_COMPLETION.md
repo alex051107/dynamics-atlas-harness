@@ -194,10 +194,29 @@ Focused implementation checks completed before the final campaign:
   registry assumption for case-bound F04R02; after repair, the two affected tests
   passed.
 
-Final full discovery, current exposed runs, workbench regeneration, artifact scan,
-core clean-archive smoke, optional-dependency clean-archive full tests, and
-`git diff --check` are release gates. Their exact observed results are populated in
-this section before delivery; a Draft PR is not opened on a failed gate.
+Final release validation on Python 3.11 completed as follows:
+
+- initial complete worktree discovery ran 166 tests; 164 passed and two governance
+  assertions failed because they still required the superseded Delivery A wording;
+- the governance assertions were updated to validate the current semantic fields,
+  and the affected file then passed 3/3 tests;
+- clean Git archive full discovery with `numpy==2.4.3`, `scipy==1.17.1`,
+  `pymbar==4.0.3`, and `jsonschema==4.26.0` ran 166 tests: `OK`, with two expected
+  skips that require the parent Dynamics Atlas workspace;
+- the clean archive installed as a core package with `--no-deps`; CLI parser/import
+  smoke passed while NumPy, SciPy, and PyMBAR were all absent;
+- both current `run-case` commands completed; each CaseView had integrity `PASS`,
+  one descriptive EvidenceResult, zero active-Rule EvidenceResults, and terminal
+  state `NOT_CALCULATED_BY_CASE_RUNNER`;
+- all five source-review workspace files and the static HTML regenerated
+  byte-for-byte from repository artifacts;
+- the generated-artifact scan found no parent-workspace absolute path, `file://`,
+  script, form, or `fetch(` mutation surface; the nine official reviewer identity and
+  disposition fields remained blank;
+- `git diff --check` passed on the final local candidate.
+
+PyMBAR emitted its standard statistical-inefficiency caution and reported that the
+optional JAX acceleration package is absent. Neither message is a test failure.
 
 ## Known limitations and human-only remainder
 
@@ -209,6 +228,11 @@ this section before delivery; a Draft PR is not opened on a failed gate.
 - Current selected actions are descriptive and do not exercise an active broad
   same-Rule EvidenceResult in either public case.
 - The runner does not calculate a terminal ConclusionPacket.
+- Optional scientific routes require a repository checkout because their frozen
+  `evidence/`, `registries/`, and configuration artifacts are repository-owned rather
+  than wheel package data. Core installed CLI behavior is independently smoke-tested;
+  full optional reproduction passed from the clean extracted Git archive with
+  `PYTHONPATH=src`.
 - Provider/model/prompt/raw-response/timestamp/cost provenance cannot be recovered
   from older recorded proposal files that did not store it.
 - No current live Planner mode is admitted.
