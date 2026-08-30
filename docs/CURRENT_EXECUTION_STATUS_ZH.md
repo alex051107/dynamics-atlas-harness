@@ -10,20 +10,30 @@ direction 才能释放科学阶段。
 
 - 当前 main 为 PR #18 merge commit `e8d4f7781590c4c0424c83dffb62f62fbe526fcf`。
   PR #16 与 PR #17 的补丁内容已经由 PR #18 吸收；两者已关闭为 superseded，没有再次合并。
-- `feature/live-agent-common-flows-v1` 已实现 strict、tool-less OpenRouter Profiler/Planner transport，
-  并取得一条真实 HSP90 full chain。冻结的 core-admitted MiniMax Profiler proposal 进入同一 deterministic
+- `feature/live-agent-common-flows-v1` 的准确完成状态是
+  `LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE`、
+  `DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE`、
+  `LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED`。它取得一条真实 HSP90 proposal transport chain：
+  冻结的 core-admitted MiniMax Profiler proposal 进入同一 deterministic
   runner，live MiniMax Planner 选择一张合法 card；runner 授权并执行一个描述性 action，产生一个
   EvidenceResult，RuleResults 保持不变，terminal state 为 `NOT_CALCULATED_BY_CASE_RUNNER`。
 - 本轮共发出 17 次 HTTP 请求，其中 13 次完成并计入调用上限，累计实际费用为 USD 0.145264010；4 次
-  provider HTTP 400 未完成、未计费。Campaign 在第一条 full-chain success 后自适应停止并冻结，没有声称
+  provider HTTP 400 未完成、未计费。Campaign 在第一条 proposal-to-descriptive-action success 后自适应停止并冻结，没有声称
   16 个 frozen cells 全部运行。
 - 获准的 credential 来自本机 Excel Benchmark secret location，只注入当前进程继承环境；没有打印、
   记录、hash、持久化或提交 key。
-- HSP90 Luna Profiler 两次 core PASS，但 annotation diagnostic 两次失败；MiniMax bounded repair core PASS；
+- HSP90 成功链的 Profiler 为 `CORE_ADMISSION_PASS`，完整 annotation envelope 为
+  `FULL_ANNOTATION_ENVELOPE_FAIL`，错误是 `UNKNOWN_STATUS_CORE_VALUE_MISMATCH`。Luna Profiler 两次 core PASS，
+  但 annotation diagnostic 两次失败；MiniMax bounded repair core PASS；
   Terra diagnostic fallback core PASS；DeepSeek 停在 JSON/schema/provider failure。所有 static ADK model
   proposals 均 core fail。Luna Planner 两次 HTTP 400，均未完成、未计费；MiniMax Planner 成功。
+- MiniMax Planner 只面对 `ONE_LEGAL_CARD_VERSUS_ABSTAIN`，因此当前结果为
+  `NOT_NONTRIVIAL_ROUTE_SELECTION`。成功链的 evidence 为
+  `DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT`，`SAME_RULE_TRANSITION_COUNT_ZERO`，
+  `CONCLUSION_PACKET_NOT_CALCULATED`。
 - Common-flow suite 已重新运行 direct evaluation、narrow lookup、registered computation 与 explicit stop。
-  三个 terminal behavior 均出现；`SUPPORT_WITHIN_CEILING` 只属于
+  六行全部是 `NO_AGENT_DETERMINISTIC_SCENARIO`，状态为 `NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE`。三个
+  terminal behavior 均出现；`SUPPORT_WITHIN_CEILING` 只属于
   `SYNTHETIC_CONTRACT_BEHAVIOR_ONLY`，real scientific support packet 数量为 0。
 - 同一 HSP90 case 的 recorded replay、实际 live full-chain run 与 common-flow matrix 已并列接入 read-only
   [workbench](../review/live_agent_common_flows_v1/index.html)。
@@ -56,7 +66,8 @@ development/runtime baseline commit，不是对当前 literal `main`、delivery 
 结果的实时断言。精确 delivery SHA 与 GitHub PR merge-ref CI 结果由 GitHub PR metadata 记录；tracked
 status 使用 `GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE`，因此不会因后续 merge 立即失真。
 
-当前工程面已经包含一条真实 OpenRouter proposal-to-action development chain。H1 保持
+当前工程面已经包含一条真实 OpenRouter proposal-to-descriptive-action transport chain，以及一套独立的
+no-Agent common-flow regression。H1 保持
 `PENDING_DOMAIN_REVIEW`，broad active-Rule closure 未完成，
 public-case runner 仍不生成 terminal ConclusionPacket，ADK dynamics portability 保持 `NOT_EVALUATED`，
 held-out evaluation 未授权，Agent value 未建立。
@@ -64,9 +75,10 @@ held-out evaluation 未授权，Agent value 未建立。
 PR #18 的历史工程范围仍准确命名为 recorded-replay evidence execution and inspection path。这个名称保留
 它在当前 live-capable 分支中的基线角色，不把后续 live integration 写回成 PR #18 的能力。
 
-本次 exact campaign 已关闭并冻结，不再补跑至 16 calls。Canonical code path 已使用持久化预算预留、跨进程
-累计和 closed-campaign guard；当前 delivery gate 是 Draft PR 的 human merge review。当前科学下一步仍是
-F01/F02/F03/F04/F06 的具名 human/domain source-science review。
+本次 exact campaign 已关闭并冻结，不再补跑至 16 calls。Closed guard 现在由 config 中的 campaign ID、
+completion receipt path/hash、closed state 和 receipt 记录的调用/费用总计驱动；新授权 campaign 可通过新
+config 与独立 ledger 建立，不需要修改产品源码。PR #19 合并后的下一工程 milestone 是
+`LIVE_AGENT_DECISION_CLOSURE_V1`；H1 的具名 human/domain source-science review 仍是独立科学 gate。
 
 ## 阅读与命名规则
 

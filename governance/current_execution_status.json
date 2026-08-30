@@ -1,17 +1,42 @@
 {
   "schema_version": "frozen-plan-execution-status/v6",
   "plan_id": "DA-HARNESS-FROZEN-PLAN-v1.0",
-  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v18",
-  "as_of": "2026-08-30T15:07:13Z",
-  "status_snapshot_as_of": "2026-08-30T15:07:13Z",
-  "overall_status": "LIVE_AGENT_COMMON_FLOWS_V1_COMPLETE_AWAITING_HUMAN_MERGE_REVIEW",
+  "status_id": "DA-HARNESS-EXEC-STATUS-20260830-v19",
+  "as_of": "2026-08-30T18:32:54Z",
+  "status_snapshot_as_of": "2026-08-30T18:32:54Z",
+  "overall_status": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_AND_DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE_LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
   "repository_baseline": {
     "bounded_engineering_integration_base_commit": "03ae77efdfaabeaebbf2cf8cae5a490c15241be1",
     "live_agent_common_flows_base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
     "baseline_tag": "bounded-engineering-integration-baseline-v1",
     "baseline_semantics": "The recorded base and implementation commits identify the bounded engineering integration baseline; they are not a live assertion about current main, delivery head, merge state, or CI result.",
     "delivery_state_authority": "GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE",
-    "accurate_name": "One bounded real OpenRouter HSP90 proposal-to-action development chain plus deterministic common-flow suite; the 13-call campaign is closed and frozen behind a persistent budget ledger and closed-campaign guard, human merge review is the delivery gate, and named domain review remains the scientific gate"
+    "accurate_name": "One bounded real-model HSP90 proposal-to-descriptive-action transport path plus a separate no-Agent deterministic common-flow regression suite; the campaign is closed and frozen through its config-owned ledger and hash-bound completion receipt"
+  },
+  "current_delivery_boundary": {
+    "completion_states": [
+      "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE",
+      "DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE",
+      "LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED"
+    ],
+    "profiler": {
+      "core_admission": "CORE_ADMISSION_PASS",
+      "full_annotation_envelope": "FULL_ANNOTATION_ENVELOPE_FAIL",
+      "field_annotation_error": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH"
+    },
+    "planner": {
+      "decision_surface": "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+      "capability_boundary": "NOT_NONTRIVIAL_ROUTE_SELECTION"
+    },
+    "successful_live_path": {
+      "evidence_class": "DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT",
+      "same_rule_transition": "SAME_RULE_TRANSITION_COUNT_ZERO",
+      "conclusion_packet": "CONCLUSION_PACKET_NOT_CALCULATED"
+    },
+    "common_flows": {
+      "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+      "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE"
+    }
   },
   "work_items": [
     {
@@ -197,18 +222,18 @@
       "authority_note": "This record reports local engineering behavior only. Advisory source reconciliation is not a named official review and does not activate a Rule, phase, Operator, or scientific conclusion."
     },
     {
-      "role": "LIVE_AGENT_COMMON_FLOWS_V1",
+      "role": "LIVE_MODEL_PROPOSAL_TRANSPORT_AND_DETERMINISTIC_COMMON_FLOW_REGRESSION_V1",
       "branch": "feature/live-agent-common-flows-v1",
       "base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
-      "state": "ACTUAL_LIVE_CAMPAIGN_CLOSED_FROZEN_AFTER_13_CALLS_AND_ONE_FULL_CHAIN_SUCCESS",
+      "state": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_AND_DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE_LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
       "authorization": "USER_DIRECTION_20260830_LIVE_AGENT_AND_COMMON_FLOW_PHASE",
       "scope": [
         "OPENROUTER_STRICT_JSON_SCHEMA_PROPOSAL_TRANSPORT",
-        "LIVE_PROFILER_AND_PLANNER_SAME_DETERMINISTIC_RUNNER_PATH",
+        "ONE_LIVE_PROFILER_CORE_AND_LIVE_PLANNER_SAME_DETERMINISTIC_RUNNER_PATH",
         "TWO_EXPOSED_CASES",
         "FROZEN_LUNA_DEEPSEEK_MINIMAX_PANEL_WITH_TERRA_DIAGNOSTIC_FALLBACK",
         "USD_5_MAXIMUM_AND_16_COMPLETED_CALL_MAXIMUM",
-        "DIRECT_LOOKUP_REGISTERED_COMPUTATION_AND_STOP_SCENARIOS",
+        "NO_AGENT_DIRECT_LOOKUP_REGISTERED_COMPUTATION_AND_STOP_REGRESSION_SCENARIOS",
         "THREE_ENGINEERING_REDUCER_BEHAVIORS",
         "CASEVIEW_AND_STATIC_WORKBENCH_PROJECTION"
       ],
@@ -243,14 +268,17 @@
         "successful_full_chain_artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
         "successful_full_chain": {
           "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
-          "profiler": "FROZEN_CORE_ADMITTED_MINIMAX_M2_5_STREAMLAKE",
-          "planner": "LIVE_MINIMAX_M2_5_STREAMLAKE_ADMITTED",
+          "profiler": "CORE_ADMISSION_PASS_FULL_ANNOTATION_ENVELOPE_FAIL_UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
+          "planner": "LIVE_MINIMAX_M2_5_STREAMLAKE_ONE_LEGAL_CARD_VERSUS_ABSTAIN_NOT_NONTRIVIAL_ROUTE_SELECTION",
           "authorized_action_count": 1,
           "evidence_result_class": "DESCRIPTIVE_ANALYSIS_ONLY",
+          "active_evidence_classification": "DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT",
           "active_rule_effect_count": 0,
+          "same_rule_transition_status": "SAME_RULE_TRANSITION_COUNT_ZERO",
           "rule_results_changed": false,
           "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER",
-          "scientific_disposition": "NOT_EVALUATED"
+          "scientific_disposition": "NOT_EVALUATED",
+          "conclusion_packet_status": "CONCLUSION_PACKET_NOT_CALCULATED"
         },
         "profiler_results": {
           "hsp90_luna": "CORE_PASS_X2_ANNOTATION_DIAGNOSTIC_FAIL_X2",
@@ -261,16 +289,19 @@
         },
         "planner_results": {
           "luna": "TWO_HTTP_400_SCHEMA_REQUEST_FAILURES_ZERO_COMPLETED_CALLS_ZERO_COST",
-          "minimax": "STRICT_TYPED_PROPOSAL_ADMITTED_AND_EXACTLY_ONE_CARD_AUTHORIZED"
+          "minimax": "STRICT_TYPED_PROPOSAL_ADMITTED_ONE_LEGAL_CARD_VERSUS_ABSTAIN_NOT_NONTRIVIAL_ROUTE_SELECTION"
         },
+        "common_flow_agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+        "common_flow_coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE",
         "held_out_accessed": false,
         "completion_receipt": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_campaign_manifest.json",
         "development_matrix": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_development_matrix.json",
         "persistent_budget_ledger": "IMPLEMENTED_WITH_RESERVATION_BEFORE_HTTP_AND_CROSS_PROCESS_ACCUMULATION",
         "closed_campaign_guard": "CLI_AND_THREE_PUBLIC_RUNTIME_ENTRIES_FAIL_BEFORE_OUTPUT_CREDENTIAL_CLIENT_OR_NETWORK_WITHOUT_NEW_AUTHORIZATION",
+        "artifact_deduplication": "REMOVED_ONE_UNREFERENCED_26_FILE_BYTE_IDENTICAL_RECORDED_REPLAY_TREE; RETAINED_UNIQUE_FAILURES_AND_CASEVIEW_BOUND_REUSED_ARTIFACTS",
         "workbench_comparison": "RECORDED_AND_LIVE_HSP90_ROOTS_RENDERED_WITH_COMMON_FLOW_MATRIX"
       },
-      "authority_note": "The artifacts establish one actual development-only OpenRouter Profiler-to-Planner-to-authorized-descriptive-action chain and bounded model failure diagnostics. They do not establish Agent value, source-science approval, broad scientific closure, ADK portability, or held-out behavior."
+      "authority_note": "The artifacts establish one actual development-only real-model proposal transport path through an authorized descriptive action, plus a separate no-Agent deterministic common-flow regression suite. They do not establish live-Agent common-flow coverage, full Profiler grounding, nontrivial Planner utility, active Rule closure, a live-path ConclusionPacket, Agent value, source-science approval, ADK portability, or held-out behavior."
     },
     {
       "role": "HISTORICAL_FROZEN_PLAN",
@@ -396,26 +427,31 @@
       ]
     },
     {
-      "stage": "LIVE_AGENT_COMMON_FLOWS_V1",
-      "status": "ACTUAL_LIVE_FULL_CHAIN_OBSERVED_CAMPAIGN_CLOSED_FROZEN",
+      "stage": "LIVE_MODEL_PROPOSAL_TRANSPORT_AND_DETERMINISTIC_COMMON_FLOW_REGRESSION_V1",
+      "status": "TWO_BOUNDED_BASELINES_COMPLETE_LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
       "known_present": [
         "STRICT_TOOLLESS_OPENROUTER_TRANSPORT",
         "FROZEN_MODEL_PROVIDER_AND_BUDGET_MATRIX",
-        "LIVE_PROFILER_COMPATIBILITY_ENVELOPE",
+        "LIVE_PROFILER_CORE_ADMISSION_WITH_FULL_ANNOTATION_ENVELOPE_FAILURE_RETAINED",
         "LIVE_PLANNER_CURRENT_LEGAL_CARD_SCHEMA",
         "SAME_RUNNER_ADMISSION_AUTHORIZATION_EXECUTION_AND_CASEVIEW_PATH",
-        "FOUR_COMMON_ROUTE_FAMILIES",
+        "FOUR_NO_AGENT_DETERMINISTIC_ROUTE_FAMILIES",
         "THREE_ENGINEERING_REDUCER_BEHAVIORS",
         "FAIL_CLOSED_LIVE_RECEIPT_AND_RAW_RESPONSE_INTEGRITY",
         "READ_ONLY_WORKBENCH_SCENARIO_MATRIX",
         "SEVENTEEN_HTTP_ATTEMPTS_THIRTEEN_COMPLETED_OPENROUTER_CALLS_WITH_EXACT_USAGE_AND_COST",
-        "ONE_HSP90_MINIMAX_FULL_PROPOSAL_TO_ACTION_CHAIN",
+        "ONE_HSP90_MINIMAX_PROPOSAL_TO_DESCRIPTIVE_ACTION_TRANSPORT_CHAIN",
         "ADAPTIVE_STOP_BEFORE_SIXTEEN_AFTER_FIRST_FULL_CHAIN_SUCCESS",
         "PERSISTENT_PRE_REQUEST_BUDGET_RESERVATION_AND_CROSS_PROCESS_LEDGER",
         "CLOSED_CAMPAIGN_GUARD_BEFORE_OUTPUT_CREDENTIAL_CLIENT_OR_NETWORK_ACROSS_CLI_AND_RUNTIME",
         "RECORDED_VERSUS_LIVE_HSP90_WORKBENCH_COMPARISON"
       ],
       "known_unresolved": [
+        "FULL_PROFILER_ANNOTATION_ENVELOPE",
+        "NONTRIVIAL_LIVE_PLANNER_DECISION",
+        "LIVE_AGENT_ACTIVE_RULE_TRANSITION",
+        "LIVE_AGENT_PATH_CONCLUSION_PACKET",
+        "LIVE_AGENT_COMMON_FLOW_COVERAGE",
         "AGENT_VALUE",
         "NAMED_SOURCE_SCIENCE_REVIEW",
         "BROAD_SAME_RULE_CLOSURE",
@@ -454,18 +490,18 @@
     }
   ],
   "authorized_development_action": {
-    "action": "PRESERVE_CLOSED_CAMPAIGN_AND_DELIVER_DRAFT_PR_FOR_HUMAN_REVIEW",
-    "deliverable": "DRAFT_PR_WITH_CANONICAL_LIVE_PATH_COMMON_FLOW_SUITE_AND_FROZEN_RECEIPTS",
-    "automatic_code_changes": false,
-    "authorization": "USER_DIRECTION_20260830_LIVE_AGENT_AND_COMMON_FLOW_PHASE",
-    "exit_gate": "A human reviews and decides whether to merge the Draft PR; tracked status does not self-record an exact final SHA or CI state because GitHub PR metadata owns those facts."
+    "action": "REPAIR_AND_CONDITIONALLY_MERGE_PR19_THEN_START_LIVE_AGENT_DECISION_CLOSURE_V1",
+    "deliverable": "ONE_REAL_MODEL_ACTIVE_RULE_TRANSITION_AND_PAIRED_ZERO_EXECUTION_STOP_ARM",
+    "automatic_code_changes": true,
+    "authorization": "USER_DECISION_DA_20260830_056_CHANGES_REQUESTED_BOUNDED",
+    "exit_gate": "One authorized exact evidence action changes the same RuleInstance and the existing reducer emits a bounded ConclusionPacket; a paired card-removed arm records zero execution and ABSTAIN_OR_HUMAN_REVIEW."
   },
   "next_allowed_action": {
-    "action": "NAMED_HUMAN_DOMAIN_SOURCE_SCIENCE_REVIEW_F01_F02_F03_F04_F06",
-    "deliverable": "COMPLETED_NARROW_SOURCE_GROUNDING_REVIEW_RECORD",
-    "automatic_code_changes": false,
-    "authorization": "RECORDED_USER_DIRECTION_DA-20260830-052",
-    "exit_gate": "A named reviewer records scope-bounded source-grounding dispositions after checking primary passages; no automated result can substitute for this record."
+    "action": "LIVE_AGENT_DECISION_CLOSURE_V1_XEISD_EXACT_LOOKUP_OR_EXACT_HSP90_CONTROL_FALLBACK",
+    "deliverable": "ACTIVE_RULE_POSITIVE_ARM_PAIRED_WITH_ZERO_EXECUTION_STOP_ARM",
+    "automatic_code_changes": true,
+    "authorization": "RECORDED_USER_DIRECTION_DA-20260830-056",
+    "exit_gate": "The live Planner path owns an exact UNRESOLVED to PASS transition and an existing bounded ConclusionPacket; the counterfactual stop path executes nothing. H1 remains separately pending."
   },
-  "claim_ceiling": "Development-only engineering evidence. The branch records 17 HTTP attempts, 13 completed bounded OpenRouter calls costing USD 0.145264010, and one actual HSP90 chain in which a frozen core-admitted MiniMax Profiler proposal entered the existing deterministic runner, a live MiniMax Planner selected one legal card, deterministic authorization released one descriptive action, one EvidenceResult was produced, and the unchanged same-Rule state ended at NOT_CALCULATED_BY_CASE_RUNNER and NOT_EVALUATED. The campaign stopped adaptively after this first full-chain success and is closed rather than completed across all 16 possible cells. Luna, MiniMax, Terra, DeepSeek, and ADK failures remain explicit development diagnostics. Four deterministic route families, three engineering reducer behaviors, the separate exact HSP90 control regression, and the read-only workbench are also present. Synthetic SUPPORT is contract behavior only. These records establish no Agent value, source-science approval, broad HSP90 closure, public-case scientific SUPPORT, ADK dynamics portability, generalization, transfer, production readiness, or held-out result."
+  "claim_ceiling": "Development-only engineering evidence. A real model proposal entered one HSP90 deterministic runtime and triggered one authorized descriptive action. The Profiler passed core admission but failed the full annotation envelope with UNKNOWN_STATUS_CORE_VALUE_MISMATCH; the Planner chose between one legal card and abstention; no active Rule changed and no ConclusionPacket was calculated. Separately, six NO_AGENT_DETERMINISTIC_SCENARIO rows cover four route families and three engineering reducer behaviors. The historical campaign records 17 HTTP attempts, 13 completed calls, and USD 0.145264010 actual cost, with unique failures retained. These records establish no live-Agent common-flow coverage, full Profiler evidence-grounding capability, nontrivial Planner utility, live-Agent decision closure, Agent value, source-science approval, broad HSP90 closure, public-case scientific SUPPORT, ADK dynamics portability, generalization, transfer, production readiness, or held-out result."
 }

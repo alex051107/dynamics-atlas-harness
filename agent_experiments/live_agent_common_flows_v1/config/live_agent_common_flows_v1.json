@@ -1,8 +1,10 @@
 {
   "schema_version": "live-agent-common-flows-campaign-config/v1",
   "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
-  "execution_status": "CLOSED_FROZEN_AFTER_13_COMPLETED_CALLS",
+  "execution_status": "CLOSED_FROZEN",
   "completion_receipt_path": "evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/live_agent_campaign_manifest.json",
+  "completion_receipt_sha256": "a748204eb534aa209cb8e0a4341832f5fc8f463d46d3c0cc1182883f8bcf28db",
+  "budget_ledger_path": "local/live_agent_common_flows_v1/budget_ledger.json",
   "provider_transport": "OPENROUTER_CHAT_COMPLETIONS_STRICT_JSON_SCHEMA_NO_TOOLS",
   "catalog_observed_at": "2026-08-30",
   "catalog_sources": [

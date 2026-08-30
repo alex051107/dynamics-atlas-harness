@@ -4,6 +4,7 @@ import json
 import shutil
 import tempfile
 import unittest
+from copy import deepcopy
 from decimal import Decimal
 from pathlib import Path
 
@@ -387,6 +388,19 @@ class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
         self.assertEqual(stub.calls, [])
         self.assertFalse(any(path.exists() for path in outputs))
 
+        bad_receipt_binding = deepcopy(closed)
+        bad_receipt_binding["completion_receipt_sha256"] = "0" * 64
+        with self.assertRaisesRegex(
+            ValueError, "LIVE_AGENT_CAMPAIGN_COMPLETION_RECEIPT_INVALID"
+        ):
+            run_live_agent_case(
+                case_id="HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
+                output_dir=self.root / "bad-closed-receipt",
+                model_profile="minimax",
+                client=client,
+                config=bad_receipt_binding,
+            )
+
     def test_open_runtime_requires_persisted_campaign_bound_budget(self):
         stub = _ProposalHttpStub()
         in_memory_client = _client(stub)
@@ -414,20 +428,39 @@ class LiveAgentCommonFlowsV1Tests(unittest.TestCase):
         self.assertFalse(case_output.exists())
         self.assertFalse(campaign_output.exists())
 
-    def test_frozen_panel_has_exact_16_call_arithmetic_and_no_hidden_fallback(self):
+    def test_call_plan_stays_within_configured_cap_and_new_config_needs_no_code_edit(self):
         config = load_campaign_config()
-        self.assertEqual(config["max_completed_calls"], 16)
         self.assertEqual(config["automatic_retries"], 0)
         planned = (
             len(config["cases"])
             * len(config["roles"])
             * sum(model["independent_trials_per_case"] for model in config["models"])
         )
-        self.assertEqual(planned, 16)
-        self.assertEqual(
-            {model["profile_id"] for model in config["models"]},
-            {"luna", "deepseek", "minimax"},
+        self.assertLessEqual(planned, config["max_completed_calls"])
+
+        next_config = deepcopy(config)
+        next_config.update(
+            {
+                "campaign_id": "TEST_NEW_EXPLICIT_CAMPAIGN",
+                "execution_status": LIVE_AGENT_CAMPAIGN_OPEN_STATUS,
+                "budget_usd": "1.00",
+                "max_completed_calls": 4,
+                "budget_ledger_path": "local/test-new-explicit-campaign/ledger.json",
+                "cases": ["HSP90_NTD_EXPOSED_PAPER_BLIND_V1"],
+                "models": [deepcopy(config["models"][0])],
+                "call_plan": "1 case x 2 roles x 1 Luna trial = 2 planned calls",
+            }
         )
+        next_config["models"][0]["independent_trials_per_case"] = 1
+        next_config.pop("completion_receipt_path", None)
+        next_config.pop("completion_receipt_sha256", None)
+        next_path = self.root / "new-campaign-config.json"
+        next_path.write_text(json.dumps(next_config), encoding="utf-8")
+
+        loaded = load_campaign_config(next_path)
+        self.assertEqual(loaded["campaign_id"], "TEST_NEW_EXPLICIT_CAMPAIGN")
+        self.assertEqual(loaded["budget_usd"], "1.00")
+        self.assertEqual(loaded["max_completed_calls"], 4)
 
 
 if __name__ == "__main__":

@@ -27,10 +27,14 @@ from .workspace import (
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-LIVE_AGENT_CAMPAIGN_LEDGER_PATH = (
-    REPO_ROOT / "local" / "live_agent_common_flows_v1" / "budget_ledger.json"
+LIVE_AGENT_CAMPAIGN_CONFIG_PATH = (
+    REPO_ROOT
+    / "agent_experiments"
+    / "live_agent_common_flows_v1"
+    / "config"
+    / "live_agent_common_flows_v1.json"
 )
-LIVE_AGENT_CAMPAIGN_CLOSED_STATUS = "CLOSED_FROZEN_AFTER_13_COMPLETED_CALLS"
+LIVE_AGENT_CAMPAIGN_CLOSED_STATUS = "CLOSED_FROZEN"
 LIVE_AGENT_CAMPAIGN_OPEN_STATUS = "AUTHORIZED_FOR_LIVE_CALLS"
 LIVE_AGENT_CAMPAIGN_CLOSED_ERROR = (
     "LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION"
@@ -356,6 +360,7 @@ def _open_live_agent_campaign_budget(
 ):
     """Open the one persisted ledger shared by every live CLI entry point."""
 
+    from .live_agent_common_flows_v1 import campaign_budget_ledger_path
     from .openrouter_proposal_transport_v1 import OpenRouterBudgetLedger
 
     frozen_cap = Decimal(str(config["budget_usd"]))
@@ -366,7 +371,7 @@ def _open_live_agent_campaign_budget(
         max_completed_calls=int(config["max_completed_calls"]),
         max_attempts_per_cell=int(config["max_attempts_per_exact_role_case_model"]),
         campaign_id=str(config["campaign_id"]),
-        state_path=LIVE_AGENT_CAMPAIGN_LEDGER_PATH,
+        state_path=campaign_budget_ledger_path(config),
     )
 
 
@@ -397,9 +402,9 @@ def run_agent_case(args: argparse.Namespace) -> int:
         read_openrouter_credential,
     )
 
-    config = load_campaign_config()
+    config = load_campaign_config(Path(args.campaign_config))
     _require_live_agent_campaign_open(config)
-    cap = Decimal(args.budget_usd)
+    cap = Decimal(args.budget_usd) if args.budget_usd is not None else None
     _model_entry(config, args.model_profile)
     credential = read_openrouter_credential(repo_root=REPO_ROOT)
     client = OpenRouterProposalClient(
@@ -424,7 +429,7 @@ def run_agent_campaign(args: argparse.Namespace) -> int:
         run_live_agent_campaign,
     )
 
-    config = load_campaign_config()
+    config = load_campaign_config(Path(args.campaign_config))
     _require_live_agent_campaign_open(config)
     budget = _open_live_agent_campaign_budget(config)
     manifest = run_live_agent_campaign(
@@ -544,21 +549,29 @@ def build_parser() -> argparse.ArgumentParser:
     )
     agent_case_parser.add_argument(
         "--model-profile",
-        choices=("luna", "deepseek", "minimax"),
         default="luna",
-        help="Frozen OpenRouter model/provider profile; ignored in recorded mode.",
+        help="Exact profile ID frozen in the selected campaign config; ignored in recorded mode.",
+    )
+    agent_case_parser.add_argument(
+        "--campaign-config",
+        default=str(LIVE_AGENT_CAMPAIGN_CONFIG_PATH),
+        help="Explicit campaign config; the config owns campaign ID, budget, ledger, and model profiles.",
     )
     agent_case_parser.add_argument(
         "--budget-usd",
-        default="5.00",
-        help="Live-only client-side cap, never above the authorized USD 5.00.",
+        default=None,
+        help="Optional live-only cap assertion; when omitted, use the frozen config cap.",
     )
     agent_case_parser.set_defaults(handler=run_agent_case)
     campaign_parser = subparsers.add_parser(
         "run-agent-campaign",
-        help="Run the frozen 16-call-maximum OpenRouter comparison campaign.",
+        help="Run the explicitly selected frozen OpenRouter campaign.",
     )
     campaign_parser.add_argument("--output-dir", required=True)
+    campaign_parser.add_argument(
+        "--campaign-config",
+        default=str(LIVE_AGENT_CAMPAIGN_CONFIG_PATH),
+    )
     campaign_parser.set_defaults(handler=run_agent_campaign)
     scenario_parser = subparsers.add_parser(
         "run-scenario-suite",

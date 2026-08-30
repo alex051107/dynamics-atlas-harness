@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 from dynamics_atlas_harness import cli
+from dynamics_atlas_harness.openrouter_proposal_transport_v1 import canonical_json_sha256
 from dynamics_atlas_harness import openrouter_profiler_sweep_v1 as older_live_profiler
 from dynamics_atlas_harness import openrouter_proposal_transport_v1  # noqa: F401
 
@@ -206,8 +207,24 @@ assert "dynamics_atlas_harness.case_runner_v1" not in sys.modules
             config["planner_schema_repair_description"],
         )
         self.assertEqual(receipt["campaign_id"], config["campaign_id"])
-        self.assertEqual(receipt["completed_api_calls"], 13)
-        self.assertEqual(receipt["actual_cost_usd"], "0.145264010")
+        self.assertEqual(receipt["campaign_state"], cli.LIVE_AGENT_CAMPAIGN_CLOSED_STATUS)
+        self.assertEqual(
+            receipt["maximum_authorized_completed_calls"],
+            config["max_completed_calls"],
+        )
+        self.assertLessEqual(
+            receipt["completed_api_calls"],
+            receipt["maximum_authorized_completed_calls"],
+        )
+        self.assertEqual(
+            receipt["maximum_authorized_cost_usd"],
+            config["budget_usd"],
+        )
+        self.assertEqual(
+            canonical_json_sha256(receipt),
+            config["completion_receipt_sha256"],
+        )
+        self.assertTrue(config["budget_ledger_path"].startswith("local/"))
 
 
 if __name__ == "__main__":

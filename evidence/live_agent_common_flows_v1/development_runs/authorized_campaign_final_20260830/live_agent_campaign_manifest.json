@@ -16,6 +16,7 @@
     "stop_reason": "FIRST_FULL_LIVE_PATH_SUCCEEDED; NO_FURTHER_SPEND_NEEDED"
   },
   "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
+  "campaign_state": "CLOSED_FROZEN",
   "catalog_snapshots": [
     {
       "canonical_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36",
@@ -30,6 +31,8 @@
   ],
   "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY",
   "common_flow_coverage": {
+    "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+    "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE",
     "registered_computation_scope": "HSP90_EXACT_CONTROL_ONLY",
     "route_families": [
       "DIRECT_EVALUATION",
@@ -61,8 +64,8 @@
   "maximum_authorized_cost_usd": "5.00",
   "schema_version": "live-agent-common-flows-campaign-completion/v1",
   "source_science_review_status": "PENDING_DOMAIN_REVIEW",
-  "status": "COMPLETE_WITH_ONE_FULL_LIVE_PATH_AND_FAIL_CLOSED_REJECTIONS",
-  "successful_full_live_case_runs": 1,
+  "status": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_WITH_FAIL_CLOSED_REJECTIONS",
+  "successful_live_proposal_transport_runs": 1,
   "successful_live_path": {
     "action_count": 1,
     "artifact_root": "evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1",
@@ -70,11 +73,18 @@
     "case_id": "HSP90_NTD_EXPOSED_PAPER_BLIND_V1",
     "deterministic_authorization": "AUTHORIZED_EXACTLY_ONE_SELECTED_CARD",
     "evidence_class": "DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT",
+    "full_annotation_envelope": "FULL_ANNOTATION_ENVELOPE_FAIL",
     "planner_model": "minimax/minimax-m2.5",
+    "planner_decision_surface": "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+    "planner_utility_boundary": "NOT_NONTRIVIAL_ROUTE_SELECTION",
     "planner_transport": "LIVE_OPENROUTER_CALL",
     "profiler_model": "minimax/minimax-m2.5",
+    "profiler_core_admission": "CORE_ADMISSION_PASS",
+    "profiler_field_annotation_error": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
     "profiler_transport": "REUSED_FROZEN_ALREADY_PAID_RESPONSE",
     "same_rule_transition_count": 0,
+    "same_rule_transition_status": "SAME_RULE_TRANSITION_COUNT_ZERO",
+    "conclusion_packet_status": "CONCLUSION_PACKET_NOT_CALCULATED",
     "scientific_disposition": "NOT_EVALUATED",
     "terminal_scientific_state": "NOT_CALCULATED_BY_CASE_RUNNER"
   },

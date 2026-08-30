@@ -6,6 +6,8 @@ prompt repair, one diagnostic fallback, and a final Planner-only continuation
 that reused an already-paid Profiler response.  This builder deduplicates that
 reused response ID, replays the current deterministic Profiler core admission,
 and emits one machine-readable campaign receipt without making a network call.
+The frozen config supplies campaign identity and authorization ceilings; observed
+receipts supply completed-call and cost totals.
 """
 
 from __future__ import annotations
@@ -36,8 +38,13 @@ INPUT_ROOTS = (
     / "authorized_planner_from_frozen_hsp90_minimax_repair1_20260830",
 )
 OUTPUT_ROOT = DEVELOPMENT_ROOT / "authorized_campaign_final_20260830"
-EXPECTED_COMPLETED_CALLS = 13
-EXPECTED_COST_USD = Decimal("0.145264010")
+CONFIG_PATH = (
+    REPO_ROOT
+    / "agent_experiments"
+    / "live_agent_common_flows_v1"
+    / "config"
+    / "live_agent_common_flows_v1.json"
+)
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -158,6 +165,10 @@ def _attempt_row(path: Path, receipt: dict[str, Any]) -> dict[str, Any]:
 
 
 def build() -> dict[str, Any]:
+    config = _read_json(CONFIG_PATH)
+    campaign_id = config["campaign_id"]
+    maximum_calls = config["max_completed_calls"]
+    maximum_cost = Decimal(str(config["budget_usd"]))
     receipt_paths = sorted(
         path
         for root in INPUT_ROOTS
@@ -192,15 +203,10 @@ def build() -> dict[str, Any]:
                 raise ValueError("COMPLETED_CALL_COST_UNAVAILABLE")
             completed_cost += Decimal(str(cost))
 
-    if completed_calls != EXPECTED_COMPLETED_CALLS:
-        raise ValueError(
-            f"COMPLETED_CALL_COUNT_MISMATCH:{completed_calls}:"
-            f"{EXPECTED_COMPLETED_CALLS}"
-        )
-    if completed_cost != EXPECTED_COST_USD:
-        raise ValueError(
-            f"COMPLETED_CALL_COST_MISMATCH:{completed_cost}:{EXPECTED_COST_USD}"
-        )
+    if completed_calls > maximum_calls:
+        raise ValueError("COMPLETED_CALL_COUNT_EXCEEDS_CONFIGURED_MAXIMUM")
+    if completed_cost > maximum_cost:
+        raise ValueError("COMPLETED_CALL_COST_EXCEEDS_CONFIGURED_BUDGET")
     successful_root = (
         DEVELOPMENT_ROOT
         / "authorized_planner_from_frozen_hsp90_minimax_repair1_20260830"
@@ -211,7 +217,7 @@ def build() -> dict[str, Any]:
     after = successful_manifest["rule_reevaluation"]["after_rule_results"]
     matrix = {
         "schema_version": "live-agent-development-attempt-matrix/v1",
-        "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
+        "campaign_id": campaign_id,
         "attempted_http_requests": len(attempts),
         "completed_api_calls": completed_calls,
         "actual_cost_usd": str(completed_cost),
@@ -222,8 +228,9 @@ def build() -> dict[str, Any]:
     }
     manifest = {
         "schema_version": "live-agent-common-flows-campaign-completion/v1",
-        "campaign_id": "LIVE_AGENT_COMMON_FLOWS_V1_20260830",
-        "status": "COMPLETE_WITH_ONE_FULL_LIVE_PATH_AND_FAIL_CLOSED_REJECTIONS",
+        "campaign_id": campaign_id,
+        "campaign_state": "CLOSED_FROZEN",
+        "status": "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE_WITH_FAIL_CLOSED_REJECTIONS",
         "base_commit": "e8d4f7781590c4c0424c83dffb62f62fbe526fcf",
         "head_commit_source": "GITHUB_PR_METADATA_AFTER_FINAL_COMMIT",
         "credential_handling": {
@@ -235,16 +242,16 @@ def build() -> dict[str, Any]:
         },
         "http_attempts": len(attempts),
         "completed_api_calls": completed_calls,
-        "maximum_authorized_completed_calls": 16,
+        "maximum_authorized_completed_calls": maximum_calls,
         "actual_cost_usd": str(completed_cost),
-        "maximum_authorized_cost_usd": "5.00",
+        "maximum_authorized_cost_usd": str(config["budget_usd"]),
         "transport_settings": {
             "api": "OPENROUTER_CHAT_COMPLETIONS",
             "structured_output": "STRICT_JSON_SCHEMA",
             "hosted_tools": False,
             "model_tool_calls": False,
             "automatic_retries": 0,
-            "max_output_tokens": 16000,
+            "max_output_tokens": config["max_output_tokens"],
             "exact_provider_routing": True,
             "server_side_max_price": True,
         },
@@ -270,13 +277,18 @@ def build() -> dict[str, Any]:
                 "scope": "HISTORICAL_TERRA_CALL_RECEIPT_BINDING",
             },
         ],
-        "successful_full_live_case_runs": 1,
+        "successful_live_proposal_transport_runs": 1,
         "successful_live_path": {
             "artifact_root": _relative(successful_root),
             "case_id": successful_manifest["case_id"],
             "profiler_model": "minimax/minimax-m2.5",
+            "profiler_core_admission": "CORE_ADMISSION_PASS",
+            "full_annotation_envelope": "FULL_ANNOTATION_ENVELOPE_FAIL",
+            "profiler_field_annotation_error": "UNKNOWN_STATUS_CORE_VALUE_MISMATCH",
             "profiler_transport": "REUSED_FROZEN_ALREADY_PAID_RESPONSE",
             "planner_model": "minimax/minimax-m2.5",
+            "planner_decision_surface": "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+            "planner_utility_boundary": "NOT_NONTRIVIAL_ROUTE_SELECTION",
             "planner_transport": "LIVE_OPENROUTER_CALL",
             "deterministic_authorization": successful_manifest["authorization"][
                 "status"
@@ -290,7 +302,9 @@ def build() -> dict[str, Any]:
                     "reevaluated_rule_instance_ids"
                 ]
             ),
+            "same_rule_transition_status": "SAME_RULE_TRANSITION_COUNT_ZERO",
             "before_after_rule_results_identical": before == after,
+            "conclusion_packet_status": "CONCLUSION_PACKET_NOT_CALCULATED",
             "terminal_scientific_state": successful_manifest[
                 "terminal_scientific_state"
             ],
@@ -317,6 +331,8 @@ def build() -> dict[str, Any]:
             "common_flow_scenarios_v1/common_flow_matrix.json"
         ),
         "common_flow_coverage": {
+            "agent_mode": "NO_AGENT_DETERMINISTIC_SCENARIO",
+            "coverage_boundary": "NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE",
             "scenario_count": 6,
             "route_families": [
                 "DIRECT_EVALUATION",

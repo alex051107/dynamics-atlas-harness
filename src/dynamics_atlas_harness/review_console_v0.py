@@ -1231,6 +1231,7 @@ def _render_scenario_matrix(matrix: Mapping[str, Any]) -> str:
             <article class="control-card">
               <div class="review-heading"><code>{_escape(scenario_id)}</code>{_badge(row.get('result_status', 'UNKNOWN'))}</div>
               <p><strong>Case:</strong> <code>{_escape(case_id)}</code></p>
+              <p><strong>Agent mode:</strong> {_badge(row.get('agent_mode', 'UNKNOWN'))}</p>
               <p><strong>Expected route:</strong> {_badge(row.get('expected_route_family', 'UNKNOWN'))}<br><strong>Actual route:</strong> {_badge(row.get('actual_route', 'UNKNOWN'))}</p>
               <p><strong>Authorization:</strong> {_escape(row.get('deterministic_authorization', 'UNKNOWN'))}<br><strong>Actions:</strong> {_escape(row.get('action_count', 'UNKNOWN'))}</p>
               <p><strong>Evidence:</strong> {_badge(row.get('evidence_result_class', 'UNKNOWN'))}<br><strong>Affected RuleInstance:</strong> <code>{_escape(row.get('affected_rule_instance') or 'NONE')}</code></p>
@@ -1244,8 +1245,35 @@ def _render_scenario_matrix(matrix: Mapping[str, Any]) -> str:
     <section class="primary-view" id="scenario-matrix">
       <div class="eyebrow">COMMON FLOW SCENARIO MATRIX</div>
       <h1>Four routes and three terminal behaviors</h1>
-      <p class="question">These are deterministic engineering-contract scenarios. Synthetic SUPPORT remains labeled synthetic; real HSP90 source-science approval and broad closure remain unavailable.</p>
+      <p class="question"><code>NO_AGENT_DETERMINISTIC_SCENARIO</code> · <code>NOT_LIVE_AGENT_COMMON_FLOW_COVERAGE</code>. These are deterministic engineering-contract scenarios. Synthetic SUPPORT remains labeled synthetic; real HSP90 source-science approval and broad closure remain unavailable.</p>
       <div class="card-grid">{''.join(cards)}</div>
+    </section>
+    """
+
+
+def _render_delivery_boundary(status: Mapping[str, Any]) -> str:
+    boundary = status.get("current_delivery_boundary")
+    if not isinstance(boundary, Mapping):
+        return ""
+    classifications = boundary.get("completion_states", [])
+    if not isinstance(classifications, Sequence) or isinstance(
+        classifications, (str, bytes)
+    ):
+        classifications = []
+    rows = []
+    for label in ("profiler", "planner", "successful_live_path", "common_flows"):
+        value = boundary.get(label)
+        if isinstance(value, Mapping):
+            rows.append(
+                f"<article class=\"control-card\"><div class=\"eyebrow\">{_escape(label.upper())}</div>"
+                f"{_details(label, value, open_by_default=True)}</article>"
+            )
+    return f"""
+    <section class="primary-view" id="delivery-boundary">
+      <div class="eyebrow">CURRENT DELIVERY BOUNDARY</div>
+      <h1>Transport success and regression coverage remain separate evidence</h1>
+      <p class="question">{' · '.join(f'<code>{_escape(item)}</code>' for item in classifications)}</p>
+      <div class="card-grid">{''.join(rows)}</div>
     </section>
     """
 
@@ -1298,6 +1326,7 @@ def render_review_console(
     )
     queue = _render_review_queue(source_index, matrix, form)
     next_action = status.get("next_allowed_action", {})
+    delivery_boundary_section = _render_delivery_boundary(status)
     html_document = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1390,6 +1419,7 @@ def render_review_console(
         <p>{_escape(next_action.get('exit_gate', 'No exit condition recorded.'))}</p>
       </aside>
     </header>
+    {delivery_boundary_section}
     <section class="primary-view" id="case-overview">
       <div class="eyebrow">PRIMARY VIEW 1</div>
       <h1>Case Overview</h1>

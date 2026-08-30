@@ -13,7 +13,7 @@ import json
 import re
 from collections.abc import Mapping, Sequence
 from copy import deepcopy
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any
 
@@ -41,7 +41,7 @@ CAMPAIGN_ROOT = REPO_ROOT / "agent_experiments" / "live_agent_common_flows_v1"
 CAMPAIGN_CONFIG_PATH = CAMPAIGN_ROOT / "config" / "live_agent_common_flows_v1.json"
 CAMPAIGN_SCHEMA = "live-agent-common-flows-campaign/v1"
 COMPARISON_MATRIX_SCHEMA = "live-agent-development-comparison-matrix/v1"
-LIVE_AGENT_CAMPAIGN_CLOSED_STATUS = "CLOSED_FROZEN_AFTER_13_COMPLETED_CALLS"
+LIVE_AGENT_CAMPAIGN_CLOSED_STATUS = "CLOSED_FROZEN"
 LIVE_AGENT_CAMPAIGN_OPEN_STATUS = "AUTHORIZED_FOR_LIVE_CALLS"
 LIVE_AGENT_CAMPAIGN_CLOSED_ERROR = (
     "LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION"
@@ -95,22 +95,76 @@ def _repository_path(raw_path: Any, label: str) -> Path:
     return path
 
 
+def campaign_budget_ledger_path(config: Mapping[str, Any]) -> Path:
+    """Resolve the campaign-owned local ledger without a source-code path binding."""
+
+    raw_path = config.get("budget_ledger_path")
+    if not isinstance(raw_path, str) or not raw_path:
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_BUDGET_LEDGER_PATH_REQUIRED")
+    path = (REPO_ROOT / raw_path).resolve()
+    try:
+        relative = path.relative_to(REPO_ROOT.resolve())
+    except ValueError as error:
+        raise LiveAgentCommonFlowsV1Error(
+            "CAMPAIGN_BUDGET_LEDGER_PATH_INVALID"
+        ) from error
+    if (
+        not relative.parts
+        or relative.parts[0] != "local"
+        or path.suffix != ".json"
+        or (path.exists() and not path.is_file())
+    ):
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_BUDGET_LEDGER_PATH_INVALID")
+    return path
+
+
 def load_campaign_config(path: Path = CAMPAIGN_CONFIG_PATH) -> dict[str, Any]:
     """Load and validate the human-frozen call matrix without reading a credential."""
 
     config = _read_json(path)
     if config.get("schema_version") != "live-agent-common-flows-campaign-config/v1":
         raise LiveAgentCommonFlowsV1Error("CAMPAIGN_CONFIG_SCHEMA_INVALID")
-    if Decimal(str(config.get("budget_usd"))) > Decimal("5.00"):
-        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_BUDGET_EXCEEDS_AUTHORIZATION")
-    if config.get("max_completed_calls") != 16:
-        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_MAX_CALLS_MUST_EQUAL_16")
+    if not isinstance(config.get("campaign_id"), str) or not config["campaign_id"]:
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_ID_REQUIRED")
+    try:
+        budget_usd = Decimal(str(config.get("budget_usd")))
+    except (InvalidOperation, ValueError) as error:
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_BUDGET_INVALID") from error
+    if not budget_usd.is_finite() or budget_usd <= 0:
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_BUDGET_INVALID")
+    max_completed_calls = config.get("max_completed_calls")
+    if (
+        not isinstance(max_completed_calls, int)
+        or isinstance(max_completed_calls, bool)
+        or max_completed_calls <= 0
+    ):
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_MAX_CALLS_INVALID")
+    max_attempts = config.get("max_attempts_per_exact_role_case_model")
+    if (
+        not isinstance(max_attempts, int)
+        or isinstance(max_attempts, bool)
+        or max_attempts <= 0
+    ):
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_MAX_ATTEMPTS_INVALID")
+    max_output_tokens = config.get("max_output_tokens")
+    if (
+        not isinstance(max_output_tokens, int)
+        or isinstance(max_output_tokens, bool)
+        or max_output_tokens <= 0
+    ):
+        raise LiveAgentCommonFlowsV1Error("CAMPAIGN_MAX_OUTPUT_TOKENS_INVALID")
     if config.get("automatic_retries") != 0:
         raise LiveAgentCommonFlowsV1Error("AUTOMATIC_RETRY_FORBIDDEN")
+    campaign_budget_ledger_path(config)
     cases = config.get("cases")
     roles = config.get("roles")
     models = config.get("models")
-    if not isinstance(cases, list) or set(cases) != set(runner._CASE_PACKET_REGISTRY):
+    if (
+        not isinstance(cases, list)
+        or not cases
+        or len(cases) != len(set(cases))
+        or not set(cases).issubset(set(runner._CASE_PACKET_REGISTRY))
+    ):
         raise LiveAgentCommonFlowsV1Error("CAMPAIGN_CASE_SET_INVALID")
     if roles != ["PROFILER", "PLANNER"]:
         raise LiveAgentCommonFlowsV1Error("CAMPAIGN_ROLE_SET_INVALID")
@@ -190,7 +244,7 @@ def load_campaign_config(path: Path = CAMPAIGN_CONFIG_PATH) -> dict[str, Any]:
             )
         _model_spec(entry)
     planned_calls = len(cases) * len(roles) * trial_sum
-    if planned_calls != config["max_completed_calls"]:
+    if planned_calls > config["max_completed_calls"]:
         raise LiveAgentCommonFlowsV1Error("CAMPAIGN_CALL_PLAN_ARITHMETIC_INVALID")
     prompts = config.get("prompts")
     if not isinstance(prompts, dict) or set(prompts) != set(roles):
@@ -210,26 +264,41 @@ def require_live_agent_campaign_open(config: Mapping[str, Any]) -> None:
 
     status = config.get("execution_status")
     if status == LIVE_AGENT_CAMPAIGN_CLOSED_STATUS:
-        raw_path = config.get("completion_receipt_path")
-        if not isinstance(raw_path, str) or not raw_path:
-            raise LiveAgentCommonFlowsV1Error(
-                "LIVE_AGENT_CAMPAIGN_COMPLETION_RECEIPT_INVALID"
-            )
-        receipt_path = (REPO_ROOT / raw_path).resolve()
+        expected_hash = config.get("completion_receipt_sha256")
         try:
-            receipt_path.relative_to(REPO_ROOT.resolve())
+            receipt_path = _repository_path(
+                config.get("completion_receipt_path"), "completion_receipt"
+            )
             receipt = _read_json(receipt_path)
             receipt_cost = Decimal(str(receipt.get("actual_cost_usd")))
-        except (ValueError, AttributeError) as error:
+            receipt_cap = Decimal(str(receipt.get("maximum_authorized_cost_usd")))
+            config_cap = Decimal(str(config.get("budget_usd")))
+        except (InvalidOperation, ValueError, AttributeError) as error:
             raise LiveAgentCommonFlowsV1Error(
                 "LIVE_AGENT_CAMPAIGN_COMPLETION_RECEIPT_INVALID"
             ) from error
+        completed_calls = receipt.get("completed_api_calls")
+        max_completed_calls = receipt.get("maximum_authorized_completed_calls")
         if (
-            receipt.get("schema_version")
+            not isinstance(expected_hash, str)
+            or not re.fullmatch(r"[0-9a-f]{64}", expected_hash)
+            or canonical_json_sha256(receipt) != expected_hash
+            or receipt.get("schema_version")
             != "live-agent-common-flows-campaign-completion/v1"
             or receipt.get("campaign_id") != config.get("campaign_id")
-            or receipt.get("completed_api_calls") != 13
-            or receipt_cost != Decimal("0.145264010")
+            or receipt.get("campaign_state") != LIVE_AGENT_CAMPAIGN_CLOSED_STATUS
+            or not isinstance(completed_calls, int)
+            or isinstance(completed_calls, bool)
+            or completed_calls < 0
+            or not isinstance(max_completed_calls, int)
+            or isinstance(max_completed_calls, bool)
+            or max_completed_calls != config.get("max_completed_calls")
+            or completed_calls > max_completed_calls
+            or not receipt_cost.is_finite()
+            or receipt_cost < 0
+            or not receipt_cap.is_finite()
+            or receipt_cap != config_cap
+            or receipt_cost > receipt_cap
         ):
             raise LiveAgentCommonFlowsV1Error(
                 "LIVE_AGENT_CAMPAIGN_COMPLETION_RECEIPT_INVALID"
@@ -874,7 +943,7 @@ def run_live_agent_campaign(
     budget: OpenRouterBudgetLedger | None = None,
     config: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Execute the frozen 16-call maximum campaign or persist a credential block."""
+    """Execute the selected frozen campaign or persist a credential block."""
 
     config = load_campaign_config() if config is None else deepcopy(dict(config))
     require_live_agent_campaign_open(config)
@@ -1045,6 +1114,7 @@ __all__ = [
     "CAMPAIGN_CONFIG_PATH",
     "LiveAgentCommonFlowsV1Error",
     "build_planner_proposal_schema",
+    "campaign_budget_ledger_path",
     "load_campaign_config",
     "require_live_agent_campaign_open",
     "run_live_agent_campaign",

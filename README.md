@@ -4,20 +4,28 @@
 
 当前仓库状态、当前授权和下一允许动作以
 [仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
-[机器可读快照](governance/current_execution_status.json) 为准。当前 main 已包含 PR #18 的 bounded
-engineering workbench。这个分支在同一 runner 上加入了 strict、tool-less、budget-bounded OpenRouter
-Profiler/Planner transport，并重新运行 direct evaluation、narrow lookup、registered computation 和 explicit
-stop 四类 common flows。三态 reducer 的 SUPPORT 只来自明确标记的 synthetic contract fixture。
+[机器可读快照](governance/current_execution_status.json) 为准。PR #19 的准确交付状态是：
+
+- `LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE`
+- `DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE`
+- `LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED`
+
+真实模型和 common-flow suite 是两套并列证据。真实路径只覆盖 HSP90 的 proposal transport 与描述性 action；
+direct evaluation、narrow lookup、registered computation 和 explicit stop 六个场景全部是
+`NO_AGENT_DETERMINISTIC_SCENARIO`，不构成 live-Agent common-flow coverage。三态 reducer 的 SUPPORT 只来自
+明确标记的 synthetic contract fixture。
 
 真实 OpenRouter development campaign 共发出 17 次 HTTP 请求，其中 13 次完成并计入调用上限，累计费用为
 USD 0.145264010。其余 4 次在 provider HTTP 400 前失败，未完成、未计费。获准的 key 从
 本机 Excel Benchmark secret location 安全注入当前进程环境，没有打印、记录或持久化。Campaign 在取得
 第一条完整 HSP90 chain 后自适应停止，没有为了填满上限继续跑到 16 次。
 
-这条真实链使用冻结的 core-admitted HSP90 MiniMax Profiler proposal 和 StreamLake 提供的 MiniMax M2.5
-Planner proposal。Planner 选择一张合法 card，deterministic runner 授权并执行一个描述性 action，产生一个
-EvidenceResult；它没有 active Rule effect，因此 RuleResults 保持不变，terminal state 仍为
-`NOT_CALCULATED_BY_CASE_RUNNER / NOT_EVALUATED`。
+这条真实链使用冻结的 HSP90 MiniMax Profiler proposal 和 StreamLake 提供的 MiniMax M2.5 Planner
+proposal。Profiler 为 `CORE_ADMISSION_PASS`，完整 field-annotation envelope 为
+`FULL_ANNOTATION_ENVELOPE_FAIL`，错误为 `UNKNOWN_STATUS_CORE_VALUE_MISMATCH`。Planner 面对的决策面是
+`ONE_LEGAL_CARD_VERSUS_ABSTAIN`，因此只证明 schema-constrained selection，不证明 nontrivial route selection。
+授权后的 EvidenceResult 属于 `DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT`；same-Rule transition count 为 0，
+ConclusionPacket 未计算，terminal state 为 `NOT_CALCULATED_BY_CASE_RUNNER / NOT_EVALUATED`。
 
 H1 继续保持 `PENDING_DOMAIN_REVIEW`。Public HSP90 broad Rule closure、runner-generated public-case
 ConclusionPacket、ADK dynamics portability 和 held-out evaluation 仍未完成。精确 delivery SHA、merge state
@@ -25,8 +33,8 @@ ConclusionPacket、ADK dynamics portability 和 held-out evaluation 仍未完成
 
 PR #18 的 recorded-replay evidence execution and inspection path 仍是当前 live-capable 路径的确定性基线。
 
-这些 development artifacts 不构成 source-science approval、transfer、Agent value 或 production
-readiness。完整的工程行为、blocker 与复现记录见
+这些 development artifacts 不构成 full Profiler grounding、nontrivial Planner utility、live-Agent decision
+closure、source-science approval、transfer、Agent value 或 production readiness。完整的工程行为、blocker 与复现记录见
 [LIVE_AGENT_COMMON_FLOWS_V1.md](docs/LIVE_AGENT_COMMON_FLOWS_V1.md)。旧的
 [ENGINEERING_V1_COMPLETION.md](docs/ENGINEERING_V1_COMPLETION.md) 仍保留为 PR #18 工程基线记录。
 
@@ -45,30 +53,33 @@ dynamics-atlas run-agent-case \
   --output-dir /tmp/dynamics-atlas-adk-recorded
 ```
 
-只有显式指定 `--agent-mode live-openrouter` 才会进入 OpenRouter 路径。单案例命令受持久化预算账本、USD 5
-上限和 completed-call 上限共同约束。本轮 exact campaign 已关闭，因此当前配置下的 live 命令会在读取
+只有显式指定 `--agent-mode live-openrouter` 才会进入 OpenRouter 路径。单案例命令受所选 campaign config
+中的预算、completed-call 上限和独立本地 ledger 共同约束。本轮 exact campaign 已关闭，因此当前配置下的 live 命令会在读取
 credential 或联网前返回 `LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION`。下例只说明新一轮经过明确
 授权后所使用的接口；它不是重开本轮 campaign 的命令：
 
 ```bash
 dynamics-atlas run-agent-case \
   --agent-mode live-openrouter \
+  --campaign-config /path/to/authorized-campaign.json \
   --model-profile minimax \
-  --budget-usd 5.00 \
   --case-id HSP90_NTD_EXPOSED_PAPER_BLIND_V1 \
   --output-dir /tmp/dynamics-atlas-hsp90-live
 ```
 
-完整冻结 panel 最多 16 个 completed calls。本轮 exact campaign 在第 13 次 completed call 后取得第一条
-full-chain success，随后关闭并冻结。新的空输出目录本身不会解锁它；下面的命令只有在新授权、独立 campaign
-配置与独立预算账本同时存在时才能启动另一轮：
+本轮历史配置最多 16 个 completed calls，并在第 13 次 completed call 后取得第一条 proposal-to-descriptive-
+action success，随后关闭并冻结。关闭状态由 config 中的 campaign ID、completion receipt path/hash、closed
+state 与 receipt 中的实际调用/费用总计绑定；不再由产品源码中的某个调用数或费用常量决定。新的空输出目录
+本身不会解锁它；下面的命令只有在新授权、独立 campaign 配置与独立预算账本同时存在时才能启动另一轮：
 
 ```bash
 dynamics-atlas run-agent-campaign \
+  --campaign-config /path/to/authorized-campaign.json \
   --output-dir /tmp/dynamics-atlas-live-campaign
 ```
 
-四类 common flow 与三态 reducer 使用现有 X-EISD、exact HSP90 control 和 Stage-2 assets：
+四类 common flow 与三态 reducer 使用现有 X-EISD、exact HSP90 control 和 Stage-2 assets；该命令不调用
+Agent：
 
 ```bash
 dynamics-atlas run-scenario-suite \
@@ -88,7 +99,8 @@ evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_2
   live_agent_development_matrix.json
 ```
 
-把同一 HSP90 case 的 recorded replay、实际 live full chain 和 scenario matrix 接入同一个静态 workbench：
+把同一 HSP90 case 的 recorded replay、实际 live proposal-to-descriptive-action path 和独立 scenario matrix
+接入同一个静态 workbench：
 
 ```bash
 dynamics-atlas build-workbench \
