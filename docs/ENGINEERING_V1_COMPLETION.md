@@ -17,8 +17,8 @@ H1 items and the F04R02 packet-label mapping remains `DATA_INSUFFICIENT`.
 - Base branch: `main`
 - Exact fetched base: `03ae77efdfaabeaebbf2cf8cae5a490c15241be1`
 - Delivery branch: `feature/dynamics-atlas-autonomous-engineering-v1`
-- Exact integrated implementation head before completion/status-only edits:
-  `576be635ee3aacbeb1136f21c5206ec117a741c2`
+- Exact review-repaired implementation head before final completion/status-only edits:
+  `5ed99b6158b483d234c13ec448d01253fb118f90`
 - Final delivery head: the Draft PR head recorded by GitHub after this completion
   file is committed and pushed. A Git commit cannot contain its own hash; use
   `git rev-parse HEAD` or the PR metadata for the exact final delivery object.
@@ -32,13 +32,15 @@ The integrated prior work is exact and auditable:
 | PR #17 concise root instructions | `055d80e0d5dfebb29d92168e456d98b18b8d8ed3` | `719c726` | integrated |
 
 The engineering batches are `b89ca2f` (runner/provenance), `9902db5`
-(H1 claim narrowing/advisory), and `576be63` (CaseView/static workbench).
+(H1 claim narrowing/advisory), `576be63` (CaseView/static workbench), and
+`5ed99b6` (final integrity-review repair).
 
 ## Implemented end-to-end path
 
 ```text
 admitted public HSP90 or ADK packet
   -> recorded Profiler proposal + explicit provenance
+  -> content-addressed packet, visible-input, and proposal snapshots
   -> deterministic proposal admission
   -> freshly recomputed RuleResults and unresolved obligations
   -> fresh same-case legal action cards
@@ -177,6 +179,11 @@ record canonical visible-input, parsed-proposal, and admission hashes. Provider,
 model, prompt version/hash, raw-response hash, timestamp, cost, and independent
 answer-blindness are explicit unavailable values when they were not recorded.
 
+Each new run persists its public packet, Profiler-visible input, and both parsed
+proposals under `inputs/`. CaseView recomputes those snapshot hashes, both receipt
+visible-input hashes, both parsed-proposal hashes, both admission hashes, and the
+receipt-to-manifest source-path binding before returning integrity `PASS`.
+
 The older OpenRouter Profiler screening client remains separate. It is not imported
 or called by `run-case`; no current live Planner transport exists. This task read no
 credential, made no live model call, and spent no credits. Live-Agent code availability
@@ -194,29 +201,43 @@ Focused implementation checks completed before the final campaign:
   registry assumption for case-bound F04R02; after repair, the two affected tests
   passed.
 
-Final release validation on Python 3.11 completed as follows:
+The first four-role final review found bounded integrity defects in same-Rule identity
+checking, run-root proposal provenance, active-evidence classification, the published
+review Schema, and the local review-template link. Commit `5ed99b6` repaired all five
+and added the corresponding negative tests. The combined affected suite then ran 23
+tests: `OK`.
 
-- initial complete worktree discovery ran 166 tests; 164 passed and two governance
-  assertions failed because they still required the superseded Delivery A wording;
-- the governance assertions were updated to validate the current semantic fields,
-  and the affected file then passed 3/3 tests;
-- clean Git archive full discovery with `numpy==2.4.3`, `scipy==1.17.1`,
-  `pymbar==4.0.3`, and `jsonschema==4.26.0` ran 166 tests: `OK`, with two expected
-  skips that require the parent Dynamics Atlas workspace;
-- the clean archive installed as a core package with `--no-deps`; CLI parser/import
-  smoke passed while NumPy, SciPy, and PyMBAR were all absent;
-- both current `run-case` commands completed; each CaseView had integrity `PASS`,
-  one descriptive EvidenceResult, zero active-Rule EvidenceResults, and terminal
-  state `NOT_CALCULATED_BY_CASE_RUNNER`;
-- all five source-review workspace files and the static HTML regenerated
-  byte-for-byte from repository artifacts;
-- the generated-artifact scan found no parent-workspace absolute path, `file://`,
-  script, form, or `fetch(` mutation surface; the nine official reviewer identity and
-  disposition fields remained blank;
-- `git diff --check` passed on the final local candidate.
+Fresh release validation for exact repaired implementation commit
+`5ed99b6158b483d234c13ec448d01253fb118f90` completed as follows:
 
-PyMBAR emitted its standard statistical-inefficiency caution and reported that the
-optional JAX acceleration package is absent. Neither message is a test failure.
+- a clean Git archive full discovery ran under Python `3.14.0` with
+  `numpy==2.4.3`, `scipy==1.17.1`, `pymbar==4.0.3`, and
+  `jsonschema==4.26.0`: 170 tests ran, `OK`, with two expected skips that require
+  the parent Dynamics Atlas workspace;
+- the same clean archive installed as a core package under Python `3.11.14` with
+  `--no-deps --no-build-isolation`; CLI parser/import smoke passed while NumPy,
+  SciPy, PyMBAR, and jsonschema were all absent;
+- the repository CI matrix now runs the full declared optional-dependency suite on
+  Python 3.11 and 3.12. Exact final-delivery-head results belong to the Draft PR
+  check readback, because a committed file cannot record its own commit hash;
+- both repaired `run-case` commands completed; each CaseView had integrity `PASS`,
+  five content-addressed input snapshots, one descriptive EvidenceResult, zero
+  active-Rule EvidenceResults, and terminal state
+  `NOT_CALCULATED_BY_CASE_RUNNER`;
+- all five source-review workspace files, the static HTML, and local copies of the
+  blank review form and Schema regenerated from repository artifacts;
+- the scoped delivery-artifact scan over the two run roots, review workspace, and
+  static console found no parent-workspace absolute path, `file://`, `<script`,
+  `<form`, or `fetch(` surface. A pip install target is not a delivery artifact and
+  normally contains an interpreter shebang and `direct_url.json` build provenance;
+- all nine official reviewer identities and dispositions remained blank;
+- `git diff --check` passed.
+
+The earlier local receipt labeled its optional-dependency interpreter as Python 3.11;
+final reproducibility review identified that it was Python 3.14. The fresh results
+above replace that receipt. PyMBAR emitted its standard statistical-inefficiency
+caution and reported that the optional JAX acceleration package is absent; neither
+message is a test failure.
 
 ## Known limitations and human-only remainder
 
