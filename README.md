@@ -1,5 +1,15 @@
 # dynamics-atlas-harness
 
+## Start here
+
+第一次进入仓库，先读这两份中文材料：
+
+- [整个仓库现在有什么、怎么运行、下一步由谁决定](docs/DYNAMICS_ATLAS_REPOSITORY_HANDOFF_ZH.md)
+- [可直接贴到 ChatGPT Pro 的全仓审查 prompt](docs/CHATGPT_PRO_WHOLE_REPO_REVIEW_PROMPT_ZH.md)
+
+它们把当前主路径、历史回归入口、多模型诊断证据、确定性 common-flow 场景、科学人工 gate 和 Draft PR #20
+分开说明。冻结 evidence 没有因这次整理被移动或改写。
+
 ## Current execution status
 
 当前仓库状态、当前授权和下一允许动作以
