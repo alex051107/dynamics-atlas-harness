@@ -25,7 +25,7 @@
       "FUE-P02-FIG1",
       "FUE-P03-FIG2"
     ],
-    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017"
   },
   "created_at_utc": "2026-09-01T16:09:45Z",
   "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
@@ -205,5 +205,21 @@
     "divergence_classification": "NO_DIVERGENCE_APPROVE_FROZEN_PATTERN",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
     "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "Frozen manifest origin relation treated a registered F03 grounding source as non-origin.",
+    "correction": {
+      "corrected_rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017",
+      "source_science_packet_anchor": "NDSR-F03R01 / SEP-F03-MEASUREMENT"
+    }
   }
 }

@@ -198,6 +198,41 @@
     "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
     "divergence_classification": "NO_DIVERGENCE",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
-    "human_review_questions": []
+    "human_review_questions": [
+      "F03 source granularity remains a human-review question: publication-level integrative bundle versus atomic modality-specific SOURCE records plus a derived representation and explicit EDGE relations."
+    ]
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "Source granularity is unresolved: the record bundles multiple native modalities with a derived integrated ensemble.",
+    "correction": {
+      "human_review_question": "Should F03 SOURCE denote a publication-level integrative bundle, or one evidence object with a single native measurement semantics followed by DERIVED and EDGE records?",
+      "disposition": "QUESTION_RETAINED_NO_CANONICAL_CHANGE",
+      "required_follow_up": "CASE_008_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_008_visible_input.json",
+      "visible_input_sha256": "825cc47be742c462819f1da81f594b8b38d2393c06177ae380b8a06d2a41f1b2",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_008_blind_output.json",
+      "output_sha256": "e80d3ef0a3e5f9fdf51de5ff4d67d1695c225c26bd081709f697a24f3c63b01c",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
   }
 }

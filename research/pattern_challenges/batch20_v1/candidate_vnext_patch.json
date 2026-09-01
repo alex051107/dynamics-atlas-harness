@@ -1,7 +1,7 @@
 {
   "schema_version": "rules-pattern-batch20-candidate-vnext-patch/v1",
   "batch_id": "RULES_PATTERN_BATCH20_V1",
-  "status": "NO_ELIGIBLE_CANDIDATE_PATCH_AFTER_BATCH20_AGGREGATION",
+  "status": "NO_ACCEPTED_CANDIDATE_PATCH_BLIND_SAFETY_ALERT",
   "base_working_pattern_version": "v1",
   "aggregation_timestamp_utc": "2026-09-01T20:36:54Z",
   "eligible_safety_defects": [],
@@ -20,5 +20,21 @@
     "REGISTER_OPERATOR",
     "RELEASE_RULE",
     "UPGRADE_LOCAL_PASS_TO_SUPPORT"
-  ]
+  ],
+  "bounded_repair_blind_spot_check": {
+    "decision_id": "DA-20260901-064",
+    "status": "BLIND_RECONSTRUCTION_COMPLETE_WITH_SAFETY_ALERT",
+    "schema_valid_outputs": 5,
+    "unsafe_false_pass_risk_reported_cases": [
+      "case_003",
+      "case_008",
+      "case_010",
+      "case_012",
+      "case_018"
+    ],
+    "canonical_pattern_assessment_counts": {
+      "DATA_INSUFFICIENT": 5
+    },
+    "reason_no_patch": "The repeated signal is a Critic visible-input/contract limitation, not a demonstrated canonical-Rule defect eligible for automatic repair."
+  }
 }

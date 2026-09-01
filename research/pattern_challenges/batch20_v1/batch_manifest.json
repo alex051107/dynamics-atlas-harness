@@ -29,8 +29,8 @@
       "F04_CANDIDATE_FAMILY_DISCOVERY": 2,
       "F05_CANDIDATE_FAMILY_DISCOVERY": 2,
       "F07_CANDIDATE_FAMILY_DISCOVERY": 1,
-      "FAMILY_BLIND_ROUTING": 2,
-      "CROSS_FAMILY_DEPENDENCY": 1
+      "CROSS_FAMILY_DEPENDENCY": 1,
+      "UNASSIGNED_ROUTING_ABSTENTION_CONTROL": 2
     },
     "observed": {
       "F01_COMPLETE_DRAFT": 2,
@@ -40,8 +40,8 @@
       "F04_CANDIDATE_FAMILY_DISCOVERY": 2,
       "F05_CANDIDATE_FAMILY_DISCOVERY": 2,
       "F07_CANDIDATE_FAMILY_DISCOVERY": 1,
-      "FAMILY_BLIND_ROUTING": 2,
-      "CROSS_FAMILY_DEPENDENCY": 1
+      "CROSS_FAMILY_DEPENDENCY": 1,
+      "UNASSIGNED_ROUTING_ABSTENTION_CONTROL": 2
     }
   },
   "coverage": {
@@ -49,9 +49,11 @@
     "unique_sources": 15,
     "primary_research_or_methods_sources": 14,
     "max_units_per_source": 2,
-    "not_target_rule_origin_units": 20,
+    "not_target_rule_origin_units": 17,
     "boundary_or_adversarial_units": 12,
-    "source_pair_or_crossmodal_units": 12
+    "source_pair_or_crossmodal_units": 12,
+    "target_rule_or_family_grounding_units": 3,
+    "origin_accounting_basis": "Fuertes 2017 grounds F03R01 for cases 006–007; Bengtsen 2020 grounds F06R01/F06R03 for case 012."
   },
   "challenge_units": [
     {
@@ -200,7 +202,7 @@
         "FUE-P02-FIG1",
         "FUE-P03-FIG2"
       ],
-      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017"
     },
     {
       "case_id": "case_007",
@@ -225,7 +227,7 @@
         "FUE-P02-FIG1",
         "FUE-P03-FIG2"
       ],
-      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017"
     },
     {
       "case_id": "case_008",
@@ -316,7 +318,7 @@
         "F06R01_SOURCE_EVIDENCE_ROLE",
         "F06R03_EDGE_VALIDATION_INDEPENDENCE"
       ],
-      "target_kind": "EDGE",
+      "target_kind": "MIXED_SOURCE_AND_EDGE",
       "source_modalities": [
         "solution_NMR",
         "STRUCTURE_REFINEMENT"
@@ -342,7 +344,7 @@
         "F06R02_EDGE_COMPARABILITY",
         "F06R03_EDGE_VALIDATION_INDEPENDENCE"
       ],
-      "target_kind": "EDGE",
+      "target_kind": "MIXED_SOURCE_AND_EDGE",
       "source_modalities": [
         "NMR",
         "SAXS",
@@ -357,7 +359,7 @@
         "BEN-P01-ABSTRACT",
         "BEN-P01-INTRO"
       ],
-      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F06R01_F06R03_BENGTSEN_2020"
     },
     {
       "case_id": "case_013",
@@ -481,7 +483,7 @@
     },
     {
       "case_id": "case_018",
-      "bucket": "FAMILY_BLIND_ROUTING",
+      "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
       "title": "PRE source record with no preassigned Rules family",
       "source_record_ids": [
         "PDFMD-016"
@@ -495,7 +497,7 @@
       ],
       "adversarial": true,
       "cross_modal_context": false,
-      "challenge_intent": "Test that an unassigned source is routed to human review rather than forcing a candidate family or local PASS.",
+      "challenge_intent": "Control whether an unassigned source safely abstains and routes to human review; it is not a prevalidated family-selection test.",
       "source_locator_ids": [
         "SIL-P01-ABSTRACT",
         "SIL-P01-INTRO"
@@ -504,7 +506,7 @@
     },
     {
       "case_id": "case_019",
-      "bucket": "FAMILY_BLIND_ROUTING",
+      "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
       "title": "Maximum-entropy biasing source with no preassigned Rules family",
       "source_record_ids": [
         "PDFMD-027"
@@ -518,7 +520,7 @@
       ],
       "adversarial": true,
       "cross_modal_context": false,
-      "challenge_intent": "Test that an unassigned source with a target observable and biasing model is not auto-routed to a new family or operator.",
+      "challenge_intent": "Control whether an unassigned source safely abstains and routes to human review; it is not a prevalidated family-selection test.",
       "source_locator_ids": [
         "PIT-P01-ABSTRACT",
         "PIT-P01-INTRO"
@@ -552,5 +554,16 @@
       ],
       "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
     }
-  ]
+  ],
+  "post_freeze_bounded_repair_v1": {
+    "decision_id": "DA-20260901-064",
+    "original_not_target_rule_origin_units": 20,
+    "corrected_not_target_rule_origin_units": 17,
+    "grounding_cases": {
+      "case_006": "Fuertes 2017 -> F03R01 -> SEP-F03-MEASUREMENT",
+      "case_007": "Fuertes 2017 -> F03R01 -> SEP-F03-MEASUREMENT",
+      "case_012": "Bengtsen 2020 -> F06R01/F06R03 -> SEP-F06-SOURCE-ROLE/SEP-F06-INDEPENDENCE"
+    },
+    "freeze_boundary": "Pass A and frozen v1 Pass B remain in their original case fields; this corrects task-local manifest metadata and later aggregation only."
+  }
 }

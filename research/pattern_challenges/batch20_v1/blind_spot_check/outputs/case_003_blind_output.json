@@ -1,0 +1,47 @@
+{
+  "schema_version": "batch20-blind-critic-output/v1",
+  "case_id": "case_003",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "selected_family_ids": [
+    "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "F03_SOURCE_MEASUREMENT_SEMANTICS",
+    "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+  ],
+  "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+  "targets": [
+    {
+      "target_id": "gomes_2020_sic1_smfret_context",
+      "target_kind": "SOURCE"
+    }
+  ],
+  "rule_instances": [
+    {
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_id": "gomes_2020_sic1_smfret_context",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The bounded record identifies Sic1/pSic1 labeling, the disordered N-terminal region, terminal dye positions, and the stated TE-buffer condition."
+    },
+    {
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_id": "gomes_2020_sic1_smfret_context",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The record explicitly identifies an smFRET efficiency histogram as the native observable and distinguishes NMR/SAXS ensemble construction from smFRET validation."
+    },
+    {
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_id": "gomes_2020_sic1_smfret_context",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The abstract locator records the source's evidence role as NMR/SAXS construction with smFRET reserved for independent validation."
+    }
+  ],
+  "first_blocker": "No CASE intake with a declared claim contract or requested wording is provided, and no second source or declared EDGE relation is visible for cross-source evaluation.",
+  "legal_resolution_route": "DIRECT_EVALUATION",
+  "claim_ceiling": "Source-local descriptive reporting of the Sic1/pSic1 smFRET context, native observable, stated condition, and reported evidence role only; no claim of sample homogeneity, reliability, cross-source comparability, validation independence, identifiability, or biological conclusion.",
+  "unsafe_false_pass_risk": true,
+  "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+  "human_review_question": "What CASE claim contract and which second source or EDGE relation should govern the intended comparison?",
+  "source_grounded_summary": "The bounded record supports local source-system, measurement-semantics, and evidence-role descriptions, but lacks the CASE intake and paired EDGE context required for broader evaluation."
+}

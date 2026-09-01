@@ -1,0 +1,202 @@
+{
+  "schema_version": "batch20-critic-visible-input-manifest/v1",
+  "contract_path": "research/pattern_challenges/batch20_v1/critic_contract_v1.md",
+  "output_schema_path": "research/pattern_challenges/batch20_v1/critic_output_schema.json",
+  "review_configuration": {
+    "decision_id": "DA-20260901-064",
+    "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+    "fresh_contexts": 5,
+    "case_ids": [
+      "case_003",
+      "case_008",
+      "case_010",
+      "case_012",
+      "case_018"
+    ],
+    "automatic_retry": "FORBIDDEN",
+    "local_access": "READ_ONLY_DECLARED_DOSSIER_ONLY",
+    "external_retrieval": "FORBIDDEN"
+  },
+  "common_visible_inventory": {
+    "embedded_in_every_visible_input": true,
+    "family_count": 7,
+    "rule_count": 12,
+    "inventory_sha256": "09bc38bff3481a1deb1a4576a27b65205144e66b0af4babd9c697a4f1f0a85e9"
+  },
+  "cases": [
+    {
+      "case_id": "case_003",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_003_visible_input.json",
+      "visible_input_sha256": "0c7cdcdd739ffb93b3d7e478f7ce2a119a7d62fe9b6f471645b3a8b83bffd33b",
+      "source_record_path": "research/pattern_challenges/batch20_v1/case_records/case_003.json",
+      "source_record_json_pointer": "/source_first_pass_a",
+      "allowed_source_first_fields": [
+        "schema_version",
+        "record_status",
+        "source_first_rule_contract_visibility",
+        "source_identity_and_locators",
+        "source_objects",
+        "atomic_source_supported_statements",
+        "missing_information",
+        "authority_boundary"
+      ],
+      "explicitly_excluded_case_fields": [
+        "/frozen_manifest_unit",
+        "/frozen_pattern_pass_b",
+        "/critic_review",
+        "/batch20_review_tracking",
+        "/analyst_divergence_classification_before_critic",
+        "/bounded_repair_v1",
+        "/source_first_pass_a/scientific_question",
+        "/source_first_pass_a/source_relationship",
+        "/source_first_pass_a/maximum_source_supported_wording",
+        "/source_first_pass_a/forbidden_generalizations",
+        "/source_first_pass_a/possible_reusable_review_obligations"
+      ],
+      "blind_output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_003_blind_output.json",
+      "blind_output_sha256": "180f8e7ac33928df1dd30145347a5eea19bf59088782200b6285e01766c3ab5f"
+    },
+    {
+      "case_id": "case_008",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_008_visible_input.json",
+      "visible_input_sha256": "825cc47be742c462819f1da81f594b8b38d2393c06177ae380b8a06d2a41f1b2",
+      "source_record_path": "research/pattern_challenges/batch20_v1/case_records/case_008.json",
+      "source_record_json_pointer": "/source_first_pass_a",
+      "allowed_source_first_fields": [
+        "schema_version",
+        "record_status",
+        "source_first_rule_contract_visibility",
+        "source_identity_and_locators",
+        "source_objects",
+        "atomic_source_supported_statements",
+        "missing_information",
+        "authority_boundary"
+      ],
+      "explicitly_excluded_case_fields": [
+        "/frozen_manifest_unit",
+        "/frozen_pattern_pass_b",
+        "/critic_review",
+        "/batch20_review_tracking",
+        "/analyst_divergence_classification_before_critic",
+        "/bounded_repair_v1",
+        "/source_first_pass_a/scientific_question",
+        "/source_first_pass_a/source_relationship",
+        "/source_first_pass_a/maximum_source_supported_wording",
+        "/source_first_pass_a/forbidden_generalizations",
+        "/source_first_pass_a/possible_reusable_review_obligations"
+      ],
+      "blind_output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_008_blind_output.json",
+      "blind_output_sha256": "e80d3ef0a3e5f9fdf51de5ff4d67d1695c225c26bd081709f697a24f3c63b01c"
+    },
+    {
+      "case_id": "case_010",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_010_visible_input.json",
+      "visible_input_sha256": "dcf0c0550b1cf935e5d25dba3694abe67ca1a1e0d40b6bd97474d2cf739fc34f",
+      "source_record_path": "research/pattern_challenges/batch20_v1/case_records/case_010.json",
+      "source_record_json_pointer": "/source_first_pass_a",
+      "allowed_source_first_fields": [
+        "schema_version",
+        "record_status",
+        "source_first_rule_contract_visibility",
+        "source_identity_and_locators",
+        "source_objects",
+        "atomic_source_supported_statements",
+        "missing_information",
+        "authority_boundary"
+      ],
+      "explicitly_excluded_case_fields": [
+        "/frozen_manifest_unit",
+        "/frozen_pattern_pass_b",
+        "/critic_review",
+        "/batch20_review_tracking",
+        "/analyst_divergence_classification_before_critic",
+        "/bounded_repair_v1",
+        "/source_first_pass_a/scientific_question",
+        "/source_first_pass_a/source_relationship",
+        "/source_first_pass_a/maximum_source_supported_wording",
+        "/source_first_pass_a/forbidden_generalizations",
+        "/source_first_pass_a/possible_reusable_review_obligations"
+      ],
+      "blind_output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_010_blind_output.json",
+      "blind_output_sha256": "bb5b8e0cc9d062b9d03e20f3996f8ed83c04462ece76f62b8e152db12fc62153"
+    },
+    {
+      "case_id": "case_012",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_012_visible_input.json",
+      "visible_input_sha256": "07b577c9224d84089e03ee2bddfa73fa20e4a43754a24b6dceb3899131903a7f",
+      "source_record_path": "research/pattern_challenges/batch20_v1/case_records/case_012.json",
+      "source_record_json_pointer": "/source_first_pass_a",
+      "allowed_source_first_fields": [
+        "schema_version",
+        "record_status",
+        "source_first_rule_contract_visibility",
+        "source_identity_and_locators",
+        "source_objects",
+        "atomic_source_supported_statements",
+        "missing_information",
+        "authority_boundary"
+      ],
+      "explicitly_excluded_case_fields": [
+        "/frozen_manifest_unit",
+        "/frozen_pattern_pass_b",
+        "/critic_review",
+        "/batch20_review_tracking",
+        "/analyst_divergence_classification_before_critic",
+        "/bounded_repair_v1",
+        "/source_first_pass_a/scientific_question",
+        "/source_first_pass_a/source_relationship",
+        "/source_first_pass_a/maximum_source_supported_wording",
+        "/source_first_pass_a/forbidden_generalizations",
+        "/source_first_pass_a/possible_reusable_review_obligations"
+      ],
+      "blind_output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_012_blind_output.json",
+      "blind_output_sha256": "3a739bbc833ab9dd40a9c1d526349f0b8661910fb17b20ea96b0cbeb5126a5e5"
+    },
+    {
+      "case_id": "case_018",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_018_visible_input.json",
+      "visible_input_sha256": "7e0e99a3d27601c73bfd08a48f3def51b3a4a4b399970331354c9e0dd0150cb7",
+      "source_record_path": "research/pattern_challenges/batch20_v1/case_records/case_018.json",
+      "source_record_json_pointer": "/source_first_pass_a",
+      "allowed_source_first_fields": [
+        "schema_version",
+        "record_status",
+        "source_first_rule_contract_visibility",
+        "source_identity_and_locators",
+        "source_objects",
+        "atomic_source_supported_statements",
+        "missing_information",
+        "authority_boundary"
+      ],
+      "explicitly_excluded_case_fields": [
+        "/frozen_manifest_unit",
+        "/frozen_pattern_pass_b",
+        "/critic_review",
+        "/batch20_review_tracking",
+        "/analyst_divergence_classification_before_critic",
+        "/bounded_repair_v1",
+        "/source_first_pass_a/scientific_question",
+        "/source_first_pass_a/source_relationship",
+        "/source_first_pass_a/maximum_source_supported_wording",
+        "/source_first_pass_a/forbidden_generalizations",
+        "/source_first_pass_a/possible_reusable_review_obligations"
+      ],
+      "blind_output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_018_blind_output.json",
+      "blind_output_sha256": "7ee35a5ca03e775365dd5837ec678319b2a80a418eae5c8dfea7c25af878e96b"
+    }
+  ],
+  "reconstruction_statement": "The files named above, the fixed review instruction in critic_contract_v1.md, and critic_output_schema.json are the complete scientific visible-input surface. No other case field or source text is authorized as Critic input.",
+  "response_records": {
+    "outputs_completed": 5,
+    "schema_valid": 5,
+    "unsafe_false_pass_risk_reported_cases": [
+      "case_003",
+      "case_008",
+      "case_010",
+      "case_012",
+      "case_018"
+    ],
+    "status": "BLIND_RECONSTRUCTION_COMPLETE_WITH_SAFETY_ALERT",
+    "interpretation": "A reported risk is a review-design signal. It is not an automatic canonical Rule change or scientific disposition."
+  }
+}

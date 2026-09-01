@@ -14,7 +14,7 @@
       "F06R02_EDGE_COMPARABILITY",
       "F06R03_EDGE_VALIDATION_INDEPENDENCE"
     ],
-    "target_kind": "EDGE",
+    "target_kind": "MIXED_SOURCE_AND_EDGE",
     "source_modalities": [
       "NMR",
       "SAXS",
@@ -29,7 +29,7 @@
       "BEN-P01-ABSTRACT",
       "BEN-P01-INTRO"
     ],
-    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F06R01_F06R03_BENGTSEN_2020"
   },
   "created_at_utc": "2026-09-01T16:09:45Z",
   "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
@@ -219,5 +219,69 @@
     "divergence_classification": "No divergence: the frozen EDGE scope, unresolved statuses, dependency chain, route, and claim ceiling match the evidence limits in the bounded abstract and introduction locators.",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
     "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "The frozen projection labeled the entire mixed F06 application EDGE although F06R01 is SOURCE-scoped.",
+    "correction": {
+      "corrected_rule_instances": [
+        {
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::bengtsen_2020_experiment_bundle",
+          "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+          "target_kind": "SOURCE",
+          "status": "UNRESOLVED",
+          "reason": "SOURCE_EVIDENCE_ROLE_UNRESOLVED"
+        },
+        {
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::bengtsen_2020_md_ensemble",
+          "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+          "target_kind": "SOURCE",
+          "status": "UNRESOLVED",
+          "reason": "SOURCE_EVIDENCE_ROLE_UNRESOLVED"
+        },
+        {
+          "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::bengtsen_2020_experiment_bundle__to__bengtsen_2020_md_ensemble_relation",
+          "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+          "target_kind": "EDGE",
+          "status": "UNRESOLVED",
+          "reason": "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+        },
+        {
+          "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::bengtsen_2020_experiment_bundle__to__bengtsen_2020_md_ensemble_validation_relation",
+          "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+          "target_kind": "EDGE",
+          "status": "UNRESOLVED",
+          "reason": "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+        }
+      ],
+      "first_blocker": "No source-first per-input role or lineage declaration is present in the bounded record.",
+      "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+      "local_claim_ceiling": "The corrected projection records unresolved source roles and relation questions; it does not judge the ensemble or methods scientifically.",
+      "required_follow_up": "CASE_012_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_012_visible_input.json",
+      "visible_input_sha256": "07b577c9224d84089e03ee2bddfa73fa20e4a43754a24b6dceb3899131903a7f",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_012_blind_output.json",
+      "output_sha256": "3a739bbc833ab9dd40a9c1d526349f0b8661910fb17b20ea96b0cbeb5126a5e5",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
   }
 }

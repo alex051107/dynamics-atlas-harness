@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch20 blind Critic output v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "review_type",
+    "selected_family_ids",
+    "family_selection_status",
+    "targets",
+    "rule_instances",
+    "first_blocker",
+    "legal_resolution_route",
+    "claim_ceiling",
+    "unsafe_false_pass_risk",
+    "canonical_pattern_defect_assessment",
+    "human_review_question",
+    "source_grounded_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "batch20-blind-critic-output/v1"
+    },
+    "case_id": {
+      "enum": [
+        "case_003",
+        "case_008",
+        "case_010",
+        "case_012",
+        "case_018"
+      ]
+    },
+    "review_type": {
+      "const": "SOURCE_FIRST_BLIND_RECONSTRUCTION"
+    },
+    "selected_family_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "family_selection_status": {
+      "enum": [
+        "FAMILY_AND_RULE_SELECTION",
+        "ABSTAIN_PENDING_ROUTING"
+      ]
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "target_kind"
+        ],
+        "properties": {
+          "target_id": {
+            "type": "string"
+          },
+          "target_kind": {
+            "enum": [
+              "CASE",
+              "SOURCE",
+              "EDGE"
+            ]
+          }
+        }
+      }
+    },
+    "rule_instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "runtime_subrule_id",
+          "target_id",
+          "target_kind",
+          "status",
+          "reason"
+        ],
+        "properties": {
+          "runtime_subrule_id": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          },
+          "target_kind": {
+            "enum": [
+              "CASE",
+              "SOURCE",
+              "EDGE"
+            ]
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNRESOLVED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "first_blocker": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legal_resolution_route": {
+      "enum": [
+        "DIRECT_EVALUATION",
+        "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+        "HUMAN_OR_NEW_DATA",
+        "ABSTAIN_PENDING_ROUTING",
+        "CANDIDATE_MAP_KEEP_DEFERRED"
+      ]
+    },
+    "claim_ceiling": {
+      "type": "string"
+    },
+    "unsafe_false_pass_risk": {
+      "type": "boolean"
+    },
+    "canonical_pattern_defect_assessment": {
+      "enum": [
+        "NO_IMMEDIATE_REPEATED_CANONICAL_DEFECT",
+        "POTENTIAL_CASE_SPECIFIC_ISSUE",
+        "POTENTIAL_GENERIC_DEFECT_REQUIRES_HUMAN_REVIEW",
+        "DATA_INSUFFICIENT"
+      ]
+    },
+    "human_review_question": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_grounded_summary": {
+      "type": "string",
+      "maxLength": 1200
+    }
+  },
+  "description": "The schema asks for conclusions, not chain-of-thought. Route options are output vocabulary, not a case-specific expected route."
+}

@@ -4,7 +4,7 @@
   "case_number": 18,
   "frozen_manifest_unit": {
     "case_id": "case_018",
-    "bucket": "FAMILY_BLIND_ROUTING",
+    "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
     "title": "PRE source record with no preassigned Rules family",
     "source_record_ids": [
       "PDFMD-016"
@@ -184,5 +184,38 @@
     "divergence_classification": "NO_DIVERGENCE",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
     "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "The historical family-blind label overstated a preassigned-abstention control as a family-selection test.",
+    "correction": {
+      "corrected_control_label": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+      "historical_test_meaning": "The frozen projection preassigned abstention, so it tested safe abstention rather than family-selection accuracy.",
+      "required_follow_up": "CASE_018_TRUE_FAMILY_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_018_visible_input.json",
+      "visible_input_sha256": "7e0e99a3d27601c73bfd08a48f3def51b3a4a4b399970331354c9e0dd0150cb7",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_018_blind_output.json",
+      "output_sha256": "7ee35a5ca03e775365dd5837ec678319b2a80a418eae5c8dfea7c25af878e96b",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
   }
 }

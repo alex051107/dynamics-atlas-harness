@@ -168,5 +168,32 @@
     "human_review_questions": [
       "A human or later model review is required before this case can influence a candidate patch."
     ]
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "Frozen F02 projection treated a broad source summary as an exact sample-composition declaration.",
+    "correction": {
+      "corrected_rule_instances": [
+        {
+          "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::henot_2022_hsp90alpha_atp_binding_domain",
+          "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+          "target_kind": "SOURCE",
+          "status": "UNRESOLVED",
+          "reason": "SAMPLE_COMPOSITION_DECLARATION_NOT_EXACTLY_EXTRACTED"
+        }
+      ],
+      "first_blocker": "The bounded locators identify an isolated domain and named methods but do not extract a complete sample-composition and condition declaration.",
+      "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+      "local_claim_ceiling": "The record may state the bounded construct/method context but may not claim an F02 declaration PASS or sample homogeneity.",
+      "required_follow_up": "CASE_004_BLIND_RECONSTRUCTION"
+    }
   }
 }

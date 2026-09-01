@@ -1,23 +1,34 @@
 # Soojung / Named Reviewer Summary
 
-## Decision-ready summary / 供审阅的直接结论
+## Decision-ready conclusion
 
-Batch20 is `BATCH_COMPLETE_WITH_PARTIAL_MODEL_REVIEW`: the frozen 20-case development set has 20/20 Pass A and Pass B records, 2 completed Claude advisory reviews, 15 completed Luna advisory reviews, and 3 pending model reviews (case_003, case_004, case_005). The 17 completed advisory judgments all returned `APPROVE_KEEP` with no reported pattern defect or unsafe false PASS.
+The bounded repair is recorded and auditable, but the five-case blind reconstruction did **not**
+clear safety: 5/5 fresh outputs explicitly reported `unsafe_false_pass_risk=true`.
+The outputs repeatedly treated partial construct/condition context as enough for F02 `PASS`.
+The existing repaired records for Cases 003–004 remain `UNRESOLVED`; no canonical Rule was
+changed and no candidate patch is accepted.
 
-Batch20 当前为 `BATCH_COMPLETE_WITH_PARTIAL_MODEL_REVIEW`：20/20 已完成 Pass A 与 Pass B；Claude advisory 完成 2 个，Luna advisory 完成 15 个；另有 3 个待模型复核。17 个已完成模型判断均为 `APPROVE_KEEP`，未报告 pattern defect 或 unsafe false PASS。
+本轮有界修订已完成并可审计，但 5 例盲审**未通过**安全条件：5/5 份 fresh
+输出明确标记 `unsafe_false_pass_risk=true`。它们反复把不完整的 construct/condition 语境当作
+F02 `PASS` 的充分证据。Case 003–004 的修订记录保持 `UNRESOLVED`；没有修改 canonical Rule，也
+没有接受 candidate patch。
 
-## What needs domain review / 需要领域审阅的内容
+## What the updated PR now establishes
 
-- Check whether the cited PDF locators actually support each source-first statement and its narrow claim ceiling.
-- Check whether the frozen F02/F03/F06 boundaries correctly prevent SOURCE-to-EDGE and EDGE-to-CASE upgrades.
-- Revisit the three pending cases before treating the exposed-set outcome as a complete advisory cohort.
+- 20 个冻结 Pass A / Pass B 与旧 Critic 输出均保留；三处 origin accounting 已更正，非 origin
+  数为 17。
+- Case 011–012 的 F06 SOURCE / EDGE scope 已按 canonical target kind 拆开。
+- Candidate-map deferred、complete-draft confirmation、abstention-control 和 pending review 已
+  分开统计；不再把它们写成单一的 “17 KEEP”。
+- Critic 的输入、输出 schema 与五份可重建 blind dossier/output 已在 PR 中可见。
+- Case 018 的 fresh review 真正允许独立选择 family 或 abstain；它选择了 family，因此旧
+  Case 018/019 的意义必须保留为 abstention control。
 
-- 核对 PDF locator 是否真正支持 source-first statement 及其狭窄 claim ceiling。
-- 核对冻结的 F02/F03/F06 边界是否阻止 SOURCE→EDGE 与 EDGE→CASE 的越级。
-- 在将该 exposed-set 结果视为完整初审 cohort 前，补做三个待复核案例的审阅。
+## What still needs a human decision
 
-## What does not need to be decided here / 本次不要求决定
-
-There is no candidate Rule patch to approve, reject, or regress. This artifact does not ask for H1 approval, a canonical Rule release, merge approval, or a scientific disposition.
-
-当前没有 candidate Rule patch 需要批准、拒绝或回归。本文件不请求 H1 批准、canonical Rule 发布、合并批准或科学处置。
+1. Decide whether to refine the blind Critic contract so F02 required-evidence fields cannot
+   be inferred from broad context, then separately authorize any new independent review.
+2. Decide how F03 should represent a multimodal publication bundle versus modality-specific
+   SOURCE objects and derived/EDGE objects.
+3. Review the still-unmerged exact PR head. Do not merge, release Rules, or upgrade H1 from
+   this artifact alone.

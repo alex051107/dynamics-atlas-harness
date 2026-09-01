@@ -4,7 +4,7 @@
   "case_number": 19,
   "frozen_manifest_unit": {
     "case_id": "case_019",
-    "bucket": "FAMILY_BLIND_ROUTING",
+    "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
     "title": "Maximum-entropy biasing source with no preassigned Rules family",
     "source_record_ids": [
       "PDFMD-027"
@@ -184,5 +184,21 @@
     "divergence_classification": "NO_DIVERGENCE",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
     "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "The historical family-blind label overstated a preassigned-abstention control as a family-selection test.",
+    "correction": {
+      "corrected_control_label": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+      "historical_test_meaning": "The frozen projection preassigned abstention, so it tests safe abstention rather than independent family selection."
+    }
   }
 }

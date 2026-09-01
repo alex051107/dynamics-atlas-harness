@@ -13,7 +13,7 @@
       "F06R01_SOURCE_EVIDENCE_ROLE",
       "F06R03_EDGE_VALIDATION_INDEPENDENCE"
     ],
-    "target_kind": "EDGE",
+    "target_kind": "MIXED_SOURCE_AND_EDGE",
     "source_modalities": [
       "solution_NMR",
       "STRUCTURE_REFINEMENT"
@@ -208,5 +208,46 @@
     "divergence_classification": "NO_DIVERGENCE",
     "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
     "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "The frozen projection labeled the entire F06 application EDGE although F06R01 is SOURCE-scoped.",
+    "correction": {
+      "corrected_rule_instances": [
+        {
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::bonvin_1995_nmr_restraints",
+          "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+          "target_kind": "SOURCE",
+          "status": "PASS",
+          "reason": "SOURCE_EVIDENCE_ROLE_RECORDED"
+        },
+        {
+          "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::bonvin_1995_crossvalidation",
+          "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+          "target_kind": "SOURCE",
+          "status": "PASS",
+          "reason": "SOURCE_EVIDENCE_ROLE_RECORDED"
+        },
+        {
+          "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::bonvin_1995_nmr_restraints__to__bonvin_1995_crossvalidation_validation_relation",
+          "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+          "target_kind": "EDGE",
+          "status": "FAIL",
+          "reason": "VALIDATION_INDEPENDENCE_CONTRADICTED"
+        }
+      ],
+      "first_blocker": "The independent-validation wording conflicts with declared SAME_DATA and shared-error fields.",
+      "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+      "local_claim_ceiling": "The correction blocks an independent-validation label without invalidating the NMR observation or cross-validation analysis.",
+      "corrective_review": "Canonical target-kind audit only; the historical confirmation-style Critic did not independently reconstruct this corrected scope."
+    }
   }
 }

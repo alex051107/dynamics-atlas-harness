@@ -176,5 +176,48 @@
     "human_review_questions": [
       "A human or later model review is required before this case can influence a candidate patch."
     ]
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "Frozen F02 projection treated a broad source summary as an exact sample-composition declaration.",
+    "correction": {
+      "corrected_rule_instances": [
+        {
+          "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::gomes_2020_sic1_smfret_context",
+          "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+          "target_kind": "SOURCE",
+          "status": "UNRESOLVED",
+          "reason": "SAMPLE_COMPOSITION_DECLARATION_NOT_EXACTLY_EXTRACTED"
+        }
+      ],
+      "first_blocker": "The bounded locators identify a construct and measurement condition but do not extract a complete sample-composition declaration.",
+      "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+      "local_claim_ceiling": "The record may state the bounded construct/method context but may not claim an F02 declaration PASS or sample homogeneity.",
+      "required_follow_up": "CASE_003_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_003_visible_input.json",
+      "visible_input_sha256": "0c7cdcdd739ffb93b3d7e478f7ce2a119a7d62fe9b6f471645b3a8b83bffd33b",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_003_blind_output.json",
+      "output_sha256": "180f8e7ac33928df1dd30145347a5eea19bf59088782200b6285e01766c3ab5f",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
   }
 }
