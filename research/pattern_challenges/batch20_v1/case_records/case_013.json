@@ -154,10 +154,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_013",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "ba0becd7d9721e37ac405283c4a7271146610a9745524c9fe8ffecba44e78ca5",
+    "completed_at_utc": "2026-09-01T20:27:42Z",
+    "response_sha256": "f25e71fb5fc862c0ea4ca9af8fcc491b1e2c73b08bcb36e6a0614fec54927cc2",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "HEL-P01-ABSTRACT",
+      "HEL-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "HEL-P01-ABSTRACT",
+        "rule_or_field_affected": "F04R01_SOURCE_RELIABILITY_PROVENANCE candidate-only uncertainty and provenance review mapping",
+        "target_scope": "SOURCE",
+        "evidence_gap": "No material evidence gap for the frozen candidate-only record: the abstract locator supports multi-laboratory dispersion, correction context, and conversion uncertainty.",
+        "dependency_or_route_issue": "The record correctly leaves the rule unresolved because F04 is candidate-map-only and routes resolution to HUMAN_OR_NEW_DATA; no executable operator route is enabled.",
+        "claim_ceiling_consequence": "The ceiling appropriately limits the result to candidate review inputs and forbids a generic source-reliability conclusion.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair needed."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The listed abstract and introduction locators support recording uncertainty, reproducibility framing, and provenance-related review inputs. The SOURCE binding, candidate-map-only dependency, HUMAN_OR_NEW_DATA route, unresolved status, and prohibition on generic reliability conclusions are internally consistent with the dossier and its evidence ceiling.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

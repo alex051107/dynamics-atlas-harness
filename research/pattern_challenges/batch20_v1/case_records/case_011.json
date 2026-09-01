@@ -166,10 +166,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_011",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "a3b478e6ddc4484555b8652eeabff0e1612e9a0a6ce9e03c7338fba09111e829",
+    "completed_at_utc": "2026-09-01T20:27:42Z",
+    "response_sha256": "e97c84b364ef7c9bcc7fc631b10eaaf42fa03e6437bc9dc1b1e65f9ddd3730f1",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "BON-P01-ABSTRACT",
+      "BON-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "BON-P01-ABSTRACT",
+        "rule_or_field_affected": "F06R03_EDGE_VALIDATION_INDEPENDENCE and the independent-validation claim ceiling",
+        "target_scope": "EDGE: cross-validation relation between NMR restraint refinement and its validation procedure",
+        "evidence_gap": "The locator supports complete cross-validation, fit assessment, and overfitting risk, while the dossier records that this procedure does not establish an independent external source lineage.",
+        "dependency_or_route_issue": "The binding correctly evaluates validation independence separately from source evidence role and routes contradicted independence claims to HUMAN_OR_NEW_DATA.",
+        "claim_ceiling_consequence": "The contract blocks the independent-validation label without invalidating the NMR measurements or the cross-validation analysis.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is required; retain the separate source-role and edge-independence checks and the current claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The listed locators support treating the paper's procedure as cross-validation for NMR refinement and support retaining a boundary against upgrading that procedure to independent external validation. The EDGE binding, required independence evidence, failure route, and narrow claim ceiling are aligned with the dossier's source-bounded record.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

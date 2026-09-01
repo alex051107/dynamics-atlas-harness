@@ -142,10 +142,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_018",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "4119fe47531b12ba8e2d69238bb4cb53a316f98952f344ba5100495f2b4d5401",
+    "completed_at_utc": "2026-09-01T20:31:12Z",
+    "response_sha256": "5e3f05e0c51fbbb6b8510117053cf4c37789a538b82f09f7966b62d9099d29e6",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "SIL-P01-ABSTRACT",
+      "SIL-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "SIL-P01-ABSTRACT",
+        "rule_or_field_affected": "Family-blind routing, selected families, and local claim ceiling",
+        "target_scope": "SOURCE",
+        "evidence_gap": "The locators support the PRE/ensemble semantic record and its resolution limits; no evidence gap creates a forced family assignment because no family or rule is selected.",
+        "dependency_or_route_issue": "The frozen projection correctly preserves the absent approved routing dependency and sends resolution to human review or new data.",
+        "claim_ceiling_consequence": "The ceiling remains limited to recording abstention and does not authorize canonical family selection, new-rule execution, or a local PASS.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is needed; retain the family-blind abstention pattern."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The listed locators support a PRE/ensemble source with sparse-data and ensemble-resolution limits, while the frozen record safely makes no family selection, creates no RuleInstance, and routes the unresolved assignment to human review or new data. The pattern preserves the appropriate claim ceiling and does not expose a local false-pass path.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

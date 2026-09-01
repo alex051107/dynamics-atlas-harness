@@ -156,10 +156,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_009",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "cbece9d8bd4f3bc6a2c61c974a216c6f3afb610c6c292807aaad975316340f0c",
+    "completed_at_utc": "2026-09-01T20:23:51Z",
+    "response_sha256": "e3ccaaeb66dca53983f167ca3397c40e22f550a52fe7827c082137565b157181",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "SAN-P01-ABSTRACT",
+      "SAN-P02-RESULTS"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "SAN-P02-RESULTS",
+        "rule_or_field_affected": "F03R01_SOURCE_NATIVE_MEASUREMENT and its native-measurement declaration fields",
+        "target_scope": "SOURCE",
+        "evidence_gap": "No material evidence gap is apparent within the dossier: the listed Results locator supports the fluorescence observables, FRET-derived representations, fFCS dynamics, and temporal semantics required for the source-local declaration.",
+        "dependency_or_route_issue": "The source-local declaration is evaluated directly from populated SOURCE fields, with no unresolved dependency or route mismatch.",
+        "claim_ceiling_consequence": "The frozen ceiling correctly limits PASS to declared measurement semantics and does not upgrade the record to reliability, comparability, validation, or a scientific conclusion.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "Retain the frozen rule, SOURCE binding, direct-evaluation route, required evidence, and claim ceiling unchanged."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The two permitted locators support the frozen SOURCE-level declaration: the abstract establishes the hybrid fluorescence toolkit, FRET-derived distance use, and ns-ms dynamic context, while the Results passage supports FRET efficiency, donor lifetime, fFCS, and time/ensemble distinctions. The required SOURCE fields are populated, the PASS dependency and direct route are coherent, and the claim ceiling preserves the distinction between declared observables and unsupported reliability, comparability, validation, or scientific conclusions.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

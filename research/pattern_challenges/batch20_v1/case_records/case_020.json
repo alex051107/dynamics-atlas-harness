@@ -175,10 +175,48 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_020",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "8d96ad440bb0666ccf2cb75d8c917e7fe60ed3039e4c1584cab29658bcef270d",
+    "completed_at_utc": "2026-09-01T20:31:12Z",
+    "response_sha256": "fc1ff6af9ed1b8dd93c059016b6087c274d33e78f27952f60d38476b16129b7b",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "GOM-P01-ABSTRACT",
+      "GOM-P02-FIG1",
+      "GOM-P02-FIG2"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "GOM-P02-FIG2",
+        "rule_or_field_affected": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION and F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "target_scope": "SOURCE: source-local construct, condition, and native measurement declarations",
+        "evidence_gap": "No material evidence gap for the frozen declaration-level claims: the listed locators identify the Sic1/pSic1 labeled construct, stated condition, and modality-specific representations.",
+        "dependency_or_route_issue": "The record preserves F02 context before F03 interpretation while correctly retaining direct evaluation for the two local declarations and avoiding a new canonical runtime dependency.",
+        "claim_ceiling_consequence": "The bounded claim remains limited to declared source-system context and native measurement semantics; it does not upgrade to comparability, validation independence, reliability, or scientific support.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is warranted; the locators support the frozen source-local declarations and their stated claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_MATERIAL_DIVERGENCE",
+    "summary": "The listed abstract and figure locators support the frozen SOURCE-level construct/condition and native-measurement declarations. The dependency chain is appropriately treated as procedural ordering rather than a new runtime prerequisite, and the claim ceiling correctly excludes comparability, independence, and scientific support.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_MATERIAL_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

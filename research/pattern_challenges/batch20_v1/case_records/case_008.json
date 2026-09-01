@@ -157,10 +157,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_008",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "0a335ba786188ee28570e2630c4b90b61623fbc4cc1f05d3f972a7de6211522e",
+    "completed_at_utc": "2026-09-01T20:22:25Z",
+    "response_sha256": "6ae1070b3e887f50f43a4c7f459ae76201bb0a9f6cd07dc4f008fe7e0ec2c901",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "BEN-P01-ABSTRACT",
+      "BEN-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "BEN-P01-ABSTRACT",
+        "rule_or_field_affected": "F03R01_SOURCE_NATIVE_MEASUREMENT; source.native_observable and source.estimand",
+        "target_scope": "SOURCE: bengtsen_2020_nanodisc_integrative_record",
+        "evidence_gap": "No material gap for the bounded review: the abstract supports modality-specific NMR/SAXS/SANS records and identifies the conformational ensemble as derived through integration with MD.",
+        "dependency_or_route_issue": "No dependency or route issue: F03R01 is source-local and DIRECT_EVALUATION is appropriate; F06 data-lineage questions remain separate.",
+        "claim_ceiling_consequence": "The current ceiling correctly limits PASS to declared source-measurement semantics and does not certify reliability, comparability, validation independence, or scientific support.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "Retain the current family selection, SOURCE scope, evidence contract, dependency separation, route, and claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The frozen projection correctly treats the individual NMR/SAXS/SANS records as native modality observations and the integrated MD-informed conformational ensemble as a derived estimand. F03R01 is appropriately applied to the SOURCE target with declared measurement semantics, while integration quality and validation independence remain outside its claim ceiling.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

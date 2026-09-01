@@ -177,10 +177,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_012",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "1a57815bd8a93de39dc5aff361e6ac64f2a516908ace28cdee0c45f7913c0e9b",
+    "completed_at_utc": "2026-09-01T20:27:42Z",
+    "response_sha256": "1c26bb9a612ee640347eceff42cadf9cfc38156adc3ed0c8970808a07ff5abf2",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "BEN-P01-ABSTRACT",
+      "BEN-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "BEN-P01-ABSTRACT",
+        "rule_or_field_affected": "F06R01/F06R02/F06R03 edge projection and unresolved lineage fields",
+        "target_scope": "EDGE: multimodal experiment-to-MD ensemble relationship",
+        "evidence_gap": "The abstract names the integrated modalities and states that an ensemble was derived and validated, but does not declare per-input roles, data lineage, relation compatibility, bridge status, or shared-error structure.",
+        "dependency_or_route_issue": "The frozen record correctly keeps source-role, comparability, and validation-independence results unresolved and routes unresolved questions to declared-only SOURCE_LOOKUP without executor action.",
+        "claim_ceiling_consequence": "The record appropriately prevents claims of comparability, independence, validation, or scientific support while retaining the bounded integrative description.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is supported by the listed locators."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "No divergence: the frozen EDGE scope, unresolved statuses, dependency chain, route, and claim ceiling match the evidence limits in the bounded abstract and introduction locators.",
+    "summary": "The listed locators support an integrative multimodal study and a derived/validated ensemble, but do not support assigning declared evidence roles, comparability, or independent validation. The frozen record correctly preserves these fields as unresolved and limits its claims accordingly.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "No divergence: the frozen EDGE scope, unresolved statuses, dependency chain, route, and claim ceiling match the evidence limits in the bounded abstract and introduction locators.",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

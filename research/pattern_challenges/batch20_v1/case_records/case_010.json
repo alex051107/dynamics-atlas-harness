@@ -189,10 +189,48 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_010",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "7287c40c07ecf9e3fc6cfa39da3f61ce6cd115308b0de110630bf3628d7a16f5",
+    "completed_at_utc": "2026-09-01T20:23:51Z",
+    "response_sha256": "d1f3773fa03830cacdfa6e4db4d27a171cab43c8a83974bfd72f1b75b70b8ee9",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "PET-P01-ABSTRACT",
+      "PET-P02-FIG1",
+      "PET-P03-TABLE1"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "PET-P03-TABLE1",
+        "rule_or_field_affected": "edge.condition_relation and the F02R02 mismatch blocking contract",
+        "target_scope": "EDGE: cross-method PELDOR/DEER and smFRET comparison",
+        "evidence_gap": "No pattern defect identified; Table 1 supports the recorded difference in physical sample-state conditions.",
+        "dependency_or_route_issue": "No pattern defect identified; the mismatch is evaluated before comparability, with independence kept separate.",
+        "claim_ceiling_consequence": "The stated claim ceiling appropriately blocks a matched-condition comparison while preserving the validity of each source's local measurement.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair indicated."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The dossier locators support the frozen EDGE projection: the paper compares PELDOR/DEER and smFRET, depicts method and representation differences, and reports differing physical-state conditions. The recorded mismatch, non-comparability, unresolved independence, dependency order, routes, and claim ceiling are consistent with the listed evidence.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

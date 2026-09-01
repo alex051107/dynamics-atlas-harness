@@ -152,10 +152,21 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "status": "PENDING_MODEL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "failure_reason": "Two fresh Luna contexts returned schema-invalid review objects: first used string risk labels instead of booleans; retry supplied an empty defects array.",
+    "retry_policy": "ONE_FRESH_CONTEXT_RETRY_ALREADY_USED",
     "primary_verdict": null,
     "defects": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "PENDING_MODEL_REVIEW_AFTER_TWO_FAILED_CONTEXTS",
+    "candidate_repair_status": "NOT_ELIGIBLE_PENDING_MODEL_REVIEW",
+    "human_review_questions": [
+      "A human or later model review is required before this case can influence a candidate patch."
+    ]
   }
 }

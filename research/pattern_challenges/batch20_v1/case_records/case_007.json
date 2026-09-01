@@ -68,7 +68,7 @@
         "statistical_unit": "Burst-wise observations from a doubly labeled protein under the reported measurement conditions.",
         "spatial_support": "Donor-acceptor separation at specified labeled termini, not a global all-pairs structural average.",
         "temporal_or_ensemble_semantics": "The paper discusses smFRET temporal sensitivity while its distance mapping uses mean efficiency and a distribution.",
-        "transformations_and_model_assumptions": "The efficiency-to-distance mapping uses a dye-pair F\u00f6rster distance and an assumed distance distribution.",
+        "transformations_and_model_assumptions": "The efficiency-to-distance mapping uses a dye-pair Förster distance and an assumed distance distribution.",
         "uncertainty_or_reliability_boundaries": "Dye/linker geometry and distribution-model choice constrain the inferred distance."
       }
     ],
@@ -162,10 +162,48 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_007_retry",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "8763e0f14edc9623ccfef9fbf5722354209a26b9c22c78da0b258defb40fd62d",
+    "completed_at_utc": "2026-09-01T20:23:51Z",
+    "response_sha256": "b07d0324e8e734ce9dad5740bac4813a4e943a2aa2cf40823a6a7049b08a6ebe",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "FUE-P01-ABSTRACT",
+      "FUE-P02-FIG1",
+      "FUE-P03-FIG2"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "FUE-P01-ABSTRACT",
+        "rule_or_field_affected": "F03R01_SOURCE_NATIVE_MEASUREMENT native observable, estimand, and measurement-semantics declaration",
+        "target_scope": "SOURCE",
+        "evidence_gap": "No evidence gap: the abstract distinguishes mean FRET efficiency and model-inferred dye-to-dye distance, consistent with the declared source fields.",
+        "dependency_or_route_issue": "No dependency or route issue: the source-local declaration has the required evidence and DIRECT_EVALUATION is appropriate.",
+        "claim_ceiling_consequence": "The measurement-semantics-only ceiling is supported; the PASS does not claim reliability, comparability, validation, or scientific support.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is needed; retain the frozen rule, binding, direct route, and claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE_APPROVE_FROZEN_PATTERN",
+    "summary": "The permitted Fuertes locators support keeping mean FRET efficiency as the native observable distinct from the model-derived dye-to-dye distance. The SOURCE scope, required evidence, direct evaluation route, PASS condition, and measurement-semantics-only claim ceiling are aligned with the dossier.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE_APPROVE_FROZEN_PATTERN",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

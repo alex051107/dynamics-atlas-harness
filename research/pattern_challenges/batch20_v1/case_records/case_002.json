@@ -204,5 +204,11 @@
         "creates_unnecessary_review_burden": false
       }
     ]
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "CLAUDE_CROSS_MODEL_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE_IDENTIFIED_BY_CLAUDE_ADVISORY_CRITIC",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

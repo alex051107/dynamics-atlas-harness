@@ -168,10 +168,48 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_006",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "edf25c76e723ca846b1db1c4608f7ac15a0da30ca14a974b2bbc8c2d08f8f27e",
+    "completed_at_utc": "2026-09-01T20:22:25Z",
+    "response_sha256": "a2bb721158af7a0ca21fa3fa979d1bddbacb1ae364a8b1709e4d30d86dff47bc",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "FUE-P01-ABSTRACT",
+      "FUE-P02-FIG1",
+      "FUE-P03-FIG2"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "FUE-P02-FIG1",
+        "rule_or_field_affected": "F03R01_SOURCE_NATIVE_MEASUREMENT; source.native_observable and source.estimand",
+        "target_scope": "SOURCE fuertes_2017_saxs_profile",
+        "evidence_gap": "No material gap: the record identifies I(q) versus q as the native SAXS profile and RG as a profile-derived estimate.",
+        "dependency_or_route_issue": "No dependency or route issue: the source-local declaration is appropriately evaluated through DIRECT_EVALUATION, with no F06 relation inferred.",
+        "claim_ceiling_consequence": "The PASS remains limited to declared source measurement semantics and does not upgrade to reliability, comparability, validation, or a scientific conclusion.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "Retain the frozen F03R01 pattern and its current evidence, dependency, route, and claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The frozen pattern correctly preserves SAXS I(q) versus q as the native measurement and RG as a derived estimand for the SOURCE target. Required evidence, scope, dependency, route, and claim ceiling are aligned.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

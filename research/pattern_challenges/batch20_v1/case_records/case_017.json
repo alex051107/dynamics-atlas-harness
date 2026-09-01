@@ -152,10 +152,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_017",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "85e4415bfdc8afc2005be7f8cef3ab2278a2631c8b51ec2b4509f53788e844d8",
+    "completed_at_utc": "2026-09-01T20:31:12Z",
+    "response_sha256": "cbe7524dcb80bd79e6b7fb9a5a1ea2bb946d0ff6de7b833a0fd3e59e92b00c60",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "SAN-P01-ABSTRACT",
+      "SAN-P02-RESULTS"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "SAN-P01-ABSTRACT",
+        "rule_or_field_affected": "F07R01_CASE_IDENTIFIABILITY binding, required evidence, unresolved status, route, and claim ceiling",
+        "target_scope": "CASE",
+        "evidence_gap": "No defect identified: the locators support candidate transient-state hypotheses and complementary dynamic measurements, while the frozen record appropriately does not claim full identifiability.",
+        "dependency_or_route_issue": "No defect identified: the candidate-map-only dependency and HUMAN_OR_NEW_DATA route match the absence of an executable identifiability contract and decision criterion.",
+        "claim_ceiling_consequence": "The candidate-only ceiling correctly prevents an identifying or mechanistic conclusion from being treated as established.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is indicated; retain the frozen rule application."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "No divergence from the source-bounded frozen projection is apparent.",
+    "summary": "The listed source locators support posing competing transient-state hypotheses and identifying a need for discriminating information. The frozen CASE binding preserves candidate-only semantics, requires candidate hypotheses and a next discriminating action, routes unresolved work to HUMAN_OR_NEW_DATA, and explicitly withholds identifiability and mechanism claims.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "No divergence from the source-bounded frozen projection is apparent.",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

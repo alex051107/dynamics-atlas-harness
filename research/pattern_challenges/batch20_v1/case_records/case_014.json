@@ -153,10 +153,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_014",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "2e76bfaf8c1e1b550a5861846fb562d80d7ee78d571a4c31331068b03de1374b",
+    "completed_at_utc": "2026-09-01T20:29:20Z",
+    "response_sha256": "9d6a7685e8120e5ba08c15e93a8ff6dd677a1b74d2cfe69ae73290fc275a40e0",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "HOF-P01-ABSTRACT",
+      "HOF-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "HOF-P01-ABSTRACT",
+        "rule_or_field_affected": "F04R01_SOURCE_RELIABILITY_PROVENANCE evidence binding and claim ceiling",
+        "target_scope": "SOURCE: candidate source entry for Bayesian cryo-EM refinement",
+        "evidence_gap": "No defect: the abstract locator supports treatment of correlation and noise and the fit-versus-physical-quality boundary recorded in the source projection.",
+        "dependency_or_route_issue": "No defect: the candidate-map-only dependency and HUMAN_OR_NEW_DATA route are consistent with the absence of an executable evaluator or threshold.",
+        "claim_ceiling_consequence": "No defect: the reviewable-uncertainty-only ceiling correctly prevents a generic reliability, correctness, or scientific-support conclusion.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "The frozen binding, contract status, route, and claim ceiling are supported by the listed source locators and require no repair."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The listed abstract and introduction locators support the frozen SOURCE-scoped uncertainty fields concerning noise, correlation, fit-versus-physical-quality balance, and low-resolution heterogeneity. The candidate-only status, unresolved dependency, HUMAN_OR_NEW_DATA route, and reviewable-uncertainty claim ceiling appropriately prevent a generic reliability conclusion.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }

@@ -148,10 +148,47 @@
     "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
   },
   "critic_review": {
-    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
-    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
-    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
-    "primary_verdict": null,
-    "defects": []
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_016",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "40888767c3c00dbfada6d82d326fa620c52679b98434cd0a428f49c3e485745d",
+    "completed_at_utc": "2026-09-01T20:29:20Z",
+    "response_sha256": "17f4facfd900ce788752451c755899d6a6b96296f68f005bc1a08f4330f75de2",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "THO-P01-ABSTRACT",
+      "THO-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "THO-P01-ABSTRACT",
+        "rule_or_field_affected": "F05R02_SOURCE_FORWARD_BRIDGE candidate-only status and claim ceiling",
+        "target_scope": "SOURCE: candidate review entry for a forward-model bridge",
+        "evidence_gap": "The locator supports only that the review discusses computational models linking structures to experimental observables; it does not establish a case-specific bridge, which matches the frozen evidence boundary.",
+        "dependency_or_route_issue": "No dependency or route defect is visible. The missing representation-observable tuple appropriately keeps the item unresolved and routes it to HUMAN_OR_NEW_DATA.",
+        "claim_ceiling_consequence": "The candidate-review-question-only ceiling is supported; no forward-bridge conclusion or scientific validation is asserted.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is needed; retain the candidate-map-only rule, unresolved status, human-or-new-data route, and candidate-only claim ceiling."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "No divergence: the listed locators support the frozen candidate-only binding, unresolved dependency, route, and claim ceiling.",
+    "summary": "The abstract and introduction support treating forward models as a review obligation linking structural representations to observables, while the dossier correctly withholds any case-specific bridge verdict. The SOURCE scope, required locator and status fields, unresolved dependency, HUMAN_OR_NEW_DATA route, and candidate-only claim ceiling are aligned with the listed evidence.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "No divergence: the listed locators support the frozen candidate-only binding, unresolved dependency, route, and claim ceiling.",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
   }
 }
