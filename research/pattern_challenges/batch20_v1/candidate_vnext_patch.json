@@ -1,0 +1,16 @@
+{
+  "schema_version": "rules-pattern-batch20-candidate-vnext-patch/v1",
+  "batch_id": "RULES_PATTERN_BATCH20_V1",
+  "status": "NO_ACCEPTED_CANDIDATE_PATCH_YET",
+  "base_working_pattern_version": "v1",
+  "accepted_patches": [],
+  "forbidden_automatic_actions": [
+    "ADD_NEW_FAMILY",
+    "CHANGE_SCIENTIFIC_THRESHOLD",
+    "REGISTER_OPERATOR",
+    "RELEASE_RULE",
+    "MODIFY_CANONICAL_REGISTRY",
+    "CREATE_CASE_SPECIFIC_PASS_BRANCH",
+    "UPGRADE_LOCAL_PASS_TO_SUPPORT"
+  ]
+}

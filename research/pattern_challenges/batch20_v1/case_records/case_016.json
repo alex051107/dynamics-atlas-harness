@@ -1,0 +1,157 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_016",
+  "case_number": 16,
+  "frozen_manifest_unit": {
+    "case_id": "case_016",
+    "bucket": "F05_CANDIDATE_FAMILY_DISCOVERY",
+    "title": "Forward-model bridge requirements for flexible ensembles",
+    "source_record_ids": [
+      "PDFMD-017"
+    ],
+    "family_focus": [
+      "F05R02_SOURCE_FORWARD_BRIDGE"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "INTEGRATIVE_ENSEMBLE_MODELING"
+    ],
+    "adversarial": false,
+    "cross_modal_context": false,
+    "challenge_intent": "Identify a forward-model obligation as a candidate review item without generating a bridge verdict.",
+    "source_locator_ids": [
+      "THO-P01-ABSTRACT",
+      "THO-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can a review's forward-model discussion become a candidate bridge obligation without creating a forward-bridge verdict?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-017",
+        "citation": "Thomasen and Lindorff-Larsen (2022), Conformational ensembles of intrinsically disordered proteins and flexible multidomain proteins, Biochemical Society Transactions 50:541-554.",
+        "pdf_sha256": "ac2b45484e2b8268429b0c0c3b67325e3248edf62916cea3ea3c7c7ac5fff7e6",
+        "derivative_sha256": "8cea22db42d809da3aee1be97fac76c2782b0a9a7b7fe4849f1c9db24283d272",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "THO-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "integrated biophysical experiments, computational models, forward models, and ensemble refinement."
+          },
+          {
+            "id": "THO-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "ensemble framing for heterogeneous proteins."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "thomasen_2022_forward_model_review",
+        "native_observable": "Review-level descriptions of experimental observables and structural ensemble approaches.",
+        "estimand": "Methodological account of how ensembles can be calculated and refined against experiments.",
+        "statistical_unit": "No single case-level raw observation is selected in this review record.",
+        "spatial_support": "IDPs and flexible multidomain systems across reviewed examples.",
+        "temporal_or_ensemble_semantics": "Multiple conformations with associated thermodynamic weights are discussed.",
+        "transformations_and_model_assumptions": "The review names computational models to sample conformations and models to calculate experimental observables.",
+        "uncertainty_or_reliability_boundaries": "The review does not validate one case-specific forward bridge or establish its correctness."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The review explicitly includes computational models for sampling conformations and models that calculate experimental observables from structure.",
+        "locators": [
+          "THO-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The review frames ensemble determination as integration of experimental and computational elements.",
+        "locators": [
+          "THO-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "This is a candidate forward-bridge prompt, not an executable bridge or source-level scientific validation.",
+    "maximum_source_supported_wording": "The source supports asking whether a declared forward model links a chosen structural representation to a specified observable.",
+    "forbidden_generalizations": [
+      "Treat a review description as a case-specific valid forward model.",
+      "Call an undeclared bridge complete."
+    ],
+    "missing_information": [
+      "No selected source/representation/observable tuple or model parameters are frozen here."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require a source locator and declared forward-bridge status.",
+      "Defer bridge assessment without a case-specific tuple."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "70b162600b065732297be5a6bf32d9763b4ab783195389759f893b9b0b18d01d",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "70b162600b065732297be5a6bf32d9763b4ab783195389759f893b9b0b18d01d",
+    "selected_families": [
+      "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE"
+    ],
+    "selected_rule_instances": [
+      "F05R02_SOURCE_FORWARD_BRIDGE"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable candidate-map SOURCE entry.",
+    "required_evidence": [
+      "source.forward_bridge_status",
+      "source.source_locator"
+    ],
+    "source_projection": {
+      "source_id": "thomasen_2022_forward_model_review",
+      "forward_bridge_status": "CANDIDATE_REVIEW_QUESTION_ONLY",
+      "source_locator": "THO-P01-ABSTRACT"
+    },
+    "dependency_chain": [
+      "F05R02 is CANDIDATE_MAP_ONLY."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F05R02",
+        "status": "UNRESOLVED",
+        "reason": "CANDIDATE_MAP_ONLY_NOT_EVALUATED"
+      }
+    ],
+    "first_blocking_dependency": "No chosen representation-observable bridge is declared for an executable evaluation.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "Candidate review question only.",
+    "facts_not_independently_established": [
+      "bridge validity",
+      "model correctness",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No auto-registration of a forward model or operator."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

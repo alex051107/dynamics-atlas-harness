@@ -1,0 +1,177 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_006",
+  "case_number": 6,
+  "frozen_manifest_unit": {
+    "case_id": "case_006",
+    "bucket": "F03_COMPLETE_DRAFT",
+    "title": "Fuertes SAXS profile versus derived radius of gyration",
+    "source_record_ids": [
+      "PDFMD-007"
+    ],
+    "family_focus": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "SAXS",
+      "smFRET"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test that the working pattern preserves I(q) as the native record and RG as a profile-derived quantity.",
+    "source_locator_ids": [
+      "FUE-P01-ABSTRACT",
+      "FUE-P02-FIG1",
+      "FUE-P03-FIG2"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does the working measurement pattern keep the Fuertes SAXS scattering profile separate from its radius-of-gyration estimate?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-007",
+        "citation": "Fuertes et al. (2017), Decoupling of size and shape fluctuations in heteropolymeric sequences reconciles discrepancies in SAXS vs. FRET measurements, PNAS 114:E6342-E6351.",
+        "pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8",
+        "derivative_sha256": "8fb918e927933faa686e985f833ad96b0bd450a651a8517f6b5f489aa76626d2",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "FUE-P01-ABSTRACT",
+            "locator": "PDF p. 1, PNAS E6342, Abstract",
+            "scope": "distinct RG and dye-to-dye-distance quantities from SAXS and smFRET."
+          },
+          {
+            "id": "FUE-P02-FIG1",
+            "locator": "PDF p. 2, PNAS E6343, Figure 1 caption and adjacent Introduction",
+            "scope": "I(q) versus q and FRET-efficiency representations."
+          },
+          {
+            "id": "FUE-P03-FIG2",
+            "locator": "PDF p. 3, PNAS E6344, Figure 2 caption and Eqs. 1-2",
+            "scope": "raw profile/efficiency versus model-derived quantities."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "fuertes_2017_saxs_profile",
+        "native_observable": "SAXS scattering intensity I(q) as a function of scattering vector q.",
+        "estimand": "Global size, including radius of gyration, inferred from the SAXS profile.",
+        "statistical_unit": "A specified labeled or unlabeled polypeptide sample and its SAXS profile under a reported condition.",
+        "spatial_support": "Global intramolecular distances averaged over molecular conformations in solution.",
+        "temporal_or_ensemble_semantics": "Weighted average over molecules and conformations in solution, not a kinetic trajectory readout.",
+        "transformations_and_model_assumptions": "RG is calculated from I(q) using stated analysis such as the Guinier relation or distance-distribution treatment.",
+        "uncertainty_or_reliability_boundaries": "SAXS averaging limits direct population/fluctuation resolution below global dimensions."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The paper identifies SAXS scattering profiles as the basis for estimating RG.",
+        "locators": [
+          "FUE-P01-ABSTRACT",
+          "FUE-P02-FIG1"
+        ]
+      },
+      {
+        "statement": "The source distinguishes I(q) versus q from the derived size quantities illustrated in its methods and figure discussion.",
+        "locators": [
+          "FUE-P02-FIG1",
+          "FUE-P03-FIG2"
+        ]
+      }
+    ],
+    "source_relationship": "This is the SAXS member of an exposed source pair; its measurement semantics are not a cross-source comparability verdict.",
+    "maximum_source_supported_wording": "For this source object, the primary record is I(q) versus q and RG is a profile-derived estimate.",
+    "forbidden_generalizations": [
+      "Call RG the raw SAXS measurement.",
+      "Treat a native-measurement declaration as reliability, validation, or scientific support."
+    ],
+    "missing_information": [
+      "Exact SI-level processing parameters are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Split raw observable from derived estimand.",
+      "Record ensemble averaging and global spatial support."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "f7fc89493a15e76a8f1830de8754f50b392c21e2253ca1d3cf7e215be0f405a5",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "f7fc89493a15e76a8f1830de8754f50b392c21e2253ca1d3cf7e215be0f405a5",
+    "selected_families": [
+      "F03_SOURCE_MEASUREMENT_SEMANTICS"
+    ],
+    "selected_rule_instances": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE record.",
+    "required_evidence": [
+      "source.native_observable",
+      "source.estimand",
+      "source.time_semantics.kind",
+      "source.spatial_support",
+      "source.unit_or_aggregation",
+      "source.native_measurement_declaration_status"
+    ],
+    "source_projection": {
+      "source_id": "fuertes_2017_saxs_profile",
+      "native_observable": "I(q) versus q",
+      "estimand": "RG and other profile-derived size/shape information",
+      "time_semantics": {
+        "kind": "ENSEMBLE_AVERAGED_NON_KINETIC"
+      },
+      "spatial_support": "global chain dimensions",
+      "unit_or_aggregation": "q-indexed scattering profile averaged over molecules/conformations",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F03R01 source-local declaration; no F06 relation inferred."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F03R01",
+        "status": "PASS",
+        "reason": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION",
+    "local_claim_ceiling": "Declared source measurement semantics only.",
+    "facts_not_independently_established": [
+      "reliability",
+      "cross-source comparability",
+      "validation independence",
+      "scientific conclusion"
+    ],
+    "irrelevant_obligations": [
+      "F04-F07 and any numeric modality conversion are not activated."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

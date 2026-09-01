@@ -1,0 +1,184 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_020",
+  "case_number": 20,
+  "frozen_manifest_unit": {
+    "case_id": "case_020",
+    "bucket": "CROSS_FAMILY_DEPENDENCY",
+    "title": "Sic1 sample-system declaration before native-measurement declaration",
+    "source_record_ids": [
+      "PDFMD-002"
+    ],
+    "family_focus": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "NMR",
+      "SAXS",
+      "smFRET"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test the prerequisite order: construct/condition declaration is source-local context and must not be replaced by a measurement declaration.",
+    "source_locator_ids": [
+      "GOM-P01-ABSTRACT",
+      "GOM-P02-FIG1",
+      "GOM-P02-FIG2"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does the working candidate preserve source-system context before interpreting native measurement semantics in the Gomes Sic1 record?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-002",
+        "citation": "Gomes et al. (2020), Conformational Ensembles of an Intrinsically Disordered Protein Consistent with NMR, SAXS, and Single-Molecule FRET, Journal of the American Chemical Society 142:15697-15710.",
+        "pdf_sha256": "e091c20025b4813fee0457746e81731c69132e83dcb7784389274a3ae0976547",
+        "derivative_sha256": "8b5ce07fa7f8de4c3a37c9dcdf002fa85045668f69020a2fc6489df7c0237a53",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "GOM-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "Sic1 ensemble, NMR/SAXS construction, and smFRET reserved for independent validation."
+          },
+          {
+            "id": "GOM-P02-FIG1",
+            "locator": "JACS 15698, Figure 1 caption and adjacent Introduction",
+            "scope": "ensemble calculation from SAXS and smFRET representations and stated construction/validation separation."
+          },
+          {
+            "id": "GOM-P02-FIG2",
+            "locator": "JACS 15698, Figure 2 caption",
+            "scope": "Sic1/pSic1 labeled construct and stated TE-buffer condition for the smFRET histogram."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "gomes_2020_sic1_crossfamily_record",
+        "native_observable": "SAXS intensity and smFRET efficiency representations described in the Sic1 integrative study, with NMR restraints in the broader analysis.",
+        "estimand": "An IDP conformational ensemble and comparisons among global and distributional descriptions.",
+        "statistical_unit": "Named Sic1/pSic1 construct, label, and reported experiment condition.",
+        "spatial_support": "Disordered N-terminal Sic1 region and specified labeled-terminal pair for the cited smFRET figure.",
+        "temporal_or_ensemble_semantics": "The paper treats Sic1 as a heterogeneous conformational ensemble.",
+        "transformations_and_model_assumptions": "SAXS and smFRET are combined/assigned roles in ensemble modeling; derived ensemble statements are not raw measurements.",
+        "uncertainty_or_reliability_boundaries": "Construct/condition declaration and measurement declaration do not establish validation independence or scientific support."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract identifies the Sic1 test system and differentiates NMR/SAXS construction from smFRET independent validation in the study design.",
+        "locators": [
+          "GOM-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "Figure 1 describes SAXS and smFRET representations in the ENSEMBLE workflow, while Figure 2 gives a labeled-construct condition example.",
+        "locators": [
+          "GOM-P02-FIG1",
+          "GOM-P02-FIG2"
+        ]
+      }
+    ],
+    "source_relationship": "This is a cross-family sequencing test: context declaration is preserved as a separate prerequisite record before the F03 measurement declaration is read.",
+    "maximum_source_supported_wording": "The source supports declaring both a defined context and modality-specific source representations, with no automatic conclusion beyond those declarations.",
+    "forbidden_generalizations": [
+      "Use measurement semantics to fill missing construct/condition fields.",
+      "Treat two local declarations as comparability, validation, or scientific support."
+    ],
+    "missing_information": [
+      "Full source-role/independence detail and all modality calibration parameters are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Maintain F02 context and F03 measurement fields separately.",
+      "Record procedural ordering without inventing a new canonical runtime dependency."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "881ea16392a5fbcc53e1add054627c63a166055ea14a473071aeb5bd2f50b58f",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "881ea16392a5fbcc53e1add054627c63a166055ea14a473071aeb5bd2f50b58f",
+    "selected_families": [
+      "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "F03_SOURCE_MEASUREMENT_SEMANTICS"
+    ],
+    "selected_rule_instances": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE record for both source-local declarations.",
+    "required_evidence": [
+      "F02 construct/composition declaration fields",
+      "F03 native measurement fields"
+    ],
+    "source_projection": {
+      "source_id": "gomes_2020_sic1_crossfamily_record",
+      "construct_and_condition": "named Sic1/pSic1 labeled context and stated Figure 2 condition",
+      "sample_composition": "defined construct/label record",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "modality-specific SAXS intensity and smFRET efficiency representations",
+      "estimand": "ensemble/model-derived structural descriptions",
+      "time_semantics": {
+        "kind": "HETEROGENEOUS_CONFORMATIONAL_ENSEMBLE"
+      },
+      "spatial_support": "global SAXS and selected labeled-pair smFRET support",
+      "unit_or_aggregation": "modality-specific records plus ensemble model",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "Working-pattern ordering: preserve F02 context declaration before F03 interpretation.",
+      "Canonical F03R01 remains a source-local declaration and does not itself create an F02 runtime prerequisite."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F02R01",
+        "status": "PASS",
+        "reason": "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      },
+      {
+        "rule": "F03R01",
+        "status": "PASS",
+        "reason": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION for the two local declarations; human review for any new cross-family runtime dependency proposal.",
+    "local_claim_ceiling": "Two source-local declarations; no edge comparability, independence, or support conclusion.",
+    "facts_not_independently_established": [
+      "cross-source comparability",
+      "validation independence",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No new canonical dependency is added in this candidate batch."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

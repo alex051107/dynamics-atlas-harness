@@ -1,0 +1,175 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_011",
+  "case_number": 11,
+  "frozen_manifest_unit": {
+    "case_id": "case_011",
+    "bucket": "F06_COMPLETE_DRAFT",
+    "title": "Complete cross-validation does not itself identify independent source lineage",
+    "source_record_ids": [
+      "PDFMD-005"
+    ],
+    "family_focus": [
+      "F06R01_SOURCE_EVIDENCE_ROLE",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "source_modalities": [
+      "solution_NMR",
+      "STRUCTURE_REFINEMENT"
+    ],
+    "adversarial": true,
+    "cross_modal_context": false,
+    "challenge_intent": "Test whether a cross-validation term is kept separate from an independently declared validation-data lineage.",
+    "source_locator_ids": [
+      "BON-P01-ABSTRACT",
+      "BON-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does a paper's complete cross-validation protocol establish an independently sourced validation lineage?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-005",
+        "citation": "Bonvin and Brunger (1995), Conformational Variability of Solution Nuclear Magnetic Resonance Structures, Journal of Molecular Biology 250:80-93.",
+        "pdf_sha256": "f1e3cd0e20d9610c7c59fdaca6efbaaaabac4a9456fea0a88cd858bed862484e",
+        "derivative_sha256": "2fcabf46e1ab981c84dd79ab4838102d53cd896617a753bc27107ae9c3d57c9a",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "BON-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "time- and ensemble-averaged NMR data, overfitting risk, and complete cross-validation framing."
+          },
+          {
+            "id": "BON-P01-INTRO",
+            "locator": "PDF p. 1, opening Introduction",
+            "scope": "distinction between experimental restraints and model refinement."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "bonvin_1995_nmr_crossvalidation_edge",
+        "native_observable": "NMR-derived distance restraints and model-fit/cross-validation quantities.",
+        "estimand": "Representation of conformational variability and model complexity that best reproduces experimental NMR data.",
+        "statistical_unit": "Synthetic test cases and observed NMR data for two protein examples.",
+        "spatial_support": "NMR structural restraints and conformers for solution structures.",
+        "temporal_or_ensemble_semantics": "The source explicitly frames NMR data as time- and ensemble-averaged.",
+        "transformations_and_model_assumptions": "Cross-validation is used to assess fit and overfitting of models refined against NMR restraints.",
+        "uncertainty_or_reliability_boundaries": "A cross-validation split within a source's restraint pool is not an external independent-source lineage declaration."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract says solution-NMR data are time and ensemble averages and warns that multi-conformer refinement can overfit.",
+        "locators": [
+          "BON-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract describes complete cross-validation as an unbiased measure of fit for NMR-derived distance refinement.",
+        "locators": [
+          "BON-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "This is an evidence-role and independence challenge within one source's model-and-restraint relation, not a verdict on the value of cross-validation.",
+    "maximum_source_supported_wording": "The paper supports calling its procedure cross-validation of an NMR refinement; it does not establish that a separate source lineage independently validates the result.",
+    "forbidden_generalizations": [
+      "Equate cross-validation with independent external validation.",
+      "Treat an internal withheld-restraint procedure as a separate source modality."
+    ],
+    "missing_information": [
+      "Exact partitioning and shared-error facts beyond the bounded abstract are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Record construction/validation role and lineage separately.",
+      "Treat SAME_DATA as a valid block for an independent-validation label."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "5f75f8c918878d322f57288dc3d9b892c141122de1cdd0b8f425d7ca1eb02f6c",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "5f75f8c918878d322f57288dc3d9b892c141122de1cdd0b8f425d7ca1eb02f6c",
+    "selected_families": [
+      "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+    ],
+    "selected_rule_instances": [
+      "F06R01_SOURCE_EVIDENCE_ROLE",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "applicability": "Applicable edge between NMR restraint refinement and its complete cross-validation procedure.",
+    "required_evidence": [
+      "source.evidence_role",
+      "source.data_lineage_status",
+      "edge.validation_claim",
+      "edge.validation_independence",
+      "edge.shared_error_status",
+      "edge.data_lineage_status"
+    ],
+    "edge_projection": {
+      "left_source_id": "bonvin_1995_nmr_restraints",
+      "right_source_id": "bonvin_1995_crossvalidation",
+      "source_evidence_role": "CONSTRUCTION",
+      "source_data_lineage_status": "DECLARED",
+      "validation_claim": "complete cross-validation is independent external validation",
+      "validation_independence": "SAME_DATA",
+      "shared_error_status": "MATERIAL_SHARED_ERROR",
+      "data_lineage_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F06R01 records the source role.",
+      "F06R03 evaluates independence separately from source role."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F06R01",
+        "status": "PASS",
+        "reason": "SOURCE_EVIDENCE_ROLE_RECORDED"
+      },
+      {
+        "rule": "F06R03",
+        "status": "FAIL",
+        "reason": "VALIDATION_INDEPENDENCE_CONTRADICTED"
+      }
+    ],
+    "first_blocking_dependency": "The proposed independent-validation wording conflicts with SAME_DATA and shared-error fields.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "The pattern blocks an independent-validation label; it does not invalidate the cross-validation analysis or NMR observation.",
+    "facts_not_independently_established": [
+      "external validation",
+      "scientific support",
+      "universal model adequacy"
+    ],
+    "irrelevant_obligations": [
+      "No cross-modal numeric-comparability result is requested."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

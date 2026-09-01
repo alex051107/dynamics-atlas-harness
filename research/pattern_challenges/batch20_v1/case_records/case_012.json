@@ -1,0 +1,186 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_012",
+  "case_number": 12,
+  "frozen_manifest_unit": {
+    "case_id": "case_012",
+    "bucket": "F06_COMPLETE_DRAFT",
+    "title": "Nanodisc integration and validation role separation",
+    "source_record_ids": [
+      "PDFMD-004"
+    ],
+    "family_focus": [
+      "F06R01_SOURCE_EVIDENCE_ROLE",
+      "F06R02_EDGE_COMPARABILITY",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "source_modalities": [
+      "NMR",
+      "SAXS",
+      "SANS",
+      "MOLECULAR_DYNAMICS",
+      "EPR"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test whether a source claim of deriving and validating an ensemble supplies enough declared data-lineage facts for F06 labels.",
+    "source_locator_ids": [
+      "BEN-P01-ABSTRACT",
+      "BEN-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does a statement that an ensemble was derived and validated by multimodal integration disclose enough lineage to label the validation independent?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-004",
+        "citation": "Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations, eLife.",
+        "pdf_sha256": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf",
+        "derivative_sha256": "3b040c8d5e6600528323fd7dd091704a34794e1ee367ab0592135e5b6c974353",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "BEN-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "two nanodiscs, SAXS/SANS with MD and prior NMR/EPR, and a derived/validated conformational ensemble."
+          },
+          {
+            "id": "BEN-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "nanodisc system context and intended integrative setting."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "bengtsen_2020_nanodisc_integration_edge",
+        "native_observable": "NMR, SAXS, SANS, EPR, and simulation components referenced in the source's integrative study.",
+        "estimand": "A nanodisc conformational ensemble and reconciled structural/dynamic description.",
+        "statistical_unit": "Two named nanodisc systems and their modality-specific source records.",
+        "spatial_support": "Nanodisc shape and lipid-ordering features.",
+        "temporal_or_ensemble_semantics": "Conformational heterogeneity is summarized as an ensemble.",
+        "transformations_and_model_assumptions": "An ensemble is derived by integrating experiments with MD and is described as validated, but the bounded abstract does not enumerate contribution or error lineage per modality.",
+        "uncertainty_or_reliability_boundaries": "The word 'validate' alone is insufficient to establish an independent-validation label."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract names SAXS/SANS, MD, and previously obtained NMR/EPR data in the study.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract says the study derives and validates a conformational ensemble.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "This is an edge-level lineage challenge. It keeps source-local measurements intact while refusing to infer an independence label from summary wording.",
+    "maximum_source_supported_wording": "The cited abstract supports an integrative/validation description but leaves detailed data roles and shared-error structure unresolved in this bounded record.",
+    "forbidden_generalizations": [
+      "Infer independent validation from the word 'validate'.",
+      "Treat multimodal integration as automatically comparable or linearly independent."
+    ],
+    "missing_information": [
+      "Per-modality construction/fit/validation role, exact condition relation, and shared-error facts are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require declared data lineage before an independence label.",
+      "Leave missing relation/bridge fields unresolved rather than generating a PASS."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "6b31133d869f31d6949725d58248dace4e60896f985a5af10096ecb367b09dfb",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "6b31133d869f31d6949725d58248dace4e60896f985a5af10096ecb367b09dfb",
+    "selected_families": [
+      "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+    ],
+    "selected_rule_instances": [
+      "F06R01_SOURCE_EVIDENCE_ROLE",
+      "F06R02_EDGE_COMPARABILITY",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "applicability": "Applicable edge in an integrative multimodal source relationship.",
+    "required_evidence": [
+      "F06 source role and edge relation/lineage fields"
+    ],
+    "edge_projection": {
+      "left_source_id": "bengtsen_2020_experiment_bundle",
+      "right_source_id": "bengtsen_2020_md_ensemble",
+      "source_evidence_role": "UNDECLARED",
+      "source_data_lineage_status": "UNRESOLVED",
+      "condition_relation": "UNRESOLVED",
+      "shared_claim": "ensemble represents nanodisc structure/dynamics",
+      "relation_type": "UNRESOLVED",
+      "bridge_status": "UNRESOLVED",
+      "validation_claim": "independent validation",
+      "validation_independence": "UNRESOLVED",
+      "shared_error_status": "UNRESOLVED",
+      "data_lineage_status": "UNRESOLVED"
+    },
+    "dependency_chain": [
+      "F06R01 source-role fields are unresolved.",
+      "F06R02 needs relation, bridge, F02, and F03 prerequisites.",
+      "F06R03 needs declared lineage/shared-error facts."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F06R01",
+        "status": "UNRESOLVED",
+        "reason": "SOURCE_EVIDENCE_ROLE_UNRESOLVED"
+      },
+      {
+        "rule": "F06R02",
+        "status": "UNRESOLVED",
+        "reason": "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      },
+      {
+        "rule": "F06R03",
+        "status": "UNRESOLVED",
+        "reason": "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      }
+    ],
+    "first_blocking_dependency": "The source summary lacks declared per-input role and lineage fields.",
+    "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+    "local_claim_ceiling": "The pattern records a missing lineage question; it does not judge the ensemble or methods scientifically.",
+    "facts_not_independently_established": [
+      "comparability",
+      "independence",
+      "validation",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No automatic source lookup or operator is run."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

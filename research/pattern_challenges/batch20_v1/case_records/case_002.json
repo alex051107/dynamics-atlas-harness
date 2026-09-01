@@ -1,0 +1,208 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_002",
+  "case_number": 2,
+  "frozen_manifest_unit": {
+    "case_id": "case_002",
+    "bucket": "F01_COMPLETE_DRAFT",
+    "title": "Integrative ensemble review must not certify biological correctness",
+    "source_record_ids": [
+      "PDFMD-017"
+    ],
+    "family_focus": [
+      "F01R01_CASE_CLAIM_DECLARATION",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+    ],
+    "target_kind": "CASE",
+    "source_modalities": [
+      "INTEGRATIVE_ENSEMBLE_MODELING"
+    ],
+    "adversarial": true,
+    "cross_modal_context": false,
+    "challenge_intent": "Test requested-wording scope where the literature frames methods and examples but does not support a biological-certainty claim.",
+    "source_locator_ids": [
+      "THO-P01-ABSTRACT",
+      "THO-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can a review of integrative ensemble methodology be worded as certification that a particular ensemble is biologically correct?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-017",
+        "citation": "Thomasen and Lindorff-Larsen (2022), Conformational ensembles of intrinsically disordered proteins and flexible multidomain proteins, Biochemical Society Transactions 50:541-554.",
+        "pdf_sha256": "ac2b45484e2b8268429b0c0c3b67325e3248edf62916cea3ea3c7c7ac5fff7e6",
+        "derivative_sha256": "8cea22db42d809da3aee1be97fac76c2782b0a9a7b7fe4849f1c9db24283d272",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "THO-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "integrated biophysical experiments, computational models, forward models, and ensemble refinement."
+          },
+          {
+            "id": "THO-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "ensemble framing for heterogeneous proteins."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "thomasen_2022_ensemble_methods_review",
+        "native_observable": "Review-level discussion of biophysical experiments, computational ensembles, and forward models.",
+        "estimand": "Methodological description of approaches for conformational ensemble determination.",
+        "statistical_unit": "No single experimental cohort or source dataset is the unit of the review-level statement.",
+        "spatial_support": "IDPs and flexible multidomain proteins discussed across examples.",
+        "temporal_or_ensemble_semantics": "Ensembles consist of multiple conformations with thermodynamic weights in the review's framing.",
+        "transformations_and_model_assumptions": "The source discusses computational sampling, observable calculation, and refinement; it does not supply a single target-system validation result.",
+        "uncertainty_or_reliability_boundaries": "Review framing cannot itself certify biological correctness of a specific ensemble."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The review says ensemble determination usually integrates biophysical experiments and computational models.",
+        "locators": [
+          "THO-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The review lists sampling, calculating experimental observables, and refining ensembles as separate methodological elements.",
+        "locators": [
+          "THO-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "This is a review article used to challenge a CASE claim ceiling, not an origin source for a project Rule.",
+    "maximum_source_supported_wording": "The source supports describing ensemble-modeling components; it does not certify that a named ensemble is biologically correct.",
+    "forbidden_generalizations": [
+      "Equate an integrated-methods description with biological correctness.",
+      "Treat a review's examples as validation of an unspecified target ensemble."
+    ],
+    "missing_information": [
+      "No named target ensemble, validation dataset, or biological endpoint is supplied."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require target-specific evidence before allowing biological-certainty wording.",
+      "Separate a methods review from a target-system support claim."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "88ab2dc2fe0d894020d9b9ed9d77b8c49687f297306d10d9ac5a9263a0497200",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "88ab2dc2fe0d894020d9b9ed9d77b8c49687f297306d10d9ac5a9263a0497200",
+    "selected_families": [
+      "F01_CLAIM_CONTRACT_AND_CEILING"
+    ],
+    "selected_rule_instances": [
+      "F01R01_CASE_CLAIM_DECLARATION",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+    ],
+    "target_kind": "CASE",
+    "applicability": "Applicable: SCIENTIFIC_CLAIM_REVIEW CASE.",
+    "required_evidence": [
+      "F01 CASE contract fields"
+    ],
+    "case_projection": {
+      "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+      "scientific_claim": "A specific ensemble is biologically correct.",
+      "requested_claim_level": "BIOLOGICAL_CORRECTNESS",
+      "claim_contract": {
+        "internal_consistency": "CONSISTENT",
+        "declared_request_scope": [
+          "METHOD_DESCRIPTION"
+        ],
+        "forbidden_upgrades": [
+          "BIOLOGICAL_CORRECTNESS",
+          "SCIENTIFIC_SUPPORT"
+        ]
+      }
+    },
+    "dependency_chain": [
+      "F01R01 CASE consistency",
+      "F01R02 requested-scope comparison"
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F01R01",
+        "status": "PASS",
+        "reason": "CLAIM_CONTRACT_CONSISTENT"
+      },
+      {
+        "rule": "F01R02",
+        "status": "FAIL",
+        "reason": "REQUESTED_WORDING_IS_FORBIDDEN"
+      }
+    ],
+    "first_blocking_dependency": "BIOLOGICAL_CORRECTNESS is outside declared request scope.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "A CASE-scope decision only; no source-science truth is evaluated.",
+    "facts_not_independently_established": [
+      "biological correctness",
+      "experimental validation",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "F02-F07 are not evaluated because no source or edge instance is selected."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "COMPLETED_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "provider": "Claude Code first-party OAuth",
+    "model": "opus",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "session_persistence": false,
+    "tools": "DISABLED",
+    "authorized_source_dossier": "bounded Markdown derivative excerpt plus exact PDF locators supplied in stdin; full text not committed",
+    "critic_prompt_sha256": "d3a0d7357d2ee280a574eafef9790bc972f27ec0bbbf89db671fb774ae9ea186",
+    "transport_attempts": 1,
+    "completed_at_utc": "2026-09-01T16:15:55Z",
+    "analyst_projection_assessment": "ALIGNS",
+    "overall_unsafe_false_pass_risk": false,
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "THO-P01-ABSTRACT",
+      "THO-P01-INTRO"
+    ],
+    "summary": "The frozen Pass B projection handles this CASE correctly and safely. The requested claim (\"a specific ensemble is biologically correct\", requested_claim_level BIOLOGICAL_CORRECTNESS) is compared against the declared request scope (METHOD_DESCRIPTION) and the declared forbidden upgrades, and F01R02 FAILs with reason REQUESTED_WORDING_IS_FORBIDDEN. That is the outcome the source dossier permits: THO-P01-ABSTRACT supports only that ensemble determination usually integrates biophysical experiments, computational models, forward models, and refinement, and THO-P01-INTRO supports only ensemble framing for heterogeneous proteins; neither locator names a target ensemble, a validation dataset, or a biological endpoint, so no biological-correctness wording is reachable. The F01R01 PASS / F01R02 FAIL split is a defensible separation of concerns rather than an inconsistency: F01R01 evaluates whether the declaration's own fields are coherent, while the requested-wording-versus-scope comparison is exactly F01R02's job, and the net CASE outcome is a block, not a pass. Restricting selection to F01 with target_kind CASE is appropriate because the refusal is decided at the claim-contract layer and does not require adjudicating source science; consistently, rule_origin_relation marks PDFMD-017 as a non-origin source. The local_claim_ceiling (\"a CASE-scope decision only; no source-science truth is evaluated\") and facts_not_independently_established (biological correctness, experimental validation, scientific support) are stated at the right height and prevent the FAIL from being misread as a scientific finding about ensembles. I note but do not classify as a defect that HUMAN_OR_NEW_DATA is the only listed resolution route even though a wording downgrade to METHOD_DESCRIPTION would be supportable from THO-P01-ABSTRACT; the canonical route enumeration is not in this dossier, so calling that route wrong would require assuming facts I was not given. No generic pattern defect and no unsafe false-pass path identified. This approval covers the typed declaration pattern only and approves no source science, no scientific SUPPORT, no canonical Rule, and no merge.",
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "THO-P01-ABSTRACT",
+        "pattern_object": "F01R02_CASE_REQUESTED_WORDING_SCOPE local_status_expectation (FAIL, REQUESTED_WORDING_IS_FORBIDDEN) and first_blocking_dependency",
+        "scientific_consequence": "The rule blocks the biological-certainty wording at the contract layer, which matches the source ceiling: the abstract supports only a description of integrated experiments, sampling, forward models, and refinement, and supplies no target-system validation that could certify a named ensemble. No false PASS is reachable and no extra evidence is demanded of the requester beyond the F01 contract fields.",
+        "scope": "NOT_A_DEFECT",
+        "can_create_unsafe_false_pass": false,
+        "creates_unnecessary_review_burden": false
+      },
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "THO-P01-INTRO",
+        "pattern_object": "F01R01_CASE_CLAIM_DECLARATION status PASS with claim_contract.internal_consistency CONSISTENT, plus selected_families limited to F01 and irrelevant_obligations for F02-F07",
+        "scientific_consequence": "F01R01 passing on declaration coherence while F01R02 carries the scope refusal keeps the two checks separable without weakening the outcome; the CASE still terminates in FAIL. Limiting evaluation to F01 is correct for a CASE target whose refusal needs no source-science adjudication, and the intro locator's generic ensemble framing confirms there is no target-specific evidence that the omitted families would have been able to score.",
+        "scope": "NOT_A_DEFECT",
+        "can_create_unsafe_false_pass": false,
+        "creates_unnecessary_review_burden": false
+      }
+    ]
+  }
+}

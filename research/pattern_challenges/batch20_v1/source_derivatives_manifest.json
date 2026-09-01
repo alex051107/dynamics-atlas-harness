@@ -1,0 +1,458 @@
+{
+  "schema_version": "rules-pattern-batch20-source-derivatives/v1",
+  "batch_id": "RULES_PATTERN_BATCH20_V1",
+  "frozen_at_utc": "2026-09-01T15:53:55Z",
+  "claim_boundary": "Each listed Markdown derivative is a local navigation aid. All case assertions must cite the corresponding primary PDF locator; no full text is included or committed.",
+  "sources": [
+    {
+      "source_record_id": "PDFMD-001",
+      "citation": "Henot et al. (2022), Visualizing the transiently populated closed-state of human HSP90 ATP binding domain, Nature Communications 13:7601.",
+      "doi": "10.1038/s41467-022-35399-8",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "2a37d00b43c167cd0e80a8e7c75083cc910b6b57648565f3db8023b44ed067a3",
+      "derivative_sha256": "a39dfea89c9544662cc91bc136005470bc143bb7cfcd59b83bf397f74ab95e5e",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "HEN-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "isolated human HSP90alpha ATP-binding domain; solution NMR, mutagenesis, and MD are named."
+        },
+        {
+          "id": "HEN-P02-RESULTS",
+          "locator": "PDF p. 2, Results, 'The ATP-lid of HSP90alpha populates two distinct conformations in solution'",
+          "scope": "the reported experimental restraint and multi-state context."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-002",
+      "citation": "Gomes et al. (2020), Conformational Ensembles of an Intrinsically Disordered Protein Consistent with NMR, SAXS, and Single-Molecule FRET, Journal of the American Chemical Society 142:15697-15710.",
+      "doi": "10.1021/jacs.0c02088",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "e091c20025b4813fee0457746e81731c69132e83dcb7784389274a3ae0976547",
+      "derivative_sha256": "8b5ce07fa7f8de4c3a37c9dcdf002fa85045668f69020a2fc6489df7c0237a53",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "GOM-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "Sic1 ensemble, NMR/SAXS construction, and smFRET reserved for independent validation."
+        },
+        {
+          "id": "GOM-P02-FIG1",
+          "locator": "JACS 15698, Figure 1 caption and adjacent Introduction",
+          "scope": "ensemble calculation from SAXS and smFRET representations and stated construction/validation separation."
+        },
+        {
+          "id": "GOM-P02-FIG2",
+          "locator": "JACS 15698, Figure 2 caption",
+          "scope": "Sic1/pSic1 labeled construct and stated TE-buffer condition for the smFRET histogram."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-004",
+      "citation": "Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations, eLife.",
+      "doi": null,
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf",
+      "derivative_sha256": "3b040c8d5e6600528323fd7dd091704a34794e1ee367ab0592135e5b6c974353",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "BEN-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "two nanodiscs, SAXS/SANS with MD and prior NMR/EPR, and a derived/validated conformational ensemble."
+        },
+        {
+          "id": "BEN-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "nanodisc system context and intended integrative setting."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-005",
+      "citation": "Bonvin and Brunger (1995), Conformational Variability of Solution Nuclear Magnetic Resonance Structures, Journal of Molecular Biology 250:80-93.",
+      "doi": null,
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "f1e3cd0e20d9610c7c59fdaca6efbaaaabac4a9456fea0a88cd858bed862484e",
+      "derivative_sha256": "2fcabf46e1ab981c84dd79ab4838102d53cd896617a753bc27107ae9c3d57c9a",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "BON-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "time- and ensemble-averaged NMR data, overfitting risk, and complete cross-validation framing."
+        },
+        {
+          "id": "BON-P01-INTRO",
+          "locator": "PDF p. 1, opening Introduction",
+          "scope": "distinction between experimental restraints and model refinement."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-006",
+      "citation": "Dimura et al. (2020), Automated and optimally FRET-assisted structural modeling, Nature Communications 11:5394.",
+      "doi": "10.1038/s41467-020-19023-1",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "fc8aa871b220f462452c9cdaacf2ed7b40929fc3ff8449f663f0329ce6d5a6fe",
+      "derivative_sha256": "f6bb20a80b79d6b3b519fb405d94bffe5d187052ce5e150cf855ad0a265660ca",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "DIM-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "FRET pair selection, coarse-grained modeling, MD refinement, and stated accuracy/precision distinction."
+        },
+        {
+          "id": "DIM-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "source-level framing that sparse FRET data require combination with simulations."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-007",
+      "citation": "Fuertes et al. (2017), Decoupling of size and shape fluctuations in heteropolymeric sequences reconciles discrepancies in SAXS vs. FRET measurements, PNAS 114:E6342-E6351.",
+      "doi": "10.1073/pnas.1704692114",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8",
+      "derivative_sha256": "8fb918e927933faa686e985f833ad96b0bd450a651a8517f6b5f489aa76626d2",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "FUE-P01-ABSTRACT",
+          "locator": "PDF p. 1, PNAS E6342, Abstract",
+          "scope": "distinct RG and dye-to-dye-distance quantities from SAXS and smFRET."
+        },
+        {
+          "id": "FUE-P02-FIG1",
+          "locator": "PDF p. 2, PNAS E6343, Figure 1 caption and adjacent Introduction",
+          "scope": "I(q) versus q and FRET-efficiency representations."
+        },
+        {
+          "id": "FUE-P03-FIG2",
+          "locator": "PDF p. 3, PNAS E6344, Figure 2 caption and Eqs. 1-2",
+          "scope": "raw profile/efficiency versus model-derived quantities."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-008",
+      "citation": "Hellenkamp et al. (2018), Precision and accuracy of single-molecule FRET measurements-a multi-laboratory benchmark study, Nature Methods.",
+      "doi": "10.1038/s41592-018-0085-0",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "54f5d1c12ea88e915a90c3a548351905e8c594a6a192c4b2d907c6dab57f7d5f",
+      "derivative_sha256": "a85465fc5f104a1892851ca920295b41744332479786778b4029d81d015e09b4",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "HEL-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "20-laboratory benchmark, FRET efficiency dispersion, correction procedure, and conversion uncertainty."
+        },
+        {
+          "id": "HEL-P01-INTRO",
+          "locator": "PDF p. 1, opening text",
+          "scope": "measurement reproducibility and accuracy framing."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-009",
+      "citation": "Hoff et al. (2024), Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference, PLOS Computational Biology 20:e1012180.",
+      "doi": "10.1371/journal.pcbi.1012180",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "78a96e35dd0f76313e643f230015ac909aa156a7d228063925b85dfa62cbdc5c",
+      "derivative_sha256": "d9f78d533401cda8b3052e33c9e52662cac2b2e1f1215ab9f24c9cb0780614c9",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "HOF-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "cryo-EM map/model balance, noise and correlation treatment, and ensemble-refinement purpose."
+        },
+        {
+          "id": "HOF-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "limits of fit-only refinement and low-resolution heterogeneity."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-010",
+      "citation": "Peter et al. (2022), Cross-validation of distance measurements in proteins by PELDOR/DEER and single-molecule FRET, Nature Communications 13:4396.",
+      "doi": "10.1038/s41467-022-31945-6",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "21ce6830df532611eb5c5ea46b3464588597ceb4d182908cd29626e925549576",
+      "derivative_sha256": "599108d0d1df3881ef0f77e7bea168e55081226cea8163c4ddb72c8f212a68db",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "PET-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "four proteins, inter-probe distance comparison, and named technique-specific inconsistencies."
+        },
+        {
+          "id": "PET-P02-FIG1",
+          "locator": "PDF p. 2, Figure 1 caption and adjacent text",
+          "scope": "PELDOR/DEER and smFRET workflows and representation differences."
+        },
+        {
+          "id": "PET-P03-TABLE1",
+          "locator": "PDF p. 3, Table 1",
+          "scope": "different sample amount and physical-state conditions for the two methods."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-011",
+      "citation": "Sanabria et al. (2020), Resolving dynamics and function of transient states in single enzyme molecules, Nature Communications 11:1231.",
+      "doi": "10.1038/s41467-020-14886-w",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "cfd8bc4b7deb7ff1abbad9aca5fffd4bd4955410e67379f9c4d0331985687ce2",
+      "derivative_sha256": "51008273094b4a7ed447a482ecfc64a00b34680cb22dd16241984b99a554b2f9",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "SAN-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "T4 lysozyme, combined fluorescence/EPR/mutagenesis toolkit, and ns-ms state claims."
+        },
+        {
+          "id": "SAN-P02-RESULTS",
+          "locator": "PDF p. 2, Results, 'Detecting T4L's states by MFD'",
+          "scope": "FRET efficiency, donor lifetime, fFCS, and time/ensemble semantics."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-016",
+      "citation": "Silvestre-Ryan et al. (2013), Average Conformations Determined from PRE Data Provide High-Resolution Maps of Transient Tertiary Interactions in Disordered Proteins, Biophysical Journal 104:1740-1751.",
+      "doi": null,
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "21fa2c9a23fc7797005953c16aea95131a9ada467e65e32ee12a5f0e41e93489",
+      "derivative_sha256": "77d1a0a3f7deafb8a45a141d26dea2cbb34e836e6f017ddab4dea63035fda4e1",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "SIL-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "PRE data fitted to conformational representations for acid-unfolded apomyoglobin."
+        },
+        {
+          "id": "SIL-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "sparse-data and ensemble-resolution boundary."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-017",
+      "citation": "Thomasen and Lindorff-Larsen (2022), Conformational ensembles of intrinsically disordered proteins and flexible multidomain proteins, Biochemical Society Transactions 50:541-554.",
+      "doi": "10.1042/BST20210499",
+      "source_type": "REVIEW_ARTICLE",
+      "pdf_sha256": "ac2b45484e2b8268429b0c0c3b67325e3248edf62916cea3ea3c7c7ac5fff7e6",
+      "derivative_sha256": "8cea22db42d809da3aee1be97fac76c2782b0a9a7b7fe4849f1c9db24283d272",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "THO-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "integrated biophysical experiments, computational models, forward models, and ensemble refinement."
+        },
+        {
+          "id": "THO-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "ensemble framing for heterogeneous proteins."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-018",
+      "citation": "Grossfield et al. (2018), Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations, Living Journal of Computational Molecular Science.",
+      "doi": null,
+      "source_type": "PRIMARY_METHODS_GUIDE",
+      "pdf_sha256": "9e11c8c6908411ef7d67c9f93e4a7eab7de26c660400283c8a148fd2f75c61a9",
+      "derivative_sha256": "37cab96bbdeaacbf689200ffa17ab83f827bd264169eabd9d7282a4943ddfbcd",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "GRO-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "statistical uncertainty and sampling-quality reporting for molecular simulation trajectories."
+        },
+        {
+          "id": "GRO-P01-SCOPE",
+          "locator": "PDF p. 1, Abstract, final sentences",
+          "scope": "explicit exclusion of systematic force-field/model error from the guide's scope."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-027",
+      "citation": "Pitera and Chodera (2012), On the Use of Experimental Observations to Bias Simulated Ensembles, Journal of Chemical Theory and Computation.",
+      "doi": null,
+      "source_type": "PRIMARY_METHODS_ARTICLE",
+      "pdf_sha256": "a1a84b34d374b07aeada6514a656f877b3f0e7264faa143c7b294c364113f77c",
+      "derivative_sha256": "db4ca955f8ae0f73748ee5bf4aaddb9e6f5d17f35ca72dc1d5830817e905492a",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "PIT-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "maximum-entropy restraints, target observables, and biasing-weight limitations."
+        },
+        {
+          "id": "PIT-P01-INTRO",
+          "locator": "PDF p. 1, Introduction",
+          "scope": "experimental observables as geometrically sensitive, equilibrium information."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    },
+    {
+      "source_record_id": "PDFMD-037",
+      "citation": "Wankowicz et al. (2023), Automated multiconformer model building for X-ray crystallography and cryo-EM, eLife 12:RP90606.",
+      "doi": "10.7554/eLife.90606",
+      "source_type": "PRIMARY_RESEARCH_ARTICLE",
+      "pdf_sha256": "4c2b090c447ad1ce21efa34e0b2cb65a9826cfa2b0a9be3f8283d21386d5823d",
+      "derivative_sha256": "4db14262bb9149e67fe7df725eba7f79aaa95f6536f845232362eb2ad3757c8c",
+      "derivative": {
+        "converter": "MarkItDown",
+        "converter_version": "0.1.7",
+        "conversion_mode": "offline_default_cli",
+        "use": "LOCAL_SEARCH_AND_NAVIGATION_ONLY"
+      },
+      "license_status": "UNKNOWN_LOCAL_ONLY",
+      "commit_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+      "exact_pdf_locators": [
+        {
+          "id": "WAN-P01-ABSTRACT",
+          "locator": "PDF p. 1, Abstract",
+          "scope": "qFit multiconformer model building from X-ray/cryo-EM data."
+        },
+        {
+          "id": "WAN-P02-OVERVIEW",
+          "locator": "PDF p. 2, Results, 'Overview of qFit protein algorithm'",
+          "scope": "refined single-conformer structure and high-resolution density-map inputs; stated limits for cryo-EM application."
+        }
+      ],
+      "exposed_development_scope": "IN_SCOPE_PRIMARY_LIBRARY"
+    }
+  ]
+}

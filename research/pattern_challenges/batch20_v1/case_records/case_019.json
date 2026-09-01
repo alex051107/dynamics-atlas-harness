@@ -1,0 +1,151 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_019",
+  "case_number": 19,
+  "frozen_manifest_unit": {
+    "case_id": "case_019",
+    "bucket": "FAMILY_BLIND_ROUTING",
+    "title": "Maximum-entropy biasing source with no preassigned Rules family",
+    "source_record_ids": [
+      "PDFMD-027"
+    ],
+    "family_focus": [],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "MOLECULAR_SIMULATION",
+      "MAXIMUM_ENTROPY",
+      "EXPERIMENTAL_RESTRAINTS"
+    ],
+    "adversarial": true,
+    "cross_modal_context": false,
+    "challenge_intent": "Test that an unassigned source with a target observable and biasing model is not auto-routed to a new family or operator.",
+    "source_locator_ids": [
+      "PIT-P01-ABSTRACT",
+      "PIT-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can a maximum-entropy simulation-biasing paper be routed without a preassigned family or a new operator?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-027",
+        "citation": "Pitera and Chodera (2012), On the Use of Experimental Observations to Bias Simulated Ensembles, Journal of Chemical Theory and Computation.",
+        "pdf_sha256": "a1a84b34d374b07aeada6514a656f877b3f0e7264faa143c7b294c364113f77c",
+        "derivative_sha256": "db4ca955f8ae0f73748ee5bf4aaddb9e6f5d17f35ca72dc1d5830817e905492a",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "PIT-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "maximum-entropy restraints, target observables, and biasing-weight limitations."
+          },
+          {
+            "id": "PIT-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "experimental observables as geometrically sensitive, equilibrium information."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "pitera_chodera_2012_maxent_record",
+        "native_observable": "Experimental observations sensitive to molecular geometry, combined with simulation-coordinate functions in a maximum-entropy formulation.",
+        "estimand": "A minimally biased ensemble consistent with observations under specified restraint/biasing assumptions.",
+        "statistical_unit": "Experimental observation and simulated ensemble/coordinate representation in the methods formulation.",
+        "spatial_support": "Molecular geometry observables such as distances and angles in the source's general setup.",
+        "temporal_or_ensemble_semantics": "The source frames experimental information as equilibrium ensemble constraints.",
+        "transformations_and_model_assumptions": "Maximum-entropy restraints and biasing weights depend on target-observable definitions and an assumed simulation formulation.",
+        "uncertainty_or_reliability_boundaries": "The source does not supply an approved Rules-family routing or an operator contract for this batch."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract presents a maximum-entropy approach to enforce concordance with experimental observations using minimally biased restraints.",
+        "locators": [
+          "PIT-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The introduction describes experiments as reporting geometry-sensitive equilibrium information in the method framing.",
+        "locators": [
+          "PIT-P01-INTRO"
+        ]
+      }
+    ],
+    "source_relationship": "No family is preassigned. This is a routing-abstention test, not authorization to construct an operator or add a family.",
+    "maximum_source_supported_wording": "The source supports recording target-observable and restraint/biasing semantics without committing to a canonical Rules route.",
+    "forbidden_generalizations": [
+      "Auto-route the method to a new family or registered operator.",
+      "Treat a method paper as evidence that a specific simulation bias is valid in another case."
+    ],
+    "missing_information": [
+      "No approved source-to-family mapping, case-specific target observable, or executor is supplied."
+    ],
+    "possible_reusable_review_obligations": [
+      "Route unassigned sources to human review.",
+      "Do not infer a model action from source methodology."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "6a277633fb375177b0dbe9a8747018c9e8854d218989d6cbe988e369641c2182",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "6a277633fb375177b0dbe9a8747018c9e8854d218989d6cbe988e369641c2182",
+    "selected_families": [],
+    "selected_rule_instances": [],
+    "target_kind": "SOURCE",
+    "applicability": "No canonical family/rule is selected in a family-blind routing challenge.",
+    "required_evidence": [
+      "source identity, exact locator, and unassigned routing state"
+    ],
+    "source_projection": {
+      "source_id": "pitera_chodera_2012_maxent_record",
+      "routing_status": "UNASSIGNED_FAMILY_BLIND"
+    },
+    "dependency_chain": [
+      "No approved routing decision; no RuleInstance or operator route."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "NO_SELECTED_RULE",
+        "status": "NOT_APPLICABLE",
+        "reason": "NO_APPROVED_FAMILY_ROUTING"
+      }
+    ],
+    "first_blocking_dependency": "No approved family-routing or operator contract exists.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "Source semantics and abstention only.",
+    "facts_not_independently_established": [
+      "family assignment",
+      "operator appropriateness",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "All F01-F07 evaluator obligations are inactive."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

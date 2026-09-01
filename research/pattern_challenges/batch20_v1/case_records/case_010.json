@@ -1,0 +1,198 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_010",
+  "case_number": 10,
+  "frozen_manifest_unit": {
+    "case_id": "case_010",
+    "bucket": "F06_COMPLETE_DRAFT",
+    "title": "PELDOR/DEER-smFRET comparison under different physical states",
+    "source_record_ids": [
+      "PDFMD-010"
+    ],
+    "family_focus": [
+      "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "F06R02_EDGE_COMPARABILITY",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "source_modalities": [
+      "PELDOR_DEER",
+      "smFRET"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test that a valuable cross-method paper does not receive a matched-condition or independent-validation label when its stated physical states differ.",
+    "source_locator_ids": [
+      "PET-P01-ABSTRACT",
+      "PET-P02-FIG1",
+      "PET-P03-TABLE1"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can PELDOR/DEER and smFRET be labeled condition-matched or independently validating when the paper reports different physical sample states?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-010",
+        "citation": "Peter et al. (2022), Cross-validation of distance measurements in proteins by PELDOR/DEER and single-molecule FRET, Nature Communications 13:4396.",
+        "pdf_sha256": "21ce6830df532611eb5c5ea46b3464588597ceb4d182908cd29626e925549576",
+        "derivative_sha256": "599108d0d1df3881ef0f77e7bea168e55081226cea8163c4ddb72c8f212a68db",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "PET-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "four proteins, inter-probe distance comparison, and named technique-specific inconsistencies."
+          },
+          {
+            "id": "PET-P02-FIG1",
+            "locator": "PDF p. 2, Figure 1 caption and adjacent text",
+            "scope": "PELDOR/DEER and smFRET workflows and representation differences."
+          },
+          {
+            "id": "PET-P03-TABLE1",
+            "locator": "PDF p. 3, Table 1",
+            "scope": "different sample amount and physical-state conditions for the two methods."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "peter_2022_deer_smfret_edge",
+        "native_observable": "PELDOR/DEER distance distributions and smFRET efficiency/distance representations from labeled proteins.",
+        "estimand": "Inter-probe distances and conformational-change comparisons across the two methods.",
+        "statistical_unit": "Double-cysteine variants of four proteins measured with each method in the stated protocols.",
+        "spatial_support": "Selected inter-probe distances in biomacromolecules.",
+        "temporal_or_ensemble_semantics": "The methods differ in physical-state context, including frozen solution versus liquid solution conditions stated in Table 1.",
+        "transformations_and_model_assumptions": "Both techniques involve probe-specific distance inference and comparisons to structural-model predictions.",
+        "uncertainty_or_reliability_boundaries": "Named technique-specific inconsistencies include cryoprotectant and label-protein effects."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract compares PELDOR/DEER and smFRET distance measurements across four proteins and reports technique-specific inconsistencies.",
+        "locators": [
+          "PET-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "Table 1 contrasts usual PELDOR/DEER frozen-solution conditions with liquid-solution or cell-culture smFRET conditions.",
+        "locators": [
+          "PET-P03-TABLE1"
+        ]
+      }
+    ],
+    "source_relationship": "This is a cross-modal edge test. The paper's value as a comparison study does not remove the stated physical-state difference.",
+    "maximum_source_supported_wording": "The source supports recording a cross-method comparison and its stated condition difference; it does not support a matched-condition label for this edge.",
+    "forbidden_generalizations": [
+      "Call the methods condition-matched despite the stated physical-state difference.",
+      "Call one technique an independent validation of the other without separately declared lineage/shared-error facts."
+    ],
+    "missing_information": [
+      "A complete project edge lineage and shared-error assessment are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require condition relation before comparability.",
+      "Keep validation independence separate from cross-method agreement."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "13d56f20762fdb9fa55a838aabb0c14f319aaa19c739e9100d0cd72243d57921",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "13d56f20762fdb9fa55a838aabb0c14f319aaa19c739e9100d0cd72243d57921",
+    "selected_families": [
+      "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+    ],
+    "selected_rule_instances": [
+      "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "F06R02_EDGE_COMPARABILITY",
+      "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+    ],
+    "target_kind": "EDGE",
+    "applicability": "Applicable EDGE with a declared cross-method comparison and validation question.",
+    "required_evidence": [
+      "edge.left_source_id",
+      "edge.right_source_id",
+      "edge.condition_relation",
+      "edge.shared_claim",
+      "edge.relation_type",
+      "edge.bridge_status",
+      "edge.validation_claim",
+      "edge.validation_independence",
+      "edge.shared_error_status",
+      "edge.data_lineage_status"
+    ],
+    "edge_projection": {
+      "comparison_id": "peter_2022_deer_smfret",
+      "left_source_id": "peter_2022_peldor_deer",
+      "right_source_id": "peter_2022_smfret",
+      "condition_relation": "MISMATCH",
+      "shared_claim": "inter-probe distances report conformational change",
+      "relation_type": "NOT_COMPARABLE",
+      "bridge_status": "UNAVAILABLE",
+      "validation_claim": "one method independently validates the other",
+      "validation_independence": "UNRESOLVED",
+      "shared_error_status": "UNRESOLVED",
+      "data_lineage_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F02R02 condition relation is evaluated before F06R02.",
+      "F06R02 also requires F03 PASS declarations for both endpoints, which are not executed in this edge-only projection.",
+      "F06R03 remains separate from F06R02."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F02R02",
+        "status": "FAIL",
+        "reason": "EDGE_CONDITION_RELATION_MISMATCH"
+      },
+      {
+        "rule": "F06R02",
+        "status": "FAIL",
+        "reason": "EDGE_NOT_COMPARABLE_FOR_DECLARED_RELATION"
+      },
+      {
+        "rule": "F06R03",
+        "status": "UNRESOLVED",
+        "reason": "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED"
+      }
+    ],
+    "first_blocking_dependency": "The stated physical sample states differ, so condition relation is MISMATCH.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA for mismatch; SOURCE_LOOKUP_DECLARED_ONLY for missing independence fields.",
+    "local_claim_ceiling": "The edge can block a declared matched-condition comparison without invalidating either source measurement.",
+    "facts_not_independently_established": [
+      "numeric equivalence",
+      "shared population",
+      "independent validation",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No new comparability threshold or operator is introduced."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_017",
+  "case_number": 17,
+  "frozen_manifest_unit": {
+    "case_id": "case_017",
+    "bucket": "F07_CANDIDATE_FAMILY_DISCOVERY",
+    "title": "Transient-state identifiability and next discriminating measurement",
+    "source_record_ids": [
+      "PDFMD-011"
+    ],
+    "family_focus": [
+      "F07R01_CASE_IDENTIFIABILITY"
+    ],
+    "target_kind": "CASE",
+    "source_modalities": [
+      "smFRET",
+      "EPR",
+      "MUTAGENESIS"
+    ],
+    "adversarial": false,
+    "cross_modal_context": true,
+    "challenge_intent": "Identify candidate hypotheses and a possible discriminating action without concluding that the case is identifiable.",
+    "source_locator_ids": [
+      "SAN-P01-ABSTRACT",
+      "SAN-P02-RESULTS"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can a transient-state study identify candidate hypotheses and an information-gain question without claiming that the system is fully identifiable?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-011",
+        "citation": "Sanabria et al. (2020), Resolving dynamics and function of transient states in single enzyme molecules, Nature Communications 11:1231.",
+        "pdf_sha256": "cfd8bc4b7deb7ff1abbad9aca5fffd4bd4955410e67379f9c4d0331985687ce2",
+        "derivative_sha256": "51008273094b4a7ed447a482ecfc64a00b34680cb22dd16241984b99a554b2f9",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "SAN-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "T4 lysozyme, combined fluorescence/EPR/mutagenesis toolkit, and ns-ms state claims."
+          },
+          {
+            "id": "SAN-P02-RESULTS",
+            "locator": "PDF p. 2, Results, 'Detecting T4L's states by MFD'",
+            "scope": "FRET efficiency, donor lifetime, fFCS, and time/ensemble semantics."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "sanabria_2020_t4l_identifiability_case",
+        "native_observable": "Single-molecule fluorescence indicators and complementary biophysical observations in T4L.",
+        "estimand": "Conformational states, exchange dynamics, and possible functional relevance in the reported system.",
+        "statistical_unit": "Labeled T4L variants and detected molecular events/states.",
+        "spatial_support": "T4L subdomain/hinge context and selected labeled sites.",
+        "temporal_or_ensemble_semantics": "The article reports short-lived states across ns-ms time ranges.",
+        "transformations_and_model_assumptions": "FRET-derived distance sets screen structures; state interpretations use a hybrid toolkit.",
+        "uncertainty_or_reliability_boundaries": "A candidate hidden/minor state and possible function do not make all competing mechanistic hypotheses identifiable."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract reports three short-lived conformational states and distinct exchange times in the studied T4L system.",
+        "locators": [
+          "SAN-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The Results passage differentiates fluorescence representations and dynamic analyses used in the hybrid toolkit.",
+        "locators": [
+          "SAN-P02-RESULTS"
+        ]
+      }
+    ],
+    "source_relationship": "This CASE asks what a future discriminating measurement would need to separate hypotheses; it does not decide the source's biological mechanism.",
+    "maximum_source_supported_wording": "The source supports posing candidate state-network hypotheses and a need for discriminating information, not a final identifiability conclusion.",
+    "forbidden_generalizations": [
+      "Treat a candidate minor-state interpretation as complete identifiability.",
+      "Infer a next action as a validated experimental prescription."
+    ],
+    "missing_information": [
+      "No project-specific hypothesis model, decision criterion, or candidate action feasibility is supplied."
+    ],
+    "possible_reusable_review_obligations": [
+      "Represent competing hypotheses explicitly.",
+      "Require a declared next discriminating action and its expected information target."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "221cf4683cb09cdd5eabe5d091b77851f7e1ef00ce6f8c957915c9a662190b02",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "221cf4683cb09cdd5eabe5d091b77851f7e1ef00ce6f8c957915c9a662190b02",
+    "selected_families": [
+      "F07_IDENTIFIABILITY_AND_NEXT_ACTION"
+    ],
+    "selected_rule_instances": [
+      "F07R01_CASE_IDENTIFIABILITY"
+    ],
+    "target_kind": "CASE",
+    "applicability": "Applicable CASE candidate-map entry.",
+    "required_evidence": [
+      "case.candidate_hypotheses",
+      "case.next_discriminating_action"
+    ],
+    "case_projection": {
+      "candidate_hypotheses": [
+        "two-state open/closed exchange accounts for observations",
+        "a third minor state contributes to product release"
+      ],
+      "next_discriminating_action": "Human-designed experiment that distinguishes state occupancy/kinetic predictions under a specified perturbation"
+    },
+    "dependency_chain": [
+      "F07R01 is CANDIDATE_MAP_ONLY."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F07R01",
+        "status": "UNRESOLVED",
+        "reason": "CANDIDATE_MAP_ONLY_NOT_EVALUATED"
+      }
+    ],
+    "first_blocking_dependency": "No executable F07 identifiability contract or scientific decision criterion exists.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "Candidate hypotheses and a discussion question only.",
+    "facts_not_independently_established": [
+      "identifiability",
+      "functional mechanism",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No operator or experimental action is scheduled."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

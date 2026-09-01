@@ -1,0 +1,171 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_007",
+  "case_number": 7,
+  "frozen_manifest_unit": {
+    "case_id": "case_007",
+    "bucket": "F03_COMPLETE_DRAFT",
+    "title": "Fuertes smFRET efficiency versus dye-distance inference",
+    "source_record_ids": [
+      "PDFMD-007"
+    ],
+    "family_focus": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "smFRET",
+      "SAXS"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test that mean FRET efficiency and a model-derived dye-to-dye distance remain distinct.",
+    "source_locator_ids": [
+      "FUE-P01-ABSTRACT",
+      "FUE-P02-FIG1",
+      "FUE-P03-FIG2"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does the working measurement pattern keep Fuertes mean FRET efficiency separate from the model-derived dye-to-dye distance?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-007",
+        "citation": "Fuertes et al. (2017), Decoupling of size and shape fluctuations in heteropolymeric sequences reconciles discrepancies in SAXS vs. FRET measurements, PNAS 114:E6342-E6351.",
+        "pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8",
+        "derivative_sha256": "8fb918e927933faa686e985f833ad96b0bd450a651a8517f6b5f489aa76626d2",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "FUE-P01-ABSTRACT",
+            "locator": "PDF p. 1, PNAS E6342, Abstract",
+            "scope": "distinct RG and dye-to-dye-distance quantities from SAXS and smFRET."
+          },
+          {
+            "id": "FUE-P02-FIG1",
+            "locator": "PDF p. 2, PNAS E6343, Figure 1 caption and adjacent Introduction",
+            "scope": "I(q) versus q and FRET-efficiency representations."
+          },
+          {
+            "id": "FUE-P03-FIG2",
+            "locator": "PDF p. 3, PNAS E6344, Figure 2 caption and Eqs. 1-2",
+            "scope": "raw profile/efficiency versus model-derived quantities."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "fuertes_2017_smfret_efficiency",
+        "native_observable": "Single-molecule FRET efficiencies, including burst-wise measurements and a mean FRET efficiency.",
+        "estimand": "A dye-to-dye distance inferred from mean FRET efficiency through a stated distance-distribution and dye model.",
+        "statistical_unit": "Burst-wise observations from a doubly labeled protein under the reported measurement conditions.",
+        "spatial_support": "Donor-acceptor separation at specified labeled termini, not a global all-pairs structural average.",
+        "temporal_or_ensemble_semantics": "The paper discusses smFRET temporal sensitivity while its distance mapping uses mean efficiency and a distribution.",
+        "transformations_and_model_assumptions": "The efficiency-to-distance mapping uses a dye-pair F\u00f6rster distance and an assumed distance distribution.",
+        "uncertainty_or_reliability_boundaries": "Dye/linker geometry and distribution-model choice constrain the inferred distance."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The paper describes mean FRET efficiencies used to infer mean dye distances for terminally labeled proteins.",
+        "locators": [
+          "FUE-P01-ABSTRACT",
+          "FUE-P03-FIG2"
+        ]
+      },
+      {
+        "statement": "The source distinguishes the inferred dye distance from the actual unlabeled-protein end-to-end distance and states model assumptions.",
+        "locators": [
+          "FUE-P01-ABSTRACT",
+          "FUE-P03-FIG2"
+        ]
+      }
+    ],
+    "source_relationship": "This is the smFRET member of an exposed source pair; it is not a conversion formula for a SAXS quantity.",
+    "maximum_source_supported_wording": "The primary record is FRET efficiency; dye-to-dye distance is an inference conditional on stated mapping assumptions.",
+    "forbidden_generalizations": [
+      "Treat inferred dye distance as the raw measurement.",
+      "Treat the dye distance as automatically identical to an unlabeled end-to-end distance."
+    ],
+    "missing_information": [
+      "SI-level calibration parameters and all dye controls are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Preserve raw efficiency, derived estimand, labeled spatial support, and mapping assumptions."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "5e860ed98299a26578a410a8111f2d0e026127b62a9377272fcb180530cf7f66",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "5e860ed98299a26578a410a8111f2d0e026127b62a9377272fcb180530cf7f66",
+    "selected_families": [
+      "F03_SOURCE_MEASUREMENT_SEMANTICS"
+    ],
+    "selected_rule_instances": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE record.",
+    "required_evidence": [
+      "F03 native-measurement fields"
+    ],
+    "source_projection": {
+      "source_id": "fuertes_2017_smfret_efficiency",
+      "native_observable": "FRET-efficiency distribution and mean",
+      "estimand": "model-inferred dye-to-dye distance",
+      "time_semantics": {
+        "kind": "BURSTWISE_AND_ENSEMBLE_SUMMARIZED"
+      },
+      "spatial_support": "specified terminal dye pair",
+      "unit_or_aggregation": "burst-wise efficiencies summarized by a mean",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F03R01 source-local declaration."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F03R01",
+        "status": "PASS",
+        "reason": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION",
+    "local_claim_ceiling": "Measurement-semantics declaration only.",
+    "facts_not_independently_established": [
+      "agreement with SAXS",
+      "reliability",
+      "comparability",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No numeric modality conversion or F06 edge result is produced."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

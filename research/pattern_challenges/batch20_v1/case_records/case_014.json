@@ -1,0 +1,162 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_014",
+  "case_number": 14,
+  "frozen_manifest_unit": {
+    "case_id": "case_014",
+    "bucket": "F04_CANDIDATE_FAMILY_DISCOVERY",
+    "title": "Cryo-EM Bayesian refinement uncertainty boundary",
+    "source_record_ids": [
+      "PDFMD-009"
+    ],
+    "family_focus": [
+      "F04R01_SOURCE_RELIABILITY_PROVENANCE"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "cryo_EM",
+      "BAYESIAN_INFERENCE"
+    ],
+    "adversarial": false,
+    "cross_modal_context": false,
+    "challenge_intent": "Identify noise, correlation, and fit-versus-physical-quality boundaries without rating a source reliable or unreliable.",
+    "source_locator_ids": [
+      "HOF-P01-ABSTRACT",
+      "HOF-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "What source-supported uncertainty boundaries arise in Bayesian cryo-EM refinement, and can F04 produce a reliability outcome?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-009",
+        "citation": "Hoff et al. (2024), Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference, PLOS Computational Biology 20:e1012180.",
+        "pdf_sha256": "78a96e35dd0f76313e643f230015ac909aa156a7d228063925b85dfa62cbdc5c",
+        "derivative_sha256": "d9f78d533401cda8b3052e33c9e52662cac2b2e1f1215ab9f24c9cb0780614c9",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "HOF-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "cryo-EM map/model balance, noise and correlation treatment, and ensemble-refinement purpose."
+          },
+          {
+            "id": "HOF-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "limits of fit-only refinement and low-resolution heterogeneity."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "hoff_2024_emmivox_refinement",
+        "native_observable": "Cryo-EM maps with model and ensemble refinement under a Bayesian inference approach.",
+        "estimand": "Single-structure/ensemble models balanced between experimental fit and physicochemical quality.",
+        "statistical_unit": "A map/model refinement problem and associated structural representation.",
+        "spatial_support": "Density-map regions and structural models, including low-resolution heterogeneity context.",
+        "temporal_or_ensemble_semantics": "Conformational heterogeneity can be represented in an ensemble but is averaged in low-resolution map regions.",
+        "transformations_and_model_assumptions": "Bayesian inference explicitly treats data correlation and noise while balancing fit and model quality.",
+        "uncertainty_or_reliability_boundaries": "Fit-only refinement can be unbalanced; no generic reliability score follows from the bounded source record."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract describes problems with fit-focused refinement and representing heterogeneity in low-resolution density regions.",
+        "locators": [
+          "HOF-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract names explicit treatment of data correlation and noise in the Bayesian approach.",
+        "locators": [
+          "HOF-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "This is candidate reliability/uncertainty discovery, not a performance evaluation of the paper or its method.",
+    "maximum_source_supported_wording": "The source supports recording fit-versus-physical-quality, correlation, noise, and heterogeneity boundaries for review.",
+    "forbidden_generalizations": [
+      "Turn a Bayesian method description into a universal reliability grade.",
+      "Treat good map fit as proof of all model quality dimensions."
+    ],
+    "missing_information": [
+      "No F04 threshold or executable evaluator is authorized."
+    ],
+    "possible_reusable_review_obligations": [
+      "Keep noise/correlation provenance visible.",
+      "Do not collapse model fit into reliability."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "8bc2d7181030e4fb44ccd2245e81dd4184f0cdf4800a27d8025bb2866fe47d33",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "8bc2d7181030e4fb44ccd2245e81dd4184f0cdf4800a27d8025bb2866fe47d33",
+    "selected_families": [
+      "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY"
+    ],
+    "selected_rule_instances": [
+      "F04R01_SOURCE_RELIABILITY_PROVENANCE"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable candidate-map SOURCE entry.",
+    "required_evidence": [
+      "F04 candidate evidence fields"
+    ],
+    "source_projection": {
+      "source_id": "hoff_2024_emmivox_refinement",
+      "uncertainty": {
+        "status": "SOURCE_SUPPORTED",
+        "source_support": "correlation/noise and fit-quality boundaries"
+      },
+      "detection_boundary": {
+        "status": "SOURCE_SUPPORTED_LIMIT"
+      }
+    },
+    "dependency_chain": [
+      "F04 candidate map only."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F04R01",
+        "status": "UNRESOLVED",
+        "reason": "CANDIDATE_MAP_ONLY_NOT_EVALUATED"
+      }
+    ],
+    "first_blocking_dependency": "F04 has no executable evaluator or threshold.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "Reviewable uncertainty inputs only.",
+    "facts_not_independently_established": [
+      "reliability",
+      "model correctness",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No quantitative model comparison is executed."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_008",
+  "case_number": 8,
+  "frozen_manifest_unit": {
+    "case_id": "case_008",
+    "bucket": "F03_COMPLETE_DRAFT",
+    "title": "Nanodisc multimodal record versus derived conformational ensemble",
+    "source_record_ids": [
+      "PDFMD-004"
+    ],
+    "family_focus": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "NMR",
+      "SAXS",
+      "SANS",
+      "MOLECULAR_DYNAMICS"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test whether an integrated ensemble is recorded as derived rather than treated as a native measurement.",
+    "source_locator_ids": [
+      "BEN-P01-ABSTRACT",
+      "BEN-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does the pattern distinguish Bengtsen's individual NMR/SAXS/SANS observations from the conformational ensemble derived by integrating them with MD?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-004",
+        "citation": "Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations, eLife.",
+        "pdf_sha256": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf",
+        "derivative_sha256": "3b040c8d5e6600528323fd7dd091704a34794e1ee367ab0592135e5b6c974353",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "BEN-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "two nanodiscs, SAXS/SANS with MD and prior NMR/EPR, and a derived/validated conformational ensemble."
+          },
+          {
+            "id": "BEN-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "nanodisc system context and intended integrative setting."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "bengtsen_2020_nanodisc_integrative_record",
+        "native_observable": "NMR, SAXS, and SANS experiment-specific records, with MD simulations used in an integrative analysis.",
+        "estimand": "A conformational ensemble representing nanodisc structure and dynamics.",
+        "statistical_unit": "One of two named nanodiscs and its modality-specific experimental records.",
+        "spatial_support": "Nanodisc shape, lipid ordering, and ensemble-level structural features.",
+        "temporal_or_ensemble_semantics": "The result is a conformational-heterogeneity/ensemble description rather than a raw experimental trace.",
+        "transformations_and_model_assumptions": "The ensemble is derived by combining experimental data with MD; it is not identical to any one raw modality.",
+        "uncertainty_or_reliability_boundaries": "The abstract does not by itself specify every modality's individual processing or data lineage."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract says the study combines SAXS and SANS experiments with MD and previously obtained NMR/EPR data.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract describes deriving and validating a conformational ensemble that represents nanodisc structure and dynamics.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "The source spans multiple measurements and a derived ensemble; this record does not assign a scientific truth value to the ensemble.",
+    "maximum_source_supported_wording": "The study supports distinguishing modality records from its integratively derived conformational ensemble.",
+    "forbidden_generalizations": [
+      "Treat the derived ensemble as a raw SAXS, SANS, or NMR observable.",
+      "Treat source integration as automatic validation independence."
+    ],
+    "missing_information": [
+      "Detailed per-modality data processing and source-lineage fields are not extracted from the bounded passages."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require separate raw-observable and derived-estimand fields.",
+      "Do not infer data-lineage or validation status from the word 'validate'."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "99561fa3876fd1c87992fece45756395d7c5b38a46d811c1cdc709c844030870",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "99561fa3876fd1c87992fece45756395d7c5b38a46d811c1cdc709c844030870",
+    "selected_families": [
+      "F03_SOURCE_MEASUREMENT_SEMANTICS"
+    ],
+    "selected_rule_instances": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE record.",
+    "required_evidence": [
+      "F03 native-measurement fields"
+    ],
+    "source_projection": {
+      "source_id": "bengtsen_2020_nanodisc_integrative_record",
+      "native_observable": "modality-specific NMR/SAXS/SANS records",
+      "estimand": "integratively derived conformational ensemble",
+      "time_semantics": {
+        "kind": "CONFORMATIONAL_ENSEMBLE"
+      },
+      "spatial_support": "nanodisc structural and dynamic features",
+      "unit_or_aggregation": "multiple modality records combined with MD",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F03R01 source-local declaration only; F06 data-lineage questions remain separate."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F03R01",
+        "status": "PASS",
+        "reason": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION",
+    "local_claim_ceiling": "The source measurement semantics are declared; integration quality is not certified.",
+    "facts_not_independently_established": [
+      "reliability",
+      "validation independence",
+      "comparability",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "No F06 relation PASS follows from this F03 declaration."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "primary_verdict": null,
+    "defects": []
+  }
+}
