@@ -1,0 +1,211 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_001",
+  "case_number": 1,
+  "frozen_manifest_unit": {
+    "case_id": "case_001",
+    "bucket": "F01_COMPLETE_DRAFT",
+    "title": "Sampling guidance must not become a source-specific convergence claim",
+    "source_record_ids": [
+      "PDFMD-018"
+    ],
+    "family_focus": [
+      "F01R01_CASE_CLAIM_DECLARATION",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+    ],
+    "target_kind": "CASE",
+    "source_modalities": [
+      "MOLECULAR_SIMULATION"
+    ],
+    "adversarial": true,
+    "cross_modal_context": false,
+    "challenge_intent": "Test whether a case contract blocks a requested claim that exceeds a general uncertainty-and-sampling guide.",
+    "source_locator_ids": [
+      "GRO-P01-ABSTRACT",
+      "GRO-P01-SCOPE"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does a request to call a particular simulation converged stay within what a general guide on uncertainty and sampling can support?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-018",
+        "citation": "Grossfield et al. (2018), Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations, Living Journal of Computational Molecular Science.",
+        "pdf_sha256": "9e11c8c6908411ef7d67c9f93e4a7eab7de26c660400283c8a148fd2f75c61a9",
+        "derivative_sha256": "37cab96bbdeaacbf689200ffa17ab83f827bd264169eabd9d7282a4943ddfbcd",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "GRO-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "statistical uncertainty and sampling-quality reporting for molecular simulation trajectories."
+          },
+          {
+            "id": "GRO-P01-SCOPE",
+            "locator": "PDF p. 1, Abstract, final sentences",
+            "scope": "explicit exclusion of systematic force-field/model error from the guide's scope."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "grossfield_2018_sampling_guidance",
+        "native_observable": "Trajectory-derived estimates and sampling diagnostics discussed at the methods-guidance level.",
+        "estimand": "Quantified statistical uncertainty and sampling quality for molecular simulations.",
+        "statistical_unit": "A trajectory or simulation estimate; no HSP90 trajectory is supplied by this source record.",
+        "spatial_support": "General molecular-simulation systems rather than a specified protein locus.",
+        "temporal_or_ensemble_semantics": "Trajectory sampling and statistical uncertainty are the stated scope.",
+        "transformations_and_model_assumptions": "The guide concerns analyses for conventional simulation trajectories and excludes systematic force-field/model error from its stated scope.",
+        "uncertainty_or_reliability_boundaries": "A methods guide does not establish convergence of an unspecified target simulation."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The guide treats uncertainty and sampling-quality communication as essential for molecular simulation analysis.",
+        "locators": [
+          "GRO-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The guide states that systematic error from model or force-field inaccuracy is outside its scope.",
+        "locators": [
+          "GRO-P01-SCOPE"
+        ]
+      }
+    ],
+    "source_relationship": "The paper is a methods guide used only to test a CASE claim contract; it is not evidence for a specific HSP90 run.",
+    "maximum_source_supported_wording": "The guide supports asking for uncertainty and sampling evidence; it does not support declaring an unspecified HSP90 simulation converged.",
+    "forbidden_generalizations": [
+      "Treat general sampling guidance as a completed convergence diagnosis for a named simulation.",
+      "Treat a statistical sampling discussion as a force-field validation result."
+    ],
+    "missing_information": [
+      "No target trajectory, observable definition, simulation protocol, or uncertainty estimate is provided for the requested HSP90 claim."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require a declared target trajectory and observable before a source-specific convergence request can be reviewed.",
+      "Keep sampling uncertainty separate from model-form error."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "7f0e7cf2ea529ad260f5a20b09191c45acd173ed9588114cde4044c8479bc440",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "7f0e7cf2ea529ad260f5a20b09191c45acd173ed9588114cde4044c8479bc440",
+    "selected_families": [
+      "F01_CLAIM_CONTRACT_AND_CEILING"
+    ],
+    "selected_rule_instances": [
+      "F01R01_CASE_CLAIM_DECLARATION",
+      "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+    ],
+    "target_kind": "CASE",
+    "applicability": "Applicable: the task supplies a SCIENTIFIC_CLAIM_REVIEW CASE contract.",
+    "required_evidence": [
+      "case.scientific_claim",
+      "case.requested_claim_level",
+      "case.intended_use",
+      "case.observability_target.event_signature",
+      "case.claim_contract.internal_consistency",
+      "case.claim_contract.declared_request_scope",
+      "case.claim_contract.forbidden_upgrades"
+    ],
+    "case_projection": {
+      "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+      "scientific_claim": "A specified HSP90 simulation is converged.",
+      "requested_claim_level": "SOURCE_SPECIFIC_CONVERGENCE",
+      "claim_contract": {
+        "internal_consistency": "CONSISTENT",
+        "declared_request_scope": [
+          "METHOD_LIMITATION"
+        ],
+        "forbidden_upgrades": [
+          "SOURCE_SPECIFIC_CONVERGENCE",
+          "SCIENTIFIC_SUPPORT"
+        ]
+      }
+    },
+    "dependency_chain": [
+      "F01R01 checks internal CASE consistency.",
+      "F01R02 compares requested wording with declared request scope."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F01R01",
+        "status": "PASS",
+        "reason": "CLAIM_CONTRACT_CONSISTENT"
+      },
+      {
+        "rule": "F01R02",
+        "status": "FAIL",
+        "reason": "REQUESTED_WORDING_IS_FORBIDDEN"
+      }
+    ],
+    "first_blocking_dependency": "The requested source-specific convergence wording is forbidden by the declared CASE scope.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "The contract can reject the requested wording; it cannot infer convergence from the guide.",
+    "facts_not_independently_established": [
+      "simulation convergence",
+      "force-field adequacy",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "F02-F07 source or edge evaluation is not activated by a CASE wording conflict."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "COMPLETED_ISOLATED_CLAUDE_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_CLAUDE_CRITIC_V1",
+    "provider": "Claude Code first-party OAuth",
+    "model": "opus",
+    "independence_label": "PROCEDURALLY_SEPARATE_FRESH_TOOLS_DISABLED_CONTEXT",
+    "session_persistence": false,
+    "tools": "DISABLED",
+    "authorized_source_dossier": "bounded Markdown derivative excerpt plus exact PDF locators supplied in stdin; full text not committed",
+    "critic_prompt_sha256": "02ff409771be381645d7b97c3da6c6c1019b1d33ae42d067f4284c23ab823345",
+    "transport_attempts": 1,
+    "completed_at_utc": "2026-09-01T16:14:44Z",
+    "primary_verdict": "APPROVE_KEEP",
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "GRO-P01-SCOPE",
+        "pattern_object": "F01_CLAIM_CONTRACT_AND_CEILING selection with F01R01_CASE_CLAIM_DECLARATION (PASS) and F01R02_CASE_REQUESTED_WORDING_SCOPE (FAIL), dependency_chain, legal_resolution_route HUMAN_OR_NEW_DATA, and local_claim_ceiling",
+        "scientific_consequence": "The projection blocks the requested SOURCE_SPECIFIC_CONVERGENCE wording at F01R02 because that level is listed in the CASE contract's forbidden_upgrades, and its claim ceiling explicitly denies inferring convergence from the guide. This is the scientifically correct behavior: GRO-P01-ABSTRACT scopes the source to statistical uncertainty and sampling-quality reporting for trajectories in general, and GRO-P01-SCOPE excludes systematic force-field/model error, so the source cannot license a convergence verdict on an unspecified HSP90 run. F01R01's PASS is a well-formedness check on the contract's own fields; the request-versus-scope contradiction is F01R02's object, so the split is a clean separation of concerns rather than a missed check, and the composite outcome remains FAIL. Restricting activation to F01 and routing to HUMAN_OR_NEW_DATA correctly reflects Pass A's missing_information (no trajectory, observable, protocol, or uncertainty estimate), and facts_not_independently_established properly withholds convergence, force-field adequacy, and scientific support.",
+        "scope": "NOT_A_DEFECT",
+        "can_create_unsafe_false_pass": false,
+        "creates_unnecessary_review_burden": false
+      }
+    ],
+    "reviewed_source_locator_ids": [
+      "GRO-P01-ABSTRACT",
+      "GRO-P01-SCOPE"
+    ],
+    "summary": "Reviewed the frozen Pass B pattern projection for case_001 against the bounded PDFMD-018 record at GRO-P01-ABSTRACT and GRO-P01-SCOPE. The projection's CASE-targeted F01 selection, its FAIL on F01R02 for the forbidden SOURCE_SPECIFIC_CONVERGENCE wording, its HUMAN_OR_NEW_DATA route, and its low claim ceiling together achieve the stated challenge intent: a general uncertainty-and-sampling guide is not permitted to become a convergence claim about an unspecified HSP90 simulation. F01R01's PASS is a contract well-formedness declaration and does not create a false pass, because the request-versus-scope conflict is caught downstream and the composite status is FAIL. Required evidence, including observability_target.event_signature, is justifiable as the field that would expose the undeclared target rather than surplus burden, and declining to activate F02-F07 avoids unnecessary review burden without weakening the block. I identify no generic or case-specific pattern defect and therefore approve keeping the pattern as drafted. This approval is bounded to the typed development pattern only: it does not approve the source science, scientific SUPPORT, the canonical Rules, held-out performance, Agent value, or any merge, and the Analyst's repair proposal was withheld and was not reconstructed.",
+    "overall_unsafe_false_pass_risk": false,
+    "analyst_projection_assessment": "ALIGNS"
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "CLAUDE_CROSS_MODEL_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE_IDENTIFIED_BY_CLAUDE_ADVISORY_CRITIC",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
+  }
+}

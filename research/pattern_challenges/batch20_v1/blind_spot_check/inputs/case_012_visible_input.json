@@ -1,0 +1,218 @@
+{
+  "schema_version": "batch20-blind-critic-visible-input/v1",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "case_id": "case_012",
+  "task": {
+    "instruction": "Using only this bounded source-first record and the frozen inventory, independently select one or more applicable families and RuleInstances, or abstain. Then report targets, local statuses, first blocker, route, and claim ceiling. Do not infer any hidden analyst decision.",
+    "allowed_outcomes": [
+      "FAMILY_AND_RULE_SELECTION",
+      "ABSTAIN_PENDING_ROUTING"
+    ],
+    "forbidden_inputs": [
+      "analyst selected family",
+      "analyst target",
+      "analyst RuleInstances",
+      "expected status",
+      "case route",
+      "case claim ceiling",
+      "prior Critic verdict",
+      "repair proposal"
+    ]
+  },
+  "source_first_record": {
+    "schema_version": "batch20-blind-source-first-view/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-004",
+        "citation": "Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations, eLife.",
+        "pdf_sha256": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf",
+        "derivative_sha256": "3b040c8d5e6600528323fd7dd091704a34794e1ee367ab0592135e5b6c974353",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "BEN-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "two nanodiscs, SAXS/SANS with MD and prior NMR/EPR, and a derived/validated conformational ensemble."
+          },
+          {
+            "id": "BEN-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "nanodisc system context and intended integrative setting."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "bengtsen_2020_nanodisc_integration_edge",
+        "native_observable": "NMR, SAXS, SANS, EPR, and simulation components referenced in the source's integrative study.",
+        "estimand": "A nanodisc conformational ensemble and reconciled structural/dynamic description.",
+        "statistical_unit": "Two named nanodisc systems and their modality-specific source records.",
+        "spatial_support": "Nanodisc shape and lipid-ordering features.",
+        "temporal_or_ensemble_semantics": "Conformational heterogeneity is summarized as an ensemble.",
+        "transformations_and_model_assumptions": "An ensemble is derived by integrating experiments with MD and is described as validated, but the bounded abstract does not enumerate contribution or error lineage per modality.",
+        "uncertainty_or_reliability_boundaries": "The word 'validate' alone is insufficient to establish an independent-validation label."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract names SAXS/SANS, MD, and previously obtained NMR/EPR data in the study.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract says the study derives and validates a conformational ensemble.",
+        "locators": [
+          "BEN-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "missing_information": [
+      "Per-modality construction/fit/validation role, exact condition relation, and shared-error facts are not extracted."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "frozen_seven_family_twelve_rule_inventory": {
+    "schema_version": "batch20-blind-frozen-inventory/v1",
+    "inventory_scope": "Frozen seven-family/twelve-Rule inventory only; it contains no analyst projection, expected status, case route, case claim ceiling, prior verdict, or repair proposal.",
+    "families": [
+      {
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "display_name": "Claim Contract and Ceiling",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "rules": [
+          {
+            "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+            "target_kind": "CASE",
+            "scientific_question": "Is the requested claim contract declared and internally consistent?",
+            "claim_effect_summary": "A PASS only establishes a reviewable question; it emits no scientific verdict.",
+            "implementation_status": "COMPLETE_DRAFT"
+          },
+          {
+            "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+            "target_kind": "CASE",
+            "scientific_question": "Is the requested wording inside the CASE intake's declared request scope?",
+            "claim_effect_summary": "A PASS records intake scope only. It does not calculate an evidence-supported claim ceiling, which is deferred to Stage 2.",
+            "implementation_status": "COMPLETE_DRAFT"
+          }
+        ]
+      },
+      {
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "display_name": "System Construct and Condition",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "rules": [
+          {
+            "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+            "target_kind": "SOURCE",
+            "scientific_question": "Does this source declare the sample-system and composition context needed to avoid silently assuming a homogeneous single-species ensemble?",
+            "claim_effect_summary": "A PASS records a source-local declaration only; it does not freeze a full construct schema or certify sample homogeneity.",
+            "implementation_status": "COMPLETE_DRAFT"
+          },
+          {
+            "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+            "target_kind": "EDGE",
+            "scientific_question": "Are the two source conditions recorded as compatible for the declared relation?",
+            "claim_effect_summary": "A PASS records an explicit relation label only; it does not establish a universal comparability threshold.",
+            "implementation_status": "COMPLETE_DRAFT"
+          }
+        ]
+      },
+      {
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "display_name": "Source Measurement Semantics",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "rules": [
+          {
+            "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+            "target_kind": "SOURCE",
+            "scientific_question": "Does this source declare the native observable and measurement semantics needed to identify what it provides?",
+            "claim_effect_summary": "A PASS records source-native measurement semantics only; it does not certify reliability, comparability, validation, or a scientific conclusion.",
+            "implementation_status": "COMPLETE_DRAFT"
+          }
+        ]
+      },
+      {
+        "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+        "display_name": "Source Reliability and Uncertainty",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "rules": [
+          {
+            "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+            "target_kind": "SOURCE",
+            "scientific_question": "Are uncertainty and method-appropriate controls source-located?",
+            "claim_effect_summary": "Candidate only; no generic artifact-free claim is allowed.",
+            "implementation_status": "CANDIDATE_MAP_ONLY"
+          }
+        ]
+      },
+      {
+        "family_id": "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE",
+        "display_name": "Representation Support and Forward Bridge",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "rules": [
+          {
+            "runtime_subrule_id": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+            "target_kind": "SOURCE",
+            "scientific_question": "Does the candidate support have a traceable lineage and missing-state audit?",
+            "claim_effect_summary": "Candidate only; support cannot create an absent state.",
+            "implementation_status": "CANDIDATE_MAP_ONLY"
+          },
+          {
+            "runtime_subrule_id": "F05R02_SOURCE_FORWARD_BRIDGE",
+            "target_kind": "SOURCE",
+            "scientific_question": "Is the forward or inverse bridge explicit and valid within its declared domain?",
+            "claim_effect_summary": "Candidate only; a model fit cannot establish a biological conclusion.",
+            "implementation_status": "CANDIDATE_MAP_ONLY"
+          }
+        ]
+      },
+      {
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "display_name": "Cross-source Comparability and Evidence Role",
+        "implementation_status": "COMPLETE_DRAFT_SLICE",
+        "rules": [
+          {
+            "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+            "target_kind": "SOURCE",
+            "scientific_question": "What exact evidence role and lineage does this source have?",
+            "claim_effect_summary": "A PASS records a role; it does not establish validation independence.",
+            "implementation_status": "COMPLETE_DRAFT"
+          },
+          {
+            "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+            "target_kind": "EDGE",
+            "scientific_question": "Is the declared cross-source relation admissible after F02 condition and F03 measurement prerequisites resolve?",
+            "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks the declared comparison, not either source's local measurement.",
+            "implementation_status": "COMPLETE_DRAFT"
+          },
+          {
+            "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+            "target_kind": "EDGE",
+            "scientific_question": "Is a validation-independence label supported by declared lineage, data-sharing, and shared-error facts?",
+            "claim_effect_summary": "A PASS records independence only. Comparability and F02/F03 prerequisites remain separate questions; a FAIL blocks only the independence label and retains the relation for human review.",
+            "implementation_status": "COMPLETE_DRAFT"
+          }
+        ]
+      },
+      {
+        "family_id": "F07_IDENTIFIABILITY_AND_NEXT_ACTION",
+        "display_name": "Identifiability and Next Discriminating Action",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "rules": [
+          {
+            "runtime_subrule_id": "F07R01_CASE_IDENTIFIABILITY",
+            "target_kind": "CASE",
+            "scientific_question": "Does current evidence distinguish remaining hypotheses, and what next evidence would discriminate them?",
+            "claim_effect_summary": "Candidate only; compatibility does not establish uniqueness.",
+            "implementation_status": "CANDIDATE_MAP_ONLY"
+          }
+        ]
+      }
+    ],
+    "interpretation_boundary": "COMPLETE_DRAFT rules may be evaluated only at their canonical target kind. CANDIDATE_MAP_ONLY families are not executable generic PASS/FAIL contracts. This inventory is not canonical adoption or scientific authority."
+  }
+}

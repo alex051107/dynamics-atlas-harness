@@ -1,0 +1,76 @@
+{
+  "schema_version": "batch20-blind-critic-output/v1",
+  "case_id": "case_010",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "selected_family_ids": [
+    "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "F03_SOURCE_MEASUREMENT_SEMANTICS",
+    "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+  ],
+  "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+  "targets": [
+    {
+      "target_id": "case_010",
+      "target_kind": "CASE"
+    },
+    {
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "SOURCE"
+    },
+    {
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "EDGE"
+    }
+  ],
+  "rule_instances": [
+    {
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The bounded record identifies labeled proteins, double-cysteine variants, four proteins, and the stated physical-state contexts."
+    },
+    {
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "EDGE",
+      "status": "FAIL",
+      "reason": "The record states frozen-solution PELDOR/DEER conditions versus liquid-solution or cell-culture smFRET conditions, with no source-supported compatibility determination."
+    },
+    {
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The native observables are explicitly identified as PELDOR/DEER distance distributions and smFRET efficiency/distance representations."
+    },
+    {
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The source is identified as a primary paper comparing the two measurement methods across four proteins, with locators and bounded statements."
+    },
+    {
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "EDGE",
+      "status": "FAIL",
+      "reason": "Cross-source comparability is blocked because the recorded F02 condition relation is not compatible, despite resolved source-native measurement semantics."
+    },
+    {
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "target_id": "peter_2022_deer_smfret_edge",
+      "target_kind": "EDGE",
+      "status": "UNRESOLVED",
+      "reason": "The bounded record does not extract complete project-edge lineage, data-sharing, or shared-error facts."
+    }
+  ],
+  "first_blocker": "F02R02_EDGE_CONDITION_COMPATIBILITY: the two methods are recorded under different physical-state conditions without a source-supported compatibility determination.",
+  "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+  "claim_ceiling": "May report source-local observables, method representations, stated condition differences, and named technique-specific inconsistencies; may not claim cross-method validation, comparable distances, validation independence, or a biological conclusion.",
+  "unsafe_false_pass_risk": true,
+  "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+  "human_review_question": "Should the frozen versus liquid/cell-culture condition difference be treated as an admissible comparison for this declared edge, and what additional controls or matched-condition data would resolve it?",
+  "source_grounded_summary": "The source compares PELDOR/DEER and smFRET measurements for labeled variants of four proteins, but records materially different physical-state conditions and technique-specific inconsistencies; local measurement semantics are available while cross-source comparability and independence remain unresolved or blocked."
+}

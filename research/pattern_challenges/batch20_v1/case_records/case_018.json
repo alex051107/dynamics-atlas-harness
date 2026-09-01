@@ -1,0 +1,221 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_018",
+  "case_number": 18,
+  "frozen_manifest_unit": {
+    "case_id": "case_018",
+    "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+    "title": "PRE source record with no preassigned Rules family",
+    "source_record_ids": [
+      "PDFMD-016"
+    ],
+    "family_focus": [],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "PRE",
+      "NMR",
+      "ENSEMBLE_MODELING"
+    ],
+    "adversarial": true,
+    "cross_modal_context": false,
+    "challenge_intent": "Test that an unassigned source is routed to human review rather than forcing a candidate family or local PASS.",
+    "source_locator_ids": [
+      "SIL-P01-ABSTRACT",
+      "SIL-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can a PRE-based disordered-protein source be routed without a preassigned family, or must the pattern abstain?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-016",
+        "citation": "Silvestre-Ryan et al. (2013), Average Conformations Determined from PRE Data Provide High-Resolution Maps of Transient Tertiary Interactions in Disordered Proteins, Biophysical Journal 104:1740-1751.",
+        "pdf_sha256": "21fa2c9a23fc7797005953c16aea95131a9ada467e65e32ee12a5f0e41e93489",
+        "derivative_sha256": "77d1a0a3f7deafb8a45a141d26dea2cbb34e836e6f017ddab4dea63035fda4e1",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "SIL-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "PRE data fitted to conformational representations for acid-unfolded apomyoglobin."
+          },
+          {
+            "id": "SIL-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "sparse-data and ensemble-resolution boundary."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "silvestre_ryan_2013_pre_record",
+        "native_observable": "Paramagnetic relaxation enhancement data used to characterize tertiary interactions in a disordered protein state.",
+        "estimand": "Average conformations/topology of transient tertiary interactions in acid-unfolded apomyoglobin.",
+        "statistical_unit": "PRE observations and fitted conformational representations for the stated protein system.",
+        "spatial_support": "Long-range tertiary interactions in a disordered protein state.",
+        "temporal_or_ensemble_semantics": "The paper describes broad conformational landscapes and ensemble representations.",
+        "transformations_and_model_assumptions": "PRE data are fitted to a small number of conformations; source-specific inference conditions are not mapped to a canonical family here.",
+        "uncertainty_or_reliability_boundaries": "Sparse data and ensemble representations have stated resolution limits."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract describes fitting PRE data to a small number of conformations to map transient tertiary interactions.",
+        "locators": [
+          "SIL-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The introduction describes sparse experimental data and low-resolution limits for disordered-state ensemble representations.",
+        "locators": [
+          "SIL-P01-INTRO"
+        ]
+      }
+    ],
+    "source_relationship": "No F01-F07 family is preassigned. This source is used to test abstention from forced routing, not to create a new family.",
+    "maximum_source_supported_wording": "The source supports a PRE/ensemble semantic record; it does not authorize a canonical family selection in this batch.",
+    "forbidden_generalizations": [
+      "Auto-route PRE to a new family.",
+      "Generate a local PASS by selecting a family after seeing the source."
+    ],
+    "missing_information": [
+      "No approved routing rubric maps this source type to a single F01-F07 family."
+    ],
+    "possible_reusable_review_obligations": [
+      "When no family is declared, route to human review.",
+      "Retain possible family candidates as non-executable discussion only."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "ee57eb5df944699866767e9b5890e90a014dd25798b1687066ea8edbcd3b4b54",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "ee57eb5df944699866767e9b5890e90a014dd25798b1687066ea8edbcd3b4b54",
+    "selected_families": [],
+    "selected_rule_instances": [],
+    "target_kind": "SOURCE",
+    "applicability": "No canonical family/rule is selected in a family-blind routing challenge.",
+    "required_evidence": [
+      "source identity, exact locator, and unassigned routing state"
+    ],
+    "source_projection": {
+      "source_id": "silvestre_ryan_2013_pre_record",
+      "routing_status": "UNASSIGNED_FAMILY_BLIND"
+    },
+    "dependency_chain": [
+      "An approved routing decision is absent; no RuleInstance is created."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "NO_SELECTED_RULE",
+        "status": "NOT_APPLICABLE",
+        "reason": "NO_APPROVED_FAMILY_ROUTING"
+      }
+    ],
+    "first_blocking_dependency": "No approved family-routing contract exists for this source type.",
+    "legal_resolution_route": "HUMAN_OR_NEW_DATA",
+    "local_claim_ceiling": "The batch can record abstention; it cannot create a new family or execute a new rule.",
+    "facts_not_independently_established": [
+      "family assignment",
+      "source reliability",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "All F01-F07 evaluator obligations are inactive."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_018",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "4119fe47531b12ba8e2d69238bb4cb53a316f98952f344ba5100495f2b4d5401",
+    "completed_at_utc": "2026-09-01T20:31:12Z",
+    "response_sha256": "5e3f05e0c51fbbb6b8510117053cf4c37789a538b82f09f7966b62d9099d29e6",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "SIL-P01-ABSTRACT",
+      "SIL-P01-INTRO"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "SIL-P01-ABSTRACT",
+        "rule_or_field_affected": "Family-blind routing, selected families, and local claim ceiling",
+        "target_scope": "SOURCE",
+        "evidence_gap": "The locators support the PRE/ensemble semantic record and its resolution limits; no evidence gap creates a forced family assignment because no family or rule is selected.",
+        "dependency_or_route_issue": "The frozen projection correctly preserves the absent approved routing dependency and sends resolution to human review or new data.",
+        "claim_ceiling_consequence": "The ceiling remains limited to recording abstention and does not authorize canonical family selection, new-rule execution, or a local PASS.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "No repair is needed; retain the family-blind abstention pattern."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The listed locators support a PRE/ensemble source with sparse-data and ensemble-resolution limits, while the frozen record safely makes no family selection, creates no RuleInstance, and routes the unresolved assignment to human review or new data. The pattern preserves the appropriate claim ceiling and does not expose a local false-pass path.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "The historical family-blind label overstated a preassigned-abstention control as a family-selection test.",
+    "correction": {
+      "corrected_control_label": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+      "historical_test_meaning": "The frozen projection preassigned abstention, so it tested safe abstention rather than family-selection accuracy.",
+      "required_follow_up": "CASE_018_TRUE_FAMILY_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_018_visible_input.json",
+      "visible_input_sha256": "7e0e99a3d27601c73bfd08a48f3def51b3a4a4b399970331354c9e0dd0150cb7",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_018_blind_output.json",
+      "output_sha256": "7ee35a5ca03e775365dd5837ec678319b2a80a418eae5c8dfea7c25af878e96b",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
+  }
+}

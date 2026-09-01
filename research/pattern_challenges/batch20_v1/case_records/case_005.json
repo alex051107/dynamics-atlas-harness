@@ -1,0 +1,172 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_005",
+  "case_number": 5,
+  "frozen_manifest_unit": {
+    "case_id": "case_005",
+    "bucket": "F02_COMPLETE_DRAFT",
+    "title": "FRET-assisted modeling source-system boundary",
+    "source_record_ids": [
+      "PDFMD-006"
+    ],
+    "family_focus": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "smFRET",
+      "COARSE_GRAINED_MODELING",
+      "MOLECULAR_DYNAMICS"
+    ],
+    "adversarial": true,
+    "cross_modal_context": true,
+    "challenge_intent": "Test that multiple benchmark systems and FRET-pair sets do not become a single undeclared biological sample-system claim.",
+    "source_locator_ids": [
+      "DIM-P01-ABSTRACT",
+      "DIM-P01-INTRO"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Does the FRET-assisted-modeling article supply one complete sample-system declaration for a source instance, rather than only a family of benchmark applications?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-006",
+        "citation": "Dimura et al. (2020), Automated and optimally FRET-assisted structural modeling, Nature Communications 11:5394.",
+        "pdf_sha256": "fc8aa871b220f462452c9cdaacf2ed7b40929fc3ff8449f663f0329ce6d5a6fe",
+        "derivative_sha256": "f6bb20a80b79d6b3b519fb405d94bffe5d187052ce5e150cf855ad0a265660ca",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "DIM-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "FRET pair selection, coarse-grained modeling, MD refinement, and stated accuracy/precision distinction."
+          },
+          {
+            "id": "DIM-P01-INTRO",
+            "locator": "PDF p. 1, Introduction",
+            "scope": "source-level framing that sparse FRET data require combination with simulations."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "dimura_2020_multisystem_benchmark",
+        "native_observable": "FRET-pair data combined with computational structural-modeling outputs across multiple conformational systems.",
+        "estimand": "Structural-model accuracy and precision under stated FRET-assisted modeling benchmarks.",
+        "statistical_unit": "Multiple benchmark proteins and sets of FRET pairs, not one fully specified sample record in the abstract.",
+        "spatial_support": "Protein structural models; exact target constructs are not all extracted in this bounded record.",
+        "temporal_or_ensemble_semantics": "The abstract discusses multiple conformational states but does not define one source-instance time protocol here.",
+        "transformations_and_model_assumptions": "FRET design, coarse-grained modeling, and MD-based refinement are combined.",
+        "uncertainty_or_reliability_boundaries": "The paper distinguishes accuracy from precision; the bounded excerpt does not identify a single complete sample system."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract describes FRET-pair selection, coarse-grained structural modeling, and MD-based refinement.",
+        "locators": [
+          "DIM-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The abstract reports benchmarks across simulated and experimental proteins with multiple conformational states.",
+        "locators": [
+          "DIM-P01-ABSTRACT"
+        ]
+      }
+    ],
+    "source_relationship": "The source is an exposed development benchmark with multiple systems; no unextracted system is inferred as a single source instance.",
+    "maximum_source_supported_wording": "The source supports a methods-and-benchmark description, not a complete declaration for one named sample-system instance in this record.",
+    "forbidden_generalizations": [
+      "Collapse multiple benchmark systems into one declared sample.",
+      "Treat stated model accuracy as a declaration of every system's composition or condition."
+    ],
+    "missing_information": [
+      "The bounded passages do not provide one selected construct, composition, and condition tuple."
+    ],
+    "possible_reusable_review_obligations": [
+      "Require a source-specific construct/condition tuple before F02 PASS.",
+      "Do not infer missing sample context from method labels."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "fcbea72e9605e78a6eec9a97c94275f6a232f6ecbe4fc538f12e3ff9ea0290b2",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "fcbea72e9605e78a6eec9a97c94275f6a232f6ecbe4fc538f12e3ff9ea0290b2",
+    "selected_families": [
+      "F02_SYSTEM_CONSTRUCT_AND_CONDITION"
+    ],
+    "selected_rule_instances": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE, but evidence completeness is assessed separately.",
+    "required_evidence": [
+      "source.construct_and_condition",
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "source_projection": {
+      "source_id": "dimura_2020_multisystem_benchmark",
+      "construct_and_condition": "multiple benchmark systems only",
+      "sample_composition": "not extracted as one source instance",
+      "sample_system_composition_declaration_status": "UNRESOLVED"
+    },
+    "dependency_chain": [
+      "No prior Rule dependency."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F02R01",
+        "status": "UNRESOLVED",
+        "reason": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED"
+      }
+    ],
+    "first_blocking_dependency": "A complete source-instance construct and composition declaration is absent from the bounded record.",
+    "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+    "local_claim_ceiling": "The record preserves a missing context field; it does not judge the paper or model pipeline.",
+    "facts_not_independently_established": [
+      "sample-system declaration",
+      "benchmark comparability",
+      "model reliability"
+    ],
+    "irrelevant_obligations": [
+      "No automatic F06 edge is constructed from this single source record."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_MODEL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "failure_reason": "Two fresh Luna contexts returned schema-invalid review objects: first used string risk labels instead of booleans; retry supplied an empty defects array.",
+    "retry_policy": "ONE_FRESH_CONTEXT_RETRY_ALREADY_USED",
+    "primary_verdict": null,
+    "defects": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "PENDING_MODEL_REVIEW_AFTER_TWO_FAILED_CONTEXTS",
+    "candidate_repair_status": "NOT_ELIGIBLE_PENDING_MODEL_REVIEW",
+    "human_review_questions": [
+      "A human or later model review is required before this case can influence a candidate patch."
+    ]
+  }
+}

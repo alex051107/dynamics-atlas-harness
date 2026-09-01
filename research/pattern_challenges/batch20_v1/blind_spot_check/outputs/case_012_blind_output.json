@@ -1,0 +1,47 @@
+{
+  "schema_version": "batch20-blind-critic-output/v1",
+  "case_id": "case_012",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "selected_family_ids": [
+    "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "F03_SOURCE_MEASUREMENT_SEMANTICS",
+    "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+  ],
+  "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+  "targets": [
+    {
+      "target_id": "bengtsen_2020_nanodisc_integration_edge",
+      "target_kind": "SOURCE"
+    }
+  ],
+  "rule_instances": [
+    {
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_id": "bengtsen_2020_nanodisc_integration_edge",
+      "target_kind": "SOURCE",
+      "status": "UNRESOLVED",
+      "reason": "The bounded record identifies two nanodisc systems and shape/lipid-ordering features, but does not provide the composition detail needed to assess the full sample-system declaration."
+    },
+    {
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_id": "bengtsen_2020_nanodisc_integration_edge",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The record explicitly identifies NMR, SAXS, SANS, EPR, and simulation components as native study observables or source components, with bounded locators."
+    },
+    {
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_id": "bengtsen_2020_nanodisc_integration_edge",
+      "target_kind": "SOURCE",
+      "status": "UNRESOLVED",
+      "reason": "The record supports an integrative-study context but does not extract per-modality construction, fit, validation, or error-lineage roles."
+    }
+  ],
+  "first_blocker": "Per-modality construction, fit, validation, shared-error, and exact condition-relation facts are absent from the bounded record; no executable cross-source EDGE relation is declared.",
+  "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+  "claim_ceiling": "Record only that the source references NMR, SAXS, SANS, EPR, and MD in deriving a nanodisc conformational ensemble; do not claim independent validation, cross-source comparability, reliability, or a biological conclusion.",
+  "unsafe_false_pass_risk": true,
+  "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+  "human_review_question": "Should the source record be expanded with per-modality evidence roles, condition relations, lineage, and shared-error facts before any edge-level comparability or validation-independence evaluation?",
+  "source_grounded_summary": "The bounded primary-source record supports source-native measurement identification and a reported integrative conformational-ensemble study, while composition detail, modality-specific roles, and validation lineage remain unextracted."
+}

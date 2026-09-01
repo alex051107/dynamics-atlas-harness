@@ -1,0 +1,47 @@
+{
+  "schema_version": "batch20-blind-critic-output/v1",
+  "case_id": "case_018",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "selected_family_ids": [
+    "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "F03_SOURCE_MEASUREMENT_SEMANTICS",
+    "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+  ],
+  "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+  "targets": [
+    {
+      "target_id": "silvestre_ryan_2013_pre_record",
+      "target_kind": "SOURCE"
+    }
+  ],
+  "rule_instances": [
+    {
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_id": "silvestre_ryan_2013_pre_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The bounded record identifies acid-unfolded apomyoglobin and states the protein-system context for the PRE observations and fitted conformational representations."
+    },
+    {
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_id": "silvestre_ryan_2013_pre_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The record explicitly identifies paramagnetic relaxation enhancement data as the native observable used to characterize transient tertiary interactions."
+    },
+    {
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_id": "silvestre_ryan_2013_pre_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The citation, source identity, locators, and authority boundary support a source-local role as a primary PRE characterization record."
+    }
+  ],
+  "first_blocker": "No approved routing rubric maps this source type to a single F01-F07 family; cross-source comparability, reliability, forward-bridge, and identifiability conclusions remain unresolved.",
+  "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+  "claim_ceiling": "The record supports only source-local reporting that PRE observations were fitted to conformational representations for transient tertiary interactions in acid-unfolded apomyoglobin, with sparse-data and ensemble-resolution limits; it does not support validation, cross-source comparability, uniqueness, or a biological conclusion.",
+  "unsafe_false_pass_risk": true,
+  "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+  "human_review_question": "Should this PRE source be routed only to the executable F02, F03, and F06 source-local rules, while candidate-only families and any cross-source relation remain deferred?",
+  "source_grounded_summary": "The dossier provides a bounded primary-source record with explicit sample context, native PRE measurement semantics, locators, and stated sparse-data limits, but no approved family-routing rubric or cross-source relation."
+}

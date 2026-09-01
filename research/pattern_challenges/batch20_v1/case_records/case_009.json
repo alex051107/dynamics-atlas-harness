@@ -1,0 +1,202 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_009",
+  "case_number": 9,
+  "frozen_manifest_unit": {
+    "case_id": "case_009",
+    "bucket": "F03_COMPLETE_DRAFT",
+    "title": "Transient-state fluorescence observables and time semantics",
+    "source_record_ids": [
+      "PDFMD-011"
+    ],
+    "family_focus": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "smFRET",
+      "MULTIPARAMETER_FLUORESCENCE",
+      "EPR"
+    ],
+    "adversarial": false,
+    "cross_modal_context": true,
+    "challenge_intent": "Test a source declaration that keeps photon/FRET observables, FRET-derived distances, and ns-ms temporal semantics separated.",
+    "source_locator_ids": [
+      "SAN-P01-ABSTRACT",
+      "SAN-P02-RESULTS"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can the Sanabria source record distinguish fluorescence observables, FRET-derived distances, and ns-ms dynamic descriptions?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-011",
+        "citation": "Sanabria et al. (2020), Resolving dynamics and function of transient states in single enzyme molecules, Nature Communications 11:1231.",
+        "pdf_sha256": "cfd8bc4b7deb7ff1abbad9aca5fffd4bd4955410e67379f9c4d0331985687ce2",
+        "derivative_sha256": "51008273094b4a7ed447a482ecfc64a00b34680cb22dd16241984b99a554b2f9",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "SAN-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "T4 lysozyme, combined fluorescence/EPR/mutagenesis toolkit, and ns-ms state claims."
+          },
+          {
+            "id": "SAN-P02-RESULTS",
+            "locator": "PDF p. 2, Results, 'Detecting T4L's states by MFD'",
+            "scope": "FRET efficiency, donor lifetime, fFCS, and time/ensemble semantics."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "sanabria_2020_t4l_fluorescence_record",
+        "native_observable": "Single-molecule multiparameter fluorescence observables including FRET efficiency and donor-lifetime representations, with other methods in the hybrid toolkit.",
+        "estimand": "Transient conformational states, their exchange dynamics, and structural screening constraints in T4 lysozyme.",
+        "statistical_unit": "Single-molecule events and a network of labeled T4L variants in the reported study.",
+        "spatial_support": "Specified donor-acceptor positions and whole-protein hinge-bending context.",
+        "temporal_or_ensemble_semantics": "The paper explicitly places its state and dynamic descriptions over ns-ms scales.",
+        "transformations_and_model_assumptions": "FRET-derived distance sets are used to screen structures; they are not identical to the raw fluorescence measurements.",
+        "uncertainty_or_reliability_boundaries": "The bounded record does not establish a universal mapping from FRET signal to every structural state."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract describes a hybrid fluorescence toolkit and 33 FRET-derived distance sets used to screen available T4L structures.",
+        "locators": [
+          "SAN-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The Results passage describes FRET-efficiency and donor-lifetime representations, fFCS dynamics, and time-scale distinctions.",
+        "locators": [
+          "SAN-P02-RESULTS"
+        ]
+      }
+    ],
+    "source_relationship": "This source supplies a complex measurement-semantic challenge; no source-science conclusion is produced.",
+    "maximum_source_supported_wording": "The source supports keeping raw fluorescence indicators, FRET-derived distances, and dynamic summaries distinct.",
+    "forbidden_generalizations": [
+      "Treat a FRET-derived distance set as the raw photon measurement.",
+      "Infer a universal structural-state mapping from a single source record."
+    ],
+    "missing_information": [
+      "All calibration and model-selection details are not extracted."
+    ],
+    "possible_reusable_review_obligations": [
+      "Capture temporal semantics explicitly.",
+      "Separate raw observables, derived distances, and structural-screening use."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "a2d645194b706c51be8d8be9ff4e37de71dfc3fc37a3d29fffcb44f0256f46b8",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "a2d645194b706c51be8d8be9ff4e37de71dfc3fc37a3d29fffcb44f0256f46b8",
+    "selected_families": [
+      "F03_SOURCE_MEASUREMENT_SEMANTICS"
+    ],
+    "selected_rule_instances": [
+      "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable SOURCE record.",
+    "required_evidence": [
+      "F03 native-measurement fields"
+    ],
+    "source_projection": {
+      "source_id": "sanabria_2020_t4l_fluorescence_record",
+      "native_observable": "single-molecule fluorescence indicators including FRET efficiency and donor lifetime",
+      "estimand": "state/dynamics and structure-screening constraints",
+      "time_semantics": {
+        "kind": "NS_TO_MS_DYNAMIC_MEASUREMENT"
+      },
+      "spatial_support": "labeled-site distance network in T4L",
+      "unit_or_aggregation": "single-molecule events and state distributions",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "F03R01 source-local declaration."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F03R01",
+        "status": "PASS",
+        "reason": "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION",
+    "local_claim_ceiling": "Declared measurement semantics only.",
+    "facts_not_independently_established": [
+      "state truth",
+      "method reliability",
+      "source comparability",
+      "scientific support"
+    ],
+    "irrelevant_obligations": [
+      "F06 is not evaluated from this one source object."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "COMPLETED_LUNA_ADVISORY_INITIAL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "review_boundary": "MODEL_BASED_ADVISORY_NOT_HUMAN_DOMAIN_REVIEW_NOT_H1_AUTHORITY",
+    "context_id": "/root/luna_case_009",
+    "context_fork_turns": "none",
+    "input_dossier_sha256": "cbece9d8bd4f3bc6a2c61c974a216c6f3afb610c6c292807aaad975316340f0c",
+    "completed_at_utc": "2026-09-01T20:23:51Z",
+    "response_sha256": "e3ccaaeb66dca53983f167ca3397c40e22f550a52fe7827c082137565b157181",
+    "primary_verdict": "APPROVE_KEEP",
+    "reviewed_source_locator_ids": [
+      "SAN-P01-ABSTRACT",
+      "SAN-P02-RESULTS"
+    ],
+    "defects": [
+      {
+        "taxonomy": "NO_PATTERN_DEFECT",
+        "source_locator_id": "SAN-P02-RESULTS",
+        "rule_or_field_affected": "F03R01_SOURCE_NATIVE_MEASUREMENT and its native-measurement declaration fields",
+        "target_scope": "SOURCE",
+        "evidence_gap": "No material evidence gap is apparent within the dossier: the listed Results locator supports the fluorescence observables, FRET-derived representations, fFCS dynamics, and temporal semantics required for the source-local declaration.",
+        "dependency_or_route_issue": "The source-local declaration is evaluated directly from populated SOURCE fields, with no unresolved dependency or route mismatch.",
+        "claim_ceiling_consequence": "The frozen ceiling correctly limits PASS to declared measurement semantics and does not upgrade the record to reliability, comparability, validation, or a scientific conclusion.",
+        "generic_status": "NOT_A_DEFECT",
+        "unsafe_false_pass_risk": false,
+        "smallest_candidate_repair": {
+          "operation": "NONE",
+          "description": "Retain the frozen rule, SOURCE binding, direct-evaluation route, required evidence, and claim ceiling unchanged."
+        }
+      }
+    ],
+    "overall_unsafe_false_pass_risk": false,
+    "divergence_classification": "NO_DIVERGENCE",
+    "summary": "The two permitted locators support the frozen SOURCE-level declaration: the abstract establishes the hybrid fluorescence toolkit, FRET-derived distance use, and ns-ms dynamic context, while the Results passage supports FRET efficiency, donor lifetime, fFCS, and time/ensemble distinctions. The required SOURCE fields are populated, the PASS dependency and direct route are coherent, and the claim ceiling preserves the distinction between declared observables and unsupported reliability, comparability, validation, or scientific conclusions.",
+    "human_review_questions": []
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "NO_DIVERGENCE",
+    "candidate_repair_status": "NOT_ELIGIBLE_NO_PATTERN_DEFECT_REPORTED",
+    "human_review_questions": []
+  }
+}

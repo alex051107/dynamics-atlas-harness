@@ -1,0 +1,569 @@
+{
+  "schema_version": "rules-pattern-batch20-manifest/v1",
+  "batch_id": "RULES_PATTERN_BATCH20_V1",
+  "frozen_at_utc": "2026-09-01T15:53:55Z",
+  "base": {
+    "pr_number": 21,
+    "head_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "branch": "research/rules-pattern-batch20-v1"
+  },
+  "working_pattern_version_at_freeze": "v1",
+  "source_derivative_policy": "Reuse verified local derivatives for navigation only; commit locators and bounded records only.",
+  "constraints": {
+    "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+    "forbidden": [
+      "HELD_OUT_ACCESS",
+      "CANONICAL_RULE_MUTATION",
+      "SCIENTIFIC_SUPPORT_OR_SOURCE_SCIENCE_APPROVAL",
+      "AGENT_VALUE_CLAIM",
+      "FULLTEXT_DERIVATIVE_COMMIT",
+      "PR_MERGE"
+    ]
+  },
+  "distribution": {
+    "expected": {
+      "F01_COMPLETE_DRAFT": 2,
+      "F02_COMPLETE_DRAFT": 3,
+      "F03_COMPLETE_DRAFT": 4,
+      "F06_COMPLETE_DRAFT": 3,
+      "F04_CANDIDATE_FAMILY_DISCOVERY": 2,
+      "F05_CANDIDATE_FAMILY_DISCOVERY": 2,
+      "F07_CANDIDATE_FAMILY_DISCOVERY": 1,
+      "CROSS_FAMILY_DEPENDENCY": 1,
+      "UNASSIGNED_ROUTING_ABSTENTION_CONTROL": 2
+    },
+    "observed": {
+      "F01_COMPLETE_DRAFT": 2,
+      "F02_COMPLETE_DRAFT": 3,
+      "F03_COMPLETE_DRAFT": 4,
+      "F06_COMPLETE_DRAFT": 3,
+      "F04_CANDIDATE_FAMILY_DISCOVERY": 2,
+      "F05_CANDIDATE_FAMILY_DISCOVERY": 2,
+      "F07_CANDIDATE_FAMILY_DISCOVERY": 1,
+      "CROSS_FAMILY_DEPENDENCY": 1,
+      "UNASSIGNED_ROUTING_ABSTENTION_CONTROL": 2
+    }
+  },
+  "coverage": {
+    "challenge_units": 20,
+    "unique_sources": 15,
+    "primary_research_or_methods_sources": 14,
+    "max_units_per_source": 2,
+    "not_target_rule_origin_units": 17,
+    "boundary_or_adversarial_units": 12,
+    "source_pair_or_crossmodal_units": 12,
+    "target_rule_or_family_grounding_units": 3,
+    "origin_accounting_basis": "Fuertes 2017 grounds F03R01 for cases 006–007; Bengtsen 2020 grounds F06R01/F06R03 for case 012."
+  },
+  "challenge_units": [
+    {
+      "case_id": "case_001",
+      "bucket": "F01_COMPLETE_DRAFT",
+      "title": "Sampling guidance must not become a source-specific convergence claim",
+      "source_record_ids": [
+        "PDFMD-018"
+      ],
+      "family_focus": [
+        "F01R01_CASE_CLAIM_DECLARATION",
+        "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+      ],
+      "target_kind": "CASE",
+      "source_modalities": [
+        "MOLECULAR_SIMULATION"
+      ],
+      "adversarial": true,
+      "cross_modal_context": false,
+      "challenge_intent": "Test whether a case contract blocks a requested claim that exceeds a general uncertainty-and-sampling guide.",
+      "source_locator_ids": [
+        "GRO-P01-ABSTRACT",
+        "GRO-P01-SCOPE"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_002",
+      "bucket": "F01_COMPLETE_DRAFT",
+      "title": "Integrative ensemble review must not certify biological correctness",
+      "source_record_ids": [
+        "PDFMD-017"
+      ],
+      "family_focus": [
+        "F01R01_CASE_CLAIM_DECLARATION",
+        "F01R02_CASE_REQUESTED_WORDING_SCOPE"
+      ],
+      "target_kind": "CASE",
+      "source_modalities": [
+        "INTEGRATIVE_ENSEMBLE_MODELING"
+      ],
+      "adversarial": true,
+      "cross_modal_context": false,
+      "challenge_intent": "Test requested-wording scope where the literature frames methods and examples but does not support a biological-certainty claim.",
+      "source_locator_ids": [
+        "THO-P01-ABSTRACT",
+        "THO-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_003",
+      "bucket": "F02_COMPLETE_DRAFT",
+      "title": "Sic1 source-system declaration",
+      "source_record_ids": [
+        "PDFMD-002"
+      ],
+      "family_focus": [
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "NMR",
+        "SAXS",
+        "smFRET"
+      ],
+      "adversarial": false,
+      "cross_modal_context": true,
+      "challenge_intent": "Test whether source-level construct, labeling, and condition details can be declared without claiming sample homogeneity.",
+      "source_locator_ids": [
+        "GOM-P01-ABSTRACT",
+        "GOM-P02-FIG2"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_004",
+      "bucket": "F02_COMPLETE_DRAFT",
+      "title": "Isolated HSP90 ATP-binding-domain source-system declaration",
+      "source_record_ids": [
+        "PDFMD-001"
+      ],
+      "family_focus": [
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "solution_NMR",
+        "MUTAGENESIS",
+        "MOLECULAR_DYNAMICS"
+      ],
+      "adversarial": false,
+      "cross_modal_context": true,
+      "challenge_intent": "Test that a source record names the isolated domain and methods without converting the result into a full-length HSP90 claim.",
+      "source_locator_ids": [
+        "HEN-P01-ABSTRACT",
+        "HEN-P02-RESULTS"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_005",
+      "bucket": "F02_COMPLETE_DRAFT",
+      "title": "FRET-assisted modeling source-system boundary",
+      "source_record_ids": [
+        "PDFMD-006"
+      ],
+      "family_focus": [
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "smFRET",
+        "COARSE_GRAINED_MODELING",
+        "MOLECULAR_DYNAMICS"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test that multiple benchmark systems and FRET-pair sets do not become a single undeclared biological sample-system claim.",
+      "source_locator_ids": [
+        "DIM-P01-ABSTRACT",
+        "DIM-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_006",
+      "bucket": "F03_COMPLETE_DRAFT",
+      "title": "Fuertes SAXS profile versus derived radius of gyration",
+      "source_record_ids": [
+        "PDFMD-007"
+      ],
+      "family_focus": [
+        "F03R01_SOURCE_NATIVE_MEASUREMENT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "SAXS",
+        "smFRET"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test that the working pattern preserves I(q) as the native record and RG as a profile-derived quantity.",
+      "source_locator_ids": [
+        "FUE-P01-ABSTRACT",
+        "FUE-P02-FIG1",
+        "FUE-P03-FIG2"
+      ],
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017"
+    },
+    {
+      "case_id": "case_007",
+      "bucket": "F03_COMPLETE_DRAFT",
+      "title": "Fuertes smFRET efficiency versus dye-distance inference",
+      "source_record_ids": [
+        "PDFMD-007"
+      ],
+      "family_focus": [
+        "F03R01_SOURCE_NATIVE_MEASUREMENT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "smFRET",
+        "SAXS"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test that mean FRET efficiency and a model-derived dye-to-dye distance remain distinct.",
+      "source_locator_ids": [
+        "FUE-P01-ABSTRACT",
+        "FUE-P02-FIG1",
+        "FUE-P03-FIG2"
+      ],
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F03R01_FUERTES_2017"
+    },
+    {
+      "case_id": "case_008",
+      "bucket": "F03_COMPLETE_DRAFT",
+      "title": "Nanodisc multimodal record versus derived conformational ensemble",
+      "source_record_ids": [
+        "PDFMD-004"
+      ],
+      "family_focus": [
+        "F03R01_SOURCE_NATIVE_MEASUREMENT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "NMR",
+        "SAXS",
+        "SANS",
+        "MOLECULAR_DYNAMICS"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test whether an integrated ensemble is recorded as derived rather than treated as a native measurement.",
+      "source_locator_ids": [
+        "BEN-P01-ABSTRACT",
+        "BEN-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_009",
+      "bucket": "F03_COMPLETE_DRAFT",
+      "title": "Transient-state fluorescence observables and time semantics",
+      "source_record_ids": [
+        "PDFMD-011"
+      ],
+      "family_focus": [
+        "F03R01_SOURCE_NATIVE_MEASUREMENT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "smFRET",
+        "MULTIPARAMETER_FLUORESCENCE",
+        "EPR"
+      ],
+      "adversarial": false,
+      "cross_modal_context": true,
+      "challenge_intent": "Test a source declaration that keeps photon/FRET observables, FRET-derived distances, and ns-ms temporal semantics separated.",
+      "source_locator_ids": [
+        "SAN-P01-ABSTRACT",
+        "SAN-P02-RESULTS"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_010",
+      "bucket": "F06_COMPLETE_DRAFT",
+      "title": "PELDOR/DEER-smFRET comparison under different physical states",
+      "source_record_ids": [
+        "PDFMD-010"
+      ],
+      "family_focus": [
+        "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "F06R02_EDGE_COMPARABILITY",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+      ],
+      "target_kind": "EDGE",
+      "source_modalities": [
+        "PELDOR_DEER",
+        "smFRET"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test that a valuable cross-method paper does not receive a matched-condition or independent-validation label when its stated physical states differ.",
+      "source_locator_ids": [
+        "PET-P01-ABSTRACT",
+        "PET-P02-FIG1",
+        "PET-P03-TABLE1"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_011",
+      "bucket": "F06_COMPLETE_DRAFT",
+      "title": "Complete cross-validation does not itself identify independent source lineage",
+      "source_record_ids": [
+        "PDFMD-005"
+      ],
+      "family_focus": [
+        "F06R01_SOURCE_EVIDENCE_ROLE",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+      ],
+      "target_kind": "MIXED_SOURCE_AND_EDGE",
+      "source_modalities": [
+        "solution_NMR",
+        "STRUCTURE_REFINEMENT"
+      ],
+      "adversarial": true,
+      "cross_modal_context": false,
+      "challenge_intent": "Test whether a cross-validation term is kept separate from an independently declared validation-data lineage.",
+      "source_locator_ids": [
+        "BON-P01-ABSTRACT",
+        "BON-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_012",
+      "bucket": "F06_COMPLETE_DRAFT",
+      "title": "Nanodisc integration and validation role separation",
+      "source_record_ids": [
+        "PDFMD-004"
+      ],
+      "family_focus": [
+        "F06R01_SOURCE_EVIDENCE_ROLE",
+        "F06R02_EDGE_COMPARABILITY",
+        "F06R03_EDGE_VALIDATION_INDEPENDENCE"
+      ],
+      "target_kind": "MIXED_SOURCE_AND_EDGE",
+      "source_modalities": [
+        "NMR",
+        "SAXS",
+        "SANS",
+        "MOLECULAR_DYNAMICS",
+        "EPR"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test whether a source claim of deriving and validating an ensemble supplies enough declared data-lineage facts for F06 labels.",
+      "source_locator_ids": [
+        "BEN-P01-ABSTRACT",
+        "BEN-P01-INTRO"
+      ],
+      "rule_origin_relation": "TARGET_RULE_GROUNDING_SOURCE_F06R01_F06R03_BENGTSEN_2020"
+    },
+    {
+      "case_id": "case_013",
+      "bucket": "F04_CANDIDATE_FAMILY_DISCOVERY",
+      "title": "Multi-laboratory smFRET uncertainty record",
+      "source_record_ids": [
+        "PDFMD-008"
+      ],
+      "family_focus": [
+        "F04R01_SOURCE_RELIABILITY_PROVENANCE"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "smFRET"
+      ],
+      "adversarial": false,
+      "cross_modal_context": false,
+      "challenge_intent": "Identify source-supported uncertainty/provenance fields without creating an executable reliability conclusion.",
+      "source_locator_ids": [
+        "HEL-P01-ABSTRACT",
+        "HEL-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_014",
+      "bucket": "F04_CANDIDATE_FAMILY_DISCOVERY",
+      "title": "Cryo-EM Bayesian refinement uncertainty boundary",
+      "source_record_ids": [
+        "PDFMD-009"
+      ],
+      "family_focus": [
+        "F04R01_SOURCE_RELIABILITY_PROVENANCE"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "cryo_EM",
+        "BAYESIAN_INFERENCE"
+      ],
+      "adversarial": false,
+      "cross_modal_context": false,
+      "challenge_intent": "Identify noise, correlation, and fit-versus-physical-quality boundaries without rating a source reliable or unreliable.",
+      "source_locator_ids": [
+        "HOF-P01-ABSTRACT",
+        "HOF-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_015",
+      "bucket": "F05_CANDIDATE_FAMILY_DISCOVERY",
+      "title": "qFit support-lineage and model-input distinction",
+      "source_record_ids": [
+        "PDFMD-037"
+      ],
+      "family_focus": [
+        "F05R01_SOURCE_CANDIDATE_SUPPORT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "X_RAY_CRYSTALLOGRAPHY",
+        "cryo_EM",
+        "MULTICONFORMER_MODELING"
+      ],
+      "adversarial": false,
+      "cross_modal_context": true,
+      "challenge_intent": "Identify model parentage and experimental-input relationships without treating a generated multiconformer as independently supported.",
+      "source_locator_ids": [
+        "WAN-P01-ABSTRACT",
+        "WAN-P02-OVERVIEW"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_016",
+      "bucket": "F05_CANDIDATE_FAMILY_DISCOVERY",
+      "title": "Forward-model bridge requirements for flexible ensembles",
+      "source_record_ids": [
+        "PDFMD-017"
+      ],
+      "family_focus": [
+        "F05R02_SOURCE_FORWARD_BRIDGE"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "INTEGRATIVE_ENSEMBLE_MODELING"
+      ],
+      "adversarial": false,
+      "cross_modal_context": false,
+      "challenge_intent": "Identify a forward-model obligation as a candidate review item without generating a bridge verdict.",
+      "source_locator_ids": [
+        "THO-P01-ABSTRACT",
+        "THO-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_017",
+      "bucket": "F07_CANDIDATE_FAMILY_DISCOVERY",
+      "title": "Transient-state identifiability and next discriminating measurement",
+      "source_record_ids": [
+        "PDFMD-011"
+      ],
+      "family_focus": [
+        "F07R01_CASE_IDENTIFIABILITY"
+      ],
+      "target_kind": "CASE",
+      "source_modalities": [
+        "smFRET",
+        "EPR",
+        "MUTAGENESIS"
+      ],
+      "adversarial": false,
+      "cross_modal_context": true,
+      "challenge_intent": "Identify candidate hypotheses and a possible discriminating action without concluding that the case is identifiable.",
+      "source_locator_ids": [
+        "SAN-P01-ABSTRACT",
+        "SAN-P02-RESULTS"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_018",
+      "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+      "title": "PRE source record with no preassigned Rules family",
+      "source_record_ids": [
+        "PDFMD-016"
+      ],
+      "family_focus": [],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "PRE",
+        "NMR",
+        "ENSEMBLE_MODELING"
+      ],
+      "adversarial": true,
+      "cross_modal_context": false,
+      "challenge_intent": "Control whether an unassigned source safely abstains and routes to human review; it is not a prevalidated family-selection test.",
+      "source_locator_ids": [
+        "SIL-P01-ABSTRACT",
+        "SIL-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_019",
+      "bucket": "UNASSIGNED_ROUTING_ABSTENTION_CONTROL",
+      "title": "Maximum-entropy biasing source with no preassigned Rules family",
+      "source_record_ids": [
+        "PDFMD-027"
+      ],
+      "family_focus": [],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "MOLECULAR_SIMULATION",
+        "MAXIMUM_ENTROPY",
+        "EXPERIMENTAL_RESTRAINTS"
+      ],
+      "adversarial": true,
+      "cross_modal_context": false,
+      "challenge_intent": "Control whether an unassigned source safely abstains and routes to human review; it is not a prevalidated family-selection test.",
+      "source_locator_ids": [
+        "PIT-P01-ABSTRACT",
+        "PIT-P01-INTRO"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    },
+    {
+      "case_id": "case_020",
+      "bucket": "CROSS_FAMILY_DEPENDENCY",
+      "title": "Sic1 sample-system declaration before native-measurement declaration",
+      "source_record_ids": [
+        "PDFMD-002"
+      ],
+      "family_focus": [
+        "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "F03R01_SOURCE_NATIVE_MEASUREMENT"
+      ],
+      "target_kind": "SOURCE",
+      "source_modalities": [
+        "NMR",
+        "SAXS",
+        "smFRET"
+      ],
+      "adversarial": true,
+      "cross_modal_context": true,
+      "challenge_intent": "Test the prerequisite order: construct/condition declaration is source-local context and must not be replaced by a measurement declaration.",
+      "source_locator_ids": [
+        "GOM-P01-ABSTRACT",
+        "GOM-P02-FIG1",
+        "GOM-P02-FIG2"
+      ],
+      "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+    }
+  ],
+  "post_freeze_bounded_repair_v1": {
+    "decision_id": "DA-20260901-064",
+    "original_not_target_rule_origin_units": 20,
+    "corrected_not_target_rule_origin_units": 17,
+    "grounding_cases": {
+      "case_006": "Fuertes 2017 -> F03R01 -> SEP-F03-MEASUREMENT",
+      "case_007": "Fuertes 2017 -> F03R01 -> SEP-F03-MEASUREMENT",
+      "case_012": "Bengtsen 2020 -> F06R01/F06R03 -> SEP-F06-SOURCE-ROLE/SEP-F06-INDEPENDENCE"
+    },
+    "freeze_boundary": "Pass A and frozen v1 Pass B remain in their original case fields; this corrects task-local manifest metadata and later aggregation only."
+  }
+}

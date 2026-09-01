@@ -1,0 +1,223 @@
+{
+  "schema_version": "rules-pattern-batch20-case-record/v1",
+  "case_id": "case_003",
+  "case_number": 3,
+  "frozen_manifest_unit": {
+    "case_id": "case_003",
+    "bucket": "F02_COMPLETE_DRAFT",
+    "title": "Sic1 source-system declaration",
+    "source_record_ids": [
+      "PDFMD-002"
+    ],
+    "family_focus": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+    ],
+    "target_kind": "SOURCE",
+    "source_modalities": [
+      "NMR",
+      "SAXS",
+      "smFRET"
+    ],
+    "adversarial": false,
+    "cross_modal_context": true,
+    "challenge_intent": "Test whether source-level construct, labeling, and condition details can be declared without claiming sample homogeneity.",
+    "source_locator_ids": [
+      "GOM-P01-ABSTRACT",
+      "GOM-P02-FIG2"
+    ],
+    "rule_origin_relation": "NOT_A_TARGET_RULE_OR_FAMILY_ORIGIN_SOURCE"
+  },
+  "created_at_utc": "2026-09-01T16:09:45Z",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "source_first_pass_a": {
+    "schema_version": "rules-pattern-batch20-source-first/v1",
+    "record_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "source_first_rule_contract_visibility": "NO_CURRENT_EXACT_RULE_CONTRACT_VISIBLE_DURING_EXTRACTION",
+    "scientific_question": "Can the Gomes Sic1 source record declare construct, labeling, and stated condition context without asserting sample homogeneity?",
+    "source_identity_and_locators": [
+      {
+        "source_record_id": "PDFMD-002",
+        "citation": "Gomes et al. (2020), Conformational Ensembles of an Intrinsically Disordered Protein Consistent with NMR, SAXS, and Single-Molecule FRET, Journal of the American Chemical Society 142:15697-15710.",
+        "pdf_sha256": "e091c20025b4813fee0457746e81731c69132e83dcb7784389274a3ae0976547",
+        "derivative_sha256": "8b5ce07fa7f8de4c3a37c9dcdf002fa85045668f69020a2fc6489df7c0237a53",
+        "derivative_policy": "LOCATORS_AND_BOUNDED_RECORD_ONLY_NO_FULLTEXT_COMMIT",
+        "exact_pdf_locators": [
+          {
+            "id": "GOM-P01-ABSTRACT",
+            "locator": "PDF p. 1, Abstract",
+            "scope": "Sic1 ensemble, NMR/SAXS construction, and smFRET reserved for independent validation."
+          },
+          {
+            "id": "GOM-P02-FIG2",
+            "locator": "JACS 15698, Figure 2 caption",
+            "scope": "Sic1/pSic1 labeled construct and stated TE-buffer condition for the smFRET histogram."
+          }
+        ]
+      }
+    ],
+    "source_objects": [
+      {
+        "source_object_id": "gomes_2020_sic1_smfret_context",
+        "native_observable": "smFRET efficiency histogram for labeled Sic1 or pSic1, with NMR and SAXS in the broader study.",
+        "estimand": "Conformational ensemble descriptions and relationships among global and distributional properties.",
+        "statistical_unit": "A specified Sic1 or pSic1 construct and labeling/condition context in a reported experiment.",
+        "spatial_support": "N-terminal region of Sic1 and terminal dye positions stated in the Figure 2 caption.",
+        "temporal_or_ensemble_semantics": "The paper describes heterogeneous IDP conformations and ensemble modeling.",
+        "transformations_and_model_assumptions": "The paper uses integrative modeling and reserves smFRET as independent validation in the reported study design.",
+        "uncertainty_or_reliability_boundaries": "Declared context does not certify homogeneity, reliability, or cross-method comparability."
+      }
+    ],
+    "atomic_source_supported_statements": [
+      {
+        "statement": "The abstract identifies the disordered N-terminal region of Sic1 as the test case and distinguishes NMR/SAXS construction from smFRET independent validation.",
+        "locators": [
+          "GOM-P01-ABSTRACT"
+        ]
+      },
+      {
+        "statement": "The Figure 2 caption identifies labeled Sic1/pSic1 and gives the stated TE-buffer pH and salt condition for the smFRET histogram.",
+        "locators": [
+          "GOM-P02-FIG2"
+        ]
+      }
+    ],
+    "source_relationship": "This is a source-local construct-and-condition challenge; it does not decide the paper's scientific conclusions.",
+    "maximum_source_supported_wording": "The cited passages support declaring the named Sic1 construct, labeling, and reported measurement condition.",
+    "forbidden_generalizations": [
+      "Infer sample homogeneity from declared construct and buffer context.",
+      "Treat declared context as validation of all modalities."
+    ],
+    "missing_information": [
+      "Full sample-preparation detail and all replicate metadata are not extracted here."
+    ],
+    "possible_reusable_review_obligations": [
+      "Record construct, label, and condition separately.",
+      "Do not elevate context declaration to reliability or comparability."
+    ],
+    "authority_boundary": "Primary-source bounded record only; it does not establish annotation truth, source-science approval, Rule validity, or scientific support."
+  },
+  "pass_a_sha256": "19aeafafb9723e005d87d7e28af407a455603b9a5237f4b017f41ed77e75ecd3",
+  "frozen_pattern_pass_b": {
+    "schema_version": "rules-pattern-batch20-frozen-pattern-projection/v1",
+    "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+    "working_pattern_version": "v1",
+    "base_sha": "df7dc2fe7c4a1c0745ccbb7f2fb89f0a1f98433d",
+    "initial_pattern_history_event_sha256": "67faccb84d3149151ad770214643a0c2d9bdb5e563661c2b12849e98df3d2f2c",
+    "pass_a_sha256": "19aeafafb9723e005d87d7e28af407a455603b9a5237f4b017f41ed77e75ecd3",
+    "selected_families": [
+      "F02_SYSTEM_CONSTRUCT_AND_CONDITION"
+    ],
+    "selected_rule_instances": [
+      "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION"
+    ],
+    "target_kind": "SOURCE",
+    "applicability": "Applicable: a SOURCE with source_id is supplied.",
+    "required_evidence": [
+      "source.construct_and_condition",
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "source_projection": {
+      "source_id": "gomes_2020_sic1_smfret_context",
+      "construct_and_condition": "Sic1/pSic1 labeled context and Figure 2 TE-buffer condition",
+      "sample_composition": "specified labeled construct; broader paper includes NMR/SAXS/smFRET roles",
+      "sample_system_composition_declaration_status": "DECLARED"
+    },
+    "dependency_chain": [
+      "No prior Rule dependency is required for F02R01."
+    ],
+    "local_status_expectation": [
+      {
+        "rule": "F02R01",
+        "status": "PASS",
+        "reason": "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      }
+    ],
+    "first_blocking_dependency": null,
+    "legal_resolution_route": "DIRECT_EVALUATION",
+    "local_claim_ceiling": "The source record declares context only; it does not certify homogeneity.",
+    "facts_not_independently_established": [
+      "sample homogeneity",
+      "reliability",
+      "comparability",
+      "scientific conclusion"
+    ],
+    "irrelevant_obligations": [
+      "F04-F07 remain outside a source-context declaration."
+    ],
+    "pattern_modification_during_pass_b": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "analyst_divergence_classification_before_critic": {
+    "status": "NO_REPAIR_PROPOSAL_BEFORE_INITIAL_CRITIC",
+    "candidate_repair": null,
+    "claim_boundary": "The analyst records a projection, not a RuleResult or scientific conclusion."
+  },
+  "critic_review": {
+    "status": "PENDING_MODEL_REVIEW",
+    "configuration_id": "BATCH20_MIXED_COHORT_LUNA_ADVISORY_V2",
+    "critic_identity": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "model": "gpt-5.6-luna",
+    "failure_reason": "Two fresh Luna contexts returned schema-invalid review objects: first used string risk labels instead of booleans; retry supplied an empty defects array.",
+    "retry_policy": "ONE_FRESH_CONTEXT_RETRY_ALREADY_USED",
+    "primary_verdict": null,
+    "defects": []
+  },
+  "preserved_prior_critic_execution_event": {
+    "critic_identity": "CLAUDE_CROSS_MODEL_CRITIC",
+    "event": "CRITIC_CONFIGURATION_OR_QUOTA_FAILURE",
+    "classification": "EXECUTION_FAILURE_NOT_SCIENTIFIC_RESULT",
+    "recorded_in": "autoresearch task work/reviewer logs at 2026-09-01T16:16:55Z",
+    "retry_policy": "DO_NOT_RETRY_CLAUDE_UNDER_DIRECTION_PASS"
+  },
+  "batch20_review_tracking": {
+    "critic_cohort": "LUNA_CONTEXT_ISOLATED_ADVISORY_CRITIC",
+    "divergence_classification": "PENDING_MODEL_REVIEW_AFTER_TWO_FAILED_CONTEXTS",
+    "candidate_repair_status": "NOT_ELIGIBLE_PENDING_MODEL_REVIEW",
+    "human_review_questions": [
+      "A human or later model review is required before this case can influence a candidate patch."
+    ]
+  },
+  "bounded_repair_v1": {
+    "repair_id": "BATCH20_CHANGES_REQUESTED_BOUNDED_V1",
+    "decision_id": "DA-20260901-064",
+    "repair_status": "POST_FREEZE_TASK_LOCAL_CORRECTION_NOT_RUNTIME_EXECUTION",
+    "frozen_fields_preserved": [
+      "source_first_pass_a",
+      "frozen_pattern_pass_b",
+      "pass_a_sha256",
+      "critic_review"
+    ],
+    "identified_issue": "Frozen F02 projection treated a broad source summary as an exact sample-composition declaration.",
+    "correction": {
+      "corrected_rule_instances": [
+        {
+          "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::gomes_2020_sic1_smfret_context",
+          "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+          "target_kind": "SOURCE",
+          "status": "UNRESOLVED",
+          "reason": "SAMPLE_COMPOSITION_DECLARATION_NOT_EXACTLY_EXTRACTED"
+        }
+      ],
+      "first_blocker": "The bounded locators identify a construct and measurement condition but do not extract a complete sample-composition declaration.",
+      "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+      "local_claim_ceiling": "The record may state the bounded construct/method context but may not claim an F02 declaration PASS or sample homogeneity.",
+      "required_follow_up": "CASE_003_BLIND_RECONSTRUCTION"
+    },
+    "blind_reconstruction_v1": {
+      "status": "SCHEMA_VALID_FRESH_ADVISORY_OUTPUT",
+      "visible_input_path": "research/pattern_challenges/batch20_v1/blind_spot_check/inputs/case_003_visible_input.json",
+      "visible_input_sha256": "0c7cdcdd739ffb93b3d7e478f7ce2a119a7d62fe9b6f471645b3a8b83bffd33b",
+      "output_path": "research/pattern_challenges/batch20_v1/blind_spot_check/outputs/case_003_blind_output.json",
+      "output_sha256": "180f8e7ac33928df1dd30145347a5eea19bf59088782200b6285e01766c3ab5f",
+      "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+      "selected_family_ids": [
+        "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+      ],
+      "unsafe_false_pass_risk": true,
+      "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+      "interpretation": "Fresh advisory output only; it neither replaces frozen Pass A/Pass B nor decides a canonical repair."
+    }
+  }
+}

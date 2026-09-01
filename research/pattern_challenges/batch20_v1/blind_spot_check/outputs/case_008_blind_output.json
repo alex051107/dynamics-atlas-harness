@@ -1,0 +1,47 @@
+{
+  "schema_version": "batch20-blind-critic-output/v1",
+  "case_id": "case_008",
+  "review_type": "SOURCE_FIRST_BLIND_RECONSTRUCTION",
+  "selected_family_ids": [
+    "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "F03_SOURCE_MEASUREMENT_SEMANTICS",
+    "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE"
+  ],
+  "family_selection_status": "FAMILY_AND_RULE_SELECTION",
+  "targets": [
+    {
+      "target_id": "bengtsen_2020_nanodisc_integrative_record",
+      "target_kind": "SOURCE"
+    }
+  ],
+  "rule_instances": [
+    {
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_id": "bengtsen_2020_nanodisc_integrative_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The bounded record identifies two nanodiscs and provides nanodisc system context, sufficient for a source-local composition declaration without assuming a homogeneous single-species ensemble."
+    },
+    {
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_id": "bengtsen_2020_nanodisc_integrative_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The record explicitly identifies NMR, SAXS, and SANS as native experimental observables and distinguishes MD as part of the integrative analysis."
+    },
+    {
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_id": "bengtsen_2020_nanodisc_integrative_record",
+      "target_kind": "SOURCE",
+      "status": "PASS",
+      "reason": "The source is identified as a primary-source integrative record whose evidence role is to combine modality-specific experiments with MD toward a derived conformational ensemble; detailed per-modality lineage remains bounded and incomplete."
+    }
+  ],
+  "first_blocker": "Detailed per-modality processing and lineage are missing, and no declared cross-source relation or paired edge is present in the visible record.",
+  "legal_resolution_route": "SOURCE_LOOKUP_DECLARED_ONLY_NO_EXECUTOR",
+  "claim_ceiling": "May claim only the source-local nanodisc system context, native NMR/SAXS/SANS measurement semantics, MD-integrative evidence role, and the abstract's derived ensemble description. May not claim cross-source comparability, validation independence, reliability certification, unique identifiability, or a biological conclusion.",
+  "unsafe_false_pass_risk": true,
+  "canonical_pattern_defect_assessment": "DATA_INSUFFICIENT",
+  "human_review_question": "Should the missing per-modality processing and lineage be retrieved before any edge-level comparability or validation-independence rule is evaluated?",
+  "source_grounded_summary": "Bengtsen et al. (2020) records two nanodiscs studied with NMR, SAXS, SANS, and MD, with a derived conformational ensemble. The visible source supports local measurement and evidence-role statements but lacks detailed modality lineage and any explicit cross-source relation."
+}
