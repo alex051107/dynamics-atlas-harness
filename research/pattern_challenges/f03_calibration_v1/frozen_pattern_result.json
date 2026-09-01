@@ -1,0 +1,160 @@
+{
+  "schema_version": "f03-frozen-pattern-projection/v1",
+  "projection_status": "FROZEN_PATTERN_PROJECTION_NOT_RUNTIME_EXECUTION",
+  "base_sha": "da584173ee64bfad9854132a3418ed1e871c69f5",
+  "pass_a_input_sha256": "d5fa872c3f8a847ff8bd662c41aa4c00b7a4d2f9c8fe7a89ebc2551ffdf0e595",
+  "frozen_pattern": {
+    "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+    "binding_id": "B-F03R01-SOURCE-MEASUREMENT",
+    "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+    "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+    "evidence_packet_id": "SEP-F03-MEASUREMENT",
+    "implementation_status": "COMPLETE_DRAFT",
+    "target_kind": "SOURCE",
+    "applicability": "A SOURCE target with source.source_id is applicable.",
+    "required_evidence_fields": [
+      "source.native_observable",
+      "source.estimand",
+      "source.time_semantics.kind",
+      "source.spatial_support",
+      "source.unit_or_aggregation",
+      "source.native_measurement_declaration_status"
+    ],
+    "pass_condition": "source.native_measurement_declaration_status == DECLARED",
+    "unresolved_condition": "source.native_measurement_declaration_status in {UNKNOWN, UNRESOLVED}",
+    "fail_condition": "source.native_measurement_declaration_status == CONTRADICTED"
+  },
+  "source_projections": [
+    {
+      "source_id": "fuertes_2017_saxs_profile",
+      "modality": "SAXS",
+      "applicability": {
+        "status": "APPLICABLE",
+        "reason": "The task-local record declares a SOURCE target and source_id."
+      },
+      "required_field_projection": [
+        {
+          "field": "source.native_observable",
+          "primary_source_representation": "Direct: I(q) versus q scattering profile.",
+          "field_status": "REPRESENTED_BY_PRIMARY_SOURCE",
+          "source_locator_ids": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "field": "source.estimand",
+          "primary_source_representation": "Source-supported: RG,U/RG,L and additional profile-derived size or shape information, derived from the profile rather than synonymous with it.",
+          "field_status": "REPRESENTED_BUT_REQUIRES_TYPED_PROJECT_ANNOTATION",
+          "source_locator_ids": ["FUE-P01-ABSTRACT", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+        },
+        {
+          "field": "source.time_semantics.kind",
+          "primary_source_representation": "The paper records ensemble/conformation averaging of scattering intensities. A controlled vocabulary label such as an ensemble-averaged, non-kinetic source must be assigned by the project rather than copied as an author field.",
+          "field_status": "SOURCE_SUPPORTS_SEMANTICS_BUT_REQUIRES_TYPED_PROJECT_ANNOTATION",
+          "source_locator_ids": ["FUE-P02-FIG1-INTRO"]
+        },
+        {
+          "field": "source.spatial_support",
+          "primary_source_representation": "Direct description of global chain or molecular dimensions through interatomic-distance information averaged across the molecule.",
+          "field_status": "REPRESENTED_BY_PRIMARY_SOURCE",
+          "source_locator_ids": ["FUE-P01-INTRO", "FUE-P02-FIG1-INTRO"]
+        },
+        {
+          "field": "source.unit_or_aggregation",
+          "primary_source_representation": "A q-indexed intensity profile with weighted averaging over molecules and conformations; exact data units and SI-level processing settings are not supplied in this record.",
+          "field_status": "AGGREGATION_REPRESENTED_EXACT_UNIT_PARTIAL",
+          "source_locator_ids": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "field": "source.native_measurement_declaration_status",
+          "primary_source_representation": "No author-provided status label exists. A project annotation can mark a completed typed declaration as DECLARED, but the evaluator does not itself establish the annotation's passage-level truth.",
+          "field_status": "PROJECT_ANNOTATION_REQUIRED",
+          "source_locator_ids": []
+        }
+      ],
+      "expected_local_rule_status_under_complete_declaration": {
+        "status": "PASS",
+        "reason_code": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "route": "DIRECT_EVALUATION",
+        "claim_ceiling": "The source record declares source-native measurement semantics only; no reliability, comparability, validation, or scientific conclusion follows."
+      },
+      "expected_local_rule_status_if_time_semantics_or_aggregation_is_removed": {
+        "status": "UNRESOLVED",
+        "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_UNRESOLVED",
+        "route": "SOURCE_LOOKUP",
+        "execution_boundary": "The current policy declares no lookup executor in this Draft."
+      },
+      "facts_the_evaluator_does_not_independently_establish": [
+        "Whether the annotation faithfully represents the cited primary passages.",
+        "SAXS reliability, numerical uncertainty, absence of all concentration artifacts, or a source-science disposition.",
+        "Any relation to the smFRET source, including comparability, validation, or shared ensemble identity."
+      ]
+    },
+    {
+      "source_id": "fuertes_2017_smfret_efficiency",
+      "modality": "smFRET",
+      "applicability": {
+        "status": "APPLICABLE",
+        "reason": "The task-local record declares a SOURCE target and source_id."
+      },
+      "required_field_projection": [
+        {
+          "field": "source.native_observable",
+          "primary_source_representation": "Direct: burst-wise EFRET measurements and their mean from a doubly labeled protein.",
+          "field_status": "REPRESENTED_BY_PRIMARY_SOURCE",
+          "source_locator_ids": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+        },
+        {
+          "field": "source.estimand",
+          "primary_source_representation": "Source-supported: RE,L, an inferred ensemble-averaged root-mean-squared donor-acceptor distance and proxy distinct from RE,U.",
+          "field_status": "REPRESENTED_BUT_REQUIRES_TYPED_PROJECT_ANNOTATION",
+          "source_locator_ids": ["FUE-P01-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "field": "source.time_semantics.kind",
+          "primary_source_representation": "The source describes nanosecond-to-millisecond motion sensitivity and uses a mean EFRET/distance distribution. It does not define one kinetic-rate estimand; the typed time label is a project annotation.",
+          "field_status": "SOURCE_SUPPORTS_SEMANTICS_BUT_REQUIRES_TYPED_PROJECT_ANNOTATION",
+          "source_locator_ids": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "field": "source.spatial_support",
+          "primary_source_representation": "Directly tied to the terminal donor-acceptor pair on specifically labeled positions, not an all-pairs/global average.",
+          "field_status": "REPRESENTED_BY_PRIMARY_SOURCE",
+          "source_locator_ids": ["FUE-P01-INTRO", "FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "field": "source.unit_or_aggregation",
+          "primary_source_representation": "Burst-wise EFRET distribution summarized as mean EFRET, then mapped through P(rD,A; RE,L); the record does not invent SI-level numerical calibration values.",
+          "field_status": "REPRESENTED_BY_PRIMARY_SOURCE",
+          "source_locator_ids": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+        },
+        {
+          "field": "source.native_measurement_declaration_status",
+          "primary_source_representation": "No author-provided status label exists. A project annotation can mark a completed typed declaration as DECLARED, but the evaluator does not itself establish the annotation's passage-level truth.",
+          "field_status": "PROJECT_ANNOTATION_REQUIRED",
+          "source_locator_ids": []
+        }
+      ],
+      "expected_local_rule_status_under_complete_declaration": {
+        "status": "PASS",
+        "reason_code": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "route": "DIRECT_EVALUATION",
+        "claim_ceiling": "The source record declares source-native measurement semantics only; no reliability, comparability, validation, or scientific conclusion follows."
+      },
+      "expected_local_rule_status_if_time_semantics_or_aggregation_is_removed": {
+        "status": "UNRESOLVED",
+        "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_UNRESOLVED",
+        "route": "SOURCE_LOOKUP",
+        "execution_boundary": "The current policy declares no lookup executor in this Draft."
+      },
+      "facts_the_evaluator_does_not_independently_establish": [
+        "Whether the annotation faithfully represents the cited primary passages.",
+        "The correct dye model, R0 calibration, distribution-model choice, or an uncertainty/reliability verdict.",
+        "Any relation to the SAXS source, including comparability, validation, or shared ensemble identity."
+      ]
+    }
+  ],
+  "projection_summary": {
+    "complete_typed_declarations": "Both source objects would be expected to receive local F03 PASS under the current Draft once all required fields exist and native_measurement_declaration_status is DECLARED.",
+    "missing_critical_declaration": "Removing an otherwise critical typed field must leave the applicable source unresolved rather than inferred.",
+    "boundary": "This projection states expected Draft-contract behavior. It does not execute a new Rule run, certify any annotation, or create a scientific result."
+  }
+}
