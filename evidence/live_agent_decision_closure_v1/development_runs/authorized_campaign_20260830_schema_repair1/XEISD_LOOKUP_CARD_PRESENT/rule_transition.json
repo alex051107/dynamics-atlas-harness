@@ -1,0 +1,81 @@
+{
+  "affected_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+  "after_rule_result": {
+    "applicability_status": "MATCHED",
+    "claim_effect": {
+      "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity.",
+      "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+      "route": "DIRECT_EVALUATION"
+    },
+    "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+    "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+    "human_decision_gate_required": true,
+    "missing_paths": [],
+    "reason_codes": [
+      "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+    ],
+    "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+    "schema_version": "rules-prototype-rule-result/v1",
+    "scientific_verdict": "NOT_EMITTED_IN_PR1",
+    "status": "PASS",
+    "target": {
+      "id": "xeisd_random_candidate_pool",
+      "kind": "SOURCE"
+    }
+  },
+  "all_changed_rule_statuses": [
+    {
+      "after_status": "PASS",
+      "before_status": "UNRESOLVED",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool"
+    },
+    {
+      "after_status": "PASS",
+      "before_status": "UNRESOLVED",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question"
+    },
+    {
+      "after_status": "PASS",
+      "before_status": "UNRESOLVED",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::xeisd_random_pool_vs_j_coupling_question"
+    }
+  ],
+  "allowed_dependent_rule_instance_ids": [
+    "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question",
+    "F06R02_EDGE_COMPARABILITY::EDGE::xeisd_random_pool_vs_j_coupling_question"
+  ],
+  "before_rule_result": {
+    "applicability_status": "MATCHED",
+    "claim_effect": {
+      "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor.",
+      "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+      "route": "SOURCE_LOOKUP"
+    },
+    "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+    "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+    "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+    "human_decision_gate_required": true,
+    "missing_paths": [
+      "source.sample_composition",
+      "source.sample_system_composition_declaration_status"
+    ],
+    "reason_codes": [
+      "REQUIRED_EVIDENCE_MISSING"
+    ],
+    "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+    "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+    "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+    "schema_version": "rules-prototype-rule-result/v1",
+    "scientific_verdict": "NOT_EMITTED_IN_PR1",
+    "status": "UNRESOLVED",
+    "target": {
+      "id": "xeisd_random_candidate_pool",
+      "kind": "SOURCE"
+    }
+  },
+  "unrelated_rule_changes": []
+}

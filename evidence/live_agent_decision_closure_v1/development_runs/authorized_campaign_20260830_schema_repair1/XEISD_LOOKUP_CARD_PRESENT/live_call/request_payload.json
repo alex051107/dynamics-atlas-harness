@@ -1,0 +1,95 @@
+{
+  "max_tokens": 4096,
+  "messages": [
+    {
+      "content": "You are the bounded development Planner for one Dynamics Atlas case.\n\nUse only the supplied task packet. Return exactly the JSON object required by the\nstrict output schema.\n\nChoose SELECT_ACTIONS only when one listed legal action card directly addresses a\ncurrent unresolved item and every prerequisite stated on that card is satisfied by\nthe packet. Select at most one listed card. Copy its card ID exactly and provide one\nshort rationale grounded only in the visible unresolved item, card description,\nprerequisites, and prohibitions.\n\nChoose ABSTAIN_NO_ACTION with an empty selected_card_ids array and an empty\nrationales object when no legal action card is listed or no listed card is legally\nusable. A card that is absent from the packet does not exist for this decision.\n\nDo not invent or restore a card. Do not execute a lookup or computation. Do not\nmodify a Rule, threshold, policy, or source record. Do not state or imply a\nscientific verdict, scientific support, shared population, independent validation,\nmechanism, or final conclusion.",
+      "role": "system"
+    },
+    {
+      "content": "Task packet:\n{\"case_id\":\"lincoff_2020_xeisd_random_j_relation_v1_alpha\",\"legal_action_cards\":[{\"action_kind\":\"EXACT_ATTESTATION\",\"addresses_ref\":\"F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool\",\"card_id\":\"XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1\",\"case_id\":\"lincoff_2020_xeisd_random_j_relation_v1_alpha\",\"description\":\"Read the one predeclared local review derivative at its exact allowlisted locator and attach only its bounded field update.\",\"lookup_id\":\"XEI-LOOKUP-RANDOM-DECLARATIONS\",\"prerequisites\":[\"The current target RuleInstance is UNRESOLVED and requests SOURCE_LOOKUP.\",\"The exact lookup ID, target, locator, fixture hash, and local path are already allowlisted.\"],\"prohibitions\":[\"No web search, undeclared source discovery, RAG, or free-text extraction.\",\"No scientific support, shared-population, independence, mechanism, or final-conclusion claim.\"],\"requested_locator_id\":\"XEI-M04\",\"required_asset_ids\":[\"XEI-LOOKUP-RANDOM-DECLARATIONS\"],\"resolution_policy_id\":\"RP_F02_F03_DECLARATION_PREREQUISITES\",\"route\":\"SOURCE_LOOKUP\"}],\"planner_boundary\":\"Select only a listed current card or abstain. Do not execute, invent a card, modify a Rule, or state a scientific conclusion.\",\"required_output\":{\"case_id\":\"same as input\",\"decision\":\"SELECT_ACTIONS or ABSTAIN_NO_ACTION\",\"rationales\":\"object keyed exactly by selected card ID\",\"selected_card_ids\":\"listed card IDs only; empty only for ABSTAIN_NO_ACTION\"},\"schema_version\":\"paper-blind-planner-visible-input/v2\",\"unresolved_items\":[{\"gap_type\":\"SOURCE_CONTEXT_LOOKUP_REQUIRED\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"REQUIRED_EVIDENCE_MISSING\"],\"ref\":\"F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool\",\"source\":{\"evaluation_contract_id\":\"EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION\",\"resolution_policy_id\":\"RP_F02_F03_DECLARATION_PREREQUISITES\",\"runtime_subrule_id\":\"F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"EDGE_CONDITION_LOOKUP_REQUIRED\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"EDGE_SOURCE_CONTEXT_PREREQUISITES_UNRESOLVED\"],\"ref\":\"F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::xeisd_random_pool_vs_j_coupling_question\",\"source\":{\"evaluation_contract_id\":\"EC-F02R02-EDGE-CONDITION\",\"resolution_policy_id\":\"RP_F02_F03_DECLARATION_PREREQUISITES\",\"runtime_subrule_id\":\"F02R02_EDGE_CONDITION_COMPATIBILITY\"},\"status\":\"UNRESOLVED\"},{\"gap_type\":\"ABSTAIN\",\"kind\":\"ACTIVE_RULE_INSTANCE\",\"reason_codes\":[\"EDGE_COMPARABILITY_PREREQUISITES_UNRESOLVED\"],\"ref\":\"F06R02_EDGE_COMPARABILITY::EDGE::xeisd_random_pool_vs_j_coupling_question\",\"source\":{\"evaluation_contract_id\":\"EC-F06R02-EDGE-COMPARABILITY\",\"resolution_policy_id\":\"RP_F06_SOURCE_EDGE_RELATION\",\"runtime_subrule_id\":\"F06R02_EDGE_COMPARABILITY\"},\"status\":\"UNRESOLVED\"}]}",
+      "role": "user"
+    }
+  ],
+  "model": "openai/gpt-5.6-luna",
+  "provider": {
+    "allow_fallbacks": false,
+    "max_price": {
+      "completion": 1.2,
+      "prompt": 0.2,
+      "request": 0.0
+    },
+    "only": [
+      "openai"
+    ],
+    "require_parameters": true
+  },
+  "reasoning": {
+    "effort": "low"
+  },
+  "response_format": {
+    "json_schema": {
+      "name": "dynamics_atlas_PLANNER_proposal",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "enum": [
+              "lincoff_2020_xeisd_random_j_relation_v1_alpha"
+            ],
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "SELECT_ACTIONS",
+              "ABSTAIN_NO_ACTION"
+            ],
+            "type": "string"
+          },
+          "rationales": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {},
+                "required": [],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "selected_card_ids": {
+            "items": {
+              "enum": [
+                "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+              ],
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "case_id",
+          "decision",
+          "selected_card_ids",
+          "rationales"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "stream": false
+}

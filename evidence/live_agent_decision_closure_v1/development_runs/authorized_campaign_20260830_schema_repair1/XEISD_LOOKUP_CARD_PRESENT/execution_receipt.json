@@ -1,0 +1,12 @@
+{
+  "arm_id": "XEISD_LOOKUP_CARD_PRESENT",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "executed_action_count": 1,
+  "execution_status": "ONE_EXACT_LOOKUP_EXECUTED",
+  "network_accessed_by_scientific_action": false,
+  "operator_execution_count": 0,
+  "schema_version": "live-agent-decision-closure-execution/v1",
+  "selected_card_ids": [
+    "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+  ]
+}

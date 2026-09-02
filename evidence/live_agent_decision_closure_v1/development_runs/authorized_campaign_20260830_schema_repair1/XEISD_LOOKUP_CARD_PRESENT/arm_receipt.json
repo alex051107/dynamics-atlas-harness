@@ -1,0 +1,24 @@
+{
+  "affected_rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool",
+  "after_status": "PASS",
+  "arm_id": "XEISD_LOOKUP_CARD_PRESENT",
+  "authorization_status": "AUTHORIZED_EXACT_ALLOWLISTED_LOOKUP",
+  "base_state_sha256": "7d1fadaeb4bb69a1c51d2cd4ac0086ce438781ff1d5d936f7e394c3f3036419c",
+  "before_status": "UNRESOLVED",
+  "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "executed_action_count": 1,
+  "legal_action_card_count": 1,
+  "model": "openai/gpt-5.6-luna",
+  "planner_decision": "SELECT_ACTIONS",
+  "profile_mode": "RECORDED_PROFILE_LIVE_PLANNER",
+  "provider": "OpenAI",
+  "reported_cost_usd": "0.00050185",
+  "response_id": "gen-1788116855-VSAGFbrlEUSLgMAT6HiF",
+  "result_status": "SUCCEEDED",
+  "schema_version": "live-agent-decision-closure-arm-receipt/v1",
+  "selected_card_ids": [
+    "XEISD_RANDOM_COMPOSITION_EXACT_LOOKUP_V1"
+  ],
+  "terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW"
+}

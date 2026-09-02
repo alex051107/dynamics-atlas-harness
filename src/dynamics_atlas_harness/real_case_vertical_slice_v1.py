@@ -62,6 +62,14 @@ HSP90_METHOD_PROFILE_ID = "hsp90_md_directional_time_anatomy_v0"
 HSP90_CAPABILITY_ID = "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL"
 HSP90_TIME_ANATOMY_ACTION = "MD_DIRECTIONAL_TIME_ANATOMY_CONTROL"
 HSP90_EXACT_REQUEST_ID = "B1_EXACT_HSP90_RULE_TO_OPERATOR"
+HSP90_CASE_DOSSIER_ID = "HSP90-CASE-DOSSIER-V1"
+HSP90_RULE_OVERLAY_ID = "hsp90-directional-time-anatomy-f04r02/v1-alpha"
+HSP90_INPUT_MANIFEST_ID = "hsp90-directional-time-anatomy-inputs/v1-alpha"
+HSP90_BINDING_ID = "B-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY"
+HSP90_EVALUATION_CONTRACT_ID = "EC-F04R02-HSP90-DIRECTIONAL-TIME-ANATOMY"
+HSP90_RESOLUTION_POLICY_ID = "RP_F04R02_HSP90_TIME_ANATOMY"
+HSP90_TRAJECTORY_PACKET_ID = "hsp90_round2_40_trajectory_directional_packet"
+HSP90_LEGACY_TIME_ANATOMY_CONTRACT_LABEL = "HSP90-TIME-ANATOMY-CONTRACT-V1"
 HSP90_EXACT_OUTPUT_DIRECTORY = (
     "evidence/real_case_vertical_slice_v1/outputs/"
     "hsp90_b1_rule_to_operator/operator_outputs"
@@ -79,6 +87,20 @@ _HSP90_EXACT_FIXED_PARAMETERS = {
     "persistence_saved_frames": [5, 20, 50],
     "state_rule": "existing zero-sign two-readout rule",
 }
+_HSP90_REQUIRED_ARTIFACT_REFS = [
+    {"artifact_kind": "CASE_DOSSIER", "artifact_id": HSP90_CASE_DOSSIER_ID},
+    {
+        "artifact_kind": "OPERATOR_INPUT_MANIFEST",
+        "artifact_id": HSP90_INPUT_MANIFEST_ID,
+    },
+]
+_HSP90_LEGACY_EVIDENCE_PACKET_ALIASES = [
+    {
+        "legacy_label": HSP90_LEGACY_TIME_ANATOMY_CONTRACT_LABEL,
+        "mapping_status": "PENDING_HUMAN_ALIAS_OR_DEPRECATION_DECISION",
+        "runtime_authority": "NONE",
+    }
+]
 _REQUIRED_SUBRULE_IDS = frozenset(
     {
         "F01R01_CASE_CLAIM_DECLARATION",
@@ -770,6 +792,58 @@ def _validate_hsp90_frozen_manifest_contract(input_manifest: Mapping[str, Any]) 
         raise VerticalSliceError("HSP90 manifest has unexpected fixed parameters")
 
 
+def _validate_hsp90_manifest_identity(input_manifest: Mapping[str, Any]) -> None:
+    """Validate the exact dossier/overlay/RuleInstance identity carried by the manifest."""
+
+    input_manifest = _mapping(input_manifest, "HSP90 input manifest")
+    expected = {
+        "schema_version": "case-bound-operator-input-manifest/v1-alpha",
+        "manifest_id": HSP90_INPUT_MANIFEST_ID,
+        "case_dossier_id": HSP90_CASE_DOSSIER_ID,
+        "rule_overlay_id": HSP90_RULE_OVERLAY_ID,
+        "binding_id": HSP90_BINDING_ID,
+        "evaluation_contract_id": HSP90_EVALUATION_CONTRACT_ID,
+        "resolution_policy_id": HSP90_RESOLUTION_POLICY_ID,
+        "case_id": HSP90_CASE_ID,
+        "source_id": HSP90_SOURCE_ID,
+        "trajectory_packet_id": HSP90_TRAJECTORY_PACKET_ID,
+        "runtime_subrule_id": HSP90_RUNTIME_SUBRULE_ID,
+        "rule_instance_id": rule_instance_id(
+            HSP90_RUNTIME_SUBRULE_ID, "SOURCE", HSP90_SOURCE_ID
+        ),
+        "operator_id": HSP90_OPERATOR_ID,
+        "method_profile_id": HSP90_METHOD_PROFILE_ID,
+        "capability_id": HSP90_CAPABILITY_ID,
+    }
+    for field, value in expected.items():
+        if input_manifest.get(field) != value:
+            raise VerticalSliceError(f"HSP90 input manifest has an invalid {field}")
+
+
+def _hsp90_manifest_artifact_lineage(
+    input_manifest: Mapping[str, Any],
+) -> dict[str, str]:
+    _validate_hsp90_manifest_identity(input_manifest)
+    return {
+        field: str(input_manifest[field])
+        for field in (
+            "case_dossier_id",
+            "rule_overlay_id",
+            "binding_id",
+            "evaluation_contract_id",
+            "resolution_policy_id",
+            "case_id",
+            "source_id",
+            "trajectory_packet_id",
+            "runtime_subrule_id",
+            "rule_instance_id",
+            "operator_id",
+            "method_profile_id",
+            "capability_id",
+        )
+    }
+
+
 def validate_hsp90_case_dossier(
     case_graph: Mapping[str, Any], input_manifest: Mapping[str, Any]
 ) -> None:
@@ -777,6 +851,13 @@ def validate_hsp90_case_dossier(
 
     case_graph = _mapping(case_graph, "HSP90 CaseGraph")
     _validate_hsp90_frozen_manifest_contract(input_manifest)
+    _validate_hsp90_manifest_identity(input_manifest)
+    if case_graph.get("schema_version") != "exposed-casegraph/v1-alpha":
+        raise VerticalSliceError("HSP90 CaseGraph has an unknown schema version")
+    if case_graph.get("dossier_id") != HSP90_CASE_DOSSIER_ID:
+        raise VerticalSliceError("HSP90 CaseGraph has an invalid dossier_id")
+    if input_manifest.get("case_dossier_id") != case_graph.get("dossier_id"):
+        raise VerticalSliceError("HSP90 manifest does not reference the exact dossier")
     case = _mapping(case_graph.get("case"), "HSP90 CaseGraph.case")
     if case.get("case_id") != HSP90_CASE_ID:
         raise VerticalSliceError("HSP90 CaseGraph has an unexpected case_id")
@@ -810,8 +891,10 @@ def validate_hsp90_case_dossier(
     if time.get("kind") != "ORDERED_TRAJECTORY":
         raise VerticalSliceError("HSP90 source must retain ordered trajectory semantics")
     identity = _mapping(source.get("trajectory_identity"), "HSP90 source.trajectory_identity")
-    if identity.get("packet_id") != "hsp90_round2_40_trajectory_directional_packet":
+    if identity.get("packet_id") != HSP90_TRAJECTORY_PACKET_ID:
         raise VerticalSliceError("HSP90 source has an unexpected trajectory packet")
+    if input_manifest.get("trajectory_packet_id") != identity.get("packet_id"):
+        raise VerticalSliceError("HSP90 manifest does not reference the exact trajectory packet")
     control = _mapping(source.get("time_anatomy_control"), "HSP90 source.time_anatomy_control")
     if control.get("persistence_saved_frames") != _HSP90_EXACT_FIXED_PARAMETERS[
         "persistence_saved_frames"
@@ -855,6 +938,8 @@ def _hsp90_rule_overlay_parts(
     rule_overlay = _mapping(rule_overlay, "HSP90 rule overlay")
     if rule_overlay.get("schema_version") != "case-bound-rule-overlay/v1-alpha":
         raise VerticalSliceError("HSP90 rule overlay has an unknown schema version")
+    if rule_overlay.get("overlay_id") != HSP90_RULE_OVERLAY_ID:
+        raise VerticalSliceError("HSP90 rule overlay has an unexpected overlay_id")
     subrule = _mapping(rule_overlay.get("runtime_subrule"), "HSP90 runtime_subrule")
     binding = _mapping(rule_overlay.get("binding"), "HSP90 binding")
     contract = _mapping(rule_overlay.get("evaluation_contract"), "HSP90 evaluation_contract")
@@ -863,12 +948,31 @@ def _hsp90_rule_overlay_parts(
         raise VerticalSliceError("HSP90 rule overlay has an unexpected RuleInstance type")
     if subrule.get("family_id") != "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY":
         raise VerticalSliceError("HSP90 rule overlay must remain an F04 rule")
+    if subrule.get("required_artifact_refs") != _HSP90_REQUIRED_ARTIFACT_REFS:
+        raise VerticalSliceError("HSP90 runtime sub-rule has invalid required artifact refs")
+    if "required_evidence_packet_ids" in subrule:
+        raise VerticalSliceError(
+            "HSP90 legacy evidence-packet labels cannot be deterministic routing authority"
+        )
+    if (
+        subrule.get("legacy_evidence_packet_aliases")
+        != _HSP90_LEGACY_EVIDENCE_PACKET_ALIASES
+    ):
+        raise VerticalSliceError("HSP90 runtime sub-rule has invalid legacy alias status")
     if subrule.get("target_kind") != "SOURCE" or binding.get("target_kind") != "SOURCE":
         raise VerticalSliceError("HSP90 rule overlay must be SOURCE-targeted")
+    if binding.get("binding_id") != HSP90_BINDING_ID:
+        raise VerticalSliceError("HSP90 rule overlay has an unexpected binding_id")
     if binding.get("runtime_subrule_id") != HSP90_RUNTIME_SUBRULE_ID:
         raise VerticalSliceError("HSP90 binding does not match its runtime sub-rule")
     if contract.get("runtime_subrule_id") != HSP90_RUNTIME_SUBRULE_ID:
         raise VerticalSliceError("HSP90 contract does not match its runtime sub-rule")
+    if contract.get("evaluation_contract_id") != HSP90_EVALUATION_CONTRACT_ID:
+        raise VerticalSliceError("HSP90 rule overlay has an unexpected evaluation contract")
+    if binding.get("evaluation_contract_id") != contract.get("evaluation_contract_id"):
+        raise VerticalSliceError("HSP90 binding and evaluation contract do not match")
+    if policy.get("resolution_policy_id") != HSP90_RESOLUTION_POLICY_ID:
+        raise VerticalSliceError("HSP90 rule overlay has an unexpected resolution policy")
     if policy.get("resolution_policy_id") != binding.get("resolution_policy_id"):
         raise VerticalSliceError("HSP90 binding and resolution policy do not match")
     return subrule, binding, contract, policy
@@ -883,12 +987,37 @@ def _hsp90_rule_result(
     applicability_status: str,
     reason_codes: Sequence[str],
     missing_paths: Sequence[str],
+    evidence_ref: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     if status not in {"PASS", "FAIL", "UNRESOLVED", "NOT_APPLICABLE"}:
         raise VerticalSliceError("HSP90 F04R02 has an invalid RuleResult status")
     source_id = HSP90_SOURCE_ID
     effect = _mapping(contract.get("result_effects"), "HSP90 contract.result_effects").get(status)
     effect = _mapping(effect, f"HSP90 result effect for {status}")
+    normalized_evidence_ref: dict[str, str] | None = None
+    if evidence_ref is not None:
+        evidence_ref = _mapping(evidence_ref, "HSP90 RuleResult evidence_ref")
+        expected_rule_id = rule_instance_id(
+            HSP90_RUNTIME_SUBRULE_ID, "SOURCE", HSP90_SOURCE_ID
+        )
+        evidence_result_id = evidence_ref.get("evidence_result_id")
+        operator_run_receipt_id = evidence_ref.get("operator_run_receipt_id")
+        affected_rule_instance_id = evidence_ref.get("affected_rule_instance_id")
+        if not isinstance(evidence_result_id, str) or not evidence_result_id:
+            raise VerticalSliceError(
+                "HSP90 RuleResult evidence_ref lacks an EvidenceResult ID"
+            )
+        if not isinstance(operator_run_receipt_id, str) or not operator_run_receipt_id:
+            raise VerticalSliceError("HSP90 RuleResult evidence_ref lacks a receipt ID")
+        if not isinstance(affected_rule_instance_id, str):
+            raise VerticalSliceError("HSP90 RuleResult evidence_ref lacks a RuleInstance ID")
+        normalized_evidence_ref = {
+            "evidence_result_id": evidence_result_id,
+            "operator_run_receipt_id": operator_run_receipt_id,
+            "affected_rule_instance_id": affected_rule_instance_id,
+        }
+        if normalized_evidence_ref["affected_rule_instance_id"] != expected_rule_id:
+            raise VerticalSliceError("HSP90 RuleResult evidence_ref targets another RuleInstance")
     return {
         "schema_version": "rules-prototype-rule-result/v1",
         "rule_instance_id": rule_instance_id(
@@ -903,6 +1032,7 @@ def _hsp90_rule_result(
         "missing_paths": list(missing_paths),
         "resolution_policy_id": binding["resolution_policy_id"],
         "evaluation_contract_id": contract["evaluation_contract_id"],
+        "evidence_ref": normalized_evidence_ref,
         "claim_effect": dict(effect),
         "scientific_verdict": "NOT_EMITTED_PROPOSAL_ONLY",
         "human_decision_gate_required": True,
@@ -1088,6 +1218,7 @@ def evaluate_hsp90_time_anatomy_f04r02(
             applicability_status="MATCHED",
             reason_codes=reason_codes or ["TIME_ANATOMY_CONTROL_CONTRACT_INVALID"],
             missing_paths=[],
+            evidence_ref=evidence,
         )
     if evidence.get("contract_status") == "PASS":
         return _hsp90_rule_result(
@@ -1098,6 +1229,7 @@ def evaluate_hsp90_time_anatomy_f04r02(
             applicability_status="MATCHED",
             reason_codes=["CASE_BOUND_TIME_ANATOMY_CONTROL_EVIDENCE_VALIDATED"],
             missing_paths=[],
+            evidence_ref=evidence,
         )
     return _hsp90_rule_result(
         subrule=subrule,
@@ -1107,6 +1239,7 @@ def evaluate_hsp90_time_anatomy_f04r02(
         applicability_status="MATCHED",
         reason_codes=["CASE_BOUND_EVIDENCE_RESULT_STATUS_UNRESOLVED"],
         missing_paths=[],
+        evidence_ref=evidence,
     )
 
 
@@ -1120,6 +1253,7 @@ def validate_hsp90_operator_input_manifest(
 
     input_manifest = _mapping(input_manifest, "HSP90 input manifest")
     _validate_hsp90_frozen_manifest_contract(input_manifest)
+    _validate_hsp90_manifest_identity(input_manifest)
     operator_spec = _mapping(operator_spec, "HSP90 OperatorSpec")
     expected = {
         "case_id": HSP90_CASE_ID,
@@ -1182,6 +1316,7 @@ def validate_hsp90_operator_input_manifest(
         }
     return {
         "manifest_id": input_manifest.get("manifest_id"),
+        "artifact_lineage": _hsp90_manifest_artifact_lineage(input_manifest),
         "resolved_assets": resolved_assets,
         "expected_time_contract": input_manifest.get("expected_time_contract"),
         "fixed_parameters": input_manifest.get("fixed_parameters"),
@@ -1782,6 +1917,27 @@ def run_hsp90_case_bound_operator(
     )
 
 
+def _hsp90_conclusion_artifact_lineage(
+    *,
+    operator_run_receipt_id: str | None,
+    evidence_result_id: str | None,
+) -> dict[str, Any]:
+    return {
+        "case_dossier_id": HSP90_CASE_DOSSIER_ID,
+        "rule_overlay_id": HSP90_RULE_OVERLAY_ID,
+        "input_manifest_id": HSP90_INPUT_MANIFEST_ID,
+        "binding_id": HSP90_BINDING_ID,
+        "evaluation_contract_id": HSP90_EVALUATION_CONTRACT_ID,
+        "resolution_policy_id": HSP90_RESOLUTION_POLICY_ID,
+        "runtime_subrule_id": HSP90_RUNTIME_SUBRULE_ID,
+        "rule_instance_id": rule_instance_id(
+            HSP90_RUNTIME_SUBRULE_ID, "SOURCE", HSP90_SOURCE_ID
+        ),
+        "operator_run_receipt_id": operator_run_receipt_id,
+        "evidence_result_id": evidence_result_id,
+    }
+
+
 def _materialize_hsp90_conclusion_packet(
     *,
     case_graph: Mapping[str, Any],
@@ -1797,6 +1953,7 @@ def _materialize_hsp90_conclusion_packet(
     """Materialize Case B's bounded terminal route without a scientific verdict."""
 
     validate_hsp90_case_dossier(case_graph, input_manifest)
+    _hsp90_rule_overlay_parts(rule_overlay)
     rule_result = _mapping(rule_result, "HSP90 RuleResult")
     context = ExecutionEvidenceContext()
     canonical_operator_run: Mapping[str, Any] | None = None
@@ -1842,9 +1999,23 @@ def _materialize_hsp90_conclusion_packet(
         first_failed = rule_result
         next_action = "Resolve the missing time-anatomy control evidence through an exact registered Operator or new data."
     operator_results = [] if canonical_operator_run is None else [canonical_operator_run]
+    operator_run_receipt_id: str | None = None
+    evidence_result_id: str | None = None
+    if canonical_operator_run is not None:
+        canonical_receipt = _mapping(
+            canonical_operator_run.get("operator_run_receipt"),
+            "HSP90 canonical operator receipt",
+        )
+        canonical_evidence = _mapping(
+            canonical_operator_run.get("evidence_result"),
+            "HSP90 canonical EvidenceResult",
+        )
+        operator_run_receipt_id = str(canonical_receipt["receipt_id"])
+        evidence_result_id = str(canonical_evidence["evidence_result_id"])
     case = _mapping(case_graph.get("case"), "HSP90 CaseGraph.case")
     packet = {
         "schema_version": "conclusion-packet/v1-alpha",
+        "conclusion_packet_id": f"HSP90-CONCLUSION::{scenario_id}",
         "packet_kind": "EXPOSED_HSP90_RULE_TO_OPERATOR_V1_ALPHA",
         "development_status": "EXPOSED_DEVELOPMENT_ACTIVE",
         "scenario_id": scenario_id,
@@ -1874,6 +2045,10 @@ def _materialize_hsp90_conclusion_packet(
         "nonblocking_rule_results": [],
         "evidence_lookup_results": [],
         "operator_results": operator_results,
+        "artifact_lineage": _hsp90_conclusion_artifact_lineage(
+            operator_run_receipt_id=operator_run_receipt_id,
+            evidence_result_id=evidence_result_id,
+        ),
         "human_review_items": [
             "The EvidenceResult validates the exact execution contract, not source science or a biological mechanism.",
             "The diagnostic remains trajectory-level and same-packet; frames are correlated observations, not independent replicates.",
@@ -2010,6 +2185,7 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
     packet = _mapping(packet, "HSP90 ConclusionPacket")
     required = {
         "schema_version",
+        "conclusion_packet_id",
         "packet_kind",
         "development_status",
         "scenario_id",
@@ -2028,6 +2204,7 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
         "nonblocking_rule_results",
         "evidence_lookup_results",
         "operator_results",
+        "artifact_lineage",
         "human_review_items",
         "next_action",
         "provenance",
@@ -2035,6 +2212,11 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
     missing = sorted(required.difference(packet))
     if missing:
         raise VerticalSliceError("HSP90 ConclusionPacket missing: " + ", ".join(missing))
+    scenario_id = packet.get("scenario_id")
+    if not isinstance(scenario_id, str) or not scenario_id:
+        raise VerticalSliceError("HSP90 ConclusionPacket requires a scenario ID")
+    if packet.get("conclusion_packet_id") != f"HSP90-CONCLUSION::{scenario_id}":
+        raise VerticalSliceError("HSP90 ConclusionPacket has an invalid packet identity")
     if packet.get("case_id") != HSP90_CASE_ID:
         raise VerticalSliceError("HSP90 ConclusionPacket has an unexpected case")
     if packet.get("development_status") != "EXPOSED_DEVELOPMENT_ACTIVE":
@@ -2059,11 +2241,108 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
     result = _mapping(rule_results[0], "HSP90 ConclusionPacket RuleResult")
     if result.get("rule_instance_id") != expected_rule_id:
         raise VerticalSliceError("HSP90 ConclusionPacket has an unrelated RuleInstance")
+    expected_result_identity = {
+        "runtime_subrule_id": HSP90_RUNTIME_SUBRULE_ID,
+        "evaluation_contract_id": HSP90_EVALUATION_CONTRACT_ID,
+        "resolution_policy_id": HSP90_RESOLUTION_POLICY_ID,
+    }
+    for field, expected in expected_result_identity.items():
+        if result.get(field) != expected:
+            raise VerticalSliceError(f"HSP90 ConclusionPacket RuleResult has an invalid {field}")
     if packet.get("selected_rule_instance_ids") != [expected_rule_id]:
         raise VerticalSliceError("HSP90 ConclusionPacket has invalid selected RuleInstances")
     operator_results = packet.get("operator_results")
     if not isinstance(operator_results, list):
         raise VerticalSliceError("HSP90 ConclusionPacket must retain Operator results")
+    if len(operator_results) > 1:
+        raise VerticalSliceError("HSP90 ConclusionPacket permits at most one Operator run")
+    receipt: Mapping[str, Any] | None = None
+    evidence: Mapping[str, Any] | None = None
+    operator_run_receipt_id: str | None = None
+    evidence_result_id: str | None = None
+    if operator_results:
+        run = _mapping(operator_results[0], "HSP90 ConclusionPacket Operator run")
+        receipt = _mapping(run.get("operator_run_receipt"), "HSP90 ConclusionPacket receipt")
+        evidence = _mapping(run.get("evidence_result"), "HSP90 ConclusionPacket evidence")
+        operator_run_receipt_id = receipt.get("receipt_id")
+        evidence_result_id = evidence.get("evidence_result_id")
+        if not isinstance(operator_run_receipt_id, str) or not operator_run_receipt_id:
+            raise VerticalSliceError("HSP90 ConclusionPacket receipt lacks an identity")
+        if not isinstance(evidence_result_id, str) or not evidence_result_id:
+            raise VerticalSliceError("HSP90 ConclusionPacket EvidenceResult lacks an identity")
+        expected_receipt_identity = {
+            "case_id": HSP90_CASE_ID,
+            "source_id": HSP90_SOURCE_ID,
+            "affected_rule_instance_id": expected_rule_id,
+            "operator_id": HSP90_OPERATOR_ID,
+        }
+        for field, expected in expected_receipt_identity.items():
+            if receipt.get(field) != expected:
+                raise VerticalSliceError(
+                    f"HSP90 ConclusionPacket receipt has an invalid {field}"
+                )
+        expected_evidence_identity = {
+            "case_id": HSP90_CASE_ID,
+            "source_id": HSP90_SOURCE_ID,
+            "affected_rule_instance_id": expected_rule_id,
+            "operator_id": HSP90_OPERATOR_ID,
+            "method_profile_id": HSP90_METHOD_PROFILE_ID,
+            "operator_run_receipt_id": operator_run_receipt_id,
+            "scientific_evaluation_status": "PENDING_HUMAN_VALIDATION",
+        }
+        for field, expected in expected_evidence_identity.items():
+            if evidence.get(field) != expected:
+                raise VerticalSliceError(
+                    f"HSP90 ConclusionPacket EvidenceResult has an invalid {field}"
+                )
+        manifest_receipt = _mapping(
+            receipt.get("manifest_receipt"), "HSP90 ConclusionPacket manifest receipt"
+        )
+        if receipt.get("input_manifest_id") != HSP90_INPUT_MANIFEST_ID:
+            raise VerticalSliceError("HSP90 ConclusionPacket receipt references another manifest")
+        if manifest_receipt.get("manifest_id") != HSP90_INPUT_MANIFEST_ID:
+            raise VerticalSliceError(
+                "HSP90 ConclusionPacket manifest receipt has another identity"
+            )
+        expected_manifest_lineage = {
+            "case_dossier_id": HSP90_CASE_DOSSIER_ID,
+            "rule_overlay_id": HSP90_RULE_OVERLAY_ID,
+            "binding_id": HSP90_BINDING_ID,
+            "evaluation_contract_id": HSP90_EVALUATION_CONTRACT_ID,
+            "resolution_policy_id": HSP90_RESOLUTION_POLICY_ID,
+            "case_id": HSP90_CASE_ID,
+            "source_id": HSP90_SOURCE_ID,
+            "trajectory_packet_id": HSP90_TRAJECTORY_PACKET_ID,
+            "runtime_subrule_id": HSP90_RUNTIME_SUBRULE_ID,
+            "rule_instance_id": expected_rule_id,
+            "operator_id": HSP90_OPERATOR_ID,
+            "method_profile_id": HSP90_METHOD_PROFILE_ID,
+            "capability_id": HSP90_CAPABILITY_ID,
+        }
+        if manifest_receipt.get("artifact_lineage") != expected_manifest_lineage:
+            raise VerticalSliceError(
+                "HSP90 ConclusionPacket manifest receipt has invalid artifact lineage"
+            )
+        expected_evidence_ref = {
+            "evidence_result_id": evidence_result_id,
+            "operator_run_receipt_id": operator_run_receipt_id,
+            "affected_rule_instance_id": expected_rule_id,
+        }
+        if result.get("evidence_ref") != expected_evidence_ref:
+            raise VerticalSliceError(
+                "HSP90 ConclusionPacket RuleResult is not linked to its EvidenceResult"
+            )
+    elif result.get("evidence_ref") is not None:
+        raise VerticalSliceError(
+            "HSP90 ConclusionPacket RuleResult references evidence without an Operator run"
+        )
+
+    expected_lineage = _hsp90_conclusion_artifact_lineage(
+        operator_run_receipt_id=operator_run_receipt_id,
+        evidence_result_id=evidence_result_id,
+    )
+    if packet.get("artifact_lineage") != expected_lineage:
+        raise VerticalSliceError("HSP90 ConclusionPacket has invalid artifact lineage")
     if result.get("status") == "PASS":
         if packet.get("terminal_route") != "REGISTERED_OPERATOR":
             raise VerticalSliceError("HSP90 PASS ConclusionPacket has an invalid route")
@@ -2071,9 +2350,8 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
             raise VerticalSliceError("HSP90 PASS ConclusionPacket has an invalid route disposition")
         if len(operator_results) != 1:
             raise VerticalSliceError("HSP90 PASS ConclusionPacket needs one Operator run")
-        run = _mapping(operator_results[0], "HSP90 ConclusionPacket Operator run")
-        receipt = _mapping(run.get("operator_run_receipt"), "HSP90 ConclusionPacket receipt")
-        evidence = _mapping(run.get("evidence_result"), "HSP90 ConclusionPacket evidence")
+        if receipt is None or evidence is None:
+            raise VerticalSliceError("HSP90 PASS ConclusionPacket lacks an Operator run")
         if (
             receipt.get("affected_rule_instance_id") != expected_rule_id
             or evidence.get("affected_rule_instance_id") != expected_rule_id
@@ -2083,5 +2361,15 @@ def validate_hsp90_conclusion_packet(packet: Mapping[str, Any]) -> None:
             or evidence.get("operator_run_receipt_id") != receipt.get("receipt_id")
         ):
             raise VerticalSliceError("HSP90 PASS ConclusionPacket lacks linked validated evidence")
-    elif packet.get("route_disposition") != "ABSTAIN":
-        raise VerticalSliceError("HSP90 non-PASS ConclusionPacket must abstain")
+    else:
+        if packet.get("route_disposition") != "ABSTAIN":
+            raise VerticalSliceError("HSP90 non-PASS ConclusionPacket must abstain")
+        if result.get("status") == "FAIL":
+            if receipt is None or evidence is None:
+                raise VerticalSliceError("HSP90 FAIL ConclusionPacket needs one failed Operator run")
+            if receipt.get("status") != "FAILED" or evidence.get("contract_status") != "FAIL":
+                raise VerticalSliceError("HSP90 FAIL ConclusionPacket lacks linked failed evidence")
+        elif operator_results:
+            raise VerticalSliceError(
+                "HSP90 unresolved ConclusionPacket cannot retain an Operator run"
+            )

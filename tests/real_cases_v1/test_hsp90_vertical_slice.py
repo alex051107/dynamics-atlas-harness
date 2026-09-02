@@ -5,8 +5,15 @@ from pathlib import Path
 
 from dynamics_atlas_harness.real_case_vertical_slice_v1 import (
     ExecutionEvidenceContext,
+    HSP90_BINDING_ID,
+    HSP90_CASE_DOSSIER_ID,
     HSP90_CASE_ID,
+    HSP90_EVALUATION_CONTRACT_ID,
+    HSP90_INPUT_MANIFEST_ID,
+    HSP90_LEGACY_TIME_ANATOMY_CONTRACT_LABEL,
     HSP90_OPERATOR_ID,
+    HSP90_RESOLUTION_POLICY_ID,
+    HSP90_RULE_OVERLAY_ID,
     HSP90_RUNTIME_SUBRULE_ID,
     HSP90_SOURCE_ID,
     VerticalSliceError,
@@ -171,6 +178,121 @@ class Hsp90VerticalSliceTests(unittest.TestCase):
                 rule_overlay=self.bundle["rule_overlay"],
                 input_manifest=self.bundle["input_manifest"],
             )
+
+    def test_f04_typed_artifact_identity_chain_preserves_the_human_gate(self):
+        case_graph = self.bundle["case_graph"]
+        manifest = self.bundle["input_manifest"]
+        overlay = self.bundle["rule_overlay"]
+        receipt = read_json(OUTPUT_ROOT / "operator_run_receipt.json")
+        evidence = read_json(OUTPUT_ROOT / "evidence_result.json")
+        pre = read_json(OUTPUT_ROOT / "pre_operator_rule_result.json")
+        post = read_json(OUTPUT_ROOT / "post_operator_rule_result.json")
+        packet = read_json(OUTPUT_ROOT / "conclusion_packet.json")
+
+        self.assertEqual(case_graph["dossier_id"], HSP90_CASE_DOSSIER_ID)
+        self.assertEqual(manifest["case_dossier_id"], case_graph["dossier_id"])
+        self.assertEqual(manifest["manifest_id"], HSP90_INPUT_MANIFEST_ID)
+        self.assertEqual(manifest["rule_overlay_id"], overlay["overlay_id"])
+        self.assertEqual(overlay["overlay_id"], HSP90_RULE_OVERLAY_ID)
+        self.assertEqual(manifest["binding_id"], HSP90_BINDING_ID)
+        self.assertEqual(
+            manifest["evaluation_contract_id"], HSP90_EVALUATION_CONTRACT_ID
+        )
+        self.assertEqual(
+            manifest["resolution_policy_id"], HSP90_RESOLUTION_POLICY_ID
+        )
+        legacy = overlay["runtime_subrule"]["legacy_evidence_packet_aliases"]
+        self.assertEqual(legacy[0]["legacy_label"], HSP90_LEGACY_TIME_ANATOMY_CONTRACT_LABEL)
+        self.assertEqual(
+            legacy[0]["mapping_status"],
+            "PENDING_HUMAN_ALIAS_OR_DEPRECATION_DECISION",
+        )
+        self.assertEqual(legacy[0]["runtime_authority"], "NONE")
+
+        manifest_receipt = receipt["manifest_receipt"]
+        self.assertEqual(manifest_receipt["manifest_id"], manifest["manifest_id"])
+        self.assertEqual(
+            manifest_receipt["artifact_lineage"]["case_dossier_id"],
+            case_graph["dossier_id"],
+        )
+        self.assertEqual(evidence["operator_run_receipt_id"], receipt["receipt_id"])
+        self.assertIsNone(pre["evidence_ref"])
+        self.assertEqual(post["evidence_ref"]["evidence_result_id"], evidence["evidence_result_id"])
+        self.assertEqual(
+            post["evidence_ref"]["affected_rule_instance_id"],
+            post["rule_instance_id"],
+        )
+        self.assertEqual(
+            packet["artifact_lineage"]["evidence_result_id"],
+            evidence["evidence_result_id"],
+        )
+        self.assertEqual(packet["rule_results"], [post])
+        self.assertEqual(packet["scientific_disposition"], "NOT_EVALUATED")
+        self.assertEqual(
+            evidence["scientific_evaluation_status"], "PENDING_HUMAN_VALIDATION"
+        )
+        validate_hsp90_conclusion_packet(packet)
+
+    def test_f04_typed_artifact_identity_mutations_fail_closed(self):
+        altered_case = copy.deepcopy(self.bundle["case_graph"])
+        altered_case["dossier_id"] = "OTHER-DOSSIER"
+        with self.assertRaisesRegex(VerticalSliceError, "invalid dossier_id"):
+            evaluate_hsp90_time_anatomy_f04r02(
+                case_graph=altered_case,
+                rule_overlay=self.bundle["rule_overlay"],
+                input_manifest=self.bundle["input_manifest"],
+            )
+
+        altered_manifest = copy.deepcopy(self.bundle["input_manifest"])
+        altered_manifest["rule_overlay_id"] = "OTHER-OVERLAY"
+        with self.assertRaisesRegex(VerticalSliceError, "invalid rule_overlay_id"):
+            evaluate_hsp90_time_anatomy_f04r02(
+                case_graph=self.bundle["case_graph"],
+                rule_overlay=self.bundle["rule_overlay"],
+                input_manifest=altered_manifest,
+            )
+
+        altered_overlay = copy.deepcopy(self.bundle["rule_overlay"])
+        altered_overlay["binding"]["evaluation_contract_id"] = "OTHER-CONTRACT"
+        with self.assertRaisesRegex(
+            VerticalSliceError, "binding and evaluation contract do not match"
+        ):
+            evaluate_hsp90_time_anatomy_f04r02(
+                case_graph=self.bundle["case_graph"],
+                rule_overlay=altered_overlay,
+                input_manifest=self.bundle["input_manifest"],
+            )
+
+        packet = read_json(OUTPUT_ROOT / "conclusion_packet.json")
+        packet_mutations = (
+            ("lineage", ("artifact_lineage", "input_manifest_id"), "OTHER-MANIFEST"),
+            (
+                "rule evidence",
+                ("rule_results", 0, "evidence_ref", "evidence_result_id"),
+                "OTHER-EVIDENCE",
+            ),
+            (
+                "receipt lineage",
+                (
+                    "operator_results",
+                    0,
+                    "operator_run_receipt",
+                    "manifest_receipt",
+                    "artifact_lineage",
+                    "case_dossier_id",
+                ),
+                "OTHER-DOSSIER",
+            ),
+        )
+        for label, path, value in packet_mutations:
+            with self.subTest(label=label):
+                altered_packet = copy.deepcopy(packet)
+                target = altered_packet
+                for part in path[:-1]:
+                    target = target[part]
+                target[path[-1]] = value
+                with self.assertRaises(VerticalSliceError):
+                    validate_hsp90_conclusion_packet(altered_packet)
 
     def test_forged_pass_rule_cannot_materialize_a_conclusion_packet(self):
         with self.assertRaisesRegex(VerticalSliceError, "exact re-evaluated RuleResult"):

@@ -208,7 +208,9 @@ class MinimalStage2ExposedConclusionsTests(unittest.TestCase):
         ] = "UNRECOGNIZED_STATUS"
         verified = {family_id: "VERIFIED" for family_id in self.source_grounding}
 
-        with self.assertRaisesRegex(VerticalSliceError, "linked validated evidence"):
+        with self.assertRaisesRegex(
+            VerticalSliceError, "invalid scientific_evaluation_status"
+        ):
             materialize_stage2_conclusion_packet(
                 route_packet=route_packet,
                 source_grounding=verified,

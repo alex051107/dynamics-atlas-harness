@@ -1,0 +1,54 @@
+{
+  "schema_version": "live-agent-decision-closure-campaign-config/v1",
+  "campaign_id": "LIVE_AGENT_DECISION_CLOSURE_V1_20260830",
+  "execution_status": "CLOSED_FROZEN",
+  "completion_receipt_path": "evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/live_agent_decision_closure_manifest_v1.json",
+  "completion_receipt_sha256": "112a160dc3498f1ec48b795c1fc633565cd3aa1d446c70fc7b87cf268b914b0f",
+  "budget_ledger_path": "local/live_agent_decision_closure_v1/budget_ledger.json",
+  "budget_usd": "1.00",
+  "max_http_attempts": 6,
+  "max_completed_calls": 4,
+  "max_attempts_per_exact_role_case_model": 6,
+  "automatic_retries": 0,
+  "schema_compatibility_repairs_allowed": 1,
+  "schema_compatibility_repairs_used": 1,
+  "schema_compatibility_repair": {
+    "failure_root": "evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830",
+    "request_file_sha256": "ade36dbf5df3c8d511a06b9d1e96efc7ec66a911c1080151a4f03f4497b9b02b",
+    "raw_response_file_sha256": "ebe889ca3a7f704631aa7050da166ca3335317f126d4dd716ea0483edd18b830",
+    "receipt_file_sha256": "9e881ba79a95edbbbb66fbb2e06060da20b9e3489874cc852c2e5906537e51ae",
+    "provider_error_code": "invalid_json_schema",
+    "unsupported_keyword": "uniqueItems",
+    "repair_scope": "OPENAI_STRICT_SCHEMA_SUBSET_NORMALIZATION_ONLY"
+  },
+  "semantic_prompt_tuning_allowed": 0,
+  "case_id": "lincoff_2020_xeisd_random_j_relation_v1_alpha",
+  "profile_mode": "RECORDED_PROFILE_LIVE_PLANNER",
+  "planner_prompt": {
+    "path": "agent_experiments/live_agent_decision_closure_v1/prompts/planner_v1.md",
+    "version": "LIVE_AGENT_DECISION_CLOSURE_PLANNER_V1_FROZEN",
+    "sha256": "167d27369c99bcdbd658584b9e01b3a7b275618bfc68322bb792a55fd8cb63ae"
+  },
+  "model": {
+    "model_id": "openai/gpt-5.6-luna",
+    "accepted_returned_model_ids": [
+      "openai/gpt-5.6-luna",
+      "openai/gpt-5.6-luna-20260709"
+    ],
+    "provider_endpoint_tag": "openai",
+    "expected_provider_display_name": "OpenAI",
+    "allowed_service_tiers": [
+      null,
+      "default"
+    ],
+    "input_price_per_million_usd": "0.20",
+    "output_price_per_million_usd": "1.20",
+    "reasoning_effort": "low",
+    "include_temperature_zero": false,
+    "metadata_sha256": "4032c962a185ecae6f67e83f80dd12ac7974738d9cab89f53d67ef3498110c36"
+  },
+  "max_output_tokens": 4096,
+  "claim_ceiling": "DEVELOPMENT_DIAGNOSTIC_ONLY; one live Planner counterfactual over an existing exact X-EISD lookup; NOT_AGENT_VALUE_ESTABLISHED; NOT_SCIENTIFIC_SUPPORT",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "held_out_status": "NOT_ACCESSED"
+}

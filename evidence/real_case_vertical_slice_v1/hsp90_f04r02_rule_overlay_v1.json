@@ -7,7 +7,17 @@
     "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
     "target_kind": "SOURCE",
     "scientific_question": "For a declared MD source making only a same-packet two-readout directional-block claim, is a case-bound trajectory-level time-semantics and persistence-control evidence record available?",
-    "required_evidence_packet_ids": ["HSP90-CASE-DOSSIER-V1", "HSP90-TIME-ANATOMY-CONTRACT-V1"],
+    "required_artifact_refs": [
+      {"artifact_kind": "CASE_DOSSIER", "artifact_id": "HSP90-CASE-DOSSIER-V1"},
+      {"artifact_kind": "OPERATOR_INPUT_MANIFEST", "artifact_id": "hsp90-directional-time-anatomy-inputs/v1-alpha"}
+    ],
+    "legacy_evidence_packet_aliases": [
+      {
+        "legacy_label": "HSP90-TIME-ANATOMY-CONTRACT-V1",
+        "mapping_status": "PENDING_HUMAN_ALIAS_OR_DEPRECATION_DECISION",
+        "runtime_authority": "NONE"
+      }
+    ],
     "failure_mode": "TIME_ANATOMY_CONTROL_CONTRACT_INVALID",
     "claim_effect_summary": "A PASS establishes only that the frozen same-packet diagnostic has a validated control record. It never establishes convergence, a transition rate, equilibrium, population, free energy, mechanism, or mutation effect.",
     "implementation_status": "CASE_BOUND_EXPOSED_DRAFT"

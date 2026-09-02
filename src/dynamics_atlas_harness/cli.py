@@ -39,6 +39,13 @@ LIVE_AGENT_CAMPAIGN_OPEN_STATUS = "AUTHORIZED_FOR_LIVE_CALLS"
 LIVE_AGENT_CAMPAIGN_CLOSED_ERROR = (
     "LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION"
 )
+LIVE_AGENT_DECISION_CLOSURE_CONFIG_PATH = (
+    REPO_ROOT
+    / "agent_experiments"
+    / "live_agent_decision_closure_v1"
+    / "config"
+    / "live_agent_decision_closure_v1.json"
+)
 OPERATOR_REGISTRY_PATH = REPO_ROOT / "config" / "operators.json"
 METHOD_PROFILE_REGISTRY_PATH = REPO_ROOT / "config" / "method_profiles.json"
 FIXTURE_ALLOWED_ROOT = REPO_ROOT / "tests" / "fixtures"
@@ -461,6 +468,47 @@ def run_scenario_suite(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_agent_decision_closure(args: argparse.Namespace) -> int:
+    """Run the two-call Luna Planner positive/removed-card counterfactual."""
+
+    from .live_agent_decision_closure_v1 import (
+        build_budget,
+        build_frozen_decision_state,
+        build_planner_input,
+        build_planner_proposal_schema,
+        load_campaign_config,
+        reconcile_schema_compatibility_repair,
+        require_campaign_open,
+        run_live_agent_decision_closure_campaign,
+    )
+    from .openrouter_proposal_transport_v1 import (
+        OpenRouterProposalClient,
+        read_openrouter_credential,
+    )
+
+    config = load_campaign_config(Path(args.campaign_config))
+    require_campaign_open(config)
+    # Freeze and validate both visible inputs and their strict schemas before
+    # opening the persisted ledger or reading a credential.
+    frozen_state = build_frozen_decision_state()
+    for include_card in (True, False):
+        planner_input = build_planner_input(
+            frozen_state, include_action_card=include_card
+        )
+        build_planner_proposal_schema(planner_input)
+    budget = build_budget(config)
+    reconcile_schema_compatibility_repair(config=config, budget=budget)
+    budget.snapshot()
+    credential = read_openrouter_credential(repo_root=REPO_ROOT)
+    client = OpenRouterProposalClient(credential=credential, budget=budget)
+    run_live_agent_decision_closure_campaign(
+        output_dir=Path(args.output_dir),
+        client=client,
+        config=config,
+    )
+    return 0
+
+
 def build_workbench(args: argparse.Namespace) -> int:
     """Render CaseView-compatible roots and an optional scenario matrix."""
 
@@ -606,6 +654,19 @@ def build_parser() -> argparse.ArgumentParser:
     )
     scenario_parser.add_argument("--output-dir", required=True)
     scenario_parser.set_defaults(handler=run_scenario_suite)
+    decision_closure_parser = subparsers.add_parser(
+        "run-agent-decision-closure",
+        help=(
+            "Run the bounded Luna Planner X-EISD exact-lookup and paired "
+            "card-removed stop arms."
+        ),
+    )
+    decision_closure_parser.add_argument("--output-dir", required=True)
+    decision_closure_parser.add_argument(
+        "--campaign-config",
+        default=str(LIVE_AGENT_DECISION_CLOSURE_CONFIG_PATH),
+    )
+    decision_closure_parser.set_defaults(handler=run_agent_decision_closure)
     workbench_parser = subparsers.add_parser(
         "build-workbench",
         help="Render a static read-only workbench from case/run roots.",

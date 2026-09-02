@@ -82,7 +82,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("status_snapshot_as_of", status)
         self.assertEqual(
             status["next_allowed_action"]["action"],
-            "LIVE_AGENT_DECISION_CLOSURE_V1_XEISD_EXACT_LOOKUP_OR_EXACT_HSP90_CONTROL_FALLBACK",
+            "HUMAN_SELECT_NAMED_H1_BROAD_RULE_RELEASE_OR_INDEPENDENTLY_CURATED_NEW_HELD_OUT_CASE",
         )
         self.assertEqual(
             status["next_allowed_action"]["authorization"],
@@ -94,16 +94,16 @@ class GovernanceConsistencyTests(unittest.TestCase):
             [
                 "LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE",
                 "DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE",
-                "LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED",
+                "LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE",
             ],
         )
         self.assertEqual(
-            boundary["profiler"]["full_annotation_envelope"],
-            "FULL_ANNOTATION_ENVELOPE_FAIL",
+            boundary["profiler"]["mode"],
+            "RECORDED_PROFILE_LIVE_PLANNER",
         )
         self.assertEqual(
             boundary["planner"]["decision_surface"],
-            "ONE_LEGAL_CARD_VERSUS_ABSTAIN",
+            "PAIRED_CARD_PRESENT_VERSUS_CARD_REMOVED_COUNTERFACTUAL",
         )
         self.assertEqual(
             boundary["common_flows"]["agent_mode"],
@@ -129,7 +129,14 @@ class GovernanceConsistencyTests(unittest.TestCase):
             "FOUR_VIEW_STATIC_READ_ONLY_REVIEW_WORKBENCH_V1_DRAFT",
             source_review["known_present"],
         )
-        self.assertIn("F04R02_CASE_BOUND_TRACEABILITY_MAPPING", source_review["known_unresolved"])
+        self.assertIn(
+            "F04R02_TYPED_ENGINEERING_TRACEABILITY_RESOLVED",
+            source_review["known_present"],
+        )
+        self.assertIn(
+            "F04R02_LEGACY_ALIAS_OR_DEPRECATION_DECISION",
+            source_review["known_unresolved"],
+        )
         workbench = work_item(status, "AUTONOMOUS_ENGINEERING_WORKBENCH_V1")
         self.assertEqual(workbench["base_commit"], ENGINEERING_INTEGRATION_BASE_COMMIT)
         self.assertEqual(
@@ -181,7 +188,7 @@ class GovernanceConsistencyTests(unittest.TestCase):
             r"EXACT_FINAL_HEAD|FINAL_DELIVERY_HEAD|GITHUB_CI_PENDING|CI_PENDING|FINAL_CI_MATRIX",
         )
         self.assertNotIn("FULL_CHAIN", serialized_status)
-        self.assertIn("NO_AGENT_DETERMINISTIC_SCENARIO", status["claim_ceiling"])
+        self.assertIn("one live Planner narrow-lookup", status["claim_ceiling"])
         self.assertEqual(
             next(stage for stage in status["stages"] if stage["stage"] == "ADK_PORTABILITY")["status"],
             "NOT_AUTHORIZED",
@@ -250,19 +257,20 @@ class GovernanceConsistencyTests(unittest.TestCase):
         self.assertIn("GitHub PR 编号只是 delivery ID", document)
         self.assertIn("Frozen Plan 的 `PR 8`", document)
         self.assertIn("只有具名 human/domain review 或具名 project-owner", document)
-        self.assertIn("development/runtime baseline commit", document)
-        self.assertIn("literal `main`", document)
-        self.assertIn("engineering workbench v1", document)
-        self.assertIn("recorded-replay evidence execution and inspection path", document)
-        self.assertIn("GITHUB_PR_METADATA_AUTHORITATIVE_FOR_DELIVERY_STATE", document)
-        self.assertIn("internal adversarial subagent review passes", document)
+        self.assertIn("PR #19 merge commit", document)
+        self.assertIn("LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE", document)
+        self.assertIn("RECORDED_PROFILE_LIVE_PLANNER", document)
+        self.assertIn("GitHub merge-ref CI", document)
+        self.assertIn("F04R02", document)
+        self.assertIn("PENDING_DOMAIN_REVIEW", document)
 
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Current execution status", readme)
         self.assertIn("docs/CURRENT_EXECUTION_STATUS_ZH.md", readme)
         self.assertIn("Historical initial control-plane smoke v0.2", readme)
-        self.assertIn("recorded-replay evidence execution and inspection path", readme)
-        self.assertIn("GitHub PR merge-ref CI", readme)
+        self.assertIn("docs/LIVE_AGENT_DECISION_CLOSURE_V1.md", readme)
+        self.assertIn("RECORDED_PROFILE_LIVE_PLANNER", readme)
+        self.assertIn("run-agent-decision-closure", readme)
 
         completion = (REPO_ROOT / "docs" / "ENGINEERING_V1_COMPLETION.md").read_text(
             encoding="utf-8"

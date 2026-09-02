@@ -1,47 +1,56 @@
 # dynamics-atlas-harness
 
+## Start here
+
+第一次进入仓库，先读这两份中文材料：
+
+- [整个仓库现在有什么、怎么运行、下一步由谁决定](docs/DYNAMICS_ATLAS_REPOSITORY_HANDOFF_ZH.md)
+- [可直接贴到 ChatGPT Pro 的全仓审查 prompt](docs/CHATGPT_PRO_WHOLE_REPO_REVIEW_PROMPT_ZH.md)
+
+它们把当前主路径、历史回归入口、多模型诊断证据、确定性 common-flow 场景、科学人工 gate 和 Draft PR #20
+分开说明。冻结 evidence 没有因这次整理被移动或改写。
+
 ## Current execution status
 
 当前仓库状态、当前授权和下一允许动作以
 [仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
-[机器可读快照](governance/current_execution_status.json) 为准。PR #19 的准确交付状态是：
+[机器可读快照](governance/current_execution_status.json) 为准。
+
+PR #19 已作为两个 bounded baseline 合并到 main（merge commit
+`da584173ee64bfad9854132a3418ed1e871c69f5`）：
 
 - `LIVE_MODEL_PROPOSAL_TRANSPORT_V1_COMPLETE`
 - `DETERMINISTIC_COMMON_FLOW_REGRESSION_V1_COMPLETE`
-- `LIVE_AGENT_DECISION_CLOSURE_NOT_YET_ESTABLISHED`
 
-真实模型和 common-flow suite 是两套并列证据。真实路径只覆盖 HSP90 的 proposal transport 与描述性 action；
-direct evaluation、narrow lookup、registered computation 和 explicit stop 六个场景全部是
-`NO_AGENT_DETERMINISTIC_SCENARIO`，不构成 live-Agent common-flow coverage。三态 reducer 的 SUPPORT 只来自
-明确标记的 synthetic contract fixture。
+当前 development branch 又完成了一个更窄但因果闭合的 milestone：
+`LIVE_AGENT_DECISION_CLOSURE_V1_COMPLETE`。它使用
+`RECORDED_PROFILE_LIVE_PLANNER`，没有把 recorded X-EISD profile 伪称为 live Profiler success。真实
+`openai/gpt-5.6-luna` Planner 在 card-present 臂选择唯一的 exact allowlisted lookup；确定性代码随后执行
+lookup、验证 EvidenceResult，并使目标 RuleInstance
+`F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::xeisd_random_candidate_pool`
+从 `UNRESOLVED` 变为 `PASS`。现有 Stage-2 reducer 生成
+`ABSTAIN_OR_HUMAN_REVIEW` ConclusionPacket。相同冻结状态的 card-removed 臂由 Luna 返回
+`ABSTAIN_NO_ACTION`，lookup、operator 和 evidence action 均为 0，目标 Rule 保持 `UNRESOLVED`，reducer 同样
+生成 `ABSTAIN_OR_HUMAN_REVIEW`。
 
-真实 OpenRouter development campaign 共发出 17 次 HTTP 请求，其中 13 次完成并计入调用上限，累计费用为
-USD 0.145264010。其余 4 次在 provider HTTP 400 前失败，未完成、未计费。获准的 key 从
-本机 Excel Benchmark secret location 安全注入当前进程环境，没有打印、记录或持久化。Campaign 在取得
-第一条完整 HSP90 chain 后自适应停止，没有为了填满上限继续跑到 16 次。
+本轮共发生 3 次 HTTP attempt：第一次在生成前因 OpenAI strict-schema 不接受 `uniqueItems` 返回 HTTP 400，
+没有 response ID、usage 或 provider-reported cost；一次 schema-only compatibility repair 没有修改冻结 prompt
+及其语义。之后两个 paired arms 均完成，completed-call provider-reported cost 合计 USD 0.00072385。
+Campaign 已关闭并冻结，不会继续调用模型。获准的 key 由本机 Excel Benchmark secret loader 只注入进程环境，
+没有打印、记录、hash、持久化或提交。
 
-这条真实链使用冻结的 HSP90 MiniMax Profiler proposal 和 StreamLake 提供的 MiniMax M2.5 Planner
-proposal。Profiler 为 `CORE_ADMISSION_PASS`，完整 field-annotation envelope 为
-`FULL_ANNOTATION_ENVELOPE_FAIL`，错误为 `UNKNOWN_STATUS_CORE_VALUE_MISMATCH`。Planner 面对的决策面是
-`ONE_LEGAL_CARD_VERSUS_ABSTAIN`，因此只证明 schema-constrained selection，不证明 nontrivial route selection。
-授权后的 EvidenceResult 属于 `DESCRIPTIVE_EVIDENCE_NO_ACTIVE_RULE_EFFECT`；same-Rule transition count 为 0，
-ConclusionPacket 未计算，terminal state 为 `NOT_CALCULATED_BY_CASE_RUNNER / NOT_EVALUATED`。
-
-H1 继续保持 `PENDING_DOMAIN_REVIEW`。Public HSP90 broad Rule closure、runner-generated public-case
-ConclusionPacket、ADK dynamics portability 和 held-out evaluation 仍未完成。精确 delivery SHA、merge state
-与 GitHub PR merge-ref CI 由 Draft PR metadata 记录，不写入会自我失效的 tracked status。
-
-PR #18 的 recorded-replay evidence execution and inspection path 仍是当前 live-capable 路径的确定性基线。
-
-这些 development artifacts 不构成 full Profiler grounding、nontrivial Planner utility、live-Agent decision
-closure、source-science approval、transfer、Agent value 或 production readiness。完整的工程行为、blocker 与复现记录见
-[LIVE_AGENT_COMMON_FLOWS_V1.md](docs/LIVE_AGENT_COMMON_FLOWS_V1.md)。旧的
-[ENGINEERING_V1_COMPLETION.md](docs/ENGINEERING_V1_COMPLETION.md) 仍保留为 PR #18 工程基线记录。
+这个结果证明一条 real-model Planner decision 已与 exact evidence、same-Rule transition 和现有 reducer 接成同一条
+development-only 因果链。它不证明 full live Profiler、四类 common flows 都有 Agent 参与、Agent value、source-
+science approval、scientific SUPPORT、transfer 或 held-out behavior。H1 继续保持
+`PENDING_DOMAIN_REVIEW`。完整记录见
+[LIVE_AGENT_DECISION_CLOSURE_V1.md](docs/LIVE_AGENT_DECISION_CLOSURE_V1.md)；PR #19 的 bounded baseline 记录仍见
+[LIVE_AGENT_COMMON_FLOWS_V1.md](docs/LIVE_AGENT_COMMON_FLOWS_V1.md)，PR #18 记录见
+[ENGINEERING_V1_COMPLETION.md](docs/ENGINEERING_V1_COMPLETION.md)。
 
 ## Canonical development path
 
-`run-agent-case` 是当前主入口。默认模式仍是 recorded replay，不读凭据、不联网，也不计算 public-case
-terminal scientific state：
+`run-agent-case` 仍是 HSP90/static-ADK public-case 主入口。默认模式是 recorded replay，不读凭据、不联网，也不计算
+public-case terminal scientific state：
 
 ```bash
 dynamics-atlas run-agent-case \
@@ -53,10 +62,8 @@ dynamics-atlas run-agent-case \
   --output-dir /tmp/dynamics-atlas-adk-recorded
 ```
 
-只有显式指定 `--agent-mode live-openrouter` 才会进入 OpenRouter 路径。单案例命令受所选 campaign config
-中的预算、completed-call 上限和独立本地 ledger 共同约束。本轮 exact campaign 已关闭，因此当前配置下的 live 命令会在读取
-credential 或联网前返回 `LIVE_AGENT_CAMPAIGN_CLOSED_REQUIRES_NEW_AUTHORIZATION`。下例只说明新一轮经过明确
-授权后所使用的接口；它不是重开本轮 campaign 的命令：
+只有显式指定 `--agent-mode live-openrouter` 才会进入 OpenRouter 路径。PR #19 的 exact campaign 已关闭，
+因此提交配置会在读取 credential 或联网前拒绝。下面只展示新一轮获得明确授权后使用的接口：
 
 ```bash
 dynamics-atlas run-agent-case \
@@ -67,10 +74,8 @@ dynamics-atlas run-agent-case \
   --output-dir /tmp/dynamics-atlas-hsp90-live
 ```
 
-本轮历史配置最多 16 个 completed calls，并在第 13 次 completed call 后取得第一条 proposal-to-descriptive-
-action success，随后关闭并冻结。关闭状态由 config 中的 campaign ID、completion receipt path/hash、closed
-state 与 receipt 中的实际调用/费用总计绑定；不再由产品源码中的某个调用数或费用常量决定。新的空输出目录
-本身不会解锁它；下面的命令只有在新授权、独立 campaign 配置与独立预算账本同时存在时才能启动另一轮：
+PR #19 campaign 的关闭状态由 config 中的 campaign ID、completion receipt path/hash、closed state 与 receipt
+中的实际调用/费用总计绑定。新的空输出目录不会解锁它：
 
 ```bash
 dynamics-atlas run-agent-campaign \
@@ -86,44 +91,54 @@ dynamics-atlas run-scenario-suite \
   --output-dir /tmp/dynamics-atlas-common-flows
 ```
 
+本轮 decision-closure 的 canonical interface 是 `run-agent-decision-closure`。它运行 paired card-present /
+card-removed arms，模型只提交 Planner proposal；exact lookup、authorization、Rule reevaluation 和 reducer 均由
+确定性代码执行。提交的 campaign 已关闭，所以当前配置会在读取 credential 和联网前 fail closed。只有新的明确
+授权、独立 config 与 ledger 才能重新调用：
+
+```bash
+dynamics-atlas run-agent-decision-closure \
+  --campaign-config /path/to/new-authorized-decision-closure-campaign.json \
+  --output-dir /tmp/dynamics-atlas-live-decision-closure
+```
+
 `build_case_view(case_or_run_root)` 可以读取 recorded 或 live `run-agent-case` root，也可以读取 committed
 capsule case root。它会重验 model-visible input、strict schema、provider-only routing、request、raw response、
 usage/cost receipt、proposal envelope、authorization、EvidenceResult 和 same-Rule links；required artifact
 缺失、malformed、cross-case、stale 或跨调用拼接会 fail closed。
 
-本轮聚合 completion receipt 与逐调用 development matrix 位于：
+本轮 frozen completion receipt 与 paired matrix 位于：
 
 ```text
-evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_final_20260830/
-  live_agent_campaign_manifest.json
-  live_agent_development_matrix.json
+evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/
+  live_agent_decision_closure_manifest_v1.json
+  paired_arm_matrix.json
 ```
 
-把同一 HSP90 case 的 recorded replay、实际 live proposal-to-descriptive-action path 和独立 scenario matrix
-接入同一个静态 workbench：
+把正向执行臂和 paired stop 臂接入同一个静态 workbench：
 
 ```bash
 dynamics-atlas build-workbench \
   --status governance/current_execution_status.json \
-  --artifact-root evidence/live_agent_common_flows_v1/development_runs/authorized_campaign_live_20260830/recorded_replay/hsp90 \
-  --artifact-root evidence/live_agent_common_flows_v1/development_runs/authorized_planner_from_frozen_hsp90_minimax_repair1_20260830/trial-1 \
-  --scenario-matrix evidence/common_flow_scenarios_v1/development_runs/common_flow_scenarios_v1/common_flow_matrix.json \
-  --output-dir /tmp/dynamics-atlas-workbench
+  --artifact-root evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/XEISD_LOOKUP_CARD_PRESENT \
+  --artifact-root evidence/live_agent_decision_closure_v1/development_runs/authorized_campaign_20260830_schema_repair1/XEISD_LOOKUP_CARD_REMOVED \
+  --output-dir /tmp/dynamics-atlas-decision-closure-workbench
 ```
 
 Committed snapshot 位于
-[review/live_agent_common_flows_v1/index.html](review/live_agent_common_flows_v1/index.html)。
-页面并列显示 `RECORDED_PROPOSAL_REPLAY` 与 `LIVE_OPENROUTER_PROPOSAL`，同时显示 provider、usage/cost、
-authorization、EvidenceResult、same-Rule transition 和 synthetic-only T1 边界。它只读，不执行模型、
-Operator 或 scientific-state mutation。
+[review/live_agent_decision_closure_v1/index.html](review/live_agent_decision_closure_v1/index.html)。页面并列显示
+两臂的 live model/provider、usage/cost、Planner proposal、authorization、EvidenceResult、same-Rule transition 和
+ConclusionPacket。它只读，不执行模型、lookup、Operator 或 scientific-state mutation。
 
 ## Source-science review workspace
 
 Delivery A 把现有窄范围 F01/F02/F03/F04/F06 evidence packet、当前 binding／contract／policy
 和 HSP90／ADK application 放入一个只读审查工作台。审查者可从
 [`review/source_science_v1/README.md`](review/source_science_v1/README.md) 开始，检查 primary
-passage 或 case-bound artifact，再在空白表单中记录具名、日期和 disposition。F04R02 的
-case-bound traceability mapping 仍待人工核对。
+passage 或 case-bound artifact，再在空白表单中记录具名、日期和 disposition。F04R02 的 deterministic
+engineering identity mapping 已接通 dossier、manifest、overlay、binding、contract、policy、receipt、
+EvidenceResult、RuleResult 和 ConclusionPacket；official disposition 仍待具名 reviewer。旧
+`HSP90-TIME-ANATOMY-CONTRACT-V1` 只作为 `runtime_authority=NONE` 的待决 legacy alias 保留。
 
 下面的命令会从提交的 repository artifacts 重建 source-science workspace，并把上面两个 fresh
 run root 接入同一个静态页面：
@@ -148,7 +163,7 @@ root；不传时仍可通过 `--capsule-root` 使用原有的 capsule directory 
 随后打开 `http://127.0.0.1:8000/`。页面包含 Case Overview、Source → Rule → Evidence Trace、
 Conclusion and Provenance、Human Review 四个主视图；不调用模型、Operator、API 或数据库，也不会
 写回 Rule、threshold 或 source-science disposition。H1 advisory 与空白 official review template
-分开显示；F04 仍是 `DATA_INSUFFICIENT`。
+分开显示；F04 official source-science disposition 仍是 `DATA_INSUFFICIENT`。
 
 ## Runnable reference demo
 
