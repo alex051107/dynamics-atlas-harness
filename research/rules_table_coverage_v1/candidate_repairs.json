@@ -5,12 +5,13 @@
   "candidate_repairs": [
     {
       "candidate_repair_id": "CR-001",
-      "disposition": "NARROW",
+      "disposition": "DEFER",
       "problem_classification": ["APPLICABILITY_GAP", "OVERTRIGGER"],
-      "status": "PROPOSED_NOT_IMPLEMENTED",
+      "status": "SOURCE_OWNERSHIP_REVIEW_REQUIRED",
+      "repair_layer_status": "UNRESOLVED_SOURCE_ADMISSION_TYPING_VS_APPLICABILITY",
       "triggering_cases": ["case_001", "case_002", "case_016", "case_019"],
       "independent_source_papers": ["PDFMD-018", "PDFMD-017", "PDFMD-027"],
-      "threshold_check": "Ordinary overtrigger recurs in three distinct source identities: a simulation best-practice guide, a conformational-ensemble review, and a maximum-entropy methods paper.",
+      "threshold_check": "The observed overtrigger recurs in three distinct source identities: a simulation best-practice guide, a conformational-ensemble review, and a maximum-entropy methods paper. This meets the recurrence threshold for investigating a generic problem, but not for selecting its repair layer.",
       "exact_source_evidence": [
         {"case_id": "case_001", "paper_id": "PDFMD-018", "locator": "GRO-P01-ABSTRACT; GRO-P01-SCOPE", "finding": "The source is a general guide for reporting sampling uncertainty and explicitly excludes systematic model error; it is not a source-specific measurement record."},
         {"case_id": "case_002", "paper_id": "PDFMD-017", "locator": "THO-P01-ABSTRACT; THO-P01-INTRO", "finding": "The source is a conceptual review of integrating experiments, models, and observable-calculation methods."},
@@ -20,18 +21,40 @@
       "affected_canonical_surface": {
         "runtime_rules": ["F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "F03R01_SOURCE_NATIVE_MEASUREMENT"],
         "bindings": ["B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION", "B-F03R01-SOURCE-MEASUREMENT"],
-        "current_predicate": "Both bindings apply to a SOURCE target with an existing source.source_id, without an evidence-object-kind or source-purpose guard."
+        "current_predicate": "Both bindings apply to a SOURCE target with an existing source.source_id, without an evidence-object-kind or source-purpose guard.",
+        "existing_reusable_boundary": {
+          "binding": "B-F06R01-SOURCE-ROLE",
+          "predicate": "target.kind == SOURCE AND source.case_evidence_scope == CLAIM_EVIDENCE",
+          "interpretation": "This existing claim-evidence boundary is a possible future input to a repair. It does not decide whether source purpose belongs to CaseGraph admission or a Rule applicability binding."
+        }
       },
       "current_behavior": "The two complete-draft declaration Rules produce unresolved source-context and native-measurement obligations for method reviews and general guides that do not make one empirical source-object claim. This creates eight unnecessary Rule-instance obligations across four challenge units.",
-      "proposed_behavior": "In a future proposal, narrow SOURCE applicability so F02R01 and F03R01 apply only to an admitted empirical or claim-evidence source object with a declared measurement/source purpose. A review, guide, or methods article without such an object should be classified for human review rather than forced through sample-composition and native-measurement declaration checks.",
-      "generic_rationale": "The trigger is the current structural predicate, not a scientific peculiarity of one paper. The same pattern appears in three independent literature types and recurs when the Thomasen review is challenged from two different source-first questions.",
-      "likely_overtrigger_risk": "A too-narrow predicate could suppress necessary declaration review for a real empirical record that is incorrectly classified as a review or methods source.",
+      "proposed_behavior": "Do not select an implementation layer in this PR. First, named source-science review must decide whether source admission or typing owns source purpose, and whether the existing case_evidence_scope boundary can be populated independently and non-circularly before F02R01/F03R01 applicability. Only then may a later vNext proposal consider an admission change or a narrow Binding condition. No new source ontology and no Binding patch are proposed here.",
+      "generic_rationale": "The observed overtrigger is generic enough to investigate because the same all-SOURCE predicate recurs across three independent literature types. The corpus does not establish whether the durable correction belongs before admission, in typing, or in applicability.",
+      "likely_overtrigger_risk": "A too-narrow predicate or a circular source-purpose label could suppress necessary declaration review for a real empirical record, including an empirical object embedded in a review or methods paper.",
       "expected_regression_cases": {
         "must_remain_applicable": ["case_003", "case_004", "case_006", "case_007", "case_009", "case_010", "case_011", "case_012", "case_018", "case_020"],
         "must_not_create_declaration_obligations_without_an_empirical_object": ["case_001", "case_002", "case_016", "case_019"]
       },
-      "effect_on_claim_ceiling": "No local PASS may be broadened. The narrowing only prevents irrelevant unresolved obligations; empirical source declarations retain their existing source-local ceiling and human gate.",
-      "rejection_condition": "Reject the repair if a source-type/purpose guard cannot be populated before applicability without circular inference, or if review/method sources demonstrably need F02/F03 declaration checks for an admitted empirical evidence object."
+      "effect_on_claim_ceiling": "No local PASS may be broadened. Any later correction may only prevent irrelevant unresolved obligations; empirical source declarations must retain their existing source-local ceiling and human gate.",
+      "rejection_condition": "Reject a Binding-only repair if the proposed guard cannot be populated before applicability without circular inference, or if review/method papers contain admitted empirical evidence objects that would be suppressed.",
+      "required_source_science_review": [
+        {
+          "case_id": "case_001",
+          "locator": "GRO-P01-ABSTRACT; GRO-P01-SCOPE",
+          "question": "Does the general guide supply or require an admitted empirical evidence object for F02/F03, or should it remain a method/reference source without those declaration obligations?"
+        },
+        {
+          "case_id": "case_008",
+          "locator": "BEN-P01-ABSTRACT; BEN-P01-INTRO",
+          "question": "Should this integrative publication be admitted as one source object or as modality-level source objects linked to an integrated representation?"
+        },
+        {
+          "case_id": "case_020",
+          "locator": "GOM-P01-ABSTRACT; GOM-P02-FIG1; GOM-P02-FIG2",
+          "question": "Does F03 source-local measurement semantics require F02 source context as a prerequisite, or only later EDGE comparability and CASE interpretation?"
+        }
+      ]
     }
   ],
   "deferred_non_repair_findings": [
@@ -45,9 +68,9 @@
     {
       "finding_id": "DNR-002",
       "cases": ["case_020"],
-      "classification": "DEPENDENCY_GAP",
-      "finding": "F03R01 has no explicit source-local F02R01 prerequisite even when construct/condition context is required before measurement interpretation.",
-      "reason_not_proposed": "The challenge exposes one direct dependency instance. The ordinary-gap threshold for a generic repair is not met by two independent source papers in this corpus."
+      "classification": "HUMAN_JUDGMENT_ONLY",
+      "finding": "Case 020 raises whether construct and condition context should be a prerequisite for F03 source-local measurement semantics, but the current F03 contract safely declares only native semantics and F06 EDGE comparability separately requires F02 and F03 evidence.",
+      "reason_not_proposed": "One source does not establish a generic prerequisite. The question requires source-science judgment about where context changes interpretation, rather than a Rule dependency repair."
     },
     {
       "finding_id": "DNR-003",

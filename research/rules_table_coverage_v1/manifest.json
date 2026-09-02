@@ -2,6 +2,14 @@
   "schema_version": "rules-table-coverage-challenge/v1",
   "challenge_id": "RULES_TABLE_COVERAGE_CHALLENGE_V1",
   "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "bounded_review_repair": {
+    "decision_id": "DA-20260902-069",
+    "development_status": "RULES_TABLE_PARTIALLY_COVERED_WITH_RECURRING_GAPS",
+    "pass_a_records_mutated": false,
+    "case_020_disposition": "HUMAN_JUDGMENT_ONLY_DEPENDENCY_QUESTION_NOT_YET_ESTABLISHED",
+    "cr_001_disposition": "DEFER_PENDING_SOURCE_OWNERSHIP_REVIEW",
+    "statement": "This repair narrows synthesis and Pass B classification only. It does not alter the frozen Pass A records, corpus, canonical Rules, bindings, evaluation contracts, source packets, H1, or scientific dispositions."
+  },
   "post_merge_main_sha": "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b",
   "pr23_merge": {
     "pr_number": 23,

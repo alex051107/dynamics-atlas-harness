@@ -26,9 +26,8 @@ ALLOWED_LABELS = {
 EXPECTED_LABEL_COUNTS = {
     "COVERED_EXACT": 14,
     "COVERED_PARTIAL": 23,
-    "HUMAN_JUDGMENT_ONLY": 1,
+    "HUMAN_JUDGMENT_ONLY": 2,
     "SOURCE_SPECIFIC_ONLY": 1,
-    "WRONG_DEPENDENCY": 1,
 }
 
 
@@ -48,6 +47,11 @@ class RulesTableCoverageV1ArtifactTests(unittest.TestCase):
         self.assertEqual(manifest["post_merge_main_sha"], "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b")
         self.assertEqual(manifest["post_merge_main_sha"], manifest["pr23_merge"]["merge_commit_sha"])
         self.assertEqual(manifest["pr23_merge"]["reviewed_head_sha"], "099faace269c4675d015a2e6fcc6c625725a55ac")
+        self.assertEqual(
+            manifest["bounded_review_repair"]["development_status"],
+            "RULES_TABLE_PARTIALLY_COVERED_WITH_RECURRING_GAPS",
+        )
+        self.assertFalse(manifest["bounded_review_repair"]["pass_a_records_mutated"])
         self.assertEqual(manifest["frozen_corpus"]["challenge_unit_count"], 20)
         self.assertEqual(manifest["frozen_corpus"]["source_identity_count"], 15)
         self.assertEqual(manifest["source_hash_audit"]["status"], "PASS")
@@ -154,7 +158,27 @@ class RulesTableCoverageV1ArtifactTests(unittest.TestCase):
         self.assertEqual(candidate_count, 19)
         self.assertEqual(len(repairs["candidate_repairs"]), 1)
         self.assertFalse(repairs["canonical_mutation"])
-        self.assertEqual(repairs["candidate_repairs"][0]["candidate_repair_id"], "CR-001")
+        cr_001 = repairs["candidate_repairs"][0]
+        self.assertEqual(cr_001["candidate_repair_id"], "CR-001")
+        self.assertEqual(cr_001["disposition"], "DEFER")
+        self.assertEqual(cr_001["status"], "SOURCE_OWNERSHIP_REVIEW_REQUIRED")
+        self.assertEqual(
+            cr_001["repair_layer_status"],
+            "UNRESOLVED_SOURCE_ADMISSION_TYPING_VS_APPLICABILITY",
+        )
+        self.assertIn("source.case_evidence_scope == CLAIM_EVIDENCE", json.dumps(cr_001))
+        self.assertEqual(len(cr_001["required_source_science_review"]), 3)
+
+        c020 = next(record for record in coverage_records if record["case_id"] == "case_020")
+        c020_o02 = next(
+            obligation
+            for obligation in c020["obligations"]
+            if obligation["obligation_id"] == "case_020_o02"
+        )
+        self.assertEqual(c020_o02["coverage_label"], "HUMAN_JUDGMENT_ONLY")
+        self.assertEqual(c020_o02["failure_layer"], "NO_GENERIC_RULE_DEFECT")
+        self.assertIn("DEPENDENCY_QUESTION_NOT_YET_ESTABLISHED", c020_o02["dependency_finding"])
+        self.assertEqual(c020_o02["resolution_route"], "HUMAN_OR_NEW_DATA")
 
         for relative_path, expected_hash in manifest["rules_baseline"]["file_hashes"].items():
             self.assertEqual(
@@ -169,11 +193,11 @@ class RulesTableCoverageV1ArtifactTests(unittest.TestCase):
             "| Challenge units | 20 |",
             "| Source identities | 15 |",
             "| Source-first mandatory obligations | 40 |",
-            "| Candidate repairs proposed | 1 |",
+            "| Deferred repair issues requiring layer decision | 1 |",
             "| `COVERED_EXACT` | 14 |",
             "| `COVERED_PARTIAL` | 23 |",
-            "| `WRONG_DEPENDENCY` | 1 |",
-            "| `HUMAN_JUDGMENT_ONLY` | 1 |",
+            "| `WRONG_DEPENDENCY` | 0 |",
+            "| `HUMAN_JUDGMENT_ONLY` | 2 |",
             "| `SOURCE_SPECIFIC_ONLY` | 1 |",
         ):
             self.assertIn(summary_line, report)
