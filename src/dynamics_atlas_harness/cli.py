@@ -342,15 +342,15 @@ def run_smoke(args: argparse.Namespace) -> int:
 
 
 def run_prototype_acceptance(args: argparse.Namespace) -> int:
-    """Run the fixed no-Agent Rules Prototype acceptance suite."""
+    """Run the fixture-driven no-Agent Rules Prototype scenario acceptance suite."""
 
     from .rules_prototype_acceptance_v1 import run_and_write_acceptance_suite
 
-    run_and_write_acceptance_suite(
+    suite = run_and_write_acceptance_suite(
         repo_root=Path(args.repo_root),
         artifacts_dir=Path(args.artifacts_dir),
     )
-    return 0
+    return 0 if suite["comparison"]["acceptance"] == "PASS" else 1
 
 
 def run_case(args: argparse.Namespace) -> int:
@@ -532,7 +532,7 @@ def build_parser() -> argparse.ArgumentParser:
     smoke_parser.set_defaults(handler=run_smoke)
     acceptance_parser = subparsers.add_parser(
         "run-prototype-acceptance",
-        help="Run the eight recorded CaseGraph Rules Prototype acceptance tests.",
+        help="Run four synthetic fixtures and four exposed-development Rules scenarios.",
     )
     acceptance_parser.add_argument(
         "--repo-root",
