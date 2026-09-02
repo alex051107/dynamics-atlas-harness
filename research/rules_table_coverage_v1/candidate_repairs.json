@@ -1,0 +1,61 @@
+{
+  "schema_version": "rules-table-coverage-candidate-repairs/v1",
+  "authority_status": "PROPOSAL_ONLY_NO_CANONICAL_MUTATION",
+  "baseline_commit": "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b",
+  "candidate_repairs": [
+    {
+      "candidate_repair_id": "CR-001",
+      "disposition": "NARROW",
+      "problem_classification": ["APPLICABILITY_GAP", "OVERTRIGGER"],
+      "status": "PROPOSED_NOT_IMPLEMENTED",
+      "triggering_cases": ["case_001", "case_002", "case_016", "case_019"],
+      "independent_source_papers": ["PDFMD-018", "PDFMD-017", "PDFMD-027"],
+      "threshold_check": "Ordinary overtrigger recurs in three distinct source identities: a simulation best-practice guide, a conformational-ensemble review, and a maximum-entropy methods paper.",
+      "exact_source_evidence": [
+        {"case_id": "case_001", "paper_id": "PDFMD-018", "locator": "GRO-P01-ABSTRACT; GRO-P01-SCOPE", "finding": "The source is a general guide for reporting sampling uncertainty and explicitly excludes systematic model error; it is not a source-specific measurement record."},
+        {"case_id": "case_002", "paper_id": "PDFMD-017", "locator": "THO-P01-ABSTRACT; THO-P01-INTRO", "finding": "The source is a conceptual review of integrating experiments, models, and observable-calculation methods."},
+        {"case_id": "case_016", "paper_id": "PDFMD-017", "locator": "THO-P01-ABSTRACT; THO-P01-INTRO", "finding": "The same review exposes a forward-mapping obligation rather than a single empirical sample or native measurement record."},
+        {"case_id": "case_019", "paper_id": "PDFMD-027", "locator": "PIT-P01-ABSTRACT; PIT-P01-INTRO", "finding": "The source derives maximum-entropy restraint behavior and its ensemble-average limitations; it is not one empirical source object with a sample-system declaration."}
+      ],
+      "affected_canonical_surface": {
+        "runtime_rules": ["F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "F03R01_SOURCE_NATIVE_MEASUREMENT"],
+        "bindings": ["B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION", "B-F03R01-SOURCE-MEASUREMENT"],
+        "current_predicate": "Both bindings apply to a SOURCE target with an existing source.source_id, without an evidence-object-kind or source-purpose guard."
+      },
+      "current_behavior": "The two complete-draft declaration Rules produce unresolved source-context and native-measurement obligations for method reviews and general guides that do not make one empirical source-object claim. This creates eight unnecessary Rule-instance obligations across four challenge units.",
+      "proposed_behavior": "In a future proposal, narrow SOURCE applicability so F02R01 and F03R01 apply only to an admitted empirical or claim-evidence source object with a declared measurement/source purpose. A review, guide, or methods article without such an object should be classified for human review rather than forced through sample-composition and native-measurement declaration checks.",
+      "generic_rationale": "The trigger is the current structural predicate, not a scientific peculiarity of one paper. The same pattern appears in three independent literature types and recurs when the Thomasen review is challenged from two different source-first questions.",
+      "likely_overtrigger_risk": "A too-narrow predicate could suppress necessary declaration review for a real empirical record that is incorrectly classified as a review or methods source.",
+      "expected_regression_cases": {
+        "must_remain_applicable": ["case_003", "case_004", "case_006", "case_007", "case_009", "case_010", "case_011", "case_012", "case_018", "case_020"],
+        "must_not_create_declaration_obligations_without_an_empirical_object": ["case_001", "case_002", "case_016", "case_019"]
+      },
+      "effect_on_claim_ceiling": "No local PASS may be broadened. The narrowing only prevents irrelevant unresolved obligations; empirical source declarations retain their existing source-local ceiling and human gate.",
+      "rejection_condition": "Reject the repair if a source-type/purpose guard cannot be populated before applicability without circular inference, or if review/method sources demonstrably need F02/F03 declaration checks for an admitted empirical evidence object."
+    }
+  ],
+  "deferred_non_repair_findings": [
+    {
+      "finding_id": "DNR-001",
+      "cases": ["case_008"],
+      "classification": "HUMAN_JUDGMENT_ONLY",
+      "finding": "Choosing publication-level versus modality-level source-object granularity is a source-science design decision. The current F03 contract can evaluate a chosen object but does not decide the decomposition.",
+      "reason_not_proposed": "One high-information integrative paper reveals the question, but its appropriate answer depends on source semantics and must not be automated into a generic canonical split without human review."
+    },
+    {
+      "finding_id": "DNR-002",
+      "cases": ["case_020"],
+      "classification": "DEPENDENCY_GAP",
+      "finding": "F03R01 has no explicit source-local F02R01 prerequisite even when construct/condition context is required before measurement interpretation.",
+      "reason_not_proposed": "The challenge exposes one direct dependency instance. The ordinary-gap threshold for a generic repair is not met by two independent source papers in this corpus."
+    },
+    {
+      "finding_id": "DNR-003",
+      "cases": ["case_019"],
+      "classification": "METHOD_PROFILE_ISSUE",
+      "finding": "Maximum-entropy bias and nonunique distributions require method-specific interpretation beyond the current candidate identifiability map.",
+      "reason_not_proposed": "One methods paper does not justify a generic Rule family or runtime change."
+    }
+  ],
+  "canonical_mutation": false
+}

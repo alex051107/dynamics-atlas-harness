@@ -1,0 +1,131 @@
+{
+  "schema_version": "rules-table-coverage-challenge/v1",
+  "challenge_id": "RULES_TABLE_COVERAGE_CHALLENGE_V1",
+  "authority_status": "EXPOSED_DEVELOPMENT_ONLY_NOT_H1_DISPOSITION",
+  "post_merge_main_sha": "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b",
+  "pr23_merge": {
+    "pr_number": 23,
+    "reviewed_head_sha": "099faace269c4675d015a2e6fcc6c625725a55ac",
+    "reviewed_base_sha": "da584173ee64bfad9854132a3418ed1e871c69f5",
+    "ci_run": 33573675790,
+    "merge_commit_sha": "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b"
+  },
+  "frozen_corpus": {
+    "corpus_id": "RULES_PATTERN_BATCH20_V1",
+    "challenge_unit_count": 20,
+    "source_identity_count": 15,
+    "case_order": [
+      "case_001", "case_002", "case_003", "case_004", "case_005",
+      "case_006", "case_007", "case_008", "case_009", "case_010",
+      "case_011", "case_012", "case_013", "case_014", "case_015",
+      "case_016", "case_017", "case_018", "case_019", "case_020"
+    ],
+    "case_roles": [
+      {"case_id": "case_001", "role": "CLAIM_SCOPE_BOUNDARY", "difficulty": "MEDIUM"},
+      {"case_id": "case_002", "role": "CLAIM_SCOPE_BOUNDARY", "difficulty": "MEDIUM"},
+      {"case_id": "case_003", "role": "SOURCE_SYSTEM_DECLARATION", "difficulty": "MEDIUM"},
+      {"case_id": "case_004", "role": "SOURCE_SYSTEM_DECLARATION", "difficulty": "MEDIUM"},
+      {"case_id": "case_005", "role": "MULTI_SYSTEM_SOURCE_BOUNDARY", "difficulty": "HIGH"},
+      {"case_id": "case_006", "role": "NATIVE_VS_DERIVED_SEMANTICS", "difficulty": "HIGH"},
+      {"case_id": "case_007", "role": "NATIVE_VS_DERIVED_SEMANTICS", "difficulty": "HIGH"},
+      {"case_id": "case_008", "role": "MULTIMODAL_SOURCE_GRANULARITY", "difficulty": "HIGH"},
+      {"case_id": "case_009", "role": "OBSERVABLE_AND_TIME_SEMANTICS", "difficulty": "HIGH"},
+      {"case_id": "case_010", "role": "CROSS_METHOD_CONDITION_COMPARABILITY", "difficulty": "HIGH"},
+      {"case_id": "case_011", "role": "VALIDATION_LINEAGE", "difficulty": "HIGH"},
+      {"case_id": "case_012", "role": "INTEGRATIVE_VALIDATION_LINEAGE", "difficulty": "HIGH"},
+      {"case_id": "case_013", "role": "UNCERTAINTY_AND_PROVENANCE_NEED", "difficulty": "MEDIUM"},
+      {"case_id": "case_014", "role": "FIT_AND_PHYSICAL_QUALITY_BOUNDARY", "difficulty": "MEDIUM"},
+      {"case_id": "case_015", "role": "MODEL_PARENTAGE", "difficulty": "MEDIUM"},
+      {"case_id": "case_016", "role": "FORWARD_MAPPING_NEED", "difficulty": "MEDIUM"},
+      {"case_id": "case_017", "role": "IDENTIFIABILITY_AND_DISCRIMINATION", "difficulty": "HIGH"},
+      {"case_id": "case_018", "role": "UNASSIGNED_REVIEW_CONTROL", "difficulty": "HIGH"},
+      {"case_id": "case_019", "role": "UNASSIGNED_REVIEW_CONTROL", "difficulty": "HIGH"},
+      {"case_id": "case_020", "role": "SOURCE_CONTEXT_PREREQUISITE", "difficulty": "HIGH"}
+    ],
+    "frozen_challenge_distribution": {
+      "claim_scope_boundary": 2,
+      "source_system_or_context": 4,
+      "native_or_derived_measurement_semantics": 4,
+      "cross_source_or_validation_relationship": 3,
+      "candidate_scientific_need_discovery": 5,
+      "unassigned_review_control": 2
+    }
+  },
+  "sources": [
+    {"paper_id": "PDFMD-001", "citation": "Henot et al. (2022), Visualizing the transiently populated closed-state of human HSP90 ATP binding domain, Nature Communications 13:7601.", "pdf_sha256": "2a37d00b43c167cd0e80a8e7c75083cc910b6b57648565f3db8023b44ed067a3", "derivative_sha256": "a39dfea89c9544662cc91bc136005470bc143bb7cfcd59b83bf397f74ab95e5e", "locators": [{"id": "HEN-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "HEN-P02-RESULTS", "locator": "PDF p. 2, Results, The ATP-lid of HSP90alpha populates two distinct conformations in solution"}]},
+    {"paper_id": "PDFMD-002", "citation": "Gomes et al. (2020), Conformational Ensembles of an Intrinsically Disordered Protein Consistent with NMR, SAXS, and Single-Molecule FRET, Journal of the American Chemical Society 142:15697-15710.", "pdf_sha256": "e091c20025b4813fee0457746e81731c69132e83dcb7784389274a3ae0976547", "derivative_sha256": "8b5ce07fa7f8de4c3a37c9dcdf002fa85045668f69020a2fc6489df7c0237a53", "locators": [{"id": "GOM-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "GOM-P02-FIG1", "locator": "PDF p. 2 / JACS 15698, Figure 1 caption and adjacent Introduction"}, {"id": "GOM-P02-FIG2", "locator": "PDF p. 3 / JACS 15699, Figure 2 caption"}]},
+    {"paper_id": "PDFMD-004", "citation": "Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations, eLife 9:e56518.", "pdf_sha256": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf", "derivative_sha256": "3b040c8d5e6600528323fd7dd091704a34794e1ee367ab0592135e5b6c974353", "locators": [{"id": "BEN-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "BEN-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-005", "citation": "Bonvin and Brunger (1995), Conformational Variability of Solution Nuclear Magnetic Resonance Structures, Journal of Molecular Biology 250:80-93.", "pdf_sha256": "f1e3cd0e20d9610c7c59fdaca6efbaaaabac4a9456fea0a88cd858bed862484e", "derivative_sha256": "2fcabf46e1ab981c84dd79ab4838102d53cd896617a753bc27107ae9c3d57c9a", "locators": [{"id": "BON-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "BON-P01-INTRO", "locator": "PDF p. 1, opening Introduction"}]},
+    {"paper_id": "PDFMD-006", "citation": "Dimura et al. (2020), Automated and optimally FRET-assisted structural modeling, Nature Communications 11:5394.", "pdf_sha256": "fc8aa871b220f462452c9cdaacf2ed7b40929fc3ff8449f663f0329ce6d5a6fe", "derivative_sha256": "f6bb20a80b79d6b3b519fb405d94bffe5d187052ce5e150cf855ad0a265660ca", "locators": [{"id": "DIM-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "DIM-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-007", "citation": "Fuertes et al. (2017), Decoupling of size and shape fluctuations in heteropolymeric sequences reconciles discrepancies in SAXS vs. FRET measurements, PNAS 114:E6342-E6351.", "pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8", "derivative_sha256": "8fb918e927933faa686e985f833ad96b0bd450a651a8517f6b5f489aa76626d2", "locators": [{"id": "FUE-P01-ABSTRACT", "locator": "PDF p. 1 / PNAS E6342, Abstract"}, {"id": "FUE-P02-FIG1", "locator": "PDF p. 2 / PNAS E6343, Figure 1 caption and adjacent Introduction"}, {"id": "FUE-P03-FIG2", "locator": "PDF p. 3 / PNAS E6344, Figure 2 caption and Eqs. 1-2"}]},
+    {"paper_id": "PDFMD-008", "citation": "Hellenkamp et al. (2018), Precision and accuracy of single-molecule FRET measurements: a multi-laboratory benchmark study, Nature Methods 15:669-676.", "pdf_sha256": "54f5d1c12ea88e915a90c3a548351905e8c594a6a192c4b2d907c6dab57f7d5f", "derivative_sha256": "a85465fc5f104a1892851ca920295b41744332479786778b4029d81d015e09b4", "locators": [{"id": "HEL-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "HEL-P01-INTRO", "locator": "PDF p. 1, opening Introduction"}]},
+    {"paper_id": "PDFMD-009", "citation": "Hoff et al. (2024), Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference, PLOS Computational Biology 20:e1012180.", "pdf_sha256": "78a96e35dd0f76313e643f230015ac909aa156a7d228063925b85dfa62cbdc5c", "derivative_sha256": "d9f78d533401cda8b3052e33c9e52662cac2b2e1f1215ab9f24c9cb0780614c9", "locators": [{"id": "HOF-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "HOF-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-010", "citation": "Peter et al. (2022), Cross-validation of distance measurements in proteins by PELDOR/DEER and single-molecule FRET, Nature Communications 13:4396.", "pdf_sha256": "21ce6830df532611eb5c5ea46b3464588597ceb4d182908cd29626e925549576", "derivative_sha256": "599108d0d1df3881ef0f77e7bea168e55081226cea8163c4ddb72c8f212a68db", "locators": [{"id": "PET-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "PET-P02-FIG1", "locator": "PDF p. 2, Figure 1 caption and adjacent text"}, {"id": "PET-P03-TABLE1", "locator": "PDF p. 3, Table 1"}]},
+    {"paper_id": "PDFMD-011", "citation": "Sanabria et al. (2020), Resolving dynamics and function of transient states in single enzyme molecules, Nature Communications 11:1231.", "pdf_sha256": "cfd8bc4b7deb7ff1abbad9aca5fffd4bd4955410e67379f9c4d0331985687ce2", "derivative_sha256": "51008273094b4a7ed447a482ecfc64a00b34680cb22dd16241984b99a554b2f9", "locators": [{"id": "SAN-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "SAN-P02-RESULTS", "locator": "PDF p. 2, Results, Detecting T4L's states by MFD"}]},
+    {"paper_id": "PDFMD-016", "citation": "Silvestre-Ryan et al. (2013), Average Conformations Determined from PRE Data Provide High-Resolution Maps of Transient Tertiary Interactions in Disordered Proteins, Biophysical Journal 104:1740-1751.", "pdf_sha256": "21fa2c9a23fc7797005953c16aea95131a9ada467e65e32ee12a5f0e41e93489", "derivative_sha256": "77d1a0a3f7deafb8a45a141d26dea2cbb34e836e6f017ddab4dea63035fda4e1", "locators": [{"id": "SIL-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "SIL-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-017", "citation": "Thomasen and Lindorff-Larsen (2022), Conformational ensembles of intrinsically disordered proteins and flexible multidomain proteins, Biochemical Society Transactions 50:541-554.", "pdf_sha256": "ac2b45484e2b8268429b0c0c3b67325e3248edf62916cea3ea3c7c7ac5fff7e6", "derivative_sha256": "8cea22db42d809da3aee1be97fac76c2782b0a9a7b7fe4849f1c9db24283d272", "locators": [{"id": "THO-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "THO-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-018", "citation": "Grossfield et al. (2018), Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations, Living Journal of Computational Molecular Science 1:5067.", "pdf_sha256": "9e11c8c6908411ef7d67c9f93e4a7eab7de26c660400283c8a148fd2f75c61a9", "derivative_sha256": "37cab96bbdeaacbf689200ffa17ab83f827bd264169eabd9d7282a4943ddfbcd", "locators": [{"id": "GRO-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "GRO-P01-SCOPE", "locator": "PDF p. 1, Abstract, final sentences"}]},
+    {"paper_id": "PDFMD-027", "citation": "Pitera and Chodera (2012), On the Use of Experimental Observations to Bias Simulated Ensembles, Journal of Chemical Theory and Computation 8:3445-3451.", "pdf_sha256": "a1a84b34d374b07aeada6514a656f877b3f0e7264faa143c7b294c364113f77c", "derivative_sha256": "db4ca955f8ae0f73748ee5bf4aaddb9e6f5d17f35ca72dc1d5830817e905492a", "locators": [{"id": "PIT-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "PIT-P01-INTRO", "locator": "PDF p. 1, Introduction"}]},
+    {"paper_id": "PDFMD-037", "citation": "Wankowicz et al. (2023), Automated multiconformer model building for X-ray crystallography and cryo-EM, eLife 12:RP90606.", "pdf_sha256": "4c2b090c447ad1ce21efa34e0b2cb65a9826cfa2b0a9be3f8283d21386d5823d", "derivative_sha256": "4db14262bb9149e67fe7df725eba7f79aaa95f6536f845232362eb2ad3757c8c", "locators": [{"id": "WAN-P01-ABSTRACT", "locator": "PDF p. 1, Abstract"}, {"id": "WAN-P02-OVERVIEW", "locator": "PDF p. 2, Results, Overview of qFit protein algorithm"}]}
+  ],
+  "source_hash_audit": {
+    "status": "PASS",
+    "verified_at_utc": "2026-09-02T00:36:54Z",
+    "verified_pdf_hashes": 15,
+    "verified_derivative_hashes": 15,
+    "result": "All locally available primary PDFs and navigation derivatives matched the frozen source identities."
+  },
+  "pass_a_isolation": {
+    "status": "FROZEN_BEFORE_RULES_BASELINE_LOAD",
+    "visible_inputs_per_case": ["scientific question", "authorized primary PDF passages", "exact source identity", "neutral scientific-review template"],
+    "excluded_prior_artifacts": ["prior Analyst rule selections", "prior RuleResults", "prior expected statuses", "prior model verdicts", "prior blind reconstructions", "candidate repairs", "current family or runtime Rule IDs", "applicability bindings", "evaluation contracts", "resolution policies", "claim ceilings"],
+    "statement": "Pass A is source-first and uses no current Rules baseline. It records review questions rather than Rule identifiers."
+  },
+  "pass_a_freeze": {
+    "status": "FROZEN",
+    "record_file": "source_first_obligations.jsonl",
+    "sha256": "87d717f62ee5934116e6a73494ba14c00b88ed53b5dd8f7f17dcc17bc383b595",
+    "frozen_at_utc": "2026-09-02T00:36:54Z",
+    "rules_baseline_loaded_after_freeze": true,
+    "case_record_sha256": {
+      "case_001": "e0e35a30b79466c6a09f0c15902bb28cb66d618776d9c7d162cb8c90604ffb00",
+      "case_002": "f1e76287888d34d387c782fbfb3bbf066b63ed11bb2bd2fd7acff99c950a840a",
+      "case_003": "d67952553387be78c38e0fb901caf778124b67948aac6a396e9296a20388a3bf",
+      "case_004": "e70cdef057d7a2295fd451984c9d5587c719f9dca6b19ed62671782fb8d3fe7e",
+      "case_005": "7a43898ccb30eeff2b8dc80582dd6b17bc3785a606284dbe46e72ab9ac3decd9",
+      "case_006": "00af8943d1edb1d1c5c2bf811b3fe106756f15e4beaa66b0c94a694b1a7b543f",
+      "case_007": "2db8c76af6dfe7cfd8109dba0a2a8faf2ed4f54a06329ea9e8a995663e449609",
+      "case_008": "da644625cdf379f542769d9e667af2b1d75b11bc0bef51a7ef5a3425c35730ae",
+      "case_009": "5094bdad8c7e7845db851aeda24d0ba95865d9518e511ade8dc70cbd941c79d1",
+      "case_010": "3a8e23a1ecd0c75231b725608082a99f5cec1e7dbae3715d609356edeb5cbb89",
+      "case_011": "76fb95dbdc593b56188ba135007ee23acc5624e8a17ac25a330427efe286da1a",
+      "case_012": "1f89aa1580df98cfdb372f077cb72bed605fcc9d171e2e75dd38098106b0c974",
+      "case_013": "603c41d49f27d1c534f506f578cc71f91cad73f13e3dc613456d44f52f142efc",
+      "case_014": "b4f1786b3b39bd18eb72d273e89cb2cb35b8de82af8462aa67dbf345d6890098",
+      "case_015": "764d173b7cbbd301af4691936f7b0f65d018ffe0f1d511c8067ad127058845e1",
+      "case_016": "a0d32c02504be6980bed2654e23d54109ef60de9e08fe118a428c98d157775dd",
+      "case_017": "3a602020bf9e9f8fd0e0bf1a33eb578af1be227b1ef0475d5b398d4cbc7df412",
+      "case_018": "1f8d78acdb3ef5cfd27dfd03a8f2258bc30a8d3d6cc8cbc7b6a91792520eeada",
+      "case_019": "dcc66525cfc5e8f90b2295e816a0f0c981ad4caeebe4195f301fc9f68b32b247",
+      "case_020": "ff891a0e8766b31c2a403852982563f32d27cb001a2e63ca6c8ebd33411abc46"
+    }
+  },
+  "rules_baseline": {
+    "status": "LOADED_AFTER_PASS_A_FREEZE",
+    "baseline_commit": "86fc842f36002e57bcd71e6cb3fd90f9fed98d4b",
+    "loaded_at_utc": "2026-09-02T00:39:05Z",
+    "file_hashes": {
+      "registries/rules_v1/family_overlay_v1.json": "0c76924f81e519300e4f082ddb9d81ff4d3fbe8bf269176d64eef71f037222ce",
+      "registries/rules_v1/runtime_subrules_v1.json": "773d532ac20c801a0e9f74a200480e855b5e672e070f3d29697bb7112ff4a8e5",
+      "registries/rules_v1/applicability_bindings_v1.json": "0208ce377d1d3f61fe9b706f60d335e4b8b301a99bf0b4068cff5dbe1257f464",
+      "registries/rules_v1/evaluation_contracts_v1.json": "405b0e2523270d06ae02e5119aeb446e2ce931fa1c51543eb1ec6add9b7a20be",
+      "registries/rules_v1/resolution_policies_v1.json": "222dc4753f8e9df19511fd1f191c58ebe0f70b0544cbc8bb8f20bdb991051551",
+      "registries/rules_v1/human_decision_gates_v1.json": "98ca7ffa2e208ee4f4b7f6006922a258aa131f62f4650b87face4ae34b14725c",
+      "evidence/rules_v1/source_evidence_packets_v1.jsonl": "5e56d06da5987f88a418b27b4b4497ec7c8d049ec03ab3fb92ebb2757f116e6b"
+    }
+  },
+  "claim_boundary": {
+    "allowed": "Systematic comparison of source-first review obligations with the current Rules Table on this exposed development corpus.",
+    "forbidden": ["scientific validation", "complete family coverage", "H1 success", "transfer", "Agent benefit", "general Operator utility", "case-level scientific support from a local Rule PASS"]
+  }
+}
