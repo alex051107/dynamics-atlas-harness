@@ -1,0 +1,236 @@
+{
+  "schema_version": "f03-source-first-record/v1",
+  "record_status": "EXPOSED_DEVELOPMENT_SOURCE_FIRST_ANALYSIS",
+  "authority_status": "NON_AUTHORITATIVE_NOT_H1_DISPOSITION",
+  "source_first_isolation_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+  "source_identity": {
+    "citation": "Fuertes et al. (2017), Decoupling of size and shape fluctuations in heteropolymeric sequences reconciles discrepancies in SAXS vs. FRET measurements, PNAS 114:E6342-E6351",
+    "doi": "10.1073/pnas.1704692114",
+    "primary_pdf_filename": "Fuertes_2017_PNAS_SAXS_FRET_discrepancy.pdf",
+    "primary_pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8",
+    "source_scope": "Main article only. Supporting Information is not an input to this calibration."
+  },
+  "pass_a_visible_inputs": {
+    "only_inputs": [
+      "The exact Fuertes et al. 2017 primary PDF identified above",
+      "A PDF-to-text derivative generated directly from that PDF",
+      "This neutral source-first extraction schema"
+    ],
+    "context_limit": "The record was produced after prior project exposure, so it is procedurally separated from the frozen-pattern pass but is not presented as an independent blind reading."
+  },
+  "exact_passage_locators": [
+    {
+      "locator_id": "FUE-P01-ABSTRACT",
+      "locator": "PDF p. 1, PNAS E6342, Abstract",
+      "supports": "The article names radius of gyration (RG) and mean dye-to-dye distance (RE) as distinct quantities estimated from SAXS and smFRET, respectively."
+    },
+    {
+      "locator_id": "FUE-P01-INTRO",
+      "locator": "PDF p. 1, PNAS E6342, Introduction, two columns beginning 'Estimates of RG' and 'At finite concentrations'",
+      "supports": "SAXS intensity is tied to global size; the paper distinguishes unlabeled and labeled quantities and describes the dye/linker and distributional assumptions behind smFRET-derived distance estimates."
+    },
+    {
+      "locator_id": "FUE-P02-FIG1-INTRO",
+      "locator": "PDF p. 2, PNAS E6343, Figure 1 caption and adjacent Introduction",
+      "supports": "The native SAXS representation is I(q) versus q, while the native smFRET representation is EFRET; the paper describes their distinct spatial scope and averaging behavior."
+    },
+    {
+      "locator_id": "FUE-P03-FIG2-EQ1-EQ2",
+      "locator": "PDF p. 3, PNAS E6344, Figure 2 caption and text with Eqs. 1-2",
+      "supports": "RG is calculated from a SAXS profile using a Guinier relation or pair-distance distribution; RE,L is inferred from mean EFRET through a distance-distribution model and a dye-pair-specific Forster distance."
+    },
+    {
+      "locator_id": "FUE-P07-DISCUSSION",
+      "locator": "PNAS E6348, Discussion paragraphs beginning 'SAXS and smFRET are two powerful' and 'Specifically'",
+      "supports": "The authors characterize SAXS as integral information over averaged distance distributions and smFRET as differential averaging of a single end-to-end distance; they report that matching SAXS need not match smFRET-derived inferences."
+    },
+    {
+      "locator_id": "FUE-P10-METHODS",
+      "locator": "PNAS Methods, paragraph beginning 'In total, 10 proteins'",
+      "supports": "smFRET was performed burst-wise at picomolar labeled-protein concentration, whereas SAXS profiles of labeled and unlabeled proteins were measured at micromolar-and-beyond concentrations and analyzed for size and shape information."
+    }
+  ],
+  "atomic_source_supported_statements": [
+    {
+      "statement_id": "FUE-A01",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The paper treats SAXS and smFRET as distinct measurement families: RG is estimated from SAXS, while RE for fluorescently labeled termini is estimated from smFRET.",
+      "locators": ["FUE-P01-ABSTRACT", "FUE-P02-FIG1-INTRO"]
+    },
+    {
+      "statement_id": "FUE-A02",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The SAXS object shown by the paper is a scattering-intensity profile I(q) as a function of momentum transfer q. RG is then calculated from that profile by a stated analysis, rather than being the raw observation itself.",
+      "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+    },
+    {
+      "statement_id": "FUE-A03",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The smFRET object shown by the paper is EFRET, including burst-wise measurements and a mean EFRET. The reported RE,L is inferred using a distribution P(rD,A; RE,L) and a dye-pair-specific Forster distance R0.",
+      "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+    },
+    {
+      "statement_id": "FUE-A04",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The paper says the functional form of the interdye-distance distribution is unknown a priori and may be chosen from polymer models such as a Gaussian chain, self-avoiding random walk, or a sphere model.",
+      "locators": ["FUE-P03-FIG2-EQ1-EQ2"]
+    },
+    {
+      "statement_id": "FUE-A05",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "SAXS intensities are weighted averages over molecules and conformations in solution and provide global chain-dimension information, whereas smFRET probes the donor-acceptor separation at the labeled termini and can follow motions from nanosecond to millisecond regimes.",
+      "locators": ["FUE-P02-FIG1-INTRO"]
+    },
+    {
+      "statement_id": "FUE-A06",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The article reports different protein-concentration regimes for the two experiments and explicitly says it tested whether that difference explained the discrepancy in their inferences.",
+      "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+    },
+    {
+      "statement_id": "FUE-A07",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "statement": "The discussion distinguishes integral averaging of distance distributions in SAXS from differential averaging of one end-to-end distance in smFRET and reports that ensembles matching SAXS can remain incompatible with smFRET-derived inferences, especially away from denaturing conditions.",
+      "locators": ["FUE-P07-DISCUSSION"]
+    }
+  ],
+  "source_objects": [
+    {
+      "source_object_id": "fuertes_2017_saxs_profile",
+      "modality": "SAXS",
+      "native_observable_by_source": {
+        "value": "Scattering intensity profile I(q) as a function of momentum transfer q, measured for labeled and unlabeled samples.",
+        "kind": "OBSERVED_PRIMARY_SOURCE",
+        "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+      },
+      "estimand_by_source": {
+        "value": "The paper reports RG,U and RG,L as estimates of global size; it also uses full scattering profiles for size-distribution and shape information.",
+        "kind": "SOURCE_SUPPORTED_DESCRIPTION",
+        "locators": ["FUE-P01-ABSTRACT", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+      },
+      "spatial_support_by_source": {
+        "value": "Global molecular/chain dimensions, based on interatomic distances within molecules and averaged over the conformations of molecules in solution.",
+        "kind": "OBSERVED_PRIMARY_SOURCE",
+        "locators": ["FUE-P01-INTRO", "FUE-P02-FIG1-INTRO"]
+      },
+      "time_or_ensemble_averaging_by_source": {
+        "value": "The paper describes scattering intensities as weighted averages over all protein molecules and conformations in solution. It does not present a time-resolved kinetic SAXS estimate in the main-text passages used here.",
+        "kind": "OBSERVED_PRIMARY_SOURCE_WITH_SCOPE_LIMIT",
+        "locators": ["FUE-P02-FIG1-INTRO"]
+      },
+      "inverse_or_forward_model_assumptions": [
+        {
+          "value": "RG is calculated from I(q) versus q through the Guinier approximation or a pair-distance distribution function.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "value": "Finite-concentration interpretation assumes the absence of intermolecular interactions in the cited introductory framing.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P01-INTRO"]
+        }
+      ],
+      "statistical_unit_by_source": {
+        "value": "A SAXS profile for a specified protein, labeling state, and buffer condition; the study describes labeled and unlabeled samples at micromolar-and-beyond concentrations.",
+        "kind": "SOURCE_SUPPORTED_DESCRIPTION",
+        "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+      },
+      "uncertainty_or_ambiguity_boundaries": [
+        {
+          "value": "SAXS averaging makes it difficult to assess populations and fluctuations smaller than global dimensions.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P02-FIG1-INTRO"]
+        },
+        {
+          "value": "Detailed experimental settings and supporting analyses are cited to the Supporting Information, which is outside this main-article-only record.",
+          "kind": "OBSERVED_SCOPE_BOUNDARY",
+          "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+        }
+      ]
+    },
+    {
+      "source_object_id": "fuertes_2017_smfret_efficiency",
+      "modality": "smFRET",
+      "native_observable_by_source": {
+        "value": "Single-molecule FRET efficiencies EFRET, including a burst-wise distribution and mean EFRET from doubly labeled proteins.",
+        "kind": "OBSERVED_PRIMARY_SOURCE",
+        "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+      },
+      "estimand_by_source": {
+        "value": "The paper uses mean EFRET to infer RE,L, the ensemble-averaged root-mean-squared distance between donor and acceptor dyes. RE,L is presented as a proxy for the actual end-to-end distance RE,U, not as the same quantity.",
+        "kind": "SOURCE_SUPPORTED_DESCRIPTION",
+        "locators": ["FUE-P01-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+      },
+      "spatial_support_by_source": {
+        "value": "The source object's direct geometric support is the donor-acceptor separation at the specifically labeled terminal positions, rather than an all-pairs/global structural average.",
+        "kind": "SOURCE_SUPPORTED_DESCRIPTION",
+        "locators": ["FUE-P01-INTRO", "FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+      },
+      "time_or_ensemble_averaging_by_source": {
+        "value": "The paper identifies smFRET as able to follow motions from nanosecond to millisecond regimes; its source-to-distance mapping uses mean EFRET and a distance distribution. The inspected passages do not define a single kinetic-rate estimand.",
+        "kind": "OBSERVED_PRIMARY_SOURCE_WITH_SCOPE_LIMIT",
+        "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+      },
+      "inverse_or_forward_model_assumptions": [
+        {
+          "value": "RE,L is inferred from mean EFRET through P(rD,A; RE,L) and a dye-pair-specific R0.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "value": "The form of P(rD,A; RE,L) is unknown a priori and selected from polymer-model alternatives; flexible dye linkers make RE,L distinct from RE,U.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P01-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        }
+      ],
+      "statistical_unit_by_source": {
+        "value": "Burst-wise EFRET measurements from a specified doubly labeled protein and condition, summarized as a mean EFRET at picomolar labeled-protein concentration.",
+        "kind": "SOURCE_SUPPORTED_DESCRIPTION",
+        "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+      },
+      "uncertainty_or_ambiguity_boundaries": [
+        {
+          "value": "Dye placement, flexible linkers, dye-pair R0, and the distribution-model choice all affect the mapping from EFRET to RE,L.",
+          "kind": "OBSERVED_PRIMARY_SOURCE",
+          "locators": ["FUE-P01-INTRO", "FUE-P03-FIG2-EQ1-EQ2"]
+        },
+        {
+          "value": "The main article refers detailed FRET parameters, anisotropies, gamma/quantum-yield checks, and full efficiency datasets to the Supporting Information, which is not used here.",
+          "kind": "OBSERVED_SCOPE_BOUNDARY",
+          "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+        }
+      ]
+    }
+  ],
+  "case_specific_assumptions": [
+    {
+      "value": "The paper's direct comparisons concern a defined set of proteins and labeled/unlabeled constructs under denaturing and near-native conditions; their results are not a universal modality conversion law.",
+      "kind": "OBSERVED_PRIMARY_SOURCE",
+      "locators": ["FUE-P02-FIG1-INTRO", "FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+    },
+    {
+      "value": "This calibration uses only main-text passages, so it does not adjudicate SI-dependent numerical parameters or reproduce the paper's analyses.",
+      "kind": "TASK_SCOPE_BOUNDARY",
+      "locators": ["FUE-P03-FIG2-EQ1-EQ2", "FUE-P10-METHODS"]
+    }
+  ],
+  "possible_reusable_review_questions": [
+    "Does a source record distinguish a raw measurement from the reported quantity derived through a model or transformation?",
+    "Does a source record state whether its spatial support is global, terminal-pair-specific, or another defined region before readers compare quantities?",
+    "Does a source record preserve aggregation and averaging semantics, including when distinct methods operate at different concentration or temporal regimes?",
+    "Does the record flag dye geometry, distribution-model choice, and omitted supplemental parameters as mapping limits rather than silently treating an inferred quantity as direct?"
+  ],
+  "maximum_source_supported_wording": "For the Fuertes et al. source objects, SAXS records global scattering profiles from which RG and additional profile-derived size or shape information are estimated, while smFRET records EFRET from labeled termini and maps mean efficiency to an inferred dye-to-dye distance through stated distribution and dye assumptions. The paper supports keeping those measurement semantics distinct before any cross-source interpretation.",
+  "forbidden_generalizations": [
+    "Treat RG as the raw SAXS measurement or RE,L as the raw smFRET measurement.",
+    "Treat RE,L as identical to actual unlabeled-protein end-to-end distance RE,U without the source's stated dye and model boundary.",
+    "Infer that agreement or disagreement of these source-local records establishes reliability, cross-source comparability, validation, or scientific SUPPORT.",
+    "Infer a kinetic rate, a universal polymer conversion, or a general result for modalities outside the paper's defined constructs and conditions.",
+    "Treat this exposed development record as held-out or as an H1 source-science disposition."
+  ],
+  "missing_or_unresolved_information": [
+    "The main-article-only record does not supply the SI-level numerical parameters and detailed experimental checks cited by the paper.",
+    "The source record does not establish a project-level annotation truth, reliability verdict, comparability relation, validation-independence label, or scientific claim ceiling.",
+    "A formal cross-source relation is outside this source-first record; the paper's discussion of complementary or discrepant inferences is not converted here into a project Rule result."
+  ]
+}

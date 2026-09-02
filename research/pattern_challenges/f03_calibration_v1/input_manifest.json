@@ -1,0 +1,84 @@
+{
+  "schema_version": "f03-pattern-calibration-input-manifest/v1",
+  "authorization": {
+    "decision_id": "DA-20260901-059",
+    "task_class": "EXPOSED_DEVELOPMENT_SOURCE_FIRST_CALIBRATION",
+    "authority_status": [
+      "NON_AUTHORITATIVE",
+      "NOT_AN_H1_DISPOSITION",
+      "NO_RULE_RELEASE",
+      "NO_CANONICAL_RULE_MUTATION"
+    ],
+    "stop_after": "One unmerged Draft PR and human review."
+  },
+  "repository_binding": {
+    "branch": "research/f03-pattern-calibration-v1",
+    "base_sha": "da584173ee64bfad9854132a3418ed1e871c69f5",
+    "base_ref_verified_against_origin_main": "da584173ee64bfad9854132a3418ed1e871c69f5"
+  },
+  "primary_source": {
+    "citation": "Fuertes et al. (2017), PNAS 114:E6342-E6351",
+    "doi": "10.1073/pnas.1704692114",
+    "local_primary_pdf_filename": "Fuertes_2017_PNAS_SAXS_FRET_discrepancy.pdf",
+    "primary_pdf_sha256": "a602b61013478d3f27b725a37f4a13ad1427b8e661b44b84063b4ee672c791d8",
+    "repository_copy": "not included; local primary PDF was inspected directly",
+    "primary_passages": [
+      "PDF p. 1 / PNAS E6342: Abstract and Introduction",
+      "PDF p. 2 / PNAS E6343: Figure 1 and measurement-semantics Introduction",
+      "PDF p. 3 / PNAS E6344: Figure 2 and Eqs. 1-2",
+      "PNAS E6348: Discussion of averaging and incompatible inferences",
+      "PNAS Methods: concentration and burst/profile measurement context"
+    ]
+  },
+  "pass_a_visible_input_manifest": {
+    "isolation_status": "SOURCE_FIRST_PROCEDURALLY_SEPARATED_NOT_INDEPENDENT",
+    "visible_inputs_only": [
+      "Fuertes et al. 2017 primary PDF",
+      "a PDF-to-text derivative generated directly from that PDF",
+      "a neutral source-first extraction schema"
+    ],
+    "frozen_output": "research/pattern_challenges/f03_calibration_v1/source_first_record.json",
+    "frozen_output_sha256": "d5fa872c3f8a847ff8bd662c41aa4c00b7a4d2f9c8fe7a89ebc2551ffdf0e595"
+  },
+  "pass_b_frozen_pattern_inputs": [
+    {
+      "path": "registries/rules_v1/runtime_subrules_v1.json",
+      "sha256": "773d532ac20c801a0e9f74a200480e855b5e672e070f3d29697bb7112ff4a8e5",
+      "selected_object": "F03R01_SOURCE_NATIVE_MEASUREMENT"
+    },
+    {
+      "path": "registries/rules_v1/applicability_bindings_v1.json",
+      "sha256": "0208ce377d1d3f61fe9b706f60d335e4b8b301a99bf0b4068cff5dbe1257f464",
+      "selected_object": "B-F03R01-SOURCE-MEASUREMENT"
+    },
+    {
+      "path": "registries/rules_v1/evaluation_contracts_v1.json",
+      "sha256": "405b0e2523270d06ae02e5119aeb446e2ce931fa1c51543eb1ec6add9b7a20be",
+      "selected_object": "EC-F03R01-SOURCE-MEASUREMENT"
+    },
+    {
+      "path": "registries/rules_v1/resolution_policies_v1.json",
+      "sha256": "222dc4753f8e9df19511fd1f191c58ebe0f70b0544cbc8bb8f20bdb991051551",
+      "selected_object": "RP_F02_F03_DECLARATION_PREREQUISITES"
+    },
+    {
+      "path": "evidence/minimal_stage2_exposed_conclusions_v1/narrow_source_science_review_packet_v1.json",
+      "sha256": "03a1ff7654f86a23fde400ea4465c32b42bb1d33e0c9229df712def64567811e",
+      "selected_object": "SEP-F03-MEASUREMENT",
+      "packet_status": "LOCATOR_REVIEWED_FOR_PROPOSED_CONTROL_LOGIC",
+      "domain_reviewer_status": "PENDING_DOMAIN_REVIEW"
+    }
+  ],
+  "required_output_files": [
+    "input_manifest.json",
+    "source_first_record.json",
+    "frozen_pattern_result.json",
+    "divergence_and_repair_report.md"
+  ],
+  "hard_boundaries": [
+    "No held-out source or hidden gold was accessed.",
+    "No primary-source retrieval, Supporting Information, Agent, model, Operator, or new calculation was used.",
+    "No canonical Rule, binding, contract, policy, source evidence packet, governance status, or scientific disposition is modified on this branch.",
+    "A local F03 declaration PASS is never interpreted as reliability, comparability, validation, scientific SUPPORT, H1 release, or source-science approval."
+  ]
+}
