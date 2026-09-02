@@ -169,6 +169,22 @@ dynamics-atlas run-demo --output-dir /tmp/dynamics-atlas-demo
 它复现的是两个 exposed development cases 的受限工程行为；F01/F02/F03/F04/F06 的具名
 source-science review 仍然是当前科学 gate。
 
+## Rules Prototype scenario acceptance v1
+
+下面的命令重建八个 fixture-driven development scenarios 的 acceptance artifacts：四个 synthetic
+contract fixtures（T1–T4）和四个 exposed development scenarios（T5–T8）。它复用既有受限路径，
+比较实际输出与预先声明的 expected results；任何不匹配都会使命令返回非零状态，并在 matrix 中标记
+对应 task 为 `FAIL`。
+
+```bash
+dynamics-atlas run-prototype-acceptance
+```
+
+T5 的 exact lookup 和 T7 的 registered Operator 只会回填各自选定的 RuleInstance。T8 是
+`DESCRIPTIVE_NO_ACTIVE_RULE_CONTROL`：它保存静态描述性 evidence，但不会伪造 Rule closure。该 suite
+不从任意 CaseGraph 自动选择 family、obligation 或 route，也不构成 scientific validation、coverage、
+held-out transfer 或 Agent-value evidence。
+
 ## Paper question → human review smoke test
 
 下面的命令把现有 Lincoff X-EISD paper-derived development question 接到一条可复现的受限流程：

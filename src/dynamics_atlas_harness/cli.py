@@ -341,6 +341,18 @@ def run_smoke(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_prototype_acceptance(args: argparse.Namespace) -> int:
+    """Run the fixture-driven no-Agent Rules Prototype scenario acceptance suite."""
+
+    from .rules_prototype_acceptance_v1 import run_and_write_acceptance_suite
+
+    suite = run_and_write_acceptance_suite(
+        repo_root=Path(args.repo_root),
+        artifacts_dir=Path(args.artifacts_dir),
+    )
+    return 0 if suite["comparison"]["acceptance"] == "PASS" else 1
+
+
 def run_case(args: argparse.Namespace) -> int:
     """Run one exact registered exposed-development case by recorded replay."""
 
@@ -518,6 +530,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="A new or empty directory for fresh smoke-test artifacts.",
     )
     smoke_parser.set_defaults(handler=run_smoke)
+    acceptance_parser = subparsers.add_parser(
+        "run-prototype-acceptance",
+        help="Run four synthetic fixtures and four exposed-development Rules scenarios.",
+    )
+    acceptance_parser.add_argument(
+        "--repo-root",
+        default=str(REPO_ROOT),
+        help="Harness repository root containing frozen inputs and Rule registries.",
+    )
+    acceptance_parser.add_argument(
+        "--artifacts-dir",
+        default=str(REPO_ROOT / "research" / "rules_prototype_acceptance_v1"),
+        help="Directory containing cases.jsonl and receiving the three generated artifacts.",
+    )
+    acceptance_parser.set_defaults(handler=run_prototype_acceptance)
     case_parser = subparsers.add_parser(
         "run-case",
         help="Run one exact registered exposed-development case by recorded proposal replay.",
