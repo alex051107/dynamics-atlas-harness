@@ -1,0 +1,556 @@
+{
+  "status": "METHOD_FUNCTIONS_MATCH",
+  "timestamp": "2026-09-04T22:41:22.071096+00:00",
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "data_commit": "85979b1b4123b6b5391b617d16551969eda9f56e",
+  "BME_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4",
+  "harness_commit": "738160824a83054d3011695ba1865b12351294ac",
+  "runtime": {
+    "executable": "python3.14",
+    "numpy": "2.4.3",
+    "pandas": "3.0.2"
+  },
+  "extraction": {
+    "local": [
+      {
+        "node": "Assign",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "node": "Assign",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "node": "Assign",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "node": "Assign",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "node": "For",
+        "start": 22,
+        "end": 24
+      },
+      {
+        "node": "Assert",
+        "start": 25,
+        "end": 25
+      },
+      {
+        "node": "Assign",
+        "start": 26,
+        "end": 26
+      },
+      {
+        "node": "Assign",
+        "start": 27,
+        "end": 27
+      },
+      {
+        "node": "Assign",
+        "start": 28,
+        "end": 28
+      },
+      {
+        "node": "For",
+        "start": 29,
+        "end": 32
+      },
+      {
+        "node": "Assert",
+        "start": 33,
+        "end": 33
+      },
+      {
+        "node": "Assign",
+        "start": 34,
+        "end": 34
+      },
+      {
+        "node": "Assert",
+        "start": 35,
+        "end": 35
+      },
+      {
+        "node": "Assert",
+        "start": 36,
+        "end": 36
+      },
+      {
+        "node": "noe",
+        "start": 37,
+        "end": 42
+      },
+      {
+        "node": "Assign",
+        "start": 43,
+        "end": 43
+      },
+      {
+        "node": "Assign",
+        "start": 43,
+        "end": 43
+      },
+      {
+        "node": "Assign",
+        "start": 44,
+        "end": 44
+      },
+      {
+        "node": "Assign",
+        "start": 44,
+        "end": 44
+      },
+      {
+        "node": "Assign",
+        "start": 44,
+        "end": 44
+      },
+      {
+        "node": "Assign",
+        "start": 44,
+        "end": 44
+      },
+      {
+        "node": "Assign",
+        "start": 44,
+        "end": 44
+      },
+      {
+        "node": "For",
+        "start": 45,
+        "end": 47
+      },
+      {
+        "node": "Assign",
+        "start": 48,
+        "end": 48
+      },
+      {
+        "node": "Assign",
+        "start": 48,
+        "end": 48
+      },
+      {
+        "node": "Assign",
+        "start": 48,
+        "end": 48
+      },
+      {
+        "node": "Assign",
+        "start": 50,
+        "end": 50
+      },
+      {
+        "node": "Assign",
+        "start": 50,
+        "end": 50
+      },
+      {
+        "node": "Assert",
+        "start": 51,
+        "end": 51
+      },
+      {
+        "node": "Assign",
+        "start": 51,
+        "end": 51
+      },
+      {
+        "node": "Assign",
+        "start": 51,
+        "end": 51
+      },
+      {
+        "node": "Assign",
+        "start": 51,
+        "end": 51
+      },
+      {
+        "node": "Assign",
+        "start": 52,
+        "end": 52
+      },
+      {
+        "node": "fun",
+        "start": 53,
+        "end": 57
+      },
+      {
+        "node": "metrics",
+        "start": 62,
+        "end": 69
+      }
+    ],
+    "tools": [
+      {
+        "node": "Assign",
+        "start": 6,
+        "end": 6
+      },
+      {
+        "node": "Assign",
+        "start": 7,
+        "end": 7
+      },
+      {
+        "node": "Assign",
+        "start": 8,
+        "end": 8
+      },
+      {
+        "node": "srel",
+        "start": 13,
+        "end": 15
+      },
+      {
+        "node": "parse",
+        "start": 18,
+        "end": 91
+      },
+      {
+        "node": "calc_chi",
+        "start": 141,
+        "end": 149
+      },
+      {
+        "node": "standardize",
+        "start": 293,
+        "end": 334
+      }
+    ],
+    "bme": [
+      {
+        "node": "maxent",
+        "start": 183,
+        "end": 206
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "transformed_experimental_values",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "propagated_standard_deviations",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 2.168404344971009e-19
+    },
+    {
+      "name": "transformed_prediction_matrix",
+      "passed": true,
+      "shape": [
+        1195,
+        422
+      ],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "bound_direction",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "dual_lambda_bounds",
+      "passed": true
+    },
+    {
+      "name": "uniform:predictions",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.3877787807814457e-16
+    },
+    {
+      "name": "uniform:raw_residuals",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.3877787807814457e-16
+    },
+    {
+      "name": "uniform:active_bound_masks",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "uniform:normalized_one_sided_residuals",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.5010215292932116e-13
+    },
+    {
+      "name": "uniform:half_sum_data_term",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 3.410605131648481e-13
+    },
+    {
+      "name": "uniform:relative_entropy",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "uniform:half_sum_plus_theta_KL",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 3.410605131648481e-13
+    },
+    {
+      "name": "linear_index:predictions",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 8.326672684688674e-17
+    },
+    {
+      "name": "linear_index:raw_residuals",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 8.326672684688674e-17
+    },
+    {
+      "name": "linear_index:active_bound_masks",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "linear_index:normalized_one_sided_residuals",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.5276668818842154e-13
+    },
+    {
+      "name": "linear_index:half_sum_data_term",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 7.958078640513122e-13
+    },
+    {
+      "name": "linear_index:relative_entropy",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "linear_index:half_sum_plus_theta_KL",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 7.958078640513122e-13
+    },
+    {
+      "name": "center",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.1102230246251565e-16
+    },
+    {
+      "name": "scale",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 3.469446951953614e-18
+    },
+    {
+      "name": "standardized_target",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 3.547162563677375e-14
+    },
+    {
+      "name": "standardized_sigma",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 7.771561172376096e-16
+    },
+    {
+      "name": "standardized_predictions",
+      "passed": true,
+      "shape": [
+        1195,
+        422
+      ],
+      "max_abs_difference": 3.552713678800501e-14
+    },
+    {
+      "name": "zero:dual_objective_after_constant_offset",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 1.4802973661668753e-16
+    },
+    {
+      "name": "zero:dual_gradient",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.3322676295501878e-15
+    },
+    {
+      "name": "fixed_small:dual_objective_after_constant_offset",
+      "passed": true,
+      "shape": [],
+      "max_abs_difference": 1.0525434690489277e-14
+    },
+    {
+      "name": "fixed_small:dual_gradient",
+      "passed": true,
+      "shape": [
+        422
+      ],
+      "max_abs_difference": 1.5543122344752192e-15
+    }
+  ],
+  "fixed_weights": {
+    "uniform": {
+      "local_half_sum_data": 664.9833241979121,
+      "author_half_sum_data": 664.9833241979118,
+      "theta_KL": 0.0,
+      "joint_primal_diagnostic": 664.9833241979121,
+      "dataset_contributions": {
+        "saxs": {
+          "count": 90,
+          "half_sum": 450.8443775737937,
+          "mean_squared_residual": 10.018763946084304
+        },
+        "amide": {
+          "count": 292,
+          "half_sum": 136.27730583089834,
+          "mean_squared_residual": 0.9334062043212216
+        },
+        "methyl": {
+          "count": 40,
+          "half_sum": 77.86164079322003,
+          "mean_squared_residual": 3.8930820396610017
+        }
+      },
+      "local_distance_domain_display_metrics": {
+        "saxs_chi2_mean": 10.018763946084297,
+        "amide": {
+          "constraints": 292,
+          "exceed_upper_count": 44,
+          "chi2_all_constraints": 4.431344470223331,
+          "chi2_exceeded_only": 29.408013302391193,
+          "max_excess_A": 5.2127036498219415
+        },
+        "methyl": {
+          "constraints": 40,
+          "exceed_upper_count": 8,
+          "chi2_all_constraints": 10.334549009083318,
+          "chi2_exceeded_only": 51.67274504541659,
+          "max_excess_A": 3.341718229423062
+        },
+        "effective_fraction_entropy": 1.0,
+        "weight_ess_not_independent_samples": 1195.0,
+        "max_weight": 0.0008368200836820083
+      }
+    },
+    "linear_index": {
+      "local_half_sum_data": 876.4105590846461,
+      "author_half_sum_data": 876.4105590846453,
+      "theta_KL": 1.156379670163433,
+      "joint_primal_diagnostic": 877.5669387548096,
+      "dataset_contributions": {
+        "saxs": {
+          "count": 90,
+          "half_sum": 652.1684353700255,
+          "mean_squared_residual": 14.492631897111677
+        },
+        "amide": {
+          "count": 292,
+          "half_sum": 137.99836512217337,
+          "mean_squared_residual": 0.9451942816587217
+        },
+        "methyl": {
+          "count": 40,
+          "half_sum": 86.2437585924473,
+          "mean_squared_residual": 4.3121879296223655
+        }
+      },
+      "local_distance_domain_display_metrics": {
+        "saxs_chi2_mean": 14.492631897111682,
+        "amide": {
+          "constraints": 292,
+          "exceed_upper_count": 44,
+          "chi2_all_constraints": 4.524310775705479,
+          "chi2_exceeded_only": 30.0249715115,
+          "max_excess_A": 5.190858115399628
+        },
+        "methyl": {
+          "constraints": 40,
+          "exceed_upper_count": 8,
+          "chi2_all_constraints": 11.822928003759127,
+          "chi2_exceeded_only": 59.11464001879563,
+          "max_excess_A": 3.538613196406539
+        },
+        "effective_fraction_entropy": 0.8247046596634896,
+        "weight_ess_not_independent_samples": 896.6248431618569,
+        "max_weight": 0.0016722408026755853
+      }
+    }
+  },
+  "fixed_dual_probes": {
+    "zero": {
+      "local_objective": -1.4802973661668753e-16,
+      "author_raw_objective": -118.02887916349165,
+      "author_objective_plus_tmax_over_theta": 0.0
+    },
+    "fixed_small": {
+      "local_objective": 0.005331196154340612,
+      "author_raw_objective": -118.02354796733732,
+      "author_objective_plus_tmax_over_theta": 0.005331196154330087
+    }
+  },
+  "configuration": {
+    "theta": 6.0,
+    "dataset_weights": "all ones",
+    "NOE_power": 3,
+    "normalization": "half sum over 422 observations; calc_chi mean multiplied by 422/2",
+    "dual_constant_removed": 118.02887916349165,
+    "original_paper_configuration": "DATA_INSUFFICIENT"
+  },
+  "claim_ceiling": "Agreement of extracted pinned functions under specified configuration only; no optimizer/full-package run, original-paper reproduction or Rules success.",
+  "metric_distinction": "Local reporting metrics use distance-domain upper-bound residuals; the fitted dual uses propagated r^-3 intensity errors. These diagnostic values are not interchangeable.",
+  "optimization_runs": 0
+}

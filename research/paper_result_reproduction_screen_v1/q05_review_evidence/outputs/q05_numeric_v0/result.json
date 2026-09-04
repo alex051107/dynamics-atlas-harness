@@ -1,0 +1,113 @@
+{
+  "status": "NUMERIC_SUBCALCULATION_COMPLETE",
+  "timestamp": "2026-09-04T21:45:46.718721+00:00",
+  "input": {
+    "frames": 1195,
+    "frame_id_range": [
+      1.0,
+      1195.0
+    ],
+    "saxs_points": 90,
+    "q_range": [
+      0.00281393,
+      0.24080569444
+    ],
+    "amide_constraints": 292,
+    "methyl_constraints": 40,
+    "frame_identity": "same ordered IDs in all3 matrices; coordinate mapping not yet verified",
+    "source_commit": "85979b1b4123b6b5391b617d16551969eda9f56e"
+  },
+  "baseline_power3": {
+    "saxs_chi2_mean": 10.018763946084297,
+    "amide": {
+      "constraints": 292,
+      "exceed_upper_count": 44,
+      "chi2_all_constraints": 4.431344470223331,
+      "chi2_exceeded_only": 29.408013302391193,
+      "max_excess_A": 5.2127036498219415
+    },
+    "methyl": {
+      "constraints": 40,
+      "exceed_upper_count": 8,
+      "chi2_all_constraints": 10.334549009083318,
+      "chi2_exceeded_only": 51.67274504541659,
+      "max_excess_A": 3.341718229423062
+    },
+    "effective_fraction_entropy": 1.0,
+    "weight_ess_not_independent_samples": 1195.0,
+    "max_weight": 0.0008368200836820083
+  },
+  "baseline_default_power6_sensitivity": {
+    "saxs_chi2_mean": 10.018763946084297,
+    "amide": {
+      "constraints": 292,
+      "exceed_upper_count": 37,
+      "chi2_all_constraints": 3.828523544197001,
+      "chi2_exceeded_only": 30.21429391636552,
+      "max_excess_A": 4.97815498398638
+    },
+    "methyl": {
+      "constraints": 40,
+      "exceed_upper_count": 6,
+      "chi2_all_constraints": 6.493840504137364,
+      "chi2_exceeded_only": 43.292270027582425,
+      "max_excess_A": 2.736684250733564
+    },
+    "effective_fraction_entropy": 1.0,
+    "weight_ess_not_independent_samples": 1195.0,
+    "max_weight": 0.0008368200836820083
+  },
+  "gradient_check": {
+    "finite_difference": -0.11417298453774083,
+    "analytic": -0.11417298453773952,
+    "passed": true
+  },
+  "config": {
+    "theta": 6.0,
+    "theta_basis": "Reconstruction assumption fixed from author grid near paper18percent effective fraction; not confirmed original fit config. No tuning to our results.",
+    "saxs_selection": "no-tag static30C; exact90 q labels from author stats grid, excluding first experimental q=0.00253895",
+    "saxs_scaling": "as deposited, no fitted scale/offset",
+    "noe_averaging": "power3",
+    "noe_bound": "UPPER distance -> LOWER r^-3 intensity",
+    "noe_sigma": "deposited0.3 Angstrom; first-order propagated for objective",
+    "prior": "uniform across deposited rows",
+    "statistical_unit": "simulation and experiment replicate; frames correlated; no inferential CIs in this subcalculation",
+    "author_fit_targets_or_weights_used": false,
+    "author_q_label_metadata_used": true,
+    "claim_ceiling": "author-processed numeric subcalculation; no coordinate reanalysis, full reproduction or Rules trigger/route success"
+  },
+  "optimizer": {
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 94,
+    "objective_at_uniform": -1.4802973661668753e-16,
+    "objective_final": -6.826621087902871,
+    "weight_sum": 0.999999999999998
+  },
+  "reweighted_power3": {
+    "saxs_chi2_mean": 1.5305569884326444,
+    "amide": {
+      "constraints": 292,
+      "exceed_upper_count": 49,
+      "chi2_all_constraints": 3.3412235990186043,
+      "chi2_exceeded_only": 19.910965120682295,
+      "max_excess_A": 4.5595315153187865
+    },
+    "methyl": {
+      "constraints": 40,
+      "exceed_upper_count": 8,
+      "chi2_all_constraints": 3.111911326762283,
+      "chi2_exceeded_only": 15.559556633811415,
+      "max_excess_A": 2.2348669263743304
+    },
+    "effective_fraction_entropy": 0.01489605295671414,
+    "weight_ess_not_independent_samples": 12.61580487724911,
+    "max_weight": 0.167348336162573
+  },
+  "elapsed_seconds": 0.0523080840066541,
+  "runtime": {
+    "python": "3.14.0 (main, Oct  7 2025, 09:34:52) [Clang 17.0.0 (clang-1700.4.4.1)]",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1"
+  }
+}

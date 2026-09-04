@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-04T22:35:38.796848+00:00",
+  "status": "UNEXPECTED_ENTRY_OUTCOME",
+  "returncode": 1,
+  "command": [
+    "python3 (original environment)",
+    "-c",
+    "from dynamics_atlas_harness.cli import main; raise SystemExit(main())",
+    "run-case",
+    "--case-id",
+    "q05_nanodisc_saxs_noe_20260904",
+    "--output-dir",
+    "REVIEW_ROOT/outputs/q05_rules_baseline_v0/runtime_output"
+  ],
+  "cwd": "TEMP_WORKDIR",
+  "environment_overrides": {
+    "PYTHONPATH": "REPOSITORY_ROOT/src",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "harness_and_available_rules_commit": "738160824a83054d3011695ba1865b12351294ac",
+  "rules_version_record": "available_rules_git_tree.txt",
+  "rules_loaded": null,
+  "fact_packet": "q05_fact_packet.json",
+  "fact_packet_consumed": null,
+  "input_boundary": "Public CLI takes registered case-id and output-dir, not an arbitrary fact packet. Q05 packet is preserved but was not ingested.",
+  "rule_instances": null,
+  "trigger_reasons": null,
+  "raw_outputs": [
+    "stdout.txt",
+    "stderr.txt"
+  ],
+  "failure_class": "UNCLASSIFIED",
+  "source_locator": "case_runner_v1.py:397-400, before rules load at435; cli.py:548-562",
+  "stop": "No registry insertion, invented RuleInstance, generic-rules bypass or extra calculation attached."
+}

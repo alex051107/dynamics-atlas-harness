@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-04T22:44:29.689683+00:00",
+  "command": [
+    "python3.14",
+    "REVIEW_ROOT/scripts/q05_fixed_weight_audit_v0.py"
+  ],
+  "cwd": "TEMP_WORKDIR",
+  "attempts": 2,
+  "first_attempt": {
+    "exit_code": 1,
+    "exception": "ValueError: Integers to negative integer powers are not allowed.",
+    "source": "BME_tools.py:69, called by audit line67",
+    "cause": "The adapter formatted all integral NOE upper distances with g, allowing pandas integer inference.",
+    "repair": "Only adapter output format changed .17g to .17e; same numerical values, original inputs and author code unchanged."
+  },
+  "second_attempt": {
+    "exit_code": 0,
+    "status": "METHOD_FUNCTIONS_MATCH",
+    "comparisons": 28,
+    "failed": 0,
+    "stderr": "Three SyntaxWarning messages from unchanged historical BME_tools string escapes; no exception."
+  },
+  "source_execution": "Extracted exact functions/initialization AST nodes, listed in result.json. No full-package execution.",
+  "optimization_runs": 0,
+  "source_hashes_computed": 0
+}

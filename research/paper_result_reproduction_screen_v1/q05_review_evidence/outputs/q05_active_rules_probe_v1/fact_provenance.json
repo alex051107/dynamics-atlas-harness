@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-04T23:27:20.462588+00:00",
+  "fact_authority": "Original answer-free Q05 packet, admitted author numeric file identities and current user research question; source content treated as recorded unverified factual proposals.",
+  "new_entry_files": [
+    "evidence/paper_blind_exposed_v1/public/q05_public_fact_packet_v1.json",
+    "research/paper_result_reproduction_screen_v1/q05_fact_proposal_v1.json",
+    "scripts/run_q05_rules_probe_v1.py"
+  ],
+  "source_backing": {
+    "method_facts": "original_facts.json#/method_facts",
+    "data_identities": "original_facts.json#/available_data",
+    "unknowns": "original_facts.json#/unknowns",
+    "case_scope": "User request: same ensemble joint SAXS/NOE consistency and shape heterogeneity; intake declaration only.",
+    "comparison_roles": "MD predicted observables are construction; SAXS and NOE are intended fit targets, not held-out validation.",
+    "condition_relation": "UNKNOWN; nominal system matching alone not sufficient.",
+    "time_semantics": "MD UNKNOWN; experiment ensemble-averaged observable/restraint from stated SAXS and power3 NOE method.",
+    "source_projection_status": "Unchanged projector assigns AGENT_PROPOSED_UNVERIFIED; no manual upgrade to DECLARED lineage."
+  },
+  "code_locators": {
+    "admission": "paper_blind_exposed_v1.py:465",
+    "projection": "paper_blind_exposed_v1.py:510",
+    "lineage_status": "paper_blind_exposed_v1.py:553",
+    "evaluator": "rules_prototype_v1.py:657",
+    "default_outcome": "rules_prototype_v1.py:652"
+  },
+  "source_schema_reuse": "Only public agent schema copied from existing packet; no old scientific facts, verdicts, action cards or chosen RuleIDs."
+}

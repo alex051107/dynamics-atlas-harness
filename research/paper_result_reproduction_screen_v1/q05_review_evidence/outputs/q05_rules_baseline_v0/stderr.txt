@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from dynamics_atlas_harness.cli import main; raise SystemExit(main())
+                                                                  ~~~~^^
+  File "REPOSITORY_ROOT/src/dynamics_atlas_harness/cli.py", line 626, in main
+    return int(args.handler(args))
+               ~~~~~~~~~~~~^^^^^^
+  File "REPOSITORY_ROOT/src/dynamics_atlas_harness/cli.py", line 362, in run_case
+    from .case_runner_v1 import run_case_v1
+  File "REPOSITORY_ROOT/src/dynamics_atlas_harness/case_runner_v1.py", line 18, in <module>
+    from . import exposed_paper_blind_capsule_v1 as capsule
+  File "REPOSITORY_ROOT/src/dynamics_atlas_harness/exposed_paper_blind_capsule_v1.py", line 36, in <module>
+    from .sampling_diagnostics_v1 import run_grouped_observable_sampling_diagnostics
+  File "REPOSITORY_ROOT/src/dynamics_atlas_harness/sampling_diagnostics_v1.py", line 18, in <module>
+    from pymbar import timeseries
+ModuleNotFoundError: No module named 'pymbar'

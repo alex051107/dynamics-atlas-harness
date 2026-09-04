@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-09-04T23:24:25.291065+00:00",
+  "status": "PASS",
+  "positive_admission": 1,
+  "rejected_boundary_inputs": [
+    {
+      "input": "expected_rules",
+      "result": "REJECTED",
+      "reason": "FORBIDDEN_FIELD:expected_rules"
+    },
+    {
+      "input": "rule_instance_id",
+      "result": "REJECTED",
+      "reason": "FORBIDDEN_FIELD:rule_instance_id"
+    },
+    {
+      "input": "execution_request",
+      "result": "REJECTED",
+      "reason": "FORBIDDEN_FIELD:execution_request"
+    },
+    {
+      "input": "scientific_conclusion",
+      "result": "REJECTED",
+      "reason": "FORBIDDEN_FIELD:scientific_conclusion"
+    },
+    {
+      "input": "changed method facts",
+      "result": "REJECTED"
+    },
+    {
+      "input": "wrong case",
+      "result": "REJECTED"
+    }
+  ],
+  "unknown_preservation": "PASS",
+  "scope": "Admission/source-boundary tests only; no Rules or science execution yet."
+}

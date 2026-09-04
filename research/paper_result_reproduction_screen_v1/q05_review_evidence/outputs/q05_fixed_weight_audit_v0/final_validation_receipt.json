@@ -1,0 +1,12 @@
+{
+  "ts": "2026-09-04T22:45:15.512709+00:00",
+  "iteration": 6,
+  "category": "combined_artifact_state",
+  "result": "PASS",
+  "command_invocations": 1,
+  "evidence": "Baseline raw failure and null Rules fields; 2x422 per-observable rows;1195 weights;28 passing saved comparisons; valid links/JSON/state/replay syntax; unchanged clean repo head7381608.",
+  "method_rerun": false,
+  "independent_reviews": 0,
+  "hashes": 0,
+  "skipped": "Full tests/builds, repeated numerical execution and rule ablation do not cover a new risk in this bounded batch."
+}

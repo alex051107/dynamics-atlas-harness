@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-04T22:35:38.796848+00:00",
+  "status": "RUNTIME_DEPENDENCY_GAP",
+  "returncode": 1,
+  "command": [
+    "python3 (original environment)",
+    "-c",
+    "from dynamics_atlas_harness.cli import main; raise SystemExit(main())",
+    "run-case",
+    "--case-id",
+    "q05_nanodisc_saxs_noe_20260904",
+    "--output-dir",
+    "REVIEW_ROOT/outputs/q05_rules_baseline_v0/runtime_output"
+  ],
+  "cwd": "TEMP_WORKDIR",
+  "environment_overrides": {
+    "PYTHONPATH": "REPOSITORY_ROOT/src",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "harness_and_available_rules_commit": "738160824a83054d3011695ba1865b12351294ac",
+  "rules_version_record": "available_rules_git_tree.txt",
+  "rules_loaded": false,
+  "fact_packet": "q05_fact_packet.json",
+  "fact_packet_consumed": false,
+  "input_boundary": "Public CLI takes registered case-id and output-dir, not an arbitrary fact packet. Q05 packet is preserved but was not ingested.",
+  "rule_instances": null,
+  "trigger_reasons": null,
+  "raw_outputs": [
+    "stdout.txt",
+    "stderr.txt"
+  ],
+  "failure_class": "MISSING_PYMBAR_BEFORE_RULES_LOAD",
+  "source_locator": "cli.py:362 -> case_runner_v1.py:18 -> exposed_paper_blind_capsule_v1.py:36 -> sampling_diagnostics_v1.py:18",
+  "stop": "No registry insertion, invented RuleInstance, generic-rules bypass or extra calculation attached.",
+  "registry_admission": "NOT_REACHED",
+  "rule_coverage_verdict": "NOT_EVALUATED",
+  "rules_version_meaning": "Available repository Rules revision only; runtime never loaded it.",
+  "interpretation": "Actual CLI import failed before case admission. Static registry exclusion is separate evidence, not the observed exception.",
+  "classified_at": "2026-09-04T22:44:29.689683+00:00"
+}

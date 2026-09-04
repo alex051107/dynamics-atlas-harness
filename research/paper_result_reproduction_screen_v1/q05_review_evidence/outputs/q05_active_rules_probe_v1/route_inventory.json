@@ -1,0 +1,33 @@
+{
+  "observed_routes": {
+    "DIRECT_EVALUATION": 7,
+    "SOURCE_LOOKUP": 10
+  },
+  "observed_numeric_obligations": [],
+  "numeric_obligation_basis": "No result has EXTRA_CALCULATION route or numerical action specification. All17 results are DIRECT_EVALUATION or SOURCE_LOOKUP.",
+  "not_executed": "No numeric operator, no ablation, no EvidenceResult injection.",
+  "unresolved_default_contract_instances": [
+    "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q05_MD_PREDICTIONS",
+    "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q05_SAXS_EXPERIMENT",
+    "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q05_NOE_EXPERIMENT"
+  ],
+  "candidate_only_rules": [
+    {
+      "rule": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "rule": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "rule": "F05R02_SOURCE_FORWARD_BRIDGE",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "rule": "F07R01_CASE_IDENTIFIABILITY",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    }
+  ],
+  "claim_boundary": "Coverage/implementation diagnosis for this Q05 probe and current active slice, not an observed miss by an implemented numerical criterion."
+}

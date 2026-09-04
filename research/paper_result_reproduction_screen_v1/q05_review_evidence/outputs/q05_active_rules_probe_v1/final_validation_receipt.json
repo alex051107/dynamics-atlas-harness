@@ -1,0 +1,13 @@
+{
+  "ts": "2026-09-04T23:29:48.150083+00:00",
+  "iteration": 8,
+  "category": "combined_final_artifact_state_and_inline_review",
+  "result": "PASS",
+  "invocations": 1,
+  "evidence": "17 unique instances from8 active kinds;7 declaration PASS/10 UNRESOLVED;0 numeric obligations;3 contract defaults; original facts preserved; rule snapshots equal committed baseline; existing tracked files unchanged; only3 intended new artifacts; report links and state valid.",
+  "prose_check": "PASS after one formatting repair",
+  "independent_reviews": 0,
+  "hashes": 0,
+  "method_reruns": 0,
+  "skipped": "No full tests/builds/optimizer/ablation; no existing source or Rules changed and no numerical obligation emitted."
+}

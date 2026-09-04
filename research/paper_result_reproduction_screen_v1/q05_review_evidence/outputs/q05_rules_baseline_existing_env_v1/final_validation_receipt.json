@@ -1,0 +1,12 @@
+{
+  "ts": "2026-09-04T23:06:40.358252+00:00",
+  "iteration": 7,
+  "category": "final_artifact_state",
+  "result": "PASS",
+  "invocations": 2,
+  "repair": "First checker used wrong positional slice for command arguments. Repaired by comparing full common argument sequence to original receipt; replay itself was not rerun.",
+  "evidence": "Same head and clean repo; case rejection traceback; absent runtime output; null RuleInstance; replay syntax and report links valid; counts and state valid.",
+  "independent_reviews": 0,
+  "hashes": 0,
+  "science_reruns": 0
+}

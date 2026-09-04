@@ -1,0 +1,16 @@
+# Reading SAXS data 
+# Reading 90 experimental data from REVIEW_ROOT/outputs/q05_fixed_weight_audit_v0/saxs_experiment_adapter.dat 
+# Reading 1195 calculated samples from REVIEW_ROOT/inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat 
+# Using linear averaging 
+
+# Reading NOE data 
+# UPPER-bound data 
+# Reading 292 experimental data from REVIEW_ROOT/outputs/q05_fixed_weight_audit_v0/amide_experiment_adapter.dat 
+# Reading 1195 calculated samples from REVIEW_ROOT/inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat 
+# Using power_3 averaging 
+
+# Reading NOE data 
+# UPPER-bound data 
+# Reading 40 experimental data from REVIEW_ROOT/outputs/q05_fixed_weight_audit_v0/methyl_experiment_adapter.dat 
+# Reading 1195 calculated samples from REVIEW_ROOT/inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat 
+# Using power_3 averaging 
