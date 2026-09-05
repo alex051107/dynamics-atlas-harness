@@ -1,0 +1,17 @@
+{
+  "status": "CONDITIONAL_KERNEL_CHECK_PASS",
+  "checks": [
+    "zero_FRET",
+    "delta_distance",
+    "zero_time_normalization",
+    "Gaussian_quadrature_vs_independent_quad",
+    "FFT_vs_direct_and_full_Lin_placement",
+    "photon_normalization",
+    "flat_reference",
+    "Poisson_zero_cases"
+  ],
+  "worst_quadrature_absolute_error": 4.556299781910411e-12,
+  "scientific_fits": 0,
+  "rules_runs": 0,
+  "method_status": "Conditional Eq34-only survival; original author executed method unknown"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PQ_MAPPING_AND_BINNED_FORWARD_CHECK_PASS",
+  "variant": "22-127",
+  "bins_per_role": 6100,
+  "dt_ns": 0.008,
+  "counts": {
+    "D0": 33558106,
+    "DA": 27825473
+  },
+  "irf_baseline": {
+    "D0": 0.0,
+    "DA": 0.0
+  },
+  "source_binding": "all5consumedfiles byte-equal original frozenZIP;metadataPQ8ps matches nativeaxes",
+  "quadrature_256_512_max_absolute_difference": 2.886579864025407e-15,
+  "checks": [
+    "ZIPbinding_and_metadata_time",
+    "positive_distance_quadrature_convergence",
+    "exact_exponential_bin_average",
+    "f0equals1_DAequalsD0_beforeIRF",
+    "separateIRFs_and_final_count_normalization"
+  ],
+  "conditional_limits": [
+    "Histogram IRF convolution assumes within-bin phase represented by fittedshift",
+    "IRFbackgroundmedianlast256;scatter0;allbinswindow;no nuisance sensitivity completed"
+  ],
+  "fits": 0
+}

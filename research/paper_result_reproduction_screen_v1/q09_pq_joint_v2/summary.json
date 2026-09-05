@@ -1,0 +1,334 @@
+{
+  "status": "ACTUAL_PQ_JOINT_K2_DIAGNOSTIC_COMPLETE",
+  "donor_runs": [
+    {
+      "label": "D0_1",
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        2.9168646886876566,
+        0.00260517409902605,
+        -2.000000073565507
+      ],
+      "scaled_objective": 0.014581281144608048,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 2.091382635347956e-06,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 40,
+      "evaluations": 488,
+      "elapsed_seconds": 0.15323295799316838,
+      "deviance": 489320.1782665582,
+      "reused_from": "v1;not rerun"
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        0.5,
+        4.0,
+        0.1,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4010088036170876,
+        3.6597211301541406,
+        0.5498253951677493,
+        0.0002406748128726697,
+        -0.2207920136714812
+      ],
+      "scaled_objective": 0.00033637531961465205,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 4.1230040215300113e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 64,
+      "evaluations": 100,
+      "elapsed_seconds": 0.37319208300323226,
+      "deviance": 11288.118631412373
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        1.0,
+        3.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4010082474280243,
+        3.659720509972215,
+        0.5498251435812964,
+        0.00024067475225782,
+        -0.2207927265677475
+      ],
+      "scaled_objective": 0.00033637531962224434,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 7.247078371439985e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 60,
+      "evaluations": 70,
+      "elapsed_seconds": 0.2547761669848114,
+      "deviance": 11288.118631667156
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        0.00024067369516156026,
+        -0.22079199377019507
+      ],
+      "scaled_objective": 0.00033637531961195943,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 5.545694112266226e-09,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 78,
+      "evaluations": 108,
+      "elapsed_seconds": 0.39825162501074374,
+      "deviance": 11288.118631322013
+    }
+  ],
+  "joint_runs": [
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        35.0,
+        65.0,
+        0.5,
+        0.1,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4342505443119284,
+        3.6832908775372437,
+        0.5582202966734001,
+        34.80683347513416,
+        65.00946628954036,
+        0.8555210934548806,
+        0.600295817926706,
+        0.0002236099054230913,
+        -0.27026812201824285,
+        0.0001482793744054708,
+        0.15961305379998594
+      ],
+      "scaled_objective": 0.0003142949790650358,
+      "optimizer_success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "projected_gradient_inf": 0.0008253989099197181,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 500,
+      "evaluations": 607,
+      "elapsed_seconds": 10.417018167005153,
+      "channel_deviance": {
+        "D0": 11425.006089320717,
+        "DA": 7867.544587421253
+      },
+      "total_deviance": 19292.550676741972
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        50.0,
+        85.0,
+        0.8,
+        0.2,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4708968931498554,
+        3.6939765264665714,
+        0.566904255709081,
+        34.894103108593136,
+        85.68294125011775,
+        0.9938177467907225,
+        0.6278788742328726,
+        0.0002299383940935931,
+        -0.14144543406758167,
+        0.00011270292145460844,
+        0.3083831503668155
+      ],
+      "scaled_objective": 0.000335605901492714,
+      "optimizer_success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "projected_gradient_inf": 0.000763864245836729,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 500,
+      "evaluations": 607,
+      "elapsed_seconds": 10.569215625000652,
+      "channel_deviance": {
+        "D0": 12384.536315748966,
+        "DA": 8216.155051395264
+      },
+      "total_deviance": 20600.69136714423
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        30.0,
+        100.0,
+        0.2,
+        0.05,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4482822073405093,
+        3.7090523996973825,
+        0.5669998191044407,
+        33.5840000482057,
+        99.65757936120447,
+        0.3618201353643054,
+        0.0038938193660012876,
+        0.00019750196653743114,
+        -0.25229475772898763,
+        0.0001725361033007561,
+        0.3440002059959941
+      ],
+      "scaled_objective": 0.0003182147845887909,
+      "optimizer_success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "projected_gradient_inf": 0.0002480136213589453,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 500,
+      "evaluations": 598,
+      "elapsed_seconds": 10.298853541986318,
+      "channel_deviance": {
+        "D0": 11681.474810404741,
+        "DA": 7851.687558369289
+      },
+      "total_deviance": 19533.16236877403
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        65.0,
+        40.0,
+        0.5,
+        0.1,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4345815427128947,
+        3.6904062437362235,
+        0.5607945723448603,
+        64.99142959037037,
+        33.2865281081215,
+        0.17333801690303427,
+        0.5667815966429893,
+        0.00021382493099561458,
+        -0.282388486888505,
+        0.00014882859168095073,
+        0.35842668695748914
+      ],
+      "scaled_objective": 0.00031037678675189346,
+      "optimizer_success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "projected_gradient_inf": 0.00068977391615364,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 500,
+      "evaluations": 590,
+      "elapsed_seconds": 10.155861750012264,
+      "channel_deviance": {
+        "D0": 11461.501053453874,
+        "DA": 7590.5369558971315
+      },
+      "total_deviance": 19052.038009351007
+    }
+  ],
+  "best_joint": {
+    "label": "JOINT_K2",
+    "initial": [
+      1.401009548795593,
+      3.6597217979403984,
+      0.5498256450985263,
+      65.0,
+      40.0,
+      0.5,
+      0.1,
+      0.00024067369516156026,
+      -0.22079199377019507,
+      0.001,
+      0.0
+    ],
+    "parameters": [
+      1.4345815427128947,
+      3.6904062437362235,
+      0.5607945723448603,
+      64.99142959037037,
+      33.2865281081215,
+      0.17333801690303427,
+      0.5667815966429893,
+      0.00021382493099561458,
+      -0.282388486888505,
+      0.00014882859168095073,
+      0.35842668695748914
+    ],
+    "scaled_objective": 0.00031037678675189346,
+    "optimizer_success": false,
+    "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "projected_gradient_inf": 0.00068977391615364,
+    "numerical_status": "UNRESOLVED",
+    "bound_hits": [],
+    "iterations": 500,
+    "evaluations": 590,
+    "elapsed_seconds": 10.155861750012264,
+    "channel_deviance": {
+      "D0": 11461.501053453874,
+      "DA": 7590.5369558971315
+    },
+    "total_deviance": 19052.038009351007
+  },
+  "donor_observation_contributions": 1,
+  "DA_observation_contributions": 1,
+  "new_optimizer_calls": 7,
+  "reused_fit_records": 1,
+  "scientific_question_verdict": "NOT_EVALUATED_SINGLE_PAIR_K2_ONLY",
+  "Rules_run": false,
+  "full_answers_added": 0
+}

@@ -47,3 +47,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## Q09原始衰减与方法核对；Q05形状准备
 
 [Q09实际输入](q09_decay_admission_v1/REPORT_ZH.md)已解析33组181份数值文件；[方法与显式映射](q09_method_admission_v1/REPORT_ZH.md)记录原SI公式的无FRET极限冲突、w=12Å对应sigma=6Å、重复参考及混合仪器条件。[Q05形状准备](q05_shape_preparation_v1/REPORT_ZH.md)包含真实原子清单与六项合成检查，真实轨迹0帧。这些新增准备没有改变完整科学答案0/20，也没有增加Rules运行数。
+
+## 首个实际Q09 DA/D0联合拟合批次
+
+[22–127 PQ联合拟合](q09_pq_joint_v3/REPORT_ZH.md)在独立IRF和共享donor寿命下，同时拟合真实DA/D0，单列DA内部donor-only比例。四组预定初值经数值缩放修复后通过梯度检查；原失败与重跑均保留。[先行IBH donor-only诊断](q09_donor_calibration_v2/REPORT_ZH.md)随批提供。它们是条件开发计算，尚无K3/33组全局比较、Q09 Rules触发或完整科学答案。
