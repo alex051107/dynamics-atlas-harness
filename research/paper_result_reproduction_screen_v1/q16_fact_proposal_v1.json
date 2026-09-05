@@ -1,0 +1,65 @@
+{
+  "case_id": "q16_male_ligand_cryoprotectant_comparison_20260905",
+  "proposed_case_facts": {
+    "case": {
+      "scientific_claim": "Do MalE residual distance components under maltose reflect incomplete ligand saturation or cryoprotectant preparation, and does removal of cryoprotectant support a closed-reference-dominated distribution when differing trace windows are accounted for?",
+      "requested_claim_level": "CONDITION_DEPENDENT_STATE_INTERPRETATION",
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "declared_request_scope": [
+        "CONDITION_DEPENDENT_STATE_INTERPRETATION"
+      ],
+      "forbidden_upgrades": [
+        "BIOLOGICAL_ACTIVITY",
+        "BACKBONE_DISTANCE_AS_PROBE_DISTANCE",
+        "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "Q16_DOSE",
+        "evidence_role": "FIT_TARGET",
+        "construct_and_condition": "MalE29/352 and36/352 spin-labelled samples with1mM versus10mM maltose; standard50percent ethylene glycol preparation.",
+        "sample_composition": "MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.",
+        "native_observable": "Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.",
+        "estimand": "Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.",
+        "time_semantics": {
+          "kind": "CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE"
+        },
+        "spatial_support": "Spin label positions29/352 and36/352; not backbone atom distances.",
+        "unit_or_aggregation": "Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN."
+      },
+      {
+        "source_id": "Q16_PROTECTOR",
+        "evidence_role": "FIT_TARGET",
+        "construct_and_condition": "MalE29/352 at0/25percentethylene glycol,25percentglycerol and50percentethylene glycol;36/352 at0/50percentethylene glycol;holo1mM maltose.",
+        "sample_composition": "MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.",
+        "native_observable": "Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.",
+        "estimand": "Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.",
+        "time_semantics": {
+          "kind": "CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE"
+        },
+        "spatial_support": "Spin label positions29/352 and36/352; not backbone atom distances.",
+        "unit_or_aggregation": "Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN."
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "Q16_CONDITION_COMPARISON",
+        "left_source_id": "Q16_DOSE",
+        "right_source_id": "Q16_PROTECTOR",
+        "condition_relation": "UNKNOWN",
+        "relation_type": "LIGAND_AND_PREPARATION_COMPARISON",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "UNKNOWN",
+        "shared_error_status": "SHARED_PROCESSING_AND_SAMPLE_RELATION_UNRESOLVED"
+      }
+    ]
+  },
+  "unknowns": [
+    "Exact background/inversion configuration and source repeat identity",
+    "Comparability under differing recording durations",
+    "Joint effect of ligand dose and cryoprotectant preparation",
+    "State reference and identifiability under available time windows"
+  ],
+  "rationale": "Method and condition facts only; no author or local scientific result or numerical obligation list."
+}

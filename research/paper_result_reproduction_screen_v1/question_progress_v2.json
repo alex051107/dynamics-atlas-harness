@@ -1,5 +1,5 @@
 {
-  "version": "question-progress/20260905-pro18",
+  "version": "question-progress/20260905-q16",
   "questions": [
     {
       "question_id": "Q01",
@@ -128,8 +128,8 @@
       "question_id": "Q16",
       "original_question": "MalE 加入麦芽糖后，DEER 中残留的开放态是真正的配体未饱和，还是与冷冻保护剂条件有关；去除保护剂后能否复现闭合态占优？",
       "dependency_group": "10.1038/s41467-022-31945-6",
-      "development_status": "NOT_RUN",
-      "answer_artifact": null,
+      "development_status": "PARTIAL_REAL_RULE_CONTROLLED_COMMON_WINDOW_SIGNAL_COMPARISON",
+      "answer_artifact": "q16_common_window_v1/REPORT_ZH.md",
       "human_final_approval_recorded": false
     },
     {
@@ -138,7 +138,8 @@
       "dependency_group": "10.1371/journal.pcbi.1012180",
       "development_status": "NOT_RUN",
       "answer_artifact": null,
-      "human_final_approval_recorded": false
+      "human_final_approval_recorded": false,
+      "source_intake_artifact": "q17_source_inventory_v1/REPORT_ZH.md"
     },
     {
       "question_id": "Q18",

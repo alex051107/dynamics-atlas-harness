@@ -6,6 +6,12 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
+## Current Q16 scientific result and Q17 source availability
+
+[Q16 currentRules baseline](q16_rules_probe_v2/REPORT_ZH.md) has11 instances andzero numericalactions. A new developmental condition/window rule then [actually executes one common-window comparison](q16_common_window_v1/REPORT_ZH.md), off0, and consumes the evidence in the same instance. At both MalE pairs the no-protector shape contrast exceeds the1to10mM maltose contrast across raw, deposited-processed and raw/background signal paths. This is descriptive preparation-sensitive evidence; closed-state population and experimental uncertainty remain unresolved. Author fitted curves/distributions/state labels are excluded from operator inputs.
+
+[Q17 short source inventory](q17_source_inventory_v1/REPORT_ZH.md) locates four refined ChRmine PDBs and official main/half-map entries. Coordinate/map payloads remain unadmitted; differing cc variants are not a pure noise-weight intervention. Current counts:1 complete development answer,4 partial questions,15 scientifically unrun; human approval0 and accuracy unmeasured.
+
 ## Latest Pro19 follow-up: matched scientific evidence
 
 [Pro19](pro_review_round19/reply.md) closes the prior Q09 continuation defects and accepts Q15's descriptive direction evidence. Its one source-consumption defect is repaired: both APBS paths validate expanded length and CRC before parsing; [all140 real files match existing receipts](q15_pro19_verification_v1/REPORT_ZH.md), with no main-science rerun.

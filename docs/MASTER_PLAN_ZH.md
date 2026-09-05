@@ -1,5 +1,8 @@
 # Dynamics Atlas：Rules Table 与 Agent Harness Master Plan
 
+**2026-09-05 Q16实际推进：** 原问题不变。当前1题完整开发回答、4题部分实算、15题科学未运行。Q16已在同窗真实信号中区分保护剂和配体剂量效应（开发规则on1/off0）；继续状态参照/可辨识性，不把方法检查视为完整科学答案。Q17公开坐标/map入口已定位，下一步核同模型/同mask；Pro20生成期间继续独立工作，收取后开放送审，循环不在批次出口停止。详见[当前现状](../research/paper_result_reproduction_screen_v1/CURRENT_STATUS_ZH.md)。
+
+
 > 版本：v2.5
 > 日期：2026-09-05
 > 状态：Q01开发题级答复完成并获Pro科学内容审阅通过，覆盖1/20；Q09按实证续算，人类最终科学批准待审
