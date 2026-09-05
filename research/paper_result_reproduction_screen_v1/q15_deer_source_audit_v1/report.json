@@ -1,0 +1,158 @@
+{
+  "status": "SOURCE_LABEL_CONFLICT_RETAINED",
+  "source": "Complete publisher workbook Figure 3",
+  "source_role": "AUTHOR_PROCESSED_DEER_DISTRIBUTION_NOT_RAW_TRACE_REINVERSION",
+  "pdf_locator": "Peter 2022 DOI10.1038/s41467-022-31945-6 physical page5 Figure3c",
+  "visually_verified_pdf_axis": "0 to 100 Angstrom",
+  "original_workbook_axis": "r (nm)",
+  "unit_resolution": "NOT_SILENTLY_RESOLVED_NO_ABSOLUTE_DISTANCE_ADMISSION",
+  "envelope_policy": "Original upper/lower labels preserved; no swap, confidence interval, posterior or independent replicate assumption",
+  "curves": [
+    {
+      "pair": "55/175",
+      "condition": "apo",
+      "columns": [
+        "AJ",
+        "AK",
+        "AL",
+        "AM"
+      ],
+      "headers": [
+        "r (nm)",
+        "P(r)",
+        "upper (P(r))",
+        "lower (P(r))"
+      ],
+      "source_rows": [
+        5,
+        310
+      ],
+      "n": 306,
+      "grid_range": [
+        19.86303,
+        101.88222
+      ],
+      "area_source_units": 0.1843293035233685,
+      "mean_source_axis_units": 42.89244464979375,
+      "mode_source_axis_units": 42.72084,
+      "original_upper_less_than_lower_rows": 297,
+      "original_upper_greater_than_lower_rows": 0,
+      "central_outside_unordered_envelope_rows": 0,
+      "central_negative_rows": 0
+    },
+    {
+      "pair": "55/175",
+      "condition": "holo",
+      "columns": [
+        "AX",
+        "AY",
+        "AZ",
+        "BA"
+      ],
+      "headers": [
+        "r (nm)",
+        "P(r)",
+        "upper (P(r))",
+        "lower (P(r))"
+      ],
+      "source_rows": [
+        5,
+        314
+      ],
+      "n": 310,
+      "grid_range": [
+        19.86303,
+        102.32423
+      ],
+      "area_source_units": 0.17421986399484057,
+      "mean_source_axis_units": 27.927990615174856,
+      "mode_source_axis_units": 27.86897,
+      "original_upper_less_than_lower_rows": 184,
+      "original_upper_greater_than_lower_rows": 0,
+      "central_outside_unordered_envelope_rows": 0,
+      "central_negative_rows": 0
+    },
+    {
+      "pair": "175/228",
+      "condition": "apo",
+      "columns": [
+        "BL",
+        "BM",
+        "BN",
+        "BO"
+      ],
+      "headers": [
+        "r (nm)",
+        "P(r)",
+        "upper (P(r))",
+        "lower (P(r))"
+      ],
+      "source_rows": [
+        5,
+        314
+      ],
+      "n": 310,
+      "grid_range": [
+        19.86303,
+        102.32423
+      ],
+      "area_source_units": 0.205369384319118,
+      "mean_source_axis_units": 60.73398519152041,
+      "mode_source_axis_units": 60.1596,
+      "original_upper_less_than_lower_rows": 195,
+      "original_upper_greater_than_lower_rows": 0,
+      "central_outside_unordered_envelope_rows": 0,
+      "central_negative_rows": 0
+    },
+    {
+      "pair": "175/228",
+      "condition": "holo",
+      "columns": [
+        "BZ",
+        "CA",
+        "CB",
+        "CC"
+      ],
+      "headers": [
+        "r (nm)",
+        "P(r)",
+        "upper (P(r))",
+        "lower (P(r))"
+      ],
+      "source_rows": [
+        5,
+        228
+      ],
+      "n": 224,
+      "grid_range": [
+        19.86303,
+        91.8207
+      ],
+      "area_source_units": 0.2253295927307394,
+      "mean_source_axis_units": 50.77165624230355,
+      "mode_source_axis_units": 50.19496,
+      "original_upper_less_than_lower_rows": 108,
+      "original_upper_greater_than_lower_rows": 0,
+      "central_outside_unordered_envelope_rows": 0,
+      "central_negative_rows": 0
+    }
+  ],
+  "differences": [
+    {
+      "pair": "55/175",
+      "mean_change_source_axis_units": -14.964454034618896,
+      "mode_change_source_axis_units": -14.851870000000002,
+      "claim": "Central author-processed curve direction only, conditional on common positive axis scale; no uncertainty or structural verdict"
+    },
+    {
+      "pair": "175/228",
+      "mean_change_source_axis_units": -9.962328949216861,
+      "mode_change_source_axis_units": -9.964639999999996,
+      "claim": "Central author-processed curve direction only, conditional on common positive axis scale; no uncertainty or structural verdict"
+    }
+  ],
+  "optimizer_calls": 0,
+  "rules_extra_credit": 0,
+  "raw_trace_reanalyses": 0,
+  "scientific_question_answer": "INCOMPLETE"
+}

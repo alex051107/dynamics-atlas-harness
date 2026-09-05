@@ -46,6 +46,10 @@ Dynamics Atlas 是一个 **scientific workflow compiler**：系统把用户问�
 
 [Q05当前可审查代码与执行证据](../research/paper_result_reproduction_screen_v1/q05_review_evidence/README.md)包含实际17条规则结果及数值方法对照。自动跟进不因首题诊断完成而停止；按每轮实际证据推进最终目标。
 
+## 2026-09-05 当前推进顺序
+
+继续执行、验证、同PR提交、Pro开放审查及回收循环。Q01已完成的开发答案冻结。Q15先保存真实DraftRules反应，随后由新增明确触发的窄规则检查背景处理方法差异：一次开/关对照已完成，两个预定替代均未改变观察方向，完整科学问题仍部分完成。DEER来源标签冲突和缺失的TMR/Cy5双标数据分别记录。下一步根据完整Pro回复选择能改变科学判断的证据，不把声明PASS、工具调用数或局部检查作为题级正确率。
+
 ## 2026-09-04 Pro 审阅后的执行修订
 
 2026-09-05 Pro16后：Q01有限时间原题科学内容通过具名ChatGPT6Pro审阅，完成证据依赖的题级答复；反向组差异、同时远离双参照和接触分歧会改变输出。开发题级内容覆盖1/20，保留PENDING_DOMAIN_REVIEW及人类最终权威，准确率未测，不新增Q01科学计算。Q09已核验36人工候选并按组改变处置，随后规则仅续算3个实际STOP点；1个较高损失点通过，较低未完成点仍保留。当前只做背景参数数值停止原因诊断，不重跑全33。见[Q01完成答复](../research/paper_result_reproduction_screen_v1/q01_question_answer_v1/REPORT_ZH.md)、[Q09实际续算](../research/paper_result_reproduction_screen_v1/q09_targeted_continuation_v1/REPORT_ZH.md)及[20题进度](../research/paper_result_reproduction_screen_v1/question_progress_v2.json)。下方为此前快照。

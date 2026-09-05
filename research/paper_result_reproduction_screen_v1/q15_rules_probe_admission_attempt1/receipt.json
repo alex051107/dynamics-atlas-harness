@@ -1,0 +1,6 @@
+{
+  "status": "PACKET_ADMISSION_REJECTED_BEFORE_RULES",
+  "reason": "PUBLIC_PACKET_MUST_EXCLUDE_DISCUSSION_AND_CONCLUSION",
+  "rules_evaluated": false,
+  "repair": "Add exact Discussion andConclusion exclusion labels required by existing packetcontract; no source science orRuleschanged"
+}

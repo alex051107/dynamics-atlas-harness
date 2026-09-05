@@ -1,0 +1,16 @@
+{
+  "clipping_discrepancy_verified": true,
+  "source_commit": "49dfef079129696e84c4983ecc330d7b5d60e71b",
+  "source_locator": "alex/models.py lines607-609",
+  "literal_assignments": [
+    "DA_bkg_corr[DA_bkg_corr < 0] = 0",
+    "DD_bkg_corr[DA_bkg_corr < 0] = 0",
+    "DA_bkg_corr[AA_bkg_corr < 0] = 0"
+  ],
+  "exact_Peter2022_executable": "UNKNOWN",
+  "alternatives": [
+    "LITERAL_ALEX_SUITE_49DFEF",
+    "CHANNELWISE_NONNEGATIVE"
+  ],
+  "other_calibration_and_selection": "Frozen main policy; selection recomputed for each alternative; no E clipping"
+}

@@ -4,6 +4,12 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
+## Current Q15 progress: a real method sensitivity obligation
+
+The [unchanged DraftRules probe](q15_rules_probe_v1/REPORT_ZH.md) produced23instances:10declarationPASS,10source-lookups,3not-applicable and0numericalactions. Its original entry rejection remains recorded. A new explicitly developmental [background-handling rule](q15_background_policy_v1/REPORT_ZH.md) then uses the observed negative-count and source-code discrepancy to trigger one real on1/off0 numerical comparison. Both predeclared alternatives preserve the observed direction pattern; this narrows a method uncertainty without certifying dye safety or protein closure.
+
+The [DEER source audit](q15_deer_source_audit_v1/REPORT_ZH.md) retains inconsistent nm/Angstrom labels and reversed envelope headings. Central author-processed curves move toward shorter distances under a common positive axis convention; absolute-distance and confidence interpretations are not admitted. Q15 remains partial, including missing TMR/Cy5 double-labelled observations. Q01 remains the only complete development answer; Pro17 accepted its reducer and Q09 is currently limited by D24's lower unfinished numerical candidate. Earlier headings are historical snapshots.
+
 ## Current result after Pro16: one complete development answer
 
 [Q01 final finite-time answer](q01_question_answer_v1/REPORT_ZH.md) is now materialized from verified evidence. Named external reviewer ChatGPT6Pro accepted its scientific content and independently recomputed the complete40-trajectory summary and bootstrap. The new answer reducer changes its result when group displacement reverses, paths move away from both references, or contact channels disagree; no-event agreement is not positive evidence. It adds no science calculation. **Development question coverage is1/20; human final scientific approval remains pending and accuracy is unmeasured.** The original20-question roster stays frozen; [current per-question progress](question_progress_v2.json) records the distinct states.
