@@ -1,0 +1,5321 @@
+{
+  "hypothesis": "NOE residue numbers below300 map to PDB chainA;above300 to chainB after subtracting300",
+  "endpoint_records_checked": 664,
+  "all_residue_names_match": true,
+  "mismatches": [],
+  "confirmation_level": "CANDIDATE_MAPPING_SUPPORTED_BY_RESIDUE_NAMES_NOT_AUTHOR_DOCUMENTED_ATOM_OR_FRAME_MAPPING",
+  "records": [
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 2,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 2,
+      "label": "446-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 146,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 3,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 3,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 4,
+      "label": "444-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 4,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 5,
+      "label": "444-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 5,
+      "label": "446-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 146,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 6,
+      "label": "444-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 6,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 7,
+      "label": "444-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 7,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 8,
+      "label": "446-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 146,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 8,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 9,
+      "label": "451-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 151,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 9,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 10,
+      "label": "450-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 150,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 10,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 11,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 11,
+      "label": "454-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 154,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 12,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 12,
+      "label": "453-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 13,
+      "label": "453-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 13,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 14,
+      "label": "453-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 14,
+      "label": "454-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 154,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 15,
+      "label": "454-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 154,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 15,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 16,
+      "label": "466-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 166,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 16,
+      "label": "467-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 167,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 17,
+      "label": "462-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 162,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 17,
+      "label": "463-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 18,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 18,
+      "label": "362-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 62,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 19,
+      "label": "363-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 63,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 19,
+      "label": "364-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 20,
+      "label": "363-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 63,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 20,
+      "label": "365-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 65,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 21,
+      "label": "364-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 21,
+      "label": "365-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 65,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 22,
+      "label": "367-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 22,
+      "label": "368-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 23,
+      "label": "359-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 59,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 23,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 24,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 24,
+      "label": "363-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 63,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 25,
+      "label": "362-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 62,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 25,
+      "label": "364-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 26,
+      "label": "360-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 60,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 26,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 27,
+      "label": "367-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 27,
+      "label": "369-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 69,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 28,
+      "label": "368-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 28,
+      "label": "369-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 69,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 29,
+      "label": "369-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 69,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 29,
+      "label": "370-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 70,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 30,
+      "label": "368-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 30,
+      "label": "370-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 70,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 31,
+      "label": "367-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 31,
+      "label": "369-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 69,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 32,
+      "label": "375-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 75,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 32,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 33,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 33,
+      "label": "377-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 77,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 34,
+      "label": "375-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 75,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 34,
+      "label": "377-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 77,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 35,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 35,
+      "label": "374-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 74,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 36,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 36,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 37,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 37,
+      "label": "494-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 194,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 38,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 38,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 39,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 39,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 40,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 40,
+      "label": "374-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 74,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 41,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 41,
+      "label": "375-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 75,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 42,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 42,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 43,
+      "label": "374-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 74,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 43,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 44,
+      "label": "377-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 77,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 44,
+      "label": "378-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 78,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 45,
+      "label": "381-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 81,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 45,
+      "label": "382-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 82,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 46,
+      "label": "463-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 46,
+      "label": "464-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 164,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 47,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 47,
+      "label": "533-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 48,
+      "label": "531-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 231,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 48,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 49,
+      "label": "531-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 231,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 49,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 50,
+      "label": "530-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 50,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 51,
+      "label": "536-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 236,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 51,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 52,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 52,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 53,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 53,
+      "label": "539-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 239,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 54,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 54,
+      "label": "539-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 239,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 55,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 55,
+      "label": "540-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 240,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 56,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 56,
+      "label": "533-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 57,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 57,
+      "label": "535-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 235,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 58,
+      "label": "386-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 86,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 58,
+      "label": "387-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 87,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 59,
+      "label": "386-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 86,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 59,
+      "label": "388-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 88,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 60,
+      "label": "386-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 86,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 60,
+      "label": "387-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 87,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 61,
+      "label": "387-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 87,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 61,
+      "label": "388-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 88,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 62,
+      "label": "388-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 88,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 62,
+      "label": "389-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 89,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 63,
+      "label": "389-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 89,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 63,
+      "label": "390-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 64,
+      "label": "388-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 88,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 64,
+      "label": "390-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 65,
+      "label": "394-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 94,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 65,
+      "label": "395-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 95,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 66,
+      "label": "393-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 66,
+      "label": "395-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 95,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 67,
+      "label": "400-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 67,
+      "label": "401-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 68,
+      "label": "400-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 68,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 69,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 69,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 70,
+      "label": "401-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 70,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 71,
+      "label": "401-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 71,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 72,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 72,
+      "label": "404-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 104,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 73,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 73,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 74,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 74,
+      "label": "405-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 105,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 75,
+      "label": "404-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 104,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 75,
+      "label": "405-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 105,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 76,
+      "label": "404-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 104,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 76,
+      "label": "406-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 106,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 77,
+      "label": "405-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 105,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 77,
+      "label": "406-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 106,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 78,
+      "label": "406-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 106,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 78,
+      "label": "407-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 107,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 79,
+      "label": "406-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 106,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 79,
+      "label": "408-TRP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 108,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 80,
+      "label": "408-TRP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 108,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 80,
+      "label": "409-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 109,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 81,
+      "label": "409-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 109,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 81,
+      "label": "411-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 111,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 82,
+      "label": "413-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 113,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 82,
+      "label": "414-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 114,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 83,
+      "label": "412-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 112,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 83,
+      "label": "413-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 113,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 84,
+      "label": "409-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 109,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 84,
+      "label": "411-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 111,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 85,
+      "label": "411-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 111,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 85,
+      "label": "412-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 112,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 86,
+      "label": "411-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 111,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 86,
+      "label": "412-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 112,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 87,
+      "label": "412-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 112,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 87,
+      "label": "414-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 114,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 88,
+      "label": "414-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 114,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 88,
+      "label": "415-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 115,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 89,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 89,
+      "label": "448-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 148,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 90,
+      "label": "446-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 146,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 90,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 91,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 91,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 92,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 92,
+      "label": "448-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 148,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 93,
+      "label": "448-MET-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 148,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 93,
+      "label": "449-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 149,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 94,
+      "label": "449-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 149,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 94,
+      "label": "450-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 150,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 95,
+      "label": "450-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 150,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 95,
+      "label": "451-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 151,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 96,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 96,
+      "label": "454-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 154,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 97,
+      "label": "453-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 97,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 98,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 98,
+      "label": "456-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 99,
+      "label": "456-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 99,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 100,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 100,
+      "label": "458-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 158,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 101,
+      "label": "456-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 101,
+      "label": "458-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 158,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 102,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 102,
+      "label": "458-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 158,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 103,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 103,
+      "label": "456-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 104,
+      "label": "456-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 104,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 105,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 105,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 106,
+      "label": "459-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 106,
+      "label": "460-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 160,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 107,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 107,
+      "label": "459-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 108,
+      "label": "460-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 160,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 108,
+      "label": "461-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 161,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 109,
+      "label": "461-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 161,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 109,
+      "label": "462-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 162,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 110,
+      "label": "461-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 161,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 110,
+      "label": "463-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 111,
+      "label": "462-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 162,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 111,
+      "label": "463-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 112,
+      "label": "470-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 112,
+      "label": "471-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 113,
+      "label": "472-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 113,
+      "label": "473-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 173,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 114,
+      "label": "474-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 174,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 114,
+      "label": "475-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 175,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 115,
+      "label": "473-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 173,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 115,
+      "label": "474-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 174,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 116,
+      "label": "471-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 116,
+      "label": "472-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 117,
+      "label": "470-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 117,
+      "label": "471-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 118,
+      "label": "475-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 175,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 118,
+      "label": "476-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 176,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 119,
+      "label": "476-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 176,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 119,
+      "label": "477-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 177,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 120,
+      "label": "477-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 177,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 120,
+      "label": "478-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 178,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 121,
+      "label": "466-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 166,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 121,
+      "label": "467-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 167,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 122,
+      "label": "467-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 167,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 122,
+      "label": "468-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 168,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 123,
+      "label": "470-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 123,
+      "label": "472-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 124,
+      "label": "472-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 124,
+      "label": "473-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 173,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 125,
+      "label": "479-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 179,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 125,
+      "label": "480-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 180,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 126,
+      "label": "480-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 180,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 126,
+      "label": "481-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 181,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 127,
+      "label": "478-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 178,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 127,
+      "label": "479-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 179,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 128,
+      "label": "476-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 176,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 128,
+      "label": "478-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 178,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 129,
+      "label": "478-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 178,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 129,
+      "label": "480-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 180,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 130,
+      "label": "480-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 180,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 130,
+      "label": "481-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 181,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 131,
+      "label": "485-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 185,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 131,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 132,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 132,
+      "label": "487-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 187,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 133,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 133,
+      "label": "488-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 188,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 134,
+      "label": "484-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 184,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 134,
+      "label": "485-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 185,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 135,
+      "label": "485-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 185,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 135,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 136,
+      "label": "485-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 185,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 136,
+      "label": "487-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 187,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 137,
+      "label": "484-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 184,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 137,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 138,
+      "label": "484-ASN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 184,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 138,
+      "label": "485-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 185,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 139,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 139,
+      "label": "487-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 187,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 140,
+      "label": "488-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 188,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 140,
+      "label": "490-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 141,
+      "label": "486-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 186,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 141,
+      "label": "488-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 188,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 142,
+      "label": "490-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 142,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 143,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 143,
+      "label": "492-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 144,
+      "label": "490-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 144,
+      "label": "492-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 145,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 145,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 146,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 146,
+      "label": "494-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 194,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 147,
+      "label": "494-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 194,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 147,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 148,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 148,
+      "label": "497-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 197,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 149,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 149,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 150,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 150,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 151,
+      "label": "494-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 194,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 151,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 152,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 152,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 153,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 153,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 154,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 154,
+      "label": "497-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 197,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 155,
+      "label": "495-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 195,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 155,
+      "label": "497-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 197,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 156,
+      "label": "497-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 197,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 156,
+      "label": "498-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 198,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 157,
+      "label": "497-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 197,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 157,
+      "label": "498-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 198,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 158,
+      "label": "498-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 198,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 158,
+      "label": "499-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 199,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 159,
+      "label": "496-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 196,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 159,
+      "label": "498-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 198,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 160,
+      "label": "499-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 199,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 160,
+      "label": "500-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 161,
+      "label": "499-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 199,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 161,
+      "label": "500-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 162,
+      "label": "498-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 198,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 162,
+      "label": "499-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 199,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 163,
+      "label": "500-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 163,
+      "label": "501-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 201,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 164,
+      "label": "501-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 201,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 164,
+      "label": "503-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 165,
+      "label": "503-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 165,
+      "label": "504-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 204,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 166,
+      "label": "504-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 204,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 166,
+      "label": "505-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 205,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 167,
+      "label": "504-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 204,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 167,
+      "label": "506-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 206,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 168,
+      "label": "503-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 168,
+      "label": "504-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 204,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 169,
+      "label": "507-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 207,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 169,
+      "label": "508-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 208,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 170,
+      "label": "505-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 205,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 170,
+      "label": "506-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 206,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 171,
+      "label": "506-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 206,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 171,
+      "label": "507-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 207,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 172,
+      "label": "517-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 217,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 172,
+      "label": "519-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 173,
+      "label": "517-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 217,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 173,
+      "label": "518-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 174,
+      "label": "516-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 216,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 174,
+      "label": "518-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 175,
+      "label": "519-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 175,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 176,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 176,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 177,
+      "label": "518-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 177,
+      "label": "519-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 178,
+      "label": "518-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 178,
+      "label": "519-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 179,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 179,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 180,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 180,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 181,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 181,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 182,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 182,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 183,
+      "label": "525-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 183,
+      "label": "526-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 226,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 184,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 184,
+      "label": "525-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 185,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 185,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 186,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 186,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 187,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 187,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 188,
+      "label": "525-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 188,
+      "label": "526-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 226,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 189,
+      "label": "526-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 226,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 189,
+      "label": "527-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 227,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 190,
+      "label": "526-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 226,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 190,
+      "label": "527-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 227,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 191,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 191,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 192,
+      "label": "527-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 227,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 192,
+      "label": "528-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 228,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 193,
+      "label": "527-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 227,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 193,
+      "label": "528-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 228,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 194,
+      "label": "528-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 228,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 194,
+      "label": "529-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 229,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 195,
+      "label": "536-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 236,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 195,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 196,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 196,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 197,
+      "label": "536-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 236,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 197,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 198,
+      "label": "536-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 236,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 198,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 199,
+      "label": "535-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 235,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 199,
+      "label": "537-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 200,
+      "label": "370-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 70,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 200,
+      "label": "371-PHE-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 71,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 201,
+      "label": "419-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 201,
+      "label": "420-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 120,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 202,
+      "label": "503-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 202,
+      "label": "505-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 205,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 203,
+      "label": "372-TRP-HD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 72,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 203,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 204,
+      "label": "492-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 204,
+      "label": "493-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 193,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 205,
+      "label": "525-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 205,
+      "label": "526-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 226,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 206,
+      "label": "525-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 206,
+      "label": "527-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 227,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 207,
+      "label": "400-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 207,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 208,
+      "label": "400-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 208,
+      "label": "401-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 209,
+      "label": "408-TRP-HD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 108,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 209,
+      "label": "409-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 109,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 210,
+      "label": "371-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 71,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 210,
+      "label": "372-TRP-HE1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 72,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 211,
+      "label": "451-ARG-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 151,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 211,
+      "label": "452-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 212,
+      "label": "464-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 164,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 212,
+      "label": "466-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 166,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 213,
+      "label": "466-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 166,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 213,
+      "label": "467-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 167,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 214,
+      "label": "470-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 214,
+      "label": "472-GLN-1HE2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 215,
+      "label": "400-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 215,
+      "label": "403-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 103,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 216,
+      "label": "477-ARG-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 177,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 216,
+      "label": "478-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 178,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 217,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 217,
+      "label": "525-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 218,
+      "label": "370-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 70,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 218,
+      "label": "371-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 71,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 219,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 219,
+      "label": "492-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 220,
+      "label": "492-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 220,
+      "label": "494-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 194,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 221,
+      "label": "357-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 57,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 221,
+      "label": "359-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 59,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 222,
+      "label": "372-TRP-HE1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 72,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 222,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 223,
+      "label": "372-TRP-HE1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 72,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 223,
+      "label": "373-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 73,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 224,
+      "label": "368-THR-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 224,
+      "label": "372-TRP-HE1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 72,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 225,
+      "label": "360-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 60,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 225,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 226,
+      "label": "364-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 226,
+      "label": "365-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 65,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 227,
+      "label": "364-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 227,
+      "label": "368-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 228,
+      "label": "367-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 228,
+      "label": "368-THR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 68,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 229,
+      "label": "375-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 75,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 229,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 230,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 230,
+      "label": "471-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 231,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 231,
+      "label": "472-GLN-2HE2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 232,
+      "label": "454-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 154,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 232,
+      "label": "456-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 233,
+      "label": "455-HIS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 155,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 233,
+      "label": "456-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 234,
+      "label": "456-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 234,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 235,
+      "label": "456-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 235,
+      "label": "457-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 157,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 236,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 236,
+      "label": "472-GLN-2HE2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 237,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 237,
+      "label": "472-GLN-1HE2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 238,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 238,
+      "label": "472-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 172,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 239,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 239,
+      "label": "471-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 240,
+      "label": "521-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 240,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 241,
+      "label": "521-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 241,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 242,
+      "label": "521-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 242,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 243,
+      "label": "453-ARG-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 243,
+      "label": "456-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 244,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 244,
+      "label": "473-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 173,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 245,
+      "label": "393-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 245,
+      "label": "395-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 95,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 246,
+      "label": "393-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 246,
+      "label": "396-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 96,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 247,
+      "label": "393-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 247,
+      "label": "394-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 94,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 248,
+      "label": "519-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 248,
+      "label": "522-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 249,
+      "label": "518-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 249,
+      "label": "519-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 250,
+      "label": "522-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 250,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 251,
+      "label": "522-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 251,
+      "label": "524-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 224,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 252,
+      "label": "522-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 252,
+      "label": "525-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 225,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 253,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 253,
+      "label": "522-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 254,
+      "label": "400-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 254,
+      "label": "401-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 255,
+      "label": "401-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 255,
+      "label": "402-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 102,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 256,
+      "label": "470-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 256,
+      "label": "471-ARG-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 171,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 257,
+      "label": "463-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 257,
+      "label": "466-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 166,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 258,
+      "label": "463-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 258,
+      "label": "464-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 164,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 259,
+      "label": "532-ALA-QB",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 259,
+      "label": "533-LEU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 260,
+      "label": "510-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 210,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 260,
+      "label": "511-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 211,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 261,
+      "label": "375-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 75,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 261,
+      "label": "376-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 76,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 262,
+      "label": "537-THR-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 262,
+      "label": "538-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 238,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 263,
+      "label": "537-THR-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 237,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 263,
+      "label": "539-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 239,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 264,
+      "label": "500-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 264,
+      "label": "504-SER-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 204,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 265,
+      "label": "396-LYS-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 96,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 265,
+      "label": "397-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 97,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 266,
+      "label": "397-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 97,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 266,
+      "label": "400-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 100,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 267,
+      "label": "417-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 117,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 267,
+      "label": "419-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 268,
+      "label": "416-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 116,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 268,
+      "label": "419-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 269,
+      "label": "419-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 269,
+      "label": "420-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 120,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 270,
+      "label": "519-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 270,
+      "label": "521-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 271,
+      "label": "519-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 271,
+      "label": "523-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 223,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 272,
+      "label": "489-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 189,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 272,
+      "label": "492-TYR-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 273,
+      "label": "364-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 273,
+      "label": "367-VAL-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 274,
+      "label": "532-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 232,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 274,
+      "label": "533-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 275,
+      "label": "444-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 275,
+      "label": "447-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 147,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 276,
+      "label": "444-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 276,
+      "label": "446-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 146,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 277,
+      "label": "444-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 277,
+      "label": "445-GLY-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 145,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 278,
+      "label": "488-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 188,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 278,
+      "label": "489-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 189,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 279,
+      "label": "489-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 189,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 279,
+      "label": "490-ALA-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 280,
+      "label": "489-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 189,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 280,
+      "label": "492-TYR-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 192,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 281,
+      "label": "489-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 189,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 281,
+      "label": "490-ALA-QB",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 282,
+      "label": "389-ASP-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 89,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 282,
+      "label": "390-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 283,
+      "label": "390-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 283,
+      "label": "391-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 91,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 284,
+      "label": "357-PHE-QD",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 57,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 284,
+      "label": "360-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 60,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 285,
+      "label": "360-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 60,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 285,
+      "label": "361-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 61,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 286,
+      "label": "514-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 286,
+      "label": "515-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 215,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 287,
+      "label": "364-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 287,
+      "label": "367-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 288,
+      "label": "530-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 288,
+      "label": "533-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 289,
+      "label": "530-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 289,
+      "label": "533-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 290,
+      "label": "417-GLN-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 117,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 290,
+      "label": "419-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 291,
+      "label": "521-VAL-QG1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 291,
+      "label": "522-LEU-QD1",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 292,
+      "label": "452-ALA-QB",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 152,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 292,
+      "label": "453-ARG-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 153,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 293,
+      "label": "490-ALA-QB",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 190,
+      "resname_match": true
+    },
+    {
+      "file": "exp_HN2_NOE.dat",
+      "source_line": 293,
+      "label": "491-GLU-H",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 191,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 2,
+      "label": "64-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 2,
+      "label": "67-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 3,
+      "label": "364-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 64,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 3,
+      "label": "367-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 67,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 4,
+      "label": "90-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 4,
+      "label": "93-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 5,
+      "label": "390-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 90,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 5,
+      "label": "393-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 6,
+      "label": "97-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 97,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 6,
+      "label": "101-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 7,
+      "label": "397-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 97,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 7,
+      "label": "401-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 8,
+      "label": "119-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 8,
+      "label": "144-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 9,
+      "label": "419-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 119,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 9,
+      "label": "444-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 144,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 10,
+      "label": "156-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 10,
+      "label": "159-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 11,
+      "label": "456-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 11,
+      "label": "459-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 12,
+      "label": "163-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 12,
+      "label": "159-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 13,
+      "label": "463-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 163,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 13,
+      "label": "459-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 159,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 14,
+      "label": "200-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 14,
+      "label": "203-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 15,
+      "label": "500-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 200,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 15,
+      "label": "503-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 16,
+      "label": "211-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 211,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 16,
+      "label": "214-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 17,
+      "label": "511-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 211,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 17,
+      "label": "514-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 18,
+      "label": "214-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 18,
+      "label": "218-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 19,
+      "label": "514-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 19,
+      "label": "518-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 20,
+      "label": "218-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 20,
+      "label": "221-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 21,
+      "label": "218-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 21,
+      "label": "222-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 22,
+      "label": "518-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 22,
+      "label": "521-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 23,
+      "label": "518-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 218,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 23,
+      "label": "522-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 24,
+      "label": "219-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 24,
+      "label": "222-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 25,
+      "label": "519-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 25,
+      "label": "522-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 26,
+      "label": "221-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 26,
+      "label": "222-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 27,
+      "label": "521-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 221,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 27,
+      "label": "522-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 28,
+      "label": "230-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 28,
+      "label": "233-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 29,
+      "label": "530-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 29,
+      "label": "533-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 30,
+      "label": "233-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 30,
+      "label": "503-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 31,
+      "label": "533-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 233,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 31,
+      "label": "203-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 203,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 32,
+      "label": "470-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 32,
+      "label": "93-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 33,
+      "label": "474-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 174,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 33,
+      "label": "93-VAL-QG2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 34,
+      "label": "214-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 34,
+      "label": "522-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 35,
+      "label": "514-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 214,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 35,
+      "label": "222-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 222,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 36,
+      "label": "230-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 36,
+      "label": "511-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 211,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 37,
+      "label": "530-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 230,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 37,
+      "label": "211-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 211,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 38,
+      "label": "219-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 38,
+      "label": "519-LEU-QD2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 219,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 39,
+      "label": "170-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 170,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 39,
+      "label": "393-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 40,
+      "label": "174-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 174,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 40,
+      "label": "393-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 93,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 41,
+      "label": "456-VAL-QG2",
+      "candidate_chain": "B",
+      "candidate_pdb_resid": 156,
+      "resname_match": true
+    },
+    {
+      "file": "exp_methyl_NOE.dat",
+      "source_line": 41,
+      "label": "101-LEU-QD2",
+      "candidate_chain": "A",
+      "candidate_pdb_resid": 101,
+      "resname_match": true
+    }
+  ]
+}

@@ -39,3 +39,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## 第一项共同权重数值规则
 
 [实际运行与同实例重评](q05_joint_numeric_v1/REPORT_ZH.md)：新增 CASE 规则触发一次主计算，三通道损失下降，数值最优性通过；绝对相容性与完整Q05仍未决。
+
+## 第六轮接口修复与证据复算
+
+[Q05 v2](q05_joint_numeric_v2/REPORT_ZH.md)核验作者来源、重算数值证据并绑定实际请求；九项针对性测试与247项本地完整回归通过。结果数值与v1相同，完整科学答案未增加。

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-05T05:22:42.714738+00:00",
+  "source_head": "5a1bccaf78b82a1604b7c4c0bf3fb043426b2372",
+  "source_uncommitted": true,
+  "rules_run_kind": "ORIGINAL_DECLARATION_SLICE_PLUS_EXPLICIT_NEW_Q05_CASE_RULE",
+  "main_calculation_operator_calls": 1,
+  "extra_calculation_operator_calls": 0,
+  "rules_off_control_kind": "ROUTING_CAPABILITY_ONLY_NOT_ACCURACY_ABLATION",
+  "full_scientific_answers": 0,
+  "original_question_count": 20,
+  "status": "NUMERIC_EVIDENCE_AND_SAME_INSTANCE_REASSESSMENT_SAVED",
+  "numerical_conditions_satisfied": true,
+  "relative_fit_change": {
+    "saxs": "DECREASED",
+    "amide": "DECREASED",
+    "methyl": "DECREASED"
+  },
+  "scientific_compatibility": "UNRESOLVED"
+}
