@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-09-05T19:15:50.648424+00:00",
+  "reviewed_head": "4a2c40aa21c11a2eabe968e811bb2a77b4b30151",
+  "duration": "28m18s",
+  "decision": "CHANGES_REQUESTED_BOUNDED",
+  "complete_response_actions_visible": true,
+  "source_scope": "FullvisibleAXresponseincludingfinaldecisionanddownloadpacketlink;notdownloadedreviewZIP",
+  "scientific_direction": "DIRECTION_PASS",
+  "defects": [
+    "crossmodal accepts label-only/no-numeric/claim-ceiling changes",
+    "background accepts repetition-total contradiction/wrongproducer",
+    "sourcehashgeneratedatconsumptionnotprioradmission"
+  ]
+}

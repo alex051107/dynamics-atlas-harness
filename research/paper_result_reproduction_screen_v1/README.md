@@ -6,6 +6,12 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
+## Pro20 follow-up: evidence admission repaired without scientific reruns
+
+[Pro20](pro_review_round20/reply.md) accepts the current Q15 scientific direction and closes source-byte consumption. Its derived-evidence counterexamples are [reproduced and repaired together](q15_pro20_admission_replay_v2/REPORT_ZH.md): prior admitted source versions are checked before cross-modal consumption, relations/claim ceilings are rebuilt by the evaluator, and background comparisons are recomputed from complete repetitions with producer/method binding. Stored real evidence replays with unchanged numerical conclusions andzero new science/operator credit.
+
+Q15 completion requires the missing double-label comparison and bounded applicability assessment, not proof of a unique microscopic mechanism. The next review includes the actual Q16 common-window computation below, rather than treating these repairs as a separate science milestone.
+
 ## Current Q16 scientific result and Q17 source availability
 
 [Q16 currentRules baseline](q16_rules_probe_v2/REPORT_ZH.md) has11 instances andzero numericalactions. A new developmental condition/window rule then [actually executes one common-window comparison](q16_common_window_v1/REPORT_ZH.md), off0, and consumes the evidence in the same instance. At both MalE pairs the no-protector shape contrast exceeds the1to10mM maltose contrast across raw, deposited-processed and raw/background signal paths. This is descriptive preparation-sensitive evidence; closed-state population and experimental uncertainty remain unresolved. Author fitted curves/distributions/state labels are excluded from operator inputs.

@@ -2,10 +2,10 @@
 import argparse
 import json
 from pathlib import Path
-from dynamics_atlas_harness.q16_common_window_v1 import POLICY,run
+from dynamics_atlas_harness.q16_common_window_v1 import POLICY,run,validate_input
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--source-curves',type=Path,required=True);ap.add_argument('--output-dir',type=Path,required=True);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--source-curves',type=Path,required=True);ap.add_argument('--output-dir',type=Path,required=True);ap.add_argument('--source-admission',type=Path,default=Path(__file__).resolve().parents[1]/'research/paper_result_reproduction_screen_v1/q16_common_window_v1/source_admission.json');args=ap.parse_args()
  source=json.loads(args.source_curves.read_text());pairs={}
  for pair,conditions in [('29',['eg50_1mM','eg50_10mM','eg0_1mM','eg25_1mM','gly25_1mM']),('36',['eg50_1mM','eg50_10mM','eg0_1mM'])]:
   pairs[pair]={}
@@ -15,6 +15,8 @@ def main():
    pairs[pair][condition]=dict(source_block=key,role='AUTHOR_DEPOSITED_OBSERVED_DEER_TRACES',raw=record['raw'],processed=[r[:2] for r in record['processed']])
  payload=dict(doi='10.1038/s41467-022-31945-6',policy=POLICY,pairs=pairs)
  # No author fit column, inverse distribution or state assignment enters payload.
+ prior=json.loads(args.source_admission.read_text())
+ if validate_input(payload)!=prior['input_id']:raise ValueError('Q16_SOURCE_INPUT_NOT_PREVIOUSLY_ADMITTED')
  on=run(payload);off=run(payload,False)
  args.output_dir.mkdir(exist_ok=False,parents=True)
  for name,obj in [('input.local.json',payload),('rules_before.json',on['before']),('rules_off.json',off),('evidence.json',on['evidence']),('rules_after.json',on['after']),('receipt.json',dict(on_operator_calls=on['operator_calls'],off_operator_calls=off['operator_calls'],deterministic_evidence_verification_passes=1,iterative_fits=0,full_question_answer=False,input_id=on['before']['input_id'],source_curves=str(args.source_curves)))]:

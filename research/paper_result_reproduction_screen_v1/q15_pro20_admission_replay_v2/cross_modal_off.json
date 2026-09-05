@@ -1,0 +1,15 @@
+{
+  "rule_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1",
+  "rule_instance_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1::ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "development_adapter": true,
+  "status": "UNRESOLVED",
+  "partial_claims": [],
+  "remaining_obligations": [
+    "MATCHED_DEER_AND_FORWARD_EVIDENCE",
+    "TMR_CY5_DOUBLE_LABEL_DATA_AND_CALIBRATION"
+  ],
+  "full_question_answer": false,
+  "new_numerical_operator_calls": 0,
+  "evidence_applications": 0
+}

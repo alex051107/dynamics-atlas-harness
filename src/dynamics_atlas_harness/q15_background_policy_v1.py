@@ -1,6 +1,7 @@
 """A finite method-discrepancy check, not a protein-state decision rule."""
 import hashlib
 import json
+import math
 
 import numpy as np
 
@@ -46,6 +47,17 @@ def direction_signature(comparison):
             'all_cross_repetition_direction': 'INCREASE' if lo > 0 else 'DECREASE' if hi < 0 else 'NOT_UNIFORM'}
 
 
+def summaries_equal(expected, actual):
+    if isinstance(expected, dict):
+        return isinstance(actual,dict) and set(expected)==set(actual) and all(summaries_equal(v,actual[k]) for k,v in expected.items())
+    if isinstance(expected,list):
+        return isinstance(actual,list) and len(expected)==len(actual) and all(summaries_equal(a,b) for a,b in zip(expected,actual))
+    if isinstance(expected,bool):return type(actual) is bool and expected==actual
+    if isinstance(expected,(int,float)):
+        return type(actual) in (int,float) and math.isfinite(actual) and math.isclose(expected,actual,rel_tol=1e-12,abs_tol=1e-12)
+    return expected==actual
+
+
 def evaluate(main_report, source_facts, evidence=None):
     binding = {'rule_id': RULE_ID, 'input_id': main_report['input_id'],
                'source_facts': source_facts}
@@ -65,14 +77,30 @@ def evaluate(main_report, source_facts, evidence=None):
         return result
     if not triggered:
         raise ValueError('EVIDENCE_WITHOUT_TRIGGER')
-    if (evidence.get('input_id') != result['input_id']
+    if (evidence.get('operator_id') != OPERATOR_ID
+            or evidence.get('policy') != main_method.POLICY
+            or main_report.get('policy') != main_method.POLICY
+            or evidence.get('input_id') != result['input_id']
             or evidence.get('rule_instance_id') != instance
             or set(evidence.get('alternatives', {})) != set(ALTERNATIVES)):
         raise ValueError('EVIDENCE_BINDING_OR_ALTERNATIVES')
     changes = []
     reference = main_report['condition_comparisons']
+    if not summaries_equal(main_method.group_difference(main_report['repetitions']), reference):
+        raise ValueError('MAIN_REPETITION_SUMMARY_MISMATCH')
+    expected_keys={(r['pair'],r['condition'],r['repetition']) for r in main_report['repetitions']}
     for name, alternative in evidence['alternatives'].items():
-        actual = alternative['condition_comparisons']
+        repetitions=alternative.get('repetitions',[])
+        keys=[(r['pair'],r['condition'],r['repetition']) for r in repetitions]
+        if len(keys)!=len(expected_keys) or set(keys)!=expected_keys:
+            raise ValueError('EVIDENCE_REPETITION_COVERAGE')
+        if any(type(r['E']['n']) is not int or r['E']['n']<=0 or not math.isfinite(r['E']['mean']) for r in repetitions):
+            raise ValueError('INVALID_REPETITION_NUMERICS')
+        if sum(r['E']['n'] for r in repetitions)!=alternative.get('selected_events'):
+            raise ValueError('EVIDENCE_SELECTION_COUNT_MISMATCH')
+        actual=main_method.group_difference(repetitions)
+        if not summaries_equal(actual, alternative.get('condition_comparisons')):
+            raise ValueError('EVIDENCE_REPETITION_SUMMARY_MISMATCH')
         if set(actual) != set(reference):
             raise ValueError('EVIDENCE_PAIR_COVERAGE')
         for pair, baseline in reference.items():

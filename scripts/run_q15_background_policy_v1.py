@@ -91,7 +91,7 @@ def main():
         if len(per_file) != 140:
             raise ValueError('SOURCE_FILE_COVERAGE')
         evidence = {'input_id': baseline['input_id'], 'rule_instance_id': instance['rule_instance_id'],
-                    'operator_id': rule.OPERATOR_ID, 'alternatives': {},
+                    'operator_id': rule.OPERATOR_ID, 'policy': q.POLICY, 'alternatives': {},
                     'source_files': len(per_file), 'raw_events': sum(f['raw_events'] for f in per_file),
                     'files': per_file, 'optimizer_calls': 0, 'scientific_question_answer': False}
         for alternative, values in groups.items():
