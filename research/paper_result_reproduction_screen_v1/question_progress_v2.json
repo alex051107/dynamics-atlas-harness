@@ -1,5 +1,5 @@
 {
-  "version": "question-progress/20260905-q16",
+  "version": "question-progress/20260905-pro23-repair",
   "questions": [
     {
       "question_id": "Q01",
@@ -117,8 +117,8 @@
       "question_id": "Q15",
       "original_question": "HiSiaP 结合底物后是否发生结构域闭合；为什么 175/228 位点的一组 FRET 染料给出异常判断，而更换染料后恢复与 DEER 和结构预测一致的结论？",
       "dependency_group": "10.1038/s41467-022-31945-6",
-      "development_status": "PARTIAL_APBS_MAIN_COMPARISON_COMPLETE_ORIGINAL_ENTRY_REJECTED",
-      "answer_artifact": "q15_apbs_comparison_v1/REPORT_ZH.md",
+      "development_status": "BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW",
+      "answer_artifact": "q15_question_answer_v3/REPORT_ZH.md",
       "human_final_approval_recorded": false,
       "complete_question_answer": false,
       "original_entry_baseline_preserved": true,
@@ -128,16 +128,16 @@
       "question_id": "Q16",
       "original_question": "MalE 加入麦芽糖后，DEER 中残留的开放态是真正的配体未饱和，还是与冷冻保护剂条件有关；去除保护剂后能否复现闭合态占优？",
       "dependency_group": "10.1038/s41467-022-31945-6",
-      "development_status": "PARTIAL_REAL_RULE_CONTROLLED_COMMON_WINDOW_SIGNAL_COMPARISON",
-      "answer_artifact": "q16_common_window_v1/REPORT_ZH.md",
+      "development_status": "PARTIAL_CONDITIONAL_WITNESSES_HELDOUT_CHECKED",
+      "answer_artifact": "q16_saved_tail_audit_v1/REPORT_ZH.md",
       "human_final_approval_recorded": false
     },
     {
       "question_id": "Q17",
       "original_question": "ChRmine 的高噪声密度区，降低数据约束权重后能否得到更合理的局部结构，即使这些区域的 map 拟合变差？",
       "dependency_group": "10.1371/journal.pcbi.1012180",
-      "development_status": "NOT_RUN",
-      "answer_artifact": null,
+      "development_status": "PARTIAL_MANUAL_LOCAL_MAP_COMPARISON",
+      "answer_artifact": "q17_local_map_comparison_v1/REPORT_ZH.md",
       "human_final_approval_recorded": false,
       "source_intake_artifact": "q17_source_inventory_v1/REPORT_ZH.md"
     },
@@ -173,5 +173,11 @@
     "human_final_scientific_approvals": 0
   },
   "accuracy": "NOT_MEASURED;1/20 is content coverage, not accuracy",
-  "original_roster_snapshot_unchanged": true
+  "original_roster_snapshot_unchanged": true,
+  "current_counts": {
+    "complete": 1,
+    "partial": 5,
+    "scientifically_unrun": 14,
+    "human_scientific_approvals": 0
+  }
 }

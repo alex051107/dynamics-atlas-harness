@@ -1,0 +1,1 @@
+Q17 v1 is a preserved rejected intake: exclusion metadata used nonliteral names. v2 changes only exclusion contract strings and is the accepted fact packet. Neither packet contains a scientific result or numerical obligation list. Complete actual baseline is in research/paper_result_reproduction_screen_v1/q17_rules_baseline_v3.

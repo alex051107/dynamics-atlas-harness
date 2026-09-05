@@ -1,0 +1,41 @@
+{
+  "status": "CONDITIONAL_LOCAL_NOISE_AND_MAP_FIT_OBSERVED",
+  "common_heavy_atoms": 6513,
+  "voxels": 166314,
+  "residue_copy_rows": 801,
+  "collapsed_residues": 266,
+  "groups": {
+    "low_noise_quartile": {
+      "n": 66,
+      "median_noise": 0.0011967181344516575,
+      "median_CC_change": 0.011448396520544635,
+      "median_CA_change_A": 0.1965812106951496,
+      "residues_with_CC_decrease": 33
+    },
+    "high_noise_quartile": {
+      "n": 66,
+      "median_noise": 0.0016553557943552732,
+      "median_CC_change": 0.0598692146977543,
+      "median_CA_change_A": 0.08911103046485316,
+      "residues_with_CC_decrease": 4
+    }
+  },
+  "global_mask_CC": {
+    "original": 0.7010080309844052,
+    "refined": 0.7928057815775289,
+    "main_halfmean": 0.9311709775895712
+  },
+  "scalar_formula_maxerror": 0,
+  "elapsed_seconds": 6.631952374998946,
+  "local_noise_CCchange_spearman": 0.17232470618989706,
+  "method": "FiveGaussianfixedauthorformfactor; eachdepositedB; 10A cutoff; commonprotein3Aunionmask; ligand4Aexclusion; nearestoriginalheavyatomresidue; median3copies.",
+  "limits": [
+    "Different original/refined Bfactors are partofcomparison, notisolatedcoordinateeffect.",
+    "Halfmapproxy is not calibrated mainmap likelihoodvariance; no statistical CI/pvalue.",
+    "Mask differs fromauthorCC_mask+; not an exactFig2replication.",
+    "No clashes/Hbond/saltgeometry yet; CAchange doesnotmeasurephysicalquality.",
+    "Availablemodelcomparison notpure noise-weight intervention; nochannelactivity orcausalclaim."
+  ],
+  "Rules_extra": 0,
+  "full_question_answer": false
+}

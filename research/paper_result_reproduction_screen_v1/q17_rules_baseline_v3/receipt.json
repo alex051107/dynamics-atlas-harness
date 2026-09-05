@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-05T21:19:48.723315+00:00",
+  "entry": "NEW_Q17_LOCAL_FACT_PROBE_UNCHANGED_ADMISSION_AND_DRAFT_RULES",
+  "source_head": "53a3793b86f9f406022953f0245735e859af0279",
+  "command": [
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-openrouter/local/venvs/exposed-capsule-v1-py311/bin/python",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/scripts/q17_rules_baseline_v3.py"
+  ],
+  "cwd": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data",
+  "instances": 17,
+  "statuses": {
+    "PASS": 8,
+    "UNRESOLVED": 7,
+    "NOT_APPLICABLE": 2
+  },
+  "routes": {
+    "DIRECT_EVALUATION": 8,
+    "SOURCE_LOOKUP": 7,
+    "HUMAN_OR_NEW_DATA": 2
+  },
+  "numeric_actions_executed": 0,
+  "scientific_verdict": "NOT_EMITTED",
+  "run_case_registry_changed": false,
+  "projection_boundary": "No typed voxel noise, density generation, clash/Hbond/geometry obligations; methodstrings alone are not scientific execution."
+}

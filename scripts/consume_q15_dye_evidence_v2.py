@@ -38,6 +38,8 @@ def main():
     for name, value in {'before':before, 'after':after, 'off':off, 'evidence':de, 'admission':receipt}.items():
         (a.output/(name+'.json')).write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
     (a.output/'REPORT_ZH.md').write_text('# Q15 规则生成的有边界答复（待独立题级审阅）\n\n'
+        +after['question_answer_candidate']['scientific_synthesis']['answer']+'\n\n'
+        +'\n'.join(after['question_answer_candidate']['scientific_synthesis']['limitations'])+'\n\n'
         +de['histogram_answer']+'\n\n'+de['probe_answer']+'\n\n'
         +'以下表格按绑定数值比较两对位点的荧光、DEER 与参考探针预测。方向关系本身不构成人口估计或唯一机制证明。\n\n'
         +'| 位点 | 实测 Alexa E 变化 | DEER 中心变化（来源轴单位） | 参考读出关系 |\n|---|---:|---:|---|\n'

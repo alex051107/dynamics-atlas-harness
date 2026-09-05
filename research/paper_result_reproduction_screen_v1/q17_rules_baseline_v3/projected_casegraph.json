@@ -1,0 +1,108 @@
+{
+  "case": {
+    "case_id": "q17_chrmine_local_noise_structure_comparison_20260905",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "Do ChRmine high-noise density regions have more plausible local structures after Bayesian noise-aware refinement, even if local map fit decreases, and what comparisons can support that interpretation?",
+    "requested_claim_level": "LOCAL_MODEL_QUALITY_INTERPRETATION",
+    "intended_use": "CROSS_SOURCE_REVIEW",
+    "observability_target": {
+      "event_signature": "Answer-blind public-packet fact proposal",
+      "target_time_scale": "Source-declared or UNKNOWN",
+      "target_spatial_scale": "Source-declared or UNKNOWN"
+    },
+    "claim_contract": {
+      "internal_consistency": "CONSISTENT",
+      "declared_request_scope": [
+        "LOCAL_MODEL_QUALITY_INTERPRETATION"
+      ],
+      "forbidden_upgrades": [
+        "ION_CHANNEL_ACTIVITY",
+        "GLOBAL_MAP_CC_EQUALS_STRUCTURAL_VALIDITY",
+        "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+      ]
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "Q17_PUBLISHED",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "DIAGNOSTIC",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "CurrentRCSB7w9w proteinchainA and biologicalassembly transforms; originalpapercoordinateversion UNKNOWN.",
+      "sample_composition": "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Deposited atomiccoordinates, altlocs, residues and ligandrecords; notdirectactivity measurements.",
+      "estimand": "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+      "time_semantics": {
+        "kind": "STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL"
+      },
+      "spatial_support": "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+      "unit_or_aggregation": "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q17_REFINED",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "DIAGNOSTIC",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "COSBlab/EMMIVox-BENCHMARK@2ea480ff9d7f5fa09443eb927f76b023aa5aebee02-7w9w cc0.8/cc1.0 refinedstructures. These variants differSCALE andvoxel/wrapconfiguration, notonlynoise weighting.",
+      "sample_composition": "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Author refinedcoordinate models; physicalprior andcryoEMdensity both used inrefinement.",
+      "estimand": "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+      "time_semantics": {
+        "kind": "STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL"
+      },
+      "spatial_support": "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+      "unit_or_aggregation": "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q17_MAP",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "EMD32377 main andtwohalfmaps; metadata162cubed,0.943182Angstromgrid; binarypayloadandhistoricmapversion UNKNOWN.",
+      "sample_composition": "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "CryoEMvoxel density; half-mapdifference usedinpublishedmethod tocharacterizelocalerror, residueVoronoiassociation.",
+      "estimand": "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+      "time_semantics": {
+        "kind": "STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL"
+      },
+      "spatial_support": "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+      "unit_or_aggregation": "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.",
+      "native_measurement_declaration_status": "DECLARED"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "Q17_MODEL_COMPARISON",
+      "left_source_id": "Q17_PUBLISHED",
+      "right_source_id": "Q17_REFINED",
+      "shared_claim": "Do ChRmine high-noise density regions have more plausible local structures after Bayesian noise-aware refinement, even if local map fit decreases, and what comparisons can support that interpretation?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "MODEL_COMPARISON",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_EXPERIMENTAL_MAP_AND_MODEL_DEPENDENCE",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    },
+    {
+      "comparison_id": "Q17_MODEL_MAP_COMPARISON",
+      "left_source_id": "Q17_REFINED",
+      "right_source_id": "Q17_MAP",
+      "shared_claim": "Do ChRmine high-noise density regions have more plausible local structures after Bayesian noise-aware refinement, even if local map fit decreases, and what comparisons can support that interpretation?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "MODEL_MAP_COMPARISON",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_EXPERIMENTAL_MAP_AND_MODEL_DEPENDENCE",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    }
+  ],
+  "projection_boundary": "Agent-proposed factual fields are evaluated as unverified Draft inputs. Case claim, evidence roles, comparison identities, and comparison semantics come only from the platform-owned public-packet contract."
+}

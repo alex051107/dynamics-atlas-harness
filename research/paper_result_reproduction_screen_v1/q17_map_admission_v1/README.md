@@ -1,0 +1,1 @@
+Derived task artifacts. Original source payloads remain local. Task scripts preserve their original workspace-relative input assumptions; published reports do not imply a fresh experimental replication.

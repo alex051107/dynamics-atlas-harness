@@ -1,0 +1,92 @@
+{
+  "status": "PDF_AND_DEPOSITED_CY5_ANISOTROPY_NUMERIC_DISCREPANCY",
+  "source": "OriginalPeter2022PDFphysical7Figure4c Cy5 blackapo/redholo",
+  "axis": {
+    "time_limits": [
+      -2,
+      20
+    ],
+    "aniso_frame_x": [
+      187.66799293512997,
+      288.42578128817456
+    ],
+    "intensity_frame_x": [
+      187.33986776407997,
+      288.4570310923659
+    ],
+    "aniso_zero_y": 352.6484372316006,
+    "aniso_04_y": 296.57031227755056,
+    "aniso_points_per_unit": 140.19531238512513,
+    "source_registration": "Each ownintensitypeak; no fittedlifetime orparameteralignment"
+  },
+  "results": {
+    "apo": {
+      "PDF_peak_display_time_ns": 1.4794038142377546,
+      "peak_kind": "vertex",
+      "windows": {
+        "early": {
+          "postpeak_window_ns": [
+            2.0,
+            4.0
+          ],
+          "PDF_points": 125,
+          "source_points": 126,
+          "PDF_mean_anisotropy": 0.2866256957825468,
+          "deposited_mean_anisotropy": 0.2563744050349251,
+          "difference": 0.03025129074762173
+        },
+        "late": {
+          "postpeak_window_ns": [
+            6.0,
+            8.0
+          ],
+          "PDF_points": 125,
+          "source_points": 126,
+          "PDF_mean_anisotropy": 0.2511936614845013,
+          "deposited_mean_anisotropy": 0.12531460691384122,
+          "difference": 0.12587905457066006
+        }
+      },
+      "aniso_svg_path": 1914,
+      "intensity_svg_path": 2032
+    },
+    "holo": {
+      "PDF_peak_display_time_ns": 1.5116992558163336,
+      "peak_kind": "vertex",
+      "windows": {
+        "early": {
+          "postpeak_window_ns": [
+            2.0,
+            4.0
+          ],
+          "PDF_points": 125,
+          "source_points": 126,
+          "PDF_mean_anisotropy": 0.27591496967585855,
+          "deposited_mean_anisotropy": 0.25284777149137694,
+          "difference": 0.023067198184481608
+        },
+        "late": {
+          "postpeak_window_ns": [
+            6.0,
+            8.0
+          ],
+          "PDF_points": 124,
+          "source_points": 126,
+          "PDF_mean_anisotropy": 0.23672951901736186,
+          "deposited_mean_anisotropy": 0.11088980603281647,
+          "difference": 0.12583971298454538
+        }
+      },
+      "aniso_svg_path": 1922,
+      "intensity_svg_path": 2033
+    }
+  },
+  "limits": [
+    "Only central2-4/6-8ns windows inside identified continuouspaths used",
+    "SVGpointquantization andpanelregistration remain; no confidenceinterval",
+    "No identificationofwhichcarrieriswrong orwhy; noautomaticrelabeling",
+    "Unweighted windowmeans compared here, not earlier intensityweightedsummary; no absolutebrightness assumption"
+  ],
+  "Rules_extra": 0,
+  "scientific_full_question_answer": false
+}

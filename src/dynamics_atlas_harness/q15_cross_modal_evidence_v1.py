@@ -110,7 +110,7 @@ def evaluate(main, evidence=None, enabled=True, *, admitted_sources=None, source
                   partial_answer_status='MATCHED_DIRECTIONAL_EVIDENCE_AVAILABLE',
                   source_request_route='REQUEST_NEW_DATA_IF_PUBLIC_SOURCE_SEARCH_EXHAUSTED')
     if dye_evidence is not None:
-        from .q15_dye_evidence_v2 import summarize_dye_evidence
+        from .q15_dye_evidence_v2 import summarize_dye_evidence, question_synthesis
         if dye_sources is None or dye_receipt is None:
             raise ValueError('PRIOR_DYE_SOURCE_ADMISSION_REQUIRED')
         if set(dye_sources) != {'histogram', 'dye_summary', 'concordance'}:
@@ -131,6 +131,7 @@ def evaluate(main, evidence=None, enabled=True, *, admitted_sources=None, source
                 'CY5_PDF_SOURCE_CONCORDANCE', 'INDEPENDENT_QUESTION_LEVEL_SCIENTIFIC_REVIEW'],
             question_answer_candidate={
                 'closure': evidence['rows'],
+                'scientific_synthesis': question_synthesis(evidence, expected_dye),
                 'replacement': expected_dye['histogram_answer'],
                 'probe_explanation': expected_dye['probe_answer'],
                 'interpretation': ('The measured donor response is condition-dependent relative to the site control; fluorescence direction alone is insufficient for an unqualified structural interpretation.' if expected_dye['probe_readout_condition_dependence'] else 'The selected windows do not establish stronger condition dependence than the site control; fluorescence-to-structure interpretation still requires probe calibration.'),

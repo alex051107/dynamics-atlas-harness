@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-05T21:00:46.868381+00:00",
+  "repository": "gjeschke/DeerAnalysis2018",
+  "commit": "d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe",
+  "files": [
+    {
+      "path": "get_Tikhonov_new.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/get_Tikhonov_new.m",
+      "bytes": 2955,
+      "git_blob_sha": "4efed77ac8cedc4d76822b460e2ad4fb53b5e290",
+      "identity": "PASS"
+    },
+    {
+      "path": "fit_Tikhonov_new.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/fit_Tikhonov_new.m",
+      "bytes": 3401,
+      "git_blob_sha": "8d93038ea447c6c27815a3948332aeb330b9b67f",
+      "identity": "PASS"
+    },
+    {
+      "path": "get_td_fit.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/get_td_fit.m",
+      "bytes": 641,
+      "git_blob_sha": "3f6bf20f5e615dcb60e722ad8e9baa9db9a57938",
+      "identity": "PASS"
+    },
+    {
+      "path": "get_std_distr.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/get_std_distr.m",
+      "bytes": 645,
+      "git_blob_sha": "bdb8260523d64ea3afae8f725b52bd18a94acdf6",
+      "identity": "PASS"
+    },
+    {
+      "path": "pcf2deer.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/pcf2deer.m",
+      "bytes": 1039,
+      "git_blob_sha": "83da9f46eb1bed1c3259a7f74519fe2ab49d952c",
+      "identity": "PASS"
+    },
+    {
+      "path": "deer_sim.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/deer_sim.m",
+      "bytes": 1505,
+      "git_blob_sha": "6152159d25dad7941533014804ede2260775973a",
+      "identity": "PASS"
+    },
+    {
+      "path": "save_result.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/save_result.m",
+      "bytes": 17111,
+      "git_blob_sha": "ec08b435e2111f9f41a3929b34f2b6a8bd2e909c",
+      "identity": "PASS"
+    },
+    {
+      "path": "update_plot.m",
+      "status": "NOT_IN_ROOT_TREE"
+    },
+    {
+      "path": "get_pake_kernel.m",
+      "url": "https://raw.githubusercontent.com/gjeschke/DeerAnalysis2018/d9aaaa17d8ddf26edb6b3abbfb4003f01859ccfe/get_pake_kernel.m",
+      "bytes": 1999,
+      "git_blob_sha": "22038e1b147c35be2264ce08942d5f4e17925bf5",
+      "identity": "PASS",
+      "reason": "Actual Pake kernel definition replaces nonexistent update_plot; eighth successful smallsource"
+    }
+  ],
+  "total_bytes": 29296,
+  "status": "SOURCE_IMPORT_ONLY_NOT_EXECUTED",
+  "paper_original_binary_identity": "UNKNOWN"
+}

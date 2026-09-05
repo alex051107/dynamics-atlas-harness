@@ -1,6 +1,6 @@
 import copy
 import unittest
-from dynamics_atlas_harness.q15_dye_evidence_v2 import histogram_direction, summarize_dye_evidence
+from dynamics_atlas_harness.q15_dye_evidence_v2 import histogram_direction, summarize_dye_evidence, question_synthesis
 from dynamics_atlas_harness import q15_cross_modal_evidence_v1 as q
 from test_q15_cross_modal_evidence_v1 import inputs, admitted
 
@@ -38,7 +38,7 @@ class DyeTests(unittest.TestCase):
         d=summarize_dye_evidence(s,e);self.assertEqual(d['Alexa_relation'],'OPPOSITE')
         s['histogram']['bins']['apo'],s['histogram']['bins']['holo']=s['histogram']['bins']['holo'],s['histogram']['bins']['apo']
         d=summarize_dye_evidence(s,e)
-        self.assertEqual(d['Alexa_relation'],'SAME');self.assertEqual(d['DEER_relation'],'TENSION')
+        self.assertEqual(d['Alexa_relation'],'SAME');self.assertEqual(d['DEER_relation'],'NOT_INFERRED_FROM_MEANS')
         self.assertNotIn('向右',d['histogram_answer'])
         row=next(r for r in e['rows'] if r['pair']=='175_228');row['observed_E_effect']=.1
         self.assertEqual(summarize_dye_evidence(s,e)['Alexa_relation'],'OPPOSITE')
@@ -65,6 +65,31 @@ class DyeTests(unittest.TestCase):
         s['dye_summary']['results']['175_TMR']['holo']['windows']['late']['mean_peak_normalized_intensity']=.001
         d=summarize_dye_evidence(s,e);self.assertFalse(d['replacement_donor_reduces_observed_concern'])
         self.assertIn('没有显示更小',d['probe_answer'])
+
+    def test_stable_readout_nonlinear_ensemble_counterexample(self):
+        fret=lambda r:1/(1+(r/5.)**6)
+        apo=(fret(3)+fret(9))/2;holo=fret(5.5)
+        self.assertLess(holo,apo);self.assertLess(5.5,(3+9)/2)
+        e=q.synthesize_manual_evidence(*inputs());s=sources()
+        s['histogram']['bins']['apo'],s['histogram']['bins']['holo']=s['histogram']['bins']['holo'],s['histogram']['bins']['apo']
+        next(r for r in e['rows'] if r['pair']=='175_228')['DEER_central_mean_change_source_axis_units']=-.5
+        d=summarize_dye_evidence(s,e)
+        self.assertEqual(d['DEER_relation'],'NOT_INFERRED_FROM_MEANS')
+        self.assertNotIn('存在张力',d['histogram_answer'])
+
+    def test_question_answer_changes_on_conflict_reverse_and_missing(self):
+        e=q.synthesize_manual_evidence(*inputs());s=sources()
+        d=summarize_dye_evidence(s,e);a=question_synthesis(e,d)
+        self.assertEqual(a['status'],'BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW')
+        for kind in ['reference_conflict','reverse','missing','donor']:
+            ec=copy.deepcopy(e);sc=copy.deepcopy(s)
+            if kind=='reference_conflict':ec['rows'][0]['DEER_direction_matches_own_spin_prediction']=False
+            elif kind=='reverse':sc['histogram']['bins']['apo'],sc['histogram']['bins']['holo']=sc['histogram']['bins']['holo'],sc['histogram']['bins']['apo']
+            elif kind=='missing':sc['histogram']['bins']['holo']=[]
+            else:sc['dye_summary']['results']['175_TMR']['holo']['windows']['late']['mean_peak_normalized_intensity']=.001
+            b=question_synthesis(ec,summarize_dye_evidence(sc,ec))
+            self.assertEqual(b['status'],'QUESTION_SYNTHESIS_UNRESOLVED',kind)
+            self.assertNotEqual(a['answer'],b['answer'])
 
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,19 @@
+{
+  "admitted_at": "2026-09-05T20:53:55.730351+00:00",
+  "main_input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "basis": "Prior actual extraction iteration70 and published1214d4a dye summary/concordance; reviewed source roles; admission before new evidence application",
+  "sources": {
+    "histogram": {
+      "path": "q15_tmr_histogram_intake_v1/source_geometry.local.json",
+      "canonical_sha256": "2b442e5bf03c22bf205bf632de1c7abe2d74d433960618a76af1b25ba50fac6f"
+    },
+    "dye_summary": {
+      "path": "q15_dye_response_v1/report.json",
+      "canonical_sha256": "7bc5b2ccaa35c09eed93809be9aea2f6a8bb4abaa84e8c19faffc0c87a15714e"
+    },
+    "concordance": {
+      "path": "q15_dye_response_v1/source_concordance_check.json",
+      "canonical_sha256": "0b65a817d14117ca8b5608c938d0f8799c51a008f9518627aca40c2a9751d424"
+    }
+  }
+}

@@ -56,10 +56,10 @@ def summarize_dye_evidence(sources, cross_evidence):
     deer = pair['DEER_central_mean_change_source_axis_units']
     if not math.isfinite(deer):
         raise ValueError('NONFINITE_DEER_EFFECT')
-    expected = -1 if deer > 0 else 1 if deer < 0 else 0
-    deer_relation = 'UNRESOLVED' if not hs or not expected else 'COMPATIBLE' if hs == expected else 'TENSION'
+    deer_direction = 'DECREASE' if deer < 0 else 'INCREASE' if deer > 0 else 'UNCHANGED'
+    deer_relation = 'NOT_INFERRED_FROM_MEANS'
     relation_text = {'UNRESOLVED': '与 Alexa 方向的关系未定。', 'OPPOSITE': '与绑定的 Alexa 观测方向相反。', 'SAME': '与绑定的 Alexa 观测方向相同。'}[relation]
-    deer_text = {'UNRESOLVED': '与 DEER 的方向关系未定。', 'COMPATIBLE': '在各自读出稳定且采用共同正距离尺度时，与 DEER 方向相容。', 'TENSION': '在各自读出稳定且采用共同正距离尺度时，与 DEER 方向存在张力。'}[deer_relation]
+    deer_text = '匹配 DEER 的中心平均距离'+{'DECREASE':'减小','INCREASE':'增大','UNCHANGED':'不变'}[deer_direction]+'；两项观测方向并列记录。平均距离不能经符号取反预测平均 FRET，尚无核准的 TMR/Cy5 前向模型来检验二者关系。'
     report = sources['dye_summary']
     if report['status'] != 'SOURCE_LABELLED_DYE_POSITION_OBSERVATIONS':
         raise ValueError('DYE_OBSERVATION_ROLE')
@@ -90,7 +90,7 @@ def summarize_dye_evidence(sources, cross_evidence):
     concordance = sources['concordance']
     if concordance['status'] != 'NUMERIC_WORKBOOK_CSV_MATCH_WITH_PDF_CY5_VISUAL_DISCREPANCY':
         raise ValueError('UNREVIEWED_CY5_CONCORDANCE_STATE')
-    return dict(histogram=histogram, Alexa_relation=relation, DEER_relation=deer_relation,
+    return dict(histogram=histogram, Alexa_relation=relation, DEER_relation=deer_relation, DEER_mean_direction=deer_direction,
         histogram_answer=histogram['sentence']+relation_text+deer_text, dye_numbers=rows,
         probe_answer=probe, probe_readout_condition_dependence=contrast,
         replacement_donor_reduces_observed_concern=replacement and lower_anisotropy,
@@ -102,3 +102,30 @@ def summarize_dye_evidence(sources, cross_evidence):
             'Cy5 deposited curves disagree visually with paper panel; no Cy5 mechanism or calibration certification.',
             'Distinct temperatures/probes and directional agreement do not identify a unique protein ensemble or microscopic dye mechanism.'],
         provenance='RULE_APPLICATION_OF_PREVIOUS_MANUAL_NUMERICAL_EVIDENCE', new_numerical_operator_calls=0)
+
+
+def question_synthesis(cross_evidence, dye):
+    """Bounded reference-hypothesis synthesis, not a mean-distance FRET conversion."""
+    rows = {r['pair']: r for r in cross_evidence['rows']}
+    reference_chain = (rows['55_175']['fluorescence_relation'] == 'DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT'
+        and all(r['DEER_direction_matches_own_spin_prediction'] for r in rows.values())
+        and all(r['author_forward_distance_changes_A'][k] < 0
+                for r in rows.values() for k in ['FRET_sim', 'PELDOR_sim']))
+    anomaly = rows['175_228']['fluorescence_relation'] == 'DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT'
+    replacement = dye['histogram']['direction'] == 'RIGHT' and dye['Alexa_relation'] == 'OPPOSITE'
+    probe = dye['probe_readout_condition_dependence'] and dye['replacement_donor_reduces_observed_concern']
+    complete = reference_chain and anomaly and replacement and probe
+    if complete:
+        answer = ('在已核准的条件及参考结构—探针假说下，观测总体更支持 HiSiaP 结合底物后的结构域闭合。'
+            '55/175 的荧光、匹配 DEER 和各自参考预测构成方向一致的证据链；175/228 的 Alexa 结果与该参考读出存在冲突。'
+            '代表性 TMR/Cy5 直方图右移，加上 175 位点 AF555 相对对照的衰减形状变化较大、TMR 当前诊断较小，'
+            '为探针读出适用性受条件影响提供了实验依据。仅凭异常 Alexa 效率下降不足以推断进一步开放或命名新的蛋白构象。')
+    else:
+        answer = ('当前证据未形成完整的闭合与异常读出解释链，题级综合保持未决。'
+            '应分别查看参考预测关系、代表性换染料方向和供体对照；不把缺失或冲突改写成相同的闭合结论。')
+    return dict(status='BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW' if complete else 'QUESTION_SYNTHESIS_UNRESOLVED',
+        answer=answer, dependencies=dict(reference_chain=reference_chain, Alexa_anomaly=anomaly,
+        replacement_observation=replacement, donor_control=probe), hypothesis=cross_evidence['hypothesis'],
+        limitations=['不唯一确定微观染料机制；标签对构象集合的扰动、样本条件差异及其他读出因素仍未排除。',
+            '未认证完整 TMR/Cy5 校准、绝对距离或重复层面效应区间；有界定性答复与全部定量复现分别记账。'],
+        full_quantitative_reproduction=False)

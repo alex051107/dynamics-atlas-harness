@@ -1,0 +1,52 @@
+{
+  "status": "PAIRED_COORDINATE_IDENTITY_WITH_EXPLICIT_ALIAS_AND_ALTLOC_GAPS",
+  "published": "MonomerA; REMARK350 provides3 biologicalassembly transforms",
+  "refined": "ThreeproteinchainsABC; 2194heavyatoms each; nohydrogens",
+  "prepared": "Fullmembrane/ions/water system34393atoms; mustnotpoolwithrefined7083atoms",
+  "protein_aliases": [
+    "HSD->HIS heavyatomidentity; protonation remainsdifferent",
+    "ILE CD->CD1 uniqueatomnamealias, retainexplicitmapping"
+  ],
+  "ambiguous_sites": [
+    "ILE89 alternates",
+    "SER149 alternates",
+    "LEU279 terminalO versusOT1/OT2; chemicalequivalence/notone-to-one"
+  ],
+  "copy_mapping": {
+    "A": {
+      "unique_CA_pairs": 268,
+      "fixed_BIOMT_coordinate_RMS_A": {
+        "1": 0.46928650193194643,
+        "2": 36.215880515364155,
+        "3": 36.228067594857954
+      },
+      "closest_operator": "1",
+      "role": "Coordinate-frame and copy-identity diagnostic; not structural quality"
+    },
+    "B": {
+      "unique_CA_pairs": 268,
+      "fixed_BIOMT_coordinate_RMS_A": {
+        "1": 36.22124478836498,
+        "2": 0.49273416597455466,
+        "3": 36.198424832891334
+      },
+      "closest_operator": "2",
+      "role": "Coordinate-frame and copy-identity diagnostic; not structural quality"
+    },
+    "C": {
+      "unique_CA_pairs": 268,
+      "fixed_BIOMT_coordinate_RMS_A": {
+        "1": 36.1850978600039,
+        "2": 36.21754922914546,
+        "3": 0.4133121972465089
+      },
+      "closest_operator": "3",
+      "role": "Coordinate-frame and copy-identity diagnostic; not structural quality"
+    }
+  },
+  "maps": "NOT_DOWNLOADED",
+  "science_verdict": "NOT_RUN",
+  "Rules_extra": 0,
+  "independent_samples": "Three symmetrycopies are notthree independentexperiments",
+  "configuration": "cc0.8versuscc1.0 differsSCALE andvoxelsetup; no pure noise-weightcausalcomparison"
+}

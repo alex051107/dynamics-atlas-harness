@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-05T21:12:08.581906+00:00",
+  "commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+  "sources": [
+    {
+      "source": "02-7w9w/1-Data/step3_input_xtc.pdb",
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/02-7w9w/1-Data/step3_input_xtc.pdb",
+      "local_file": "02-7w9w__1-Data__step3_input_xtc.pdb",
+      "bytes": 2717226,
+      "git_blob_sha": "ed378199c83c43a6641e2279128c28b5d821bc58",
+      "identity": "MATCHED_FIXED_GIT_BLOB"
+    },
+    {
+      "source": "02-7w9w/3-Model/cc-0.8/conf_EMMIVOX.pdb",
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/02-7w9w/3-Model/cc-0.8/conf_EMMIVOX.pdb",
+      "local_file": "02-7w9w__3-Model__cc-0.8__conf_EMMIVOX.pdb",
+      "bytes": 559691,
+      "git_blob_sha": "3e85bbf488ffcc8f54168cc57760b2469c76e971",
+      "identity": "MATCHED_FIXED_GIT_BLOB"
+    },
+    {
+      "source": "02-7w9w/3-Model/cc-1.0/conf_EMMIVOX.pdb",
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/02-7w9w/3-Model/cc-1.0/conf_EMMIVOX.pdb",
+      "local_file": "02-7w9w__3-Model__cc-1.0__conf_EMMIVOX.pdb",
+      "bytes": 559691,
+      "git_blob_sha": "7654b1d816dff92e47529681f435e13a61885eba",
+      "identity": "MATCHED_FIXED_GIT_BLOB"
+    },
+    {
+      "source": "published_7w9w.pdb",
+      "url": "https://files.rcsb.org/download/7w9w.pdb",
+      "local_file": "published_7w9w.pdb",
+      "bytes": 231255,
+      "git_blob_sha": "2595ddd4a9dacbdf02877b4024e5b806347e9284",
+      "identity": "CURRENT_RCSB_DOWNLOAD_NOT_HISTORICAL_VERSION_CERTIFICATION"
+    }
+  ],
+  "total_bytes": 4067863,
+  "status": "COORDINATE_PAYLOADS_RETRIEVED_NOT_SCIENTIFIC_ANALYSIS",
+  "maps_downloaded": 0,
+  "new_rules_extra": 0
+}
