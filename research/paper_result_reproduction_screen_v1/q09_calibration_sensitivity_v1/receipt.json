@@ -1,0 +1,10 @@
+{
+  "optimizer_calls": 12,
+  "extra_operator_calls": 1,
+  "off_operator_calls": 0,
+  "same_instance": true,
+  "full_question_answer": false,
+  "local_forward_status": "PARTIAL_SENSITIVITY_WITH_NUMERICAL_STOPS",
+  "source_input_id": "ca0620bf5d002fb7ada4659d828a0934c5a890a3ecd5034a010fc342e8c6dad0",
+  "base_evidence_request_id": "d5fb1ce5bacb9c8f18a04a832dee361db9014175ebaeed8f203e961847af0893"
+}

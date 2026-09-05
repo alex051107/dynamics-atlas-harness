@@ -25,7 +25,68 @@ def synthetic():
     d.baseline=[1.,4.,.2,35.,65.,.5,.1,.001,0.,.001,0.];d.source_identity={'synthetic':True};d.input_id=q._input_identity(d);return d
 
 
+def positive_fixture(d=None):
+    # SYNTHETIC_EXPECTED_CURVE: exact generated means, not experimental counts
+    # or a claim that an optimizer ran. No paper targets or fitted values.
+    if d is None:
+        d=synthetic();d.irf['D0'][0]=.1;d.irf['DA'][-1]=.1
+    p=[.2,1.,4.,.2,.4,35.,65.,.5,.4,.001,.2,.001,.3]
+    d.y=q.j3_counts(d,p);d.input_id=q._input_identity(d)
+    total=sum(x.sum() for x in d.y.values());dp=p[:5]+p[9:11]
+    def record(par,bounds,fun,initial):
+        return {'initial':initial,'parameters':par,'objective':fun(par),'optimizer_success':True,'numerical_status':'PASS',
+                'projected_gradient_inf':float(max(abs(q.gradient_at(par,bounds,fun)))),'fixture_origin':'SYNTHETIC_EXPECTED_CURVE_KNOWN_PARAMETERS'}
+    df=lambda x:q.poisson_deviance(d.y['D0'],q.d3_counts(d,x)['D0'])/d.y['D0'].sum()
+    jf=lambda x:sum(q.poisson_deviance(d.y[k],v) for k,v in q.j3_counts(d,x).items())/total
+    e={'schema':'q09-forward-evidence/v1','operator_id':q.OPERATOR_ID,'request_id':q.evaluate_forward_rule(graph(),d)['request_id'],
+       'input_id':d.input_id,'config':copy.deepcopy(q.CONFIG),'baseline_parameters':d.baseline,'baseline':q.summarize(d,d.joint_counts(d.baseline)),
+       'IRF_audit':q.irf_audit(d),'donor_runs':[record(dp,q.D3_BOUNDS,df,seed+[.001,0.]) for seed in q.CONFIG['candidate_donor_initials']],
+       'joint_runs':[record(p,q.J3_BOUNDS,jf,dp[:5]+seed+dp[5:]+[.001,0.]) for seed in q.CONFIG['joint_fret_initials']],
+       'selected_donor_index':0,'selected_joint_index':0,'candidate':q.summarize(d,q.j3_counts(d,p)),'profile_runs':[]}
+    reduced=p[:8]+p[9:]
+    for f0 in q.CONFIG['profile_f0']:
+        r={'fixed_f0':f0,'initial':reduced,'numerical_status':'TIME_BUDGET_STOP'}
+        if f0==p[8]:
+            r.update(record(reduced,q.J3_BOUNDS[:8]+q.J3_BOUNDS[9:],lambda x:jf(list(x[:8])+[f0]+list(x[8:])),reduced))
+            r['full_parameters']=p
+        e['profile_runs'].append(r)
+    return d,e
+
+
 class Q09AdequacyTests(unittest.TestCase):
+    def test_expected_curve_positive_evidence_without_optimizer(self):
+        d,e=positive_fixture()
+        with patch.object(q,'optimize',side_effect=AssertionError('No verification optimizer')):
+            r=q.evaluate_forward_rule(graph(),d,e)
+        self.assertIn('BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED',r['reason_codes'])
+        self.assertEqual([x['status'] for x in r['profile_checks']],['VERIFIED','NUMERICAL_STOP','NUMERICAL_STOP'])
+        self.assertEqual(len(r['obligations']),1);self.assertEqual(r['profile_branch_status'],'INCOMPLETE')
+
+    def test_profile_missing_and_malformed_are_local_not_joint_success(self):
+        d,e=positive_fixture();e['profile_runs']=[]
+        r=q.evaluate_forward_rule(graph(),d,e)
+        self.assertEqual([x['status'] for x in r['profile_checks']],['NOT_RUN']*3)
+        for mutation in ['missing_full','wrong_length','negative_objective','false_convergence','wrong_fixed','wrong_initial']:
+            d,e=positive_fixture();x=e['profile_runs'][0]
+            if mutation=='missing_full':del x['full_parameters']
+            if mutation=='wrong_length':x['parameters']=[-1.]
+            if mutation=='negative_objective':x['objective']=-10.
+            if mutation=='false_convergence':x['projected_gradient_inf']=.9
+            if mutation=='wrong_fixed':x['fixed_f0']=.8
+            if mutation=='wrong_initial':x['initial']=[0.]*12
+            r=q.evaluate_forward_rule(graph(),d,e)
+            self.assertIn('BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED',r['reason_codes'],mutation)
+            self.assertEqual(r['profile_checks'][0]['status'],'REJECTED',mutation)
+
+    def test_joint_initial_is_verified(self):
+        d,e=positive_fixture();e['joint_runs'][0]['initial']=[0.]*13
+        self.assertEqual(q.evaluate_forward_rule(graph(),d,e)['reason_codes'],['DIAGNOSTIC_EVIDENCE_REJECTED'])
+
+    def test_replay_requires_affirmative_verification(self):
+        spec=importlib.util.spec_from_file_location('q09_replay',REPO/'scripts/replay_q09_numeric_evidence_v1.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        with self.assertRaises(ValueError):m.require_verified_replay({'status':'NOT_APPLICABLE','reason_codes':[]})
+        m.require_verified_replay({'reason_codes':['BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED']})
+
     def test_wrong_case_and_forbidden_operator_proposals_rejected(self):
         proposal=json.loads(PROPOSAL.read_text());proposal['case_id']='other'
         with self.assertRaises(ValueError):validate_agent_proposal(PACKET,proposal)

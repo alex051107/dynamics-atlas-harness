@@ -1,0 +1,6 @@
+{
+  "original": "evidence.json",
+  "derivative": "evidence_geometry_v2.json",
+  "change": "Add convolved finite-window fluorescence shares and compute fast photons from them; all fit parameters, objectives and input realizations preserved",
+  "optimizer_calls": 0
+}

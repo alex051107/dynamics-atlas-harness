@@ -57,3 +57,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 [新方法诊断义务](q09_forward_adequacy_v1/REPORT_ZH.md)已实际派发并同实例重评。原Rules基线17个实例没有数值义务；新Q09窄规则触发三寿命donor校准、保持FRET两成分的联合重算及有限f0轮廓。联合deviance从18923.6172降到13880.0482，距离和donor-only系数随donor模型明显变化。IRF首尾中位数0但均有非零计数；校准误差尚未传播，态数仍未决。关闭规则不派发该补查，完整正确人工流程若得出相同结论不计Rules增益。
 
 [共享IBH参考组](q09_shared_ibh_v1/REPORT_ZH.md)保留两DA/一D0及四次拟合，一个初值落入更差边界解，未宣称所有初值一致。新的[零优化回放](q09_forward_adequacy_v1/REPLAY.md)直接从原始数据和保存参数重算证据，不必重新制造历史失败。完整科学回答仍0/20。
+
+## Calibration sensitivity after Pro10
+
+[Actual rule-controlled calibration batch](q09_calibration_sensitivity_v1/REPORT_ZH.md) reports two IRF hypotheses, ten conditional joint fits (nine verified, one numerical stop), two fixed-f0 branch starts and actual IRF/fast-component geometry. Profile verification now preserves local rejection/stop without discarding validated joint evidence. The same Q09 instance dispatches the new numerical follow-up from a verified gap. Full scientific answers remain0/20; proceed to conditional cross-variant comparisons with calibration limits rather than indefinitely refine22–127.
