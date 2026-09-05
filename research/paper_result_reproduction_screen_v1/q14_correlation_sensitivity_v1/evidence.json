@@ -1,0 +1,20 @@
+{
+  "operator_id": "linearized_unknown_correlation_bounds_v1",
+  "input_id": "be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+  "difference": 0.04242523645508722,
+  "delta_sd_bounds": [
+    0.0,
+    0.17305916200965077
+  ],
+  "delta_variance_bounds": [
+    0.0,
+    0.029949473555482553
+  ],
+  "weighted_marginal_lengths": [
+    0.04145936981757878,
+    0.02981774378521984,
+    0.053375196232339085,
+    0.04840685217451308
+  ],
+  "interpretation": "Sensitivity over arbitrary PSD correlations with fixed marginal dispersions, not estimated covariance or a confidence interval."
+}

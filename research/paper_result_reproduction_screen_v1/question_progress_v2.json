@@ -1,5 +1,5 @@
 {
-  "version": "question-progress/20260905-pro23-repair",
+  "version": "question-progress/20260905-q14",
   "questions": [
     {
       "question_id": "Q01",
@@ -109,8 +109,8 @@
       "question_id": "Q14",
       "original_question": "在传播染料和仪器不确定性后，两种染料对对 DNA 长/短间距比的估计是否一致，并且能够支持同一几何模型？",
       "dependency_group": "10.1038/s41592-018-0085-0",
-      "development_status": "NOT_RUN",
-      "answer_artifact": null,
+      "development_status": "PARTIAL_SUMMARY_DATA_CORRELATION_SENSITIVITY",
+      "answer_artifact": "q14_correlation_sensitivity_v1/REPORT_ZH.md",
       "human_final_approval_recorded": false
     },
     {
@@ -176,8 +176,8 @@
   "original_roster_snapshot_unchanged": true,
   "current_counts": {
     "complete": 1,
-    "partial": 5,
-    "scientifically_unrun": 14,
+    "partial": 6,
+    "scientifically_unrun": 13,
     "human_scientific_approvals": 0
   }
 }

@@ -1,0 +1,12 @@
+{
+  "rule_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY",
+  "rule_instance_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY::be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+  "triggered": true,
+  "status": "UNRESOLVED",
+  "evidence_applications": 0,
+  "full_question_answer": false,
+  "development_adapter": true,
+  "remaining_obligations": [
+    "CORRELATION_SENSITIVITY"
+  ]
+}

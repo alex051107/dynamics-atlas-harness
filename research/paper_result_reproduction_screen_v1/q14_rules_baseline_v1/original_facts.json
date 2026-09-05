@@ -1,0 +1,77 @@
+{
+  "case_id": "q14_cross_dye_distance_ratio_20260905",
+  "scientific_question": "Do two dye pairs yield compatible DNA long-to-short distance ratios after dye and instrument uncertainty propagation, and can they support a common geometry model?",
+  "primary_paper_doi": "10.1038/s41592-018-0085-0",
+  "native_sources": [
+    {
+      "source_id": "Q14_PAIR1",
+      "evidence_role": "DIAGNOSTIC",
+      "construct_and_condition": "DNA lo/mid Atto550/Atto647N, fixed labeling positions in primary SI Table1.",
+      "sample_composition": "DNA in measurement buffer; lo/mid spacing and dye attachment differ; primary SITables1-2.",
+      "native_observable": "Author summarized corrected efficiency and apparent distance with statistical SD; not paired lab data.",
+      "estimand": "Long/short apparent-distance ratio and cross-dye geometrical comparison.",
+      "time_semantics": {
+        "kind": "SINGLE_MOLECULE_MEASUREMENT_WITH_DYE_AVERAGING_ASSUMPTIONS"
+      },
+      "spatial_support": "Dye attachment sites, accessible volumes and DNA geometry; apparent distance distinct from mean dye position.",
+      "unit_or_aggregation": "Intensity-based measurement summaries; N not certified number of independent labs; SD not SEM."
+    },
+    {
+      "source_id": "Q14_PAIR2",
+      "evidence_role": "DIAGNOSTIC",
+      "construct_and_condition": "Same DNA design lo/mid Atto550/Alexa647; same donor species, different acceptor.",
+      "sample_composition": "DNA in measurement buffer; lo/mid spacing and dye attachment differ; primary SITables1-2.",
+      "native_observable": "Author summarized corrected efficiency and apparent distance with statistical SD; systematic calibration uncertainty excluded from SD.",
+      "estimand": "Long/short apparent-distance ratio and cross-dye geometrical comparison.",
+      "time_semantics": {
+        "kind": "SINGLE_MOLECULE_MEASUREMENT_WITH_DYE_AVERAGING_ASSUMPTIONS"
+      },
+      "spatial_support": "Dye attachment sites, accessible volumes and DNA geometry; apparent distance distinct from mean dye position.",
+      "unit_or_aggregation": "Intensity-based measurement summaries; N not certified number of independent labs; SD not SEM."
+    },
+    {
+      "source_id": "Q14_MODEL",
+      "evidence_role": "DIAGNOSTIC",
+      "construct_and_condition": "Author static DNA and accessible-volume dye model; parameter variations.",
+      "sample_composition": "DNA in measurement buffer; lo/mid spacing and dye attachment differ; primary SITables1-2.",
+      "native_observable": "Author computed reference distances with parameter-variation ranges; not independent experiment.",
+      "estimand": "Long/short apparent-distance ratio and cross-dye geometrical comparison.",
+      "time_semantics": {
+        "kind": "SINGLE_MOLECULE_MEASUREMENT_WITH_DYE_AVERAGING_ASSUMPTIONS"
+      },
+      "spatial_support": "Dye attachment sites, accessible volumes and DNA geometry; apparent distance distinct from mean dye position.",
+      "unit_or_aggregation": "Intensity-based measurement summaries; N not certified number of independent labs; SD not SEM."
+    }
+  ],
+  "source_relationships": [
+    {
+      "edge_id": "Q14_CROSS_DYE_COMPARISON",
+      "left_source_id": "Q14_PAIR1",
+      "right_source_id": "Q14_PAIR2",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "CROSS_DYE_COMPARISON",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_DONOR_CALIBRATION_AND_LAB_DEPENDENCE_COVARIANCE_UNKNOWN"
+    },
+    {
+      "edge_id": "Q14_MODEL_COMPARISON",
+      "left_source_id": "Q14_PAIR1",
+      "right_source_id": "Q14_MODEL",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "MODEL_COMPARISON",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_DONOR_CALIBRATION_AND_LAB_DEPENDENCE_COVARIANCE_UNKNOWN"
+    }
+  ],
+  "unknowns": [
+    "Paired lab level values and between-sample covariance",
+    "Per-lab correction parameter covariance and cross-dye shared error",
+    "Sample-specific dye averaging/AV validity and reference-model covariance",
+    "Whether summary distances preserve desired statistical unit for ratio comparison"
+  ],
+  "author_interpretations_included": false,
+  "target_values_included": false,
+  "manual_extra_results_included": false
+}

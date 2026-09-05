@@ -1,0 +1,45 @@
+{
+  "doi": "10.1038/s41592-018-0085-0",
+  "role": "AUTHOR_SUMMARIZED_INTENSITY_BASED_MEASUREMENTS",
+  "locator": "SI PDF physical15 printed6 Table4; independently visually read",
+  "statistical_unit": "Published summary of intensity-based measurements; N19 is not certified19 independent labs",
+  "uncertainty": "Reported standard deviation, not SEM/CI; excludes R0 uncertainty",
+  "paired_lab_values_available": false,
+  "covariance_available": false,
+  "samples": {
+    "1-lo": {
+      "N": 19,
+      "E": 0.15,
+      "E_sd": 0.02,
+      "R_apparent_A": 83.4,
+      "R_sd_A": 2.5
+    },
+    "1-mid": {
+      "N": 19,
+      "E": 0.56,
+      "E_sd": 0.03,
+      "R_apparent_A": 60.3,
+      "R_sd_A": 1.3
+    },
+    "2-lo": {
+      "N": 19,
+      "E": 0.21,
+      "E_sd": 0.04,
+      "R_apparent_A": 85.4,
+      "R_sd_A": 3.4
+    },
+    "2-mid": {
+      "N": 19,
+      "E": 0.6,
+      "E_sd": 0.05,
+      "R_apparent_A": 63.7,
+      "R_sd_A": 2.3
+    }
+  },
+  "dye_pairs": {
+    "1": "Atto550/Atto647N",
+    "2": "Atto550/Alexa647"
+  },
+  "distance_semantics": "Mean of lab apparent distances; not necessarily transformation of rounded pooled mean E or mean dye position",
+  "source_payload": "Hellenkamp_2018_SI.pdf"
+}
