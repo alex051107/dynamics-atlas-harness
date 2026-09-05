@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-09-05T20:05:50.800307+00:00",
+  "first_final_seen": "2026-09-05T20:04:01Z",
+  "head": "16f81d89df35619f8256f41f287d3aef8e2151a5",
+  "decision": "DIRECTION_PASS",
+  "worked": "25m55s",
+  "complete_response_actions_seen": true,
+  "q15_acceptance_defects": "PASS_CLOSED",
+  "new_finding": "Q16 observed-row selection depends on fit presence; actual impact unverified byPro",
+  "scope": "No actual source workbook/SI acquisition, no actual DEER inversion; exact code synthetic checks and published summary arithmetic",
+  "next": "Verify original14blocks once, then long/short identifiability",
+  "resubmit": false
+}

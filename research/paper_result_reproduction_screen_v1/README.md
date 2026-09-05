@@ -1,5 +1,15 @@
 # Paper-result reproduction screen v1
 
+## New evidence after Pro21
+
+[Pro21](pro_review_round21/reply.md) gives DIRECTION_PASS and closes Q15 acceptance repairs. Its Q16 fit-column selection concern is [checked on all14 real source blocks](q16_observation_independence_v2/REPORT_ZH.md): observation rowsets, values and the prior scientific input identity are unchanged. The new extractor separates observed and author-fit roles; no scientific rerun.
+
+[Actual TMR/Cy5 measured histogram bars](q15_tmr_histogram_direction_v1/REPORT_ZH.md) shift right after ligand: centroid change0.136805 of plot width, conservative geometric lower bound0.075481. This representative processed-observation comparison uses no author printed fit means, exactE, replicateCI or Rules-extra credit. It supplies new dye-replacement direction evidence; calibration and bounded probe/sample interpretation require assessment.
+
+[Q16 forward-method audit](q16_forward_method_audit_v1/REPORT_ZH.md) reconstructed ten author-fit curves from deposited inverse distributions. RelativeRMS1.15%-3.75% exceeds a prospectively chosen0.5% audit tolerance; the analytic kernel agrees with independent orientation integration. This is a compatibility gap, not an established paper/software defect; whether deposited fit and central validation distribution represent the same estimate remains unverified. The old-software source URL returned404. No inverse state analysis or threshold tuning was performed.
+
+Task source snapshots retain original task-directory assumptions and require the separately held original inputs. The production role-extraction module and synthetic tests are repository-runnable. No original PDF/SVG, workbook or local curve arrays are published. Current count remains1 complete development answer,4 partial,15 scientifically unrun; original20 accuracy is not measured.
+
 [一页中文现状与下一步](CURRENT_STATUS_ZH.md)汇总完整答案、部分实算、未运行问题和目前最明确的规则缺口。
 
 Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe9222bd960a4eda56cd01e8a5c6`. The initial report and JSON/CSV preserve the screening snapshot: 20 questions from 10 primary papers, all `NOT_RUN` at initial submission. Later review, Q05 numerical work and an actual Rules probe are recorded below.

@@ -1,0 +1,37 @@
+{
+  "role": "PUBLISHED_MEASURED_HISTOGRAM_BARS_NOT_FITTED_CURVES",
+  "source_pdf": "Peter_2022_NatureCommunications_DEER_smFRET_crossvalidation.pdf",
+  "physical_page": 7,
+  "figure": "4d right column",
+  "variant": "HiSiaP175/228",
+  "dye_pair": "TMR/Cy5",
+  "converter": "installed pdftocairo -f7 -l7 -svg",
+  "frames": {
+    "apo": [
+      435.507836713295,
+      535.5117189965033,
+      293.22657487404496,
+      348.2265623731084
+    ],
+    "holo": [
+      435.43361721658005,
+      535.4335937830069,
+      348.42970001365995,
+      403.429687467778
+    ]
+  },
+  "calibration": "Same displayed E scale in stacked panels; exact bin edges not printed. Frame-normalized displacement only until quantitative axis mapping admitted.",
+  "exclusions": [
+    "Smooth Gaussian paths",
+    "Printed fitted mean/sigma",
+    "Figure4e distance bars",
+    "Single-label traces"
+  ],
+  "repetition_status": "Representative published histograms; no individual repetition identity or event count available",
+  "scientific_calculation": false,
+  "bar_counts": {
+    "apo": 35,
+    "holo": 33
+  },
+  "status": "PROCESSED_OBSERVATION_GEOMETRY_ADMITTED_FOR_DIRECTION_ONLY"
+}
