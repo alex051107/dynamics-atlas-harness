@@ -1146,6 +1146,16 @@
               ]
             },
             "reason_code": "SOURCE_LINEAGE_UNRESOLVED"
+          },
+          {
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "AGENT_PROPOSED_UNVERIFIED"
+              ]
+            },
+            "reason_code": "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
           }
         ]
       },

@@ -1,0 +1,142 @@
+{
+  "schema_version": "rules-prototype-applicability-bindings/v1",
+  "registry_id": "dynamics-atlas-rules-bindings/v1",
+  "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+  "grammar": {
+    "predicate_primitives": ["EQ", "IN", "EXISTS", "ALL", "ANY", "NOT", "PRIOR_RESULT_STATUS"],
+    "iteration_primitives": ["FOR_EACH_SOURCE", "FOR_EACH_EDGE"],
+    "missing_value_semantics": "A matched binding with any absent required evidence path returns UNRESOLVED; it never infers a missing value.",
+    "forbidden_freeform_operators": ["AFTER_EVALUATION", "FOR_EACH_EVIDENTIARY_SOURCE", "LOOKUP_WHATEVER_IS_RELEVANT"]
+  },
+  "bindings": [
+    {
+      "binding_id": "B-F01R01-CASE-CLAIM-DECLARATION",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "target_kind": "CASE",
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "CASE"}, {"op": "EQ", "path": "case.intake_kind", "value": "SCIENTIFIC_CLAIM_REVIEW"}]},
+      "required_evidence_paths": ["case.scientific_claim", "case.requested_claim_level", "case.intended_use", "case.observability_target.event_signature", "case.claim_contract.internal_consistency"],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "target_kind": "CASE",
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "CASE"}, {"op": "EQ", "path": "case.intake_kind", "value": "SCIENTIFIC_CLAIM_REVIEW"}]},
+      "required_evidence_paths": ["case.requested_claim_level", "case.claim_contract.declared_request_scope", "case.claim_contract.forbidden_upgrades"],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "SOURCE"}, {"op": "EXISTS", "path": "source.source_id"}]},
+      "required_evidence_paths": ["source.construct_and_condition", "source.sample_composition", "source.sample_system_composition_declaration_status"],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F02R02-EDGE-CONDITION",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "target_kind": "EDGE",
+      "iteration": {"op": "FOR_EACH_EDGE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.comparison_id"}]},
+      "required_evidence_paths": ["edge.left_source_id", "edge.right_source_id", "edge.condition_relation"],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F03R01-SOURCE-MEASUREMENT",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "SOURCE"}, {"op": "EXISTS", "path": "source.source_id"}]},
+      "required_evidence_paths": ["source.native_observable", "source.estimand", "source.time_semantics.kind", "source.spatial_support", "source.unit_or_aggregation", "source.native_measurement_declaration_status"],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F04R01-SOURCE-RELIABILITY",
+      "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "EQ", "path": "target.kind", "value": "SOURCE"},
+      "required_evidence_paths": ["source.uncertainty.status", "source.uncertainty.source_support", "source.detection_boundary.status"],
+      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "evaluation_contract_id": "EC-F04R01-SOURCE-RELIABILITY",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "binding_id": "B-F05R01-SOURCE-SUPPORT",
+      "runtime_subrule_id": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "EQ", "path": "target.kind", "value": "SOURCE"},
+      "required_evidence_paths": ["source.support_lineage.status", "source.support_lineage.generator_or_parentage", "source.support_lineage.prior_data_exposure"],
+      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "evaluation_contract_id": "EC-F05R01-SOURCE-SUPPORT",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "binding_id": "B-F05R02-SOURCE-FORWARD-BRIDGE",
+      "runtime_subrule_id": "F05R02_SOURCE_FORWARD_BRIDGE",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "EQ", "path": "target.kind", "value": "SOURCE"},
+      "required_evidence_paths": ["source.forward_bridge_status", "source.source_locator"],
+      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "evaluation_contract_id": "EC-F05R02-SOURCE-FORWARD-BRIDGE",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    },
+    {
+      "binding_id": "B-F06R01-SOURCE-ROLE",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "target_kind": "SOURCE",
+      "iteration": {"op": "FOR_EACH_SOURCE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "SOURCE"}, {"op": "EQ", "path": "source.case_evidence_scope", "value": "CLAIM_EVIDENCE"}]},
+      "required_evidence_paths": ["source.evidence_role", "source.source_locator", "source.data_lineage_status"],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F06R02-EDGE-COMPARABILITY",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "target_kind": "EDGE",
+      "iteration": {"op": "FOR_EACH_EDGE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.shared_claim"}]},
+      "required_evidence_paths": ["edge.left_source_id", "edge.right_source_id", "edge.shared_claim", "edge.condition_relation", "edge.relation_type", "edge.bridge_status"],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F06R03-EDGE-INDEPENDENCE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "target_kind": "EDGE",
+      "iteration": {"op": "FOR_EACH_EDGE"},
+      "applicability": {"op": "ALL", "args": [{"op": "EQ", "path": "target.kind", "value": "EDGE"}, {"op": "EXISTS", "path": "edge.validation_claim"}]},
+      "required_evidence_paths": ["edge.validation_claim", "edge.validation_independence", "edge.shared_error_status", "edge.data_lineage_status"],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "implementation_status": "COMPLETE_DRAFT"
+    },
+    {
+      "binding_id": "B-F07R01-CASE-IDENTIFIABILITY",
+      "runtime_subrule_id": "F07R01_CASE_IDENTIFIABILITY",
+      "target_kind": "CASE",
+      "applicability": {"op": "EQ", "path": "target.kind", "value": "CASE"},
+      "required_evidence_paths": ["case.candidate_hypotheses", "case.next_discriminating_action"],
+      "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+      "evaluation_contract_id": "EC-F07R01-CASE-IDENTIFIABILITY",
+      "implementation_status": "CANDIDATE_MAP_ONLY"
+    }
+  ]
+}

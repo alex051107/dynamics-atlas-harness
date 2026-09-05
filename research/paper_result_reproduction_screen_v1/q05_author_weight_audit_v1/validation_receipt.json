@@ -1,0 +1,23 @@
+{
+  "ts": "2026-09-05T03:47:06.916757+00:00",
+  "iteration": 11,
+  "status": "bounded_science_audit_complete_continuing",
+  "planned_checks": {
+    "preflight": 1,
+    "input_and_fixed_weight_runner": 1,
+    "final_artifact_state": 1
+  },
+  "actual_checks": {
+    "preflight": 1,
+    "input_and_fixed_weight_runner": 1,
+    "final_artifact_state": 1
+  },
+  "repair_reruns": 0,
+  "hashes": 0,
+  "independent_reviews": 0,
+  "optimization_runs": 0,
+  "rules_runs": 0,
+  "pro_check": "Round4 still generating;one check;no duplicate send",
+  "skipped": "No input download/hash,optimizer,unchanged Rules tests or full build;publish with next completed-review batch",
+  "evidence": "outputs/q05_author_weight_audit_v1/REPORT_ZH.md"
+}

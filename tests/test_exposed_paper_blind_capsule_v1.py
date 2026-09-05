@@ -238,7 +238,11 @@ class ExposedPaperBlindCapsuleV1Tests(unittest.TestCase):
         )
         self.assertEqual(
             by_ref["F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"]["gap_type"],
-            "EVALUATION_CONTRACT_OR_RULE_LIFECYCLE_PENDING",
+            "SOURCE_FACT_MISSING",
+        )
+        self.assertEqual(
+            by_ref["F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::HSP90_NMR_METHODS_RESULTS"]["reason_codes"],
+            ["SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"],
         )
         self.assertEqual(
             by_ref["HSP90_DEV_OBL_NMR_MD_FORWARD_BRIDGE"]["gap_type"],

@@ -31,3 +31,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## Round4: confirmed semantics repairs
 
 [Q05 R1 actual results and remaining scientific work](q05_semantic_repair_r1/README.md):7 declaration PASS,8 UNRESOLVED,2 NOT_APPLICABLE; no scientific numerical obligation. Original R0 evidence remains preserved. The continuing objective is full scientific correctness and coverage across the original20 questions.
+
+## 第四轮修复与固定权重审计
+
+见 [第四轮修复](PRO_ROUND4_REPAIR_ZH.md) 和 [作者权重回算](q05_author_weight_audit_v1/REPORT_ZH.md)。当前科学完整回答仍为 0/20；声明测试通过不计科学正确率。

@@ -1,0 +1,31 @@
+{
+  "schema_version": "rules-prototype-human-decision-gates/v1",
+  "registry_id": "dynamics-atlas-human-decision-gates/v1",
+  "authority_boundary": "HumanDecisionGate records architecture, source-grounding, and runtime-readiness dispositions after deterministic rule evaluation. It is not required scientific evidence and cannot change a RuleResult, compute an evidence-supported claim ceiling, or upgrade a Draft into an active runtime.",
+  "gates": [
+    {
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+      "gate_role": "ARCHITECTURE_AND_RUNTIME_READINESS",
+      "legacy_id_note": "The existing contract identifier is retained for Draft compatibility. This gate does not verify primary-source entailment.",
+      "trigger": "The proposal-only F01/F06 review packet and its behavioral fixtures are complete.",
+      "review_dimensions": {
+        "architecture_decision": {"allowed_decisions": ["APPROVE", "REVISE", "REJECT", "DEFER"]},
+        "runtime_readiness": {"allowed_decisions": ["READY_FOR_NEXT_DRAFT", "NOT_READY", "DEFER"]}
+      },
+      "required_review_fields": ["reviewer_identity", "architecture_decision", "runtime_readiness", "rationale", "reviewed_family_ids"],
+      "does_not_control": ["applicability", "missing_evidence", "rule_status", "scientific_claim_ceiling"],
+      "status": "PENDING_HUMAN_ARCHITECTURE_REVIEW"
+    },
+    {
+      "human_decision_gate_id": "HDG-RULES-V1-SOURCE-SCIENCE-REVIEW",
+      "gate_role": "SOURCE_GROUNDING",
+      "trigger": "A domain reviewer is asked to assess whether a Source Evidence Packet's locator and primary passage entail its atomic statement and proposed reusable use.",
+      "review_dimensions": {
+        "source_grounding_decision": {"allowed_decisions": ["VERIFIED", "PENDING_DOMAIN_REVIEW", "REJECTED"]}
+      },
+      "required_review_fields": ["reviewer_identity", "source_grounding_decision", "rationale", "reviewed_packet_ids"],
+      "does_not_control": ["applicability", "missing_evidence", "rule_status", "scientific_claim_ceiling", "runtime_readiness"],
+      "status": "PENDING_DOMAIN_REVIEW"
+    }
+  ]
+}
