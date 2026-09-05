@@ -1,0 +1,338 @@
+{
+  "method": {
+    "version": "60-119-response-diagnostic/v1",
+    "IRF_shift": "padded_linear_v2",
+    "window": "unchangedIBH17HanningLin>0.1medianpositive",
+    "dt_ns": 0.0141,
+    "donor_components": 2,
+    "FRET_components": 2,
+    "sigma_A": 6.0,
+    "scatter": 0.0,
+    "max_fits": 10,
+    "seconds_per_fit": 60,
+    "maxiter": 1500,
+    "gradient_limit": 1e-06,
+    "shared_reference_applicability": "UNKNOWN",
+    "role": "MANUAL_METHOD_DIAGNOSTIC_NOT_RULES_GAIN",
+    "fit_regions_ns": [
+      0,
+      5,
+      10,
+      20,
+      40,
+      60
+    ]
+  },
+  "input_id": "dece4ab7d105b138a84e9213ac1d975dbc92313d3c051ed4716457520404c5f3",
+  "single_runs": {
+    "D0_16": [
+      {
+        "parameters": [
+          2.9599835675095174,
+          0.8845109159714953,
+          0.27711046835336123,
+          1e-12,
+          0.7704839745596939
+        ],
+        "objective": 0.0021283140172187413,
+        "initial": [
+          1.0,
+          4.0,
+          0.3,
+          0.001,
+          0.0
+        ],
+        "optimizer_success": true,
+        "iterations": 24,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 319,
+        "projected_gradient_inf": 5.234961044221829e-11,
+        "numerical_status": "PASS",
+        "elapsed_seconds": 0.09060812499956228
+      },
+      {
+        "parameters": [
+          0.8845108978755268,
+          2.959983543097064,
+          0.7228895234158808,
+          1e-12,
+          0.7704839495899263
+        ],
+        "objective": 0.0021283140172186784,
+        "initial": [
+          0.3,
+          3.0,
+          0.6,
+          0.001,
+          0.0
+        ],
+        "optimizer_success": true,
+        "iterations": 24,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 363,
+        "projected_gradient_inf": 6.449004173326724e-09,
+        "numerical_status": "PASS",
+        "elapsed_seconds": 0.09792970801936463
+      }
+    ],
+    "60-119": [
+      {
+        "parameters": [
+          3.0758453921987723,
+          1.1553442241726,
+          0.39564370224363854,
+          0.0019364699251073127,
+          2.833563372145191
+        ],
+        "objective": 0.0010598813602051512,
+        "initial": [
+          1.0,
+          4.0,
+          0.3,
+          0.001,
+          0.0
+        ],
+        "optimizer_success": true,
+        "iterations": 27,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 363,
+        "projected_gradient_inf": 1.544725149957093e-08,
+        "numerical_status": "PASS",
+        "elapsed_seconds": 0.09834579200833105
+      },
+      {
+        "parameters": [
+          3.075845362696811,
+          1.1553441963523423,
+          0.3956437135608702,
+          0.0019364699062542322,
+          2.83356336968954
+        ],
+        "objective": 0.0010598813602051356,
+        "initial": [
+          0.3,
+          3.0,
+          0.6,
+          0.001,
+          0.0
+        ],
+        "optimizer_success": true,
+        "iterations": 33,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 451,
+        "projected_gradient_inf": 1.7356462527922145e-10,
+        "numerical_status": "PASS",
+        "elapsed_seconds": 0.12960274997749366
+      }
+    ]
+  },
+  "shared_null_runs": [
+    {
+      "parameters": [
+        0.9929947572233538,
+        3.0076511131089263,
+        0.6560721602555601,
+        1e-12,
+        -0.4147848146164721,
+        0.0023832220814990505,
+        3.844373052313429
+      ],
+      "objective": 0.006634144215559771,
+      "initial": [
+        0.8845108978755268,
+        2.959983543097064,
+        0.7228895234158808,
+        1e-12,
+        0.7704839495899263,
+        0.0019364699062542322,
+        2.83356336968954
+      ],
+      "optimizer_success": true,
+      "iterations": 32,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 555,
+      "projected_gradient_inf": 4.91325737481217e-10,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.2980807919811923
+    },
+    {
+      "parameters": [
+        3.007651143162384,
+        0.9929947809021586,
+        0.3439278298154053,
+        1e-12,
+        -0.41478618421428504,
+        0.002383221767912661,
+        3.8443735565940855
+      ],
+      "objective": 0.006634144215560388,
+      "initial": [
+        3.0076511999672118,
+        0.9929947456255228,
+        0.34392783086591494,
+        1e-12,
+        -0.41478618890577224,
+        0.0023832217695689316,
+        3.8443735592799015
+      ],
+      "optimizer_success": true,
+      "iterations": 1,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 45,
+      "projected_gradient_inf": 2.8078359729348556e-08,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.03152683298685588
+    }
+  ],
+  "FRET2_runs": [
+    {
+      "parameters": [
+        0.9929947485634625,
+        3.0076511033388558,
+        0.6560721430515115,
+        1e-12,
+        -0.4147845635385421,
+        10.0,
+        10.0,
+        0.8136539551580534,
+        1.0,
+        0.00238322272769808,
+        3.8443731603809344
+      ],
+      "objective": 0.0066341442155600765,
+      "initial": [
+        0.8845108978755268,
+        2.959983543097064,
+        0.7228895234158808,
+        1e-12,
+        0.7704839495899263,
+        20.0,
+        40.0,
+        0.5,
+        0.2,
+        0.0019364699062542322,
+        2.83356336968954
+      ],
+      "optimizer_success": true,
+      "iterations": 56,
+      "evaluations": 1403,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 8.11961054157229e-08,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.8932587089948356,
+      "kind": "ACTUAL_OPTIMIZER"
+    },
+    {
+      "parameters": [
+        0.9929947593573115,
+        3.0076511152428367,
+        0.6560721609366401,
+        1e-12,
+        -0.41478482402325323,
+        10.0,
+        120.0,
+        0.32309975191344303,
+        1.0,
+        0.0023832220764850075,
+        3.844373044083767
+      ],
+      "objective": 0.006634144215559794,
+      "initial": [
+        0.8845108978755268,
+        2.959983543097064,
+        0.7228895234158808,
+        1e-12,
+        0.7704839495899263,
+        35.0,
+        65.0,
+        0.5,
+        0.2,
+        0.0019364699062542322,
+        2.83356336968954
+      ],
+      "optimizer_success": true,
+      "iterations": 60,
+      "evaluations": 1495,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 2.3656424447179673e-10,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.9581913339789025,
+      "kind": "ACTUAL_OPTIMIZER"
+    },
+    {
+      "parameters": [
+        0.9929947805019582,
+        3.0076510932051836,
+        0.6560721568968318,
+        1e-12,
+        -0.4147849241799815,
+        120.0,
+        120.0,
+        0.33330368639261665,
+        1.0,
+        0.0023832221963549717,
+        3.8443728349486754
+      ],
+      "objective": 0.006634144215559825,
+      "initial": [
+        0.8845108978755268,
+        2.959983543097064,
+        0.7228895234158808,
+        1e-12,
+        0.7704839495899263,
+        60.0,
+        90.0,
+        0.5,
+        0.2,
+        0.0019364699062542322,
+        2.83356336968954
+      ],
+      "optimizer_success": true,
+      "iterations": 60,
+      "evaluations": 1518,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 3.5344408599449922e-09,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.9825304170080926,
+      "kind": "ACTUAL_OPTIMIZER"
+    },
+    {
+      "parameters": [
+        0.9929947602901655,
+        3.007651111353018,
+        0.6560721580969151,
+        1e-12,
+        -0.4147848304123878,
+        10.0,
+        120.0,
+        0.7421332894641564,
+        1.0,
+        0.0023832220682341223,
+        3.844373016614764
+      ],
+      "objective": 0.006634144215559825,
+      "initial": [
+        0.8845108978755268,
+        2.959983543097064,
+        0.7228895234158808,
+        1e-12,
+        0.7704839495899263,
+        15.0,
+        100.0,
+        0.5,
+        0.2,
+        0.0019364699062542322,
+        2.83356336968954
+      ],
+      "optimizer_success": true,
+      "iterations": 55,
+      "evaluations": 1357,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 2.9358155496801588e-09,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.8703631669923197,
+      "kind": "ACTUAL_OPTIMIZER"
+    }
+  ],
+  "new_fits": 10
+}

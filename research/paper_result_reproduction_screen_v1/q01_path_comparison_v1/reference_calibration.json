@@ -1,0 +1,46 @@
+{
+  "geometry_A": {
+    "open": 1.6725821005124173,
+    "closed": 2.823910647931917
+  },
+  "contact_A": {
+    "deposited_uniform": {
+      "open": 0.1742761275070527,
+      "closed": 0.8594182280037745
+    },
+    "SI_per_contact": {
+      "open": 0.06732640887153253,
+      "closed": 0.0
+    }
+  },
+  "reference_discrimination": {
+    "deposited_uniform": {
+      "open": {
+        "open": 20,
+        "closed": 0,
+        "ambiguous": 0,
+        "outside": 0
+      },
+      "closed": {
+        "open": 0,
+        "closed": 20,
+        "ambiguous": 0,
+        "outside": 0
+      }
+    },
+    "SI_per_contact": {
+      "open": {
+        "open": 20,
+        "closed": 0,
+        "ambiguous": 0,
+        "outside": 0
+      },
+      "closed": {
+        "open": 0,
+        "closed": 20,
+        "ambiguous": 0,
+        "outside": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,2072 @@
+{
+  "method": {
+    "version": "q09-source-donor-groups/v2",
+    "IRF_shift": "padded_linear_v2",
+    "source_orders": "SI21Table2a componentpresence only",
+    "models": [
+      "donor2_FRET2_fixed_reference",
+      "donor3_FRET2_conditional"
+    ],
+    "unique_D0_likelihood": true,
+    "seconds_per_fit": 30,
+    "fits_per_changed_group": 2,
+    "max_fits": 26,
+    "maxiter": 1500,
+    "gradient_tolerance": 1e-06,
+    "new_donor_seed": [
+      0.2,
+      1.5,
+      4.0,
+      0.2,
+      0.5
+    ],
+    "author_fitted_values_used": false,
+    "protein_state_number": "NOT_INFERRED"
+  },
+  "source_input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "source_orders": {
+    "source": "Sanabria2020SIphysicalpage21,SupplementaryTable2a",
+    "verification": "Existingoriginalpage21render visually rechecked entiretable; only componentpresence/absence extracted, no fitted lifetimes/amplitudes reused",
+    "by_variant": {
+      "19-119": 3,
+      "19-132": 3,
+      "19-69": 3,
+      "19-86": 3,
+      "22-127": 3,
+      "36-132": 3,
+      "36-86": 3,
+      "44-119": 2,
+      "44-127": 3,
+      "44-132": 2,
+      "44-150": 2,
+      "44-69": 2,
+      "44-86": 2,
+      "5-132": 3,
+      "5-44": 3,
+      "55-119": 3,
+      "55-132": 2,
+      "55-150": 3,
+      "55-69": 2,
+      "60-119": 2,
+      "60-132": 2,
+      "60-150": 2,
+      "60-86": 2,
+      "69-119": 2,
+      "69-132": 2,
+      "69-150": 2,
+      "69-86": 2,
+      "70-119": 3,
+      "70-132": 2,
+      "8-119": 3,
+      "8-132": 3,
+      "8-69": 2,
+      "8-86": 2
+    },
+    "three_component_rows": 15,
+    "two_component_rows": 18,
+    "groups": [
+      {
+        "reference": "D0_01",
+        "source_component_orders": {
+          "19-119": 3,
+          "19-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-119",
+          "19-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_02",
+        "source_component_orders": {
+          "19-69": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-69"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_03",
+        "source_component_orders": {
+          "19-86": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-86"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_04",
+        "source_component_orders": {
+          "22-127": 3
+        },
+        "current_frozen_hypothesis": 3,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_05",
+        "source_component_orders": {
+          "36-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "36-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_06",
+        "source_component_orders": {
+          "36-86": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "36-86"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_07",
+        "source_component_orders": {
+          "44-119": 2,
+          "44-132": 2,
+          "44-69": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_08",
+        "source_component_orders": {
+          "44-127": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "44-127"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_09",
+        "source_component_orders": {
+          "44-150": 2,
+          "44-86": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_10",
+        "source_component_orders": {
+          "5-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "5-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_11",
+        "source_component_orders": {
+          "5-44": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "5-44"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_12",
+        "source_component_orders": {
+          "55-119": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "55-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_13",
+        "source_component_orders": {
+          "55-132": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_14",
+        "source_component_orders": {
+          "55-150": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "55-150"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_15",
+        "source_component_orders": {
+          "55-69": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_16",
+        "source_component_orders": {
+          "60-119": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_17",
+        "source_component_orders": {
+          "60-132": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_18",
+        "source_component_orders": {
+          "60-150": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_19",
+        "source_component_orders": {
+          "60-86": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_20",
+        "source_component_orders": {
+          "69-119": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_21",
+        "source_component_orders": {
+          "69-132": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_22",
+        "source_component_orders": {
+          "69-150": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_23",
+        "source_component_orders": {
+          "69-86": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_24",
+        "source_component_orders": {
+          "70-119": 3,
+          "70-132": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "70-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": true
+      },
+      {
+        "reference": "D0_25",
+        "source_component_orders": {
+          "8-119": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "8-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_26",
+        "source_component_orders": {
+          "8-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "8-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      {
+        "reference": "D0_27",
+        "source_component_orders": {
+          "8-69": 2,
+          "8-86": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [],
+        "source_model_order_disagreement_on_same_reference": false
+      }
+    ],
+    "mismatch_variant_count": 14,
+    "interpretation": "Currentbatch intentionallyconditionalsimpledonor hypothesis; notauthor-methodmatch. Sourceordersaremethodreferences,notadequacyproof. D70pair shares deposited D0byteidentity but authorreports3vs2components; originalparameter-sharing/processing remainsunknown. Do notchangeongoingfits oruseauthorfitnumbersasinitials."
+  },
+  "request_id": "f51544b5ea38ca7fdfd5968d7cf5ffd193288d84f0fd30f8c49237a3d9fb418f",
+  "groups": {
+    "D0_01": {
+      "reference": "D0_01",
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "source": {
+        "reference": "D0_01",
+        "source_component_orders": {
+          "19-119": 3,
+          "19-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-119",
+          "19-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.345569032142944,
+        3.896975126280368,
+        0.10397963147789488,
+        0.001765012178879066,
+        0.5234463786955423,
+        20.679382255954188,
+        49.77415142988709,
+        0.7653835562803238,
+        0.13178064120333718,
+        0.0027607674840645574,
+        1.4096639219942242,
+        49.69163086584026,
+        31.330402851604582,
+        0.46801260145747897,
+        0.25556951412080364,
+        0.0018838826612464865,
+        0.8989626712185306
+      ],
+      "old_donor2_padded_deviance": 13034.163116290363,
+      "old_donor2_padded_gradient": 1.1912291110652224e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_01": 0.0,
+        "19-119": 0.0,
+        "19-132": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.20425361284930404,
+            4.038399759902803,
+            2.8476839756602432,
+            0.12231965871249471,
+            0.7586240204189906,
+            0.001680244091143955,
+            1.0556774959166653,
+            16.894685149930858,
+            48.729698680476794,
+            0.8153023571679726,
+            0.10438572869375748,
+            0.002644442776595795,
+            1.4807254211558512,
+            52.53100323363564,
+            39.22109286929144,
+            0.39233643861845796,
+            0.30612647469227483,
+            0.0018198113407570536,
+            0.6861438881575133
+          ],
+          "objective": 0.00035065314783804284,
+          "initial": [
+            1.345569032142944,
+            3.896975126280368,
+            2.621272079211656,
+            0.10397963147789488,
+            1.0,
+            0.001765012178879066,
+            0.5234463786955423,
+            20.679382255954188,
+            49.77415142988709,
+            0.7653835562803238,
+            0.13178064120333718,
+            0.0027607674840645574,
+            1.4096639219942242,
+            49.69163086584026,
+            31.330402851604582,
+            0.46801260145747897,
+            0.25556951412080364,
+            0.0018838826612464865,
+            0.8989626712185306
+          ],
+          "optimizer_success": true,
+          "iterations": 425,
+          "evaluations": 18252,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.729707854765588e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 20.95733154201298,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.23438110780937577,
+            2.9538446227120727,
+            4.061922974923973,
+            0.1125942134610391,
+            0.2753034787133714,
+            0.0016751645510965296,
+            1.0000391487027045,
+            15.146398936077784,
+            48.706886830408315,
+            0.8759571454647012,
+            0.07252349692102898,
+            0.0026411302355597976,
+            1.649234774208077,
+            51.58254580835712,
+            38.420484847746735,
+            0.43524191213402463,
+            0.305897787802961,
+            0.00181066021452763,
+            0.6619682832705944
+          ],
+          "objective": 0.0003506372651420331,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.001765012178879066,
+            0.5234463786955423,
+            20.679382255954188,
+            49.77415142988709,
+            0.7653835562803238,
+            0.13178064120333718,
+            0.0027607674840645574,
+            1.4096639219942242,
+            49.69163086584026,
+            31.330402851604582,
+            0.46801260145747897,
+            0.25556951412080364,
+            0.0018838826612464865,
+            0.8989626712185306
+          ],
+          "optimizer_success": false,
+          "iterations": null,
+          "evaluations": 26712,
+          "message": "LOCAL_TIME_BUDGET",
+          "projected_gradient_inf": 1.3051621963506681e-06,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "elapsed_seconds": 30.04289300000528,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 12301.394199399138,
+      "best_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+      "contributions": {
+        "D0_01": 4107.817068447013,
+        "19-119": 3996.4058714680227,
+        "19-132": 4197.171259484101
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_02": {
+      "reference": "D0_02",
+      "owners": [
+        "19-69"
+      ],
+      "source": {
+        "reference": "D0_02",
+        "source_component_orders": {
+          "19-69": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-69"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.1696517520009102,
+        4.179926260254721,
+        0.16307248913588787,
+        0.005855481942305728,
+        -0.45780738237868057,
+        33.258959911469205,
+        65.46002678650325,
+        0.6512112170021611,
+        0.23416046374331892,
+        0.0030177426564097325,
+        -0.49475174648278397
+      ],
+      "old_donor2_padded_deviance": 9348.813430883529,
+      "old_donor2_padded_gradient": 5.011988457504511e-08,
+      "embedding_max_relative_prediction_delta": {
+        "D0_02": 0.0,
+        "19-69": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.14334846470066526,
+            4.202567838362535,
+            1.4845268587659246,
+            0.11470026044785477,
+            0.8463109937576467,
+            0.005799089401466374,
+            -0.03201930816654297,
+            35.623093444219556,
+            70.80466046307649,
+            0.5784938155608486,
+            0.18757604883569706,
+            0.0030527423577203943,
+            -0.4478626800258212
+          ],
+          "objective": 0.00016379186790055518,
+          "initial": [
+            1.1696517520009102,
+            4.179926260254721,
+            2.6747890061278157,
+            0.16307248913588787,
+            1.0,
+            0.005855481942305728,
+            -0.45780738237868057,
+            33.258959911469205,
+            65.46002678650325,
+            0.6512112170021611,
+            0.23416046374331892,
+            0.0030177426564097325,
+            -0.49475174648278397
+          ],
+          "optimizer_success": true,
+          "iterations": 219,
+          "evaluations": 6777,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.683228136291181e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 4.780344209022587,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.14330256612686737,
+            1.484462690584779,
+            4.202564015868482,
+            0.11471995429942695,
+            0.15369091825855974,
+            0.005799099263912134,
+            -0.03195162732393442,
+            35.62301591909653,
+            70.80457928518697,
+            0.5784945901375326,
+            0.18757622489648562,
+            0.0030527453433743293,
+            -0.44777126790493593
+          ],
+          "objective": 0.00016379186792781316,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.005855481942305728,
+            -0.45780738237868057,
+            33.258959911469205,
+            65.46002678650325,
+            0.6512112170021611,
+            0.23416046374331892,
+            0.0030177426564097325,
+            -0.49475174648278397
+          ],
+          "optimizer_success": true,
+          "iterations": 316,
+          "evaluations": 9585,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.0541049921032765e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 6.760917208011961,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 8663.726956379269,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_02": 4415.635346481007,
+        "19-69": 4248.0916098982625
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_03": {
+      "reference": "D0_03",
+      "owners": [
+        "19-86"
+      ],
+      "source": {
+        "reference": "D0_03",
+        "source_component_orders": {
+          "19-86": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "19-86"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.2557353831047895,
+        3.820618837839503,
+        0.08843436160930324,
+        0.0018915112791858246,
+        -0.9167166911786557,
+        51.7312849405178,
+        31.557115513562277,
+        0.771305867757097,
+        0.06367694388227213,
+        0.0036454392946855176,
+        1.5524151660819063
+      ],
+      "old_donor2_padded_deviance": 11688.48585401084,
+      "old_donor2_padded_gradient": 3.2418970629171284e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_03": 0.0,
+        "19-86": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.5508042099537351,
+            3.8913962125871766,
+            2.598599184330445,
+            0.054782875160876696,
+            0.8648727775946824,
+            0.0018343728939340406,
+            -0.8188279509906247,
+            51.64259744595991,
+            32.77984298358638,
+            0.804298762530952,
+            0.06758004959146771,
+            0.0035957823833176845,
+            1.4765569144768085
+          ],
+          "objective": 0.00023260224864003295,
+          "initial": [
+            1.2557353831047895,
+            3.820618837839503,
+            2.5381771104721462,
+            0.08843436160930324,
+            1.0,
+            0.0018915112791858246,
+            -0.9167166911786557,
+            51.7312849405178,
+            31.557115513562277,
+            0.771305867757097,
+            0.06367694388227213,
+            0.0036454392946855176,
+            1.5524151660819063
+          ],
+          "optimizer_success": true,
+          "iterations": 243,
+          "evaluations": 7479,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.0371140898577084e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 7.153282415994909,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.5508578693513982,
+            2.5986552268648215,
+            3.891399196945808,
+            0.05478266944953728,
+            0.1351307531848224,
+            0.0018343745082114642,
+            -0.8188428298042627,
+            51.6425089856432,
+            32.77877342181863,
+            0.8042935298541284,
+            0.06757974176500699,
+            0.0035957793322701674,
+            1.4765976035860788
+          ],
+          "objective": 0.00023260224866767615,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0018915112791858246,
+            -0.9167166911786557,
+            51.7312849405178,
+            31.557115513562277,
+            0.771305867757097,
+            0.06367694388227213,
+            0.0036454392946855176,
+            1.5524151660819063
+          ],
+          "optimizer_success": true,
+          "iterations": 430,
+          "evaluations": 12771,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.4887082570431436e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 12.282696667010896,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 11361.202367962398,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_03": 4674.004783240442,
+        "19-86": 6687.197584721956
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_05": {
+      "reference": "D0_05",
+      "owners": [
+        "36-132"
+      ],
+      "source": {
+        "reference": "D0_05",
+        "source_component_orders": {
+          "36-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "36-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.4411239507622675,
+        4.3337826130445665,
+        0.12256128779011699,
+        0.00044011823082626324,
+        -0.47112361815383164,
+        48.99303704910551,
+        35.142679292834046,
+        0.5387106719495545,
+        0.029648823882439404,
+        9.085866802762905e-05,
+        -0.0930293917782743
+      ],
+      "old_donor2_padded_deviance": 14401.717649962939,
+      "old_donor2_padded_gradient": 3.3052816579968587e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_05": 0.0,
+        "36-132": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.13804502453177686,
+            4.350731198913628,
+            1.7461654347117372,
+            0.06608030516772907,
+            0.8779160104172677,
+            0.00042486646641674283,
+            -0.1471098927291532,
+            50.06914606923034,
+            37.92270226822663,
+            0.4739484327401593,
+            0.029710651947681455,
+            9.711537293299889e-05,
+            -0.08531807886818665
+          ],
+          "objective": 0.0001852176961296571,
+          "initial": [
+            1.4411239507622675,
+            4.3337826130445665,
+            2.887453281903417,
+            0.12256128779011699,
+            1.0,
+            0.00044011823082626324,
+            -0.47112361815383164,
+            48.99303704910551,
+            35.142679292834046,
+            0.5387106719495545,
+            0.029648823882439404,
+            9.085866802762905e-05,
+            -0.0930293917782743
+          ],
+          "optimizer_success": true,
+          "iterations": 275,
+          "evaluations": 8208,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.0290475468516747e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 8.72334649998811,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.138050710545947,
+            1.7461880929921523,
+            4.3507323739323835,
+            0.06608065560627573,
+            0.12208415800723516,
+            0.000424865958355224,
+            -0.14710862804030267,
+            50.06924747285363,
+            37.92285927534668,
+            0.4739414221904509,
+            0.02971052988168387,
+            9.711627532291607e-05,
+            -0.08532806906217338
+          ],
+          "objective": 0.00018521769614195175,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.00044011823082626324,
+            -0.47112361815383164,
+            48.99303704910551,
+            35.142679292834046,
+            0.5387106719495545,
+            0.029648823882439404,
+            9.085866802762905e-05,
+            -0.0930293917782743
+          ],
+          "optimizer_success": true,
+          "iterations": 352,
+          "evaluations": 10692,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.235850338484559e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 11.3252250419755,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 13604.042153441544,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_05": 6913.236623211945,
+        "36-132": 6690.8055302296
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_06": {
+      "reference": "D0_06",
+      "owners": [
+        "36-86"
+      ],
+      "source": {
+        "reference": "D0_06",
+        "source_component_orders": {
+          "36-86": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "36-86"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.342162791037958,
+        4.33213447180836,
+        0.1269454696940233,
+        0.0003698403537678976,
+        0.8973781649139481,
+        48.77591849473744,
+        32.42367252764505,
+        0.6281701618696744,
+        0.027653210070022603,
+        0.00016070045625202233,
+        0.13120707714858515
+      ],
+      "old_donor2_padded_deviance": 15078.072489942107,
+      "old_donor2_padded_gradient": 2.9162603826004716e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_06": 0.0,
+        "36-86": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.17611706136665356,
+            4.352669759654444,
+            1.7163647557703305,
+            0.06687987991627278,
+            0.8764499274526997,
+            0.00035104154166388444,
+            1.2084629150141355,
+            49.24318910615601,
+            35.72986932451316,
+            0.6297534154911677,
+            0.029147066992602354,
+            0.00016076509849080416,
+            0.05086877095471465
+          ],
+          "objective": 0.00018952212893112258,
+          "initial": [
+            1.342162791037958,
+            4.33213447180836,
+            2.837148631423159,
+            0.1269454696940233,
+            1.0,
+            0.0003698403537678976,
+            0.8973781649139481,
+            48.77591849473744,
+            32.42367252764505,
+            0.6281701618696744,
+            0.027653210070022603,
+            0.00016070045625202233,
+            0.13120707714858515
+          ],
+          "optimizer_success": true,
+          "iterations": 277,
+          "evaluations": 8343,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 6.698441500016204e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 8.966414541995618,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.17612397956412545,
+            1.7163950790623888,
+            4.352672169007974,
+            0.06687985957831148,
+            0.12355106780953329,
+            0.00035103748197201347,
+            1.2084658375216613,
+            49.24315495221405,
+            35.72978550711758,
+            0.6297557175115742,
+            0.02914717756693384,
+            0.00016076350808506555,
+            0.05086371027814085
+          ],
+          "objective": 0.00018952212890754408,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0003698403537678976,
+            0.8973781649139481,
+            48.77591849473744,
+            32.42367252764505,
+            0.6281701618696744,
+            0.027653210070022603,
+            0.00016070045625202233,
+            0.13120707714858515
+          ],
+          "optimizer_success": true,
+          "iterations": 413,
+          "evaluations": 12798,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.4130536482421439e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 13.575084541982505,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 14103.429848074542,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_06": 7389.8557259939935,
+        "36-86": 6713.574122080549
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_08": {
+      "reference": "D0_08",
+      "owners": [
+        "44-127"
+      ],
+      "source": {
+        "reference": "D0_08",
+        "source_component_orders": {
+          "44-127": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "44-127"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.1671491519322679,
+        4.218794489262335,
+        0.09545475235298911,
+        0.0003868362056425838,
+        0.6922255941358575,
+        31.30842148204401,
+        55.80018233502315,
+        0.19680863053598982,
+        0.09157791036568161,
+        0.00019550237252260815,
+        -0.5523194074896303
+      ],
+      "old_donor2_padded_deviance": 15041.418958006692,
+      "old_donor2_padded_gradient": 3.8792054721858026e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_08": 0.0,
+        "44-127": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.15539072664597214,
+            4.2359367904071945,
+            1.61261051211974,
+            0.0662185320142693,
+            0.9104749266221804,
+            0.0003716865190852371,
+            0.9811369226656375,
+            39.58949710248115,
+            56.71318052106389,
+            0.18022839783926664,
+            0.09008168825607822,
+            0.00020426244230042074,
+            -0.6305847533826698
+          ],
+          "objective": 0.00016717292191008223,
+          "initial": [
+            1.1671491519322679,
+            4.218794489262335,
+            2.6929718205973012,
+            0.09545475235298911,
+            1.0,
+            0.0003868362056425838,
+            0.6922255941358575,
+            31.30842148204401,
+            55.80018233502315,
+            0.19680863053598982,
+            0.09157791036568161,
+            0.00019550237252260815,
+            -0.5523194074896303
+          ],
+          "optimizer_success": true,
+          "iterations": 234,
+          "evaluations": 7020,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 4.1148379621109356e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 7.507453583006281,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.15540704118413406,
+            1.6126717019910624,
+            4.235939034253551,
+            0.06621869283513454,
+            0.08952481035014125,
+            0.0003716854273366035,
+            0.9811346410775057,
+            39.58965151366732,
+            56.71316419064641,
+            0.18022693103647477,
+            0.09008218067073367,
+            0.00020426265835267604,
+            -0.6306054257420142
+          ],
+          "objective": 0.00016717292197311107,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0003868362056425838,
+            0.6922255941358575,
+            31.30842148204401,
+            55.80018233502315,
+            0.19680863053598982,
+            0.09157791036568161,
+            0.00019550237252260815,
+            -0.5523194074896303
+          ],
+          "optimizer_success": true,
+          "iterations": 453,
+          "evaluations": 13743,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 6.77554478944624e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 15.229092665977078,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 14282.272641427047,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_08": 7429.698091061628,
+        "44-127": 6852.574550365419
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_10": {
+      "reference": "D0_10",
+      "owners": [
+        "5-132"
+      ],
+      "source": {
+        "reference": "D0_10",
+        "source_component_orders": {
+          "5-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "5-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.3483708155316825,
+        4.02824313904857,
+        0.13210414873643675,
+        0.0003648214262511028,
+        -0.6619613653470244,
+        44.17338318406944,
+        30.4561750926569,
+        0.4113692545250536,
+        0.03445201730981033,
+        5.3020019004331194e-05,
+        -0.5574728141117689
+      ],
+      "old_donor2_padded_deviance": 16490.73103853233,
+      "old_donor2_padded_gradient": 8.931066353064721e-08,
+      "embedding_max_relative_prediction_delta": {
+        "D0_10": 0.0,
+        "5-132": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.14945498193478204,
+            4.070200017612523,
+            1.9517422925986831,
+            0.10438831035324396,
+            0.8560758521029368,
+            0.00033117561798028545,
+            -0.13577608052829415,
+            44.93615042942086,
+            33.48870114972736,
+            0.39352969649397923,
+            0.03935972309743755,
+            4.4167889280060796e-05,
+            -0.6735280225068054
+          ],
+          "objective": 0.00022068164493283657,
+          "initial": [
+            1.3483708155316825,
+            4.02824313904857,
+            2.688306977290126,
+            0.13210414873643675,
+            1.0,
+            0.0003648214262511028,
+            -0.6619613653470244,
+            44.17338318406944,
+            30.4561750926569,
+            0.4113692545250536,
+            0.03445201730981033,
+            5.3020019004331194e-05,
+            -0.5574728141117689
+          ],
+          "optimizer_success": true,
+          "iterations": 321,
+          "evaluations": 9639,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.5227071264554155e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 10.33401266700821,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.14944663820480497,
+            1.95172823258395,
+            4.070198879046151,
+            0.10439226700460182,
+            0.14392359719279713,
+            0.0003311777173765899,
+            -0.13574766358153756,
+            44.93634446655382,
+            33.48897918774278,
+            0.3935172718280854,
+            0.039359771446170796,
+            4.416900139363407e-05,
+            -0.6735278402458196
+          ],
+          "objective": 0.00022068164497236043,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0003648214262511028,
+            -0.6619613653470244,
+            44.17338318406944,
+            30.4561750926569,
+            0.4113692545250536,
+            0.03445201730981033,
+            5.3020019004331194e-05,
+            -0.5574728141117689
+          ],
+          "optimizer_success": true,
+          "iterations": 365,
+          "evaluations": 11097,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 4.7403480459980116e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 12.005941625015112,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 14209.983079041593,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_10": 7203.222028379926,
+        "5-132": 7006.761050661667
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_11": {
+      "reference": "D0_11",
+      "owners": [
+        "5-44"
+      ],
+      "source": {
+        "reference": "D0_11",
+        "source_component_orders": {
+          "5-44": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "5-44"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.3524511934441683,
+        4.007134165977956,
+        0.13117761844187031,
+        8.361203823490554e-05,
+        0.2761611447528969,
+        21.26311828290135,
+        41.98067350616323,
+        0.4516826315246743,
+        0.04623537583966152,
+        0.0002533543203049996,
+        -0.006826077166231848
+      ],
+      "old_donor2_padded_deviance": 17316.301776319142,
+      "old_donor2_padded_gradient": 2.2494604615849264e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_11": 0.0,
+        "5-44": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.1548824568131037,
+            4.035102448076068,
+            1.8374530822204629,
+            0.09777522422550074,
+            0.8666068743466189,
+            7.403414501722345e-05,
+            0.7827102388805338,
+            17.85200111731308,
+            41.6949141861167,
+            0.41768037369595623,
+            0.047699814816291625,
+            0.00023167333652054375,
+            -0.07792587778884119
+          ],
+          "objective": 0.0002279765425264399,
+          "initial": [
+            1.3524511934441683,
+            4.007134165977956,
+            2.679792679711062,
+            0.13117761844187031,
+            1.0,
+            8.361203823490554e-05,
+            0.2761611447528969,
+            21.26311828290135,
+            41.98067350616323,
+            0.4516826315246743,
+            0.04623537583966152,
+            0.0002533543203049996,
+            -0.006826077166231848
+          ],
+          "optimizer_success": true,
+          "iterations": 375,
+          "evaluations": 11124,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.0764245683256593e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 11.878660749993287,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.15487935593535995,
+            1.8374753546186688,
+            4.03510455498384,
+            0.09777860224289409,
+            0.13339474051798242,
+            7.403336205784582e-05,
+            0.7827311042443608,
+            17.850737676519394,
+            41.69488415938845,
+            0.41773206768405785,
+            0.04769569009510158,
+            0.0002316714984970174,
+            -0.07787980608757206
+          ],
+          "objective": 0.00022797654246183753,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            8.361203823490554e-05,
+            0.2761611447528969,
+            21.26311828290135,
+            41.98067350616323,
+            0.4516826315246743,
+            0.04623537583966152,
+            0.0002533543203049996,
+            -0.006826077166231848
+          ],
+          "optimizer_success": true,
+          "iterations": 457,
+          "evaluations": 13959,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.5029948586921857e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 15.06031020800583,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 15179.433939347404,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_11": 8500.079719895479,
+        "5-44": 6679.354219451926
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_12": {
+      "reference": "D0_12",
+      "owners": [
+        "55-119"
+      ],
+      "source": {
+        "reference": "D0_12",
+        "source_component_orders": {
+          "55-119": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "55-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        4.143904826566775,
+        0.6370472540214352,
+        0.8585039218850137,
+        1e-12,
+        1.6029600840219587,
+        57.47875045254933,
+        57.4786828091291,
+        0.2992726123078045,
+        0.26031294365980395,
+        0.00088058736902528,
+        2.7345835449547264
+      ],
+      "old_donor2_padded_deviance": 21395.57542022705,
+      "old_donor2_padded_gradient": 1.2653618688834584e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_12": 0.0,
+        "55-119": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            4.168920183938533,
+            0.056640037841500866,
+            1.0849774501109068,
+            0.5972339369020633,
+            0.8181352335655562,
+            1e-12,
+            2.5772989342658725,
+            57.716994697282,
+            57.715445587523426,
+            0.3000692606539138,
+            0.2568242885596767,
+            0.0008675493467301763,
+            3.6719504798231597
+          ],
+          "objective": 0.00032709975960017477,
+          "initial": [
+            4.143904826566775,
+            0.6370472540214352,
+            2.390476040294105,
+            0.8585039218850137,
+            1.0,
+            1e-12,
+            1.6029600840219587,
+            57.47875045254933,
+            57.4786828091291,
+            0.2992726123078045,
+            0.26031294365980395,
+            0.00088058736902528,
+            2.7345835449547264
+          ],
+          "optimizer_success": true,
+          "iterations": 275,
+          "evaluations": 8478,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.041058525164191e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 6.194284833007259,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.05663128074196277,
+            1.0849612725842106,
+            4.1689196958215256,
+            0.32955523369897405,
+            0.1092493017922825,
+            1e-12,
+            2.5773942873108826,
+            57.71697303995134,
+            57.715472501577885,
+            0.28736148166263953,
+            0.25682463519257936,
+            0.0008675465665105266,
+            3.672040281534546
+          ],
+          "objective": 0.00032709975964567006,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            1e-12,
+            1.6029600840219587,
+            57.47875045254933,
+            57.4786828091291,
+            0.2992726123078045,
+            0.26031294365980395,
+            0.00088058736902528,
+            2.7345835449547264
+          ],
+          "optimizer_success": true,
+          "iterations": 325,
+          "evaluations": 9882,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.0165021419118507e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 7.581838249985594,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 18792.019879328112,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_12": 14208.259798322424,
+        "55-119": 4583.760081005688
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_14": {
+      "reference": "D0_14",
+      "owners": [
+        "55-150"
+      ],
+      "source": {
+        "reference": "D0_14",
+        "source_component_orders": {
+          "55-150": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "55-150"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.563465837168396,
+        4.082186275381808,
+        0.2028737184692943,
+        0.0024953557772021706,
+        -0.5697310942099136,
+        43.45742257949677,
+        120.0,
+        1.0,
+        0.8360095646306914,
+        0.0030221018284940495,
+        -0.6237458928937469
+      ],
+      "old_donor2_padded_deviance": 17296.138652936002,
+      "old_donor2_padded_gradient": 1.2161346454258427e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_14": 0.0,
+        "55-150": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.3212021570034563,
+            4.229676175215545,
+            2.484616379351696,
+            0.12871489312639706,
+            0.7196524048585711,
+            0.0023304412202778645,
+            -0.07661988678465903,
+            46.90794513477672,
+            120.0,
+            1.0,
+            0.849579370552851,
+            0.0028761803467557846,
+            -0.3127416007429975
+          ],
+          "objective": 0.00019800446635441765,
+          "initial": [
+            1.563465837168396,
+            4.082186275381808,
+            2.822826056275102,
+            0.2028737184692943,
+            1.0,
+            0.0024953557772021706,
+            -0.5697310942099136,
+            43.45742257949677,
+            120.0,
+            1.0,
+            0.8360095646306914,
+            0.0030221018284940495,
+            -0.6237458928937469
+          ],
+          "optimizer_success": true,
+          "iterations": 155,
+          "evaluations": 4833,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 7.566180424857583e-08,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 3.5220219590119086,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.321197642787733,
+            2.4846084512315407,
+            4.229674127562957,
+            0.12871533896897078,
+            0.28034618833414543,
+            0.00233044219164698,
+            -0.0766172985130229,
+            46.907897186259525,
+            120.0,
+            1.0,
+            0.8495791758244583,
+            0.0028761808807870174,
+            -0.3127362547886312
+          ],
+          "objective": 0.00019800446635289833,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0024953557772021706,
+            -0.5697310942099136,
+            43.45742257949677,
+            120.0,
+            1.0,
+            0.8360095646306914,
+            0.0030221018284940495,
+            -0.6237458928937469
+          ],
+          "optimizer_success": true,
+          "iterations": 109,
+          "evaluations": 3267,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.1488385124677978e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 2.348794874997111,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 12220.2576882636,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_14": 5994.2962431364,
+        "55-150": 6225.9614451272
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_24": {
+      "reference": "D0_24",
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "source": {
+        "reference": "D0_24",
+        "source_component_orders": {
+          "70-119": 3,
+          "70-132": 2
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "70-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": true
+      },
+      "old_donor2_parameters": [
+        1.7373885475410558,
+        4.058986258842522,
+        0.22397651325690746,
+        0.006444942562908725,
+        -0.40067877496352633,
+        25.82105347313724,
+        41.52108402443716,
+        0.6583525764868786,
+        0.06878768935205938,
+        0.0019735374252657163,
+        0.630117328663732,
+        40.75614808578122,
+        24.808358290897523,
+        0.33089593650506083,
+        0.09520406253442414,
+        0.002228895760833992,
+        0.1292143369398442
+      ],
+      "old_donor2_padded_deviance": 12812.74119481003,
+      "old_donor2_padded_gradient": 6.269083135631179e-08,
+      "embedding_max_relative_prediction_delta": {
+        "D0_24": 0.0,
+        "70-119": 0.0,
+        "70-132": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.5255611632888574,
+            4.326752377875543,
+            2.9383987937263214,
+            0.1095488796524033,
+            0.5739198215152942,
+            0.006217444317870607,
+            -0.06740072933022301,
+            19.74463447239897,
+            40.48569958877145,
+            0.7445676255630684,
+            0.04439003414040251,
+            0.0018781754172543103,
+            0.9999934201148584,
+            39.746021743409244,
+            15.55211607311919,
+            0.13015121219526815,
+            0.03349256059635821,
+            0.0021175178473100647,
+            0.807995635993402
+          ],
+          "objective": 0.000363700955230079,
+          "initial": [
+            1.7373885475410558,
+            4.058986258842522,
+            2.8981874031917885,
+            0.22397651325690746,
+            1.0,
+            0.006444942562908725,
+            -0.40067877496352633,
+            25.82105347313724,
+            41.52108402443716,
+            0.6583525764868786,
+            0.06878768935205938,
+            0.0019735374252657163,
+            0.630117328663732,
+            40.75614808578122,
+            24.808358290897523,
+            0.33089593650506083,
+            0.09520406253442414,
+            0.002228895760833992,
+            0.1292143369398442
+          ],
+          "optimizer_success": false,
+          "iterations": null,
+          "evaluations": 26531,
+          "message": "LOCAL_TIME_BUDGET",
+          "projected_gradient_inf": 5.353062630780869e-05,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "elapsed_seconds": 30.042949875001796,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.05,
+            2.03324809482698,
+            4.108345835869682,
+            0.34917345672660105,
+            0.2481540590751698,
+            0.006363761210678651,
+            0.8291950366565572,
+            32.879780035334406,
+            43.14156827770254,
+            0.6359237098856032,
+            0.10480466441655605,
+            0.0019527333545405821,
+            0.7843075112220701,
+            41.839859610509095,
+            32.00019960650312,
+            0.4152061242040294,
+            0.1516349504783305,
+            0.0021927492268266767,
+            0.27021856524819654
+          ],
+          "objective": 0.00037089999128454935,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.006444942562908725,
+            -0.40067877496352633,
+            25.82105347313724,
+            41.52108402443716,
+            0.6583525764868786,
+            0.06878768935205938,
+            0.0019735374252657163,
+            0.630117328663732,
+            40.75614808578122,
+            24.808358290897523,
+            0.33089593650506083,
+            0.09520406253442414,
+            0.002228895760833992,
+            0.1292143369398442
+          ],
+          "optimizer_success": false,
+          "iterations": null,
+          "evaluations": 26427,
+          "message": "LOCAL_TIME_BUDGET",
+          "projected_gradient_inf": 5.974368202609159e-05,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "elapsed_seconds": 30.0431631669926,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 12106.004151705363,
+      "best_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+      "contributions": {
+        "D0_24": 4126.5797651812545,
+        "70-119": 3955.0052134716548,
+        "70-132": 4024.419173052454
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_25": {
+      "reference": "D0_25",
+      "owners": [
+        "8-119"
+      ],
+      "source": {
+        "reference": "D0_25",
+        "source_component_orders": {
+          "8-119": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "8-119"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.4967283450447293,
+        3.950932933466758,
+        0.12799728433273946,
+        0.00034277575642866886,
+        -0.6118869589359504,
+        44.15834292505193,
+        29.008964986483427,
+        0.5919940976348858,
+        0.07967302731476714,
+        1.090387358647935e-05,
+        -0.5248796235780508
+      ],
+      "old_donor2_padded_deviance": 15623.310890215702,
+      "old_donor2_padded_gradient": 2.582397667216752e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_25": 0.0,
+        "8-119": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.20765130298804457,
+            3.983058650390843,
+            2.0115718354929606,
+            0.06838950660114182,
+            0.8606126036311067,
+            0.00032339119500133503,
+            -0.2745443494966384,
+            43.90849812174812,
+            30.306025414325443,
+            0.6720353175079503,
+            0.088338831860387,
+            7.2152138012938065e-06,
+            -0.626519613330915
+          ],
+          "objective": 0.00020937755612321956,
+          "initial": [
+            1.4967283450447293,
+            3.950932933466758,
+            2.723830639255744,
+            0.12799728433273946,
+            1.0,
+            0.00034277575642866886,
+            -0.6118869589359504,
+            44.15834292505193,
+            29.008964986483427,
+            0.5919940976348858,
+            0.07967302731476714,
+            1.090387358647935e-05,
+            -0.5248796235780508
+          ],
+          "optimizer_success": true,
+          "iterations": 312,
+          "evaluations": 9288,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.998986881331112e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 10.171544167009415,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.20766406092020007,
+            2.011568287264279,
+            3.98305692345513,
+            0.0683873288939694,
+            0.1393855489868168,
+            0.0003233922345656182,
+            -0.27456088272683665,
+            43.90843817390102,
+            30.305659623601212,
+            0.672037863999585,
+            0.08833840187928615,
+            7.215334834520721e-06,
+            -0.6265209968507319
+          ],
+          "objective": 0.0002093775561144245,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.00034277575642866886,
+            -0.6118869589359504,
+            44.15834292505193,
+            29.008964986483427,
+            0.5919940976348858,
+            0.07967302731476714,
+            1.090387358647935e-05,
+            -0.5248796235780508
+          ],
+          "optimizer_success": true,
+          "iterations": 428,
+          "evaluations": 13473,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 2.2562247209886275e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 14.48409924999578,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 14244.010627516669,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_25": 7230.288466482894,
+        "8-119": 7013.722161033776
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    },
+    "D0_26": {
+      "reference": "D0_26",
+      "owners": [
+        "8-132"
+      ],
+      "source": {
+        "reference": "D0_26",
+        "source_component_orders": {
+          "8-132": 3
+        },
+        "current_frozen_hypothesis": 2,
+        "mismatch_variants": [
+          "8-132"
+        ],
+        "source_model_order_disagreement_on_same_reference": false
+      },
+      "old_donor2_parameters": [
+        1.4464351349266442,
+        4.0341579982951,
+        0.13621791097847488,
+        0.0003082754112543288,
+        -0.4960927651889824,
+        25.707717945384196,
+        40.83191227938154,
+        0.5690609048461176,
+        0.15316122529444953,
+        0.0003389576306603692,
+        0.14744591924903183
+      ],
+      "old_donor2_padded_deviance": 16836.888824415484,
+      "old_donor2_padded_gradient": 1.3075297259167974e-07,
+      "embedding_max_relative_prediction_delta": {
+        "D0_26": 0.0,
+        "8-132": 0.0
+      },
+      "runs": [
+        {
+          "parameters": [
+            0.20284972930856776,
+            4.085059178943875,
+            2.168141711517889,
+            0.0957094264250877,
+            0.8433738472407843,
+            0.0002755777150871481,
+            -0.023431764132465283,
+            21.955188714852802,
+            39.801686948705765,
+            0.5060168164752015,
+            0.14968371451409904,
+            0.00029650465508991336,
+            0.19703719058297509
+          ],
+          "objective": 0.00019580422522041314,
+          "initial": [
+            1.4464351349266442,
+            4.0341579982951,
+            2.7402965666108723,
+            0.13621791097847488,
+            1.0,
+            0.0003082754112543288,
+            -0.4960927651889824,
+            25.707717945384196,
+            40.83191227938154,
+            0.5690609048461176,
+            0.15316122529444953,
+            0.0003389576306603692,
+            0.14744591924903183
+          ],
+          "optimizer_success": true,
+          "iterations": 235,
+          "evaluations": 6966,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.9891049554847754e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 7.472864415991353,
+          "kind": "ACTUAL_OPTIMIZER"
+        },
+        {
+          "parameters": [
+            0.20284721985893922,
+            2.168135345544349,
+            4.085058654558303,
+            0.09570983005570285,
+            0.15662580863668307,
+            0.0002755773850415972,
+            -0.023427809063330862,
+            21.95575735877628,
+            39.80171935892719,
+            0.5059983468450059,
+            0.14968916764210335,
+            0.00029650466153275415,
+            0.19700228471374626
+          ],
+          "objective": 0.00019580422523621157,
+          "initial": [
+            0.2,
+            1.5,
+            4.0,
+            0.2,
+            0.5,
+            0.0003082754112543288,
+            -0.4960927651889824,
+            25.707717945384196,
+            40.83191227938154,
+            0.5690609048461176,
+            0.15316122529444953,
+            0.0003389576306603692,
+            0.14744591924903183
+          ],
+          "optimizer_success": true,
+          "iterations": 272,
+          "evaluations": 8181,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "projected_gradient_inf": 1.3796090184717772e-07,
+          "numerical_status": "PASS",
+          "elapsed_seconds": 8.982504874991719,
+          "kind": "ACTUAL_OPTIMIZER"
+        }
+      ],
+      "best_D": 13976.885064821567,
+      "best_status": "PASS",
+      "contributions": {
+        "D0_26": 7015.413284801908,
+        "8-132": 6961.471780019658
+      },
+      "status": "CONDITIONAL_SOURCE_ORDER_COMPARISON_WITH_LIMITS"
+    }
+  },
+  "fits": 26
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/opt/homebrew/bin/gmx",
+    "traj",
+    "-f",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "-s",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "-n",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/selection.ndx",
+    "-b",
+    "20000",
+    "-e",
+    "1020000",
+    "-nocom",
+    "-nopbc",
+    "-nonojump",
+    "-fp",
+    "-ox",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/coordinates_nm.xvg",
+    "-ob",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/box_nm.xvg",
+    "-xvg",
+    "none"
+  ],
+  "stdin": "0\n",
+  "cwd": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+  "coordinate_policy": "source fitBB coordinates unchanged; no COM/make-whole/nojump"
+}

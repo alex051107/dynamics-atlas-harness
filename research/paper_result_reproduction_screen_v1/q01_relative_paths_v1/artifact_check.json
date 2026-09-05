@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-05T13:14:22.698734+00:00",
+  "status": "PASS",
+  "full_path_rows": 40040,
+  "trajectory_method_records": 80,
+  "frames_each": 1001,
+  "max_backbone_adjacent_C_N_nm": 0.1472207845386308,
+  "threshold_method_frame_preference_changes": 342,
+  "same_instance": true,
+  "category_changes_20frames": 0,
+  "gmx_calls_repeated": 0,
+  "optimizer_calls": 0
+}

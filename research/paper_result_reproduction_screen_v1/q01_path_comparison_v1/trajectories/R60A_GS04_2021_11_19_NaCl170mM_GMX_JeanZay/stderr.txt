@@ -1,0 +1,63 @@
+                  :-) GROMACS - gmx traj, 2025.1-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2025.1/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2025.1
+Working dir:  /Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay
+Command line:
+  gmx traj -f '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.xtc' -s '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro' -n '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/selection.ndx' -b 20000 -e 1020000 -nocom -nopbc -nonojump -fp -ox '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/coordinates_nm.xvg' -ob '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_path_comparison_v1/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/box_nm.xvg' -xvg none
+
+Group     0 (Q01_backbone_and_methyl_H) has   781 elements
+There is one group in the index
+
+Reading frame       0 time    0.000   
+Reading frame       0 time 20000.000   
+Reading frame       1 time 21000.000   
+Reading frame       2 time 22000.000   
+Reading frame       3 time 23000.000   
+Reading frame       4 time 24000.000   
+Reading frame       5 time 25000.000   
+Reading frame       6 time 26000.000   
+Reading frame       7 time 27000.000   
+Reading frame       8 time 28000.000   
+Reading frame       9 time 29000.000   
+Reading frame      10 time 30000.000   
+Reading frame      11 time 31000.000   
+Reading frame      12 time 32000.000   
+Reading frame      13 time 33000.000   
+Reading frame      14 time 34000.000   
+Reading frame      15 time 35000.000   
+Reading frame      16 time 36000.000   
+Reading frame      17 time 37000.000   
+Reading frame      18 time 38000.000   
+Reading frame      19 time 39000.000   
+Reading frame      20 time 40000.000   
+Reading frame      30 time 50000.000   
+Reading frame      40 time 60000.000   
+Reading frame      50 time 70000.000   
+Reading frame      60 time 80000.000   
+Reading frame      70 time 90000.000   
+Reading frame      80 time 100000.000   
+Reading frame      90 time 110000.000   
+Reading frame     100 time 120000.000   
+Reading frame     110 time 130000.000   
+Reading frame     120 time 140000.000   
+Reading frame     130 time 150000.000   
+Reading frame     140 time 160000.000   
+Reading frame     150 time 170000.000   
+Reading frame     160 time 180000.000   
+Reading frame     170 time 190000.000   
+Reading frame     180 time 200000.000   
+Reading frame     190 time 210000.000   
+Reading frame     200 time 220000.000   
+Reading frame     300 time 320000.000   
+Reading frame     400 time 420000.000   
+Reading frame     500 time 520000.000   
+Reading frame     600 time 620000.000   
+Reading frame     700 time 720000.000   
+Reading frame     800 time 820000.000   
+Reading frame     900 time 920000.000   
+Reading frame    1000 time 1020000.000   
+Last frame       1000 time 1020000.000   
+
+GROMACS reminds you: "I identified myself very early on as a scientist rather than a student - as someone creating knowledge rather than simply absorbing it." (Emmanuelle Charpentier)
+

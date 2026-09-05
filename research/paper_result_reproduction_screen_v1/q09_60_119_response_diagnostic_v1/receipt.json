@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-09-05T12:02:27.743241+00:00",
+  "status": "BOUNDED_RESPONSE_DIAGNOSTIC_COMPLETED",
+  "fits": 10,
+  "method": {
+    "version": "60-119-response-diagnostic/v1",
+    "IRF_shift": "padded_linear_v2",
+    "window": "unchangedIBH17HanningLin>0.1medianpositive",
+    "dt_ns": 0.0141,
+    "donor_components": 2,
+    "FRET_components": 2,
+    "sigma_A": 6.0,
+    "scatter": 0.0,
+    "max_fits": 10,
+    "seconds_per_fit": 60,
+    "maxiter": 1500,
+    "gradient_limit": 1e-06,
+    "shared_reference_applicability": "UNKNOWN",
+    "role": "MANUAL_METHOD_DIAGNOSTIC_NOT_RULES_GAIN",
+    "fit_regions_ns": [
+      0,
+      5,
+      10,
+      20,
+      40,
+      60
+    ]
+  },
+  "separate_total_deviance": 49446.94936571376,
+  "shared_null_best_D": 213413.9643922361,
+  "FRET2_best_D": 213413.9643922368,
+  "FRET2_best_parameters": [
+    0.9929947593573115,
+    3.0076511152428367,
+    0.6560721609366401,
+    1e-12,
+    -0.41478482402325323,
+    10.0,
+    120.0,
+    0.32309975191344303,
+    1.0,
+    0.0023832220764850075,
+    3.844373044083767
+  ],
+  "FRET2_best_status": "PASS",
+  "separate_effective_parameters": {
+    "D0_16": [
+      0.8845108978755268,
+      2.959983543097064,
+      0.7228895234158808,
+      1e-12,
+      0.7704839495899263
+    ],
+    "60-119": [
+      3.075845362696811,
+      1.1553441963523423,
+      0.3956437135608702,
+      0.0019364699062542322,
+      2.83356336968954
+    ]
+  },
+  "old_joint_D_at_legacy_parameters": 213413.96439226935,
+  "all_run_statuses": {
+    "D0_16": [
+      "PASS",
+      "PASS"
+    ],
+    "60-119": [
+      "PASS",
+      "PASS"
+    ],
+    "shared_null": [
+      "PASS",
+      "PASS"
+    ],
+    "FRET2": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS"
+    ]
+  },
+  "rules_controlled": false,
+  "full_question_answer": false,
+  "scientific_ceiling": "Effective independent decay fits diagnose latent-response transfer and localminima; no proof sample error/noFRET/state-number."
+}

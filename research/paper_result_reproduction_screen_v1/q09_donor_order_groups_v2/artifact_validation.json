@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "group_count": 13,
+  "actual_fits": 26,
+  "stationary_runs": 23,
+  "numerical_stops": 3,
+  "exact_embedding_checked": 13,
+  "reference_likelihood_duplicated": false,
+  "unresolved_groups": [
+    "D0_01 one lower feasible stop",
+    "D0_24 both starts stop"
+  ],
+  "source_method_recovery_claimed": false
+}

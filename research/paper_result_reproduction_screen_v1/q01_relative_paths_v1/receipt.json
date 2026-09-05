@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-09-05T13:11:11.694403+00:00",
+  "status": "RELATIVE_COMPARISON_EXECUTED",
+  "scientific_status": "RELATIVE_DIRECTION_STABLE_ACROSS_TWO_METHODS",
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "same_instance_as_parent": true,
+  "on_operator_calls": 1,
+  "off_operator_calls": 0,
+  "new_gmx_calls": 0,
+  "new_optimizations": 0,
+  "trajectory_count": 40,
+  "changed_primary_trajectories": 0,
+  "state_membership_claimed": false,
+  "accuracy_gain_claimed": false,
+  "full_question_answer": false,
+  "development_method_revision": true,
+  "original_envelope_results_preserved": true
+}

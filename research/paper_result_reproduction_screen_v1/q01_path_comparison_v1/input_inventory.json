@@ -1,0 +1,422 @@
+[
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/config/noe_contacts_v0.json",
+    "bytes": 5019,
+    "sha256": "b7f696667b1fdaefb1a86851d064b7524861779427999836d30f9ba2eb2216cf"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/scripts/structural_contact_calibration.py",
+    "bytes": 7730,
+    "sha256": "a3d3d6b15b568b2ffc8c52fb5ddcf194fb27ff342437619db93d9d34c2770102"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/8B7I.cif.gz",
+    "bytes": 1531434,
+    "sha256": "853720a0a2738fdf4fc03ac96c5bf87ec293762b2f7a5a0ff1ab1902672d9865"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/8B7J.cif.gz",
+    "bytes": 1542039,
+    "sha256": "b7260fe3d9df5ea81ce11cf294fe8326b585f443c6b8b156198fe81dad014e00"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13037580,
+    "sha256": "cd656aa1ce92641934dddb8384ba6f5971f35f5e64910a7af58491f4cbe43c5c"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150906,
+    "sha256": "bf5fdd56dbfc7380d3a334c4c848a48ca255838317e90a6e6d6e385b9bcd013e"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13036236,
+    "sha256": "c5651950675e98bfb013ebe39ff4a11c351191aee9ad6e00b6dc787510923219"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150897,
+    "sha256": "e9090a886b6de467c77ad36424156177e91fb4997100e639f61c4faa90456265"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13036652,
+    "sha256": "d12656e7fb58ccdbcfe6cd2de72175b749e3d7ea6d8117fa3fd91306e350ed09"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150919,
+    "sha256": "88c8b560af65bd28edb7000d4d5457c44f7da05cf4cee1436bc08100b6e559de"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13032212,
+    "sha256": "e655345994f15dce43edce47d6e2dcea547d30d53a07cca74cbfd7e03d4341b8"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150920,
+    "sha256": "5d2a8e8e5185e8b8f2b7df140af32b8e77e6578a26a47ccd9b558c428c700ed9"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13031784,
+    "sha256": "7c2fe24806367e4dcca3ffc4d5e100c5182cfd0bba419934f21e0531a08935f8"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150921,
+    "sha256": "676b1b2e5969d8af1c3614d858b56a2f585855ab2e2eaec6dcdb5e9d22bf886e"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13040520,
+    "sha256": "b94aa56ebaa500a2ed33b7a2eae50624d995d468522bf87ad4d21e9b9356bdbc"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150936,
+    "sha256": "8326a7737d25d0937c41d17adf0564c83b403b50db77a97095f140c3a135b624"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13032736,
+    "sha256": "bdbc7f05aacb6d364049dfe1aa228bfee57572d8b95fee7fa6f3a9531c4d081b"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150936,
+    "sha256": "514dcd8f9191bc76f3e34f0028a72e1a177528330e8c55cc0842b133fc7a6c34"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13056840,
+    "sha256": "e42dfbeeebbe2adfd3432dee43c1ba8a7d4e8e81dc76e6796a31c8d3ac2c94f6"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150934,
+    "sha256": "4fd746b6eff2ba14b5ac80d8e06280e0c86ad8ca1d0b6d7f38f269b1b7ba6894"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13036616,
+    "sha256": "ce89d12f6819f6c3744faba18a749d465bbdcbf7b997e50517ffa1b0252c2d42"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150927,
+    "sha256": "19891e5924a2f9870d07580d26cd438e2556100d80076b02deda27beacec5d19"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13042408,
+    "sha256": "11ffbb9fb6fc79f6f8f55cd8eb8b30a2efdf8880421b05d7bc617ff1cd065a00"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150915,
+    "sha256": "7cce9963f8c455ad5b323f92f1f3fff67929a242b1a67929bf0bfd0caf68e4b3"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13045020,
+    "sha256": "8974cf1e5644ea3a406111d989a2713247fd6568434644ddbf4f9ebde85603e4"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150942,
+    "sha256": "f98420e7ce2319fb7c1ed300f520e8a5d739e3c011d4e568909db5a43ba82626"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13036220,
+    "sha256": "dd6eb3070f30222e0342c64634cd4525327f9bcc63e33dc63d18ddfbb7a41b87"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150921,
+    "sha256": "1adf4580c3e156a09ce504a4a5ad60f3fd19e970c0a38a9c124b6b3f332cb313"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13043856,
+    "sha256": "7359fcaa5f42d8e8340440792c86ac5be5d090245270b3ae9a5829d9030503f6"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150915,
+    "sha256": "72c46df6f4c20f7299e2144849fbed2727ef3d2bb0a25aa92042f62bb50ab8f2"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035324,
+    "sha256": "3aef602b97818ff6af8b59ded062c74690b138e42715775d0cfd93ef9a0bc05f"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150936,
+    "sha256": "f153e9ab13117a3aeca6fc9d78784a7f254991eb372ee73ab978566a896d4d84"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035740,
+    "sha256": "82f620c3052f48c3c0c4045379bf2acc2b64986eb0c594787681fbbd7ce0877b"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150915,
+    "sha256": "242313ce6166b75f956c794ae149b91edee222df4a438c36b6c32d695fcec1b1"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13039000,
+    "sha256": "2aff0a81777842d67c013c16b54197640930bb2db96864ecb8aa2eaab8c9cae1"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150896,
+    "sha256": "a5802f0c8a910a17458c8e667def2c939637b76164cc11514e7abbb3303fe065"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13042604,
+    "sha256": "127e1609d06b3b95aa72ed10b26e523bfc486f94757117eaa8d3516fc015e188"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150906,
+    "sha256": "99747aed662e5ab9386d5ed091f72c3b27e18e4214f46ce478dda5458110a696"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13042112,
+    "sha256": "64f762d41e710531c49bf61081010620300715185f43eb07cbdfc73ae7c54ebd"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150932,
+    "sha256": "0682792a2388e77c98edffc7bf975648a7d9f7d89434ab1b62636ae8af5b4ad6"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13024004,
+    "sha256": "96d937c7b2cd0f0a2cf2eebafcb1bada7df083811823f184a967ee6d250c520a"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150926,
+    "sha256": "b96ebcaf2a9e6718b8ce32520b3d66df457115355dcc1977a61af8fbce5f6526"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13032804,
+    "sha256": "9bf70846931dfd87de4ee4ff371f3afb099b65bf9b952ed18853af5ee50f26d4"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150925,
+    "sha256": "00fc63536cf66560226c7bbd1fc08e1659a1bbad7683a376a7cc16894262a0a8"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13046212,
+    "sha256": "d7a04cb42453482dfa5c99e57a74471a87442d2c3ad45a20b13637b095be0993"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150920,
+    "sha256": "1a3fc6f28bf56aaafa291f48cee94b6283667554091dbb95b907de0c74d2214e"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13041728,
+    "sha256": "950ccd26d222a2f86ee055124222ba75945655984ddf8f34b5d3c704780400bf"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150925,
+    "sha256": "704e6a102f95e609fbaf3d0ed26a8799208df15e99f7fc1842b0c8584fd61efb"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13038352,
+    "sha256": "09017e79da492f1ef5e29a01c6f6d7d8920857525a2a7e51025f2062e3ef1de5"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150914,
+    "sha256": "eaf26c4839d1e37067e16b98f04a336dfd0ed3b8ea54f46fd69c99d210c4efc7"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13028224,
+    "sha256": "e8d64ba89cfd2e75f9d3fff0bf8375c6ea38a797c018c1b3fe3a5adac5c22076"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150934,
+    "sha256": "1f355ae7d4f3c4db6f3b809f2393aa7c7fc9e5c42efdd681f1985679ad33fc0f"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035672,
+    "sha256": "90ed5caeafcebefc83cdfe66762199d0b40d437b8098926ee17c107d1c4fe476"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150942,
+    "sha256": "1f73e12a5bb3a3361fa98357a6d04988273a508a5631b79f967aec2de5ed41aa"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035880,
+    "sha256": "ce24b4ae6cb6c56a8d903eed61481aa837f8e8d54f769177088ae4aba1326add"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150932,
+    "sha256": "19a08bc3d920d66417f9d43d139b6c8eef0d0504e85a1963faf2dc952aeb3502"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13041664,
+    "sha256": "6244d124c537ec7029933a5c7695480bbf33193c29d04e21e5510bf3aeac4d15"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150897,
+    "sha256": "7b08ee761a8b1f557ce8e650f1e92f3eb5820c6bb227a15511eb9d8a75112334"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035540,
+    "sha256": "f6e3d9a121a86bc981158e4e1e8e78e53dcbd04378bd3a12c16fdcbfc22173d9"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150911,
+    "sha256": "73bab1d9db523c4fd3e88537f9d548d573534113c3430b3846d2646201ca0430"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13035660,
+    "sha256": "b27c5947634eff65085a448272294d24b0dfb5ba9b0f0b80046e0a25fbd4f2d0"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150921,
+    "sha256": "e8e0eb9017303e7cdc81af30155a521f865f37f5f97de7e9c143e891824a40c4"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13039280,
+    "sha256": "dc19f95828315784738f8a926060ad0c627bb765ab3cb15d9afd8c2ffec6df28"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150911,
+    "sha256": "393553d7cab3c767529823b39164469f9425d71672ba4ae763af432c5b77df49"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13039028,
+    "sha256": "e630e05bfb9da91b98fcebd5a086a6978f165a0c850db59638eca3d5262bd41d"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150925,
+    "sha256": "4c6f73072ec6d3f323e1b472df9666b0f92b17e63b3a564af8b17f071f762e34"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13030192,
+    "sha256": "323de4e4b9a8f1f153245dbd3da40ea9904d56cd1e6f5aee623f68079b8596df"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150942,
+    "sha256": "723e43d75016d802d441d3fe979a5deba2e4b1338d6874806bbb941451c59d9c"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13038760,
+    "sha256": "8aeea57c47c1425f3a27850c3e318e740bb814b5108e54ee7e98013dcc051da5"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150934,
+    "sha256": "0c798e24662226c10593387c82941f36f82f581948884b5c7ad250f9c8792fb6"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13039676,
+    "sha256": "9bbd074cb5b51450f21f8bc2959ad5ec2fa9b11c4e1e320aff3791899f4ed80c"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150897,
+    "sha256": "73853960080e12bdb7e2d51c7d0fb150c4509006959ede92fdc6e183e40aabd8"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13041556,
+    "sha256": "571dc392411dbae39144b1fb8d4e76f5d3bc1a6c44f2735e52c4f2411877d893"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150922,
+    "sha256": "dfce5cde2293a8a0f999437e978d98a7b97a3515e9513649fa3477e8d89fd869"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13030932,
+    "sha256": "45a88e59c8c2c75cbe24decb44fa937bca5a8141af1dcc5a876cb95a720a1149"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150919,
+    "sha256": "94cc974659bf8217c1c8c9a8f41cb1e625d4c904bd2ce2b8d0e05e42185b0337"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13031776,
+    "sha256": "81f1c67e22af443e2fd26e7df7e4898e750c809c09af092996ad61181994c104"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150915,
+    "sha256": "61818199e3b2b70ce2a3916c599151dbd56237f9e0bd47ae9f200f813cfa823a"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13027836,
+    "sha256": "c21bafdb79c3ed204492e102bcb8c38d1b842095925ab502a895014bc6869603"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150919,
+    "sha256": "d3a933f54fec8a6c576ab0e2eabbfd2f10f770f66f28331a4cbd637dd9b4ff36"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13036008,
+    "sha256": "5d973d6a616c9ed3ebb0b204abe57b7c3d4dbc43e13bc0ce542522b0caa89a22"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150912,
+    "sha256": "b103811d02057b7d0921de8279abd5f47dbf7942514b2914af4180b5619aced8"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay.xtc",
+    "bytes": 13032480,
+    "sha256": "15defedab3d59f42585ce9a49de959e66d4046f78ca7b24d9cbaa6de9e38349d"
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R60A/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/processed.gro",
+    "bytes": 150915,
+    "sha256": "c86605081caa449f2177fea3c92a0b2b834c62d3fdee24ac951b99f373ace7da"
+  }
+]

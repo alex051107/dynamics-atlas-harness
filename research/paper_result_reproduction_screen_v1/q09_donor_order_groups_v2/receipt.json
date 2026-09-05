@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-09-05T12:12:43.321787+00:00",
+  "status": "SOURCE_ORDER_GROUP_BATCH_COMPLETED",
+  "groups": 13,
+  "fits": 26,
+  "elapsed_seconds": 318.3136400829826,
+  "PASS": 23,
+  "STOP": 3,
+  "results": [
+    {
+      "reference": "D0_01",
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "old_donor2_padded_deviance": 13034.163116290363,
+      "best_D": 12301.394199399138,
+      "best_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT"
+    },
+    {
+      "reference": "D0_02",
+      "owners": [
+        "19-69"
+      ],
+      "old_donor2_padded_deviance": 9348.813430883529,
+      "best_D": 8663.726956379269,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_03",
+      "owners": [
+        "19-86"
+      ],
+      "old_donor2_padded_deviance": 11688.48585401084,
+      "best_D": 11361.202367962398,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_05",
+      "owners": [
+        "36-132"
+      ],
+      "old_donor2_padded_deviance": 14401.717649962939,
+      "best_D": 13604.042153441544,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_06",
+      "owners": [
+        "36-86"
+      ],
+      "old_donor2_padded_deviance": 15078.072489942107,
+      "best_D": 14103.429848074542,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_08",
+      "owners": [
+        "44-127"
+      ],
+      "old_donor2_padded_deviance": 15041.418958006692,
+      "best_D": 14282.272641427047,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_10",
+      "owners": [
+        "5-132"
+      ],
+      "old_donor2_padded_deviance": 16490.73103853233,
+      "best_D": 14209.983079041593,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_11",
+      "owners": [
+        "5-44"
+      ],
+      "old_donor2_padded_deviance": 17316.301776319142,
+      "best_D": 15179.433939347404,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_12",
+      "owners": [
+        "55-119"
+      ],
+      "old_donor2_padded_deviance": 21395.57542022705,
+      "best_D": 18792.019879328112,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_14",
+      "owners": [
+        "55-150"
+      ],
+      "old_donor2_padded_deviance": 17296.138652936002,
+      "best_D": 12220.2576882636,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_24",
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "old_donor2_padded_deviance": 12812.74119481003,
+      "best_D": 12106.004151705363,
+      "best_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT"
+    },
+    {
+      "reference": "D0_25",
+      "owners": [
+        "8-119"
+      ],
+      "old_donor2_padded_deviance": 15623.310890215702,
+      "best_D": 14244.010627516669,
+      "best_status": "PASS"
+    },
+    {
+      "reference": "D0_26",
+      "owners": [
+        "8-132"
+      ],
+      "old_donor2_padded_deviance": 16836.888824415484,
+      "best_D": 13976.885064821567,
+      "best_status": "PASS"
+    }
+  ],
+  "D0_24_source_shared_configuration": "UNKNOWN;sameD0 observedonce;joint2vs3isourconditionalchoice",
+  "full_question_answer": false,
+  "rules_controlled": false,
+  "claim_ceiling": "Method-groundedconditionalreferencegroup fits;not3proteinstates orfull33globalrecovery"
+}

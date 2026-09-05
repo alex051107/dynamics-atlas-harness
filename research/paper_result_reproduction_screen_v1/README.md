@@ -4,11 +4,13 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
-## Latest result after Pro13
+## Latest scientific batch after Pro14
 
-[Q09 information-content repair and actual fixed-parameter audit](q09_information_content_v2/REPORT_ZH.md) separates zero-contribution FRET distance parameters from observational evidence, preserves all33 rows, restores rejected structure obligations, and checks the author archive identity. A new explicit padded IRF shift policy is tested and compared on old parameters; new-policy fits remain pending.285 local tests pass,0 skips; no old optimization repeated. Complete scientific answers remain0/20.
+[Q01 full40 relative paths](q01_relative_paths_v1/REPORT_ZH.md) provides a bounded directional result: all20 open-seeded trajectories retain their relative preference; among20 closed-seeded,9 show sustained open preference at the20-sample criterion,1 sustained disagreement,10 no sustained loss. Both sourced contact-threshold methods give the same trajectory categories;5/50-sample sensitivity gives10/8 opposite-preference trajectories. Relative preference is not state membership or equilibrium. The original [construction-envelope method](q01_path_comparison_v1/REPORT_ZH.md) left40/40 initial frames outside support; its actual failure is preserved, then the same RuleInstance triggered a different estimand on reused measurements. Two operators each on1/off0,40GROMACS extractions total,0 repeated extractions,0 optimizations. This is a new exposed CASE rule, not the unchanged Draft baseline or held-out accuracy gain.
 
-[Q01 actual Rules baseline](q01_rules_baseline_v1/REPORT_ZH.md) adds20 current instances with no numeric obligation. [One-trajectory contact-method check](q01_contact_method_canary_v2/REPORT_ZH.md) independently matches deposited scores before applying SI thresholds. Both were completed while Pro13 generated; they do not count as complete Q01 or Rules gain.
+Q09 [60–119 reference diagnostic](q09_60_119_response_diagnostic_v1/REPORT_ZH.md) completed10 actual fits, and [source-order groups](q09_donor_order_groups_v2/REPORT_ZH.md) completed26 fits across13 groups. Shared-response inadequacy and3 numericstops remain separate from protein state number. The new padded shift policy is explicit in these diagnostic methods; a formal all33 new-method fit is still pending. [Cache parity](q09_cached_group_v2/REPORT_ZH.md) establishes one actual group's prediction/gradient equivalence and about2.14x local gradient speed, with0 newfits.
+
+295 local regression tests pass with0 skips. Complete paper-question acceptance remains0/20 pending scientific scope/adjudication, with a concrete Q01 bounded directional result now available. Original data, failed attempts and baselines remain intact. Raw PDFs/ZIPs/XTCs and extracted atom-coordinate arrays are excluded from the PR; derived distance/RMSD paths, numerical evidence, mapping and commands are included.
 
 ## Read this packet
 

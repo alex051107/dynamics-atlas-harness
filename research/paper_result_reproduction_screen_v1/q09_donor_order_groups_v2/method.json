@@ -1,0 +1,24 @@
+{
+  "version": "q09-source-donor-groups/v2",
+  "IRF_shift": "padded_linear_v2",
+  "source_orders": "SI21Table2a componentpresence only",
+  "models": [
+    "donor2_FRET2_fixed_reference",
+    "donor3_FRET2_conditional"
+  ],
+  "unique_D0_likelihood": true,
+  "seconds_per_fit": 30,
+  "fits_per_changed_group": 2,
+  "max_fits": 26,
+  "maxiter": 1500,
+  "gradient_tolerance": 1e-06,
+  "new_donor_seed": [
+    0.2,
+    1.5,
+    4.0,
+    0.2,
+    0.5
+  ],
+  "author_fitted_values_used": false,
+  "protein_state_number": "NOT_INFERRED"
+}
