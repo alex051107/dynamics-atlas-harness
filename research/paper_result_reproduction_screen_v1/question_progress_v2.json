@@ -1,5 +1,5 @@
 {
-  "version": "question-progress/20260905-q14",
+  "version": "question-progress/20260905-pro25",
   "questions": [
     {
       "question_id": "Q01",
@@ -117,12 +117,14 @@
       "question_id": "Q15",
       "original_question": "HiSiaP 结合底物后是否发生结构域闭合；为什么 175/228 位点的一组 FRET 染料给出异常判断，而更换染料后恢复与 DEER 和结构预测一致的结论？",
       "dependency_group": "10.1038/s41467-022-31945-6",
-      "development_status": "BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW",
+      "development_status": "COMPLETE_BOUNDED_QUALITATIVE_DEVELOPMENT_ANSWER_PRO24_ACCEPTED",
       "answer_artifact": "q15_question_answer_v3/REPORT_ZH.md",
       "human_final_approval_recorded": false,
-      "complete_question_answer": false,
+      "complete_question_answer": true,
       "original_entry_baseline_preserved": true,
-      "new_rules_extra": 0
+      "new_rules_extra": 0,
+      "review_artifact": "pro_review_round24/reply.md",
+      "full_quantitative_reproduction": false
     },
     {
       "question_id": "Q16",
@@ -168,15 +170,15 @@
   ],
   "counts": {
     "original_questions": 20,
-    "complete_development_answers": 1,
-    "external_AI_reviewed_scientific_answers": 1,
+    "complete_development_answers": 2,
+    "external_AI_reviewed_scientific_answers": 2,
     "human_final_scientific_approvals": 0
   },
-  "accuracy": "NOT_MEASURED;1/20 is content coverage, not accuracy",
+  "accuracy": "NOT_MEASURED;2/20 is development content coverage, not accuracy",
   "original_roster_snapshot_unchanged": true,
   "current_counts": {
-    "complete": 1,
-    "partial": 6,
+    "complete": 2,
+    "partial": 5,
     "scientifically_unrun": 13,
     "human_scientific_approvals": 0
   }
