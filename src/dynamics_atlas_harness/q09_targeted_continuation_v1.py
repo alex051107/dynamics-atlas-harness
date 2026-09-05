@@ -13,6 +13,38 @@ NEEDS_CONTINUATION = {'LOWER_FEASIBLE_CANDIDATE_REQUIRES_CONTINUATION',
                       'NO_STATIONARY_CANDIDATE_REQUIRES_CONTINUATION'}
 
 
+def history_reports(previous):
+    history = previous.get('targeted_numerical_history')
+    latest = previous.get('targeted_numerical_evidence')
+    if history is None:
+        return [latest] if latest is not None else []
+    if not history or history[-1] != latest:
+        raise ValueError('LATEST_REPORT_HISTORY_MISMATCH')
+    return history
+
+
+def evidence_anchor(previous, evidence):
+    """Bind the reports actually consumed; this is a reference, not new calculation."""
+    out = deepcopy(evidence)
+    out['history_report_ids'] = [a.q.digest(r) for r in history_reports(previous)]
+    return out
+
+
+def verify_saved_history(previous, anchor):
+    history = history_reports(previous)
+    if not history:
+        return
+    ids = [a.q.digest(r) for r in history]
+    # Original single-report artifacts predate multi-round history anchors.
+    expected = anchor.get('history_report_ids', [anchor['report_id']])
+    if ids != expected or ids[-1] != anchor['report_id']:
+        raise ValueError('CONSUMED_HISTORY_ARTIFACT_CHANGED')
+    if history[-1]['request_id'] != anchor['request_id']:
+        raise ValueError('LATEST_REQUEST_ARTIFACT_CHANGED')
+    if anchor['input_id'] != previous['method_evidence']['input_id'] or anchor['rule_instance_id'] != previous['rule_instance_id']:
+        raise ValueError('HISTORY_SOURCE_OR_INSTANCE_CHANGED')
+
+
 def current_groups(previous):
     """Fold verified descendants without overwriting the historical manual report."""
     report = previous['method_evidence']
@@ -21,9 +53,7 @@ def current_groups(previous):
         gr = groups[row['reference']]
         if row != m.group_disposition(row['reference'], gr['owners'], gr['candidates']):
             raise ValueError('METHOD_DISPOSITION_NOT_DERIVED_FROM_CANDIDATES')
-    history = previous.get('targeted_numerical_history')
-    if history is None:
-        history = [previous['targeted_numerical_evidence']] if 'targeted_numerical_evidence' in previous else []
+    history = history_reports(previous)
     for result in history:
         for run in result['runs']:
             candidates = groups[run['reference']]['candidates']
@@ -86,8 +116,7 @@ def evaluate(previous, evidence=None, verify=None, enabled=True):
         out['targeted_continuation'] = 'EVIDENCE_REJECTED'; out['targeted_rejection'] = str(error); return out
     out['targeted_operator_obligations'] = []
     out['targeted_continuation'] = 'TARGETED_NUMERICAL_CONTINUATION_ASSESSED'
-    history = deepcopy(previous.get('targeted_numerical_history',
-        [previous['targeted_numerical_evidence']] if 'targeted_numerical_evidence' in previous else []))
+    history = deepcopy(history_reports(previous))
     history.append(deepcopy(report))
     out['targeted_numerical_history'] = history
     out['targeted_numerical_evidence'] = deepcopy(report)
@@ -97,6 +126,38 @@ def evaluate(previous, evidence=None, verify=None, enabled=True):
     out['method_obligations'] = [dict(replacements[row['reference']], kind='DONOR_GROUP_NEXT_ACTION')
         if row.get('reference') in replacements and row['kind'] == 'DONOR_GROUP_NEXT_ACTION' else row
         for row in previous['method_obligations']]
+    out['complete_question_answer'] = False
+    return out
+
+
+def consume_manual_derived(previous, evidence, verify, enabled=True):
+    """Admit fixed-point-verified manual descendants, with zero operator credit."""
+    out = deepcopy(previous)
+    if not enabled:
+        out['manual_derived_application'] = 'DISABLED'
+        return out
+    report = verify(evidence)
+    if report.get('provenance') != 'MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED':
+        raise ValueError('MANUAL_DERIVED_PROVENANCE_REQUIRED')
+    if report.get('optimizer_calls') != 0 or report.get('new_rules_extra') != 0:
+        raise ValueError('MANUAL_WORK_CANNOT_RECEIVE_OPERATOR_CREDIT')
+    if (report['base_result_id'] != a.q.digest(previous)
+            or report['input_id'] != previous['method_evidence']['input_id']
+            or report['rule_instance_id'] != previous['rule_instance_id']):
+        raise ValueError('MANUAL_DERIVED_CONTEXT_CHANGED')
+    if any(evidence[k] != report[k] for k in ('request_id', 'input_id', 'rule_instance_id', 'base_result_id')) or evidence['report_id'] != a.q.digest(report):
+        raise ValueError('MANUAL_DERIVED_REPORT_CHANGED')
+    history = deepcopy(history_reports(previous)) + [deepcopy(report)]
+    out['targeted_numerical_history'] = history
+    out['targeted_numerical_evidence'] = deepcopy(report)
+    groups = current_groups(out)
+    dispositions = {ref: m.group_disposition(ref, gr['owners'], gr['candidates'])
+                    for ref, gr in groups.items()}
+    out['method_obligations'] = [dict(dispositions[row['reference']], kind='DONOR_GROUP_NEXT_ACTION')
+        if row['kind'] == 'DONOR_GROUP_NEXT_ACTION' and row.get('reference') in dispositions else row
+        for row in previous['method_obligations']]
+    out['manual_derived_application'] = 'VERIFIED_MANUAL_POINTS_CONSUMED_ZERO_OPERATOR_CREDIT'
+    out['targeted_operator_obligations'] = []
     out['complete_question_answer'] = False
     return out
 

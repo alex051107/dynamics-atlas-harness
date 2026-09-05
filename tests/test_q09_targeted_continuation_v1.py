@@ -64,4 +64,78 @@ class ContinuationTests(unittest.TestCase):
         self.assertEqual(c.evaluate(previous, dict(evidence, input_id='bad'), lambda _: report)['targeted_continuation'], 'EVIDENCE_REJECTED')
 
 
+
+class FileReplayTests(unittest.TestCase):
+    previous = ContinuationTests.previous
+    def advance(self, previous, value, status):
+        req = c.request(previous)
+        report = {'request_id': req['request_id'], 'optimizer_calls': 1,
+                  'runs': [{'reference': 'one', 'parent_candidate_id': req['selected'][0]['parent_candidate_id'],
+                            'checked': {'objective': value, 'parameters': [value],
+                                        'numerical_status': status, 'candidate_id': str(value)}}]}
+        evidence = {k: req[k] for k in ('request_id', 'input_id', 'rule_instance_id', 'base_result_id')}
+        evidence['report_id'] = c.a.q.digest(report)
+        after = c.evaluate(previous, evidence, lambda _: report)
+        return after, c.evidence_anchor(after, evidence)
+
+    def test_earlier_history_mutation_rejected_even_when_latest_is_unchanged(self):
+        first, _ = self.advance(self.previous(), .9, 'NUMERICAL_STOP_WITH_FEASIBLE_POINT')
+        after, anchor = self.advance(first, .8, 'PASS')
+        c.verify_saved_history(after, anchor)
+        after['targeted_numerical_history'][0]['runs'][0]['checked']['parameters'] = [.7]
+        with self.assertRaisesRegex(ValueError, 'CONSUMED_HISTORY_ARTIFACT_CHANGED'):
+            c.verify_saved_history(after, anchor)
+        first['targeted_numerical_history'][-1]['runs'][0]['checked']['numerical_status'] = 'PASS'
+        with self.assertRaisesRegex(ValueError, 'LATEST_REPORT_HISTORY_MISMATCH'):
+            c.request(first)
+
+    def test_two_consecutive_zero_cli_runs_preserve_existing_evidence(self):
+        import importlib.util
+        import json
+        import tempfile
+        from pathlib import Path
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        spec = importlib.util.spec_from_file_location('q09_cli_replay_test',
+            Path(__file__).resolve().parents[1]/'scripts/run_q09_targeted_continuation_v1.py')
+        cli = importlib.util.module_from_spec(spec); spec.loader.exec_module(cli)
+        original = self.previous(); after, anchor = self.advance(original, .9, 'PASS')
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); manual = root/'outputs/q09_method_evidence_v1'; manual.mkdir(parents=True)
+            (manual/'evidence_result.json').write_text(json.dumps({'report_id': c.a.q.digest(original['method_evidence'])}))
+            last = root/'initial'; last.mkdir()
+            (last/'rules_after.json').write_text(json.dumps(after)); (last/'evidence_result.json').write_text(json.dumps(anchor))
+            with patch.object(cli.a, 'GlobalData', return_value=SimpleNamespace(input_id='input')), patch.object(cli.a, 'optimize_local', side_effect=AssertionError('NO_REAL_FITS')) as fit:
+                for name in ['zero1', 'zero2']:
+                    out = root/name
+                    with patch('sys.argv', ['runner', '--task-root', str(root), '--output', str(out), '--previous-result', str(last/'rules_after.json')]):
+                        cli.main()
+                    self.assertEqual(json.loads((out/'receipt.json').read_text())['optimizer_calls'], 0)
+                    self.assertEqual(json.loads((out/'evidence_result.json').read_text()), anchor)
+                    last = out
+                fit.assert_not_called()
+
+    def test_manual_descendant_changes_action_without_optimizer_credit(self):
+        previous = self.previous()
+        report = {'request_id': 'manual', 'input_id': 'input', 'rule_instance_id': 'same',
+                  'base_result_id': c.a.q.digest(previous), 'optimizer_calls': 0, 'new_rules_extra': 0,
+                  'provenance': 'MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED',
+                  'runs': [{'reference': 'one', 'parent_candidate_id': 'stopped',
+                            'checked': {'objective': .9, 'parameters': [.9], 'numerical_status': 'PASS', 'candidate_id': 'manual-new'}}]}
+        evidence = {k: report[k] for k in ('request_id','input_id','rule_instance_id','base_result_id')}
+        evidence['report_id'] = c.a.q.digest(report)
+        calls = []
+        verify = lambda _: (calls.append(True) or report)
+        off = c.consume_manual_derived(previous, evidence, verify, enabled=False)
+        self.assertEqual(calls, [])
+        self.assertEqual(c.request(off)['selected'][0]['parent_candidate_id'], 'stopped')
+        after = c.consume_manual_derived(previous, evidence, verify)
+        self.assertEqual(c.request(after)['selected'], [])
+        self.assertEqual(after['method_evidence'], previous['method_evidence'])
+        self.assertFalse(after['complete_question_answer'])
+        c.verify_saved_history(after, c.evidence_anchor(after, evidence))
+        report['new_rules_extra'] = 1
+        with self.assertRaisesRegex(ValueError, 'MANUAL_WORK_CANNOT_RECEIVE_OPERATOR_CREDIT'):
+            c.consume_manual_derived(previous, evidence, verify)
+
 if __name__ == '__main__': unittest.main()

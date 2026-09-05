@@ -1,0 +1,2076 @@
+{
+  "status": "APBS_SOURCE_QUALITY_CHECKED",
+  "selected_members": 78,
+  "successful_members": 78,
+  "burst_files": 71,
+  "background_files": 7,
+  "all_selected_received": true,
+  "backgrounds": [
+    {
+      "member": "Figure3/175_228_apo/repetion_2/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 18,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 13,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 14,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 11,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 13,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 17,
+      "raw_background_rows_published": false
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/bkg.csv",
+      "units": "SOURCE_COLUMN_UNITS_NOT_EXPLICIT",
+      "row_count": 9,
+      "raw_background_rows_published": false
+    }
+  ],
+  "records": [
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/001_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1049,
+      "raw_Len_at_least150": 252,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.275000000186445e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.692307690820854e-08,
+      "max_Sraw_ratio_difference": 7.619047615037289e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/002_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1084,
+      "raw_Len_at_least150": 240,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.776200000954959e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.630331755326125e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/003_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1117,
+      "raw_Len_at_least150": 251,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.855000001846275e-05,
+      "max_Tau_timeresolution_grid_residual": 0.2000000000698492,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/004_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1094,
+      "raw_Len_at_least150": 269,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.926200000197815e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.249070632653343e-08,
+      "nonparseable_source_literals": {}
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/005_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1127,
+      "raw_Len_at_least150": 269,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.902499998858593e-05,
+      "max_Tau_timeresolution_grid_residual": 0.19999999995343387,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/006_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1184,
+      "raw_Len_at_least150": 254,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.70875000018645e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/007_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1090,
+      "raw_Len_at_least150": 261,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.598799998194649e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.819548875076521e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/008_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1178,
+      "raw_Len_at_least150": 243,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.496250001182348e-05,
+      "max_Tau_timeresolution_grid_residual": 0.04000000000814907,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/009_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1101,
+      "raw_Len_at_least150": 249,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.925000000611636e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/010_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1068,
+      "raw_Len_at_least150": 219,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.702499997780827e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.142857139097458e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/011_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1069,
+      "raw_Len_at_least150": 234,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.821199999615745e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 6.666666663157628e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {}
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/012_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1050,
+      "raw_Len_at_least150": 227,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.263799996016417e-05,
+      "max_Tau_timeresolution_grid_residual": 0.39999999990686774,
+      "max_Epr_ratio_difference": 6.734693880350306e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {}
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2466,
+      "raw_Len_at_least150": 637,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.767499998299253e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2487,
+      "raw_Len_at_least150": 666,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.948749999481583e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2638,
+      "raw_Len_at_least150": 704,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.913700000291044e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.692307690820854e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2736,
+      "raw_Len_at_least150": 763,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.857499999376979e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2862,
+      "raw_Len_at_least150": 743,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.87625000199179e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.676767677100571e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2952,
+      "raw_Len_at_least150": 802,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.941250000570709e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.849462357878423e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2958,
+      "raw_Len_at_least150": 759,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.868699997967281e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.849462357878423e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3038,
+      "raw_Len_at_least150": 728,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.847499999481588e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.883959041166122e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3258,
+      "raw_Len_at_least150": 887,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.578750000145523e-05,
+      "max_Tau_timeresolution_grid_residual": 0.19999999995343387,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.890295361523414e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3173,
+      "raw_Len_at_least150": 835,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.73250000070485e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3478,
+      "raw_Len_at_least150": 886,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.837500000477487e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3574,
+      "raw_Len_at_least150": 969,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.78249999885859e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.692307690820854e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3578,
+      "raw_Len_at_least150": 943,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.786250000477488e-05,
+      "max_Tau_timeresolution_grid_residual": 0.2000000000698492,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/001_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 873,
+      "raw_Len_at_least150": 112,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.312499999481589e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 7,
+        "sigEpr:-1.#IND00e+000": 7
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/002_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1046,
+      "raw_Len_at_least150": 155,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.941250002323755e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.401574808607592e-08,
+      "max_Sraw_ratio_difference": 7.692307690820854e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/003_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1455,
+      "raw_Len_at_least150": 242,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.757499998381105e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/004_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1963,
+      "raw_Len_at_least150": 349,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.908749996971383e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/005_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2675,
+      "raw_Len_at_least150": 485,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.73250999985447e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.692307690820854e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 7,
+        "sigEpr:-1.#IND00e+000": 7
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/006_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3122,
+      "raw_Len_at_least150": 589,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.89999999970897e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/007_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3874,
+      "raw_Len_at_least150": 699,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.893750003028617e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/008_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4148,
+      "raw_Len_at_least150": 770,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.807500001473386e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 9,
+        "sigEpr:-1.#IND00e+000": 9
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/009_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4197,
+      "raw_Len_at_least150": 795,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.758699999190545e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.84313726187591e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/010_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4469,
+      "raw_Len_at_least150": 868,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.864999999813554e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.842323657136774e-08,
+      "max_Sraw_ratio_difference": 7.619047615037289e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/001_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1739,
+      "raw_Len_at_least150": 458,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.619999999772606e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/002_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1532,
+      "raw_Len_at_least150": 408,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.416199997594379e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.757847531042472e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/003_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1131,
+      "raw_Len_at_least150": 286,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 8.983699998526629e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/004_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1143,
+      "raw_Len_at_least150": 297,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.742499999959076e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/005_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1175,
+      "raw_Len_at_least150": 309,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.496249999854482e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 6.996336998632557e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/006_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1174,
+      "raw_Len_at_least150": 259,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.509999999149626e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.619047615037289e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/007_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1261,
+      "raw_Len_at_least150": 321,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.801199998194648e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 1,
+        "sigEpr:-1.#IND00e+000": 1
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/008_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1189,
+      "raw_Len_at_least150": 301,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.13124999942929e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.397260282093754e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/009_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1219,
+      "raw_Len_at_least150": 299,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.67870000029103e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/010_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1213,
+      "raw_Len_at_least150": 307,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.45375000127556e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/011_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1270,
+      "raw_Len_at_least150": 309,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.84874999942929e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/012_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1273,
+      "raw_Len_at_least150": 303,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.346250000145516e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 6.863905321896624e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {}
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2388,
+      "raw_Len_at_least150": 757,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.80499999933607e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.84313726187591e-08,
+      "max_Sraw_ratio_difference": 7.890295361523414e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 9,
+        "sigEpr:-1.#IND00e+000": 9
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2381,
+      "raw_Len_at_least150": 728,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.87874999800821e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.356828191085185e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2321,
+      "raw_Len_at_least150": 726,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.708749999481588e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.692307690820854e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2792,
+      "raw_Len_at_least150": 846,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.94625000051841e-05,
+      "max_Tau_timeresolution_grid_residual": 0.40000000037252903,
+      "max_Epr_ratio_difference": 7.819548875076521e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 11,
+        "sigEpr:-1.#IND00e+000": 11
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2380,
+      "raw_Len_at_least150": 723,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.66500000018645e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 13,
+        "sigEpr:-1.#IND00e+000": 13
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2397,
+      "raw_Len_at_least150": 743,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.74499999734428e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2517,
+      "raw_Len_at_least150": 765,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.862499999481586e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2660,
+      "raw_Len_at_least150": 836,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.867499995498002e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.849462357878423e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 10,
+        "sigEpr:-1.#IND00e+000": 10
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2609,
+      "raw_Len_at_least150": 801,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.944999998008207e-05,
+      "max_Tau_timeresolution_grid_residual": 0.39999999990686774,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2603,
+      "raw_Len_at_least150": 865,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.713700001141422e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.84313726187591e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2874,
+      "raw_Len_at_least150": 861,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.912499999813554e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.209302332888967e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2671,
+      "raw_Len_at_least150": 826,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.857500001473371e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 7,
+        "sigEpr:-1.#IND00e+000": 7
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3020,
+      "raw_Len_at_least150": 941,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.947500002655723e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 11,
+        "sigEpr:-1.#IND00e+000": 11
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/014_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2855,
+      "raw_Len_at_least150": 895,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.896250000518414e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.484662578605139e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 3,
+        "sigEpr:-1.#IND00e+000": 3
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/015_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2837,
+      "raw_Len_at_least150": 845,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.44625000085038e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 4,
+        "sigEpr:-1.#IND00e+000": 4
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/016_60uW-green_25uW-red__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 2993,
+      "raw_Len_at_least150": 907,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.955000002178239e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.704280147180498e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/001_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1079,
+      "raw_Len_at_least150": 184,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.81875000047748e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.619047615037289e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/002_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 1827,
+      "raw_Len_at_least150": 297,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.753800000809453e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 2,
+        "sigEpr:-1.#IND00e+000": 2
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/003_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 3218,
+      "raw_Len_at_least150": 596,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.717499999440651e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 10,
+        "sigEpr:-1.#IND00e+000": 10
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/004_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4071,
+      "raw_Len_at_least150": 784,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.637500000622993e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.849462357878423e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 6,
+        "sigEpr:-1.#IND00e+000": 6
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/005_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4665,
+      "raw_Len_at_least150": 953,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.690000000186442e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.84313726187591e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 7,
+        "sigEpr:-1.#IND00e+000": 7
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/006_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 4975,
+      "raw_Len_at_least150": 992,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.755000000518407e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.84313726187591e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/007_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 5456,
+      "raw_Len_at_least150": 1079,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.766250000145516e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.701149429273357e-08,
+      "max_Sraw_ratio_difference": 7.849462357878423e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 5,
+        "sigEpr:-1.#IND00e+000": 5
+      }
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/008_60g_25r__apbs_alex.csv",
+      "metadata": {
+        "timeResolution": "1.250000e-008",
+        "alexPeriod": "1.000000e-004",
+        "periodShift": "0.000000e+000",
+        "greenLaserOn": "4.000000e-006",
+        "greenLaserOff": "5.000000e-005",
+        "redLaserOn": "5.000000e-005",
+        "redLaserOff": "1.000000e-004",
+        "arrivalWindow": "5.000000e-004",
+        "minNeighbors": "15",
+        "minPhotPerBurst": "50",
+        "reductionMode": "0"
+      },
+      "rows": 5574,
+      "raw_Len_at_least150": 1039,
+      "Len_vs_AA_DD_DA_mismatches": 0,
+      "Tau_vs_End_minus_Start_outside_export_rounding": 0,
+      "max_duration_absolute_difference": 9.869999997780829e-05,
+      "max_Tau_timeresolution_grid_residual": 0.0400000000372529,
+      "max_Epr_ratio_difference": 7.619047615037289e-08,
+      "max_Sraw_ratio_difference": 7.84313726187591e-08,
+      "nonparseable_source_literals": {
+        "Epr:-1.#IND00e+000": 8,
+        "sigEpr:-1.#IND00e+000": 8
+      }
+    }
+  ],
+  "by_repetition": {
+    "55_175_1mM_SA/repetion_1": {
+      "files": 12,
+      "rows": 13211,
+      "raw_Len_at_least150": 2968
+    },
+    "55_175_1mM_SA/repetion_2": {
+      "files": 13,
+      "rows": 39198,
+      "raw_Len_at_least150": 10322
+    },
+    "55_175_1mM_SA/repetion_3": {
+      "files": 10,
+      "rows": 27822,
+      "raw_Len_at_least150": 5064
+    },
+    "55_175_apo/repetion_1": {
+      "files": 12,
+      "rows": 15319,
+      "raw_Len_at_least150": 3857
+    },
+    "55_175_apo/repetion_2": {
+      "files": 16,
+      "rows": 42298,
+      "raw_Len_at_least150": 13065
+    },
+    "55_175_apo/repetion_3": {
+      "files": 8,
+      "rows": 30865,
+      "raw_Len_at_least150": 5924
+    }
+  },
+  "nonparseable": {
+    "Epr:-1.#IND00e+000": 321,
+    "sigEpr:-1.#IND00e+000": 321
+  },
+  "time_unit_evidence": "Tau matches BurstEnd-BurstStart within seven-digit export rounding; Tau is on metadata timeResolution lattice within its own export precision. Absolute SI second assignment is a source convention requiring documentation, not established solely by equality.",
+  "selection_evidence": "APBS filenames and reductionMode0/minPhotPerBurst50; paper requires total150. rawLen threshold count is a source eligibility count, not corrected FRET result.",
+  "remaining": [
+    "background rate units and duty-cycle integration",
+    "full calibration applicability and uncertainty",
+    "Q15 Rules entry adaptation",
+    "second-dye double-labelled source"
+  ],
+  "scientific_fits": 0,
+  "new_Rules_results": 0
+}

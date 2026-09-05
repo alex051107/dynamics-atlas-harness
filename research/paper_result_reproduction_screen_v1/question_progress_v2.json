@@ -1,5 +1,5 @@
 {
-  "version": "question-progress/20260905-pro16",
+  "version": "question-progress/20260905-pro18",
   "questions": [
     {
       "question_id": "Q01",
@@ -117,9 +117,12 @@
       "question_id": "Q15",
       "original_question": "HiSiaP 结合底物后是否发生结构域闭合；为什么 175/228 位点的一组 FRET 染料给出异常判断，而更换染料后恢复与 DEER 和结构预测一致的结论？",
       "dependency_group": "10.1038/s41467-022-31945-6",
-      "development_status": "SOURCE_INTAKE_PARTIAL_ENTRY_REJECTED_BEFORE_RULES",
-      "answer_artifact": null,
-      "human_final_approval_recorded": false
+      "development_status": "PARTIAL_APBS_MAIN_COMPARISON_COMPLETE_ORIGINAL_ENTRY_REJECTED",
+      "answer_artifact": "q15_apbs_comparison_v1/REPORT_ZH.md",
+      "human_final_approval_recorded": false,
+      "complete_question_answer": false,
+      "original_entry_baseline_preserved": true,
+      "new_rules_extra": 0
     },
     {
       "question_id": "Q16",

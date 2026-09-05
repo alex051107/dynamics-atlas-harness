@@ -23,10 +23,10 @@ def main():
     parent_evidence = json.loads((parent/'evidence_result.json').read_text())
     if a.q.digest(previous['method_evidence']) != parent_evidence['report_id']:
         raise ValueError('PREVIOUSLY_VERIFIED_METHOD_ARTIFACT_CHANGED')
-    if 'targeted_numerical_evidence' in previous:
+    latest_evidence = None
+    if c.history_reports(previous):
         latest_evidence = json.loads((previous_path.parent/'evidence_result.json').read_text())
-        if a.q.digest(previous['targeted_numerical_evidence']) != latest_evidence['report_id']:
-            raise ValueError('PREVIOUSLY_VERIFIED_CONTINUATION_ARTIFACT_CHANGED')
+        c.verify_saved_history(previous, latest_evidence)
     data = a.GlobalData(task/'inputs/q09_author')
     if previous['method_evidence']['input_id'] != data.input_id:
         raise ValueError('CURRENT_SOURCE_INPUT_CHANGED')
@@ -56,6 +56,8 @@ def main():
     dispatched = c.dispatch(before, previous, operator)
     if not dispatched:
         save('rules_after.json', before)
+        if latest_evidence is not None:
+            save('evidence_result.json', latest_evidence)  # unchanged prior evidence, zero new calculation
         save('receipt.json', {'status': before['targeted_continuation'], 'optimizer_calls': 0,
                              'on_operator_calls': 0, 'off_operator_calls': 0})
         return
@@ -70,6 +72,7 @@ def main():
         item['checked']['deviance'] = item['checked']['objective']*group.total
     evidence['report_id'] = a.q.digest(report)
     after = c.evaluate(previous, evidence, lambda _: report)
+    evidence = c.evidence_anchor(after, evidence)
     save('verified_report.json', report); save('evidence_result.json', evidence); save('rules_after.json', after)
     receipt = {'completed_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'status': after['targeted_continuation'], 'on_operator_calls': len(calls), 'off_operator_calls': 0,

@@ -1,0 +1,20 @@
+{
+  "source_repository": "https://github.com/DirkHaehnel/LABViewlib",
+  "commit": "49dfef079129696e84c4983ecc330d7b5d60e71b",
+  "models_url": "https://github.com/DirkHaehnel/LABViewlib/blob/49dfef079129696e84c4983ecc330d7b5d60e71b/SIMA_NED_Version/py/ALEX-Suite-1.2.0/alex/models.py",
+  "models_locators": [
+    "144-146 background counts/ms",
+    "235-286 APBS mode0 and50/counts defaults,12.5ns and500us metadata",
+    "602-605 background=rate*Tau*1000",
+    "624-626 E/S gamma/beta formulas"
+  ],
+  "merge_bursts_url": "https://github.com/DirkHaehnel/LABViewlib/blob/49dfef079129696e84c4983ecc330d7b5d60e71b/SIMA_NED_Version/py/ALEX-Suite-1.2.0/alex/merge_bursts.py",
+  "merge_locators": [
+    "39-51 exact13column burst schema",
+    "200 rawarrival multiplied by time_resolution"
+  ],
+  "inference": "Public matching software supports seconds and whole-duration background convention; exact Peter2022 executable identity remains unknown",
+  "method_difference": "Matching old software includes negative-value clipping with suspicious channel indexing. This reanalysis uses declared Hellenkamp algebra without clipping, preserving all exclusions and out-of-range values. No claim of byte-exact old-software reproduction.",
+  "paper_parameters": "Peter2022 SI Table3 physicalPDF21; formulas Hellenkamp2018 physicalPDF10 eq14/18-21",
+  "author_fitted_targets_used": false
+}
