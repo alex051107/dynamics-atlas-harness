@@ -1,0 +1,147 @@
+{
+  "schema_version": "paper-blind-agent-visible-input/v1",
+  "packet_id": "Q05_PUBLIC_FACT_PACKET_V1",
+  "case_id": "q05_nanodisc_saxs_noe_20260904",
+  "research_question": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+  "source_materials": [
+    {
+      "source_id": "Q05_MD_PREDICTIONS",
+      "source_kind": "AUTHOR_PROCESSED_PREDICTIONS",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat;inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat;inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat",
+      "permitted_facts": [
+        "DeltaH5-DMPC nanodisc simulation; original joint-fit configuration UNKNOWN.",
+        "DeltaH5 protein and DMPC lipids; full coordinate composition and stoichiometry UNKNOWN.",
+        "Author-processed per-frame SAXS predictions and amide/methyl NOE distances.",
+        "Uniform-prior ensemble predictions before joint fitting.",
+        "UNKNOWN",
+        "1195 ordered matrix rows; 90 SAXS,292 amide and40 methyl observables. Row chronology and independent replicates UNKNOWN.",
+        "Time semantics: UNKNOWN",
+        "Original answer-free fact packet: {\"available_data\": {\"amide_NOE_constraints\": 292, \"coordinate_frame_mapping\": \"UNVERIFIED\", \"files\": [\"inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat\", \"inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat\", \"inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat\", \"inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat\", \"inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat\", \"inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat\", \"inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat\"], \"frames\": 1195, \"matrix_frame_ids\": \"same ordered1..1195\", \"methyl_NOE_constraints\": 40, \"saxs_points\": 90, \"source_repo_commit\": \"85979b1b4123b6b5391b617d16551969eda9f56e\", \"trajectory_coordinates\": \"NOT_ADMITTED\"}, \"case_id\": \"q05_nanodisc_saxs_noe_20260904\", \"method_facts\": {\"NOE_bounds\": \"UPPER\", \"NOE_distance_average\": \"power3\", \"NOE_distance_uncertainty_unit\": \"angstrom\", \"SAXS_observable\": \"deposited intensity with per-point uncertainty\", \"original_joint_fit_configuration\": \"UNKNOWN\", \"prior\": \"uniform\"}, \"scientific_question\": \"Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?\", \"screen_question_id\": \"Q05\", \"system\": {\"lipid\": \"DMPC\", \"protein\": \"DeltaH5 nanodisc\", \"saxs_condition\": \"no tag, static30C\"}, \"unknowns\": [\"original author BME code version and joint configuration\", \"coordinate to matrix mapping\", \"independent replicate metadata for uncertainty\"]}"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted weights and statistics",
+        "Local fitted results and manually proposed calculations"
+      ]
+    },
+    {
+      "source_id": "Q05_SAXS_EXPERIMENT",
+      "source_kind": "AUTHOR_DEPOSITED_EXPERIMENT",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat;inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat",
+      "permitted_facts": [
+        "DeltaH5-DMPC nanodisc, no tag, static30C SAXS.",
+        "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+        "SAXS scattering intensity with deposited per-point uncertainty.",
+        "Experimental intensity versus scattering vector for joint ensemble fit.",
+        "Whole nanodisc scattering curve;90 selected q labels aligned to deposited prediction columns.",
+        "90 intensity/error pairs in deposited units, with authors q-label selection; independent replicate metadata UNKNOWN.",
+        "Time semantics: ENSEMBLE_AVERAGED_MEASUREMENT"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted weights and statistics",
+        "Local fitted results and manually proposed calculations"
+      ]
+    },
+    {
+      "source_id": "Q05_NOE_EXPERIMENT",
+      "source_kind": "AUTHOR_DEPOSITED_EXPERIMENT",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat;inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat",
+      "permitted_facts": [
+        "DeltaH5-DMPC nanodisc NOE restraints; complete original joint-condition compatibility UNKNOWN.",
+        "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+        "Amide and methyl NOE distance upper bounds with deposited distance uncertainty.",
+        "NOE-compatible ensemble distance averages using power3.",
+        "292 amide and40 methyl labeled atom-pair restraints.",
+        "Angstrom distance bounds and uncertainties; UPPER constraint with power3 averaging.",
+        "Time semantics: ENSEMBLE_AVERAGED_RESTRAINT"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted weights and statistics",
+        "Local fitted results and manually proposed calculations"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_1",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_2",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_3",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_4",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_5",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_6",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat"
+    },
+    {
+      "asset_id": "Q05_NUMERIC_ASSET_7",
+      "asset_kind": "AUTHOR_PROCESSED_NUMERIC_FILE",
+      "public_description": "inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat"
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_case_facts",
+      "unknowns",
+      "rationale"
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
+  }
+}

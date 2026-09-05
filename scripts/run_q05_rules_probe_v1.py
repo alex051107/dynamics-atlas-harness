@@ -72,7 +72,9 @@ def main() -> int:
         'timestamp': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'entry': 'NEW_Q05_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR',
         'source_head': subprocess.check_output(['git', '-C', str(REPO), 'rev-parse', 'HEAD'], text=True).strip(),
-        'local_adapter_uncommitted': True,
+        'local_adapter_uncommitted': bool(subprocess.check_output(
+            ['git', '-C', str(REPO), 'status', '--porcelain', '--',
+             str(Path(__file__).resolve().relative_to(REPO))], text=True).strip()),
         'command': [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],
         'cwd': str(Path.cwd()),
         'python': sys.version,

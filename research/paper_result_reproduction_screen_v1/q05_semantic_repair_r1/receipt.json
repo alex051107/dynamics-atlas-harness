@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-05T03:21:21.711762+00:00",
+  "entry": "NEW_Q05_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR",
+  "source_head": "fcc15858070588129c6a3ec063c5a90362db6ad1",
+  "local_adapter_uncommitted": true,
+  "command": [
+    "WORKSPACE/dynamics-atlas-harness-openrouter/local/venvs/exposed-capsule-v1-py311/bin/python",
+    "REPOSITORY_ROOT/scripts/run_q05_rules_probe_v1.py",
+    "--fact-packet",
+    "TASK_ROOT/outputs/q05_rules_baseline_v0/q05_fact_packet.json",
+    "--output-dir",
+    "TASK_ROOT/outputs/q05_semantic_repair_r1"
+  ],
+  "cwd": "TEMP_WORKDIR",
+  "python": "3.11.14 (main, Jan 14 2026, 21:09:41) [Clang 21.1.4 ]",
+  "rules_loaded": true,
+  "active_rule_instance_count": 17,
+  "statuses": {
+    "PASS": 7,
+    "UNRESOLVED": 8,
+    "NOT_APPLICABLE": 2
+  },
+  "routes": {
+    "DIRECT_EVALUATION": 7,
+    "SOURCE_LOOKUP": 8,
+    "HUMAN_OR_NEW_DATA": 2
+  },
+  "numeric_actions_executed": 0,
+  "scientific_verdict": "NOT_EMITTED",
+  "original_run_case_registry_modified": false,
+  "projection_boundary": "The existing projection preserves declaration strings but has no dedicated numerical BME configuration, NOE propagation, or matrix payload slots. Full original facts are retained separately; no claim that text preservation means numerical evaluation.",
+  "stop": "Inspect actual routes before any obligation adapter. SOURCE_LOOKUP is not a numerical extra-calculation obligation."
+}

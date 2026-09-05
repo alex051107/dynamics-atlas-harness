@@ -27,3 +27,7 @@ The roster contains 17 protein/protein-lipid questions, 2 DNA measurement contro
 The screening received a combined count/source/state check and one independent delivery review. PR packaging uses one focused check for 20 unique IDs, unchanged JSON/CSV records, `NOT_RUN` status, portable links, absence of personal absolute paths in added content, expected changed files and whitespace. No scientific calculations, runtime tests, builds or data hashes are needed for this documentation-only change.
 
 No raw paper PDFs, author prediction matrices, canonical Rules changes or new registered Operators are included; generated numerical review results and authored source are now included. A Pro review is advice; it does not establish a scientific result or authorize merging.
+
+## Round4: confirmed semantics repairs
+
+[Q05 R1 actual results and remaining scientific work](q05_semantic_repair_r1/README.md):7 declaration PASS,8 UNRESOLVED,2 NOT_APPLICABLE; no scientific numerical obligation. Original R0 evidence remains preserved. The continuing objective is full scientific correctness and coverage across the original20 questions.

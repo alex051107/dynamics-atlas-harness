@@ -179,7 +179,8 @@
       ],
       "unresolved_conditions": [
         {"reason_code": "SOURCE_EVIDENCE_ROLE_UNRESOLVED", "condition": {"op": "IN", "path": "source.evidence_role", "values": ["UNKNOWN", "UNRESOLVED", "UNDECLARED"]}},
-        {"reason_code": "SOURCE_LINEAGE_UNRESOLVED", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["UNKNOWN", "UNRESOLVED"]}}
+        {"reason_code": "SOURCE_LINEAGE_UNRESOLVED", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["UNKNOWN", "UNRESOLVED"]}},
+        {"reason_code": "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["AGENT_PROPOSED_UNVERIFIED"]}}
       ],
       "result_effects": {
         "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "SOURCE_ROLE_RECORDED", "claim_ceiling": "The source role is recorded; independence is not established here."},

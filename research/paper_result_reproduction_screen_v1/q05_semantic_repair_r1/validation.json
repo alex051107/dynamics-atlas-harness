@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "test_invocations": 1,
+  "test_count": 21,
+  "modules": [
+    "tests.test_q05_review_repairs_v1",
+    "tests.test_paper_blind_exposed_v1",
+    "tests.rules_v1.test_binding_behavior",
+    "tests.rules_v1.test_contract_consistency"
+  ],
+  "actual_probe_invocations": 1,
+  "science_runs": 0,
+  "hashes": 0,
+  "risk": "Incorrect independent-validation applicability and generic source-lineage fallthrough; existing bindings/contracts must retain behavior."
+}

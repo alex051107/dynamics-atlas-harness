@@ -572,7 +572,8 @@ def project_admitted_proposal_to_rules_casegraph(
             "left_source_id": edge["left_source_id"],
             "right_source_id": edge["right_source_id"],
             "shared_claim": case_facts["scientific_claim"],
-            "validation_claim": "No validation claim is emitted by a development profiling proposal.",
+            # Profiling proposals do not request independent validation. Omit the
+            # claim: a nonempty denial still satisfies the Rules EXISTS binding.
             "condition_relation": edge["condition_relation"],
             "relation_type": edge["relation_type"],
             "bridge_status": edge["bridge_status"],
