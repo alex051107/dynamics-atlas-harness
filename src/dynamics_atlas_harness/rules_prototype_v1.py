@@ -661,6 +661,7 @@ def evaluate_active_rules(
     bindings: Mapping[str, Any],
     contracts: Mapping[str, Any],
     evaluation_context: EvaluationContext | Mapping[str, Any] | None = None,
+    forward_bridge_context: Mapping[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     """Run the explicit PR1B prerequisite phase and its one F06 replay.
 
@@ -734,4 +735,9 @@ def evaluate_active_rules(
                 results.append(result)
                 if runtime_subrule_id in _PR1B_CONTEXT_PRODUCER_SUBRULE_IDS:
                     context.record(result)
+    # Versioned, opt-in numerical use phase. Legacy candidate registries and
+    # historical fact projections remain unchanged; no topic-specific dispatch.
+    if case_graph.get("forward_bridge_uses"):
+        from .forward_bridge_use_v1 import evaluate_uses
+        results.extend(evaluate_uses(case_graph, forward_bridge_context))
     return results
