@@ -1,0 +1,27 @@
+{
+  "source_locator": "Source-matched SI Markdown lines3323-3334, physical page59, previously visuallychecked SI59",
+  "models": [
+    "K2_local_populations",
+    "K2_shared_populations",
+    "K3_shared_populations"
+  ],
+  "comparability": "Same60 unique likelihoodrecords, role-specific bins/calibration/nuisance assumptions anddonororder acrosscomparands;allmodel-specificfailuresretained",
+  "common_donor_latent": "One fitted donorresponseperuniqueD0record,sharedconditionallywithitsDAowners before eachindividualIRF convolution;single D0likelihood notonceperowner",
+  "local_parameters": [
+    "DA distance means",
+    "DA donor-only coefficient",
+    "per unique observed record background andshift"
+  ],
+  "population_parameters": "K2localonepervariant;K2sharedonescalar;K3sharedtwosimplexcoordinates. Noauthorfittedfractions.",
+  "labels": "No distance sorting toassert proteinstate correspondence; componentpermutations/structuralidentification mustremainexplicit",
+  "calibration": "Share eachbyte-identicalIRF/Lin realization acrossallrecordowners,distinctfromlatentdonorresponseexchangeability;calibration sensitivitynotyetpropagatedglobally",
+  "remaining_admission": [
+    "19-86 crossinstrumentlatentresponse transfer conditional",
+    "duplicateD0reference biologicalexchangeability unknown",
+    "instrument/model adequacy outside22-127 untested",
+    "conditional fitbounds,startsandbudget mustfreeze beforefit",
+    "globalpopulationlabel/structuremapping unresolved"
+  ],
+  "scientific_stop": "No proteinstate supportfrom optimizedlowerloss;needadequacy,conditionalmodelcomparison,identifiability andstructure evidence",
+  "not_solver_input": "Authorfinalparameters/populations, localmanualobligations, paperanswer"
+}

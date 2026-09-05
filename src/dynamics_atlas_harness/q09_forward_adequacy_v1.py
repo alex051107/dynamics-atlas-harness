@@ -29,8 +29,15 @@ def digest(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',
 
 def _input_identity(data):
     h=hashlib.sha256()
-    for a in [data.t,*data.y.values(),*data.irf.values(),data.lin,data.mask,data.r,data.qweights,data.rates,data.transfer_exp]:
-        h.update(str(a.shape).encode());h.update(a.dtype.str.encode());h.update(a.tobytes())
+    # Semantic identity includes role names, not dictionary insertion order.
+    arrays=[('time',data.t)]
+    for field in ('y','irf'):
+        mapping=getattr(data,field)
+        if set(mapping)!={'D0','DA'}:raise ValueError('EXACT_DA_D0_ROLES_REQUIRED')
+        arrays.extend((field+':'+role,mapping[role]) for role in ('D0','DA'))
+    arrays.extend(zip(('lin','mask','r','qweights','rates','transfer_exp'),(data.lin,data.mask,data.r,data.qweights,data.rates,data.transfer_exp)))
+    for name,a in arrays:
+        h.update(name.encode());h.update(str(a.shape).encode());h.update(a.dtype.str.encode());h.update(a.tobytes())
     h.update(json.dumps({'dt':data.dt,'baseline':data.baseline,'source_identity':data.source_identity},sort_keys=True,allow_nan=False).encode())
     return h.hexdigest()
 

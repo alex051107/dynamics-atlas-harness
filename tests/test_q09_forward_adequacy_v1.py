@@ -87,6 +87,18 @@ class Q09AdequacyTests(unittest.TestCase):
         with self.assertRaises(ValueError):m.require_verified_replay({'status':'NOT_APPLICABLE','reason_codes':[]})
         m.require_verified_replay({'reason_codes':['BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED']})
 
+    def test_role_identity_and_dictionary_order(self):
+        for field in ('y','irf'):
+            d=synthetic();old=getattr(d,field)
+            setattr(d,field,{'DA':old['DA'],'D0':old['D0']});q.verify_data(d)
+            d=synthetic();old=getattr(d,field)
+            if field=='irf':old['DA'][4]=1;d.input_id=q._input_identity(d)
+            setattr(d,field,{'DA':old['D0'],'D0':old['DA']})
+            with self.assertRaises(ValueError):q.verify_data(d)
+            for keys in ({'DA'}, {'D0','DA','unexpected'}):
+                d=synthetic();setattr(d,field,{k:d.y['D0'] for k in keys})
+                with self.assertRaises(ValueError):q.verify_data(d)
+
     def test_wrong_case_and_forbidden_operator_proposals_rejected(self):
         proposal=json.loads(PROPOSAL.read_text());proposal['case_id']='other'
         with self.assertRaises(ValueError):validate_agent_proposal(PACKET,proposal)

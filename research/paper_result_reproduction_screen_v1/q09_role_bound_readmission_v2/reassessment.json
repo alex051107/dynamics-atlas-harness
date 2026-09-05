@@ -1,0 +1,331 @@
+{
+  "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+  "runtime_subrule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q09_t4l_state_number_20260905"
+  },
+  "status": "UNRESOLVED",
+  "obligations": [],
+  "reason_codes": [
+    "BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED",
+    "PROTEIN_STATE_NUMBER_NOT_IDENTIFIED",
+    "BOUND_CALIBRATION_SENSITIVITY_RECOMPUTED"
+  ],
+  "complete_question_answer": false,
+  "state_number_verdict": "UNRESOLVED",
+  "request_id": "a800bde8d789d5ef670918497a47e203bd4ecfbae1e7a54fdfe3bdd0c8c5173f",
+  "diagnostic_status": "CALCULATED_WITH_UNRESOLVED_CALIBRATION_AND_IDENTIFIABILITY",
+  "profile_checks": [
+    {
+      "fixed_f0": 0.4,
+      "status": "VERIFIED",
+      "objective": 0.00022614364433423895,
+      "projected_gradient_inf": 2.9696185679811287e-07
+    },
+    {
+      "fixed_f0": 0.6,
+      "status": "VERIFIED",
+      "objective": 0.0002276339173072454,
+      "projected_gradient_inf": 7.36383309664837e-07
+    },
+    {
+      "fixed_f0": 0.8,
+      "status": "VERIFIED",
+      "objective": 0.0004644258170174581,
+      "projected_gradient_inf": 5.468752362756721e-08
+    }
+  ],
+  "model_changes": {
+    "D0": {
+      "prior_deviance": 11400.897657376265,
+      "candidate_deviance": 7145.056316757114,
+      "change": -4255.841340619151
+    },
+    "DA": {
+      "prior_deviance": 7522.719542616853,
+      "candidate_deviance": 6734.99185424431,
+      "change": -787.7276883725426
+    }
+  },
+  "next_required_evidence": "Conditional global shared/local comparison and structure evidence; retain calibration assumptions and incomplete profile branches",
+  "claim_ceiling": "Conditional model dependence only;no scientific state-number support",
+  "numeric_gap_assessment": {
+    "IRF_edge_signal_unrepresented_by_median": true,
+    "fast_transfer_time_ns": 0.012259688781296827,
+    "fast_transfer_relative_to_two_bins": true
+  },
+  "local_forward_status": "PARTIAL_SENSITIVITY_WITH_NUMERICAL_STOPS",
+  "profile_branch_status": "VERIFIED_LOCAL_STATIONARY_POINTS",
+  "calibration_request_id": "30818b3652994cf7c701e6d3dc80a9d5332538ae02e68fca30f79688dc98eb6f",
+  "calibration_assessment": {
+    "all_calibration_fits_verified": false,
+    "calibration_fit_checks": [
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": null,
+        "status": "VERIFIED",
+        "objective": 0.0002219488707393602,
+        "projected_gradient_inf": 8.206998841129228e-08
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91001,
+        "status": "VERIFIED",
+        "objective": 0.0002229558228044516,
+        "projected_gradient_inf": 7.562394877037823e-08
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91002,
+        "status": "VERIFIED",
+        "objective": 0.00022279422502821536,
+        "projected_gradient_inf": 7.278894633468592e-08
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91003,
+        "status": "NUMERICAL_STOP",
+        "objective": 0.00022148960139544444,
+        "projected_gradient_inf": 3.9575649654113226e-05
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91004,
+        "status": "VERIFIED",
+        "objective": 0.00022206370903997709,
+        "projected_gradient_inf": 3.4617603570361133e-07
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": null,
+        "status": "VERIFIED",
+        "objective": 0.00022107516979543435,
+        "projected_gradient_inf": 1.7019563677422994e-07
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91001,
+        "status": "VERIFIED",
+        "objective": 0.00022363449450050842,
+        "projected_gradient_inf": 1.2010873588066907e-07
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91002,
+        "status": "VERIFIED",
+        "objective": 0.00022278635966941325,
+        "projected_gradient_inf": 8.742734997424539e-08
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91003,
+        "status": "VERIFIED",
+        "objective": 0.00022118820276162106,
+        "projected_gradient_inf": 9.321602907802086e-08
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91004,
+        "status": "VERIFIED",
+        "objective": 0.00022189288713933065,
+        "projected_gradient_inf": 3.408266356804646e-07
+      }
+    ],
+    "branch_checks": [
+      {
+        "status": "VERIFIED",
+        "objective": 0.0004644258170171019,
+        "projected_gradient_inf": 2.871051882990007e-07
+      },
+      {
+        "status": "VERIFIED",
+        "objective": 0.0004644258170162476,
+        "projected_gradient_inf": 5.485175528624473e-08
+      }
+    ],
+    "accepted_conditional_fits": [
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": null,
+        "parameters": [
+          3.893448485948422,
+          1.934858788707919,
+          0.7238705607974436,
+          0.3341401892645671,
+          0.7026332967953552,
+          42.31414624157,
+          22.683498831484478,
+          0.318692872523308,
+          0.5027350449293352,
+          0.0006818043390417889,
+          0.011073480293697813,
+          0.0006952527510128104,
+          0.6765554458816059
+        ],
+        "deviance": 13624.016040990306
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91001,
+        "parameters": [
+          3.893759670599955,
+          1.9360957735715743,
+          0.7256438629616243,
+          0.3340451913454982,
+          0.7021505576261412,
+          42.303216887268526,
+          22.655437269572822,
+          0.31803984223828463,
+          0.5019614239976468,
+          0.0006809959557240789,
+          0.010051029139019896,
+          0.0006967294900640231,
+          0.673891779687013
+        ],
+        "deviance": 13685.826362627056
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91002,
+        "parameters": [
+          3.893912834926063,
+          1.9357147972540314,
+          0.7243237381948477,
+          0.3339437752735393,
+          0.7022371759743253,
+          42.346581215008854,
+          22.775469483290777,
+          0.3189833429810723,
+          0.503911769542832,
+          0.0006782133548747621,
+          0.004978092754342356,
+          0.0006967859417993562,
+          0.6728218975197588
+        ],
+        "deviance": 13675.906912763236
+      },
+      {
+        "hypothesis": "compact_3_7ns",
+        "seed": 91004,
+        "parameters": [
+          3.8946968115333283,
+          1.9382079814659903,
+          0.7278537375748235,
+          0.33369515074597067,
+          0.7011786642306861,
+          42.407869593020465,
+          23.22138666087937,
+          0.3315657450507624,
+          0.515570167626984,
+          0.0006782370169850727,
+          0.021700111883213857,
+          0.0006954674041580732,
+          0.6323787386523261
+        ],
+        "deviance": 13631.065226888448
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": null,
+        "parameters": [
+          3.8707074199235842,
+          1.89229756748089,
+          0.6943173002328098,
+          0.3425949168188371,
+          0.7165424038772783,
+          42.19459858388012,
+          22.340466694867935,
+          0.3163384150290906,
+          0.49746302530847736,
+          0.0006776656912403502,
+          0.019642510865757856,
+          0.0006716158071355819,
+          0.6837566508338426
+        ],
+        "deviance": 13570.385150076458
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91001,
+        "parameters": [
+          3.887309859684878,
+          1.9258068523503815,
+          0.7202245901728119,
+          0.33641560689010824,
+          0.7047108285011591,
+          42.40198299646319,
+          22.810542955861088,
+          0.3194571774959016,
+          0.5044761782594452,
+          0.0006657631979281165,
+          0.011611828306002714,
+          0.000636079896284118,
+          0.6726196057463119
+        ],
+        "deviance": 13727.485660297025
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91002,
+        "parameters": [
+          3.8614968961641583,
+          1.8736625316131623,
+          0.6803485989302149,
+          0.34621712262188986,
+          0.7226234019465879,
+          42.199304979507126,
+          22.084242207417184,
+          0.30775454290416554,
+          0.4897431313653018,
+          0.0006607192898106783,
+          0.01914601868933108,
+          0.0006135424086872642,
+          0.7136654017949082
+        ],
+        "deviance": 13675.424108889842
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91003,
+        "parameters": [
+          3.8679928602873948,
+          1.885439155430641,
+          0.6873139756830626,
+          0.3436674379818969,
+          0.719200264423609,
+          42.15233933065847,
+          21.932545433179616,
+          0.3054966283824795,
+          0.48674019880216945,
+          0.0006096716201257573,
+          0.006235432386271,
+          0.000668813198443774,
+          0.7063166623203738
+        ],
+        "deviance": 13577.323518085985
+      },
+      {
+        "hypothesis": "adaptive_full_axis",
+        "seed": 91004,
+        "parameters": [
+          3.873352072805684,
+          1.9009781893622764,
+          0.7030823732715055,
+          0.34144500908358155,
+          0.712739202247648,
+          42.293960225145916,
+          22.605878112037637,
+          0.31930726020038225,
+          0.5020891034365239,
+          0.0006342786885816302,
+          0.02864379739870415,
+          0.0006694630536790674,
+          0.6722203579240418
+        ],
+        "deviance": 13620.579567255187
+      }
+    ],
+    "interpretation": "Finite calibration sensitivity with sample counts fixed; profile points are existence witnesses, not global exclusion or joint confidence intervals"
+  }
+}

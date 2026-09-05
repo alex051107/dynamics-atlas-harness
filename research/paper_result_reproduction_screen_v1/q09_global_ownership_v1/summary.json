@@ -1,0 +1,277 @@
+{
+  "status": "SOURCE_LIKELIHOOD_OWNERSHIP_CONDITIONAL_NOT_FITTED",
+  "variants": 33,
+  "role_paths": 66,
+  "original_files_compared_to_ZIP": 214,
+  "DA_likelihood_terms": 33,
+  "D0_likelihood_terms": 27,
+  "total_unique_likelihood_terms": 60,
+  "raw_photons_unique_records": 1579507556,
+  "raw_photons_if_66_paths_wrongly_counted_independently": 1736562061,
+  "duplicated_reference_photons": 157054505,
+  "unique_calibration_records": {
+    "IRF": 30,
+    "Lin": 13
+  },
+  "role_instruments": {
+    "IBH": 49,
+    "PQ": 17
+  },
+  "reference_context_conflicts": [],
+  "conditional_source_aliases": [
+    {
+      "variant": "19-86",
+      "role": "DA",
+      "exception": "Explicit candidate alias: metadataIRF_DA.txt versus sole PQ IRF_DA.dat; original unchanged"
+    },
+    {
+      "variant": "19-86",
+      "role": "D0",
+      "exception": "Explicit candidate alias: metadataIRF_D0.txt versus sole IBH IRF_Do.txt; original unchanged"
+    }
+  ],
+  "nonzero_excluded_sample_photons": [
+    {
+      "variant": "19-69",
+      "role": "D0",
+      "excluded_photons": 4
+    },
+    {
+      "variant": "44-119",
+      "role": "DA",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "44-119",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "44-132",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "44-150",
+      "role": "DA",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "44-150",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "44-69",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "44-86",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "55-119",
+      "role": "D0",
+      "excluded_photons": 2170
+    },
+    {
+      "variant": "55-132",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "55-150",
+      "role": "DA",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "55-69",
+      "role": "DA",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "55-69",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "60-119",
+      "role": "DA",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "60-119",
+      "role": "D0",
+      "excluded_photons": 946
+    },
+    {
+      "variant": "60-132",
+      "role": "DA",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "60-132",
+      "role": "D0",
+      "excluded_photons": 4
+    },
+    {
+      "variant": "60-150",
+      "role": "DA",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "60-150",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "60-86",
+      "role": "DA",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "60-86",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "69-119",
+      "role": "DA",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "69-119",
+      "role": "D0",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "69-132",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "69-150",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "69-86",
+      "role": "DA",
+      "excluded_photons": 2
+    },
+    {
+      "variant": "69-86",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "70-119",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "70-132",
+      "role": "D0",
+      "excluded_photons": 1
+    },
+    {
+      "variant": "8-86",
+      "role": "DA",
+      "excluded_photons": 1
+    }
+  ],
+  "shared_reference_groups": [
+    {
+      "record_id": "D0_01",
+      "likelihood_multiplicity": 1,
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "source_paths": [
+        "19-119/19-119_D0.txt",
+        "19-132/19-132_D0.txt"
+      ],
+      "raw_photons": 15012893,
+      "retained_photons": 15012893,
+      "instrument_method_alternatives": 1,
+      "status": "CONDITIONAL_UNIQUE_REFERENCE",
+      "response_transfer_to_distinct_mutants": "UNKNOWN"
+    },
+    {
+      "record_id": "D0_07",
+      "likelihood_multiplicity": 1,
+      "owners": [
+        "44-119",
+        "44-132",
+        "44-69"
+      ],
+      "source_paths": [
+        "44-119/44-119_D0.txt",
+        "44-132/44-132_D0.txt",
+        "44-69/44-69_D0.txt"
+      ],
+      "raw_photons": 33923585,
+      "retained_photons": 33923583,
+      "instrument_method_alternatives": 1,
+      "status": "CONDITIONAL_UNIQUE_REFERENCE",
+      "response_transfer_to_distinct_mutants": "UNKNOWN"
+    },
+    {
+      "record_id": "D0_09",
+      "likelihood_multiplicity": 1,
+      "owners": [
+        "44-150",
+        "44-86"
+      ],
+      "source_paths": [
+        "44-150/44-150_D0.txt",
+        "44-86/44-86_D0.txt"
+      ],
+      "raw_photons": 34253368,
+      "retained_photons": 34253367,
+      "instrument_method_alternatives": 1,
+      "status": "CONDITIONAL_UNIQUE_REFERENCE",
+      "response_transfer_to_distinct_mutants": "UNKNOWN"
+    },
+    {
+      "record_id": "D0_24",
+      "likelihood_multiplicity": 1,
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "source_paths": [
+        "70-119/70-119_D0.txt",
+        "70-132/70-132_D0.txt"
+      ],
+      "raw_photons": 7320517,
+      "retained_photons": 7320516,
+      "instrument_method_alternatives": 1,
+      "status": "CONDITIONAL_UNIQUE_REFERENCE",
+      "response_transfer_to_distinct_mutants": "UNKNOWN"
+    },
+    {
+      "record_id": "D0_27",
+      "likelihood_multiplicity": 1,
+      "owners": [
+        "8-69",
+        "8-86"
+      ],
+      "source_paths": [
+        "8-69/8-69_D0.txt",
+        "8-86/8-86_D0.txt"
+      ],
+      "raw_photons": 32620557,
+      "retained_photons": 32620557,
+      "instrument_method_alternatives": 1,
+      "status": "CONDITIONAL_UNIQUE_REFERENCE",
+      "response_transfer_to_distinct_mutants": "UNKNOWN"
+    }
+  ],
+  "optimizer_calls": 0,
+  "Rules_runs": 0,
+  "full_scientific_answers": 0
+}

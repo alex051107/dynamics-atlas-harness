@@ -1,0 +1,82 @@
+{
+  "variants": [
+    "19-119",
+    "19-132"
+  ],
+  "source_files": [
+    "eTCSPC/19-119/19-119.yml",
+    "eTCSPC/19-119/19-119_D0.txt",
+    "eTCSPC/19-119/19-119_DA.txt",
+    "eTCSPC/19-119/IRF_D0.txt",
+    "eTCSPC/19-119/IRF_DA.txt",
+    "eTCSPC/19-119/Linearization_D0.txt",
+    "eTCSPC/19-119/Linearization_DA.txt",
+    "eTCSPC/19-132/19-132.yml",
+    "eTCSPC/19-132/19-132_D0.txt",
+    "eTCSPC/19-132/19-132_DA.txt",
+    "eTCSPC/19-132/IRF_D0.txt",
+    "eTCSPC/19-132/IRF_DA.txt",
+    "eTCSPC/19-132/Linearization_D0.txt",
+    "eTCSPC/19-132/Linearization_DA.txt"
+  ],
+  "metadata": {
+    "19-119": {
+      "sample_name": "T4 Lysozyme K19pAcF R119C",
+      "sample_descriptions": [
+        "PBS pH 7.5,~20 nM K19pAcF-Alexa488 R119C-Alexa647, 50 uL sample in cuvette (Hellma).",
+        "PBS pH 7.5,~20 nM K19pAcF-Alexa488 R119C, 50 uL sample in cuvette (Hellma)."
+      ],
+      "resolution_ps": 14.1,
+      "channel_origin": "stored channel1 mapped to relative time0",
+      "native_dt_authority": "metadata resolution and sequential channel axis",
+      "donor_exchangeability": "NOT_ESTABLISHED_BY_IDENTICAL_BYTES"
+    },
+    "19-132": {
+      "sample_name": "T4 Lysozyme K19pAcF N132C",
+      "sample_descriptions": [
+        "PBS pH 7.5,~20 nM K19pAcF-Alexa488 N132C-Alexa647, 50 uL sample in cuvette (Hellma).",
+        "PBS pH 7.5,~20 nM K19pAcF-Alexa488 N132C, 50 uL sample in cuvette (Hellma)."
+      ],
+      "resolution_ps": 14.1,
+      "channel_origin": "stored channel1 mapped to relative time0",
+      "native_dt_authority": "metadata resolution and sequential channel axis",
+      "donor_exchangeability": "NOT_ESTABLISHED_BY_IDENTICAL_BYTES"
+    }
+  },
+  "byte_equal_across_variants": {
+    "D0_decay": true,
+    "D0_IRF": true,
+    "D0_Linearization": true,
+    "DA_decay": false,
+    "DA_IRF": true,
+    "DA_Linearization": true
+  },
+  "record_treatment": "One observed D0 record contributes once;two distinct DA records both retained. Applying one latent donor response to two mutant samples is explicitly conditional,not proven.",
+  "original_donor_descriptions_preserved": true,
+  "records": {
+    "D0_shared": {
+      "raw_photons": 15012893,
+      "fit_photons": 15012893,
+      "excluded_photons": 0,
+      "fit_bins": 3750,
+      "irf_baseline": 1.0,
+      "original_header": "Item name: Decay\n\nReal time: 1297.7\nLive time: 1112.88\n\nComment: \n\n\n"
+    },
+    "19-119_DA": {
+      "raw_photons": 10284749,
+      "fit_photons": 10284749,
+      "excluded_photons": 0,
+      "fit_bins": 3750,
+      "irf_baseline": 1.0,
+      "original_header": "Item name: Decay\n\nReal time: 4436.9\nLive time: 4313.72\n\nComment: \n\n\n"
+    },
+    "19-132_DA": {
+      "raw_photons": 9785321,
+      "fit_photons": 9785321,
+      "excluded_photons": 0,
+      "fit_bins": 3750,
+      "irf_baseline": 1.0,
+      "original_header": "Item name: Decay\n\nReal time: 955.48\nLive time: 834.92\n\nComment: \n\n\n"
+    }
+  }
+}

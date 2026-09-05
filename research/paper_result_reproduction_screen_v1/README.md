@@ -61,3 +61,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## Calibration sensitivity after Pro10
 
 [Actual rule-controlled calibration batch](q09_calibration_sensitivity_v1/REPORT_ZH.md) reports two IRF hypotheses, ten conditional joint fits (nine verified, one numerical stop), two fixed-f0 branch starts and actual IRF/fast-component geometry. Profile verification now preserves local rejection/stop without discarding validated joint evidence. The same Q09 instance dispatches the new numerical follow-up from a verified gap. Full scientific answers remain0/20; proceed to conditional cross-variant comparisons with calibration limits rather than indefinitely refine22–127.
+
+## Shared/local comparison after Pro11
+
+[Actual competing-model calculation](q09_state_comparison_v1/REPORT_ZH.md) compares localK2/sharedK2/sharedK3 on two realDA plusoneD0 through a new narrowrule, with13newfits, numeric replay and an exactcoalescence counterexample. SharedK3's lowerloss and10A boundary are retainedwithoutstateclaim. Full33sourceownership and172L/148Lstructureintake areincluded; dye-forwardexecution remainsanexplicitgap. [Role-bound readmission](q09_role_bound_readmission_v2/receipt.json) preserves all previousfits undercorrectnamedinputbindings.

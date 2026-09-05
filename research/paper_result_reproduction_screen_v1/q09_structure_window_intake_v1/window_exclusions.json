@@ -1,0 +1,68 @@
+[
+  {
+    "variant": "55-119",
+    "role": "D0",
+    "raw_photons": 32700955,
+    "excluded_photons": 2170,
+    "excluded_fraction": 6.635891826400789e-05,
+    "Lin_threshold": 0.1091807090161216,
+    "segments": [
+      {
+        "first_bin0": 0,
+        "last_bin0": 238,
+        "time_ns": [
+          0.0,
+          3.3558
+        ],
+        "sample_photons": 2170,
+        "raw_Lin_photons": 4872,
+        "maximum_sample_bin": 25
+      },
+      {
+        "first_bin0": 3999,
+        "last_bin0": 4095,
+        "time_ns": [
+          56.3859,
+          57.7395
+        ],
+        "sample_photons": 0,
+        "raw_Lin_photons": 2350,
+        "maximum_sample_bin": 0
+      }
+    ],
+    "interpretation": "Observed nonzero sample counts in channels where fixed calibration-response mask excludes fit;no automatic source error or background-only verdict;do not retune mask by desiredfit"
+  },
+  {
+    "variant": "60-119",
+    "role": "D0",
+    "raw_photons": 14369280,
+    "excluded_photons": 946,
+    "excluded_fraction": 6.583489221450205e-05,
+    "Lin_threshold": 0.1091970794661892,
+    "segments": [
+      {
+        "first_bin0": 0,
+        "last_bin0": 240,
+        "time_ns": [
+          0.0,
+          3.384
+        ],
+        "sample_photons": 946,
+        "raw_Lin_photons": 2215,
+        "maximum_sample_bin": 17
+      },
+      {
+        "first_bin0": 3999,
+        "last_bin0": 4095,
+        "time_ns": [
+          56.3859,
+          57.7395
+        ],
+        "sample_photons": 0,
+        "raw_Lin_photons": 1296,
+        "maximum_sample_bin": 0
+      }
+    ],
+    "interpretation": "Observed nonzero sample counts in channels where fixed calibration-response mask excludes fit;no automatic source error or background-only verdict;do not retune mask by desiredfit"
+  }
+]

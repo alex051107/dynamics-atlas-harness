@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-09-05T10:15:47.703589+00:00",
+  "local_tests": 273,
+  "skips": 0,
+  "scientific_optimizer_calls": 13,
+  "all_new_fits_locally_stationary": true,
+  "new_operator_calls": 1,
+  "off_calls": 0,
+  "full_answers_added": 0,
+  "legacyfits_preserved": true,
+  "final_source_and_registry_reassessment": true,
+  "repair": "NumPybool serialization fixed;13fits retained andzerooptimizationreplayed",
+  "source_hashes": "Two importedPDB hashes once;ZIPidentity atactualadmission;record/requestrolebindingruntime only"
+}

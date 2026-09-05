@@ -1,0 +1,47 @@
+{
+  "source_article": "https://www.nature.com/articles/s41467-020-14886-w",
+  "program_source": "https://github.com/Fluorescence-Tools/mdtraj_fps",
+  "coordinate_references": {
+    "172L": "open",
+    "148L": "closed"
+  },
+  "labeling": "pAcF donor/Alexa488 and Cys acceptor/Alexa647; actual anchor mutation and atomic attachment need source-matched method admission",
+  "reported_dye_geometry_A": {
+    "Alexa488": {
+      "linker_length": 20,
+      "linker_width": 4.5,
+      "radii": [
+        5,
+        4.5,
+        1.5
+      ]
+    },
+    "Alexa647": {
+      "linker_length": 22,
+      "linker_width": 4.5,
+      "radii": [
+        11,
+        3,
+        3.5
+      ]
+    }
+  },
+  "ACV_contact_layer_A": 3,
+  "contact_population": "site-specific residual/fundamental anisotropy; values and mapping not yet admitted",
+  "observable": "Compare source-defined mean pairwise dye distance for eTCSPC;not CA distance,not distance ofmean dye positions,not automaticallyefficiency-equivalentdistance",
+  "problems": [
+    "No installed source-matched AV/ACV executable or dependencies",
+    "ExactoriginalFPSversion/attachmentatom mutations/grid/residue/siteanisotropy mapping not fully admitted",
+    "Two-column currentMD mixes geometry/density equations;returntoPDF beforeencodingequation"
+  ],
+  "first_structure_FRET_predictions": 0,
+  "installed_programs": {
+    "fps": false,
+    "mdtraj_fps": false,
+    "chisurf": false,
+    "mdtraj": false,
+    "MDAnalysis": false,
+    "labellib": false
+  },
+  "dependencies_installed": false
+}
