@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "operator_on": 1,
+  "operator_off": 0,
+  "same_instance": true,
+  "attempts": 396,
+  "solver_stops": 0,
+  "changed_model_adequacy_records": 4,
+  "evidence_reassessment": "candidate predictions and residuals reconstructed by evaluator without rerunningNNLS"
+}

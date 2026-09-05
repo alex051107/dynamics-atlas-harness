@@ -1,0 +1,42 @@
+{
+  "before": {
+    "rule_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1",
+    "rule_instance_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1::ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+    "input_id": "ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+    "triggered_records": [
+      "29_actual_noEG_raw",
+      "36_actual_noEG_raw",
+      "36_long_full",
+      "36_long_raw_cropped"
+    ],
+    "development_adapter": true,
+    "status": "UNRESOLVED",
+    "remaining_obligations": [
+      "FINITE_SHAPE_FAMILY_ADEQUACY_CHECK"
+    ],
+    "evidence_applications": 0,
+    "full_question_answer": false,
+    "protein_population": false
+  },
+  "after": {
+    "rule_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1",
+    "rule_instance_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1::ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+    "input_id": "ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+    "triggered_records": [
+      "29_actual_noEG_raw",
+      "36_actual_noEG_raw",
+      "36_long_full",
+      "36_long_raw_cropped"
+    ],
+    "development_adapter": true,
+    "status": "UNRESOLVED",
+    "remaining_obligations": [
+      "FINITE_SHAPE_FAMILY_ADEQUACY_CHECK"
+    ],
+    "evidence_applications": 0,
+    "full_question_answer": false,
+    "protein_population": false
+  },
+  "operator_calls": 0,
+  "evidence": null
+}

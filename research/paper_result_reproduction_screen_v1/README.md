@@ -1,5 +1,15 @@
 # Paper-result reproduction screen v1
 
+## Actual Q16 rule-controlled model revision and Q15 probe response
+
+[Q16 raw support](q16_raw_applicability_v1/REPORT_ZH.md) shows both no-EG records extend to4.896us, longer than their author-processed3.488/3.008us windows. [The first conditional two-Gaussian calculation](q16_conditional_feasibility_v1/REPORT_ZH.md) used six full/cropped/actual-short records with separate background/modulation estimation.72 local fits produced only20 stationary points; finite residual-screen witnesses are not global optimum or exclusion claims.
+
+[A new developmental rule](q16_shape_flexibility_v1/REPORT_ZH.md) responds to the four records without an adequate witness. On1/off0 controls one bundled finite nonnegative-grid calculation(396NNLS solves). The same instance recomputes candidate predictions/residuals and changes all four model-adequacy judgments. Actual no-EG records still permit long-distance grid mass under the declared noise/background conditions. These are conditional witnesses, not protein open-state percentages or confidence intervals. Failed grid searches do not exclude values. Previous Gaussian-component p and new grid-mass p are different quantities and are not directly compared.
+
+[Q15 actual12 dye/site curves](q15_dye_response_v1/REPORT_ZH.md) show a larger change in peak-normalized decay shape at175 withAF555(holo/apo late-to-early ratio0.6709) thanTMR(0.9943). TMR late anisotropy is around0.10 versusAF555around0.24-0.26;58controls have smaller changes. No fitted lifetime or quantum-yield inference. Cy5 workbook values match deposited CSV, but its main-figure visual correspondence remains unresolved; the discrepancy is retained, not silently replaced by a convenient curve.
+
+Original failures and local source payloads remain intact. These results still leave1 complete development answer,4 partial,15 scientifically unrun; no overall accuracy claim. Pro22 is reviewing prior fixedhead2ced635; this later batch will receive the next unrestricted review after its reply is collected.
+
 ## New evidence after Pro21
 
 [Pro21](pro_review_round21/reply.md) gives DIRECTION_PASS and closes Q15 acceptance repairs. Its Q16 fit-column selection concern is [checked on all14 real source blocks](q16_observation_independence_v2/REPORT_ZH.md): observation rowsets, values and the prior scientific input identity are unchanged. The new extractor separates observed and author-fit roles; no scientific rerun.

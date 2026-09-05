@@ -1,0 +1,8 @@
+{
+  "admitted_at": "2026-09-05T20:26:44.623112+00:00",
+  "input_digest": "ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+  "baseline_digest": "53dca368bb9d1c5f59dc835665eb73fd1687667d5084707668cde9358d746c93",
+  "source_prior": "Q16 originalinputffd0e10f unchangedactual14block audit",
+  "baseline_prior": "Iteration75 actual72calls/6records, frozen before this operator",
+  "admission_role": "EXPLICIT_PRIOR_SOURCE_AND_MANUAL_MAIN_ADMISSION"
+}

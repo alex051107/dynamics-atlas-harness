@@ -1,0 +1,7 @@
+{
+  "status": "PASS_CHANGED_REAL_INPUT_REJECTED_BEFORE_OPERATOR",
+  "returncode": 1,
+  "new_science_calls": 0,
+  "attempts": 2,
+  "first_attempt": "Assertion failed using resolved venv Python symlink; rerun preserved venv path. Original subprocess stderr not retained."
+}

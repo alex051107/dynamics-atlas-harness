@@ -1,0 +1,498 @@
+{
+  "status": "CONDITIONAL_FINITE_FAMILY_WITNESSES",
+  "completed_records": 6,
+  "planned_records": 6,
+  "optimizer_calls": 72,
+  "wall_seconds": 1.3778311249916442,
+  "interrupted": null,
+  "analytic_derivative_max_abs_error": 9.052669724951556e-11,
+  "records": [
+    {
+      "record": "29_long_full",
+      "source_block": "SI Figure10:29_eg50_1mM",
+      "n": 216,
+      "end_us": 6.88,
+      "noise_proxy": 0.0045498740780826824,
+      "best_free": {
+        "record": "29_long_full",
+        "call_index": 0,
+        "fixed_p": null,
+        "x": [
+          0.9771855946563252,
+          1.1415705938013855e-33,
+          0.21208972319555458,
+          5.330293223992672,
+          0.6168103617926445,
+          7.013871774789016,
+          0.33421038169333245,
+          0.3364890652687907
+        ],
+        "weighted_sse": 371.5003858077307,
+        "raw_rms": 0.0059669463950193,
+        "noise_proxy": 0.0045498740780826824,
+        "residual_lag1": 0.102308059810733,
+        "criterion_witness": true,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 32,
+        "optimality": 0.00047028476707962265,
+        "numerical_stationarity": true,
+        "active_bounds": [
+          1
+        ]
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 3,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": true,
+          "best_sse_call": 5,
+          "all_stationary": true
+        },
+        {
+          "p": 0.5,
+          "any_witness": true,
+          "best_sse_call": 7,
+          "all_stationary": false
+        },
+        {
+          "p": 0.75,
+          "any_witness": true,
+          "best_sse_call": 9,
+          "all_stationary": false
+        },
+        {
+          "p": 1.0,
+          "any_witness": false,
+          "best_sse_call": 10,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": true,
+      "allowed_tested_p": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    },
+    {
+      "record": "29_long_raw_cropped",
+      "source_block": "SI Figure10:29_eg50_1mM",
+      "n": 154,
+      "end_us": 4.896,
+      "noise_proxy": 0.004685433068299401,
+      "best_free": {
+        "record": "29_long_raw_cropped",
+        "call_index": 13,
+        "fixed_p": null,
+        "x": [
+          0.978247817446271,
+          0.014140835498377689,
+          0.1771670140702018,
+          5.185562033003309,
+          0.5636610653414152,
+          6.264369824512786,
+          0.08000000000000432,
+          0.4107988759757773
+        ],
+        "weighted_sse": 260.0764684020013,
+        "raw_rms": 0.006088914945149116,
+        "noise_proxy": 0.004685433068299401,
+        "residual_lag1": 0.05454856275839804,
+        "criterion_witness": true,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 30,
+        "optimality": 1.0218445373510659e-05,
+        "numerical_stationarity": true,
+        "active_bounds": [
+          6
+        ]
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 15,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": true,
+          "best_sse_call": 16,
+          "all_stationary": false
+        },
+        {
+          "p": 0.5,
+          "any_witness": true,
+          "best_sse_call": 19,
+          "all_stationary": false
+        },
+        {
+          "p": 0.75,
+          "any_witness": true,
+          "best_sse_call": 20,
+          "all_stationary": true
+        },
+        {
+          "p": 1.0,
+          "any_witness": true,
+          "best_sse_call": 23,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": true,
+      "allowed_tested_p": [
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    },
+    {
+      "record": "29_actual_noEG_raw",
+      "source_block": "SI Figure10:29_eg0_1mM",
+      "n": 154,
+      "end_us": 4.896,
+      "noise_proxy": 0.001995270641967329,
+      "best_free": {
+        "record": "29_actual_noEG_raw",
+        "call_index": 24,
+        "fixed_p": null,
+        "x": [
+          0.9986362414275273,
+          1.1707029805654196e-23,
+          0.4741341038798169,
+          4.71125980857093,
+          0.5740835669236967,
+          9.125044216532531,
+          0.9326077452250031,
+          0.6132753802816429
+        ],
+        "weighted_sse": 553.9859917503933,
+        "raw_rms": 0.003784346059851891,
+        "noise_proxy": 0.001995270641967329,
+        "residual_lag1": 0.6803942225377982,
+        "criterion_witness": false,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 92,
+        "optimality": 0.008325373879404002,
+        "numerical_stationarity": false,
+        "active_bounds": [
+          1
+        ]
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 27,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": false,
+          "best_sse_call": 28,
+          "all_stationary": false
+        },
+        {
+          "p": 0.5,
+          "any_witness": false,
+          "best_sse_call": 30,
+          "all_stationary": false
+        },
+        {
+          "p": 0.75,
+          "any_witness": false,
+          "best_sse_call": 33,
+          "all_stationary": false
+        },
+        {
+          "p": 1.0,
+          "any_witness": false,
+          "best_sse_call": 35,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": false,
+      "allowed_tested_p": [],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    },
+    {
+      "record": "36_long_full",
+      "source_block": "SI Figure10:36_eg50_1mM",
+      "n": 216,
+      "end_us": 6.88,
+      "noise_proxy": 0.009162649641115819,
+      "best_free": {
+        "record": "36_long_full",
+        "call_index": 36,
+        "fixed_p": null,
+        "x": [
+          0.9889947887642863,
+          0.003453281317034169,
+          0.295130131295358,
+          4.286701668082866,
+          1.5661422639261262,
+          5.616648132897678,
+          0.08000000000000002,
+          0.18835007410809684
+        ],
+        "weighted_sse": 415.94564976854144,
+        "raw_rms": 0.012714886803152758,
+        "noise_proxy": 0.009162649641115819,
+        "residual_lag1": 0.29490550342532196,
+        "criterion_witness": false,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 18,
+        "optimality": 0.0001971191032548267,
+        "numerical_stationarity": true,
+        "active_bounds": [
+          6
+        ]
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 38,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": false,
+          "best_sse_call": 41,
+          "all_stationary": true
+        },
+        {
+          "p": 0.5,
+          "any_witness": false,
+          "best_sse_call": 42,
+          "all_stationary": true
+        },
+        {
+          "p": 0.75,
+          "any_witness": false,
+          "best_sse_call": 44,
+          "all_stationary": false
+        },
+        {
+          "p": 1.0,
+          "any_witness": false,
+          "best_sse_call": 47,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": false,
+      "allowed_tested_p": [],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    },
+    {
+      "record": "36_long_raw_cropped",
+      "source_block": "SI Figure10:36_eg50_1mM",
+      "n": 154,
+      "end_us": 4.896,
+      "noise_proxy": 0.009749730167320034,
+      "best_free": {
+        "record": "36_long_raw_cropped",
+        "call_index": 49,
+        "fixed_p": null,
+        "x": [
+          0.968469578830164,
+          0.009398125131842903,
+          0.26619431770402746,
+          3.98321529905061,
+          0.41569166194519297,
+          5.684474672924312,
+          0.3491816940288965,
+          0.5003345849931238
+        ],
+        "weighted_sse": 238.83101239796423,
+        "raw_rms": 0.01214164681791027,
+        "noise_proxy": 0.009749730167320034,
+        "residual_lag1": 0.2182763645216479,
+        "criterion_witness": false,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 45,
+        "optimality": 0.0011638586784367294,
+        "numerical_stationarity": false,
+        "active_bounds": []
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 50,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": false,
+          "best_sse_call": 53,
+          "all_stationary": false
+        },
+        {
+          "p": 0.5,
+          "any_witness": false,
+          "best_sse_call": 54,
+          "all_stationary": false
+        },
+        {
+          "p": 0.75,
+          "any_witness": false,
+          "best_sse_call": 56,
+          "all_stationary": false
+        },
+        {
+          "p": 1.0,
+          "any_witness": false,
+          "best_sse_call": 59,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": false,
+      "allowed_tested_p": [],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    },
+    {
+      "record": "36_actual_noEG_raw",
+      "source_block": "SI Figure10:36_eg0_1mM",
+      "n": 154,
+      "end_us": 4.896,
+      "noise_proxy": 0.002694280272044353,
+      "best_free": {
+        "record": "36_actual_noEG_raw",
+        "call_index": 61,
+        "fixed_p": null,
+        "x": [
+          1.0022207795880052,
+          0.07529063076371707,
+          0.43336474301358335,
+          3.6935721819385154,
+          0.4989867431616835,
+          9.193046293560986,
+          0.08000000000000002,
+          0.3948361861663898
+        ],
+        "weighted_sse": 335.7735289127141,
+        "raw_rms": 0.003978374277382751,
+        "noise_proxy": 0.002694280272044353,
+        "residual_lag1": 0.2620901318366919,
+        "criterion_witness": false,
+        "solver_success": true,
+        "solver_status": 2,
+        "nfev": 24,
+        "optimality": 3.5905656760655095e-06,
+        "numerical_stationarity": true,
+        "active_bounds": [
+          6
+        ]
+      },
+      "profile": [
+        {
+          "p": 0.0,
+          "any_witness": false,
+          "best_sse_call": 62,
+          "all_stationary": false
+        },
+        {
+          "p": 0.25,
+          "any_witness": false,
+          "best_sse_call": 65,
+          "all_stationary": false
+        },
+        {
+          "p": 0.5,
+          "any_witness": false,
+          "best_sse_call": 67,
+          "all_stationary": false
+        },
+        {
+          "p": 0.75,
+          "any_witness": false,
+          "best_sse_call": 69,
+          "all_stationary": false
+        },
+        {
+          "p": 1.0,
+          "any_witness": false,
+          "best_sse_call": 71,
+          "all_stationary": false
+        }
+      ],
+      "any_witness": false,
+      "allowed_tested_p": [],
+      "exclusion": "NO_EXCLUSION_FROM_FAILED_LOCAL_SEARCH"
+    }
+  ],
+  "rules_extra_credit": 0,
+  "first_manual_conditional_main": true,
+  "original_inverse_reproduced": false,
+  "model": "A exp(-kt)[1-lambda+lambda((1-p)Gshort+pGlong)]",
+  "parameter_names": [
+    "A",
+    "k_per_us",
+    "lambda",
+    "short_center_nm",
+    "short_width_nm",
+    "long_center_nm",
+    "long_width_nm",
+    "p"
+  ],
+  "bounds": [
+    [
+      0.5,
+      0.0,
+      0.001,
+      2.0,
+      0.08,
+      5.5,
+      0.08,
+      0.0
+    ],
+    [
+      1.5,
+      1.0,
+      1.0,
+      5.5,
+      2.0,
+      10.0,
+      2.0,
+      1.0
+    ]
+  ],
+  "distance_grid_nm": [
+    2,
+    10,
+    201
+  ],
+  "source_roles_used": [
+    "raw time",
+    "raw real",
+    "raw imaginary noise proxy"
+  ],
+  "source_roles_excluded": [
+    "authorfit",
+    "authorP(r)",
+    "depositedbackground"
+  ],
+  "criterion": "rawRMS<=2*window-local imaginarydiffMADscale andabsresiduallag1<=.2; conditional screen,notCI",
+  "limits": [
+    "Local search and finite Gaussian family; failed search never excludes p.",
+    "p is long-centered Gaussian contribution; overlapping tails mean not exact mass above5.5nm.",
+    "5.5nm is declared analysis partition, not an open/closed structural boundary.",
+    "Fixed published timeorigin; no new phase calibration. Noiseproxy not an accepted likelihood.",
+    "Monotone exponential background may be inadequate; deposited29EG50background increases.",
+    "No original inverse reproduction, protein population or final scientific answer."
+  ]
+}
