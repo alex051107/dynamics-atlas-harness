@@ -1,0 +1,578 @@
+[
+  {
+    "id": "O01",
+    "residue_i": 24,
+    "resname_i": "ALA",
+    "pseudoatom_i": "HB*",
+    "residue_j": 119,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 11.87,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        211,
+        212,
+        213
+      ],
+      "j": [
+        1719,
+        1720,
+        1721
+      ]
+    }
+  },
+  {
+    "id": "O02",
+    "residue_i": 26,
+    "resname_i": "ILE",
+    "pseudoatom_i": "HD1*",
+    "residue_j": 115,
+    "resname_j": "THR",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 5.54,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        245,
+        246,
+        247
+      ],
+      "j": [
+        1648,
+        1649,
+        1650
+      ]
+    }
+  },
+  {
+    "id": "O03",
+    "residue_i": 26,
+    "resname_i": "ILE",
+    "pseudoatom_i": "HD1*",
+    "residue_j": 119,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 8.59,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        245,
+        246,
+        247
+      ],
+      "j": [
+        1719,
+        1720,
+        1721
+      ]
+    }
+  },
+  {
+    "id": "O05",
+    "residue_i": 29,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 115,
+    "resname_j": "THR",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 6.63,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        291,
+        292,
+        293
+      ],
+      "j": [
+        1648,
+        1649,
+        1650
+      ]
+    }
+  },
+  {
+    "id": "O06",
+    "residue_i": 29,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 119,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 6.16,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        291,
+        292,
+        293
+      ],
+      "j": [
+        1719,
+        1720,
+        1721
+      ]
+    }
+  },
+  {
+    "id": "O07",
+    "residue_i": 29,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 122,
+    "resname_j": "LEU",
+    "pseudoatom_j": "HD2*",
+    "dviol_angstrom": 8.89,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        291,
+        292,
+        293
+      ],
+      "j": [
+        1763,
+        1764,
+        1765
+      ]
+    }
+  },
+  {
+    "id": "O08",
+    "residue_i": 32,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 119,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 4.52,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        338,
+        339,
+        340
+      ],
+      "j": [
+        1719,
+        1720,
+        1721
+      ]
+    }
+  },
+  {
+    "id": "O09",
+    "residue_i": 32,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 122,
+    "resname_j": "LEU",
+    "pseudoatom_j": "HD2*",
+    "dviol_angstrom": 6.24,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        338,
+        339,
+        340
+      ],
+      "j": [
+        1763,
+        1764,
+        1765
+      ]
+    }
+  },
+  {
+    "id": "O11",
+    "residue_i": 32,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 131,
+    "resname_j": "ILE",
+    "pseudoatom_j": "HD1*",
+    "dviol_angstrom": 9.65,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        338,
+        339,
+        340
+      ],
+      "j": [
+        1885,
+        1886,
+        1887
+      ]
+    }
+  },
+  {
+    "id": "O12",
+    "residue_i": 36,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 122,
+    "resname_j": "LEU",
+    "pseudoatom_j": "HD2*",
+    "dviol_angstrom": 8.53,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        402,
+        403,
+        404
+      ],
+      "j": [
+        1763,
+        1764,
+        1765
+      ]
+    }
+  },
+  {
+    "id": "O13",
+    "residue_i": 36,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 131,
+    "resname_j": "ILE",
+    "pseudoatom_j": "HD1*",
+    "dviol_angstrom": 11.65,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        402,
+        403,
+        404
+      ],
+      "j": [
+        1885,
+        1886,
+        1887
+      ]
+    }
+  },
+  {
+    "id": "O14",
+    "residue_i": 43,
+    "resname_i": "ILE",
+    "pseudoatom_i": "HD1*",
+    "residue_j": 122,
+    "resname_j": "LEU",
+    "pseudoatom_j": "HD2*",
+    "dviol_angstrom": 9.42,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        526,
+        527,
+        528
+      ],
+      "j": [
+        1763,
+        1764,
+        1765
+      ]
+    }
+  },
+  {
+    "id": "O16",
+    "residue_i": 111,
+    "resname_i": "ALA",
+    "pseudoatom_i": "HB*",
+    "residue_j": 119,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 10.55,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        1596,
+        1597,
+        1598
+      ],
+      "j": [
+        1719,
+        1720,
+        1721
+      ]
+    }
+  },
+  {
+    "id": "O17",
+    "residue_i": 115,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 136,
+    "resname_j": "VAL",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 6.64,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        1648,
+        1649,
+        1650
+      ],
+      "j": [
+        1952,
+        1953,
+        1954
+      ]
+    }
+  },
+  {
+    "id": "O18",
+    "residue_i": 119,
+    "resname_i": "MET",
+    "pseudoatom_i": "HE*",
+    "residue_j": 136,
+    "resname_j": "VAL",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 8.76,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        1719,
+        1720,
+        1721
+      ],
+      "j": [
+        1952,
+        1953,
+        1954
+      ]
+    }
+  },
+  {
+    "id": "O19",
+    "residue_i": 122,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 136,
+    "resname_j": "VAL",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 8.31,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        1763,
+        1764,
+        1765
+      ],
+      "j": [
+        1952,
+        1953,
+        1954
+      ]
+    }
+  },
+  {
+    "id": "O20",
+    "residue_i": 122,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 143,
+    "resname_j": "LEU",
+    "pseudoatom_j": "HD2*",
+    "dviol_angstrom": 7.98,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        1763,
+        1764,
+        1765
+      ],
+      "j": [
+        2061,
+        2062,
+        2063
+      ]
+    }
+  },
+  {
+    "id": "O21",
+    "residue_i": 32,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 115,
+    "resname_j": "THR",
+    "pseudoatom_j": "HG2*",
+    "dviol_angstrom": 10.72,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        338,
+        339,
+        340
+      ],
+      "j": [
+        1648,
+        1649,
+        1650
+      ]
+    }
+  },
+  {
+    "id": "O22",
+    "residue_i": 32,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 126,
+    "resname_j": "ALA",
+    "pseudoatom_j": "HB*",
+    "dviol_angstrom": 8.53,
+    "md_used": true,
+    "state": "open",
+    "atom_indices": {
+      "i": [
+        338,
+        339,
+        340
+      ],
+      "j": [
+        1807,
+        1808,
+        1809
+      ]
+    }
+  },
+  {
+    "id": "C01",
+    "residue_i": 64,
+    "resname_i": "LEU",
+    "pseudoatom_i": "HD2*",
+    "residue_j": 130,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 10.08,
+    "md_used": true,
+    "state": "closed",
+    "atom_indices": {
+      "i": [
+        876,
+        877,
+        878
+      ],
+      "j": [
+        1866,
+        1867,
+        1868
+      ]
+    }
+  },
+  {
+    "id": "C02",
+    "residue_i": 65,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 121,
+    "resname_j": "ALA",
+    "pseudoatom_j": "HB*",
+    "dviol_angstrom": 10.43,
+    "md_used": true,
+    "state": "closed",
+    "atom_indices": {
+      "i": [
+        888,
+        889,
+        890
+      ],
+      "j": [
+        1744,
+        1745,
+        1746
+      ]
+    }
+  },
+  {
+    "id": "C03",
+    "residue_i": 65,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 124,
+    "resname_j": "ALA",
+    "pseudoatom_j": "HB*",
+    "dviol_angstrom": 9.85,
+    "md_used": true,
+    "state": "closed",
+    "atom_indices": {
+      "i": [
+        888,
+        889,
+        890
+      ],
+      "j": [
+        1790,
+        1791,
+        1792
+      ]
+    }
+  },
+  {
+    "id": "C04",
+    "residue_i": 65,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 126,
+    "resname_j": "ALA",
+    "pseudoatom_j": "HB*",
+    "dviol_angstrom": 10.19,
+    "md_used": true,
+    "state": "closed",
+    "atom_indices": {
+      "i": [
+        888,
+        889,
+        890
+      ],
+      "j": [
+        1807,
+        1808,
+        1809
+      ]
+    }
+  },
+  {
+    "id": "C05",
+    "residue_i": 65,
+    "resname_i": "THR",
+    "pseudoatom_i": "HG2*",
+    "residue_j": 130,
+    "resname_j": "MET",
+    "pseudoatom_j": "HE*",
+    "dviol_angstrom": 10.19,
+    "md_used": true,
+    "state": "closed",
+    "atom_indices": {
+      "i": [
+        888,
+        889,
+        890
+      ],
+      "j": [
+        1866,
+        1867,
+        1868
+      ]
+    }
+  }
+]

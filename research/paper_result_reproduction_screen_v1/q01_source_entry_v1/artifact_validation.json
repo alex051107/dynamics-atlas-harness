@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "40 coordinate array headers have1021x213x3",
+    "original entry log and exception preserved",
+    "entry rejection not converted to Rules failure"
+  ],
+  "scientific_validation": false
+}

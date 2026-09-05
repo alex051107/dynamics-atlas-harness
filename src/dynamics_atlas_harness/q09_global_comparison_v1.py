@@ -75,7 +75,10 @@ class Group:
 
 class GlobalData:
     def __init__(self,input_root,manifest_root=ROOT/'q09_global_ownership_v1'):
-        base=Path(input_root);self.mapping=json.loads((Path(manifest_root)/'records.json').read_text())
+        base=Path(input_root)
+        if hashlib.md5((base/'eTCSPC_wildtype.zip').read_bytes()).hexdigest()!='177132ce5bb9fefde871bafe8c92cbfd':
+            raise ValueError('AUTHOR_ARCHIVE_IDENTITY_MISMATCH')
+        self.mapping=json.loads((Path(manifest_root)/'records.json').read_text())
         ownership=json.loads((Path(manifest_root)/'reference_ownership.json').read_text())
         if len(self.mapping)!=66 or len(ownership)!=27:raise ValueError('FULL33_OWNERSHIP_REQUIRED')
         records={};kernels={};checked=set();seen={}
@@ -251,16 +254,21 @@ def evaluate(g,data,e=None,enabled=True,structure_evidence=None):
     if report['numerical_status']!='COMPLETE_LOCAL_SEARCH_BUDGET':out['reason_codes'].append('SOLVER_COMPARISON_INCOMPLETE')
     else:out['reason_codes'].append('MODEL_SELECTION_CALIBRATION_REQUIRED')
     out['reason_codes'].append('DONOR_AND_INSTRUMENT_ADEQUACY_NOT_ESTABLISHED')
+    structural_obligation={'operator_id':STRUCTURE_OPERATOR_ID,'rule_instance_id':instance,'input_id':data.input_id,'comparison_evidence_id':q.digest(e),'purpose':'Classify distance information and compare conditional contributing components with source-attributed author forward predictions'}
     if structure_evidence is None:
         out['reason_codes'].append('STRUCTURE_FORWARD_EVIDENCE_REQUIRED')
-        out['obligations']=[{'operator_id':STRUCTURE_OPERATOR_ID,'rule_instance_id':instance,'input_id':data.input_id,'comparison_evidence_id':q.digest(e),'purpose':'Compare own conditional mean distances with source-attributed author forward predictions'}]
+        out['obligations']=[structural_obligation]
     else:
         try:
             expected=structure_comparison(data,e,report)
             if structure_evidence!=expected:raise ValueError('STRUCTURE_COMPARISON_NOT_RECOMPUTED')
             out['structure_comparison']=expected;out['reason_codes'].append('AUTHOR_FORWARD_STRUCTURE_COMPARISON_ASSESSED_WITH_LIMITS')
+            if any(model['zero_contribution_components'] for model in expected['models'].values()):
+                out['reason_codes'].append('ZERO_CONTRIBUTION_DISTANCE_PARAMETERS_ARE_NOT_OBSERVATIONAL_EVIDENCE')
+            out['reason_codes'].append('NONZERO_CONTRIBUTION_DOES_NOT_ESTABLISH_DISTANCE_IDENTIFIABILITY')
         except (ValueError,KeyError,TypeError) as error:
             out['reason_codes'].append('STRUCTURE_EVIDENCE_REJECTED');out['structure_rejection']=str(error)
+            out['obligations']=[structural_obligation]
     return out
 
 def verify(data,e,rid):
@@ -321,6 +329,23 @@ def global_initial(data,e,kind,seed):
     return initial+([best['parameters'][-1],1.] if seed==0 else [.2,.625])
 
 
+def component_information(means,weights,f0):
+    """Exact absence of signal is different from unestablished identifiability.
+
+    No arbitrary small-weight threshold: positive contribution alone does not
+    establish a distance estimate. Coincidence removes mixture-weight information
+    but need not remove information about the common distance.
+    """
+    if len(means)!=len(weights) or not 0<=f0<=1 or any(w<0 for w in weights):
+        raise ValueError('INVALID_COMPONENT_INFORMATION_INPUT')
+    return [{'component':i,'fret_prefactor':float((1-f0)*w),
+             'distance_status':'ZERO_OBSERVATIONAL_CONTRIBUTION' if (1-f0)*w==0 else 'NONZERO_CONTRIBUTION_IDENTIFIABILITY_UNESTABLISHED',
+             'reason':'DONOR_ONLY_FRACTION_ONE' if f0==1 else 'ZERO_COMPONENT_WEIGHT' if w==0 else 'CONTRIBUTES_TO_LATENT_SIGNAL',
+             'coincident_with':[j for j,m in enumerate(means) if j!=i and m==mu],
+             'population_degeneracy':any(j!=i and m==mu and weights[j]>0 and w>0 for j,m in enumerate(means))}
+            for i,(mu,w) in enumerate(zip(means,weights))]
+
+
 def structure_comparison(data,e,report):
     """Descriptive mean-to-mean comparisons, never a model selection test.
 
@@ -333,18 +358,30 @@ def structure_comparison(data,e,report):
     expected_pairs={v.replace('-','_') for v in data.audit['variants']}
     if any(set(row)!=expected_pairs for row in source['predictions'].values()):raise ValueError('STRUCTURE_PAIR_SET_MISMATCH')
     def mean(mu):return float(mu+6*np.exp(-.5*(mu/6)**2)/(np.sqrt(2*np.pi)*ndtr(mu/6)))
-    result={'schema':'q09-author-structure-comparison/v1','operator_id':STRUCTURE_OPERATOR_ID,'input_id':data.input_id,'comparison_evidence_id':q.digest(e),'source':source,'claim':'DESCRIPTIVE_CONDITIONAL_MEAN_RESIDUALS_ONLY','local_ACV_runs':0,'uncertainty':'No validated joint fit/forward uncertainty; no standardizedscores,thresholdPASSorproteinstateconclusion','models':{}}
+    result={'schema':'q09-author-structure-comparison/v2','operator_id':STRUCTURE_OPERATOR_ID,'input_id':data.input_id,'comparison_evidence_id':q.digest(e),'source':source,'claim':'PARAMETER_GEOMETRY_WITH_OBSERVATIONAL_CONTRIBUTION_CLASSIFICATION','local_ACV_runs':0,'uncertainty':'Nonzero contribution is not distance identifiability. No validated joint fit/forward uncertainty; no standardizedscores,thresholdPASSorproteinstateconclusion','models':{}}
     for kind in ('shared2','shared3'):
-        j=Joint(data,kind);p=report['best_parameters'][kind];n=2 if kind=='shared2' else 3;means={}
+        j=Joint(data,kind);p=report['best_parameters'][kind];n=2 if kind=='shared2' else 3;means={};information={}
         for gr,sl in zip(data.groups,j.slices):
             local=p[sl];step=5 if n==2 else 6
-            for i,v in enumerate(gr.owners):means[v.replace('-','_')]=[mean(mu) for mu in local[gr.donor_size+step*i:gr.donor_size+step*i+n]]
+            for i,v in enumerate(gr.owners):
+                row=local[gr.donor_size+step*i:gr.donor_size+step*(i+1)]
+                means[v.replace('-','_')]=[mean(mu) for mu in row[:n]]
+                information[v.replace('-','_')]=component_information(row[:n],j.population(p),row[-3])
         assignments=[]
         for perm in itertools.permutations(range(n),2):
             residuals={pdb:{v:means[v][comp]-expected for v,expected in source['predictions'][pdb].items()} for pdb,comp in zip(('172L','148L'),perm)}
             flat=[x for r in residuals.values() for x in r.values()]
-            assignments.append({'172L_component':perm[0],'148L_component':perm[1],'residuals_A':residuals,'RMS_A':float(np.sqrt(np.mean(np.square(flat)))),'max_absolute_A':float(max(abs(x) for x in flat))})
-        result['models'][kind]={'actual_truncated_distance_means_A':means,'global_assignments':assignments,'fit_search_status':report['numerical_status'],'component_number_is_not_protein_state_identity':True}
+            contributing={pdb:{v:(value if information[v][comp]['fret_prefactor']>0 else None) for v,value in residuals[pdb].items()} for pdb,comp in zip(('172L','148L'),perm)}
+            values=[x for row in contributing.values() for x in row.values() if x is not None]
+            assignments.append({'172L_component':perm[0],'148L_component':perm[1],'parameter_geometry_residuals_A':residuals,
+                'parameter_geometry_all_rows_RMS_A':float(np.sqrt(np.mean(np.square(flat)))),
+                'parameter_geometry_all_rows_max_absolute_A':float(max(abs(x) for x in flat)),
+                'contributing_component_residuals_A':contributing,'contributing_rows':len(values),'zero_contribution_rows':len(flat)-len(values),
+                'contributing_parameter_geometry_RMS_A':float(np.sqrt(np.mean(np.square(values)))) if values else None,
+                'comparison_scope':'All rows retained; neither RMS measures experimentally established compatibility or model improvement.'})
+        result['models'][kind]={'actual_truncated_distance_means_A':means,'component_information':information,
+            'zero_contribution_components':sum(c['fret_prefactor']==0 for row in information.values() for c in row),
+            'global_assignments':assignments,'fit_search_status':report['numerical_status'],'component_number_is_not_protein_state_identity':True}
     return result
 
 

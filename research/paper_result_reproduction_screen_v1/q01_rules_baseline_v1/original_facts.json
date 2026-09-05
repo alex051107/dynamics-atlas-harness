@@ -1,0 +1,96 @@
+{
+  "case_id": "q01_hsp90_seeded_departure_20260905",
+  "question": "Do closed-lid-seeded apo human HSP90alpha N-terminal-domain trajectories depart their initial conformation more often than open-lid-seeded trajectories, and do the observed paths support closed-to-open directional behavior?",
+  "paper_doi": "10.1038/s41467-022-35399-8",
+  "sources": [
+    {
+      "source_id": "Q01_OPEN_SEEDED_MD",
+      "evidence_role": "DIAGNOSTIC",
+      "construct_and_condition": "Apo human HSP90alpha N-terminal domain; deposited coordinate payload contains ARG46 and ARG60. R60A_GS denotes structural seed lineage, not mutant simulation identity.",
+      "sample_composition": "Twenty independently initialized trajectories for this seed family; exact author execution provenance beyond deposited methods UNKNOWN.",
+      "native_observable": "Saved time-ordered coordinates for each trajectory; local source derivative contains 1021 frames of 213 Calpha atoms per run in nm.",
+      "estimand": "Trajectory-level departure from initial lid geometry and directional structural path relative to source NMR anchors.",
+      "time_semantics": {
+        "kind": "PHYSICAL_TIME_ORDERED_SEEDED_MD"
+      },
+      "spatial_support": "Author residues11-223; core Calpha40-97 and137-220; lid98-136. Reference mapping described separately.",
+      "unit_or_aggregation": "Twenty trajectories per seed family; saved frames0-1020ns every1ns; existing author-analysis window20-1020ns. Frames within a trajectory are correlated."
+    },
+    {
+      "source_id": "Q01_CLOSED_SEEDED_MD",
+      "evidence_role": "DIAGNOSTIC",
+      "construct_and_condition": "Apo human HSP90alpha N-terminal domain; deposited coordinate payload contains ARG46 and ARG60. R46A_ES denotes structural seed lineage, not mutant simulation identity.",
+      "sample_composition": "Twenty independently initialized trajectories for this seed family; exact author execution provenance beyond deposited methods UNKNOWN.",
+      "native_observable": "Saved time-ordered coordinates for each trajectory; local source derivative contains 1021 frames of 213 Calpha atoms per run in nm.",
+      "estimand": "Trajectory-level departure from initial lid geometry and directional structural path relative to source NMR anchors.",
+      "time_semantics": {
+        "kind": "PHYSICAL_TIME_ORDERED_SEEDED_MD"
+      },
+      "spatial_support": "Author residues11-223; core Calpha40-97 and137-220; lid98-136. Reference mapping described separately.",
+      "unit_or_aggregation": "Twenty trajectories per seed family; saved frames0-1020ns every1ns; existing author-analysis window20-1020ns. Frames within a trajectory are correlated."
+    },
+    {
+      "source_id": "Q01_NMR_ANCHORS",
+      "evidence_role": "CONSTRUCTION",
+      "construct_and_condition": "8B7I R60A-informed open and8B7J R46A-informed closed structural ensembles; transfer to ARG46/ARG60 MD is not identical construct identity.",
+      "sample_composition": "Twenty coordinate models per NMR structural ensemble, not twenty independent experimental samples.",
+      "native_observable": "NMR-derived coordinate ensembles and declared NOE contact definitions.",
+      "estimand": "Reference lid geometry and contact-distance bounds for trajectory readouts.",
+      "time_semantics": {
+        "kind": "STATIC_STRUCTURE_ENSEMBLE_NO_PHYSICAL_TIME"
+      },
+      "spatial_support": "Residue correspondence and core/lid atom selections are explicit; structures were used to initialize MD and are not held-out validation.",
+      "unit_or_aggregation": "Ensemble-derived structural reference; paper per-contact mean+2SD and deposited no-ref uniform ITP upper bounds differ."
+    }
+  ],
+  "method_facts": {
+    "md_source": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/work/hsp90_ca_coordinates.npz",
+    "source_derivative_units": "nm",
+    "trajectory_count_by_seed": {
+      "open": 20,
+      "closed": 20
+    },
+    "trajectory_frames": 1021,
+    "analysis_window_ns": [
+      20,
+      1020
+    ],
+    "core_CA_residues": [
+      [
+        40,
+        97
+      ],
+      [
+        137,
+        220
+      ]
+    ],
+    "lid_CA_residues": [
+      [
+        98,
+        136
+      ]
+    ],
+    "contact_thresholds": {
+      "paper": "For each contact, reference ensemble mean plus two standard deviations",
+      "deposited_script": "Violation.zsh invokes trj_violations.py without -ref; ITP up1 used",
+      "deposited_open_contact_count": 19,
+      "deposited_open_upper_A": 10.0,
+      "deposited_closed_contact_count": 5,
+      "deposited_closed_upper_A": 8.5,
+      "exact_original_execution": "UNKNOWN"
+    },
+    "source_locators": [
+      "tmp/pdfs/henot_2022_article.txt",
+      "tmp/pdfs/henot_2022_supplement.txt",
+      "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/Tools/VIOLATION/Violation.zsh",
+      "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/Tools/VIOLATION/trj_violations.py"
+    ]
+  },
+  "unknowns": [
+    "Original complete author execution configuration UNKNOWN",
+    "Paper versus deposited NOE threshold implementation used for original figure UNKNOWN",
+    "Threshold for pathwise departure and persistent state assignment is not identified by a scalar terminal route label",
+    "NMR anchor transfer to deposited MD construct requires explicit applicability limits"
+  ]
+}

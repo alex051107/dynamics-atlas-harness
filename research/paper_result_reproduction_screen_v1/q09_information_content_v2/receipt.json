@@ -1,0 +1,51 @@
+{
+  "status": "OLD_DECAY_VERIFIED_STRUCTURE_INFORMATION_REASSESSED_NEW_METHOD_DELTA_ONLY",
+  "optimizer_calls": 0,
+  "old_fits_repeated": 0,
+  "same_rule_instance": true,
+  "structure_on_calls": 1,
+  "structure_off_calls": 0,
+  "original_decay_evidence_unchanged": true,
+  "author_archive_MD5_verified": true,
+  "source_hash_checks": 1,
+  "structure_zero_contribution_components": {
+    "shared2": 2,
+    "shared3": 3
+  },
+  "shift_method_comparison": {
+    "local2": {
+      "legacy_D": 552302.8443162121,
+      "padded_D_at_old_parameters": 552293.9467742845,
+      "changed_roles": 2,
+      "maximum_count_delta": 0.031928780074219454
+    },
+    "shared2:0": {
+      "legacy_D": 565140.8017612516,
+      "padded_D_at_old_parameters": 565113.2838810878,
+      "changed_roles": 1,
+      "maximum_count_delta": 0.08492020905173392
+    },
+    "shared2:1": {
+      "legacy_D": 565108.0388374381,
+      "padded_D_at_old_parameters": 565081.7499058924,
+      "changed_roles": 1,
+      "maximum_count_delta": 0.08201825646109662
+    },
+    "shared3:0": {
+      "legacy_D": 561776.831409797,
+      "padded_D_at_old_parameters": 561748.7292176445,
+      "changed_roles": 2,
+      "maximum_count_delta": 0.08614240545796581
+    },
+    "shared3:1": {
+      "legacy_D": 561706.720389589,
+      "padded_D_at_old_parameters": 561679.8457987058,
+      "changed_roles": 2,
+      "maximum_count_delta": 0.08316310176276925
+    }
+  },
+  "new_shift_policy": "padded_linear_v2",
+  "historical_policy": "legacy_endpoint_v1",
+  "new_shift_scientific_fit": "NOT_RUN",
+  "full_question_answer": false
+}

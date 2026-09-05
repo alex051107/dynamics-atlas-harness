@@ -1,0 +1,1300 @@
+[
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/work/hsp90_ca_coordinates.npz",
+    "bytes": 64732578,
+    "array_headers": {
+      "runs.npy": {
+        "descr": "<U42",
+        "fortran_order": false,
+        "shape": [
+          40
+        ]
+      },
+      "resid.npy": {
+        "descr": "<i8",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "resname.npy": {
+        "descr": "<U3",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "lid_mask.npy": {
+        "descr": "|b1",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "core_mask.npy": {
+        "descr": "|b1",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "xyz__R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "xyz__R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021,
+          213,
+          3
+        ]
+      },
+      "time__R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "time__R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      }
+    },
+    "contents_calculated": false,
+    "new_hashes": 0
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/results/nmr_ensemble_aligned.npz",
+    "bytes": 207904,
+    "array_headers": {
+      "open_aligned.npy": {
+        "descr": "<f8",
+        "fortran_order": false,
+        "shape": [
+          20,
+          213,
+          3
+        ]
+      },
+      "closed_aligned.npy": {
+        "descr": "<f8",
+        "fortran_order": false,
+        "shape": [
+          20,
+          213,
+          3
+        ]
+      },
+      "shared_resids.npy": {
+        "descr": "<i8",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "lid_mask.npy": {
+        "descr": "|b1",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      },
+      "core_mask.npy": {
+        "descr": "|b1",
+        "fortran_order": false,
+        "shape": [
+          213
+        ]
+      }
+    },
+    "contents_calculated": false,
+    "new_hashes": 0
+  },
+  {
+    "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/results/md_nmr_state_series.npz",
+    "bytes": 299712,
+    "array_headers": {
+      "d_open__R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_open__R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      },
+      "d_closed__R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay.npy": {
+        "descr": "<f4",
+        "fortran_order": false,
+        "shape": [
+          1021
+        ]
+      }
+    },
+    "contents_calculated": false,
+    "new_hashes": 0
+  }
+]

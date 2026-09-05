@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/opt/homebrew/bin/gmx",
+    "distance",
+    "-f",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay.xtc",
+    "-s",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/R46A/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/processed.gro",
+    "-sf",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_contact_method_canary_v2/selections.dat",
+    "-b",
+    "20000",
+    "-e",
+    "1020000",
+    "-normpbc",
+    "-pbc",
+    "-oall",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_contact_method_canary_v2/distances_nm.xvg",
+    "-xvg",
+    "none"
+  ],
+  "cwd": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_contact_method_canary_v2",
+  "source_coordinate_pipeline": "md_0-10_evert1ns_fitBB_protonly.xtc; compare author md_1-10 only after numerical check",
+  "units": "GROMACS distance nm, times ps",
+  "PBC": true,
+  "additional_make_whole": false,
+  "statistical_unit": "trajectory",
+  "numeric_comparison_tolerance_A": 0.011
+}

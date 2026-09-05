@@ -1,0 +1,422 @@
+[
+  {
+    "reference": "D0_01",
+    "role": "D0_01",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1412711.0
+  },
+  {
+    "reference": "D0_01",
+    "role": "19-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1412711.0
+  },
+  {
+    "reference": "D0_01",
+    "role": "19-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1412711.0
+  },
+  {
+    "reference": "D0_02",
+    "role": "D0_02",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2560551.0
+  },
+  {
+    "reference": "D0_02",
+    "role": "19-69",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2790537.0
+  },
+  {
+    "reference": "D0_03",
+    "role": "D0_03",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2352329.0
+  },
+  {
+    "reference": "D0_03",
+    "role": "19-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1505820.0
+  },
+  {
+    "reference": "D0_04",
+    "role": "D0_04",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2212906.0
+  },
+  {
+    "reference": "D0_04",
+    "role": "22-127",
+    "IRF_first": 2.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2209533.0
+  },
+  {
+    "reference": "D0_05",
+    "role": "D0_05",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2201196.0
+  },
+  {
+    "reference": "D0_05",
+    "role": "36-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2202321.0
+  },
+  {
+    "reference": "D0_06",
+    "role": "D0_06",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2225253.0
+  },
+  {
+    "reference": "D0_06",
+    "role": "36-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2200662.0
+  },
+  {
+    "reference": "D0_07",
+    "role": "D0_07",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2338103.0
+  },
+  {
+    "reference": "D0_07",
+    "role": "44-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2389045.0
+  },
+  {
+    "reference": "D0_07",
+    "role": "44-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2389045.0
+  },
+  {
+    "reference": "D0_07",
+    "role": "44-69",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1412711.0
+  },
+  {
+    "reference": "D0_08",
+    "role": "D0_08",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2218654.0
+  },
+  {
+    "reference": "D0_08",
+    "role": "44-127",
+    "IRF_first": 0.0,
+    "IRF_last": 1.0,
+    "IRF_total": 2205951.0
+  },
+  {
+    "reference": "D0_09",
+    "role": "D0_09",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2804877.0
+  },
+  {
+    "reference": "D0_09",
+    "role": "44-150",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2804877.0
+  },
+  {
+    "reference": "D0_09",
+    "role": "44-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 1412711.0
+  },
+  {
+    "reference": "D0_10",
+    "role": "D0_10",
+    "IRF_first": 1.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2204897.0
+  },
+  {
+    "reference": "D0_10",
+    "role": "5-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2218106.0
+  },
+  {
+    "reference": "D0_11",
+    "role": "D0_11",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2223504.0
+  },
+  {
+    "reference": "D0_11",
+    "role": "5-44",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2196649.0
+  },
+  {
+    "reference": "D0_12",
+    "role": "D0_12",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2348031.0
+  },
+  {
+    "reference": "D0_12",
+    "role": "55-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2358888.0
+  },
+  {
+    "reference": "D0_13",
+    "role": "D0_13",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2296069.0
+  },
+  {
+    "reference": "D0_13",
+    "role": "55-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2296069.0
+  },
+  {
+    "reference": "D0_14",
+    "role": "D0_14",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2389045.0
+  },
+  {
+    "reference": "D0_14",
+    "role": "55-150",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2389045.0
+  },
+  {
+    "reference": "D0_15",
+    "role": "D0_15",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2338103.0
+  },
+  {
+    "reference": "D0_15",
+    "role": "55-69",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2338103.0
+  },
+  {
+    "reference": "D0_16",
+    "role": "D0_16",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2405888.0
+  },
+  {
+    "reference": "D0_16",
+    "role": "60-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2353907.0
+  },
+  {
+    "reference": "D0_17",
+    "role": "D0_17",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_17",
+    "role": "60-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_18",
+    "role": "D0_18",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_18",
+    "role": "60-150",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_19",
+    "role": "D0_19",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_19",
+    "role": "60-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_20",
+    "role": "D0_20",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_20",
+    "role": "69-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_21",
+    "role": "D0_21",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_21",
+    "role": "69-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_22",
+    "role": "D0_22",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_22",
+    "role": "69-150",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_23",
+    "role": "D0_23",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_23",
+    "role": "69-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2576901.0
+  },
+  {
+    "reference": "D0_24",
+    "role": "D0_24",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2560551.0
+  },
+  {
+    "reference": "D0_24",
+    "role": "70-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2804877.0
+  },
+  {
+    "reference": "D0_24",
+    "role": "70-132",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2804877.0
+  },
+  {
+    "reference": "D0_25",
+    "role": "D0_25",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2188433.0
+  },
+  {
+    "reference": "D0_25",
+    "role": "8-119",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2206403.0
+  },
+  {
+    "reference": "D0_26",
+    "role": "D0_26",
+    "IRF_first": 1.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2229386.0
+  },
+  {
+    "reference": "D0_26",
+    "role": "8-132",
+    "IRF_first": 0.0,
+    "IRF_last": 1.0,
+    "IRF_total": 2232035.0
+  },
+  {
+    "reference": "D0_27",
+    "role": "D0_27",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2790537.0
+  },
+  {
+    "reference": "D0_27",
+    "role": "8-69",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2790537.0
+  },
+  {
+    "reference": "D0_27",
+    "role": "8-86",
+    "IRF_first": 0.0,
+    "IRF_last": 0.0,
+    "IRF_total": 2790537.0
+  }
+]

@@ -1,0 +1,24 @@
+Warning on use of the timeseries module: If the inherent timescales of the system are long compared to those being analyzed, this statistical inefficiency may be an underestimate.  The estimate presumes the use of many statistically independent samples.  Tests should be performed to assess whether this condition is satisfied.   Be cautious in the interpretation of the data.
+
+********* JAX NOT FOUND *********
+ PyMBAR can run faster with JAX  
+ But will work fine without it   
+Either install with pip or conda:
+      pip install pybar[jax]     
+               OR                
+      conda install pymbar       
+*********************************
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/__main__.py", line 3, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/cli.py", line 626, in main
+    return int(args.handler(args))
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/cli.py", line 364, in run_case
+    run_case_v1(case_id=args.case_id, output_dir=Path(args.output_dir))
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/case_runner_v1.py", line 400, in run_case_v1
+    raise CaseRunnerV1Error("CASE_NOT_IN_EXPOSED_DEVELOPMENT_REGISTRY")
+dynamics_atlas_harness.case_runner_v1.CaseRunnerV1Error: CASE_NOT_IN_EXPOSED_DEVELOPMENT_REGISTRY

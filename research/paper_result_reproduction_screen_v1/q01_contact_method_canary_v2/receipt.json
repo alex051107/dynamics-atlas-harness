@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-05T11:44:30.512018+00:00",
+  "status": "UNIFORM_SOURCE_PARITY_PASS",
+  "run": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+  "frames": 1001,
+  "contact_count": 24,
+  "uniform_vs_source_max_abs_A": {
+    "open": 0.0068421052631570944,
+    "closed": 0.008000000000000895
+  },
+  "SI_vs_uniform_descriptive_changes": {
+    "open": {
+      "mean_SI_minus_uniform_A": 1.5851769283348232,
+      "max_abs_SI_minus_uniform_A": 1.651052631578949
+    },
+    "closed": {
+      "mean_SI_minus_uniform_A": -1.607290709290709,
+      "max_abs_SI_minus_uniform_A": 1.6480000000000032
+    }
+  },
+  "rules_controlled": false,
+  "all40_admitted": false,
+  "scientific_verdict": "NOT_EMITTED",
+  "new_gmx_invocations": 1,
+  "new_optimizations": 0,
+  "SI_thresholds": "Existing method-table transcription, not fitted output targets; exact source precision retained",
+  "next": "If parity fails preserve failure and locate method mismatch before dispatch; if passes extend only under explicit source-bound obligation and method checks."
+}

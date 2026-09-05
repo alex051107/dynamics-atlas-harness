@@ -4,6 +4,12 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
+## Latest result after Pro13
+
+[Q09 information-content repair and actual fixed-parameter audit](q09_information_content_v2/REPORT_ZH.md) separates zero-contribution FRET distance parameters from observational evidence, preserves all33 rows, restores rejected structure obligations, and checks the author archive identity. A new explicit padded IRF shift policy is tested and compared on old parameters; new-policy fits remain pending.285 local tests pass,0 skips; no old optimization repeated. Complete scientific answers remain0/20.
+
+[Q01 actual Rules baseline](q01_rules_baseline_v1/REPORT_ZH.md) adds20 current instances with no numeric obligation. [One-trajectory contact-method check](q01_contact_method_canary_v2/REPORT_ZH.md) independently matches deposited scores before applying SI thresholds. Both were completed while Pro13 generated; they do not count as complete Q01 or Rules gain.
+
 ## Read this packet
 
 - [Revised Master Plan, section 0A](../../docs/MASTER_PLAN_ZH.md#0a-用论文数据检验-rules-table-与-operator): current goal, execution sequence and comparison logic. Dated later sections preserve historical milestones.

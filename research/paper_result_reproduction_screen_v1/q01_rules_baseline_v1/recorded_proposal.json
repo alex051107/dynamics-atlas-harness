@@ -1,0 +1,99 @@
+{
+  "case_id": "q01_hsp90_seeded_departure_20260905",
+  "proposed_case_facts": {
+    "case": {
+      "scientific_claim": "Do closed-lid-seeded apo human HSP90alpha N-terminal-domain trajectories depart their initial conformation more often than open-lid-seeded trajectories, and do the observed paths support closed-to-open directional behavior?",
+      "requested_claim_level": "SEEDED_DIRECTIONAL_TRAJECTORY_COMPARISON",
+      "intended_use": "CROSS_SOURCE_REVIEW",
+      "declared_request_scope": [
+        "SEEDED_DIRECTIONAL_TRAJECTORY_COMPARISON"
+      ],
+      "forbidden_upgrades": [
+        "EQUILIBRIUM_POPULATION",
+        "EXPERIMENTAL_EXCHANGE_RATE",
+        "BIOLOGICAL_ACTIVITY",
+        "INDEPENDENT_VALIDATION_WITH_CONSTRUCTION_DATA"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "Q01_OPEN_SEEDED_MD",
+        "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "Apo human HSP90alpha N-terminal domain; deposited coordinate payload contains ARG46 and ARG60. R60A_GS denotes structural seed lineage, not mutant simulation identity.",
+        "sample_composition": "Twenty independently initialized trajectories for this seed family; exact author execution provenance beyond deposited methods UNKNOWN.",
+        "native_observable": "Saved time-ordered coordinates for each trajectory; local source derivative contains 1021 frames of 213 Calpha atoms per run in nm.",
+        "estimand": "Trajectory-level departure from initial lid geometry and directional structural path relative to source NMR anchors.",
+        "time_semantics": {
+          "kind": "PHYSICAL_TIME_ORDERED_SEEDED_MD"
+        },
+        "spatial_support": "Author residues11-223; core Calpha40-97 and137-220; lid98-136. Reference mapping described separately.",
+        "unit_or_aggregation": "Twenty trajectories per seed family; saved frames0-1020ns every1ns; existing author-analysis window20-1020ns. Frames within a trajectory are correlated."
+      },
+      {
+        "source_id": "Q01_CLOSED_SEEDED_MD",
+        "evidence_role": "DIAGNOSTIC",
+        "construct_and_condition": "Apo human HSP90alpha N-terminal domain; deposited coordinate payload contains ARG46 and ARG60. R46A_ES denotes structural seed lineage, not mutant simulation identity.",
+        "sample_composition": "Twenty independently initialized trajectories for this seed family; exact author execution provenance beyond deposited methods UNKNOWN.",
+        "native_observable": "Saved time-ordered coordinates for each trajectory; local source derivative contains 1021 frames of 213 Calpha atoms per run in nm.",
+        "estimand": "Trajectory-level departure from initial lid geometry and directional structural path relative to source NMR anchors.",
+        "time_semantics": {
+          "kind": "PHYSICAL_TIME_ORDERED_SEEDED_MD"
+        },
+        "spatial_support": "Author residues11-223; core Calpha40-97 and137-220; lid98-136. Reference mapping described separately.",
+        "unit_or_aggregation": "Twenty trajectories per seed family; saved frames0-1020ns every1ns; existing author-analysis window20-1020ns. Frames within a trajectory are correlated."
+      },
+      {
+        "source_id": "Q01_NMR_ANCHORS",
+        "evidence_role": "CONSTRUCTION",
+        "construct_and_condition": "8B7I R60A-informed open and8B7J R46A-informed closed structural ensembles; transfer to ARG46/ARG60 MD is not identical construct identity.",
+        "sample_composition": "Twenty coordinate models per NMR structural ensemble, not twenty independent experimental samples.",
+        "native_observable": "NMR-derived coordinate ensembles and declared NOE contact definitions.",
+        "estimand": "Reference lid geometry and contact-distance bounds for trajectory readouts.",
+        "time_semantics": {
+          "kind": "STATIC_STRUCTURE_ENSEMBLE_NO_PHYSICAL_TIME"
+        },
+        "spatial_support": "Residue correspondence and core/lid atom selections are explicit; structures were used to initialize MD and are not held-out validation.",
+        "unit_or_aggregation": "Ensemble-derived structural reference; paper per-contact mean+2SD and deposited no-ref uniform ITP upper bounds differ."
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "Q01_OPEN_TO_ANCHOR",
+        "left_source_id": "Q01_OPEN_SEEDED_MD",
+        "right_source_id": "Q01_NMR_ANCHORS",
+        "condition_relation": "UNKNOWN",
+        "relation_type": "STRUCTURAL_REFERENCE_CONSTRUCTION",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "SAME_CONSTRUCTION_LINEAGE",
+        "shared_error_status": "SHARED_NMR_REFERENCES_PRESENT"
+      },
+      {
+        "edge_id": "Q01_CLOSED_TO_ANCHOR",
+        "left_source_id": "Q01_CLOSED_SEEDED_MD",
+        "right_source_id": "Q01_NMR_ANCHORS",
+        "condition_relation": "UNKNOWN",
+        "relation_type": "STRUCTURAL_REFERENCE_CONSTRUCTION",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "SAME_CONSTRUCTION_LINEAGE",
+        "shared_error_status": "SHARED_NMR_REFERENCES_PRESENT"
+      },
+      {
+        "edge_id": "Q01_SEED_COMPARISON",
+        "left_source_id": "Q01_OPEN_SEEDED_MD",
+        "right_source_id": "Q01_CLOSED_SEEDED_MD",
+        "condition_relation": "DECLARED_MATCHED_APO_MD_DIFFERENT_INITIAL_GEOMETRY",
+        "relation_type": "SEEDED_TRAJECTORY_COMPARISON",
+        "bridge_status": "UNRESOLVED",
+        "validation_independence": "NOT_A_VALIDATION_CLAIM",
+        "shared_error_status": "SHARED_FORCE_FIELD_AND_REFERENCE_MODEL"
+      }
+    ]
+  },
+  "unknowns": [
+    "Original complete author execution configuration UNKNOWN",
+    "Paper versus deposited NOE threshold implementation used for original figure UNKNOWN",
+    "Threshold for pathwise departure and persistent state assignment is not identified by a scalar terminal route label",
+    "NMR anchor transfer to deposited MD construct requires explicit applicability limits"
+  ],
+  "rationale": "Recorded source-grounded method facts from existing source files. No profiler execution, author outcome counts, local route results, target values or prescribed numerical obligations."
+}

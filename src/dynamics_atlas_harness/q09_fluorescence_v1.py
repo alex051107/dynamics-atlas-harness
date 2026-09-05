@@ -55,11 +55,14 @@ def linearization_reference(raw_counts):
     return np.convolve(np.pad(a, (8, 8), mode='reflect'), window, mode='valid') / a.mean()
 
 
-def expected_counts(intrinsic, irf, lin, mask, total, shift_bins=0.0, background_fraction=0.0, scatter_fraction=0.0):
+def expected_counts(intrinsic, irf, lin, mask, total, shift_bins=0.0, background_fraction=0.0, scatter_fraction=0.0, *, shift_policy='legacy_endpoint_v1'):
     """Causal convolution, scatter + constant then all times Lin; profile scale.
 
-    IRF shift uses linear interpolation with zero fill. Component fractions are
-    defined before Lin over the specified window. No periodic wrap is used.
+    The default preserves the historical v1 endpoint-truncation model for
+    reproducible old evidence. It is discontinuous when an endpoint is nonzero.
+    New method comparisons must explicitly use padded_linear_v2 and bind that
+    policy in their configuration; old fit evidence cannot be silently upgraded.
+    Component fractions are defined before Lin. No periodic wrap is used.
     """
     f, h, linear = [np.asarray(x, float) for x in (intrinsic, irf, lin)]
     mask = np.asarray(mask, bool)
@@ -70,7 +73,13 @@ def expected_counts(intrinsic, irf, lin, mask, total, shift_bins=0.0, background
     if not np.isfinite(shift_bins) or background_fraction < 0 or scatter_fraction < 0 or background_fraction + scatter_fraction >= 1:
         raise ValueError('INVALID_NUISANCE')
     axis = np.arange(len(h))
-    shifted = np.interp(axis - shift_bins, axis, h, left=0, right=0)
+    if shift_policy == 'legacy_endpoint_v1':
+        shifted = np.interp(axis - shift_bins, axis, h, left=0, right=0)
+    elif shift_policy == 'padded_linear_v2':
+        pad = int(np.ceil(abs(shift_bins))) + 1
+        shifted = np.interp(axis - shift_bins, np.arange(-pad, len(h)+pad), np.pad(h, (pad,pad)), left=0, right=0)
+    else:
+        raise ValueError('UNKNOWN_IRF_SHIFT_POLICY')
     if shifted.sum() <= 0:
         raise ValueError('EMPTY_SHIFTED_IRF')
     shifted /= shifted.sum()
