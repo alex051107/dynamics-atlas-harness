@@ -1,0 +1,33 @@
+{
+  "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+  "runtime_subrule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q09_t4l_state_number_20260905"
+  },
+  "status": "UNRESOLVED",
+  "obligations": [],
+  "reason_codes": [
+    "BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED",
+    "IRF_UNCERTAINTY_NOT_PROPAGATED",
+    "PROTEIN_STATE_NUMBER_NOT_IDENTIFIED"
+  ],
+  "complete_question_answer": false,
+  "state_number_verdict": "UNRESOLVED",
+  "request_id": "f2d1ec6192c381c75e358c0ceb261ff10903ec2ed01ba576678f50fd307b881e",
+  "diagnostic_status": "CALCULATED_WITH_UNRESOLVED_CALIBRATION_AND_IDENTIFIABILITY",
+  "model_changes": {
+    "D0": {
+      "prior_deviance": 11400.897657376265,
+      "candidate_deviance": 7145.056316757114,
+      "change": -4255.841340619151
+    },
+    "DA": {
+      "prior_deviance": 7522.719542616853,
+      "candidate_deviance": 6734.99185424431,
+      "change": -787.7276883725426
+    }
+  },
+  "next_required_evidence": "Calibration-constrained IRF sensitivity and identifiability;not automatic FRET K3",
+  "claim_ceiling": "Conditional model dependence only;no scientific state-number support"
+}

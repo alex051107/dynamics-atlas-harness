@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-05T08:07:03.117269+00:00",
+  "entry": "NEW_Q09_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR",
+  "source_head": "3dc3d77fab096ab4d05613839e323af931d9d27a",
+  "local_adapter_uncommitted": true,
+  "command": [
+    "PYTHON",
+    "scripts/run_q09_rules_probe_v1.py",
+    "--fact-packet",
+    "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/inputs/q09_answer_free_facts_v1.json",
+    "--output-dir",
+    "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q09_rules_baseline_v1"
+  ],
+  "cwd": "WORKSPACE",
+  "python": "3.11.14 (main, Jan 14 2026, 21:09:41) [Clang 21.1.4 ]",
+  "rules_loaded": true,
+  "active_rule_instance_count": 17,
+  "statuses": {
+    "PASS": 8,
+    "UNRESOLVED": 7,
+    "NOT_APPLICABLE": 2
+  },
+  "routes": {
+    "DIRECT_EVALUATION": 8,
+    "SOURCE_LOOKUP": 7,
+    "HUMAN_OR_NEW_DATA": 2
+  },
+  "numeric_actions_executed": 0,
+  "scientific_verdict": "NOT_EMITTED",
+  "original_run_case_registry_modified": false,
+  "projection_boundary": "Projection carries case, source and comparison declarations but no typed donor/FRET model, native histogram, IRF uncertainty or numerical state-number comparison slots. Complete original method facts,archive identity andsource exceptions preserved separately; text retention is not execution.",
+  "stop": "Inspect actual routes before any obligation adapter. SOURCE_LOOKUP is not a numerical extra-calculation obligation.",
+  "portable_receipt": true,
+  "local_original_preserved": true
+}

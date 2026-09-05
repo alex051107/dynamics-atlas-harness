@@ -1,0 +1,65 @@
+{
+  "scope": "TWO_VARIANTS_SHARED_DONOR_CONDITIONAL_LOCAL_K2",
+  "variants": [
+    "19-119",
+    "19-132"
+  ],
+  "dt_ns": 0.0141,
+  "Gaussian_sigma_A": 6.0,
+  "radiative_rate_per_ns": 0.224,
+  "kappa_squared": 0.6666666666666666,
+  "reduced_radius_A": 56.4,
+  "parameter_order": [
+    "donor_tau1",
+    "donor_tau2",
+    "donor_amplitude1",
+    "D0_background",
+    "D0_shift",
+    "19-119_R1",
+    "19-119_R2",
+    "19-119_FRET_fraction1",
+    "19-119_DA_f0",
+    "19-119_background",
+    "19-119_shift",
+    "19-132_R1",
+    "19-132_R2",
+    "19-132_FRET_fraction1",
+    "19-132_DA_f0",
+    "19-132_background",
+    "19-132_shift"
+  ],
+  "initial_local_seeds": [
+    [
+      35.0,
+      65.0,
+      0.5,
+      0.1
+    ],
+    [
+      50.0,
+      85.0,
+      0.8,
+      0.2
+    ],
+    [
+      30.0,
+      100.0,
+      0.2,
+      0.05
+    ],
+    [
+      65.0,
+      40.0,
+      0.5,
+      0.1
+    ]
+  ],
+  "second_DA_initialization": "swapdistancecomponent order and complementpopulation,physicallyidenticallocalstart",
+  "numerical_method": "reusePQv3unitcoordinates symmetricJac;physicalprojectedgradient1e-6+optimizer.success;1500iter120s",
+  "donor_initializer": "prior19-119 localdoublelifetimefit;not authorfit;initializeronly becausebin integrationnowexplicit",
+  "likelihood": "OneD0record+bothdistinctDA;conditionalindependentPoisson after fixedIRF/Lin;latentdonorparametersshared",
+  "instrument_assumptions": "17binHanning reflectLin;maskLin>.1medianpositive;IRFmedianlast256validsubtractclip;scatter0;nonperiodiccausal;separatefittedshift/background perrecord",
+  "reference_applicability": "UNKNOWN donor mutant equivalence;shareone response asconditional depositedreferenceanalysis",
+  "scientific_claim_ceiling": "No globalpopulation,thirdstate,authorreproduction orRulesgain",
+  "author_final_fit_values_used": false
+}

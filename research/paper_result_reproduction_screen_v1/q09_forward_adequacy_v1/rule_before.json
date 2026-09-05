@@ -1,0 +1,24 @@
+{
+  "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+  "runtime_subrule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q09_t4l_state_number_20260905"
+  },
+  "status": "UNRESOLVED",
+  "obligations": [
+    {
+      "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+      "operator_id": "q09_donor_instrument_diagnostic_v1",
+      "request_id": "f2d1ec6192c381c75e358c0ceb261ff10903ec2ed01ba576678f50fd307b881e",
+      "input_id": "ca0620bf5d002fb7ada4659d828a0934c5a890a3ecd5034a010fc342e8c6dad0",
+      "purpose": "DONOR_ORDER_AND_INSTRUMENT_DIAGNOSTIC_KEEP_FRET_K2"
+    }
+  ],
+  "reason_codes": [
+    "FORWARD_MODEL_ADEQUACY_NUMERIC_EVIDENCE_REQUIRED"
+  ],
+  "complete_question_answer": false,
+  "state_number_verdict": "UNRESOLVED",
+  "request_id": "f2d1ec6192c381c75e358c0ceb261ff10903ec2ed01ba576678f50fd307b881e"
+}

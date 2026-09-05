@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-09-05T08:19:09.691512+00:00",
+  "command": [
+    "PYTHON",
+    "scripts/run_q09_forward_adequacy_v1.py",
+    "--input-root",
+    "WORKSPACE/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/inputs/q09_author",
+    "--output-dir",
+    "WORKSPACE/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q09_forward_adequacy_v1"
+  ],
+  "source_head": "3dc3d77fab096ab4d05613839e323af931d9d27a",
+  "new_rule_uncommitted": true,
+  "rule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "operator_id": "q09_donor_instrument_diagnostic_v1",
+  "declaration_instances": 17,
+  "extra_operator_calls": 1,
+  "optimizer_calls": 11,
+  "off_operator_calls": 0,
+  "same_rule_instance_reassessed": true,
+  "status_after": "UNRESOLVED",
+  "reason_codes_after": [
+    "BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED",
+    "IRF_UNCERTAINTY_NOT_PROPAGATED",
+    "PROTEIN_STATE_NUMBER_NOT_IDENTIFIED"
+  ],
+  "complete_question_answer": false,
+  "claim": "Actualrule-controlledextra methoddiagnostic;no comparativeaccuracygain againstcompletecorrectmanualworkflow",
+  "portable_receipt": true,
+  "local_original_preserved": true
+}

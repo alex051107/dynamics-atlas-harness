@@ -1,0 +1,93 @@
+{
+  "case_id": "q09_t4l_state_number_20260905",
+  "screen_question_id": "Q09",
+  "scientific_question": "Do the 33 T4 lysozyme time-resolved FRET datasets require a third protein conformational state beyond two states, with compatible structural-distance evidence?",
+  "native_sources": [
+    {
+      "source_id": "Q09_DA_DECAYS",
+      "evidence_role": "FIT_TARGET",
+      "construct_and_condition": "33 T4 lysozyme labeled variants; variant-specific PBS pH7.5 sample descriptions in deposited metadata.",
+      "sample_composition": "Donor Alexa488 on pAcF and acceptor Alexa647 on cysteine; complete labeling efficiencies UNKNOWN.",
+      "native_observable": "Original donor-acceptor time-resolved fluorescence integer photon histograms.",
+      "estimand": "Instrument-convolved fluorescence decay under donor and FRET photophysics; protein-state-number inference requested.",
+      "time_semantics": {
+        "kind": "TIME_RESOLVED_FLUORESCENCE_DECAY"
+      },
+      "spatial_support": "Variant-specific labeling-site pairs; coordinate/dye-model correspondence UNKNOWN.",
+      "unit_or_aggregation": "33 distinct DA records; PQ8ps or IBH14.1ps native bins; counts are photons, not independent protein conformations."
+    },
+    {
+      "source_id": "Q09_D0_REFERENCES",
+      "evidence_role": "FIT_TARGET",
+      "construct_and_condition": "Deposited donor-only references for the same labeled-variant folders; transfer across different mutant samples UNKNOWN.",
+      "sample_composition": "Alexa488 donor-only labeled T4 lysozyme; metadata describes variant-specific cysteine substitutions.",
+      "native_observable": "Original donor-only time-resolved fluorescence integer photon histograms.",
+      "estimand": "Donor photophysical decay in the absence of acceptor transfer.",
+      "time_semantics": {
+        "kind": "TIME_RESOLVED_FLUORESCENCE_DECAY"
+      },
+      "spatial_support": "Donor label local environment; sample equivalence across reused references UNKNOWN.",
+      "unit_or_aggregation": "33 D0 paths contain27 distinct byte payloads; duplicate paths are not established independent acquisitions."
+    },
+    {
+      "source_id": "Q09_INSTRUMENT_REFERENCES",
+      "evidence_role": "CONSTRUCTION",
+      "construct_and_condition": "Deposited Ludox IRF and uncorrelated room-light linearization references matched by variant role metadata.",
+      "sample_composition": "Ludox scattering solution for IRF; room light for IBH linearization; no protein conformational population.",
+      "native_observable": "Instrument response and electronic linearization integer photon histograms.",
+      "estimand": "Instrument timing response and detection-channel response.",
+      "time_semantics": {
+        "kind": "INSTRUMENT_TIMING_CALIBRATION"
+      },
+      "spatial_support": "Instrument channels, not molecular coordinates.",
+      "unit_or_aggregation": "PQ8ps/20MHz and IBH14.1ps/10MHz declared instrument timing; shared IRF/Lin records occur; calibration uncertainty UNKNOWN."
+    }
+  ],
+  "source_relationships": [
+    {
+      "edge_id": "Q09_DA_TO_DONOR",
+      "left_source_id": "Q09_DA_DECAYS",
+      "right_source_id": "Q09_D0_REFERENCES",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "DONOR_REFERENCE_CALIBRATION",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_REFERENCES_PRESENT"
+    },
+    {
+      "edge_id": "Q09_DA_TO_IRF",
+      "left_source_id": "Q09_DA_DECAYS",
+      "right_source_id": "Q09_INSTRUMENT_REFERENCES",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "INSTRUMENT_RESPONSE_CALIBRATION",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_REFERENCES_PRESENT"
+    }
+  ],
+  "unknowns": [
+    "Original author fitting code and joint configuration UNKNOWN",
+    "Donor reference applicability across variant mutants UNKNOWN",
+    "IRF/Lin calibration uncertainty UNKNOWN",
+    "Coordinate and dye-model mapping for structural checks UNKNOWN"
+  ],
+  "method_facts": {
+    "distance_to_transfer_rate": "SI Eq34 kRET=kF*kappa_squared*(R0J/R)^6",
+    "donor_and_transfer_factorization": "SI Eq33 latent product before IRF",
+    "Gaussian_distance_width": "SI Eq37 w12A corresponds sigma6A",
+    "instrument_model": "SI Eq38 whole convolution+scatter+background multiplied byLin",
+    "original_fitting_configuration": "UNKNOWN",
+    "printed_equation36_status": "contains extra intrinsic-like rate despite Eq33 factorization;actual author implementation UNKNOWN"
+  },
+  "archive_identity": {
+    "source": "https://zenodo.org/records/3376527",
+    "filename": "eTCSPC_wildtype.zip",
+    "published_md5": "177132ce5bb9fefde871bafe8c92cbfd"
+  },
+  "known_source_exceptions": [
+    "19-86 DA PQ8ps versus D0 IBH14.1ps; IRF filename exceptions retained",
+    "70-119 metadata filename70-132.yml with internal70-119 sample",
+    "19-86 and44-69 top-level measurement identifiers conflict with internal sample descriptions",
+    "19-119/19-132 D0,IRF andLin bytes identical with distinct donor-mutant descriptions"
+  ]
+}

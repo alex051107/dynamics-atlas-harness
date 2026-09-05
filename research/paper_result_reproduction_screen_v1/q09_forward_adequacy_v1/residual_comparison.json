@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "D0": {
+      "deviance": 11400.897657376265,
+      "max_abs_block_scaled_residual": 20.484231366240845,
+      "blocks_abs_scaled_residual_gt5_descriptive": 17
+    },
+    "DA": {
+      "deviance": 7522.719542616853,
+      "max_abs_block_scaled_residual": 13.427971057236174,
+      "blocks_abs_scaled_residual_gt5_descriptive": 12
+    }
+  },
+  "candidate": {
+    "D0": {
+      "deviance": 7145.056316757114,
+      "max_abs_block_scaled_residual": 13.363828001240464,
+      "blocks_abs_scaled_residual_gt5_descriptive": 4
+    },
+    "DA": {
+      "deviance": 6734.99185424431,
+      "max_abs_block_scaled_residual": 13.886170381661787,
+      "blocks_abs_scaled_residual_gt5_descriptive": 4
+    }
+  }
+}

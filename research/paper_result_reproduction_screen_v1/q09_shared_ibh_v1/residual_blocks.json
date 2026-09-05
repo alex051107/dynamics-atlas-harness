@@ -1,0 +1,278 @@
+{
+  "D0_shared": [
+    {
+      "first_bin": 99,
+      "last_bin": 348,
+      "observed": 1844.0,
+      "expected": 1880.974050893601
+    },
+    {
+      "first_bin": 349,
+      "last_bin": 598,
+      "observed": 4835650.0,
+      "expected": 4840769.922472471
+    },
+    {
+      "first_bin": 599,
+      "last_bin": 848,
+      "observed": 6075856.0,
+      "expected": 6065831.966489316
+    },
+    {
+      "first_bin": 849,
+      "last_bin": 1098,
+      "observed": 2407688.0,
+      "expected": 2407081.086850941
+    },
+    {
+      "first_bin": 1099,
+      "last_bin": 1348,
+      "observed": 965047.0,
+      "expected": 970910.2299389776
+    },
+    {
+      "first_bin": 1349,
+      "last_bin": 1598,
+      "observed": 392398.0,
+      "expected": 394759.1555650634
+    },
+    {
+      "first_bin": 1599,
+      "last_bin": 1848,
+      "observed": 162198.0,
+      "expected": 162030.90954329292
+    },
+    {
+      "first_bin": 1849,
+      "last_bin": 2098,
+      "observed": 68624.0,
+      "expected": 68276.5793334565
+    },
+    {
+      "first_bin": 2099,
+      "last_bin": 2348,
+      "observed": 41168.0,
+      "expected": 40650.065777285956
+    },
+    {
+      "first_bin": 2349,
+      "last_bin": 2598,
+      "observed": 25235.0,
+      "expected": 24137.93584452891
+    },
+    {
+      "first_bin": 2599,
+      "last_bin": 2848,
+      "observed": 15422.0,
+      "expected": 15266.992143641963
+    },
+    {
+      "first_bin": 2849,
+      "last_bin": 3098,
+      "observed": 9242.0,
+      "expected": 8782.480543642007
+    },
+    {
+      "first_bin": 3099,
+      "last_bin": 3348,
+      "observed": 5738.0,
+      "expected": 5496.340717397325
+    },
+    {
+      "first_bin": 3349,
+      "last_bin": 3598,
+      "observed": 3897.0,
+      "expected": 3897.8593352968346
+    },
+    {
+      "first_bin": 3599,
+      "last_bin": 3848,
+      "observed": 2886.0,
+      "expected": 3120.5013937972776
+    }
+  ],
+  "19-119_DA": [
+    {
+      "first_bin": 99,
+      "last_bin": 348,
+      "observed": 1966.0,
+      "expected": 1986.5798881923358
+    },
+    {
+      "first_bin": 349,
+      "last_bin": 598,
+      "observed": 4437186.0,
+      "expected": 4438285.965652046
+    },
+    {
+      "first_bin": 599,
+      "last_bin": 848,
+      "observed": 3880901.0,
+      "expected": 3877456.852945422
+    },
+    {
+      "first_bin": 849,
+      "last_bin": 1098,
+      "observed": 1201513.0,
+      "expected": 1203877.1030281868
+    },
+    {
+      "first_bin": 1099,
+      "last_bin": 1348,
+      "observed": 432917.0,
+      "expected": 435808.8638849257
+    },
+    {
+      "first_bin": 1349,
+      "last_bin": 1598,
+      "observed": 168109.0,
+      "expected": 168390.5369255018
+    },
+    {
+      "first_bin": 1599,
+      "last_bin": 1848,
+      "observed": 68788.0,
+      "expected": 68076.87055503915
+    },
+    {
+      "first_bin": 1849,
+      "last_bin": 2098,
+      "observed": 30552.0,
+      "expected": 29558.346541412204
+    },
+    {
+      "first_bin": 2099,
+      "last_bin": 2348,
+      "observed": 23083.0,
+      "expected": 22539.759435687116
+    },
+    {
+      "first_bin": 2349,
+      "last_bin": 2598,
+      "observed": 14900.0,
+      "expected": 14083.044519741083
+    },
+    {
+      "first_bin": 2599,
+      "last_bin": 2848,
+      "observed": 9700.0,
+      "expected": 9446.217461045831
+    },
+    {
+      "first_bin": 2849,
+      "last_bin": 3098,
+      "observed": 5878.0,
+      "expected": 5612.599486391008
+    },
+    {
+      "first_bin": 3099,
+      "last_bin": 3348,
+      "observed": 3817.0,
+      "expected": 3879.9055978214215
+    },
+    {
+      "first_bin": 3349,
+      "last_bin": 3598,
+      "observed": 3038.0,
+      "expected": 3068.624610329509
+    },
+    {
+      "first_bin": 3599,
+      "last_bin": 3848,
+      "observed": 2401.0,
+      "expected": 2677.7294682588804
+    }
+  ],
+  "19-132_DA": [
+    {
+      "first_bin": 99,
+      "last_bin": 348,
+      "observed": 1297.0,
+      "expected": 1331.5034227098322
+    },
+    {
+      "first_bin": 349,
+      "last_bin": 598,
+      "observed": 4320300.0,
+      "expected": 4317104.61597781
+    },
+    {
+      "first_bin": 599,
+      "last_bin": 848,
+      "observed": 3611145.0,
+      "expected": 3614269.042653624
+    },
+    {
+      "first_bin": 849,
+      "last_bin": 1098,
+      "observed": 1131373.0,
+      "expected": 1131446.2364739156
+    },
+    {
+      "first_bin": 1099,
+      "last_bin": 1348,
+      "observed": 413085.0,
+      "expected": 413574.59649833175
+    },
+    {
+      "first_bin": 1349,
+      "last_bin": 1598,
+      "observed": 159808.0,
+      "expected": 160448.1801354533
+    },
+    {
+      "first_bin": 1599,
+      "last_bin": 1848,
+      "observed": 64893.0,
+      "expected": 64754.307533659194
+    },
+    {
+      "first_bin": 1849,
+      "last_bin": 2098,
+      "observed": 27839.0,
+      "expected": 27844.7626071148
+    },
+    {
+      "first_bin": 2099,
+      "last_bin": 2348,
+      "observed": 21186.0,
+      "expected": 21069.66470612243
+    },
+    {
+      "first_bin": 2349,
+      "last_bin": 2598,
+      "observed": 13397.0,
+      "expected": 12850.00890345611
+    },
+    {
+      "first_bin": 2599,
+      "last_bin": 2848,
+      "observed": 8571.0,
+      "expected": 8412.861091776616
+    },
+    {
+      "first_bin": 2849,
+      "last_bin": 3098,
+      "observed": 5051.0,
+      "expected": 4761.079046252953
+    },
+    {
+      "first_bin": 3099,
+      "last_bin": 3348,
+      "observed": 3180.0,
+      "expected": 3117.720070512662
+    },
+    {
+      "first_bin": 3349,
+      "last_bin": 3598,
+      "observed": 2319.0,
+      "expected": 2347.4620392830197
+    },
+    {
+      "first_bin": 3599,
+      "last_bin": 3848,
+      "observed": 1877.0,
+      "expected": 1988.9588399786571
+    }
+  ]
+}

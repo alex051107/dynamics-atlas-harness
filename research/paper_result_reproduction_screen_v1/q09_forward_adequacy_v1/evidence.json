@@ -1,0 +1,1188 @@
+{
+  "schema": "q09-forward-evidence/v1",
+  "operator_id": "q09_donor_instrument_diagnostic_v1",
+  "request_id": "f2d1ec6192c381c75e358c0ceb261ff10903ec2ed01ba576678f50fd307b881e",
+  "input_id": "ca0620bf5d002fb7ada4659d828a0934c5a890a3ecd5034a010fc342e8c6dad0",
+  "config": {
+    "version": "Q09_DONOR_INSTRUMENT_DIAGNOSTIC_V1",
+    "variant": "22-127",
+    "donor_components": [
+      2,
+      3
+    ],
+    "FRET_components": 2,
+    "candidate_donor_initials": [
+      [
+        0.2,
+        1.0,
+        4.0,
+        0.2,
+        0.4
+      ],
+      [
+        0.5,
+        2.0,
+        5.0,
+        0.4,
+        0.5
+      ],
+      [
+        0.1,
+        3.0,
+        7.0,
+        0.1,
+        0.7
+      ],
+      [
+        1.0,
+        4.0,
+        8.0,
+        0.6,
+        0.3
+      ]
+    ],
+    "joint_fret_initials": [
+      [
+        35.0,
+        65.0,
+        0.5,
+        0.1
+      ],
+      [
+        50.0,
+        85.0,
+        0.8,
+        0.2
+      ],
+      [
+        30.0,
+        100.0,
+        0.2,
+        0.05
+      ],
+      [
+        65.0,
+        40.0,
+        0.5,
+        0.1
+      ]
+    ],
+    "profile_f0": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "maxiter": 1500,
+    "max_seconds": 120,
+    "physical_gradient_tolerance": 1e-06,
+    "source_model_form": "PublishedSI21_Table2a_three_donor_terms;author_fit_values_excluded",
+    "instrument": "native8ps;separateIRF;tail256median;scatter0;all6100bins;noLin;nonperiodic",
+    "IRF_audit_regions": "first256_and_last256_descriptive_no_pure_background_assertion",
+    "claim_ceiling": "ConditionalmodeldependenceandIRFdiagnostic;noabsoluteadequacyorstate-numberdecision"
+  },
+  "baseline_parameters": [
+    1.4301945871781994,
+    3.684456136887813,
+    0.558629150094645,
+    55.77281797664925,
+    32.41233052201855,
+    0.15427990109052683,
+    0.5803341926149068,
+    0.00021943242476574478,
+    -0.24894008015996327,
+    0.00014228815221330163,
+    0.42331368294648364
+  ],
+  "baseline": {
+    "D0": {
+      "deviance": 11400.897657376265,
+      "expected_total": 33558106.0,
+      "observed_total": 33558106.0,
+      "blocks": [
+        {
+          "first_bin": 0,
+          "last_bin": 304,
+          "observed": 1172.0,
+          "expected": 877.152883941603,
+          "scaled_residual": 9.955411968561103
+        },
+        {
+          "first_bin": 305,
+          "last_bin": 609,
+          "observed": 1227845.0,
+          "expected": 1215206.5020142698,
+          "scaled_residual": 11.464903965857738
+        },
+        {
+          "first_bin": 610,
+          "last_bin": 914,
+          "observed": 19014458.0,
+          "expected": 19072407.640033845,
+          "scaled_residual": -13.269299064674096
+        },
+        {
+          "first_bin": 915,
+          "last_bin": 1219,
+          "observed": 7100786.0,
+          "expected": 7046410.452720466,
+          "scaled_residual": 20.484231366240845
+        },
+        {
+          "first_bin": 1220,
+          "last_bin": 1524,
+          "observed": 3137046.0,
+          "expected": 3116238.6050226586,
+          "scaled_residual": 11.786974922309662
+        },
+        {
+          "first_bin": 1525,
+          "last_bin": 1829,
+          "observed": 1499678.0,
+          "expected": 1513889.6954959352,
+          "scaled_residual": -11.55044661376383
+        },
+        {
+          "first_bin": 1830,
+          "last_bin": 2134,
+          "observed": 750573.0,
+          "expected": 764572.413609019,
+          "scaled_residual": -16.010339185019564
+        },
+        {
+          "first_bin": 2135,
+          "last_bin": 2439,
+          "observed": 385097.0,
+          "expected": 392062.8608532126,
+          "scaled_residual": -11.124921178782575
+        },
+        {
+          "first_bin": 2440,
+          "last_bin": 2744,
+          "observed": 200835.0,
+          "expected": 202618.8845141561,
+          "scaled_residual": -3.963024665699363
+        },
+        {
+          "first_bin": 2745,
+          "last_bin": 3049,
+          "observed": 107065.0,
+          "expected": 105348.38925219007,
+          "scaled_residual": 5.288808930241791
+        },
+        {
+          "first_bin": 3050,
+          "last_bin": 3354,
+          "observed": 57496.0,
+          "expected": 55250.283207776476,
+          "scaled_residual": 9.55405489208978
+        },
+        {
+          "first_bin": 3355,
+          "last_bin": 3659,
+          "observed": 31691.0,
+          "expected": 29776.06479844729,
+          "scaled_residual": 11.097379353834832
+        },
+        {
+          "first_bin": 3660,
+          "last_bin": 3964,
+          "observed": 17630.0,
+          "expected": 16359.212970447832,
+          "scaled_residual": 9.93554215570491
+        },
+        {
+          "first_bin": 3965,
+          "last_bin": 4269,
+          "observed": 9900.0,
+          "expected": 9260.043844999833,
+          "scaled_residual": 6.650337697381881
+        },
+        {
+          "first_bin": 4270,
+          "last_bin": 4574,
+          "observed": 5955.0,
+          "expected": 5527.352087873562,
+          "scaled_residual": 5.75211806024248
+        },
+        {
+          "first_bin": 4575,
+          "last_bin": 4879,
+          "observed": 3674.0,
+          "expected": 3739.400595327049,
+          "scaled_residual": -1.0694997938795043
+        },
+        {
+          "first_bin": 4880,
+          "last_bin": 5184,
+          "observed": 2528.0,
+          "expected": 2671.27117862432,
+          "scaled_residual": -2.7720422446582305
+        },
+        {
+          "first_bin": 5185,
+          "last_bin": 5489,
+          "observed": 1911.0,
+          "expected": 2167.0147241144996,
+          "scaled_residual": -5.49963683903094
+        },
+        {
+          "first_bin": 5490,
+          "last_bin": 5794,
+          "observed": 1498.0,
+          "expected": 1889.870075742672,
+          "scaled_residual": -9.0141779363415
+        },
+        {
+          "first_bin": 5795,
+          "last_bin": 6099,
+          "observed": 1268.0,
+          "expected": 1832.8901169529126,
+          "scaled_residual": -13.194585809377646
+        }
+      ]
+    },
+    "DA": {
+      "deviance": 7522.719542616853,
+      "expected_total": 27825473.000000004,
+      "observed_total": 27825473.0,
+      "blocks": [
+        {
+          "first_bin": 0,
+          "last_bin": 304,
+          "observed": 1023.0,
+          "expected": 738.5905627037288,
+          "scaled_residual": 10.465069719421429
+        },
+        {
+          "first_bin": 305,
+          "last_bin": 609,
+          "observed": 1354553.0,
+          "expected": 1352045.1917900462,
+          "scaled_residual": 2.1567445824461893
+        },
+        {
+          "first_bin": 610,
+          "last_bin": 914,
+          "observed": 16357108.0,
+          "expected": 16370865.4776766,
+          "scaled_residual": -3.4001885210472444
+        },
+        {
+          "first_bin": 915,
+          "last_bin": 1219,
+          "observed": 5457871.0,
+          "expected": 5439793.246083973,
+          "scaled_residual": 7.7509203409305165
+        },
+        {
+          "first_bin": 1220,
+          "last_bin": 1524,
+          "observed": 2360378.0,
+          "expected": 2354389.987558373,
+          "scaled_residual": 3.9025052225994834
+        },
+        {
+          "first_bin": 1525,
+          "last_bin": 1829,
+          "observed": 1120476.0,
+          "expected": 1130201.0253440337,
+          "scaled_residual": -9.147720639828817
+        },
+        {
+          "first_bin": 1830,
+          "last_bin": 2134,
+          "observed": 558398.0,
+          "expected": 566378.1794466355,
+          "scaled_residual": -10.603748062511064
+        },
+        {
+          "first_bin": 2135,
+          "last_bin": 2439,
+          "observed": 286437.0,
+          "expected": 288991.63170105906,
+          "scaled_residual": -4.7521010122552365
+        },
+        {
+          "first_bin": 2440,
+          "last_bin": 2744,
+          "observed": 149677.0,
+          "expected": 148820.88774514862,
+          "scaled_residual": 2.2192118788101713
+        },
+        {
+          "first_bin": 2745,
+          "last_bin": 3049,
+          "observed": 79600.0,
+          "expected": 77291.05138314645,
+          "scaled_residual": 8.305191690502701
+        },
+        {
+          "first_bin": 3050,
+          "last_bin": 3354,
+          "observed": 42402.0,
+          "expected": 40613.02286334729,
+          "scaled_residual": 8.8771208541861
+        },
+        {
+          "first_bin": 3355,
+          "last_bin": 3659,
+          "observed": 23716.0,
+          "expected": 22008.639392210982,
+          "scaled_residual": 11.50876334762573
+        },
+        {
+          "first_bin": 3660,
+          "last_bin": 3964,
+          "observed": 13185.0,
+          "expected": 12002.700457469444,
+          "scaled_residual": 10.791654620993095
+        },
+        {
+          "first_bin": 3965,
+          "last_bin": 4269,
+          "observed": 7437.0,
+          "expected": 6833.098171546923,
+          "scaled_residual": 7.305627328286413
+        },
+        {
+          "first_bin": 4270,
+          "last_bin": 4574,
+          "observed": 4539.0,
+          "expected": 4360.310555524855,
+          "scaled_residual": 2.7060772335712904
+        },
+        {
+          "first_bin": 4575,
+          "last_bin": 4879,
+          "observed": 2858.0,
+          "expected": 2998.1937454652652,
+          "scaled_residual": -2.560346782799224
+        },
+        {
+          "first_bin": 4880,
+          "last_bin": 5184,
+          "observed": 2036.0,
+          "expected": 2154.1330036465374,
+          "scaled_residual": -2.54527662524872
+        },
+        {
+          "first_bin": 5185,
+          "last_bin": 5489,
+          "observed": 1479.0,
+          "expected": 1779.7740182405064,
+          "scaled_residual": -7.129480518553084
+        },
+        {
+          "first_bin": 5490,
+          "last_bin": 5794,
+          "observed": 1242.0,
+          "expected": 1613.725303626224,
+          "scaled_residual": -9.25352750965449
+        },
+        {
+          "first_bin": 5795,
+          "last_bin": 6099,
+          "observed": 1058.0,
+          "expected": 1594.133197203905,
+          "scaled_residual": -13.427971057236174
+        }
+      ]
+    }
+  },
+  "IRF_audit": {
+    "D0": {
+      "total": 2212906.0,
+      "regions": {
+        "first256": {
+          "sum": 80.0,
+          "mean": 0.3125,
+          "median": 0.0,
+          "zero_fraction": 0.73046875
+        },
+        "last256": {
+          "sum": 90.0,
+          "mean": 0.3515625,
+          "median": 0.0,
+          "zero_fraction": 0.73046875
+        }
+      }
+    },
+    "DA": {
+      "total": 2209533.0,
+      "regions": {
+        "first256": {
+          "sum": 96.0,
+          "mean": 0.375,
+          "median": 0.0,
+          "zero_fraction": 0.6796875
+        },
+        "last256": {
+          "sum": 82.0,
+          "mean": 0.3203125,
+          "median": 0.0,
+          "zero_fraction": 0.71875
+        }
+      }
+    }
+  },
+  "donor_runs": [
+    {
+      "label": "DONOR3",
+      "initial": [
+        0.2,
+        1.0,
+        4.0,
+        0.2,
+        0.4,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        0.5355352682967122,
+        1.728918167441046,
+        3.7903287907146574,
+        0.1399090662268091,
+        0.567107261348072,
+        0.00017001426187902494,
+        0.07770708941291815
+      ],
+      "objective": 0.00021274294257737857,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 51,
+      "evaluations": 59,
+      "projected_gradient_inf": 2.5380957010358647e-08,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.3295950420142617,
+      "bound_hits": []
+    },
+    {
+      "label": "DONOR3",
+      "initial": [
+        0.5,
+        2.0,
+        5.0,
+        0.4,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        3.7903287683337172,
+        1.7289180966758884,
+        0.535535247089002,
+        0.372327125469287,
+        0.7770987680953394,
+        0.0001700143251916453,
+        0.07770701799192725
+      ],
+      "objective": 0.00021274294257733292,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 51,
+      "evaluations": 64,
+      "projected_gradient_inf": 2.5396890364785062e-08,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.3446160000166856,
+      "bound_hits": []
+    },
+    {
+      "label": "DONOR3",
+      "initial": [
+        0.1,
+        3.0,
+        7.0,
+        0.1,
+        0.7,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        0.5355350136842196,
+        1.7289179973861604,
+        3.7903287477070293,
+        0.13990902173795647,
+        0.5671072647354969,
+        0.00017001428624406305,
+        0.07770736350874152
+      ],
+      "objective": 0.00021274294257735054,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 50,
+      "evaluations": 65,
+      "projected_gradient_inf": 9.29465817608458e-09,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.3523662499792408,
+      "bound_hits": []
+    },
+    {
+      "label": "DONOR3",
+      "initial": [
+        1.0,
+        4.0,
+        8.0,
+        0.6,
+        0.3,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        0.5355349933711148,
+        1.7289179752862631,
+        3.7903287393077174,
+        0.13990901535100309,
+        0.5671072639110997,
+        0.00017001430648868357,
+        0.07770733860242451
+      ],
+      "objective": 0.00021274294257733688,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 82,
+      "evaluations": 117,
+      "projected_gradient_inf": 4.503843262585508e-09,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 0.6386753749975469,
+      "bound_hits": []
+    }
+  ],
+  "joint_runs": [
+    {
+      "label": "JOINT_DONOR3_FRET2",
+      "initial": [
+        3.7903287683337172,
+        1.7289180966758884,
+        0.535535247089002,
+        0.372327125469287,
+        0.7770987680953394,
+        35.0,
+        65.0,
+        0.5,
+        0.1,
+        0.0001700143251916453,
+        0.07770701799192725,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        3.791487674266149,
+        1.7433035859643113,
+        0.5684486814958599,
+        0.37207340859495686,
+        0.7680976879959044,
+        19.725928073428303,
+        41.569551948421314,
+        0.7339344996456261,
+        0.437253910400179,
+        0.00017050342613086043,
+        0.0613852264898469,
+        8.528408809665613e-05,
+        0.784819410969658
+      ],
+      "objective": 0.00022611989065042095,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 865,
+      "evaluations": 960,
+      "projected_gradient_inf": 5.766106907956616e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 27.13588816599804,
+      "bound_hits": []
+    },
+    {
+      "label": "JOINT_DONOR3_FRET2",
+      "initial": [
+        3.7903287683337172,
+        1.7289180966758884,
+        0.535535247089002,
+        0.372327125469287,
+        0.7770987680953394,
+        50.0,
+        85.0,
+        0.8,
+        0.2,
+        0.0001700143251916453,
+        0.07770701799192725,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        3.7914926955557915,
+        1.7433205596527948,
+        0.5684732802331015,
+        0.3720714676498758,
+        0.7680893680852698,
+        19.726012055148928,
+        41.5696626288845,
+        0.7339418668082952,
+        0.43724940277052576,
+        0.00017050065488497673,
+        0.061370681793295745,
+        8.528156775368217e-05,
+        0.7848451553876608
+      ],
+      "objective": 0.00022611989068443316,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 554,
+      "evaluations": 633,
+      "projected_gradient_inf": 1.3429913562312685e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 16.275301332992967,
+      "bound_hits": []
+    },
+    {
+      "label": "JOINT_DONOR3_FRET2",
+      "initial": [
+        3.7903287683337172,
+        1.7289180966758884,
+        0.535535247089002,
+        0.372327125469287,
+        0.7770987680953394,
+        30.0,
+        100.0,
+        0.2,
+        0.05,
+        0.0001700143251916453,
+        0.07770701799192725,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        3.791487341117341,
+        1.7433009788101532,
+        0.5684459648944485,
+        0.3720736835682074,
+        0.7680989439318991,
+        19.72699384693005,
+        41.56972903924233,
+        0.7339032897990545,
+        0.4372868195548961,
+        0.00017050174463204817,
+        0.061385454190419964,
+        8.52836723096475e-05,
+        0.7847691213070522
+      ],
+      "objective": 0.0002261198906728392,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 788,
+      "evaluations": 907,
+      "projected_gradient_inf": 1.8525042100532835e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 22.459339166001882,
+      "bound_hits": []
+    },
+    {
+      "label": "JOINT_DONOR3_FRET2",
+      "initial": [
+        3.7903287683337172,
+        1.7289180966758884,
+        0.535535247089002,
+        0.372327125469287,
+        0.7770987680953394,
+        65.0,
+        40.0,
+        0.5,
+        0.1,
+        0.0001700143251916453,
+        0.07770701799192725,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        3.7914899782665628,
+        1.7433098436018717,
+        0.5684569016161423,
+        0.37207253886567765,
+        0.7680947555396298,
+        41.56967884917049,
+        19.726580304438677,
+        0.26608318667572284,
+        0.43727307476914545,
+        0.00017050112842240198,
+        0.061382238156366675,
+        8.52832928214209e-05,
+        0.7847888494983648
+      ],
+      "objective": 0.00022611989064699902,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 811,
+      "evaluations": 914,
+      "projected_gradient_inf": 1.8316181829426174e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 22.79295083298348,
+      "bound_hits": []
+    }
+  ],
+  "profile_runs": [
+    {
+      "label": "FIXED_F0_PROFILE",
+      "initial": [
+        3.7914899782665628,
+        1.7433098436018717,
+        0.5684569016161423,
+        0.37207253886567765,
+        0.7680947555396298,
+        41.56967884917049,
+        19.726580304438677,
+        0.26608318667572284,
+        0.00017050112842240198,
+        0.061382238156366675,
+        8.52832928214209e-05,
+        0.7847888494983648
+      ],
+      "parameters": [
+        3.790973312365274,
+        1.7412705176470968,
+        0.5628880523709124,
+        0.37214130172341164,
+        0.769416389143859,
+        41.38391914719844,
+        18.563944071299368,
+        0.23264903871874454,
+        0.00017082349676728533,
+        0.06426614590975532,
+        8.471189355910207e-05,
+        0.8395488495474019
+      ],
+      "objective": 0.00022614364433423895,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 142,
+      "evaluations": 158,
+      "projected_gradient_inf": 2.9696185679811287e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 3.6387596249987837,
+      "bound_hits": [],
+      "fixed_f0": 0.4,
+      "full_parameters": [
+        3.790973312365274,
+        1.7412705176470968,
+        0.5628880523709124,
+        0.37214130172341164,
+        0.769416389143859,
+        41.38391914719844,
+        18.563944071299368,
+        0.23264903871874454,
+        0.4,
+        0.00017082349676728533,
+        0.06426614590975532,
+        8.471189355910207e-05,
+        0.8395488495474019
+      ]
+    },
+    {
+      "label": "FIXED_F0_PROFILE",
+      "initial": [
+        3.7914899782665628,
+        1.7433098436018717,
+        0.5684569016161423,
+        0.37207253886567765,
+        0.7680947555396298,
+        41.56967884917049,
+        19.726580304438677,
+        0.26608318667572284,
+        0.00017050112842240198,
+        0.061382238156366675,
+        8.52832928214209e-05,
+        0.7847888494983648
+      ],
+      "parameters": [
+        3.7902577416900267,
+        1.7382553455397831,
+        0.5740769067153243,
+        0.37323923852625435,
+        0.7695342950273645,
+        43.22287775287082,
+        27.62054312158181,
+        0.4146325356451049,
+        0.00017021653295490105,
+        0.0554480234871253,
+        9.019007750462589e-05,
+        0.4107003162579179
+      ],
+      "objective": 0.0002276339173072454,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 183,
+      "evaluations": 206,
+      "projected_gradient_inf": 7.36383309664837e-07,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 4.6631589159951545,
+      "bound_hits": [],
+      "fixed_f0": 0.6,
+      "full_parameters": [
+        3.7902577416900267,
+        1.7382553455397831,
+        0.5740769067153243,
+        0.37323923852625435,
+        0.7695342950273645,
+        43.22287775287082,
+        27.62054312158181,
+        0.4146325356451049,
+        0.6,
+        0.00017021653295490105,
+        0.0554480234871253,
+        9.019007750462589e-05,
+        0.4107003162579179
+      ]
+    },
+    {
+      "label": "FIXED_F0_PROFILE",
+      "initial": [
+        3.7914899782665628,
+        1.7433098436018717,
+        0.5684569016161423,
+        0.37207253886567765,
+        0.7680947555396298,
+        41.56967884917049,
+        19.726580304438677,
+        0.26608318667572284,
+        0.00017050112842240198,
+        0.061382238156366675,
+        8.52832928214209e-05,
+        0.7847888494983648
+      ],
+      "parameters": [
+        3.7564847295190478,
+        1.6259761867059992,
+        0.34391703332002044,
+        0.357690931551592,
+        0.7357764968981503,
+        43.0989905155635,
+        43.0990348196833,
+        0.32517193628862584,
+        0.00019820446337792856,
+        0.6521180938408015,
+        8.476047545697848e-05,
+        -0.42677351016533827
+      ],
+      "objective": 0.0004644258170174581,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 100,
+      "evaluations": 116,
+      "projected_gradient_inf": 5.468752362756721e-08,
+      "numerical_status": "PASS",
+      "elapsed_seconds": 2.734073958999943,
+      "bound_hits": [],
+      "fixed_f0": 0.8,
+      "full_parameters": [
+        3.7564847295190478,
+        1.6259761867059992,
+        0.34391703332002044,
+        0.357690931551592,
+        0.7357764968981503,
+        43.0989905155635,
+        43.0990348196833,
+        0.32517193628862584,
+        0.8,
+        0.00019820446337792856,
+        0.6521180938408015,
+        8.476047545697848e-05,
+        -0.42677351016533827
+      ]
+    }
+  ],
+  "selected_donor_index": 1,
+  "selected_joint_index": 3,
+  "candidate": {
+    "D0": {
+      "deviance": 7145.056316757114,
+      "expected_total": 33558106.0,
+      "observed_total": 33558106.0,
+      "blocks": [
+        {
+          "first_bin": 0,
+          "last_bin": 304,
+          "observed": 1172.0,
+          "expected": 795.1591969227768,
+          "scaled_residual": 13.363828001240464
+        },
+        {
+          "first_bin": 305,
+          "last_bin": 609,
+          "observed": 1227845.0,
+          "expected": 1223976.1815565543,
+          "scaled_residual": 3.4969696754697126
+        },
+        {
+          "first_bin": 610,
+          "last_bin": 914,
+          "observed": 19014458.0,
+          "expected": 19011666.616039068,
+          "scaled_residual": 0.6401908810954596
+        },
+        {
+          "first_bin": 915,
+          "last_bin": 1219,
+          "observed": 7100786.0,
+          "expected": 7110645.65924537,
+          "scaled_residual": -3.6974932271665018
+        },
+        {
+          "first_bin": 1220,
+          "last_bin": 1524,
+          "observed": 3137046.0,
+          "expected": 3131695.336375463,
+          "scaled_residual": 3.0235551642237324
+        },
+        {
+          "first_bin": 1525,
+          "last_bin": 1829,
+          "observed": 1499678.0,
+          "expected": 1498775.4252329776,
+          "scaled_residual": 0.737250212086528
+        },
+        {
+          "first_bin": 1830,
+          "last_bin": 2134,
+          "observed": 750573.0,
+          "expected": 751994.548407596,
+          "scaled_residual": -1.6392844041362666
+        },
+        {
+          "first_bin": 2135,
+          "last_bin": 2439,
+          "observed": 385097.0,
+          "expected": 386958.85583761893,
+          "scaled_residual": -2.9930478201898603
+        },
+        {
+          "first_bin": 2440,
+          "last_bin": 2744,
+          "observed": 200835.0,
+          "expected": 202041.65143774042,
+          "scaled_residual": -2.6844874616755012
+        },
+        {
+          "first_bin": 2745,
+          "last_bin": 3049,
+          "observed": 107065.0,
+          "expected": 106514.50545345069,
+          "scaled_residual": 1.6867419391763
+        },
+        {
+          "first_bin": 3050,
+          "last_bin": 3354,
+          "observed": 57496.0,
+          "expected": 56713.65597281445,
+          "scaled_residual": 3.285140505509581
+        },
+        {
+          "first_bin": 3355,
+          "last_bin": 3659,
+          "observed": 31691.0,
+          "expected": 30993.637724373053,
+          "scaled_residual": 3.961158076396215
+        },
+        {
+          "first_bin": 3660,
+          "last_bin": 3964,
+          "observed": 17630.0,
+          "expected": 17220.67608057816,
+          "scaled_residual": 3.119191402401302
+        },
+        {
+          "first_bin": 3965,
+          "last_bin": 4269,
+          "observed": 9900.0,
+          "expected": 9810.354055303056,
+          "scaled_residual": 0.9050827912752752
+        },
+        {
+          "first_bin": 4270,
+          "last_bin": 4574,
+          "observed": 5955.0,
+          "expected": 5847.991320853234,
+          "scaled_residual": 1.3993154965789194
+        },
+        {
+          "first_bin": 4575,
+          "last_bin": 4879,
+          "observed": 3674.0,
+          "expected": 3904.664374070479,
+          "scaled_residual": -3.6913792639468466
+        },
+        {
+          "first_bin": 4880,
+          "last_bin": 5184,
+          "observed": 2528.0,
+          "expected": 2738.1908599379453,
+          "scaled_residual": -4.016816281971406
+        },
+        {
+          "first_bin": 5185,
+          "last_bin": 5489,
+          "observed": 1911.0,
+          "expected": 2173.0455902750514,
+          "scaled_residual": -5.6213734328563065
+        },
+        {
+          "first_bin": 5490,
+          "last_bin": 5794,
+          "observed": 1498.0,
+          "expected": 1859.2979332685645,
+          "scaled_residual": -8.378976724271093
+        },
+        {
+          "first_bin": 5795,
+          "last_bin": 6099,
+          "observed": 1268.0,
+          "expected": 1780.5473057675758,
+          "scaled_residual": -12.146668991272557
+        }
+      ]
+    },
+    "DA": {
+      "deviance": 6734.99185424431,
+      "expected_total": 27825473.0,
+      "observed_total": 27825473.0,
+      "blocks": [
+        {
+          "first_bin": 0,
+          "last_bin": 304,
+          "observed": 1023.0,
+          "expected": 664.9283648129851,
+          "scaled_residual": 13.886170381661787
+        },
+        {
+          "first_bin": 305,
+          "last_bin": 609,
+          "observed": 1354553.0,
+          "expected": 1354567.1174355547,
+          "scaled_residual": -0.012129853328529368
+        },
+        {
+          "first_bin": 610,
+          "last_bin": 914,
+          "observed": 16357108.0,
+          "expected": 16353911.331716,
+          "scaled_residual": 0.7904724764914576
+        },
+        {
+          "first_bin": 915,
+          "last_bin": 1219,
+          "observed": 5457871.0,
+          "expected": 5464275.303050292,
+          "scaled_residual": -2.7397162676922857
+        },
+        {
+          "first_bin": 1220,
+          "last_bin": 1524,
+          "observed": 2360378.0,
+          "expected": 2355631.8927750243,
+          "scaled_residual": 3.0923157531481618
+        },
+        {
+          "first_bin": 1525,
+          "last_bin": 1829,
+          "observed": 1120476.0,
+          "expected": 1119072.9642927728,
+          "scaled_residual": 1.3262931362125652
+        },
+        {
+          "first_bin": 1830,
+          "last_bin": 2134,
+          "observed": 558398.0,
+          "expected": 559722.5937709473,
+          "scaled_residual": -1.7705014607049225
+        },
+        {
+          "first_bin": 2135,
+          "last_bin": 2439,
+          "observed": 286437.0,
+          "expected": 287696.3010000405,
+          "scaled_residual": -2.347807086882971
+        },
+        {
+          "first_bin": 2440,
+          "last_bin": 2744,
+          "observed": 149677.0,
+          "expected": 150126.51738596836,
+          "scaled_residual": -1.1601597349921797
+        },
+        {
+          "first_bin": 2745,
+          "last_bin": 3049,
+          "observed": 79600.0,
+          "expected": 79225.8713599376,
+          "scaled_residual": 1.3291911563824899
+        },
+        {
+          "first_bin": 3050,
+          "last_bin": 3354,
+          "observed": 42402.0,
+          "expected": 42315.64035748491,
+          "scaled_residual": 0.419817344483999
+        },
+        {
+          "first_bin": 3355,
+          "last_bin": 3659,
+          "observed": 23716.0,
+          "expected": 23252.037390179175,
+          "scaled_residual": 3.042653353125247
+        },
+        {
+          "first_bin": 3660,
+          "last_bin": 3964,
+          "observed": 13185.0,
+          "expected": 12820.304251077763,
+          "scaled_residual": 3.2209318432835565
+        },
+        {
+          "first_bin": 3965,
+          "last_bin": 4269,
+          "observed": 7437.0,
+          "expected": 7328.990490950854,
+          "scaled_residual": 1.2616529657267437
+        },
+        {
+          "first_bin": 4270,
+          "last_bin": 4574,
+          "observed": 4539.0,
+          "expected": 4636.159159647177,
+          "scaled_residual": -1.426936284274544
+        },
+        {
+          "first_bin": 4575,
+          "last_bin": 4879,
+          "observed": 2858.0,
+          "expected": 3132.9799243670213,
+          "scaled_residual": -4.912721921983507
+        },
+        {
+          "first_bin": 4880,
+          "last_bin": 5184,
+          "observed": 2036.0,
+          "expected": 2201.833805374448,
+          "scaled_residual": -3.5341159895157093
+        },
+        {
+          "first_bin": 5185,
+          "last_bin": 5489,
+          "observed": 1479.0,
+          "expected": 1774.249058787237,
+          "scaled_residual": -7.009406227085679
+        },
+        {
+          "first_bin": 5490,
+          "last_bin": 5794,
+          "observed": 1242.0,
+          "expected": 1576.88585037973,
+          "scaled_residual": -8.433282913980422
+        },
+        {
+          "first_bin": 5795,
+          "last_bin": 6099,
+          "observed": 1058.0,
+          "expected": 1539.0985604070088,
+          "scaled_residual": -12.26311614105893
+        }
+      ]
+    }
+  }
+}

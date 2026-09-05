@@ -1,0 +1,1553 @@
+{
+  "runtime_subrules": {
+    "schema_version": "rules-prototype-runtime-subrules/v1",
+    "registry_id": "dynamics-atlas-runtime-subrules/v1",
+    "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+    "runtime_subrules": [
+      {
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "target_kind": "CASE",
+        "scientific_question": "Is the requested claim contract declared and internally consistent?",
+        "required_evidence_packet_ids": [
+          "SEP-F01-CLAIM-CONTRACT"
+        ],
+        "failure_mode": "CLAIM_CONTRACT_CONTRADICTED",
+        "claim_effect_summary": "A PASS only establishes a reviewable question; it emits no scientific verdict.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+        "target_kind": "CASE",
+        "scientific_question": "Is the requested wording inside the CASE intake's declared request scope?",
+        "required_evidence_packet_ids": [
+          "SEP-F01-REQUESTED-WORDING-SCOPE"
+        ],
+        "failure_mode": "REQUESTED_WORDING_OUTSIDE_DECLARED_SCOPE",
+        "claim_effect_summary": "A PASS records intake scope only. It does not calculate an evidence-supported claim ceiling, which is deferred to Stage 2.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "target_kind": "SOURCE",
+        "scientific_question": "Does this source declare the sample-system and composition context needed to avoid silently assuming a homogeneous single-species ensemble?",
+        "required_evidence_packet_ids": [
+          "SEP-F02-CONSTRUCT"
+        ],
+        "failure_mode": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_CONTRADICTED",
+        "claim_effect_summary": "A PASS records a source-local declaration only; it does not freeze a full construct schema or certify sample homogeneity.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+        "target_kind": "EDGE",
+        "scientific_question": "Are the two source conditions recorded as compatible for the declared relation?",
+        "required_evidence_packet_ids": [
+          "SEP-F02-CONDITION"
+        ],
+        "failure_mode": "EDGE_CONDITION_RELATION_MISMATCH",
+        "claim_effect_summary": "A PASS records an explicit relation label only; it does not establish a universal comparability threshold.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+        "target_kind": "SOURCE",
+        "scientific_question": "Does this source declare the native observable and measurement semantics needed to identify what it provides?",
+        "required_evidence_packet_ids": [
+          "SEP-F03-MEASUREMENT"
+        ],
+        "failure_mode": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_CONTRADICTED",
+        "claim_effect_summary": "A PASS records source-native measurement semantics only; it does not certify reliability, comparability, validation, or a scientific conclusion.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+        "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+        "target_kind": "SOURCE",
+        "scientific_question": "Are uncertainty and method-appropriate controls source-located?",
+        "required_evidence_packet_ids": [
+          "SEP-F04-RELIABILITY"
+        ],
+        "failure_mode": "UNCERTAINTY_OR_CONTROL_PROVENANCE_UNRESOLVED",
+        "claim_effect_summary": "Candidate only; no generic artifact-free claim is allowed.",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "runtime_subrule_id": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+        "family_id": "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE",
+        "target_kind": "SOURCE",
+        "scientific_question": "Does the candidate support have a traceable lineage and missing-state audit?",
+        "required_evidence_packet_ids": [
+          "SEP-F05-SUPPORT"
+        ],
+        "failure_mode": "CANDIDATE_SUPPORT_UNVERIFIED",
+        "claim_effect_summary": "Candidate only; support cannot create an absent state.",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "runtime_subrule_id": "F05R02_SOURCE_FORWARD_BRIDGE",
+        "family_id": "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE",
+        "target_kind": "SOURCE",
+        "scientific_question": "Is the forward or inverse bridge explicit and valid within its declared domain?",
+        "required_evidence_packet_ids": [
+          "SEP-F05-FORWARD-BRIDGE"
+        ],
+        "failure_mode": "FORWARD_BRIDGE_UNVERIFIED",
+        "claim_effect_summary": "Candidate only; a model fit cannot establish a biological conclusion.",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "target_kind": "SOURCE",
+        "scientific_question": "What exact evidence role and lineage does this source have?",
+        "required_evidence_packet_ids": [
+          "SEP-F06-SOURCE-ROLE"
+        ],
+        "failure_mode": "SOURCE_EVIDENCE_ROLE_OR_LINEAGE_CONTRADICTED",
+        "claim_effect_summary": "A PASS records a role; it does not establish validation independence.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "target_kind": "EDGE",
+        "scientific_question": "Is the declared cross-source relation admissible after F02 condition and F03 measurement prerequisites resolve?",
+        "required_evidence_packet_ids": [
+          "SEP-F06-COMPARABILITY"
+        ],
+        "failure_mode": "EDGE_NOT_COMPARABLE_FOR_DECLARED_RELATION",
+        "claim_effect_summary": "A PASS requires recorded F02/F03 prerequisite PASS results. A FAIL blocks the declared comparison, not either source's local measurement.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+        "target_kind": "EDGE",
+        "scientific_question": "Is a validation-independence label supported by declared lineage, data-sharing, and shared-error facts?",
+        "required_evidence_packet_ids": [
+          "SEP-F06-INDEPENDENCE"
+        ],
+        "failure_mode": "VALIDATION_INDEPENDENCE_CONTRADICTED",
+        "claim_effect_summary": "A PASS records independence only. Comparability and F02/F03 prerequisites remain separate questions; a FAIL blocks only the independence label and retains the relation for human review.",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "runtime_subrule_id": "F07R01_CASE_IDENTIFIABILITY",
+        "family_id": "F07_IDENTIFIABILITY_AND_NEXT_ACTION",
+        "target_kind": "CASE",
+        "scientific_question": "Does current evidence distinguish remaining hypotheses, and what next evidence would discriminate them?",
+        "required_evidence_packet_ids": [
+          "SEP-F07-IDENTIFIABILITY"
+        ],
+        "failure_mode": "NON_IDENTIFIABLE_OR_NEXT_ACTION_UNDECLARED",
+        "claim_effect_summary": "Candidate only; compatibility does not establish uniqueness.",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      }
+    ]
+  },
+  "bindings": {
+    "schema_version": "rules-prototype-applicability-bindings/v1",
+    "registry_id": "dynamics-atlas-rules-bindings/v1",
+    "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+    "grammar": {
+      "predicate_primitives": [
+        "EQ",
+        "IN",
+        "EXISTS",
+        "ALL",
+        "ANY",
+        "NOT",
+        "PRIOR_RESULT_STATUS"
+      ],
+      "iteration_primitives": [
+        "FOR_EACH_SOURCE",
+        "FOR_EACH_EDGE"
+      ],
+      "missing_value_semantics": "A matched binding with any absent required evidence path returns UNRESOLVED; it never infers a missing value.",
+      "forbidden_freeform_operators": [
+        "AFTER_EVALUATION",
+        "FOR_EACH_EVIDENTIARY_SOURCE",
+        "LOOKUP_WHATEVER_IS_RELEVANT"
+      ]
+    },
+    "bindings": [
+      {
+        "binding_id": "B-F01R01-CASE-CLAIM-DECLARATION",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "target_kind": "CASE",
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "CASE"
+            },
+            {
+              "op": "EQ",
+              "path": "case.intake_kind",
+              "value": "SCIENTIFIC_CLAIM_REVIEW"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "case.scientific_claim",
+          "case.requested_claim_level",
+          "case.intended_use",
+          "case.observability_target.event_signature",
+          "case.claim_contract.internal_consistency"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "target_kind": "CASE",
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "CASE"
+            },
+            {
+              "op": "EQ",
+              "path": "case.intake_kind",
+              "value": "SCIENTIFIC_CLAIM_REVIEW"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "case.requested_claim_level",
+          "case.claim_contract.declared_request_scope",
+          "case.claim_contract.forbidden_upgrades"
+        ],
+        "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "source.source_id"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "source.construct_and_condition",
+          "source.sample_composition",
+          "source.sample_system_composition_declaration_status"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F02R02-EDGE-CONDITION",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "target_kind": "EDGE",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.comparison_id"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "edge.left_source_id",
+          "edge.right_source_id",
+          "edge.condition_relation"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F03R01-SOURCE-MEASUREMENT",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "source.source_id"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "source.native_observable",
+          "source.estimand",
+          "source.time_semantics.kind",
+          "source.spatial_support",
+          "source.unit_or_aggregation",
+          "source.native_measurement_declaration_status"
+        ],
+        "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F04R01-SOURCE-RELIABILITY",
+        "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "EQ",
+          "path": "target.kind",
+          "value": "SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.uncertainty.status",
+          "source.uncertainty.source_support",
+          "source.detection_boundary.status"
+        ],
+        "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+        "evaluation_contract_id": "EC-F04R01-SOURCE-RELIABILITY",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "binding_id": "B-F05R01-SOURCE-SUPPORT",
+        "runtime_subrule_id": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "EQ",
+          "path": "target.kind",
+          "value": "SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.support_lineage.status",
+          "source.support_lineage.generator_or_parentage",
+          "source.support_lineage.prior_data_exposure"
+        ],
+        "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+        "evaluation_contract_id": "EC-F05R01-SOURCE-SUPPORT",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "binding_id": "B-F05R02-SOURCE-FORWARD-BRIDGE",
+        "runtime_subrule_id": "F05R02_SOURCE_FORWARD_BRIDGE",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "EQ",
+          "path": "target.kind",
+          "value": "SOURCE"
+        },
+        "required_evidence_paths": [
+          "source.forward_bridge_status",
+          "source.source_locator"
+        ],
+        "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+        "evaluation_contract_id": "EC-F05R02-SOURCE-FORWARD-BRIDGE",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      },
+      {
+        "binding_id": "B-F06R01-SOURCE-ROLE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "target_kind": "SOURCE",
+        "iteration": {
+          "op": "FOR_EACH_SOURCE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            },
+            {
+              "op": "EQ",
+              "path": "source.case_evidence_scope",
+              "value": "CLAIM_EVIDENCE"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "source.evidence_role",
+          "source.source_locator",
+          "source.data_lineage_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F06R02-EDGE-COMPARABILITY",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "target_kind": "EDGE",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.shared_claim"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "edge.left_source_id",
+          "edge.right_source_id",
+          "edge.shared_claim",
+          "edge.condition_relation",
+          "edge.relation_type",
+          "edge.bridge_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F06R03-EDGE-INDEPENDENCE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "target_kind": "EDGE",
+        "iteration": {
+          "op": "FOR_EACH_EDGE"
+        },
+        "applicability": {
+          "op": "ALL",
+          "args": [
+            {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "EDGE"
+            },
+            {
+              "op": "EXISTS",
+              "path": "edge.validation_claim"
+            }
+          ]
+        },
+        "required_evidence_paths": [
+          "edge.validation_claim",
+          "edge.validation_independence",
+          "edge.shared_error_status",
+          "edge.data_lineage_status"
+        ],
+        "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "implementation_status": "COMPLETE_DRAFT"
+      },
+      {
+        "binding_id": "B-F07R01-CASE-IDENTIFIABILITY",
+        "runtime_subrule_id": "F07R01_CASE_IDENTIFIABILITY",
+        "target_kind": "CASE",
+        "applicability": {
+          "op": "EQ",
+          "path": "target.kind",
+          "value": "CASE"
+        },
+        "required_evidence_paths": [
+          "case.candidate_hypotheses",
+          "case.next_discriminating_action"
+        ],
+        "resolution_policy_id": "RP_CANDIDATE_FAMILY_REVIEW",
+        "evaluation_contract_id": "EC-F07R01-CASE-IDENTIFIABILITY",
+        "implementation_status": "CANDIDATE_MAP_ONLY"
+      }
+    ]
+  },
+  "contracts": {
+    "schema_version": "rules-prototype-evaluation-contracts/v1",
+    "registry_id": "dynamics-atlas-rules-evaluation-contracts/v1",
+    "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+    "shared_boundary": "A contract classifies the selected RuleInstance. It does not emit a terminal scientific SUPPORT or CANNOT_SUPPORT verdict in PR1. A matched failure blocks; otherwise an explicit unresolved state blocks PASS; any unmatched state defaults to UNRESOLVED.",
+    "contracts": [
+      {
+        "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+        "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+        "target_kind": "CASE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "CLAIM_CONTRACT_CONSISTENT",
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "CONSISTENT"
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "CLAIM_CONTRACT_CONTRADICTED",
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "CONTRADICTED"
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "CLAIM_CONTRACT_STATUS_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "case.claim_contract.internal_consistency",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "REVIEWABLE_CASE_CONTRACT",
+            "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_CASE_CONTRACT_REVISION",
+            "claim_ceiling": "Conflicting CASE contract metadata blocks the requested wording until a human resolves it."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_CASE_CLARIFICATION",
+            "claim_ceiling": "Missing CASE intent is an intake gap; it cannot be recovered from a source lookup."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No claim-contract instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+        "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+        "target_kind": "CASE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "case.requested_claim_level",
+                  "values_path": "case.claim_contract.declared_request_scope"
+                },
+                {
+                  "op": "NOT",
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values_path": "case.claim_contract.forbidden_upgrades"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "REQUESTED_WORDING_IS_FORBIDDEN",
+            "condition": {
+              "op": "IN",
+              "path": "case.requested_claim_level",
+              "values_path": "case.claim_contract.forbidden_upgrades"
+            }
+          },
+          {
+            "reason_code": "REQUESTED_WORDING_OUTSIDE_DECLARED_SCOPE",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "NOT",
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values_path": "case.claim_contract.declared_request_scope"
+                  }
+                },
+                {
+                  "op": "NOT",
+                  "arg": {
+                    "op": "IN",
+                    "path": "case.requested_claim_level",
+                    "values": [
+                      "UNKNOWN",
+                      "UNRESOLVED"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "REQUESTED_WORDING_STATUS_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "case.requested_claim_level",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+            "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_SCOPE_CONFLICT",
+            "claim_ceiling": "The requested wording is outside the intake-declared scope. This is not an evidence-derived scientific impossibility."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_CASE_CLARIFICATION",
+            "claim_ceiling": "Missing request-scope metadata prevents an intake decision and cannot be recovered from a source lookup."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No requested-wording-scope instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+        "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+        "target_kind": "SOURCE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED",
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "DECLARED"
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_CONTRADICTED",
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "SOURCE_SAMPLE_SYSTEM_OR_COMPOSITION_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "source.sample_system_composition_declaration_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+            "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_SOURCE_CONTEXT_RESOLUTION",
+            "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it is not a verdict on the source's science."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+            "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No source sample-system/composition instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+        "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+        "target_kind": "EDGE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "EDGE_CONDITION_RELATION_AND_SOURCE_CONTEXT_PREREQUISITES_MATCHED",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MATCHED"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "EDGE_CONDITION_RELATION_MISMATCH",
+            "condition": {
+              "op": "IN",
+              "path": "edge.condition_relation",
+              "values": [
+                "MISMATCH"
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "EDGE_CONDITION_RELATION_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "edge.condition_relation",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          },
+          {
+            "reason_code": "EDGE_SOURCE_CONTEXT_PREREQUISITES_UNRESOLVED",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN",
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN",
+                    "FAIL"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "EDGE_CONDITION_RELATION_DECLARED",
+            "claim_ceiling": "The edge records a matched condition relation only after both endpoint sample-system/composition declarations PASS. It does not establish a universal comparability threshold or validation independence."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "EDGE_CONDITION_RELATION_MISMATCH",
+            "claim_ceiling": "An explicit mismatch blocks the declared relation until a human revises or separates it; neither source's local measurement is invalidated."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+            "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No edge condition-relation instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+        "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+        "target_kind": "SOURCE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "DECLARED"
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_CONTRADICTED",
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "SOURCE_NATIVE_MEASUREMENT_SEMANTICS_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "source.native_measurement_declaration_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+            "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "REQUEST_SOURCE_MEASUREMENT_RESOLUTION",
+            "claim_ceiling": "An explicit contradiction blocks this source-local declaration until a human resolves the record; it does not invalidate the source's science."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+            "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No source-native measurement instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F04R01-SOURCE-RELIABILITY",
+        "runtime_subrule_id": "F04R01_SOURCE_RELIABILITY_PROVENANCE",
+        "target_kind": "SOURCE",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [],
+        "fail_conditions": [],
+        "unresolved_conditions": [
+          {
+            "reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED",
+            "condition": {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No generic reliability conclusion is frozen."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No generic reliability conclusion is frozen."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No generic reliability conclusion is frozen."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No generic reliability conclusion is frozen."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F05R01-SOURCE-SUPPORT",
+        "runtime_subrule_id": "F05R01_SOURCE_CANDIDATE_SUPPORT",
+        "target_kind": "SOURCE",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [],
+        "fail_conditions": [],
+        "unresolved_conditions": [
+          {
+            "reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED",
+            "condition": {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No candidate-support conclusion is frozen."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No candidate-support conclusion is frozen."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No candidate-support conclusion is frozen."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No candidate-support conclusion is frozen."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F05R02-SOURCE-FORWARD-BRIDGE",
+        "runtime_subrule_id": "F05R02_SOURCE_FORWARD_BRIDGE",
+        "target_kind": "SOURCE",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [],
+        "fail_conditions": [],
+        "unresolved_conditions": [
+          {
+            "reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED",
+            "condition": {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "SOURCE"
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No forward-bridge conclusion is frozen."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No forward-bridge conclusion is frozen."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No forward-bridge conclusion is frozen."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No forward-bridge conclusion is frozen."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+        "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+        "target_kind": "SOURCE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "SOURCE_EVIDENCE_ROLE_RECORDED",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "source.evidence_role",
+                  "values": [
+                    "CONSTRUCTION",
+                    "FIT_TARGET",
+                    "DIAGNOSTIC",
+                    "HELD_OUT_VALIDATION"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "source.data_lineage_status",
+                  "values": [
+                    "DECLARED",
+                    "REVIEWED"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "SOURCE_EVIDENCE_ROLE_CONTRADICTED",
+            "condition": {
+              "op": "IN",
+              "path": "source.evidence_role",
+              "values": [
+                "ROLE_CONTRADICTED"
+              ]
+            }
+          },
+          {
+            "reason_code": "SOURCE_LINEAGE_CONTRADICTED",
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "CONTRADICTED"
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "SOURCE_EVIDENCE_ROLE_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "source.evidence_role",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED",
+                "UNDECLARED"
+              ]
+            }
+          },
+          {
+            "reason_code": "SOURCE_LINEAGE_UNRESOLVED",
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "UNKNOWN",
+                "UNRESOLVED"
+              ]
+            }
+          },
+          {
+            "reason_code": "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION",
+            "condition": {
+              "op": "IN",
+              "path": "source.data_lineage_status",
+              "values": [
+                "AGENT_PROPOSED_UNVERIFIED"
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "SOURCE_ROLE_RECORDED",
+            "claim_ceiling": "The source role is recorded; independence is not established here."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "SOURCE_ROLE_CONTRADICTION",
+            "claim_ceiling": "An explicitly contradicted role or lineage cannot support a validation or integration label."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "ABSTAIN",
+            "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No source-role instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+        "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+        "target_kind": "EDGE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "EDGE_COMPARABILITY_PREREQUISITES_AND_RELATION_RECORDED",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MATCHED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "QUALITATIVE_TRIANGULATION"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "DECLARED"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "PASS"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "EDGE_NOT_COMPARABLE_FOR_DECLARED_RELATION",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "MISMATCH"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "NOT_COMPARABLE"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "UNAVAILABLE",
+                    "INVALID"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "FAIL"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "FAIL"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "EDGE_COMPARABILITY_INPUT_UNRESOLVED",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.condition_relation",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.relation_type",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.bridge_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "reason_code": "EDGE_COMPARABILITY_PREREQUISITES_UNRESOLVED",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+                  "target_selector": "CURRENT_EDGE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_LEFT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                },
+                {
+                  "op": "PRIOR_RESULT_STATUS",
+                  "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+                  "target_selector": "EDGE_RIGHT_SOURCE",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED",
+                    "NOT_APPLICABLE",
+                    "NOT_RUN"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "DECLARED_RELATION_REVIEWABLE",
+            "claim_ceiling": "The declared edge relation is reviewable only after separately stored F02/F03 PASS prerequisites. Numeric equivalence and shared population are not implied."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANNOT_SUPPORT_CROSS_SOURCE_COMPARISON",
+            "claim_ceiling": "The declared cross-source comparison is blocked while source-local observations remain intact."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "ABSTAIN",
+            "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No comparability instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+        "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+        "target_kind": "EDGE",
+        "implementation_status": "COMPLETE_DRAFT",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [
+          {
+            "reason_code": "EDGE_INDEPENDENCE_LABEL_RECORDED",
+            "condition": {
+              "op": "ALL",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "INDEPENDENT"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "NO_MATERIAL_SHARED_ERROR_IDENTIFIED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "DECLARED",
+                    "REVIEWED"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "fail_conditions": [
+          {
+            "reason_code": "VALIDATION_INDEPENDENCE_CONTRADICTED",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "SAME_DATA",
+                    "SHARED_DATA"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "MATERIAL_SHARED_ERROR"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "CONTRADICTED"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "unresolved_conditions": [
+          {
+            "reason_code": "VALIDATION_INDEPENDENCE_INPUT_UNRESOLVED",
+            "condition": {
+              "op": "ANY",
+              "args": [
+                {
+                  "op": "IN",
+                  "path": "edge.validation_independence",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.shared_error_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                },
+                {
+                  "op": "IN",
+                  "path": "edge.data_lineage_status",
+                  "values": [
+                    "UNKNOWN",
+                    "UNRESOLVED"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "DIRECT_EVALUATION",
+            "decision_class": "INDEPENDENCE_LABEL_REVIEWABLE",
+            "claim_ceiling": "The independence label is reviewable from declared lineage, data-sharing, and shared-error facts only. Comparability remains a separate F06R02 question; human scientific approval is still required."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANNOT_SUPPORT_INDEPENDENT_VALIDATION_LABEL",
+            "claim_ceiling": "The independence label is blocked; it does not invalidate either source measurement."
+          },
+          "UNRESOLVED": {
+            "route": "SOURCE_LOOKUP",
+            "decision_class": "ABSTAIN",
+            "claim_ceiling": "Missing lineage or shared-error evidence prevents an independence claim. SOURCE_LOOKUP is declared-only in this Draft."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "NO_RULE_INSTANCE",
+            "claim_ceiling": "No validation-independence instance was selected for this target."
+          }
+        }
+      },
+      {
+        "evaluation_contract_id": "EC-F07R01-CASE-IDENTIFIABILITY",
+        "runtime_subrule_id": "F07R01_CASE_IDENTIFIABILITY",
+        "target_kind": "CASE",
+        "implementation_status": "CANDIDATE_MAP_ONLY",
+        "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW",
+        "pass_conditions": [],
+        "fail_conditions": [],
+        "unresolved_conditions": [
+          {
+            "reason_code": "CANDIDATE_MAP_ONLY_NOT_EVALUATED",
+            "condition": {
+              "op": "EQ",
+              "path": "target.kind",
+              "value": "CASE"
+            }
+          }
+        ],
+        "result_effects": {
+          "PASS": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No identifying conclusion is frozen."
+          },
+          "FAIL": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No identifying conclusion is frozen."
+          },
+          "UNRESOLVED": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No identifying conclusion is frozen."
+          },
+          "NOT_APPLICABLE": {
+            "route": "HUMAN_OR_NEW_DATA",
+            "decision_class": "CANDIDATE_ONLY",
+            "claim_ceiling": "No identifying conclusion is frozen."
+          }
+        }
+      }
+    ]
+  }
+}

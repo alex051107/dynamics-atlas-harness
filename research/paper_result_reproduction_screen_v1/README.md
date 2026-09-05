@@ -51,3 +51,9 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## 首个实际Q09 DA/D0联合拟合批次
 
 [22–127 PQ联合拟合](q09_pq_joint_v3/REPORT_ZH.md)在独立IRF和共享donor寿命下，同时拟合真实DA/D0，单列DA内部donor-only比例。四组预定初值经数值缩放修复后通过梯度检查；原失败与重跑均保留。[先行IBH donor-only诊断](q09_donor_calibration_v2/REPORT_ZH.md)随批提供。它们是条件开发计算，尚无K3/33组全局比较、Q09 Rules触发或完整科学答案。
+
+## Q09规则控制的donor与仪器诊断
+
+[新方法诊断义务](q09_forward_adequacy_v1/REPORT_ZH.md)已实际派发并同实例重评。原Rules基线17个实例没有数值义务；新Q09窄规则触发三寿命donor校准、保持FRET两成分的联合重算及有限f0轮廓。联合deviance从18923.6172降到13880.0482，距离和donor-only系数随donor模型明显变化。IRF首尾中位数0但均有非零计数；校准误差尚未传播，态数仍未决。关闭规则不派发该补查，完整正确人工流程若得出相同结论不计Rules增益。
+
+[共享IBH参考组](q09_shared_ibh_v1/REPORT_ZH.md)保留两DA/一D0及四次拟合，一个初值落入更差边界解，未宣称所有初值一致。新的[零优化回放](q09_forward_adequacy_v1/REPLAY.md)直接从原始数据和保存参数重算证据，不必重新制造历史失败。完整科学回答仍0/20。

@@ -1,0 +1,15 @@
+{
+  "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+  "runtime_subrule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q09_t4l_state_number_20260905"
+  },
+  "status": "NOT_APPLICABLE",
+  "obligations": [],
+  "reason_codes": [
+    "RULE_DISABLED"
+  ],
+  "complete_question_answer": false,
+  "state_number_verdict": "UNRESOLVED"
+}
