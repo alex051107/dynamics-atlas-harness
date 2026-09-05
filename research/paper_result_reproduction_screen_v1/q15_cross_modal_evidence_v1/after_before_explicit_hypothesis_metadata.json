@@ -1,0 +1,53 @@
+{
+  "rule_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1",
+  "rule_instance_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1::ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "status": "UNRESOLVED",
+  "partial_claims": [
+    {
+      "pair": "175_228",
+      "observed_E_effect": -0.026169186819396173,
+      "descriptive_direction_retained_in_manual_checks": true,
+      "DEER_central_mean_change_source_axis_units": -9.962328949216861,
+      "author_forward_distance_changes_A": {
+        "FRET_sim": -7.900000000000006,
+        "PELDOR_sim": -9.899999999999999
+      },
+      "DEER_direction_matches_own_spin_prediction": true,
+      "fluorescence_relation": "DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT"
+    },
+    {
+      "pair": "55_175",
+      "observed_E_effect": 0.08198984534700182,
+      "descriptive_direction_retained_in_manual_checks": true,
+      "DEER_central_mean_change_source_axis_units": -14.964454034618896,
+      "author_forward_distance_changes_A": {
+        "FRET_sim": -9.400000000000006,
+        "PELDOR_sim": -13.8
+      },
+      "DEER_direction_matches_own_spin_prediction": true,
+      "fluorescence_relation": "DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT"
+    }
+  ],
+  "remaining_obligations": [
+    "TMR_CY5_DOUBLE_LABEL_DATA_AND_CALIBRATION",
+    "PROBE_AND_SAMPLE_CONDITION_EXPLANATIONS"
+  ],
+  "full_question_answer": false,
+  "new_numerical_operator_calls": 0,
+  "evidence_applications": 1,
+  "source_bindings": {
+    "manual_summary": "91d439f73526d778b3591e6a4871e6a49f60d432844e605c128578f5d2bfc85e",
+    "manual_DEER": "570c84703fe1420db6680cdce0f553eeeeeb421e1f1ee3b91d33688b42356752",
+    "author_forward": "36e08a5beed2baf76bb595690ca3e4c3436f91630a6b96f84ef7f14048783f7d"
+  },
+  "claim_ceiling": [
+    "No mean-E to absolute-distance conversion",
+    "Not a local FPS or spin-label simulation",
+    "DEER uses author-processed curves and common positive source-axis scale; original nm/Angstrom conflict retained",
+    "Cryogenic DEER and fluorescence are not pooled into a common population",
+    "Directional tension is not formal ensemble-model rejection or proof of a unique dye mechanism"
+  ],
+  "partial_answer_status": "MATCHED_DIRECTIONAL_EVIDENCE_AVAILABLE",
+  "source_request_route": "REQUEST_NEW_DATA_IF_PUBLIC_SOURCE_SEARCH_EXHAUSTED"
+}

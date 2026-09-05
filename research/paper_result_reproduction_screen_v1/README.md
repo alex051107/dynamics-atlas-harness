@@ -6,6 +6,14 @@ Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe92
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.
 
+## Latest Pro19 follow-up: matched scientific evidence
+
+[Pro19](pro_review_round19/reply.md) closes the prior Q09 continuation defects and accepts Q15's descriptive direction evidence. Its one source-consumption defect is repaired: both APBS paths validate expanded length and CRC before parsing; [all140 real files match existing receipts](q15_pro19_verification_v1/REPORT_ZH.md), with no main-science rerun.
+
+[Matched DEER and probe-forward evidence](q15_cross_modal_evidence_v1/REPORT_ZH.md) now yields a partial scientific interpretation:55/175 has directional agreement, while175/228 has directional tension with a stable-readout/two-reference interpretation. Author-computed probe predictions remain distinct from local simulations, and cryogenic DEER is not pooled with fluorescence populations. Missing TMR/Cy5 observations and sample/probe explanations remain open. Existing manual evidence is consumed with on1/off0 application and zero new numerical-operator credit. The separate background-policy operator genuinely ran once, preserving both direction patterns.327localtests pass.
+
+The original Q02 [small source intake](q02_cpmg_inventory_v1/REPORT_ZH.md) found18curves without downloading the214MB spectra archive; fitting is deferred while Q15/Q16 lead and Q17 gets a short source check. Earlier sections preserve prior snapshots.
+
 ## Current Q15 progress: a real method sensitivity obligation
 
 The [unchanged DraftRules probe](q15_rules_probe_v1/REPORT_ZH.md) produced23instances:10declarationPASS,10source-lookups,3not-applicable and0numericalactions. Its original entry rejection remains recorded. A new explicitly developmental [background-handling rule](q15_background_policy_v1/REPORT_ZH.md) then uses the observed negative-count and source-code discrepancy to trigger one real on1/off0 numerical comparison. Both predeclared alternatives preserve the observed direction pattern; this narrows a method uncertainty without certifying dye safety or protein closure.

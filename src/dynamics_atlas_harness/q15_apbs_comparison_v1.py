@@ -1,5 +1,14 @@
 """Source-compatible APBS fluorescence comparison; no protein-state inference."""
 import numpy as np
+import zlib
+
+
+def validate_member_bytes(data, member):
+    """Consume the already-admitted ZIP member identity, before any parsing."""
+    if len(data) != member['expanded_bytes']:
+        raise ValueError('SOURCE_MEMBER_EXPANDED_LENGTH_MISMATCH')
+    if f'{zlib.crc32(data) & 0xffffffff:08x}' != member['crc32'].lower():
+        raise ValueError('SOURCE_MEMBER_CRC_MISMATCH')
 
 POLICY = {'version':'q15-apbs-reported-method/v1','selection':'APBS source exports; raw total AA+DD+DA at least150',
           'minimum_raw_photons':150,'stoichiometry_open_interval':[.25,.75],

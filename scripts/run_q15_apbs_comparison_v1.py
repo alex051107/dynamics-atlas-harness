@@ -18,7 +18,7 @@ def main():
             path=t.parent.parent.parent/Path(item['path'])
             # Source receipts are workspace-relative; use exact known source directory and member name.
             path=t/'outputs'/source/'source_members'/name
-            b=path.read_bytes();h.update(name.encode()+b'\0'+len(b).to_bytes(8,'big')+b)
+            b=path.read_bytes();q.validate_member_bytes(b,item['member']);h.update(name.encode()+b'\0'+len(b).to_bytes(8,'big')+b)
             lines=b.decode().splitlines();i=lines.index('DATA');meta=dict(csv.reader(lines[1:i]));rows=list(csv.DictReader(lines[i+1:]));
             if meta['reductionMode']!='0' or int(meta['minPhotPerBurst'])!=50 or int(meta['minNeighbors'])!=15 or float(meta['arrivalWindow'])!=.0005 or float(meta['timeResolution'])!=1.25e-8:raise ValueError('SOURCE_BURST_POLICY_CHANGED')
             counts=np.array([[float(r[k])for k in ['F_Dexc_Dem','F_Dexc_Aem','F_Aexc_Aem']]for r in rows]);duration=np.array([float(r['Tau'])for r in rows])

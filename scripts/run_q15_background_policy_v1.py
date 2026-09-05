@@ -61,6 +61,7 @@ def main():
                 if item['status'] != 'LOCAL_HEADER_CENTRAL_CRC_LENGTH_MATCH':
                     raise ValueError('UNADMITTED_SOURCE')
                 b = (task / 'outputs' / source_name / 'source_members' / name).read_bytes()
+                q.validate_member_bytes(b, item['member'])
                 h.update(name.encode() + b'\0' + len(b).to_bytes(8, 'big') + b)
                 lines = b.decode().splitlines()
                 data_start = lines.index('DATA')
