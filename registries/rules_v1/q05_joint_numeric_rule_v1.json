@@ -1,0 +1,16 @@
+{
+  "rule_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1",
+  "status": "EXPLICIT_Q05_DEVELOPMENT_EXTENSION",
+  "case_id": "q05_nanodisc_saxs_noe_20260904",
+  "target_kind": "CASE",
+  "trigger_relation": "JOINT_ENSEMBLE_FIT",
+  "operator_id": "q05_common_weight_bme_v1",
+  "required_channels": [
+    "saxs",
+    "amide",
+    "methyl"
+  ],
+  "purpose": "CONDITIONAL_COMMON_WEIGHT_MAIN_CALCULATION",
+  "scientific_pass_enabled": false,
+  "basis": "Common ensemble requires the same weights for all channels; source authority papers/BME and fixed-weight method audit are recorded in PR25. This new development rule is not part of the immutable original eight-subrule slice."
+}

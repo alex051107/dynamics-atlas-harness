@@ -1,0 +1,15 @@
+{
+  "scope": "REVIEW_SIDE_ARITHMETIC_ONLY",
+  "computed_combined_reporting_statistic": 3.659746227320678,
+  "author_theta6_row": [
+    6.0,
+    1.746848,
+    3.659746,
+    0.174
+  ],
+  "rounded_6_decimal_match": true,
+  "formula": "(90*SAXS_mean_squared_residual + NOE_one_sided_squared_sum)/(90+NOE_violation_count)",
+  "scientific_threshold": false,
+  "matrix_or_optimizer_rerun": false,
+  "interpretation": "Corroborates deposited weight/statistics/grid correspondence; does not resolve Table2 NOE6.0 or establish original objective."
+}

@@ -35,3 +35,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## 第四轮修复与固定权重审计
 
 见 [第四轮修复](PRO_ROUND4_REPAIR_ZH.md) 和 [作者权重回算](q05_author_weight_audit_v1/REPORT_ZH.md)。当前科学完整回答仍为 0/20；声明测试通过不计科学正确率。
+
+## 第一项共同权重数值规则
+
+[实际运行与同实例重评](q05_joint_numeric_v1/REPORT_ZH.md)：新增 CASE 规则触发一次主计算，三通道损失下降，数值最优性通过；绝对相容性与完整Q05仍未决。
