@@ -1,4 +1,6 @@
 import unittest
+import json
+from pathlib import Path
 import numpy as np
 from dynamics_atlas_harness import q01_path_comparison_v1 as q
 from dynamics_atlas_harness import q01_relative_paths_v1 as r
@@ -40,12 +42,11 @@ class AbsolutePaths(unittest.TestCase):
         self.assertEqual(calls, [])
         before = a.evaluate(previous, method)
         evidence = a.dispatch(before, lambda request: dict(request))[0]
-        report = {'trajectory_count': 40, 'rows': [{'trajectory': 'ES17', 'methods': {
-            m: {'interpretation': 'Internal contact disagreement limits complete-state support'} for m in q.METHODS}}]}
+        report = json.loads((Path(__file__).resolve().parents[1]/'research/paper_result_reproduction_screen_v1/q01_absolute_paths_v1/numerical_report.json').read_text())
         after = a.evaluate(previous, method, evidence, lambda _: report)
         self.assertEqual(after['instance_id'], previous['instance_id'])
         self.assertEqual(after['operator_requests'], [])
-        self.assertIn('ES17', after['trajectory_interpretation_limits'])
+        self.assertTrue(any('ES17' in name for name in after['trajectory_interpretation_limits']))
         evidence['measurement_manifest_id'] = 'other'
         self.assertEqual(len(a.evaluate(previous, method, evidence, lambda _: report)['operator_requests']), 1)
 

@@ -237,7 +237,7 @@ def run(data,request_id,save):
 
 def request(data,g):return q.digest({'input':data.input_id,'graph':g,'config':CONFIG,'rule':RULE_ID,'operator':OPERATOR_ID})
 
-def evaluate(g,data,e=None,enabled=True,structure_evidence=None):
+def evaluate(g,data,e=None,enabled=True,structure_evidence=None,method_evidence=None,method_verifier=None):
     instance=q.rule_instance_id(RULE_ID,'CASE',g['case']['case_id'])
     out={'rule_instance_id':instance,'status':'UNRESOLVED','obligations':[],'reason_codes':[],'complete_question_answer':False}
     if not enabled:out['status']='NOT_APPLICABLE';return out
@@ -269,6 +269,9 @@ def evaluate(g,data,e=None,enabled=True,structure_evidence=None):
         except (ValueError,KeyError,TypeError) as error:
             out['reason_codes'].append('STRUCTURE_EVIDENCE_REJECTED');out['structure_rejection']=str(error)
             out['obligations']=[structural_obligation]
+    if method_evidence is not None:
+        from .q09_method_evidence_v1 import consume
+        return consume(out, data.input_id, method_evidence, method_verifier)
     return out
 
 def verify(data,e,rid):

@@ -1,0 +1,1657 @@
+{
+  "question_id": "Q01",
+  "evidence_report_id": "52500b0aeef10797cd1b879e08d0beb7e67ca02b203dfca39b7ec7eaece5f3b0",
+  "evidence_disposition": "SUPPORT_WITHIN_CEILING",
+  "group_movement_direction": "CLOSED_GREATER",
+  "terminal_lid_displacement_medians_A": {
+    "open": 3.766639858673632,
+    "closed": 9.711095675522916
+  },
+  "closed_minus_open_median_A": 5.944455816849285,
+  "conditional_uncertainty": {
+    "metric": "closed minus open median terminal lid displacement from analysis start",
+    "observed_A": 5.944455816849285,
+    "conditional_bootstrap_percentile_95_A": [
+      2.0720255777684145,
+      10.51072793560019
+    ],
+    "scope": "conditional resampling of the twenty source seed runs per group; not biological replication or force-field uncertainty",
+    "zero_observed_events_implies_zero_population_probability": false
+  },
+  "directional_paths_by_method": {
+    "deposited_uniform": {
+      "sustained_open_preference_trajectories": [
+        "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+      ],
+      "absolute_approach_open_and_leave_closed_trajectories": [
+        "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+      ]
+    },
+    "SI_per_contact": {
+      "sustained_open_preference_trajectories": [
+        "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+      ],
+      "absolute_approach_open_and_leave_closed_trajectories": [
+        "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+      ]
+    }
+  },
+  "all_trajectory_answers": [
+    {
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -3.448136082151448,
+        "closed": 4.057605729274824
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -2.7746581230295746,
+        "closed": 3.108449692275479
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -10.268635787750513,
+        "closed": 8.599246599374961
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 82,
+              "end_ns": 1020,
+              "sample_count": 939,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.25790146430008604,
+                  0.44667743417729544
+                ],
+                "closed_contact_normalized_direction": [
+                  0.11248103267296501,
+                  0.4858872968370474
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 82,
+              "end_ns": 1020,
+              "sample_count": 939,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.23751229695762088,
+                  0.421318268730774
+                ],
+                "closed_contact_normalized_direction": [
+                  0.0994808491670024,
+                  0.4854138548990981
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -10.776192826140914,
+        "closed": 9.343437046960933
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 53,
+              "end_ns": 1020,
+              "sample_count": 968,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.17576323315121709,
+                  0.47592577816416354
+                ],
+                "closed_contact_normalized_direction": [
+                  0.15092594490143366,
+                  0.56699972648502
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 53,
+              "end_ns": 1020,
+              "sample_count": 968,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.11738160265309812,
+                  0.4538933283506695
+                ],
+                "closed_contact_normalized_direction": [
+                  0.1392154812697989,
+                  0.5692473809551033
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -4.223302453560255,
+        "closed": 7.222524139664706
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 537,
+              "end_ns": 616,
+              "sample_count": 80,
+              "internal_disagreement_samples": 80,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.25966736667844736,
+                  -0.031624506494840776
+                ],
+                "closed_contact_normalized_direction": [
+                  0.23552544078526164,
+                  0.4665169209473345
+                ]
+              }
+            },
+            {
+              "start_ns": 618,
+              "end_ns": 1020,
+              "sample_count": 403,
+              "internal_disagreement_samples": 74,
+              "internal_disagreement_fraction": 0.18362282878411912,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.18738313877452797,
+                  0.33290594353532516
+                ],
+                "closed_contact_normalized_direction": [
+                  0.24556879853005445,
+                  0.5716138271515641
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 540,
+              "end_ns": 616,
+              "sample_count": 77,
+              "internal_disagreement_samples": 77,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.29043472450283986,
+                  -0.08750470093978828
+                ],
+                "closed_contact_normalized_direction": [
+                  0.2642516318821171,
+                  0.4653936567751787
+                ]
+              }
+            },
+            {
+              "start_ns": 618,
+              "end_ns": 1020,
+              "sample_count": 403,
+              "internal_disagreement_samples": 105,
+              "internal_disagreement_fraction": 0.26054590570719605,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.22844718504921377,
+                  0.26188963414688826
+                ],
+                "closed_contact_normalized_direction": [
+                  0.23703333939739116,
+                  0.5740162718653191
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -4.2085576612204285,
+        "closed": 1.339652035210797
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 1.2968153810101022,
+        "closed": 3.4544349176940665
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -1.2005314295150598,
+        "closed": -2.786838565655075
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.3559577763197872,
+        "closed": 1.8424451500573928
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.2787186280177174,
+        "closed": 0.4528527294147495
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 5.907927888790313,
+        "closed": -3.204471198520408
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -1.4440576794186306,
+        "closed": 0.6326017783109608
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.15699648227445095,
+        "closed": 0.44013182488750147
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -12.086782061486465,
+        "closed": 13.733288791689176
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 635,
+              "end_ns": 668,
+              "sample_count": 34,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.2131513142854819,
+                  0.3596267505735711
+                ],
+                "closed_contact_normalized_direction": [
+                  0.016333714652985994,
+                  0.2351768841022853
+                ]
+              }
+            },
+            {
+              "start_ns": 670,
+              "end_ns": 1020,
+              "sample_count": 351,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.23303448863616702,
+                  0.38443343465917695
+                ],
+                "closed_contact_normalized_direction": [
+                  0.010694814581698558,
+                  0.4596112394896065
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 635,
+              "end_ns": 668,
+              "sample_count": 34,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.19475427900731906,
+                  0.35444120511234595
+                ],
+                "closed_contact_normalized_direction": [
+                  0.00010805605224927661,
+                  0.22629280514471084
+                ]
+              }
+            },
+            {
+              "start_ns": 670,
+              "end_ns": 1020,
+              "sample_count": 351,
+              "internal_disagreement_samples": 1,
+              "internal_disagreement_fraction": 0.002849002849002849,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.18889764110724686,
+                  0.3743898021162284
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.005720013432355314,
+                  0.4582563089120532
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -16.11953524319354,
+        "closed": 10.036481581902084
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 115,
+              "end_ns": 1020,
+              "sample_count": 906,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.24603979225511852,
+                  0.45557659907305387
+                ],
+                "closed_contact_normalized_direction": [
+                  0.249837672446528,
+                  0.6264946259051901
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 115,
+              "end_ns": 1020,
+              "sample_count": 906,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.18121908101329193,
+                  0.38544495023794206
+                ],
+                "closed_contact_normalized_direction": [
+                  0.24144542216028766,
+                  0.6307381687713076
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -10.915761777742755,
+        "closed": 10.790182270152453
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 399,
+              "end_ns": 784,
+              "sample_count": 386,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.04343655420546514,
+                  0.4034695896460801
+                ],
+                "closed_contact_normalized_direction": [
+                  0.10354617747696317,
+                  0.49915698868256814
+                ]
+              }
+            },
+            {
+              "start_ns": 786,
+              "end_ns": 1020,
+              "sample_count": 235,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.16686079620078828,
+                  0.42827298883995985
+                ],
+                "closed_contact_normalized_direction": [
+                  0.11096395076439697,
+                  0.4908812012565055
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 2,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 399,
+              "end_ns": 784,
+              "sample_count": 386,
+              "internal_disagreement_samples": 1,
+              "internal_disagreement_fraction": 0.0025906735751295338,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.021595610087846245,
+                  0.3520142972377947
+                ],
+                "closed_contact_normalized_direction": [
+                  0.09024625443064097,
+                  0.49912870799762576
+                ]
+              }
+            },
+            {
+              "start_ns": 786,
+              "end_ns": 1020,
+              "sample_count": 235,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.09835379618689509,
+                  0.38810483910168786
+                ],
+                "closed_contact_normalized_direction": [
+                  0.09791287338002372,
+                  0.49057529092174945
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -8.843977341507149,
+        "closed": 5.414687462163739
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 4,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 605,
+              "end_ns": 646,
+              "sample_count": 42,
+              "internal_disagreement_samples": 41,
+              "internal_disagreement_fraction": 0.9761904761904762,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.16980572378426956,
+                  0.3271711154662819
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.13929503826103445,
+                  0.002140424482404766
+                ]
+              }
+            },
+            {
+              "start_ns": 879,
+              "end_ns": 904,
+              "sample_count": 26,
+              "internal_disagreement_samples": 26,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.23260353714524312,
+                  0.3615705673903828
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.16921292268172733,
+                  -0.07343104647852707
+                ]
+              }
+            },
+            {
+              "start_ns": 949,
+              "end_ns": 978,
+              "sample_count": 30,
+              "internal_disagreement_samples": 30,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.235968140277795,
+                  0.34323636338730085
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.14983095946447014,
+                  -0.051043091607486386
+                ]
+              }
+            },
+            {
+              "start_ns": 987,
+              "end_ns": 1007,
+              "sample_count": 21,
+              "internal_disagreement_samples": 21,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.25000862596434187,
+                  0.3534689766988012
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.14424693036753852,
+                  -0.053531133303421546
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 4,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 605,
+              "end_ns": 646,
+              "sample_count": 42,
+              "internal_disagreement_samples": 42,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.11499520157233009,
+                  0.28226153131278897
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.1603342337067477,
+                  -0.014561379526242382
+                ]
+              }
+            },
+            {
+              "start_ns": 879,
+              "end_ns": 904,
+              "sample_count": 26,
+              "internal_disagreement_samples": 26,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.20733489905505673,
+                  0.33780156853274157
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.18896271456346353,
+                  -0.08912580392876847
+                ]
+              }
+            },
+            {
+              "start_ns": 949,
+              "end_ns": 978,
+              "sample_count": 30,
+              "internal_disagreement_samples": 30,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.214203746445273,
+                  0.3242821080516941
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.1716309807103067,
+                  -0.06952905465596039
+                ]
+              }
+            },
+            {
+              "start_ns": 987,
+              "end_ns": 1007,
+              "sample_count": 21,
+              "internal_disagreement_samples": 21,
+              "internal_disagreement_fraction": 1.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.21750655285003698,
+                  0.3241142251104886
+                ],
+                "closed_contact_normalized_direction": [
+                  -0.15527287275156257,
+                  -0.0721005632305384
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.21625535828417597,
+        "closed": 0.36386196951989813
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -8.912520558303893,
+        "closed": 8.346137225968896
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 59,
+              "end_ns": 1020,
+              "sample_count": 962,
+              "internal_disagreement_samples": 3,
+              "internal_disagreement_fraction": 0.0031185031185031187,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.09807053867181349,
+                  0.35688976796634736
+                ],
+                "closed_contact_normalized_direction": [
+                  0.031016242470955347,
+                  0.4410319350321707
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE",
+          "all_channels_agree_in_observed_primary_events": false,
+          "events": [
+            {
+              "start_ns": 64,
+              "end_ns": 1020,
+              "sample_count": 957,
+              "internal_disagreement_samples": 3,
+              "internal_disagreement_fraction": 0.003134796238244514,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  -0.04819494491891367,
+                  0.32449079946970244
+                ],
+                "closed_contact_normalized_direction": [
+                  0.015283141840429811,
+                  0.4390537204666724
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed_group": "closed",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -8.65286763753102,
+        "closed": 8.535314639941724
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 45,
+              "end_ns": 1020,
+              "sample_count": 976,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.17044313386225168,
+                  0.45473419863577647
+                ],
+                "closed_contact_normalized_direction": [
+                  0.14486041304822675,
+                  0.4638257061059307
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 1,
+          "contact_event_interpretation": "NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS",
+          "all_channels_agree_in_observed_primary_events": true,
+          "events": [
+            {
+              "start_ns": 45,
+              "end_ns": 1020,
+              "sample_count": 976,
+              "internal_disagreement_samples": 0,
+              "internal_disagreement_fraction": 0.0,
+              "contact_direction_ranges": {
+                "open_contact_normalized_direction": [
+                  0.11232386729662326,
+                  0.4122779945077422
+                ],
+                "closed_contact_normalized_direction": [
+                  0.13294646769362783,
+                  0.4626121591612091
+                ]
+              }
+            }
+          ],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 3.498745247092172,
+        "closed": -1.010150037825305
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.8666058870711009,
+        "closed": -0.01869187663018934
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.11423145824061187,
+        "closed": 0.47324831343390983
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.3270119598601271,
+        "closed": 0.8358130432303241
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.27229801348091565,
+        "closed": 1.097139558248502
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -1.8574582508277397,
+        "closed": 3.0102455213607016
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.5290771006520494,
+        "closed": 1.640048490010562
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.2983206196966197,
+        "closed": -0.30256361191688796
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.21181055931704806,
+        "closed": 1.462943276231659
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.2902863405091862,
+        "closed": 0.35292177851896867
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.5773149445351855,
+        "closed": 0.2480534875220748
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.6666384459182355,
+        "closed": 0.24658043063615231
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.677795978706135,
+        "closed": 2.6965724627448147
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 3.029316848721175,
+        "closed": -0.26747955450400696
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 2.96851968618998,
+        "closed": -0.20474763386601325
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.9724315206881791,
+        "closed": 2.048519594234449
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.1247715372913345,
+        "closed": 1.8419219166824838
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.8497547093332805,
+        "closed": 0.7159540168375429
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": true,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": -0.15889782426532228,
+        "closed": 0.9821102438703164
+      },
+      "absolute_approach_open_and_leave_closed": true,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed_group": "open",
+      "first20_to_last20_NMR_distance_delta_A": {
+        "open": 0.2667183246588589,
+        "closed": -0.8710196792297644
+      },
+      "absolute_approach_open_and_leave_closed": false,
+      "both_reference_distances_increase": false,
+      "methods": {
+        "deposited_uniform": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        },
+        "SI_per_contact": {
+          "sustained_opposite_preference_event_count": 0,
+          "contact_event_interpretation": "NOT_APPLICABLE_NO_PRIMARY_EVENT",
+          "all_channels_agree_in_observed_primary_events": null,
+          "events": [],
+          "complete_physical_open_state_established": false
+        }
+      }
+    }
+  ],
+  "answer": "Within these source simulations and20–1020ns, closed-seeded paths have greater typical lid displacement (closed 9.71Å; open 3.77Å). deposited_uniform: 9 sustained relative-open paths, 9 also approach open and leave closed; SI_per_contact: 9 sustained relative-open paths, 9 also approach open and leave closed. This supports the bounded finite-time asymmetry and open-direction rearrangement, compatible with the closed-state metastability interpretation. Contact disagreements retain their event duration and amplitude; neither relative preference nor MD proximity establishes a complete physical state, equilibrium population, rate or activity.",
+  "scientific_interpretation_scope": "Finite-time source-simulation structural motion; exposed development answer.",
+  "terminal_disposition": "ABSTAIN_OR_HUMAN_REVIEW",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "human_final_authority": true,
+  "unsupported_claims": [
+    "all candidates complete one open-state transition",
+    "equilibrium population",
+    "transition rate",
+    "activity",
+    "mutant causal effect",
+    "held-out accuracy"
+  ],
+  "new_operator_calls": 0,
+  "new_trajectory_calculations": 0,
+  "accuracy_gain_claimed": false
+}

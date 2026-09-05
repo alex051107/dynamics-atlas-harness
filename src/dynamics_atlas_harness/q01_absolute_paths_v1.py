@@ -135,9 +135,11 @@ def evaluate(relative_instance, method, evidence=None, verify=None, enabled=True
                 raise ValueError('ALL40_REQUIRED')
             limits = {row['trajectory']: {m: row['methods'][m]['interpretation'] for m in q.METHODS}
                       for row in report['rows']}
+            answer = question_answer(report)
             result.update(status='ABSOLUTE_PATHS_AND_CONTACT_DECOMPOSITION_EVALUATED',
                           numerical_evidence=report, trajectory_interpretation_limits=limits,
-                          scientific_claim='Finite-time structural direction assessed; no automatic complete-state assignment',
+                          scientific_claim=answer['answer'],
+                          question_level_answer=answer,
                           original_relative_labels_preserved=True, accuracy_gain_claimed=False)
             return result
         except (ValueError, KeyError, TypeError) as exc:
@@ -154,3 +156,67 @@ def dispatch(instance, operator):
             raise ValueError('UNBOUND_ABSOLUTE_PATH_OPERATOR')
         results.append(operator(request))
     return results
+
+def question_answer(report):
+    """Reduce verified paths to an evidence-dependent finite-time answer.
+
+    This adds no numerical method. Human source-science authority remains pending.
+    """
+    rows = report['rows']
+    if len(rows) != 40 or len({r['trajectory'] for r in rows}) != 40:
+        raise ValueError('QUESTION_ANSWER_REQUIRES_ALL40')
+    groups = {s: [r for r in rows if r['seed_group'] == s] for s in q.STATES}
+    if any(len(group) != 20 for group in groups.values()):
+        raise ValueError('QUESTION_ANSWER_GROUP_OWNERSHIP')
+    metric = 'lid_displacement_from_20ns_A'
+    medians = {s: float(np.median([r['absolute_metrics'][metric]['first20_to_last20']['after_median'] for r in group]))
+               for s, group in groups.items()}
+    difference = medians['closed']-medians['open']
+    if not np.isfinite(list(medians.values())).all() or not np.isclose(difference, report['uncertainty']['observed_A'], atol=1e-10, rtol=1e-10):
+        raise ValueError('QUESTION_GROUP_SUMMARY_INCONSISTENT')
+    movement = ('CLOSED_GREATER' if difference > 0 else 'OPEN_GREATER' if difference < 0 else 'EQUAL')
+    trajectories = []; by_method = {}
+    for row in rows:
+        delta = {s: row['absolute_metrics'][s+'_reference_lid_rmsd_A']['first20_to_last20']['delta'] for s in q.STATES}
+        if not np.isfinite(list(delta.values())).all():
+            raise ValueError('QUESTION_ABSOLUTE_DIRECTION_MISSING')
+        approach = delta['open'] < 0 and delta['closed'] > 0
+        methods = {}
+        for name in q.METHODS:
+            events = row['methods'][name]['events_by_persistence']['20']
+            event_rows = [{'start_ns': e['start_ns'], 'end_ns': e['end_ns'], 'sample_count': e['sample_count'],
+                           'internal_disagreement_samples': e['event_contact_internal_disagreement_frames'],
+                           'internal_disagreement_fraction': e['event_contact_internal_disagreement_frames']/e['sample_count'],
+                           'contact_direction_ranges': {k: v for k, v in e['event_range'].items() if k.endswith('normalized_direction')}} for e in events]
+            methods[name] = {'sustained_opposite_preference_event_count': len(events),
+                'contact_event_interpretation': ('NOT_APPLICABLE_NO_PRIMARY_EVENT' if not events else
+                    'INTERNAL_DISAGREEMENT_RECORDED_WITH_DURATION_AND_AMPLITUDE' if any(e['internal_disagreement_samples'] for e in event_rows)
+                    else 'NO_INTERNAL_DISAGREEMENT_OBSERVED_IN_PRIMARY_EVENTS'),
+                'all_channels_agree_in_observed_primary_events': None if not events else not any(e['internal_disagreement_samples'] for e in event_rows),
+                'events': event_rows, 'complete_physical_open_state_established': False}
+        trajectories.append({'trajectory': row['trajectory'], 'seed_group': row['seed_group'],
+            'first20_to_last20_NMR_distance_delta_A': delta,
+            'absolute_approach_open_and_leave_closed': bool(approach),
+            'both_reference_distances_increase': bool(all(v > 0 for v in delta.values())), 'methods': methods})
+    for name in q.METHODS:
+        selected = [r for r in trajectories if r['seed_group'] == 'closed' and r['methods'][name]['sustained_opposite_preference_event_count']]
+        by_method[name] = {'sustained_open_preference_trajectories': [r['trajectory'] for r in selected],
+            'absolute_approach_open_and_leave_closed_trajectories': [r['trajectory'] for r in selected if r['absolute_approach_open_and_leave_closed']]}
+    supported = movement == 'CLOSED_GREATER' and all(v['absolute_approach_open_and_leave_closed_trajectories'] for v in by_method.values())
+    counts = '; '.join(f"{name}: {len(v['sustained_open_preference_trajectories'])} sustained relative-open paths, {len(v['absolute_approach_open_and_leave_closed_trajectories'])} also approach open and leave closed" for name, v in by_method.items())
+    direction = {'CLOSED_GREATER': 'closed-seeded paths have greater typical lid displacement',
+                 'OPEN_GREATER': 'open-seeded paths have greater typical lid displacement', 'EQUAL': 'the two seed groups have equal median lid displacement'}[movement]
+    claim = (f"Within these source simulations and20–1020ns, {direction} (closed {medians['closed']:.2f}Å; open {medians['open']:.2f}Å). {counts}. "+
+        ('This supports the bounded finite-time asymmetry and open-direction rearrangement, compatible with the closed-state metastability interpretation.' if supported else
+         'These results do not support the requested combination of greater closed-seed motion and sustained absolute open-direction rearrangement.')+
+        ' Contact disagreements retain their event duration and amplitude; neither relative preference nor MD proximity establishes a complete physical state, equilibrium population, rate or activity.')
+    return {'question_id': 'Q01', 'evidence_report_id': q.identity(report),
+        'evidence_disposition': 'SUPPORT_WITHIN_CEILING' if supported else 'CANNOT_SUPPORT_REQUESTED_CLAIM',
+        'group_movement_direction': movement, 'terminal_lid_displacement_medians_A': medians,
+        'closed_minus_open_median_A': difference, 'conditional_uncertainty': report['uncertainty'],
+        'directional_paths_by_method': by_method, 'all_trajectory_answers': trajectories,
+        'answer': claim, 'scientific_interpretation_scope': 'Finite-time source-simulation structural motion; exposed development answer.',
+        'terminal_disposition': 'ABSTAIN_OR_HUMAN_REVIEW', 'source_science_review_status': 'PENDING_DOMAIN_REVIEW',
+        'human_final_authority': True, 'unsupported_claims': ['all candidates complete one open-state transition',
+            'equilibrium population', 'transition rate', 'activity', 'mutant causal effect', 'held-out accuracy'],
+        'new_operator_calls': 0, 'new_trajectory_calculations': 0, 'accuracy_gain_claimed': False}

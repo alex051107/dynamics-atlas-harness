@@ -1,0 +1,29 @@
+{
+  "question_id": "Q01",
+  "original_question_preserved": true,
+  "development_answer_status": "COMPLETE_FINITE_TIME_ANSWER_WITH_NAMED_EXTERNAL_AI_SCIENCE_REVIEW",
+  "answer_id": "87df326491b875d3ed949f18ee0e582af84b53efb027d4801dbe7c0e43196eea",
+  "report_id": "52500b0aeef10797cd1b879e08d0beb7e67ca02b203dfca39b7ec7eaece5f3b0",
+  "rule_instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "measurement_manifest_id": "a520303b79452f14e45c38b3468850f47569ba4e54605017a27a10e4c3c06de7",
+  "method_id": "861ba6378a5d71031dd55d2622c561aa0c0f8588bd451cef891e2070a941f948",
+  "named_review": {
+    "captured_at": "2026-09-05T15:18:40.363575+00:00",
+    "reviewed_head": "1fbb417113b01952678eec9d0f02a240524cc95e",
+    "decision": "PASS_LIMITED_TO_Q01_ORIGINAL_FINITE_TIME_SCIENTIFIC_ANSWER",
+    "reviewer": "ChatGPT 6 Pro",
+    "reviewer_type": "external_AI_not_human_domain_reviewer",
+    "complete": true,
+    "completion_evidence": "Worked18m22s,complete numbered sections1–9,Responseactions andCopyresponse",
+    "scope": "All40trajectorysummary independentlyrecomputed;4source modules/isolatedchecks;CI;notrawMDgeometryrerun/full80080rows/figurevisual",
+    "remaining": "Bind evidence-dependent question-level answer and existing named review boundary; Q09manual evidence consumption recommended (now locallycomplete); no newQ01 scientific analysis."
+  },
+  "review_scope": "Pro16 accepted the bounded scientific content at its reviewed head; this new evidence-dependent reducer is a subsequent code change, tested locally and pending next review.",
+  "source_science_review_status": "PENDING_DOMAIN_REVIEW",
+  "human_final_authority": true,
+  "human_final_approval_recorded": false,
+  "development_question_content_completed": true,
+  "heldout_accuracy": "NOT_MEASURED",
+  "incremental_Rules_accuracy": "NOT_ESTABLISHED",
+  "completed_at": "2026-09-05T15:25:52.358332+00:00"
+}

@@ -1,8 +1,8 @@
 # Dynamics Atlas：Rules Table 与 Agent Harness Master Plan
 
-> 版本：v2.4
+> 版本：v2.5
 > 日期：2026-09-05
-> 状态：Q01已形成全40轨迹原题科学答复草案，待独立审阅；Q09接入已有方法诊断，完整题级科学验收仍0/20
+> 状态：Q01开发题级答复完成并获Pro科学内容审阅通过，覆盖1/20；Q09按实证续算，人类最终科学批准待审
 > 适用范围：Dynamics Atlas prototype、Rules runtime、Profile Agent、Harness、registered operators 与科学验证路线
 
 ## 文档边界
@@ -47,6 +47,8 @@ Dynamics Atlas 是一个 **scientific workflow compiler**：系统把用户问�
 [Q05当前可审查代码与执行证据](../research/paper_result_reproduction_screen_v1/q05_review_evidence/README.md)包含实际17条规则结果及数值方法对照。自动跟进不因首题诊断完成而停止；按每轮实际证据推进最终目标。
 
 ## 2026-09-04 Pro 审阅后的执行修订
+
+2026-09-05 Pro16后：Q01有限时间原题科学内容通过具名ChatGPT6Pro审阅，完成证据依赖的题级答复；反向组差异、同时远离双参照和接触分歧会改变输出。开发题级内容覆盖1/20，保留PENDING_DOMAIN_REVIEW及人类最终权威，准确率未测，不新增Q01科学计算。Q09已核验36人工候选并按组改变处置，随后规则仅续算3个实际STOP点；1个较高损失点通过，较低未完成点仍保留。当前只做背景参数数值停止原因诊断，不重跑全33。见[Q01完成答复](../research/paper_result_reproduction_screen_v1/q01_question_answer_v1/REPORT_ZH.md)、[Q09实际续算](../research/paper_result_reproduction_screen_v1/q09_targeted_continuation_v1/REPORT_ZH.md)及[20题进度](../research/paper_result_reproduction_screen_v1/question_progress_v2.json)。下方为此前快照。
 
 2026-09-05 Pro15后：Q01现已完成全40条绝对几何、相对20ns起点位移、局部接触分解及整轨迹排除的开放MD参照比较。终段lid位移中位数开放种子3.77Å、闭合种子9.71Å；原9条持续相反偏好候选均在首尾窗口更接近开放NMR参照、远离闭合参照。ES17等局部接触仍存在内部方向分歧，证据限制完整开放态解释。连续测量从保存坐标及原始NMR重新构建差为0，输入/参考绑定修复；同一Rules实例实际补算开1/关0，零新GROMACS和优化。302测试及全40产物核查通过。已形成原题有限时间结构答复草案，提交独立审阅；下一步把Q09已有10+26个人工诊断核验后接回方法义务，零重复拟合，不转记Rules补算。见[Q01科学答复](../research/paper_result_reproduction_screen_v1/q01_absolute_paths_v1/REPORT_ZH.md)。下方为此前快照。
 
