@@ -1,5 +1,7 @@
 # Paper-result reproduction screen v1
 
+[一页中文现状与下一步](CURRENT_STATUS_ZH.md)汇总完整答案、部分实算、未运行问题和目前最明确的规则缺口。
+
 Screened on 2026-09-04 against the post-PR24 implementation at `914bc00816c7fe9222bd960a4eda56cd01e8a5c6`. The initial report and JSON/CSV preserve the screening snapshot: 20 questions from 10 primary papers, all `NOT_RUN` at initial submission. Later review, Q05 numerical work and an actual Rules probe are recorded below.
 
 The goal is to test whether paper data, frozen Rules, connected Operators and justified additional calculations can produce a bounded scientific conclusion comparable to a paper result. The initial screen found zero complete registered routes for these new questions; this is an integration gap, not twenty scientific failures.

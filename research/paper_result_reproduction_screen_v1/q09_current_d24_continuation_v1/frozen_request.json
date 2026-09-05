@@ -1,0 +1,56 @@
+{
+  "operator_id": "q09_targeted_source_order_continuation_v1",
+  "policy": {
+    "version": "q09_targeted_source_order_continuation_v1",
+    "IRF_shift": "padded_linear_v2",
+    "donor_components": 3,
+    "FRET_components": 2,
+    "sigma_A": 6.0,
+    "distance_bounds_A": [
+      10.0,
+      120.0
+    ],
+    "seconds_per_fit": 60,
+    "maxiter": 1500,
+    "max_fits": 3,
+    "stationarity_limit": 1e-06,
+    "window_and_normalization": "unchanged_source_native",
+    "unique_D0_likelihood": true,
+    "optimizer": "existing_scaled_L-BFGS-B"
+  },
+  "input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "base_result_id": "9218233bdfb5f09473a7cd614038082f24c50e8844b098f0bb54620a63faae11",
+  "selected": [
+    {
+      "reference": "D0_24",
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "parent_candidate_id": "82a8789211f2a92932d76fbaf3f88bbae75a19151532484eb42be4de5d499857",
+      "initial": [
+        0.511704608185522,
+        4.2945109711682505,
+        2.8730635333992063,
+        0.10822270275007774,
+        0.6021054339225503,
+        0.006239790390162528,
+        -0.06271683212739187,
+        19.712449853278205,
+        40.476434927526014,
+        0.7447013725078819,
+        0.044329456197326235,
+        0.0018843298429015,
+        1.0000016184201161,
+        39.74081460224838,
+        15.562968676590227,
+        0.13092735298691582,
+        0.0336719619881494,
+        0.002126353700456641,
+        0.8045953466915563
+      ]
+    }
+  ],
+  "request_id": "c0917e6b1d44a264ed7aa204bf2f689215da404b7bf89a8e0a1f3cbeb7956f31"
+}
