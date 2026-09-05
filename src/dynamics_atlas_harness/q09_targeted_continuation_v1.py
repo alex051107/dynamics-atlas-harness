@@ -13,6 +13,33 @@ NEEDS_CONTINUATION = {'LOWER_FEASIBLE_CANDIDATE_REQUIRES_CONTINUATION',
                       'NO_STATIONARY_CANDIDATE_REQUIRES_CONTINUATION'}
 
 
+def current_groups(previous):
+    """Fold verified descendants without overwriting the historical manual report."""
+    report = previous['method_evidence']
+    groups = deepcopy(report['source_order_groups'])
+    for row in report['group_dispositions']:
+        gr = groups[row['reference']]
+        if row != m.group_disposition(row['reference'], gr['owners'], gr['candidates']):
+            raise ValueError('METHOD_DISPOSITION_NOT_DERIVED_FROM_CANDIDATES')
+    history = previous.get('targeted_numerical_history')
+    if history is None:
+        history = [previous['targeted_numerical_evidence']] if 'targeted_numerical_evidence' in previous else []
+    for result in history:
+        for run in result['runs']:
+            candidates = groups[run['reference']]['candidates']
+            parents = [c for c in candidates if c['candidate_id'] == run['parent_candidate_id']]
+            if len(parents) != 1:
+                raise ValueError('CONTINUATION_PARENT_NOT_CURRENT')
+            child = deepcopy(run['checked'])
+            if any(c['candidate_id'] == child['candidate_id'] for c in candidates):
+                raise ValueError('CONTINUATION_CHILD_ID_REUSED')
+            # A worse stationary point must not erase a lower feasible STOP.
+            if child['objective'] <= parents[0]['objective']:
+                candidates.remove(parents[0])
+            candidates.append(child)
+    return groups
+
+
 def request(previous):
     if previous.get('method_evidence_application') != 'VERIFIED_MANUAL_DIAGNOSTICS_CONSUMED':
         raise ValueError('VERIFIED_MANUAL_METHOD_RESULT_REQUIRED')
@@ -20,15 +47,12 @@ def request(previous):
     if report['policy'] != m.POLICY or report['provenance'] != m.PROVENANCE:
         raise ValueError('MANUAL_METHOD_CHANGED')
     selected = []
-    for row in report['group_dispositions']:
-        gr = report['source_order_groups'][row['reference']]
-        expected = m.group_disposition(row['reference'], gr['owners'], gr['candidates'])
-        if row != expected:
-            raise ValueError('METHOD_DISPOSITION_NOT_DERIVED_FROM_CANDIDATES')
+    for ref, gr in current_groups(previous).items():
+        row = m.group_disposition(ref, gr['owners'], gr['candidates'])
         if row['status'] in NEEDS_CONTINUATION:
             for candidate in gr['candidates']:
                 if candidate['numerical_status'] != 'PASS':
-                    selected.append({'reference': row['reference'], 'owners': row['owners'],
+                    selected.append({'reference': ref, 'owners': row['owners'],
                         'parent_candidate_id': candidate['candidate_id'], 'initial': candidate['parameters']})
     if len(selected) > POLICY['max_fits']:
         raise ValueError('TARGETED_BUDGET_EXCEEDED')
@@ -62,12 +86,14 @@ def evaluate(previous, evidence=None, verify=None, enabled=True):
         out['targeted_continuation'] = 'EVIDENCE_REJECTED'; out['targeted_rejection'] = str(error); return out
     out['targeted_operator_obligations'] = []
     out['targeted_continuation'] = 'TARGETED_NUMERICAL_CONTINUATION_ASSESSED'
-    out['targeted_numerical_evidence'] = report
-    replacements = {}
-    for ref in {r['reference'] for r in req['selected']}:
-        old = previous['method_evidence']['source_order_groups'][ref]
-        candidates = old['candidates']+[r['checked'] for r in report['runs'] if r['reference'] == ref]
-        replacements[ref] = m.group_disposition(ref, old['owners'], candidates)
+    history = deepcopy(previous.get('targeted_numerical_history',
+        [previous['targeted_numerical_evidence']] if 'targeted_numerical_evidence' in previous else []))
+    history.append(deepcopy(report))
+    out['targeted_numerical_history'] = history
+    out['targeted_numerical_evidence'] = deepcopy(report)
+    groups = current_groups(out)
+    replacements = {ref: m.group_disposition(ref, gr['owners'], gr['candidates'])
+                    for ref, gr in groups.items()}
     out['method_obligations'] = [dict(replacements[row['reference']], kind='DONOR_GROUP_NEXT_ACTION')
         if row.get('reference') in replacements and row['kind'] == 'DONOR_GROUP_NEXT_ACTION' else row
         for row in previous['method_obligations']]

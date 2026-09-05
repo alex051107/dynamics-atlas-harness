@@ -329,3 +329,8 @@ PYTHONPATH=src python3 -m unittest discover -s tests -v
 - 上游 Rules、selector、CaseGraph 和 HSP90 inputs 的冻结身份见 `config/frozen_assets_v0_1.json`；
 - 初始 baseline 进入 `main` 后，后续修改一律从新分支提交 Pull Request；
 - PR 的最小检查和科学边界见 `CONTRIBUTING.md`。
+
+
+## Pro17 后续进展（2026-09-05）
+
+Q01科学答复与题级输出通过Pro17并冻结。Q09已修复第二轮选回旧候选的问题：真实保存结果现在只选择两个最新未完成点，0重新拟合；313本地回归通过。下一项新增题目推进Q15，已核对SI校正参数与公式，现有66文件为63DCBS+3背景、0APBS。开发题级内容完成1/20、最终人类批准0、准确率未测。

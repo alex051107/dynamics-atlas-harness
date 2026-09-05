@@ -38,13 +38,25 @@ class ContinuationTests(unittest.TestCase):
         previous = self.previous(); req = c.request(previous)
         report = {'request_id': req['request_id'], 'optimizer_calls': 1,
                   'runs': [{'reference': 'one', 'parent_candidate_id': 'stopped',
-                            'checked': {'objective': .9, 'numerical_status': 'PASS', 'candidate_id': 'new'}}]}
+                            'checked': {'objective': .9, 'numerical_status': 'PASS', 'candidate_id': 'new', 'parameters': [.9]}}]}
         evidence = {k: req[k] for k in ('request_id', 'input_id', 'rule_instance_id', 'base_result_id')}
         evidence['report_id'] = c.a.q.digest(report)
         after = c.evaluate(previous, evidence, lambda _: report)
         self.assertEqual(after['method_obligations'][0]['status'], 'CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE')
         self.assertEqual(after['comparison'], previous['comparison'])
         self.assertFalse(after['complete_question_answer'])
+        self.assertEqual(c.request(after)['selected'], [])
+        calls = []
+        c.dispatch(c.evaluate(after), after, calls.append)
+        self.assertEqual(calls, [])
+        self.assertEqual(after['method_evidence'], previous['method_evidence'])
+        report['runs'][0]['checked'].update(numerical_status='NUMERICAL_STOP_WITH_FEASIBLE_POINT')
+        evidence['report_id'] = c.a.q.digest(report)
+        stopped = c.evaluate(previous, evidence, lambda _: report)
+        self.assertEqual(c.request(stopped)['selected'], [{'reference': 'one', 'owners': ['A'],
+                         'parent_candidate_id': 'new', 'initial': [.9]}])
+        c.dispatch(c.evaluate(stopped, enabled=False), stopped, calls.append)
+        self.assertEqual(calls, [])
         report['runs'][0]['checked'].update(objective=1.1, numerical_status='PASS')
         evidence['report_id'] = c.a.q.digest(report)
         after = c.evaluate(previous, evidence, lambda _: report)

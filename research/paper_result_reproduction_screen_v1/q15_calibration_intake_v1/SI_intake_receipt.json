@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SI_INTAKE_AND_SEARCH_DERIVATIVE",
+  "downloaded_at": "2026-09-05T15:51:48.721523+00:00",
+  "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-022-31945-6/MediaObjects/41467_2022_31945_MOESM1_ESM.pdf",
+  "HTTP_status": 200,
+  "content_type": "application/pdf",
+  "bytes": 5385435,
+  "SHA256": "7ea3bd82e01cee7df2f9cd0840b1038e1be6d2aa1aa287f2a3ca6b281244874b",
+  "converter": "/opt/homebrew/bin/pdftotext",
+  "converter_arguments": [
+    "-layout",
+    "PDF",
+    "stdout"
+  ],
+  "PDF": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/inputs/q15_author/Peter_2022_Supplementary_Information.pdf",
+  "MD": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/inputs/q15_author/Peter_2022_Supplementary_Information.md",
+  "characters": 27644,
+  "page_breaks": 24,
+  "conversion_runs": 1,
+  "scientific_fits": 0
+}

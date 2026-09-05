@@ -1,0 +1,23 @@
+{
+  "version": "q09-background-profile-canary/v1",
+  "source_method": "padded_linear_v2;mix beforeLin and finalmasknormalization",
+  "background_bounds": [
+    1e-12,
+    0.05
+  ],
+  "count_parity_backgrounds": [
+    0.0,
+    0.001,
+    0.05
+  ],
+  "count_relative_tolerance": 1e-12,
+  "gradient_atol": 2e-08,
+  "gradient_rtol": 0.001,
+  "root_xtol": 1e-15,
+  "root_rtol": 1e-14,
+  "root_maxiter": 100,
+  "maximum_scalar_roots": 9,
+  "full_fit_optimizer_calls": 0,
+  "Rules_controlled": false,
+  "official_API": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html"
+}

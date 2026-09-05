@@ -13,14 +13,20 @@ from dynamics_atlas_harness.q09_cached_group_v2 import CachedGroup
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--task-root', type=Path, required=True); p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--previous-result', type=Path, help='Latest verified rules_after.json; defaults to the original manual admission for first use.')
     args = p.parse_args(); task = args.task_root.resolve(); out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=False)
     def save(n, value): (out/n).write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n')
     parent = task/'outputs/q09_method_evidence_v1'
-    previous = json.loads((parent/'rules_after.json').read_text())
+    previous_path = args.previous_result.resolve() if args.previous_result else parent/'rules_after.json'
+    previous = json.loads(previous_path.read_text())
     parent_evidence = json.loads((parent/'evidence_result.json').read_text())
     if a.q.digest(previous['method_evidence']) != parent_evidence['report_id']:
         raise ValueError('PREVIOUSLY_VERIFIED_METHOD_ARTIFACT_CHANGED')
+    if 'targeted_numerical_evidence' in previous:
+        latest_evidence = json.loads((previous_path.parent/'evidence_result.json').read_text())
+        if a.q.digest(previous['targeted_numerical_evidence']) != latest_evidence['report_id']:
+            raise ValueError('PREVIOUSLY_VERIFIED_CONTINUATION_ARTIFACT_CHANGED')
     data = a.GlobalData(task/'inputs/q09_author')
     if previous['method_evidence']['input_id'] != data.input_id:
         raise ValueError('CURRENT_SOURCE_INPUT_CHANGED')
@@ -47,7 +53,13 @@ def main():
                 'rule_instance_id': req['rule_instance_id'], 'base_result_id': req['base_result_id']}
     c.dispatch(off, previous, operator)
     if calls: raise ValueError('DISABLED_RULE_DISPATCHED')
-    evidence = c.dispatch(before, previous, operator)[0]
+    dispatched = c.dispatch(before, previous, operator)
+    if not dispatched:
+        save('rules_after.json', before)
+        save('receipt.json', {'status': before['targeted_continuation'], 'optimizer_calls': 0,
+                             'on_operator_calls': 0, 'off_operator_calls': 0})
+        return
+    evidence = dispatched[0]
     # Verify each new objective/gradient once. No historical candidates are refitted.
     for item in report['runs']:
         original = next(g for g in data.groups if g.ref == item['reference'])

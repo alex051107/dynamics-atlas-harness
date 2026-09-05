@@ -1,0 +1,19 @@
+{
+  "submitted_at": "2026-09-05T15:41:33.226838+00:00",
+  "round": 17,
+  "head": "a5a56baf69ce9ef6a294f8987ba609af4efdd9ba",
+  "PR": "https://github.com/alex051107/dynamics-atlas-harness/pull/25",
+  "conversation": "https://chatgpt.com/g/g-p-6a3c8b377c5c8191b8a11c68c79cb45b-protein-data/c/6a9b28c7-cddc-83e9-bdb0-c9c1ef4c09d0",
+  "model": "6 Pro",
+  "GitHub_chip_observed": true,
+  "submission_clicks": 1,
+  "CI": {
+    "run": 33975270688,
+    "status": "SUCCESS",
+    "tests_each": 313,
+    "executed_each": 311,
+    "existing_skips_each": 2,
+    "merge_ref_prefix": "7b76146"
+  },
+  "response_complete": false
+}

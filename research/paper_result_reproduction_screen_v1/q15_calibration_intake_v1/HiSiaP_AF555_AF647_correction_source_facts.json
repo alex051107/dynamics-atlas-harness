@@ -1,0 +1,22 @@
+{
+  "source": "Peter2022 SI physicalPDFpage21 SupplementaryTable3; visually verified",
+  "dye_pair": "AlexaFluor555-AlexaFluor647",
+  "system": "HiSiaP",
+  "BGDD_kHz": 1.33,
+  "BGDA_kHz": 0.83,
+  "BGAA_kHz": 0.77,
+  "alpha": 0.084,
+  "delta": 0.065,
+  "gamma": 2.17,
+  "beta": 0.82,
+  "scope": "system-levelreportedcorrectionparameters;not per-run calibration uncertainty",
+  "applies_to_TMR_Cy5": false,
+  "author_fitted_E_or_distance_included": false,
+  "missing_for_numerical_admission": [
+    "exactalpha/delta/gamma/beta equationconvention",
+    "durationunit andlaser-dutybackgroundconvention",
+    "sourceAPBS selection and150photonfilter",
+    "fullapo/holo repetitions",
+    "per-runcalibration applicability"
+  ]
+}
