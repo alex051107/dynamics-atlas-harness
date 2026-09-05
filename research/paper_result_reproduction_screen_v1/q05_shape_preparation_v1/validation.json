@@ -1,0 +1,30 @@
+{
+  "status": "PREPARATION_CHECK_PASS",
+  "actual_atom_selection": {
+    "selected": 948,
+    "excluded": 54,
+    "uses_original_PDB_numbers": true
+  },
+  "synthetic_checks": [
+    "known_tensor_units",
+    "rigid_rotation_translation_invariance",
+    "internal_orthogonal_deformation",
+    "axis_sign_equivalence",
+    "near_circle_axis_abstention",
+    "noncommuting_averages"
+  ],
+  "synthetic_mean_counterexample": {
+    "mean_per_frame_sqrt_C": 1.2909944487358056,
+    "sqrt_C_of_mean_tensor": 0.0,
+    "sqrt_C_of_mean_coordinates": 0.9128709291752769
+  },
+  "actual_trajectory_frames_read": 0,
+  "actual_shape_statistics_computed": false,
+  "conditional_method": "Equal atom N/CA/C,exclude PDB55-63;fixed labelled reference Kabsch;Angstrom;no author-configuration claim",
+  "axis_threshold_scope": "Numerical near-degeneracy guard only;coordinate/noise uncertainty and biological state thresholds not validated",
+  "sources": {
+    "gromacs_backbone": "https://manual.gromacs.org/documentation/current/reference-manual/analysis/using-groups.html",
+    "mdtraj_numbering": "https://www.mdtraj.org/1.8.0/atom_selection.html",
+    "paper": "OriginalPDF18,previouslyrendered;source-matchedMarkdown used for discovery"
+  }
+}

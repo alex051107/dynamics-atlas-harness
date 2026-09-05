@@ -1,0 +1,15 @@
+{
+  "kind": "ANALYTIC_LIMIT_NOT_Q09_FIT",
+  "source": "OriginalSI58 Eq33,34,36;SI59 Eq37",
+  "time_ns": 10.0,
+  "kappa_squared": 0.6666666666666666,
+  "radiative_rate_per_ns": 0.224,
+  "zero_fret_limit_expected_survival": 1.0,
+  "printed_eq36_zero_fret_survival": 0.22462266403458517,
+  "printed_eq36_extra_rate_per_ns": 0.14933333333333332,
+  "eq37_width_A": 12.0,
+  "eq37_gaussian_sigma_A": 6.0,
+  "verdict": "PRINTED_FORMULA_CONSISTENCY_GAP; author executed code unknown",
+  "candidate_correction": "Use exp(-t*kRET) for FRET-only survival fromEq34; requires independent scientific review before scientific fitting",
+  "scientific_fits": 0
+}

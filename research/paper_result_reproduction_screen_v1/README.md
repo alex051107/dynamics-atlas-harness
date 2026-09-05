@@ -14,7 +14,7 @@ The goal is to test whether paper data, frozen Rules, connected Operators and ju
 
 ## Current pilot order
 
-After review: Q05 nanodisc → Q01 HSP90 → Q09 T4 lysozyme, sequentially; Q15 HiSiaP is the next candidate. This supersedes the initial Q09/Q01/Q05 order. These are data-inspection priorities, not three immediately runnable registered routes. A 2.9 MB archive does not establish fitting simplicity.
+Initial reviewed priority: Q05 nanodisc → Q01 HSP90 → Q09 T4 lysozyme; Q15 HiSiaP is the next candidate. While Q05 trajectory/reader resource authorization is pending, Q09 small-input and method work proceeds under the existing loop authorization. This supersedes the initial Q09/Q01/Q05 order. These are data-inspection priorities, not three immediately runnable registered routes. A 2.9 MB archive does not establish fitting simplicity.
 
 The roster contains 17 protein/protein-lipid questions, 2 DNA measurement controls and 1 paper-simulated negative control. Q09/Q10/Q11 share T4L data. These exposed development questions are not a held-out evaluation or twenty independent systems.
 
@@ -43,3 +43,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## 第六轮接口修复与证据复算
 
 [Q05 v2](q05_joint_numeric_v2/REPORT_ZH.md)核验作者来源、重算数值证据并绑定实际请求；九项针对性测试与247项本地完整回归通过。结果数值与v1相同，完整科学答案未增加。
+
+## Q09原始衰减与方法核对；Q05形状准备
+
+[Q09实际输入](q09_decay_admission_v1/REPORT_ZH.md)已解析33组181份数值文件；[方法与显式映射](q09_method_admission_v1/REPORT_ZH.md)记录原SI公式的无FRET极限冲突、w=12Å对应sigma=6Å、重复参考及混合仪器条件。[Q05形状准备](q05_shape_preparation_v1/REPORT_ZH.md)包含真实原子清单与六项合成检查，真实轨迹0帧。这些新增准备没有改变完整科学答案0/20，也没有增加Rules运行数。
