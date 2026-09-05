@@ -1,5 +1,9 @@
 # Paper-result reproduction screen v1
 
+## Pro22 and Q15 rule-generated answer candidate
+
+[Pro22 full review](pro_review_round22/reply.md) supports direction and found fixed positive text in the manual TMR report. [The new Q15 answer](q15_question_answer_v2/REPORT_ZH.md) derives text from both geometric bounds and bound Alexa/DEER directions, incorporates donor/site observations, and preserves Cy5 source discrepancy and calibration limits. Same Q15R02 instance, evidence on1/off0, zero new numerical-operator credit. All68bar coordinates are now reviewable. Full question completion awaits independent review; counts stay1 complete/4partial/15unrun.
+
 ## Actual Q16 rule-controlled model revision and Q15 probe response
 
 [Q16 raw support](q16_raw_applicability_v1/REPORT_ZH.md) shows both no-EG records extend to4.896us, longer than their author-processed3.488/3.008us windows. [The first conditional two-Gaussian calculation](q16_conditional_feasibility_v1/REPORT_ZH.md) used six full/cropped/actual-short records with separate background/modulation estimation.72 local fits produced only20 stationary points; finite residual-screen witnesses are not global optimum or exclusion claims.

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "changed_real_source_rejected_before_output": true,
+  "valid_science_reruns": 0,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/consume_q15_dye_evidence_v2.py\", line 53, in <module>\n    main()\n  File \"/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/consume_q15_dye_evidence_v2.py\", line 28, in main\n    raise ValueError('DYE_SOURCE_NOT_PREVIOUSLY_ADMITTED:'+name)\nValueError: DYE_SOURCE_NOT_PREVIOUSLY_ADMITTED:histogram\n"
+}

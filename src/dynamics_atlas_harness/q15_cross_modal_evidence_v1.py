@@ -82,7 +82,8 @@ def synthesize_manual_evidence(main, summary, deer, forward):
                       'Directional tension is not formal ensemble-model rejection or proof of a unique dye mechanism']}
 
 
-def evaluate(main, evidence=None, enabled=True, *, admitted_sources=None, source_receipt=None):
+def evaluate(main, evidence=None, enabled=True, *, admitted_sources=None, source_receipt=None,
+             dye_sources=None, dye_receipt=None, dye_evidence=None):
     instance=RULE_ID+'::'+main['input_id']
     result={'rule_id':RULE_ID,'rule_instance_id':instance,'input_id':main['input_id'],
             'development_adapter':True,
@@ -108,4 +109,31 @@ def evaluate(main, evidence=None, enabled=True, *, admitted_sources=None, source
                   comparison_hypothesis=evidence['hypothesis'],
                   partial_answer_status='MATCHED_DIRECTIONAL_EVIDENCE_AVAILABLE',
                   source_request_route='REQUEST_NEW_DATA_IF_PUBLIC_SOURCE_SEARCH_EXHAUSTED')
+    if dye_evidence is not None:
+        from .q15_dye_evidence_v2 import summarize_dye_evidence
+        if dye_sources is None or dye_receipt is None:
+            raise ValueError('PRIOR_DYE_SOURCE_ADMISSION_REQUIRED')
+        if set(dye_sources) != {'histogram', 'dye_summary', 'concordance'}:
+            raise ValueError('DYE_SOURCE_COVERAGE')
+        if dye_receipt.get('main_input_id') != main['input_id']:
+            raise ValueError('DYE_MAIN_BINDING')
+        for name, value in dye_sources.items():
+            if canonical_digest(value) != dye_receipt['sources'][name]['canonical_sha256']:
+                raise ValueError('DYE_SOURCE_NOT_PREVIOUSLY_ADMITTED:' + name)
+        expected_dye = summarize_dye_evidence(dye_sources, evidence)
+        if dye_evidence != expected_dye:
+            raise ValueError('DYE_EVIDENCE_DIFFERS_FROM_BOUND_NUMBERS')
+        observed = expected_dye['histogram']['direction'] != 'SOURCE_INSUFFICIENT'
+        result.update(dye_evidence=expected_dye,
+            representative_double_label_observation_available=observed,
+            partial_answer_status='Q15_BOUNDED_ANSWER_CANDIDATE' if observed else 'DYE_SOURCE_INSUFFICIENT',
+            remaining_obligations=['REPLICATE_SELECTION_AND_CALIBRATION_UNCERTAINTY',
+                'CY5_PDF_SOURCE_CONCORDANCE', 'INDEPENDENT_QUESTION_LEVEL_SCIENTIFIC_REVIEW'],
+            question_answer_candidate={
+                'closure': evidence['rows'],
+                'replacement': expected_dye['histogram_answer'],
+                'probe_explanation': expected_dye['probe_answer'],
+                'interpretation': ('The measured donor response is condition-dependent relative to the site control; fluorescence direction alone is insufficient for an unqualified structural interpretation.' if expected_dye['probe_readout_condition_dependence'] else 'The selected windows do not establish stronger condition dependence than the site control; fluorescence-to-structure interpretation still requires probe calibration.'),
+                'limitations': expected_dye['limits']},
+            source_bindings={**result['source_bindings'], 'dye': dye_receipt['sources']})
     return result
