@@ -19,6 +19,17 @@ class ComparisonTests(unittest.TestCase):
         self.assertLess(max(r['max_relative_count_differences']),1e-12)
         self.assertIn('EQUIVALENT_LOCAL_K2_EXPLANATION_EXISTS',r['judgment'])
 
+    def test_arbitrary_local_two_variant_embedding_including_edges(self):
+        d=data()
+        for a,b in [(0,0),(0,1),(1,0),(1,1),(.3,.3),(.2,.7),(.8,.4)]:
+            p=[1.,4.,.3,.001,.2,35.,65.,a,.1,.001,.2,40.,70.,b,.2,.001,.3]
+            e=s.embed_local_k3(p)
+            for k,v in d.joint_counts(p).items():np.testing.assert_allclose(v,s.k3_counts(d,e)[k],rtol=1e-12,atol=1e-9)
+
+    def test_total_cache_change_is_rejected(self):
+        d,g,e=self.expected_evidence();d.total+=100
+        with self.assertRaisesRegex(ValueError,'CACHED_TOTAL'):s.verify_data(d)
+
     def test_sharedK2_embeds_localK2_and_zero_weightK3(self):
         d=data();p=[1.,4.,.3,.001,.2,35.,65.,.1,.001,.2,40.,70.,.2,.001,.3,.35]
         local=s.expand_fixed(p[:15],p[-1]);np.testing.assert_array_equal(s.reduce_local(local),p[:15])
@@ -36,7 +47,7 @@ class ComparisonTests(unittest.TestCase):
     def expected_evidence(self):
         d=data();p=[1.,4.,.3,.001,.2,35.,65.,.1,.001,.2,40.,70.,.2,.001,.3,.35]
         for k,mu in s.shared2_counts(d,p).items():d.records[k]['y']=mu
-        d.input_id=s.identity(d);local=s.expand_fixed(p[:15],p[-1])
+        d.total=sum(v['y'][v['mask']].sum() for v in d.records.values());d.input_id=s.identity(d);local=s.expand_fixed(p[:15],p[-1])
         def fit(params,bounds,fun,initial):
             return {'initial':list(initial),'parameters':list(params),'objective':float(fun(params)),'optimizer_success':True,'numerical_status':'PASS','projected_gradient_inf':float(max(abs(s.q.gradient_at(params,bounds,fun)))),'fixture':'SYNTHETIC_EXPECTED_MEAN_NOT_OPTIMIZER_RUN'}
         d.baseline=fit(local,s.LOCAL_BOUNDS,lambda x:d.deviance(x)/d.total,local);g=graph();rid=s.request(d,g)

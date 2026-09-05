@@ -1,8 +1,8 @@
 # Dynamics Atlas：Rules Table 与 Agent Harness Master Plan
 
-> 版本：v2.2
-> 日期：2026-09-04
-> 状态：20 题初筛与首次 Pro 审阅已完成；Q05 局部数值计算完成，完整复现与 Rules 贡献待检验
+> 版本：v2.3
+> 日期：2026-09-05
+> 状态：20题已筛选；Q05共同权重及Q09全33条件模型、结构参考比较已由规则运行，科学完整回答仍0/20
 > 适用范围：Dynamics Atlas prototype、Rules runtime、Profile Agent、Harness、registered operators 与科学验证路线
 
 ## 文档边界
@@ -47,6 +47,8 @@ Dynamics Atlas 是一个 **scientific workflow compiler**：系统把用户问�
 [Q05当前可审查代码与执行证据](../research/paper_result_reproduction_screen_v1/q05_review_evidence/README.md)包含实际17条规则结果及数值方法对照。自动跟进不因首题诊断完成而停止；按每轮实际证据推进最终目标。
 
 ## 2026-09-04 Pro 审阅后的执行修订
+
+2026-09-05 当前更新：同一Q09R02已将全部33标记对/60观测纳入localK2、sharedK2、sharedK3条件比较，29次新优化保留4局部组和4全局搜索的数值stop；旧13次不重跑。规则实际派发作者前向结构参考比较，结构证据从缺失更新为已作描述性均值对照。全局仍未收敛，donor配置与SI中14个标记对的方法阶数有差距，不能判第三态。下一步根据源方法差距和数值贡献修正求解，再做科学模型比较；不通过改变参数追论文占比。见[全33实际结果](../research/paper_result_reproduction_screen_v1/q09_global_comparison_v1/REPORT_ZH.md)。以下为此前快照。
 
 2026-09-05 后续实际结果：Q09已由另一条窄CASE义务完成19–119/19–132的共享K2、局部K2及共享K3比较，保留三组分10Å边界及等价局部人口解释；全33输入所有权已核对，尚未全33拟合。172L/148L坐标已取得，染料ACV执行仍有具体程序/方法缺口，未作残基距离替代。下一步扩展参考组与结构前向证据；完整20题答案仍0，不能用开发反例或单个低损失模型替代最终科学判断。见[实际模型比较](../research/paper_result_reproduction_screen_v1/q09_state_comparison_v1/REPORT_ZH.md)。
 

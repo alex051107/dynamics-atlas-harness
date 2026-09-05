@@ -1,0 +1,27 @@
+{
+  "status": "AUTHOR_PREDICTIONS_AVAILABLE_CONFIGURATION_SOURCE_CONFLICT_RETAINED",
+  "source_structure_rows": 421,
+  "admitted_structures": [
+    "172L",
+    "148L"
+  ],
+  "admitted_pair_predictions": 66,
+  "label_configurations": 17,
+  "target_entries_excluded": 99,
+  "experimental_config_discrepancies": 76,
+  "resolved_gaps": [
+    "deposited mean-dye predictions",
+    "CBattachment recorded in deposited settings",
+    "17site trappedfractions recorded",
+    "0.7Agrid,3Acontact layer,strip masks recorded"
+  ],
+  "remaining_gaps": [
+    "exactFPSsoftwareversion and settings-to-predictions execution provenance",
+    "article3radius vs depositedAV1single3.5A radius; site-specificlinker widths2.5/3.5/4.5 vs article4.5",
+    "blankchain identifiers and coordinate/heteroatom preprocessing",
+    "rounding and forwardprediction uncertainties",
+    "sourceexperimental-target discrepancies: preserved reviewside"
+  ],
+  "no_fits": true,
+  "no_scientific_verdict": true
+}

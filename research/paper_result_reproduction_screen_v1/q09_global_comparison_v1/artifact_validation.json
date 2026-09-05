@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "risk": "partial33coverage mislabeledcomplete; authorreference leakinginto scientificsolver; structurescores stale orunbound; originalfitsoverwritten",
+  "all_variants": 33,
+  "observed_records": 60,
+  "new_optimizer_calls": 29,
+  "old_fits_repeated": 0,
+  "structure_on": 1,
+  "structure_off": 0,
+  "same_RuleInstance": true,
+  "evidence_readmission_changed_only_id_fields": true,
+  "full_scientific_answers": 0,
+  "local_tests": 280,
+  "skips": 0,
+  "hashes": "No newsourceimports; inputbindingdigests required"
+}

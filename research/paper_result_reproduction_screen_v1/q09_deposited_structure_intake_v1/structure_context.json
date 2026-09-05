@@ -1,0 +1,12 @@
+{
+  "source": "https://www.rcsb.org/structure/148L",
+  "read_at": "2026-09-05T11:01:00Z",
+  "chain_namespaces": {
+    "label_asym_id": "A",
+    "auth_asym_id": "E"
+  },
+  "chemistry_authority": "Entry primary citation abstract: threonine26->glutamate with covalentlyboundcellwallproduct; geometryreference,notautomaticallysameasfreeunligandedlabeledsample",
+  "display_field_conflict": "Entry summary Mutation(s):No / entity0; do not infer wildtype fromthisdisplay againstprimarycitation",
+  "coordinate_version": "CurrentRCSBversion3.0 Nov15,2023; authorZenodoarchive2019. Exacthistoricalcoordinatebytes used for predictions unknown",
+  "heteroatom_treatment": "Do not blanketdeleteHETATM; originalFPSpreprocessingunknown; no newACVrun"
+}

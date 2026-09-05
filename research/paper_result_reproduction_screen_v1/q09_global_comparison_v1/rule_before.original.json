@@ -1,0 +1,52 @@
+{
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "status": "UNRESOLVED",
+  "obligations": [
+    {
+      "operator_id": "q09_all33_conditional_comparison_v1",
+      "request_id": "76e34043374f7aaf1ae5d75448f3c8a58501d1464faa643fff00805ee8642fcf",
+      "input_id": "c03e46b9cf23211a87b4feec0b0d17a14a8ba87f282314cea109f52bbac6a972",
+      "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+      "variants": [
+        "19-119",
+        "19-132",
+        "19-69",
+        "19-86",
+        "22-127",
+        "36-132",
+        "36-86",
+        "44-119",
+        "44-127",
+        "44-132",
+        "44-150",
+        "44-69",
+        "44-86",
+        "5-132",
+        "5-44",
+        "55-119",
+        "55-132",
+        "55-150",
+        "55-69",
+        "60-119",
+        "60-132",
+        "60-150",
+        "60-86",
+        "69-119",
+        "69-132",
+        "69-150",
+        "69-86",
+        "70-119",
+        "70-132",
+        "8-119",
+        "8-132",
+        "8-69",
+        "8-86"
+      ]
+    }
+  ],
+  "reason_codes": [
+    "ALL33_SAME_RECORD_COMPARISON_REQUIRED"
+  ],
+  "complete_question_answer": false,
+  "request_id": "76e34043374f7aaf1ae5d75448f3c8a58501d1464faa643fff00805ee8642fcf"
+}

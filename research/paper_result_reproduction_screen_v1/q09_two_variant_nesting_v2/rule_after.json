@@ -1,0 +1,150 @@
+{
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "status": "UNRESOLVED",
+  "obligations": [],
+  "complete_question_answer": false,
+  "reason_codes": [
+    "BOUND_SHARED_LOCAL_COMPARISON_RECOMPUTED",
+    "LOCAL_POPULATION_ALTERNATIVE_MUST_BE_RETAINED",
+    "STRUCTURE_FORWARD_EVIDENCE_REQUIRED"
+  ],
+  "request_id": "63ee0e0146eb140f334679eb33815f3b9fa747c82830a3ef5caf719c2d800713",
+  "comparison": {
+    "profile_checks": [
+      {
+        "pi": 0.2,
+        "orientation": 0,
+        "status": "VERIFIED",
+        "objective": 0.00042016173320563895,
+        "projected_gradient_inf": 3.7922924855119617e-07
+      },
+      {
+        "pi": 0.2,
+        "orientation": 1,
+        "status": "VERIFIED",
+        "objective": 0.00041640836201891946,
+        "projected_gradient_inf": 2.5005084215716435e-07
+      },
+      {
+        "pi": 0.35,
+        "orientation": 0,
+        "status": "VERIFIED",
+        "objective": 0.0004091824940642843,
+        "projected_gradient_inf": 7.89324154579842e-08
+      },
+      {
+        "pi": 0.35,
+        "orientation": 1,
+        "status": "VERIFIED",
+        "objective": 0.00040360539056860184,
+        "projected_gradient_inf": 2.423552414154178e-07
+      },
+      {
+        "pi": 0.5,
+        "orientation": 0,
+        "status": "VERIFIED",
+        "objective": 0.0003803773217693874,
+        "projected_gradient_inf": 2.1355812853667584e-07
+      },
+      {
+        "pi": 0.5,
+        "orientation": 1,
+        "status": "VERIFIED",
+        "objective": 0.0003803773217731716,
+        "projected_gradient_inf": 8.184365316872727e-08
+      },
+      {
+        "pi": 0.65,
+        "orientation": 0,
+        "status": "VERIFIED",
+        "objective": 0.0003902300507427391,
+        "projected_gradient_inf": 1.2325486442251974e-07
+      },
+      {
+        "pi": 0.65,
+        "orientation": 1,
+        "status": "VERIFIED",
+        "objective": 0.0003777484743100118,
+        "projected_gradient_inf": 3.470339415706645e-07
+      },
+      {
+        "pi": 0.8,
+        "orientation": 0,
+        "status": "VERIFIED",
+        "objective": 0.0004024534372281749,
+        "projected_gradient_inf": 2.4087288102871334e-07
+      },
+      {
+        "pi": 0.8,
+        "orientation": 1,
+        "status": "VERIFIED",
+        "objective": 0.00040138412106523967,
+        "projected_gradient_inf": 9.105896398410762e-08
+      }
+    ],
+    "localK2_baseline_deviance": 13034.163116290363,
+    "sharedK2_deviance": 13165.86303850951,
+    "sharedK3_deviance": 13000.883249746568,
+    "counterexample": {
+      "synthetic_known_mean": true,
+      "max_relative_count_differences": [
+        3.0381515598084757e-16,
+        7.170212392786017e-16
+      ],
+      "judgment": "EQUIVALENT_LOCAL_K2_EXPLANATION_EXISTS; sharedK3fit alone cannot establish3protein states"
+    },
+    "protein_state_number": "UNRESOLVED",
+    "shared2_refinement_check": {
+      "status": "VERIFIED",
+      "objective": 0.00037527796721472783,
+      "projected_gradient_inf": 7.624616304238271e-08
+    },
+    "K3_zero_weight_embedding_deviance": 13165.86303850951,
+    "K3_checks": [
+      {
+        "status": "VERIFIED",
+        "objective": 0.00037527796721453555,
+        "projected_gradient_inf": 6.674572972433774e-08
+      },
+      {
+        "status": "VERIFIED",
+        "objective": 0.0003705754057816202,
+        "projected_gradient_inf": 2.758187589467703e-07
+      }
+    ],
+    "localK2_exact_K3_candidate": {
+      "kind": "EXACT_FEASIBLE_NOT_OPTIMIZER_PASS",
+      "parameters": [
+        1.345569032142944,
+        3.896975126280368,
+        0.10397963147789488,
+        0.001765012178879066,
+        0.5234463786955423,
+        20.679382255954188,
+        20.679382255954188,
+        49.77415142988709,
+        0.13178064120333718,
+        0.0027607674840645574,
+        1.4096639219942242,
+        49.69163086584026,
+        31.330402851604582,
+        31.330402851604582,
+        0.25556951412080364,
+        0.0018838826612464865,
+        0.8989626712185306,
+        0.46801260145747897,
+        0.5589812007531536
+      ],
+      "deviance": 13034.16311629032
+    },
+    "search_stops": {
+      "fixed_profile": 0,
+      "shared2_refinement": false,
+      "K3": 0
+    },
+    "local2_nested_order_observed": true,
+    "K3_nested_order_observed": true,
+    "K3_local2_nested_order_observed": true,
+    "status": "CONDITIONAL_COMPETING_EXPLANATIONS_RETAINED"
+  }
+}

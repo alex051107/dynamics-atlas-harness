@@ -26,7 +26,7 @@ The roster contains 17 protein/protein-lipid questions, 2 DNA measurement contro
 
 The screening received a combined count/source/state check and one independent delivery review. PR packaging uses one focused check for 20 unique IDs, unchanged JSON/CSV records, `NOT_RUN` status, portable links, absence of personal absolute paths in added content, expected changed files and whitespace. No scientific calculations, runtime tests, builds or data hashes are needed for this documentation-only change.
 
-No raw paper PDFs, author prediction matrices, canonical Rules changes or new registered Operators are included; generated numerical review results and authored source are now included. A Pro review is advice; it does not establish a scientific result or authorize merging.
+The initial screen included no raw sources or new Operators. Later batches include authored numerical Operators, generated evidence and a66-value author forward-structure reference with source attribution; original PDFs/ZIPs/PDBs remain external. A Pro review is advice; it does not establish a scientific result or authorize merging.
 
 ## Round4: confirmed semantics repairs
 
@@ -65,3 +65,7 @@ No raw paper PDFs, author prediction matrices, canonical Rules changes or new re
 ## Shared/local comparison after Pro11
 
 [Actual competing-model calculation](q09_state_comparison_v1/REPORT_ZH.md) compares localK2/sharedK2/sharedK3 on two realDA plusoneD0 through a new narrowrule, with13newfits, numeric replay and an exactcoalescence counterexample. SharedK3's lowerloss and10A boundary are retainedwithoutstateclaim. Full33sourceownership and172L/148Lstructureintake areincluded; dye-forwardexecution remainsanexplicitgap. [Role-bound readmission](q09_role_bound_readmission_v2/receipt.json) preserves all previousfits undercorrectnamedinputbindings.
+
+## All33 comparison and structural evidence after Pro12
+
+[All33 real conditional calculation](q09_global_comparison_v1/REPORT_ZH.md) uses60unique observed records and29new optimizations, retaining4local and4global numerical stops. The sameQ09R02 instance dispatches a source-attributed author-forward structure comparison, changing its structure obligation from missing to locally computed descriptive evidence. Full scientific answers remain0/20: global search is incomplete and14variant donor orders differ fromSI method references. Exacttwo-variantlocalK2-to-sharedK3 nesting and derivedtotal verification are repaired withzero oldfit repetition. [Deposited structure source/configuration](q09_deposited_structure_intake_v1/REPORT_ZH.md) distinguishes66author mean-dye predictions from experimental fit targets, documents AV1/article geometry differences and148L chemistry/chain namespace.

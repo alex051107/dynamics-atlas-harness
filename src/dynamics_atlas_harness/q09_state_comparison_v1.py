@@ -45,6 +45,8 @@ def load_inputs(root):
 
 def verify_data(d):
     if identity(d)!=d.input_id:raise ValueError('SHARED_GROUP_INPUT_CHANGED')
+    observed_total=sum(float(v['y'][v['mask']].sum()) for v in d.records.values())
+    if d.total!=observed_total:raise ValueError('CACHED_TOTAL_DIFFERS_FROM_BOUND_OBSERVATIONS')
     q.verify_fit(d.baseline,LOCAL_BOUNDS,lambda p:d.deviance(p)/d.total)
 
 
@@ -74,6 +76,22 @@ def embed_k3(p):
     return out+[p[15],1.]
 
 
+def embed_local_k3(p):
+    """Exact feasible embedding for TWO variants, identical component kernels.
+
+    Includes coincident distances/zero weights. Not an optimizer PASS and not
+    the nesting relation of the general33-variant comparison.
+    """
+    a,b=p[7],p[13]
+    if not (0<=a<=1 and 0<=b<=1):raise ValueError('INVALID_LOCAL_POPULATIONS')
+    if a<=b:
+        weights=[a,b-a,1-b];ar=[p[5],p[6],p[6]];br=[p[11],p[11],p[12]]
+    else:
+        weights=[b,a-b,1-a];ar=[p[5],p[5],p[6]];br=[p[11],p[12],p[12]]
+    u=weights[0];v=weights[1]/(1-u) if u<1 else 0.
+    return list(p[:5])+ar+list(p[8:11])+br+list(p[14:17])+[u,v]
+
+
 def equivalent_local_counterexample(d):
     # Synthetic known mean; no fitting and no author parameter values.
     t=[1.,4.];a=[.3,.7];pi=[.2,.5,.3];results=[]
@@ -98,6 +116,8 @@ def evaluate(g,d,e=None,enabled=True):
     if e is None:r.update(obligations=[obligation],reason_codes=['SHARED_LOCAL_AND_STRUCTURE_COMPETING_EVIDENCE_REQUIRED']);return r
     try:result=verify_evidence(d,e,rid)
     except (ValueError,KeyError,TypeError,IndexError) as err:r.update(obligations=[obligation],reason_codes=['COMPARISON_EVIDENCE_REJECTED'],rejection_reason=str(err));return r
+    if result['status'] in ('NUMERICAL_STOP','NUMERICAL_COMPARISON_INCOMPLETE'):
+        r.update(reason_codes=['BOUND_SHARED_LOCAL_COMPARISON_RECOMPUTED','SOLVER_COMPARISON_INCOMPLETE','STRUCTURE_FORWARD_EVIDENCE_REQUIRED'],comparison=result);return r
     r.update(reason_codes=['BOUND_SHARED_LOCAL_COMPARISON_RECOMPUTED','LOCAL_POPULATION_ALTERNATIVE_MUST_BE_RETAINED','STRUCTURE_FORWARD_EVIDENCE_REQUIRED'],comparison=result)
     return r
 
@@ -158,10 +178,17 @@ def verify_evidence(d,e,rid):
         ck=q.verify_fit(fit,K3_BOUNDS,lambda p:loss(d,p,'shared3'));kc.append(ck)
     result['K3_checks']=kc;valid=[x['objective'] for x in kc if x['status']=='VERIFIED']
     if valid:result['sharedK3_deviance']=min(valid)*d.total
+    local_embedding=embed_local_k3(d.baseline['parameters'])
+    local_counts=d.joint_counts(d.baseline['parameters']);embedded_counts=k3_counts(d,local_embedding)
+    for role in local_counts:np.testing.assert_allclose(local_counts[role],embedded_counts[role],rtol=1e-12,atol=1e-9)
+    result['localK2_exact_K3_candidate']={'kind':'EXACT_FEASIBLE_NOT_OPTIMIZER_PASS','parameters':local_embedding,'deviance':loss(d,local_embedding,'shared3')*d.total}
+    result['search_stops']={'fixed_profile':sum(c['status']!='VERIFIED' for c in checks),'shared2_refinement':check['status']!='VERIFIED','K3':sum(c['status']!='VERIFIED' for c in kc)}
     tol=1e-5
     result['local2_nested_order_observed']=bool(result['localK2_baseline_deviance']<=result['sharedK2_deviance']+tol)
     result['K3_nested_order_observed']=bool(valid) and bool(result['sharedK3_deviance']<=result['sharedK2_deviance']+tol)
-    result['status']='CONDITIONAL_COMPETING_EXPLANATIONS_RETAINED' if result['local2_nested_order_observed'] and result['K3_nested_order_observed'] else 'NUMERICAL_COMPARISON_INCOMPLETE'
+    result['K3_local2_nested_order_observed']=bool(valid) and bool(result['sharedK3_deviance']<=result['localK2_exact_K3_candidate']['deviance']+tol)
+    completed=result['local2_nested_order_observed'] and result['K3_nested_order_observed'] and result['K3_local2_nested_order_observed'] and not any(result['search_stops'].values())
+    result['status']='CONDITIONAL_COMPETING_EXPLANATIONS_RETAINED' if completed else 'NUMERICAL_COMPARISON_INCOMPLETE'
     return result
 
 
