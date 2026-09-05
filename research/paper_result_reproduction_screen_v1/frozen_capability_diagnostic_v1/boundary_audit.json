@@ -1,0 +1,150 @@
+{
+  "frozen_science_head": "6b5856e3381314f698429f725a5a194ff94a932a",
+  "rows": [
+    {
+      "question": "Q14",
+      "receipt": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q14_rules_baseline_v1/receipt.json",
+      "source_head": "995591b0af91d30300550a2e5d943faef55c5981",
+      "common_boundary_code_and_registry_changed": false,
+      "instances": 17,
+      "numeric_executions": 0,
+      "statuses": {
+        "PASS": 8,
+        "UNRESOLVED": 7,
+        "NOT_APPLICABLE": 2
+      },
+      "source_fields": [
+        "case_evidence_scope",
+        "construct_and_condition",
+        "data_lineage_status",
+        "estimand",
+        "evidence_role",
+        "native_measurement_declaration_status",
+        "native_observable",
+        "sample_composition",
+        "sample_system_composition_declaration_status",
+        "source_id",
+        "source_locator",
+        "spatial_support",
+        "time_semantics",
+        "unit_or_aggregation"
+      ],
+      "comparison_fields": [
+        "bridge_status",
+        "comparison_id",
+        "condition_relation",
+        "data_lineage_status",
+        "left_source_id",
+        "relation_type",
+        "right_source_id",
+        "shared_claim",
+        "shared_error_status",
+        "validation_independence"
+      ],
+      "source_lineage_values": [
+        "AGENT_PROPOSED_UNVERIFIED"
+      ],
+      "baseline_reused_not_rerun": true,
+      "scope": "Saved pre-main fact baseline; later computed numerical evidence was not passed through this projection."
+    },
+    {
+      "question": "Q15",
+      "receipt": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_rules_probe_v1/receipt.json",
+      "source_head": "4e0ac1c6d793eb97349b0683b17d12998c589784",
+      "common_boundary_code_and_registry_changed": false,
+      "instances": 23,
+      "numeric_executions": 0,
+      "statuses": {
+        "PASS": 10,
+        "UNRESOLVED": 10,
+        "NOT_APPLICABLE": 3
+      },
+      "source_fields": [
+        "case_evidence_scope",
+        "construct_and_condition",
+        "data_lineage_status",
+        "estimand",
+        "evidence_role",
+        "native_measurement_declaration_status",
+        "native_observable",
+        "sample_composition",
+        "sample_system_composition_declaration_status",
+        "source_id",
+        "source_locator",
+        "spatial_support",
+        "time_semantics",
+        "unit_or_aggregation"
+      ],
+      "comparison_fields": [
+        "bridge_status",
+        "comparison_id",
+        "condition_relation",
+        "data_lineage_status",
+        "left_source_id",
+        "relation_type",
+        "right_source_id",
+        "shared_claim",
+        "shared_error_status",
+        "validation_independence"
+      ],
+      "source_lineage_values": [
+        "AGENT_PROPOSED_UNVERIFIED"
+      ],
+      "baseline_reused_not_rerun": true,
+      "scope": "Saved pre-main fact baseline; later computed numerical evidence was not passed through this projection."
+    },
+    {
+      "question": "Q16",
+      "receipt": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q16_rules_probe_v2/receipt.json",
+      "source_head": "4a2c40aa21c11a2eabe968e811bb2a77b4b30151",
+      "common_boundary_code_and_registry_changed": false,
+      "instances": 11,
+      "numeric_executions": 0,
+      "statuses": {
+        "PASS": 6,
+        "UNRESOLVED": 4,
+        "NOT_APPLICABLE": 1
+      },
+      "source_fields": [
+        "case_evidence_scope",
+        "construct_and_condition",
+        "data_lineage_status",
+        "estimand",
+        "evidence_role",
+        "native_measurement_declaration_status",
+        "native_observable",
+        "sample_composition",
+        "sample_system_composition_declaration_status",
+        "source_id",
+        "source_locator",
+        "spatial_support",
+        "time_semantics",
+        "unit_or_aggregation"
+      ],
+      "comparison_fields": [
+        "bridge_status",
+        "comparison_id",
+        "condition_relation",
+        "data_lineage_status",
+        "left_source_id",
+        "relation_type",
+        "right_source_id",
+        "shared_claim",
+        "shared_error_status",
+        "validation_independence"
+      ],
+      "source_lineage_values": [
+        "AGENT_PROPOSED_UNVERIFIED"
+      ],
+      "baseline_reused_not_rerun": true,
+      "scope": "Saved pre-main fact baseline; later computed numerical evidence was not passed through this projection."
+    }
+  ],
+  "new_rule_runs": 0,
+  "new_cli_runs": 0,
+  "limits": [
+    "Upstream source lineage remains unverified, so no downstream numerical false-negative claim.",
+    "Fixed public-packet source projection has no typed model predictions, fit/validation windows or numerical method evidence.",
+    "Missing arbitrary-question CLI is integration scope, not scientific invalidity."
+  ]
+}
