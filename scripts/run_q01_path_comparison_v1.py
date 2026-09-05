@@ -11,6 +11,7 @@ from pathlib import Path
 
 import numpy as np
 from dynamics_atlas_harness import q01_path_comparison_v1 as q
+from dynamics_atlas_harness import q01_measurement_identity_v2 as binding
 
 
 def save(path, value):
@@ -101,7 +102,7 @@ def prepare(workspace, out):
     save(out/'reference_calibration.json', calibration)
     np.savez_compressed(out/'reference_coordinates.npz', **arrays)
     method = {'config': q.CONFIG, 'contacts': contacts, 'calibration': calibration,
-              'prespecified_before_full40': now(), 'author_route_labels_used': False,
+              'reference_id': binding.reference_identity(arrays, contacts), 'prespecified_before_full40': now(), 'author_route_labels_used': False,
               'method_origin': 'Conditional reference-envelope operationalization; not original TTClust assignments',
               'source_method_review': 'source_method_review.md'}
     save(out/'frozen_method.json', method)
@@ -199,6 +200,8 @@ def run(workspace, out):
         if digest(workspace/row['path']) != row['sha256']:
             raise ValueError('SOURCE_FILE_CHANGED:'+row['path'])
     ref = np.load(out/'reference_coordinates.npz', allow_pickle=False)
+    if binding.reference_identity(ref, contacts) != method.get('reference_id'):
+        raise ValueError('REFERENCE_CHANGED_SINCE_PREPARATION')
     before = q.evaluate(facts); off = q.evaluate(facts, enabled=False)
     save(out/'rules_before.json', before); save(out/'rules_off.json', off)
     calls = []; records = {}; parities = {}
@@ -212,6 +215,8 @@ def run(workspace, out):
             records[entry['name']] = record; parities[entry['name']] = errors
             np.savez_compressed(out/'trajectories'/entry['name']/'measurements.npz', time_ns=time, distances_A=distances, open_rmsd_A=geometry['open'], closed_rmsd_A=geometry['closed'])
             print('admitted', entry['name'], errors, flush=True)
+        measurement = binding.measurement_manifest(records, contacts, ref, runs, facts)
+        save(out/'measurement_manifest.json', measurement)
         report, labels = q.summarize(records, contacts, calibration)
         save(out/'numerical_report.json', report)
         with (out/'full_paths.tsv').open('w', newline='') as f:
@@ -222,7 +227,7 @@ def run(workspace, out):
                 for i, time in enumerate(r['time_ns']):
                     writer.writerow([name, r['seed'], time, r['geometry_A']['open'][i], r['geometry_A']['closed'][i], s1['open'][i], s1['closed'][i], s2['open'][i], s2['closed'][i], labels[name][q.METHODS[0]][i], labels[name][q.METHODS[1]][i]])
         result = dict(request, report_path='numerical_report.json', evidence_type='ACTUAL_COORDINATE_PATH_COMPARISON',
-                      completed_at=now(), report_id=q.identity(report))
+                      completed_at=now(), report_id=q.identity(report), measurement_manifest_id=measurement['manifest_id'])
         save(out/'evidence_result.json', result); return result
     q.dispatch(off, operator)
     if calls:

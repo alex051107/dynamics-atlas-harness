@@ -3,6 +3,7 @@
 Relative preference is explicitly different from membership in an NMR envelope.
 This is an exposed method revision, never a retrospective held-out success.
 """
+import copy
 import numpy as np
 from . import q01_path_comparison_v1 as q
 
@@ -17,7 +18,7 @@ POLICY = {'version': 'q01-relative-reference/v1', 'primary_persistence_frames': 
 
 
 def reference_policy(reference_distances, contacts):
-    output = {'policy': POLICY, 'normalization': {}, 'reference_preference': {}}
+    output = {'policy': copy.deepcopy(POLICY), 'normalization': {}, 'reference_preference': {}}
     for method in q.METHODS:
         matrix = {state: np.column_stack([q.scores(reference_distances[state], contacts, method)[s] for s in q.STATES]) for state in q.STATES}
         means = {state: matrix[state].mean(axis=0) for state in q.STATES}
@@ -65,6 +66,8 @@ def path(labels, seed, n):
 
 
 def compare(records, contacts, policy):
+    if policy.get('policy') != POLICY:
+        raise ValueError('UNSUPPORTED_RELATIVE_POLICY')
     result = {'rows': [], 'grouped': {}, 'method_changes': [], 'full_question_answer': False,
               'claim_ceiling': POLICY['claim_ceiling']}; frames = {}
     for name, r in records.items():
@@ -103,9 +106,16 @@ def evaluate(base_instance, facts, envelope_evidence, policy, evidence=None, ver
     if not enabled:
         return result
     paths = envelope_evidence.get('paths', [])
-    if not paths or any(p['persistence_results']['20']['initial_support'] in q.STATES for p in paths):
-        result['status'] = 'FOLLOWUP_NOT_TRIGGERED'; return result
+    uncovered = [p.get('trajectory', 'UNNAMED') for p in paths
+                 if p['persistence_results']['20']['initial_support'] not in q.STATES]
+    if not paths or len(uncovered) != len(paths):
+        result.update(status='FOLLOWUP_NOT_TRIGGERED', unhandled_initial_support_trajectories=uncovered,
+                      unhandled_reason='This v1 followup handles all-initial-noncoverage only; partial coverage requires a separate validated disposition.')
+        return result
+    if not policy.get('measurement_manifest_id') or not policy.get('reference_id'):
+        raise ValueError('BOUND_CONTINUOUS_MEASUREMENTS_AND_REFERENCES_REQUIRED')
     request = {'operator_id': OPERATOR_ID, 'instance_id': result['instance_id'], 'facts_id': result['facts_id'],
+               'measurement_manifest_id': policy['measurement_manifest_id'], 'reference_id': policy['reference_id'],
                'input_id': facts['input_id'], 'parent_method_id': facts['method_id'], 'method_id': q.identity(policy)}
     result['reason'] = 'Validated construction envelopes classify no initial trajectory frame; relative directional claim requires a different estimand.'
     if evidence is not None:

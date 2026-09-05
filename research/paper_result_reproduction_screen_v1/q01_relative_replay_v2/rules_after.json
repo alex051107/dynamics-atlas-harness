@@ -1,0 +1,5526 @@
+{
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+  "rule_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1",
+  "status": "RELATIVE_COMPARISON_EXECUTED",
+  "operator_requests": [],
+  "state_membership_claimed": false,
+  "accuracy_gain_claimed": false,
+  "reason": "Validated construction envelopes classify no initial trajectory frame; relative directional claim requires a different estimand.",
+  "numeric_result": {
+    "rows": [
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 845,
+              "conflict": 156
+            },
+            "longest_seed_frames": 742,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 845,
+              "conflict": 156
+            },
+            "longest_seed_frames": 742,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 845,
+              "conflict": 156
+            },
+            "longest_seed_frames": 742,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.611190396750658,
+        "geometry_margin_final_A": -2.428317240607157,
+        "geometry_margin_range_A": [
+          -13.744728847095345,
+          -1.001759273252409
+        ]
+      },
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 955,
+              "conflict": 46
+            },
+            "longest_seed_frames": 746,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 955,
+              "conflict": 46
+            },
+            "longest_seed_frames": 746,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 955,
+              "conflict": 46
+            },
+            "longest_seed_frames": 746,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.611190396750658,
+        "geometry_margin_final_A": -2.428317240607157,
+        "geometry_margin_range_A": [
+          -13.744728847095345,
+          -1.001759273252409
+        ]
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.615057585928433,
+        "geometry_margin_final_A": -10.364123550222722,
+        "geometry_margin_range_A": [
+          -16.669779373989375,
+          -6.117257071784909
+        ]
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.615057585928433,
+        "geometry_margin_final_A": -10.364123550222722,
+        "geometry_margin_range_A": [
+          -16.669779373989375,
+          -6.117257071784909
+        ]
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              82,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 957,
+              "closed": 12,
+              "conflict": 32
+            },
+            "longest_seed_frames": 8,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              37,
+              48
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 957,
+              "closed": 12,
+              "conflict": 32
+            },
+            "longest_seed_frames": 8,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              82,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 957,
+              "closed": 12,
+              "conflict": 32
+            },
+            "longest_seed_frames": 8,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.062412108487933,
+        "geometry_margin_final_A": 12.180783578893733,
+        "geometry_margin_range_A": [
+          -13.582478866724815,
+          15.315787151696496
+        ]
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              82,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 957,
+              "closed": 15,
+              "conflict": 29
+            },
+            "longest_seed_frames": 12,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              37,
+              48
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 957,
+              "closed": 15,
+              "conflict": 29
+            },
+            "longest_seed_frames": 12,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              82,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 957,
+              "closed": 15,
+              "conflict": 29
+            },
+            "longest_seed_frames": 12,
+            "longest_opposite_frames": 939,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.062412108487933,
+        "geometry_margin_final_A": 12.180783578893733,
+        "geometry_margin_range_A": [
+          -13.582478866724815,
+          15.315787151696496
+        ]
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -3.773463688235136,
+        "geometry_margin_final_A": 14.325993438859129,
+        "geometry_margin_range_A": [
+          -11.323071550598721,
+          17.385633310285485
+        ]
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              53,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 968,
+              "closed": 33,
+              "conflict": 0
+            },
+            "longest_seed_frames": 33,
+            "longest_opposite_frames": 968,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -3.773463688235136,
+        "geometry_margin_final_A": 14.325993438859129,
+        "geometry_margin_range_A": [
+          -11.323071550598721,
+          17.385633310285485
+        ]
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              537,
+              616
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 570,
+              "closed": 290,
+              "conflict": 141
+            },
+            "longest_seed_frames": 24,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              114,
+              118
+            ],
+            "opposite_intervals": 5,
+            "counts": {
+              "open": 570,
+              "closed": 290,
+              "conflict": 141
+            },
+            "longest_seed_frames": 24,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              537,
+              616
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 570,
+              "closed": 290,
+              "conflict": 141
+            },
+            "longest_seed_frames": 24,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -2.155325611957654,
+        "geometry_margin_final_A": 9.057330960049532,
+        "geometry_margin_range_A": [
+          -3.887280781207405,
+          12.125032847854197
+        ]
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              540,
+              616
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 550,
+              "closed": 363,
+              "conflict": 88
+            },
+            "longest_seed_frames": 51,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              114,
+              118
+            ],
+            "opposite_intervals": 5,
+            "counts": {
+              "open": 550,
+              "closed": 363,
+              "conflict": 88
+            },
+            "longest_seed_frames": 51,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              540,
+              616
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 550,
+              "closed": 363,
+              "conflict": 88
+            },
+            "longest_seed_frames": 51,
+            "longest_opposite_frames": 403,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -2.155325611957654,
+        "geometry_margin_final_A": 9.057330960049532,
+        "geometry_margin_range_A": [
+          -3.887280781207405,
+          12.125032847854197
+        ]
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 55,
+              "closed": 510,
+              "conflict": 436
+            },
+            "longest_seed_frames": 225,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              179,
+              183
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 55,
+              "closed": 510,
+              "conflict": 436
+            },
+            "longest_seed_frames": 225,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 55,
+              "closed": 510,
+              "conflict": 436
+            },
+            "longest_seed_frames": 225,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.70962567439209,
+        "geometry_margin_final_A": -6.060002383874636,
+        "geometry_margin_range_A": [
+          -14.182604611393621,
+          3.130084125973502
+        ]
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 55,
+              "closed": 534,
+              "conflict": 412
+            },
+            "longest_seed_frames": 430,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              179,
+              183
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 55,
+              "closed": 534,
+              "conflict": 412
+            },
+            "longest_seed_frames": 430,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 55,
+              "closed": 534,
+              "conflict": 412
+            },
+            "longest_seed_frames": 430,
+            "longest_opposite_frames": 9,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.70962567439209,
+        "geometry_margin_final_A": -6.060002383874636,
+        "geometry_margin_range_A": [
+          -14.182604611393621,
+          3.130084125973502
+        ]
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.716213901761144,
+        "geometry_margin_final_A": -6.366538667822239,
+        "geometry_margin_range_A": [
+          -10.492438078158123,
+          -5.204325728991812
+        ]
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.716213901761144,
+        "geometry_margin_final_A": -6.366538667822239,
+        "geometry_margin_range_A": [
+          -10.492438078158123,
+          -5.204325728991812
+        ]
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.49647998145468,
+        "geometry_margin_final_A": -16.501645080336253,
+        "geometry_margin_range_A": [
+          -17.546431861242677,
+          -13.047188061034102
+        ]
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.49647998145468,
+        "geometry_margin_final_A": -16.501645080336253,
+        "geometry_margin_range_A": [
+          -17.546431861242677,
+          -13.047188061034102
+        ]
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.197934052518818,
+        "geometry_margin_final_A": -15.014889496681528,
+        "geometry_margin_range_A": [
+          -16.897620015801035,
+          -6.089007946932124
+        ]
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.197934052518818,
+        "geometry_margin_final_A": -15.014889496681528,
+        "geometry_margin_range_A": [
+          -16.897620015801035,
+          -6.089007946932124
+        ]
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.582088794440745,
+        "geometry_margin_final_A": -14.119828633164097,
+        "geometry_margin_range_A": [
+          -15.236578516017191,
+          -12.721757424257294
+        ]
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.582088794440745,
+        "geometry_margin_final_A": -14.119828633164097,
+        "geometry_margin_range_A": [
+          -15.236578516017191,
+          -12.721757424257294
+        ]
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 998,
+              "conflict": 3
+            },
+            "longest_seed_frames": 685,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 998,
+              "conflict": 3
+            },
+            "longest_seed_frames": 685,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 998,
+              "conflict": 3
+            },
+            "longest_seed_frames": 685,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.69200431427085,
+        "geometry_margin_final_A": -14.870149396221285,
+        "geometry_margin_range_A": [
+          -16.98736743721247,
+          -2.3498942956344155
+        ]
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.69200431427085,
+        "geometry_margin_final_A": -14.870149396221285,
+        "geometry_margin_range_A": [
+          -16.98736743721247,
+          -2.3498942956344155
+        ]
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.345240266585972,
+        "geometry_margin_final_A": -11.537644670020539,
+        "geometry_margin_range_A": [
+          -16.077041844436238,
+          -5.0190411975845866
+        ]
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.345240266585972,
+        "geometry_margin_final_A": -11.537644670020539,
+        "geometry_margin_range_A": [
+          -16.077041844436238,
+          -5.0190411975845866
+        ]
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.851405860334172,
+        "geometry_margin_final_A": -14.122786917504616,
+        "geometry_margin_range_A": [
+          -16.050505240915538,
+          -13.120931741216374
+        ]
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.851405860334172,
+        "geometry_margin_final_A": -14.122786917504616,
+        "geometry_margin_range_A": [
+          -16.050505240915538,
+          -13.120931741216374
+        ]
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              635,
+              668
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 424,
+              "closed": 184,
+              "conflict": 393
+            },
+            "longest_seed_frames": 26,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              621,
+              633
+            ],
+            "opposite_intervals": 3,
+            "counts": {
+              "open": 424,
+              "closed": 184,
+              "conflict": 393
+            },
+            "longest_seed_frames": 26,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              670,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 424,
+              "closed": 184,
+              "conflict": 393
+            },
+            "longest_seed_frames": 26,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.613529726866991,
+        "geometry_margin_final_A": 13.391160669874399,
+        "geometry_margin_range_A": [
+          -15.186267062855897,
+          14.5312507483257
+        ]
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              635,
+              668
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 424,
+              "closed": 235,
+              "conflict": 342
+            },
+            "longest_seed_frames": 40,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              621,
+              633
+            ],
+            "opposite_intervals": 3,
+            "counts": {
+              "open": 424,
+              "closed": 235,
+              "conflict": 342
+            },
+            "longest_seed_frames": 40,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              670,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 424,
+              "closed": 235,
+              "conflict": 342
+            },
+            "longest_seed_frames": 40,
+            "longest_opposite_frames": 351,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.613529726866991,
+        "geometry_margin_final_A": 13.391160669874399,
+        "geometry_margin_range_A": [
+          -15.186267062855897,
+          14.5312507483257
+        ]
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.983806526722258,
+        "geometry_margin_final_A": 11.94303643142273,
+        "geometry_margin_range_A": [
+          -16.351034626890215,
+          14.99287065813647
+        ]
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              115,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 906,
+              "closed": 95,
+              "conflict": 0
+            },
+            "longest_seed_frames": 95,
+            "longest_opposite_frames": 906,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -9.983806526722258,
+        "geometry_margin_final_A": 11.94303643142273,
+        "geometry_margin_range_A": [
+          -16.351034626890215,
+          14.99287065813647
+        ]
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 295,
+              "conflict": 76
+            },
+            "longest_seed_frames": 232,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 295,
+              "conflict": 76
+            },
+            "longest_seed_frames": 232,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 295,
+              "conflict": 76
+            },
+            "longest_seed_frames": 232,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.359533791496577,
+        "geometry_margin_final_A": 7.000398435937228,
+        "geometry_margin_range_A": [
+          -16.60549822443042,
+          10.08641185078247
+        ]
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 315,
+              "conflict": 56
+            },
+            "longest_seed_frames": 236,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 315,
+              "conflict": 56
+            },
+            "longest_seed_frames": 236,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              399,
+              784
+            ],
+            "opposite_intervals": 2,
+            "counts": {
+              "open": 630,
+              "closed": 315,
+              "conflict": 56
+            },
+            "longest_seed_frames": 236,
+            "longest_opposite_frames": 386,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -16.359533791496577,
+        "geometry_margin_final_A": 7.000398435937228,
+        "geometry_margin_range_A": [
+          -16.60549822443042,
+          10.08641185078247
+        ]
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              605,
+              646
+            ],
+            "opposite_intervals": 4,
+            "counts": {
+              "open": 259,
+              "closed": 557,
+              "conflict": 185
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              580,
+              588
+            ],
+            "opposite_intervals": 12,
+            "counts": {
+              "open": 259,
+              "closed": 557,
+              "conflict": 185
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 259,
+              "closed": 557,
+              "conflict": 185
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.44874129536733,
+        "geometry_margin_final_A": 0.7803597994789708,
+        "geometry_margin_range_A": [
+          -16.531795178767887,
+          2.8573507757149024
+        ]
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              605,
+              646
+            ],
+            "opposite_intervals": 4,
+            "counts": {
+              "open": 257,
+              "closed": 586,
+              "conflict": 158
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              580,
+              588
+            ],
+            "opposite_intervals": 11,
+            "counts": {
+              "open": 257,
+              "closed": 586,
+              "conflict": 158
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 257,
+              "closed": 586,
+              "conflict": 158
+            },
+            "longest_seed_frames": 542,
+            "longest_opposite_frames": 42,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -13.44874129536733,
+        "geometry_margin_final_A": 0.7803597994789708,
+        "geometry_margin_range_A": [
+          -16.531795178767887,
+          2.8573507757149024
+        ]
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.84113684743761,
+        "geometry_margin_final_A": -14.431892637030641,
+        "geometry_margin_range_A": [
+          -16.362524499812082,
+          -13.374943482945474
+        ]
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 0,
+              "closed": 1001,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -14.84113684743761,
+        "geometry_margin_final_A": -14.431892637030641,
+        "geometry_margin_range_A": [
+          -16.362524499812082,
+          -13.374943482945474
+        ]
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              59,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 963,
+              "closed": 36,
+              "conflict": 2
+            },
+            "longest_seed_frames": 35,
+            "longest_opposite_frames": 962,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              59,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 963,
+              "closed": 36,
+              "conflict": 2
+            },
+            "longest_seed_frames": 35,
+            "longest_opposite_frames": 962,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              59,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 963,
+              "closed": 36,
+              "conflict": 2
+            },
+            "longest_seed_frames": 35,
+            "longest_opposite_frames": 962,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -6.862749137399893,
+        "geometry_margin_final_A": 9.070416844515382,
+        "geometry_margin_range_A": [
+          -11.633296650025386,
+          11.804510381063572
+        ]
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              64,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 960,
+              "closed": 37,
+              "conflict": 4
+            },
+            "longest_seed_frames": 37,
+            "longest_opposite_frames": 957,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              64,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 960,
+              "closed": 37,
+              "conflict": 4
+            },
+            "longest_seed_frames": 37,
+            "longest_opposite_frames": 957,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              64,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 960,
+              "closed": 37,
+              "conflict": 4
+            },
+            "longest_seed_frames": 37,
+            "longest_opposite_frames": 957,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -6.862749137399893,
+        "geometry_margin_final_A": 9.070416844515382,
+        "geometry_margin_range_A": [
+          -11.633296650025386,
+          11.804510381063572
+        ]
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 4,
+              "conflict": 18
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 4,
+              "conflict": 18
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 4,
+              "conflict": 18
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.640014406972469,
+        "geometry_margin_final_A": 12.863980392378043,
+        "geometry_margin_range_A": [
+          -12.640014406972469,
+          14.750184676767075
+        ]
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 7,
+              "conflict": 15
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 7,
+              "conflict": 15
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE",
+            "initial_preference": "closed",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": [
+              45,
+              1020
+            ],
+            "opposite_intervals": 1,
+            "counts": {
+              "open": 979,
+              "closed": 7,
+              "conflict": 15
+            },
+            "longest_seed_frames": 3,
+            "longest_opposite_frames": 976,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": -12.640014406972469,
+        "geometry_margin_final_A": 12.863980392378043,
+        "geometry_margin_range_A": [
+          -12.640014406972469,
+          14.750184676767075
+        ]
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.335709926040046,
+        "geometry_margin_final_A": 10.891314850785044,
+        "geometry_margin_range_A": [
+          8.596608445076992,
+          16.37598131988951
+        ]
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.335709926040046,
+        "geometry_margin_final_A": 10.891314850785044,
+        "geometry_margin_range_A": [
+          8.596608445076992,
+          16.37598131988951
+        ]
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.206077844511983,
+        "geometry_margin_final_A": 15.442942580393225,
+        "geometry_margin_range_A": [
+          10.953434691418732,
+          17.35660607793256
+        ]
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.206077844511983,
+        "geometry_margin_final_A": 15.442942580393225,
+        "geometry_margin_range_A": [
+          10.953434691418732,
+          17.35660607793256
+        ]
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.083151511094341,
+        "geometry_margin_final_A": 14.066030162094147,
+        "geometry_margin_range_A": [
+          8.776370824422294,
+          16.214232926317045
+        ]
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.083151511094341,
+        "geometry_margin_final_A": 14.066030162094147,
+        "geometry_margin_range_A": [
+          8.776370824422294,
+          16.214232926317045
+        ]
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 12.317695100730953,
+        "geometry_margin_final_A": 13.478207461939357,
+        "geometry_margin_range_A": [
+          10.36176372181664,
+          15.968096158705869
+        ]
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 12.317695100730953,
+        "geometry_margin_final_A": 13.478207461939357,
+        "geometry_margin_range_A": [
+          10.36176372181664,
+          15.968096158705869
+        ]
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.19954777181384,
+        "geometry_margin_final_A": 13.92058695570157,
+        "geometry_margin_range_A": [
+          9.966357234560313,
+          16.06464666409235
+        ]
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.19954777181384,
+        "geometry_margin_final_A": 13.92058695570157,
+        "geometry_margin_range_A": [
+          9.966357234560313,
+          16.06464666409235
+        ]
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 10.339700350763305,
+        "geometry_margin_final_A": 16.272324117229395,
+        "geometry_margin_range_A": [
+          8.02054582556681,
+          17.93853332331028
+        ]
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 10.339700350763305,
+        "geometry_margin_final_A": 16.272324117229395,
+        "geometry_margin_range_A": [
+          8.02054582556681,
+          17.93853332331028
+        ]
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 9.631004691270904,
+        "geometry_margin_final_A": 12.33843260784925,
+        "geometry_margin_range_A": [
+          5.397681980740932,
+          15.128732588146471
+        ]
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 9.631004691270904,
+        "geometry_margin_final_A": 12.33843260784925,
+        "geometry_margin_range_A": [
+          5.397681980740932,
+          15.128732588146471
+        ]
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 12.927359206297279,
+        "geometry_margin_final_A": 12.98922305460143,
+        "geometry_margin_range_A": [
+          6.441682376174289,
+          15.840584432084114
+        ]
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 12.927359206297279,
+        "geometry_margin_final_A": 12.98922305460143,
+        "geometry_margin_range_A": [
+          6.441682376174289,
+          15.840584432084114
+        ]
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.952223799290682,
+        "geometry_margin_final_A": 17.383027243947847,
+        "geometry_margin_range_A": [
+          12.631709146104363,
+          17.863025646166093
+        ]
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.952223799290682,
+        "geometry_margin_final_A": 17.383027243947847,
+        "geometry_margin_range_A": [
+          12.631709146104363,
+          17.863025646166093
+        ]
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.484585571494868,
+        "geometry_margin_final_A": 15.898184739675983,
+        "geometry_margin_range_A": [
+          9.3859725115879,
+          17.092084847479025
+        ]
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.484585571494868,
+        "geometry_margin_final_A": 15.898184739675983,
+        "geometry_margin_range_A": [
+          9.3859725115879,
+          17.092084847479025
+        ]
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 16.39803722499486,
+        "geometry_margin_final_A": 14.307461684666237,
+        "geometry_margin_range_A": [
+          10.853615402898978,
+          17.52344452381783
+        ]
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 16.39803722499486,
+        "geometry_margin_final_A": 14.307461684666237,
+        "geometry_margin_range_A": [
+          10.853615402898978,
+          17.52344452381783
+        ]
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 11.386070386489376,
+        "geometry_margin_final_A": 11.253660585513225,
+        "geometry_margin_range_A": [
+          5.9721451090155835,
+          14.59511159051273
+        ]
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 11.386070386489376,
+        "geometry_margin_final_A": 11.253660585513225,
+        "geometry_margin_range_A": [
+          5.9721451090155835,
+          14.59511159051273
+        ]
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.489151355582356,
+        "geometry_margin_final_A": 17.002573445857955,
+        "geometry_margin_range_A": [
+          12.539258419746808,
+          17.854680549358044
+        ]
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.489151355582356,
+        "geometry_margin_final_A": 17.002573445857955,
+        "geometry_margin_range_A": [
+          12.539258419746808,
+          17.854680549358044
+        ]
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.924295799940861,
+        "geometry_margin_final_A": 11.746985726971074,
+        "geometry_margin_range_A": [
+          9.473450648780794,
+          17.22708517989458
+        ]
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.924295799940861,
+        "geometry_margin_final_A": 11.746985726971074,
+        "geometry_margin_range_A": [
+          9.473450648780794,
+          17.22708517989458
+        ]
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.440488524361797,
+        "geometry_margin_final_A": 13.589523559443109,
+        "geometry_margin_range_A": [
+          9.665138739562664,
+          17.659383036413818
+        ]
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 15.440488524361797,
+        "geometry_margin_final_A": 13.589523559443109,
+        "geometry_margin_range_A": [
+          9.665138739562664,
+          17.659383036413818
+        ]
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 11.145610075028404,
+        "geometry_margin_final_A": 15.522674142836749,
+        "geometry_margin_range_A": [
+          10.141857352175155,
+          18.024737772967818
+        ]
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 11.145610075028404,
+        "geometry_margin_final_A": 15.522674142836749,
+        "geometry_margin_range_A": [
+          10.141857352175155,
+          18.024737772967818
+        ]
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.730872732000217,
+        "geometry_margin_final_A": 14.987963331295525,
+        "geometry_margin_range_A": [
+          9.277186883837551,
+          17.136554303047674
+        ]
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.730872732000217,
+        "geometry_margin_final_A": 14.987963331295525,
+        "geometry_margin_range_A": [
+          9.277186883837551,
+          17.136554303047674
+        ]
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.502964602561203,
+        "geometry_margin_final_A": 13.171501375298389,
+        "geometry_margin_range_A": [
+          10.842917218634096,
+          17.69604276449224
+        ]
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 14.502964602561203,
+        "geometry_margin_final_A": 13.171501375298389,
+        "geometry_margin_range_A": [
+          10.842917218634096,
+          17.69604276449224
+        ]
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.622830421180215,
+        "geometry_margin_final_A": 13.428021340350654,
+        "geometry_margin_range_A": [
+          9.518506950198233,
+          17.29854905614883
+        ]
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 13.622830421180215,
+        "geometry_margin_final_A": 13.428021340350654,
+        "geometry_margin_range_A": [
+          9.518506950198233,
+          17.29854905614883
+        ]
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "deposited_uniform",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 16.807221513302306,
+        "geometry_margin_final_A": 14.971909722090587,
+        "geometry_margin_range_A": [
+          11.891127783908553,
+          16.944705226307512
+        ]
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "method": "SI_per_contact",
+        "paths": {
+          "20": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "5": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          },
+          "50": {
+            "category": "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE",
+            "initial_preference": "open",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_opposite_interval_ns": null,
+            "opposite_intervals": 0,
+            "counts": {
+              "open": 1001,
+              "closed": 0,
+              "conflict": 0
+            },
+            "longest_seed_frames": 1001,
+            "longest_opposite_frames": 0,
+            "state_transition_claimed": false
+          }
+        },
+        "geometry_margin_initial_A": 16.807221513302306,
+        "geometry_margin_final_A": 14.971909722090587,
+        "geometry_margin_range_A": [
+          11.891127783908553,
+          16.944705226307512
+        ]
+      }
+    ],
+    "grouped": {
+      "deposited_uniform": {
+        "open": {
+          "20": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          },
+          "5": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          },
+          "50": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          }
+        },
+        "closed": {
+          "20": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 10,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 1,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 9
+          },
+          "5": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 9,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 1,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 10
+          },
+          "50": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 10,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 2,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 8
+          }
+        }
+      },
+      "SI_per_contact": {
+        "open": {
+          "20": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          },
+          "5": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          },
+          "50": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 20
+          }
+        },
+        "closed": {
+          "20": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 10,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 1,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 9
+          },
+          "5": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 9,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 1,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 10
+          },
+          "50": {
+            "NO_SUSTAINED_LOSS_OF_SEED_PREFERENCE": 10,
+            "SUSTAINED_LOSS_OF_SEED_PREFERENCE_WITHOUT_OPPOSITE_AGREEMENT": 2,
+            "SUSTAINED_OPPOSITE_REFERENCE_PREFERENCE": 8
+          }
+        }
+      }
+    },
+    "method_changes": [
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 110,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 3,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 93,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 24,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 3,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 51,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 20,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 31,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 4,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_preference_changes": 3,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_preference_changes": 0,
+        "category_changes": {
+          "20": false,
+          "5": false,
+          "50": false
+        }
+      }
+    ],
+    "full_question_answer": false,
+    "claim_ceiling": "Relative-reference finite-time direction in deposited seeds, not state entry, rates, equilibrium or activity",
+    "trajectory_count": 40
+  },
+  "scientific_status": "RELATIVE_DIRECTION_STABLE_ACROSS_TWO_METHODS",
+  "changed_primary_trajectories": 0,
+  "original_envelope_gap": "PRESERVED_NOT_SOLVED_BY_RELATIVE_PREFERENCE"
+}

@@ -20,7 +20,7 @@ class RelativePaths(unittest.TestCase):
         envelope = {'paths': [{'persistence_results': {'20': {'initial_support': 'outside'}}}]}
         base = {'facts_id': q.identity(facts), 'rule_id': q.RULE_ID, 'instance_id': 'same',
                 'status': 'COMPARISON_EXECUTED', 'numeric_result': envelope}
-        policy = {'policy': 'synthetic'}
+        policy = {'policy': 'synthetic', 'measurement_manifest_id': 'synthetic-measures', 'reference_id': 'synthetic-reference'}
         before = r.evaluate(base, facts, envelope, policy)
         calls = []
         r.dispatch(r.evaluate(base, facts, envelope, policy, enabled=False), calls.append)

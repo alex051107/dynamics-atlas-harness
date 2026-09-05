@@ -1,0 +1,1740 @@
+{
+  "schema": "q01-measurement-manifest/v2",
+  "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+  "input_id": "31642c42f952af33ffd9faf886b98f9d3de87fbaa39260e13969e8b3cd9df57c",
+  "method_id": "5362a505a1295ccd69fea728d6d679cb9460728fc28bcc431fc91e4fa18e1c1c",
+  "contact_columns": [
+    {
+      "id": "O01",
+      "residue_i": 24,
+      "resname_i": "ALA",
+      "pseudoatom_i": "HB*",
+      "residue_j": 119,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 11.87,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O02",
+      "residue_i": 26,
+      "resname_i": "ILE",
+      "pseudoatom_i": "HD1*",
+      "residue_j": 115,
+      "resname_j": "THR",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 5.54,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O03",
+      "residue_i": 26,
+      "resname_i": "ILE",
+      "pseudoatom_i": "HD1*",
+      "residue_j": 119,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 8.59,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O05",
+      "residue_i": 29,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 115,
+      "resname_j": "THR",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 6.63,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O06",
+      "residue_i": 29,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 119,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 6.16,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O07",
+      "residue_i": 29,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 122,
+      "resname_j": "LEU",
+      "pseudoatom_j": "HD2*",
+      "dviol_angstrom": 8.89,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O08",
+      "residue_i": 32,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 119,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 4.52,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O09",
+      "residue_i": 32,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 122,
+      "resname_j": "LEU",
+      "pseudoatom_j": "HD2*",
+      "dviol_angstrom": 6.24,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O11",
+      "residue_i": 32,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 131,
+      "resname_j": "ILE",
+      "pseudoatom_j": "HD1*",
+      "dviol_angstrom": 9.65,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O12",
+      "residue_i": 36,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 122,
+      "resname_j": "LEU",
+      "pseudoatom_j": "HD2*",
+      "dviol_angstrom": 8.53,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O13",
+      "residue_i": 36,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 131,
+      "resname_j": "ILE",
+      "pseudoatom_j": "HD1*",
+      "dviol_angstrom": 11.65,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O14",
+      "residue_i": 43,
+      "resname_i": "ILE",
+      "pseudoatom_i": "HD1*",
+      "residue_j": 122,
+      "resname_j": "LEU",
+      "pseudoatom_j": "HD2*",
+      "dviol_angstrom": 9.42,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O16",
+      "residue_i": 111,
+      "resname_i": "ALA",
+      "pseudoatom_i": "HB*",
+      "residue_j": 119,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 10.55,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O17",
+      "residue_i": 115,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 136,
+      "resname_j": "VAL",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 6.64,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O18",
+      "residue_i": 119,
+      "resname_i": "MET",
+      "pseudoatom_i": "HE*",
+      "residue_j": 136,
+      "resname_j": "VAL",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 8.76,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O19",
+      "residue_i": 122,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 136,
+      "resname_j": "VAL",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 8.31,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O20",
+      "residue_i": 122,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 143,
+      "resname_j": "LEU",
+      "pseudoatom_j": "HD2*",
+      "dviol_angstrom": 7.98,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O21",
+      "residue_i": 32,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 115,
+      "resname_j": "THR",
+      "pseudoatom_j": "HG2*",
+      "dviol_angstrom": 10.72,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "O22",
+      "residue_i": 32,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 126,
+      "resname_j": "ALA",
+      "pseudoatom_j": "HB*",
+      "dviol_angstrom": 8.53,
+      "md_used": true,
+      "state": "open"
+    },
+    {
+      "id": "C01",
+      "residue_i": 64,
+      "resname_i": "LEU",
+      "pseudoatom_i": "HD2*",
+      "residue_j": 130,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 10.08,
+      "md_used": true,
+      "state": "closed"
+    },
+    {
+      "id": "C02",
+      "residue_i": 65,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 121,
+      "resname_j": "ALA",
+      "pseudoatom_j": "HB*",
+      "dviol_angstrom": 10.43,
+      "md_used": true,
+      "state": "closed"
+    },
+    {
+      "id": "C03",
+      "residue_i": 65,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 124,
+      "resname_j": "ALA",
+      "pseudoatom_j": "HB*",
+      "dviol_angstrom": 9.85,
+      "md_used": true,
+      "state": "closed"
+    },
+    {
+      "id": "C04",
+      "residue_i": 65,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 126,
+      "resname_j": "ALA",
+      "pseudoatom_j": "HB*",
+      "dviol_angstrom": 10.19,
+      "md_used": true,
+      "state": "closed"
+    },
+    {
+      "id": "C05",
+      "residue_i": 65,
+      "resname_i": "THR",
+      "pseudoatom_i": "HG2*",
+      "residue_j": 130,
+      "resname_j": "MET",
+      "pseudoatom_j": "HE*",
+      "dviol_angstrom": 10.19,
+      "md_used": true,
+      "state": "closed"
+    }
+  ],
+  "reference_id": "762c9290edbcc3048d537457d099aedb14db2334cb74338965b3718b6a3e25e9",
+  "trajectories": [
+    {
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "042e9d96b18498d3669f8b04256a56a4dce214bfac3d4953714756484f2dc192",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "2b1399ddf4cea266d852d86c80ed2d4802960d3df6084e42ab159fd3dda00833"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "f01c167c7f3e6ea08bc5f15809d20336f4aeb29c6b13117300b495f12a3eff9a"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "1a49bdc9a356ea442e55a3091066317aa942ca409fc1920f939e3a4861b0b4cc"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "d94a43f58ca34f85b31a79fc3ba51682fce8e73bb623b2291514a1fe69291cca",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "2dba59636fe0efa2632be3ab748142ef103df35373ffb8a19e1bf1ddcacb57ee"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "b78374100ca59ca3acc627cda631eb080b309659d28e40d530ce007a687c0f29"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "db08ac3d001d6cb92f8cd5c234f5b064a36d1fa1508986212c75b7b397e8a20e"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "25554b6e5efe62c3d94157f344d92a7157189d0e17f39245d7987e83123fd2c3",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "b5278cb38754778029b1759a70b77857ddf818cbf2ae93ec0ae19a619839c49a"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "5c07adff078670ab01c6d42b8fe9633ab57a241560cafec51f9630157f6bc1f0"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "bec45bdb07a38e956b70b0a591d620d216ab52e04477034a04e841906bb765d2"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "9fa510f0ae003f59097cbd934620c00386637daf1b70ec0725f3a793a987d174",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "7400bebf6dbfabacc70e3063d361b2d81e308e3fd7c465dc99016d1a7ab9c248"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "fa2d0be7f99dfe2d339c83f187393c738a1efebcfc55ca78738953a533995b6f"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "fbac72f2379439322b60d963693d7cf857dee4d64047ff10fc4dd9989c75afcf"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "212c2dc569897fe10341f7d26a4015ea6dc25f04798bdcac2c26abb25331522b",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "6ab13f4b959d000dbef2a3326de456e346de4d1e2e4ab2e08e0c5924b90ac89a"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "3c7d278ba1b3ac21fb99c81900e1ca761862174ecf453670fe4c678b7fe8f58d"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "4a120b229356f469f01ad9efb7e911371d1d08c93047434e2d0234ca9316c89f"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "4d7fcc1cfa19fc43fe28a42fad6b82f3322602b90976953925b20b9a1ef56fcb",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "33c125401c69d1319365859796300e5e93ba2a061037b2c226eaa4465899167f"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "2a423d726c919ced39ab1dc5714685b1755b12620aa49df8b0098b6d486f969d"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "7bf53573afdb32661b37203450523245339df64dd9d171870949ea5305382902"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "fe1b8fd88070f616b0faa2581a8bcbf6e3a1eff8eccfaed28ece872a3c212b4b",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "e6c0efaa53ff7875512aa872d6ee1be8b76956da00d779f7b41b46e5198398bc"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "3228758175fadfea137188d84195c8107cdfeb2a3d2739dba1f1fe935beefd28"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "eafdd210dfbc00e04cb65ca515ea8354a1fa28dbfa7d4ff74a43361aa4c6fc5b"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "e11994d68feb540b5349d801b0ad1d0e3204c4ca4a774ea531199cb5fc261496",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "7a568f52958dfece2ea06fbb783d41f97c85dbecd1b87ccf78a0df4932b7f671"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "0250b665ea64c0417d0e4ee03f73bde9960c6134082ab523d075e7eadc417292"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "49a153e186acc961a6e652c82f078914e22439b6202c520ce3f846cb2beff423"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "26de3c2b7e5b1ea56f2c574a6a5b92fda5338aa6cebbf0c741da717408f24807",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "4e8fd769925800ef01adb5113a32a1e2d8adbbd11c769ddb29557a56cf843c77"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "e91650f8b08709baa1f772c38e6b8d8164b37b645043bb2067d5a73e2f6f9fd6"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "1eb8488e04b285a0da3f4b85d065960cf1ec14363138db807cfda1ff14d66fff"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "f35e7ae430ba543e646495ca85bc2c42781d931eeafd1f53aec24aec8f424916",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "843d416266e69ff5ddeff71acde2e69b766d40ddd9cf742fcdd2e0f3573897dc"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "32057e4e5598ea047593d151ad79e99a65ea9d149e08581e1520fd849eb04af9"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "297e8bef8901406782cee5e25101661d1c7fb22214ed255b240442af93fd960c"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "b09909698ed5d607b4c5f05aa6dffa65d6a7788d883a6eb11b1edcb1b9c9007b",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "0116fcbc23829fd579d16e0ce2b25642aeec5a0f7ffa15d38160f63b88f47bd3"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "b3877fab95b725881e07b075fd9b67ed0c52c5456a7b6157450a5cec36588857"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "2556a90ab249ecbf0fb74bcd041b2a69deb72eb46c4b57b04fb9cafc17743b75"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "1572a39fdb1a6109c41586b486a52c6ca90e17566b147be953622ec5dbaf6899",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "3042c13ddcf6aded426b93990d3ad5d1d6d156b88aea31e04b0d383e4ae3497a"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "c6c974058c1b247046c0c7f50442f85e1d1ca401c88da7f6b768e33d33fc830c"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "d1cd668394140eac190173dd69481f0a0499f8e4cb4eb1117f4d5201294f4023"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "1d5e2a6d35f1f6505b8c963f9e2c40408adb36401d34150710b3e4c2984fa34e",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "236b7f760f53e6419d28b01d7c04903827c5d0da79869d973772a880d9d8e5b7"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "09ef03b2a4d485b78b92a7fafbff86019d390e8c4d7cb74bcbf53fd19c0bb6cb"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "86fc0ff4a52c797e08549122a523421edc687af35b1ca1e66adabbc4d73ba526"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "a4e830939a0ce352b9e16e6c6687fb43228d3f20e4c36e30156c4dff167bc6c5",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "7e8be22d329cdef6d6437847caeb2009324618a19a3b3b7c5b0d2d2053964e63"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "7b9d71f31c9ac7eaaeb9291e98b720c184a661f6a1b1664be96174c8b95a79f9"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "659f16245e39c7534b89c00eecc595dbc95b22980228157da56b7761ac5b475f"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "f47cdb3041e74d29c3b00abf7bb12bddb573c911af5cf85cdcb58f3718a17e30",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "5b9da3155929f970d3b09c5128b9a645e899f14e1849d4f8822e27b43021e184"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "dbba70ec2b932f6614500fd691beb551e8b8908209daf63c03ed922d71ee0711"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "76ae1ac3ab148c7ba7cd257f460d782fb178682399141945deea4593df42550e"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "2e2b15b18337ae32a0cba24069f29e09c92e504fac3ee4c26fca5f9db3c227df",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "36b885589e00c9e484ca22149b9a445204c9457e12f8c77984019cd963271c49"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "46d2506b4621beea0457c8de3a1e87762c558d3b7bc0709e2ef971c3bbc73a0d"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "5ec0edf4a93abe5add3959f890178171d5beea2899ce972295e4698addadd89e"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "0655f46f0e5de428c8fa0a36d41ac5fe1e335bdd01a7f5ebce6cfe1a9312c82b",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "d99e3e46eb01849c627f968edca3c9cb9c757f9b0c6ff08be2eac466a3e46a98"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "aee6c2ea0abf06371e1fd80801c7c7094c4926a370ae610415345c27e5491417"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "f5551102dea249cbd3f4e8a102baac6bb79f03e9cf10f06212f1e7dd3c4205ff"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "fdbfc9ebfc420693130b66824128578d78538723967dcab3707e9eb27e74b648",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "f8f7f6b71dd05949447ab497f6ad384b7663a7678ca7949af66fb19aa3317d67"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "a41ce57d717c812aac372ffd6174a9a64e6d48efa2b5288aba5d8cde7754f8d8"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "c0b8db0c028e51523ed38f2123d0163d534dacd772004eb5e55ed44b8db61f16"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "09242bd7d5a715fffd9f5fe9452f7aedef870148e989d7760e153a3ed91cfa67",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "ef2bbe5fc20fd69ebe7dfd7c23b52b2d913d6326077f9632d88603f7fb179824"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "edace115c428f19c4bfbc5555beebc8c696c9d6d9f1e191ac338279dbe2822fe"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "548ecc1351a08d3b09f433e114b675d19628e96f27943a0fd05295dc7e852274"
+        }
+      }
+    },
+    {
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "seed": "closed",
+      "source_and_atom_mapping_id": "bbabe8309bd188b6478335e876299d508657a29136657e27ed00b0475748aca2",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "61975304d4ec26cf7f3b782b4f38918e307ecb2de533722dce990dca6c2046df"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "1e6972ac2e39ddcb29d68deed412c0a59e97a1e7ef2edd454714e670facc8526"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "8ccd162dd82e2610663dfcfef912db53183a33ad22815125e85dc61e575354af"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "b6f692942c60621756621b8588ab1a009a9d24d6c08799cb9aaaa16cfc97e430",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "9cb5c680f6486ad72c0e367a6dd5961846c0f0dc4bc87a54343d83d92622c3ab"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "67dbfb0faefd8031e4896ea239f192ded40e945500838c1c89e3b3d11169efe9"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "5eacbbceadf7c9bb8e94aa282efe15f0b14ad6fc5adae0611ff3984098080700"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "4de61cdd3b60c3732900098ae39ad4d29641586a78cc84cc34c6e8f6744e98ed",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "8ec0bb67c296c2ff3345c2cd88e4c37af765f5c067a3d96ea0fdd7c06d02f827"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "6ec37252302d94d22771eedcb4312b69b5e532d938f92ae72ba1a06d6f177008"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "99a8ccd38c3251034ad55c04c9ccf277f9c8f2f0ef0f1f6f0e78b26ccaada3a4"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "25c07a9ddb746162661d54cba2b72f55c046df4a079a74d52e4221d3f713523c",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "39f9507015166422049bec568f7ffb014173bfa40f0107b2f0b869b399d589d9"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "45631eb2982adba87867e7b2a2650d42e0e90938344880d03b576ca1684eb523"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "6ab224aee155a5608e0b993411c3969213f1feb857de58665923c9b1734cd3dd"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "4f9c5dae234c9dbe8e536c3df4a8adb8d912d1efdc10c0b89f01b07fafe14314",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "fc0cea2eb2626010e1b77fada2d53ee6312a85f1ecbeb7023189c522d7317bcd"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "11523c0b65cbd9318b4d0fa2eaaf109f550fb39942e69df3c28e604c9c769b4c"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "09a69cdd57f3218450effdd5119a058d7b4a96f1029083b2e23f07fedee31cc1"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "874658281466982100e32b2c68252884a286e2bfc9e2b6fda07d3848222bf62d",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "abd4168d409f1928382b30ad72c4405f51cec0267e7cd217af6ecd01360aaafd"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "81e199788fb3565e8f2fe414e2fb25011dac9d0bb5c30d14899741b0afacf1a8"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "4c9f1aecf69e1ef3e72305eab81b18c83f1e465c8b14f4072b29a2c888fc455c"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "949b4f027faa6df4ef84678eedec4c586f74b8f89c7245599be5f9065766b0d1",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "39bbe495e8187730ca5f4fbd402f0c8dd9c2f4ad220ba5b39d1993c7ccbf3b7e"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "139599c45a24d911bed78f2d76a48529e3ad68462956499597a18bfbec414fa6"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "cd8a6faf513d7185ed7af916d1348c11dca0879bfa3ffcd963a9241a3590835a"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "85e63d45227a51356eb3a4d3846dc9454864dfb21e38e8a6fcd04fa7eaef6d3a",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "92b24e0e35ba339c6e043eb05f46f5bdace49ad8684f84827c2b78045680e6cb"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "a1a33948fb5ca82925c39093a95abb813095cd83da51e72a06294081fe903414"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "01aef855786c6fcf07ad81eaa511620a2ea55a6018b683272330f5a97eda8227"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "c7d69193c57adf554f723ba69ac0d661978b541b126e0c1d74646bcaec9516e1",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "3ba5970b8974f047ad66d5ff305b6b0a1ca2a8319ce90cfb08ef5bd27f6fe4e0"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "b70c0cd21e8687a52172d31566d7930c37b5d549e18fdeb910d35063ee43e705"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "8ec48991278f0c18adb92d2647a3fdad7e3d84990ca9774bdbbbf445f9067d45"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "6a6dc9e40c05ae46b13fc0d688bf0b593723cc8c07eb09ad84f6c2bfd1e59c33",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "d20783b1dd0d6c2095975b3d1fe104ff133967b222b5b28e9d2fe2bdb07bc5fe"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "d3fce40442b33dfd92a6291788adea04ab13b2295177b3bca770bab3ab77158f"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "77e026793de5c1b5a935777e2c37a27fb3dfdfab4a5c6bb2d5488e36db2b6de1"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "40eae1f6e72fe79b679f3065602b78b486022b965dd0eac5b5292062a4dc2da9",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "5f27971a4b40fc6f098d343cb0452e51a8b6de16d2f7bcd300860690cef1eab8"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "6cfcfa55f23fcba16a80f8ed5c9c96f1f93308647138dfdeb85422e29531a381"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "e3748af9fde894578b35c82b68d91c6e687e6ba542ebaa2d962d7d4613c86fee"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "90d8ef291bec69e21100cc2c70fb6803cf9f6f04dccea9f780b461953a753011",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "314863abe9dc23a83d1230a8b7b47fa96a681787078f11d829f9ae615b3664e9"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "987a74d547f12eebb90a49f3501e22541ad4ef518996fe0a5bf49b406ed9c97d"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "4b679846b653abe473bc92eaf28ff80732ac23f960874ec9da2971f09abcfc76"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "a82fa3a058313f12b37669ff64cf6a651eba59b5709b59eed72302562f14df5b",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "6480b9c72bcecb42173c0d2552ce50fc6de741ddf9d6271b1b4610cb7fbfc7ed"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "134120e1b4df1422f70f4265e8a133cd08093c829abc16275364f69765ffb6a5"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "e93de80baf9caea4782ab5cb63c7b8d8754bd4e9329f66755ee619bfca44964c"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "be5df76f905e59c134a309b69f2328bf161989f8e347a96679a6aeab31fbfcf7",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "42e35906d1939659eafb7492ba8956523c88ce97fc7071181ef313963773d187"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "e62d14ea90f8d3614584bd7834ff197947fcb70c3d0760b62f387c77b78963f9"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "e45984de292e683e4618bd6a8a3a7de00e3d3835b737cb3f1dbd1f7427e3097a"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "8a7e5080efd4005adadc6587b73b4c212336b2a326b71bad52d9746f44a4cb69",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "06a0453071c8a6cf3ab82c3d98bd20e5f1123a90a917a68a9e9cc44c1f7f70f3"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "5521d0cd432bc26699c50523b5eb721936100712981f58acf231a47c8e1ae5cb"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "69a6474299d27047ea9de886cf442e19f7f901288a9ec24a14ed4513add21d31"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "0658176ea8e760b60ed9f883feebf718b32460630bb80c1f705dc696d78c33de",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "eeefc5a59b223e8a240f174cc1d4c25f594db8235778cfcb0d2ebec8f64cc66d"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "49367bcdf30048809108b53c0e98698fc0aa8a01a41486dbdf1bc6f8c07adca7"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "f1eb5e703a933e2e55587ed4b127527d399bf7394ff55a4752a1c200c0b4dad4"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "3fd7517c065f24f34e0fdd569edb62f1c0cd3960648904e20ec0653170119334",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "0a672c8ffd22bcb4105ef6f9e130daec848aad97824f11d4e10856b1093d0d95"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "f41b1bf2461442405c6debfcfb7d87ea78b55065ba58d645dea024d5e7c44514"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "26447c7dd8d9604d6362c45611b21eeb9b6a902156465bdd76e6f38c5d28940c"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "155e15a10e9b2579314e6dc20f935e6c6d680dc5ecc114e6f3ead67f34688927",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "5ab6885e7cb40d224dab134bb99ae19682032b14e0183b76ca3efee0072ffc16"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "b422f5828b2f24e3c14f9e0077d0958052effda3ff0afe4753cf4a44c96955c3"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "353220307816221d871ab9a2d6c5906358e11d111635f1461673ad79498f8670"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "7b236eb491105475f6b034cf293f7530f524b134a5fab3e9533b467e2388a622",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "5b45c381292739c4e06122b6771f37379eb975ab275cbc3a262092e297f3b1c5"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "43d37af76251a7cccd759c16d3b26092c40e3aaf1152915f9c08ab28681ca3b0"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "789aa367f0fd7b6a07d83ec58fa4039e4bff3910b142ea0b041ff17e40f196b1"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "51f2f75c9e6b7f721a540da3db9051ff460309af8ec0e7971ec892cf83417d79",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "47a65fd43812b7ee61cf15c823192cb2c8e01ff5eb66f07c83bb7d609a8a3756"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "b51501f2f7080068f17cbdddd1c1dac4f33d61749d0a5ee041a54cbdbc582d46"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "92acf1a82a5c18edd2542af2a50565d9ec40ace372ab774c35b8572808d3e6bc"
+        }
+      }
+    },
+    {
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "seed": "open",
+      "source_and_atom_mapping_id": "cc0182bc730b21d9fde23fc9fb5fa9368ba768f59c23e28964b8d66b3596e319",
+      "arrays": {
+        "time_ns": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "ba1d1198f71b42ef224f6008c2dd8f514d8b38e08f3d1d57aab688467f35a0cc"
+        },
+        "contact_distances_A": {
+          "shape": [
+            1001,
+            24
+          ],
+          "dtype": "<f8",
+          "sha256": "8e6bf1cece55f47433fd023198acfd190ad5756d85f87053fa4ff705223603d1"
+        },
+        "open_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "c469e079718ea743b82e999538093c50fca9f5589725b60954d85183c5060d50"
+        },
+        "closed_reference_lid_rmsd_A": {
+          "shape": [
+            1001
+          ],
+          "dtype": "<f8",
+          "sha256": "dfe6bc0710a6e14c7bd3b1478457a0ab5c9b2372f4d38fec689cf2fcd444a79c"
+        }
+      }
+    }
+  ],
+  "manifest_id": "a520303b79452f14e45c38b3468850f47569ba4e54605017a27a10e4c3c06de7"
+}

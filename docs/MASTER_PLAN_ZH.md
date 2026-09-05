@@ -1,8 +1,8 @@
 # Dynamics Atlas：Rules Table 与 Agent Harness Master Plan
 
-> 版本：v2.3
+> 版本：v2.4
 > 日期：2026-09-05
-> 状态：Q01完整40轨迹已得到有界方向性结果；Q05/Q09方法计算持续推进，完整题级科学验收仍0/20
+> 状态：Q01已形成全40轨迹原题科学答复草案，待独立审阅；Q09接入已有方法诊断，完整题级科学验收仍0/20
 > 适用范围：Dynamics Atlas prototype、Rules runtime、Profile Agent、Harness、registered operators 与科学验证路线
 
 ## 文档边界
@@ -47,6 +47,8 @@ Dynamics Atlas 是一个 **scientific workflow compiler**：系统把用户问�
 [Q05当前可审查代码与执行证据](../research/paper_result_reproduction_screen_v1/q05_review_evidence/README.md)包含实际17条规则结果及数值方法对照。自动跟进不因首题诊断完成而停止；按每轮实际证据推进最终目标。
 
 ## 2026-09-04 Pro 审阅后的执行修订
+
+2026-09-05 Pro15后：Q01现已完成全40条绝对几何、相对20ns起点位移、局部接触分解及整轨迹排除的开放MD参照比较。终段lid位移中位数开放种子3.77Å、闭合种子9.71Å；原9条持续相反偏好候选均在首尾窗口更接近开放NMR参照、远离闭合参照。ES17等局部接触仍存在内部方向分歧，证据限制完整开放态解释。连续测量从保存坐标及原始NMR重新构建差为0，输入/参考绑定修复；同一Rules实例实际补算开1/关0，零新GROMACS和优化。302测试及全40产物核查通过。已形成原题有限时间结构答复草案，提交独立审阅；下一步把Q09已有10+26个人工诊断核验后接回方法义务，零重复拟合，不转记Rules补算。见[Q01科学答复](../research/paper_result_reproduction_screen_v1/q01_absolute_paths_v1/REPORT_ZH.md)。下方为此前快照。
 
 2026-09-05 Pro14后：Q01完整40条轨迹已实际读取并核对19+5甲基接触，最大源评分差0.005Å。NMR范围方法在全部起点无法分类，原失败保留；同一窄规则据此触发复用数据的相对方向比较。20开放种子保持偏好，20闭合种子中9条在20连续采样点条件下持续偏向开放参照，两种阈值轨迹分类一致，5/50点敏感性为10/8条。这是有限时间相对方向，不是进入NMR状态、平衡人口或准确率增益。完整题级验收暂不加一。Q09另完成60–119的10次诊断与13来源组26拟合，23/26数值通过；不重复全局旧拟合。下一步让独立审阅检验完整路径/方法边界，并把具体方法证据接回Q09义务。见[Q01完整结果](../research/paper_result_reproduction_screen_v1/q01_relative_paths_v1/REPORT_ZH.md)。下方为此前快照。
 

@@ -7,34 +7,54 @@ from pathlib import Path
 import numpy as np
 from dynamics_atlas_harness import q01_path_comparison_v1 as q
 from dynamics_atlas_harness import q01_relative_paths_v1 as r
+from dynamics_atlas_harness import q01_measurement_identity_v2 as binding
 
 
 def save(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n')
 
 
-def prepare(parent, out):
-    out.mkdir(parents=True, exist_ok=False)
-    contacts = json.loads((parent/'contacts.json').read_text())
-    ref = np.load(parent/'reference_coordinates.npz', allow_pickle=False)
-    policy = r.reference_policy({s: ref[s+'_distances_A'] for s in q.STATES}, contacts)
-    policy['frozen_before_grouped_preference_outcomes'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    policy['method_revision_context'] = 'Original40 envelope failure observed; exposed development revision, not heldout'
-    save(out/'frozen_policy.json', policy)
-    print(json.dumps(policy, indent=2))
-
-
-def run(parent, out):
+def load_bound_records(parent, admission=None):
     facts = json.loads((parent/'facts.json').read_text())
     contacts = json.loads((parent/'contacts.json').read_text())
-    calibration = json.loads((parent/'reference_calibration.json').read_text())
-    policy = json.loads((out/'frozen_policy.json').read_text())
     mappings = json.loads((parent/'trajectory_mapping.json').read_text())
+    ref = dict(np.load(parent/'reference_coordinates.npz', allow_pickle=False))
     records = {}
     for entry in mappings:
         v = np.load(parent/'trajectories'/entry['name']/'measurements.npz', allow_pickle=False)
         records[entry['name']] = {'seed': entry['seed'], 'time_ns': v['time_ns'], 'distances_A': v['distances_A'],
             'geometry_A': {'open': v['open_rmsd_A'], 'closed': v['closed_rmsd_A']}}
+    manifest = json.loads(((admission or parent)/'measurement_manifest.json').read_text())
+    binding.verify_manifest(manifest, records, contacts, ref, mappings, facts)
+    return records, ref, manifest
+
+
+def prepare(parent, out, admission=None):
+    records, ref, manifest = load_bound_records(parent, admission)
+    out.mkdir(parents=True, exist_ok=False)
+    contacts = json.loads((parent/'contacts.json').read_text())
+    ref = np.load(parent/'reference_coordinates.npz', allow_pickle=False)
+    policy = r.reference_policy({s: ref[s+'_distances_A'] for s in q.STATES}, contacts)
+    policy['measurement_manifest_id'] = manifest['manifest_id']
+    policy['reference_id'] = manifest['reference_id']
+    policy['historical_replay'] = admission is not None
+    timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    policy['prepared_at' if admission else 'frozen_before_grouped_preference_outcomes'] = timestamp
+    policy['method_revision_context'] = ('Historical same-method replay after source-coordinate readmission; outcomes already exposed'
+                                         if admission else 'Original40 envelope failure observed; exposed development revision, not heldout')
+    save(out/'frozen_policy.json', policy)
+    print(json.dumps(policy, indent=2))
+
+
+def run(parent, out, admission=None):
+    facts = json.loads((parent/'facts.json').read_text())
+    contacts = json.loads((parent/'contacts.json').read_text())
+    calibration = json.loads((parent/'reference_calibration.json').read_text())
+    policy = json.loads((out/'frozen_policy.json').read_text())
+    records, ref, manifest = load_bound_records(parent, admission)
+    if policy.get('measurement_manifest_id') != manifest['manifest_id'] or policy.get('reference_id') != manifest['reference_id']:
+        raise ValueError('FROZEN_MEASUREMENT_IDENTITY_MISMATCH')
+    binding.verify_policy(policy, ref, contacts, manifest['reference_id'])
     envelope, _ = q.summarize(records, contacts, calibration)
     if envelope != json.loads((parent/'numerical_report.json').read_text()):
         raise ValueError('PARENT_NUMERICAL_REPLAY_MISMATCH')
@@ -77,7 +97,9 @@ def run(parent, out):
         'new_gmx_calls': 0, 'new_optimizations': 0, 'trajectory_count': len(records),
         'changed_primary_trajectories': after['changed_primary_trajectories'],
         'state_membership_claimed': False, 'accuracy_gain_claimed': False, 'full_question_answer': False,
-        'development_method_revision': True, 'original_envelope_results_preserved': True}
+        'development_method_revision': True, 'original_envelope_results_preserved': True,
+        'historical_replay_not_new_scientific_extra': admission is not None,
+        'measurement_manifest_id': manifest['manifest_id'], 'reference_id': manifest['reference_id']}
     save(out/'receipt.json', receipt)
     print(json.dumps(receipt, indent=2))
 
@@ -86,6 +108,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--parent', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--measurement-admission', type=Path, help='Versioned coordinate-derived readmission for historical unbound measurements')
     parser.add_argument('--phase', choices=['prepare', 'run'], required=True)
     args = parser.parse_args()
-    globals()[args.phase](args.parent.resolve(), args.output.resolve())
+    globals()[args.phase](args.parent.resolve(), args.output.resolve(), args.measurement_admission.resolve() if args.measurement_admission else None)

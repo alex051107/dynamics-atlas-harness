@@ -1,0 +1,16 @@
+{
+  "status": "ABSOLUTE_PATHS_AND_CONTACT_DECOMPOSITION_EVALUATED",
+  "completed_at": "2026-09-05T14:31:00.825541+00:00",
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "same_instance_as_relative": true,
+  "on_operator_calls": 1,
+  "off_operator_calls": 0,
+  "new_GROMACS_calls": 0,
+  "new_optimizations": 0,
+  "elapsed_seconds": 82.604499707988,
+  "trajectory_count": 40,
+  "measurement_manifest_id": "a520303b79452f14e45c38b3468850f47569ba4e54605017a27a10e4c3c06de7",
+  "historical_work_reclassified_as_extra": false,
+  "source_raw_coordinates_published": false,
+  "original_labels_preserved": true
+}
