@@ -22,10 +22,13 @@ def _known_text(value):
     return isinstance(value, str) and bool(value.strip()) and value.strip().upper() != 'UNKNOWN'
 
 
-def _scope_issue(scope):
+def _scope_issue(scope, *, needs_model):
     if not isinstance(scope, dict) or set(scope) != SCOPE_FIELDS:
         return 'SCIENTIFIC_SCOPE_SCHEMA_UNAVAILABLE'
-    for field in SCOPE_FIELDS - {'target_support'}:
+    required = SCOPE_FIELDS - {'target_support', 'model_id'}
+    if needs_model:
+        required.add('model_id')
+    for field in required:
         if not _known_text(scope[field]):
             return 'SCIENTIFIC_SCOPE_'+field.upper()+'_UNAVAILABLE'
     support = scope['target_support']
@@ -108,7 +111,9 @@ def _authority_issue(receipt, source):
     relation = binding.get('relationship_to_graph')
     if relation not in {'LATER_ADMITTED_SOURCE_FOR_CURRENT_USE', 'SUPERSEDES_NONAUTHORITATIVE_PROPOSAL'}:
         return 'SOURCE_MEASUREMENT_AUTHORITY_RELATION_UNAVAILABLE'
-    contradictions = binding.get('relevant_contradictions', [])
+    if 'relevant_contradictions' not in binding:
+        return 'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT_DECLARATION_UNAVAILABLE'
+    contradictions = binding['relevant_contradictions']
     if not isinstance(contradictions, list) or contradictions:
         return 'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT'
     if source.get('data_lineage_status') == 'CONTRADICTED' and relation != 'SUPERSEDES_NONAUTHORITATIVE_PROPOSAL':
@@ -159,7 +164,7 @@ def evaluate_uses(case_graph, context=None):
                       local_support=None, full_question_answer=False,
                       remaining_obligations=['MODEL_OBSERVATION_USE_EVIDENCE'])
         results.append(result)
-        scope_issue = _scope_issue(scope)
+        scope_issue = _scope_issue(scope, needs_model=use['requested_use'] != 'OBSERVATION_DESCRIPTION')
         if scope_issue:
             result['reason'] = scope_issue
             continue

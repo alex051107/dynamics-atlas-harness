@@ -26,9 +26,10 @@ class BridgeUseTest(unittest.TestCase):
             self.assertEqual(r['route'],'DIRECT_EVALUATION');self.assertFalse(r['full_question_answer'])
 
     def test_description_needs_no_model_and_population_not_licensed(self):
-        g,c=fixture();g['forward_bridge_uses'][0]['requested_use']='OBSERVATION_DESCRIPTION'
-        self.assertEqual(f.evaluate_uses(g,{})[0]['status'],'NOT_APPLICABLE')
-        g['forward_bridge_uses'][0]['requested_use']='STRUCTURAL_POPULATION';admit_evidence(g,c)
+        g,c=fixture();g['forward_bridge_uses'][0]['requested_use']='OBSERVATION_DESCRIPTION';g['forward_bridge_uses'][0]['scope']['model_id']='UNKNOWN'
+        r=f.evaluate_uses(g,{})[0]
+        self.assertEqual(r['status'],'NOT_APPLICABLE');self.assertEqual(r['remaining_obligations'],[])
+        g,c=fixture();g['forward_bridge_uses'][0]['requested_use']='STRUCTURAL_POPULATION';admit_evidence(g,c)
         r=f.evaluate_uses(g,c)[0];self.assertTrue(r['local_support'])
         self.assertIn('STRUCTURAL_ASSIGNMENT_AND_IDENTIFIABILITY',r['remaining_obligations'])
 
@@ -81,13 +82,16 @@ class BridgeUseTest(unittest.TestCase):
         r=f.evaluate_uses(g,c)[0];self.assertEqual(r['reason'],'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT')
         c['admissions']['i']['authority_binding']['relationship_to_graph']='SUPERSEDES_NONAUTHORITATIVE_PROPOSAL'
         self.assertTrue(f.evaluate_uses(g,c)[0]['check_completed'])
+        g,c=fixture();admit_evidence(g,c);del c['admissions']['i']['authority_binding']['relevant_contradictions']
+        self.assertEqual(f.evaluate_uses(g,c)[0]['reason'],'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT_DECLARATION_UNAVAILABLE')
 
     def test_deer_target_with_zero_imaginary_trailing_values_needs_no_target_noise(self):
         import numpy as np
         from dynamics_atlas_harness import q16_shape_flexibility_v1 as d
-        t=np.arange(20)*.032;candidate=dict(k=0.,p=0.,unmodulated_amplitude=.7,grid_weights=[[0,.3]])
+        t=np.arange(80)*.032;candidate=dict(k=0.,p=0.,unmodulated_amplitude=.7,grid_weights=[[0,.3]])
         y=.7+d.kernel(t)[:,0]*.3
-        raw=np.column_stack([t,y,np.r_[np.sin(np.arange(12))*.001,np.zeros(8)]]).tolist()
-        value=dict(training_record=dict(source_key='record',raw_time_real_imaginary=raw[:12]),target_record=dict(source_key='record',raw_time_real_imaginary=raw),candidate=candidate)
+        raw=np.column_stack([t,y,np.r_[np.sin(np.arange(20))*.001,np.zeros(60)]]).tolist()
+        value=dict(training_record=dict(source_key='record',raw_time_real_imaginary=raw[:20]),target_record=dict(source_key='record',raw_time_real_imaginary=raw),candidate=candidate)
+        with self.assertRaisesRegex(ValueError,'NO_POSITIVE_NOISE_PROXY'):d.arrays(value['target_record'])
         r=f.numerical_check('fixed_deer_prediction_screen_v1',value)
         self.assertLess(r['rms'],1e-14);self.assertGreater(r['training_noise'],0)
