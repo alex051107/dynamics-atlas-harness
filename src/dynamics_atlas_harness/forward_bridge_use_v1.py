@@ -18,6 +18,33 @@ def digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, allow_nan=False).encode()).hexdigest()
 
 
+def _known_text(value):
+    return isinstance(value, str) and bool(value.strip()) and value.strip().upper() != 'UNKNOWN'
+
+
+def _scope_issue(scope):
+    if not isinstance(scope, dict) or set(scope) != SCOPE_FIELDS:
+        return 'SCIENTIFIC_SCOPE_SCHEMA_UNAVAILABLE'
+    for field in SCOPE_FIELDS - {'target_support'}:
+        if not _known_text(scope[field]):
+            return 'SCIENTIFIC_SCOPE_'+field.upper()+'_UNAVAILABLE'
+    support = scope['target_support']
+    if isinstance(support, str):
+        return None if _known_text(support) else 'SCIENTIFIC_SCOPE_TARGET_SUPPORT_UNAVAILABLE'
+    if isinstance(support, list) and len(support) == 3 and all(isinstance(x, (int, float)) and math.isfinite(x) for x in support):
+        return None
+    return 'SCIENTIFIC_SCOPE_TARGET_SUPPORT_UNAVAILABLE'
+
+
+def _target_record_structure(record):
+    """Validate the prediction target without estimating a target noise proxy."""
+    import numpy as np
+    raw = np.asarray(record.get('raw_time_real_imaginary'), float)
+    if raw.ndim != 2 or raw.shape[1] != 3 or len(raw) < 10 or not np.isfinite(raw).all() or not np.all(np.diff(raw[:, 0]) > 0):
+        raise ValueError('INVALID_RAW_RECORD')
+    return raw
+
+
 def numerical_check(method, data):
     if method == 'efficiency_weighted_reference_direction_v1':
         # Reference distances must be efficiency-weighted forward outputs under
@@ -44,10 +71,9 @@ def numerical_check(method, data):
         training, target, candidate = data['training_record'], data['target_record'], data['candidate']
         if training['source_key'] != target['source_key']:
             raise ValueError('DIFFERENT_RECORD_FOR_PREDICTION')
-        train = np.asarray(training['raw_time_real_imaginary'], float)
-        full = np.asarray(target['raw_time_real_imaginary'], float)
+        train = _target_record_structure(training)
+        full = _target_record_structure(target)
         t, y, noise, K = deer.arrays(training)
-        deer.arrays(target)  # Shape, finite and ordering checks; target noise not used.
         if len(full) <= len(train) or not np.array_equal(full[:len(train)], train):
             raise ValueError('TRAINING_NOT_EXACT_PREFIX')
         metrics = deer.audit_candidate(candidate, t, y, noise, K)
@@ -71,19 +97,44 @@ def numerical_check(method, data):
     raise ValueError('METHOD_NOT_SUPPORTED')
 
 
-def _input(use, context):
+def _authority_issue(receipt, source):
+    binding = receipt.get('authority_binding')
+    if not isinstance(binding, dict):
+        return 'SOURCE_MEASUREMENT_AUTHORITY_BINDING_UNAVAILABLE'
+    if binding.get('source_id') != source.get('source_id'):
+        return 'SOURCE_MEASUREMENT_AUTHORITY_SOURCE_MISMATCH'
+    if not _known_text(binding.get('source_version')) or not _known_text(binding.get('measurement_version')):
+        return 'SOURCE_MEASUREMENT_AUTHORITY_VERSION_UNAVAILABLE'
+    relation = binding.get('relationship_to_graph')
+    if relation not in {'LATER_ADMITTED_SOURCE_FOR_CURRENT_USE', 'SUPERSEDES_NONAUTHORITATIVE_PROPOSAL'}:
+        return 'SOURCE_MEASUREMENT_AUTHORITY_RELATION_UNAVAILABLE'
+    contradictions = binding.get('relevant_contradictions', [])
+    if not isinstance(contradictions, list) or contradictions:
+        return 'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT'
+    if source.get('data_lineage_status') == 'CONTRADICTED' and relation != 'SUPERSEDES_NONAUTHORITATIVE_PROPOSAL':
+        return 'SOURCE_MEASUREMENT_AUTHORITY_CONFLICT'
+    return None
+
+
+def _input(use, context, source):
     ref = use['input_ref']
     value = context.get('inputs', {}).get(ref)
     receipt = context.get('admissions', {}).get(ref)
     if value is None or receipt is None:
-        return None
+        return None, 'SOURCE_SCOPE_METHOD_OR_CALIBRATION_UNAVAILABLE', []
     if receipt.get('input_digest') != digest(value) or not receipt.get('source_receipts'):
         raise ValueError('INPUT_NOT_PREVIOUSLY_ADMITTED')
     if value['scope'] != use['scope'] or value['method_id'] != use['method_id']:
-        return None
-    if not receipt.get('method_basis'):
-        return None
-    return value
+        return None, 'SOURCE_SCOPE_METHOD_OR_CALIBRATION_UNAVAILABLE', []
+    if not _known_text(receipt.get('method_basis')):
+        return None, 'METHOD_BASIS_OR_CONDITIONAL_ASSUMPTION_UNAVAILABLE', []
+    authority_issue = _authority_issue(receipt, source)
+    if authority_issue:
+        return None, authority_issue, []
+    assumptions = receipt.get('conditional_assumptions', [receipt['method_basis']])
+    if not isinstance(assumptions, list) or not all(_known_text(x) for x in assumptions):
+        return None, 'METHOD_BASIS_OR_CONDITIONAL_ASSUMPTION_UNAVAILABLE', []
+    return value, None, assumptions
 
 
 def evaluate_uses(case_graph, context=None):
@@ -91,15 +142,13 @@ def evaluate_uses(case_graph, context=None):
     if not isinstance(uses, list):
         raise ValueError('BRIDGE_USES_MUST_BE_LIST')
     context = context or {}
-    sources = {x['source_id'] for x in case_graph.get('evidence_items', [])}
+    sources = {x['source_id']: x for x in case_graph.get('evidence_items', []) if isinstance(x, dict) and 'source_id' in x}
     results, seen = [], set()
     for use in uses:
         if use.get('contract') != CONTRACT or use.get('requested_use') not in REQUESTS:
             raise ValueError('UNSUPPORTED_BRIDGE_USE_CONTRACT')
         scope = use['scope']
-        if set(scope) != SCOPE_FIELDS or any(v is None or v == '' for v in scope.values()):
-            raise ValueError('INCOMPLETE_SCIENTIFIC_SCOPE')
-        if scope['source_id'] not in sources or use['use_id'] in seen:
+        if not isinstance(scope, dict) or set(scope) != SCOPE_FIELDS or use['use_id'] in seen:
             raise ValueError('FOREIGN_SOURCE_OR_DUPLICATE_USE')
         seen.add(use['use_id'])
         identity = digest(use)
@@ -110,13 +159,20 @@ def evaluate_uses(case_graph, context=None):
                       local_support=None, full_question_answer=False,
                       remaining_obligations=['MODEL_OBSERVATION_USE_EVIDENCE'])
         results.append(result)
+        scope_issue = _scope_issue(scope)
+        if scope_issue:
+            result['reason'] = scope_issue
+            continue
+        if scope['source_id'] not in sources:
+            result['reason'] = 'SOURCE_SCOPE_METHOD_OR_CALIBRATION_UNAVAILABLE'
+            continue
         if use['requested_use'] == 'OBSERVATION_DESCRIPTION':
             result.update(status='NOT_APPLICABLE', route='DIRECT_EVALUATION',
                           reason='OBSERVATION_DESCRIPTION_DOES_NOT_REQUIRE_STRUCTURAL_FORWARD_CHECK', remaining_obligations=[])
             continue
-        value = _input(use, context)
+        value, issue, assumptions = _input(use, context, sources[scope['source_id']])
         if value is None or use['method_id'] not in METHODS:
-            result['reason'] = 'SOURCE_SCOPE_METHOD_OR_CALIBRATION_UNAVAILABLE'
+            result['reason'] = issue or 'SOURCE_SCOPE_METHOD_OR_CALIBRATION_UNAVAILABLE'
             continue
         evidence = context.get('evidence', {}).get(use['use_id'])
         if evidence is None or evidence.get('use_digest') != identity or evidence.get('input_digest') != digest(value):
@@ -134,6 +190,7 @@ def evaluate_uses(case_graph, context=None):
                       reason='REQUESTED_USE_'+relation,
                       remaining_obligations=[] if relation != 'UNRESOLVED_DIRECTION' else ['DIRECTION_RESOLUTION'],
                       allowed_conclusion='Conditional model-observation comparison: '+relation+'. '+expected['limitation'])
+        result['conditional_assumptions'] = assumptions
         if use['requested_use'] == 'STRUCTURAL_POPULATION':
             result['remaining_obligations'].append('STRUCTURAL_ASSIGNMENT_AND_IDENTIFIABILITY')
         result['claim_ceiling'] = 'This specific model-observation use only; no whole-question or population approval.'
@@ -156,7 +213,9 @@ def run_checks(*, case_graph, runtime_subrules, bindings, contracts, context, en
             if result.get('runtime_subrule_id') != RULE_ID or result.get('route') != 'REGISTERED_OPERATOR':
                 continue
             use = by_id[result['use_id']]
-            value = _input(use, ctx)
+            value, issue, _ = _input(use, ctx, next(x for x in case_graph['evidence_items'] if x.get('source_id') == use['scope']['source_id']))
+            if value is None:
+                raise ValueError(issue)
             numeric = numerical_check(use['method_id'], value['data'])
             ctx.setdefault('evidence', {})[use['use_id']] = dict(use_digest=digest(use), input_digest=digest(value), numerical=numeric)
             calls.append(dict(use_id=use['use_id'], method_id=use['method_id'], execution_role='DEVELOPMENT_REPLAY_OF_EXISTING_SCIENTIFIC_COMPONENT'))

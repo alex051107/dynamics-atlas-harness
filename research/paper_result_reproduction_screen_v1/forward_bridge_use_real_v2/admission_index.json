@@ -1,0 +1,84 @@
+{
+  "admissions": {
+    "input-reference-55_175": {
+      "input_digest": "5121ade94d59036284a6c0f2e414df50dde458d36a541a658f5d531afc04b79a",
+      "source_receipts": [
+        "q15_admitted_source_receipt_v2.json",
+        "q15_probe_forward_source_facts_v1.json"
+      ],
+      "method_basis": "SI physical page21 Table2 FRET sim and PELDOR sim columns, rows3/4/7/8; stable-probe reference hypothesis; no mean-distance conversion",
+      "conditional_assumptions": [
+        "stable-probe reference hypothesis",
+        "efficiency-weighted reference output, not mean distance"
+      ],
+      "authority_binding": {
+        "source_id": "Q15_APBS_55_175",
+        "source_version": "source-receipts:q15_admitted_source_receipt_v2.json,q15_probe_forward_source_facts_v1.json",
+        "measurement_version": "derived-input:reference-55_175",
+        "relationship_to_graph": "LATER_ADMITTED_SOURCE_FOR_CURRENT_USE",
+        "relevant_contradictions": []
+      },
+      "role": "NEW_DERIVED_INPUT_ADMISSION_FROM_PRIOR_SOURCES_NOT_SCIENTIFIC_APPROVAL"
+    },
+    "input-reference-175_228": {
+      "input_digest": "a6113515333476ce89639fd20fc17d96e8dc19d473781811315884f5bbe50e3d",
+      "source_receipts": [
+        "q15_admitted_source_receipt_v2.json",
+        "q15_probe_forward_source_facts_v1.json"
+      ],
+      "method_basis": "SI physical page21 Table2 FRET sim and PELDOR sim columns, rows3/4/7/8; stable-probe reference hypothesis; no mean-distance conversion",
+      "conditional_assumptions": [
+        "stable-probe reference hypothesis",
+        "efficiency-weighted reference output, not mean distance"
+      ],
+      "authority_binding": {
+        "source_id": "Q15_APBS_175_228",
+        "source_version": "source-receipts:q15_admitted_source_receipt_v2.json,q15_probe_forward_source_facts_v1.json",
+        "measurement_version": "derived-input:reference-175_228",
+        "relationship_to_graph": "LATER_ADMITTED_SOURCE_FOR_CURRENT_USE",
+        "relevant_contradictions": []
+      },
+      "role": "NEW_DERIVED_INPUT_ADMISSION_FROM_PRIOR_SOURCES_NOT_SCIENTIFIC_APPROVAL"
+    },
+    "input-prediction-29_long_raw_cropped": {
+      "input_digest": "c9a4cdd377ce758cd6e7fbf7adb4980832e0f7d85c71d73cbfc4f724aa139e94",
+      "source_receipts": [
+        "q16_shape_flexibility_v1/admission_receipt.json",
+        "q16_saved_tail_audit_v1/report.json"
+      ],
+      "method_basis": "Frozen 2..10nm finite kernel; fixed saved parameters; RMS<=2 training-noise and abs(lag1)<=.2 descriptive only",
+      "conditional_assumptions": [
+        "fixed saved candidate",
+        "training-noise RMS and lag screen only"
+      ],
+      "authority_binding": {
+        "source_id": "source-29_long_raw_cropped",
+        "source_version": "source-receipts:q16_shape_flexibility_v1/admission_receipt.json,q16_saved_tail_audit_v1/report.json",
+        "measurement_version": "derived-input:prediction-29_long_raw_cropped",
+        "relationship_to_graph": "LATER_ADMITTED_SOURCE_FOR_CURRENT_USE",
+        "relevant_contradictions": []
+      },
+      "role": "NEW_DERIVED_INPUT_ADMISSION_FROM_PRIOR_SOURCES_NOT_SCIENTIFIC_APPROVAL"
+    },
+    "input-prediction-36_long_raw_cropped": {
+      "input_digest": "45af7a1b5424e3b59dc37256fa39577678e84af6b114e4d2b390ec8992acf1b7",
+      "source_receipts": [
+        "q16_shape_flexibility_v1/admission_receipt.json",
+        "q16_saved_tail_audit_v1/report.json"
+      ],
+      "method_basis": "Frozen 2..10nm finite kernel; fixed saved parameters; RMS<=2 training-noise and abs(lag1)<=.2 descriptive only",
+      "conditional_assumptions": [
+        "fixed saved candidate",
+        "training-noise RMS and lag screen only"
+      ],
+      "authority_binding": {
+        "source_id": "source-36_long_raw_cropped",
+        "source_version": "source-receipts:q16_shape_flexibility_v1/admission_receipt.json,q16_saved_tail_audit_v1/report.json",
+        "measurement_version": "derived-input:prediction-36_long_raw_cropped",
+        "relationship_to_graph": "LATER_ADMITTED_SOURCE_FOR_CURRENT_USE",
+        "relevant_contradictions": []
+      },
+      "role": "NEW_DERIVED_INPUT_ADMISSION_FROM_PRIOR_SOURCES_NOT_SCIENTIFIC_APPROVAL"
+    }
+  }
+}

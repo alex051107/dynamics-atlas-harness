@@ -1,0 +1,57 @@
+{
+  "summary": [
+    {
+      "use_id": "reference-55_175",
+      "status": "PASS",
+      "local_support": true,
+      "check_completed": true,
+      "remaining_obligations": []
+    },
+    {
+      "use_id": "reference-175_228",
+      "status": "FAIL",
+      "local_support": false,
+      "check_completed": true,
+      "remaining_obligations": []
+    },
+    {
+      "use_id": "prediction-29_long_raw_cropped",
+      "status": "FAIL",
+      "local_support": false,
+      "check_completed": true,
+      "remaining_obligations": []
+    },
+    {
+      "use_id": "prediction-36_long_raw_cropped",
+      "status": "FAIL",
+      "local_support": false,
+      "check_completed": true,
+      "remaining_obligations": []
+    }
+  ],
+  "on_calls": 4,
+  "off_calls": 0,
+  "reentry_calls": 0,
+  "new_fits": 0,
+  "original_manual_calculations_reclassified": false,
+  "selected_tail_candidates": [
+    {
+      "use_id": "prediction-29_long_raw_cropped",
+      "record": "29_long_raw_cropped",
+      "p": null,
+      "k": 0.0,
+      "expected_rms": 0.006118971776989765,
+      "expected_lag1": 0.35970338296480364
+    },
+    {
+      "use_id": "prediction-36_long_raw_cropped",
+      "record": "36_long_raw_cropped",
+      "p": null,
+      "k": 0.0,
+      "expected_rms": 0.02830750639080947,
+      "expected_lag1": 0.5772839490905335
+    }
+  ],
+  "full_question_count_change": 0,
+  "scope": "Development replay on previously exposed same-paper cases; not blind generalization or science accuracy."
+}
