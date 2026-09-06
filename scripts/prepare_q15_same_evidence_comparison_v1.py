@@ -9,6 +9,8 @@ import argparse
 import json
 from pathlib import Path
 
+from dynamics_atlas_harness import q15_cross_modal_evidence_v1 as cross_modal
+
 
 FORBIDDEN_KEYS = {
     'fluorescence_relation', 'relation', 'allowed_conclusion', 'local_support',
@@ -50,7 +52,8 @@ def source(task_root, relative_path):
 def build_snapshots(task_root):
     apbs = source(task_root, 'q15_apbs_comparison_v1/report.json')
     diagnostics = source(task_root, 'q15_pro19_verification_v1/report.json')
-    cross = source(task_root, 'q15_pro20_admission_replay_v2/cross_modal_evidence.json')
+    deer = source(task_root, 'q15_deer_source_audit_v1/report.json')
+    forward = source(task_root, 'q15_probe_forward_source_facts_v1.json')
     fret = source(task_root, 'q15_58_134_forward_bridge_v3/report.json')
     dye = source(task_root, 'q15_dye_response_v1/report.json')
 
@@ -72,7 +75,12 @@ def build_snapshots(task_root):
         for pair in ['55_175', '175_228']
     }
 
-    raw_cross_rows = {row['pair']: row for row in cross['rows']}
+    admitted_sources = dict(main=apbs, summary=diagnostics, deer=deer, forward=forward)
+    source_receipt = cross_modal.verify_admitted_sources(admitted_sources)
+    derived_cross = cross_modal.synthesize_manual_evidence(
+        *(admitted_sources[name] for name in ['main', 'summary', 'deer', 'forward'])
+    )
+    raw_cross_rows = {row['pair']: row for row in derived_cross['rows']}
     require_keys(raw_cross_rows, {'55_175', '175_228'}, source='cross-modal rows')
     primary_cross = [
         {key: raw_cross_rows[pair][key] for key in [
@@ -108,8 +116,8 @@ def build_snapshots(task_root):
         'apbs_direction_diagnostics': primary_diagnostics,
         'deer_and_author_forward_inputs': {
             'rows': primary_cross,
-            'hypothesis': cross['hypothesis'],
-            'limits': cross['limits'],
+            'hypothesis': derived_cross['hypothesis'],
+            'limits': derived_cross['limits'],
         },
         'fret_58_134': primary_fret,
         'claim_limits': [
@@ -125,6 +133,13 @@ def build_snapshots(task_root):
     }
     geometry = source(task_root, 'q15_tmr_histogram_intake_v1/source_geometry.local.json')
     concordance = source(task_root, 'q15_dye_response_v1/source_concordance_check.json')
+    dye_admission = source(task_root, 'q15_question_answer_v3/admission.json')
+    dye_sources = {'histogram': geometry, 'dye_summary': dye, 'concordance': concordance}
+    if dye_admission.get('main_input_id') != apbs['input_id']:
+        raise ValueError('DYE_ADMISSION_MAIN_INPUT_MISMATCH')
+    for name, value in dye_sources.items():
+        if cross_modal.canonical_digest(value) != dye_admission['sources'][name]['canonical_sha256']:
+            raise ValueError(f'DYE_SOURCE_NOT_PREVIOUSLY_ADMITTED:{name}')
     raw_histogram_geometry = {key: geometry[key] for key in [
         'role', 'source_pdf', 'physical_page', 'figure', 'variant', 'dye_pair',
         'frames', 'bins',
@@ -152,7 +167,10 @@ def build_snapshots(task_root):
     }
     assert_no_forbidden_keys(primary)
     assert_no_forbidden_keys(pd)
-    return primary, pd
+    return primary, pd, {
+        'cross_modal_source_receipt_version': source_receipt.get('version'),
+        'dye_source_admission': 'PASS',
+    }
 
 
 def main():
@@ -164,7 +182,7 @@ def main():
     output = args.output.resolve()
     if output.exists():
         raise ValueError('OUTPUT_ALREADY_EXISTS')
-    primary, primary_plus_probe = build_snapshots(task_root)
+    primary, primary_plus_probe, admission_verification = build_snapshots(task_root)
     output.mkdir(parents=True)
     for filename, packet in [
         ('P_primary_comparisons.json', primary),
@@ -181,6 +199,7 @@ def main():
             'outputs/q15_question_answer_v3/admission.json',
             'outputs/q15_58_134_frozen_reuse_v3/producer_admission.json',
         ],
+        'source_admission_verification': admission_verification,
         'answer_generation': 'NOT_RUN',
         'numerical_reruns': 0,
         'rules_reruns': 0,
