@@ -1,0 +1,1471 @@
+{
+  "status": "CALIBRATION_ONLY_FIXED_REGION_AUDIT",
+  "method": "Predeclared time/edge regions;noDA-drivenselection or IRF mutation",
+  "roles": {
+    "D0": {
+      "source": "eTCSPC/22-127/IRF_D0.dat",
+      "total_photons": 2212906,
+      "peak_bin": 600,
+      "peak_time_ns": 4.8,
+      "regions": {
+        "first256": {
+          "first_bin": 0,
+          "last_bin": 255,
+          "first_time_ns": 0.0,
+          "last_time_ns": 2.04,
+          "bins": 256,
+          "count": 80,
+          "mean_counts_per_bin": 0.3125,
+          "sample_variance": 0.30196078431372547,
+          "zero_fraction": 0.73046875,
+          "expected_zero_fraction_under_constant_Poisson": 0.7316156289466418,
+          "conditional_Poisson_mean_95_interval": [
+            0.24779306480855606,
+            0.3889333006540565
+          ],
+          "blocks": [
+            {
+              "first_bin": 0,
+              "last_bin": 31,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            },
+            {
+              "first_bin": 32,
+              "last_bin": 63,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            },
+            {
+              "first_bin": 64,
+              "last_bin": 95,
+              "count": 14,
+              "mean": 0.4375,
+              "bins": 32
+            },
+            {
+              "first_bin": 96,
+              "last_bin": 127,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            },
+            {
+              "first_bin": 128,
+              "last_bin": 159,
+              "count": 6,
+              "mean": 0.1875,
+              "bins": 32
+            },
+            {
+              "first_bin": 160,
+              "last_bin": 191,
+              "count": 9,
+              "mean": 0.28125,
+              "bins": 32
+            },
+            {
+              "first_bin": 192,
+              "last_bin": 223,
+              "count": 10,
+              "mean": 0.3125,
+              "bins": 32
+            },
+            {
+              "first_bin": 224,
+              "last_bin": 255,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 4.115000904419289,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "last256": {
+          "first_bin": 5844,
+          "last_bin": 6099,
+          "first_time_ns": 46.752,
+          "last_time_ns": 48.792,
+          "bins": 256,
+          "count": 90,
+          "mean_counts_per_bin": 0.3515625,
+          "sample_variance": 0.4641544117647059,
+          "zero_fraction": 0.73046875,
+          "expected_zero_fraction_under_constant_Poisson": 0.7035878743456275,
+          "conditional_Poisson_mean_95_interval": [
+            0.2826977661371327,
+            0.432129999179322
+          ],
+          "blocks": [
+            {
+              "first_bin": 5844,
+              "last_bin": 5875,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            },
+            {
+              "first_bin": 5876,
+              "last_bin": 5907,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            },
+            {
+              "first_bin": 5908,
+              "last_bin": 5939,
+              "count": 19,
+              "mean": 0.59375,
+              "bins": 32
+            },
+            {
+              "first_bin": 5940,
+              "last_bin": 5971,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            },
+            {
+              "first_bin": 5972,
+              "last_bin": 6003,
+              "count": 14,
+              "mean": 0.4375,
+              "bins": 32
+            },
+            {
+              "first_bin": 6004,
+              "last_bin": 6035,
+              "count": 12,
+              "mean": 0.375,
+              "bins": 32
+            },
+            {
+              "first_bin": 6036,
+              "last_bin": 6067,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            },
+            {
+              "first_bin": 6068,
+              "last_bin": 6099,
+              "count": 10,
+              "mean": 0.3125,
+              "bins": 32
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 8.37237473746393,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "first512": {
+          "first_bin": 0,
+          "last_bin": 511,
+          "first_time_ns": 0.0,
+          "last_time_ns": 4.088,
+          "bins": 512,
+          "count": 140,
+          "mean_counts_per_bin": 0.2734375,
+          "sample_variance": 0.27733610567514677,
+          "zero_fraction": 0.763671875,
+          "expected_zero_fraction_under_constant_Poisson": 0.7607598823626837,
+          "conditional_Poisson_mean_95_interval": [
+            0.23002064693994198,
+            0.3226669734390059
+          ],
+          "blocks": [
+            {
+              "first_bin": 0,
+              "last_bin": 63,
+              "count": 19,
+              "mean": 0.296875,
+              "bins": 64
+            },
+            {
+              "first_bin": 64,
+              "last_bin": 127,
+              "count": 25,
+              "mean": 0.390625,
+              "bins": 64
+            },
+            {
+              "first_bin": 128,
+              "last_bin": 191,
+              "count": 15,
+              "mean": 0.234375,
+              "bins": 64
+            },
+            {
+              "first_bin": 192,
+              "last_bin": 255,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            },
+            {
+              "first_bin": 256,
+              "last_bin": 319,
+              "count": 11,
+              "mean": 0.171875,
+              "bins": 64
+            },
+            {
+              "first_bin": 320,
+              "last_bin": 383,
+              "count": 14,
+              "mean": 0.21875,
+              "bins": 64
+            },
+            {
+              "first_bin": 384,
+              "last_bin": 447,
+              "count": 20,
+              "mean": 0.3125,
+              "bins": 64
+            },
+            {
+              "first_bin": 448,
+              "last_bin": 511,
+              "count": 15,
+              "mean": 0.234375,
+              "bins": 64
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 8.245772414951027,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "last512": {
+          "first_bin": 5588,
+          "last_bin": 6099,
+          "first_time_ns": 44.704,
+          "last_time_ns": 48.792,
+          "bins": 512,
+          "count": 160,
+          "mean_counts_per_bin": 0.3125,
+          "sample_variance": 0.3561643835616438,
+          "zero_fraction": 0.740234375,
+          "expected_zero_fraction_under_constant_Poisson": 0.7316156289466418,
+          "conditional_Poisson_mean_95_interval": [
+            0.2659541070052655,
+            0.3648483367698771
+          ],
+          "blocks": [
+            {
+              "first_bin": 5588,
+              "last_bin": 5651,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            },
+            {
+              "first_bin": 5652,
+              "last_bin": 5715,
+              "count": 17,
+              "mean": 0.265625,
+              "bins": 64
+            },
+            {
+              "first_bin": 5716,
+              "last_bin": 5779,
+              "count": 18,
+              "mean": 0.28125,
+              "bins": 64
+            },
+            {
+              "first_bin": 5780,
+              "last_bin": 5843,
+              "count": 14,
+              "mean": 0.21875,
+              "bins": 64
+            },
+            {
+              "first_bin": 5844,
+              "last_bin": 5907,
+              "count": 16,
+              "mean": 0.25,
+              "bins": 64
+            },
+            {
+              "first_bin": 5908,
+              "last_bin": 5971,
+              "count": 27,
+              "mean": 0.421875,
+              "bins": 64
+            },
+            {
+              "first_bin": 5972,
+              "last_bin": 6035,
+              "count": 26,
+              "mean": 0.40625,
+              "bins": 64
+            },
+            {
+              "first_bin": 6036,
+              "last_bin": 6099,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 7.500849295914777,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "nominal_pulse_3_to_7ns": {
+          "first_bin": 375,
+          "last_bin": 874,
+          "first_time_ns": 3.0,
+          "last_time_ns": 6.992,
+          "bins": 500,
+          "count": 2210967,
+          "mean_counts_per_bin": 4421.934,
+          "sample_variance": 267853272.35836074,
+          "zero_fraction": 0.372,
+          "expected_zero_fraction_under_constant_Poisson": 0.0,
+          "conditional_Poisson_mean_95_interval": [
+            4416.107227902486,
+            4427.766562027277
+          ],
+          "blocks": [
+            {
+              "first_bin": 375,
+              "last_bin": 437,
+              "count": 19,
+              "mean": 0.30158730158730157,
+              "bins": 63
+            },
+            {
+              "first_bin": 438,
+              "last_bin": 500,
+              "count": 19,
+              "mean": 0.30158730158730157,
+              "bins": 63
+            },
+            {
+              "first_bin": 501,
+              "last_bin": 563,
+              "count": 61,
+              "mean": 0.9682539682539683,
+              "bins": 63
+            },
+            {
+              "first_bin": 564,
+              "last_bin": 626,
+              "count": 2174361,
+              "mean": 34513.666666666664,
+              "bins": 63
+            },
+            {
+              "first_bin": 627,
+              "last_bin": 688,
+              "count": 35362,
+              "mean": 570.3548387096774,
+              "bins": 62
+            },
+            {
+              "first_bin": 689,
+              "last_bin": 750,
+              "count": 971,
+              "mean": 15.661290322580646,
+              "bins": 62
+            },
+            {
+              "first_bin": 751,
+              "last_bin": 812,
+              "count": 122,
+              "mean": 1.967741935483871,
+              "bins": 62
+            },
+            {
+              "first_bin": 813,
+              "last_bin": 874,
+              "count": 52,
+              "mean": 0.8387096774193549,
+              "bins": 62
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 8775320.846860263,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "postpulse_7_to_15ns": {
+          "first_bin": 875,
+          "last_bin": 1874,
+          "first_time_ns": 7.0,
+          "last_time_ns": 14.992,
+          "bins": 1000,
+          "count": 455,
+          "mean_counts_per_bin": 0.455,
+          "sample_variance": 0.5365115115115114,
+          "zero_fraction": 0.651,
+          "expected_zero_fraction_under_constant_Poisson": 0.6344479679482282,
+          "conditional_Poisson_mean_95_interval": [
+            0.4141476006782073,
+            0.49879233183847216
+          ],
+          "blocks": [
+            {
+              "first_bin": 875,
+              "last_bin": 999,
+              "count": 61,
+              "mean": 0.488,
+              "bins": 125
+            },
+            {
+              "first_bin": 1000,
+              "last_bin": 1124,
+              "count": 104,
+              "mean": 0.832,
+              "bins": 125
+            },
+            {
+              "first_bin": 1125,
+              "last_bin": 1249,
+              "count": 52,
+              "mean": 0.416,
+              "bins": 125
+            },
+            {
+              "first_bin": 1250,
+              "last_bin": 1374,
+              "count": 47,
+              "mean": 0.376,
+              "bins": 125
+            },
+            {
+              "first_bin": 1375,
+              "last_bin": 1499,
+              "count": 50,
+              "mean": 0.4,
+              "bins": 125
+            },
+            {
+              "first_bin": 1500,
+              "last_bin": 1624,
+              "count": 47,
+              "mean": 0.376,
+              "bins": 125
+            },
+            {
+              "first_bin": 1625,
+              "last_bin": 1749,
+              "count": 56,
+              "mean": 0.448,
+              "bins": 125
+            },
+            {
+              "first_bin": 1750,
+              "last_bin": 1874,
+              "count": 38,
+              "mean": 0.304,
+              "bins": 125
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 43.63640403215136,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "late_15_to_30ns": {
+          "first_bin": 1875,
+          "last_bin": 3749,
+          "first_time_ns": 15.0,
+          "last_time_ns": 29.992,
+          "bins": 1875,
+          "count": 703,
+          "mean_counts_per_bin": 0.37493333333333334,
+          "sample_variance": 0.380694699395233,
+          "zero_fraction": 0.6912,
+          "expected_zero_fraction_under_constant_Poisson": 0.6873350996035684,
+          "conditional_Poisson_mean_95_interval": [
+            0.34772627536428985,
+            0.40370362563300155
+          ],
+          "blocks": [
+            {
+              "first_bin": 1875,
+              "last_bin": 2109,
+              "count": 88,
+              "mean": 0.37446808510638296,
+              "bins": 235
+            },
+            {
+              "first_bin": 2110,
+              "last_bin": 2344,
+              "count": 75,
+              "mean": 0.3191489361702128,
+              "bins": 235
+            },
+            {
+              "first_bin": 2345,
+              "last_bin": 2579,
+              "count": 86,
+              "mean": 0.3659574468085106,
+              "bins": 235
+            },
+            {
+              "first_bin": 2580,
+              "last_bin": 2813,
+              "count": 80,
+              "mean": 0.3418803418803419,
+              "bins": 234
+            },
+            {
+              "first_bin": 2814,
+              "last_bin": 3047,
+              "count": 83,
+              "mean": 0.3547008547008547,
+              "bins": 234
+            },
+            {
+              "first_bin": 3048,
+              "last_bin": 3281,
+              "count": 76,
+              "mean": 0.3247863247863248,
+              "bins": 234
+            },
+            {
+              "first_bin": 3282,
+              "last_bin": 3515,
+              "count": 128,
+              "mean": 0.5470085470085471,
+              "bins": 234
+            },
+            {
+              "first_bin": 3516,
+              "last_bin": 3749,
+              "count": 87,
+              "mean": 0.3717948717948718,
+              "bins": 234
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 20.88401043147625,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "late_30_to_46_752ns": {
+          "first_bin": 3750,
+          "last_bin": 5843,
+          "first_time_ns": 30.0,
+          "last_time_ns": 46.744,
+          "bins": 2094,
+          "count": 589,
+          "mean_counts_per_bin": 0.281279847182426,
+          "sample_variance": 0.29303687052534694,
+          "zero_fraction": 0.7578796561604585,
+          "expected_zero_fraction_under_constant_Poisson": 0.7548170724899271,
+          "conditional_Poisson_mean_95_interval": [
+            0.2590196384744473,
+            0.3049414135930675
+          ],
+          "blocks": [
+            {
+              "first_bin": 3750,
+              "last_bin": 4011,
+              "count": 84,
+              "mean": 0.32061068702290074,
+              "bins": 262
+            },
+            {
+              "first_bin": 4012,
+              "last_bin": 4273,
+              "count": 71,
+              "mean": 0.27099236641221375,
+              "bins": 262
+            },
+            {
+              "first_bin": 4274,
+              "last_bin": 4535,
+              "count": 77,
+              "mean": 0.29389312977099236,
+              "bins": 262
+            },
+            {
+              "first_bin": 4536,
+              "last_bin": 4797,
+              "count": 83,
+              "mean": 0.31679389312977096,
+              "bins": 262
+            },
+            {
+              "first_bin": 4798,
+              "last_bin": 5059,
+              "count": 59,
+              "mean": 0.22519083969465647,
+              "bins": 262
+            },
+            {
+              "first_bin": 5060,
+              "last_bin": 5321,
+              "count": 77,
+              "mean": 0.29389312977099236,
+              "bins": 262
+            },
+            {
+              "first_bin": 5322,
+              "last_bin": 5582,
+              "count": 67,
+              "mean": 0.2567049808429119,
+              "bins": 261
+            },
+            {
+              "first_bin": 5583,
+              "last_bin": 5843,
+              "count": 71,
+              "mean": 0.2720306513409962,
+              "bins": 261
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 6.70310743981058,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        }
+      },
+      "pooled_first_last256": {
+        "first_bin": 0,
+        "last_bin": 6099,
+        "first_time_ns": 0.0,
+        "last_time_ns": 48.792,
+        "bins": 512,
+        "count": 170,
+        "mean_counts_per_bin": 0.33203125,
+        "sample_variance": 0.38269019080234834,
+        "zero_fraction": 0.73046875,
+        "expected_zero_fraction_under_constant_Poisson": 0.717464901725936,
+        "conditional_Poisson_mean_95_interval": [
+          0.2839943768747166,
+          0.385866159915572
+        ],
+        "blocks": [
+          {
+            "first_bin": 0,
+            "last_bin": 63,
+            "count": 19,
+            "mean": 0.296875,
+            "bins": 64
+          },
+          {
+            "first_bin": 64,
+            "last_bin": 127,
+            "count": 25,
+            "mean": 0.390625,
+            "bins": 64
+          },
+          {
+            "first_bin": 128,
+            "last_bin": 191,
+            "count": 15,
+            "mean": 0.234375,
+            "bins": 64
+          },
+          {
+            "first_bin": 192,
+            "last_bin": 255,
+            "count": 21,
+            "mean": 0.328125,
+            "bins": 64
+          },
+          {
+            "first_bin": 5844,
+            "last_bin": 5907,
+            "count": 16,
+            "mean": 0.25,
+            "bins": 64
+          },
+          {
+            "first_bin": 5908,
+            "last_bin": 5971,
+            "count": 27,
+            "mean": 0.421875,
+            "bins": 64
+          },
+          {
+            "first_bin": 5972,
+            "last_bin": 6035,
+            "count": 26,
+            "mean": 0.40625,
+            "bins": 64
+          },
+          {
+            "first_bin": 6036,
+            "last_bin": 6099,
+            "count": 21,
+            "mean": 0.328125,
+            "bins": 64
+          }
+        ],
+        "eight_block_deviance_descriptive_only": 6.77156868064767,
+        "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+      },
+      "nominal_pulse_photons": 2210967,
+      "outside_nominal_pulse_photons": 1939,
+      "constant_background_count_range_over_full6100bins": [
+        1732.3656989357714,
+        2353.7835754849893
+      ],
+      "constant_background_fraction_range": [
+        0.0007828464918689594,
+        0.0010636617983253646
+      ],
+      "conditional_late_region_contrasts": {
+        "postpulse_7_to_15ns": {
+          "observed_count": 455.0,
+          "expected_if_pooled_edge_rate": [
+            283.99437687471664,
+            385.866159915572
+          ],
+          "excess_over_upper_edge_rate": 69.13384008442802,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        },
+        "late_15_to_30ns": {
+          "observed_count": 703.0,
+          "expected_if_pooled_edge_rate": [
+            532.4894566400936,
+            723.4990498416975
+          ],
+          "excess_over_upper_edge_rate": -20.499049841697456,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        },
+        "late_30_to_46_752ns": {
+          "observed_count": 589.0,
+          "expected_if_pooled_edge_rate": [
+            594.6842251756566,
+            808.0037388632078
+          ],
+          "excess_over_upper_edge_rate": -219.0037388632078,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        }
+      }
+    },
+    "DA": {
+      "source": "eTCSPC/22-127/IRF_DA.dat",
+      "total_photons": 2209533,
+      "peak_bin": 599,
+      "peak_time_ns": 4.792,
+      "regions": {
+        "first256": {
+          "first_bin": 0,
+          "last_bin": 255,
+          "first_time_ns": 0.0,
+          "last_time_ns": 2.04,
+          "bins": 256,
+          "count": 96,
+          "mean_counts_per_bin": 0.375,
+          "sample_variance": 0.34509803921568627,
+          "zero_fraction": 0.6796875,
+          "expected_zero_fraction_under_constant_Poisson": 0.6872892787909722,
+          "conditional_Poisson_mean_95_interval": [
+            0.3037512039648221,
+            0.4579391835911269
+          ],
+          "blocks": [
+            {
+              "first_bin": 0,
+              "last_bin": 31,
+              "count": 12,
+              "mean": 0.375,
+              "bins": 32
+            },
+            {
+              "first_bin": 32,
+              "last_bin": 63,
+              "count": 13,
+              "mean": 0.40625,
+              "bins": 32
+            },
+            {
+              "first_bin": 64,
+              "last_bin": 95,
+              "count": 12,
+              "mean": 0.375,
+              "bins": 32
+            },
+            {
+              "first_bin": 96,
+              "last_bin": 127,
+              "count": 13,
+              "mean": 0.40625,
+              "bins": 32
+            },
+            {
+              "first_bin": 128,
+              "last_bin": 159,
+              "count": 9,
+              "mean": 0.28125,
+              "bins": 32
+            },
+            {
+              "first_bin": 160,
+              "last_bin": 191,
+              "count": 14,
+              "mean": 0.4375,
+              "bins": 32
+            },
+            {
+              "first_bin": 192,
+              "last_bin": 223,
+              "count": 15,
+              "mean": 0.46875,
+              "bins": 32
+            },
+            {
+              "first_bin": 224,
+              "last_bin": 255,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 3.5070273397507306,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "last256": {
+          "first_bin": 5844,
+          "last_bin": 6099,
+          "first_time_ns": 46.752,
+          "last_time_ns": 48.792,
+          "bins": 256,
+          "count": 82,
+          "mean_counts_per_bin": 0.3203125,
+          "sample_variance": 0.29699754901960784,
+          "zero_fraction": 0.71875,
+          "expected_zero_fraction_under_constant_Poisson": 0.7259221509524082,
+          "conditional_Poisson_mean_95_interval": [
+            0.2547540369840014,
+            0.39759227006276615
+          ],
+          "blocks": [
+            {
+              "first_bin": 5844,
+              "last_bin": 5875,
+              "count": 13,
+              "mean": 0.40625,
+              "bins": 32
+            },
+            {
+              "first_bin": 5876,
+              "last_bin": 5907,
+              "count": 8,
+              "mean": 0.25,
+              "bins": 32
+            },
+            {
+              "first_bin": 5908,
+              "last_bin": 5939,
+              "count": 10,
+              "mean": 0.3125,
+              "bins": 32
+            },
+            {
+              "first_bin": 5940,
+              "last_bin": 5971,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            },
+            {
+              "first_bin": 5972,
+              "last_bin": 6003,
+              "count": 5,
+              "mean": 0.15625,
+              "bins": 32
+            },
+            {
+              "first_bin": 6004,
+              "last_bin": 6035,
+              "count": 10,
+              "mean": 0.3125,
+              "bins": 32
+            },
+            {
+              "first_bin": 6036,
+              "last_bin": 6067,
+              "count": 14,
+              "mean": 0.4375,
+              "bins": 32
+            },
+            {
+              "first_bin": 6068,
+              "last_bin": 6099,
+              "count": 11,
+              "mean": 0.34375,
+              "bins": 32
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 5.8849843214912925,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "first512": {
+          "first_bin": 0,
+          "last_bin": 511,
+          "first_time_ns": 0.0,
+          "last_time_ns": 4.088,
+          "bins": 512,
+          "count": 176,
+          "mean_counts_per_bin": 0.34375,
+          "sample_variance": 0.312133072407045,
+          "zero_fraction": 0.69921875,
+          "expected_zero_fraction_under_constant_Poisson": 0.7091061824373984,
+          "conditional_Poisson_mean_95_interval": [
+            0.2948395546701839,
+            0.39845601852311047
+          ],
+          "blocks": [
+            {
+              "first_bin": 0,
+              "last_bin": 63,
+              "count": 25,
+              "mean": 0.390625,
+              "bins": 64
+            },
+            {
+              "first_bin": 64,
+              "last_bin": 127,
+              "count": 25,
+              "mean": 0.390625,
+              "bins": 64
+            },
+            {
+              "first_bin": 128,
+              "last_bin": 191,
+              "count": 23,
+              "mean": 0.359375,
+              "bins": 64
+            },
+            {
+              "first_bin": 192,
+              "last_bin": 255,
+              "count": 23,
+              "mean": 0.359375,
+              "bins": 64
+            },
+            {
+              "first_bin": 256,
+              "last_bin": 319,
+              "count": 10,
+              "mean": 0.15625,
+              "bins": 64
+            },
+            {
+              "first_bin": 320,
+              "last_bin": 383,
+              "count": 26,
+              "mean": 0.40625,
+              "bins": 64
+            },
+            {
+              "first_bin": 384,
+              "last_bin": 447,
+              "count": 23,
+              "mean": 0.359375,
+              "bins": 64
+            },
+            {
+              "first_bin": 448,
+              "last_bin": 511,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 9.881504924297307,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "last512": {
+          "first_bin": 5588,
+          "last_bin": 6099,
+          "first_time_ns": 44.704,
+          "last_time_ns": 48.792,
+          "bins": 512,
+          "count": 169,
+          "mean_counts_per_bin": 0.330078125,
+          "sample_variance": 0.34289001345401177,
+          "zero_fraction": 0.724609375,
+          "expected_zero_fraction_under_constant_Poisson": 0.7188675697091758,
+          "conditional_Poisson_mean_95_interval": [
+            0.2821883387671717,
+            0.38376637121088814
+          ],
+          "blocks": [
+            {
+              "first_bin": 5588,
+              "last_bin": 5651,
+              "count": 9,
+              "mean": 0.140625,
+              "bins": 64
+            },
+            {
+              "first_bin": 5652,
+              "last_bin": 5715,
+              "count": 27,
+              "mean": 0.421875,
+              "bins": 64
+            },
+            {
+              "first_bin": 5716,
+              "last_bin": 5779,
+              "count": 23,
+              "mean": 0.359375,
+              "bins": 64
+            },
+            {
+              "first_bin": 5780,
+              "last_bin": 5843,
+              "count": 28,
+              "mean": 0.4375,
+              "bins": 64
+            },
+            {
+              "first_bin": 5844,
+              "last_bin": 5907,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            },
+            {
+              "first_bin": 5908,
+              "last_bin": 5971,
+              "count": 21,
+              "mean": 0.328125,
+              "bins": 64
+            },
+            {
+              "first_bin": 5972,
+              "last_bin": 6035,
+              "count": 15,
+              "mean": 0.234375,
+              "bins": 64
+            },
+            {
+              "first_bin": 6036,
+              "last_bin": 6099,
+              "count": 25,
+              "mean": 0.390625,
+              "bins": 64
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 15.23207714786761,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "nominal_pulse_3_to_7ns": {
+          "first_bin": 375,
+          "last_bin": 874,
+          "first_time_ns": 3.0,
+          "last_time_ns": 6.992,
+          "bins": 500,
+          "count": 2207412,
+          "mean_counts_per_bin": 4414.824,
+          "sample_variance": 266859674.3336914,
+          "zero_fraction": 0.31,
+          "expected_zero_fraction_under_constant_Poisson": 0.0,
+          "conditional_Poisson_mean_95_interval": [
+            4409.0019157261095,
+            4420.651874204715
+          ],
+          "blocks": [
+            {
+              "first_bin": 375,
+              "last_bin": 437,
+              "count": 27,
+              "mean": 0.42857142857142855,
+              "bins": 63
+            },
+            {
+              "first_bin": 438,
+              "last_bin": 500,
+              "count": 22,
+              "mean": 0.3492063492063492,
+              "bins": 63
+            },
+            {
+              "first_bin": 501,
+              "last_bin": 563,
+              "count": 80,
+              "mean": 1.2698412698412698,
+              "bins": 63
+            },
+            {
+              "first_bin": 564,
+              "last_bin": 626,
+              "count": 2172113,
+              "mean": 34477.98412698413,
+              "bins": 63
+            },
+            {
+              "first_bin": 627,
+              "last_bin": 688,
+              "count": 33888,
+              "mean": 546.5806451612904,
+              "bins": 62
+            },
+            {
+              "first_bin": 689,
+              "last_bin": 750,
+              "count": 1079,
+              "mean": 17.403225806451612,
+              "bins": 62
+            },
+            {
+              "first_bin": 751,
+              "last_bin": 812,
+              "count": 152,
+              "mean": 2.4516129032258065,
+              "bins": 62
+            },
+            {
+              "first_bin": 813,
+              "last_bin": 874,
+              "count": 51,
+              "mean": 0.8225806451612904,
+              "bins": 62
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 8770010.379650107,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "postpulse_7_to_15ns": {
+          "first_bin": 875,
+          "last_bin": 1874,
+          "first_time_ns": 7.0,
+          "last_time_ns": 14.992,
+          "bins": 1000,
+          "count": 470,
+          "mean_counts_per_bin": 0.47,
+          "sample_variance": 0.6437437437437438,
+          "zero_fraction": 0.66,
+          "expected_zero_fraction_under_constant_Poisson": 0.6250022682827008,
+          "conditional_Poisson_mean_95_interval": [
+            0.42846392991769305,
+            0.5144752738585925
+          ],
+          "blocks": [
+            {
+              "first_bin": 875,
+              "last_bin": 999,
+              "count": 59,
+              "mean": 0.472,
+              "bins": 125
+            },
+            {
+              "first_bin": 1000,
+              "last_bin": 1124,
+              "count": 130,
+              "mean": 1.04,
+              "bins": 125
+            },
+            {
+              "first_bin": 1125,
+              "last_bin": 1249,
+              "count": 43,
+              "mean": 0.344,
+              "bins": 125
+            },
+            {
+              "first_bin": 1250,
+              "last_bin": 1374,
+              "count": 47,
+              "mean": 0.376,
+              "bins": 125
+            },
+            {
+              "first_bin": 1375,
+              "last_bin": 1499,
+              "count": 60,
+              "mean": 0.48,
+              "bins": 125
+            },
+            {
+              "first_bin": 1500,
+              "last_bin": 1624,
+              "count": 51,
+              "mean": 0.408,
+              "bins": 125
+            },
+            {
+              "first_bin": 1625,
+              "last_bin": 1749,
+              "count": 35,
+              "mean": 0.28,
+              "bins": 125
+            },
+            {
+              "first_bin": 1750,
+              "last_bin": 1874,
+              "count": 45,
+              "mean": 0.36,
+              "bins": 125
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 87.033326555027,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "late_15_to_30ns": {
+          "first_bin": 1875,
+          "last_bin": 3749,
+          "first_time_ns": 15.0,
+          "last_time_ns": 29.992,
+          "bins": 1875,
+          "count": 751,
+          "mean_counts_per_bin": 0.40053333333333335,
+          "sample_variance": 0.410992244752757,
+          "zero_fraction": 0.6768,
+          "expected_zero_fraction_under_constant_Poisson": 0.6699626373285474,
+          "conditional_Poisson_mean_95_interval": [
+            0.37239559426508284,
+            0.43023367340556623
+          ],
+          "blocks": [
+            {
+              "first_bin": 1875,
+              "last_bin": 2109,
+              "count": 87,
+              "mean": 0.3702127659574468,
+              "bins": 235
+            },
+            {
+              "first_bin": 2110,
+              "last_bin": 2344,
+              "count": 84,
+              "mean": 0.3574468085106383,
+              "bins": 235
+            },
+            {
+              "first_bin": 2345,
+              "last_bin": 2579,
+              "count": 85,
+              "mean": 0.3617021276595745,
+              "bins": 235
+            },
+            {
+              "first_bin": 2580,
+              "last_bin": 2813,
+              "count": 87,
+              "mean": 0.3717948717948718,
+              "bins": 234
+            },
+            {
+              "first_bin": 2814,
+              "last_bin": 3047,
+              "count": 96,
+              "mean": 0.41025641025641024,
+              "bins": 234
+            },
+            {
+              "first_bin": 3048,
+              "last_bin": 3281,
+              "count": 92,
+              "mean": 0.39316239316239315,
+              "bins": 234
+            },
+            {
+              "first_bin": 3282,
+              "last_bin": 3515,
+              "count": 136,
+              "mean": 0.5811965811965812,
+              "bins": 234
+            },
+            {
+              "first_bin": 3516,
+              "last_bin": 3749,
+              "count": 84,
+              "mean": 0.358974358974359,
+              "bins": 234
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 20.938922253468036,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        },
+        "late_30_to_46_752ns": {
+          "first_bin": 3750,
+          "last_bin": 5843,
+          "first_time_ns": 30.0,
+          "last_time_ns": 46.744,
+          "bins": 2094,
+          "count": 691,
+          "mean_counts_per_bin": 0.3299904489016237,
+          "sample_variance": 0.32535910167653037,
+          "zero_fraction": 0.7187201528175741,
+          "expected_zero_fraction_under_constant_Poisson": 0.7189305999760207,
+          "conditional_Poisson_mean_95_interval": [
+            0.3058415751446977,
+            0.3555392177562999
+          ],
+          "blocks": [
+            {
+              "first_bin": 3750,
+              "last_bin": 4011,
+              "count": 84,
+              "mean": 0.32061068702290074,
+              "bins": 262
+            },
+            {
+              "first_bin": 4012,
+              "last_bin": 4273,
+              "count": 79,
+              "mean": 0.3015267175572519,
+              "bins": 262
+            },
+            {
+              "first_bin": 4274,
+              "last_bin": 4535,
+              "count": 105,
+              "mean": 0.40076335877862596,
+              "bins": 262
+            },
+            {
+              "first_bin": 4536,
+              "last_bin": 4797,
+              "count": 90,
+              "mean": 0.3435114503816794,
+              "bins": 262
+            },
+            {
+              "first_bin": 4798,
+              "last_bin": 5059,
+              "count": 77,
+              "mean": 0.29389312977099236,
+              "bins": 262
+            },
+            {
+              "first_bin": 5060,
+              "last_bin": 5321,
+              "count": 81,
+              "mean": 0.30916030534351147,
+              "bins": 262
+            },
+            {
+              "first_bin": 5322,
+              "last_bin": 5582,
+              "count": 85,
+              "mean": 0.32567049808429116,
+              "bins": 261
+            },
+            {
+              "first_bin": 5583,
+              "last_bin": 5843,
+              "count": 90,
+              "mean": 0.3448275862068966,
+              "bins": 261
+            }
+          ],
+          "eight_block_deviance_descriptive_only": 6.208725438809463,
+          "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+        }
+      },
+      "pooled_first_last256": {
+        "first_bin": 0,
+        "last_bin": 6099,
+        "first_time_ns": 0.0,
+        "last_time_ns": 48.792,
+        "bins": 512,
+        "count": 178,
+        "mean_counts_per_bin": 0.34765625,
+        "sample_variance": 0.3211686643835616,
+        "zero_fraction": 0.69921875,
+        "expected_zero_fraction_under_constant_Poisson": 0.7063416394256196,
+        "conditional_Poisson_mean_95_interval": [
+          0.2984579356961442,
+          0.4026493438626949
+        ],
+        "blocks": [
+          {
+            "first_bin": 0,
+            "last_bin": 63,
+            "count": 25,
+            "mean": 0.390625,
+            "bins": 64
+          },
+          {
+            "first_bin": 64,
+            "last_bin": 127,
+            "count": 25,
+            "mean": 0.390625,
+            "bins": 64
+          },
+          {
+            "first_bin": 128,
+            "last_bin": 191,
+            "count": 23,
+            "mean": 0.359375,
+            "bins": 64
+          },
+          {
+            "first_bin": 192,
+            "last_bin": 255,
+            "count": 23,
+            "mean": 0.359375,
+            "bins": 64
+          },
+          {
+            "first_bin": 5844,
+            "last_bin": 5907,
+            "count": 21,
+            "mean": 0.328125,
+            "bins": 64
+          },
+          {
+            "first_bin": 5908,
+            "last_bin": 5971,
+            "count": 21,
+            "mean": 0.328125,
+            "bins": 64
+          },
+          {
+            "first_bin": 5972,
+            "last_bin": 6035,
+            "count": 15,
+            "mean": 0.234375,
+            "bins": 64
+          },
+          {
+            "first_bin": 6036,
+            "last_bin": 6099,
+            "count": 25,
+            "mean": 0.390625,
+            "bins": 64
+          }
+        ],
+        "eight_block_deviance_descriptive_only": 3.8444773315850123,
+        "assumption": "ConstantPoissonrateintervalonly;regionmaycontaintrueresponse;notproofpurebackground"
+      },
+      "nominal_pulse_photons": 2207412,
+      "outside_nominal_pulse_photons": 2121,
+      "constant_background_count_range_over_full6100bins": [
+        1820.5934077464797,
+        2456.1609975624388
+      ],
+      "constant_background_fraction_range": [
+        0.0008239720374153632,
+        0.0011116199656499536
+      ],
+      "conditional_late_region_contrasts": {
+        "postpulse_7_to_15ns": {
+          "observed_count": 470.0,
+          "expected_if_pooled_edge_rate": [
+            298.4579356961442,
+            402.64934386269493
+          ],
+          "excess_over_upper_edge_rate": 67.35065613730507,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        },
+        "late_15_to_30ns": {
+          "observed_count": 751.0,
+          "expected_if_pooled_edge_rate": [
+            559.6086294302704,
+            754.967519742553
+          ],
+          "excess_over_upper_edge_rate": -3.9675197425530087,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        },
+        "late_30_to_46_752ns": {
+          "observed_count": 691.0,
+          "expected_if_pooled_edge_rate": [
+            624.970917347726,
+            843.1477260484832
+          ],
+          "excess_over_upper_edge_rate": -152.14772604848315,
+          "interpretation": "Conditionalcontrastnot formal intervalfor netresponse;overlapping/multiple regionsnotindependenttests"
+        }
+      }
+    }
+  },
+  "fits": 0,
+  "Rules_run": false,
+  "claim_ceiling": "Descriptivecalibrationstructure andconditionalconstant-rateintervals;no netIRF truth,backgroundsubtraction,uncertaintypropagationorstate-numberverdict"
+}

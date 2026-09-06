@@ -1,0 +1,582 @@
+{
+  "role": "PUBLISHED_MEASURED_HISTOGRAM_BARS_NOT_FITTED_CURVES",
+  "source_pdf": "Peter_2022_NatureCommunications_DEER_smFRET_crossvalidation.pdf",
+  "physical_page": 7,
+  "figure": "4d right column",
+  "variant": "HiSiaP175/228",
+  "dye_pair": "TMR/Cy5",
+  "converter": "installed pdftocairo -f7 -l7 -svg",
+  "frames": {
+    "apo": [
+      435.507836713295,
+      535.5117189965033,
+      293.22657487404496,
+      348.2265623731084
+    ],
+    "holo": [
+      435.43361721658005,
+      535.4335937830069,
+      348.42970001365995,
+      403.429687467778
+    ]
+  },
+  "bins": {
+    "apo": [
+      {
+        "svg_path_index": 3947,
+        "left_pt": 437.511719,
+        "right_pt": 439.550781,
+        "top_pt": 337.335938,
+        "baseline_pt": 347.125,
+        "height_pt": 9.789062000000001
+      },
+      {
+        "svg_path_index": 3952,
+        "left_pt": 439.550781,
+        "right_pt": 441.597656,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      },
+      {
+        "svg_path_index": 3960,
+        "left_pt": 441.597656,
+        "right_pt": 443.636719,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      },
+      {
+        "svg_path_index": 3968,
+        "left_pt": 443.636719,
+        "right_pt": 445.679688,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      },
+      {
+        "svg_path_index": 3976,
+        "left_pt": 445.679688,
+        "right_pt": 447.722656,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      },
+      {
+        "svg_path_index": 3984,
+        "left_pt": 447.722656,
+        "right_pt": 449.765625,
+        "top_pt": 341.007812,
+        "baseline_pt": 347.125,
+        "height_pt": 6.117187999999999
+      },
+      {
+        "svg_path_index": 3992,
+        "left_pt": 449.765625,
+        "right_pt": 451.808594,
+        "top_pt": 341.007812,
+        "baseline_pt": 347.125,
+        "height_pt": 6.117187999999999
+      },
+      {
+        "svg_path_index": 4000,
+        "left_pt": 451.808594,
+        "right_pt": 453.851562,
+        "top_pt": 338.5625,
+        "baseline_pt": 347.125,
+        "height_pt": 8.5625
+      },
+      {
+        "svg_path_index": 4007,
+        "left_pt": 453.851562,
+        "right_pt": 455.894531,
+        "top_pt": 334.890625,
+        "baseline_pt": 347.125,
+        "height_pt": 12.234375
+      },
+      {
+        "svg_path_index": 4014,
+        "left_pt": 455.894531,
+        "right_pt": 457.9375,
+        "top_pt": 334.890625,
+        "baseline_pt": 347.125,
+        "height_pt": 12.234375
+      },
+      {
+        "svg_path_index": 4020,
+        "left_pt": 457.9375,
+        "right_pt": 459.980469,
+        "top_pt": 325.101562,
+        "baseline_pt": 347.125,
+        "height_pt": 22.023438
+      },
+      {
+        "svg_path_index": 4027,
+        "left_pt": 459.980469,
+        "right_pt": 462.023438,
+        "top_pt": 321.425781,
+        "baseline_pt": 347.125,
+        "height_pt": 25.699219000000028
+      },
+      {
+        "svg_path_index": 4034,
+        "left_pt": 462.023438,
+        "right_pt": 464.066406,
+        "top_pt": 306.742188,
+        "baseline_pt": 347.125,
+        "height_pt": 40.382812
+      },
+      {
+        "svg_path_index": 4041,
+        "left_pt": 464.066406,
+        "right_pt": 466.105469,
+        "top_pt": 315.3125,
+        "baseline_pt": 347.125,
+        "height_pt": 31.8125
+      },
+      {
+        "svg_path_index": 4047,
+        "left_pt": 466.105469,
+        "right_pt": 468.148438,
+        "top_pt": 300.625,
+        "baseline_pt": 347.125,
+        "height_pt": 46.5
+      },
+      {
+        "svg_path_index": 4054,
+        "left_pt": 468.148438,
+        "right_pt": 470.191406,
+        "top_pt": 301.851562,
+        "baseline_pt": 347.125,
+        "height_pt": 45.273438
+      },
+      {
+        "svg_path_index": 4062,
+        "left_pt": 470.191406,
+        "right_pt": 472.234375,
+        "top_pt": 300.625,
+        "baseline_pt": 347.125,
+        "height_pt": 46.5
+      },
+      {
+        "svg_path_index": 4070,
+        "left_pt": 472.234375,
+        "right_pt": 474.277344,
+        "top_pt": 306.742188,
+        "baseline_pt": 347.125,
+        "height_pt": 40.382812
+      },
+      {
+        "svg_path_index": 4077,
+        "left_pt": 474.277344,
+        "right_pt": 476.320312,
+        "top_pt": 312.863281,
+        "baseline_pt": 347.125,
+        "height_pt": 34.26171900000003
+      },
+      {
+        "svg_path_index": 4083,
+        "left_pt": 476.320312,
+        "right_pt": 478.363281,
+        "top_pt": 311.640625,
+        "baseline_pt": 347.125,
+        "height_pt": 35.484375
+      },
+      {
+        "svg_path_index": 4090,
+        "left_pt": 478.363281,
+        "right_pt": 480.40625,
+        "top_pt": 326.324219,
+        "baseline_pt": 347.125,
+        "height_pt": 20.800780999999972
+      },
+      {
+        "svg_path_index": 4096,
+        "left_pt": 480.40625,
+        "right_pt": 482.445312,
+        "top_pt": 325.101562,
+        "baseline_pt": 347.125,
+        "height_pt": 22.023438
+      },
+      {
+        "svg_path_index": 4103,
+        "left_pt": 482.445312,
+        "right_pt": 484.492188,
+        "top_pt": 331.21875,
+        "baseline_pt": 347.125,
+        "height_pt": 15.90625
+      },
+      {
+        "svg_path_index": 4110,
+        "left_pt": 484.488281,
+        "right_pt": 486.53125,
+        "top_pt": 339.785156,
+        "baseline_pt": 347.125,
+        "height_pt": 7.339844000000028
+      },
+      {
+        "svg_path_index": 4116,
+        "left_pt": 486.53125,
+        "right_pt": 488.574219,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      },
+      {
+        "svg_path_index": 4122,
+        "left_pt": 488.574219,
+        "right_pt": 490.617188,
+        "top_pt": 341.007812,
+        "baseline_pt": 347.125,
+        "height_pt": 6.117187999999999
+      },
+      {
+        "svg_path_index": 4129,
+        "left_pt": 490.617188,
+        "right_pt": 492.660156,
+        "top_pt": 342.230469,
+        "baseline_pt": 347.125,
+        "height_pt": 4.894530999999972
+      },
+      {
+        "svg_path_index": 4137,
+        "left_pt": 492.660156,
+        "right_pt": 494.703125,
+        "top_pt": 343.453125,
+        "baseline_pt": 347.125,
+        "height_pt": 3.671875
+      },
+      {
+        "svg_path_index": 4145,
+        "left_pt": 494.703125,
+        "right_pt": 496.742188,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4156,
+        "left_pt": 496.742188,
+        "right_pt": 498.789062,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4164,
+        "left_pt": 498.789062,
+        "right_pt": 500.828125,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4172,
+        "left_pt": 502.871094,
+        "right_pt": 504.914062,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4177,
+        "left_pt": 504.917969,
+        "right_pt": 506.957031,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4188,
+        "left_pt": 523.296875,
+        "right_pt": 525.34375,
+        "top_pt": 345.902344,
+        "baseline_pt": 347.125,
+        "height_pt": 1.2226559999999722
+      },
+      {
+        "svg_path_index": 4193,
+        "left_pt": 527.382812,
+        "right_pt": 529.425781,
+        "top_pt": 344.675781,
+        "baseline_pt": 347.125,
+        "height_pt": 2.449219000000028
+      }
+    ],
+    "holo": [
+      {
+        "svg_path_index": 3514,
+        "left_pt": 437.433594,
+        "right_pt": 439.472656,
+        "top_pt": 397.347656,
+        "baseline_pt": 402.328125,
+        "height_pt": 4.980469000000028
+      },
+      {
+        "svg_path_index": 3519,
+        "left_pt": 439.472656,
+        "right_pt": 441.515625,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3527,
+        "left_pt": 447.644531,
+        "right_pt": 449.6875,
+        "top_pt": 399.007812,
+        "baseline_pt": 402.328125,
+        "height_pt": 3.3203129999999987
+      },
+      {
+        "svg_path_index": 3532,
+        "left_pt": 449.6875,
+        "right_pt": 451.730469,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3540,
+        "left_pt": 451.730469,
+        "right_pt": 453.773438,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3548,
+        "left_pt": 453.773438,
+        "right_pt": 455.816406,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3556,
+        "left_pt": 455.816406,
+        "right_pt": 457.859375,
+        "top_pt": 397.347656,
+        "baseline_pt": 402.328125,
+        "height_pt": 4.980469000000028
+      },
+      {
+        "svg_path_index": 3564,
+        "left_pt": 457.859375,
+        "right_pt": 459.902344,
+        "top_pt": 397.347656,
+        "baseline_pt": 402.328125,
+        "height_pt": 4.980469000000028
+      },
+      {
+        "svg_path_index": 3572,
+        "left_pt": 459.902344,
+        "right_pt": 461.945312,
+        "top_pt": 397.347656,
+        "baseline_pt": 402.328125,
+        "height_pt": 4.980469000000028
+      },
+      {
+        "svg_path_index": 3580,
+        "left_pt": 463.988281,
+        "right_pt": 466.027344,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3584,
+        "left_pt": 466.027344,
+        "right_pt": 468.070312,
+        "top_pt": 394.027344,
+        "baseline_pt": 402.332031,
+        "height_pt": 8.304686999999944
+      },
+      {
+        "svg_path_index": 3591,
+        "left_pt": 468.070312,
+        "right_pt": 470.113281,
+        "top_pt": 394.027344,
+        "baseline_pt": 402.332031,
+        "height_pt": 8.304686999999944
+      },
+      {
+        "svg_path_index": 3597,
+        "left_pt": 470.113281,
+        "right_pt": 472.15625,
+        "top_pt": 384.0625,
+        "baseline_pt": 402.332031,
+        "height_pt": 18.269530999999972
+      },
+      {
+        "svg_path_index": 3604,
+        "left_pt": 472.15625,
+        "right_pt": 474.199219,
+        "top_pt": 384.0625,
+        "baseline_pt": 402.332031,
+        "height_pt": 18.269530999999972
+      },
+      {
+        "svg_path_index": 3610,
+        "left_pt": 474.199219,
+        "right_pt": 476.242188,
+        "top_pt": 379.082031,
+        "baseline_pt": 402.328125,
+        "height_pt": 23.246094000000028
+      },
+      {
+        "svg_path_index": 3616,
+        "left_pt": 476.242188,
+        "right_pt": 478.285156,
+        "top_pt": 365.792969,
+        "baseline_pt": 402.332031,
+        "height_pt": 36.539061999999944
+      },
+      {
+        "svg_path_index": 3623,
+        "left_pt": 478.285156,
+        "right_pt": 480.328125,
+        "top_pt": 362.472656,
+        "baseline_pt": 402.328125,
+        "height_pt": 39.85546900000003
+      },
+      {
+        "svg_path_index": 3631,
+        "left_pt": 480.324219,
+        "right_pt": 482.367188,
+        "top_pt": 365.792969,
+        "baseline_pt": 402.332031,
+        "height_pt": 36.539061999999944
+      },
+      {
+        "svg_path_index": 3637,
+        "left_pt": 482.371094,
+        "right_pt": 484.414062,
+        "top_pt": 355.828125,
+        "baseline_pt": 402.328125,
+        "height_pt": 46.5
+      },
+      {
+        "svg_path_index": 3644,
+        "left_pt": 484.410156,
+        "right_pt": 486.453125,
+        "top_pt": 364.921875,
+        "baseline_pt": 402.332031,
+        "height_pt": 37.41015599999997
+      },
+      {
+        "svg_path_index": 3650,
+        "left_pt": 486.453125,
+        "right_pt": 488.496094,
+        "top_pt": 368.683594,
+        "baseline_pt": 402.328125,
+        "height_pt": 33.64453099999997
+      },
+      {
+        "svg_path_index": 3656,
+        "left_pt": 488.496094,
+        "right_pt": 490.539062,
+        "top_pt": 364.132812,
+        "baseline_pt": 402.328125,
+        "height_pt": 38.195313
+      },
+      {
+        "svg_path_index": 3663,
+        "left_pt": 490.539062,
+        "right_pt": 492.582031,
+        "top_pt": 369.117188,
+        "baseline_pt": 402.332031,
+        "height_pt": 33.21484299999997
+      },
+      {
+        "svg_path_index": 3671,
+        "left_pt": 492.582031,
+        "right_pt": 494.625,
+        "top_pt": 385.726562,
+        "baseline_pt": 402.332031,
+        "height_pt": 16.60546899999997
+      },
+      {
+        "svg_path_index": 3677,
+        "left_pt": 494.625,
+        "right_pt": 496.664062,
+        "top_pt": 384.0625,
+        "baseline_pt": 402.332031,
+        "height_pt": 18.269530999999972
+      },
+      {
+        "svg_path_index": 3684,
+        "left_pt": 496.667969,
+        "right_pt": 498.710938,
+        "top_pt": 382.402344,
+        "baseline_pt": 402.328125,
+        "height_pt": 19.925780999999972
+      },
+      {
+        "svg_path_index": 3692,
+        "left_pt": 498.710938,
+        "right_pt": 500.75,
+        "top_pt": 395.6875,
+        "baseline_pt": 402.328125,
+        "height_pt": 6.640625
+      },
+      {
+        "svg_path_index": 3698,
+        "left_pt": 500.75,
+        "right_pt": 502.792969,
+        "top_pt": 392.367188,
+        "baseline_pt": 402.332031,
+        "height_pt": 9.964842999999973
+      },
+      {
+        "svg_path_index": 3705,
+        "left_pt": 502.796875,
+        "right_pt": 504.839844,
+        "top_pt": 395.6875,
+        "baseline_pt": 402.328125,
+        "height_pt": 6.640625
+      },
+      {
+        "svg_path_index": 3713,
+        "left_pt": 504.839844,
+        "right_pt": 506.878906,
+        "top_pt": 395.6875,
+        "baseline_pt": 402.328125,
+        "height_pt": 6.640625
+      },
+      {
+        "svg_path_index": 3721,
+        "left_pt": 506.878906,
+        "right_pt": 508.921875,
+        "top_pt": 399.007812,
+        "baseline_pt": 402.328125,
+        "height_pt": 3.3203129999999987
+      },
+      {
+        "svg_path_index": 3732,
+        "left_pt": 508.921875,
+        "right_pt": 510.964844,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      },
+      {
+        "svg_path_index": 3740,
+        "left_pt": 521.179688,
+        "right_pt": 523.21875,
+        "top_pt": 400.667969,
+        "baseline_pt": 402.328125,
+        "height_pt": 1.6601559999999722
+      }
+    ]
+  },
+  "calibration": "Same displayed E scale in stacked panels; exact bin edges not printed. Frame-normalized displacement only until quantitative axis mapping admitted.",
+  "exclusions": [
+    "Smooth Gaussian paths",
+    "Printed fitted mean/sigma",
+    "Figure4e distance bars",
+    "Single-label traces"
+  ],
+  "repetition_status": "Representative published histograms; no individual repetition identity or event count available",
+  "scientific_calculation": false
+}

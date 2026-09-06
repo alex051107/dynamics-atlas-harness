@@ -1,0 +1,359 @@
+{
+  "status": "REAL_DONOR_ONLY_DIAGNOSTIC_COMPLETE",
+  "fit_bins": 3750,
+  "masked_photons": 15012893.0,
+  "excluded_photons": 0.0,
+  "runs": [
+    {
+      "components": 1,
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        3.7985105987088503,
+        0.001995150318442293,
+        0.009608618495921204
+      ],
+      "iterations": 31,
+      "evaluations": 152,
+      "poisson_deviance": 9641.153969036157,
+      "projected_scaled_gradient_inf": 1.4853569763139623e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.039429750002454966,
+      "reused_from": "q09_donor_calibration_v1;not rerun"
+    },
+    {
+      "components": 2,
+      "initial": [
+        0.5,
+        4.0,
+        0.1,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        1.1006811927427884,
+        3.8780840954029965,
+        0.09696473411196772,
+        0.0018013627195266006,
+        0.5836486374689153
+      ],
+      "iterations": 59,
+      "evaluations": 402,
+      "poisson_deviance": 4693.122807143954,
+      "projected_scaled_gradient_inf": 5.203574116766457e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.11761554097756743
+    },
+    {
+      "components": 2,
+      "initial": [
+        1.0,
+        3.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        1.1006864512022472,
+        3.878084441946203,
+        0.0969648549119205,
+        0.0018013625314226233,
+        0.583649986442488
+      ],
+      "iterations": 51,
+      "evaluations": 372,
+      "poisson_deviance": 4693.122807205643,
+      "projected_scaled_gradient_inf": 4.2824359510173024e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.10495012500905432
+    },
+    {
+      "components": 2,
+      "initial": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        1.1006726097165178,
+        3.8780834559784796,
+        0.09696449591879701,
+        0.0018013662541126077,
+        0.5836491699528586
+      ],
+      "iterations": 67,
+      "evaluations": 462,
+      "poisson_deviance": 4693.1228071164505,
+      "projected_scaled_gradient_inf": 1.11022302463175e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.12878612501663156
+    }
+  ],
+  "best_by_components": {
+    "1": {
+      "components": 1,
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        3.7985105987088503,
+        0.001995150318442293,
+        0.009608618495921204
+      ],
+      "iterations": 31,
+      "evaluations": 152,
+      "poisson_deviance": 9641.153969036157,
+      "projected_scaled_gradient_inf": 1.4853569763139623e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.039429750002454966,
+      "reused_from": "q09_donor_calibration_v1;not rerun"
+    },
+    "2": {
+      "components": 2,
+      "initial": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        1.1006726097165178,
+        3.8780834559784796,
+        0.09696449591879701,
+        0.0018013662541126077,
+        0.5836491699528586
+      ],
+      "iterations": 67,
+      "evaluations": 462,
+      "poisson_deviance": 4693.1228071164505,
+      "projected_scaled_gradient_inf": 1.11022302463175e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.12878612501663156
+    }
+  },
+  "deviance_per_fit_bin_descriptive_only": {
+    "1": 2.570974391742975,
+    "2": 1.2514994152310535
+  },
+  "residual_blocks": [
+    {
+      "first_bin": 99,
+      "last_bin": 411,
+      "observed_sum": 2284.0,
+      "models": {
+        "1": {
+          "expected_sum": 2678.8137636628753,
+          "deviance": 405.50534855525166
+        },
+        "2": {
+          "expected_sum": 2441.902397586446,
+          "deviance": 355.1061356287116
+        }
+      }
+    },
+    {
+      "first_bin": 412,
+      "last_bin": 724,
+      "observed_sum": 8596291.0,
+      "models": {
+        "1": {
+          "expected_sum": 8552053.427575793,
+          "deviance": 3593.625455615285
+        },
+        "2": {
+          "expected_sum": 8596977.194980603,
+          "deviance": 770.5046622567795
+        }
+      }
+    },
+    {
+      "first_bin": 725,
+      "last_bin": 1037,
+      "observed_sum": 4322658.0,
+      "models": {
+        "1": {
+          "expected_sum": 4386304.164588897,
+          "deviance": 1286.2054094410164
+        },
+        "2": {
+          "expected_sum": 4316622.663084697,
+          "deviance": 411.3668299095811
+        }
+      }
+    },
+    {
+      "first_bin": 1038,
+      "last_bin": 1350,
+      "observed_sum": 1369737.0,
+      "models": {
+        "1": {
+          "expected_sum": 1375336.985440511,
+          "deviance": 371.0421860846703
+        },
+        "2": {
+          "expected_sum": 1378635.0894901142,
+          "deviance": 367.52966450605754
+        }
+      }
+    },
+    {
+      "first_bin": 1351,
+      "last_bin": 1663,
+      "observed_sum": 444383.0,
+      "models": {
+        "1": {
+          "expected_sum": 434166.1212965426,
+          "deviance": 559.8776369743268
+        },
+        "2": {
+          "expected_sum": 445263.53189360193,
+          "deviance": 278.74127732033105
+        }
+      }
+    },
+    {
+      "first_bin": 1664,
+      "last_bin": 1976,
+      "observed_sum": 147196.0,
+      "models": {
+        "1": {
+          "expected_sum": 139251.5959624867,
+          "deviance": 775.0259801967705
+        },
+        "2": {
+          "expected_sum": 145894.00700151085,
+          "deviance": 326.4553091710234
+        }
+      }
+    },
+    {
+      "first_bin": 1977,
+      "last_bin": 2288,
+      "observed_sum": 59875.0,
+      "models": {
+        "1": {
+          "expected_sum": 55623.69822433374,
+          "deviance": 683.845288637478
+        },
+        "2": {
+          "expected_sum": 58696.24098661331,
+          "deviance": 391.2915956423035
+        }
+      }
+    },
+    {
+      "first_bin": 2289,
+      "last_bin": 2600,
+      "observed_sum": 33454.0,
+      "models": {
+        "1": {
+          "expected_sum": 30929.534704697762,
+          "deviance": 504.26264415755395
+        },
+        "2": {
+          "expected_sum": 31957.75097571705,
+          "deviance": 377.5096853400174
+        }
+      }
+    },
+    {
+      "first_bin": 2601,
+      "last_bin": 2912,
+      "observed_sum": 18092.0,
+      "models": {
+        "1": {
+          "expected_sum": 17518.464133561843,
+          "deviance": 322.0483320116746
+        },
+        "2": {
+          "expected_sum": 17764.344588852815,
+          "deviance": 310.3874654865632
+        }
+      }
+    },
+    {
+      "first_bin": 2913,
+      "last_bin": 3224,
+      "observed_sum": 9545.0,
+      "models": {
+        "1": {
+          "expected_sum": 9124.800871377916,
+          "deviance": 357.9119563089122
+        },
+        "2": {
+          "expected_sum": 9082.166902196866,
+          "deviance": 361.16377184729384
+        }
+      }
+    },
+    {
+      "first_bin": 3225,
+      "last_bin": 3536,
+      "observed_sum": 5667.0,
+      "models": {
+        "1": {
+          "expected_sum": 5693.436611961896,
+          "deviance": 318.2635819873177
+        },
+        "2": {
+          "expected_sum": 5542.767927365895,
+          "deviance": 319.4738185965378
+        }
+      }
+    },
+    {
+      "first_bin": 3537,
+      "last_bin": 3848,
+      "observed_sum": 3711.0,
+      "models": {
+        "1": {
+          "expected_sum": 4211.956826174357,
+          "deviance": 463.5401490659
+        },
+        "2": {
+          "expected_sum": 4015.3397711425855,
+          "deviance": 423.59259141125136
+        }
+      }
+    }
+  ],
+  "scientific_state_number_verdict": "NOT_EVALUATED",
+  "Rules_run": false,
+  "full_question_answers_added": 0,
+  "limits": [
+    "Single reference diagnostic;free nuisance assumptions not originalmethod",
+    "No regular likelihood-ratio scientific test",
+    "No FRET or globalpopulation fit",
+    "Reference replication multiplicity not used here"
+  ],
+  "fit_records_including_reused": 4,
+  "new_optimizer_calls": 3,
+  "reused_fit_records": 1,
+  "prior_optimizer_calls_preserved": 4
+}

@@ -1,0 +1,33 @@
+{
+  "version": "q15-admitted-source-receipt/v2",
+  "accepted_git_commit": "4a2c40aa21c11a2eabe968e811bb2a77b4b30151",
+  "forward_distance_semantics": "FRET_EFFICIENCY_AVERAGED_MODEL_DISTANCE",
+  "semantics_source": "Peter2022 primary Methods In silico distance simulations; DOI10.1038/s41467-022-31945-6",
+  "sources": {
+    "main": {
+      "path": "research/paper_result_reproduction_screen_v1/q15_apbs_comparison_v1/report.json",
+      "git_blob": "bc8c919684d3e7ed919fd5e29e118bc17b6f445b",
+      "canonical_sha256": "ea470a6a4d92c63a9b1a42fd5f17ba2a1d8c7b747bd04966491cdd1724fe028a"
+    },
+    "summary": {
+      "path": "research/paper_result_reproduction_screen_v1/q15_pro19_verification_v1/report.json",
+      "git_blob": "78a1eba28411af2ef1804e495603de14f14a5825",
+      "canonical_sha256": "91d439f73526d778b3591e6a4871e6a49f60d432844e605c128578f5d2bfc85e"
+    },
+    "deer": {
+      "path": "research/paper_result_reproduction_screen_v1/q15_deer_source_audit_v1/report.json",
+      "git_blob": "c8db517b2d52c1178e66cc4f54fafb15b779e2e3",
+      "canonical_sha256": "570c84703fe1420db6680cdce0f553eeeeeb421e1f1ee3b91d33688b42356752"
+    },
+    "forward": {
+      "path": "research/paper_result_reproduction_screen_v1/q15_cross_modal_evidence_v1/source_forward_predictions.json",
+      "git_blob": "b62c1915443554baddbd021a3f09f376a8d8f7dc",
+      "canonical_sha256": "36e08a5beed2baf76bb595690ca3e4c3436f91630a6b96f84ef7f14048783f7d"
+    },
+    "background": {
+      "path": "research/paper_result_reproduction_screen_v1/q15_background_policy_v1/evidence_result.json",
+      "git_blob": "74ce4d862325d2a89afbf0fb6f82a140574523a7",
+      "canonical_sha256": "2ff62172210ed8878b75d1cb0276c04b5c92e4005a26be1f13f22e960254f317"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rule_instance_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1::CASE::q05_nanodisc_saxs_noe_20260904",
+  "runtime_subrule_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q05_nanodisc_saxs_noe_20260904"
+  },
+  "status": "UNRESOLVED",
+  "reason_codes": [
+    "COMMON_WEIGHT_NUMERIC_EVIDENCE_AVAILABLE",
+    "ABSOLUTE_COMPATIBILITY_CRITERION_UNRESOLVED"
+  ],
+  "obligations": [],
+  "scientific_compatibility": "UNRESOLVED",
+  "complete_question_answer": false,
+  "relative_fit_change": {
+    "saxs": "DECREASED",
+    "amide": "DECREASED",
+    "methyl": "DECREASED"
+  },
+  "evidence_weight_id": "02f8c98ba666473d5fa6bec72fc2e20fcee99adb597ea18fca294805fc8f2a2a",
+  "request_id": "8c7edfb627921380955450fb7424a13e6a2c3a211f0b10b62b1a63a8ed59c82f",
+  "conditional_calculation": "COMPLETE",
+  "claim_ceiling": "Verified per-channel changes under stated method; no absolute compatibility or shape support"
+}

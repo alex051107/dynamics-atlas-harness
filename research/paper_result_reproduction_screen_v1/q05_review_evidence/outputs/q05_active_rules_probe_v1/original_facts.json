@@ -1,0 +1,42 @@
+{
+  "case_id": "q05_nanodisc_saxs_noe_20260904",
+  "screen_question_id": "Q05",
+  "scientific_question": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+  "system": {
+    "protein": "DeltaH5 nanodisc",
+    "lipid": "DMPC",
+    "saxs_condition": "no tag, static30C"
+  },
+  "method_facts": {
+    "NOE_distance_average": "power3",
+    "NOE_bounds": "UPPER",
+    "NOE_distance_uncertainty_unit": "angstrom",
+    "SAXS_observable": "deposited intensity with per-point uncertainty",
+    "prior": "uniform",
+    "original_joint_fit_configuration": "UNKNOWN"
+  },
+  "available_data": {
+    "source_repo_commit": "85979b1b4123b6b5391b617d16551969eda9f56e",
+    "frames": 1195,
+    "saxs_points": 90,
+    "amide_NOE_constraints": 292,
+    "methyl_NOE_constraints": 40,
+    "matrix_frame_ids": "same ordered1..1195",
+    "coordinate_frame_mapping": "UNVERIFIED",
+    "trajectory_coordinates": "NOT_ADMITTED",
+    "files": [
+      "inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat",
+      "inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat",
+      "inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat",
+      "inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat",
+      "inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat",
+      "inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat",
+      "inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat"
+    ]
+  },
+  "unknowns": [
+    "original author BME code version and joint configuration",
+    "coordinate to matrix mapping",
+    "independent replicate metadata for uncertainty"
+  ]
+}

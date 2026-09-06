@@ -1,0 +1,32 @@
+{
+  "variant": "19-119",
+  "role": "D0_ONLY",
+  "dt_ns": 0.0141,
+  "components": [
+    1,
+    2
+  ],
+  "lifetimes_bounds_ns": [
+    0.05,
+    10.0
+  ],
+  "shift_bounds_bins": [
+    -5.0,
+    5.0
+  ],
+  "background_fraction_bounds": [
+    0.0,
+    0.05
+  ],
+  "scatter_fraction": 0.0,
+  "linearization": "17binHanning reflectpadding divided by raw all-bin mean",
+  "fit_mask": "Lin greater than0.1*median positiveLin;data count independent",
+  "irf_background": "median of last256 electronic-valid bins,subtract and clip0",
+  "irf_background_value": 1.0,
+  "irf_shift": "linear interpolation zero fill",
+  "convolution": "causal nonperiodic; repetition effects not evaluated",
+  "objective": "Poisson deviance / observed masked photon count; total scale profiled",
+  "max_seconds_per_optimization": 120,
+  "model_status": "CONDITIONAL_DIAGNOSTIC_NOT_ORIGINAL_AUTHOR_METHOD",
+  "no_FRET_or_paper_fit_targets": true
+}

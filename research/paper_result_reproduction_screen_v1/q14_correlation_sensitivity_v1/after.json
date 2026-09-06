@@ -1,0 +1,40 @@
+{
+  "rule_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY",
+  "rule_instance_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY::be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+  "triggered": true,
+  "status": "UNRESOLVED",
+  "evidence_applications": 1,
+  "full_question_answer": false,
+  "development_adapter": true,
+  "remaining_obligations": [
+    "PAIRED_LAB_DATA_AND_CALIBRATION_COVARIANCE",
+    "SAMPLE_SPECIFIC_DYE_AVERAGING_AND_MODEL_APPLICABILITY"
+  ],
+  "evidence": {
+    "operator_id": "linearized_unknown_correlation_bounds_v1",
+    "input_id": "be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+    "difference": 0.04242523645508722,
+    "delta_sd_bounds": [
+      0.0,
+      0.17305916200965077
+    ],
+    "delta_variance_bounds": [
+      0.0,
+      0.029949473555482553
+    ],
+    "weighted_marginal_lengths": [
+      0.04145936981757878,
+      0.02981774378521984,
+      0.053375196232339085,
+      0.04840685217451308
+    ],
+    "interpretation": "Sensitivity over arbitrary PSD correlations with fixed marginal dispersions, not estimated covariance or a confidence interval."
+  },
+  "partial_claim": "UNKNOWN_CORRELATION_CHANGES_PROPAGATED_DISPERSION",
+  "answer": "The zero-covariance baseline does not establish cross-dye compatibility. The actual published marginals permit the reported range of first-order dispersions; pairing/calibration and dye-model evidence remain necessary.",
+  "limits": [
+    "SD is published measurement dispersion, not uncertainty of a mean or CI.",
+    "R0 cancellation requires identical within-pair calibration; sample-specific effects remain.",
+    "A broad sensitivity range is not measured disagreement or proof of a common geometry."
+  ]
+}

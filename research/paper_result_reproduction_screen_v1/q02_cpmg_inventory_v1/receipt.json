@@ -1,0 +1,30 @@
+{
+  "status": "DIRECTORY_RECEIVED_ONLY_NO_SCIENTIFIC_PAYLOAD",
+  "source_archive_declared_size": 213907264,
+  "source_archive_declared_md5": null,
+  "whole_archive_verified": false,
+  "HTTP": [
+    {
+      "timestamp": "2026-09-05T18:20:15.477270+00:00",
+      "url": "https://bmrbig.org/deposition/released/44/HSP90-NTD-CPMG_WT_293K.zip",
+      "request_range": [
+        213841728,
+        213907263
+      ],
+      "status": 206,
+      "headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/zip",
+        "Content-Length": "65536",
+        "Connection": "close",
+        "Content-Disposition": "inline; filename=HSP90-NTD-CPMG_WT_293K.zip",
+        "Last-Modified": "Wed, 06 Jul 2022 13:01:16 GMT",
+        "Cache-Control": "no-cache",
+        "ETag": "\"1657112476.128644-213907264-2093228031\"",
+        "Date": "Sat, 05 Sep 2026 18:20:15 GMT",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 213841728-213907263/213907264"
+      }
+    }
+  ]
+}

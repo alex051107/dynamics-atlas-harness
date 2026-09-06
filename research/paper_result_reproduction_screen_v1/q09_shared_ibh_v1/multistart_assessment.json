@@ -1,0 +1,16 @@
+{
+  "status": "MULTISTART_DISAGREEMENT_OBSERVED",
+  "all_four_stationarity_checks_pass": true,
+  "lowest_basin_starts": [
+    1,
+    3,
+    4
+  ],
+  "higher_boundary_basin_starts": [
+    2
+  ],
+  "max_minus_best_deviance": 1892.1923210108343,
+  "interpretation": "Numerical stationarity does not establish global optimum or science validity;one predeclared start reached a worse boundary solution. Three starts recover lower objective but no global certificate.",
+  "scientific_state_number_verdict": "NOT_EVALUATED",
+  "Rules_gain": "NOT_EVALUATED"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "ROBUST_RIGHTWARD_PUBLISHED_HISTOGRAM_SHIFT",
+  "conditions": {
+    "apo": {
+      "bars": 35,
+      "centroid": 0.3405221692624981,
+      "weighted_median": 0.3366077847995429,
+      "modal_bin_center": 0.35703667669210326,
+      "within_bar_centroid_bounds": [
+        0.3303095327238471,
+        0.35073480580114913
+      ],
+      "maximum_bin_width": 0.02046796537561707,
+      "probability_mass_sum": 1.0
+    },
+    "holo": {
+      "bars": 33,
+      "centroid": 0.4773269174726859,
+      "weighted_median": 0.4795897202192074,
+      "modal_bin_center": 0.4795897202192074,
+      "within_bar_centroid_bounds": [
+        0.46711362207105095,
+        0.4875402128743208
+      ],
+      "maximum_bin_width": 0.02042969478740775,
+      "probability_mass_sum": 1.0
+    }
+  },
+  "centroid_shift_frame_units": 0.1368047482101878,
+  "lower_shift_after_within_bin_and_one_bin_registration_per_panel": 0.075481156106877,
+  "comparison": "Opposite direction to original APBS175/228 mean shift; compatible with shorter-distance DEER under stable readout within each dye.",
+  "role": "MANUAL_FIRST_PROCESSED_OBSERVATION_CALCULATION",
+  "rules_extra_credit": 0,
+  "exact_E_calibration": false,
+  "scientific_full_question_answer": false,
+  "uncertainty": "Bin-location and coarse frame-registration bound, not a statistical confidence interval.",
+  "limits": [
+    "One published representative histogram per condition; repetition-resolved TMR data unavailable.",
+    "Processed histogram cannot verify original event selection or calibration.",
+    "Different dye absolute efficiencies not compared; no E-to-distance conversion.",
+    "No unique photophysical mechanism, binding equilibrium or population inference."
+  ],
+  "source": "Peter2022 originalPDF physical7 Figure4d right: gray measured bars only"
+}

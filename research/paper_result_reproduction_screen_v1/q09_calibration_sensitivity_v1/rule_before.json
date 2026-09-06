@@ -1,0 +1,69 @@
+{
+  "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+  "runtime_subrule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q09_t4l_state_number_20260905"
+  },
+  "status": "UNRESOLVED",
+  "obligations": [
+    {
+      "rule_instance_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1::CASE::q09_t4l_state_number_20260905",
+      "operator_id": "q09_calibration_sensitivity_v1",
+      "request_id": "d5fb1ce5bacb9c8f18a04a832dee361db9014175ebaeed8f203e961847af0893",
+      "input_id": "ca0620bf5d002fb7ada4659d828a0934c5a890a3ecd5034a010fc342e8c6dad0",
+      "purpose": "CALIBRATION_ONLY_IRF_AND_FAST_COMPONENT_SENSITIVITY"
+    }
+  ],
+  "reason_codes": [
+    "BOUND_NUMERIC_DIAGNOSTIC_RECOMPUTED",
+    "IRF_UNCERTAINTY_NOT_PROPAGATED",
+    "PROTEIN_STATE_NUMBER_NOT_IDENTIFIED"
+  ],
+  "complete_question_answer": false,
+  "state_number_verdict": "UNRESOLVED",
+  "request_id": "f2d1ec6192c381c75e358c0ceb261ff10903ec2ed01ba576678f50fd307b881e",
+  "diagnostic_status": "CALCULATED_WITH_UNRESOLVED_CALIBRATION_AND_IDENTIFIABILITY",
+  "profile_checks": [
+    {
+      "fixed_f0": 0.4,
+      "status": "VERIFIED",
+      "objective": 0.00022614364433423895,
+      "projected_gradient_inf": 2.9696185679811287e-07
+    },
+    {
+      "fixed_f0": 0.6,
+      "status": "VERIFIED",
+      "objective": 0.0002276339173072454,
+      "projected_gradient_inf": 7.36383309664837e-07
+    },
+    {
+      "fixed_f0": 0.8,
+      "status": "VERIFIED",
+      "objective": 0.0004644258170174581,
+      "projected_gradient_inf": 5.468752362756721e-08
+    }
+  ],
+  "model_changes": {
+    "D0": {
+      "prior_deviance": 11400.897657376265,
+      "candidate_deviance": 7145.056316757114,
+      "change": -4255.841340619151
+    },
+    "DA": {
+      "prior_deviance": 7522.719542616853,
+      "candidate_deviance": 6734.99185424431,
+      "change": -787.7276883725426
+    }
+  },
+  "next_required_evidence": "Calibration-constrained IRF sensitivity and identifiability;not automatic FRET K3",
+  "claim_ceiling": "Conditional model dependence only;no scientific state-number support",
+  "numeric_gap_assessment": {
+    "IRF_edge_signal_unrepresented_by_median": true,
+    "fast_transfer_time_ns": 0.012259688781296827,
+    "fast_transfer_relative_to_two_bins": true
+  },
+  "local_forward_status": "CALIBRATION_SENSITIVITY_REQUIRED",
+  "profile_branch_status": "VERIFIED_LOCAL_STATIONARY_POINTS",
+  "calibration_request_id": "d5fb1ce5bacb9c8f18a04a832dee361db9014175ebaeed8f203e961847af0893"
+}

@@ -1,0 +1,1230 @@
+{
+  "policy": {
+    "version": "q09-method-evidence/v1",
+    "IRF_shift": "padded_linear_v2",
+    "objective_atol": 1e-11,
+    "objective_rtol": 1e-08,
+    "gradient_replay_atol": 1e-08,
+    "gradient_replay_rtol": 0.001,
+    "stationarity_limit": 1e-06,
+    "protein_state_number": "UNRESOLVED"
+  },
+  "provenance": "MANUAL_DIAGNOSTICS_VERIFIED_WITHOUT_REFITTING",
+  "input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "historical_diagnostic_id": "5499d20d961e75b6ff8a84a5ed79b608095fda333755bd5dd55b5ca2baf6cadf",
+  "candidate_count": 36,
+  "optimizer_calls": 0,
+  "new_rules_extra_calculations": 0,
+  "source_order_groups": {
+    "D0_01": {
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0003506531478380419,
+          "projected_gradient_inf": 1.7294413595256015e-07,
+          "objective_difference": -9.215718466126788e-19,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.20425361284930404,
+            4.038399759902803,
+            2.8476839756602432,
+            0.12231965871249471,
+            0.7586240204189906,
+            0.001680244091143955,
+            1.0556774959166653,
+            16.894685149930858,
+            48.729698680476794,
+            0.8153023571679726,
+            0.10438572869375748,
+            0.002644442776595795,
+            1.4807254211558512,
+            52.53100323363564,
+            39.22109286929144,
+            0.39233643861845796,
+            0.30612647469227483,
+            0.0018198113407570536,
+            0.6861438881575133
+          ],
+          "candidate_id": "a2c94c1fe28ce6342ef52781676f538ee0cb2a6962b2f030700a0288073b44e2"
+        },
+        {
+          "objective": 0.0003506372651420326,
+          "projected_gradient_inf": 1.305094238114503e-06,
+          "objective_difference": -4.87890977618477e-19,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "parameters": [
+            0.23438110780937577,
+            2.9538446227120727,
+            4.061922974923973,
+            0.1125942134610391,
+            0.2753034787133714,
+            0.0016751645510965296,
+            1.0000391487027045,
+            15.146398936077784,
+            48.706886830408315,
+            0.8759571454647012,
+            0.07252349692102898,
+            0.0026411302355597976,
+            1.649234774208077,
+            51.58254580835712,
+            38.420484847746735,
+            0.43524191213402463,
+            0.305897787802961,
+            0.00181066021452763,
+            0.6619682832705944
+          ],
+          "candidate_id": "b2826dd7d0d90bb7253ffe090c178b750f8d04682cbf2bf1be89a142a83f80ff"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_01": 0.0,
+        "19-119": 0.0,
+        "19-132": 0.0
+      },
+      "old_donor2_deviance": 13034.163116290336,
+      "best_donor3_deviance": 12301.39419939912
+    },
+    "D0_02": {
+      "owners": [
+        "19-69"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0001637918679005565,
+          "projected_gradient_inf": 2.683134655910244e-07,
+          "objective_difference": 1.328147661294743e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.14334846470066526,
+            4.202567838362535,
+            1.4845268587659246,
+            0.11470026044785477,
+            0.8463109937576467,
+            0.005799089401466374,
+            -0.03201930816654297,
+            35.623093444219556,
+            70.80466046307649,
+            0.5784938155608486,
+            0.18757604883569706,
+            0.0030527423577203943,
+            -0.4478626800258212
+          ],
+          "candidate_id": "e8620289883234e10fd6dd6c473081ca7ef8c089f9d0807e4dba7accbe2b47b0"
+        },
+        {
+          "objective": 0.00016379186792781137,
+          "projected_gradient_inf": 2.053949611160138e-07,
+          "objective_difference": -1.7889335846010823e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.14330256612686737,
+            1.484462690584779,
+            4.202564015868482,
+            0.11471995429942695,
+            0.15369091825855974,
+            0.005799099263912134,
+            -0.03195162732393442,
+            35.62301591909653,
+            70.80457928518697,
+            0.5784945901375326,
+            0.18757622489648562,
+            0.0030527453433743293,
+            -0.44777126790493593
+          ],
+          "candidate_id": "4d7aa16e4eb13c203d25753b714d25fa1d5840dd5634a756df0d86afea5a1b65"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_02": 0.0,
+        "19-69": 0.0
+      },
+      "old_donor2_deviance": 9348.813430883394,
+      "best_donor3_deviance": 8663.72695637934
+    },
+    "D0_03": {
+      "owners": [
+        "19-86"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0002326022486400391,
+          "projected_gradient_inf": 2.036658040071731e-07,
+          "objective_difference": 6.152847328855238e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.5508042099537351,
+            3.8913962125871766,
+            2.598599184330445,
+            0.054782875160876696,
+            0.8648727775946824,
+            0.0018343728939340406,
+            -0.8188279509906247,
+            51.64259744595991,
+            32.77984298358638,
+            0.804298762530952,
+            0.06758004959146771,
+            0.0035957823833176845,
+            1.4765569144768085
+          ],
+          "candidate_id": "dc8381ce2186edf8ed216a22a0a74aa192c7fbb65842cfe443b5c8d1203fc98b"
+        },
+        {
+          "objective": 0.00023260224866766835,
+          "projected_gradient_inf": 2.4880137764190097e-07,
+          "objective_difference": -7.806255641895632e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.5508578693513982,
+            2.5986552268648215,
+            3.891399196945808,
+            0.05478266944953728,
+            0.1351307531848224,
+            0.0018343745082114642,
+            -0.8188428298042627,
+            51.6425089856432,
+            32.77877342181863,
+            0.8042935298541284,
+            0.06757974176500699,
+            0.0035957793322701674,
+            1.4765976035860788
+          ],
+          "candidate_id": "a4662886ec4c584c4a2db5d03b67e4310ba69abe59dd760ccb4d108fb89f811d"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_03": 0.0,
+        "19-86": 0.0
+      },
+      "old_donor2_deviance": 11688.485854011076,
+      "best_donor3_deviance": 11361.202367962698
+    },
+    "D0_05": {
+      "owners": [
+        "36-132"
+      ],
+      "candidates": [
+        {
+          "objective": 0.00018521769612965967,
+          "projected_gradient_inf": 1.0332340706387035e-07,
+          "objective_difference": 2.574980159653073e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.13804502453177686,
+            4.350731198913628,
+            1.7461654347117372,
+            0.06608030516772907,
+            0.8779160104172677,
+            0.00042486646641674283,
+            -0.1471098927291532,
+            50.06914606923034,
+            37.92270226822663,
+            0.4739484327401593,
+            0.029710651947681455,
+            9.711537293299889e-05,
+            -0.08531807886818665
+          ],
+          "candidate_id": "c5cdae43211d2c4f1322426b183a50ffafa40f292642b33f6afaecab7fdaa431"
+        },
+        {
+          "objective": 0.00018521769614194959,
+          "projected_gradient_inf": 1.2419905163180414e-07,
+          "objective_difference": -2.168404344971009e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.138050710545947,
+            1.7461880929921523,
+            4.3507323739323835,
+            0.06608065560627573,
+            0.12208415800723516,
+            0.000424865958355224,
+            -0.14710862804030267,
+            50.06924747285363,
+            37.92285927534668,
+            0.4739414221904509,
+            0.02971052988168387,
+            9.711627532291607e-05,
+            -0.08532806906217338
+          ],
+          "candidate_id": "7df4a9680e5c7afd7a5f96f100f76c2fa03debc0cd83d815c243ad02211c7dc6"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_05": 0.0,
+        "36-132": 0.0
+      },
+      "old_donor2_deviance": 14401.717649963306,
+      "best_donor3_deviance": 13604.042153441733
+    },
+    "D0_06": {
+      "owners": [
+        "36-86"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0001895221289311189,
+          "projected_gradient_inf": 6.698480106635611e-07,
+          "objective_difference": -3.686287386450715e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.17611706136665356,
+            4.352669759654444,
+            1.7163647557703305,
+            0.06687987991627278,
+            0.8764499274526997,
+            0.00035104154166388444,
+            1.2084629150141355,
+            49.24318910615601,
+            35.72986932451316,
+            0.6297534154911677,
+            0.029147066992602354,
+            0.00016076509849080416,
+            0.05086877095471465
+          ],
+          "candidate_id": "fbb88a97d40bb5b75c766bf35f8da5f9ca5cd1f0bd9c62cd0451ac47de466be3"
+        },
+        {
+          "objective": 0.00018952212890753874,
+          "projected_gradient_inf": 1.407826985183379e-07,
+          "objective_difference": -5.339695699491109e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.17612397956412545,
+            1.7163950790623888,
+            4.352672169007974,
+            0.06687985957831148,
+            0.12355106780953329,
+            0.00035103748197201347,
+            1.2084658375216613,
+            49.24315495221405,
+            35.72978550711758,
+            0.6297557175115742,
+            0.02914717756693384,
+            0.00016076350808506555,
+            0.05086371027814085
+          ],
+          "candidate_id": "1b3052597489a350fc19f77a124ba64e6d79c4c4ed484f689fcf588b8cc4c5e3"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_06": 0.0,
+        "36-86": 0.0
+      },
+      "old_donor2_deviance": 15078.072489940663,
+      "best_donor3_deviance": 14103.429848074145
+    },
+    "D0_08": {
+      "owners": [
+        "44-127"
+      ],
+      "candidates": [
+        {
+          "objective": 0.00016717292191006485,
+          "projected_gradient_inf": 4.1161870654019547e-07,
+          "objective_difference": -1.737433981408021e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.15539072664597214,
+            4.2359367904071945,
+            1.61261051211974,
+            0.0662185320142693,
+            0.9104749266221804,
+            0.0003716865190852371,
+            0.9811369226656375,
+            39.58949710248115,
+            56.71318052106389,
+            0.18022839783926664,
+            0.09008168825607822,
+            0.00020426244230042074,
+            -0.6305847533826698
+          ],
+          "candidate_id": "d1969c5672bbd1b58470017951fed3a265c5253b186ddcd78441cb5d5cc2b56a"
+        },
+        {
+          "objective": 0.00016717292197312186,
+          "projected_gradient_inf": 6.778097154520862e-07,
+          "objective_difference": 1.0787811616230769e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.15540704118413406,
+            1.6126717019910624,
+            4.235939034253551,
+            0.06621869283513454,
+            0.08952481035014125,
+            0.0003716854273366035,
+            0.9811346410775057,
+            39.58965151366732,
+            56.71316419064641,
+            0.18022693103647477,
+            0.09008218067073367,
+            0.00020426265835267604,
+            -0.6306054257420142
+          ],
+          "candidate_id": "2c3c329b0e20666cb1eed51a1d7135fc7d3afacc675921cd85f259c196858d22"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_08": 0.0,
+        "44-127": 0.0
+      },
+      "old_donor2_deviance": 15041.418958007012,
+      "best_donor3_deviance": 14282.272641425563
+    },
+    "D0_10": {
+      "owners": [
+        "5-132"
+      ],
+      "candidates": [
+        {
+          "objective": 0.00022068164493283971,
+          "projected_gradient_inf": 2.516159529851697e-07,
+          "objective_difference": 3.144186300207963e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.14945498193478204,
+            4.070200017612523,
+            1.9517422925986831,
+            0.10438831035324396,
+            0.8560758521029368,
+            0.00033117561798028545,
+            -0.13577608052829415,
+            44.93615042942086,
+            33.48870114972736,
+            0.39352969649397923,
+            0.03935972309743755,
+            4.4167889280060796e-05,
+            -0.6735280225068054
+          ],
+          "candidate_id": "c60da95df40034b629bdf1e5aca2661b15285849e9f4de42f8ec8a3d78259a1c"
+        },
+        {
+          "objective": 0.0002206816449723843,
+          "projected_gradient_inf": 4.7358466018686256e-07,
+          "objective_difference": 2.3879552848993235e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.14944663820480497,
+            1.95172823258395,
+            4.070198879046151,
+            0.10439226700460182,
+            0.14392359719279713,
+            0.0003311777173765899,
+            -0.13574766358153756,
+            44.93634446655382,
+            33.48897918774278,
+            0.3935172718280854,
+            0.039359771446170796,
+            4.416900139363407e-05,
+            -0.6735278402458196
+          ],
+          "candidate_id": "9710a3d29099891ef503d5ffb44a7aa460c34331f51d5b9684b875fcbf294e4f"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_10": 0.0,
+        "5-132": 0.0
+      },
+      "old_donor2_deviance": 16490.731038533253,
+      "best_donor3_deviance": 14209.983079041795
+    },
+    "D0_11": {
+      "owners": [
+        "5-44"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0002279765425264386,
+          "projected_gradient_inf": 2.0907030763331884e-07,
+          "objective_difference": -1.3010426069826053e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.1548824568131037,
+            4.035102448076068,
+            1.8374530822204629,
+            0.09777522422550074,
+            0.8666068743466189,
+            7.403414501722345e-05,
+            0.7827102388805338,
+            17.85200111731308,
+            41.6949141861167,
+            0.41768037369595623,
+            0.047699814816291625,
+            0.00023167333652054375,
+            -0.07792587778884119
+          ],
+          "candidate_id": "d7267747ce60991e3c1f0b6e62f971a2fae6ee85cc3a32125b2582c1b2ec3b25"
+        },
+        {
+          "objective": 0.000227976542461826,
+          "projected_gradient_inf": 1.5029388819814094e-07,
+          "objective_difference": -1.1546753136970622e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.15487935593535995,
+            1.8374753546186688,
+            4.03510455498384,
+            0.09777860224289409,
+            0.13339474051798242,
+            7.403336205784582e-05,
+            0.7827311042443608,
+            17.850737676519394,
+            41.69488415938845,
+            0.41773206768405785,
+            0.04769569009510158,
+            0.0002316714984970174,
+            -0.07787980608757206
+          ],
+          "candidate_id": "1f298094831a68d1871700665a43ad9c2e2cfcf3a063ae548a125426526238de"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_11": 0.0,
+        "5-44": 0.0
+      },
+      "old_donor2_deviance": 17316.30177631978,
+      "best_donor3_deviance": 15179.433939346634
+    },
+    "D0_12": {
+      "owners": [
+        "55-119"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0003270997596001755,
+          "projected_gradient_inf": 2.038027930672688e-07,
+          "objective_difference": 7.047314121155779e-19,
+          "numerical_status": "PASS",
+          "parameters": [
+            4.168920183938533,
+            0.056640037841500866,
+            1.0849774501109068,
+            0.5972339369020633,
+            0.8181352335655562,
+            1e-12,
+            2.5772989342658725,
+            57.716994697282,
+            57.715445587523426,
+            0.3000692606539138,
+            0.2568242885596767,
+            0.0008675493467301763,
+            3.6719504798231597
+          ],
+          "candidate_id": "9d2f6379a8105543ee5b9d8f8b5bd1287bb7d5ee077a9c6de650860487807fa0"
+        },
+        {
+          "objective": 0.0003270997596456749,
+          "projected_gradient_inf": 1.0164084118849341e-07,
+          "objective_difference": 4.824699667560495e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.05663128074196277,
+            1.0849612725842106,
+            4.1689196958215256,
+            0.32955523369897405,
+            0.1092493017922825,
+            1e-12,
+            2.5773942873108826,
+            57.71697303995134,
+            57.715472501577885,
+            0.28736148166263953,
+            0.25682463519257936,
+            0.0008675465665105266,
+            3.672040281534546
+          ],
+          "candidate_id": "b6cba565db5c74ad1d9b0d2f6afa666d638dfae847a995cd9f0665f1ed0575bf"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_12": 0.0,
+        "55-119": 0.0
+      },
+      "old_donor2_deviance": 21395.575420227553,
+      "best_donor3_deviance": 18792.019879328152
+    },
+    "D0_14": {
+      "owners": [
+        "55-150"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0001980044663544128,
+          "projected_gradient_inf": 7.567970980281873e-08,
+          "objective_difference": -4.851804721872632e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.3212021570034563,
+            4.229676175215545,
+            2.484616379351696,
+            0.12871489312639706,
+            0.7196524048585711,
+            0.0023304412202778645,
+            -0.07661988678465903,
+            46.90794513477672,
+            120.0,
+            1.0,
+            0.849579370552851,
+            0.0028761803467557846,
+            -0.3127416007429975
+          ],
+          "candidate_id": "c795bfd643c0bdb34628f0eda6fafd0c29379e8374250a62725dfc802210f914"
+        },
+        {
+          "objective": 0.00019800446635289613,
+          "projected_gradient_inf": 1.148693126677812e-07,
+          "objective_difference": -2.1955093992831465e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.321197642787733,
+            2.4846084512315407,
+            4.229674127562957,
+            0.12871533896897078,
+            0.28034618833414543,
+            0.00233044219164698,
+            -0.0766172985130229,
+            46.907897186259525,
+            120.0,
+            1.0,
+            0.8495791758244583,
+            0.0028761808807870174,
+            -0.3127362547886312
+          ],
+          "candidate_id": "e12892c23ee88dcc46ee45a979c861292e8b7f6c4f18ae080b409b2d58896f31"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_14": 0.0,
+        "55-150": 0.0
+      },
+      "old_donor2_deviance": 17296.138652936224,
+      "best_donor3_deviance": 12220.257688263466
+    },
+    "D0_24": {
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "candidates": [
+        {
+          "objective": 0.0003637009552300797,
+          "projected_gradient_inf": 5.3530628923518906e-05,
+          "objective_difference": 7.047314121155779e-19,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "parameters": [
+            0.5255611632888574,
+            4.326752377875543,
+            2.9383987937263214,
+            0.1095488796524033,
+            0.5739198215152942,
+            0.006217444317870607,
+            -0.06740072933022301,
+            19.74463447239897,
+            40.48569958877145,
+            0.7445676255630684,
+            0.04439003414040251,
+            0.0018781754172543103,
+            0.9999934201148584,
+            39.746021743409244,
+            15.55211607311919,
+            0.13015121219526815,
+            0.03349256059635821,
+            0.0021175178473100647,
+            0.807995635993402
+          ],
+          "candidate_id": "330bc337d70b2eb7d6c66d748e8e6a8be502b2794d50be11219351cf27b82a55"
+        },
+        {
+          "objective": 0.00037089999128454317,
+          "projected_gradient_inf": 5.974366719262829e-05,
+          "objective_difference": -6.179952383167375e-18,
+          "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+          "parameters": [
+            0.05,
+            2.03324809482698,
+            4.108345835869682,
+            0.34917345672660105,
+            0.2481540590751698,
+            0.006363761210678651,
+            0.8291950366565572,
+            32.879780035334406,
+            43.14156827770254,
+            0.6359237098856032,
+            0.10480466441655605,
+            0.0019527333545405821,
+            0.7843075112220701,
+            41.839859610509095,
+            32.00019960650312,
+            0.4152061242040294,
+            0.1516349504783305,
+            0.0021927492268266767,
+            0.27021856524819654
+          ],
+          "candidate_id": "6d86314675f203828e8f7f38d0d757c3c96ba42ce3741b61d9fc6f390c3cbcd9"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_24": 0.0,
+        "70-119": 0.0,
+        "70-132": 0.0
+      },
+      "old_donor2_deviance": 12812.741194810298,
+      "best_donor3_deviance": 12106.004151705387
+    },
+    "D0_25": {
+      "owners": [
+        "8-119"
+      ],
+      "candidates": [
+        {
+          "objective": 0.00020937755612321487,
+          "projected_gradient_inf": 3.0061530694855463e-07,
+          "objective_difference": -4.689174395999807e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.20765130298804457,
+            3.983058650390843,
+            2.0115718354929606,
+            0.06838950660114182,
+            0.8606126036311067,
+            0.00032339119500133503,
+            -0.2745443494966384,
+            43.90849812174812,
+            30.306025414325443,
+            0.6720353175079503,
+            0.088338831860387,
+            7.2152138012938065e-06,
+            -0.626519613330915
+          ],
+          "candidate_id": "057f1cccfea0a47cb81c13bc783437f03644bc8c5aa821c2a7df84550003c582"
+        },
+        {
+          "objective": 0.000209377556114413,
+          "projected_gradient_inf": 2.256495771531754e-07,
+          "objective_difference": -1.1492543028346347e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.20766406092020007,
+            2.011568287264279,
+            3.98305692345513,
+            0.0683873288939694,
+            0.1393855489868168,
+            0.0003233922345656182,
+            -0.27456088272683665,
+            43.90843817390102,
+            30.305659623601212,
+            0.672037863999585,
+            0.08833840187928615,
+            7.215334834520721e-06,
+            -0.6265209968507319
+          ],
+          "candidate_id": "45728120dcc466d501f7ec389652c1a69660776795d4b4d60937033e78a8896c"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_25": 0.0,
+        "8-119": 0.0
+      },
+      "old_donor2_deviance": 15623.310890215738,
+      "best_donor3_deviance": 14244.010627515887
+    },
+    "D0_26": {
+      "owners": [
+        "8-132"
+      ],
+      "candidates": [
+        {
+          "objective": 0.00019580422522042225,
+          "projected_gradient_inf": 1.988099387466469e-07,
+          "objective_difference": 9.107298248878237e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.20284972930856776,
+            4.085059178943875,
+            2.168141711517889,
+            0.0957094264250877,
+            0.8433738472407843,
+            0.0002755777150871481,
+            -0.023431764132465283,
+            21.955188714852802,
+            39.801686948705765,
+            0.5060168164752015,
+            0.14968371451409904,
+            0.00029650465508991336,
+            0.19703719058297509
+          ],
+          "candidate_id": "1f12b6fa462f03eb2fcc4a4f4b364d92a1697bea52ff161f99db5e6fcb73ab9d"
+        },
+        {
+          "objective": 0.00019580422523621826,
+          "projected_gradient_inf": 1.374101008274335e-07,
+          "objective_difference": 6.69494841509799e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.20284721985893922,
+            2.168135345544349,
+            4.085058654558303,
+            0.09570983005570285,
+            0.15662580863668307,
+            0.0002755773850415972,
+            -0.023427809063330862,
+            21.95575735877628,
+            39.80171935892719,
+            0.5059983468450059,
+            0.14968916764210335,
+            0.00029650466153275415,
+            0.19700228471374626
+          ],
+          "candidate_id": "ef6021e7732d957f9911051d7eddfc069d7c4d81b7df759f65bb33581b29f04d"
+        }
+      ],
+      "embedding_max_relative_delta": {
+        "D0_26": 0.0,
+        "8-132": 0.0
+      },
+      "old_donor2_deviance": 16836.888824415302,
+      "best_donor3_deviance": 13976.885064822218
+    }
+  },
+  "group_dispositions": [
+    {
+      "reference": "D0_01",
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "status": "LOWER_FEASIBLE_CANDIDATE_REQUIRES_CONTINUATION",
+      "candidate_count": 2,
+      "stationary_candidates": 1,
+      "best_candidate_id": "b2826dd7d0d90bb7253ffe090c178b750f8d04682cbf2bf1be89a142a83f80ff",
+      "best_objective": 0.0003506372651420326,
+      "next_action": "Continue the recorded feasible point under the declared padded donor-order model; retain every stop and candidate.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_02",
+      "owners": [
+        "19-69"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "e8620289883234e10fd6dd6c473081ca7ef8c089f9d0807e4dba7accbe2b47b0",
+      "best_objective": 0.0001637918679005565,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_03",
+      "owners": [
+        "19-86"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "dc8381ce2186edf8ed216a22a0a74aa192c7fbb65842cfe443b5c8d1203fc98b",
+      "best_objective": 0.0002326022486400391,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_05",
+      "owners": [
+        "36-132"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "c5cdae43211d2c4f1322426b183a50ffafa40f292642b33f6afaecab7fdaa431",
+      "best_objective": 0.00018521769612965967,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_06",
+      "owners": [
+        "36-86"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "1b3052597489a350fc19f77a124ba64e6d79c4c4ed484f689fcf588b8cc4c5e3",
+      "best_objective": 0.00018952212890753874,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_08",
+      "owners": [
+        "44-127"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "d1969c5672bbd1b58470017951fed3a265c5253b186ddcd78441cb5d5cc2b56a",
+      "best_objective": 0.00016717292191006485,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_10",
+      "owners": [
+        "5-132"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "c60da95df40034b629bdf1e5aca2661b15285849e9f4de42f8ec8a3d78259a1c",
+      "best_objective": 0.00022068164493283971,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_11",
+      "owners": [
+        "5-44"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "1f298094831a68d1871700665a43ad9c2e2cfcf3a063ae548a125426526238de",
+      "best_objective": 0.000227976542461826,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_12",
+      "owners": [
+        "55-119"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "9d2f6379a8105543ee5b9d8f8b5bd1287bb7d5ee077a9c6de650860487807fa0",
+      "best_objective": 0.0003270997596001755,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_14",
+      "owners": [
+        "55-150"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "e12892c23ee88dcc46ee45a979c861292e8b7f6c4f18ae080b409b2d58896f31",
+      "best_objective": 0.00019800446635289613,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_24",
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "status": "NO_STATIONARY_CANDIDATE_REQUIRES_CONTINUATION",
+      "candidate_count": 2,
+      "stationary_candidates": 0,
+      "best_candidate_id": "330bc337d70b2eb7d6c66d748e8e6a8be502b2794d50be11219351cf27b82a55",
+      "best_objective": 0.0003637009552300797,
+      "next_action": "Continue the recorded feasible point under the declared padded donor-order model; retain every stop and candidate.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_25",
+      "owners": [
+        "8-119"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "45728120dcc466d501f7ec389652c1a69660776795d4b4d60937033e78a8896c",
+      "best_objective": 0.000209377556114413,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    },
+    {
+      "reference": "D0_26",
+      "owners": [
+        "8-132"
+      ],
+      "status": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+      "candidate_count": 2,
+      "stationary_candidates": 2,
+      "best_candidate_id": "1f12b6fa462f03eb2fcc4a4f4b364d92a1697bea52ff161f99db5e6fcb73ab9d",
+      "best_objective": 0.00019580422522042225,
+      "next_action": "Use the verified source-order candidate for conditional method comparison; assess absolute fit and transfer before structural/population inference.",
+      "donor_order": 3,
+      "FRET_components": 2,
+      "absolute_adequacy": "NOT_ESTABLISHED",
+      "author_joint_configuration": "UNKNOWN",
+      "structure_or_population_claim_permitted": false
+    }
+  ],
+  "response_transfer": {
+    "reference": "D0_16",
+    "owners": [
+      "60-119"
+    ],
+    "single_candidates": {
+      "D0_16": [
+        {
+          "objective": 0.002128314017218732,
+          "projected_gradient_inf": 4.8202331887005184e-11,
+          "objective_difference": -9.107298248878237e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            2.9599835675095174,
+            0.8845109159714953,
+            0.27711046835336123,
+            1e-12,
+            0.7704839745596939
+          ],
+          "candidate_id": "862a2b0aba8f5c088bb40ddc6e1716f2456e87c10a0257439173b9747ed2727b"
+        },
+        {
+          "objective": 0.0021283140172186706,
+          "projected_gradient_inf": 6.446004538839402e-09,
+          "objective_difference": -7.806255641895632e-18,
+          "numerical_status": "PASS",
+          "parameters": [
+            0.8845108978755268,
+            2.959983543097064,
+            0.7228895234158808,
+            1e-12,
+            0.7704839495899263
+          ],
+          "candidate_id": "144dc370a7740e2ed3e27f1a022023664d6bb4477162e1136ca191776da08529"
+        }
+      ],
+      "60-119": [
+        {
+          "objective": 0.001059881360205138,
+          "projected_gradient_inf": 1.544725149957093e-08,
+          "objective_difference": -1.3227266504323154e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            3.0758453921987723,
+            1.1553442241726,
+            0.39564370224363854,
+            0.0019364699251073127,
+            2.833563372145191
+          ],
+          "candidate_id": "9c299d13b7920880cd985559d7a78afbbb059c700473fc3d68d0300df67dd350"
+        },
+        {
+          "objective": 0.0010598813602051467,
+          "projected_gradient_inf": 3.751235449583173e-10,
+          "objective_difference": 1.1058862159352145e-17,
+          "numerical_status": "PASS",
+          "parameters": [
+            3.075845362696811,
+            1.1553441963523423,
+            0.3956437135608702,
+            0.0019364699062542322,
+            2.83356336968954
+          ],
+          "candidate_id": "383de810fa0100b1661a1b59125c03b3019e6e5eca97d2fb9c4a7bba96215dce"
+        }
+      ]
+    },
+    "shared_null_candidates": [
+      {
+        "objective": 0.006634144215559769,
+        "projected_gradient_inf": 4.003394897995101e-10,
+        "objective_difference": -2.6020852139652106e-18,
+        "numerical_status": "PASS",
+        "parameters": [
+          0.9929947572233538,
+          3.0076511131089263,
+          0.6560721602555601,
+          1e-12,
+          -0.4147848146164721,
+          0.0023832220814990505,
+          3.844373052313429
+        ],
+        "candidate_id": "b2683326cb263b915028af878c4c6fde8c39db2cc9bf1837b10286015b647f0d"
+      },
+      {
+        "objective": 0.00663414421556041,
+        "projected_gradient_inf": 2.8005570721625032e-08,
+        "objective_difference": 2.168404344971009e-17,
+        "numerical_status": "PASS",
+        "parameters": [
+          3.007651143162384,
+          0.9929947809021586,
+          0.3439278298154053,
+          1e-12,
+          -0.41478618421428504,
+          0.002383221767912661,
+          3.8443735565940855
+        ],
+        "candidate_id": "fe601a0c5ece0b6acccc12db923cebff47f65a535018246f01c38223ae611024"
+      }
+    ],
+    "FRET2_candidates": [
+      {
+        "objective": 0.0066341442155600635,
+        "projected_gradient_inf": 8.115971092651819e-08,
+        "objective_difference": -1.3010426069826053e-17,
+        "numerical_status": "PASS",
+        "parameters": [
+          0.9929947485634625,
+          3.0076511033388558,
+          0.6560721430515115,
+          1e-12,
+          -0.4147845635385421,
+          10.0,
+          10.0,
+          0.8136539551580534,
+          1.0,
+          0.00238322272769808,
+          3.8443731603809344
+        ],
+        "candidate_id": "c433b5fa78bf40e76aabf5095098131096224f294053147cd319673bf90eaee8"
+      },
+      {
+        "objective": 0.0066341442155598085,
+        "projected_gradient_inf": 3.8214224106982555e-10,
+        "objective_difference": 1.474514954580286e-17,
+        "numerical_status": "PASS",
+        "parameters": [
+          0.9929947593573115,
+          3.0076511152428367,
+          0.6560721609366401,
+          1e-12,
+          -0.41478482402325323,
+          10.0,
+          120.0,
+          0.32309975191344303,
+          1.0,
+          0.0023832220764850075,
+          3.844373044083767
+        ],
+        "candidate_id": "ef1d761386a3a36a96f8c84cef67a49857114e6c602944afbe636cf2ac843e6d"
+      },
+      {
+        "objective": 0.00663414421555985,
+        "projected_gradient_inf": 3.536622246325478e-09,
+        "objective_difference": 2.5153490401663703e-17,
+        "numerical_status": "PASS",
+        "parameters": [
+          0.9929947805019582,
+          3.0076510932051836,
+          0.6560721568968318,
+          1e-12,
+          -0.4147849241799815,
+          120.0,
+          120.0,
+          0.33330368639261665,
+          1.0,
+          0.0023832221963549717,
+          3.8443728349486754
+        ],
+        "candidate_id": "77d3c6ac1b8fd87bf961f5172ffdd4a1e2f06243f3e653210d99d7ecc80466b0"
+      },
+      {
+        "objective": 0.006634144215559803,
+        "projected_gradient_inf": 2.9368731915596734e-09,
+        "objective_difference": -2.168404344971009e-17,
+        "numerical_status": "PASS",
+        "parameters": [
+          0.9929947602901655,
+          3.007651111353018,
+          0.6560721580969151,
+          1e-12,
+          -0.4147848304123878,
+          10.0,
+          120.0,
+          0.7421332894641564,
+          1.0,
+          0.0023832220682341223,
+          3.844373016614764
+        ],
+        "candidate_id": "14cb05afae18154aee3f007151db08d4c75057b967b4c35d9ff99b5d29e3c6a5"
+      }
+    ],
+    "separate_deviance": 49446.94936571369,
+    "shared_null_deviance": 213413.96439223603,
+    "FRET2_deviance": 213413.96439223713,
+    "conditional_latent_means_ns": {
+      "D0_16": 2.0508146713617244,
+      "60-119": 2.37566525488395
+    },
+    "latent_mean_difference_DA_minus_D0_ns": 0.32485058352222573,
+    "status": "COMMON_RESPONSE_TRANSFER_REQUIRES_CALIBRATION",
+    "next_action": "Check independent response/IRF applicability before further similar FRET starts; independent effective DA decay is not an established donor model."
+  },
+  "unassessed_variants": [
+    "22-127",
+    "44-119",
+    "44-132",
+    "44-150",
+    "44-69",
+    "44-86",
+    "55-132",
+    "55-69",
+    "60-132",
+    "60-150",
+    "60-86",
+    "69-119",
+    "69-132",
+    "69-150",
+    "69-86",
+    "8-69",
+    "8-86"
+  ],
+  "unassessed_reason": "No manual diagnostic in this evidence batch; preserve existing obligations.",
+  "complete_question_answer": false,
+  "absolute_adequacy_established": false
+}

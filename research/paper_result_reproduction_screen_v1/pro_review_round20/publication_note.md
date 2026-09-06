@@ -1,0 +1,1 @@
+Full local AX capture is preserved task-locally. Published copy removes trailing whitespace only; visible-text Markdown is a transcription, with original AX retained. Pro did not independently view SI Table2 in this round.

@@ -1,0 +1,17 @@
+{
+  "rule_id": "Q15R01_BACKGROUND_HANDLING_SENSITIVITY_V1",
+  "rule_instance_id": "4b54ea8c2b58427ae3b112c89ee072f544a845b58e72599c2c5026ff0d98b403",
+  "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "development_adapter": true,
+  "trigger": {
+    "eligible_negative_count_events": 24348,
+    "clipping_discrepancy_verified": true
+  },
+  "status": "UNRESOLVED",
+  "operator_obligations": [
+    "q15_background_handling_sensitivity_v1"
+  ],
+  "method_disposition": "AWAITING_FINITE_METHOD_COMPARISON",
+  "scientific_question_status": "INCOMPLETE",
+  "claim_ceiling": "Finite background-handling alternatives only; no absolute distance, dye safety, protein closure or full Q15 answer"
+}

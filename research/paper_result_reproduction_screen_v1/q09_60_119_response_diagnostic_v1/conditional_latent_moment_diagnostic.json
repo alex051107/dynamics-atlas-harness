@@ -1,0 +1,12 @@
+{
+  "D0_16": {
+    "normalized_continuous_emission_mean_ns": 2.0508146713617244,
+    "scope": "0-to-infinity moment of independently fitted2exponential latentresponse,not rawphotonmean or intrinsicdonor biology"
+  },
+  "60-119": {
+    "normalized_continuous_emission_mean_ns": 2.3756652534987404,
+    "scope": "0-to-infinity moment of independently fitted2exponential latentresponse,not rawphotonmean or intrinsicdonor biology"
+  },
+  "DA_minus_D0_ns": 0.324850582137016,
+  "interpretation": "Independent effectiveDAresponse is longer-lived inthisconditionalfit. Current common donor multiplied bynonincreasingpositive FRETsurvival cannotlengthen its normalizedcontinuous emission time; supports checkingreference/observationmodel applicability, notclaim sample hasnoFRET."
+}

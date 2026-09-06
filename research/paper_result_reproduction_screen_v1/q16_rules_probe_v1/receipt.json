@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-05T18:54:22.358363+00:00",
+  "entry": "NEW_Q16_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR",
+  "source_head": "4a2c40aa21c11a2eabe968e811bb2a77b4b30151",
+  "local_adapter_uncommitted": true,
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "<WORKSPACE>/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/run_q16_rules_probe_v1.py",
+    "--fact-packet",
+    "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q16_original_facts_v1.json",
+    "--output-dir",
+    "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q16_rules_probe_v1"
+  ],
+  "cwd": "<WORKSPACE>",
+  "python": "3.14.0 (main, Oct  7 2025, 09:34:52) [Clang 17.0.0 (clang-1700.4.4.1)]",
+  "rules_loaded": true,
+  "active_rule_instance_count": 11,
+  "statuses": {
+    "PASS": 6,
+    "UNRESOLVED": 4,
+    "NOT_APPLICABLE": 1
+  },
+  "routes": {
+    "DIRECT_EVALUATION": 6,
+    "SOURCE_LOOKUP": 4,
+    "HUMAN_OR_NEW_DATA": 1
+  },
+  "numeric_actions_executed": 0,
+  "scientific_verdict": "NOT_EMITTED",
+  "original_run_case_registry_modified": false,
+  "projection_boundary": "Projection carries case, source and comparison declarations but no typed ligand dose, cryoprotectant concentration, common time-window, DEER inversion or state-identifiability slots. Complete original method facts,archive identity andsource exceptions preserved separately; text retention is not execution.",
+  "stop": "Inspect actual routes before any obligation adapter. SOURCE_LOOKUP is not a numerical extra-calculation obligation."
+}

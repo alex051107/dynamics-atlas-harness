@@ -1,0 +1,321 @@
+{
+  "source": "Sanabria2020SIphysicalpage21,SupplementaryTable2a",
+  "verification": "Existingoriginalpage21render visually rechecked entiretable; only componentpresence/absence extracted, no fitted lifetimes/amplitudes reused",
+  "by_variant": {
+    "19-119": 3,
+    "19-132": 3,
+    "19-69": 3,
+    "19-86": 3,
+    "22-127": 3,
+    "36-132": 3,
+    "36-86": 3,
+    "44-119": 2,
+    "44-127": 3,
+    "44-132": 2,
+    "44-150": 2,
+    "44-69": 2,
+    "44-86": 2,
+    "5-132": 3,
+    "5-44": 3,
+    "55-119": 3,
+    "55-132": 2,
+    "55-150": 3,
+    "55-69": 2,
+    "60-119": 2,
+    "60-132": 2,
+    "60-150": 2,
+    "60-86": 2,
+    "69-119": 2,
+    "69-132": 2,
+    "69-150": 2,
+    "69-86": 2,
+    "70-119": 3,
+    "70-132": 2,
+    "8-119": 3,
+    "8-132": 3,
+    "8-69": 2,
+    "8-86": 2
+  },
+  "three_component_rows": 15,
+  "two_component_rows": 18,
+  "groups": [
+    {
+      "reference": "D0_01",
+      "source_component_orders": {
+        "19-119": 3,
+        "19-132": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "19-119",
+        "19-132"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_02",
+      "source_component_orders": {
+        "19-69": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "19-69"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_03",
+      "source_component_orders": {
+        "19-86": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "19-86"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_04",
+      "source_component_orders": {
+        "22-127": 3
+      },
+      "current_frozen_hypothesis": 3,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_05",
+      "source_component_orders": {
+        "36-132": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "36-132"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_06",
+      "source_component_orders": {
+        "36-86": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "36-86"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_07",
+      "source_component_orders": {
+        "44-119": 2,
+        "44-132": 2,
+        "44-69": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_08",
+      "source_component_orders": {
+        "44-127": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "44-127"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_09",
+      "source_component_orders": {
+        "44-150": 2,
+        "44-86": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_10",
+      "source_component_orders": {
+        "5-132": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "5-132"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_11",
+      "source_component_orders": {
+        "5-44": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "5-44"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_12",
+      "source_component_orders": {
+        "55-119": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "55-119"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_13",
+      "source_component_orders": {
+        "55-132": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_14",
+      "source_component_orders": {
+        "55-150": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "55-150"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_15",
+      "source_component_orders": {
+        "55-69": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_16",
+      "source_component_orders": {
+        "60-119": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_17",
+      "source_component_orders": {
+        "60-132": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_18",
+      "source_component_orders": {
+        "60-150": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_19",
+      "source_component_orders": {
+        "60-86": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_20",
+      "source_component_orders": {
+        "69-119": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_21",
+      "source_component_orders": {
+        "69-132": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_22",
+      "source_component_orders": {
+        "69-150": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_23",
+      "source_component_orders": {
+        "69-86": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_24",
+      "source_component_orders": {
+        "70-119": 3,
+        "70-132": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "70-119"
+      ],
+      "source_model_order_disagreement_on_same_reference": true
+    },
+    {
+      "reference": "D0_25",
+      "source_component_orders": {
+        "8-119": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "8-119"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_26",
+      "source_component_orders": {
+        "8-132": 3
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [
+        "8-132"
+      ],
+      "source_model_order_disagreement_on_same_reference": false
+    },
+    {
+      "reference": "D0_27",
+      "source_component_orders": {
+        "8-69": 2,
+        "8-86": 2
+      },
+      "current_frozen_hypothesis": 2,
+      "mismatch_variants": [],
+      "source_model_order_disagreement_on_same_reference": false
+    }
+  ],
+  "mismatch_variant_count": 14,
+  "interpretation": "Currentbatch intentionallyconditionalsimpledonor hypothesis; notauthor-methodmatch. Sourceordersaremethodreferences,notadequacyproof. D70pair shares deposited D0byteidentity but authorreports3vs2components; originalparameter-sharing/processing remainsunknown. Do notchangeongoingfits oruseauthorfitnumbersasinitials."
+}

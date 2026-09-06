@@ -1,0 +1,17 @@
+{
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "status": "UNRESOLVED",
+  "obligations": [
+    {
+      "operator_id": "q09_shared_local_comparison_v1",
+      "request_id": "63ee0e0146eb140f334679eb33815f3b9fa747c82830a3ef5caf719c2d800713",
+      "input_id": "1cf5741570b1f1589a7de5a2b1aefe9baeb4d10aaa4d3c5fefc1a82fd0d5f526",
+      "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905"
+    }
+  ],
+  "complete_question_answer": false,
+  "reason_codes": [
+    "SHARED_LOCAL_AND_STRUCTURE_COMPETING_EVIDENCE_REQUIRED"
+  ],
+  "request_id": "63ee0e0146eb140f334679eb33815f3b9fa747c82830a3ef5caf719c2d800713"
+}

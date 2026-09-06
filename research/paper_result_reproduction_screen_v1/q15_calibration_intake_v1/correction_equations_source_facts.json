@@ -1,0 +1,14 @@
+{
+  "source": "Hellenkamp2018 main article physical PDF page10 equations14,18-21, visually verified",
+  "DOI": "10.1038/s41592-018-0085-0",
+  "channels": "DD, DA, AA after channel-specific background subtraction",
+  "F_AD": "DA-alpha*DD-delta*AA",
+  "E": "F_AD/(gamma*DD+F_AD)",
+  "S": "(gamma*DD+F_AD)/(gamma*DD+F_AD+AA/beta)",
+  "unresolved": [
+    "burst duration units and duty-cycle convention",
+    "APBS source selection",
+    "per-run calibration applicability"
+  ],
+  "calculation_performed": false
+}

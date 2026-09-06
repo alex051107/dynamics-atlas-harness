@@ -1,0 +1,133 @@
+{
+  "status": "MATCHED_PUBLIC_SOURCES_LOCATED_PAYLOADS_NOT_ADMITTED",
+  "doi": "10.1371/journal.pcbi.1012180",
+  "pdb": "7w9w",
+  "emdb": "EMD-32377",
+  "benchmark_commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+  "refined_models": [
+    {
+      "path": "02-7w9w/3-Model/cc-0.7/conf_EMMIVOX.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6304b2fde6dd5905211f423c29c1608083d119df",
+      "size": 559691,
+      "url": "https://api.github.com/repos/COSBlab/EMMIVox-BENCHMARK/git/blobs/6304b2fde6dd5905211f423c29c1608083d119df"
+    },
+    {
+      "path": "02-7w9w/3-Model/cc-0.8/conf_EMMIVOX.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e85bbf488ffcc8f54168cc57760b2469c76e971",
+      "size": 559691,
+      "url": "https://api.github.com/repos/COSBlab/EMMIVox-BENCHMARK/git/blobs/3e85bbf488ffcc8f54168cc57760b2469c76e971"
+    },
+    {
+      "path": "02-7w9w/3-Model/cc-0.9/conf_EMMIVOX.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23262a7712425b6225ff41cfce3b05fbf81f4b9e",
+      "size": 559691,
+      "url": "https://api.github.com/repos/COSBlab/EMMIVox-BENCHMARK/git/blobs/23262a7712425b6225ff41cfce3b05fbf81f4b9e"
+    },
+    {
+      "path": "02-7w9w/3-Model/cc-1.0/conf_EMMIVOX.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7654b1d816dff92e47529681f435e13a61885eba",
+      "size": 559691,
+      "url": "https://api.github.com/repos/COSBlab/EMMIVox-BENCHMARK/git/blobs/7654b1d816dff92e47529681f435e13a61885eba"
+    }
+  ],
+  "map": {
+    "file": "emd_32377.map.gz",
+    "dimensions": {
+      "col": 162,
+      "row": 162,
+      "sec": 162
+    },
+    "pixel_spacing": {
+      "x": {
+        "units": "\u212b",
+        "valueOf_": "0.943182"
+      },
+      "y": {
+        "units": "\u212b",
+        "valueOf_": "0.943182"
+      },
+      "z": {
+        "units": "\u212b",
+        "valueOf_": "0.943182"
+      }
+    },
+    "size_kbytes": 17007
+  },
+  "half_maps": [
+    {
+      "file": "emd_32377_half_map_1.map.gz",
+      "dimensions": {
+        "col": 162,
+        "row": 162,
+        "sec": 162
+      },
+      "pixel_spacing": {
+        "x": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        },
+        "y": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        },
+        "z": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        }
+      },
+      "size_kbytes": 17007
+    },
+    {
+      "file": "emd_32377_half_map_2.map.gz",
+      "dimensions": {
+        "col": 162,
+        "row": 162,
+        "sec": 162
+      },
+      "pixel_spacing": {
+        "x": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        },
+        "y": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        },
+        "z": {
+          "units": "\u212b",
+          "valueOf_": "0.943182"
+        }
+      },
+      "size_kbytes": 17007
+    }
+  ],
+  "emdb_dates": {
+    "deposition": "2021-12-11T00:00:00",
+    "header_release": "2022-02-02T00:00:00",
+    "map_release": "2022-02-02T00:00:00",
+    "update": "2024-11-13T00:00:00"
+  },
+  "configuration_findings": [
+    "cc0.8 SCALE1.4 versuscc1.0 SCALE1.35;bothSIGMA_MIN0.2 andBFACT_SIGMA0.1",
+    "differentalignedvoxelDATfilesandwrapindexsizes;notpureone-factornoiseintervention",
+    "authorvalidationusesfinalPDBoriginalmapandthreshold0;exactFig2modelchoice andresidueVoronoi assignments notyetadmitted",
+    "paperFig2Bpoolednine-systems geometrycounts notChRmine-only groundtruth"
+  ],
+  "remaining": [
+    "OriginalPDBandrefinedcoordinatebyteidentity",
+    "Main/halfmapbinarygridandregistration",
+    "Exactpaperselectedrefinedvariant andgeometryhydrogen/atomtyping conventions",
+    "ResidueVoronoi noiseaggregation andsame-mask localCC",
+    "Historicalmapversion vs currentEMDBlastupdate2024-11-13"
+  ],
+  "scientific_computations": 0,
+  "downloads": "OnlyGitHubmetadata6smallcodefilesandEMDBJSON;no structure/map/trajectory payloads"
+}

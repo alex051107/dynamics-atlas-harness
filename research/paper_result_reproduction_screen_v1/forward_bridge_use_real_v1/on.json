@@ -1,0 +1,2259 @@
+{
+  "before": [
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.construct_and_condition",
+        "source.sample_composition",
+        "source.sample_system_composition_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.construct_and_condition",
+        "source.sample_composition",
+        "source.sample_system_composition_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.native_observable",
+        "source.estimand",
+        "source.time_semantics.kind",
+        "source.spatial_support",
+        "source.unit_or_aggregation",
+        "source.native_measurement_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.native_observable",
+        "source.estimand",
+        "source.time_semantics.kind",
+        "source.spatial_support",
+        "source.unit_or_aggregation",
+        "source.native_measurement_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::development-bridge-use-comparison",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "target": {
+        "kind": "CASE",
+        "id": "development-bridge-use-comparison"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "CLAIM_CONTRACT_CONSISTENT"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "REVIEWABLE_CASE_CONTRACT",
+        "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::development-bridge-use-comparison",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "target": {
+        "kind": "CASE",
+        "id": "development-bridge-use-comparison"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+        "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.source_locator"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.source_locator"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::134c8a6a068a1fa3e571129631194edbf73e1ee9f35aef73c9d6f24ab48a24fd",
+      "use_id": "reference-55_175",
+      "target_kind": "SOURCE_USE",
+      "status": "UNRESOLVED",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "Q15_APBS_55_175",
+        "model_id": "author-open-closed-reference",
+        "observable": "FRET_E",
+        "probe": "AF555_AF647_55_175",
+        "condition": "apo:1mM_sialic_acid",
+        "unit": "dimensionless_efficiency",
+        "aggregation": "equal_repetition_mean_E_vs_efficiency_weighted_reference_R",
+        "target_support": "apo:holo"
+      },
+      "input_ref": "input-reference-55_175",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "route": "REGISTERED_OPERATOR",
+      "check_completed": false,
+      "local_support": null,
+      "full_question_answer": false,
+      "remaining_obligations": [
+        "MODEL_OBSERVATION_USE_EVIDENCE"
+      ],
+      "reason": "REQUESTED_USE_NUMERICAL_CHECK_MISSING"
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::ebbd4dd74bac878eb69ef78c914be04849f30e7daa18ad1831ce96eb63ed8630",
+      "use_id": "reference-175_228",
+      "target_kind": "SOURCE_USE",
+      "status": "UNRESOLVED",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "Q15_APBS_175_228",
+        "model_id": "author-open-closed-reference",
+        "observable": "FRET_E",
+        "probe": "AF555_AF647_175_228",
+        "condition": "apo:1mM_sialic_acid",
+        "unit": "dimensionless_efficiency",
+        "aggregation": "equal_repetition_mean_E_vs_efficiency_weighted_reference_R",
+        "target_support": "apo:holo"
+      },
+      "input_ref": "input-reference-175_228",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "route": "REGISTERED_OPERATOR",
+      "check_completed": false,
+      "local_support": null,
+      "full_question_answer": false,
+      "remaining_obligations": [
+        "MODEL_OBSERVATION_USE_EVIDENCE"
+      ],
+      "reason": "REQUESTED_USE_NUMERICAL_CHECK_MISSING"
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::4987c4253920256dd474e62061971e4da6823ae50e20ae3f8b78fc0914024498",
+      "use_id": "prediction-29_long_raw_cropped",
+      "target_kind": "SOURCE_USE",
+      "status": "UNRESOLVED",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "source-29_long_raw_cropped",
+        "model_id": "saved-candidate-29_long_raw_cropped-None-0.0",
+        "observable": "DEER_raw_real",
+        "probe": "spin_29_long_raw_cropped",
+        "condition": "same_EG_record",
+        "unit": "microsecond_normalized_signal",
+        "aggregation": "time_trace_not_independent_repeats",
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ]
+      },
+      "input_ref": "input-prediction-29_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "route": "REGISTERED_OPERATOR",
+      "check_completed": false,
+      "local_support": null,
+      "full_question_answer": false,
+      "remaining_obligations": [
+        "MODEL_OBSERVATION_USE_EVIDENCE"
+      ],
+      "reason": "REQUESTED_USE_NUMERICAL_CHECK_MISSING"
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::932acd05651238fe4f72642f7147dedbb59ab29e527e515995259ea9d0cec84e",
+      "use_id": "prediction-36_long_raw_cropped",
+      "target_kind": "SOURCE_USE",
+      "status": "UNRESOLVED",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "source-36_long_raw_cropped",
+        "model_id": "saved-candidate-36_long_raw_cropped-None-0.0",
+        "observable": "DEER_raw_real",
+        "probe": "spin_36_long_raw_cropped",
+        "condition": "same_EG_record",
+        "unit": "microsecond_normalized_signal",
+        "aggregation": "time_trace_not_independent_repeats",
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ]
+      },
+      "input_ref": "input-prediction-36_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "route": "REGISTERED_OPERATOR",
+      "check_completed": false,
+      "local_support": null,
+      "full_question_answer": false,
+      "remaining_obligations": [
+        "MODEL_OBSERVATION_USE_EVIDENCE"
+      ],
+      "reason": "REQUESTED_USE_NUMERICAL_CHECK_MISSING"
+    }
+  ],
+  "after": [
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_SAMPLE_SYSTEM_AND_COMPOSITION_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_SAMPLE_SYSTEM_CONTEXT_DECLARED",
+        "claim_ceiling": "The source record declares sample-system and composition context. It does not freeze a full construct schema or certify sample homogeneity."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.construct_and_condition",
+        "source.sample_composition",
+        "source.sample_system_composition_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.construct_and_condition",
+        "source.sample_composition",
+        "source.sample_system_composition_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R01-SOURCE-SAMPLE-SYSTEM-COMPOSITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_CONTEXT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved source context must remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F02R02_EDGE_CONDITION_COMPATIBILITY::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F02R02_EDGE_CONDITION_COMPATIBILITY",
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_CONDITION_RELATION_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F02R02-EDGE-CONDITION",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "EDGE_CONDITION_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or non-PASS endpoint source-context declarations leave the condition relation unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "SOURCE_NATIVE_MEASUREMENT_DECLARED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "SOURCE_NATIVE_MEASUREMENT_DECLARED",
+        "claim_ceiling": "The source record declares its native measurement semantics. It does not certify reliability, comparability, validation, or a scientific conclusion."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.native_observable",
+        "source.estimand",
+        "source.time_semantics.kind",
+        "source.spatial_support",
+        "source.unit_or_aggregation",
+        "source.native_measurement_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F03R01_SOURCE_NATIVE_MEASUREMENT::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F03R01_SOURCE_NATIVE_MEASUREMENT",
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.native_observable",
+        "source.estimand",
+        "source.time_semantics.kind",
+        "source.spatial_support",
+        "source.unit_or_aggregation",
+        "source.native_measurement_declaration_status"
+      ],
+      "resolution_policy_id": "RP_F02_F03_DECLARATION_PREREQUISITES",
+      "evaluation_contract_id": "EC-F03R01-SOURCE-MEASUREMENT",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "SOURCE_MEASUREMENT_LOOKUP_REQUIRED",
+        "claim_ceiling": "Missing or unresolved measurement semantics remain unresolved; this Draft has no lookup executor."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F01R01_CASE_CLAIM_DECLARATION::CASE::development-bridge-use-comparison",
+      "runtime_subrule_id": "F01R01_CASE_CLAIM_DECLARATION",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "target": {
+        "kind": "CASE",
+        "id": "development-bridge-use-comparison"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "CLAIM_CONTRACT_CONSISTENT"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R01-CASE-CLAIM-DECLARATION",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "REVIEWABLE_CASE_CONTRACT",
+        "claim_ceiling": "The question is declared; no source evidence or scientific conclusion is validated."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE::CASE::development-bridge-use-comparison",
+      "runtime_subrule_id": "F01R02_CASE_REQUESTED_WORDING_SCOPE",
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "target": {
+        "kind": "CASE",
+        "id": "development-bridge-use-comparison"
+      },
+      "applicability_status": "MATCHED",
+      "status": "PASS",
+      "reason_codes": [
+        "REQUESTED_WORDING_WITHIN_DECLARED_SCOPE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F01_CASE_CONTRACT",
+      "evaluation_contract_id": "EC-F01R02-CASE-REQUESTED-WORDING-SCOPE",
+      "claim_effect": {
+        "route": "DIRECT_EVALUATION",
+        "decision_class": "DECLARED_REQUEST_SCOPE_RESPECTED",
+        "claim_ceiling": "The requested wording is inside the intake-declared scope. It is not an evidence-supported claim ceiling; Stage 2 is not implemented."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_APBS_175_228",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_175_228"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_APBS_55_175",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_APBS_55_175"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_DEER",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::Q15_PROBE_PHOTOPHYSICS",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "Q15_PROBE_PHOTOPHYSICS"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::source-29_long_raw_cropped",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-29_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.source_locator"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R01_SOURCE_EVIDENCE_ROLE::SOURCE::source-36_long_raw_cropped",
+      "runtime_subrule_id": "F06R01_SOURCE_EVIDENCE_ROLE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "SOURCE",
+        "id": "source-36_long_raw_cropped"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ],
+      "missing_paths": [
+        "source.source_locator"
+      ],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R01-SOURCE-ROLE",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing role or lineage evidence prevents the requested label."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R02_EDGE_COMPARABILITY::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F06R02_EDGE_COMPARABILITY",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "MATCHED",
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "EDGE_COMPARABILITY_INPUT_UNRESOLVED"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R02-EDGE-COMPARABILITY",
+      "claim_effect": {
+        "route": "SOURCE_LOOKUP",
+        "decision_class": "ABSTAIN",
+        "claim_ceiling": "Missing relation, bridge, or F02/F03 prerequisite evidence prevents a cross-source claim. SOURCE_LOOKUP is declared-only in this Draft."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_PAIR",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PAIR"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_DEER",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_DEER"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "schema_version": "rules-prototype-rule-result/v1",
+      "rule_instance_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE::EDGE::Q15_PROBE",
+      "runtime_subrule_id": "F06R03_EDGE_VALIDATION_INDEPENDENCE",
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "target": {
+        "kind": "EDGE",
+        "id": "Q15_PROBE"
+      },
+      "applicability_status": "NOT_MATCHED",
+      "status": "NOT_APPLICABLE",
+      "reason_codes": [
+        "APPLICABILITY_PREDICATE_FALSE"
+      ],
+      "missing_paths": [],
+      "resolution_policy_id": "RP_F06_SOURCE_EDGE_RELATION",
+      "evaluation_contract_id": "EC-F06R03-EDGE-INDEPENDENCE",
+      "claim_effect": {
+        "route": "HUMAN_OR_NEW_DATA",
+        "decision_class": "NO_RULE_INSTANCE",
+        "claim_ceiling": "No validation-independence instance was selected for this target."
+      },
+      "scientific_verdict": "NOT_EMITTED_IN_PR1",
+      "human_decision_gate_required": true,
+      "human_decision_gate_id": "HDG-RULES-V1-SCIENTIFIC-REVIEW"
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::134c8a6a068a1fa3e571129631194edbf73e1ee9f35aef73c9d6f24ab48a24fd",
+      "use_id": "reference-55_175",
+      "target_kind": "SOURCE_USE",
+      "status": "PASS",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "Q15_APBS_55_175",
+        "model_id": "author-open-closed-reference",
+        "observable": "FRET_E",
+        "probe": "AF555_AF647_55_175",
+        "condition": "apo:1mM_sialic_acid",
+        "unit": "dimensionless_efficiency",
+        "aggregation": "equal_repetition_mean_E_vs_efficiency_weighted_reference_R",
+        "target_support": "apo:holo"
+      },
+      "input_ref": "input-reference-55_175",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "route": "DIRECT_EVALUATION",
+      "check_completed": true,
+      "local_support": true,
+      "full_question_answer": false,
+      "remaining_obligations": [],
+      "numerical": {
+        "observed_change": 0.08198984534700182,
+        "reference_distance_change": -9.400000000000006,
+        "direction_checks": [
+          0.08458183019269927,
+          0.09008412683212952,
+          0.09167485014364629,
+          0.0587806929560607,
+          0.0907830949943561,
+          0.09237381830587288,
+          0.059479661118287286,
+          0.09481502477907178,
+          0.09640574809058855,
+          0.06351159090300296
+        ],
+        "relation": "COMPATIBLE",
+        "limitation": "Conditional reference-readout direction only; not a calibrated absolute distance or mechanism."
+      },
+      "reason": "REQUESTED_USE_COMPATIBLE",
+      "allowed_conclusion": "Conditional model-observation comparison: COMPATIBLE. Conditional reference-readout direction only; not a calibrated absolute distance or mechanism.",
+      "claim_ceiling": "This specific model-observation use only; no whole-question or population approval."
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::ebbd4dd74bac878eb69ef78c914be04849f30e7daa18ad1831ce96eb63ed8630",
+      "use_id": "reference-175_228",
+      "target_kind": "SOURCE_USE",
+      "status": "FAIL",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "Q15_APBS_175_228",
+        "model_id": "author-open-closed-reference",
+        "observable": "FRET_E",
+        "probe": "AF555_AF647_175_228",
+        "condition": "apo:1mM_sialic_acid",
+        "unit": "dimensionless_efficiency",
+        "aggregation": "equal_repetition_mean_E_vs_efficiency_weighted_reference_R",
+        "target_support": "apo:holo"
+      },
+      "input_ref": "input-reference-175_228",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "route": "DIRECT_EVALUATION",
+      "check_completed": true,
+      "local_support": false,
+      "full_question_answer": false,
+      "remaining_obligations": [],
+      "numerical": {
+        "observed_change": -0.026169186819396173,
+        "reference_distance_change": -7.900000000000006,
+        "direction_checks": [
+          -0.027920789696480097,
+          -0.017666885585378767,
+          -0.029020743067647348,
+          -0.00549436490226729,
+          -0.013356476267307849,
+          -0.02471033374957643,
+          -0.0011839555841963723,
+          -0.0483028618063448,
+          -0.05965671928861338,
+          -0.03613034112323332
+        ],
+        "relation": "TENSION",
+        "limitation": "Conditional reference-readout direction only; not a calibrated absolute distance or mechanism."
+      },
+      "reason": "REQUESTED_USE_TENSION",
+      "allowed_conclusion": "Conditional model-observation comparison: TENSION. Conditional reference-readout direction only; not a calibrated absolute distance or mechanism.",
+      "claim_ceiling": "This specific model-observation use only; no whole-question or population approval."
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::4987c4253920256dd474e62061971e4da6823ae50e20ae3f8b78fc0914024498",
+      "use_id": "prediction-29_long_raw_cropped",
+      "target_kind": "SOURCE_USE",
+      "status": "FAIL",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "source-29_long_raw_cropped",
+        "model_id": "saved-candidate-29_long_raw_cropped-None-0.0",
+        "observable": "DEER_raw_real",
+        "probe": "spin_29_long_raw_cropped",
+        "condition": "same_EG_record",
+        "unit": "microsecond_normalized_signal",
+        "aggregation": "time_trace_not_independent_repeats",
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ]
+      },
+      "input_ref": "input-prediction-29_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "route": "DIRECT_EVALUATION",
+      "check_completed": true,
+      "local_support": false,
+      "full_question_answer": false,
+      "remaining_obligations": [],
+      "numerical": {
+        "training_metrics": {
+          "raw_rms": 0.005899131462104779,
+          "noise_proxy": 0.004685433068299401,
+          "residual_lag1": 0.010665726934918685,
+          "amplitude": 0.9879573409246639,
+          "modulation": 0.22100301339871206,
+          "long_grid_fraction": 0.49499155716369186,
+          "conditional_witness": true
+        },
+        "prediction": [
+          0.7631699627361934,
+          0.7630167791024155,
+          0.7625568795813097,
+          0.762246411401255,
+          0.762271736854918,
+          0.7624215258741774,
+          0.7624020861965802,
+          0.7623021429271077,
+          0.7623228413593421,
+          0.7624561437766164,
+          0.7624993583665213,
+          0.762364724781821,
+          0.7623580378363827,
+          0.7627361312005341,
+          0.7633697345950581,
+          0.7638320389764085,
+          0.7639556526038459,
+          0.7640876740131949,
+          0.7645316804372623,
+          0.7652175178364363,
+          0.7658145270674863,
+          0.7662324752860696,
+          0.7666677315566903,
+          0.767179733270367,
+          0.7676138357733656,
+          0.7677823508030776,
+          0.767858411789417,
+          0.7681949399263365,
+          0.7688517512814859,
+          0.7695138855287593,
+          0.7698379737582384,
+          0.7699771078850799,
+          0.7703076485382726,
+          0.770937553987045,
+          0.7716303043415309,
+          0.7721673363269231,
+          0.7726825267099948,
+          0.7733077949147762,
+          0.7739370978304023,
+          0.7743231892774912,
+          0.7744425875229632,
+          0.774616721617401,
+          0.775042004371675,
+          0.7755478989123938,
+          0.7757364456236701,
+          0.7755202945331177,
+          0.7752343752491982,
+          0.7751304000792998,
+          0.7751271096852945,
+          0.7749689217341695,
+          0.7746813529802958,
+          0.7744679404807563,
+          0.7743256277295719,
+          0.7740402852801678,
+          0.7734582361157578,
+          0.7728140561147783,
+          0.7724280770367504,
+          0.7723088112326336,
+          0.7721322166426774,
+          0.7716218762911147,
+          0.7709522916438935,
+          0.7704275126675003
+        ],
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ],
+        "rms": 0.006118971776989765,
+        "lag1": 0.35970338296480364,
+        "training_noise": 0.004685433068299401,
+        "relation": "TENSION",
+        "limitation": "Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate."
+      },
+      "reason": "REQUESTED_USE_TENSION",
+      "allowed_conclusion": "Conditional model-observation comparison: TENSION. Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate.",
+      "claim_ceiling": "This specific model-observation use only; no whole-question or population approval."
+    },
+    {
+      "runtime_subrule_id": "F05R02_MODEL_OBSERVATION_USE_V1",
+      "rule_instance_id": "F05R02_MODEL_OBSERVATION_USE_V1::932acd05651238fe4f72642f7147dedbb59ab29e527e515995259ea9d0cec84e",
+      "use_id": "prediction-36_long_raw_cropped",
+      "target_kind": "SOURCE_USE",
+      "status": "FAIL",
+      "requested_use": "MODEL_OBSERVATION_COMPARISON",
+      "scope": {
+        "source_id": "source-36_long_raw_cropped",
+        "model_id": "saved-candidate-36_long_raw_cropped-None-0.0",
+        "observable": "DEER_raw_real",
+        "probe": "spin_36_long_raw_cropped",
+        "condition": "same_EG_record",
+        "unit": "microsecond_normalized_signal",
+        "aggregation": "time_trace_not_independent_repeats",
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ]
+      },
+      "input_ref": "input-prediction-36_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "route": "DIRECT_EVALUATION",
+      "check_completed": true,
+      "local_support": false,
+      "full_question_answer": false,
+      "remaining_obligations": [],
+      "numerical": {
+        "training_metrics": {
+          "raw_rms": 0.011076749886244438,
+          "noise_proxy": 0.009749730167320034,
+          "residual_lag1": 0.08356659927495452,
+          "amplitude": 0.9853976297869925,
+          "modulation": 0.2961930033531703,
+          "long_grid_fraction": 0.41198461066341613,
+          "conditional_witness": true
+        },
+        "prediction": [
+          0.6915437800718809,
+          0.692688646427014,
+          0.6936973396726087,
+          0.6941848978919168,
+          0.6941908422278998,
+          0.6940780600470191,
+          0.6940605565293685,
+          0.69407361125673,
+          0.6938421101241865,
+          0.6932420755423205,
+          0.6925716687449702,
+          0.692166265282341,
+          0.6920537124437341,
+          0.6919600132367842,
+          0.6915291570641284,
+          0.6907907325648082,
+          0.6901486626588071,
+          0.6898873248303096,
+          0.689966298294506,
+          0.6900689075173148,
+          0.6899555270582864,
+          0.6898289599337851,
+          0.6900419600204415,
+          0.6906929625226246,
+          0.6915595328807931,
+          0.6922604672329018,
+          0.6927239598708278,
+          0.6933037412921835,
+          0.694332206288975,
+          0.6958491258819814,
+          0.6975803327679952,
+          0.6992114272558524,
+          0.700796254607464,
+          0.7025912438698098,
+          0.7046698290162777,
+          0.7068276220636878,
+          0.7086825441336586,
+          0.7100840420438298,
+          0.711304271756111,
+          0.712658894866675,
+          0.7142228298227177,
+          0.7157868391104578,
+          0.7170565066705067,
+          0.7180422910637981,
+          0.7189649503217891,
+          0.7198784376461107,
+          0.7205712908625168,
+          0.7206597946240798,
+          0.7199657057724927,
+          0.7187648500000585,
+          0.7174552685089838,
+          0.7162386441042687,
+          0.7150545090587515,
+          0.7137299444919993,
+          0.7123551093751056,
+          0.7112482139898276,
+          0.7105611011127716,
+          0.7101289296733926,
+          0.7095319291178612,
+          0.7084442668806971,
+          0.7069619685751742,
+          0.7053711024761816
+        ],
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ],
+        "rms": 0.02830750639080947,
+        "lag1": 0.5772839490905335,
+        "training_noise": 0.009749730167320034,
+        "relation": "TENSION",
+        "limitation": "Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate."
+      },
+      "reason": "REQUESTED_USE_TENSION",
+      "allowed_conclusion": "Conditional model-observation comparison: TENSION. Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate.",
+      "claim_ceiling": "This specific model-observation use only; no whole-question or population approval."
+    }
+  ],
+  "evidence": {
+    "reference-55_175": {
+      "use_digest": "134c8a6a068a1fa3e571129631194edbf73e1ee9f35aef73c9d6f24ab48a24fd",
+      "input_digest": "5121ade94d59036284a6c0f2e414df50dde458d36a541a658f5d531afc04b79a",
+      "numerical": {
+        "observed_change": 0.08198984534700182,
+        "reference_distance_change": -9.400000000000006,
+        "direction_checks": [
+          0.08458183019269927,
+          0.09008412683212952,
+          0.09167485014364629,
+          0.0587806929560607,
+          0.0907830949943561,
+          0.09237381830587288,
+          0.059479661118287286,
+          0.09481502477907178,
+          0.09640574809058855,
+          0.06351159090300296
+        ],
+        "relation": "COMPATIBLE",
+        "limitation": "Conditional reference-readout direction only; not a calibrated absolute distance or mechanism."
+      }
+    },
+    "reference-175_228": {
+      "use_digest": "ebbd4dd74bac878eb69ef78c914be04849f30e7daa18ad1831ce96eb63ed8630",
+      "input_digest": "a6113515333476ce89639fd20fc17d96e8dc19d473781811315884f5bbe50e3d",
+      "numerical": {
+        "observed_change": -0.026169186819396173,
+        "reference_distance_change": -7.900000000000006,
+        "direction_checks": [
+          -0.027920789696480097,
+          -0.017666885585378767,
+          -0.029020743067647348,
+          -0.00549436490226729,
+          -0.013356476267307849,
+          -0.02471033374957643,
+          -0.0011839555841963723,
+          -0.0483028618063448,
+          -0.05965671928861338,
+          -0.03613034112323332
+        ],
+        "relation": "TENSION",
+        "limitation": "Conditional reference-readout direction only; not a calibrated absolute distance or mechanism."
+      }
+    },
+    "prediction-29_long_raw_cropped": {
+      "use_digest": "4987c4253920256dd474e62061971e4da6823ae50e20ae3f8b78fc0914024498",
+      "input_digest": "c9a4cdd377ce758cd6e7fbf7adb4980832e0f7d85c71d73cbfc4f724aa139e94",
+      "numerical": {
+        "training_metrics": {
+          "raw_rms": 0.005899131462104779,
+          "noise_proxy": 0.004685433068299401,
+          "residual_lag1": 0.010665726934918685,
+          "amplitude": 0.9879573409246639,
+          "modulation": 0.22100301339871206,
+          "long_grid_fraction": 0.49499155716369186,
+          "conditional_witness": true
+        },
+        "prediction": [
+          0.7631699627361934,
+          0.7630167791024155,
+          0.7625568795813097,
+          0.762246411401255,
+          0.762271736854918,
+          0.7624215258741774,
+          0.7624020861965802,
+          0.7623021429271077,
+          0.7623228413593421,
+          0.7624561437766164,
+          0.7624993583665213,
+          0.762364724781821,
+          0.7623580378363827,
+          0.7627361312005341,
+          0.7633697345950581,
+          0.7638320389764085,
+          0.7639556526038459,
+          0.7640876740131949,
+          0.7645316804372623,
+          0.7652175178364363,
+          0.7658145270674863,
+          0.7662324752860696,
+          0.7666677315566903,
+          0.767179733270367,
+          0.7676138357733656,
+          0.7677823508030776,
+          0.767858411789417,
+          0.7681949399263365,
+          0.7688517512814859,
+          0.7695138855287593,
+          0.7698379737582384,
+          0.7699771078850799,
+          0.7703076485382726,
+          0.770937553987045,
+          0.7716303043415309,
+          0.7721673363269231,
+          0.7726825267099948,
+          0.7733077949147762,
+          0.7739370978304023,
+          0.7743231892774912,
+          0.7744425875229632,
+          0.774616721617401,
+          0.775042004371675,
+          0.7755478989123938,
+          0.7757364456236701,
+          0.7755202945331177,
+          0.7752343752491982,
+          0.7751304000792998,
+          0.7751271096852945,
+          0.7749689217341695,
+          0.7746813529802958,
+          0.7744679404807563,
+          0.7743256277295719,
+          0.7740402852801678,
+          0.7734582361157578,
+          0.7728140561147783,
+          0.7724280770367504,
+          0.7723088112326336,
+          0.7721322166426774,
+          0.7716218762911147,
+          0.7709522916438935,
+          0.7704275126675003
+        ],
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ],
+        "rms": 0.006118971776989765,
+        "lag1": 0.35970338296480364,
+        "training_noise": 0.004685433068299401,
+        "relation": "TENSION",
+        "limitation": "Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate."
+      }
+    },
+    "prediction-36_long_raw_cropped": {
+      "use_digest": "932acd05651238fe4f72642f7147dedbb59ab29e527e515995259ea9d0cec84e",
+      "input_digest": "45af7a1b5424e3b59dc37256fa39577678e84af6b114e4d2b390ec8992acf1b7",
+      "numerical": {
+        "training_metrics": {
+          "raw_rms": 0.011076749886244438,
+          "noise_proxy": 0.009749730167320034,
+          "residual_lag1": 0.08356659927495452,
+          "amplitude": 0.9853976297869925,
+          "modulation": 0.2961930033531703,
+          "long_grid_fraction": 0.41198461066341613,
+          "conditional_witness": true
+        },
+        "prediction": [
+          0.6915437800718809,
+          0.692688646427014,
+          0.6936973396726087,
+          0.6941848978919168,
+          0.6941908422278998,
+          0.6940780600470191,
+          0.6940605565293685,
+          0.69407361125673,
+          0.6938421101241865,
+          0.6932420755423205,
+          0.6925716687449702,
+          0.692166265282341,
+          0.6920537124437341,
+          0.6919600132367842,
+          0.6915291570641284,
+          0.6907907325648082,
+          0.6901486626588071,
+          0.6898873248303096,
+          0.689966298294506,
+          0.6900689075173148,
+          0.6899555270582864,
+          0.6898289599337851,
+          0.6900419600204415,
+          0.6906929625226246,
+          0.6915595328807931,
+          0.6922604672329018,
+          0.6927239598708278,
+          0.6933037412921835,
+          0.694332206288975,
+          0.6958491258819814,
+          0.6975803327679952,
+          0.6992114272558524,
+          0.700796254607464,
+          0.7025912438698098,
+          0.7046698290162777,
+          0.7068276220636878,
+          0.7086825441336586,
+          0.7100840420438298,
+          0.711304271756111,
+          0.712658894866675,
+          0.7142228298227177,
+          0.7157868391104578,
+          0.7170565066705067,
+          0.7180422910637981,
+          0.7189649503217891,
+          0.7198784376461107,
+          0.7205712908625168,
+          0.7206597946240798,
+          0.7199657057724927,
+          0.7187648500000585,
+          0.7174552685089838,
+          0.7162386441042687,
+          0.7150545090587515,
+          0.7137299444919993,
+          0.7123551093751056,
+          0.7112482139898276,
+          0.7105611011127716,
+          0.7101289296733926,
+          0.7095319291178612,
+          0.7084442668806971,
+          0.7069619685751742,
+          0.7053711024761816
+        ],
+        "target_support": [
+          4.928,
+          6.88,
+          62
+        ],
+        "rms": 0.02830750639080947,
+        "lag1": 0.5772839490905335,
+        "training_noise": 0.009749730167320034,
+        "relation": "TENSION",
+        "limitation": "Fixed-candidate descriptive screen, not a confidence test, family exclusion or population estimate."
+      }
+    }
+  },
+  "operator_calls": [
+    {
+      "use_id": "reference-55_175",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "execution_role": "DEVELOPMENT_REPLAY_OF_EXISTING_SCIENTIFIC_COMPONENT"
+    },
+    {
+      "use_id": "reference-175_228",
+      "method_id": "efficiency_weighted_reference_direction_v1",
+      "execution_role": "DEVELOPMENT_REPLAY_OF_EXISTING_SCIENTIFIC_COMPONENT"
+    },
+    {
+      "use_id": "prediction-29_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "execution_role": "DEVELOPMENT_REPLAY_OF_EXISTING_SCIENTIFIC_COMPONENT"
+    },
+    {
+      "use_id": "prediction-36_long_raw_cropped",
+      "method_id": "fixed_deer_prediction_screen_v1",
+      "execution_role": "DEVELOPMENT_REPLAY_OF_EXISTING_SCIENTIFIC_COMPONENT"
+    }
+  ],
+  "original_manual_results_reclassified": false
+}

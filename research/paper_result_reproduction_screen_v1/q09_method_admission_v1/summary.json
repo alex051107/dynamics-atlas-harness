@@ -1,0 +1,14 @@
+{
+  "variant_count": 33,
+  "decay_role_records": 66,
+  "unique_byte_payload_counts": {
+    "DA": 33,
+    "D0": 27,
+    "IRF_DA": 18,
+    "IRF_D0": 19
+  },
+  "repeated_reference_policy": "Byte-identical records provide no independent acquisition identity evidence;retain originals and resolve likelihood multiplicity from provenance",
+  "formula_status": "PRINTED_FORMULA_CONSISTENCY_GAP; author executed code unknown",
+  "fits": 0,
+  "rules_runs": 0
+}

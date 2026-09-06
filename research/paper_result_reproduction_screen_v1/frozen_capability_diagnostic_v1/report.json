@@ -1,0 +1,1269 @@
+{
+  "frozen_head": "6b5856e3381314f698429f725a5a194ff94a932a",
+  "scope": "Exposed development diagnostic. Specialist selection supplied by harness; not end-to-end routing or accuracy.",
+  "production_edits": 0,
+  "new_fits": 0,
+  "new_operator_calls": 0,
+  "Q14": {
+    "specialist_result": {
+      "rule_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY",
+      "rule_instance_id": "Q14R01_UNKNOWN_CORRELATION_SENSITIVITY::be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+      "triggered": true,
+      "status": "UNRESOLVED",
+      "evidence_applications": 1,
+      "full_question_answer": false,
+      "development_adapter": true,
+      "remaining_obligations": [
+        "PAIRED_LAB_DATA_AND_CALIBRATION_COVARIANCE",
+        "SAMPLE_SPECIFIC_DYE_AVERAGING_AND_MODEL_APPLICABILITY"
+      ],
+      "evidence": {
+        "operator_id": "linearized_unknown_correlation_bounds_v1",
+        "input_id": "be0ae1ec27708f8d19ff763833bb5259c177d62545038eabc2d1720bd57fef1f",
+        "difference": 0.04242523645508722,
+        "delta_sd_bounds": [
+          0.0,
+          0.17305916200965077
+        ],
+        "delta_variance_bounds": [
+          0.0,
+          0.029949473555482553
+        ],
+        "weighted_marginal_lengths": [
+          0.04145936981757878,
+          0.02981774378521984,
+          0.053375196232339085,
+          0.04840685217451308
+        ],
+        "interpretation": "Sensitivity over arbitrary PSD correlations with fixed marginal dispersions, not estimated covariance or a confidence interval."
+      },
+      "partial_claim": "UNKNOWN_CORRELATION_CHANGES_PROPAGATED_DISPERSION",
+      "answer": "The zero-covariance baseline does not establish cross-dye compatibility. The actual published marginals permit the reported range of first-order dispersions; pairing/calibration and dye-model evidence remain necessary.",
+      "limits": [
+        "SD is published measurement dispersion, not uncertainty of a mean or CI.",
+        "R0 cancellation requires identical within-pair calibration; sample-specific effects remain.",
+        "A broad sensitivity range is not measured disagreement or proof of a common geometry."
+      ]
+    },
+    "automatic_selection": "NOT_TESTED_BY_SPECIALIST_CALL",
+    "required_inputs": [
+      "source",
+      "manual main report",
+      "prior admission receipt"
+    ],
+    "finding": "Existing numeric component consumes evidence; selected path and covariance-status prerequisite supplied externally. Partial answer only."
+  },
+  "Q15": {
+    "specialist_result": {
+      "rule_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1",
+      "rule_instance_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1::ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+      "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+      "development_adapter": true,
+      "status": "UNRESOLVED",
+      "partial_claims": [
+        {
+          "pair": "175_228",
+          "observed_E_effect": -0.026169186819396173,
+          "descriptive_direction_retained_in_manual_checks": true,
+          "DEER_central_mean_change_source_axis_units": -9.962328949216861,
+          "author_forward_distance_changes_A": {
+            "FRET_sim": -7.900000000000006,
+            "PELDOR_sim": -9.899999999999999
+          },
+          "DEER_direction_matches_own_spin_prediction": true,
+          "fluorescence_relation": "DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT"
+        },
+        {
+          "pair": "55_175",
+          "observed_E_effect": 0.08198984534700182,
+          "descriptive_direction_retained_in_manual_checks": true,
+          "DEER_central_mean_change_source_axis_units": -14.964454034618896,
+          "author_forward_distance_changes_A": {
+            "FRET_sim": -9.400000000000006,
+            "PELDOR_sim": -13.8
+          },
+          "DEER_direction_matches_own_spin_prediction": true,
+          "fluorescence_relation": "DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT"
+        }
+      ],
+      "remaining_obligations": [
+        "REPLICATE_SELECTION_AND_CALIBRATION_UNCERTAINTY",
+        "CY5_PDF_SOURCE_CONCORDANCE",
+        "INDEPENDENT_QUESTION_LEVEL_SCIENTIFIC_REVIEW"
+      ],
+      "full_question_answer": false,
+      "new_numerical_operator_calls": 0,
+      "evidence_applications": 1,
+      "source_bindings": {
+        "manual_summary": "91d439f73526d778b3591e6a4871e6a49f60d432844e605c128578f5d2bfc85e",
+        "manual_DEER": "570c84703fe1420db6680cdce0f553eeeeeb421e1f1ee3b91d33688b42356752",
+        "author_forward": "36e08a5beed2baf76bb595690ca3e4c3436f91630a6b96f84ef7f14048783f7d",
+        "dye": {
+          "histogram": {
+            "path": "q15_tmr_histogram_intake_v1/source_geometry.local.json",
+            "canonical_sha256": "2b442e5bf03c22bf205bf632de1c7abe2d74d433960618a76af1b25ba50fac6f"
+          },
+          "dye_summary": {
+            "path": "q15_dye_response_v1/report.json",
+            "canonical_sha256": "7bc5b2ccaa35c09eed93809be9aea2f6a8bb4abaa84e8c19faffc0c87a15714e"
+          },
+          "concordance": {
+            "path": "q15_dye_response_v1/source_concordance_check.json",
+            "canonical_sha256": "0b65a817d14117ca8b5608c938d0f8799c51a008f9518627aca40c2a9751d424"
+          }
+        }
+      },
+      "claim_ceiling": [
+        "No mean-E to absolute-distance conversion",
+        "Not a local FPS or spin-label simulation",
+        "DEER uses author-processed curves and common positive source-axis scale; original nm/Angstrom conflict retained",
+        "Cryogenic DEER and fluorescence are not pooled into a common population",
+        "Directional tension is not formal ensemble-model rejection or proof of a unique dye mechanism"
+      ],
+      "comparison_hypothesis": "Condition maps to its published structural reference prediction, with stable probe/readout; no changing ensemble or dye parameters assumed.",
+      "partial_answer_status": "Q15_BOUNDED_ANSWER_CANDIDATE",
+      "source_request_route": "REQUEST_NEW_DATA_IF_PUBLIC_SOURCE_SEARCH_EXHAUSTED",
+      "dye_evidence": {
+        "histogram": {
+          "direction": "RIGHT",
+          "conditions": {
+            "apo": {
+              "bars": 35,
+              "centroid": 0.340522169262498,
+              "lower": 0.330309532723847,
+              "upper": 0.3507348058011491,
+              "max_bin_width": 0.02046796537561707
+            },
+            "holo": {
+              "bars": 33,
+              "centroid": 0.47732691747268585,
+              "lower": 0.4671136220710509,
+              "upper": 0.48754021287432087,
+              "max_bin_width": 0.02042969478740775
+            }
+          },
+          "centroid_shift": 0.13680474821018784,
+          "geometric_bounds": [
+            0.075481156106877,
+            0.19812834031349869
+          ],
+          "sentence": "代表性已处理 TMR/Cy5 直方图加配体后向右移动。",
+          "uncertainty": "Within-bar position plus one bin registration per panel; not a confidence interval."
+        },
+        "Alexa_relation": "OPPOSITE",
+        "DEER_relation": "NOT_INFERRED_FROM_MEANS",
+        "DEER_mean_direction": "DECREASE",
+        "histogram_answer": "代表性已处理 TMR/Cy5 直方图加配体后向右移动。与绑定的 Alexa 观测方向相反。匹配 DEER 的中心平均距离减小；两项观测方向并列记录。平均距离不能经符号取反预测平均 FRET，尚无核准的 TMR/Cy5 前向模型来检验二者关系。",
+        "dye_numbers": {
+          "175_AF555": {
+            "conditions": {
+              "apo": {
+                "late_early": 0.08613561921315742,
+                "anisotropy": 0.25705478999568726
+              },
+              "holo": {
+                "late_early": 0.057788551626657365,
+                "anisotropy": 0.2376653890280817
+              }
+            },
+            "decay_shape_ratio": 0.6709019120609053,
+            "anisotropy_change": -0.019389400967605552
+          },
+          "58_AF555": {
+            "conditions": {
+              "apo": {
+                "late_early": 0.06095202407861815,
+                "anisotropy": 0.24614682518211103
+              },
+              "holo": {
+                "late_early": 0.06444948569420703,
+                "anisotropy": 0.2535086183997748
+              }
+            },
+            "decay_shape_ratio": 1.0573805655916813,
+            "anisotropy_change": 0.0073617932176637535
+          },
+          "175_TMR": {
+            "conditions": {
+              "apo": {
+                "late_early": 0.2132796003670633,
+                "anisotropy": 0.09929398531160298
+              },
+              "holo": {
+                "late_early": 0.21206877081480102,
+                "anisotropy": 0.10106401670269279
+              }
+            },
+            "decay_shape_ratio": 0.9943228065404361,
+            "anisotropy_change": 0.0017700313910898047
+          }
+        },
+        "probe_answer": "所选时间窗内，175 位点 Alexa 供体的衰减形状变化大于 58 位点对照；TMR 供体的衰减形状变化较小。TMR 在两个条件的晚窗各向异性均较低。",
+        "probe_readout_condition_dependence": true,
+        "replacement_donor_reduces_observed_concern": true,
+        "Cy5_mechanistic_use": "EXCLUDED_PENDING_PDF_SOURCE_CONCORDANCE",
+        "limits": [
+          "Representative processed histogram, not replicate-level uncertainty or original burst-selection validation.",
+          "Geometric bounds cover stated graphical perturbations only, not selection/calibration systematics.",
+          "Window ratios are not fitted lifetimes, quantum yields, gamma or R0 calibrations.",
+          "Lower anisotropy and similar decay shape do not establish complete probe applicability.",
+          "Cy5 deposited curves disagree visually with paper panel; no Cy5 mechanism or calibration certification.",
+          "Distinct temperatures/probes and directional agreement do not identify a unique protein ensemble or microscopic dye mechanism."
+        ],
+        "provenance": "RULE_APPLICATION_OF_PREVIOUS_MANUAL_NUMERICAL_EVIDENCE",
+        "new_numerical_operator_calls": 0
+      },
+      "representative_double_label_observation_available": true,
+      "question_answer_candidate": {
+        "closure": [
+          {
+            "pair": "175_228",
+            "observed_E_effect": -0.026169186819396173,
+            "descriptive_direction_retained_in_manual_checks": true,
+            "DEER_central_mean_change_source_axis_units": -9.962328949216861,
+            "author_forward_distance_changes_A": {
+              "FRET_sim": -7.900000000000006,
+              "PELDOR_sim": -9.899999999999999
+            },
+            "DEER_direction_matches_own_spin_prediction": true,
+            "fluorescence_relation": "DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT"
+          },
+          {
+            "pair": "55_175",
+            "observed_E_effect": 0.08198984534700182,
+            "descriptive_direction_retained_in_manual_checks": true,
+            "DEER_central_mean_change_source_axis_units": -14.964454034618896,
+            "author_forward_distance_changes_A": {
+              "FRET_sim": -9.400000000000006,
+              "PELDOR_sim": -13.8
+            },
+            "DEER_direction_matches_own_spin_prediction": true,
+            "fluorescence_relation": "DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT"
+          }
+        ],
+        "scientific_synthesis": {
+          "status": "BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW",
+          "answer": "在已核准的条件及参考结构—探针假说下，观测总体更支持 HiSiaP 结合底物后的结构域闭合。55/175 的荧光、匹配 DEER 和各自参考预测构成方向一致的证据链；175/228 的 Alexa 结果与该参考读出存在冲突。代表性 TMR/Cy5 直方图右移，加上 175 位点 AF555 相对对照的衰减形状变化较大、TMR 当前诊断较小，为探针读出适用性受条件影响提供了实验依据。仅凭异常 Alexa 效率下降不足以推断进一步开放或命名新的蛋白构象。",
+          "dependencies": {
+            "reference_chain": true,
+            "Alexa_anomaly": true,
+            "replacement_observation": true,
+            "donor_control": true
+          },
+          "hypothesis": "Condition maps to its published structural reference prediction, with stable probe/readout; no changing ensemble or dye parameters assumed.",
+          "limitations": [
+            "不唯一确定微观染料机制；标签对构象集合的扰动、样本条件差异及其他读出因素仍未排除。",
+            "未认证完整 TMR/Cy5 校准、绝对距离或重复层面效应区间；有界定性答复与全部定量复现分别记账。"
+          ],
+          "full_quantitative_reproduction": false
+        },
+        "replacement": "代表性已处理 TMR/Cy5 直方图加配体后向右移动。与绑定的 Alexa 观测方向相反。匹配 DEER 的中心平均距离减小；两项观测方向并列记录。平均距离不能经符号取反预测平均 FRET，尚无核准的 TMR/Cy5 前向模型来检验二者关系。",
+        "probe_explanation": "所选时间窗内，175 位点 Alexa 供体的衰减形状变化大于 58 位点对照；TMR 供体的衰减形状变化较小。TMR 在两个条件的晚窗各向异性均较低。",
+        "interpretation": "The measured donor response is condition-dependent relative to the site control; fluorescence direction alone is insufficient for an unqualified structural interpretation.",
+        "limitations": [
+          "Representative processed histogram, not replicate-level uncertainty or original burst-selection validation.",
+          "Geometric bounds cover stated graphical perturbations only, not selection/calibration systematics.",
+          "Window ratios are not fitted lifetimes, quantum yields, gamma or R0 calibrations.",
+          "Lower anisotropy and similar decay shape do not establish complete probe applicability.",
+          "Cy5 deposited curves disagree visually with paper panel; no Cy5 mechanism or calibration certification.",
+          "Distinct temperatures/probes and directional agreement do not identify a unique protein ensemble or microscopic dye mechanism."
+        ]
+      }
+    },
+    "automatic_selection": "NOT_TESTED_BY_SPECIALIST_CALL",
+    "finding": "Saved admitted sources reach bounded scientific synthesis through selected specialist. Alternative complete-answer coverage unmeasured."
+  },
+  "Q16": {
+    "specialist_result": {
+      "rule_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1",
+      "rule_instance_id": "Q16R02_FINITE_DISTRIBUTION_ADEQUACY_V1::ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+      "input_id": "ad2e108c660a6e76f992bb92b714b8ee3e5b5105283f32fc88c5c569574799c1",
+      "triggered_records": [
+        "29_actual_noEG_raw",
+        "36_actual_noEG_raw",
+        "36_long_full",
+        "36_long_raw_cropped"
+      ],
+      "development_adapter": true,
+      "status": "UNRESOLVED",
+      "remaining_obligations": [
+        "NOISE_BACKGROUND_TIMEORIGIN_AND_MODEL_APPLICABILITY",
+        "STRUCTURAL_ASSIGNMENT_AND_PROBE_REFERENCE"
+      ],
+      "evidence_applications": 1,
+      "full_question_answer": false,
+      "protein_population": false,
+      "results": {
+        "29_actual_noEG_raw": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.5,
+            0.75
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.0020656953650910986,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.05249587272236504,
+              "amplitude": 1.000443997152378,
+              "modulation": 0.5511375056383295,
+              "long_grid_fraction": 0.6984459593348759,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.0020671035143169703,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.05135808311498582,
+              "amplitude": 1.0004622095606077,
+              "modulation": 0.546172584768403,
+              "long_grid_fraction": 0.6977232213355511,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.002069270297548233,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.049608435962280435,
+              "amplitude": 1.000489331009987,
+              "modulation": 0.5385840603624376,
+              "long_grid_fraction": 0.6965246780637956,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.01,
+              "raw_rms": 0.0020729856542105424,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.04689565624956041,
+              "amplitude": 1.000534063137227,
+              "modulation": 0.529671363856595,
+              "long_grid_fraction": 0.6962689486954979,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.02,
+              "raw_rms": 0.002080905310472414,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.04055021491002772,
+              "amplitude": 1.000625108834539,
+              "modulation": 0.4995418003891313,
+              "long_grid_fraction": 0.687167435640827,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.04,
+              "raw_rms": 0.002100259436740745,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.02483265406510541,
+              "amplitude": 1.0008546294763825,
+              "modulation": 0.42544836255385804,
+              "long_grid_fraction": 0.647646460582707,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.08,
+              "raw_rms": 0.002185807296297568,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": 0.042886289464765866,
+              "amplitude": 1.00170098768994,
+              "modulation": 0.2514348177751235,
+              "long_grid_fraction": 0.44681825328143093,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.08,
+              "raw_rms": 0.0021894316874408143,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": 0.04401570640986757,
+              "amplitude": 1.0017196892028013,
+              "modulation": 0.27077079572839263,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.0,
+              "raw_rms": 0.002076871783114484,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.04457879971643708,
+              "amplitude": 1.0003420909354366,
+              "modulation": 0.6120174734267637,
+              "long_grid_fraction": 0.7499999999999999,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.002,
+              "raw_rms": 0.0020788689745642624,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.04318344287980618,
+              "amplitude": 1.0003434906890574,
+              "modulation": 0.6068971603668398,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.005,
+              "raw_rms": 0.002082138873995795,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.0413178563609103,
+              "amplitude": 1.0002928369286561,
+              "modulation": 0.5991323524545692,
+              "long_grid_fraction": 0.7500000000000001,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.01,
+              "raw_rms": 0.002093982227112316,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": -0.03487322501795586,
+              "amplitude": 0.9998906198609746,
+              "modulation": 0.5843356153055225,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.02,
+              "raw_rms": 0.0021626766363027215,
+              "noise_proxy": 0.001995270641967329,
+              "residual_lag1": 0.015430347485858014,
+              "amplitude": 0.9984315636232831,
+              "modulation": 0.5494511792380117,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.0020656953650910986,
+            "noise_proxy": 0.001995270641967329,
+            "residual_lag1": -0.05249587272236504,
+            "amplitude": 1.000443997152378,
+            "modulation": 0.5511375056383295,
+            "long_grid_fraction": 0.6984459593348759,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        },
+        "29_long_raw_cropped": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.5,
+            0.75
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.005899131462104779,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.010665726934918685,
+              "amplitude": 0.9879573409246639,
+              "modulation": 0.22100301339871206,
+              "long_grid_fraction": 0.49499155716369186,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.005901766259782291,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.011520950888083368,
+              "amplitude": 0.9879812828376423,
+              "modulation": 0.21618827590457537,
+              "long_grid_fraction": 0.49351089160312545,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.005905952704101487,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.012875711153134557,
+              "amplitude": 0.9880167838857093,
+              "modulation": 0.2088828658678575,
+              "long_grid_fraction": 0.49138366390341603,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.01,
+              "raw_rms": 0.005913578070782411,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.015333423536920307,
+              "amplitude": 0.9880753913308956,
+              "modulation": 0.196311517321432,
+              "long_grid_fraction": 0.48720871754522665,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.02,
+              "raw_rms": 0.005968928682883782,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.032001530825650146,
+              "amplitude": 0.9881785530418383,
+              "modulation": 0.17323758835426778,
+              "long_grid_fraction": 0.5553182688935134,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.0,
+              "raw_rms": 0.0058991449511259335,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.010668792259110766,
+              "amplitude": 0.9879532754021889,
+              "modulation": 0.22108733205930622,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.002,
+              "raw_rms": 0.005901782604088376,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.011525216160844188,
+              "amplitude": 0.9879774375059497,
+              "modulation": 0.21628006711550346,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.005,
+              "raw_rms": 0.005905972753344202,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.012881527917876844,
+              "amplitude": 0.9880131074994576,
+              "modulation": 0.2089829748385719,
+              "long_grid_fraction": 0.5000000000000001,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.01,
+              "raw_rms": 0.005913611273753588,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.015342701120635757,
+              "amplitude": 0.9880711637184422,
+              "modulation": 0.19631680844272792,
+              "long_grid_fraction": 0.49999999999999994,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.02,
+              "raw_rms": 0.006000691435916739,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.040158361786335896,
+              "amplitude": 0.9910659334799006,
+              "modulation": 0.17568580267300687,
+              "long_grid_fraction": 0.5000000000000001,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.0,
+              "raw_rms": 0.005918981877024156,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.016658332177859923,
+              "amplitude": 0.9872032945461078,
+              "modulation": 0.26427177721256817,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.002,
+              "raw_rms": 0.005924385296438169,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.018300663449498218,
+              "amplitude": 0.9871278129804948,
+              "modulation": 0.2552763524671811,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.005,
+              "raw_rms": 0.005934287413211902,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.020824851379603534,
+              "amplitude": 0.9864695693055998,
+              "modulation": 0.24049108401477848,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.01,
+              "raw_rms": 0.005978270528410747,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.029473775781889533,
+              "amplitude": 0.9829066000701712,
+              "modulation": 0.21734920352314158,
+              "long_grid_fraction": 0.7499999999999999,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.02,
+              "raw_rms": 0.006231444997742421,
+              "noise_proxy": 0.004685433068299401,
+              "residual_lag1": 0.09085355856546534,
+              "amplitude": 0.9765650584087378,
+              "modulation": 0.16361800897626746,
+              "long_grid_fraction": 0.75,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.005899131462104779,
+            "noise_proxy": 0.004685433068299401,
+            "residual_lag1": 0.010665726934918685,
+            "amplitude": 0.9879573409246639,
+            "modulation": 0.22100301339871206,
+            "long_grid_fraction": 0.49499155716369186,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        },
+        "36_long_full": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.25,
+            0.5
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.01111149232779174,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.08923291902681452,
+              "amplitude": 0.9837351268777795,
+              "modulation": 0.3032817793700119,
+              "long_grid_fraction": 0.4447005708090841,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.011122800945223252,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.0909104011702798,
+              "amplitude": 0.9837533350387191,
+              "modulation": 0.2949229615949505,
+              "long_grid_fraction": 0.4309986124314391,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.011181581320487237,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.09845890107132024,
+              "amplitude": 0.9837682082549424,
+              "modulation": 0.2866327062882305,
+              "long_grid_fraction": 0.4202560072354563,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.0,
+              "raw_rms": 0.01153423237089779,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.14756893635927856,
+              "amplitude": 0.9964156663556977,
+              "modulation": 0.31022497703404367,
+              "long_grid_fraction": 0.25,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.002,
+              "raw_rms": 0.011432517258433996,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.13359658229325005,
+              "amplitude": 0.9921670849038966,
+              "modulation": 0.3010739130872159,
+              "long_grid_fraction": 0.25,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.005,
+              "raw_rms": 0.011420421309910425,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.1307860869955008,
+              "amplitude": 0.9885107773960056,
+              "modulation": 0.29028046073687425,
+              "long_grid_fraction": 0.24999999999999994,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.0,
+              "raw_rms": 0.011192015082132316,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.09790381593466141,
+              "amplitude": 0.9773004709930319,
+              "modulation": 0.3040586063251113,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.002,
+              "raw_rms": 0.011250104623863668,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.10568826012358237,
+              "amplitude": 0.9747824295191353,
+              "modulation": 0.29448626313098114,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.005,
+              "raw_rms": 0.011384811249105866,
+              "noise_proxy": 0.009162649641115819,
+              "residual_lag1": 0.12406698730218248,
+              "amplitude": 0.9708716204143415,
+              "modulation": 0.27854118375827863,
+              "long_grid_fraction": 0.5000000000000001,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.01111149232779174,
+            "noise_proxy": 0.009162649641115819,
+            "residual_lag1": 0.08923291902681452,
+            "amplitude": 0.9837351268777795,
+            "modulation": 0.3032817793700119,
+            "long_grid_fraction": 0.4447005708090841,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        },
+        "36_long_raw_cropped": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.25,
+            0.5
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.011076749886244438,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08356659927495452,
+              "amplitude": 0.9853976297869925,
+              "modulation": 0.2961930033531703,
+              "long_grid_fraction": 0.41198461066341613,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.011079301185477935,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08384004174908641,
+              "amplitude": 0.9854134901480207,
+              "modulation": 0.29228650457830185,
+              "long_grid_fraction": 0.4116993042790403,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.011083952111416401,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.084222007646477,
+              "amplitude": 0.9854377692133853,
+              "modulation": 0.2866747680786869,
+              "long_grid_fraction": 0.449953349700673,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.01,
+              "raw_rms": 0.011111818343935667,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08547086775954686,
+              "amplitude": 0.9854328519602525,
+              "modulation": 0.2775446018441013,
+              "long_grid_fraction": 0.25066041861666566,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.0,
+              "raw_rms": 0.011079664721017566,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.0841387547599853,
+              "amplitude": 0.985496988567449,
+              "modulation": 0.29669310093051754,
+              "long_grid_fraction": 0.25000000000000006,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.002,
+              "raw_rms": 0.01108204668631493,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08437566179030861,
+              "amplitude": 0.9854734979362902,
+              "modulation": 0.29256068825891673,
+              "long_grid_fraction": 0.25000000000000006,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.005,
+              "raw_rms": 0.011085969971313921,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08478637379591755,
+              "amplitude": 0.985489784297728,
+              "modulation": 0.28662260550728585,
+              "long_grid_fraction": 0.25,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.25,
+              "k": 0.01,
+              "raw_rms": 0.011111848200956155,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08546273037902688,
+              "amplitude": 0.985515331267847,
+              "modulation": 0.2775985363139698,
+              "long_grid_fraction": 0.25,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.0,
+              "raw_rms": 0.011083751387203612,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08335874405076733,
+              "amplitude": 0.984399877864264,
+              "modulation": 0.31455803622228773,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.002,
+              "raw_rms": 0.011098035481549437,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08398958032467477,
+              "amplitude": 0.9832336322333949,
+              "modulation": 0.30899390483930145,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.005,
+              "raw_rms": 0.011142805590209996,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.08793684001497487,
+              "amplitude": 0.9802094525456491,
+              "modulation": 0.29759007223980194,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.01,
+              "raw_rms": 0.011302091734394414,
+              "noise_proxy": 0.009749730167320034,
+              "residual_lag1": 0.1062036325735422,
+              "amplitude": 0.9741455748997616,
+              "modulation": 0.2744170798206959,
+              "long_grid_fraction": 0.4999999999999999,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.011076749886244438,
+            "noise_proxy": 0.009749730167320034,
+            "residual_lag1": 0.08356659927495452,
+            "amplitude": 0.9853976297869925,
+            "modulation": 0.2961930033531703,
+            "long_grid_fraction": 0.41198461066341613,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        },
+        "36_actual_noEG_raw": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.5
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.003104994448259745,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.16195268282545763,
+              "amplitude": 1.0001039717936633,
+              "modulation": 0.5520722402849104,
+              "long_grid_fraction": 0.4626309916778287,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.0031057399389089043,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.16155532225702784,
+              "amplitude": 1.000128313721428,
+              "modulation": 0.5490971393605362,
+              "long_grid_fraction": 0.4614065130355226,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.0031068823702564753,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.16094494841410134,
+              "amplitude": 1.0001645270452766,
+              "modulation": 0.5445649859668217,
+              "long_grid_fraction": 0.4594788227357193,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.01,
+              "raw_rms": 0.0031088584391147853,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.15988548959557838,
+              "amplitude": 1.0002241011525328,
+              "modulation": 0.5369214393604829,
+              "long_grid_fraction": 0.45612788377546376,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.02,
+              "raw_rms": 0.0031130561558338557,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.15763573693618685,
+              "amplitude": 1.00034041118576,
+              "modulation": 0.5211783102518497,
+              "long_grid_fraction": 0.44872725518459106,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.04,
+              "raw_rms": 0.003122865471189077,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.15274636217926224,
+              "amplitude": 1.000561757248428,
+              "modulation": 0.48788911161381693,
+              "long_grid_fraction": 0.4303534026947016,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.08,
+              "raw_rms": 0.0031850729927623916,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.12449293539030212,
+              "amplitude": 1.0009538841613868,
+              "modulation": 0.42810274263605,
+              "long_grid_fraction": 0.3937574584028983,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.0,
+              "raw_rms": 0.0031064201180246503,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.1615864007575514,
+              "amplitude": 1.0000927329135676,
+              "modulation": 0.5845199997368637,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.002,
+              "raw_rms": 0.0031072776075649717,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.16115908347788643,
+              "amplitude": 1.000115912771721,
+              "modulation": 0.5831700696702237,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.005,
+              "raw_rms": 0.0031085979194656944,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.16050001687818688,
+              "amplitude": 1.0001517435945786,
+              "modulation": 0.5804146423215523,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.01,
+              "raw_rms": 0.0031108763339438225,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.15935674753419646,
+              "amplitude": 1.0002107451646465,
+              "modulation": 0.5757669101664351,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.02,
+              "raw_rms": 0.003115710929505682,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.1569121303818399,
+              "amplitude": 1.000326163742494,
+              "modulation": 0.5662558909369371,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.04,
+              "raw_rms": 0.003130460226375899,
+              "noise_proxy": 0.002694280272044353,
+              "residual_lag1": -0.15063090684583502,
+              "amplitude": 1.0004930483609702,
+              "modulation": 0.549619136632034,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.003104994448259745,
+            "noise_proxy": 0.002694280272044353,
+            "residual_lag1": -0.16195268282545763,
+            "amplitude": 1.0001039717936633,
+            "modulation": 0.5520722402849104,
+            "long_grid_fraction": 0.4626309916778287,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        },
+        "29_long_full": {
+          "any_witness": true,
+          "allowed_tested_p": [
+            0.5,
+            0.75
+          ],
+          "witness_points": [
+            {
+              "p": null,
+              "k": 0.0,
+              "raw_rms": 0.005772970095644636,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.05534995860679056,
+              "amplitude": 0.9871987149121287,
+              "modulation": 0.21954452297102695,
+              "long_grid_fraction": 0.585227593961458,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.002,
+              "raw_rms": 0.0057834089710128425,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.05838817053974713,
+              "amplitude": 0.9872214176683927,
+              "modulation": 0.21391437482691558,
+              "long_grid_fraction": 0.5934139865668285,
+              "conditional_witness": true
+            },
+            {
+              "p": null,
+              "k": 0.005,
+              "raw_rms": 0.005818386080372396,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.06876229569605757,
+              "amplitude": 0.9872632514994807,
+              "modulation": 0.20567338837472907,
+              "long_grid_fraction": 0.6237720033848851,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.0,
+              "raw_rms": 0.005792104872661127,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.06082680904841634,
+              "amplitude": 0.9885894723323925,
+              "modulation": 0.2207783156751999,
+              "long_grid_fraction": 0.5000000000000001,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.002,
+              "raw_rms": 0.0058049920011047414,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.0645731514509993,
+              "amplitude": 0.98839560475158,
+              "modulation": 0.2148861955849033,
+              "long_grid_fraction": 0.49999999999999994,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.5,
+              "k": 0.005,
+              "raw_rms": 0.005858019627932146,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.07969909492223297,
+              "amplitude": 0.9888007789827219,
+              "modulation": 0.20696987022995497,
+              "long_grid_fraction": 0.5,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.0,
+              "raw_rms": 0.005901105510181605,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.08377216980629866,
+              "amplitude": 0.9783329185242708,
+              "modulation": 0.21564006710588937,
+              "long_grid_fraction": 0.7500000000000001,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.002,
+              "raw_rms": 0.005938265045452885,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.09250925259904927,
+              "amplitude": 0.976916733061669,
+              "modulation": 0.20776287987575498,
+              "long_grid_fraction": 0.7500000000000002,
+              "conditional_witness": true
+            },
+            {
+              "p": 0.75,
+              "k": 0.005,
+              "raw_rms": 0.006013141109302142,
+              "noise_proxy": 0.0045498740780826824,
+              "residual_lag1": 0.11210329061992719,
+              "amplitude": 0.9753648415729328,
+              "modulation": 0.1964224766485031,
+              "long_grid_fraction": 0.7499999999999999,
+              "conditional_witness": true
+            }
+          ],
+          "best_rms_point": {
+            "p": null,
+            "k": 0.0,
+            "raw_rms": 0.005772970095644636,
+            "noise_proxy": 0.0045498740780826824,
+            "residual_lag1": 0.05534995860679056,
+            "amplitude": 0.9871987149121287,
+            "modulation": 0.21954452297102695,
+            "long_grid_fraction": 0.585227593961458,
+            "conditional_witness": true
+          },
+          "failed_search_is_exclusion": false
+        }
+      },
+      "model_adequacy_changed_records": [
+        "29_actual_noEG_raw",
+        "36_actual_noEG_raw",
+        "36_long_full",
+        "36_long_raw_cropped"
+      ],
+      "partial_claim": "LIMITED_GAUSSIAN_FAILURE_NOT_STABLE_TO_FINITE_SHAPE_FLEXIBILITY",
+      "numerical_grid_completed": true,
+      "claim_ceiling": [
+        "Conditional finite-grid witnesses only; no confidence interval or exclusion.",
+        "p is grid mass at r>=5.5nm, not prior Gaussian-component p or protein population.",
+        "No author inverse or source-fitted distribution used as scientific target."
+      ]
+    },
+    "unchanged_vs_saved_without_tail": true,
+    "tail_summary": {
+      "29_long_raw_cropped": {
+        "training_witnesses": 15,
+        "tail_pass_same_screen": 0,
+        "rms_range": [
+          0.006118971776989765,
+          0.05082129958356973
+        ],
+        "by_p": {
+          "None": {
+            "n": 5,
+            "tail_pass": 0
+          },
+          "0.5": {
+            "n": 5,
+            "tail_pass": 0
+          },
+          "0.75": {
+            "n": 5,
+            "tail_pass": 0
+          }
+        }
+      },
+      "36_long_raw_cropped": {
+        "training_witnesses": 12,
+        "tail_pass_same_screen": 0,
+        "rms_range": [
+          0.01418120864730375,
+          0.02830750639080947
+        ],
+        "by_p": {
+          "None": {
+            "n": 4,
+            "tail_pass": 0
+          },
+          "0.25": {
+            "n": 4,
+            "tail_pass": 0
+          },
+          "0.5": {
+            "n": 4,
+            "tail_pass": 0
+          }
+        }
+      }
+    },
+    "supported_signature": "(payload, baseline, receipt, evidence=None, enabled=True)",
+    "finding": "Additional tail_audit field ignored. Unsupported-evidence-extension diagnostic, not a formally supported tail contract. Source confirms no native tail-consumption path.",
+    "automatic_selection": "NOT_TESTED_BY_SPECIALIST_CALL"
+  }
+}

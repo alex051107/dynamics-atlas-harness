@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-05T09:33:53.476704+00:00",
+  "full_regression": {
+    "tests": 267,
+    "failures": 0,
+    "skips": 0
+  },
+  "fits_preserved_in_geometry_derivative": true,
+  "optimizer_calls": 12,
+  "calibration_verified": 9,
+  "calibration_numeric_stops": 1,
+  "profile_branch_verified": 2,
+  "old_profiles_verified_without_optimization": 3,
+  "portable_files": 13,
+  "new_raw_sources_uploaded": 0,
+  "status": "PASS"
+}

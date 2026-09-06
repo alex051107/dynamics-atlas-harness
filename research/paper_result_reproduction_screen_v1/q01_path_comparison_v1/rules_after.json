@@ -1,0 +1,5316 @@
+{
+  "rule_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1",
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+  "operator_requests": [],
+  "scientific_status": "INITIAL_REFERENCE_SUPPORT_UNESTABLISHED_FOR_ALL_TRAJECTORIES",
+  "status": "COMPARISON_EXECUTED",
+  "scope": "EXPOSED_DEVELOPMENT_CASE_RULE",
+  "reason": "Same source trajectories have two admissible state-score definitions; test path conclusion sensitivity.",
+  "numeric_result": {
+    "trajectory_count": 40,
+    "group_counts": {
+      "open": 20,
+      "closed": 20
+    },
+    "trajectory_changes": [
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed_group": "closed",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 2,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 12,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 0,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed_group": "open",
+        "frame_label_changes": 2,
+        "primary_route_changed": false,
+        "primary_initial_support_changed": false,
+        "sensitivity_route_changes": {
+          "5": false,
+          "50": false
+        }
+      }
+    ],
+    "grouped_paths": {
+      "deposited_uniform": {
+        "open": {
+          "20": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "5": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "50": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          }
+        },
+        "closed": {
+          "20": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "5": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "50": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          }
+        }
+      },
+      "SI_per_contact": {
+        "open": {
+          "20": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "5": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "50": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          }
+        },
+        "closed": {
+          "20": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "5": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          },
+          "50": {
+            "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT": 20
+          }
+        }
+      }
+    },
+    "paths": [
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "closed",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 12,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 989
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 12,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 989
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 12,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 989
+            },
+            "longest_seed_support_frames": 2,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "deposited_uniform",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 1,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 1,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 2,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 999
+            },
+            "longest_seed_support_frames": 1,
+            "longest_other_support_frames": 0
+          }
+        }
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "method": "SI_per_contact",
+        "persistence_results": {
+          "20": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 20,
+            "sampled_span_ns": 19,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "5": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 5,
+            "sampled_span_ns": 4,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          },
+          "50": {
+            "seed_group": "open",
+            "initial_support": "outside",
+            "initial_matches_seed": false,
+            "route": "INITIAL_OUTSIDE_OR_AMBIGUOUS_REFERENCE_SUPPORT",
+            "persistence_frames": 50,
+            "sampled_span_ns": 49,
+            "first_departure_frame": null,
+            "first_other_support_frame": null,
+            "frame_counts": {
+              "open": 0,
+              "closed": 0,
+              "ambiguous": 0,
+              "outside": 1001
+            },
+            "longest_seed_support_frames": 0,
+            "longest_other_support_frames": 0
+          }
+        }
+      }
+    ],
+    "full_question_answer": false,
+    "claim_ceiling": "Conditional finite-time paths for source seeds; no kinetics/equilibrium/activity"
+  },
+  "changed_primary_trajectories": 0,
+  "accuracy_gain_claimed": false,
+  "status_repair_note": "Numericalcomparisonexecuted,allinitialclassificationsoutside;notinformativeunchangedpathjudgments"
+}

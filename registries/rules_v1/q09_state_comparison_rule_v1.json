@@ -1,0 +1,13 @@
+{
+  "rule_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1",
+  "operator_id": "q09_shared_local_comparison_v1",
+  "case_id": "q09_t4l_state_number_20260905",
+  "trigger_claim_level": "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY",
+  "scope": "Two-DA shared-reference conditional comparison pilot inside Q09; no full33 coverage",
+  "scientific_pass_enabled": false,
+  "required_science": "Retain local-population K2, shared K2, shared K3 and structure correspondence as competing evidence; coalesced shared K3 can represent unequal local K2 populations.",
+  "source": "Published SI59 sharing model plus independently verified synthetic equivalence counterexample",
+  "global_operator_id": "q09_all33_conditional_comparison_v1",
+  "global_scope": "All33variants60uniquerecords conditionalmodelcomparison; numericalstops anddonoradequacylimits retained",
+  "structure_operator_id": "q09_author_forward_structure_comparison_v1"
+}

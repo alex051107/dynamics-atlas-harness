@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-05T18:06:05.856351+00:00",
+  "status": "PASS",
+  "checks": [
+    "140 original files and 364326 events",
+    "12 repetitions for both predeclared alternatives",
+    "same input identity and same RuleInstance",
+    "on1/off0",
+    "full question remains incomplete",
+    "zero optimizer calls"
+  ],
+  "source_hydration": "Existing local APBS file had dataless flag; Foundation download request restored it; no new source archive"
+}

@@ -1,0 +1,901 @@
+[
+  {
+    "source": {
+      "PDB": "172L",
+      "url": "https://files.rcsb.org/download/172L.pdb",
+      "bytes": 138429,
+      "sha256": "38995f649bea74a54ca1102632ddb9a33215fc3ca258724f06ab03bd90ea692e",
+      "downloaded": true,
+      "read_at": "2026-09-05T10:06:35.272109+00:00"
+    },
+    "headers": [
+      "HEADER    HYDROLASE (O-GLYCOSYL)                  24-MAR-95   172L              ",
+      "TITLE     PROTEIN FLEXIBILITY AND ADAPTABILITY SEEN IN 25 CRYSTAL FORMS OF T4   ",
+      "TITLE    2 LYSOZYME                                                             ",
+      "COMPND    MOL_ID: 1;                                                            ",
+      "COMPND   2 MOLECULE: T4 LYSOZYME;                                               ",
+      "COMPND   3 CHAIN: A;                                                            ",
+      "COMPND   4 EC: 3.2.1.17;                                                        ",
+      "COMPND   5 ENGINEERED: YES                                                      ",
+      "REMARK   2                                                                      ",
+      "REMARK   2 RESOLUTION.    1.90 ANGSTROMS.                                       "
+    ],
+    "chains": [
+      {
+        "chain": "A",
+        "residue_count": 164,
+        "minimum_residue": 1,
+        "maximum_residue": 164,
+        "label_sites": [
+          {
+            "site": 5,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLU",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "OE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 8,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ARG",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "NE",
+                  "CZ",
+                  "NH1",
+                  "NH2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 19,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "LYS",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "CE",
+                  "NZ"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 22,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLU",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "OE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 36,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "SER",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "OG"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 44,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "SER",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "OG"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 55,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "ND2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 60,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "LYS",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "CE",
+                  "NZ"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 69,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "NE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 70,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASP",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "OD2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 86,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "PRO",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 119,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ARG",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "NE",
+                  "CZ",
+                  "NH1",
+                  "NH2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 127,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASP",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "OD2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 132,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "ND2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 150,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ILE",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG1",
+                  "CG2",
+                  "CD1"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          }
+        ]
+      }
+    ],
+    "nonA_alternate_atoms": [],
+    "dye_label_attachment_defined": false
+  },
+  {
+    "source": {
+      "PDB": "148L",
+      "url": "https://files.rcsb.org/download/148L.pdb",
+      "bytes": 163377,
+      "sha256": "6ef296636aa26caaba4e125cde78a4b2e1efbc80b0b8aa3db1070eb17ff91145",
+      "downloaded": true,
+      "read_at": "2026-09-05T10:06:35.765225+00:00"
+    },
+    "headers": [
+      "HEADER    HYDROLASE/HYDROLASE SUBSTRATE           27-OCT-93   148L              ",
+      "TITLE     A COVALENT ENZYME-SUBSTRATE INTERMEDIATE WITH SACCHARIDE DISTORTION IN",
+      "TITLE    2 A MUTANT T4 LYSOZYME                                                 ",
+      "COMPND    MOL_ID: 1;                                                            ",
+      "COMPND   2 MOLECULE: T4 LYSOZYME;                                               ",
+      "COMPND   3 CHAIN: E;                                                            ",
+      "COMPND   4 EC: 3.2.1.17;                                                        ",
+      "COMPND   5 ENGINEERED: YES;                                                     ",
+      "COMPND   6 MOL_ID: 2;                                                           ",
+      "COMPND   7 MOLECULE: SUBSTRATE CLEAVED FROM CELL WALL OF ESCHERICHIA COLI;      ",
+      "COMPND   8 CHAIN: S                                                             ",
+      "REMARK   2                                                                      ",
+      "REMARK   2 RESOLUTION.    1.90 ANGSTROMS.                                       "
+    ],
+    "chains": [
+      {
+        "chain": "E",
+        "residue_count": 163,
+        "minimum_residue": 1,
+        "maximum_residue": 163,
+        "label_sites": [
+          {
+            "site": 5,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLU",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "OE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 8,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ARG",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "NE",
+                  "CZ",
+                  "NH1",
+                  "NH2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 19,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "LYS",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "CE",
+                  "NZ"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 22,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLU",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "OE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 36,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "SER",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "OG"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 44,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "SER",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "OG"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 55,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "ND2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 60,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "LYS",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "CE",
+                  "NZ"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 69,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "GLN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "OE1",
+                  "NE2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 70,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASP",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "OD2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 86,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "PRO",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 119,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ARG",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "CD",
+                  "NE",
+                  "CZ",
+                  "NH1",
+                  "NH2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 127,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASP",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "OD2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 132,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ASN",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG",
+                  "OD1",
+                  "ND2"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          },
+          {
+            "site": 150,
+            "matches": [
+              {
+                "insertion": " ",
+                "resname": "ILE",
+                "atoms": [
+                  "N",
+                  "CA",
+                  "C",
+                  "O",
+                  "CB",
+                  "CG1",
+                  "CG2",
+                  "CD1"
+                ]
+              }
+            ],
+            "has_unique_CA_CB": true
+          }
+        ]
+      },
+      {
+        "chain": "S",
+        "residue_count": 1,
+        "minimum_residue": 166,
+        "maximum_residue": 166,
+        "label_sites": [
+          {
+            "site": 5,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 8,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 19,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 22,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 36,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 44,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 55,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 60,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 69,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 70,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 86,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 119,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 127,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 132,
+            "matches": [],
+            "has_unique_CA_CB": false
+          },
+          {
+            "site": 150,
+            "matches": [],
+            "has_unique_CA_CB": false
+          }
+        ]
+      }
+    ],
+    "nonA_alternate_atoms": [
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "N",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "CA",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "C",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "O",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "CB",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "CG",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "CD",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "NE",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "CZ",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "NH1",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 8,
+        "atom": "NH2",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "N",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "CA",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "C",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "O",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "CB",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "CG",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "CD",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "NE",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "CZ",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "NH1",
+        "alt": "B"
+      },
+      {
+        "chain": "E",
+        "residue": 145,
+        "atom": "NH2",
+        "alt": "B"
+      }
+    ],
+    "dye_label_attachment_defined": false
+  }
+]

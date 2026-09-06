@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-09-05T15:18:40.363575+00:00",
+  "reviewed_head": "1fbb417113b01952678eec9d0f02a240524cc95e",
+  "decision": "PASS_LIMITED_TO_Q01_ORIGINAL_FINITE_TIME_SCIENTIFIC_ANSWER",
+  "reviewer": "ChatGPT 6 Pro",
+  "reviewer_type": "external_AI_not_human_domain_reviewer",
+  "complete": true,
+  "completion_evidence": "Worked18m22s,complete numbered sections1–9,Responseactions andCopyresponse",
+  "scope": "All40trajectorysummary independentlyrecomputed;4source modules/isolatedchecks;CI;notrawMDgeometryrerun/full80080rows/figurevisual",
+  "remaining": "Bind evidence-dependent question-level answer and existing named review boundary; Q09manual evidence consumption recommended (now locallycomplete); no newQ01 scientific analysis."
+}

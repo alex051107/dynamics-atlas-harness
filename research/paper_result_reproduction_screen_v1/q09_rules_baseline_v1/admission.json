@@ -1,0 +1,92 @@
+{
+  "schema_version": "paper-blind-agent-proposal-admission/v1",
+  "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
+  "proposal": {
+    "case_id": "q09_t4l_state_number_20260905",
+    "proposed_case_facts": {
+      "case": {
+        "scientific_claim": "Do the 33 T4 lysozyme time-resolved FRET datasets require a third protein conformational state beyond two states, with compatible structural-distance evidence?",
+        "requested_claim_level": "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "declared_request_scope": [
+          "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY"
+        ],
+        "forbidden_upgrades": [
+          "BIOLOGICAL_ACTIVITY",
+          "KINETICS_FROM_DECAY_ALONE",
+          "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+        ]
+      },
+      "sources": [
+        {
+          "source_id": "Q09_DA_DECAYS",
+          "evidence_role": "FIT_TARGET",
+          "construct_and_condition": "33 T4 lysozyme labeled variants; variant-specific PBS pH7.5 sample descriptions in deposited metadata.",
+          "sample_composition": "Donor Alexa488 on pAcF and acceptor Alexa647 on cysteine; complete labeling efficiencies UNKNOWN.",
+          "native_observable": "Original donor-acceptor time-resolved fluorescence integer photon histograms.",
+          "estimand": "Instrument-convolved fluorescence decay under donor and FRET photophysics; protein-state-number inference requested.",
+          "time_semantics": {
+            "kind": "TIME_RESOLVED_FLUORESCENCE_DECAY"
+          },
+          "spatial_support": "Variant-specific labeling-site pairs; coordinate/dye-model correspondence UNKNOWN.",
+          "unit_or_aggregation": "33 distinct DA records; PQ8ps or IBH14.1ps native bins; counts are photons, not independent protein conformations."
+        },
+        {
+          "source_id": "Q09_D0_REFERENCES",
+          "evidence_role": "FIT_TARGET",
+          "construct_and_condition": "Deposited donor-only references for the same labeled-variant folders; transfer across different mutant samples UNKNOWN.",
+          "sample_composition": "Alexa488 donor-only labeled T4 lysozyme; metadata describes variant-specific cysteine substitutions.",
+          "native_observable": "Original donor-only time-resolved fluorescence integer photon histograms.",
+          "estimand": "Donor photophysical decay in the absence of acceptor transfer.",
+          "time_semantics": {
+            "kind": "TIME_RESOLVED_FLUORESCENCE_DECAY"
+          },
+          "spatial_support": "Donor label local environment; sample equivalence across reused references UNKNOWN.",
+          "unit_or_aggregation": "33 D0 paths contain27 distinct byte payloads; duplicate paths are not established independent acquisitions."
+        },
+        {
+          "source_id": "Q09_INSTRUMENT_REFERENCES",
+          "evidence_role": "CONSTRUCTION",
+          "construct_and_condition": "Deposited Ludox IRF and uncorrelated room-light linearization references matched by variant role metadata.",
+          "sample_composition": "Ludox scattering solution for IRF; room light for IBH linearization; no protein conformational population.",
+          "native_observable": "Instrument response and electronic linearization integer photon histograms.",
+          "estimand": "Instrument timing response and detection-channel response.",
+          "time_semantics": {
+            "kind": "INSTRUMENT_TIMING_CALIBRATION"
+          },
+          "spatial_support": "Instrument channels, not molecular coordinates.",
+          "unit_or_aggregation": "PQ8ps/20MHz and IBH14.1ps/10MHz declared instrument timing; shared IRF/Lin records occur; calibration uncertainty UNKNOWN."
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "Q09_DA_TO_DONOR",
+          "left_source_id": "Q09_DA_DECAYS",
+          "right_source_id": "Q09_D0_REFERENCES",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "DONOR_REFERENCE_CALIBRATION",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_REFERENCES_PRESENT"
+        },
+        {
+          "edge_id": "Q09_DA_TO_IRF",
+          "left_source_id": "Q09_DA_DECAYS",
+          "right_source_id": "Q09_INSTRUMENT_REFERENCES",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "INSTRUMENT_RESPONSE_CALIBRATION",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_REFERENCES_PRESENT"
+        }
+      ]
+    },
+    "unknowns": [
+      "Original author fitting code and joint configuration UNKNOWN",
+      "Donor reference applicability across variant mutants UNKNOWN",
+      "IRF/Lin calibration uncertainty UNKNOWN",
+      "Coordinate and dye-model mapping for structural checks UNKNOWN"
+    ],
+    "rationale": "Recorded source-grounded proposal from original metadata and native data inventory; no live profiler run, rule selection, fitted values or scientific conclusion."
+  }
+}

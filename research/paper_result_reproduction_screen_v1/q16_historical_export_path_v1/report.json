@@ -1,0 +1,31 @@
+{
+  "status": "HISTORICAL_SOURCE_PATH_DIFFERENCE_VERIFIED_ACTUAL_CAUSE_UNKNOWN",
+  "files_imported": 8,
+  "source_encoding_note": "save_result.m has Latin1 degree symbol; original bytes unchanged, read Latin1",
+  "archive_checks": [
+    {
+      "path": "outputs/q16_figure5_inventory_v1/members.json",
+      "members": 651,
+      "matching_DEER_export_files": []
+    },
+    {
+      "path": "outputs/q15_raw_archive_inventory_v1/members.json",
+      "members": 253,
+      "matching_DEER_export_files": []
+    }
+  ],
+  "conditional_math_bound": {
+    "assumption": "Identical resampled positive normalized P and cosine-minus-one kernel; only epsilon=.01 exponential versus linear map differs, no other regridding/bandwidth changes",
+    "epsilon": 0.01,
+    "kernel_range_max": 2,
+    "secant_error_bound_relative_to_exponential_range": 0.0025250833327777828,
+    "derivation": "For g(s)=(exp(b*s)-1)/expm1(b), interpolation error <=max|gsecond|/8=b^2*exp(b)/(8*expm1(b)), b<=.02. Affine fit can do no worse than secant.",
+    "consequence": "Under these assumptions exponentiation alone cannot explain >1.1percent normalizedRMS. Does not identify truehistoricalkernel/processingpath."
+  },
+  "actual_paper_version": "UNKNOWN",
+  "actual_bandwidth_flag": "UNKNOWN",
+  "actual_Pake_grid": "UNKNOWN",
+  "method_reconstruction": "NOT_RUN_NO_MATCHED_ANALYSIS_CONFIGURATION",
+  "science_reruns": 0,
+  "Rules_extra": 0
+}

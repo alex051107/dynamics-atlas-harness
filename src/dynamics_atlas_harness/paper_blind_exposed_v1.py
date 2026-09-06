@@ -288,8 +288,18 @@ def _validate_rules_projection_authority(value: Any) -> None:
         "shared_error_status",
     }
     for comparison in comparisons:
-        if not isinstance(comparison, Mapping) or set(comparison) != expected_fields:
+        optional_fields = {"validation_claim", "validation_lineage_status"}
+        if (not isinstance(comparison, Mapping)
+                or not expected_fields <= set(comparison)
+                or set(comparison) - expected_fields - optional_fields):
             raise PaperBlindPublicPacketError("INVALID_RULES_PROJECTION_COMPARISON")
+        if "validation_claim" in comparison:
+            _require_string(comparison["validation_claim"], label="RULES_PROJECTION_VALIDATION_CLAIM")
+        if "validation_lineage_status" in comparison:
+            if "validation_claim" not in comparison or comparison["validation_lineage_status"] not in {
+                "DECLARED", "REVIEWED", "UNKNOWN", "UNRESOLVED", "CONTRADICTED"
+            }:
+                raise PaperBlindPublicPacketError("INVALID_RULES_PROJECTION_VALIDATION_LINEAGE")
         _require_string(comparison.get("comparison_id"), label="RULES_PROJECTION_COMPARISON_ID")
         left = _require_string(
             comparison.get("left_source_id"), label="RULES_PROJECTION_LEFT_SOURCE"
@@ -572,13 +582,18 @@ def project_admitted_proposal_to_rules_casegraph(
             "left_source_id": edge["left_source_id"],
             "right_source_id": edge["right_source_id"],
             "shared_claim": case_facts["scientific_claim"],
-            "validation_claim": "No validation claim is emitted by a development profiling proposal.",
+            # Only platform-owned requests may activate independence review.
+            # An absent claim stays absent; a missing lineage stays unknown.
+            **({"validation_claim": edge["validation_claim"]}
+               if "validation_claim" in edge else {}),
             "condition_relation": edge["condition_relation"],
             "relation_type": edge["relation_type"],
             "bridge_status": edge["bridge_status"],
             "validation_independence": edge["validation_independence"],
             "shared_error_status": edge["shared_error_status"],
-            "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT",
+            "data_lineage_status": (edge.get("validation_lineage_status", "UNKNOWN")
+                                    if "validation_claim" in edge
+                                    else "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"),
         }
         for edge in authority["comparisons"]
     ]

@@ -1,0 +1,13 @@
+{
+  "on_calls": 1,
+  "off_calls": 0,
+  "optimizer_calls": 29,
+  "same_instance": true,
+  "full_question_answer": false,
+  "reason_codes": [
+    "BOUND_ALL33_COMPARISON_RECOMPUTED",
+    "SOLVER_COMPARISON_INCOMPLETE",
+    "DONOR_AND_INSTRUMENT_ADEQUACY_NOT_ESTABLISHED",
+    "STRUCTURE_FORWARD_EVIDENCE_REQUIRED"
+  ]
+}

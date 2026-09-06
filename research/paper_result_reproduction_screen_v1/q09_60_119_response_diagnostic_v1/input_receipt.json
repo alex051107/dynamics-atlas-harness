@@ -1,0 +1,133 @@
+{
+  "source_input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "method": {
+    "version": "60-119-response-diagnostic/v1",
+    "IRF_shift": "padded_linear_v2",
+    "window": "unchangedIBH17HanningLin>0.1medianpositive",
+    "dt_ns": 0.0141,
+    "donor_components": 2,
+    "FRET_components": 2,
+    "sigma_A": 6.0,
+    "scatter": 0.0,
+    "max_fits": 10,
+    "seconds_per_fit": 60,
+    "maxiter": 1500,
+    "gradient_limit": 1e-06,
+    "shared_reference_applicability": "UNKNOWN",
+    "role": "MANUAL_METHOD_DIAGNOSTIC_NOT_RULES_GAIN",
+    "fit_regions_ns": [
+      0,
+      5,
+      10,
+      20,
+      40,
+      60
+    ]
+  },
+  "reference": "D0_16",
+  "roles": [
+    "D0_16",
+    "60-119"
+  ],
+  "old_result_review_side": {
+    "parameters": [
+      3.0076511999672118,
+      0.9929947456255228,
+      0.34392783086591494,
+      1e-12,
+      -0.41478618890577224,
+      120.0,
+      120.0,
+      0.7676100544836558,
+      1.0,
+      0.0023832217695689316,
+      3.8443735592799015
+    ],
+    "objective": 0.006634144215560805,
+    "initial": [
+      1.0,
+      4.0,
+      0.3,
+      0.001,
+      0.0,
+      35.0,
+      65.0,
+      0.5,
+      0.2,
+      0.001,
+      0.0
+    ],
+    "optimizer_success": true,
+    "iterations": 52,
+    "evaluations": 1311,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "projected_gradient_inf": 1.7572426374585862e-08,
+    "numerical_status": "PASS",
+    "elapsed_seconds": 0.8183094999985769,
+    "kind": "ACTUAL_OPTIMIZER"
+  },
+  "source_mapping": [
+    {
+      "variant": "60-119",
+      "role": "DA",
+      "sample_name": "T4 Lysozyme K60pAcF R119C",
+      "metadata": "60-119/60-119.yml",
+      "source": {
+        "role": "DA",
+        "decay": "60-119/60-119_DA.txt",
+        "irf": "60-119/IRF_DA.txt",
+        "linearization": "60-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      "decay_record": "DA_20",
+      "IRF_record": "IRF_24",
+      "Lin_record": "Lin_11",
+      "native_bins": 4096,
+      "valid_bins_under_existing_conditional_mask": 3758,
+      "valid_first_bin": 97,
+      "valid_last_bin": 3854,
+      "raw_photons": 17800694,
+      "retained_photons": 17800693,
+      "excluded_photons": 1,
+      "IRF_tail_median": 2.0,
+      "metadata_measurement_section": "Sample:\r\n    Name: T4 Lysozyme K60pAcF R119C\r\n    Measurement ID: K60pAcF R119C-DA\r\n\r\nMeasurement datasets:\r\n    K60pAcF R119C-DA:\r\n        Setup ID: IBH TCSPC\r\n        Instrument response function:\r\n            Measurement ID: IRF_DA\r\n        Linearization:\r\n            Measurement ID: Linearization_DA\r\n        Description: >\r\n            PBS pH 7.5,~20 nM K60pAcF-Alexa488 R119C-Alexa647, 50 uL sample in cuvette (Hellma).\r\n        Data:\r\n            Filename: ./60-119_DA.txt\r\n\r\n    K60pAcF R119C Donor:\r\n        Setup ID: IBH TCSPC\r\n        Instrument response function:\r\n            Measurement ID: IRF_D0\r\n        Linearization:\r\n            Measurement ID: Linearization_D0\r\n        Description: >\r\n            PBS pH 7.5,~20 nM K60pAcF-Alexa488 R119C, 50 uL sample in cuvette (Hellma).\r\n        Data:\r\n            Filename: ./60-119_D0.txt\r\n\r\n    IRF-DA:\r\n        Setup ID: IBH TCSPC\r\n        Description: >\r\n            500 uL of Ludox diluted in water to gain a scattering solution.\r\n        Data:\r\n            Filename: ./IRF_DA.txt\r\n\r\n    IRF-D0:\r\n        Setup ID: IBH TCSPC\r\n        description: >\r\n            500 uL of Ludox diluted in water to gain a scattering solution.\r\n        Data:\r\n            Filename: ./IRF_D0.txt\r\n\r\n    Linearization-DA:\r\n        Setup ID: IBH TCSPC\r\n        Description: >\r\n            Roomlight (uncorrelated lightsource) used to generate linearization table.\r\n        Data:\r\n            Filename: ./Linearization_DA.txt\r\n\r\n    Linearization-D0:\r\n        Setup ID: IBH TCSPC\r\n        description: > \r\n            Roomlight (uncorrelated lightsource) used to generate linearization table.\r\n        Data:\r\n            Filename: ./Linearization_D0.txt\r\n\r\n",
+      "reference_exchangeability": "UNKNOWN; byteidentity does not establish biological response transfer"
+    },
+    {
+      "variant": "60-119",
+      "role": "D0",
+      "sample_name": "T4 Lysozyme K60pAcF R119C",
+      "metadata": "60-119/60-119.yml",
+      "source": {
+        "role": "D0",
+        "decay": "60-119/60-119_D0.txt",
+        "irf": "60-119/IRF_D0.txt",
+        "linearization": "60-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      "decay_record": "D0_16",
+      "IRF_record": "IRF_25",
+      "Lin_record": "Lin_12",
+      "native_bins": 4096,
+      "valid_bins_under_existing_conditional_mask": 3758,
+      "valid_first_bin": 241,
+      "valid_last_bin": 3998,
+      "raw_photons": 14369280,
+      "retained_photons": 14368334,
+      "excluded_photons": 946,
+      "IRF_tail_median": 0.0,
+      "metadata_measurement_section": "Sample:\r\n    Name: T4 Lysozyme K60pAcF R119C\r\n    Measurement ID: K60pAcF R119C-DA\r\n\r\nMeasurement datasets:\r\n    K60pAcF R119C-DA:\r\n        Setup ID: IBH TCSPC\r\n        Instrument response function:\r\n            Measurement ID: IRF_DA\r\n        Linearization:\r\n            Measurement ID: Linearization_DA\r\n        Description: >\r\n            PBS pH 7.5,~20 nM K60pAcF-Alexa488 R119C-Alexa647, 50 uL sample in cuvette (Hellma).\r\n        Data:\r\n            Filename: ./60-119_DA.txt\r\n\r\n    K60pAcF R119C Donor:\r\n        Setup ID: IBH TCSPC\r\n        Instrument response function:\r\n            Measurement ID: IRF_D0\r\n        Linearization:\r\n            Measurement ID: Linearization_D0\r\n        Description: >\r\n            PBS pH 7.5,~20 nM K60pAcF-Alexa488 R119C, 50 uL sample in cuvette (Hellma).\r\n        Data:\r\n            Filename: ./60-119_D0.txt\r\n\r\n    IRF-DA:\r\n        Setup ID: IBH TCSPC\r\n        Description: >\r\n            500 uL of Ludox diluted in water to gain a scattering solution.\r\n        Data:\r\n            Filename: ./IRF_DA.txt\r\n\r\n    IRF-D0:\r\n        Setup ID: IBH TCSPC\r\n        description: >\r\n            500 uL of Ludox diluted in water to gain a scattering solution.\r\n        Data:\r\n            Filename: ./IRF_D0.txt\r\n\r\n    Linearization-DA:\r\n        Setup ID: IBH TCSPC\r\n        Description: >\r\n            Roomlight (uncorrelated lightsource) used to generate linearization table.\r\n        Data:\r\n            Filename: ./Linearization_DA.txt\r\n\r\n    Linearization-D0:\r\n        Setup ID: IBH TCSPC\r\n        description: > \r\n            Roomlight (uncorrelated lightsource) used to generate linearization table.\r\n        Data:\r\n            Filename: ./Linearization_D0.txt\r\n\r\n",
+      "reference_exchangeability": "UNKNOWN; byteidentity does not establish biological response transfer"
+    }
+  ]
+}

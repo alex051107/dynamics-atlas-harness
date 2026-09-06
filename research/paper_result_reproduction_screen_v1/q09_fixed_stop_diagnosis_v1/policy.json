@@ -1,0 +1,19 @@
+{
+  "version": "q09-fixed-stop-diagnosis/v1",
+  "gradient_step_multipliers": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "normalized_coordinate_probe_steps": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "IRF_shift": "padded_linear_v2",
+  "acceptance_gradient_unchanged": 1e-06,
+  "optimizer_calls": 0,
+  "candidate_promotion": false,
+  "maximum_seconds": 120
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "risk": "author experimental targets orscores accidentallyenterforwardinput;missingpaircoverage",
+  "predictions": 66,
+  "positions": 17,
+  "original_ACV_runs": 0,
+  "optimizer_calls": 0,
+  "hashes": 1,
+  "source_intake_syntax_repair_reruns": 1,
+  "bounded_layout_derivative": 1
+}

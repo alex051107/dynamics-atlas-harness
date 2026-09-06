@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-05T11:38:09.423837+00:00",
+  "entry": "NEW_Q01_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR",
+  "source_head": "35e97f33032bee7fde0267100ee34bea2fa156ca",
+  "local_adapter_uncommitted": true,
+  "command": [
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/../dynamics-atlas-harness-openrouter/local/venvs/exposed-capsule-v1-py311/bin/python",
+    "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/run_q01_rules_probe_v1.py",
+    "--fact-packet",
+    "research/paper_result_reproduction_screen_v1/q01_original_facts_v1.json",
+    "--output-dir",
+    "../autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_rules_baseline_v1"
+  ],
+  "cwd": "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1",
+  "python": "3.11.14 (main, Jan 14 2026, 21:09:41) [Clang 21.1.4 ]",
+  "rules_loaded": true,
+  "active_rule_instance_count": 20,
+  "statuses": {
+    "PASS": 8,
+    "UNRESOLVED": 9,
+    "NOT_APPLICABLE": 3
+  },
+  "routes": {
+    "DIRECT_EVALUATION": 8,
+    "SOURCE_LOOKUP": 9,
+    "HUMAN_OR_NEW_DATA": 3
+  },
+  "numeric_actions_executed": 0,
+  "scientific_verdict": "NOT_EMITTED",
+  "original_run_case_registry_modified": false,
+  "projection_boundary": "Projection carries case, source and comparison declarations but no typed pathwise departure, NMR-contact threshold discrepancy, within-trajectory uncertainty or numerical seeded-state comparison slots. Complete original method facts,archive identity andsource exceptions preserved separately; text retention is not execution.",
+  "stop": "Inspect actual routes before any obligation adapter. SOURCE_LOOKUP is not a numerical extra-calculation obligation."
+}

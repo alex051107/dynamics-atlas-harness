@@ -1,0 +1,216 @@
+{
+  "rule_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1",
+  "rule_instance_id": "Q15R02_MATCHED_PROBE_DIRECTION_V1::ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "development_adapter": true,
+  "status": "UNRESOLVED",
+  "partial_claims": [
+    {
+      "pair": "175_228",
+      "observed_E_effect": -0.026169186819396173,
+      "descriptive_direction_retained_in_manual_checks": true,
+      "DEER_central_mean_change_source_axis_units": -9.962328949216861,
+      "author_forward_distance_changes_A": {
+        "FRET_sim": -7.900000000000006,
+        "PELDOR_sim": -9.899999999999999
+      },
+      "DEER_direction_matches_own_spin_prediction": true,
+      "fluorescence_relation": "DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT"
+    },
+    {
+      "pair": "55_175",
+      "observed_E_effect": 0.08198984534700182,
+      "descriptive_direction_retained_in_manual_checks": true,
+      "DEER_central_mean_change_source_axis_units": -14.964454034618896,
+      "author_forward_distance_changes_A": {
+        "FRET_sim": -9.400000000000006,
+        "PELDOR_sim": -13.8
+      },
+      "DEER_direction_matches_own_spin_prediction": true,
+      "fluorescence_relation": "DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT"
+    }
+  ],
+  "remaining_obligations": [
+    "REPLICATE_SELECTION_AND_CALIBRATION_UNCERTAINTY",
+    "CY5_PDF_SOURCE_CONCORDANCE",
+    "INDEPENDENT_QUESTION_LEVEL_SCIENTIFIC_REVIEW"
+  ],
+  "full_question_answer": false,
+  "new_numerical_operator_calls": 0,
+  "evidence_applications": 1,
+  "source_bindings": {
+    "manual_summary": "91d439f73526d778b3591e6a4871e6a49f60d432844e605c128578f5d2bfc85e",
+    "manual_DEER": "570c84703fe1420db6680cdce0f553eeeeeb421e1f1ee3b91d33688b42356752",
+    "author_forward": "36e08a5beed2baf76bb595690ca3e4c3436f91630a6b96f84ef7f14048783f7d",
+    "dye": {
+      "histogram": {
+        "path": "q15_tmr_histogram_intake_v1/source_geometry.local.json",
+        "canonical_sha256": "2b442e5bf03c22bf205bf632de1c7abe2d74d433960618a76af1b25ba50fac6f"
+      },
+      "dye_summary": {
+        "path": "q15_dye_response_v1/report.json",
+        "canonical_sha256": "7bc5b2ccaa35c09eed93809be9aea2f6a8bb4abaa84e8c19faffc0c87a15714e"
+      },
+      "concordance": {
+        "path": "q15_dye_response_v1/source_concordance_check.json",
+        "canonical_sha256": "0b65a817d14117ca8b5608c938d0f8799c51a008f9518627aca40c2a9751d424"
+      }
+    }
+  },
+  "claim_ceiling": [
+    "No mean-E to absolute-distance conversion",
+    "Not a local FPS or spin-label simulation",
+    "DEER uses author-processed curves and common positive source-axis scale; original nm/Angstrom conflict retained",
+    "Cryogenic DEER and fluorescence are not pooled into a common population",
+    "Directional tension is not formal ensemble-model rejection or proof of a unique dye mechanism"
+  ],
+  "comparison_hypothesis": "Condition maps to its published structural reference prediction, with stable probe/readout; no changing ensemble or dye parameters assumed.",
+  "partial_answer_status": "Q15_BOUNDED_ANSWER_CANDIDATE",
+  "source_request_route": "REQUEST_NEW_DATA_IF_PUBLIC_SOURCE_SEARCH_EXHAUSTED",
+  "dye_evidence": {
+    "histogram": {
+      "direction": "RIGHT",
+      "conditions": {
+        "apo": {
+          "bars": 35,
+          "centroid": 0.340522169262498,
+          "lower": 0.330309532723847,
+          "upper": 0.3507348058011491,
+          "max_bin_width": 0.02046796537561707
+        },
+        "holo": {
+          "bars": 33,
+          "centroid": 0.47732691747268585,
+          "lower": 0.4671136220710509,
+          "upper": 0.48754021287432087,
+          "max_bin_width": 0.02042969478740775
+        }
+      },
+      "centroid_shift": 0.13680474821018784,
+      "geometric_bounds": [
+        0.075481156106877,
+        0.19812834031349869
+      ],
+      "sentence": "\u4ee3\u8868\u6027\u5df2\u5904\u7406 TMR/Cy5 \u76f4\u65b9\u56fe\u52a0\u914d\u4f53\u540e\u5411\u53f3\u79fb\u52a8\u3002",
+      "uncertainty": "Within-bar position plus one bin registration per panel; not a confidence interval."
+    },
+    "Alexa_relation": "OPPOSITE",
+    "DEER_relation": "NOT_INFERRED_FROM_MEANS",
+    "DEER_mean_direction": "DECREASE",
+    "histogram_answer": "\u4ee3\u8868\u6027\u5df2\u5904\u7406 TMR/Cy5 \u76f4\u65b9\u56fe\u52a0\u914d\u4f53\u540e\u5411\u53f3\u79fb\u52a8\u3002\u4e0e\u7ed1\u5b9a\u7684 Alexa \u89c2\u6d4b\u65b9\u5411\u76f8\u53cd\u3002\u5339\u914d DEER \u7684\u4e2d\u5fc3\u5e73\u5747\u8ddd\u79bb\u51cf\u5c0f\uff1b\u4e24\u9879\u89c2\u6d4b\u65b9\u5411\u5e76\u5217\u8bb0\u5f55\u3002\u5e73\u5747\u8ddd\u79bb\u4e0d\u80fd\u7ecf\u7b26\u53f7\u53d6\u53cd\u9884\u6d4b\u5e73\u5747 FRET\uff0c\u5c1a\u65e0\u6838\u51c6\u7684 TMR/Cy5 \u524d\u5411\u6a21\u578b\u6765\u68c0\u9a8c\u4e8c\u8005\u5173\u7cfb\u3002",
+    "dye_numbers": {
+      "175_AF555": {
+        "conditions": {
+          "apo": {
+            "late_early": 0.08613561921315742,
+            "anisotropy": 0.25705478999568726
+          },
+          "holo": {
+            "late_early": 0.057788551626657365,
+            "anisotropy": 0.2376653890280817
+          }
+        },
+        "decay_shape_ratio": 0.6709019120609053,
+        "anisotropy_change": -0.019389400967605552
+      },
+      "58_AF555": {
+        "conditions": {
+          "apo": {
+            "late_early": 0.06095202407861815,
+            "anisotropy": 0.24614682518211103
+          },
+          "holo": {
+            "late_early": 0.06444948569420703,
+            "anisotropy": 0.2535086183997748
+          }
+        },
+        "decay_shape_ratio": 1.0573805655916813,
+        "anisotropy_change": 0.0073617932176637535
+      },
+      "175_TMR": {
+        "conditions": {
+          "apo": {
+            "late_early": 0.2132796003670633,
+            "anisotropy": 0.09929398531160298
+          },
+          "holo": {
+            "late_early": 0.21206877081480102,
+            "anisotropy": 0.10106401670269279
+          }
+        },
+        "decay_shape_ratio": 0.9943228065404361,
+        "anisotropy_change": 0.0017700313910898047
+      }
+    },
+    "probe_answer": "\u6240\u9009\u65f6\u95f4\u7a97\u5185\uff0c175 \u4f4d\u70b9 Alexa \u4f9b\u4f53\u7684\u8870\u51cf\u5f62\u72b6\u53d8\u5316\u5927\u4e8e 58 \u4f4d\u70b9\u5bf9\u7167\uff1bTMR \u4f9b\u4f53\u7684\u8870\u51cf\u5f62\u72b6\u53d8\u5316\u8f83\u5c0f\u3002TMR \u5728\u4e24\u4e2a\u6761\u4ef6\u7684\u665a\u7a97\u5404\u5411\u5f02\u6027\u5747\u8f83\u4f4e\u3002",
+    "probe_readout_condition_dependence": true,
+    "replacement_donor_reduces_observed_concern": true,
+    "Cy5_mechanistic_use": "EXCLUDED_PENDING_PDF_SOURCE_CONCORDANCE",
+    "limits": [
+      "Representative processed histogram, not replicate-level uncertainty or original burst-selection validation.",
+      "Geometric bounds cover stated graphical perturbations only, not selection/calibration systematics.",
+      "Window ratios are not fitted lifetimes, quantum yields, gamma or R0 calibrations.",
+      "Lower anisotropy and similar decay shape do not establish complete probe applicability.",
+      "Cy5 deposited curves disagree visually with paper panel; no Cy5 mechanism or calibration certification.",
+      "Distinct temperatures/probes and directional agreement do not identify a unique protein ensemble or microscopic dye mechanism."
+    ],
+    "provenance": "RULE_APPLICATION_OF_PREVIOUS_MANUAL_NUMERICAL_EVIDENCE",
+    "new_numerical_operator_calls": 0
+  },
+  "representative_double_label_observation_available": true,
+  "question_answer_candidate": {
+    "closure": [
+      {
+        "pair": "175_228",
+        "observed_E_effect": -0.026169186819396173,
+        "descriptive_direction_retained_in_manual_checks": true,
+        "DEER_central_mean_change_source_axis_units": -9.962328949216861,
+        "author_forward_distance_changes_A": {
+          "FRET_sim": -7.900000000000006,
+          "PELDOR_sim": -9.899999999999999
+        },
+        "DEER_direction_matches_own_spin_prediction": true,
+        "fluorescence_relation": "DIRECTIONAL_TENSION_WITH_REFERENCE_READOUT"
+      },
+      {
+        "pair": "55_175",
+        "observed_E_effect": 0.08198984534700182,
+        "descriptive_direction_retained_in_manual_checks": true,
+        "DEER_central_mean_change_source_axis_units": -14.964454034618896,
+        "author_forward_distance_changes_A": {
+          "FRET_sim": -9.400000000000006,
+          "PELDOR_sim": -13.8
+        },
+        "DEER_direction_matches_own_spin_prediction": true,
+        "fluorescence_relation": "DIRECTIONAL_AGREEMENT_WITH_REFERENCE_READOUT"
+      }
+    ],
+    "scientific_synthesis": {
+      "status": "BOUNDED_QUALITATIVE_ANSWER_PENDING_REVIEW",
+      "answer": "\u5728\u5df2\u6838\u51c6\u7684\u6761\u4ef6\u53ca\u53c2\u8003\u7ed3\u6784\u2014\u63a2\u9488\u5047\u8bf4\u4e0b\uff0c\u89c2\u6d4b\u603b\u4f53\u66f4\u652f\u6301 HiSiaP \u7ed3\u5408\u5e95\u7269\u540e\u7684\u7ed3\u6784\u57df\u95ed\u5408\u300255/175 \u7684\u8367\u5149\u3001\u5339\u914d DEER \u548c\u5404\u81ea\u53c2\u8003\u9884\u6d4b\u6784\u6210\u65b9\u5411\u4e00\u81f4\u7684\u8bc1\u636e\u94fe\uff1b175/228 \u7684 Alexa \u7ed3\u679c\u4e0e\u8be5\u53c2\u8003\u8bfb\u51fa\u5b58\u5728\u51b2\u7a81\u3002\u4ee3\u8868\u6027 TMR/Cy5 \u76f4\u65b9\u56fe\u53f3\u79fb\uff0c\u52a0\u4e0a 175 \u4f4d\u70b9 AF555 \u76f8\u5bf9\u5bf9\u7167\u7684\u8870\u51cf\u5f62\u72b6\u53d8\u5316\u8f83\u5927\u3001TMR \u5f53\u524d\u8bca\u65ad\u8f83\u5c0f\uff0c\u4e3a\u63a2\u9488\u8bfb\u51fa\u9002\u7528\u6027\u53d7\u6761\u4ef6\u5f71\u54cd\u63d0\u4f9b\u4e86\u5b9e\u9a8c\u4f9d\u636e\u3002\u4ec5\u51ed\u5f02\u5e38 Alexa \u6548\u7387\u4e0b\u964d\u4e0d\u8db3\u4ee5\u63a8\u65ad\u8fdb\u4e00\u6b65\u5f00\u653e\u6216\u547d\u540d\u65b0\u7684\u86cb\u767d\u6784\u8c61\u3002",
+      "dependencies": {
+        "reference_chain": true,
+        "Alexa_anomaly": true,
+        "replacement_observation": true,
+        "donor_control": true
+      },
+      "hypothesis": "Condition maps to its published structural reference prediction, with stable probe/readout; no changing ensemble or dye parameters assumed.",
+      "limitations": [
+        "\u4e0d\u552f\u4e00\u786e\u5b9a\u5fae\u89c2\u67d3\u6599\u673a\u5236\uff1b\u6807\u7b7e\u5bf9\u6784\u8c61\u96c6\u5408\u7684\u6270\u52a8\u3001\u6837\u672c\u6761\u4ef6\u5dee\u5f02\u53ca\u5176\u4ed6\u8bfb\u51fa\u56e0\u7d20\u4ecd\u672a\u6392\u9664\u3002",
+        "\u672a\u8ba4\u8bc1\u5b8c\u6574 TMR/Cy5 \u6821\u51c6\u3001\u7edd\u5bf9\u8ddd\u79bb\u6216\u91cd\u590d\u5c42\u9762\u6548\u5e94\u533a\u95f4\uff1b\u6709\u754c\u5b9a\u6027\u7b54\u590d\u4e0e\u5168\u90e8\u5b9a\u91cf\u590d\u73b0\u5206\u522b\u8bb0\u8d26\u3002"
+      ],
+      "full_quantitative_reproduction": false
+    },
+    "replacement": "\u4ee3\u8868\u6027\u5df2\u5904\u7406 TMR/Cy5 \u76f4\u65b9\u56fe\u52a0\u914d\u4f53\u540e\u5411\u53f3\u79fb\u52a8\u3002\u4e0e\u7ed1\u5b9a\u7684 Alexa \u89c2\u6d4b\u65b9\u5411\u76f8\u53cd\u3002\u5339\u914d DEER \u7684\u4e2d\u5fc3\u5e73\u5747\u8ddd\u79bb\u51cf\u5c0f\uff1b\u4e24\u9879\u89c2\u6d4b\u65b9\u5411\u5e76\u5217\u8bb0\u5f55\u3002\u5e73\u5747\u8ddd\u79bb\u4e0d\u80fd\u7ecf\u7b26\u53f7\u53d6\u53cd\u9884\u6d4b\u5e73\u5747 FRET\uff0c\u5c1a\u65e0\u6838\u51c6\u7684 TMR/Cy5 \u524d\u5411\u6a21\u578b\u6765\u68c0\u9a8c\u4e8c\u8005\u5173\u7cfb\u3002",
+    "probe_explanation": "\u6240\u9009\u65f6\u95f4\u7a97\u5185\uff0c175 \u4f4d\u70b9 Alexa \u4f9b\u4f53\u7684\u8870\u51cf\u5f62\u72b6\u53d8\u5316\u5927\u4e8e 58 \u4f4d\u70b9\u5bf9\u7167\uff1bTMR \u4f9b\u4f53\u7684\u8870\u51cf\u5f62\u72b6\u53d8\u5316\u8f83\u5c0f\u3002TMR \u5728\u4e24\u4e2a\u6761\u4ef6\u7684\u665a\u7a97\u5404\u5411\u5f02\u6027\u5747\u8f83\u4f4e\u3002",
+    "interpretation": "The measured donor response is condition-dependent relative to the site control; fluorescence direction alone is insufficient for an unqualified structural interpretation.",
+    "limitations": [
+      "Representative processed histogram, not replicate-level uncertainty or original burst-selection validation.",
+      "Geometric bounds cover stated graphical perturbations only, not selection/calibration systematics.",
+      "Window ratios are not fitted lifetimes, quantum yields, gamma or R0 calibrations.",
+      "Lower anisotropy and similar decay shape do not establish complete probe applicability.",
+      "Cy5 deposited curves disagree visually with paper panel; no Cy5 mechanism or calibration certification.",
+      "Distinct temperatures/probes and directional agreement do not identify a unique protein ensemble or microscopic dye mechanism."
+    ]
+  }
+}

@@ -1,0 +1,5609 @@
+[
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 0
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 59
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 125
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "09426f0b",
+    "compressed_bytes": 2036,
+    "expanded_bytes": 7908,
+    "local_header_offset": 194
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "338c0ae4",
+    "compressed_bytes": 384,
+    "expanded_bytes": 544,
+    "local_header_offset": 2303
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d2a3b2a",
+    "compressed_bytes": 393,
+    "expanded_bytes": 558,
+    "local_header_offset": 2761
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "96294331",
+    "compressed_bytes": 374,
+    "expanded_bytes": 534,
+    "local_header_offset": 3229
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "17745d08",
+    "compressed_bytes": 388,
+    "expanded_bytes": 550,
+    "local_header_offset": 3677
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6d60cc3e",
+    "compressed_bytes": 2293,
+    "expanded_bytes": 8092,
+    "local_header_offset": 4140
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e5ffa86a",
+    "compressed_bytes": 454,
+    "expanded_bytes": 663,
+    "local_header_offset": 6507
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 7040
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 7224
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 7576
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 10268
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 11739
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 12224
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 12658
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 13092
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 13191
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 13266
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c33b9dac",
+    "compressed_bytes": 351,
+    "expanded_bytes": 492,
+    "local_header_offset": 13343
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "23b4423b",
+    "compressed_bytes": 930,
+    "expanded_bytes": 2071,
+    "local_header_offset": 13775
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae31405b",
+    "compressed_bytes": 914,
+    "expanded_bytes": 2065,
+    "local_header_offset": 14786
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66141187",
+    "compressed_bytes": 912,
+    "expanded_bytes": 2062,
+    "local_header_offset": 15782
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ad8a90ee",
+    "compressed_bytes": 909,
+    "expanded_bytes": 2058,
+    "local_header_offset": 16777
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a005e605",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2059,
+    "local_header_offset": 17768
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fdd825b7",
+    "compressed_bytes": 948,
+    "expanded_bytes": 2091,
+    "local_header_offset": 18762
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "33bec997",
+    "compressed_bytes": 661,
+    "expanded_bytes": 765,
+    "local_header_offset": 19792
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 20539
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 20643
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "af3902e6",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 23078
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "829a78be",
+    "compressed_bytes": 17199459,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 23519
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "311e51c3",
+    "compressed_bytes": 1022,
+    "expanded_bytes": 2939,
+    "local_header_offset": 17223050
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 17224151
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 17225751
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 17230372
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 17234701
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 17236943
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 17240960
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/60/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 17241074
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 17241464
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "984595bf",
+    "compressed_bytes": 2026,
+    "expanded_bytes": 7856,
+    "local_header_offset": 17241533
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "218aeca6",
+    "compressed_bytes": 382,
+    "expanded_bytes": 544,
+    "local_header_offset": 17243632
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "95be7238",
+    "compressed_bytes": 393,
+    "expanded_bytes": 558,
+    "local_header_offset": 17244088
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2c7da654",
+    "compressed_bytes": 374,
+    "expanded_bytes": 534,
+    "local_header_offset": 17244556
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "afd7c407",
+    "compressed_bytes": 388,
+    "expanded_bytes": 550,
+    "local_header_offset": 17245004
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5483a1f6",
+    "compressed_bytes": 2292,
+    "expanded_bytes": 8091,
+    "local_header_offset": 17245467
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "90f0b73f",
+    "compressed_bytes": 452,
+    "expanded_bytes": 663,
+    "local_header_offset": 17247833
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 17248364
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 17248548
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 17248900
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 17251592
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 17253063
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 17253548
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 17253982
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 17254416
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 17254515
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 17254590
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a9f6fce4",
+    "compressed_bytes": 350,
+    "expanded_bytes": 492,
+    "local_header_offset": 17254667
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "465193f2",
+    "compressed_bytes": 929,
+    "expanded_bytes": 2071,
+    "local_header_offset": 17255098
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4394550e",
+    "compressed_bytes": 915,
+    "expanded_bytes": 2065,
+    "local_header_offset": 17256108
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b704b4b3",
+    "compressed_bytes": 912,
+    "expanded_bytes": 2062,
+    "local_header_offset": 17257105
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "acc80c67",
+    "compressed_bytes": 908,
+    "expanded_bytes": 2058,
+    "local_header_offset": 17258100
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4269a37c",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2059,
+    "local_header_offset": 17259090
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "cae80dfa",
+    "compressed_bytes": 947,
+    "expanded_bytes": 2091,
+    "local_header_offset": 17260083
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "33bec997",
+    "compressed_bytes": 661,
+    "expanded_bytes": 765,
+    "local_header_offset": 17261112
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 17261859
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 17261963
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "590e8649",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 17264398
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8e2b2fb8",
+    "compressed_bytes": 17196709,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 17264839
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1e11f311",
+    "compressed_bytes": 1020,
+    "expanded_bytes": 2939,
+    "local_header_offset": 34461620
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 34462719
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 34464319
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 34468940
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 34473269
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 34475511
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 34479528
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/61/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 34479642
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 34480032
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "df3464af",
+    "compressed_bytes": 2027,
+    "expanded_bytes": 7856,
+    "local_header_offset": 34480101
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c5afaf50",
+    "compressed_bytes": 383,
+    "expanded_bytes": 544,
+    "local_header_offset": 34482201
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "acf2152f",
+    "compressed_bytes": 392,
+    "expanded_bytes": 558,
+    "local_header_offset": 34482658
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "acaa85c8",
+    "compressed_bytes": 374,
+    "expanded_bytes": 534,
+    "local_header_offset": 34483125
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9f13dc30",
+    "compressed_bytes": 387,
+    "expanded_bytes": 550,
+    "local_header_offset": 34483573
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "01e6403d",
+    "compressed_bytes": 2293,
+    "expanded_bytes": 8091,
+    "local_header_offset": 34484035
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "83c8fad3",
+    "compressed_bytes": 455,
+    "expanded_bytes": 663,
+    "local_header_offset": 34486402
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 34486936
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 34487120
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 34487472
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 34490164
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 34491635
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 34492120
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 34492554
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 34492988
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 34493087
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 34493162
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f09e23d0",
+    "compressed_bytes": 351,
+    "expanded_bytes": 492,
+    "local_header_offset": 34493239
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "469c8e29",
+    "compressed_bytes": 929,
+    "expanded_bytes": 2068,
+    "local_header_offset": 34493671
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8274ed48",
+    "compressed_bytes": 914,
+    "expanded_bytes": 2065,
+    "local_header_offset": 34494681
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2bc43612",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2062,
+    "local_header_offset": 34495677
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "81602e54",
+    "compressed_bytes": 909,
+    "expanded_bytes": 2058,
+    "local_header_offset": 34496671
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "14780ac5",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2059,
+    "local_header_offset": 34497662
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6a812080",
+    "compressed_bytes": 946,
+    "expanded_bytes": 2088,
+    "local_header_offset": 34498655
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 34499683
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 34499787
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a15559af",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 34502222
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "23814475",
+    "compressed_bytes": 17198346,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 34502663
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d1c9f531",
+    "compressed_bytes": 1022,
+    "expanded_bytes": 2939,
+    "local_header_offset": 51701081
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 51702182
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 51703782
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 51708403
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 51712732
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 51714974
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 51718991
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/62/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 51719105
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 51719495
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a0df32f2",
+    "compressed_bytes": 2026,
+    "expanded_bytes": 7856,
+    "local_header_offset": 51719564
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7510f904",
+    "compressed_bytes": 383,
+    "expanded_bytes": 544,
+    "local_header_offset": 51721663
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "91f8a54a",
+    "compressed_bytes": 392,
+    "expanded_bytes": 558,
+    "local_header_offset": 51722120
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "01ce9020",
+    "compressed_bytes": 374,
+    "expanded_bytes": 534,
+    "local_header_offset": 51722587
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "acdacc56",
+    "compressed_bytes": 387,
+    "expanded_bytes": 550,
+    "local_header_offset": 51723035
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "df0bb75e",
+    "compressed_bytes": 2293,
+    "expanded_bytes": 8092,
+    "local_header_offset": 51723497
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c0bf94b6",
+    "compressed_bytes": 454,
+    "expanded_bytes": 663,
+    "local_header_offset": 51725864
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 51726397
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 51726581
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 51726933
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 51729625
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 51731096
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 51731581
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 51732015
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 51732449
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 51732548
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 51732623
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ab198b30",
+    "compressed_bytes": 350,
+    "expanded_bytes": 492,
+    "local_header_offset": 51732700
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2b3f0497",
+    "compressed_bytes": 929,
+    "expanded_bytes": 2068,
+    "local_header_offset": 51733131
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "cab54600",
+    "compressed_bytes": 914,
+    "expanded_bytes": 2065,
+    "local_header_offset": 51734141
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5c0cfc4d",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2062,
+    "local_header_offset": 51735137
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9b0d4a05",
+    "compressed_bytes": 909,
+    "expanded_bytes": 2058,
+    "local_header_offset": 51736131
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e1e2664e",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2059,
+    "local_header_offset": 51737122
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d91007b2",
+    "compressed_bytes": 945,
+    "expanded_bytes": 2088,
+    "local_header_offset": 51738116
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 51739143
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 51739247
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3005da1d",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 51741682
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c24a213e",
+    "compressed_bytes": 17201851,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 51742123
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "159df3d2",
+    "compressed_bytes": 1020,
+    "expanded_bytes": 2939,
+    "local_header_offset": 68944046
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 68945145
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 68946745
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 68951366
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 68955695
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 68957937
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 68961954
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/63/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 68962068
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 68962458
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fa6a26d0",
+    "compressed_bytes": 2027,
+    "expanded_bytes": 7856,
+    "local_header_offset": 68962527
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d3499e65",
+    "compressed_bytes": 384,
+    "expanded_bytes": 544,
+    "local_header_offset": 68964627
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e7e1dfc1",
+    "compressed_bytes": 393,
+    "expanded_bytes": 558,
+    "local_header_offset": 68965085
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f36c9cf2",
+    "compressed_bytes": 375,
+    "expanded_bytes": 534,
+    "local_header_offset": 68965553
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f168e8c1",
+    "compressed_bytes": 388,
+    "expanded_bytes": 550,
+    "local_header_offset": 68966002
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6116961e",
+    "compressed_bytes": 2292,
+    "expanded_bytes": 8091,
+    "local_header_offset": 68966465
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66a77809",
+    "compressed_bytes": 453,
+    "expanded_bytes": 663,
+    "local_header_offset": 68968831
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 68969363
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 68969547
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 68969899
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 68972591
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 68974062
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 68974547
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 68974981
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 68975415
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 68975514
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 68975589
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4fba95e7",
+    "compressed_bytes": 350,
+    "expanded_bytes": 492,
+    "local_header_offset": 68975666
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "eb4d61a1",
+    "compressed_bytes": 928,
+    "expanded_bytes": 2068,
+    "local_header_offset": 68976097
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bbd4b1ed",
+    "compressed_bytes": 914,
+    "expanded_bytes": 2065,
+    "local_header_offset": 68977106
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "da6c292e",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2062,
+    "local_header_offset": 68978102
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f30c02e0",
+    "compressed_bytes": 909,
+    "expanded_bytes": 2058,
+    "local_header_offset": 68979096
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "31ea71f1",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2059,
+    "local_header_offset": 68980087
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9792718",
+    "compressed_bytes": 945,
+    "expanded_bytes": 2088,
+    "local_header_offset": 68981080
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 68982107
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 68982211
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fe0e9876",
+    "compressed_bytes": 366,
+    "expanded_bytes": 615,
+    "local_header_offset": 68984646
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8be65183",
+    "compressed_bytes": 17203785,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 68985086
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "95b06b07",
+    "compressed_bytes": 1019,
+    "expanded_bytes": 2939,
+    "local_header_offset": 86188943
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 86190041
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 86191641
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 86196262
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 86200591
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 86202833
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 86206850
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/64/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 86206964
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 86207354
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "11e97024",
+    "compressed_bytes": 2026,
+    "expanded_bytes": 7856,
+    "local_header_offset": 86207423
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d7003c2f",
+    "compressed_bytes": 382,
+    "expanded_bytes": 544,
+    "local_header_offset": 86209522
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f0d07a41",
+    "compressed_bytes": 393,
+    "expanded_bytes": 558,
+    "local_header_offset": 86209978
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9c961033",
+    "compressed_bytes": 374,
+    "expanded_bytes": 534,
+    "local_header_offset": 86210446
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "aea71a5f",
+    "compressed_bytes": 388,
+    "expanded_bytes": 550,
+    "local_header_offset": 86210894
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "baa70a97",
+    "compressed_bytes": 2290,
+    "expanded_bytes": 8087,
+    "local_header_offset": 86211357
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ceb27dc7",
+    "compressed_bytes": 454,
+    "expanded_bytes": 663,
+    "local_header_offset": 86213721
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 86214254
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 86214438
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 86214790
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 86217482
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 86218953
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 86219438
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 86219872
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 86220306
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 86220405
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 86220480
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3d448d12",
+    "compressed_bytes": 351,
+    "expanded_bytes": 492,
+    "local_header_offset": 86220557
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "558f9c83",
+    "compressed_bytes": 931,
+    "expanded_bytes": 2071,
+    "local_header_offset": 86220989
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b3bf54ae",
+    "compressed_bytes": 914,
+    "expanded_bytes": 2065,
+    "local_header_offset": 86222001
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6a388bb9",
+    "compressed_bytes": 912,
+    "expanded_bytes": 2062,
+    "local_header_offset": 86222997
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1c19a1c4",
+    "compressed_bytes": 909,
+    "expanded_bytes": 2058,
+    "local_header_offset": 86223992
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7b0fbce2",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2059,
+    "local_header_offset": 86224983
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ce63cd52",
+    "compressed_bytes": 948,
+    "expanded_bytes": 2091,
+    "local_header_offset": 86225976
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "33bec997",
+    "compressed_bytes": 661,
+    "expanded_bytes": 765,
+    "local_header_offset": 86227006
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 86227753
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 86227857
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d71080d3",
+    "compressed_bytes": 226278,
+    "expanded_bytes": 262144,
+    "local_header_offset": 86227936
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/2ir",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "09d003b4",
+    "compressed_bytes": 224338,
+    "expanded_bytes": 262144,
+    "local_header_offset": 86454296
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/2ri",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e2f3a8c8",
+    "compressed_bytes": 230320,
+    "expanded_bytes": 262144,
+    "local_header_offset": 86678716
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "007e391d",
+    "compressed_bytes": 227586,
+    "expanded_bytes": 262144,
+    "local_header_offset": 86909118
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b0b2c266",
+    "compressed_bytes": 624,
+    "expanded_bytes": 1056,
+    "local_header_offset": 87136786
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4e2a890e",
+    "compressed_bytes": 476,
+    "expanded_bytes": 1235,
+    "local_header_offset": 87137499
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "87530216",
+    "compressed_bytes": 352,
+    "expanded_bytes": 493,
+    "local_header_offset": 87138061
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e2321d87",
+    "compressed_bytes": 928,
+    "expanded_bytes": 2069,
+    "local_header_offset": 87138496
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d71842be",
+    "compressed_bytes": 915,
+    "expanded_bytes": 2067,
+    "local_header_offset": 87139507
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "12bf3547",
+    "compressed_bytes": 924,
+    "expanded_bytes": 2077,
+    "local_header_offset": 87140506
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3c89b3be",
+    "compressed_bytes": 965,
+    "expanded_bytes": 2121,
+    "local_header_offset": 87141515
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5e1fc824",
+    "compressed_bytes": 6731,
+    "expanded_bytes": 6731,
+    "local_header_offset": 87142564
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pdata/231/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7b8c512c",
+    "compressed_bytes": 334,
+    "expanded_bytes": 484,
+    "local_header_offset": 87149383
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 87149805
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5e452ca1",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 87152240
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "25193828",
+    "compressed_bytes": 17206668,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 87152681
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c732329a",
+    "compressed_bytes": 1020,
+    "expanded_bytes": 2939,
+    "local_header_offset": 104359421
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 104360520
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 104362120
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 104366741
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 104371070
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 104373312
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 104377329
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/65/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 104377443
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 104377833
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "81730d84",
+    "compressed_bytes": 2027,
+    "expanded_bytes": 7856,
+    "local_header_offset": 104377902
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d11d9c1",
+    "compressed_bytes": 383,
+    "expanded_bytes": 544,
+    "local_header_offset": 104380002
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "05d69884",
+    "compressed_bytes": 393,
+    "expanded_bytes": 558,
+    "local_header_offset": 104380459
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "02207d9c",
+    "compressed_bytes": 372,
+    "expanded_bytes": 534,
+    "local_header_offset": 104380927
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a80813f5",
+    "compressed_bytes": 388,
+    "expanded_bytes": 550,
+    "local_header_offset": 104381373
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3d6a1da5",
+    "compressed_bytes": 2293,
+    "expanded_bytes": 8092,
+    "local_header_offset": 104381836
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ba730d1e",
+    "compressed_bytes": 454,
+    "expanded_bytes": 663,
+    "local_header_offset": 104384203
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 104384736
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 104384920
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e74ea912",
+    "compressed_bytes": 2612,
+    "expanded_bytes": 11439,
+    "local_header_offset": 104385272
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 104387964
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 104389435
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 104389920
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 104390354
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 104390788
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 104390887
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 104390962
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0b494518",
+    "compressed_bytes": 350,
+    "expanded_bytes": 492,
+    "local_header_offset": 104391039
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2544e688",
+    "compressed_bytes": 931,
+    "expanded_bytes": 2071,
+    "local_header_offset": 104391470
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "14e74858",
+    "compressed_bytes": 915,
+    "expanded_bytes": 2065,
+    "local_header_offset": 104392482
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "18eb1211",
+    "compressed_bytes": 912,
+    "expanded_bytes": 2062,
+    "local_header_offset": 104393479
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "17073ef9",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2058,
+    "local_header_offset": 104394474
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b977aacf",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2059,
+    "local_header_offset": 104395466
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fe5deb05",
+    "compressed_bytes": 948,
+    "expanded_bytes": 2091,
+    "local_header_offset": 104396460
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "33bec997",
+    "compressed_bytes": 661,
+    "expanded_bytes": 765,
+    "local_header_offset": 104397490
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "5855568c",
+    "compressed_bytes": 22,
+    "expanded_bytes": 22,
+    "local_header_offset": 104398237
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 104398341
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bb1da669",
+    "compressed_bytes": 226361,
+    "expanded_bytes": 262144,
+    "local_header_offset": 104398420
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/2ir",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "62273488",
+    "compressed_bytes": 224360,
+    "expanded_bytes": 262144,
+    "local_header_offset": 104624863
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/2ri",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4d913d9f",
+    "compressed_bytes": 230236,
+    "expanded_bytes": 262144,
+    "local_header_offset": 104849305
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae52542b",
+    "compressed_bytes": 227679,
+    "expanded_bytes": 262144,
+    "local_header_offset": 105079623
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ba4d91e",
+    "compressed_bytes": 620,
+    "expanded_bytes": 1056,
+    "local_header_offset": 105307384
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e380bd53",
+    "compressed_bytes": 477,
+    "expanded_bytes": 1235,
+    "local_header_offset": 105308093
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d84438d4",
+    "compressed_bytes": 352,
+    "expanded_bytes": 493,
+    "local_header_offset": 105308656
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "489fe3d7",
+    "compressed_bytes": 927,
+    "expanded_bytes": 2069,
+    "local_header_offset": 105309091
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "27e4c447",
+    "compressed_bytes": 916,
+    "expanded_bytes": 2067,
+    "local_header_offset": 105310101
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "05f1a095",
+    "compressed_bytes": 923,
+    "expanded_bytes": 2077,
+    "local_header_offset": 105311101
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2b5e817e",
+    "compressed_bytes": 965,
+    "expanded_bytes": 2121,
+    "local_header_offset": 105312109
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "a229441e",
+    "compressed_bytes": 6728,
+    "expanded_bytes": 6728,
+    "local_header_offset": 105313158
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pdata/231/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f13afe06",
+    "compressed_bytes": 333,
+    "expanded_bytes": 484,
+    "local_header_offset": 105319974
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "48a6aace",
+    "compressed_bytes": 2354,
+    "expanded_bytes": 7820,
+    "local_header_offset": 105320395
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c47cb4bb",
+    "compressed_bytes": 367,
+    "expanded_bytes": 615,
+    "local_header_offset": 105322830
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2bec6964",
+    "compressed_bytes": 17206286,
+    "expanded_bytes": 30105600,
+    "local_header_offset": 105323271
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "caf97c6c",
+    "compressed_bytes": 1019,
+    "expanded_bytes": 2939,
+    "local_header_offset": 122529629
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85b6409a",
+    "compressed_bytes": 1524,
+    "expanded_bytes": 3982,
+    "local_header_offset": 122530727
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 122532327
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 122536948
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8d44c032",
+    "compressed_bytes": 2163,
+    "expanded_bytes": 6978,
+    "local_header_offset": 122541277
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "548e31a3",
+    "compressed_bytes": 3939,
+    "expanded_bytes": 26420,
+    "local_header_offset": 122543519
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 122547536
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/66/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8688257c",
+    "compressed_bytes": 305,
+    "expanded_bytes": 485,
+    "local_header_offset": 122547650
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/fid.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "13dadd3b",
+    "compressed_bytes": 306,
+    "expanded_bytes": 598,
+    "local_header_offset": 122548040
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/700MHz/process3Dcpmgs.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2d4f085f",
+    "compressed_bytes": 1107,
+    "expanded_bytes": 3071,
+    "local_header_offset": 122548419
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 122549610
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 122549676
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ea24bd4a",
+    "compressed_bytes": 2049,
+    "expanded_bytes": 7922,
+    "local_header_offset": 122549745
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9d6916de",
+    "compressed_bytes": 406,
+    "expanded_bytes": 573,
+    "local_header_offset": 122551867
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "83192b7f",
+    "compressed_bytes": 401,
+    "expanded_bytes": 572,
+    "local_header_offset": 122552347
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bca61898",
+    "compressed_bytes": 383,
+    "expanded_bytes": 549,
+    "local_header_offset": 122552823
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5c1c6699",
+    "compressed_bytes": 398,
+    "expanded_bytes": 565,
+    "local_header_offset": 122553280
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f66f8c8d",
+    "compressed_bytes": 2326,
+    "expanded_bytes": 8142,
+    "local_header_offset": 122553753
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "24967daa",
+    "compressed_bytes": 466,
+    "expanded_bytes": 679,
+    "local_header_offset": 122556153
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 122556698
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 122556882
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9fac589e",
+    "compressed_bytes": 2609,
+    "expanded_bytes": 11433,
+    "local_header_offset": 122557234
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 122559923
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 122561394
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 122561879
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 122562313
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 122562747
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 122563181
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/hmqc_cpmg_test_v9_from_pm.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1c0f9a96",
+    "compressed_bytes": 1623,
+    "expanded_bytes": 5466,
+    "local_header_offset": 122563280
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 122565000
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 122565075
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "153cc3cf",
+    "compressed_bytes": 366,
+    "expanded_bytes": 508,
+    "local_header_offset": 122565152
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "29116bd1",
+    "compressed_bytes": 940,
+    "expanded_bytes": 2081,
+    "local_header_offset": 122565599
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "757c10a2",
+    "compressed_bytes": 924,
+    "expanded_bytes": 2074,
+    "local_header_offset": 122566620
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ef542bc3",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2075,
+    "local_header_offset": 122567626
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "128357bf",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2074,
+    "local_header_offset": 122568634
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "af46e6c7",
+    "compressed_bytes": 926,
+    "expanded_bytes": 2075,
+    "local_header_offset": 122569641
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "778ea62d",
+    "compressed_bytes": 965,
+    "expanded_bytes": 2108,
+    "local_header_offset": 122570650
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "475cedff",
+    "compressed_bytes": 535,
+    "expanded_bytes": 625,
+    "local_header_offset": 122571697
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "45b9cc01",
+    "compressed_bytes": 4,
+    "expanded_bytes": 4,
+    "local_header_offset": 122572318
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 122572404
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "348fae9e",
+    "compressed_bytes": 429751,
+    "expanded_bytes": 524288,
+    "local_header_offset": 122572483
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/2ir",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2033e5cf",
+    "compressed_bytes": 437122,
+    "expanded_bytes": 524288,
+    "local_header_offset": 123002316
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/2ri",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "baf67568",
+    "compressed_bytes": 425257,
+    "expanded_bytes": 524288,
+    "local_header_offset": 123439520
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0d56f374",
+    "compressed_bytes": 428666,
+    "expanded_bytes": 524288,
+    "local_header_offset": 123864859
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3849022f",
+    "compressed_bytes": 506,
+    "expanded_bytes": 826,
+    "local_header_offset": 124293607
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "47897842",
+    "compressed_bytes": 493,
+    "expanded_bytes": 1251,
+    "local_header_offset": 124294202
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5c5eb3a7",
+    "compressed_bytes": 366,
+    "expanded_bytes": 509,
+    "local_header_offset": 124294781
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "08f24681",
+    "compressed_bytes": 938,
+    "expanded_bytes": 2079,
+    "local_header_offset": 124295230
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8b9c0bc0",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2076,
+    "local_header_offset": 124296251
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5cdc8991",
+    "compressed_bytes": 936,
+    "expanded_bytes": 2088,
+    "local_header_offset": 124297260
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "daf6daf0",
+    "compressed_bytes": 979,
+    "expanded_bytes": 2137,
+    "local_header_offset": 124298281
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "9c4a8100",
+    "compressed_bytes": 6051,
+    "expanded_bytes": 6051,
+    "local_header_offset": 124299344
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pdata/231/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9b6c7eae",
+    "compressed_bytes": 349,
+    "expanded_bytes": 516,
+    "local_header_offset": 124305483
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "36751be7",
+    "compressed_bytes": 2363,
+    "expanded_bytes": 8060,
+    "local_header_offset": 124305920
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "04620a10",
+    "compressed_bytes": 383,
+    "expanded_bytes": 631,
+    "local_header_offset": 124308364
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "885a6c25",
+    "compressed_bytes": 16174709,
+    "expanded_bytes": 28508160,
+    "local_header_offset": 124308821
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e3d12958",
+    "compressed_bytes": 1047,
+    "expanded_bytes": 2937,
+    "local_header_offset": 140483602
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bbbda4ca",
+    "compressed_bytes": 1394,
+    "expanded_bytes": 3710,
+    "local_header_offset": 140484728
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 140486198
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 140490819
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "347f1b2b",
+    "compressed_bytes": 2082,
+    "expanded_bytes": 5941,
+    "local_header_offset": 140495148
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae36fcf5",
+    "compressed_bytes": 3782,
+    "expanded_bytes": 26089,
+    "local_header_offset": 140497309
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 140501169
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "be811958",
+    "compressed_bytes": 298,
+    "expanded_bytes": 483,
+    "local_header_offset": 140501283
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/10/Z117769_0011.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "805739be",
+    "compressed_bytes": 279,
+    "expanded_bytes": 1240,
+    "local_header_offset": 140501666
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 140502029
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ce3eb6ce",
+    "compressed_bytes": 2055,
+    "expanded_bytes": 7927,
+    "local_header_offset": 140502098
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6ea3ff55",
+    "compressed_bytes": 403,
+    "expanded_bytes": 570,
+    "local_header_offset": 140504226
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "319754fa",
+    "compressed_bytes": 401,
+    "expanded_bytes": 572,
+    "local_header_offset": 140504703
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bbec44e5",
+    "compressed_bytes": 383,
+    "expanded_bytes": 549,
+    "local_header_offset": 140505179
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6f1771c8",
+    "compressed_bytes": 397,
+    "expanded_bytes": 565,
+    "local_header_offset": 140505636
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fe5883c9",
+    "compressed_bytes": 2328,
+    "expanded_bytes": 8142,
+    "local_header_offset": 140506108
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "73b1afbe",
+    "compressed_bytes": 469,
+    "expanded_bytes": 679,
+    "local_header_offset": 140508510
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 140509058
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 140509242
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9fac589e",
+    "compressed_bytes": 2609,
+    "expanded_bytes": 11433,
+    "local_header_offset": 140509594
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 140512283
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 140513754
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 140514239
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 140514673
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 140515107
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 140515541
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/hmqc_cpmg_test_v9_from_pm.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1c0f9a96",
+    "compressed_bytes": 1623,
+    "expanded_bytes": 5466,
+    "local_header_offset": 140515640
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 140517360
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 140517435
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "43d96ff0",
+    "compressed_bytes": 366,
+    "expanded_bytes": 508,
+    "local_header_offset": 140517512
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "13e1feca",
+    "compressed_bytes": 939,
+    "expanded_bytes": 2081,
+    "local_header_offset": 140517959
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a4825573",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2074,
+    "local_header_offset": 140518979
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9158a1f1",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2075,
+    "local_header_offset": 140519986
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9971bddc",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2074,
+    "local_header_offset": 140520994
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d14a6cf5",
+    "compressed_bytes": 926,
+    "expanded_bytes": 2075,
+    "local_header_offset": 140522001
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fdf62637",
+    "compressed_bytes": 964,
+    "expanded_bytes": 2108,
+    "local_header_offset": 140523010
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "475cedff",
+    "compressed_bytes": 535,
+    "expanded_bytes": 625,
+    "local_header_offset": 140524056
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "45b9cc01",
+    "compressed_bytes": 4,
+    "expanded_bytes": 4,
+    "local_header_offset": 140524677
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "36751be7",
+    "compressed_bytes": 2363,
+    "expanded_bytes": 8060,
+    "local_header_offset": 140524763
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "819d7213",
+    "compressed_bytes": 379,
+    "expanded_bytes": 631,
+    "local_header_offset": 140527207
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "722d0691",
+    "compressed_bytes": 16238187,
+    "expanded_bytes": 28508160,
+    "local_header_offset": 140527660
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "fc9c8716",
+    "compressed_bytes": 1041,
+    "expanded_bytes": 2937,
+    "local_header_offset": 156765919
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bbbda4ca",
+    "compressed_bytes": 1394,
+    "expanded_bytes": 3710,
+    "local_header_offset": 156767039
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 156768509
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 156773130
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "347f1b2b",
+    "compressed_bytes": 2082,
+    "expanded_bytes": 5941,
+    "local_header_offset": 156777459
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae36fcf5",
+    "compressed_bytes": 3782,
+    "expanded_bytes": 26089,
+    "local_header_offset": 156779620
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 156783480
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "be811958",
+    "compressed_bytes": 298,
+    "expanded_bytes": 483,
+    "local_header_offset": 156783594
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/11/Z117769_0011.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "805739be",
+    "compressed_bytes": 279,
+    "expanded_bytes": 1240,
+    "local_header_offset": 156783977
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 156784340
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7fdea5ec",
+    "compressed_bytes": 2055,
+    "expanded_bytes": 7927,
+    "local_header_offset": 156784409
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c070aa62",
+    "compressed_bytes": 403,
+    "expanded_bytes": 570,
+    "local_header_offset": 156786537
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "185389b5",
+    "compressed_bytes": 402,
+    "expanded_bytes": 572,
+    "local_header_offset": 156787014
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a25354d8",
+    "compressed_bytes": 384,
+    "expanded_bytes": 549,
+    "local_header_offset": 156787491
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a0c5bfed",
+    "compressed_bytes": 398,
+    "expanded_bytes": 565,
+    "local_header_offset": 156787949
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7e5ebbb1",
+    "compressed_bytes": 2326,
+    "expanded_bytes": 8142,
+    "local_header_offset": 156788422
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "aa458c28",
+    "compressed_bytes": 466,
+    "expanded_bytes": 679,
+    "local_header_offset": 156790822
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/cpdprg2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "3aa8c6d1",
+    "compressed_bytes": 108,
+    "expanded_bytes": 1942,
+    "local_header_offset": 156791367
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 156791551
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9fac589e",
+    "compressed_bytes": 2609,
+    "expanded_bytes": 11433,
+    "local_header_offset": 156791903
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a1bcfcc",
+    "compressed_bytes": 1391,
+    "expanded_bytes": 7145,
+    "local_header_offset": 156794592
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9ecab245",
+    "compressed_bytes": 410,
+    "expanded_bytes": 1768,
+    "local_header_offset": 156796063
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 156796548
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 156796982
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 156797416
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 156797850
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/hmqc_cpmg_test_v9_from_pm.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1c0f9a96",
+    "compressed_bytes": 1623,
+    "expanded_bytes": 5466,
+    "local_header_offset": 156797949
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 156799669
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 156799744
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d59a2906",
+    "compressed_bytes": 365,
+    "expanded_bytes": 508,
+    "local_header_offset": 156799821
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8b7eaa8f",
+    "compressed_bytes": 940,
+    "expanded_bytes": 2081,
+    "local_header_offset": 156800267
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b80afcae",
+    "compressed_bytes": 924,
+    "expanded_bytes": 2074,
+    "local_header_offset": 156801288
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c31acf0b",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2075,
+    "local_header_offset": 156802294
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "85f91401",
+    "compressed_bytes": 925,
+    "expanded_bytes": 2074,
+    "local_header_offset": 156803302
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8308020f",
+    "compressed_bytes": 926,
+    "expanded_bytes": 2075,
+    "local_header_offset": 156804309
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e33d9888",
+    "compressed_bytes": 964,
+    "expanded_bytes": 2108,
+    "local_header_offset": 156805318
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "475cedff",
+    "compressed_bytes": 535,
+    "expanded_bytes": 625,
+    "local_header_offset": 156806364
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "45b9cc01",
+    "compressed_bytes": 4,
+    "expanded_bytes": 4,
+    "local_header_offset": 156806985
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "36751be7",
+    "compressed_bytes": 2363,
+    "expanded_bytes": 8060,
+    "local_header_offset": 156807071
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c2fbdf7f",
+    "compressed_bytes": 379,
+    "expanded_bytes": 631,
+    "local_header_offset": 156809515
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b6fcda82",
+    "compressed_bytes": 16271645,
+    "expanded_bytes": 28508160,
+    "local_header_offset": 156809968
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9aa27bc4",
+    "compressed_bytes": 1049,
+    "expanded_bytes": 2937,
+    "local_header_offset": 173081685
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bbbda4ca",
+    "compressed_bytes": 1394,
+    "expanded_bytes": 3710,
+    "local_header_offset": 173082813
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 173084283
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 173088904
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "347f1b2b",
+    "compressed_bytes": 2082,
+    "expanded_bytes": 5941,
+    "local_header_offset": 173093233
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae36fcf5",
+    "compressed_bytes": 3782,
+    "expanded_bytes": 26089,
+    "local_header_offset": 173095394
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b5d6482e",
+    "compressed_bytes": 39,
+    "expanded_bytes": 51,
+    "local_header_offset": 173099254
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "be811958",
+    "compressed_bytes": 298,
+    "expanded_bytes": 483,
+    "local_header_offset": 173099368
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/12/Z117769_0011.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "805739be",
+    "compressed_bytes": 279,
+    "expanded_bytes": 1240,
+    "local_header_offset": 173099751
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/fid.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1e89ec3e",
+    "compressed_bytes": 305,
+    "expanded_bytes": 598,
+    "local_header_offset": 173100114
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/13CH3/850MHz/process3Dcpmgs.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "57f9b9db",
+    "compressed_bytes": 1114,
+    "expanded_bytes": 3073,
+    "local_header_offset": 173100492
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 173101690
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 173101747
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8fccd501",
+    "compressed_bytes": 2088,
+    "expanded_bytes": 7998,
+    "local_header_offset": 173101834
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "75846426",
+    "compressed_bytes": 417,
+    "expanded_bytes": 605,
+    "local_header_offset": 173104013
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "50ad3e70",
+    "compressed_bytes": 399,
+    "expanded_bytes": 566,
+    "local_header_offset": 173104522
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "585ef859",
+    "compressed_bytes": 406,
+    "expanded_bytes": 594,
+    "local_header_offset": 173105014
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ebc4316",
+    "compressed_bytes": 387,
+    "expanded_bytes": 550,
+    "local_header_offset": 173105512
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0587eb31",
+    "compressed_bytes": 2397,
+    "expanded_bytes": 8268,
+    "local_header_offset": 173105992
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c748c312",
+    "compressed_bytes": 463,
+    "expanded_bytes": 671,
+    "local_header_offset": 173108481
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/BT_CPMG_RD_3D.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ff8f5bd",
+    "compressed_bytes": 2393,
+    "expanded_bytes": 7889,
+    "local_header_offset": 173109041
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 173111537
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/fid.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c4041fd3",
+    "compressed_bytes": 317,
+    "expanded_bytes": 728,
+    "local_header_offset": 173111907
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6fc2aee5",
+    "compressed_bytes": 3279,
+    "expanded_bytes": 17529,
+    "local_header_offset": 173112318
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "de442ffc",
+    "compressed_bytes": 1759,
+    "expanded_bytes": 10913,
+    "local_header_offset": 173115695
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/fq1list",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "09a4dd46",
+    "compressed_bytes": 1569,
+    "expanded_bytes": 4620,
+    "local_header_offset": 173117552
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 173119215
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 173119667
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 173120118
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 173120569
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam5",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 173121021
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam6",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 173121472
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gpnam7",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 173121924
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 173122375
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 173122492
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 173122585
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "05ac522a",
+    "compressed_bytes": 355,
+    "expanded_bytes": 502,
+    "local_header_offset": 173122680
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "156f5f64",
+    "compressed_bytes": 945,
+    "expanded_bytes": 2088,
+    "local_header_offset": 173123134
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "efa06a25",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2072,
+    "local_header_offset": 173124178
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "818b0d28",
+    "compressed_bytes": 919,
+    "expanded_bytes": 2073,
+    "local_header_offset": 173125196
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "cfc10efc",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2069,
+    "local_header_offset": 173126216
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "263a7a20",
+    "compressed_bytes": 919,
+    "expanded_bytes": 2070,
+    "local_header_offset": 173127234
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f2c4538e",
+    "compressed_bytes": 961,
+    "expanded_bytes": 2109,
+    "local_header_offset": 173128254
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b591207e",
+    "compressed_bytes": 996,
+    "expanded_bytes": 1079,
+    "local_header_offset": 173129315
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/1/title",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f2d78e68",
+    "compressed_bytes": 62,
+    "expanded_bytes": 93,
+    "local_header_offset": 173130415
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 173130577
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9b4228f7",
+    "compressed_bytes": 440277,
+    "expanded_bytes": 524288,
+    "local_header_offset": 173130674
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c31d94e5",
+    "compressed_bytes": 440349,
+    "expanded_bytes": 524288,
+    "local_header_offset": 173571051
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f6cb15bb",
+    "compressed_bytes": 497,
+    "expanded_bytes": 816,
+    "local_header_offset": 174011500
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "08ecf5f4",
+    "compressed_bytes": 480,
+    "expanded_bytes": 1243,
+    "local_header_offset": 174012104
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1d169421",
+    "compressed_bytes": 354,
+    "expanded_bytes": 501,
+    "local_header_offset": 174012688
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8b9f9d12",
+    "compressed_bytes": 937,
+    "expanded_bytes": 2077,
+    "local_header_offset": 174013143
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8ca06d58",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2068,
+    "local_header_offset": 174014181
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e1d31786",
+    "compressed_bytes": 938,
+    "expanded_bytes": 2085,
+    "local_header_offset": 174015201
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a3f5317b",
+    "compressed_bytes": 975,
+    "expanded_bytes": 2130,
+    "local_header_offset": 174016242
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "ea228f36",
+    "compressed_bytes": 5121,
+    "expanded_bytes": 5121,
+    "local_header_offset": 174017319
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/131/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "704116bd",
+    "compressed_bytes": 336,
+    "expanded_bytes": 500,
+    "local_header_offset": 174022546
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 174022988
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7a0af303",
+    "compressed_bytes": 441083,
+    "expanded_bytes": 524288,
+    "local_header_offset": 174023085
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/2ir",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "72ee8b4d",
+    "compressed_bytes": 442071,
+    "expanded_bytes": 524288,
+    "local_header_offset": 174464268
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/2ri",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b64e203f",
+    "compressed_bytes": 430308,
+    "expanded_bytes": 524288,
+    "local_header_offset": 174906439
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7e0c88db",
+    "compressed_bytes": 432540,
+    "expanded_bytes": 524288,
+    "local_header_offset": 175336847
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "83880339",
+    "compressed_bytes": 611,
+    "expanded_bytes": 1042,
+    "local_header_offset": 175769487
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5fdca7ff",
+    "compressed_bytes": 456,
+    "expanded_bytes": 1167,
+    "local_header_offset": 175770205
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "047d6e85",
+    "compressed_bytes": 355,
+    "expanded_bytes": 501,
+    "local_header_offset": 175770765
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "575beadb",
+    "compressed_bytes": 944,
+    "expanded_bytes": 2086,
+    "local_header_offset": 175771221
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "aaeadf25",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2071,
+    "local_header_offset": 175772266
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "9b0685a6",
+    "compressed_bytes": 934,
+    "expanded_bytes": 2087,
+    "local_header_offset": 175773286
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "14dead92",
+    "compressed_bytes": 981,
+    "expanded_bytes": 2139,
+    "local_header_offset": 175774323
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "87c13ee8",
+    "compressed_bytes": 5851,
+    "expanded_bytes": 5851,
+    "local_header_offset": 175775406
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pdata/231/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "54c70a9c",
+    "compressed_bytes": 336,
+    "expanded_bytes": 500,
+    "local_header_offset": 175781363
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/precom.output",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "87d7dd60",
+    "compressed_bytes": 1336,
+    "expanded_bytes": 3979,
+    "local_header_offset": 175781805
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "08e62289",
+    "compressed_bytes": 2970,
+    "expanded_bytes": 11238,
+    "local_header_offset": 175783241
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d3502390",
+    "compressed_bytes": 366,
+    "expanded_bytes": 623,
+    "local_header_offset": 175786310
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "92a253c0",
+    "compressed_bytes": 11578719,
+    "expanded_bytes": 19660800,
+    "local_header_offset": 175786768
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "404b311a",
+    "compressed_bytes": 1073,
+    "expanded_bytes": 2939,
+    "local_header_offset": 187365577
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ae44775e",
+    "compressed_bytes": 1550,
+    "expanded_bytes": 3975,
+    "local_header_offset": 187366747
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 187368391
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam26",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 187373030
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam28",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6dc93ca6",
+    "compressed_bytes": 5765,
+    "expanded_bytes": 25569,
+    "local_header_offset": 187377588
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam29",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "78bf3abb",
+    "compressed_bytes": 5832,
+    "expanded_bytes": 25582,
+    "local_header_offset": 187383447
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 187389373
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam50",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 187393720
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/spnam51",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 187398067
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "23aecb9a",
+    "compressed_bytes": 2159,
+    "expanded_bytes": 6976,
+    "local_header_offset": 187402625
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c7b0a62a",
+    "compressed_bytes": 3936,
+    "expanded_bytes": 26420,
+    "local_header_offset": 187404881
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "918bf8f1",
+    "compressed_bytes": 35,
+    "expanded_bytes": 40,
+    "local_header_offset": 187408913
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "726d1e39",
+    "compressed_bytes": 302,
+    "expanded_bytes": 485,
+    "local_header_offset": 187409041
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_Apo_15N_CPMG_700MHz/Z123952_0009.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7fdea0b6",
+    "compressed_bytes": 59,
+    "expanded_bytes": 65,
+    "local_header_offset": 187409446
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 187409607
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "31f23994",
+    "compressed_bytes": 2074,
+    "expanded_bytes": 7982,
+    "local_header_offset": 187409698
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2d4e3eeb",
+    "compressed_bytes": 380,
+    "expanded_bytes": 543,
+    "local_header_offset": 187411867
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "10b510f7",
+    "compressed_bytes": 391,
+    "expanded_bytes": 559,
+    "local_header_offset": 187412343
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8421a698",
+    "compressed_bytes": 367,
+    "expanded_bytes": 538,
+    "local_header_offset": 187412831
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "cc9c7485",
+    "compressed_bytes": 379,
+    "expanded_bytes": 548,
+    "local_header_offset": 187413294
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f742f866",
+    "compressed_bytes": 2386,
+    "expanded_bytes": 8264,
+    "local_header_offset": 187413770
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "dec9903d",
+    "compressed_bytes": 456,
+    "expanded_bytes": 669,
+    "local_header_offset": 187416252
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/BT_CPMG_RD_3D.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ff8f5bd",
+    "compressed_bytes": 2393,
+    "expanded_bytes": 7889,
+    "local_header_offset": 187416809
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 187419309
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/fid.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "bd3a2a72",
+    "compressed_bytes": 316,
+    "expanded_bytes": 728,
+    "local_header_offset": 187419683
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5abd84fe",
+    "compressed_bytes": 3281,
+    "expanded_bytes": 17529,
+    "local_header_offset": 187420097
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "de442ffc",
+    "compressed_bytes": 1759,
+    "expanded_bytes": 10913,
+    "local_header_offset": 187423480
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 187425341
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 187425797
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 187426252
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 187426707
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam5",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 187427163
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam6",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 187427618
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gpnam7",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 187428074
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 187428529
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 187428650
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 187428747
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0fbde943",
+    "compressed_bytes": 352,
+    "expanded_bytes": 498,
+    "local_header_offset": 187428846
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0d48346e",
+    "compressed_bytes": 929,
+    "expanded_bytes": 2074,
+    "local_header_offset": 187429301
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "77d21400",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2067,
+    "local_header_offset": 187430333
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2529211a",
+    "compressed_bytes": 912,
+    "expanded_bytes": 2068,
+    "local_header_offset": 187431348
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4db6ecd1",
+    "compressed_bytes": 910,
+    "expanded_bytes": 2066,
+    "local_header_offset": 187432365
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e7b43af4",
+    "compressed_bytes": 911,
+    "expanded_bytes": 2067,
+    "local_header_offset": 187433379
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f7a0d3d9",
+    "compressed_bytes": 947,
+    "expanded_bytes": 2096,
+    "local_header_offset": 187434395
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "14e74cda",
+    "compressed_bytes": 501,
+    "expanded_bytes": 599,
+    "local_header_offset": 187435446
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "f9a50c6c",
+    "compressed_bytes": 7,
+    "expanded_bytes": 7,
+    "local_header_offset": 187436055
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "08e62289",
+    "compressed_bytes": 2970,
+    "expanded_bytes": 11238,
+    "local_header_offset": 187436166
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4add184d",
+    "compressed_bytes": 362,
+    "expanded_bytes": 621,
+    "local_header_offset": 187439239
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ed6d4b6",
+    "compressed_bytes": 14488876,
+    "expanded_bytes": 23592960,
+    "local_header_offset": 187439697
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7fefb18c",
+    "compressed_bytes": 1018,
+    "expanded_bytes": 2937,
+    "local_header_offset": 201928667
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6402aa8a",
+    "compressed_bytes": 1382,
+    "expanded_bytes": 3697,
+    "local_header_offset": 201929786
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 201931266
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam26",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 201935909
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam28",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6dc93ca6",
+    "compressed_bytes": 5765,
+    "expanded_bytes": 25569,
+    "local_header_offset": 201940471
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam29",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "78bf3abb",
+    "compressed_bytes": 5832,
+    "expanded_bytes": 25582,
+    "local_header_offset": 201946334
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 201952264
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam50",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 201956615
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/spnam51",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 201960966
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5b534785",
+    "compressed_bytes": 2085,
+    "expanded_bytes": 5946,
+    "local_header_offset": 201965528
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f5c3e004",
+    "compressed_bytes": 3784,
+    "expanded_bytes": 26089,
+    "local_header_offset": 201967714
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "918bf8f1",
+    "compressed_bytes": 35,
+    "expanded_bytes": 40,
+    "local_header_offset": 201971598
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f5c8e79b",
+    "compressed_bytes": 301,
+    "expanded_bytes": 483,
+    "local_header_offset": 201971730
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD_WT_15N_CPMG_850MHz_293K/Z117769_0011.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a02bf138",
+    "compressed_bytes": 285,
+    "expanded_bytes": 1240,
+    "local_header_offset": 201972138
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 201972529
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqu",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8a456151",
+    "compressed_bytes": 2078,
+    "expanded_bytes": 7991,
+    "local_header_offset": 201972620
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqu2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "dfbf31f9",
+    "compressed_bytes": 385,
+    "expanded_bytes": 549,
+    "local_header_offset": 201974793
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqu2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "146499a7",
+    "compressed_bytes": 394,
+    "expanded_bytes": 564,
+    "local_header_offset": 201975274
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqu3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "c7ea29ae",
+    "compressed_bytes": 377,
+    "expanded_bytes": 548,
+    "local_header_offset": 201975765
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqu3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "4e529e99",
+    "compressed_bytes": 384,
+    "expanded_bytes": 555,
+    "local_header_offset": 201976238
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/acqus",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "35c66736",
+    "compressed_bytes": 2393,
+    "expanded_bytes": 8269,
+    "local_header_offset": 201976719
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/audita.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5da17f30",
+    "compressed_bytes": 456,
+    "expanded_bytes": 676,
+    "local_header_offset": 201979208
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/BT_CPMG_RD_3D.pp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0ff8f5bd",
+    "compressed_bytes": 2393,
+    "expanded_bytes": 7889,
+    "local_header_offset": 201979765
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/EA",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "80ce7556",
+    "compressed_bytes": 281,
+    "expanded_bytes": 490,
+    "local_header_offset": 201982265
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/fid.com",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "af873307",
+    "compressed_bytes": 314,
+    "expanded_bytes": 728,
+    "local_header_offset": 201982639
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/format.ased",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "526f6565",
+    "compressed_bytes": 3577,
+    "expanded_bytes": 19911,
+    "local_header_offset": 201983051
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/format.temp",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "369ff81d",
+    "compressed_bytes": 1974,
+    "expanded_bytes": 13027,
+    "local_header_offset": 201986730
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam1",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 201988806
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 201989262
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 201989717
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam4",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 201990172
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam5",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 201990628
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam6",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "2ee73ddf",
+    "compressed_bytes": 359,
+    "expanded_bytes": 939,
+    "local_header_offset": 201991083
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gpnam7",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9343400",
+    "compressed_bytes": 358,
+    "expanded_bytes": 1157,
+    "local_header_offset": 201991539
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/gradient_calib",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a55c2108",
+    "compressed_bytes": 16,
+    "expanded_bytes": 22,
+    "local_header_offset": 201991994
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 201992115
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 201992212
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "13fd6776",
+    "compressed_bytes": 353,
+    "expanded_bytes": 505,
+    "local_header_offset": 201992311
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "e40f58eb",
+    "compressed_bytes": 945,
+    "expanded_bytes": 2094,
+    "local_header_offset": 201992767
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "25383b9c",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2075,
+    "local_header_offset": 201993815
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "76bbb7ee",
+    "compressed_bytes": 919,
+    "expanded_bytes": 2076,
+    "local_header_offset": 201994837
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/proc3",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "43f81728",
+    "compressed_bytes": 918,
+    "expanded_bytes": 2073,
+    "local_header_offset": 201995861
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/proc3s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d9b6a52d",
+    "compressed_bytes": 919,
+    "expanded_bytes": 2074,
+    "local_header_offset": 201996883
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "f6ba61a9",
+    "compressed_bytes": 964,
+    "expanded_bytes": 2116,
+    "local_header_offset": 201997907
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/thumb.png",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "1a5f3bb7",
+    "compressed_bytes": 532,
+    "expanded_bytes": 624,
+    "local_header_offset": 201998975
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/1/title",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "f9a50c6c",
+    "compressed_bytes": 7,
+    "expanded_bytes": 7,
+    "local_header_offset": 201999615
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "00000000",
+    "compressed_bytes": 0,
+    "expanded_bytes": 0,
+    "local_header_offset": 201999726
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/2ii",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "aaae5185",
+    "compressed_bytes": 440923,
+    "expanded_bytes": 524288,
+    "local_header_offset": 201999826
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/2rr",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b7d98b32",
+    "compressed_bytes": 441939,
+    "expanded_bytes": 524288,
+    "local_header_offset": 202440852
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/auditp.txt",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "44db9aa7",
+    "compressed_bytes": 497,
+    "expanded_bytes": 818,
+    "local_header_offset": 202882894
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/clevels",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8cb55999",
+    "compressed_bytes": 483,
+    "expanded_bytes": 1249,
+    "local_header_offset": 202883501
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/outd",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "b4efa994",
+    "compressed_bytes": 353,
+    "expanded_bytes": 505,
+    "local_header_offset": 202884091
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/proc",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "df17a967",
+    "compressed_bytes": 941,
+    "expanded_bytes": 2090,
+    "local_header_offset": 202884548
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/proc2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "decc1184",
+    "compressed_bytes": 917,
+    "expanded_bytes": 2074,
+    "local_header_offset": 202885593
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/proc2s",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "57b2dc2e",
+    "compressed_bytes": 940,
+    "expanded_bytes": 2091,
+    "local_header_offset": 202886615
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/procs",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "7e44acdf",
+    "compressed_bytes": 984,
+    "expanded_bytes": 2144,
+    "local_header_offset": 202887661
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/thumb.png",
+    "flags": 0,
+    "compression": 0,
+    "crc32": "8da4b78f",
+    "compressed_bytes": 4415,
+    "expanded_bytes": 4415,
+    "local_header_offset": 202888750
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pdata/23/used_from",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "62737881",
+    "compressed_bytes": 339,
+    "expanded_bytes": 509,
+    "local_header_offset": 202893274
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/pulseprogram",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "08e62289",
+    "compressed_bytes": 2970,
+    "expanded_bytes": 11238,
+    "local_header_offset": 202893722
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/scon2",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "a29a9555",
+    "compressed_bytes": 369,
+    "expanded_bytes": 628,
+    "local_header_offset": 202896795
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/ser",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "5b546a6a",
+    "compressed_bytes": 10903223,
+    "expanded_bytes": 17203200,
+    "local_header_offset": 202897260
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/shimvalues",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "0e71ec1b",
+    "compressed_bytes": 1006,
+    "expanded_bytes": 2942,
+    "local_header_offset": 213800577
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/specpar",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "8342b689",
+    "compressed_bytes": 1371,
+    "expanded_bytes": 3719,
+    "local_header_offset": 213801684
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam25",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "45d039a7",
+    "compressed_bytes": 4545,
+    "expanded_bytes": 25891,
+    "local_header_offset": 213803153
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam26",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 213807796
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam28",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "6dc93ca6",
+    "compressed_bytes": 5765,
+    "expanded_bytes": 25569,
+    "local_header_offset": 213812358
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam29",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "78bf3abb",
+    "compressed_bytes": 5832,
+    "expanded_bytes": 25582,
+    "local_header_offset": 213818221
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam30",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 213824151
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam50",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "66be2f14",
+    "compressed_bytes": 4253,
+    "expanded_bytes": 25604,
+    "local_header_offset": 213828502
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/spnam51",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d6663d24",
+    "compressed_bytes": 4464,
+    "expanded_bytes": 25586,
+    "local_header_offset": 213832853
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/uxnmr.info",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "24423ae1",
+    "compressed_bytes": 2059,
+    "expanded_bytes": 6050,
+    "local_header_offset": 213837415
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/uxnmr.par",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "d94b9b2b",
+    "compressed_bytes": 3881,
+    "expanded_bytes": 26168,
+    "local_header_offset": 213839575
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/vclist",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "ce570b31",
+    "compressed_bytes": 41,
+    "expanded_bytes": 53,
+    "local_header_offset": 213843556
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/vtc_pid_settings",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "892a6ec7",
+    "compressed_bytes": 305,
+    "expanded_bytes": 489,
+    "local_header_offset": 213843694
+  },
+  {
+    "name": "HSP90-NTD-CPMG_WT_293K/15N/HSP90-NTD-WT-15N-CPMG-600MHz_293K/Z124092_0004.bb",
+    "flags": 0,
+    "compression": 8,
+    "crc32": "19c0021b",
+    "compressed_bytes": 368,
+    "expanded_bytes": 1802,
+    "local_header_offset": 213844106
+  }
+]

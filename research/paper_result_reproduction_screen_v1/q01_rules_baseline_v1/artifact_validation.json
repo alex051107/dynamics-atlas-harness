@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": [
+    "complete original methods preserved in packet",
+    "20 unique currentRuleInstances with fullreasons",
+    "same caseID and all three source proposals preserved",
+    "discussion/conclusion excluded",
+    "zero numeric execution and no scientificverdict promoted"
+  ],
+  "baseline_statuses": {
+    "PASS": 8,
+    "UNRESOLVED": 9,
+    "NOT_APPLICABLE": 3
+  },
+  "projection_gaps": [
+    "Complete contact threshold difference retained as original facts/text but absent as numerical method slot",
+    "No pathwise departure or reference-threshold scientific obligation emitted",
+    "F04 time-anatomy operator belongs separate old case-bound path, not this genericDraftbundle"
+  ],
+  "new_tests": 0,
+  "scientific_validation": false
+}

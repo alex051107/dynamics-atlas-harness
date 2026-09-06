@@ -1,0 +1,32 @@
+{
+  "before": {
+    "rule_id": "Q16R01_COMMON_WINDOW_CONDITION_CONTRAST_V1",
+    "rule_instance_id": "Q16R01_COMMON_WINDOW_CONDITION_CONTRAST_V1:ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+    "input_id": "ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+    "development_adapter": true,
+    "status": "UNRESOLVED",
+    "full_question_answer": false,
+    "actions": [],
+    "remaining": [
+      "STATE_REFERENCE_AND_INVERSION_IDENTIFIABILITY",
+      "EXPERIMENTAL_REPLICATION_AND_PREPARATION_UNCERTAINTY"
+    ],
+    "obligation": "DISABLED"
+  },
+  "evidence": null,
+  "after": {
+    "rule_id": "Q16R01_COMMON_WINDOW_CONDITION_CONTRAST_V1",
+    "rule_instance_id": "Q16R01_COMMON_WINDOW_CONDITION_CONTRAST_V1:ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+    "input_id": "ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+    "development_adapter": true,
+    "status": "UNRESOLVED",
+    "full_question_answer": false,
+    "actions": [],
+    "remaining": [
+      "STATE_REFERENCE_AND_INVERSION_IDENTIFIABILITY",
+      "EXPERIMENTAL_REPLICATION_AND_PREPARATION_UNCERTAINTY"
+    ],
+    "obligation": "DISABLED"
+  },
+  "operator_calls": 0
+}

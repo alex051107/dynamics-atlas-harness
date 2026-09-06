@@ -1,0 +1,9 @@
+{
+  "on_operator_calls": 1,
+  "off_operator_calls": 0,
+  "deterministic_evidence_verification_passes": 1,
+  "iterative_fits": 0,
+  "full_question_answer": false,
+  "input_id": "ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+  "source_curves": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q16_condition_inventory_v1/source_curves.local.json"
+}

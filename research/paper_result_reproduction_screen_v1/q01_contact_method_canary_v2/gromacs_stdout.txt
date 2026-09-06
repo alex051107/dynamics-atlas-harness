@@ -1,0 +1,106 @@
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary. Note, that this functionality may
+         be removed in a future GROMACS version. Please, consider
+         using another file format for your input.
+
+O01:
+  Number of samples:  1001
+  Average distance:   2.21069  nm
+  Standard deviation: 0.46838  nm
+O02:
+  Number of samples:  1001
+  Average distance:   1.25336  nm
+  Standard deviation: 0.32338  nm
+O03:
+  Number of samples:  1001
+  Average distance:   1.48874  nm
+  Standard deviation: 0.43410  nm
+O05:
+  Number of samples:  1001
+  Average distance:   1.70031  nm
+  Standard deviation: 0.40082  nm
+O06:
+  Number of samples:  1001
+  Average distance:   1.76155  nm
+  Standard deviation: 0.44189  nm
+O07:
+  Number of samples:  1001
+  Average distance:   1.60130  nm
+  Standard deviation: 0.40226  nm
+O08:
+  Number of samples:  1001
+  Average distance:   2.32834  nm
+  Standard deviation: 0.46094  nm
+O09:
+  Number of samples:  1001
+  Average distance:   2.06624  nm
+  Standard deviation: 0.49727  nm
+O11:
+  Number of samples:  1001
+  Average distance:   2.02761  nm
+  Standard deviation: 0.29399  nm
+O12:
+  Number of samples:  1001
+  Average distance:   2.33129  nm
+  Standard deviation: 0.48994  nm
+O13:
+  Number of samples:  1001
+  Average distance:   2.32631  nm
+  Standard deviation: 0.24861  nm
+O14:
+  Number of samples:  1001
+  Average distance:   2.17213  nm
+  Standard deviation: 0.51131  nm
+O16:
+  Number of samples:  1001
+  Average distance:   1.46066  nm
+  Standard deviation: 0.41052  nm
+O17:
+  Number of samples:  1001
+  Average distance:   1.54171  nm
+  Standard deviation: 0.29243  nm
+O18:
+  Number of samples:  1001
+  Average distance:   1.58099  nm
+  Standard deviation: 0.36174  nm
+O19:
+  Number of samples:  1001
+  Average distance:   1.39922  nm
+  Standard deviation: 0.37539  nm
+O20:
+  Number of samples:  1001
+  Average distance:   2.46568  nm
+  Standard deviation: 0.48112  nm
+O21:
+  Number of samples:  1001
+  Average distance:   2.32830  nm
+  Standard deviation: 0.38090  nm
+O22:
+  Number of samples:  1001
+  Average distance:   1.59238  nm
+  Standard deviation: 0.51148  nm
+C01:
+  Number of samples:  1001
+  Average distance:   1.16728  nm
+  Standard deviation: 0.20315  nm
+C02:
+  Number of samples:  1001
+  Average distance:   1.87538  nm
+  Standard deviation: 0.29719  nm
+C03:
+  Number of samples:  1001
+  Average distance:   2.55863  nm
+  Standard deviation: 0.31601  nm
+C04:
+  Number of samples:  1001
+  Average distance:   2.78570  nm
+  Standard deviation: 0.29408  nm
+C05:
+  Number of samples:  1001
+  Average distance:   1.27116  nm
+  Standard deviation: 0.17977  nm

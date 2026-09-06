@@ -1,0 +1,1091 @@
+[
+  {
+    "variant": "19-119",
+    "sample_name": "T4 Lysozyme K19pAcF R119C",
+    "metadata": "19-119/19-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "19-119/19-119_DA.txt",
+        "irf": "19-119/IRF_DA.txt",
+        "linearization": "19-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "19-119/19-119_D0.txt",
+        "irf": "19-119/IRF_D0.txt",
+        "linearization": "19-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "19-132",
+    "sample_name": "T4 Lysozyme K19pAcF N132C",
+    "metadata": "19-132/19-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "19-132/19-132_DA.txt",
+        "irf": "19-132/IRF_DA.txt",
+        "linearization": "19-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "19-132/19-132_D0.txt",
+        "irf": "19-132/IRF_D0.txt",
+        "linearization": "19-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "19-69",
+    "sample_name": "T4 Lysozyme K19pAcF Q69C",
+    "metadata": "19-69/19-69.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "19-69/19-69_DA.txt",
+        "irf": "19-69/IRF_DA.txt",
+        "linearization": "19-69/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "19-69/19-69_D0.txt",
+        "irf": "19-69/IRF_D0.txt",
+        "linearization": "19-69/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "19-86",
+    "sample_name": "T4 Lysozyme K19pAcF P86C",
+    "metadata": "19-86/19-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "19-86/19-86_DA.dat",
+        "irf": "19-86/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": "Explicit candidate alias: metadataIRF_DA.txt versus sole PQ IRF_DA.dat; original unchanged",
+        "mapping_status": "EXPLICIT_CONDITIONAL_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "19-86/19-86_D0.txt",
+        "irf": "19-86/IRF_Do.txt",
+        "linearization": "19-86/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": "Explicit candidate alias: metadataIRF_D0.txt versus sole IBH IRF_Do.txt; original unchanged",
+        "mapping_status": "EXPLICIT_CONDITIONAL_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "22-127",
+    "sample_name": "T4 Lysozyme E22pAcF D127C",
+    "metadata": "22-127/22-127.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "22-127/22-127_DA.dat",
+        "irf": "22-127/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "22-127/22-127_D0.dat",
+        "irf": "22-127/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "36-132",
+    "sample_name": "T4 Lysozyme S36pAcF N132C",
+    "metadata": "36-132/36-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "36-132/36-132_DA.dat",
+        "irf": "36-132/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "36-132/36-132_D0.dat",
+        "irf": "36-132/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "36-86",
+    "sample_name": "T4 Lysozyme S36pAcF P86C",
+    "metadata": "36-86/36-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "36-86/36-86_DA.dat",
+        "irf": "36-86/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "36-86/36-86_D0.dat",
+        "irf": "36-86/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-119",
+    "sample_name": "T4 Lysozyme S44pAcF R119C",
+    "metadata": "44-119/44-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-119/44-119_DA.txt",
+        "irf": "44-119/IRF_DA.txt",
+        "linearization": "44-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-119/44-119_D0.txt",
+        "irf": "44-119/IRF_D0.txt",
+        "linearization": "44-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-127",
+    "sample_name": "T4 Lysozyme S44pAcF D127C",
+    "metadata": "44-127/44-127.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-127/44-127_DA.dat",
+        "irf": "44-127/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-127/44-127_D0.dat",
+        "irf": "44-127/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-132",
+    "sample_name": "T4 Lysozyme S44pAcF N132C",
+    "metadata": "44-132/44-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-132/44-132_DA.txt",
+        "irf": "44-132/IRF_DA.txt",
+        "linearization": "44-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-132/44-132_D0.txt",
+        "irf": "44-132/IRF_D0.txt",
+        "linearization": "44-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-150",
+    "sample_name": "T4 Lysozyme S44pAcF I150C",
+    "metadata": "44-150/44-150.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-150/44-150_DA.txt",
+        "irf": "44-150/IRF_DA.txt",
+        "linearization": "44-150/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-150/44-150_D0.txt",
+        "irf": "44-150/IRF_D0.txt",
+        "linearization": "44-150/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-69",
+    "sample_name": "T4 Lysozyme S44pAcF Q69C",
+    "metadata": "44-69/44-69.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-69/44-69_DA.txt",
+        "irf": "44-69/IRF_DA.txt",
+        "linearization": "44-69/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-69/44-69_D0.txt",
+        "irf": "44-69/IRF_D0.txt",
+        "linearization": "44-69/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "44-86",
+    "sample_name": "T4 Lysozyme S44pAcF P86C",
+    "metadata": "44-86/44-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "44-86/44-86_DA.txt",
+        "irf": "44-86/IRF_DA.txt",
+        "linearization": "44-86/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "44-86/44-86_D0.txt",
+        "irf": "44-86/IRF_D0.txt",
+        "linearization": "44-86/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "5-132",
+    "sample_name": "T4 Lysozyme E5pAcF N132C",
+    "metadata": "5-132/5-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "5-132/5-132_DA.dat",
+        "irf": "5-132/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "5-132/5-132_D0.dat",
+        "irf": "5-132/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "5-44",
+    "sample_name": "T4 Lysozyme E5pAcF S44C",
+    "metadata": "5-44/5-44.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "5-44/5-44_DA.dat",
+        "irf": "5-44/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "5-44/5-44_D0.dat",
+        "irf": "5-44/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "55-119",
+    "sample_name": "T4 Lysozyme N55pAcF R119C",
+    "metadata": "55-119/55-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "55-119/55-119_DA.txt",
+        "irf": "55-119/IRF_DA.txt",
+        "linearization": "55-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "55-119/55-119_D0.txt",
+        "irf": "55-119/IRF_D0.txt",
+        "linearization": "55-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "55-132",
+    "sample_name": "T4 Lysozyme N55pAcF N132C",
+    "metadata": "55-132/55-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "55-132/55-132_DA.txt",
+        "irf": "55-132/IRF_DA.txt",
+        "linearization": "55-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "55-132/55-132_D0.txt",
+        "irf": "55-132/IRF_D0.txt",
+        "linearization": "55-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "55-150",
+    "sample_name": "T4 Lysozyme N55pAcF I150C",
+    "metadata": "55-150/55-150.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "55-150/55-150_DA.txt",
+        "irf": "55-150/IRF_DA.txt",
+        "linearization": "55-150/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "55-150/55-150_D0.txt",
+        "irf": "55-150/IRF_D0.txt",
+        "linearization": "55-150/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "55-69",
+    "sample_name": "T4 Lysozyme N55pAcF Q69C",
+    "metadata": "55-69/55-69.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "55-69/55-69_DA.txt",
+        "irf": "55-69/IRF_DA.txt",
+        "linearization": "55-69/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "55-69/55-69_D0.txt",
+        "irf": "55-69/IRF_D0.txt",
+        "linearization": "55-69/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "60-119",
+    "sample_name": "T4 Lysozyme K60pAcF R119C",
+    "metadata": "60-119/60-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "60-119/60-119_DA.txt",
+        "irf": "60-119/IRF_DA.txt",
+        "linearization": "60-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "60-119/60-119_D0.txt",
+        "irf": "60-119/IRF_D0.txt",
+        "linearization": "60-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "60-132",
+    "sample_name": "T4 Lysozyme K60pAcF N132C",
+    "metadata": "60-132/60-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "60-132/60-132_DA.txt",
+        "irf": "60-132/IRF_DA.txt",
+        "linearization": "60-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "60-132/60-132_D0.txt",
+        "irf": "60-132/IRF_D0.txt",
+        "linearization": "60-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "60-150",
+    "sample_name": "T4 Lysozyme K60pAcF I150C",
+    "metadata": "60-150/60-150.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "60-150/60-150_DA.txt",
+        "irf": "60-150/IRF_DA.txt",
+        "linearization": "60-150/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "60-150/60-150_D0.txt",
+        "irf": "60-150/IRF_D0.txt",
+        "linearization": "60-150/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "60-86",
+    "sample_name": "T4 Lysozyme K60pAcF P86C",
+    "metadata": "60-86/60-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "60-86/60-86_DA.txt",
+        "irf": "60-86/IRF_DA.txt",
+        "linearization": "60-86/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "60-86/60-86_D0.txt",
+        "irf": "60-86/IRF_D0.txt",
+        "linearization": "60-86/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "69-119",
+    "sample_name": "T4 Lysozyme Q69pAcF R119C",
+    "metadata": "69-119/69-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "69-119/69-119_DA.txt",
+        "irf": "69-119/IRF_DA.txt",
+        "linearization": "69-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "69-119/69-119_D0.txt",
+        "irf": "69-119/IRF_D0.txt",
+        "linearization": "69-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "69-132",
+    "sample_name": "T4 Lysozyme Q69pAcF N132C",
+    "metadata": "69-132/69-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "69-132/69-132_DA.txt",
+        "irf": "69-132/IRF_DA.txt",
+        "linearization": "69-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "69-132/69-132_D0.txt",
+        "irf": "69-132/IRF_D0.txt",
+        "linearization": "69-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "69-150",
+    "sample_name": "T4 Lysozyme Q69pAcF I150C",
+    "metadata": "69-150/69-150.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "69-150/69-150_DA.txt",
+        "irf": "69-150/IRF_DA.txt",
+        "linearization": "69-150/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "69-150/69-150_D0.txt",
+        "irf": "69-150/IRF_D0.txt",
+        "linearization": "69-150/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "69-86",
+    "sample_name": "T4 Lysozyme Q69pAcF P86C",
+    "metadata": "69-86/69-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "69-86/69-86_DA.txt",
+        "irf": "69-86/IRF_DA.txt",
+        "linearization": "69-86/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "69-86/69-86_D0.txt",
+        "irf": "69-86/IRF_D0.txt",
+        "linearization": "69-86/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "70-119",
+    "sample_name": "T4 Lysozyme D70pAcF R119C",
+    "metadata": "70-119/70-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "70-119/70-119_DA.txt",
+        "irf": "70-119/IRF_DA.txt",
+        "linearization": "70-119/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "70-119/70-119_D0.txt",
+        "irf": "70-119/IRF_D0.txt",
+        "linearization": "70-119/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "70-132",
+    "sample_name": "T4 Lysozyme D70pAcF N132C",
+    "metadata": "70-132/70-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "70-132/70-132_DA.txt",
+        "irf": "70-132/IRF_DA.txt",
+        "linearization": "70-132/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "70-132/70-132_D0.txt",
+        "irf": "70-132/IRF_D0.txt",
+        "linearization": "70-132/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "8-119",
+    "sample_name": "T4 Lysozyme R8pAcF R119C",
+    "metadata": "8-119/8-119.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "8-119/8-119_DA.dat",
+        "irf": "8-119/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "8-119/8-119_D0.dat",
+        "irf": "8-119/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "8-132",
+    "sample_name": "T4 Lysozyme R8pAcF N132C",
+    "metadata": "8-132/8-132.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "8-132/8-132_DA.dat",
+        "irf": "8-132/IRF_DA.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "8-132/8-132_D0.dat",
+        "irf": "8-132/IRF_D0.dat",
+        "linearization": null,
+        "instrument": "PQ",
+        "bin_width_ns": 0.008,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "8-69",
+    "sample_name": "T4 Lysozyme R8pAcF Q69C",
+    "metadata": "8-69/8-69.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "8-69/8-69_DA.txt",
+        "irf": "8-69/IRF_DA.txt",
+        "linearization": "8-69/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "8-69/8-69_D0.txt",
+        "irf": "8-69/IRF_D0.txt",
+        "linearization": "8-69/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  },
+  {
+    "variant": "8-86",
+    "sample_name": "T4 Lysozyme R8pAcF P86C",
+    "metadata": "8-86/8-86.yml",
+    "datasets": [
+      {
+        "role": "DA",
+        "decay": "8-86/8-86_DA.txt",
+        "irf": "8-86/IRF_DA.txt",
+        "linearization": "8-86/Linearization_DA.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      },
+      {
+        "role": "D0",
+        "decay": "8-86/8-86_D0.txt",
+        "irf": "8-86/IRF_D0.txt",
+        "linearization": "8-86/Linearization_D0.txt",
+        "instrument": "IBH",
+        "bin_width_ns": 0.0141,
+        "time_origin_convention": "first stored bin zero; fitted IRF shift remains unspecified",
+        "original_irf_reference_exception": null,
+        "mapping_status": "EXACT_FILE_ROLE_MAPPING",
+        "authority": "per-variant metadata + filename + observed file format; SI57 timing"
+      }
+    ],
+    "original_metadata_preserved": true,
+    "sample_identity_rule": "Sample.Name + dataset description + actual decay filenames; conflicting top-level Measurement ID not silently trusted"
+  }
+]

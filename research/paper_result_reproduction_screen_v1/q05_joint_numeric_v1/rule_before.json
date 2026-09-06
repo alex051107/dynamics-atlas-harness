@@ -1,0 +1,22 @@
+{
+  "rule_instance_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1::CASE::q05_nanodisc_saxs_noe_20260904",
+  "runtime_subrule_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1",
+  "target": {
+    "kind": "CASE",
+    "id": "q05_nanodisc_saxs_noe_20260904"
+  },
+  "status": "UNRESOLVED",
+  "reason_codes": [
+    "COMMON_WEIGHT_NUMERIC_EVIDENCE_REQUIRED"
+  ],
+  "obligations": [
+    {
+      "rule_instance_id": "Q05R01_CASE_COMMON_ENSEMBLE_NUMERIC_V1::CASE::q05_nanodisc_saxs_noe_20260904",
+      "operator_id": "q05_common_weight_bme_v1",
+      "input_id": "a63e83ee522b0ecd09671be2d79ef4fae595c6fa7a4a5aed2fba1f0f73fd0a73",
+      "purpose": "CONDITIONAL_COMMON_WEIGHT_MAIN_CALCULATION"
+    }
+  ],
+  "scientific_compatibility": "UNRESOLVED",
+  "complete_question_answer": false
+}

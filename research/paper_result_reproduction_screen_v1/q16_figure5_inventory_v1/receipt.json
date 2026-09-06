@@ -1,0 +1,76 @@
+{
+  "status": "DIRECTORY_RECEIVED_ONLY_NO_SCIENTIFIC_PAYLOAD",
+  "source_archive_declared_size": 1752451256,
+  "source_archive_declared_md5": "5066716852aa42f8828cde9a591cd49d",
+  "whole_archive_verified": false,
+  "HTTP": [
+    {
+      "timestamp": "2026-09-05T19:10:34.866544+00:00",
+      "url": "https://zenodo.org/api/records/6683587/files/Figure5.zip/content",
+      "request_range": [
+        1752385720,
+        1752451255
+      ],
+      "status": 206,
+      "headers": {
+        "server": "nginx",
+        "date": "Sat, 05 Sep 2026 19:10:34 GMT",
+        "content-type": "application/octet-stream",
+        "content-length": "65536",
+        "content-disposition": "attachment; filename=Figure5.zip",
+        "content-range": "bytes 1752385720-1752451255/1752451256",
+        "accept-ranges": "bytes",
+        "content-security-policy": "default-src 'self' fonts.googleapis.com *.gstatic.com data: 'unsafe-inline' 'unsafe-eval' blob: zenodo-broker.web.cern.ch zenodo-broker-qa.web.cern.ch maxcdn.bootstrapcdn.com cdnjs.cloudflare.com ajax.googleapis.com webanalytics.web.cern.ch",
+        "x-content-type-options": "nosniff",
+        "x-download-options": "noopen",
+        "x-permitted-cross-domain-policies": "none",
+        "x-frame-options": "sameorigin",
+        "x-xss-protection": "1; mode=block",
+        "x-ratelimit-limit": "133",
+        "x-ratelimit-remaining": "132",
+        "x-ratelimit-reset": "1788635495",
+        "retry-after": "60",
+        "strict-transport-security": "max-age=31556926; includeSubDomains",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "Content-Type, ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+        "x-source": "files-primary",
+        "connection": "close"
+      }
+    },
+    {
+      "timestamp": "2026-09-05T19:10:38.524506+00:00",
+      "url": "https://zenodo.org/api/records/6683587/files/Figure5.zip/content",
+      "request_range": [
+        1752357731,
+        1752451233
+      ],
+      "status": 206,
+      "headers": {
+        "server": "nginx",
+        "date": "Sat, 05 Sep 2026 19:10:38 GMT",
+        "content-type": "application/octet-stream",
+        "content-length": "93503",
+        "content-disposition": "attachment; filename=Figure5.zip",
+        "content-range": "bytes 1752357731-1752451233/1752451256",
+        "accept-ranges": "bytes",
+        "content-security-policy": "default-src 'self' fonts.googleapis.com *.gstatic.com data: 'unsafe-inline' 'unsafe-eval' blob: zenodo-broker.web.cern.ch zenodo-broker-qa.web.cern.ch maxcdn.bootstrapcdn.com cdnjs.cloudflare.com ajax.googleapis.com webanalytics.web.cern.ch",
+        "x-content-type-options": "nosniff",
+        "x-download-options": "noopen",
+        "x-permitted-cross-domain-policies": "none",
+        "x-frame-options": "sameorigin",
+        "x-xss-protection": "1; mode=block",
+        "x-ratelimit-limit": "133",
+        "x-ratelimit-remaining": "131",
+        "x-ratelimit-reset": "1788635495",
+        "retry-after": "56",
+        "strict-transport-security": "max-age=31556926; includeSubDomains",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "Content-Type, ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+        "x-source": "files-primary",
+        "connection": "close"
+      }
+    }
+  ]
+}

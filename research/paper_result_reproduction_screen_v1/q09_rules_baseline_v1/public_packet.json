@@ -1,0 +1,177 @@
+{
+  "schema_version": "paper-blind-public-packet/v1",
+  "packet_id": "Q09_PUBLIC_FACT_PACKET_V1",
+  "case_id": "q09_t4l_state_number_20260905",
+  "case_role": "EXPOSED_DEVELOPMENT",
+  "research_question": "Do the 33 T4 lysozyme time-resolved FRET datasets require a third protein conformational state beyond two states, with compatible structural-distance evidence?",
+  "source_materials": [
+    {
+      "source_id": "Q09_DA_DECAYS",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT",
+      "source_locator": "Zenodo3376527 eTCSPC_wildtype.zip; input_manifest anddataset_mapping.json;source-specific native files in33variantfolders",
+      "permitted_facts": [
+        "33 T4 lysozyme labeled variants; variant-specific PBS pH7.5 sample descriptions in deposited metadata.",
+        "Donor Alexa488 on pAcF and acceptor Alexa647 on cysteine; complete labeling efficiencies UNKNOWN.",
+        "Original donor-acceptor time-resolved fluorescence integer photon histograms.",
+        "Instrument-convolved fluorescence decay under donor and FRET photophysics; protein-state-number inference requested.",
+        "Time semantics: TIME_RESOLVED_FLUORESCENCE_DECAY",
+        "Variant-specific labeling-site pairs; coordinate/dye-model correspondence UNKNOWN.",
+        "33 distinct DA records; PQ8ps or IBH14.1ps native bins; counts are photons, not independent protein conformations.",
+        "Original answer-free fact packet: {\"archive_identity\": {\"filename\": \"eTCSPC_wildtype.zip\", \"published_md5\": \"177132ce5bb9fefde871bafe8c92cbfd\", \"source\": \"https://zenodo.org/records/3376527\"}, \"case_id\": \"q09_t4l_state_number_20260905\", \"known_source_exceptions\": [\"19-86 DA PQ8ps versus D0 IBH14.1ps; IRF filename exceptions retained\", \"70-119 metadata filename70-132.yml with internal70-119 sample\", \"19-86 and44-69 top-level measurement identifiers conflict with internal sample descriptions\", \"19-119/19-132 D0,IRF andLin bytes identical with distinct donor-mutant descriptions\"], \"method_facts\": {\"Gaussian_distance_width\": \"SI Eq37 w12A corresponds sigma6A\", \"distance_to_transfer_rate\": \"SI Eq34 kRET=kF*kappa_squared*(R0J/R)^6\", \"donor_and_transfer_factorization\": \"SI Eq33 latent product before IRF\", \"instrument_model\": \"SI Eq38 whole convolution+scatter+background multiplied byLin\", \"original_fitting_configuration\": \"UNKNOWN\", \"printed_equation36_status\": \"contains extra intrinsic-like rate despite Eq33 factorization;actual author implementation UNKNOWN\"}, \"native_sources\": [{\"construct_and_condition\": \"33 T4 lysozyme labeled variants; variant-specific PBS pH7.5 sample descriptions in deposited metadata.\", \"estimand\": \"Instrument-convolved fluorescence decay under donor and FRET photophysics; protein-state-number inference requested.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"Original donor-acceptor time-resolved fluorescence integer photon histograms.\", \"sample_composition\": \"Donor Alexa488 on pAcF and acceptor Alexa647 on cysteine; complete labeling efficiencies UNKNOWN.\", \"source_id\": \"Q09_DA_DECAYS\", \"spatial_support\": \"Variant-specific labeling-site pairs; coordinate/dye-model correspondence UNKNOWN.\", \"time_semantics\": {\"kind\": \"TIME_RESOLVED_FLUORESCENCE_DECAY\"}, \"unit_or_aggregation\": \"33 distinct DA records; PQ8ps or IBH14.1ps native bins; counts are photons, not independent protein conformations.\"}, {\"construct_and_condition\": \"Deposited donor-only references for the same labeled-variant folders; transfer across different mutant samples UNKNOWN.\", \"estimand\": \"Donor photophysical decay in the absence of acceptor transfer.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"Original donor-only time-resolved fluorescence integer photon histograms.\", \"sample_composition\": \"Alexa488 donor-only labeled T4 lysozyme; metadata describes variant-specific cysteine substitutions.\", \"source_id\": \"Q09_D0_REFERENCES\", \"spatial_support\": \"Donor label local environment; sample equivalence across reused references UNKNOWN.\", \"time_semantics\": {\"kind\": \"TIME_RESOLVED_FLUORESCENCE_DECAY\"}, \"unit_or_aggregation\": \"33 D0 paths contain27 distinct byte payloads; duplicate paths are not established independent acquisitions.\"}, {\"construct_and_condition\": \"Deposited Ludox IRF and uncorrelated room-light linearization references matched by variant role metadata.\", \"estimand\": \"Instrument timing response and detection-channel response.\", \"evidence_role\": \"CONSTRUCTION\", \"native_observable\": \"Instrument response and electronic linearization integer photon histograms.\", \"sample_composition\": \"Ludox scattering solution for IRF; room light for IBH linearization; no protein conformational population.\", \"source_id\": \"Q09_INSTRUMENT_REFERENCES\", \"spatial_support\": \"Instrument channels, not molecular coordinates.\", \"time_semantics\": {\"kind\": \"INSTRUMENT_TIMING_CALIBRATION\"}, \"unit_or_aggregation\": \"PQ8ps/20MHz and IBH14.1ps/10MHz declared instrument timing; shared IRF/Lin records occur; calibration uncertainty UNKNOWN.\"}], \"scientific_question\": \"Do the 33 T4 lysozyme time-resolved FRET datasets require a third protein conformational state beyond two states, with compatible structural-distance evidence?\", \"screen_question_id\": \"Q09\", \"source_relationships\": [{\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q09_DA_TO_DONOR\", \"left_source_id\": \"Q09_DA_DECAYS\", \"relation_type\": \"DONOR_REFERENCE_CALIBRATION\", \"right_source_id\": \"Q09_D0_REFERENCES\", \"shared_error_status\": \"SHARED_REFERENCES_PRESENT\", \"validation_independence\": \"UNKNOWN\"}, {\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q09_DA_TO_IRF\", \"left_source_id\": \"Q09_DA_DECAYS\", \"relation_type\": \"INSTRUMENT_RESPONSE_CALIBRATION\", \"right_source_id\": \"Q09_INSTRUMENT_REFERENCES\", \"shared_error_status\": \"SHARED_REFERENCES_PRESENT\", \"validation_independence\": \"UNKNOWN\"}], \"unknowns\": [\"Original author fitting code and joint configuration UNKNOWN\", \"Donor reference applicability across variant mutants UNKNOWN\", \"IRF/Lin calibration uncertainty UNKNOWN\", \"Coordinate and dye-model mapping for structural checks UNKNOWN\"]}"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted parameters and state proportions",
+        "Local fitted parameters/results and manual obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q09_D0_REFERENCES",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT",
+      "source_locator": "Zenodo3376527 eTCSPC_wildtype.zip; input_manifest anddataset_mapping.json;source-specific native files in33variantfolders",
+      "permitted_facts": [
+        "Deposited donor-only references for the same labeled-variant folders; transfer across different mutant samples UNKNOWN.",
+        "Alexa488 donor-only labeled T4 lysozyme; metadata describes variant-specific cysteine substitutions.",
+        "Original donor-only time-resolved fluorescence integer photon histograms.",
+        "Donor photophysical decay in the absence of acceptor transfer.",
+        "Time semantics: TIME_RESOLVED_FLUORESCENCE_DECAY",
+        "Donor label local environment; sample equivalence across reused references UNKNOWN.",
+        "33 D0 paths contain27 distinct byte payloads; duplicate paths are not established independent acquisitions."
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted parameters and state proportions",
+        "Local fitted parameters/results and manual obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q09_INSTRUMENT_REFERENCES",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT",
+      "source_locator": "Zenodo3376527 eTCSPC_wildtype.zip; input_manifest anddataset_mapping.json;source-specific native files in33variantfolders",
+      "permitted_facts": [
+        "Deposited Ludox IRF and uncorrelated room-light linearization references matched by variant role metadata.",
+        "Ludox scattering solution for IRF; room light for IBH linearization; no protein conformational population.",
+        "Instrument response and electronic linearization integer photon histograms.",
+        "Instrument timing response and detection-channel response.",
+        "Time semantics: INSTRUMENT_TIMING_CALIBRATION",
+        "Instrument channels, not molecular coordinates.",
+        "PQ8ps/20MHz and IBH14.1ps/10MHz declared instrument timing; shared IRF/Lin records occur; calibration uncertainty UNKNOWN."
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author final fitted parameters and state proportions",
+        "Local fitted parameters/results and manual obligation lists"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "Q09_RAW_ETCSPC_ARCHIVE",
+      "asset_kind": "AUTHOR_DEPOSITED_RAW_HISTOGRAMS",
+      "public_description": "Zenodo3376527 eTCSPC_wildtype.zip;33variantfolders,181numericfiles,originalmetadata"
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_case_facts",
+      "unknowns",
+      "rationale"
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
+  },
+  "platform_authority_envelope": {
+    "execution_authorization": "NO_EXECUTION",
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_boundary": {
+      "allowed_descriptions": [
+        "Source-grounded facts and unresolved requirements for the T4 lysozyme state-number question."
+      ],
+      "forbidden_claims": [
+        "A fit or structural description establishes activity, kinetics or mechanism.",
+        "The declared research question has already been supported by evidence."
+      ]
+    },
+    "rules_projection_authority": {
+      "case": {
+        "scientific_claim": "Do the 33 T4 lysozyme time-resolved FRET datasets require a third protein conformational state beyond two states, with compatible structural-distance evidence?",
+        "requested_claim_level": "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "declared_request_scope": [
+          "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY"
+        ],
+        "forbidden_upgrades": [
+          "BIOLOGICAL_ACTIVITY",
+          "KINETICS_FROM_DECAY_ALONE",
+          "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+        ]
+      },
+      "source_evidence_roles": {
+        "Q09_DA_DECAYS": "FIT_TARGET",
+        "Q09_D0_REFERENCES": "FIT_TARGET",
+        "Q09_INSTRUMENT_REFERENCES": "CONSTRUCTION"
+      },
+      "comparisons": [
+        {
+          "comparison_id": "Q09_DA_TO_DONOR",
+          "left_source_id": "Q09_DA_DECAYS",
+          "right_source_id": "Q09_D0_REFERENCES",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "DONOR_REFERENCE_CALIBRATION",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_REFERENCES_PRESENT"
+        },
+        {
+          "comparison_id": "Q09_DA_TO_IRF",
+          "left_source_id": "Q09_DA_DECAYS",
+          "right_source_id": "Q09_INSTRUMENT_REFERENCES",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "INSTRUMENT_RESPONSE_CALIBRATION",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_REFERENCES_PRESENT"
+        }
+      ]
+    }
+  },
+  "hidden_reference_boundary": {
+    "status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+    "repository_visibility": "SEALED_NON_AGENT_INPUT"
+  }
+}

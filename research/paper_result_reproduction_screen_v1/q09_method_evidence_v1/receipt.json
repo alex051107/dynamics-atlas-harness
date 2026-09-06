@@ -1,0 +1,30 @@
+{
+  "completed_at": "2026-09-05T15:03:04.723517+00:00",
+  "status": "VERIFIED_MANUAL_DIAGNOSTICS_CONSUMED",
+  "candidate_verifications": 36,
+  "optimizer_calls": 0,
+  "new_rules_extra_calculations": 0,
+  "manual_provenance_preserved": true,
+  "same_instance": true,
+  "original_global_comparison_preserved": true,
+  "original_structure_evidence_preserved": true,
+  "historical_base_status": "Previously verified result snapshot; matching current source request checked, old global fits not reverified in this method-only application.",
+  "elapsed_seconds": 1.1012825000216253,
+  "dispositions": {
+    "D0_01": "LOWER_FEASIBLE_CANDIDATE_REQUIRES_CONTINUATION",
+    "D0_02": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_03": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_05": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_06": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_08": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_10": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_11": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_12": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_14": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_24": "NO_STATIONARY_CANDIDATE_REQUIRES_CONTINUATION",
+    "D0_25": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE",
+    "D0_26": "CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE"
+  },
+  "response_transfer": "COMMON_RESPONSE_TRANSFER_REQUIRES_CALIBRATION",
+  "complete_question_answer": false
+}

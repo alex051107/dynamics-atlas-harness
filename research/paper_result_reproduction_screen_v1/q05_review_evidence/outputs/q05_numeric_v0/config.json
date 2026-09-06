@@ -1,0 +1,14 @@
+{
+  "theta": 6.0,
+  "theta_basis": "Reconstruction assumption fixed from author grid near paper18percent effective fraction; not confirmed original fit config. No tuning to our results.",
+  "saxs_selection": "no-tag static30C; exact90 q labels from author stats grid, excluding first experimental q=0.00253895",
+  "saxs_scaling": "as deposited, no fitted scale/offset",
+  "noe_averaging": "power3",
+  "noe_bound": "UPPER distance -> LOWER r^-3 intensity",
+  "noe_sigma": "deposited0.3 Angstrom; first-order propagated for objective",
+  "prior": "uniform across deposited rows",
+  "statistical_unit": "simulation and experiment replicate; frames correlated; no inferential CIs in this subcalculation",
+  "author_fit_targets_or_weights_used": false,
+  "author_q_label_metadata_used": true,
+  "claim_ceiling": "author-processed numeric subcalculation; no coordinate reanalysis, full reproduction or Rules trigger/route success"
+}

@@ -329,3 +329,13 @@ PYTHONPATH=src python3 -m unittest discover -s tests -v
 - 上游 Rules、selector、CaseGraph 和 HSP90 inputs 的冻结身份见 `config/frozen_assets_v0_1.json`；
 - 初始 baseline 进入 `main` 后，后续修改一律从新分支提交 Pull Request；
 - PR 的最小检查和科学边界见 `CONTRIBUTING.md`。
+
+
+## Pro17 后续进展（2026-09-05）
+
+Q01科学答复与题级输出通过Pro17并冻结。Q09已修复第二轮选回旧候选的问题：真实保存结果现在只选择两个最新未完成点，0重新拟合；313本地回归通过。下一项新增题目推进Q15，已核对SI校正参数与公式，现有66文件为63DCBS+3背景、0APBS。开发题级内容完成1/20、最终人类批准0、准确率未测。
+
+
+## Pro18之后的实际科学进展（2026-09-05）
+
+Q15两个位点的140个APBS文件完成首次主计算：55/175平均效率增加0.08199、175/228减少0.02617，后者重复间差异跨零。详见research/paper_result_reproduction_screen_v1/q15_apbs_comparison_v1/。这是条件荧光分析，原Q15的换染料和正交证据仍待完成，0Rules-extra。Q09修复完整历史绑定及连续零动作文件衔接，三个已有人工背景派生点经零拟合验收，D01数值分支结束、D24较低点保留。319本地测试通过，下一轮同PR开放Pro审阅。Q01冻结，开发完整内容1/20、准确率未测。

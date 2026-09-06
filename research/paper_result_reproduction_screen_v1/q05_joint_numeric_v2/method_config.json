@@ -1,0 +1,20 @@
+{
+  "theta": 6.0,
+  "noe_power": 3,
+  "prior": "UNIFORM",
+  "saxs_scale": "AS_DEPOSITED_NO_SCALE_OFFSET",
+  "error_model": "GAUSSIAN_FIRST_ORDER_NOE_PROPAGATION",
+  "loss": "HALF_SUM_FIXED_ROWS",
+  "duplicate_policy": "PRESERVE_ALL_ROWS",
+  "channel_weights": {
+    "saxs": 1.0,
+    "amide": 1.0,
+    "methyl": 1.0
+  },
+  "original_joint_configuration": "UNKNOWN",
+  "mode": "CONDITIONAL_RECONSTRUCTION",
+  "maxiter": 2000,
+  "max_seconds": 120,
+  "projected_gradient_tolerance": 1e-06,
+  "relative_primal_dual_gap_tolerance": 1e-06
+}

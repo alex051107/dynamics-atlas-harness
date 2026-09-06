@@ -1,0 +1,76 @@
+{
+  "question_id": "Q01",
+  "claim": "FINITE_TIME_SEEDED_PATH_COMPARISON",
+  "input_id": "31642c42f952af33ffd9faf886b98f9d3de87fbaa39260e13969e8b3cd9df57c",
+  "method_id": "5362a505a1295ccd69fea728d6d679cb9460728fc28bcc431fc91e4fa18e1c1c",
+  "original_facts_locator": "q01_original_facts_v1.json",
+  "source_class": "EXPOSED_DEVELOPMENT_RAW_MD_NMR_CONSTRUCTION",
+  "threshold_definitions": [
+    {
+      "source_locator": "MD/Tools/VIOLATION/NOE_specific_GS_ES_2022-01-07_distances.itp; no-ref call",
+      "bounds_A": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        8.5,
+        8.5,
+        8.5,
+        8.5,
+        8.5
+      ]
+    },
+    {
+      "source_locator": "Henot2022 SupplementaryTable2 pp4-5 dviol;explicitMDsubset19+5",
+      "bounds_A": [
+        11.87,
+        5.54,
+        8.59,
+        6.63,
+        6.16,
+        8.89,
+        4.52,
+        6.24,
+        9.65,
+        8.53,
+        11.65,
+        9.42,
+        10.55,
+        6.64,
+        8.76,
+        8.31,
+        7.98,
+        10.72,
+        8.53,
+        10.08,
+        10.43,
+        9.85,
+        10.19,
+        10.19
+      ]
+    }
+  ],
+  "source_exclusions": {
+    "O04": "SI2c,f",
+    "O10": "SI2c,f",
+    "O15": "SI2d,f",
+    "O23": "SI2e,f",
+    "O24": "SI2e,f"
+  },
+  "original_full_execution_config": "UNKNOWN"
+}

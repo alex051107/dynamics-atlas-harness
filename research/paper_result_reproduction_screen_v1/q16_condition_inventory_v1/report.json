@@ -1,0 +1,1014 @@
+{
+  "status": "SOURCE_CURVE_INVENTORY_NOT_STATE_VERDICT",
+  "source_workbook": "41467_2022_31945_MOESM4_ESM.xlsx",
+  "records": [
+    {
+      "key": "Figure5:36_apo",
+      "condition": "36_apo",
+      "source_label": "36/352 (-)",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "AC",
+            "AD",
+            "AE",
+            "AF"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "AG",
+            "AH",
+            "AI"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "AJ",
+            "AK",
+            "AL",
+            "AM"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    },
+    {
+      "key": "Figure5:36_eg50_1mM",
+      "condition": "36_eg50_1mM",
+      "source_label": "36/352 (+)",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "AQ",
+            "AR",
+            "AS",
+            "AT"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "AU",
+            "AV",
+            "AW"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "AX",
+            "AY",
+            "AZ",
+            "BA"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    },
+    {
+      "key": "Figure5:29_apo",
+      "condition": "29_apo",
+      "source_label": "29/352 (-)",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "CG",
+            "CH",
+            "CI",
+            "CJ"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "CK",
+            "CL",
+            "CM"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 173,
+          "grid_min": 0.0,
+          "grid_max": 5.504,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "CN",
+            "CO",
+            "CP",
+            "CQ"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 173,
+          "grid_min": 19.86303,
+          "grid_max": 84.24419,
+          "step_min": 0.374299999999991,
+          "step_max": 0.3743200000000009,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 173,
+          "central_inside_unordered_band": 173
+        }
+      }
+    },
+    {
+      "key": "Figure5:29_eg50_1mM",
+      "condition": "29_eg50_1mM",
+      "source_label": "29/352 (+)",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "CU",
+            "CV",
+            "CW",
+            "CX"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "CY",
+            "CZ",
+            "DA"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "DB",
+            "DC",
+            "DD",
+            "DE"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    },
+    {
+      "key": "Figure5:29_eg0_1mM",
+      "condition": "29_eg0_1mM",
+      "source_label": "29/352 (+) 0% ethylene glycol holo",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "DI",
+            "DJ",
+            "DK",
+            "DL"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 159,
+          "grid_min": -0.16,
+          "grid_max": 4.896,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "DM",
+            "DN",
+            "DO"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 110,
+          "grid_min": 0.0,
+          "grid_max": 3.488,
+          "step_min": 0.031999999999999584,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "DP",
+            "DQ",
+            "DR",
+            "DS"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 19.86303,
+          "grid_max": 68.98676,
+          "step_min": 0.5225899999999939,
+          "step_max": 0.5226000000000042,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 95,
+          "central_inside_unordered_band": 95
+        }
+      }
+    },
+    {
+      "key": "Figure5:36_eg0_1mM",
+      "condition": "36_eg0_1mM",
+      "source_label": "36/352 (+) 0% ethylene glycol holo",
+      "source_sheet": "Figure5",
+      "roles": {
+        "raw": {
+          "columns": [
+            "DT",
+            "DU",
+            "DV",
+            "DW"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 159,
+          "grid_min": -0.16,
+          "grid_max": 4.896,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "DX",
+            "DY",
+            "DZ"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 0.0,
+          "grid_max": 3.008,
+          "step_min": 0.031999999999999584,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "EA",
+            "EB",
+            "EC",
+            "ED"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 19.86303,
+          "grid_max": 68.98676,
+          "step_min": 0.5225899999999939,
+          "step_max": 0.5226000000000042,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 95,
+          "central_inside_unordered_band": 95
+        }
+      }
+    },
+    {
+      "key": "SI Figure9:36_eg50_10mM",
+      "condition": "36_eg50_10mM",
+      "source_label": "36/352 (++)",
+      "source_sheet": "SI Figure9",
+      "roles": {
+        "raw": {
+          "columns": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "E",
+            "F",
+            "G"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "H",
+            "I",
+            "J",
+            "K"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    },
+    {
+      "key": "SI Figure9:29_eg50_10mM",
+      "condition": "29_eg50_10mM",
+      "source_label": "29/352 (++)",
+      "source_sheet": "SI Figure9",
+      "roles": {
+        "raw": {
+          "columns": [
+            "L",
+            "M",
+            "N",
+            "O"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "P",
+            "Q",
+            "R"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 207,
+          "grid_min": 0.0,
+          "grid_max": 6.592,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "S",
+            "T",
+            "U",
+            "V"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 207,
+          "grid_min": 19.86303,
+          "grid_max": 89.43648,
+          "step_min": 0.3377299999999934,
+          "step_max": 0.3377400000000108,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 207,
+          "central_inside_unordered_band": 207
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:29_eg0_1mM",
+      "condition": "29_eg0_1mM",
+      "source_label": "MalE 29/352 0% holo",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 159,
+          "grid_min": -0.16,
+          "grid_max": 4.896,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "E",
+            "F",
+            "G"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 110,
+          "grid_min": 0.0,
+          "grid_max": 3.488,
+          "step_min": 0.031999999999999584,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "H",
+            "I",
+            "J",
+            "K"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 19.86303,
+          "grid_max": 68.98676,
+          "step_min": 0.5225899999999939,
+          "step_max": 0.5226000000000042,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 95,
+          "central_inside_unordered_band": 95
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:29_gly25_1mM",
+      "condition": "29_gly25_1mM",
+      "source_label": "MalE 29/352 25% d-Glycerol holo",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "N",
+            "O",
+            "P",
+            "Q"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 251,
+          "grid_min": -0.16,
+          "grid_max": 7.84,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "R",
+            "S",
+            "T"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 188,
+          "grid_min": 0.0,
+          "grid_max": 5.984,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "U",
+            "V",
+            "W",
+            "X"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 188,
+          "grid_min": 19.86303,
+          "grid_max": 86.61183,
+          "step_min": 0.3569399999999945,
+          "step_max": 0.35695000000001187,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 188,
+          "central_inside_unordered_band": 188
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:29_eg25_1mM",
+      "condition": "29_eg25_1mM",
+      "source_label": "MalE 29/352 25% d-Ethgly holo",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "AA",
+            "AB",
+            "AC",
+            "AD"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 251,
+          "grid_min": -0.16,
+          "grid_max": 7.84,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "AE",
+            "AF",
+            "AG"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 220,
+          "grid_min": 0.0,
+          "grid_max": 7.008,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "AH",
+            "AI",
+            "AJ",
+            "AK"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 220,
+          "grid_min": 19.86303,
+          "grid_max": 91.27086,
+          "step_min": 0.32605999999999824,
+          "step_max": 0.3260700000000014,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 220,
+          "central_inside_unordered_band": 220
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:29_eg50_1mM",
+      "condition": "29_eg50_1mM",
+      "source_label": "MalE 29/352 50% d-Ethgly holo",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "AN",
+            "AO",
+            "AP",
+            "AQ"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "AR",
+            "AS",
+            "AT"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "AU",
+            "AV",
+            "AW",
+            "AX"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:36_eg0_1mM",
+      "condition": "36_eg0_1mM",
+      "source_label": "MalE 36/352 0% d-Ethgly",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "BA",
+            "BB",
+            "BC",
+            "BD"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 159,
+          "grid_min": -0.16,
+          "grid_max": 4.896,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "BE",
+            "BF",
+            "BG"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 0.0,
+          "grid_max": 3.008,
+          "step_min": 0.031999999999999584,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "BH",
+            "BI",
+            "BJ",
+            "BK"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 95,
+          "grid_min": 19.86303,
+          "grid_max": 68.98676,
+          "step_min": 0.5225899999999939,
+          "step_max": 0.5226000000000042,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 95,
+          "central_inside_unordered_band": 95
+        }
+      }
+    },
+    {
+      "key": "SI Figure10:36_eg50_1mM",
+      "condition": "36_eg50_1mM",
+      "source_label": "MalE 36/352 50% d-Ethgly",
+      "source_sheet": "SI Figure10",
+      "roles": {
+        "raw": {
+          "columns": [
+            "BN",
+            "BO",
+            "BP",
+            "BQ"
+          ],
+          "headers": [
+            "raw",
+            null,
+            null,
+            null
+          ],
+          "n": 221,
+          "grid_min": -0.16,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "processed": {
+          "columns": [
+            "BR",
+            "BS",
+            "BT"
+          ],
+          "headers": [
+            "fit",
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 0.0,
+          "grid_max": 6.88,
+          "step_min": 0.03199999999999914,
+          "step_max": 0.03200000000000003,
+          "rows_start": 5
+        },
+        "distribution": {
+          "columns": [
+            "BU",
+            "BV",
+            "BW",
+            "BX"
+          ],
+          "headers": [
+            "distance distribution",
+            null,
+            null,
+            null
+          ],
+          "n": 216,
+          "grid_min": 19.86303,
+          "grid_max": 90.71432,
+          "step_min": 0.3295399999999944,
+          "step_max": 0.3295500000000118,
+          "rows_start": 5,
+          "nonnegative_central": true,
+          "column_upper_le_lower": 216,
+          "central_inside_unordered_band": 216
+        }
+      }
+    }
+  ],
+  "duplicate_checks": [
+    {
+      "left": "Figure5:36_eg50_1mM",
+      "right": "SI Figure10:36_eg50_1mM",
+      "equal_by_role": {
+        "raw": true,
+        "processed": true,
+        "distribution": true
+      }
+    },
+    {
+      "left": "Figure5:29_eg50_1mM",
+      "right": "SI Figure10:29_eg50_1mM",
+      "equal_by_role": {
+        "raw": true,
+        "processed": true,
+        "distribution": true
+      }
+    },
+    {
+      "left": "Figure5:29_eg0_1mM",
+      "right": "SI Figure10:29_eg0_1mM",
+      "equal_by_role": {
+        "raw": true,
+        "processed": true,
+        "distribution": true
+      }
+    },
+    {
+      "left": "Figure5:36_eg0_1mM",
+      "right": "SI Figure10:36_eg0_1mM",
+      "equal_by_role": {
+        "raw": true,
+        "processed": true,
+        "distribution": true
+      }
+    }
+  ],
+  "uncertainty_role": "DeerAnalysis validation envelope; not independent repeats or likelihood standard errors",
+  "source_conditions": "SIphysical9 caption +=1mM,++=10mM maltose; main Fig5 narrative default50percentethylene glycol. SIphysical10 varyingprotector; exactlabels preserved.",
+  "fits": 0,
+  "scientific_verdict": null
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": "paper-blind-public-packet/v1",
+  "packet_id": "Q15_PUBLIC_FACT_PACKET_V1",
+  "case_id": "q15_hisiap_cross_modal_dye_comparison_20260905",
+  "case_role": "EXPOSED_DEVELOPMENT",
+  "research_question": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+  "source_materials": [
+    {
+      "source_id": "Q15_APBS_175_228",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "permitted_facts": [
+        "HiSiaP labeled at 175_228;apo and1mM sialicacid holo source-labelled three repetitions percondition.",
+        "AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.",
+        "APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.",
+        "Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.",
+        "Two labeling positions 175_228; not C-alpha geometry.",
+        "Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.",
+        "Time semantics: DIFFUSING_SINGLE_MOLECULE_BURSTS",
+        "BothAFpairs nowhavecompleteAPBS apo/holo3source-labelledrepetitions;unmodifiedoriginalentryfailurepreserved.",
+        "Table3calibration andmatchingpublicALEXSuite seconds/backgroundconvention available;exactpaperbinaryUNKNOWN.",
+        "FullworkbookFRETEventscolumns haveheadersbutno numericpayload;TMR/Cy5doublelabeldataMISSING.",
+        "Original answer-free fact packet: {\"case_id\": \"q15_hisiap_cross_modal_dye_comparison_20260905\", \"current_source_updates\": [\"BothAFpairs nowhavecompleteAPBS apo/holo3source-labelledrepetitions;unmodifiedoriginalentryfailurepreserved.\", \"Table3calibration andmatchingpublicALEXSuite seconds/backgroundconvention available;exactpaperbinaryUNKNOWN.\", \"FullworkbookFRETEventscolumns haveheadersbutno numericpayload;TMR/Cy5doublelabeldataMISSING.\"], \"manual_extra_results_included\": false, \"native_sources\": [{\"construct_and_condition\": \"HiSiaP labeled at 175_228;apo and1mM sialicacid holo source-labelled three repetitions percondition.\", \"estimand\": \"Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.\", \"sample_composition\": \"AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.\", \"source_id\": \"Q15_APBS_175_228\", \"spatial_support\": \"Two labeling positions 175_228; not C-alpha geometry.\", \"time_semantics\": {\"kind\": \"DIFFUSING_SINGLE_MOLECULE_BURSTS\"}, \"unit_or_aggregation\": \"Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.\"}, {\"construct_and_condition\": \"HiSiaP labeled at 55_175;apo and1mM sialicacid holo source-labelled three repetitions percondition.\", \"estimand\": \"Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.\", \"sample_composition\": \"AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.\", \"source_id\": \"Q15_APBS_55_175\", \"spatial_support\": \"Two labeling positions 55_175; not C-alpha geometry.\", \"time_semantics\": {\"kind\": \"DIFFUSING_SINGLE_MOLECULE_BURSTS\"}, \"unit_or_aggregation\": \"Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.\"}, {\"construct_and_condition\": \"HiSiaP spin-labelled pairs in apo/holo; cryogenic preparation differs from fluorescence conditions.\", \"estimand\": \"Spin-label ensemble distance distribution conditional on background/inverse method.\", \"evidence_role\": \"DIAGNOSTIC\", \"native_observable\": \"Author deposited normalized DEER time traces and processed distance distributions.\", \"sample_composition\": \"Nitroxide spin labels and cryoprotectant; equivalence to fluorophore samples UNKNOWN.\", \"source_id\": \"Q15_DEER\", \"spatial_support\": \"Spin-label positions; not automatically the FRET dye or protein-backbone distance.\", \"time_semantics\": {\"kind\": \"CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE\"}, \"unit_or_aggregation\": \"Time trace samples and inverse distributions; independent uncertainty and processing details retained separately.\"}, {\"construct_and_condition\": \"HiSiaP singly labeled175 or58 withAF555/647,TMR orCy5;sourceidentity discrepancies preserved.\", \"estimand\": \"Probe rotational restriction and photophysical response, conditional on source identity and instrument correction.\", \"evidence_role\": \"DIAGNOSTIC\", \"native_observable\": \"Time-resolved anisotropy and fluorescence intensity curves.\", \"sample_composition\": \"Single fluorophores;175C directories vs165C acquisition filenames, andsialicacid vs maltose labels conflict for some records.\", \"source_id\": \"Q15_PROBE_PHOTOPHYSICS\", \"spatial_support\": \"Local dye environment at individual positions; not a direct domain-distance observation.\", \"time_semantics\": {\"kind\": \"TIME_RESOLVED_FLUORESCENCE_DECAY\"}, \"unit_or_aggregation\": \"Published processed curves; raw instrument files partly present, independent repetition identity UNKNOWN.\"}], \"original_entry_facts_preserved\": {\"author_interpretations_included\": false, \"case_id\": \"q15_hisiap_cross_modal_dye_comparison_20260905\", \"manual_supplement_results_included\": false, \"measurement_availability\": {\"DEER_traces\": 8, \"FRET_histograms\": 0, \"anisotropy_and_intensity_workbook_curves\": 24, \"complete_Figure4_archive\": false}, \"original_calibration_and_analysis_configuration\": \"NOT_YET_ADMITTED\", \"primary_paper_doi\": \"10.1038/s41467-022-31945-6\", \"question\": \"Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?\", \"source_identity_conflicts\": [\"175C directory versus165C acquisition names and comments\", \"100uM sialicacid directory versus1mM maltose acquisition names and comments\"], \"source_observables\": [\"normalized_DEER_time_traces\", \"time_resolved_anisotropy\", \"intensity_decay\", \"smFRET_efficiency_histograms\"], \"target_values_included\": false}, \"scientific_question\": \"Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?\", \"source_relationships\": [{\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q15_PAIR\", \"left_source_id\": \"Q15_APBS_175_228\", \"relation_type\": \"MATCHED_SITE_CONTROL\", \"right_source_id\": \"Q15_APBS_55_175\", \"shared_error_status\": \"SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED\", \"validation_independence\": \"UNKNOWN\"}, {\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q15_DEER\", \"left_source_id\": \"Q15_APBS_175_228\", \"relation_type\": \"CROSS_MODAL_COMPARISON\", \"right_source_id\": \"Q15_DEER\", \"shared_error_status\": \"SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED\", \"validation_independence\": \"UNKNOWN\"}, {\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q15_PROBE\", \"left_source_id\": \"Q15_APBS_175_228\", \"relation_type\": \"PROBE_APPLICABILITY_DIAGNOSTIC\", \"right_source_id\": \"Q15_PROBE_PHOTOPHYSICS\", \"shared_error_status\": \"SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED\", \"validation_independence\": \"UNKNOWN\"}], \"target_values_included\": false, \"unknowns\": [\"Probe-specificquantumyieldandcalibrationapplicability\", \"Crossmodalprobeandspin-labelgeometry\", \"Sourceidentityconflictsinphotophysics\", \"TMR/Cy5doublelabelcountsandcalibration\"]}"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q15_APBS_55_175",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "permitted_facts": [
+        "HiSiaP labeled at 55_175;apo and1mM sialicacid holo source-labelled three repetitions percondition.",
+        "AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.",
+        "APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.",
+        "Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.",
+        "Two labeling positions 55_175; not C-alpha geometry.",
+        "Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.",
+        "Time semantics: DIFFUSING_SINGLE_MOLECULE_BURSTS"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q15_DEER",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "permitted_facts": [
+        "HiSiaP spin-labelled pairs in apo/holo; cryogenic preparation differs from fluorescence conditions.",
+        "Nitroxide spin labels and cryoprotectant; equivalence to fluorophore samples UNKNOWN.",
+        "Author deposited normalized DEER time traces and processed distance distributions.",
+        "Spin-label ensemble distance distribution conditional on background/inverse method.",
+        "Spin-label positions; not automatically the FRET dye or protein-backbone distance.",
+        "Time trace samples and inverse distributions; independent uncertainty and processing details retained separately.",
+        "Time semantics: CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q15_PROBE_PHOTOPHYSICS",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "permitted_facts": [
+        "HiSiaP singly labeled175 or58 withAF555/647,TMR orCy5;sourceidentity discrepancies preserved.",
+        "Single fluorophores;175C directories vs165C acquisition filenames, andsialicacid vs maltose labels conflict for some records.",
+        "Time-resolved anisotropy and fluorescence intensity curves.",
+        "Probe rotational restriction and photophysical response, conditional on source identity and instrument correction.",
+        "Local dye environment at individual positions; not a direct domain-distance observation.",
+        "Published processed curves; raw instrument files partly present, independent repetition identity UNKNOWN.",
+        "Time semantics: TIME_RESOLVED_FLUORESCENCE_DECAY"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "Q15_SOURCE_MEASUREMENTS",
+      "asset_kind": "AUTHOR_DEPOSITED_OBSERVATIONS",
+      "public_description": "APBS counts,normalized DEER time traces,processed anisotropy/intensity;source identities andmissingdoublelabelcontrol retained."
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_case_facts",
+      "unknowns",
+      "rationale"
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
+  },
+  "platform_authority_envelope": {
+    "execution_authorization": "NO_EXECUTION",
+    "scientific_disposition": "NOT_EVALUATED",
+    "claim_boundary": {
+      "allowed_descriptions": [
+        "Source-grounded HiSiaP method facts andexplicit unknowns only."
+      ],
+      "forbidden_claims": [
+        "A fit or structural description establishes activity, kinetics or mechanism.",
+        "The declared research question has already been supported by evidence."
+      ]
+    },
+    "rules_projection_authority": {
+      "case": {
+        "scientific_claim": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+        "requested_claim_level": "CROSS_MODAL_CONFORMATIONAL_CHANGE_AND_PROBE_APPLICABILITY",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "declared_request_scope": [
+          "CROSS_MODAL_CONFORMATIONAL_CHANGE_AND_PROBE_APPLICABILITY"
+        ],
+        "forbidden_upgrades": [
+          "BIOLOGICAL_ACTIVITY",
+          "BACKBONE_DISTANCE_AS_PROBE_DISTANCE",
+          "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+        ]
+      },
+      "source_evidence_roles": {
+        "Q15_APBS_175_228": "FIT_TARGET",
+        "Q15_APBS_55_175": "FIT_TARGET",
+        "Q15_DEER": "DIAGNOSTIC",
+        "Q15_PROBE_PHOTOPHYSICS": "DIAGNOSTIC"
+      },
+      "comparisons": [
+        {
+          "comparison_id": "Q15_PAIR",
+          "left_source_id": "Q15_APBS_175_228",
+          "right_source_id": "Q15_APBS_55_175",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "MATCHED_SITE_CONTROL",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED"
+        },
+        {
+          "comparison_id": "Q15_DEER",
+          "left_source_id": "Q15_APBS_175_228",
+          "right_source_id": "Q15_DEER",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "CROSS_MODAL_COMPARISON",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED"
+        },
+        {
+          "comparison_id": "Q15_PROBE",
+          "left_source_id": "Q15_APBS_175_228",
+          "right_source_id": "Q15_PROBE_PHOTOPHYSICS",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "PROBE_APPLICABILITY_DIAGNOSTIC",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED"
+        }
+      ]
+    }
+  },
+  "hidden_reference_boundary": {
+    "status": "DEVELOPMENT_REFERENCE_DRAFT_NOT_HUMAN_APPROVED",
+    "repository_visibility": "SEALED_NON_AGENT_INPUT"
+  }
+}

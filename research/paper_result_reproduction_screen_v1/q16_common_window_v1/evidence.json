@@ -1,0 +1,218 @@
+{
+  "operator_id": "q16_common_window_contrast_v1",
+  "rule_id": "Q16R01_COMMON_WINDOW_CONDITION_CONTRAST_V1",
+  "input_id": "ffd0e10f3b07ffd881c3432c37f274d86de6746d45d045ce7b4acd286893467d",
+  "policy": {
+    "version": 1,
+    "window": "intersection_of_nonnegative_observed_processed_grids_per_pair",
+    "alignment": "exact_rounded_9_decimal_us_no_interpolation",
+    "shape": "center_and_divide_population_RMS",
+    "scientific_ceiling": "DESCRIPTIVE_SIGNAL_CONTRAST_NO_STATE_POPULATIONS"
+  },
+  "results": {
+    "29": {
+      "window_us": [
+        0.0,
+        3.488
+      ],
+      "n": 110,
+      "comparisons": {
+        "eg50_10mM": {
+          "raw_real": {
+            "n": 110,
+            "rmse": 0.011205741547812165,
+            "shape_distance": 0.11444619982174146,
+            "correlation": 0.9934510336731811,
+            "reference_rms": 0.07007165922807314,
+            "comparison_rms": 0.06430831015127357
+          },
+          "observed_processed": {
+            "n": 110,
+            "rmse": 0.028897561504547253,
+            "shape_distance": 0.1775898037440508,
+            "correlation": 0.9842309308030748,
+            "reference_rms": 0.07580231369394586,
+            "comparison_rms": 0.06642315610052997
+          },
+          "raw_over_deposited_background": {
+            "n": 110,
+            "rmse": 0.03555729865110355,
+            "shape_distance": 0.133859890477503,
+            "correlation": 0.9910407648606754,
+            "reference_rms": 0.0956636864740537,
+            "comparison_rms": 0.07727876951572302
+          }
+        },
+        "eg0_1mM": {
+          "raw_real": {
+            "n": 110,
+            "rmse": 0.07912875669668794,
+            "shape_distance": 0.3097353488332012,
+            "correlation": 0.9520320068415875,
+            "reference_rms": 0.07007165922807314,
+            "comparison_rms": 0.10254523754312952
+          },
+          "observed_processed": {
+            "n": 110,
+            "rmse": 0.09100550381457957,
+            "shape_distance": 0.6768672967632141,
+            "correlation": 0.7709253312862296,
+            "reference_rms": 0.07580231369394586,
+            "comparison_rms": 0.03712860519034031
+          },
+          "raw_over_deposited_background": {
+            "n": 110,
+            "rmse": 0.08802498565544029,
+            "shape_distance": 0.6580470516001619,
+            "correlation": 0.7834870389401671,
+            "reference_rms": 0.0956636864740537,
+            "comparison_rms": 0.04264672825735787
+          }
+        },
+        "eg25_1mM": {
+          "raw_real": {
+            "n": 110,
+            "rmse": 0.01332081634817544,
+            "shape_distance": 0.12583856718352165,
+            "correlation": 0.992082327504599,
+            "reference_rms": 0.07007165922807314,
+            "comparison_rms": 0.07284398204954691
+          },
+          "observed_processed": {
+            "n": 110,
+            "rmse": 0.027764134532948015,
+            "shape_distance": 0.1553224594326452,
+            "correlation": 0.9879374667978973,
+            "reference_rms": 0.07580231369394586,
+            "comparison_rms": 0.068278916387246
+          },
+          "raw_over_deposited_background": {
+            "n": 110,
+            "rmse": 0.03261160960695589,
+            "shape_distance": 0.11561811874272772,
+            "correlation": 0.9933162253091965,
+            "reference_rms": 0.0956636864740537,
+            "comparison_rms": 0.07971403586858422
+          }
+        },
+        "gly25_1mM": {
+          "raw_real": {
+            "n": 110,
+            "rmse": 0.014992802182138176,
+            "shape_distance": 0.17656094566966032,
+            "correlation": 0.9844131162321177,
+            "reference_rms": 0.07007165922807314,
+            "comparison_rms": 0.06370786901491438
+          },
+          "observed_processed": {
+            "n": 110,
+            "rmse": 0.05096173544925644,
+            "shape_distance": 0.3506929741518282,
+            "correlation": 0.9385072189402728,
+            "reference_rms": 0.07580231369394586,
+            "comparison_rms": 0.054339732192418846
+          },
+          "raw_over_deposited_background": {
+            "n": 110,
+            "rmse": 0.056861977440332105,
+            "shape_distance": 0.3083102569409187,
+            "correlation": 0.9524723927325124,
+            "reference_rms": 0.0956636864740537,
+            "comparison_rms": 0.06542793990082088
+          }
+        }
+      },
+      "ordering": {
+        "raw_real": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 2.706383866966638
+        },
+        "observed_processed": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 3.8114085521415464
+        },
+        "raw_over_deposited_background": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 4.915938966129334
+        }
+      }
+    },
+    "36": {
+      "window_us": [
+        0.0,
+        3.008
+      ],
+      "n": 95,
+      "comparisons": {
+        "eg50_10mM": {
+          "raw_real": {
+            "n": 95,
+            "rmse": 0.02020004054190825,
+            "shape_distance": 0.21099704299581185,
+            "correlation": 0.9777401239235117,
+            "reference_rms": 0.08083905679244045,
+            "comparison_rms": 0.08457874733386099
+          },
+          "observed_processed": {
+            "n": 95,
+            "rmse": 0.02463183111769254,
+            "shape_distance": 0.29381249569119594,
+            "correlation": 0.9568371086878554,
+            "reference_rms": 0.08335363722785931,
+            "comparison_rms": 0.0838201451889782
+          },
+          "raw_over_deposited_background": {
+            "n": 95,
+            "rmse": 0.025393049463076973,
+            "shape_distance": 0.21690116446088073,
+            "correlation": 0.976476942427757,
+            "reference_rms": 0.11209586771150419,
+            "comparison_rms": 0.11685398054650781
+          }
+        },
+        "eg0_1mM": {
+          "raw_real": {
+            "n": 95,
+            "rmse": 0.08938861465239119,
+            "shape_distance": 0.37751959620354975,
+            "correlation": 0.9287394772411544,
+            "reference_rms": 0.08083905679244045,
+            "comparison_rms": 0.10224155947574959
+          },
+          "observed_processed": {
+            "n": 95,
+            "rmse": 0.06444294996351424,
+            "shape_distance": 0.7261429922759168,
+            "correlation": 0.7363581773842888,
+            "reference_rms": 0.08335363722785931,
+            "comparison_rms": 0.05400487573104638
+          },
+          "raw_over_deposited_background": {
+            "n": 95,
+            "rmse": 0.08626381441092884,
+            "shape_distance": 0.76493890844938,
+            "correlation": 0.7074342331701355,
+            "reference_rms": 0.11209586771150419,
+            "comparison_rms": 0.06735374543267186
+          }
+        }
+      },
+      "ordering": {
+        "raw_real": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 1.7892174735882116
+        },
+        "observed_processed": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 2.471450339672111
+        },
+        "raw_over_deposited_background": {
+          "protector_greater_than_dose": true,
+          "protector_over_dose": 3.5266703632074816
+        }
+      }
+    }
+  },
+  "new_iterative_fits": 0,
+  "full_question_answer": false
+}

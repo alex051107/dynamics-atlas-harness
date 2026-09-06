@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "repo": "EMMIVox-BENCHMARK",
+      "path": "get_PDB_MAP.sh",
+      "commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+      "blob": "7bbe8f14121daf8555b6e9d057ccb4def6665ff1",
+      "bytes": 558,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/get_PDB_MAP.sh",
+      "local": "EMMIVox-BENCHMARK__get_PDB_MAP.sh"
+    },
+    {
+      "repo": "EMMIVox-BENCHMARK",
+      "path": "validate_EMMIVox.sh",
+      "commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+      "blob": "93201c7b552a07490e95cf1ee4c94e016938299a",
+      "bytes": 980,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/validate_EMMIVox.sh",
+      "local": "EMMIVox-BENCHMARK__validate_EMMIVox.sh"
+    },
+    {
+      "repo": "EMMIVox-BENCHMARK",
+      "path": "02-7w9w/2-Production/cc-0.8/plumed_EMMI.dat",
+      "commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+      "blob": "fc44f5f0f0e9147c0f598cd7c691084a7d266877",
+      "bytes": 1968,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/02-7w9w/2-Production/cc-0.8/plumed_EMMI.dat",
+      "local": "EMMIVox-BENCHMARK__02-7w9w__2-Production__cc-0.8__plumed_EMMI.dat"
+    },
+    {
+      "repo": "EMMIVox-BENCHMARK",
+      "path": "02-7w9w/2-Production/cc-1.0/plumed_EMMI.dat",
+      "commit": "2ea480ff9d7f5fa09443eb927f76b023aa5aebee",
+      "blob": "92f90c69bab3a19472d9979492a94d6fbe056d61",
+      "bytes": 1830,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox-BENCHMARK/2ea480ff9d7f5fa09443eb927f76b023aa5aebee/02-7w9w/2-Production/cc-1.0/plumed_EMMI.dat",
+      "local": "EMMIVox-BENCHMARK__02-7w9w__2-Production__cc-1.0__plumed_EMMI.dat"
+    },
+    {
+      "repo": "EMMIVox",
+      "path": "tutorials/2-ensemble/README.md",
+      "commit": "81366ab8adaefb6a8279bcbd883df204314c366c",
+      "blob": "d7db7e90d932333a62cadf7086d7b74592015aed",
+      "bytes": 3352,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox/81366ab8adaefb6a8279bcbd883df204314c366c/tutorials/2-ensemble/README.md",
+      "local": "EMMIVox__tutorials__2-ensemble__README.md"
+    },
+    {
+      "repo": "EMMIVox",
+      "path": "scripts/README.md",
+      "commit": "81366ab8adaefb6a8279bcbd883df204314c366c",
+      "blob": "e0c5807e3a799d7057246757030042a836c9557e",
+      "bytes": 2027,
+      "url": "https://raw.githubusercontent.com/COSBlab/EMMIVox/81366ab8adaefb6a8279bcbd883df204314c366c/scripts/README.md",
+      "local": "EMMIVox__scripts__README.md"
+    }
+  ],
+  "total_bytes": 10715,
+  "scientific_computations": 0
+}

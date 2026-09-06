@@ -1,0 +1,85 @@
+{
+  "operator_id": "q09_targeted_source_order_continuation_v1",
+  "policy": {
+    "version": "q09_targeted_source_order_continuation_v1",
+    "IRF_shift": "padded_linear_v2",
+    "donor_components": 3,
+    "FRET_components": 2,
+    "sigma_A": 6.0,
+    "distance_bounds_A": [
+      10.0,
+      120.0
+    ],
+    "seconds_per_fit": 60,
+    "maxiter": 1500,
+    "max_fits": 3,
+    "stationarity_limit": 1e-06,
+    "window_and_normalization": "unchanged_source_native",
+    "unique_D0_likelihood": true,
+    "optimizer": "existing_scaled_L-BFGS-B"
+  },
+  "input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "base_result_id": "00052d77bfb0adc8957aceb150df742dd6ffeee53b7ad3551b08587d38e10064",
+  "selected": [
+    {
+      "reference": "D0_01",
+      "owners": [
+        "19-119",
+        "19-132"
+      ],
+      "parent_candidate_id": "b923fd74f725f8d0425c628888f4b0b75d984f38924c51999db56338137e27bf",
+      "initial": [
+        0.23438147383759816,
+        2.953844145293367,
+        4.06192218498302,
+        0.1125942231284912,
+        0.27530349202005666,
+        0.001675164922903071,
+        1.0000395251240128,
+        15.146397101641718,
+        48.70688354812743,
+        0.8759571165432704,
+        0.07252342230472936,
+        0.0026411301354086376,
+        1.6492346868262073,
+        51.58254124461146,
+        38.420484433607754,
+        0.435246275793656,
+        0.3058977439898636,
+        0.0018106599591784184,
+        0.6619683209672642
+      ]
+    },
+    {
+      "reference": "D0_24",
+      "owners": [
+        "70-119",
+        "70-132"
+      ],
+      "parent_candidate_id": "68bf7050514ef7128b86dec75cfa836b8de5072357341fe0421684dc8ee1556d",
+      "initial": [
+        0.511704608185522,
+        4.2945109711682505,
+        2.8730635333992063,
+        0.10822270275007774,
+        0.6021054339225503,
+        0.006239085291110019,
+        -0.06271683212739187,
+        19.712449853278205,
+        40.476434927526014,
+        0.7447013725078819,
+        0.044329456197326235,
+        0.001883963166888009,
+        1.0000016184201161,
+        39.74081460224838,
+        15.562968676590227,
+        0.13092735298691582,
+        0.0336719619881494,
+        0.002126371827067064,
+        0.8045953466915563
+      ]
+    }
+  ],
+  "request_id": "50e96aa0bd85bbba7b33986e17f1866c4d3602e5371048406610863abbb457c2"
+}

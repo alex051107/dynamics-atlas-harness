@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "files": 140,
+  "source_repetitions": 12,
+  "raw_events": 364326,
+  "selected_events": 44451,
+  "selected_negative_corrected_count_events": 180,
+  "selected_E_outside_zero_one": 715,
+  "histogram_accounting_matches": true,
+  "figure_visually_checked": true,
+  "figure_generation_attempts": 2,
+  "first_attempt": "Python syntax typo repaired before rendering; no scientific rerun"
+}

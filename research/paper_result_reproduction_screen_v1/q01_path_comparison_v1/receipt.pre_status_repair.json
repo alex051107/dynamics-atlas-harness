@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-09-05T13:05:19.018475+00:00",
+  "status": "COMPARISON_EXECUTED",
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "on_operator_calls": 1,
+  "off_operator_calls": 0,
+  "new_gmx_calls": 40,
+  "new_optimizations": 0,
+  "trajectories_admitted": 40,
+  "max_uniform_source_parity_A": 0.005001660338926683,
+  "scientific_status": "PATH_JUDGMENTS_UNCHANGED_UNDER_TWO_METHODS",
+  "accuracy_gain_claimed": false,
+  "full_question_answer": false,
+  "original_rules_baseline_changed": false,
+  "manual_canary_reclassified_as_extra": false,
+  "method_id": "5362a505a1295ccd69fea728d6d679cb9460728fc28bcc431fc91e4fa18e1c1c",
+  "input_id": "31642c42f952af33ffd9faf886b98f9d3de87fbaa39260e13969e8b3cd9df57c"
+}

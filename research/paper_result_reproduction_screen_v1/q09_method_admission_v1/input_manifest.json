@@ -1,0 +1,1507 @@
+{
+  "record": "https://zenodo.org/records/3376527",
+  "sources": [
+    {
+      "name": "eTCSPC_wildtype.zip",
+      "url": "https://zenodo.org/records/3376527/files/eTCSPC_wildtype.zip?download=1",
+      "bytes": 2906818,
+      "md5": "177132ce5bb9fefde871bafe8c92cbfd",
+      "published_md5": "177132ce5bb9fefde871bafe8c92cbfd",
+      "verified_at": "2026-09-05T06:11:36.371723+00:00"
+    },
+    {
+      "name": "Description_of_uploaded_data.pdf",
+      "url": "https://zenodo.org/records/3376527/files/Description_of_uploaded_data.pdf?download=1",
+      "bytes": 461994,
+      "md5": "26995df1533836929c3c783b776e9c24",
+      "published_md5": "26995df1533836929c3c783b776e9c24",
+      "verified_at": "2026-09-05T06:11:37.369771+00:00"
+    }
+  ],
+  "download_bytes": 3368812,
+  "zip_integrity": "PASS",
+  "archive_inventory": [
+    {
+      "name": "eTCSPC/19-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/19-119/19-119.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/19-119_D0.txt",
+      "bytes": 38751,
+      "compressed_bytes": 15035,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/19-119_DA.txt",
+      "bytes": 37887,
+      "compressed_bytes": 14566,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/IRF_D0.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/IRF_DA.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/Linearization_D0.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-119/Linearization_DA.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/19-132/19-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/19-132_D0.txt",
+      "bytes": 38751,
+      "compressed_bytes": 15035,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/19-132_DA.txt",
+      "bytes": 37566,
+      "compressed_bytes": 14391,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/IRF_D0.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/IRF_DA.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/Linearization_D0.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-132/Linearization_DA.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/19-69/19-69.yml",
+      "bytes": 7213,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/19-69_D0.txt",
+      "bytes": 40258,
+      "compressed_bytes": 16072,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/19-69_DA.txt",
+      "bytes": 39433,
+      "compressed_bytes": 15525,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/IRF_D0.txt",
+      "bytes": 32905,
+      "compressed_bytes": 11753,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/IRF_DA.txt",
+      "bytes": 32830,
+      "compressed_bytes": 11663,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/Linearization_D0.txt",
+      "bytes": 46753,
+      "compressed_bytes": 16876,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-69/Linearization_DA.txt",
+      "bytes": 46874,
+      "compressed_bytes": 16635,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/19-86/19-86.yml",
+      "bytes": 9246,
+      "compressed_bytes": 2408,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/19-86_D0.txt",
+      "bytes": 39879,
+      "compressed_bytes": 15801,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/19-86_DA.dat",
+      "bytes": 61988,
+      "compressed_bytes": 21630,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/IRF_DA.dat",
+      "bytes": 52548,
+      "compressed_bytes": 15909,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/IRF_Do.txt",
+      "bytes": 32653,
+      "compressed_bytes": 11503,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/19-86/Linearization_D0.txt",
+      "bytes": 47060,
+      "compressed_bytes": 17312,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/22-127/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/22-127/22-127.yml",
+      "bytes": 6152,
+      "compressed_bytes": 2034,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/22-127/22-127_D0.dat",
+      "bytes": 62025,
+      "compressed_bytes": 22203,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/22-127/22-127_DA.dat",
+      "bytes": 61407,
+      "compressed_bytes": 21864,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/22-127/IRF_D0.dat",
+      "bytes": 52446,
+      "compressed_bytes": 15542,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/22-127/IRF_DA.dat",
+      "bytes": 52449,
+      "compressed_bytes": 15731,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/36-132/36-132.yml",
+      "bytes": 6151,
+      "compressed_bytes": 2035,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-132/36-132_D0.dat",
+      "bytes": 65118,
+      "compressed_bytes": 23410,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-132/36-132_DA.dat",
+      "bytes": 59463,
+      "compressed_bytes": 20854,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-132/IRF_D0.dat",
+      "bytes": 52438,
+      "compressed_bytes": 15433,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-132/IRF_DA.dat",
+      "bytes": 52447,
+      "compressed_bytes": 15539,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/36-86/36-86.yml",
+      "bytes": 6143,
+      "compressed_bytes": 2034,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-86/36-86_D0.dat",
+      "bytes": 65162,
+      "compressed_bytes": 23442,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-86/36-86_DA.dat",
+      "bytes": 59541,
+      "compressed_bytes": 20824,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-86/IRF_D0.dat",
+      "bytes": 52450,
+      "compressed_bytes": 15639,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/36-86/IRF_DA.dat",
+      "bytes": 52450,
+      "compressed_bytes": 15481,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-119/44-119.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/44-119_D0.txt",
+      "bytes": 40109,
+      "compressed_bytes": 16046,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/44-119_DA.txt",
+      "bytes": 39395,
+      "compressed_bytes": 15387,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/IRF_D0.txt",
+      "bytes": 32634,
+      "compressed_bytes": 11508,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/IRF_DA.txt",
+      "bytes": 32668,
+      "compressed_bytes": 11535,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/Linearization_D0.txt",
+      "bytes": 46836,
+      "compressed_bytes": 16671,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-119/Linearization_DA.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16746,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-127/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-127/44-127.yml",
+      "bytes": 6152,
+      "compressed_bytes": 2033,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-127/44-127_D0.dat",
+      "bytes": 64916,
+      "compressed_bytes": 23530,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-127/44-127_DA.dat",
+      "bytes": 61396,
+      "compressed_bytes": 21919,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-127/IRF_D0.dat",
+      "bytes": 52449,
+      "compressed_bytes": 15629,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-127/IRF_DA.dat",
+      "bytes": 52440,
+      "compressed_bytes": 15454,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-132/44-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/44-132_D0.txt",
+      "bytes": 40109,
+      "compressed_bytes": 16046,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/44-132_DA.txt",
+      "bytes": 39773,
+      "compressed_bytes": 15780,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/IRF_D0.txt",
+      "bytes": 32634,
+      "compressed_bytes": 11508,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/IRF_DA.txt",
+      "bytes": 32668,
+      "compressed_bytes": 11535,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/Linearization_D0.txt",
+      "bytes": 46836,
+      "compressed_bytes": 16671,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-132/Linearization_DA.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16746,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-150/44-150.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2146,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/44-150_D0.txt",
+      "bytes": 40252,
+      "compressed_bytes": 15972,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/44-150_DA.txt",
+      "bytes": 38440,
+      "compressed_bytes": 14799,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/IRF_D0.txt",
+      "bytes": 32810,
+      "compressed_bytes": 11611,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/IRF_DA.txt",
+      "bytes": 32810,
+      "compressed_bytes": 11611,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/Linearization_D0.txt",
+      "bytes": 46834,
+      "compressed_bytes": 16460,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-150/Linearization_DA.txt",
+      "bytes": 46834,
+      "compressed_bytes": 16460,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-69/44-69.yml",
+      "bytes": 7214,
+      "compressed_bytes": 2152,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/44-69_D0.txt",
+      "bytes": 40109,
+      "compressed_bytes": 16046,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/44-69_DA.txt",
+      "bytes": 37465,
+      "compressed_bytes": 14275,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/IRF_D0.txt",
+      "bytes": 32634,
+      "compressed_bytes": 11508,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/IRF_DA.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/Linearization_D0.txt",
+      "bytes": 46836,
+      "compressed_bytes": 16672,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-69/Linearization_DA.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/44-86/44-86.yml",
+      "bytes": 7213,
+      "compressed_bytes": 2146,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/44-86_D0.txt",
+      "bytes": 40252,
+      "compressed_bytes": 15972,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/44-86_DA.txt",
+      "bytes": 37198,
+      "compressed_bytes": 14097,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/IRF_D0.txt",
+      "bytes": 32810,
+      "compressed_bytes": 11611,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/IRF_DA.txt",
+      "bytes": 32394,
+      "compressed_bytes": 11202,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/Linearization_D0.txt",
+      "bytes": 46834,
+      "compressed_bytes": 16460,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/44-86/Linearization_DA.txt",
+      "bytes": 47024,
+      "compressed_bytes": 17120,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/5-132/5-132.yml",
+      "bytes": 6144,
+      "compressed_bytes": 2033,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-132/5-132_D0.dat",
+      "bytes": 64270,
+      "compressed_bytes": 23421,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-132/5-132_DA.dat",
+      "bytes": 58920,
+      "compressed_bytes": 20345,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-132/IRF_D0.dat",
+      "bytes": 52444,
+      "compressed_bytes": 15451,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-132/IRF_DA.dat",
+      "bytes": 52444,
+      "compressed_bytes": 15501,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-44/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/5-44/5-44.yml",
+      "bytes": 6136,
+      "compressed_bytes": 2030,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-44/5-44_D0.dat",
+      "bytes": 64182,
+      "compressed_bytes": 23383,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-44/5-44_DA.dat",
+      "bytes": 59577,
+      "compressed_bytes": 20743,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-44/IRF_D0.dat",
+      "bytes": 52447,
+      "compressed_bytes": 15759,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/5-44/IRF_DA.dat",
+      "bytes": 52480,
+      "compressed_bytes": 15562,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/55-119/55-119.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/55-119_D0.txt",
+      "bytes": 40081,
+      "compressed_bytes": 15940,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/55-119_DA.txt",
+      "bytes": 39250,
+      "compressed_bytes": 15268,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/IRF_D0.txt",
+      "bytes": 32642,
+      "compressed_bytes": 11544,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/IRF_DA.txt",
+      "bytes": 32642,
+      "compressed_bytes": 11554,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/Linearization_D0.txt",
+      "bytes": 46933,
+      "compressed_bytes": 16926,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-119/Linearization_DA.txt",
+      "bytes": 46900,
+      "compressed_bytes": 16824,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/55-132/55-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/55-132_D0.txt",
+      "bytes": 40358,
+      "compressed_bytes": 16073,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/55-132_DA.txt",
+      "bytes": 38532,
+      "compressed_bytes": 14844,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/IRF_D0.txt",
+      "bytes": 32867,
+      "compressed_bytes": 11669,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/IRF_DA.txt",
+      "bytes": 32867,
+      "compressed_bytes": 11669,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/Linearization_D0.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16890,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-132/Linearization_DA.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16890,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/55-150/55-150.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/55-150_D0.txt",
+      "bytes": 39979,
+      "compressed_bytes": 15923,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/55-150_DA.txt",
+      "bytes": 39908,
+      "compressed_bytes": 15816,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/IRF_D0.txt",
+      "bytes": 32668,
+      "compressed_bytes": 11535,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/IRF_DA.txt",
+      "bytes": 32668,
+      "compressed_bytes": 11535,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/Linearization_D0.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16746,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-150/Linearization_DA.txt",
+      "bytes": 46988,
+      "compressed_bytes": 16746,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/55-69/55-69.yml",
+      "bytes": 7213,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/55-69_D0.txt",
+      "bytes": 40145,
+      "compressed_bytes": 16102,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/55-69_DA.txt",
+      "bytes": 39081,
+      "compressed_bytes": 15194,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/IRF_D0.txt",
+      "bytes": 32634,
+      "compressed_bytes": 11508,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/IRF_DA.txt",
+      "bytes": 32634,
+      "compressed_bytes": 11508,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/Linearization_D0.txt",
+      "bytes": 46836,
+      "compressed_bytes": 16672,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/55-69/Linearization_DA.txt",
+      "bytes": 46836,
+      "compressed_bytes": 16672,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/60-119/60-119.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/60-119_D0.txt",
+      "bytes": 37679,
+      "compressed_bytes": 14406,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/60-119_DA.txt",
+      "bytes": 38156,
+      "compressed_bytes": 14643,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/IRF_D0.txt",
+      "bytes": 32751,
+      "compressed_bytes": 11618,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/IRF_DA.txt",
+      "bytes": 32642,
+      "compressed_bytes": 11551,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/Linearization_D0.txt",
+      "bytes": 46802,
+      "compressed_bytes": 16378,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-119/Linearization_DA.txt",
+      "bytes": 46797,
+      "compressed_bytes": 16469,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/60-132/60-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/60-132_D0.txt",
+      "bytes": 40379,
+      "compressed_bytes": 16194,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/60-132_DA.txt",
+      "bytes": 39073,
+      "compressed_bytes": 15291,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-132/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/60-150/60-150.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/60-150_D0.txt",
+      "bytes": 40365,
+      "compressed_bytes": 16255,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/60-150_DA.txt",
+      "bytes": 39178,
+      "compressed_bytes": 15363,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-150/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/60-86/60-86.yml",
+      "bytes": 7213,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/60-86_D0.txt",
+      "bytes": 40492,
+      "compressed_bytes": 16275,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/60-86_DA.txt",
+      "bytes": 39652,
+      "compressed_bytes": 15738,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/60-86/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/69-119/69-119.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/69-119_D0.txt",
+      "bytes": 40343,
+      "compressed_bytes": 16168,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/69-119_DA.txt",
+      "bytes": 39416,
+      "compressed_bytes": 15566,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-119/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/69-132/69-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/69-132_D0.txt",
+      "bytes": 40242,
+      "compressed_bytes": 16132,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/69-132_DA.txt",
+      "bytes": 39261,
+      "compressed_bytes": 15424,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-132/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/69-150/69-150.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/69-150_D0.txt",
+      "bytes": 40408,
+      "compressed_bytes": 16240,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/69-150_DA.txt",
+      "bytes": 39642,
+      "compressed_bytes": 15678,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-150/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/69-86/69-86.yml",
+      "bytes": 7213,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/69-86_D0.txt",
+      "bytes": 40372,
+      "compressed_bytes": 16266,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/69-86_DA.txt",
+      "bytes": 39802,
+      "compressed_bytes": 15794,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/IRF_D0.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/IRF_DA.txt",
+      "bytes": 32877,
+      "compressed_bytes": 11689,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/Linearization_D0.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/69-86/Linearization_DA.txt",
+      "bytes": 46903,
+      "compressed_bytes": 17997,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/70-119/70-119_D0.txt",
+      "bytes": 38357,
+      "compressed_bytes": 14656,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/70-119_DA.txt",
+      "bytes": 37780,
+      "compressed_bytes": 14463,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/70-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/IRF_D0.txt",
+      "bytes": 32905,
+      "compressed_bytes": 11753,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/IRF_DA.txt",
+      "bytes": 32810,
+      "compressed_bytes": 11611,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/Linearization_D0.txt",
+      "bytes": 46753,
+      "compressed_bytes": 16876,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-119/Linearization_DA.txt",
+      "bytes": 46834,
+      "compressed_bytes": 16460,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/70-132/70-132.yml",
+      "bytes": 7221,
+      "compressed_bytes": 2148,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/70-132_D0.txt",
+      "bytes": 38357,
+      "compressed_bytes": 14656,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/70-132_DA.txt",
+      "bytes": 38257,
+      "compressed_bytes": 14737,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/IRF_D0.txt",
+      "bytes": 32905,
+      "compressed_bytes": 11754,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/IRF_DA.txt",
+      "bytes": 32810,
+      "compressed_bytes": 11611,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/Linearization_D0.txt",
+      "bytes": 46753,
+      "compressed_bytes": 16876,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/70-132/Linearization_DA.txt",
+      "bytes": 46834,
+      "compressed_bytes": 16460,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-119/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/8-119/8-119.yml",
+      "bytes": 6144,
+      "compressed_bytes": 2033,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-119/8-119_D0.dat",
+      "bytes": 64022,
+      "compressed_bytes": 23109,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-119/8-119_DA.dat",
+      "bytes": 59891,
+      "compressed_bytes": 20956,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-119/IRF_D0.dat",
+      "bytes": 52444,
+      "compressed_bytes": 15545,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-119/IRF_DA.dat",
+      "bytes": 52444,
+      "compressed_bytes": 15612,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-132/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/8-132/8-132.yml",
+      "bytes": 6143,
+      "compressed_bytes": 2030,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-132/8-132_D0.dat",
+      "bytes": 64291,
+      "compressed_bytes": 23340,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-132/8-132_DA.dat",
+      "bytes": 61507,
+      "compressed_bytes": 21732,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-132/IRF_D0.dat",
+      "bytes": 52448,
+      "compressed_bytes": 15666,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-132/IRF_DA.dat",
+      "bytes": 52444,
+      "compressed_bytes": 15594,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/8-69/8-69.yml",
+      "bytes": 7205,
+      "compressed_bytes": 2145,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/8-69_D0.txt",
+      "bytes": 40162,
+      "compressed_bytes": 15992,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/8-69_DA.txt",
+      "bytes": 38733,
+      "compressed_bytes": 14957,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/IRF_D0.txt",
+      "bytes": 32830,
+      "compressed_bytes": 11663,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/IRF_DA.txt",
+      "bytes": 32830,
+      "compressed_bytes": 11663,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/Linearization_D0.txt",
+      "bytes": 46874,
+      "compressed_bytes": 16635,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-69/Linearization_DA.txt",
+      "bytes": 46874,
+      "compressed_bytes": 16635,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "eTCSPC/8-86/8-86.yml",
+      "bytes": 7204,
+      "compressed_bytes": 2147,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/8-86_D0.txt",
+      "bytes": 40162,
+      "compressed_bytes": 15992,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/8-86_DA.txt",
+      "bytes": 38755,
+      "compressed_bytes": 14856,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/IRF_D0.txt",
+      "bytes": 32830,
+      "compressed_bytes": 11663,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/IRF_DA.txt",
+      "bytes": 32830,
+      "compressed_bytes": 11663,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/Linearization_D0.txt",
+      "bytes": 46874,
+      "compressed_bytes": 16635,
+      "is_directory": false
+    },
+    {
+      "name": "eTCSPC/8-86/Linearization_DA.txt",
+      "bytes": 46874,
+      "compressed_bytes": 16635,
+      "is_directory": false
+    }
+  ]
+}

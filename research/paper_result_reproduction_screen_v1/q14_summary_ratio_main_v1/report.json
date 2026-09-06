@@ -1,0 +1,68 @@
+{
+  "status": "CONDITIONAL_SUMMARY_RATIOS_COVARIANCE_UNRESOLVED",
+  "ratios": [
+    {
+      "pair": "1",
+      "ratio": 1.383084577114428,
+      "zero_covariance_delta_sd": 0.051068358012685104
+    },
+    {
+      "pair": "2",
+      "ratio": 1.3406593406593408,
+      "zero_covariance_delta_sd": 0.07205647028744792
+    }
+  ],
+  "cross_pair_difference": 0.04242523645508722,
+  "main_inputs": {
+    "means_A": [
+      83.4,
+      60.3,
+      85.4,
+      63.7
+    ],
+    "published_sd_A": [
+      2.5,
+      1.3,
+      3.4,
+      2.3
+    ]
+  },
+  "difference_jacobian": [
+    0.01658374792703151,
+    -0.022936725988630648,
+    -0.015698587127158554,
+    0.0210464574671796
+  ],
+  "zero_covariance_difference_sd": 0.08831824330452709,
+  "covariance_status": "UNAVAILABLE_NOT_ASSUMED_ZERO_FOR_CONCLUSION",
+  "zero_covariance_role": "EXPLICIT_BASELINE_ONLY",
+  "shared_R0": "Cancels exactly only when identical within pair; sample-specific factor remains unknown",
+  "reference": [
+    {
+      "pair": "1",
+      "ratio": 1.422487223168654,
+      "parameter_box_ratio": [
+        1.3449419568822552,
+        1.5043782837127846
+      ],
+      "role": "AUTHOR_REFERENCE_PARAMETER_SENSITIVITY_NOT_CI"
+    },
+    {
+      "pair": "2",
+      "ratio": 1.4077181208053693,
+      "parameter_box_ratio": [
+        1.341543513957307,
+        1.476843910806175
+      ],
+      "role": "AUTHOR_REFERENCE_PARAMETER_SENSITIVITY_NOT_CI"
+    }
+  ],
+  "jacobian_max_error": 1.2022952078361016e-12,
+  "full_question_answer": false,
+  "new_numerical_operators": 0,
+  "limits": [
+    "Published dispersion not SEM/CI; no certified independent lab sample size.",
+    "Mean of apparent lab distances not distance transformed from pooled E.",
+    "Unknown calibration covariance and dye model variation prevent full quantitative comparison."
+  ]
+}

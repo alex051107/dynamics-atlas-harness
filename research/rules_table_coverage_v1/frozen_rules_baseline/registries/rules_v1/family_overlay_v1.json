@@ -1,0 +1,70 @@
+{
+  "schema_version": "rules-prototype-family-overlay/v1",
+  "overlay_id": "dynamics-atlas-family-overlay/v1",
+  "status": "PROPOSAL_ONLY_NOT_RUNTIME_ACTIVE",
+  "families": [
+    {
+      "family_id": "F01_CLAIM_CONTRACT_AND_CEILING",
+      "display_name": "Claim Contract and Ceiling",
+      "candidate_subrule_ids": ["F01R01_CASE_CLAIM_DECLARATION", "F01R02_CASE_REQUESTED_WORDING_SCOPE"],
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
+      "architecture_decision": "APPROVE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "NOT_READY"
+    },
+    {
+      "family_id": "F02_SYSTEM_CONSTRUCT_AND_CONDITION",
+      "display_name": "System Construct and Condition",
+      "candidate_subrule_ids": ["F02R01_SOURCE_SAMPLE_SYSTEM_COMPOSITION_DECLARATION", "F02R02_EDGE_CONDITION_COMPATIBILITY"],
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
+      "architecture_decision": "APPROVE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "NOT_READY"
+    },
+    {
+      "family_id": "F03_SOURCE_MEASUREMENT_SEMANTICS",
+      "display_name": "Source Measurement Semantics",
+      "candidate_subrule_ids": ["F03R01_SOURCE_NATIVE_MEASUREMENT"],
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
+      "architecture_decision": "APPROVE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "NOT_READY"
+    },
+    {
+      "family_id": "F04_SOURCE_RELIABILITY_AND_UNCERTAINTY",
+      "display_name": "Source Reliability and Uncertainty",
+      "candidate_subrule_ids": ["F04R01_SOURCE_RELIABILITY_PROVENANCE"],
+      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "architecture_decision": "REVISE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "DEFER"
+    },
+    {
+      "family_id": "F05_REPRESENTATION_SUPPORT_AND_FORWARD_BRIDGE",
+      "display_name": "Representation Support and Forward Bridge",
+      "candidate_subrule_ids": ["F05R01_SOURCE_CANDIDATE_SUPPORT", "F05R02_SOURCE_FORWARD_BRIDGE"],
+      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "architecture_decision": "REVISE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "DEFER"
+    },
+    {
+      "family_id": "F06_CROSS_SOURCE_COMPARABILITY_AND_EVIDENCE_ROLE",
+      "display_name": "Cross-source Comparability and Evidence Role",
+      "candidate_subrule_ids": ["F06R01_SOURCE_EVIDENCE_ROLE", "F06R02_EDGE_COMPARABILITY", "F06R03_EDGE_VALIDATION_INDEPENDENCE"],
+      "implementation_status": "COMPLETE_DRAFT_SLICE",
+      "architecture_decision": "REVISE",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "NOT_READY"
+    },
+    {
+      "family_id": "F07_IDENTIFIABILITY_AND_NEXT_ACTION",
+      "display_name": "Identifiability and Next Discriminating Action",
+      "candidate_subrule_ids": ["F07R01_CASE_IDENTIFIABILITY"],
+      "implementation_status": "CANDIDATE_MAP_ONLY",
+      "architecture_decision": "DEFER",
+      "source_grounding_decision": "PENDING_DOMAIN_REVIEW",
+      "runtime_readiness": "DEFER"
+    }
+  ]
+}

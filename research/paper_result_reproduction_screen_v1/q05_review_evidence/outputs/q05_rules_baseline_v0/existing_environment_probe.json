@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-04T22:44:29.689683+00:00",
+  "method": "importlib.util.find_spec without importing pymbar; filesystem check for repo .venv",
+  "pymbar_found": false,
+  "checked_interpreters": [
+    "python3 (original environment) (actual import traceback)",
+    "python3.14",
+    "/opt/anaconda3/envs/PythonProject/bin/python",
+    "/opt/anaconda3/envs/langchain1.2/bin/python"
+  ],
+  "repo_dot_venv_python_found": false,
+  "claim_ceiling": "These checked environments only; not an exhaustive machine inventory. No dependency installed."
+}

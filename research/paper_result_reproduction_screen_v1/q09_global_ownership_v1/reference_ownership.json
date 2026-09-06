@@ -1,0 +1,419 @@
+[
+  {
+    "record_id": "D0_01",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "19-119",
+      "19-132"
+    ],
+    "source_paths": [
+      "19-119/19-119_D0.txt",
+      "19-132/19-132_D0.txt"
+    ],
+    "raw_photons": 15012893,
+    "retained_photons": 15012893,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "UNKNOWN"
+  },
+  {
+    "record_id": "D0_02",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "19-69"
+    ],
+    "source_paths": [
+      "19-69/19-69_D0.txt"
+    ],
+    "raw_photons": 30829055,
+    "retained_photons": 30829051,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_03",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "19-86"
+    ],
+    "source_paths": [
+      "19-86/19-86_D0.txt"
+    ],
+    "raw_photons": 31626813,
+    "retained_photons": 31626813,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_04",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "22-127"
+    ],
+    "source_paths": [
+      "22-127/22-127_D0.dat"
+    ],
+    "raw_photons": 33558106,
+    "retained_photons": 33558106,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_05",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "36-132"
+    ],
+    "source_paths": [
+      "36-132/36-132_D0.dat"
+    ],
+    "raw_photons": 53292706,
+    "retained_photons": 53292706,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_06",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "36-86"
+    ],
+    "source_paths": [
+      "36-86/36-86_D0.dat"
+    ],
+    "raw_photons": 53221526,
+    "retained_photons": 53221526,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_07",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "44-119",
+      "44-132",
+      "44-69"
+    ],
+    "source_paths": [
+      "44-119/44-119_D0.txt",
+      "44-132/44-132_D0.txt",
+      "44-69/44-69_D0.txt"
+    ],
+    "raw_photons": 33923585,
+    "retained_photons": 33923583,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "UNKNOWN"
+  },
+  {
+    "record_id": "D0_08",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "44-127"
+    ],
+    "source_paths": [
+      "44-127/44-127_D0.dat"
+    ],
+    "raw_photons": 52782752,
+    "retained_photons": 52782752,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_09",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "44-150",
+      "44-86"
+    ],
+    "source_paths": [
+      "44-150/44-150_D0.txt",
+      "44-86/44-86_D0.txt"
+    ],
+    "raw_photons": 34253368,
+    "retained_photons": 34253367,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "UNKNOWN"
+  },
+  {
+    "record_id": "D0_10",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "5-132"
+    ],
+    "source_paths": [
+      "5-132/5-132_D0.dat"
+    ],
+    "raw_photons": 49275154,
+    "retained_photons": 49275154,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_11",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "5-44"
+    ],
+    "source_paths": [
+      "5-44/5-44_D0.dat"
+    ],
+    "raw_photons": 49278363,
+    "retained_photons": 49278363,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_12",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "55-119"
+    ],
+    "source_paths": [
+      "55-119/55-119_D0.txt"
+    ],
+    "raw_photons": 32700955,
+    "retained_photons": 32698785,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_13",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "55-132"
+    ],
+    "source_paths": [
+      "55-132/55-132_D0.txt"
+    ],
+    "raw_photons": 33972278,
+    "retained_photons": 33972276,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_14",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "55-150"
+    ],
+    "source_paths": [
+      "55-150/55-150_D0.txt"
+    ],
+    "raw_photons": 31823371,
+    "retained_photons": 31823371,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_15",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "55-69"
+    ],
+    "source_paths": [
+      "55-69/55-69_D0.txt"
+    ],
+    "raw_photons": 34029051,
+    "retained_photons": 34029050,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_16",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "60-119"
+    ],
+    "source_paths": [
+      "60-119/60-119_D0.txt"
+    ],
+    "raw_photons": 14369280,
+    "retained_photons": 14368334,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_17",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "60-132"
+    ],
+    "source_paths": [
+      "60-132/60-132_D0.txt"
+    ],
+    "raw_photons": 31884326,
+    "retained_photons": 31884322,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_18",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "60-150"
+    ],
+    "source_paths": [
+      "60-150/60-150_D0.txt"
+    ],
+    "raw_photons": 31811586,
+    "retained_photons": 31811584,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_19",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "60-86"
+    ],
+    "source_paths": [
+      "60-86/60-86_D0.txt"
+    ],
+    "raw_photons": 33061909,
+    "retained_photons": 33061907,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_20",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "69-119"
+    ],
+    "source_paths": [
+      "69-119/69-119_D0.txt"
+    ],
+    "raw_photons": 31624749,
+    "retained_photons": 31624747,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_21",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "69-132"
+    ],
+    "source_paths": [
+      "69-132/69-132_D0.txt"
+    ],
+    "raw_photons": 31396864,
+    "retained_photons": 31396863,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_22",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "69-150"
+    ],
+    "source_paths": [
+      "69-150/69-150_D0.txt"
+    ],
+    "raw_photons": 31961090,
+    "retained_photons": 31961089,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_23",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "69-86"
+    ],
+    "source_paths": [
+      "69-86/69-86_D0.txt"
+    ],
+    "raw_photons": 32689715,
+    "retained_photons": 32689714,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_24",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "70-119",
+      "70-132"
+    ],
+    "source_paths": [
+      "70-119/70-119_D0.txt",
+      "70-132/70-132_D0.txt"
+    ],
+    "raw_photons": 7320517,
+    "retained_photons": 7320516,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "UNKNOWN"
+  },
+  {
+    "record_id": "D0_25",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "8-119"
+    ],
+    "source_paths": [
+      "8-119/8-119_D0.dat"
+    ],
+    "raw_photons": 48905343,
+    "retained_photons": 48905343,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_26",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "8-132"
+    ],
+    "source_paths": [
+      "8-132/8-132_D0.dat"
+    ],
+    "raw_photons": 49262427,
+    "retained_photons": 49262427,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "SINGLE_PAIR_JOINT_DONOR_RESPONSE_ASSUMPTION"
+  },
+  {
+    "record_id": "D0_27",
+    "likelihood_multiplicity": 1,
+    "owners": [
+      "8-69",
+      "8-86"
+    ],
+    "source_paths": [
+      "8-69/8-69_D0.txt",
+      "8-86/8-86_D0.txt"
+    ],
+    "raw_photons": 32620557,
+    "retained_photons": 32620557,
+    "instrument_method_alternatives": 1,
+    "status": "CONDITIONAL_UNIQUE_REFERENCE",
+    "response_transfer_to_distinct_mutants": "UNKNOWN"
+  }
+]

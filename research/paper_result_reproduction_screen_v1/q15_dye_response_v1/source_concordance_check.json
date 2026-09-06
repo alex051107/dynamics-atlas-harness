@@ -1,0 +1,22 @@
+{
+  "status": "NUMERIC_WORKBOOK_CSV_MATCH_WITH_PDF_CY5_VISUAL_DISCREPANCY",
+  "checks": [
+    {
+      "condition": "apo",
+      "source_csv": "outputs/q15_raw_archive_inventory_v1/source_members/Figure4/HiSiaP_175_Cy5_10g_200nM/anisotropy.csv",
+      "n": 3125,
+      "max_abs_difference": 9.947598300641403e-14,
+      "matches": true
+    },
+    {
+      "condition": "holo",
+      "source_csv": "outputs/q15_raw_archive_inventory_v1/source_members/Figure4/HiSiaP_175_Cy5_10g_200nM_100uM_SilAcid/anisotropy.csv",
+      "n": 3125,
+      "max_abs_difference": 9.947598300641403e-14,
+      "matches": true
+    }
+  ],
+  "pdf_visual_finding": "Source-deposited Cy5 anisotropy falls substantially toward zero at late plotted delays; physical7Figure4c Cy5 appears persistently larger. Source-deposited intensity has much higher relative late floor. Exact cause/plot-registration unresolved; do not claim same published-figure curve or quantitative Cy5 mechanism.",
+  "scope": "Numbers reproduce deposited workbook and CSV; source label identity alone does not resolve displayed-paper discrepancy. TMR andAlexa donor qualitative comparison remains a separate observation.",
+  "main_record_preserved": true
+}

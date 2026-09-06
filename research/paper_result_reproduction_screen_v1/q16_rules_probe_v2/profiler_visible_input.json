@@ -1,0 +1,100 @@
+{
+  "schema_version": "paper-blind-agent-visible-input/v1",
+  "packet_id": "Q16_PUBLIC_FACT_PACKET_V1",
+  "case_id": "q16_male_ligand_cryoprotectant_comparison_20260905",
+  "research_question": "Do MalE residual distance components under maltose reflect incomplete ligand saturation or cryoprotectant preparation, and does removal of cryoprotectant support a closed-reference-dominated distribution when differing trace windows are accounted for?",
+  "source_materials": [
+    {
+      "source_id": "Q16_DOSE",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;SourceData Figure5/SI Figure9/SI Figure10;SI physical9/10 and main Fig5.",
+      "permitted_facts": [
+        "MalE29/352 and36/352 spin-labelled samples with1mM versus10mM maltose; standard50percent ethylene glycol preparation.",
+        "MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.",
+        "Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.",
+        "Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.",
+        "{'kind': 'CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE'}",
+        "Spin label positions29/352 and36/352; not backbone atom distances.",
+        "Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN.",
+        "Original answer-free fact packet: {\"author_interpretations_included\": false, \"case_id\": \"q16_male_ligand_cryoprotectant_comparison_20260905\", \"manual_extra_results_included\": false, \"native_sources\": [{\"construct_and_condition\": \"MalE29/352 and36/352 spin-labelled samples with1mM versus10mM maltose; standard50percent ethylene glycol preparation.\", \"estimand\": \"Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.\", \"sample_composition\": \"MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.\", \"source_id\": \"Q16_DOSE\", \"spatial_support\": \"Spin label positions29/352 and36/352; not backbone atom distances.\", \"time_semantics\": {\"kind\": \"CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE\"}, \"unit_or_aggregation\": \"Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN.\"}, {\"construct_and_condition\": \"MalE29/352 at0/25percentethylene glycol,25percentglycerol and50percentethylene glycol;36/352 at0/50percentethylene glycol;holo1mM maltose.\", \"estimand\": \"Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.\", \"sample_composition\": \"MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.\", \"source_id\": \"Q16_PROTECTOR\", \"spatial_support\": \"Spin label positions29/352 and36/352; not backbone atom distances.\", \"time_semantics\": {\"kind\": \"CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE\"}, \"unit_or_aggregation\": \"Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN.\"}], \"primary_paper_doi\": \"10.1038/s41467-022-31945-6\", \"scientific_question\": \"Do MalE residual distance components under maltose reflect incomplete ligand saturation or cryoprotectant preparation, and does removal of cryoprotectant support a closed-reference-dominated distribution when differing trace windows are accounted for?\", \"source_relationships\": [{\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q16_CONDITION_COMPARISON\", \"left_source_id\": \"Q16_DOSE\", \"relation_type\": \"LIGAND_AND_PREPARATION_COMPARISON\", \"right_source_id\": \"Q16_PROTECTOR\", \"shared_error_status\": \"SHARED_PROCESSING_AND_SAMPLE_RELATION_UNRESOLVED\", \"validation_independence\": \"UNKNOWN\"}], \"target_values_included\": false, \"unknowns\": [\"Exact background/inversion configuration and source repeat identity\", \"Comparability under differing recording durations\", \"Joint effect of ligand dose and cryoprotectant preparation\", \"State reference and identifiability under available time windows\"]}"
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    },
+    {
+      "source_id": "Q16_PROTECTOR",
+      "source_kind": "AUTHOR_DEPOSITED_MEASUREMENT_OR_PROCESSED_TRACE",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;SourceData Figure5/SI Figure9/SI Figure10;SI physical9/10 and main Fig5.",
+      "permitted_facts": [
+        "MalE29/352 at0/25percentethylene glycol,25percentglycerol and50percentethylene glycol;36/352 at0/50percentethylene glycol;holo1mM maltose.",
+        "MTSL spin labels, cryogenic DEER sample; preparation equivalence and biological replicate identity UNKNOWN.",
+        "Deposited normalized DEER real and imaginary traces, background curves and background-corrected traces; processed distance distributions held as author-processed diagnostic evidence.",
+        "Condition-dependent dipolar signal and spin-label distance distribution; protein state population requires reference/forward and identifiability support.",
+        "{'kind': 'CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE'}",
+        "Spin label positions29/352 and36/352; not backbone atom distances.",
+        "Trace samples within condition; no-protectant recording shorter according to main paper method narrative; independent replicate identity UNKNOWN."
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Author final fitted distances or efficiencies",
+        "Local computed efficiencies and differences",
+        "Manual extra-diagnostic results and obligation lists"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "Q16_DEER_SOURCE",
+      "asset_kind": "AUTHOR_DEPOSITED_OBSERVATIONS",
+      "public_description": "Normalized dipolar traces and separately labelled author-processed backgrounds/distributions; no fitted state labels."
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_case_facts",
+      "unknowns",
+      "rationale"
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
+  }
+}

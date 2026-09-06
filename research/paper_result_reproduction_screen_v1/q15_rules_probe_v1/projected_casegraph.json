@@ -1,0 +1,138 @@
+{
+  "case": {
+    "case_id": "q15_hisiap_cross_modal_dye_comparison_20260905",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+    "requested_claim_level": "CROSS_MODAL_CONFORMATIONAL_CHANGE_AND_PROBE_APPLICABILITY",
+    "intended_use": "CROSS_SOURCE_REVIEW",
+    "observability_target": {
+      "event_signature": "Answer-blind public-packet fact proposal",
+      "target_time_scale": "Source-declared or UNKNOWN",
+      "target_spatial_scale": "Source-declared or UNKNOWN"
+    },
+    "claim_contract": {
+      "internal_consistency": "CONSISTENT",
+      "declared_request_scope": [
+        "CROSS_MODAL_CONFORMATIONAL_CHANGE_AND_PROBE_APPLICABILITY"
+      ],
+      "forbidden_upgrades": [
+        "BIOLOGICAL_ACTIVITY",
+        "BACKBONE_DISTANCE_AS_PROBE_DISTANCE",
+        "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+      ]
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "Q15_APBS_175_228",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "HiSiaP labeled at 175_228;apo and1mM sialicacid holo source-labelled three repetitions percondition.",
+      "sample_composition": "AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.",
+      "estimand": "Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.",
+      "time_semantics": {
+        "kind": "DIFFUSING_SINGLE_MOLECULE_BURSTS"
+      },
+      "spatial_support": "Two labeling positions 175_228; not C-alpha geometry.",
+      "unit_or_aggregation": "Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q15_APBS_55_175",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "HiSiaP labeled at 55_175;apo and1mM sialicacid holo source-labelled three repetitions percondition.",
+      "sample_composition": "AlexaFluor555/AlexaFluor647 double labels; site-specific calibration applicability UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "APBS photon counts AA DD DA AD and burst times; original source exports, no calculated efficiencies supplied to this probe.",
+      "estimand": "Conditional fluorescence efficiency and stoichiometry under declared correction; structural closure requires an appropriate probe bridge.",
+      "time_semantics": {
+        "kind": "DIFFUSING_SINGLE_MOLECULE_BURSTS"
+      },
+      "spatial_support": "Two labeling positions 55_175; not C-alpha geometry.",
+      "unit_or_aggregation": "Technical segments within three source-labelled repetitions;140 files over two pairs; counts not independent biological repeats.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q15_DEER",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "DIAGNOSTIC",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "HiSiaP spin-labelled pairs in apo/holo; cryogenic preparation differs from fluorescence conditions.",
+      "sample_composition": "Nitroxide spin labels and cryoprotectant; equivalence to fluorophore samples UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Author deposited normalized DEER time traces and processed distance distributions.",
+      "estimand": "Spin-label ensemble distance distribution conditional on background/inverse method.",
+      "time_semantics": {
+        "kind": "CRYOGENIC_ENSEMBLE_DIPOLAR_TRACE"
+      },
+      "spatial_support": "Spin-label positions; not automatically the FRET dye or protein-backbone distance.",
+      "unit_or_aggregation": "Time trace samples and inverse distributions; independent uncertainty and processing details retained separately.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q15_PROBE_PHOTOPHYSICS",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "DIAGNOSTIC",
+      "source_locator": "Peter2022 DOI10.1038/s41467-022-31945-6;Zenodo6683587 Figure3/Figure4;sourceworkbook andsourceadmissionreceipts",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "HiSiaP singly labeled175 or58 withAF555/647,TMR orCy5;sourceidentity discrepancies preserved.",
+      "sample_composition": "Single fluorophores;175C directories vs165C acquisition filenames, andsialicacid vs maltose labels conflict for some records.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Time-resolved anisotropy and fluorescence intensity curves.",
+      "estimand": "Probe rotational restriction and photophysical response, conditional on source identity and instrument correction.",
+      "time_semantics": {
+        "kind": "TIME_RESOLVED_FLUORESCENCE_DECAY"
+      },
+      "spatial_support": "Local dye environment at individual positions; not a direct domain-distance observation.",
+      "unit_or_aggregation": "Published processed curves; raw instrument files partly present, independent repetition identity UNKNOWN.",
+      "native_measurement_declaration_status": "DECLARED"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "Q15_PAIR",
+      "left_source_id": "Q15_APBS_175_228",
+      "right_source_id": "Q15_APBS_55_175",
+      "shared_claim": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "MATCHED_SITE_CONTROL",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    },
+    {
+      "comparison_id": "Q15_DEER",
+      "left_source_id": "Q15_APBS_175_228",
+      "right_source_id": "Q15_DEER",
+      "shared_claim": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "CROSS_MODAL_COMPARISON",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    },
+    {
+      "comparison_id": "Q15_PROBE",
+      "left_source_id": "Q15_APBS_175_228",
+      "right_source_id": "Q15_PROBE_PHOTOPHYSICS",
+      "shared_claim": "Does substrate-associated HiSiaP intersite conformational change agree between DEER and smFRET across labeling pairs, and does changing the 175/228 fluorophore pair affect that agreement?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "PROBE_APPLICABILITY_DIAGNOSTIC",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "SHARED_CALIBRATION_OR_SAMPLE_RELATION_UNRESOLVED",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    }
+  ],
+  "projection_boundary": "Agent-proposed factual fields are evaluated as unverified Draft inputs. Case claim, evidence roles, comparison identities, and comparison semantics come only from the platform-owned public-packet contract."
+}

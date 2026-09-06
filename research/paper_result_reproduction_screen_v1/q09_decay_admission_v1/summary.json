@@ -1,0 +1,47 @@
+{
+  "status": "RAW_CURVES_PARSED_METHOD_AND_MAPPING_NOT_YET_ADMITTED",
+  "variant_folders": 33,
+  "numeric_files": 181,
+  "format_counts": {
+    "IBH_CHANNEL_COUNTS": 147,
+    "NUMERIC_TIME_COUNTS": 34
+  },
+  "bin_counts": {
+    "4096": 147,
+    "6100": 34
+  },
+  "all_counts_finite_nonnegative_integers": true,
+  "missing_literal_references": [
+    {
+      "variant": "19-86",
+      "literal": "./IRF_DA.txt",
+      "line": 31,
+      "exists_exactly": false
+    },
+    {
+      "variant": "19-86",
+      "literal": "./IRF_D0.txt",
+      "line": 38,
+      "exists_exactly": false
+    }
+  ],
+  "metadata_filename_mismatches": [
+    "70-119"
+  ],
+  "sample_dataset_key_mismatches": [
+    "19-86",
+    "44-69"
+  ],
+  "mixed_instrument_variants": [
+    "19-86"
+  ],
+  "optimizer_runs": 0,
+  "rules_runs": 0,
+  "full_scientific_answers": 0,
+  "not_admitted": [
+    "Supplementary equations20,24-27 and Table5 model constraints",
+    "exact per-dataset IRF/linearization/time-axis mapping",
+    "fit window, nuisance parameters, distance-width constraints",
+    "predeclared model comparison and uncertainty evaluation"
+  ]
+}

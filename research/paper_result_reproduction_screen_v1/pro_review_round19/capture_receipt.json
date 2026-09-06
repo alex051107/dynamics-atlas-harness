@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-09-05T18:26:27.196606+00:00",
+  "visible_completed_at": "2026-09-05T18:24:39Z",
+  "model": "ChatGPT6Pro",
+  "worked": "35m5s",
+  "review_head": "4e0ac1c6d793eb97349b0683b17d12998c589784",
+  "decision": "CHANGES_REQUESTED_BOUNDED",
+  "complete_response_verified": "Final decision, full numbered sections, download package and Response actions visible",
+  "scope": "Q09 continuation PASS, Q15 DIRECTION_PASS plus source byte-receipt verification repair; next matched DEER/probe comparison,Q16 and short Q17source audit",
+  "independently_verified_so_far": [
+    "Q15 main runner has no expanded-length/CRC comparison afterread",
+    "Q15 re-selection sensitivity independently already computed locally during review"
+  ],
+  "not_independently_verified_yet": [
+    "Pro leave-one-per-condition summary and analytic E bounds"
+  ],
+  "no_merge_authorization": true,
+  "published_derivative": "Trailing UI whitespace removed; original full AX capture retained unchanged in task outputs"
+}

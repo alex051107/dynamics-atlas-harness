@@ -1,0 +1,490 @@
+heading ChatGPT said:, Value: 4
+							635 text ChatGPT said:
+						636 container
+							690 button (collapsed) Worked for 39m 5s, Secondary Actions: Expand
+							691 button Talked to App
+							692 heading Decision：CHANGES_REQUESTED_BOUNDED, Value: 1
+								693 text Decision：CHANGES_REQUESTED_BOUNDED
+							694 container
+								695 text 审查版本：
+								696 text a5a56baf69ce9ef6a294f8987ba609af4efdd9ba
+								697 text 。首次 GitHub 读回与指定 head 一致，PR #25 为 OPEN、DRAFT、未合并；以下判断锁定该提交，不包含审阅期间继续开展的工作。
+							698 text Q01 的科学答复与新增题级输出可以通过本轮审查，应该冻结。Q09 已经完成一次真正受证据控制的续算，不只是改状态名；但续算结果尚未成为下一次动作选择的依据。这个缺陷会让下一轮重新选择旧 STOP，甚至重新计算已经被后续 PASS 取代的起点。
+							699 container
+								700 text 这是本轮需要现在修复的实现问题，不需要推倒现有设计，也不需要增加科学计算来修复。修完后， 下一项新增题目的科学工作，我优先选择 Q15；Q09 保留有边界的方法处理与全33组比较，不应继续独占整个项目。
+							701 container
+								702 table
+									703 row
+										704 cell
+											705 text 审查对象
+										706 cell
+											707 text 本轮判断
+									708 row
+										709 cell
+											710 text Q01 原题的有限时间科学答复
+										711 cell
+											712 text PASS，保持冻结
+									713 row
+										714 cell
+											715 text Q01 新增证据依赖 reducer
+										716 cell
+											717 text PASS，限当前开发题及其已验证输入范围
+									718 row
+										719 cell
+											720 text Q09 人工诊断消费及本次3个起点的选择
+										721 cell
+											722 text 方向与本次动作成立
+									723 row
+										724 cell
+											725 text Q09 消费续算结果后的再次派发
+										726 cell
+											727 text CHANGES_REQUESTED_BOUNDED
+									728 row
+										729 cell
+											730 text Q09 是否已回答“33组数据需要第三构象态”
+										731 cell
+											732 text 尚未回答
+									733 row
+										734 cell
+											735 text 原20题的高正确率、Rules 泛化、Agent 增益
+										736 cell
+											737 text 尚未测得，不能由本轮推导
+								738 button Copy table
+							739 heading 一、实际核验范围与CI, Value: 2
+								740 text 一、实际核验范围与CI
+							741 container
+								742 text 已核验。  我读取了本轮关键源码、对应测试、Q01题级输出与具名审阅记录、Q09方法消费和续算脚本、保存的拟合参数与数值核验输出、执行回执，以及固定点诊断源码。两份完整远端job日志也已读取。
+							743 container
+								744 text CI  33975270688  的实际情况是：
+							745 container
+								746 table
+									747 row
+										748 cell
+											749 text Job
+										750 cell
+											751 text 实际Python
+										752 cell
+											753 text 日志报告
+										754 cell
+											755 text 实际执行通过
+									756 row
+										757 cell
+											758 text 101330750372
+										759 cell
+											760 text 3.11.16
+										761 cell
+											762 text Ran 313 tests … OK (skipped=2)
+										763 cell
+											764 text 311
+									765 row
+										766 cell
+											767 text 101330750523
+										768 cell
+											769 text 3.12.14
+										770 cell
+											771 text Ran 313 tests … OK (skipped=2)
+										772 cell
+											773 text 311
+								774 button Copy table
+							775 container
+								776 text 两个job检出的是合并引用 
+								777 text 7b76146c3777c9252b95f4690efc3fb053f5611c
+								778 text ，日志明确说明它将本轮 head 合入  914bc00816c7fe9222bd960a4eda56cd01e8a5c6 。新增的11项测试实际执行。两项skip仍是需要外部 Dynamics Atlas 工作区的既有检查，不是新增Q01/Q09测试被跳过。
+							779 text 本地另实际执行了三组独立检查：
+							780 container
+								781 text 一组检查新增Q01输出在反事实下是否改变；一组检查Q09完成一次续算后再次调用选择器的行为；一组检查背景参数是否能够在 不改变现有前向模型 的前提下精确重参数化。
+							782 text 其中六个核心模块已与本轮GitHub读回的完整Git blob SHA核对一致。用于隔离检查的 RuleInstance-ID scaffold 明确标为审计辅助，不是完整Rules引擎；我没有把它当作实际权限与来源准入的验证。
+							783 container
+								784 text 核验边界。  本轮没有在原工作区重跑本地313项测试，没有从真实TCSPC原始包独立重算36个历史候选及3个新拟合的目标与梯度，也没有重新读取原始MD坐标、XTC或完整逐帧路径表。Q09的真实数据数值检查范围是源码、保存参数、核验输出与回执之间的审查；下面的重入缺陷和背景等价性则有本地实际执行的独立反例或数值检查支持。两者不能混称。
+							785 heading 二、Q01可以结项：新输出确实依赖证据, Value: 2
+								786 text 二、Q01可以结项：新输出确实依赖证据
+							787 heading 这次不是把上一轮自然语言PASS写进代码, Value: 3
+								788 text 这次不是把上一轮自然语言PASS写进代码
+							789 container
+								790 text 已核验。 question_answer()  从40条逐轨迹记录重新计算两组末段位移中位数，并与报告中的组间差值核对；分别读取两种方法的持续偏好事件，再检查这些轨迹首尾区段是否真的靠近开放参照、远离闭合参照。 evaluate()  现在使用这个结果，而不是原来的固定科学文字。
+							791 text 保存的题级输出也与上一轮接受的范围一致：两组中位数约为3.76664 Å、9.71110 Å，差5.94446 Å；两种接触方法各有9条持续开放偏好轨迹，并且这9条全部满足首尾绝对靠近开放、远离闭合。没有将其改写为9个完整物理状态转换。
+							792 text 我在精确源码上执行的合成40轨迹检查确认：
+							793 content list
+								794 container
+									795 AXListMarker • 
+									796 text 反转组间位移方向，输出不再支持“closed组移动更大”。
+								797 container
+									798 AXListMarker • 
+									799 text 保留相对事件、但使closed路径到两参照都变远，绝对靠近计数归零，组合结论不再支持。
+								800 container
+									801 AXListMarker • 
+									802 text 接触分歧继续保留；没有主事件时，一致性为 
+									803 text null
+									804 text ，没有被当作正面证据。
+								805 container
+									806 AXListMarker • 
+									807 text 改变记录顺序不改变科学判断；缺少轨迹或重复轨迹身份被拒绝。
+							808 text 这些是输出层行为检查，不是再次证明真实40条MD轨迹的科学结果。
+							809 heading 当前两个终局字段没有构成矛盾, Value: 3
+								810 text 当前两个终局字段没有构成矛盾
+							811 container
+								812 text SUPPORT_WITHIN_CEILING 表达的是： 来源模拟内的证据支持这个限定答复 。
+							813 container
+								814 text ABSTAIN_OR_HUMAN_REVIEW 与 PENDING_DOMAIN_REVIEW 表达的是： 最终人类科学批准仍未完成 。
+							815 text 现有记录明确将上一轮审阅者标为 external AI，而非人类领域审阅人；也明确区分上一轮接受的科学内容与随后才实现的reducer。这个边界是正确的。
+							816 container
+								817 text 我的判断：保留题级内容完成1/20、最终人类批准0、准确率未测的当前口径。  不需要因为人类最终批准尚未填写，就把已经形成的开发题级内容重新抹成0；也不能把这个1计入人类批准或独立正确率。
+							818 heading 冻结的范围仍然要准确, Value: 3
+								819 text 冻结的范围仍然要准确
+							820 text Q01已经能回答的是：
+							821 text 这批来源模拟在20–1020 ns内表现出更大的closed-seeded典型lid移动，以及多条持续的开放方向结构重排；结果与闭合构象有限时间亚稳性解释相容，但不能统一判定9条全部到达同一种完整开放态。
+							822 text 它没有建立一个可用于任意蛋白的“亚稳性判定器”。新reducer的正面条件仍是本题的限定条件组合，不应脱离原有测量、初态与方法准入直接复用。尤其“更大的典型位移”与“已经估计出更高的盆地逃逸概率”仍不是同一个统计量。
+							823 text 这里不需要再补一个Q01 Operator、再扩持续时间网格或再建立状态分类器。下一轮只应在发现会改变已接受结论的具体反证时重新打开Q01。
+							824 heading 三、Q09本轮有真实进展，但应把进展说到正确的位置, Value: 2
+								825 text 三、Q09本轮有真实进展，但应把进展说到正确的位置
+							826 heading 人工结果已经影响了动作，而不是只挂了一个引用, Value: 3
+								827 text 人工结果已经影响了动作，而不是只挂了一个引用
+							828 container
+								829 text 已核验。 verify_diagnostics() 核对完整冻结方法、来源输入、角色和参考组，对候选参数重新计算目标与投影梯度；source-order分支还核对原donor2参数、donor3嵌入和规定起点。 consume() 将这些结果写入同一Q09R02的方法处置，同时保留旧comparison与structure内容。它没有把历史优化过程伪装成重新执行。
+							830 text 回执记录36个候选的固定参数核验、0次优化、0次新增Rules-extra，并明确说明旧全局结果只是此前已经核验的快照，本次只检查其当前来源请求身份，没有再核验整次旧全局拟合。这个限制应该继续保留。
+							831 container
+								832 text “11组有条件候选”也有一个容易误读的细节： D01本来就有PASS候选，但另一个STOP的目标更低。  因而它没有进入“已有候选，可以继续方法比较”的那11组，不意味着D01完全没有驻点。D24当时才是两个起点都没有通过规定数值标准。当前报告没有把这两种情况混为一谈。
+							833 heading 本次3个起点的续算选择是合理的, Value: 3
+								834 text 本次3个起点的续算选择是合理的
+							835 text 脚本确实从方法处置中选择了3个原STOP起点，使用保存参数续算。11个已有条件候选组没有跟着重跑，60–119也没有被送进同类FRET起点搜索。执行回执记录一次Operator派发、三次优化、off为零，并保留人工历史来源。
+							836 text 保存的结果是：
+							837 container
+								838 table
+									839 row
+										840 cell
+											841 text 候选
+										842 cell
+											843 text Deviance
+										844 cell
+											845 text 投影梯度上确界
+										846 cell
+											847 text 当前数值判定
+									848 row
+										849 cell
+											850 text D01续算点
+										851 cell
+											852 text 12,301.394187
+										853 cell
+											854 container 1.5524\times10^{-6}
+										855 cell
+											856 text STOP
+									857 row
+										858 cell
+											859 text D24较低目标点
+										860 cell
+											861 text 12,104.797876
+										862 cell
+											863 container 3.3819\times10^{-5}
+										864 cell
+											865 text STOP
+									866 row
+										867 cell
+											868 text D24另一候选
+										869 cell
+											870 text 12,344.809190
+										871 cell
+											872 container 8.5654\times10^{-7}
+										873 cell
+											874 text PASS
+								875 button Copy table
+							876 text 这些值、起点和终止消息出现在保存的拟合及核验输出中。
+							877 container
+								878 text 判断：本次操作不是空的调度演示。  它实际把D24从“没有通过标准的候选”改变为“存在通过标准的候选，但仍有更低的未完成点”。
+							879 container
+								880 text 同时，较低STOP比PASS候选低约  240.01个deviance单位 。这不是一个可以因为PASS标签更好看就忽略的候选差异；也不能未经模型比较校准，把这个差值直接解释为统计显著性。
+							881 heading 四、本轮确认的实现缺陷：下一次选择仍然读旧候选, Value: 2
+								882 text 四、本轮确认的实现缺陷：下一次选择仍然读旧候选
+							883 text 问题在：
+							884 text src/dynamics_atlas_harness/q09_targeted_continuation_v1.py
+							885 container
+								886 text request() 第19–32行只从原人工报告选择：
+							887 container
+								888 text Python
+								889 button Copy
+								890 button Run code
+									891 image
+									892 text Run
+								893 container
+									894 text report = previous [ 'method_evidence' ]
+...
+ gr = report [ 'source_order_groups' ][ row [ 'reference' ]]
+							895 container
+								896 text 而 evaluate() 第63–73行把续算结果保存到：
+							897 container
+								898 text Python
+								899 button Copy
+								900 button Run code
+									901 image
+									902 text Run
+								903 container
+									904 text out [ 'targeted_numerical_evidence' ]  = report out [ 'method_obligations' ]  =  ...
+							905 container
+								906 text 下一次 request() 不消费这两处更新。
+							907 heading 我实际执行的反例, Value: 3
+								908 text 我实际执行的反例
+							909 text 我构造了一个已经通过验证回调的合成结果：
+							910 text 原候选中，PASS目标为2，STOP目标为1；续算从STOP得到目标0.9的新PASS。
+							911 container
+								912 text 第一次 evaluate() 正确地把组处置改为：
+							913 container
+								914 button Copy
+								915 text CONDITIONAL_NUMERICAL_CANDIDATE_AVAILABLE
+							916 container
+								917 text 而且该次返回的 targeted_operator_obligations 为空。
+							918 container
+								919 text 但是把这个 after 再交给当前选择器，结果仍然是：
+							920 container
+								921 button Copy
+								922 text selected parent = 原STOP
+initial = 原参数[1.0]
+							923 container
+								924 text 而不是不再派发，也不是使用最新参数[0.9]。随后通过当前 dispatch() ，mock Operator被再次调用一次。
+							925 text 另一个反例让续算产生更低的新STOP，下一次选择仍然忽略新可行参数，退回原起点。
+							926 text 这是我执行的选择与派发反事实，不是声称仓库已经实际重复运行了那3次科学拟合。
+							927 heading 为什么必须现在修, Value: 3
+								928 text 为什么必须现在修
+							929 text 这里的失败层是：
+							930 text 新证据 → 当前候选状态 → 下一步动作。
+							931 text 第一次的“证据改变显示处置”已经成立，但第二次动作仍由旧人工证据驱动。若继续使用这个入口，当前本应只处理的D01和D24较低未完成分支，可能再次变成原来的3个起点。
+							932 text 它不推翻已经产生的数值，也不抹掉本次Rules控制的贡献；但它限制了“续算后可以继续根据新证据推进”的声明。
+							933 heading 最小修复, Value: 3
+								934 text 最小修复
+							935 container
+								936 text 保留历史人工报告不变，选择器改为从当前已验证候选计算下一步。  已被续算取代的父候选仍作为历史证据保存，但不应继续作为活跃起点；仍未完成的分支应使用最新保留的可行点。组处置和派发选择应来自同一份当前候选计算结果。
+							937 text 这只需要现有模块内一个窄的候选整理步骤，不需要数据库、调度器或新的工作流框架。
+							938 text 若这个入口确实只打算执行一次，则也可以明确拒绝对已消费结果再次调用。但不能一边允许再次评估，一边悄悄恢复旧候选。
+							939 container
+								940 text 修复的行为验收应直接覆盖第二轮： 新PASS不再派发；新STOP从最新参数继续；不相关组不增加调用；off仍为零。  本轮现有测试检查了第一次处置改变，却没有检查这一步。
+							941 heading 五、两个STOP应该怎样处理：不要放宽标准，也不要继续追逐标签, Value: 2
+								942 text 五、两个STOP应该怎样处理：不要放宽标准，也不要继续追逐标签
+							943 container
+								944 text 已观察。  三个优化器都报告相对目标下降条件终止；两个没有达到另行规定的投影梯度标准。固定点诊断对三个差分尺度进行了检查，主要残余梯度位于背景参数，且没有把探针计算晋升为新拟合。
+							945 container
+								946 text 这与L-BFGS-B的两类终止条件相容：目标下降小与投影梯度小是不同条件， success=True 不能替代你们额外设定的数值验收。
+								947 link Description: SciPy Documentation, Value: docs.scipy.org/doc/scipy-1.17.0/reference/optimize.minimize-lbfgsb.html
+							948 container
+								949 text 我的判断：原STOP应保留，但不建议继续用完全相同的多参数配置反复续跑，只为把两个标签变成PASS。  D24较低点的背景探针只带来很小的目标变化，并不能解决它与另一候选之间的局部极值差异，更不能解决共同donor/响应模型的适用性。
+							950 container
+								951 text 另外，PASS在这里是 给定参数边界下的投影梯度标准通过 。D24的PASS候选有donor寿命位于0.05 ns边界，不能把它叙述成所有参数均处于内部驻点，更不能由此确认一个真实的donor物理组分。
+							952 heading 一个可用的较小方法：精确处理背景，而不是换模型, Value: 3
+								953 text 一个可用的较小方法：精确处理背景，而不是换模型
+							954 text 你最后强调保留“混合→Lin→窗口归一化”的顺序，这个要求正确。不过还有一个值得利用的事实：
+							955 container
+								956 text 现有模型在固定其他参数、scatter为零时，可以精确重参数化为一维凸混合；只是混合权重不能继续用原来的背景参数 
+								957 container b
+								958 text 。
+							959 container
+								960 text 当前源码在拟合窗口 
+								961 container W
+								962 text  内使用的形式可以写为：
+							963 container P_i(b)= \frac{(1-b)a_i+b\,c_i} {(1-b)A+bC},
+							964 container
+								965 text 其中，令已在窗口内归一化的卷积荧光为 
+								966 container F_i
+								967 text ，Lin为 
+								968 container L_i
+								969 text ，窗口点数为 
+								970 container M
+								971 text ，则
+							972 container a_i=L_iF_i,\qquad c_i=L_i/M,\qquad A=\sum_{i\in W}a_i,\quad C=\sum_{i\in W}c_i.
+							973 container
+								974 text 这正是当前 expected_counts() 在scatter为零时的运算顺序，而不是另一个前向模型。
+							975 text 定义
+							976 container w=\frac{bC}{(1-b)A+bC},
+							977 text 便有精确恒等式：
+							978 container P_i=(1-w)\frac{a_i}{A}+w\frac{c_i}{C}, \qquad b=\frac{wA}{C(1-w)+wA}.
+							979 container
+								980 text 因此，固定其他参数时，可以在变换后的合法区间对 
+								981 container w
+								982 text  做一维背景剖面。需要保住三个条件： 原 
+								983 container b
+								984 text  的边界要一并变换；背景经过Lin后通常不是平的；其他参数变化时，
+								985 container A,C
+								986 text 也要重新计算。
+							987 container
+								988 text 我用当前精确源码实际做了144组合成预测检查，覆盖非恒定Lin、裁剪与有缺口的窗口、正负padded shift及多个背景比例。精确变换与原模型的最大概率差为 
+								989 container 2.91\times10^{-17}
+								990 text ；直接把 
+								991 container b
+								992 text  当成后处理混合权重则不等价。这一检查没有调用优化器，也没有使用真实Q09曲线。
+							993 text **设计建议：**若继续处理这两个STOP，优先在现有计算函数中加入背景的解析导数或上述精确一维剖面，然后仍回到原参数、原目标和原梯度标准验收。先验证它是否改变科学上需要使用的预测或参数，再决定是否扩大使用范围。这不是需要建设的新Operator平台，也不应成为Q15启动的前置条件。
+							994 heading 六、Q09下一项真正重要的科学工作是方法适用性，不是再得到几个驻点, Value: 2
+								995 text 六、Q09下一项真正重要的科学工作是方法适用性，不是再得到几个驻点
+							996 heading 60–119的分支划分是正确的, Value: 3
+								997 text 60–119的分支划分是正确的
+							998 text 当前方法报告保留了一个明显的条件模型差异：独立有效曲线的总deviance约49,446.95，共同donor零FRET与FRET2约213,413.96；独立拟合得到的DA条件潜在平均时间比D0长约0.325 ns。
+							999 text **推断：**这足以把下一动作导向共同响应、IRF和参考适用性检查，而不是继续增加类似的FRET起点。
+							1000 text 理由可以直接从当前模型看出：在共同donor和非负转移率假设下，FRET给donor衰减乘上一个非增的存活因子；增加构象成分并不是一个可以任意制造更慢DA潜在衰减的自由旋钮。但当前这些平均时间来自条件拟合，不能单凭它们断言样品错误，或证明某种新donor机制。仪器与模型适用性仍必须分开。
+							1001 container
+								1002 text 所以， 60–119保留独立校准分支是科学上有意义的动作差异，不是消极弃权。  没有依据时，既不能将它删除后宣称完成33组，也不能为了保留它而给每条曲线增加任意独立自由度。
+							1003 heading 新方法不能靠旧全局比较“继承完成”, Value: 3
+								1004 text 新方法不能靠旧全局比较“继承完成”
+							1005 text 当前全33比较与结构证据被保留是正确的历史处理。但新增padded政策和source-order候选，尚不能自动替代旧全局比较里的方法与参数。
+							1006 container
+								1007 text 下一次全33比较至少需要做到：在 同一明确方法、同一批观测、相同参考去重和窗口处理 下，比较共同人口K2、共同人口K3，并保留局部人口模型这一竞争解释。结构对应也应基于该次比较的实际参数，而不是将旧图或旧距离解释重新标为新方法结果。当前注册规则本身仍将科学PASS关闭，并要求保留这些竞争解释。
+							1008 text 我不要求先证明数学意义上的全局最优。但比较不能被一个已经知道的、更低的可行点直接推翻，也不能让明显未完成的K2成为人为削弱的基线。
+							1009 container
+								1010 text 最后，即便K3拟合更好，成分数检验也不能自动套用普通参数差对应的卡方阈值。零权重和成分重合会使这类检验触及参数边界；相关统计文献明确说明，这时通常的似然比检验标定可能失效。 这里需要适合本模型的校准，而不是仅报告优化完成或损失下降。
+								1011 link Description: arXiv, Value: arxiv.org/abs/astro-ph/0201547
+							1012 text 但这项模型选择校准应放在前向方法可接受之后，不能先给一个已知适用性未解决的模型包上一层昂贵bootstrap。
+							1013 heading 七、从原20题的实质覆盖看，下一新题我选Q15, Value: 2
+								1014 text 七、从原20题的实质覆盖看，下一新题我选Q15
+							1015 container
+								1016 text 已观察。  当前进度文件是Q01内容完成；Q05、Q09部分计算；Q15部分来源准入但在Rules之前被拒绝；其余16题NOT_RUN。这个分布说明，继续精修Q09的局部数值标签，未必是增加整体科学信息的最好投入。
+							1017 container
+								1018 text 设计判断：Q15比现在直接开展Q10或Q11更值得作为下一新题。  后两题与当前T4L数据和状态解释相关，容易把尚未解决的前向模型问题带入下一题。Q15则能检验另一种核心能力：发现测量冲突后，能否选择真正具有判别力的对照，而不是平均冲突结果或宣布新构象。
+							1019 heading 本轮额外核验到一个具体来源问题, Value: 3
+								1020 text 本轮额外核验到一个具体来源问题
+							1021 container
+								1022 text HiSiaP原论文Fig.1图注按apo/holo叙述时列出的PDB ID次序，与正文Fig.3的开放/闭合映射不一致。RCSB将  2CEY明确标为apo结构，3B50标为Neu5Ac结合结构 。因此下一题不能根据图注中的ID次序自动分配结构状态；应明确记录来源冲突及采用的映射依据。 我没有发现或声称当前仓库已经把它们标错，这是本轮外部来源核验得到的下一题风险。
+								1023 link Description: Nature +2 RCSB PDB +2, Value: nature.com/articles/s41467-022-31945-6
+							1024 container
+								1025 text 另一个重要边界是：论文中涉及175位点的染料相互作用，并不意味着所有包含175的距离结果都错误；55/175仍表现出预期趋势。因此，不能建立“发现染料相互作用→所有相关FRET证据自动否定”的机械规则。
+								1026 link Description: Nature, Value: nature.com/articles/s41467-022-31945-6
+							1027 heading 最小科学推进方式, Value: 3
+								1028 text 最小科学推进方式
+							1029 container
+								1030 text 先查明Q15当前准入失败的具体回执与原因，并验收已有Source Data中的实际数值内容。 本轮我没有独立读取该XLSX载荷，不能保证其中已经提供所需重复、曲线及校准信息。
+							1031 text 取得可计算输入后，最小实验应围绕175/228的apo/holo、两套染料及DEER/结构参照进行比较，同时保留至少一个正常位点对照。主要结果不是重画作者最终距离，而是从取得的观测重新计算条件变化、冲突幅度和不确定性，再观察换染料是否改变结论。
+							1032 container
+								1033 text 预期信息增益很明确：它会检验系统是否能将 探针适用性问题 与 蛋白真实构象变化 分开，并根据冲突选择额外证据。
+							1034 text 成本先限制在现有小型数值输入与CPU分析；若只有作者最终均值、缺少可重新估计的观测与必要误差，记录准确的数据缺口，不以最终表格抄录充当完整复现，也不为了“赶第二题”直接下载并处理整批GB级原始档案。
+							1035 heading 八、原20题应保留，但完成标准需要逐题守住, Value: 2
+								1036 text 八、原20题应保留，但完成标准需要逐题守住
+							1037 container
+								1038 text 下面是基于原题卡和当前进度的 方法与推进建议 ，不是声称这些题已完成运行。原20题来自相关论文和共享数据组，本来就不应作为20个独立体系计算置信区间。
+								1039 button PRO_REVIEW_PACKET
+									1040 text PRO_REVIEW_PACKET
+							1041 container
+								1042 table
+									1043 row
+										1044 cell
+											1045 text 题目
+										1046 cell
+											1047 text 需要守住的科学终点
+										1048 cell
+											1049 text 推进建议
+									1050 row
+										1051 cell
+											1052 text Q01
+										1053 cell
+											1054 text 来源模拟内的有限时间运动与限定解释
+										1055 cell
+											1056 text 冻结，不继续加分析
+									1057 row
+										1058 cell
+											1059 text Q02
+										1060 cell
+											1061 text CPMG共享交换模型、参数可辨识性，而非抄人口与速率
+										1062 cell
+											1063 text 先确认数字曲线和误差，不因Q01完成而自动启动
+									1064 row
+										1065 cell
+											1066 text Q03–04
+										1067 cell
+											1068 text 独立FRET预测；突变/磷酸化效应与组成、校准误差
+										1069 cell
+											1070 text 优先解决真实构象池、权重和重复数据的可得性
+									1071 row
+										1072 cell
+											1073 text Q05–06
+										1074 cell
+											1075 text 同一集合解释多观测；真实脂质区域性质
+										1076 cell
+											1077 text Q05按现有资源请求处理；不要顺带扩成Q06整套轨迹项目
+									1078 row
+										1079 cell
+											1080 text Q07–08
+										1081 cell
+											1082 text 可观测量变化与模型推导尺寸、形状的区别
+										1083 cell
+											1084 text 没有曲线或集合权重，不能用作者最终Rg/Re代替计算
+									1085 row
+										1086 cell
+											1087 text Q09
+										1088 cell
+											1089 text 全33组在可接受前向方法下的竞争模型判断
+										1090 cell
+											1091 text 处理当前方法问题，不再围绕几个PASS标签无限循环
+									1092 row
+										1093 cell
+											1094 text Q10–11
+										1095 cell
+											1096 text 功能干预证据、结构判别；不能继承未验证的T4状态解释
+										1097 cell
+											1098 text 暂不作为快速增加题数的下一项
+									1099 row
+										1100 cell
+											1101 text Q12
+										1102 cell
+											1103 text 错误折叠能否被未用于优化的模拟FRET拒绝
+										1104 cell
+											1105 text 适合作为后续负对照，但继续单列模拟数据属性
+									1106 row
+										1107 cell
+											1108 text Q13–14
+										1109 cell
+											1110 text 校正后的DNA距离、跨染料共享误差与比值
+										1111 cell
+											1112 text 有助于测量层检验，但不能合并成一个“FRET正确性”总分
+									1113 row
+										1114 cell
+											1115 text Q15–16
+										1116 cell
+											1117 text 探针/保护剂条件是否解释冲突；共同窗口与正常对照
+										1118 cell
+											1119 text 先Q15
+											1120 text ，不同时启动两套完整分析
+									1121 row
+										1122 cell
+											1123 text Q17–18
+										1124 cell
+											1125 text 密度拟合与结构合理性、集合必要性的竞争解释
+										1126 cell
+											1127 text 不能把更高map correlation直接当科学通过
+									1128 row
+										1129 cell
+											1130 text Q19–20
+										1131 cell
+											1132 text 原始密度/衍射是否支持局部替代构象
+										1133 cell
+											1134 text 不能读取qFit输出标签就算恢复了科学证据
+								1135 button Copy table
+							1136 text 还有一个横贯20题的判断必须明确：
+							1137 text “正确回答”不等于“复现作者肯定结论”；但“尚未计算完成”也不等于“已经正确证明无法支持”。
+							1138 text 例如，完整比较后证明现有数据在指定模型下不能识别第三态，可以成为有内容的科学答复；因优化未完成、输入缺失而停下，则不能直接增加完整题级覆盖。论文结果一致性、完整内容覆盖、错误支持与数据/运行缺口应继续分别报告。
+							1139 heading 九、整个Rules/Operator项目现在证明了什么, Value: 2
+								1140 text 九、整个Rules/Operator项目现在证明了什么
+							1141 container
+								1142 text 已建立的开发证据，比前几轮更实质。  Q01已经从数值证据到限定答案；Q09已经从方法诊断到选择具体计算，并保留较低未完成点，避免“较差PASS覆盖较好STOP”。这些都是值得保留的行为。
+							1143 container
+								1144 text 尚未建立的，是这些科学判断来自未修改的通用Rules对新问题的自动适用。  当前Q01/Q09仍有明确的题级规则和专用方法逻辑。其研究价值可以是“把经过审查的科学义务变成可执行行为”，但不能因此宣称原Rules已经具备跨题高正确率。当前Q09规则也明确绑定该case和claim范围。
+							1145 text 下一题不必禁止编写必要的窄适配，但应先保留首次使用现有系统得到的结果，再区分后续补的是数据接入、科学方法、规则适用性还是判断标准。否则每题经过多轮修订后都能通过，却无法知道哪些能力已经存在、哪些仍依赖新的专家工作。
+							1146 text 也不要通过削弱no-Rules基线来证明增益。一个完整、正确的人工分析流程若选择同样的补充计算并得到同样结论，Rules可能证明的是执行一致性、来源保留和避免重复劳动，而不一定是更高的科学准确率。
+							1147 heading 反过度工程结论, Value: 3
+								1148 text 反过度工程结论
+							1149 text **KEEP NOW：**Q01冻结答复及反事实检查；Q09历史人工与前瞻续算的来源区分；原低目标STOP；60–119独立适用性分支；用于修复真实重入问题的当前候选整理。
+							1150 text **DEFER：**通用状态数平台、更多Agent、完整自动选方法系统、新的数据库、调度器或统一所有观测的统计引擎。
+							1151 text **AVOID：**每个数值停止都新开一轮框架建设；为了收集PASS不断重复旧点；把同一批开发题反复修订后的完成数称为泛化正确率；让Q01永远留在“再补最后一项检查”的状态。
+							1152 heading 最小下一步与结论上限, Value: 2
+								1153 text 最小下一步与结论上限
+							1154 container
+								1155 text 现在最小的代码修复是 让Q09下一次派发读取已经消费的新候选状态 ，并增加第二轮行为检查。它关闭的是已观察到的重复选择风险，不需要新增真实拟合来验证。
+							1156 container
+								1157 text 随后，Q09的科学重点应转向共同donor/响应适用性和同方法全33组竞争比较；背景精确处理可以作为一个小的数值改进，但不应成为新的长期主线。 下一项新增题级科学工作优先Q15。Q05按原资源分支等待，不重复制造授权流程。
+							1158 text Q01保持1个完成的开发题级内容；本轮仍不增加Q09完整题数，不增加人类科学批准数，也不升级Rules准确率或Agent增益。
+							1159 text 需要人类领域人员裁决的，是最终科学批准，以及Q09共同donor/响应模型与新题测量解释中的具体适用性问题；不是为了继续保持Q01冻结而再增加一道流程门槛。
+							1160 container
+								1161 button 下载第17轮独立核验包
+									1162 text 下载第17轮独立核验包
+								1163 text 。包含精确源码哈希清单、Q09重入反例、Q01输出反事实检查、144组背景模型等价性检查、实际结果及英文GitHub审阅摘要。没有修改PR、提交审阅、启动真实科学拟合或更改资源授权。
+							1164 button Sources
+							1165 container Response actions
+								1166 button Copy response
+								1167 pop up button (collapsed) Description: Rate response, ID: radix-_r_3pc_, Secondary Actions: Expand
+								1168 pop up button (collapsed) Description: Pro feedback, Secondary Actions: Expand
+								1169 button Add to project sources
+								1170 pop up button (collapsed) Description: Switch model, ID: radix-_r_3pt_, Secondary Actions: Expand
+								1171 pop up button (collapsed) Description: More actions, ID: radix-_r_3pk_, Secondary Actions: Expand
+						670 text ChatGPT can make mistakes. Check important info.
+					671 

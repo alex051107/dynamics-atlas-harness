@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "trajectories": 40,
+  "unique_full_path_rows": 80080,
+  "old_relative_numerics_identical": true,
+  "ES17_first_event_internal_disagreement": [
+    41,
+    42
+  ],
+  "terminal_metrics_checked_from_40_derivative_arrays": true,
+  "new_GROMACS": 0,
+  "new_optimizations": 0,
+  "full_scientific_acceptance": "PENDING_QUESTION_LEVEL_REVIEW",
+  "graphically_reviewed": true,
+  "visual_fix": "Moved annotations clear of data; no scientific recomputation"
+}

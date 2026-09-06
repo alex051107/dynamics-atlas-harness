@@ -1,0 +1,8 @@
+{
+  "valid_first_input_identity": "PASS",
+  "actual_changed_source_cli": "REJECTED_BEFORE_OPERATOR",
+  "valid_scientific_reruns": 0,
+  "returncode": 1,
+  "affected_test_attempts": 2,
+  "first_attempt": "Guard insertion missed due whitespace;mutation test assertionfailed;fixedexactlineandreranonlyaffectedcheck"
+}

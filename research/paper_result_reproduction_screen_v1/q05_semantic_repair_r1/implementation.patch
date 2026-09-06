@@ -1,0 +1,43 @@
+diff --git a/registries/rules_v1/evaluation_contracts_v1.json b/registries/rules_v1/evaluation_contracts_v1.json
+index 1852bde..98ad594 100644
+--- a/registries/rules_v1/evaluation_contracts_v1.json
++++ b/registries/rules_v1/evaluation_contracts_v1.json
+@@ -179,7 +179,8 @@
+       ],
+       "unresolved_conditions": [
+         {"reason_code": "SOURCE_EVIDENCE_ROLE_UNRESOLVED", "condition": {"op": "IN", "path": "source.evidence_role", "values": ["UNKNOWN", "UNRESOLVED", "UNDECLARED"]}},
+-        {"reason_code": "SOURCE_LINEAGE_UNRESOLVED", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["UNKNOWN", "UNRESOLVED"]}}
++        {"reason_code": "SOURCE_LINEAGE_UNRESOLVED", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["UNKNOWN", "UNRESOLVED"]}},
++        {"reason_code": "SOURCE_PROPOSED_LINEAGE_REQUIRES_VERIFICATION", "condition": {"op": "IN", "path": "source.data_lineage_status", "values": ["AGENT_PROPOSED_UNVERIFIED"]}}
+       ],
+       "result_effects": {
+         "PASS": {"route": "DIRECT_EVALUATION", "decision_class": "SOURCE_ROLE_RECORDED", "claim_ceiling": "The source role is recorded; independence is not established here."},
+diff --git a/scripts/run_q05_rules_probe_v1.py b/scripts/run_q05_rules_probe_v1.py
+index bc5b998..3183b5f 100644
+--- a/scripts/run_q05_rules_probe_v1.py
++++ b/scripts/run_q05_rules_probe_v1.py
+@@ -72,7 +72,9 @@ def main() -> int:
+         'timestamp': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+         'entry': 'NEW_Q05_FACT_PROBE_USING_EXISTING_ADMISSION_AND_ACTIVE_DRAFT_EVALUATOR',
+         'source_head': subprocess.check_output(['git', '-C', str(REPO), 'rev-parse', 'HEAD'], text=True).strip(),
+-        'local_adapter_uncommitted': True,
++        'local_adapter_uncommitted': bool(subprocess.check_output(
++            ['git', '-C', str(REPO), 'status', '--porcelain', '--',
++             str(Path(__file__).resolve().relative_to(REPO))], text=True).strip()),
+         'command': [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],
+         'cwd': str(Path.cwd()),
+         'python': sys.version,
+diff --git a/src/dynamics_atlas_harness/paper_blind_exposed_v1.py b/src/dynamics_atlas_harness/paper_blind_exposed_v1.py
+index bc011f2..03fecd6 100644
+--- a/src/dynamics_atlas_harness/paper_blind_exposed_v1.py
++++ b/src/dynamics_atlas_harness/paper_blind_exposed_v1.py
+@@ -572,7 +572,8 @@ def project_admitted_proposal_to_rules_casegraph(
+             "left_source_id": edge["left_source_id"],
+             "right_source_id": edge["right_source_id"],
+             "shared_claim": case_facts["scientific_claim"],
+-            "validation_claim": "No validation claim is emitted by a development profiling proposal.",
++            # Profiling proposals do not request independent validation. Omit the
++            # claim: a nonempty denial still satisfies the Rules EXISTS binding.
+             "condition_relation": edge["condition_relation"],
+             "relation_type": edge["relation_type"],
+             "bridge_status": edge["bridge_status"],

@@ -1,0 +1,109 @@
+{
+  "case": {
+    "case_id": "q05_nanodisc_saxs_noe_20260904",
+    "intake_kind": "SCIENTIFIC_CLAIM_REVIEW",
+    "scientific_claim": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+    "requested_claim_level": "JOINT_ENSEMBLE_CONSISTENCY_AND_SHAPE_HETEROGENEITY",
+    "intended_use": "CROSS_SOURCE_REVIEW",
+    "observability_target": {
+      "event_signature": "Answer-blind public-packet fact proposal",
+      "target_time_scale": "Source-declared or UNKNOWN",
+      "target_spatial_scale": "Source-declared or UNKNOWN"
+    },
+    "claim_contract": {
+      "internal_consistency": "CONSISTENT",
+      "declared_request_scope": [
+        "JOINT_ENSEMBLE_CONSISTENCY_AND_SHAPE_HETEROGENEITY"
+      ],
+      "forbidden_upgrades": [
+        "BIOLOGICAL_ACTIVITY",
+        "KINETICS",
+        "MECHANISM",
+        "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+      ]
+    }
+  },
+  "evidence_items": [
+    {
+      "source_id": "Q05_MD_PREDICTIONS",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "CONSTRUCTION",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat;inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat;inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "DeltaH5-DMPC nanodisc simulation; original joint-fit configuration UNKNOWN.",
+      "sample_composition": "DeltaH5 protein and DMPC lipids; full coordinate composition and stoichiometry UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Author-processed per-frame SAXS predictions and amide/methyl NOE distances.",
+      "estimand": "Uniform-prior ensemble predictions before joint fitting.",
+      "time_semantics": {
+        "kind": "UNKNOWN"
+      },
+      "spatial_support": "UNKNOWN",
+      "unit_or_aggregation": "1195 ordered matrix rows; 90 SAXS,292 amide and40 methyl observables. Row chronology and independent replicates UNKNOWN.",
+      "native_measurement_declaration_status": "UNKNOWN"
+    },
+    {
+      "source_id": "Q05_SAXS_EXPERIMENT",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat;inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "DeltaH5-DMPC nanodisc, no tag, static30C SAXS.",
+      "sample_composition": "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "SAXS scattering intensity with deposited per-point uncertainty.",
+      "estimand": "Experimental intensity versus scattering vector for joint ensemble fit.",
+      "time_semantics": {
+        "kind": "ENSEMBLE_AVERAGED_MEASUREMENT"
+      },
+      "spatial_support": "Whole nanodisc scattering curve;90 selected q labels aligned to deposited prediction columns.",
+      "unit_or_aggregation": "90 intensity/error pairs in deposited units, with authors q-label selection; independent replicate metadata UNKNOWN.",
+      "native_measurement_declaration_status": "DECLARED"
+    },
+    {
+      "source_id": "Q05_NOE_EXPERIMENT",
+      "case_evidence_scope": "CLAIM_EVIDENCE",
+      "evidence_role": "FIT_TARGET",
+      "source_locator": "KULL-Centre/papers@85979b1b4123b6b5391b617d16551969eda9f56e;2020/nanodisc-bengtsen-et-al;inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat;inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat",
+      "data_lineage_status": "AGENT_PROPOSED_UNVERIFIED",
+      "construct_and_condition": "DeltaH5-DMPC nanodisc NOE restraints; complete original joint-condition compatibility UNKNOWN.",
+      "sample_composition": "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+      "sample_system_composition_declaration_status": "DECLARED",
+      "native_observable": "Amide and methyl NOE distance upper bounds with deposited distance uncertainty.",
+      "estimand": "NOE-compatible ensemble distance averages using power3.",
+      "time_semantics": {
+        "kind": "ENSEMBLE_AVERAGED_RESTRAINT"
+      },
+      "spatial_support": "292 amide and40 methyl labeled atom-pair restraints.",
+      "unit_or_aggregation": "Angstrom distance bounds and uncertainties; UPPER constraint with power3 averaging.",
+      "native_measurement_declaration_status": "DECLARED"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "Q05_MD_TO_SAXS",
+      "left_source_id": "Q05_MD_PREDICTIONS",
+      "right_source_id": "Q05_SAXS_EXPERIMENT",
+      "shared_claim": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "JOINT_ENSEMBLE_FIT",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "UNKNOWN",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    },
+    {
+      "comparison_id": "Q05_MD_TO_NOE",
+      "left_source_id": "Q05_MD_PREDICTIONS",
+      "right_source_id": "Q05_NOE_EXPERIMENT",
+      "shared_claim": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+      "condition_relation": "UNKNOWN",
+      "relation_type": "JOINT_ENSEMBLE_FIT",
+      "bridge_status": "UNRESOLVED",
+      "validation_independence": "UNKNOWN",
+      "shared_error_status": "UNKNOWN",
+      "data_lineage_status": "PLATFORM_DECLARED_PUBLIC_PACKET_CONTRACT"
+    }
+  ],
+  "projection_boundary": "Agent-proposed factual fields are evaluated as unverified Draft inputs. Case claim, evidence roles, comparison identities, and comparison semantics come only from the platform-owned public-packet contract."
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/run_q15_rules_probe_v1.py", line 97, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/run_q15_rules_probe_v1.py", line 53, in main
+    packet, admission, graph = admit_q15(original, proposal)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/scripts/run_q15_rules_probe_v1.py", line 35, in admit_q15
+    packet = load_public_packet(PACKET)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/paper_blind_exposed_v1.py", line 375, in load_public_packet
+    _validate_source_materials(packet["source_materials"])
+  File "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/paper_blind_exposed_v1.py", line 187, in _validate_source_materials
+    raise PaperBlindPublicPacketError(
+dynamics_atlas_harness.paper_blind_exposed_v1.PaperBlindPublicPacketError: PUBLIC_PACKET_MUST_EXCLUDE_DISCUSSION_AND_CONCLUSION

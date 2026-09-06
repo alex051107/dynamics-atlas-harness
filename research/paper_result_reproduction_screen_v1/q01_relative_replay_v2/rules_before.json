@@ -1,0 +1,21 @@
+{
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+  "rule_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1",
+  "status": "PENDING",
+  "operator_requests": [
+    {
+      "operator_id": "q01_relative_reference_paths_v1",
+      "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+      "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+      "measurement_manifest_id": "a520303b79452f14e45c38b3468850f47569ba4e54605017a27a10e4c3c06de7",
+      "reference_id": "762c9290edbcc3048d537457d099aedb14db2334cb74338965b3718b6a3e25e9",
+      "input_id": "31642c42f952af33ffd9faf886b98f9d3de87fbaa39260e13969e8b3cd9df57c",
+      "parent_method_id": "5362a505a1295ccd69fea728d6d679cb9460728fc28bcc431fc91e4fa18e1c1c",
+      "method_id": "d8c5cf28b2d5f9fe48a6dc5a9d6e0a4e6aa9d37c0c1104d31eb5f33a4fad4e2d"
+    }
+  ],
+  "state_membership_claimed": false,
+  "accuracy_gain_claimed": false,
+  "reason": "Validated construction envelopes classify no initial trajectory frame; relative directional claim requires a different estimand."
+}

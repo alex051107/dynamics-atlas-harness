@@ -1,0 +1,149 @@
+{
+  "repository": "KULL-Centre/papers",
+  "commit": "85979b1b4123b6b5391b617d16551969eda9f56e",
+  "acquired_at": "2026-09-04T21:13:52.977653+00:00",
+  "files": [
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/reference_only/BME_simulation_weights.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/BME_simulation_weights.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/BME_simulation_weights.dat",
+      "git_blob_sha": "9555c1679648fd2bd8ca9466fecd15a185c2936f",
+      "bytes": 29914,
+      "role": "reference_only"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/reference_only/BME_stats_HN_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_HN_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_HN_NOE.dat",
+      "git_blob_sha": "607c3eed2e1683e6692a833f456f7bf5cdcdef5e",
+      "bytes": 11844,
+      "role": "reference_only"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/reference_only/BME_stats_SAXS.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_SAXS.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_SAXS.dat",
+      "git_blob_sha": "ec24713572228170a2ecc34787153ff8069fd591",
+      "bytes": 2846,
+      "role": "reference_only"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/reference_only/BME_stats_methyl_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_methyl_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/BME_stats_methyl_NOE.dat",
+      "git_blob_sha": "aeb3df2f9ce3513369db7d0bdb2a41ea1c050e4d",
+      "bytes": 1755,
+      "role": "reference_only"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/README.md",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/README.md",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/README.md",
+      "git_blob_sha": "0e4da0895cd5ee20e830e5203d148804ae63f310",
+      "bytes": 2080,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/exp_HN2_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/exp_HN2_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/exp_HN2_NOE.dat",
+      "git_blob_sha": "52c6c8d8f67056833eaac8219a4e1819967ecf68",
+      "bytes": 10229,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/exp_methyl_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/exp_methyl_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/exp_methyl_NOE.dat",
+      "git_blob_sha": "9dad03844ed0df775962815aa81e03f671132f71",
+      "bytes": 1460,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/hyperparameter_theta.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/hyperparameter_theta.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/hyperparameter_theta.dat",
+      "git_blob_sha": "1a6d32577d5368f30340963eca297feccebbef00",
+      "bytes": 691,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_HN2_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_HN2_NOE.dat",
+      "git_blob_sha": "c50e2ae4fe14828850dacb808bb92fb28304feb2",
+      "bytes": 2757164,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_SAXS.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_SAXS.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_SAXS.dat",
+      "git_blob_sha": "a09d565d5597e52a907b0dc00c79ee0b826e0ac4",
+      "bytes": 1175797,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat",
+      "author_path": "2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_methyl_NOE.dat",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/BME_reweight/simulation_methyl_NOE.dat",
+      "git_blob_sha": "1e7c10229939b19c8e31babf67480990d2444bb5",
+      "bytes": 382003,
+      "role": "inputs_and_method"
+    },
+    {
+      "relative_path": "inputs/q05_author/molecular_dynamics_simulations/inputs_and_method/README.md",
+      "author_path": "2020/nanodisc-bengtsen-et-al/molecular_dynamics_simulations/README.md",
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/molecular_dynamics_simulations/README.md",
+      "git_blob_sha": "1e7702b6dfb69156bd584295047f54eabba3fa1c",
+      "bytes": 1826,
+      "role": "inputs_and_method"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/SAXS_and_SANS/README.md",
+      "relative_path": "inputs/q05_author/SAXS_and_SANS/README.md",
+      "bytes": 483
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/papers/85979b1b4123b6b5391b617d16551969eda9f56e/2020/nanodisc-bengtsen-et-al/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat",
+      "relative_path": "inputs/q05_author/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat",
+      "bytes": 5302
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/BME/314d3b5bb8cd400c1a9eee984acdb903a03c3da4/BME.py",
+      "relative_path": "inputs/q05_author/bme_source/BME.py",
+      "bytes": 28989,
+      "source_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/BME/314d3b5bb8cd400c1a9eee984acdb903a03c3da4/BME_tools.py",
+      "relative_path": "inputs/q05_author/bme_source/BME_tools.py",
+      "bytes": 12706,
+      "source_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/BME/314d3b5bb8cd400c1a9eee984acdb903a03c3da4/README.rst",
+      "relative_path": "inputs/q05_author/bme_source/README.rst",
+      "bytes": 6821,
+      "source_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/KULL-Centre/BME/314d3b5bb8cd400c1a9eee984acdb903a03c3da4/LICENSE.md",
+      "relative_path": "inputs/q05_author/bme_source/LICENSE.md",
+      "bytes": 35129,
+      "source_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4"
+    }
+  ],
+  "total_bytes": 4467039,
+  "bme_commit": "314d3b5bb8cd400c1a9eee984acdb903a03c3da4",
+  "updated_at": "2026-09-04T21:16:20.983410+00:00",
+  "local_derivatives": [
+    {
+      "path": "inputs/q05_author/BME_reweight/inputs_and_method/SAXS_q_labels_from_author_stats.dat",
+      "source": "BME_reweight/reference_only/BME_stats_SAXS.dat",
+      "operation": "extract first-column q labels only; do not import fitted simulation or author experimental display values",
+      "purpose": "resolve observed91vs90 experimental/matrix mismatch",
+      "method_limit": "inferred matrix column grid from corresponding author output labels; coordinates not verified"
+    }
+  ]
+}

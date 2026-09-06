@@ -1,0 +1,72 @@
+{
+  "variant": "22-127",
+  "scope": "SINGLE_PAIR_DEVELOPMENT_PROBE",
+  "dt_ns": 0.008,
+  "distance_sigma_A": 6.0,
+  "radiative_rate_per_ns": 0.224,
+  "kappa_squared": 0.6666666666666666,
+  "reduced_radius_A": 56.4,
+  "donor_components": [
+    1,
+    2
+  ],
+  "FRET_components": 2,
+  "DA_internal_donor_only_fraction": "f0 free[0,1] distinct from FRETpopulations",
+  "conditional_choices": "allnativebins;IRFmedianlast256subtractclip;noLinPQ;scatter0;causalIRF;fittedshift+/-5bins",
+  "likelihood": "profiled count-scale Poisson deviance;D0once+DAonce;latent donor parameters shared",
+  "time_bins": "exact exponential integration before discrete histogram IRF convolution",
+  "R_bounds_A": [
+    10.0,
+    120.0
+  ],
+  "tau_bounds_ns": [
+    0.05,
+    10.0
+  ],
+  "background_bounds": [
+    1e-12,
+    0.05
+  ],
+  "optimizer": "L-BFGS-B explicit symmetric finite differences max500iterations/120s perstart;3affectedD0reruns+4jointcalls;mono reused fromv1",
+  "joint_parameter_order": [
+    "tau1",
+    "tau2",
+    "donor_amplitude1",
+    "R1",
+    "R2",
+    "FRET_fraction1",
+    "DA_f0",
+    "D0_background",
+    "D0_shift",
+    "DA_background",
+    "DA_shift"
+  ],
+  "joint_initial_distance_population_f0": [
+    [
+      35.0,
+      65.0,
+      0.5,
+      0.1
+    ],
+    [
+      50.0,
+      85.0,
+      0.8,
+      0.2
+    ],
+    [
+      30.0,
+      100.0,
+      0.2,
+      0.05
+    ],
+    [
+      65.0,
+      40.0,
+      0.5,
+      0.1
+    ]
+  ],
+  "scientific_verdict": "NOT_EVALUATED_NO_K3_OR_GLOBAL_COMPARISON",
+  "author_postfit_targets_used": false
+}

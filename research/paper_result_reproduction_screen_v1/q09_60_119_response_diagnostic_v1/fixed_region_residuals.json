@@ -1,0 +1,362 @@
+[
+  {
+    "model": "separate_effective_response",
+    "role": "D0_16",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 114,
+    "observed_counts": 830,
+    "predicted_counts": 845.2260244588214,
+    "deviance": 174.59510139871088
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "D0_16",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 10795588,
+    "predicted_counts": 10810731.381783694,
+    "deviance": 12575.408966872066
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "D0_16",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 3367082,
+    "predicted_counts": 3372965.2591242343,
+    "deviance": 7186.7540146073925
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "D0_16",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 189284,
+    "predicted_counts": 164857.68574491265,
+    "deviance": 7148.670265079547
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "D0_16",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1162,
+    "observed_counts": 15550,
+    "predicted_counts": 18934.447322700125,
+    "deviance": 3494.8983083220055
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "60-119",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 258,
+    "observed_counts": 2075,
+    "predicted_counts": 2622.2212221039563,
+    "deviance": 406.825858762691
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "60-119",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 12464354,
+    "predicted_counts": 12501268.649873635,
+    "deviance": 9377.380211398508
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "60-119",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 5059562,
+    "predicted_counts": 5038828.4412416015,
+    "deviance": 3838.5193822842157
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "60-119",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 256004,
+    "predicted_counts": 238739.33036881126,
+    "deviance": 4061.0542672228075
+  },
+  {
+    "model": "separate_effective_response",
+    "role": "60-119",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1018,
+    "observed_counts": 18698,
+    "predicted_counts": 19234.35729384571,
+    "deviance": 1182.8429897658139
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "D0_16",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 114,
+    "observed_counts": 830,
+    "predicted_counts": 815.7484791037208,
+    "deviance": 176.64282803619568
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "D0_16",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 10795588,
+    "predicted_counts": 10430303.7715894,
+    "deviance": 66088.33950741723
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "D0_16",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 3367082,
+    "predicted_counts": 3735762.835621522,
+    "deviance": 47726.148362669934
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "D0_16",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 189284,
+    "predicted_counts": 182096.79187635414,
+    "deviance": 3733.912724064808
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "D0_16",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1162,
+    "observed_counts": 15550,
+    "predicted_counts": 19354.852433621116,
+    "deviance": 3683.1642634763357
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "60-119",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 258,
+    "observed_counts": 2075,
+    "predicted_counts": 3170.7476217970293,
+    "deviance": 714.0538548541431
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "60-119",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 12464354,
+    "predicted_counts": 12882453.607667763,
+    "deviance": 46978.049348439614
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "60-119",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 5059562,
+    "predicted_counts": 4672976.621969981,
+    "deviance": 34168.86480061551
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "60-119",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 256004,
+    "predicted_counts": 221079.64614864672,
+    "deviance": 8558.193437165291
+  },
+  {
+    "model": "shared_donor_only_null",
+    "role": "60-119",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1018,
+    "observed_counts": 18698,
+    "predicted_counts": 21012.37659180766,
+    "deviance": 1586.5952654970188
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "D0_16",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 114,
+    "observed_counts": 830,
+    "predicted_counts": 815.7484791756714,
+    "deviance": 176.6428280322319
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "D0_16",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 10795588,
+    "predicted_counts": 10430303.772544442,
+    "deviance": 66088.33973352166
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "D0_16",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 3367082,
+    "predicted_counts": 3735762.83451066,
+    "deviance": 47726.1481053369
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "D0_16",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 189284,
+    "predicted_counts": 182096.79203146126,
+    "deviance": 3733.9127000863073
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "D0_16",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1162,
+    "observed_counts": 15550,
+    "predicted_counts": 19354.852434260472,
+    "deviance": 3683.1642636564225
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "60-119",
+    "region_ns": [
+      0,
+      5
+    ],
+    "included_bins": 258,
+    "observed_counts": 2075,
+    "predicted_counts": 3170.747615806559,
+    "deviance": 714.0538507287844
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "60-119",
+    "region_ns": [
+      5,
+      10
+    ],
+    "included_bins": 355,
+    "observed_counts": 12464354,
+    "predicted_counts": 12882453.608868591,
+    "deviance": 46978.04926672597
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "60-119",
+    "region_ns": [
+      10,
+      20
+    ],
+    "included_bins": 709,
+    "observed_counts": 5059562,
+    "predicted_counts": 4672976.620636845,
+    "deviance": 34168.86501748233
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "60-119",
+    "region_ns": [
+      20,
+      40
+    ],
+    "included_bins": 1418,
+    "observed_counts": 256004,
+    "predicted_counts": 221079.64631000324,
+    "deviance": 8558.193367676204
+  },
+  {
+    "model": "shared_donor_FRET2",
+    "role": "60-119",
+    "region_ns": [
+      40,
+      60
+    ],
+    "included_bins": 1018,
+    "observed_counts": 18698,
+    "predicted_counts": 21012.376568752927,
+    "deviance": 1586.595258989987
+  }
+]

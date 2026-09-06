@@ -182,7 +182,7 @@ class RulesTableCoverageV1ArtifactTests(unittest.TestCase):
 
         for relative_path, expected_hash in manifest["rules_baseline"]["file_hashes"].items():
             self.assertEqual(
-                hashlib.sha256((REPO_ROOT / relative_path).read_bytes()).hexdigest(), expected_hash
+                hashlib.sha256((ARTIFACT_ROOT / "frozen_rules_baseline" / relative_path).read_bytes()).hexdigest(), expected_hash
             )
         for forbidden in ("/Users/", "BEGIN PRIVATE KEY", "ghp_"):
             for artifact in ARTIFACT_ROOT.iterdir():

@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-09-05T03:45:11.243249+00:00",
+  "source_commit": "85979b1b4123b6b5391b617d16551969eda9f56e",
+  "command": [
+    "python",
+    "audit_source.py",
+    "--input-root",
+    "PATH_TO_PINNED_Q05_INPUTS",
+    "--output-dir",
+    "NEW_OUTPUT_DIRECTORY"
+  ],
+  "scope": "REVIEW_SIDE_AUTHOR_WEIGHT_RECONSTRUCTION_ONLY",
+  "optimization_runs": 0,
+  "rules_runs": 0,
+  "tolerance": {
+    "rtol": 1e-06,
+    "atol": 1e-05,
+    "basis": "Predeclared diagnostic tolerance for finite deposited predictions and five-decimal post-fit stats; not a scientific acceptance threshold."
+  },
+  "coordinate_mapping": "NOT_VERIFIED",
+  "weights": {
+    "rows": 1195,
+    "raw_sum": 0.99999999628679,
+    "normalization": "divide deposited weights by their sum",
+    "relative_entropy": -1.746847605799901,
+    "entropy_effective_fraction": 0.17432261177696184,
+    "weight_ess_not_independent_samples": 84.58330077783258,
+    "max_weight": 0.04274802015873237
+  },
+  "matrix_row_identity": "All three matrices have same unique ordered IDs as author weights; coordinate mapping separate.",
+  "channels": {
+    "saxs": {
+      "observables": 90,
+      "postfit_matches": 90,
+      "max_abs_postfit_delta": 4.9957461973719475e-06,
+      "uniform_chi2_mean": 10.018763946084297,
+      "author_weight_chi2_mean": 1.9207256339144516
+    },
+    "amide": {
+      "observables": 292,
+      "restraint_labels_and_bounds": "MATCH",
+      "uniform": {
+        "upper_violations": 44,
+        "intensity_chi2_all": 0.9334062043212216,
+        "intensity_chi2_violations_only": 6.194422992313561,
+        "distance_chi2_all": 4.43134447022333,
+        "distance_chi2_violations_only": 29.40801330239119
+      },
+      "author_weight": {
+        "upper_violations": 47,
+        "intensity_chi2_all": 0.8884242430032784,
+        "intensity_chi2_violations_only": 5.519571892701219,
+        "distance_chi2_all": 4.03001921675884,
+        "distance_chi2_violations_only": 25.037566197735767
+      },
+      "postfit_matches": 292,
+      "max_abs_postfit_delta": 5.002938595399797e-06
+    },
+    "methyl": {
+      "observables": 40,
+      "restraint_labels_and_bounds": "MATCH",
+      "uniform": {
+        "upper_violations": 8,
+        "intensity_chi2_all": 3.8930820396610017,
+        "intensity_chi2_violations_only": 19.46541019830501,
+        "distance_chi2_all": 10.334549009083322,
+        "distance_chi2_violations_only": 51.672745045416605
+      },
+      "author_weight": {
+        "upper_violations": 8,
+        "intensity_chi2_all": 2.45945042380601,
+        "intensity_chi2_violations_only": 12.297252119030052,
+        "distance_chi2_all": 5.557343447802566,
+        "distance_chi2_violations_only": 27.78671723901283
+      },
+      "postfit_matches": 40,
+      "max_abs_postfit_delta": 4.9684323624177296e-06
+    }
+  },
+  "noe_combined": {
+    "uniform": {
+      "count": 332,
+      "violations": 52,
+      "intensity_sum": 428.27789324823675,
+      "distance_sum": 1707.3345456685452,
+      "intensity_chi2_all": 1.2899936543621588,
+      "intensity_chi2_violations_only": 8.23611333169686,
+      "distance_chi2_all": 5.142573932736582,
+      "distance_chi2_violations_only": 32.83335664747202
+    },
+    "author_weight": {
+      "count": 332,
+      "violations": 55,
+      "intensity_sum": 357.7978959091977,
+      "distance_sum": 1399.0593492056837,
+      "intensity_chi2_all": 1.0777045057505954,
+      "intensity_chi2_violations_only": 6.5054162892581395,
+      "distance_chi2_all": 4.214034184354469,
+      "distance_chi2_violations_only": 25.437442712830613
+    }
+  },
+  "postfit_comparison": {
+    "matched": 422,
+    "total": 422
+  },
+  "table2_reference": {
+    "source": "Bengtsen2020 eLife56518 Table2 p7; existing source-matched Markdown lines304-320",
+    "uniform": {
+      "saxs": 10.0,
+      "noe": 8.2,
+      "relative_entropy": 0
+    },
+    "joint_fit": {
+      "saxs": 1.9,
+      "noe": 6.0,
+      "relative_entropy": -1.7
+    },
+    "comparison_boundary": "One-decimal reference values; matching a rounded value does not establish original config or exact chi2 definition."
+  },
+  "status": "POSTFIT_PREDICTIONS_MATCH",
+  "publication_note": "Portable command replaces machine-local invocation; numerical values unchanged."
+}

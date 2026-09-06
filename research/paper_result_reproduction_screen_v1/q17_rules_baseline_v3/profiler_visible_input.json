@@ -1,0 +1,120 @@
+{
+  "schema_version": "paper-blind-agent-visible-input/v1",
+  "packet_id": "Q17_PUBLIC_FACT_PACKET_V1",
+  "case_id": "q17_chrmine_local_noise_structure_comparison_20260905",
+  "research_question": "Do ChRmine high-noise density regions have more plausible local structures after Bayesian noise-aware refinement, even if local map fit decreases, and what comparisons can support that interpretation?",
+  "source_materials": [
+    {
+      "source_id": "Q17_PUBLISHED",
+      "source_kind": "AUTHOR_COORDINATES_OR_EXPERIMENTAL_MAP_METADATA",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "permitted_facts": [
+        "CurrentRCSB7w9w proteinchainA and biologicalassembly transforms; originalpapercoordinateversion UNKNOWN.",
+        "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+        "Deposited atomiccoordinates, altlocs, residues and ligandrecords; notdirectactivity measurements.",
+        "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+        "{'kind': 'STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL'}",
+        "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+        "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.",
+        "Original answer-free fact packet: {\"author_interpretations_included\": false, \"case_id\": \"q17_chrmine_local_noise_structure_comparison_20260905\", \"manual_extra_results_included\": false, \"native_sources\": [{\"construct_and_condition\": \"CurrentRCSB7w9w proteinchainA and biologicalassembly transforms; originalpapercoordinateversion UNKNOWN.\", \"estimand\": \"Local data fit andphysicalgeometry ofthe sameprotein regions.\", \"evidence_role\": \"DIAGNOSTIC\", \"native_observable\": \"Deposited atomiccoordinates, altlocs, residues and ligandrecords; notdirectactivity measurements.\", \"sample_composition\": \"ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.\", \"source_id\": \"Q17_PUBLISHED\", \"spatial_support\": \"Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.\", \"time_semantics\": {\"kind\": \"STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL\"}, \"unit_or_aggregation\": \"Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.\"}, {\"construct_and_condition\": \"COSBlab/EMMIVox-BENCHMARK@2ea480ff9d7f5fa09443eb927f76b023aa5aebee02-7w9w cc0.8/cc1.0 refinedstructures. These variants differSCALE andvoxel/wrapconfiguration, notonlynoise weighting.\", \"estimand\": \"Local data fit andphysicalgeometry ofthe sameprotein regions.\", \"evidence_role\": \"DIAGNOSTIC\", \"native_observable\": \"Author refinedcoordinate models; physicalprior andcryoEMdensity both used inrefinement.\", \"sample_composition\": \"ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.\", \"source_id\": \"Q17_REFINED\", \"spatial_support\": \"Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.\", \"time_semantics\": {\"kind\": \"STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL\"}, \"unit_or_aggregation\": \"Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.\"}, {\"construct_and_condition\": \"EMD32377 main andtwohalfmaps; metadata162cubed,0.943182Angstromgrid; binarypayloadandhistoricmapversion UNKNOWN.\", \"estimand\": \"Local data fit andphysicalgeometry ofthe sameprotein regions.\", \"evidence_role\": \"FIT_TARGET\", \"native_observable\": \"CryoEMvoxel density; half-mapdifference usedinpublishedmethod tocharacterizelocalerror, residueVoronoiassociation.\", \"sample_composition\": \"ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.\", \"source_id\": \"Q17_MAP\", \"spatial_support\": \"Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.\", \"time_semantics\": {\"kind\": \"STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL\"}, \"unit_or_aggregation\": \"Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim.\"}], \"primary_paper_doi\": \"10.1371/journal.pcbi.1012180\", \"scientific_question\": \"Do ChRmine high-noise density regions have more plausible local structures after Bayesian noise-aware refinement, even if local map fit decreases, and what comparisons can support that interpretation?\", \"source_relationships\": [{\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q17_MODEL_COMPARISON\", \"left_source_id\": \"Q17_PUBLISHED\", \"relation_type\": \"MODEL_COMPARISON\", \"right_source_id\": \"Q17_REFINED\", \"shared_error_status\": \"SHARED_EXPERIMENTAL_MAP_AND_MODEL_DEPENDENCE\", \"validation_independence\": \"UNKNOWN\"}, {\"bridge_status\": \"UNRESOLVED\", \"condition_relation\": \"UNKNOWN\", \"edge_id\": \"Q17_MODEL_MAP_COMPARISON\", \"left_source_id\": \"Q17_REFINED\", \"relation_type\": \"MODEL_MAP_COMPARISON\", \"right_source_id\": \"Q17_MAP\", \"shared_error_status\": \"SHARED_EXPERIMENTAL_MAP_AND_MODEL_DEPENDENCE\", \"validation_independence\": \"UNKNOWN\"}], \"target_values_included\": false, \"unknowns\": [\"Exactpaperselectedrefinedconfiguration andhistoricalinputversions\", \"Halfmapbinaryregistration andlocalnoise/geometrymethodimplementation\", \"Alternateconformations andatomname/terminaloxygen correspondence\", \"Whether availablecomparisons isolateaweightchange fromotherconfigurationchanges\"]}"
+      ],
+      "excluded_sections": [
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Computed geometry scores",
+        "Local calculated differences",
+        "Desired numerical obligations"
+      ]
+    },
+    {
+      "source_id": "Q17_REFINED",
+      "source_kind": "AUTHOR_COORDINATES_OR_EXPERIMENTAL_MAP_METADATA",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "permitted_facts": [
+        "COSBlab/EMMIVox-BENCHMARK@2ea480ff9d7f5fa09443eb927f76b023aa5aebee02-7w9w cc0.8/cc1.0 refinedstructures. These variants differSCALE andvoxel/wrapconfiguration, notonlynoise weighting.",
+        "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+        "Author refinedcoordinate models; physicalprior andcryoEMdensity both used inrefinement.",
+        "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+        "{'kind': 'STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL'}",
+        "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+        "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim."
+      ],
+      "excluded_sections": [
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Computed geometry scores",
+        "Local calculated differences",
+        "Desired numerical obligations"
+      ]
+    },
+    {
+      "source_id": "Q17_MAP",
+      "source_kind": "AUTHOR_COORDINATES_OR_EXPERIMENTAL_MAP_METADATA",
+      "source_locator": "Hoff2024 DOI10.1371/journal.pcbi.1012180;Methods/Fig2; fixedbenchmarkconfig andcurrentRCSB/EMDBsourceheaders.",
+      "permitted_facts": [
+        "EMD32377 main andtwohalfmaps; metadata162cubed,0.943182Angstromgrid; binarypayloadandhistoricmapversion UNKNOWN.",
+        "ChRmine protein withretinal/lipidcontext; biologicalassembly andsourceatomselection mustmatch.",
+        "CryoEMvoxel density; half-mapdifference usedinpublishedmethod tocharacterizelocalerror, residueVoronoiassociation.",
+        "Local data fit andphysicalgeometry ofthe sameprotein regions.",
+        "{'kind': 'STATIC_CRYOEM_RECONSTRUCTION_AND_REFINED_COORDINATE_MODEL'}",
+        "Matchedproteinresidues anddensityvoxels inonecoordinateframe; symmetrycopiesnotindependentexperiments.",
+        "Atoms/residues/voxels; dependenceandsharedexperimentaldata retained, no independentreplicateclaim."
+      ],
+      "excluded_sections": [
+        "Discussion",
+        "Conclusion",
+        "Author scientific conclusion",
+        "Computed geometry scores",
+        "Local calculated differences",
+        "Desired numerical obligations"
+      ]
+    }
+  ],
+  "data_assets": [
+    {
+      "asset_id": "Q17_SOURCES",
+      "asset_kind": "DEPOSITED_COORDINATES_AND_MAP_METADATA",
+      "public_description": "Coordinatesreceived;mainandhalfmapsmetadataonly;noscoretargets."
+    }
+  ],
+  "agent_proposal_schema": {
+    "allowed_output_fields": [
+      "case_id",
+      "proposed_case_facts",
+      "unknowns",
+      "rationale"
+    ],
+    "proposed_case_facts_contract": {
+      "case": [
+        "scientific_claim",
+        "requested_claim_level",
+        "intended_use",
+        "declared_request_scope",
+        "forbidden_upgrades"
+      ],
+      "sources": [
+        "source_id",
+        "evidence_role",
+        "construct_and_condition",
+        "sample_composition",
+        "native_observable",
+        "estimand",
+        "time_semantics",
+        "spatial_support",
+        "unit_or_aggregation"
+      ],
+      "edges": [
+        "edge_id",
+        "left_source_id",
+        "right_source_id",
+        "relation_type",
+        "condition_relation",
+        "bridge_status",
+        "validation_independence",
+        "shared_error_status"
+      ]
+    }
+  }
+}

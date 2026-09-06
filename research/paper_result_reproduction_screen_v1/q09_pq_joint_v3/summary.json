@@ -1,0 +1,337 @@
+{
+  "status": "ACTUAL_PQ_JOINT_K2_DIAGNOSTIC_COMPLETE",
+  "donor_runs": [
+    {
+      "label": "D0_1",
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        2.9168646886876566,
+        0.00260517409902605,
+        -2.000000073565507
+      ],
+      "scaled_objective": 0.014581281144608048,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 2.091382635347956e-06,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "iterations": 40,
+      "evaluations": 488,
+      "elapsed_seconds": 0.15323295799316838,
+      "deviance": 489320.1782665582,
+      "reused_from": "v2calibration;not rerun"
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        0.5,
+        4.0,
+        0.1,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4010088036170876,
+        3.6597211301541406,
+        0.5498253951677493,
+        0.0002406748128726697,
+        -0.2207920136714812
+      ],
+      "scaled_objective": 0.00033637531961465205,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 4.1230040215300113e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 64,
+      "evaluations": 100,
+      "elapsed_seconds": 0.37319208300323226,
+      "deviance": 11288.118631412373,
+      "reused_from": "v2calibration;not rerun"
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        1.0,
+        3.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4010082474280243,
+        3.659720509972215,
+        0.5498251435812964,
+        0.00024067475225782,
+        -0.2207927265677475
+      ],
+      "scaled_objective": 0.00033637531962224434,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 7.247078371439985e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 60,
+      "evaluations": 70,
+      "elapsed_seconds": 0.2547761669848114,
+      "deviance": 11288.118631667156,
+      "reused_from": "v2calibration;not rerun"
+    },
+    {
+      "label": "D0_2",
+      "initial": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        0.00024067369516156026,
+        -0.22079199377019507
+      ],
+      "scaled_objective": 0.00033637531961195943,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 5.545694112266226e-09,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 78,
+      "evaluations": 108,
+      "elapsed_seconds": 0.39825162501074374,
+      "deviance": 11288.118631322013,
+      "reused_from": "v2calibration;not rerun"
+    }
+  ],
+  "joint_runs": [
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        35.0,
+        65.0,
+        0.5,
+        0.1,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4301944877029489,
+        3.6844559343291454,
+        0.5586290548014976,
+        32.41227228608844,
+        55.77260532439706,
+        0.8457198411032468,
+        0.580333689779026,
+        0.0002194312786542293,
+        -0.2489414582791376,
+        0.00014228960795939431,
+        0.4233227940189943
+      ],
+      "scaled_objective": 0.00030828468310870044,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 5.001491404666829e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 230,
+      "evaluations": 253,
+      "elapsed_seconds": 4.605925332987681,
+      "channel_deviance": {
+        "D0": 11400.896412685799,
+        "DA": 7522.720787407077
+      },
+      "total_deviance": 18923.61720009288
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        50.0,
+        85.0,
+        0.8,
+        0.2,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4301962689733774,
+        3.6844586265658004,
+        0.5586300177085339,
+        32.41269172705353,
+        55.77498979173286,
+        0.8457229445498764,
+        0.5803346539002113,
+        0.00021943029409673205,
+        -0.24894528995102227,
+        0.00014229019776153983,
+        0.4232935969869853
+      ],
+      "scaled_objective": 0.0003082846832660256,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 2.1657580206682215e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 183,
+      "evaluations": 223,
+      "elapsed_seconds": 4.026959333015839,
+      "channel_deviance": {
+        "D0": 11400.915004918988,
+        "DA": 7522.702204831072
+      },
+      "total_deviance": 18923.61720975006
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        30.0,
+        100.0,
+        0.2,
+        0.05,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4301936171378573,
+        3.684455208712612,
+        0.5586287980726433,
+        32.41227041012536,
+        55.77241031830479,
+        0.8457194952916689,
+        0.5803345505789178,
+        0.00021943410956901216,
+        -0.24893823065529297,
+        0.0001422891931723203,
+        0.42331417248942316
+      ],
+      "scaled_objective": 0.00030828468311164714,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 5.217591292457896e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 251,
+      "evaluations": 298,
+      "elapsed_seconds": 5.566755958017893,
+      "channel_deviance": {
+        "D0": 11400.889797199347,
+        "DA": 7522.727403074414
+      },
+      "total_deviance": 18923.61720027376
+    },
+    {
+      "label": "JOINT_K2",
+      "initial": [
+        1.401009548795593,
+        3.6597217979403984,
+        0.5498256450985263,
+        65.0,
+        40.0,
+        0.5,
+        0.1,
+        0.00024067369516156026,
+        -0.22079199377019507,
+        0.001,
+        0.0
+      ],
+      "parameters": [
+        1.4301945871781994,
+        3.684456136887813,
+        0.558629150094645,
+        55.77281797664925,
+        32.41233052201855,
+        0.15427990109052683,
+        0.5803341926149068,
+        0.00021943242476574478,
+        -0.24894008015996327,
+        0.00014228815221330163,
+        0.42331368294648364
+      ],
+      "scaled_objective": 0.0003082846831070752,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "projected_gradient_inf": 4.1078149248841454e-07,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "iterations": 191,
+      "evaluations": 227,
+      "elapsed_seconds": 4.0592642500123475,
+      "channel_deviance": {
+        "D0": 11400.897657376265,
+        "DA": 7522.719542616853
+      },
+      "total_deviance": 18923.617199993118
+    }
+  ],
+  "best_joint": {
+    "label": "JOINT_K2",
+    "initial": [
+      1.401009548795593,
+      3.6597217979403984,
+      0.5498256450985263,
+      65.0,
+      40.0,
+      0.5,
+      0.1,
+      0.00024067369516156026,
+      -0.22079199377019507,
+      0.001,
+      0.0
+    ],
+    "parameters": [
+      1.4301945871781994,
+      3.684456136887813,
+      0.558629150094645,
+      55.77281797664925,
+      32.41233052201855,
+      0.15427990109052683,
+      0.5803341926149068,
+      0.00021943242476574478,
+      -0.24894008015996327,
+      0.00014228815221330163,
+      0.42331368294648364
+    ],
+    "scaled_objective": 0.0003082846831070752,
+    "optimizer_success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "projected_gradient_inf": 4.1078149248841454e-07,
+    "numerical_status": "PASS",
+    "bound_hits": [],
+    "iterations": 191,
+    "evaluations": 227,
+    "elapsed_seconds": 4.0592642500123475,
+    "channel_deviance": {
+      "D0": 11400.897657376265,
+      "DA": 7522.719542616853
+    },
+    "total_deviance": 18923.617199993118
+  },
+  "donor_observation_contributions": 1,
+  "DA_observation_contributions": 1,
+  "new_optimizer_calls": 4,
+  "reused_fit_records": 4,
+  "scientific_question_verdict": "NOT_EVALUATED_SINGLE_PAIR_K2_ONLY",
+  "Rules_run": false,
+  "full_answers_added": 0
+}

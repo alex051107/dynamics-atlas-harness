@@ -1,0 +1,120 @@
+{
+  "base_result_id": "00052d77bfb0adc8957aceb150df742dd6ffeee53b7ad3551b08587d38e10064",
+  "input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "rule_instance_id": "Q09R02_CASE_SHARED_POPULATION_COMPARISON_V1::CASE::q09_t4l_state_number_20260905",
+  "canary_report_id": "60a3ebde828e27881ba3caa90da695b164f2f45092e98382a5bba1cde8556e67",
+  "provenance": "MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED",
+  "request_id": "272da5539b4c7acdf88779d0b637645e7b80cd1fa31c22ae1d380d1a38b51cc7",
+  "optimizer_calls": 0,
+  "new_rules_extra": 0,
+  "runs": [
+    {
+      "reference": "D0_01",
+      "parent_candidate_id": "b923fd74f725f8d0425c628888f4b0b75d984f38924c51999db56338137e27bf",
+      "source_continuation_parent_id": "b2826dd7d0d90bb7253ffe090c178b750f8d04682cbf2bf1be89a142a83f80ff",
+      "checked": {
+        "objective": 0.0003506372647704872,
+        "deviance": 12301.394186364207,
+        "projected_gradient_inf": 3.3123099132795726e-07,
+        "parameters": [
+          0.23438147383759816,
+          2.953844145293367,
+          4.06192218498302,
+          0.1125942231284912,
+          0.27530349202005666,
+          0.0016751804539936967,
+          1.0000395251240128,
+          15.146397101641718,
+          48.70688354812743,
+          0.8759571165432704,
+          0.07252342230472936,
+          0.0026411289075538007,
+          1.6492346868262073,
+          51.58254124461146,
+          38.420484433607754,
+          0.435246275793656,
+          0.3058977439898636,
+          0.0018106536263915777,
+          0.6619683209672642
+        ],
+        "numerical_status": "PASS",
+        "provenance": "MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED",
+        "full_fit_optimizer_executed": false,
+        "original_manual_background_roots": 3,
+        "candidate_id": "ce11e0c29f4a39878752e6e913a14357388f0b95cc89fcfbba03bb465c03463b"
+      }
+    },
+    {
+      "reference": "D0_24",
+      "parent_candidate_id": "68bf7050514ef7128b86dec75cfa836b8de5072357341fe0421684dc8ee1556d",
+      "source_continuation_parent_id": "330bc337d70b2eb7d6c66d748e8e6a8be502b2794d50be11219351cf27b82a55",
+      "checked": {
+        "objective": 0.00036366470355620524,
+        "deviance": 12104.797493025722,
+        "projected_gradient_inf": 4.0977255981849035e-06,
+        "parameters": [
+          0.511704608185522,
+          4.2945109711682505,
+          2.8730635333992063,
+          0.10822270275007774,
+          0.6021054339225503,
+          0.006239790390162528,
+          -0.06271683212739187,
+          19.712449853278205,
+          40.476434927526014,
+          0.7447013725078819,
+          0.044329456197326235,
+          0.0018843298429015,
+          1.0000016184201161,
+          39.74081460224838,
+          15.562968676590227,
+          0.13092735298691582,
+          0.0336719619881494,
+          0.002126353700456641,
+          0.8045953466915563
+        ],
+        "numerical_status": "NUMERICAL_STOP_WITH_FEASIBLE_POINT",
+        "provenance": "MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED",
+        "full_fit_optimizer_executed": false,
+        "original_manual_background_roots": 3,
+        "candidate_id": "82a8789211f2a92932d76fbaf3f88bbae75a19151532484eb42be4de5d499857"
+      }
+    },
+    {
+      "reference": "D0_24",
+      "parent_candidate_id": "b8323080d57b7e580dd39fcce9e68ea3a6784b82d42d6a979318fa4f28cf695f",
+      "source_continuation_parent_id": "6d86314675f203828e8f7f38d0d757c3c96ba42ce3741b61d9fc6f390c3cbcd9",
+      "checked": {
+        "objective": 0.0003708753803718964,
+        "deviance": 12344.809190031416,
+        "projected_gradient_inf": 2.560650596785002e-08,
+        "parameters": [
+          0.05,
+          2.0303953184113315,
+          4.108933144851698,
+          0.35220951332325845,
+          0.24813202538866225,
+          0.00635824419326647,
+          0.846035128615723,
+          33.028701294494894,
+          43.25141441624008,
+          0.6428319295466863,
+          0.10518143169057666,
+          0.001952609444647153,
+          0.7862013341704746,
+          42.173362469069865,
+          32.49273914570276,
+          0.38844819144780185,
+          0.1529076408627951,
+          0.0021934628883216825,
+          0.26030979589659964
+        ],
+        "numerical_status": "PASS",
+        "provenance": "MANUAL_BACKGROUND_DERIVED_FIXED_POINT_VERIFIED",
+        "full_fit_optimizer_executed": false,
+        "original_manual_background_roots": 3,
+        "candidate_id": "95346ea55e86df895f1ae344c2095fe0e8106153e60d7b5ec9d5f12e06da38b3"
+      }
+    }
+  ]
+}

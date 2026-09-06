@@ -1,0 +1,6 @@
+{
+  "status": "REJECTED_BEFORE_RULES",
+  "error": "PUBLIC_PACKET_MUST_EXCLUDE_DISCUSSION_AND_CONCLUSION",
+  "cause": "Q01 declared excluded scientific conclusions but omitted literal Discussion/Conclusion section names required by existing contract",
+  "rules_or_core_changed": false
+}

@@ -1,0 +1,14 @@
+{
+  "rule_id": "Q09R01_CASE_FORWARD_ADEQUACY_V1",
+  "operator_id": "q09_donor_instrument_diagnostic_v1",
+  "case_id": "q09_t4l_state_number_20260905",
+  "trigger_claim_level": "STATE_NUMBER_AND_STRUCTURE_CONSISTENCY",
+  "family_origin": "F05_FORWARD_MODEL_APPLICABILITY",
+  "scope": "Q09_22_127_CONDITIONAL_DIAGNOSTIC_ONLY",
+  "scientific_pass_enabled": false,
+  "declaration": "A state-number request needs actual donor andinstrument adequacy evidence; numerical fit success alone cannot close it.",
+  "excludes": "No activation or claim of complete F05/F04/F07 family coverage;no full scientific answer.",
+  "followup_operator_id": "q09_calibration_sensitivity_v1",
+  "followup_trigger": "Verified numerical diagnostic: nonzero IRF edge mean omitted by median background, or mean-distance transfer time below two native bins; routing heuristic, not a resolution threshold.",
+  "local_completion": "Bounded conditional sensitivity assessed separately from full state-number question, preserving numerical stops and incomplete profiles."
+}

@@ -1,0 +1,450 @@
+{
+  "status": "PARTIAL_SOURCE_CURVES_EXTRACTED_NOT_METHOD_ADMITTED",
+  "profiles": [
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "I104 - 700 MHz",
+      "frequency_header_cell": "B4",
+      "columns": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "excluded_fitted_curve_column": "F",
+      "rows": [
+        5,
+        23
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "I104 - 850 MHz",
+      "frequency_header_cell": "H4",
+      "columns": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "excluded_fitted_curve_column": "L",
+      "rows": [
+        5,
+        23
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "T115 - 700 MHz",
+      "frequency_header_cell": "B30",
+      "columns": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "excluded_fitted_curve_column": "F",
+      "rows": [
+        31,
+        49
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "T115 - 850 MHz",
+      "frequency_header_cell": "H30",
+      "columns": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "excluded_fitted_curve_column": "L",
+      "rows": [
+        31,
+        49
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "M12 - 700 MHz",
+      "frequency_header_cell": "B56",
+      "columns": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "excluded_fitted_curve_column": "F",
+      "rows": [
+        57,
+        75
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Figure 5 (b)",
+      "measurement_kind": "13C1H_MULTIPLE_QUANTUM",
+      "label": "M12 - 850 MHz",
+      "frequency_header_cell": "H56",
+      "columns": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "excluded_fitted_curve_column": "L",
+      "rows": [
+        57,
+        75
+      ],
+      "n": 19,
+      "frequency_range_Hz": [
+        66.6666667,
+        2000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 3
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "T36 - 600 MHz",
+      "frequency_header_cell": "F4",
+      "columns": [
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "excluded_fitted_curve_column": "J",
+      "rows": [
+        5,
+        24
+      ],
+      "n": 20,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 8
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "A101 - 600 MHz",
+      "frequency_header_cell": "M4",
+      "columns": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "excluded_fitted_curve_column": "Q",
+      "rows": [
+        5,
+        24
+      ],
+      "n": 20,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 8
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "S129 - 600 MHz",
+      "frequency_header_cell": "T4",
+      "columns": [
+        "T",
+        "U",
+        "V",
+        "W"
+      ],
+      "excluded_fitted_curve_column": "X",
+      "rows": [
+        5,
+        24
+      ],
+      "n": 20,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 8
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "E158 - 600 MHz",
+      "frequency_header_cell": "AA4",
+      "columns": [
+        "AA",
+        "AB",
+        "AC",
+        "AD"
+      ],
+      "excluded_fitted_curve_column": "AE",
+      "rows": [
+        5,
+        24
+      ],
+      "n": 20,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 8
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "T36 - 700 MHz",
+      "frequency_header_cell": "F30",
+      "columns": [
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "excluded_fitted_curve_column": "J",
+      "rows": [
+        31,
+        45
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "A101 - 700 MHz",
+      "frequency_header_cell": "M30",
+      "columns": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "excluded_fitted_curve_column": "Q",
+      "rows": [
+        31,
+        45
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "S129 - 700 MHz",
+      "frequency_header_cell": "T30",
+      "columns": [
+        "T",
+        "U",
+        "V",
+        "W"
+      ],
+      "excluded_fitted_curve_column": "X",
+      "rows": [
+        31,
+        45
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "E158 - 700 MHz",
+      "frequency_header_cell": "AA30",
+      "columns": [
+        "AA",
+        "AB",
+        "AC",
+        "AD"
+      ],
+      "excluded_fitted_curve_column": "AE",
+      "rows": [
+        31,
+        45
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "T36 - 850 MHz",
+      "frequency_header_cell": "F51",
+      "columns": [
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "excluded_fitted_curve_column": "J",
+      "rows": [
+        52,
+        66
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "A101 - 850 MHz",
+      "frequency_header_cell": "M51",
+      "columns": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "excluded_fitted_curve_column": "Q",
+      "rows": [
+        52,
+        66
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "S129 - 850 MHz",
+      "frequency_header_cell": "T51",
+      "columns": [
+        "T",
+        "U",
+        "V",
+        "W"
+      ],
+      "excluded_fitted_curve_column": "X",
+      "rows": [
+        52,
+        66
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    },
+    {
+      "sheet": "Supplementary Figure 8B",
+      "measurement_kind": "15N_SINGLE_QUANTUM",
+      "label": "E158 - 850 MHz",
+      "frequency_header_cell": "AA51",
+      "columns": [
+        "AA",
+        "AB",
+        "AC",
+        "AD"
+      ],
+      "excluded_fitted_curve_column": "AE",
+      "rows": [
+        52,
+        66
+      ],
+      "n": 15,
+      "frequency_range_Hz": [
+        33.3333333,
+        1000.0
+      ],
+      "nonpositive_error_rows": 0,
+      "duplicate_frequencies": 4
+    }
+  ],
+  "excluded_source_roles": [
+    "All fitted data-point curves",
+    "All fitted kinetic parameters and Monte Carlo parameter samples",
+    "Chi-square parameter grid in Supplementary Figure8A"
+  ],
+  "temperature": "293K from article/labels; no 21-probe methyl full fit claimed",
+  "unresolved": [
+    "Only3 of article21 methyl probes in workbook",
+    "Exact ChemEx version and MQ pulse propagation configuration",
+    "Asymmetric error meaning and source2percent floor implementation"
+  ],
+  "scientific_fits": 0,
+  "rules_runs": 0
+}

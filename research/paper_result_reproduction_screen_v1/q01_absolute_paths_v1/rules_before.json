@@ -1,0 +1,15 @@
+{
+  "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+  "facts_id": "b10a07010be6da5c9e08e513bbcd86c436eb8bd5c410c9751fce9bb41201bbcf",
+  "rule_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1",
+  "status": "PENDING_ABSOLUTE_PATHS",
+  "operator_requests": [
+    {
+      "operator_id": "q01_absolute_paths_and_development_MD_reference_v1",
+      "instance_id": "Q01_R01_STATE_METHOD_CONSISTENCY_V1:b10a07010be6da5c9e08",
+      "measurement_manifest_id": "a520303b79452f14e45c38b3468850f47569ba4e54605017a27a10e4c3c06de7",
+      "method_id": "861ba6378a5d71031dd55d2622c561aa0c0f8588bd451cef891e2070a941f948"
+    }
+  ],
+  "reason": "Original question needs departure and structural approach; relative preference alone and its averaged contact projection cannot establish them."
+}

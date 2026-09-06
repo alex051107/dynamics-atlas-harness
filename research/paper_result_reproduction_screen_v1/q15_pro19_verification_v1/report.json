@@ -1,0 +1,622 @@
+{
+  "timestamp": "2026-09-05T18:28:15.834293+00:00",
+  "source_crc_length_audit": [
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/001_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/002_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/003_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/004_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/005_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/006_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/007_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_1/008_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/014_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/015_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/016_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/017_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/018_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/019_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/020_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/021_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/022_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/023_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_2/024_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_1mM_SA/repetion_3/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/001_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/002_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/003_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/004_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/005_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/006_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/007_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_1/008_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/014_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/015_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/016_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_2/017_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/175_228_apo/repetion_3/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_1/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/001_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/002_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/003_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/004_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/005_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/006_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/007_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/008_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/009_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_1mM_SA/repetion_3/010_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_1/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/001_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/002_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/003_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/004_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/005_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/006_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/007_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/008_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/009_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/010_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/011_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/012_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/013_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/014_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/015_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_2/016_60uW-green_25uW-red__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/001_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/002_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/003_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/004_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/005_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/006_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/007_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    },
+    {
+      "member": "Figure3/55_175_apo/repetion_3/008_60g_25r__apbs_alex.csv",
+      "status": "EXPANDED_LENGTH_AND_CRC_MATCH"
+    }
+  ],
+  "input_id": "ed3a81113560da2de7739ab6f8908e6f6be608dc54185d753cc397875326adf3",
+  "source_audit_status": "ALL140_MATCH_ORIGINAL_RECEIPTS",
+  "main_science_recomputed": false,
+  "original_main_report_preserved": true,
+  "diagnostics": {
+    "175_228": {
+      "equal_repetition_mean_effect": -0.026169186819396173,
+      "equal_repetition_median_effect": -0.027920789696480097,
+      "leave_one_per_condition_effects": [
+        -0.017666885585378767,
+        -0.029020743067647348,
+        -0.00549436490226729,
+        -0.013356476267307849,
+        -0.02471033374957643,
+        -0.0011839555841963723,
+        -0.0483028618063448,
+        -0.05965671928861338,
+        -0.03613034112323332
+      ],
+      "leave_one_per_condition_range": [
+        -0.05965671928861338,
+        -0.0011839555841963723
+      ],
+      "fixed_selected_E_clipping_effect_bound": [
+        -0.027451418735577503,
+        -0.02467685035201802
+      ],
+      "interpretation": "Descriptive group-effect sensitivity; no added experiments, paired design or confidence interval"
+    },
+    "55_175": {
+      "equal_repetition_mean_effect": 0.08198984534700182,
+      "equal_repetition_median_effect": 0.08458183019269927,
+      "leave_one_per_condition_effects": [
+        0.09008412683212952,
+        0.09167485014364629,
+        0.0587806929560607,
+        0.0907830949943561,
+        0.09237381830587288,
+        0.059479661118287286,
+        0.09481502477907178,
+        0.09640574809058855,
+        0.06351159090300296
+      ],
+      "leave_one_per_condition_range": [
+        0.0587806929560607,
+        0.09640574809058855
+      ],
+      "fixed_selected_E_clipping_effect_bound": [
+        0.07927190508479812,
+        0.08378805002605162
+      ],
+      "interpretation": "Descriptive group-effect sensitivity; no added experiments, paired design or confidence interval"
+    }
+  },
+  "provenance": "MANUAL_VERIFICATION_OF_ALREADY_PRODUCED_PRO19_DIAGNOSTICS",
+  "rules_extra_credit": 0,
+  "scientific_question_answer": false
+}

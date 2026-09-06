@@ -1,0 +1,29 @@
+{
+  "status": "PASS_SAME_METHOD_FORWARD_OBJECTIVE_GRADIENT",
+  "reference": "D0_01",
+  "owners": [
+    "19-119",
+    "19-132"
+  ],
+  "donor_components": 3,
+  "source_input_id": "6f40c9a4feb7b67515882ba5d496cd5520aa5ac979933954c7c0dc6a3b1d25ce",
+  "IRF_policy": "padded_linear_v2",
+  "model_for_gradient": "shared3",
+  "max_relative_count_delta": 7.113660256029928e-16,
+  "max_scaled_gradient_delta": 3.7457578705435424e-11,
+  "objective_delta": -6.938893903907228e-18,
+  "timings_seconds": {
+    "uncached_cold": 0.04910074998042546,
+    "uncached_warm": 0.04720858400105499,
+    "cached_cold": 0.022993666992988437,
+    "cached_warm": 0.021889583993470296
+  },
+  "cold_speed_ratio": 2.1354031958190043,
+  "warm_speed_ratio": 2.1566688528725533,
+  "cache_entries": 128,
+  "cache_hits": 2066,
+  "cache_misses": 451,
+  "optimizer_calls": 0,
+  "global_convergence_claimed": false,
+  "timing_scope": "Onegradient pertemperature andimplementation;localmicrobenchmarknotall33speedguarantee"
+}

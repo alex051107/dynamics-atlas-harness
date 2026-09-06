@@ -1,0 +1,1831 @@
+[
+  {
+    "variant_folder": "19-119",
+    "metadata_filename": "19-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K19pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K19pAcF R119C-DA",
+      "K19pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./19-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./19-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "19-132",
+    "metadata_filename": "19-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K19pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K19pAcF N132C-DA",
+      "K19pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./19-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./19-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "19-69",
+    "metadata_filename": "19-69.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K19pAcF Q69C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K19pAcF Q69C-DA",
+      "K19pAcF Q69C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./19-69_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./19-69_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "19-86",
+    "metadata_filename": "19-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K19pAcF Q69C-DA",
+    "sample_id_matches_exact_dataset_key": false,
+    "dataset_keys": [
+      "K19pAcF P86C-DA",
+      "K19pAcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./19-86_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./19-86_D0.txt",
+        "line": 24,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 31,
+        "exists_exactly": false
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 38,
+        "exists_exactly": false
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 45,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "IBH TCSPC",
+      "PQ TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8",
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "22-127",
+    "metadata_filename": "22-127.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "E22pAcF D127C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "E22pAcF D127C-DA",
+      "E22AcF D127C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./22-127_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./22-127_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "36-132",
+    "metadata_filename": "36-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S36pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S36pAcF N132C-DA",
+      "S36AcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./36-132_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./36-132_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "36-86",
+    "metadata_filename": "36-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S36pAcF P86C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S36pAcF P86C-DA",
+      "S36AcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./36-86_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./36-86_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-119",
+    "metadata_filename": "44-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S44pAcF R119C-DA",
+      "S44pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-127",
+    "metadata_filename": "44-127.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF D127C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S44pAcF D127C-DA",
+      "S44AcF D127C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-127_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-127_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-132",
+    "metadata_filename": "44-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S44pAcF N132C-DA",
+      "S44pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-150",
+    "metadata_filename": "44-150.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF I150C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S44pAcF I150C-DA",
+      "S44pAcF I150C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-150_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-150_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-69",
+    "metadata_filename": "44-69.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": false,
+    "dataset_keys": [
+      "S44pAcF Q69C-DA",
+      "S44pAcF Q69C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-69_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-69_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "44-86",
+    "metadata_filename": "44-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "S44pAcF P86C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "S44pAcF P86C-DA",
+      "S44pAcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./44-86_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./44-86_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "5-132",
+    "metadata_filename": "5-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "E5pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "E5pAcF N132C-DA",
+      "E5AcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./5-132_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./5-132_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "5-44",
+    "metadata_filename": "5-44.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "E5pAcF S44C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "E5pAcF S44C-DA",
+      "E5AcF S44C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./5-44_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./5-44_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "55-119",
+    "metadata_filename": "55-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "N55pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "N55pAcF R119C-DA",
+      "N55pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./55-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./55-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "55-132",
+    "metadata_filename": "55-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "N55pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "N55pAcF N132C-DA",
+      "N55pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./55-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./55-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "55-150",
+    "metadata_filename": "55-150.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "N55pAcF I150C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "N55pAcF I150C-DA",
+      "N55pAcF I150C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./55-150_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./55-150_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "55-69",
+    "metadata_filename": "55-69.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "N55pAcF Q69C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "N55pAcF Q69C-DA",
+      "N55pAcF Q69C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./55-69_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./55-69_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "60-119",
+    "metadata_filename": "60-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K60pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K60pAcF R119C-DA",
+      "K60pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./60-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./60-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "60-132",
+    "metadata_filename": "60-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K60pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K60pAcF N132C-DA",
+      "K60pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./60-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./60-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "60-150",
+    "metadata_filename": "60-150.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K60pAcF I150C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K60pAcF I150C-DA",
+      "K60pAcF I150C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./60-150_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./60-150_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "60-86",
+    "metadata_filename": "60-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "K60pAcF P86C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "K60pAcF P86C-DA",
+      "K60pAcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./60-86_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./60-86_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "69-119",
+    "metadata_filename": "69-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "Q69pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "Q69pAcF R119C-DA",
+      "Q69pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./69-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./69-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "69-132",
+    "metadata_filename": "69-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "Q69pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "Q69pAcF N132C-DA",
+      "Q69pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./69-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./69-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "69-150",
+    "metadata_filename": "69-150.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "Q69pAcF I150C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "Q69pAcF I150C-DA",
+      "Q69pAcF I150C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./69-150_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./69-150_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "69-86",
+    "metadata_filename": "69-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "Q69pAcF P86C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "Q69pAcF P86C-DA",
+      "Q69pAcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./69-86_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./69-86_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "70-119",
+    "metadata_filename": "70-132.yml",
+    "metadata_name_matches_folder": false,
+    "sample_measurement_id": "D70pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "D70pAcF R119C-DA",
+      "D70pAcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./70-119_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./70-119_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "70-132",
+    "metadata_filename": "70-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "D70pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "D70pAcF N132C-DA",
+      "D70pAcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./70-132_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./70-132_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "8-119",
+    "metadata_filename": "8-119.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "R8pAcF R119C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "R8pAcF R119C-DA",
+      "R8AcF R119C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./8-119_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./8-119_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "8-132",
+    "metadata_filename": "8-132.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "R8pAcF N132C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "R8pAcF N132C-DA",
+      "R8AcF N132C Donor",
+      "IRF-DA",
+      "IRF-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./8-132_DA.dat",
+        "line": 13,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./8-132_D0.dat",
+        "line": 22,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.dat",
+        "line": 29,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.dat",
+        "line": 36,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC",
+      "PQ TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "8"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "8-69",
+    "metadata_filename": "8-69.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "R8pAcF Q69C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "R8pAcF Q69C-DA",
+      "R8pAcF Q69C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./8-69_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./8-69_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  },
+  {
+    "variant_folder": "8-86",
+    "metadata_filename": "8-86.yml",
+    "metadata_name_matches_folder": true,
+    "sample_measurement_id": "R8pAcF P86C-DA",
+    "sample_id_matches_exact_dataset_key": true,
+    "dataset_keys": [
+      "R8pAcF P86C-DA",
+      "R8AcF P86C Donor",
+      "IRF-DA",
+      "IRF-D0",
+      "Linearization-DA",
+      "Linearization-D0"
+    ],
+    "literal_references": [
+      {
+        "literal": "./8-86_DA.txt",
+        "line": 15,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./8-86_D0.txt",
+        "line": 26,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_DA.txt",
+        "line": 33,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./IRF_D0.txt",
+        "line": 40,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_DA.txt",
+        "line": 47,
+        "exists_exactly": true
+      },
+      {
+        "literal": "./Linearization_D0.txt",
+        "line": 54,
+        "exists_exactly": true
+      }
+    ],
+    "setup_ids": [
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC",
+      "IBH TCSPC"
+    ],
+    "declared_resolution_ps": [
+      "14.1"
+    ],
+    "input_scope": "FILE_FORMAT_AND_LITERAL_LINK_CHECK_ONLY"
+  }
+]

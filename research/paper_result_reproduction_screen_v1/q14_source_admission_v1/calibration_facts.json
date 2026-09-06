@@ -1,0 +1,25 @@
+{
+  "role": "SOURCE_METHOD_AND_SHARED_PARAMETER_FACTS",
+  "R0_A": {
+    "1": 62.6,
+    "2": 68.0
+  },
+  "R0_uncertainty_A": {
+    "1": 4.0,
+    "2": 5.0
+  },
+  "R0_shared_within_pair": true,
+  "sharing_condition": "Only under source dye/medium/averaging assumptions; possible sample-specific factors remain",
+  "typical_correction_factors_role": "Reference setup examples, not per-lab correction covariance",
+  "missing": [
+    "paired lab efficiency values",
+    "sample/setting calibration covariance",
+    "cross-pair measurement covariance",
+    "model parameter covariance"
+  ],
+  "locators": [
+    "SI Table2 physical13-14",
+    "SI Table3-4 physical15",
+    "Main Methods Eq30"
+  ]
+}

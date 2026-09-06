@@ -1,0 +1,183 @@
+{
+  "timestamp": "2026-09-05T21:22:21.395937+00:00",
+  "status": "THREE_MAP_BINARY_GRIDS_MATCH_FINITE",
+  "sources": [
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-32377/map/emd_32377.map.gz",
+      "file": "emd_32377.map.gz",
+      "compressed_bytes": 2807930,
+      "uncompressed_bytes": 17007136,
+      "sha256": "117c976477ef08cae7e55f38d5d690a8ef073d5b0e283173f99635a600f7917f",
+      "gzip_crc": "PASS",
+      "endian": "<",
+      "dimensions": [
+        162,
+        162,
+        162
+      ],
+      "mode": 2,
+      "starts": [
+        0,
+        0,
+        0
+      ],
+      "sampling": [
+        162,
+        162,
+        162
+      ],
+      "cell_A": [
+        152.7954864501953,
+        152.7954864501953,
+        152.7954864501953
+      ],
+      "axes": [
+        1,
+        2,
+        3
+      ],
+      "origin_A": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nsymbt": 0,
+      "header_stats": [
+        -0.10222624987363815,
+        0.23236215114593506,
+        0.0006151247071102262
+      ],
+      "computed_stats": [
+        -0.10222624987363815,
+        0.23236215114593506,
+        0.0006151246880604488
+      ],
+      "header_stat_maxerror": 1.9049777380542032e-11,
+      "grid_spacing_A": [
+        0.9431820151246624,
+        0.9431820151246624,
+        0.9431820151246624
+      ]
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-32377/other/emd_32377_half_map_1.map.gz",
+      "file": "emd_32377_half_map_1.map.gz",
+      "compressed_bytes": 15668394,
+      "uncompressed_bytes": 17007136,
+      "sha256": "b85252fe5a0bc6cb669239de49130870802dbd8ceeac12ed87fd541849d157d0",
+      "gzip_crc": "PASS",
+      "endian": "<",
+      "dimensions": [
+        162,
+        162,
+        162
+      ],
+      "mode": 2,
+      "starts": [
+        0,
+        0,
+        0
+      ],
+      "sampling": [
+        162,
+        162,
+        162
+      ],
+      "cell_A": [
+        152.7954864501953,
+        152.7954864501953,
+        152.7954864501953
+      ],
+      "axes": [
+        1,
+        2,
+        3
+      ],
+      "origin_A": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nsymbt": 0,
+      "header_stats": [
+        -0.03270965814590454,
+        0.1048130914568901,
+        -0.00041937598143704236
+      ],
+      "computed_stats": [
+        -0.03270965814590454,
+        0.1048130914568901,
+        -0.0004193759887027101
+      ],
+      "header_stat_maxerror": 7.265667722414909e-12,
+      "grid_spacing_A": [
+        0.9431820151246624,
+        0.9431820151246624,
+        0.9431820151246624
+      ]
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-32377/other/emd_32377_half_map_2.map.gz",
+      "file": "emd_32377_half_map_2.map.gz",
+      "compressed_bytes": 15669759,
+      "uncompressed_bytes": 17007136,
+      "sha256": "66c229c262875d01ae464d7a8dae65e33eef71d6c6a157dc5ccf633bfdc6597e",
+      "gzip_crc": "PASS",
+      "endian": "<",
+      "dimensions": [
+        162,
+        162,
+        162
+      ],
+      "mode": 2,
+      "starts": [
+        0,
+        0,
+        0
+      ],
+      "sampling": [
+        162,
+        162,
+        162
+      ],
+      "cell_A": [
+        152.7954864501953,
+        152.7954864501953,
+        152.7954864501953
+      ],
+      "axes": [
+        1,
+        2,
+        3
+      ],
+      "origin_A": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nsymbt": 0,
+      "header_stats": [
+        -0.03112657181918621,
+        0.10531211644411087,
+        -0.0004207341407891363
+      ],
+      "computed_stats": [
+        -0.03112657181918621,
+        0.10531211644411087,
+        -0.00042073414030998035
+      ],
+      "header_stat_maxerror": 4.791559401855217e-13,
+      "grid_spacing_A": [
+        0.9431820151246624,
+        0.9431820151246624,
+        0.9431820151246624
+      ]
+    }
+  ],
+  "total_download_bytes": 34146083,
+  "source_page": "https://www.ebi.ac.uk/emdb/EMD-32377",
+  "format_reference": "https://www.ccpem.ac.uk/mrc-format/mrc2014/",
+  "historical_paper_map_version": "UNKNOWN_CURRENT_ARCHIVE",
+  "local_noise_CC_geometry": "NOT_COMPUTED",
+  "Rules_extra": 0
+}

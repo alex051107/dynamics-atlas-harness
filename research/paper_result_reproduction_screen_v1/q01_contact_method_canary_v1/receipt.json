@@ -1,0 +1,7 @@
+{
+  "status": "ATOM_MAPPING_REJECTED_BEFORE_GROMACS",
+  "error": "KeyError(26,ILE,HD11)",
+  "gmx_calls": 0,
+  "cause": "NMR names HD11-13 differ from depositedGRO/ITP ILE HD1-3",
+  "repair_source": "processed.gro ILE26 and NOE_specific_GS ITP indices245-247 explicitlyHD1,HD2,HD3"
+}

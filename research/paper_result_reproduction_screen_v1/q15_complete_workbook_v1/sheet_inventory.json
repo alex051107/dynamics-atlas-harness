@@ -1,0 +1,6048 @@
+[
+  {
+    "name": "Figure 3",
+    "member": "xl/worksheets/sheet1.xml",
+    "nonempty_cells": 23250,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "HiSiaP 58/134 apo (-)"
+      },
+      {
+        "cell": "O1",
+        "value": "HiSiaP 58/134 holo (+)"
+      },
+      {
+        "cell": "AC1",
+        "value": "HiSiaP 55/175 apo (-)"
+      },
+      {
+        "cell": "AQ1",
+        "value": "HiSiaP 55/175 holo (+)"
+      },
+      {
+        "cell": "BE1",
+        "value": "HiSiaP 175/228 apo (-)"
+      },
+      {
+        "cell": "BS1",
+        "value": "HiSiaP 175/228 holo (+)"
+      },
+      {
+        "cell": "CG1",
+        "value": "HiSiaP 112/175 apo (-)"
+      },
+      {
+        "cell": "CU1",
+        "value": "HiSiaP 112/175 holo (+)"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "O2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "Z2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AC2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AN2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AQ2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BB2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "BE2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BP2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "BS2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CD2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "CG2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CR2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "CU2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "DF2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "O3",
+        "value": "raw"
+      },
+      {
+        "cell": "S3",
+        "value": "fit"
+      },
+      {
+        "cell": "V3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AC3",
+        "value": "raw"
+      },
+      {
+        "cell": "AG3",
+        "value": "fit"
+      },
+      {
+        "cell": "AJ3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AQ3",
+        "value": "raw"
+      },
+      {
+        "cell": "AU3",
+        "value": "fit"
+      },
+      {
+        "cell": "AX3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BE3",
+        "value": "raw"
+      },
+      {
+        "cell": "BI3",
+        "value": "fit"
+      },
+      {
+        "cell": "BL3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BS3",
+        "value": "raw"
+      },
+      {
+        "cell": "BW3",
+        "value": "fit"
+      },
+      {
+        "cell": "BZ3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CG3",
+        "value": "raw"
+      },
+      {
+        "cell": "CK3",
+        "value": "fit"
+      },
+      {
+        "cell": "CN3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CU3",
+        "value": "raw"
+      },
+      {
+        "cell": "CY3",
+        "value": "fit"
+      },
+      {
+        "cell": "DB3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "M4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "N4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "O4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "P4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "Q4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "R4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "S4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "T4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "U4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "V4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "W4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "X4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "Y4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "Z4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "AA4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "AB4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "AC4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AD4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AE4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AF4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AG4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AH4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AI4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AJ4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AK4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AL4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AM4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "AN4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "AO4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "AP4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "AQ4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AR4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AS4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AT4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AU4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AV4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AW4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AX4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AY4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AZ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BA4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BB4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "BC4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "BD4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "BE4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BF4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BG4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BH4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BI4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BJ4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BK4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BL4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "BM4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "BN4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BO4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BP4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "BQ4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "BR4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "BS4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BT4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BU4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BV4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BW4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BX4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BY4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BZ4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CA4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CB4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CC4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CD4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "CE4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "CF4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "CG4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CH4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CI4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CJ4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CK4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CL4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CM4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "CN4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CO4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CP4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CQ4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CR4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "CS4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "CT4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "CU4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CV4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CW4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CX4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CY4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CZ4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DA4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "DB4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "DC4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "DD4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "DE4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "DF4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "DG4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "DH4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "L5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "M5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "N5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "Z5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AA5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AB5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "AN5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AO5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AP5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "BB5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BC5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BD5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "BP5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BQ5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BR5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "CD5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CE5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CF5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "CH5",
+        "value": "--"
+      },
+      {
+        "cell": "CI5",
+        "value": "--"
+      },
+      {
+        "cell": "CR5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CS5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CT5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "CV5",
+        "value": "--"
+      },
+      {
+        "cell": "CW5",
+        "value": "--"
+      },
+      {
+        "cell": "DF5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "DG5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "DH5",
+        "value": "SI Table 2"
+      }
+    ],
+    "total_source_text_cells": 208,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "Figure 4",
+    "member": "xl/worksheets/sheet2.xml",
+    "nonempty_cells": 93821,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "HiSiaP 175 Alexa Fluor 555"
+      },
+      {
+        "cell": "F1",
+        "value": "HiSiaP 58 Alexa Fluor 555"
+      },
+      {
+        "cell": "K1",
+        "value": "HiSiaP 175 Alexa Fluor 647"
+      },
+      {
+        "cell": "P1",
+        "value": "HiSiaP 58 Alexa Fluor 647"
+      },
+      {
+        "cell": "U1",
+        "value": "HiSiaP 175 TMR"
+      },
+      {
+        "cell": "Z1",
+        "value": "HiSiaP 175 Cy5"
+      },
+      {
+        "cell": "AE1",
+        "value": "HiSiaP175/228"
+      },
+      {
+        "cell": "B2",
+        "value": "apo"
+      },
+      {
+        "cell": "D2",
+        "value": "holo"
+      },
+      {
+        "cell": "G2",
+        "value": "apo"
+      },
+      {
+        "cell": "I2",
+        "value": "holo"
+      },
+      {
+        "cell": "L2",
+        "value": "apo"
+      },
+      {
+        "cell": "N2",
+        "value": "holo"
+      },
+      {
+        "cell": "Q2",
+        "value": "apo"
+      },
+      {
+        "cell": "S2",
+        "value": "holo"
+      },
+      {
+        "cell": "V2",
+        "value": "apo"
+      },
+      {
+        "cell": "X2",
+        "value": "holo"
+      },
+      {
+        "cell": "AA2",
+        "value": "apo"
+      },
+      {
+        "cell": "AC2",
+        "value": "holo"
+      },
+      {
+        "cell": "AE2",
+        "value": "apo 555/647"
+      },
+      {
+        "cell": "AG2",
+        "value": "holo 555/657"
+      },
+      {
+        "cell": "AI2",
+        "value": "apo TMR-Cy5"
+      },
+      {
+        "cell": "AK2",
+        "value": "holo TMR-Cy5"
+      },
+      {
+        "cell": "AM2",
+        "value": "175/228 TMR-Cy5"
+      },
+      {
+        "cell": "A3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "B3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "C3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "D3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "E3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "F3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "G3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "H3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "I3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "J3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "K3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "L3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "M3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "N3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "O3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "P3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "Q3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "R3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "S3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "T3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "U3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "V3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "W3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "X3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "Y3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "Z3",
+        "value": "time (ns)"
+      },
+      {
+        "cell": "AA3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "AB3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "AC3",
+        "value": "Anisotropy"
+      },
+      {
+        "cell": "AD3",
+        "value": "Intensity"
+      },
+      {
+        "cell": "AE3",
+        "value": "E"
+      },
+      {
+        "cell": "AF3",
+        "value": "Events"
+      },
+      {
+        "cell": "AG3",
+        "value": "E"
+      },
+      {
+        "cell": "AH3",
+        "value": "Events"
+      },
+      {
+        "cell": "AI3",
+        "value": "E"
+      },
+      {
+        "cell": "AJ3",
+        "value": "events"
+      },
+      {
+        "cell": "AK3",
+        "value": "E"
+      },
+      {
+        "cell": "AL3",
+        "value": "events"
+      },
+      {
+        "cell": "AM3",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "AN3",
+        "value": "std (nm)"
+      },
+      {
+        "cell": "AO3",
+        "value": "prediction (nm)"
+      }
+    ],
+    "total_source_text_cells": 65,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "Figure5",
+    "member": "xl/worksheets/sheet3.xml",
+    "nonempty_cells": 21350,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "87/127 (-)"
+      },
+      {
+        "cell": "O1",
+        "value": "87/127 (+)"
+      },
+      {
+        "cell": "AC1",
+        "value": "36/352 (-)"
+      },
+      {
+        "cell": "AQ1",
+        "value": "36/352 (+)"
+      },
+      {
+        "cell": "BE1",
+        "value": "134/186 (-)"
+      },
+      {
+        "cell": "BS1",
+        "value": "134/186 (+)"
+      },
+      {
+        "cell": "CG1",
+        "value": "29/352 (-)"
+      },
+      {
+        "cell": "CU1",
+        "value": "29/352 (+)"
+      },
+      {
+        "cell": "DI1",
+        "value": "29/352 (+) 0% ethylene glycol holo"
+      },
+      {
+        "cell": "DT1",
+        "value": "36/352 (+) 0% ethylene glycol holo"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "O2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "Z2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AC2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AN2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AQ2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BB2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "BE2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BP2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "BS2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CD2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "CG2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CR2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "CU2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "DF2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "DI2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "DT2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "O3",
+        "value": "raw"
+      },
+      {
+        "cell": "S3",
+        "value": "fit"
+      },
+      {
+        "cell": "V3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AC3",
+        "value": "raw"
+      },
+      {
+        "cell": "AG3",
+        "value": "fit"
+      },
+      {
+        "cell": "AJ3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AQ3",
+        "value": "raw"
+      },
+      {
+        "cell": "AU3",
+        "value": "fit"
+      },
+      {
+        "cell": "AX3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BE3",
+        "value": "raw"
+      },
+      {
+        "cell": "BI3",
+        "value": "fit"
+      },
+      {
+        "cell": "BL3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BS3",
+        "value": "raw"
+      },
+      {
+        "cell": "BW3",
+        "value": "fit"
+      },
+      {
+        "cell": "BZ3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CG3",
+        "value": "raw"
+      },
+      {
+        "cell": "CK3",
+        "value": "fit"
+      },
+      {
+        "cell": "CN3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CU3",
+        "value": "raw"
+      },
+      {
+        "cell": "CY3",
+        "value": "fit"
+      },
+      {
+        "cell": "DB3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "DI3",
+        "value": "raw"
+      },
+      {
+        "cell": "DM3",
+        "value": "fit"
+      },
+      {
+        "cell": "DP3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "DT3",
+        "value": "raw"
+      },
+      {
+        "cell": "DX3",
+        "value": "fit"
+      },
+      {
+        "cell": "EA3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "M4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "N4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "O4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "P4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "Q4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "R4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "S4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "T4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "U4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "V4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "W4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "X4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "Y4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "Z4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "AA4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "AB4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "AC4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AD4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AE4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AF4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AG4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AH4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AI4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AJ4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AK4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AL4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AM4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "AN4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "AO4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "AP4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "AQ4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AR4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AS4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AT4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AU4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AV4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AW4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AX4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AY4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AZ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BA4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BB4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "BC4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "BD4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "BE4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BF4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BG4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BH4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BI4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BJ4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BK4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BL4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "BM4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "BN4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BO4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BP4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "BQ4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "BR4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "BS4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BT4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BU4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BV4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BW4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BX4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BY4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BZ4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CA4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CB4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CC4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CD4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "CE4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "CF4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "CG4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CH4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CI4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CJ4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CK4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CL4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CM4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "CN4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CO4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CP4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CQ4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CR4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "CS4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "CT4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "CU4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CV4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CW4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CX4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CY4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CZ4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DA4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "DB4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "DC4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "DD4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "DE4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "DF4",
+        "value": "r_mean (nm)"
+      },
+      {
+        "cell": "DG4",
+        "value": "sd (nm)"
+      },
+      {
+        "cell": "DH4",
+        "value": "prediction (nm)"
+      },
+      {
+        "cell": "DI4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "DJ4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DK4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "DL4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "DM4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "DN4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DO4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "DP4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "DQ4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "DR4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "DS4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "DT4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "DU4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DV4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "DW4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "DX4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "DY4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "DZ4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "EA4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "EB4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "EC4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "ED4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "M5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "N5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "Z5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AA5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AB5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "AN5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AO5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AP5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "BB5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BC5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BD5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "BP5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BQ5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BR5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "CD5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CE5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CF5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "CR5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CS5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "CT5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "DF5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "DG5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "DH5",
+        "value": "SI Table 2"
+      }
+    ],
+    "total_source_text_cells": 216,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "Figure6",
+    "member": "xl/worksheets/sheet4.xml",
+    "nonempty_cells": 13868,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "319/392 (-)"
+      },
+      {
+        "cell": "O1",
+        "value": "319/392 (+)"
+      },
+      {
+        "cell": "AC1",
+        "value": "369/451 (-)"
+      },
+      {
+        "cell": "AQ1",
+        "value": "369/451 (+)"
+      },
+      {
+        "cell": "BE1",
+        "value": "369/451 (-) 0% ethylene glycol apo"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "O2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "Z2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AC2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AN2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "AQ2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BB2",
+        "value": "smFRET"
+      },
+      {
+        "cell": "BE2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "O3",
+        "value": "raw"
+      },
+      {
+        "cell": "S3",
+        "value": "fit"
+      },
+      {
+        "cell": "V3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AC3",
+        "value": "raw"
+      },
+      {
+        "cell": "AG3",
+        "value": "fit"
+      },
+      {
+        "cell": "AJ3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AQ3",
+        "value": "raw"
+      },
+      {
+        "cell": "AU3",
+        "value": "fit"
+      },
+      {
+        "cell": "AX3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BE3",
+        "value": "raw"
+      },
+      {
+        "cell": "BI3",
+        "value": "fit"
+      },
+      {
+        "cell": "BL3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t"
+      },
+      {
+        "cell": "B4",
+        "value": "V"
+      },
+      {
+        "cell": "C4",
+        "value": "background"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part"
+      },
+      {
+        "cell": "E4",
+        "value": "t"
+      },
+      {
+        "cell": "F4",
+        "value": "V"
+      },
+      {
+        "cell": "G4",
+        "value": "fit"
+      },
+      {
+        "cell": "H4",
+        "value": "r"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper"
+      },
+      {
+        "cell": "K4",
+        "value": "lower"
+      },
+      {
+        "cell": "L4",
+        "value": "r(mean)"
+      },
+      {
+        "cell": "M4",
+        "value": "sd"
+      },
+      {
+        "cell": "N4",
+        "value": "prediction"
+      },
+      {
+        "cell": "O4",
+        "value": "t"
+      },
+      {
+        "cell": "P4",
+        "value": "V"
+      },
+      {
+        "cell": "Q4",
+        "value": "background"
+      },
+      {
+        "cell": "R4",
+        "value": "imaginary part"
+      },
+      {
+        "cell": "S4",
+        "value": "t"
+      },
+      {
+        "cell": "T4",
+        "value": "V"
+      },
+      {
+        "cell": "U4",
+        "value": "fit"
+      },
+      {
+        "cell": "V4",
+        "value": "r"
+      },
+      {
+        "cell": "W4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "X4",
+        "value": "upper"
+      },
+      {
+        "cell": "Y4",
+        "value": "lower"
+      },
+      {
+        "cell": "Z4",
+        "value": "r(mean)"
+      },
+      {
+        "cell": "AA4",
+        "value": "sd"
+      },
+      {
+        "cell": "AB4",
+        "value": "prediction"
+      },
+      {
+        "cell": "AC4",
+        "value": "t"
+      },
+      {
+        "cell": "AD4",
+        "value": "V"
+      },
+      {
+        "cell": "AE4",
+        "value": "background"
+      },
+      {
+        "cell": "AF4",
+        "value": "imaginary part"
+      },
+      {
+        "cell": "AG4",
+        "value": "t"
+      },
+      {
+        "cell": "AH4",
+        "value": "V"
+      },
+      {
+        "cell": "AI4",
+        "value": "fit"
+      },
+      {
+        "cell": "AJ4",
+        "value": "r"
+      },
+      {
+        "cell": "AK4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AL4",
+        "value": "upper"
+      },
+      {
+        "cell": "AM4",
+        "value": "lower"
+      },
+      {
+        "cell": "AN4",
+        "value": "r(mean)"
+      },
+      {
+        "cell": "AO4",
+        "value": "sd"
+      },
+      {
+        "cell": "AP4",
+        "value": "prediction"
+      },
+      {
+        "cell": "AQ4",
+        "value": "t"
+      },
+      {
+        "cell": "AR4",
+        "value": "V"
+      },
+      {
+        "cell": "AS4",
+        "value": "background"
+      },
+      {
+        "cell": "AT4",
+        "value": "imaginary part"
+      },
+      {
+        "cell": "AU4",
+        "value": "t"
+      },
+      {
+        "cell": "AV4",
+        "value": "V"
+      },
+      {
+        "cell": "AW4",
+        "value": "fit"
+      },
+      {
+        "cell": "AX4",
+        "value": "r"
+      },
+      {
+        "cell": "AY4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AZ4",
+        "value": "upper"
+      },
+      {
+        "cell": "BA4",
+        "value": "lower"
+      },
+      {
+        "cell": "BB4",
+        "value": "r(mean)"
+      },
+      {
+        "cell": "BC4",
+        "value": "sd"
+      },
+      {
+        "cell": "BD4",
+        "value": "prediction"
+      },
+      {
+        "cell": "BE4",
+        "value": "t"
+      },
+      {
+        "cell": "BF4",
+        "value": "V"
+      },
+      {
+        "cell": "BG4",
+        "value": "background"
+      },
+      {
+        "cell": "BH4",
+        "value": "imaginary part"
+      },
+      {
+        "cell": "BI4",
+        "value": "t"
+      },
+      {
+        "cell": "BJ4",
+        "value": "V"
+      },
+      {
+        "cell": "BK4",
+        "value": "fit"
+      },
+      {
+        "cell": "BL4",
+        "value": "r"
+      },
+      {
+        "cell": "BM4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "BN4",
+        "value": "upper"
+      },
+      {
+        "cell": "BO4",
+        "value": "lower"
+      },
+      {
+        "cell": "B5",
+        "value": "--"
+      },
+      {
+        "cell": "L5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "M5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "N5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "Z5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AA5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AB5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "AN5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AO5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "AP5",
+        "value": "SI Table 2"
+      },
+      {
+        "cell": "BB5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BC5",
+        "value": "SI Table 2 & 6"
+      },
+      {
+        "cell": "BD5",
+        "value": "SI Table 2"
+      }
+    ],
+    "total_source_text_cells": 130,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "Figure7",
+    "member": "xl/worksheets/sheet5.xml",
+    "nonempty_cells": 22,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "113/497 apo"
+      },
+      {
+        "cell": "F1",
+        "value": "113/497 holo"
+      },
+      {
+        "cell": "A2",
+        "value": "accurate FRET E"
+      },
+      {
+        "cell": "B2",
+        "value": "Events"
+      },
+      {
+        "cell": "C2",
+        "value": "mean"
+      },
+      {
+        "cell": "D2",
+        "value": "sd"
+      },
+      {
+        "cell": "E2",
+        "value": "prediction"
+      },
+      {
+        "cell": "F2",
+        "value": "accurate FRET E"
+      },
+      {
+        "cell": "G2",
+        "value": "Events"
+      },
+      {
+        "cell": "H2",
+        "value": "mean"
+      },
+      {
+        "cell": "I2",
+        "value": "sd"
+      },
+      {
+        "cell": "J2",
+        "value": "prediction"
+      },
+      {
+        "cell": "E3",
+        "value": "-"
+      }
+    ],
+    "total_source_text_cells": 13,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "Figure8",
+    "member": "xl/worksheets/sheet6.xml",
+    "nonempty_cells": 6014,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "10 Å linker (R1)"
+      },
+      {
+        "cell": "D1",
+        "value": "20 Å linker (AF647)"
+      },
+      {
+        "cell": "A2",
+        "value": "10% immobilisation"
+      },
+      {
+        "cell": "B2",
+        "value": "50% immobilisation"
+      },
+      {
+        "cell": "C2",
+        "value": "100% immobilisation"
+      },
+      {
+        "cell": "D2",
+        "value": "10% immobilisation"
+      },
+      {
+        "cell": "E2",
+        "value": "50% immobilisation"
+      },
+      {
+        "cell": "F2",
+        "value": "100% immobilisation"
+      },
+      {
+        "cell": "A3",
+        "value": "errors"
+      },
+      {
+        "cell": "B3",
+        "value": "errors"
+      },
+      {
+        "cell": "C3",
+        "value": "errors"
+      },
+      {
+        "cell": "D3",
+        "value": "errors"
+      },
+      {
+        "cell": "E3",
+        "value": "errors"
+      },
+      {
+        "cell": "F3",
+        "value": "errors"
+      }
+    ],
+    "total_source_text_cells": 14,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure1",
+    "member": "xl/worksheets/sheet7.xml",
+    "nonempty_cells": 6182,
+    "text_cells": [
+      {
+        "cell": "A2",
+        "value": "HiSiaP 58/134"
+      },
+      {
+        "cell": "C2",
+        "value": "HiSiaP 55/175"
+      },
+      {
+        "cell": "E2",
+        "value": "HiSiaP 112/175"
+      },
+      {
+        "cell": "G2",
+        "value": "HiSiaP 175/228"
+      },
+      {
+        "cell": "I2",
+        "value": "MalE 87/127"
+      },
+      {
+        "cell": "K2",
+        "value": "MalE 134/186"
+      },
+      {
+        "cell": "M2",
+        "value": "MalE 29/352"
+      },
+      {
+        "cell": "O2",
+        "value": "MalE 36/352"
+      },
+      {
+        "cell": "Q2",
+        "value": "SBD2 319/392"
+      },
+      {
+        "cell": "S2",
+        "value": "SBD2 369/451"
+      },
+      {
+        "cell": "A3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "B3",
+        "value": "intensity"
+      },
+      {
+        "cell": "C3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "D3",
+        "value": "intensity"
+      },
+      {
+        "cell": "E3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "F3",
+        "value": "intensity"
+      },
+      {
+        "cell": "G3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "H3",
+        "value": "intensity"
+      },
+      {
+        "cell": "I3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "J3",
+        "value": "intensity"
+      },
+      {
+        "cell": "K3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "L3",
+        "value": "intensity"
+      },
+      {
+        "cell": "M3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "N3",
+        "value": "intensity"
+      },
+      {
+        "cell": "O3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "P3",
+        "value": "intensity"
+      },
+      {
+        "cell": "Q3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "R3",
+        "value": "intensity"
+      },
+      {
+        "cell": "S3",
+        "value": "field (G)"
+      },
+      {
+        "cell": "T3",
+        "value": "intensity"
+      }
+    ],
+    "total_source_text_cells": 30,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure3",
+    "member": "xl/worksheets/sheet8.xml",
+    "nonempty_cells": 346808,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "58/134"
+      },
+      {
+        "cell": "G1",
+        "value": "175/228"
+      },
+      {
+        "cell": "M1",
+        "value": "55/175"
+      },
+      {
+        "cell": "S1",
+        "value": "112/175"
+      },
+      {
+        "cell": "A2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "B2",
+        "value": "A280"
+      },
+      {
+        "cell": "C2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "D2",
+        "value": "A552"
+      },
+      {
+        "cell": "E2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "F2",
+        "value": "A650"
+      },
+      {
+        "cell": "G2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "H2",
+        "value": "A280"
+      },
+      {
+        "cell": "I2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "J2",
+        "value": "A556"
+      },
+      {
+        "cell": "K2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "L2",
+        "value": "A651"
+      },
+      {
+        "cell": "M2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "N2",
+        "value": "A280"
+      },
+      {
+        "cell": "O2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "P2",
+        "value": "A556"
+      },
+      {
+        "cell": "Q2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "R2",
+        "value": "A651"
+      },
+      {
+        "cell": "S2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "T2",
+        "value": "A280"
+      },
+      {
+        "cell": "U2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "V2",
+        "value": "A556"
+      },
+      {
+        "cell": "W2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "X2",
+        "value": "A651"
+      }
+    ],
+    "total_source_text_cells": 28,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure4",
+    "member": "xl/worksheets/sheet9.xml",
+    "nonempty_cells": 28,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "58/134"
+      },
+      {
+        "cell": "E1",
+        "value": "55/175"
+      },
+      {
+        "cell": "I1",
+        "value": "175/228"
+      },
+      {
+        "cell": "M1",
+        "value": "112/175"
+      },
+      {
+        "cell": "A2",
+        "value": "apo"
+      },
+      {
+        "cell": "C2",
+        "value": "holo"
+      },
+      {
+        "cell": "E2",
+        "value": "apo"
+      },
+      {
+        "cell": "G2",
+        "value": "holo"
+      },
+      {
+        "cell": "I2",
+        "value": "apo"
+      },
+      {
+        "cell": "K2",
+        "value": "holo"
+      },
+      {
+        "cell": "M2",
+        "value": "apo"
+      },
+      {
+        "cell": "O2",
+        "value": "holo"
+      },
+      {
+        "cell": "A3",
+        "value": "E"
+      },
+      {
+        "cell": "B3",
+        "value": "events"
+      },
+      {
+        "cell": "C3",
+        "value": "E"
+      },
+      {
+        "cell": "D3",
+        "value": "events"
+      },
+      {
+        "cell": "E3",
+        "value": "E"
+      },
+      {
+        "cell": "F3",
+        "value": "events"
+      },
+      {
+        "cell": "G3",
+        "value": "E"
+      },
+      {
+        "cell": "H3",
+        "value": "events"
+      },
+      {
+        "cell": "I3",
+        "value": "E"
+      },
+      {
+        "cell": "J3",
+        "value": "events"
+      },
+      {
+        "cell": "K3",
+        "value": "E"
+      },
+      {
+        "cell": "L3",
+        "value": "events"
+      },
+      {
+        "cell": "M3",
+        "value": "E"
+      },
+      {
+        "cell": "N3",
+        "value": "events"
+      },
+      {
+        "cell": "O3",
+        "value": "E"
+      },
+      {
+        "cell": "P3",
+        "value": "events"
+      }
+    ],
+    "total_source_text_cells": 28,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure4+5",
+    "member": "xl/worksheets/sheet10.xml",
+    "nonempty_cells": 62,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "SI Figure 4 "
+      },
+      {
+        "cell": "B1",
+        "value": "raw data files available on zenedo "
+      },
+      {
+        "cell": "A3",
+        "value": "SI Figure 5A"
+      },
+      {
+        "cell": "B3",
+        "value": "raw data files available on zenedo "
+      },
+      {
+        "cell": "A4",
+        "value": "SI Figure 5B"
+      },
+      {
+        "cell": "A5",
+        "value": "58/134"
+      },
+      {
+        "cell": "I5",
+        "value": "175/228"
+      },
+      {
+        "cell": "Q5",
+        "value": "55/175"
+      }
+    ],
+    "total_source_text_cells": 38,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure6",
+    "member": "xl/worksheets/sheet11.xml",
+    "nonempty_cells": 108301,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "SI Figure 6A"
+      },
+      {
+        "cell": "B1",
+        "value": "raw data files available on zenedo "
+      },
+      {
+        "cell": "A2",
+        "value": "SI Figure 6B"
+      },
+      {
+        "cell": "A4",
+        "value": "112/175 Alexa Fluor546-Star635P"
+      },
+      {
+        "cell": "A5",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "B5",
+        "value": "A280 (mAU)"
+      },
+      {
+        "cell": "C5",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "D5",
+        "value": "A554 (mAU)"
+      },
+      {
+        "cell": "E5",
+        "value": "A639 (mAU)"
+      }
+    ],
+    "total_source_text_cells": 34878,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure7",
+    "member": "xl/worksheets/sheet12.xml",
+    "nonempty_cells": 433646,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "87/127"
+      },
+      {
+        "cell": "G1",
+        "value": "29/352"
+      },
+      {
+        "cell": "M1",
+        "value": "36/352"
+      },
+      {
+        "cell": "S1",
+        "value": "134/186"
+      },
+      {
+        "cell": "A2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "B2",
+        "value": "A280"
+      },
+      {
+        "cell": "C2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "D2",
+        "value": "A556"
+      },
+      {
+        "cell": "E2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "F2",
+        "value": "A651"
+      },
+      {
+        "cell": "G2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "H2",
+        "value": "A280"
+      },
+      {
+        "cell": "I2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "J2",
+        "value": "A556"
+      },
+      {
+        "cell": "K2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "L2",
+        "value": "A651"
+      },
+      {
+        "cell": "M2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "N2",
+        "value": "A280"
+      },
+      {
+        "cell": "O2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "P2",
+        "value": "A556"
+      },
+      {
+        "cell": "Q2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "R2",
+        "value": "A651"
+      },
+      {
+        "cell": "S2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "T2",
+        "value": "A280"
+      },
+      {
+        "cell": "U2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "V2",
+        "value": "A556"
+      },
+      {
+        "cell": "W2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "X2",
+        "value": "A651"
+      }
+    ],
+    "total_source_text_cells": 28,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure8",
+    "member": "xl/worksheets/sheet13.xml",
+    "nonempty_cells": 28,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "87/127"
+      },
+      {
+        "cell": "E1",
+        "value": "134/186"
+      },
+      {
+        "cell": "I1",
+        "value": "36/352"
+      },
+      {
+        "cell": "M1",
+        "value": "29/352"
+      },
+      {
+        "cell": "A2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "C2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "E2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "G2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "I2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "K2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "M2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "O2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "A3",
+        "value": "E"
+      },
+      {
+        "cell": "B3",
+        "value": "Events"
+      },
+      {
+        "cell": "C3",
+        "value": "E"
+      },
+      {
+        "cell": "D3",
+        "value": "Events"
+      },
+      {
+        "cell": "E3",
+        "value": "E"
+      },
+      {
+        "cell": "F3",
+        "value": "Events"
+      },
+      {
+        "cell": "G3",
+        "value": "E"
+      },
+      {
+        "cell": "H3",
+        "value": "Events"
+      },
+      {
+        "cell": "I3",
+        "value": "E"
+      },
+      {
+        "cell": "J3",
+        "value": "Events"
+      },
+      {
+        "cell": "K3",
+        "value": "E"
+      },
+      {
+        "cell": "L3",
+        "value": "Events"
+      },
+      {
+        "cell": "M3",
+        "value": "E"
+      },
+      {
+        "cell": "N3",
+        "value": "Events"
+      },
+      {
+        "cell": "O3",
+        "value": "E"
+      },
+      {
+        "cell": "P3",
+        "value": "Events"
+      }
+    ],
+    "total_source_text_cells": 28,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure 8",
+    "member": "xl/worksheets/sheet14.xml",
+    "nonempty_cells": 2,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "SI Figure 8 "
+      },
+      {
+        "cell": "B1",
+        "value": "raw data files available on zenedo "
+      }
+    ],
+    "total_source_text_cells": 2,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure9",
+    "member": "xl/worksheets/sheet15.xml",
+    "nonempty_cells": 4761,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "36/352 (++)"
+      },
+      {
+        "cell": "L1",
+        "value": "29/352 (++)"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "L3",
+        "value": "raw"
+      },
+      {
+        "cell": "P3",
+        "value": "fit"
+      },
+      {
+        "cell": "S3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "M4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "N4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "O4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "P4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "Q4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "R4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "S4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "T4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "U4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "V4",
+        "value": "lower (P(r))"
+      }
+    ],
+    "total_source_text_cells": 32,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure10",
+    "member": "xl/worksheets/sheet16.xml",
+    "nonempty_cells": 66066,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "MalE 29/352 0% holo"
+      },
+      {
+        "cell": "N1",
+        "value": "MalE 29/352 25% d-Glycerol holo"
+      },
+      {
+        "cell": "AA1",
+        "value": "MalE 29/352 25% d-Ethgly holo"
+      },
+      {
+        "cell": "AN1",
+        "value": "MalE 29/352 50% d-Ethgly holo"
+      },
+      {
+        "cell": "BA1",
+        "value": "MalE 36/352 0% d-Ethgly"
+      },
+      {
+        "cell": "BN1",
+        "value": "MalE 36/352 50% d-Ethgly"
+      },
+      {
+        "cell": "CA1",
+        "value": "SBD2 369/451 0% d-Ethgly apo"
+      },
+      {
+        "cell": "CN1",
+        "value": "SBD2 369/451 50% d-Ethgly apo"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "N2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "Y2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "AA2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AL2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "AN2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AY2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "BA2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BL2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "BN2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "BY2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "CA2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CL2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "CN2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "CY2",
+        "value": "2peseem"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "N3",
+        "value": "raw"
+      },
+      {
+        "cell": "R3",
+        "value": "fit"
+      },
+      {
+        "cell": "U3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AA3",
+        "value": "raw"
+      },
+      {
+        "cell": "AE3",
+        "value": "fit"
+      },
+      {
+        "cell": "AH3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AN3",
+        "value": "raw"
+      },
+      {
+        "cell": "AR3",
+        "value": "fit"
+      },
+      {
+        "cell": "AU3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BA3",
+        "value": "raw"
+      },
+      {
+        "cell": "BE3",
+        "value": "fit"
+      },
+      {
+        "cell": "BH3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "BN3",
+        "value": "raw"
+      },
+      {
+        "cell": "BR3",
+        "value": "fit"
+      },
+      {
+        "cell": "BU3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CA3",
+        "value": "raw"
+      },
+      {
+        "cell": "CE3",
+        "value": "fit"
+      },
+      {
+        "cell": "CH3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "CN3",
+        "value": "raw"
+      },
+      {
+        "cell": "CR3",
+        "value": "fit"
+      },
+      {
+        "cell": "CU3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "M4",
+        "value": "intensity"
+      },
+      {
+        "cell": "N4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "O4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "P4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "Q4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "R4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "S4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "T4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "U4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "V4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "W4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "X4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "Y4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "Z4",
+        "value": "intensity"
+      },
+      {
+        "cell": "AA4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AB4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AC4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AD4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AE4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AF4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AG4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AH4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AI4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AJ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AK4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "AL4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AM4",
+        "value": "intensity"
+      },
+      {
+        "cell": "AN4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AO4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AP4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AQ4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AR4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AS4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AT4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AU4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AV4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AW4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AX4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "AY4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AZ4",
+        "value": "intensity"
+      },
+      {
+        "cell": "BA4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BB4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BC4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BD4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BE4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BF4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BG4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BH4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "BI4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "BJ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BK4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BL4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BM4",
+        "value": "intensity"
+      },
+      {
+        "cell": "BN4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BO4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BP4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "BQ4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "BR4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BS4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "BT4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "BU4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "BV4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "BW4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "BX4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "BY4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "BZ4",
+        "value": "intensity"
+      },
+      {
+        "cell": "CA4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CB4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CC4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CD4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CE4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CF4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CG4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "CH4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CI4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CJ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CK4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CL4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CM4",
+        "value": "intensity"
+      },
+      {
+        "cell": "CN4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CO4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CP4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "CQ4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "CR4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CS4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "CT4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "CU4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "CV4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "CW4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "CX4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "CY4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "CZ4",
+        "value": "intensity"
+      }
+    ],
+    "total_source_text_cells": 152,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure11",
+    "member": "xl/worksheets/sheet17.xml",
+    "nonempty_cells": 183308,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "319/392"
+      },
+      {
+        "cell": "G1",
+        "value": "369/451"
+      },
+      {
+        "cell": "A2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "B2",
+        "value": "A280"
+      },
+      {
+        "cell": "C2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "D2",
+        "value": "A556"
+      },
+      {
+        "cell": "E2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "F2",
+        "value": "A651"
+      },
+      {
+        "cell": "G2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "H2",
+        "value": "A280"
+      },
+      {
+        "cell": "I2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "J2",
+        "value": "A556"
+      },
+      {
+        "cell": "K2",
+        "value": "volume (ml)"
+      },
+      {
+        "cell": "L2",
+        "value": "A651"
+      }
+    ],
+    "total_source_text_cells": 14,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure12 ",
+    "member": "xl/worksheets/sheet18.xml",
+    "nonempty_cells": 2,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "SI Figure 12 "
+      },
+      {
+        "cell": "B1",
+        "value": "raw data files available on zenedo "
+      }
+    ],
+    "total_source_text_cells": 2,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure12",
+    "member": "xl/worksheets/sheet19.xml",
+    "nonempty_cells": 14,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "369/451"
+      },
+      {
+        "cell": "E1",
+        "value": "319/392"
+      },
+      {
+        "cell": "A2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "C2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "E2",
+        "value": "apo (-)"
+      },
+      {
+        "cell": "G2",
+        "value": "holo (+)"
+      },
+      {
+        "cell": "A3",
+        "value": "E"
+      },
+      {
+        "cell": "B3",
+        "value": "Events"
+      },
+      {
+        "cell": "C3",
+        "value": "E"
+      },
+      {
+        "cell": "D3",
+        "value": "Events"
+      },
+      {
+        "cell": "E3",
+        "value": "E"
+      },
+      {
+        "cell": "F3",
+        "value": "Events"
+      },
+      {
+        "cell": "G3",
+        "value": "E"
+      },
+      {
+        "cell": "H3",
+        "value": "Events"
+      }
+    ],
+    "total_source_text_cells": 14,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure13",
+    "member": "xl/worksheets/sheet20.xml",
+    "nonempty_cells": 17350,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "SBD2 369/451"
+      },
+      {
+        "cell": "A2",
+        "value": "1 mM glutamate"
+      },
+      {
+        "cell": "N2",
+        "value": "1.5 µM protein"
+      },
+      {
+        "cell": "A3",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L3",
+        "value": "2peseem"
+      },
+      {
+        "cell": "N3",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "Y3",
+        "value": "2peseem"
+      },
+      {
+        "cell": "A4",
+        "value": "raw"
+      },
+      {
+        "cell": "E4",
+        "value": "fit"
+      },
+      {
+        "cell": "H4",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "N4",
+        "value": "raw"
+      },
+      {
+        "cell": "R4",
+        "value": "fit"
+      },
+      {
+        "cell": "U4",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B5",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C5",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D5",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F5",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G5",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H5",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I5",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J5",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K5",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "M5",
+        "value": "intensity"
+      },
+      {
+        "cell": "N5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "O5",
+        "value": "V/V0"
+      },
+      {
+        "cell": "P5",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "Q5",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "R5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "S5",
+        "value": "V/V0"
+      },
+      {
+        "cell": "T5",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "U5",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "V5",
+        "value": "P(r)"
+      },
+      {
+        "cell": "W5",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "X5",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "Y5",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "Z5",
+        "value": "intensity"
+      }
+    ],
+    "total_source_text_cells": 39,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure15",
+    "member": "xl/worksheets/sheet21.xml",
+    "nonempty_cells": 14639,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "VcSiaP 54/173 apo (-) with cryoprotectant"
+      },
+      {
+        "cell": "L1",
+        "value": "VcSiaP 54/173 holo (+) with cryoprotectant"
+      },
+      {
+        "cell": "W1",
+        "value": "VcSiaP 54/173 apo (-) without cryoprotectant"
+      },
+      {
+        "cell": "AH1",
+        "value": "VcSiaP 54/173 holo (+) without cryoprotectant"
+      },
+      {
+        "cell": "A2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "L2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "W2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "AH2",
+        "value": "PELDOR"
+      },
+      {
+        "cell": "A3",
+        "value": "raw"
+      },
+      {
+        "cell": "E3",
+        "value": "fit"
+      },
+      {
+        "cell": "H3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "L3",
+        "value": "raw"
+      },
+      {
+        "cell": "P3",
+        "value": "fit"
+      },
+      {
+        "cell": "S3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "W3",
+        "value": "raw"
+      },
+      {
+        "cell": "AA3",
+        "value": "fit"
+      },
+      {
+        "cell": "AD3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "AH3",
+        "value": "raw"
+      },
+      {
+        "cell": "AL3",
+        "value": "fit"
+      },
+      {
+        "cell": "AO3",
+        "value": "distance distribution"
+      },
+      {
+        "cell": "A4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "C4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "D4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "E4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "G4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "H4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "I4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "J4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "K4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "L4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "M4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "N4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "O4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "P4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "Q4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "R4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "S4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "T4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "U4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "V4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "W4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "X4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "Y4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "Z4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AA4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AB4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AC4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AD4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AE4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AF4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AG4",
+        "value": "lower (P(r))"
+      },
+      {
+        "cell": "AH4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AI4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AJ4",
+        "value": "background (V/V0)"
+      },
+      {
+        "cell": "AK4",
+        "value": "imaginary part (V(V0)"
+      },
+      {
+        "cell": "AL4",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "AM4",
+        "value": "V/V0"
+      },
+      {
+        "cell": "AN4",
+        "value": "fit (V/V0)"
+      },
+      {
+        "cell": "AO4",
+        "value": "r (nm)"
+      },
+      {
+        "cell": "AP4",
+        "value": "P(r)"
+      },
+      {
+        "cell": "AQ4",
+        "value": "upper (P(r))"
+      },
+      {
+        "cell": "AR4",
+        "value": "lower (P(r))"
+      }
+    ],
+    "total_source_text_cells": 64,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure16",
+    "member": "xl/worksheets/sheet22.xml",
+    "nonempty_cells": 1,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "raw data of SI 4 used "
+      }
+    ],
+    "total_source_text_cells": 1,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure 17",
+    "member": "xl/worksheets/sheet23.xml",
+    "nonempty_cells": 67265,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "HiSiaP 58/134 holo"
+      },
+      {
+        "cell": "C1",
+        "value": "HiSiaP 55/175 holo"
+      },
+      {
+        "cell": "E1",
+        "value": "HiSiaP 175/228 holo"
+      },
+      {
+        "cell": "G1",
+        "value": "HiSiaP 112/175 holo"
+      },
+      {
+        "cell": "I1",
+        "value": "HiSiaP 36/352 holo"
+      },
+      {
+        "cell": "K1",
+        "value": "HiSiaP 29/352 holo"
+      },
+      {
+        "cell": "M1",
+        "value": "HiSiaP 87/127 holo"
+      },
+      {
+        "cell": "O1",
+        "value": "HiSiaP 134/186 holo"
+      },
+      {
+        "cell": "Q1",
+        "value": "SBD2 369/451 holo"
+      },
+      {
+        "cell": "S1",
+        "value": "SBD2 319/392 holo"
+      },
+      {
+        "cell": "U1",
+        "value": "YopO 113/497 holo"
+      },
+      {
+        "cell": "A2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "B2",
+        "value": "intensity"
+      },
+      {
+        "cell": "C2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "D2",
+        "value": "intensity"
+      },
+      {
+        "cell": "E2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "F2",
+        "value": "intensity"
+      },
+      {
+        "cell": "G2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "H2",
+        "value": "intensity"
+      },
+      {
+        "cell": "I2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "J2",
+        "value": "intensity"
+      },
+      {
+        "cell": "K2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "L2",
+        "value": "intensity"
+      },
+      {
+        "cell": "M2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "N2",
+        "value": "intensity"
+      },
+      {
+        "cell": "O2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "P2",
+        "value": "intensity"
+      },
+      {
+        "cell": "Q2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "R2",
+        "value": "intensity"
+      },
+      {
+        "cell": "S2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "T2",
+        "value": "intensity"
+      },
+      {
+        "cell": "U2",
+        "value": "t (µs)"
+      },
+      {
+        "cell": "V2",
+        "value": "intensity"
+      }
+    ],
+    "total_source_text_cells": 33,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure18",
+    "member": "xl/worksheets/sheet24.xml",
+    "nonempty_cells": 1598,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "Alexa Fluor 555"
+      },
+      {
+        "cell": "C1",
+        "value": "Alexa Fluor 647"
+      },
+      {
+        "cell": "A2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "B2",
+        "value": "Emission (a.u.)"
+      },
+      {
+        "cell": "C2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "D2",
+        "value": "Absorption (a.u.)"
+      }
+    ],
+    "total_source_text_cells": 6,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure21",
+    "member": "xl/worksheets/sheet25.xml",
+    "nonempty_cells": 30,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "MalE"
+      },
+      {
+        "cell": "F1",
+        "value": "SBD2"
+      },
+      {
+        "cell": "B2",
+        "value": "29/352, apo"
+      },
+      {
+        "cell": "C2",
+        "value": "29/352, holo"
+      },
+      {
+        "cell": "D2",
+        "value": "87/186, apo"
+      },
+      {
+        "cell": "E2",
+        "value": "87/186, holo"
+      },
+      {
+        "cell": "G2",
+        "value": "369/451, apo"
+      },
+      {
+        "cell": "H2",
+        "value": "369/451, holo"
+      },
+      {
+        "cell": "I2",
+        "value": "319/392, apo"
+      },
+      {
+        "cell": "J2",
+        "value": "319/392, holo"
+      },
+      {
+        "cell": "A3",
+        "value": "Alexa Fluor 555 – Alexa Fluor 647"
+      },
+      {
+        "cell": "F3",
+        "value": "Alexa Fluor 555 – Alexa Fluor 647"
+      },
+      {
+        "cell": "A4",
+        "value": "Alexa Fluor 532 – Alexa Fluor 647"
+      },
+      {
+        "cell": "F4",
+        "value": "Alexa Fluor 546 – Alexa Fluor 647"
+      }
+    ],
+    "total_source_text_cells": 14,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  },
+  {
+    "name": "SI Figure22",
+    "member": "xl/worksheets/sheet26.xml",
+    "nonempty_cells": 57988,
+    "text_cells": [
+      {
+        "cell": "A1",
+        "value": "Rhodamine 6G"
+      },
+      {
+        "cell": "Y1",
+        "value": "TMR"
+      },
+      {
+        "cell": "AW1",
+        "value": "HiSiaP 175 TMR apo (-)"
+      },
+      {
+        "cell": "BU1",
+        "value": "HiSiaP 175 TMRh holo (+)"
+      },
+      {
+        "cell": "A2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "B2",
+        "value": "1 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "C2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "D2",
+        "value": "1 uM Emission (a.u.)"
+      },
+      {
+        "cell": "E2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "F2",
+        "value": "0.85 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "G2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "H2",
+        "value": "0.85 uM Emission (a.u.)"
+      },
+      {
+        "cell": "I2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "J2",
+        "value": "0.75 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "K2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "L2",
+        "value": "0.75 uM Emission (a.u.)"
+      },
+      {
+        "cell": "M2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "N2",
+        "value": "0.66 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "O2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "P2",
+        "value": "0.66 uM Emission (a.u.)"
+      },
+      {
+        "cell": "Q2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "R2",
+        "value": "0.6 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "S2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "T2",
+        "value": "0.6 uM Emission (a.u.)"
+      },
+      {
+        "cell": "U2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "V2",
+        "value": "0.54 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "W2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "X2",
+        "value": "0.54 uM Emission (a.u.)"
+      },
+      {
+        "cell": "Y2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "Z2",
+        "value": "1 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AA2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AB2",
+        "value": "1 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AC2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AD2",
+        "value": "0.85 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AE2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AF2",
+        "value": "0.85 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AG2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AH2",
+        "value": "0.75 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AI2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AJ2",
+        "value": "0.75 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AK2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AL2",
+        "value": "0.66 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AM2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AN2",
+        "value": "0.66 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AO2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AP2",
+        "value": "0.6 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AQ2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AR2",
+        "value": "0.6 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AS2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AT2",
+        "value": "0.54 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AU2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AV2",
+        "value": "0.54 uM Emission (a.u.)"
+      },
+      {
+        "cell": "AW2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AX2",
+        "value": "1 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "AY2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "AZ2",
+        "value": "1 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BA2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BB2",
+        "value": "0.85 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BC2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BD2",
+        "value": "0.85 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BE2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BF2",
+        "value": "0.75 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BG2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BH2",
+        "value": "0.75 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BI2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BJ2",
+        "value": "0.66 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BK2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BL2",
+        "value": "0.66 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BM2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BN2",
+        "value": "0.6 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BO2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BP2",
+        "value": "0.6 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BQ2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BR2",
+        "value": "0.54 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BS2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BT2",
+        "value": "0.54 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BU2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BV2",
+        "value": "1 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "BW2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BX2",
+        "value": "1 uM Emission (a.u.)"
+      },
+      {
+        "cell": "BY2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "BZ2",
+        "value": "0.85 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "CA2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CB2",
+        "value": "0.85 uM Emission (a.u.)"
+      },
+      {
+        "cell": "CC2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CD2",
+        "value": "0.75 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "CE2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CF2",
+        "value": "0.75 uM Emission (a.u.)"
+      },
+      {
+        "cell": "CG2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CH2",
+        "value": "0.66 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "CI2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CJ2",
+        "value": "0.66 uM Emission (a.u.)"
+      },
+      {
+        "cell": "CK2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CL2",
+        "value": "0.6 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "CM2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CN2",
+        "value": "0.6 uM Emission (a.u.)"
+      },
+      {
+        "cell": "CO2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CP2",
+        "value": "0.54 uM Absorption (a.u.)"
+      },
+      {
+        "cell": "CQ2",
+        "value": "wavelength (nm)"
+      },
+      {
+        "cell": "CR2",
+        "value": "0.54 uM Emission (a.u.)"
+      },
+      {
+        "cell": "B3",
+        "value": "5.115249E-02"
+      },
+      {
+        "cell": "C3",
+        "value": "520.0"
+      },
+      {
+        "cell": "D3",
+        "value": "73.0920"
+      },
+      {
+        "cell": "F3",
+        "value": "-2.310622E-02"
+      },
+      {
+        "cell": "G3",
+        "value": "520.0"
+      },
+      {
+        "cell": "H3",
+        "value": "68.2770"
+      },
+      {
+        "cell": "J3",
+        "value": "-6.320141E-02"
+      },
+      {
+        "cell": "K3",
+        "value": "520.0"
+      },
+      {
+        "cell": "L3",
+        "value": "58.4480"
+      },
+      {
+        "cell": "N3",
+        "value": "7.775965E-02"
+      },
+      {
+        "cell": "O3",
+        "value": "520.0"
+      },
+      {
+        "cell": "P3",
+        "value": "49.3570"
+      },
+      {
+        "cell": "R3",
+        "value": "3.175859E-03"
+      },
+      {
+        "cell": "S3",
+        "value": "520.0"
+      },
+      {
+        "cell": "T3",
+        "value": "46.8250"
+      },
+      {
+        "cell": "V3",
+        "value": "2.379656E-03"
+      },
+      {
+        "cell": "W3",
+        "value": "520.0"
+      },
+      {
+        "cell": "X3",
+        "value": "39.5730"
+      },
+      {
+        "cell": "Z3",
+        "value": "1.040754E-02"
+      },
+      {
+        "cell": "AA3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AB3",
+        "value": "3.3820"
+      },
+      {
+        "cell": "AD3",
+        "value": "-2.535068E-02"
+      },
+      {
+        "cell": "AE3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AF3",
+        "value": "3.4500"
+      },
+      {
+        "cell": "AH3",
+        "value": "1.203109E-02"
+      },
+      {
+        "cell": "AI3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AJ3",
+        "value": "3.5020"
+      },
+      {
+        "cell": "AL3",
+        "value": "-0.0414646"
+      },
+      {
+        "cell": "AM3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AN3",
+        "value": "3.2210"
+      },
+      {
+        "cell": "AP3",
+        "value": "3.370862E-02"
+      },
+      {
+        "cell": "AQ3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AR3",
+        "value": "3.0800"
+      },
+      {
+        "cell": "AT3",
+        "value": "6.563033E-02"
+      },
+      {
+        "cell": "AU3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AV3",
+        "value": "2.9160"
+      },
+      {
+        "cell": "AX3",
+        "value": "0.3520657"
+      },
+      {
+        "cell": "AY3",
+        "value": "520.0"
+      },
+      {
+        "cell": "AZ3",
+        "value": "3.4630"
+      },
+      {
+        "cell": "BB3",
+        "value": "0.375839"
+      },
+      {
+        "cell": "BC3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BD3",
+        "value": "3.6730"
+      },
+      {
+        "cell": "BF3",
+        "value": "0.3250569"
+      },
+      {
+        "cell": "BG3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BH3",
+        "value": "3.1320"
+      },
+      {
+        "cell": "BJ3",
+        "value": "0.3024347"
+      },
+      {
+        "cell": "BK3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BL3",
+        "value": "2.7810"
+      },
+      {
+        "cell": "BN3",
+        "value": "0.2541054"
+      },
+      {
+        "cell": "BO3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BP3",
+        "value": "2.0160"
+      },
+      {
+        "cell": "BR3",
+        "value": "0.2457932"
+      },
+      {
+        "cell": "BS3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BT3",
+        "value": "2.4140"
+      },
+      {
+        "cell": "BV3",
+        "value": "0.399814"
+      },
+      {
+        "cell": "BW3",
+        "value": "520.0"
+      },
+      {
+        "cell": "BX3",
+        "value": "3.5280"
+      },
+      {
+        "cell": "BZ3",
+        "value": "0.373071"
+      },
+      {
+        "cell": "CA3",
+        "value": "520.0"
+      },
+      {
+        "cell": "CB3",
+        "value": "3.3500"
+      },
+      {
+        "cell": "CD3",
+        "value": "0.375839"
+      },
+      {
+        "cell": "CE3",
+        "value": "520.0"
+      },
+      {
+        "cell": "CF3",
+        "value": "2.8790"
+      },
+      {
+        "cell": "CH3",
+        "value": "0.4165657"
+      },
+      {
+        "cell": "CI3",
+        "value": "520.0"
+      },
+      {
+        "cell": "CJ3",
+        "value": "2.6040"
+      },
+      {
+        "cell": "CL3",
+        "value": "0.3594897"
+      },
+      {
+        "cell": "CM3",
+        "value": "520.0"
+      },
+      {
+        "cell": "CN3",
+        "value": "2.6460"
+      },
+      {
+        "cell": "CP3",
+        "value": "0.3478797"
+      },
+      {
+        "cell": "CQ3",
+        "value": "520.0"
+      },
+      {
+        "cell": "CR3",
+        "value": "2.3910"
+      },
+      {
+        "cell": "B4",
+        "value": "5.435769E-02"
+      },
+      {
+        "cell": "C4",
+        "value": "520.5"
+      },
+      {
+        "cell": "D4",
+        "value": "78.4223"
+      },
+      {
+        "cell": "F4",
+        "value": "-5.127593E-02"
+      },
+      {
+        "cell": "G4",
+        "value": "520.5"
+      },
+      {
+        "cell": "H4",
+        "value": "72.0487"
+      },
+      {
+        "cell": "J4",
+        "value": "-4.730974E-02"
+      },
+      {
+        "cell": "K4",
+        "value": "520.5"
+      },
+      {
+        "cell": "L4",
+        "value": "62.0100"
+      },
+      {
+        "cell": "N4",
+        "value": "7.895918E-02"
+      },
+      {
+        "cell": "O4",
+        "value": "520.5"
+      },
+      {
+        "cell": "P4",
+        "value": "52.8889"
+      },
+      {
+        "cell": "R4",
+        "value": "6.326007E-02"
+      },
+      {
+        "cell": "S4",
+        "value": "520.5"
+      },
+      {
+        "cell": "T4",
+        "value": "49.0083"
+      },
+      {
+        "cell": "V4",
+        "value": "-3.319427E-03"
+      },
+      {
+        "cell": "W4",
+        "value": "520.5"
+      },
+      {
+        "cell": "X4",
+        "value": "42.7037"
+      },
+      {
+        "cell": "Z4",
+        "value": "-4.730974E-02"
+      },
+      {
+        "cell": "AA4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AB4",
+        "value": "3.5794"
+      },
+      {
+        "cell": "AD4",
+        "value": "-1.741761E-02"
+      },
+      {
+        "cell": "AE4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AF4",
+        "value": "3.5338"
+      },
+      {
+        "cell": "AH4",
+        "value": "1.011339E-02"
+      },
+      {
+        "cell": "AI4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AJ4",
+        "value": "3.5286"
+      },
+      {
+        "cell": "AL4",
+        "value": "-3.621216E-02"
+      },
+      {
+        "cell": "AM4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AN4",
+        "value": "3.3958"
+      },
+      {
+        "cell": "AP4",
+        "value": "-9.883175E-03"
+      },
+      {
+        "cell": "AQ4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AR4",
+        "value": "3.2804"
+      },
+      {
+        "cell": "AT4",
+        "value": "5.561836E-02"
+      },
+      {
+        "cell": "AU4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AV4",
+        "value": "3.0197"
+      },
+      {
+        "cell": "AX4",
+        "value": "0.5056633"
+      },
+      {
+        "cell": "AY4",
+        "value": "520.5"
+      },
+      {
+        "cell": "AZ4",
+        "value": "3.8914"
+      },
+      {
+        "cell": "BB4",
+        "value": "0.4810856"
+      },
+      {
+        "cell": "BC4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BD4",
+        "value": "3.5730"
+      },
+      {
+        "cell": "BF4",
+        "value": "0.4864956"
+      },
+      {
+        "cell": "BG4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BH4",
+        "value": "3.3562"
+      },
+      {
+        "cell": "BJ4",
+        "value": "0.4293362"
+      },
+      {
+        "cell": "BK4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BL4",
+        "value": "2.9080"
+      },
+      {
+        "cell": "BN4",
+        "value": "0.3704172"
+      },
+      {
+        "cell": "BO4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BP4",
+        "value": "2.5939"
+      },
+      {
+        "cell": "BR4",
+        "value": "0.3612545"
+      },
+      {
+        "cell": "BS4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BT4",
+        "value": "2.4085"
+      },
+      {
+        "cell": "BV4",
+        "value": "0.5509294"
+      },
+      {
+        "cell": "BW4",
+        "value": "520.5"
+      },
+      {
+        "cell": "BX4",
+        "value": "3.5866"
+      },
+      {
+        "cell": "BZ4",
+        "value": "0.541903"
+      },
+      {
+        "cell": "CA4",
+        "value": "520.5"
+      },
+      {
+        "cell": "CB4",
+        "value": "3.4547"
+      },
+      {
+        "cell": "CD4",
+        "value": "0.5297067"
+      },
+      {
+        "cell": "CE4",
+        "value": "520.5"
+      },
+      {
+        "cell": "CF4",
+        "value": "2.9852"
+      },
+      {
+        "cell": "CH4",
+        "value": "0.5659189"
+      },
+      {
+        "cell": "CI4",
+        "value": "520.5"
+      },
+      {
+        "cell": "CJ4",
+        "value": "2.7408"
+      },
+      {
+        "cell": "CL4",
+        "value": "0.5018868"
+      },
+      {
+        "cell": "CM4",
+        "value": "520.5"
+      },
+      {
+        "cell": "CN4",
+        "value": "2.6854"
+      },
+      {
+        "cell": "CP4",
+        "value": "0.520452"
+      },
+      {
+        "cell": "CQ4",
+        "value": "520.5"
+      },
+      {
+        "cell": "CR4",
+        "value": "2.0929"
+      },
+      {
+        "cell": "B5",
+        "value": "7.061847E-03"
+      },
+      {
+        "cell": "C5",
+        "value": "521.0"
+      },
+      {
+        "cell": "D5",
+        "value": "83.7655"
+      },
+      {
+        "cell": "F5",
+        "value": "-8.411487E-02"
+      },
+      {
+        "cell": "G5",
+        "value": "521.0"
+      },
+      {
+        "cell": "H5",
+        "value": "77.5168"
+      },
+      {
+        "cell": "J5",
+        "value": "-0.1370272"
+      },
+      {
+        "cell": "K5",
+        "value": "521.0"
+      },
+      {
+        "cell": "L5",
+        "value": "66.2315"
+      },
+      {
+        "cell": "N5",
+        "value": "4.809866E-02"
+      },
+      {
+        "cell": "O5",
+        "value": "521.0"
+      },
+      {
+        "cell": "P5",
+        "value": "57.2091"
+      },
+      {
+        "cell": "R5",
+        "value": "0.0124346"
+      },
+      {
+        "cell": "S5",
+        "value": "521.0"
+      },
+      {
+        "cell": "T5",
+        "value": "52.3525"
+      },
+      {
+        "cell": "V5",
+        "value": "-6.494084E-02"
+      },
+      {
+        "cell": "W5",
+        "value": "521.0"
+      },
+      {
+        "cell": "X5",
+        "value": "46.1003"
+      },
+      {
+        "cell": "Z5",
+        "value": "3.51657E-03"
+      },
+      {
+        "cell": "AA5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AB5",
+        "value": "3.7260"
+      },
+      {
+        "cell": "AD5",
+        "value": "-0.1079755"
+      },
+      {
+        "cell": "AE5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AF5",
+        "value": "3.5740"
+      },
+      {
+        "cell": "AH5",
+        "value": "-1.378832E-02"
+      },
+      {
+        "cell": "AI5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AJ5",
+        "value": "3.5368"
+      },
+      {
+        "cell": "AL5",
+        "value": "-3.368313E-02"
+      },
+      {
+        "cell": "AM5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AN5",
+        "value": "3.4498"
+      },
+      {
+        "cell": "AP5",
+        "value": "-4.959312E-02"
+      },
+      {
+        "cell": "AQ5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AR5",
+        "value": "3.3816"
+      },
+      {
+        "cell": "AT5",
+        "value": "0.1691424"
+      },
+      {
+        "cell": "AU5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AV5",
+        "value": "3.1595"
+      },
+      {
+        "cell": "AX5",
+        "value": "0.7766577"
+      },
+      {
+        "cell": "AY5",
+        "value": "521.0"
+      },
+      {
+        "cell": "AZ5",
+        "value": "4.1263"
+      },
+      {
+        "cell": "BB5",
+        "value": "0.7407709"
+      },
+      {
+        "cell": "BC5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BD5",
+        "value": "3.5793"
+      },
+      {
+        "cell": "BF5",
+        "value": "0.7111073"
+      },
+      {
+        "cell": "BG5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BH5",
+        "value": "3.4563"
+      },
+      {
+        "cell": "BJ5",
+        "value": "0.6444604"
+      },
+      {
+        "cell": "BK5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BL5",
+        "value": "3.0579"
+      },
+      {
+        "cell": "BN5",
+        "value": "0.5722328"
+      },
+      {
+        "cell": "BO5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BP5",
+        "value": "2.7268"
+      },
+      {
+        "cell": "BR5",
+        "value": "0.4994478"
+      },
+      {
+        "cell": "BS5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BT5",
+        "value": "2.4976"
+      },
+      {
+        "cell": "BV5",
+        "value": "0.8548641"
+      },
+      {
+        "cell": "BW5",
+        "value": "521.0"
+      },
+      {
+        "cell": "BX5",
+        "value": "3.8941"
+      },
+      {
+        "cell": "BZ5",
+        "value": "0.7923917"
+      },
+      {
+        "cell": "CA5",
+        "value": "521.0"
+      },
+      {
+        "cell": "CB5",
+        "value": "3.4993"
+      },
+      {
+        "cell": "CD5",
+        "value": "0.7766577"
+      },
+      {
+        "cell": "CE5",
+        "value": "521.0"
+      },
+      {
+        "cell": "CF5",
+        "value": "3.1853"
+      },
+      {
+        "cell": "CH5",
+        "value": "0.8386179"
+      },
+      {
+        "cell": "CI5",
+        "value": "521.0"
+      },
+      {
+        "cell": "CJ5",
+        "value": "2.9404"
+      },
+      {
+        "cell": "CL5",
+        "value": "0.7498506"
+      },
+      {
+        "cell": "CM5",
+        "value": "521.0"
+      },
+      {
+        "cell": "CN5",
+        "value": "2.7294"
+      },
+      {
+        "cell": "CP5",
+        "value": "0.7832131"
+      },
+      {
+        "cell": "CQ5",
+        "value": "521.0"
+      },
+      {
+        "cell": "CR5",
+        "value": "2.2381"
+      }
+    ],
+    "total_source_text_cells": 42508,
+    "published_scope": "header rows1-5 only; full source inventory retained locally"
+  }
+]

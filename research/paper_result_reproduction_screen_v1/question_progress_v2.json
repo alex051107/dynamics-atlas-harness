@@ -1,0 +1,185 @@
+{
+  "version": "question-progress/20260905-pro25",
+  "questions": [
+    {
+      "question_id": "Q01",
+      "original_question": "在无配体的人 HSP90α NTD 中，从闭合 ATP-lid 起始的轨迹是否比开放起始轨迹更容易离开原有构象，并出现闭合到开放的转变？",
+      "dependency_group": "10.1038/s41467-022-35399-8",
+      "development_status": "COMPLETE_DEVELOPMENT_ANSWER_SCIENCE_REVIEWED_BY_PRO",
+      "answer_artifact": "q01_question_answer_v1/named_review_and_development_completion.json",
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q02",
+      "original_question": "HSP90α NTD 的多磁场 CPMG 数据是否支持共享的低占比交换态，其占比和交换速率能否复现论文的室温结果？",
+      "dependency_group": "10.1038/s41467-022-35399-8",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q03",
+      "original_question": "对 Sic1 和磷酸化 pSic1，只用 SAXS 得到的构象集合与加入 PRE 后的集合，哪一种能预测未参与拟合的 smFRET 效率？",
+      "dependency_group": "10.1021/jacs.0c02088",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q04",
+      "original_question": "Y14A 突变是否使 Sic1 更伸展，且磷酸化后的 Y14A 是否进一步伸展？这些差异在FRET校准误差下是否仍可分辨？",
+      "dependency_group": "10.1021/jacs.0c02088",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q05",
+      "original_question": "ΔH5–DMPC nanodisc 能否通过同一构象集合同时解释SAXS和NOE，并由互相转向的椭圆构象解释平均近圆形结构？",
+      "dependency_group": "10.7554/eLife.56518",
+      "development_status": "PARTIAL_SCIENTIFIC_COMPUTATION_OR_METHOD_DIAGNOSIS",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q06",
+      "original_question": "ΔH5–DMPC nanodisc 的边缘脂质是否比中心更薄、更无序，而中心是否更接近普通DMPC双层？",
+      "dependency_group": "10.7554/eLife.56518",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q07",
+      "original_question": "NUS 在原生与变性条件之间的变化中，端到端距离与回转半径的相对变化是否不同，从而否定统一比例缩放的链塌缩解释？",
+      "dependency_group": "10.1073/pnas.1704692114",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q08",
+      "original_question": "同时匹配FRET与Rg的NUS原生和变性构象集合，能否重现变性后形状更细长以及尺寸与形状变化不成固定关系的结果？",
+      "dependency_group": "10.1073/pnas.1704692114",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q09",
+      "original_question": "T4溶菌酶的33组时间分辨FRET衰减，在全局分析中是否确实需要第三个构象态，而不仅是已知开放/闭合两态？",
+      "dependency_group": "T4L_SHARED_EXPERIMENT_SANABRIA_DIMURA",
+      "development_status": "PARTIAL_SCIENTIFIC_COMPUTATION_OR_METHOD_DIAGNOSIS",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q10",
+      "original_question": "T4溶菌酶E11A和T26E功能突变体加入肽聚糖后，能否分别复现C2和C3富集，并与底物结合/产物加合物证据对应？",
+      "dependency_group": "T4L_SHARED_EXPERIMENT_SANABRIA_DIMURA",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q11",
+      "original_question": "T4 lysozyme 的实验 FRET 约束是否足以从候选结构中分别识别 C1、C2 两种短寿命构象，并重现各自接近参考晶体构象的结构范围？",
+      "dependency_group": "T4L_SHARED_EXPERIMENT_SANABRIA_DIMURA",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q12",
+      "original_question": "对 YaaA 的不同初始折叠，保留未用于结构优化的 FRET 距离后，能否识别错误折叠仍与数据不符，并重现正确折叠附近候选的优势？",
+      "dependency_group": "YAAA_SIMULATION",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q13",
+      "original_question": "从同一批 confocal 原始光子数据出发，完整校正后能否恢复 DNA 两个标记间距状态，并得到与结构模型一致的距离差？",
+      "dependency_group": "10.1038/s41592-018-0085-0",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q14",
+      "original_question": "在传播染料和仪器不确定性后，两种染料对对 DNA 长/短间距比的估计是否一致，并且能够支持同一几何模型？",
+      "dependency_group": "10.1038/s41592-018-0085-0",
+      "development_status": "PARTIAL_SUMMARY_DATA_CORRELATION_SENSITIVITY",
+      "answer_artifact": "q14_correlation_sensitivity_v1/REPORT_ZH.md",
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q15",
+      "original_question": "HiSiaP 结合底物后是否发生结构域闭合；为什么 175/228 位点的一组 FRET 染料给出异常判断，而更换染料后恢复与 DEER 和结构预测一致的结论？",
+      "dependency_group": "10.1038/s41467-022-31945-6",
+      "development_status": "COMPLETE_BOUNDED_QUALITATIVE_DEVELOPMENT_ANSWER_PRO24_ACCEPTED",
+      "answer_artifact": "q15_question_answer_v3/REPORT_ZH.md",
+      "human_final_approval_recorded": false,
+      "complete_question_answer": true,
+      "original_entry_baseline_preserved": true,
+      "new_rules_extra": 0,
+      "review_artifact": "pro_review_round24/reply.md",
+      "full_quantitative_reproduction": false
+    },
+    {
+      "question_id": "Q16",
+      "original_question": "MalE 加入麦芽糖后，DEER 中残留的开放态是真正的配体未饱和，还是与冷冻保护剂条件有关；去除保护剂后能否复现闭合态占优？",
+      "dependency_group": "10.1038/s41467-022-31945-6",
+      "development_status": "PARTIAL_CONDITIONAL_WITNESSES_HELDOUT_CHECKED",
+      "answer_artifact": "q16_saved_tail_audit_v1/REPORT_ZH.md",
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q17",
+      "original_question": "ChRmine 的高噪声密度区，降低数据约束权重后能否得到更合理的局部结构，即使这些区域的 map 拟合变差？",
+      "dependency_group": "10.1371/journal.pcbi.1012180",
+      "development_status": "PARTIAL_MANUAL_LOCAL_MAP_COMPARISON",
+      "answer_artifact": "q17_local_map_comparison_v1/REPORT_ZH.md",
+      "human_final_approval_recorded": false,
+      "source_intake_artifact": "q17_source_inventory_v1/REPORT_ZH.md"
+    },
+    {
+      "question_id": "Q18",
+      "original_question": "对 SPP1 噬菌体尾管，构象集合是否比单个带 B-factor 的结构更能解释 cryo-EM 密度，而非仅因增加参数得到表面改善？",
+      "dependency_group": "10.1371/journal.pcbi.1012180",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q19",
+      "original_question": "Fibrillarin 的 RNA 结合区域邻近残基是否支持多种局部构象，能否用衍射数据重新支持 Leu58、Phe69、Met175 的替代构象而非仅读取 qFit 输出标签？",
+      "dependency_group": "10.7554/eLife.90606.3",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    },
+    {
+      "question_id": "Q20",
+      "original_question": "Apoferritin 的 1.22 Å cryo-EM map 能否同时支持 Arg22 的已知两构象，以及 Glu14 在原沉积模型中未表达的额外构象？",
+      "dependency_group": "10.7554/eLife.90606.3",
+      "development_status": "NOT_RUN",
+      "answer_artifact": null,
+      "human_final_approval_recorded": false
+    }
+  ],
+  "counts": {
+    "original_questions": 20,
+    "complete_development_answers": 2,
+    "external_AI_reviewed_scientific_answers": 2,
+    "human_final_scientific_approvals": 0
+  },
+  "accuracy": "NOT_MEASURED;2/20 is development content coverage, not accuracy",
+  "original_roster_snapshot_unchanged": true,
+  "current_counts": {
+    "complete": 2,
+    "partial": 5,
+    "scientifically_unrun": 13,
+    "human_scientific_approvals": 0
+  }
+}

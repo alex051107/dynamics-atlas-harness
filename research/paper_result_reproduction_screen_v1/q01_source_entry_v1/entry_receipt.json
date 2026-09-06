@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-05T11:35:57.811678+00:00",
+  "case_id": "q01_hsp90_seeded_departure_20260905",
+  "entry": "python -m dynamics_atlas_harness run-case",
+  "source_head": "35e97f33032bee7fde0267100ee34bea2fa156ca",
+  "command": [
+    "PYTHONDONTWRITEBYTECODE=1",
+    "PYTHONPATH=src",
+    "../dynamics-atlas-harness-openrouter/local/venvs/exposed-capsule-v1-py311/bin/python",
+    "-m",
+    "dynamics_atlas_harness",
+    "run-case",
+    "--case-id",
+    "q01_hsp90_seeded_departure_20260905",
+    "--output-dir",
+    "../autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q01_source_entry_v1/entry_attempt"
+  ],
+  "cwd": "dynamics-atlas-harness-rules-prototype-acceptance-v1",
+  "exit_code": 1,
+  "status": "ENTRY_REJECTED_BEFORE_RULES",
+  "error": "CASE_NOT_IN_EXPOSED_DEVELOPMENT_REGISTRY",
+  "rules_evaluated": false,
+  "numeric_actions": 0,
+  "rule_miss_inferred": false,
+  "raw_output": "raw_entry_output.txt",
+  "source_available_trajectories": 40
+}

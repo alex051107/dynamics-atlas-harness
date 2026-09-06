@@ -1,0 +1,501 @@
+{
+  "status": "SOURCE_LABELLED_DYE_POSITION_OBSERVATIONS",
+  "results": {
+    "175_AF555": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.192,
+        "source_peak_intensity": 58927.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.1803890527989837,
+            "intensity_weighted_anisotropy": 0.30680901128631816
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.015537922762115408,
+            "intensity_weighted_anisotropy": 0.25705478999568726
+          }
+        },
+        "late_to_early_intensity_ratio": 0.08613561921315742
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.08,
+        "source_peak_intensity": 42943.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.10277170660702319,
+            "intensity_weighted_anisotropy": 0.2722775978752135
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.005939028073019643,
+            "intensity_weighted_anisotropy": 0.2376653890280817
+          }
+        },
+        "late_to_early_intensity_ratio": 0.057788551626657365
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 0.6709019120609053,
+        "late_anisotropy_holo_minus_apo": -0.019389400967605552
+      }
+    },
+    "58_AF555": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.144,
+        "source_peak_intensity": 64230.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.10222316130770123,
+            "intensity_weighted_anisotropy": 0.28066194925038485
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.006230708589419472,
+            "intensity_weighted_anisotropy": 0.24614682518211103
+          }
+        },
+        "late_to_early_intensity_ratio": 0.06095202407861815
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.176,
+        "source_peak_intensity": 57930.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.10683241131195559,
+            "intensity_weighted_anisotropy": 0.2897827707456336
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.006885293964527523,
+            "intensity_weighted_anisotropy": 0.2535086183997748
+          }
+        },
+        "late_to_early_intensity_ratio": 0.06444948569420703
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 1.0573805655916813,
+        "late_anisotropy_holo_minus_apo": 0.0073617932176637535
+      }
+    },
+    "175_AF647": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.576,
+        "source_peak_intensity": 98485.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.23074152779691695,
+            "intensity_weighted_anisotropy": 0.24889081411314073
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.020701242877208762,
+            "intensity_weighted_anisotropy": 0.21421277520679796
+          }
+        },
+        "late_to_early_intensity_ratio": 0.0897161558860293
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.512,
+        "source_peak_intensity": 89520.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.2131044583457452,
+            "intensity_weighted_anisotropy": 0.20072481515882076
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.015956264096344524,
+            "intensity_weighted_anisotropy": 0.1694854480397998
+          }
+        },
+        "late_to_early_intensity_ratio": 0.07487531804922046
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 0.8345800966365315,
+        "late_anisotropy_holo_minus_apo": -0.04472732716699815
+      }
+    },
+    "58_AF647": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.528,
+        "source_peak_intensity": 51620.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.25127073301230607,
+            "intensity_weighted_anisotropy": 0.2604174190698834
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.027275327023486652,
+            "intensity_weighted_anisotropy": 0.24107474541362614
+          }
+        },
+        "late_to_early_intensity_ratio": 0.10854955806632217
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.592,
+        "source_peak_intensity": 45947.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.24884537429426104,
+            "intensity_weighted_anisotropy": 0.2691349243224035
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.028359452108554336,
+            "intensity_weighted_anisotropy": 0.24539018137540133
+          }
+        },
+        "late_to_early_intensity_ratio": 0.11396415219283572
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 1.0498813097258795,
+        "late_anisotropy_holo_minus_apo": 0.004315435961775194
+      }
+    },
+    "175_TMR": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.624,
+        "source_peak_intensity": 31612.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.3835699322539763,
+            "intensity_weighted_anisotropy": 0.12925567349170924
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.0818076418639496,
+            "intensity_weighted_anisotropy": 0.09929398531160298
+          }
+        },
+        "late_to_early_intensity_ratio": 0.2132796003670633
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.608,
+        "source_peak_intensity": 20551.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.3898539676360707,
+            "intensity_weighted_anisotropy": 0.13164602293052977
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.08267585171385473,
+            "intensity_weighted_anisotropy": 0.10106401670269279
+          }
+        },
+        "late_to_early_intensity_ratio": 0.21206877081480102
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 0.9943228065404361,
+        "late_anisotropy_holo_minus_apo": 0.0017700313910898047
+      }
+    },
+    "175_Cy5": {
+      "apo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.336,
+        "source_peak_intensity": 907.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.1582926445109466,
+            "intensity_weighted_anisotropy": 0.2616982279426138
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.02303949878371047,
+            "intensity_weighted_anisotropy": 0.12922120951768754
+          }
+        },
+        "late_to_early_intensity_ratio": 0.1455500276395799
+      },
+      "holo": {
+        "source_rows": 3125,
+        "peak_time_ns": 6.368,
+        "source_peak_intensity": 944.0,
+        "windows": {
+          "early": {
+            "delay_ns": [
+              2.0,
+              4.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.1514157923056228,
+            "intensity_weighted_anisotropy": 0.25719164613794204
+          },
+          "late": {
+            "delay_ns": [
+              6.0,
+              8.0
+            ],
+            "n": 126,
+            "mean_peak_normalized_intensity": 0.021371401668011835,
+            "intensity_weighted_anisotropy": 0.11401597704996144
+          }
+        },
+        "late_to_early_intensity_ratio": 0.14114380899500278
+      },
+      "comparison": {
+        "holo_over_apo_late_early_ratio": 0.9697271191491076,
+        "late_anisotropy_holo_minus_apo": -0.015205232467726093
+      }
+    }
+  },
+  "source_blocks": [
+    {
+      "name": "175_AF555",
+      "source_label": "HiSiaP 175 Alexa Fluor 555",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    },
+    {
+      "name": "58_AF555",
+      "source_label": "HiSiaP 58 Alexa Fluor 555",
+      "columns": [
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    },
+    {
+      "name": "175_AF647",
+      "source_label": "HiSiaP 175 Alexa Fluor 647",
+      "columns": [
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    },
+    {
+      "name": "58_AF647",
+      "source_label": "HiSiaP 58 Alexa Fluor 647",
+      "columns": [
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    },
+    {
+      "name": "175_TMR",
+      "source_label": "HiSiaP 175 TMR",
+      "columns": [
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    },
+    {
+      "name": "175_Cy5",
+      "source_label": "HiSiaP 175 Cy5",
+      "columns": [
+        "Z",
+        "AA",
+        "AB",
+        "AC",
+        "AD"
+      ],
+      "headers": [
+        "time (ns)",
+        "Anisotropy",
+        "Intensity",
+        "Anisotropy",
+        "Intensity"
+      ],
+      "conditions": [
+        "apo",
+        "holo"
+      ]
+    }
+  ],
+  "source": "Peter2022 SourceData Figure4 A:AD; source PDFphysical7Figure4a-c",
+  "roles": "Measured anisotropy and intensity only; no author fitted lifetime/distances",
+  "registration": "time minus own observed intensity peak; peak-normalized intensity; fixedpostpeak2-4and6-8ns",
+  "archive_identity": "Separate165/rawarchive label ambiguity not resolved; these publisherworksheet175labels agree withmainfigure175.",
+  "uncertainty": "One source-labelled curve percondition; time bins are not independent experimental repetitions",
+  "rules_extra_credit": 0,
+  "optimizers": 0,
+  "scientific_full_question_answer": false,
+  "limits": [
+    "No fitted lifetime or IRF deconvolution",
+    "No brightness/quantum-yield equivalence inferred after peak normalization",
+    "No kappa-squared/R0/absolute-distance conversion",
+    "Descriptive dye/position dependence does not uniquely identify microscopic interactions"
+  ]
+}

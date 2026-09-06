@@ -1,0 +1,208 @@
+{
+  "status": "RAW_SUPPORT_AND_NOISE_PROXIES_ONLY",
+  "rows": [
+    {
+      "key": "SI Figure10:29_eg50_1mM",
+      "raw_all_n": 221,
+      "raw_nonnegative_n": 216,
+      "raw_time_range_us": [
+        -0.16,
+        6.88
+      ],
+      "processed_time_range_us": [
+        0.0,
+        6.88
+      ],
+      "raw_points_beyond_processed_end": 0,
+      "proxies": {
+        "full": {
+          "n": 216,
+          "imaginary_mean": -6.125809027777775e-05,
+          "imaginary_std": 0.005691219039176491,
+          "imaginary_difference_MAD_scale": 0.0045498740780826824,
+          "imaginary_lag1": 0.12725119188941827,
+          "real_imaginary_correlation": -0.03496379531625284
+        },
+        "first_half": {
+          "n": 108,
+          "imaginary_mean": -0.00036636070833333327,
+          "imaginary_std": 0.0053996684960013145,
+          "imaginary_difference_MAD_scale": 0.004696644209633737,
+          "imaginary_lag1": 0.11291508735453785,
+          "real_imaginary_correlation": -0.04220470970173185
+        },
+        "second_half": {
+          "n": 108,
+          "imaginary_mean": 0.00024384452777777784,
+          "imaginary_std": 0.005978153837556677,
+          "imaginary_difference_MAD_scale": 0.004497456173957306,
+          "imaginary_lag1": 0.13694940232650368,
+          "real_imaginary_correlation": 0.15359627820853397
+        }
+      },
+      "deposited_background_audit_only": {
+        "start": 0.75367,
+        "end": 0.77014,
+        "increasing_steps": 215,
+        "decreasing_steps": 0,
+        "positive": true
+      },
+      "inference": "Imaginary channel is a proxy; phase/orientation/coherence and temporal correlation require interpretation."
+    },
+    {
+      "key": "SI Figure10:29_eg0_1mM",
+      "raw_all_n": 159,
+      "raw_nonnegative_n": 154,
+      "raw_time_range_us": [
+        -0.16,
+        4.896
+      ],
+      "processed_time_range_us": [
+        0.0,
+        3.488
+      ],
+      "raw_points_beyond_processed_end": 44,
+      "proxies": {
+        "full": {
+          "n": 154,
+          "imaginary_mean": -3.753508512987017e-05,
+          "imaginary_std": 0.0022872381517536865,
+          "imaginary_difference_MAD_scale": 0.001995270641967329,
+          "imaginary_lag1": -0.007010939552486786,
+          "real_imaginary_correlation": -0.05112796257561496
+        },
+        "first_half": {
+          "n": 77,
+          "imaginary_mean": -1.7935329610389645e-05,
+          "imaginary_std": 0.0022440898291315237,
+          "imaginary_difference_MAD_scale": 0.0019444091302512434,
+          "imaginary_lag1": -0.07870295826228783,
+          "real_imaginary_correlation": -0.06871604705448167
+        },
+        "second_half": {
+          "n": 77,
+          "imaginary_mean": -5.713484064935064e-05,
+          "imaginary_std": 0.0023441489143968108,
+          "imaginary_difference_MAD_scale": 0.001972335292853079,
+          "imaginary_lag1": 0.062182146786435376,
+          "real_imaginary_correlation": -0.16446456861211334
+        }
+      },
+      "deposited_background_audit_only": {
+        "start": 0.87353,
+        "end": 0.52258,
+        "increasing_steps": 0,
+        "decreasing_steps": 153,
+        "positive": true
+      },
+      "inference": "Imaginary channel is a proxy; phase/orientation/coherence and temporal correlation require interpretation."
+    },
+    {
+      "key": "SI Figure10:36_eg50_1mM",
+      "raw_all_n": 221,
+      "raw_nonnegative_n": 216,
+      "raw_time_range_us": [
+        -0.16,
+        6.88
+      ],
+      "processed_time_range_us": [
+        0.0,
+        6.88
+      ],
+      "raw_points_beyond_processed_end": 0,
+      "proxies": {
+        "full": {
+          "n": 216,
+          "imaginary_mean": -0.0002894938657407409,
+          "imaginary_std": 0.010529184046307464,
+          "imaginary_difference_MAD_scale": 0.009162649641115819,
+          "imaginary_lag1": 0.23543199948371532,
+          "real_imaginary_correlation": -0.07122592153453336
+        },
+        "first_half": {
+          "n": 108,
+          "imaginary_mean": -0.0021739152962962963,
+          "imaginary_std": 0.01052462291032733,
+          "imaginary_difference_MAD_scale": 0.01053599872920068,
+          "imaginary_lag1": 0.17800119619892457,
+          "real_imaginary_correlation": -0.005616221710055438
+        },
+        "second_half": {
+          "n": 108,
+          "imaginary_mean": 0.0015949275648148146,
+          "imaginary_std": 0.010238524920449476,
+          "imaginary_difference_MAD_scale": 0.008302996013459641,
+          "imaginary_lag1": 0.24452260885519234,
+          "real_imaginary_correlation": -0.05382794258543715
+        }
+      },
+      "deposited_background_audit_only": {
+        "start": 0.70115,
+        "end": 0.67815,
+        "increasing_steps": 0,
+        "decreasing_steps": 215,
+        "positive": true
+      },
+      "inference": "Imaginary channel is a proxy; phase/orientation/coherence and temporal correlation require interpretation."
+    },
+    {
+      "key": "SI Figure10:36_eg0_1mM",
+      "raw_all_n": 159,
+      "raw_nonnegative_n": 154,
+      "raw_time_range_us": [
+        -0.16,
+        4.896
+      ],
+      "processed_time_range_us": [
+        0.0,
+        3.008
+      ],
+      "raw_points_beyond_processed_end": 59,
+      "proxies": {
+        "full": {
+          "n": 154,
+          "imaginary_mean": -5.525009740259737e-05,
+          "imaginary_std": 0.0031456019018727215,
+          "imaginary_difference_MAD_scale": 0.002694280272044353,
+          "imaginary_lag1": 0.09211952469421497,
+          "real_imaginary_correlation": -0.2694701958246956
+        },
+        "first_half": {
+          "n": 77,
+          "imaginary_mean": -0.0007472181389610391,
+          "imaginary_std": 0.0029091653788142335,
+          "imaginary_difference_MAD_scale": 0.00207636753463359,
+          "imaginary_lag1": 0.13874214785755526,
+          "real_imaginary_correlation": -0.2702187185962966
+        },
+        "second_half": {
+          "n": 77,
+          "imaginary_mean": 0.0006367179441558442,
+          "imaginary_std": 0.0032382609952475343,
+          "imaginary_difference_MAD_scale": 0.0028758805283495966,
+          "imaginary_lag1": -0.025130637074249257,
+          "real_imaginary_correlation": 0.008092437243314113
+        }
+      },
+      "deposited_background_audit_only": {
+        "start": 0.76694,
+        "end": 0.41242,
+        "increasing_steps": 0,
+        "decreasing_steps": 153,
+        "positive": true
+      },
+      "inference": "Imaginary channel is a proxy; phase/orientation/coherence and temporal correlation require interpretation."
+    }
+  ],
+  "main_author_fit_or_distribution_used": false,
+  "accepted_likelihood": false,
+  "optimizations": 0,
+  "rules_extra_credit": 0,
+  "scientific_full_answer": false,
+  "implications": [
+    "Both no-EG raw records extend to4.896us, beyond their3.488/3.008us processed windows.",
+    "Cropping long raw records to the actual short acquisition support is different from cropping to the author analysis window.",
+    "Background arrays are audited as source processing, not treated as independent calibration.",
+    "No confidence limits derived from imaginary-channel proxy statistics."
+  ]
+}

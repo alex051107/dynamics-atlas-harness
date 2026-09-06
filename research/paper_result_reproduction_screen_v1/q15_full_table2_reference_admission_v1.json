@@ -1,0 +1,27 @@
+{
+  "version": "q15-full-table2-reference-admission/v1",
+  "doi": "10.1038/s41467-022-31945-6",
+  "source_role": "AUTHOR_COMPUTED_FORWARD_NOT_LOCAL_SIMULATION",
+  "locator": "Supplementary Table 2, physical PDF page 21, FRET sim (Å) column, rows 1/2/5/6; primary Methods, In silico distance simulations",
+  "unit": "Angstrom",
+  "forward_distance_semantics": "FRET_EFFICIENCY_AVERAGED_MODEL_DISTANCE",
+  "contract_compatibility": "EFFICIENCY_WEIGHTED_DISTANCE under the existing stable-probe reference hypothesis; no new calibration or local forward simulation.",
+  "excluded": ["FRET Exp", "PELDOR exp", "PELDOR sim", "comparison columns", "author final fitted distances"],
+  "pairs": {
+    "58_134": {
+      "FRET_sim": {
+        "apo": 65.6,
+        "holo": 59.8
+      },
+      "selected_for_later_raw_input_preparation": true
+    },
+    "112_175": {
+      "FRET_sim": {
+        "apo": 59.3,
+        "holo": 52.1
+      },
+      "selected_for_later_raw_input_preparation": false
+    }
+  },
+  "claim_ceiling": "Published-reference admission only; not a raw-observation admission, Rules execution, or paper-level conclusion."
+}

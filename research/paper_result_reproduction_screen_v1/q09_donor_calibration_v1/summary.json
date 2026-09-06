@@ -1,0 +1,356 @@
+{
+  "status": "REAL_DONOR_ONLY_DIAGNOSTIC_COMPLETE",
+  "fit_bins": 3750,
+  "masked_photons": 15012893.0,
+  "excluded_photons": 0.0,
+  "fits_attempted": 4,
+  "runs": [
+    {
+      "components": 1,
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        3.7985105987088503,
+        0.001995150318442293,
+        0.009608618495921204
+      ],
+      "iterations": 31,
+      "evaluations": 152,
+      "poisson_deviance": 9641.153969036157,
+      "projected_scaled_gradient_inf": 1.4853569763139623e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.039429750002454966
+    },
+    {
+      "components": 2,
+      "initial": [
+        0.5,
+        4.0,
+        0.1,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        0.8624167272472958,
+        3.8391691195605033,
+        0.07668284587315725,
+        0.0014751408110849666,
+        0.4314955461155393
+      ],
+      "iterations": 35,
+      "evaluations": 234,
+      "poisson_deviance": 5455.165050012949,
+      "projected_scaled_gradient_inf": 0.10424120837410912,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "elapsed_seconds": 0.06463920799433254
+    },
+    {
+      "components": 2,
+      "initial": [
+        1.0,
+        3.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        0.9590549656435855,
+        3.3455286274406255,
+        0.0,
+        0.02127636751035042,
+        0.006275772143811255
+      ],
+      "iterations": 3,
+      "evaluations": 30,
+      "poisson_deviance": 308869.07209713134,
+      "projected_scaled_gradient_inf": 0.5475538389836095,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [
+        2
+      ],
+      "elapsed_seconds": 0.008360875013750046
+    },
+    {
+      "components": 2,
+      "initial": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        2.0,
+        5.0,
+        0.5,
+        0.001,
+        0.0
+      ],
+      "iterations": 1,
+      "evaluations": 18,
+      "poisson_deviance": 160454.7601596637,
+      "projected_scaled_gradient_inf": 0.30841577486523364,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "elapsed_seconds": 0.005257542012259364
+    }
+  ],
+  "best_by_components": {
+    "1": {
+      "components": 1,
+      "initial": [
+        4.0,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        3.7985105987088503,
+        0.001995150318442293,
+        0.009608618495921204
+      ],
+      "iterations": 31,
+      "evaluations": 152,
+      "poisson_deviance": 9641.153969036157,
+      "projected_scaled_gradient_inf": 1.4853569763139623e-08,
+      "numerical_status": "PASS",
+      "bound_hits": [],
+      "elapsed_seconds": 0.039429750002454966
+    },
+    "2": {
+      "components": 2,
+      "initial": [
+        0.5,
+        4.0,
+        0.1,
+        0.001,
+        0.0
+      ],
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameters": [
+        0.8624167272472958,
+        3.8391691195605033,
+        0.07668284587315725,
+        0.0014751408110849666,
+        0.4314955461155393
+      ],
+      "iterations": 35,
+      "evaluations": 234,
+      "poisson_deviance": 5455.165050012949,
+      "projected_scaled_gradient_inf": 0.10424120837410912,
+      "numerical_status": "UNRESOLVED",
+      "bound_hits": [],
+      "elapsed_seconds": 0.06463920799433254
+    }
+  },
+  "deviance_per_fit_bin_descriptive_only": {
+    "1": 2.570974391742975,
+    "2": 1.454710680003453
+  },
+  "residual_blocks": [
+    {
+      "first_bin": 99,
+      "last_bin": 411,
+      "observed_sum": 2284.0,
+      "models": {
+        "1": {
+          "expected_sum": 2678.8137636628753,
+          "deviance": 405.50534855525166
+        },
+        "2": {
+          "expected_sum": 2039.9623465445804,
+          "deviance": 374.1011723805294
+        }
+      }
+    },
+    {
+      "first_bin": 412,
+      "last_bin": 724,
+      "observed_sum": 8596291.0,
+      "models": {
+        "1": {
+          "expected_sum": 8552053.427575793,
+          "deviance": 3593.625455615285
+        },
+        "2": {
+          "expected_sum": 8600404.411361694,
+          "deviance": 778.2471744471341
+        }
+      }
+    },
+    {
+      "first_bin": 725,
+      "last_bin": 1037,
+      "observed_sum": 4322658.0,
+      "models": {
+        "1": {
+          "expected_sum": 4386304.164588897,
+          "deviance": 1286.2054094410164
+        },
+        "2": {
+          "expected_sum": 4334955.114548614,
+          "deviance": 412.60382009161424
+        }
+      }
+    },
+    {
+      "first_bin": 1038,
+      "last_bin": 1350,
+      "observed_sum": 1369737.0,
+      "models": {
+        "1": {
+          "expected_sum": 1375336.985440511,
+          "deviance": 371.0421860846703
+        },
+        "2": {
+          "expected_sum": 1373443.1382428054,
+          "deviance": 324.9847601123578
+        }
+      }
+    },
+    {
+      "first_bin": 1351,
+      "last_bin": 1663,
+      "observed_sum": 444383.0,
+      "models": {
+        "1": {
+          "expected_sum": 434166.1212965426,
+          "deviance": 559.8776369743268
+        },
+        "2": {
+          "expected_sum": 438409.0815623491,
+          "deviance": 377.8643368599752
+        }
+      }
+    },
+    {
+      "first_bin": 1664,
+      "last_bin": 1976,
+      "observed_sum": 147196.0,
+      "models": {
+        "1": {
+          "expected_sum": 139251.5959624867,
+          "deviance": 775.0259801967705
+        },
+        "2": {
+          "expected_sum": 141821.4310797068,
+          "deviance": 525.7915542742867
+        }
+      }
+    },
+    {
+      "first_bin": 1977,
+      "last_bin": 2288,
+      "observed_sum": 59875.0,
+      "models": {
+        "1": {
+          "expected_sum": 55623.69822433374,
+          "deviance": 683.845288637478
+        },
+        "2": {
+          "expected_sum": 56608.49086189893,
+          "deviance": 551.997553365138
+        }
+      }
+    },
+    {
+      "first_bin": 2289,
+      "last_bin": 2600,
+      "observed_sum": 33454.0,
+      "models": {
+        "1": {
+          "expected_sum": 30929.534704697762,
+          "deviance": 504.26264415755395
+        },
+        "2": {
+          "expected_sum": 30882.16011631649,
+          "deviance": 517.3105944011986
+        }
+      }
+    },
+    {
+      "first_bin": 2601,
+      "last_bin": 2912,
+      "observed_sum": 18092.0,
+      "models": {
+        "1": {
+          "expected_sum": 17518.464133561843,
+          "deviance": 322.0483320116746
+        },
+        "2": {
+          "expected_sum": 17090.970322735924,
+          "deviance": 363.2045515255814
+        }
+      }
+    },
+    {
+      "first_bin": 2913,
+      "last_bin": 3224,
+      "observed_sum": 9545.0,
+      "models": {
+        "1": {
+          "expected_sum": 9124.800871377916,
+          "deviance": 357.9119563089122
+        },
+        "2": {
+          "expected_sum": 8564.445220954132,
+          "deviance": 445.9298276219364
+        }
+      }
+    },
+    {
+      "first_bin": 3225,
+      "last_bin": 3536,
+      "observed_sum": 5667.0,
+      "models": {
+        "1": {
+          "expected_sum": 5693.436611961896,
+          "deviance": 318.2635819873177
+        },
+        "2": {
+          "expected_sum": 5080.606904334865,
+          "deviance": 380.6706541508103
+        }
+      }
+    },
+    {
+      "first_bin": 3537,
+      "last_bin": 3848,
+      "observed_sum": 3711.0,
+      "models": {
+        "1": {
+          "expected_sum": 4211.956826174357,
+          "deviance": 463.5401490659
+        },
+        "2": {
+          "expected_sum": 3593.187432046546,
+          "deviance": 402.4590507823867
+        }
+      }
+    }
+  ],
+  "scientific_state_number_verdict": "NOT_EVALUATED",
+  "Rules_run": false,
+  "full_question_answers_added": 0,
+  "limits": [
+    "Single reference diagnostic;free nuisance assumptions not originalmethod",
+    "No regular likelihood-ratio scientific test",
+    "No FRET or globalpopulation fit",
+    "Reference replication multiplicity not used here"
+  ]
+}

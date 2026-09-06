@@ -1,0 +1,95 @@
+{
+  "schema_version": "paper-blind-agent-proposal-admission/v1",
+  "proposal_status": "ADMISSIBLE_NONAUTHORITATIVE",
+  "proposal": {
+    "case_id": "q05_nanodisc_saxs_noe_20260904",
+    "proposed_case_facts": {
+      "case": {
+        "scientific_claim": "Can the same DeltaH5-DMPC nanodisc ensemble account for SAXS and NOE observations, and what shape heterogeneity can be identified?",
+        "requested_claim_level": "JOINT_ENSEMBLE_CONSISTENCY_AND_SHAPE_HETEROGENEITY",
+        "intended_use": "CROSS_SOURCE_REVIEW",
+        "declared_request_scope": [
+          "JOINT_ENSEMBLE_CONSISTENCY_AND_SHAPE_HETEROGENEITY"
+        ],
+        "forbidden_upgrades": [
+          "BIOLOGICAL_ACTIVITY",
+          "KINETICS",
+          "MECHANISM",
+          "INDEPENDENT_VALIDATION_WITH_FIT_DATA"
+        ]
+      },
+      "sources": [
+        {
+          "source_id": "Q05_MD_PREDICTIONS",
+          "evidence_role": "CONSTRUCTION",
+          "construct_and_condition": "DeltaH5-DMPC nanodisc simulation; original joint-fit configuration UNKNOWN.",
+          "sample_composition": "DeltaH5 protein and DMPC lipids; full coordinate composition and stoichiometry UNKNOWN.",
+          "native_observable": "Author-processed per-frame SAXS predictions and amide/methyl NOE distances.",
+          "estimand": "Uniform-prior ensemble predictions before joint fitting.",
+          "time_semantics": {
+            "kind": "UNKNOWN"
+          },
+          "spatial_support": "UNKNOWN",
+          "unit_or_aggregation": "1195 ordered matrix rows; 90 SAXS,292 amide and40 methyl observables. Row chronology and independent replicates UNKNOWN."
+        },
+        {
+          "source_id": "Q05_SAXS_EXPERIMENT",
+          "evidence_role": "FIT_TARGET",
+          "construct_and_condition": "DeltaH5-DMPC nanodisc, no tag, static30C SAXS.",
+          "sample_composition": "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+          "native_observable": "SAXS scattering intensity with deposited per-point uncertainty.",
+          "estimand": "Experimental intensity versus scattering vector for joint ensemble fit.",
+          "time_semantics": {
+            "kind": "ENSEMBLE_AVERAGED_MEASUREMENT"
+          },
+          "spatial_support": "Whole nanodisc scattering curve;90 selected q labels aligned to deposited prediction columns.",
+          "unit_or_aggregation": "90 intensity/error pairs in deposited units, with authors q-label selection; independent replicate metadata UNKNOWN."
+        },
+        {
+          "source_id": "Q05_NOE_EXPERIMENT",
+          "evidence_role": "FIT_TARGET",
+          "construct_and_condition": "DeltaH5-DMPC nanodisc NOE restraints; complete original joint-condition compatibility UNKNOWN.",
+          "sample_composition": "DeltaH5 protein and DMPC lipids; remaining sample composition UNKNOWN.",
+          "native_observable": "Amide and methyl NOE distance upper bounds with deposited distance uncertainty.",
+          "estimand": "NOE-compatible ensemble distance averages using power3.",
+          "time_semantics": {
+            "kind": "ENSEMBLE_AVERAGED_RESTRAINT"
+          },
+          "spatial_support": "292 amide and40 methyl labeled atom-pair restraints.",
+          "unit_or_aggregation": "Angstrom distance bounds and uncertainties; UPPER constraint with power3 averaging."
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "Q05_MD_TO_SAXS",
+          "left_source_id": "Q05_MD_PREDICTIONS",
+          "right_source_id": "Q05_SAXS_EXPERIMENT",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "JOINT_ENSEMBLE_FIT",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "UNKNOWN"
+        },
+        {
+          "edge_id": "Q05_MD_TO_NOE",
+          "left_source_id": "Q05_MD_PREDICTIONS",
+          "right_source_id": "Q05_NOE_EXPERIMENT",
+          "condition_relation": "UNKNOWN",
+          "relation_type": "JOINT_ENSEMBLE_FIT",
+          "bridge_status": "UNRESOLVED",
+          "validation_independence": "UNKNOWN",
+          "shared_error_status": "UNKNOWN"
+        }
+      ]
+    },
+    "unknowns": [
+      "original author BME code version and joint configuration",
+      "coordinate to matrix mapping",
+      "independent replicate metadata for uncertainty",
+      "MD row time semantics and coordinate spatial support are UNKNOWN.",
+      "Cross-source condition compatibility, full forward-bridge configuration and shared errors are UNKNOWN.",
+      "No held-out validation experiment is declared; both experiments are proposed fit targets."
+    ],
+    "rationale": "Recorded source-grounded fact proposal for the original Q05 question. No scientific verdict, selected Rules or calculation actions supplied. Complete original method facts are preserved in the public packet even where current projection has no dedicated field."
+  }
+}
