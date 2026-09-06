@@ -118,6 +118,12 @@ def build_snapshots(task_root):
             'rows': primary_cross,
             'hypothesis': derived_cross['hypothesis'],
             'limits': derived_cross['limits'],
+            'reference_semantics': {
+                'FRET_sim': source_receipt['forward_distance_semantics'],
+                'structure_mapping': forward['structure_mapping'],
+                'source_role': forward['source_role'],
+                'locator': forward['locator'],
+            },
         },
         'fret_58_134': primary_fret,
         'claim_limits': [
