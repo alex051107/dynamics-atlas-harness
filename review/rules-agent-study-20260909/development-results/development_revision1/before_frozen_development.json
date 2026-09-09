@@ -1,0 +1,92 @@
+{
+  "frozen_at": "2026-09-09T16:47:44.540590+00:00",
+  "model": "openai/gpt-5.6-luna",
+  "provider": "openai",
+  "reasoning": "medium",
+  "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+  "run_order": [
+    [
+      "Q05",
+      "B"
+    ],
+    [
+      "T4L",
+      "A"
+    ],
+    [
+      "Q05",
+      "C"
+    ],
+    [
+      "T4L",
+      "C"
+    ],
+    [
+      "Q05",
+      "A"
+    ],
+    [
+      "T4L",
+      "B"
+    ]
+  ],
+  "scope": "exposed development, six sessions; no formal accuracy inference",
+  "check_scope": "source-indexed fitting overlap; static-rate inactive",
+  "budget_usd": 3,
+  "hashes": {
+    "runtime/common_prompt.txt": "c5c5412f63f8fbc6db1e6a8416e091c69c7328f47c496c6cb363b537a8869cf5",
+    "runtime/ACTIVE_RULES_ZH.md": "20bbbfb7fd71834bd212d87b09e96761609140f8d710f7258e27aae860e0656a",
+    "runtime/agent_run.py": "d0fb980833bdfe474f266a20ea042852c4055955a7aba82fdf4128b4a3f5a591",
+    "runtime/test_runner_offline.py": "5732801e6cfd55ed0f4f113f2188245f6131b541770f8d8bd044edb30d1b999d",
+    "runtime/C_POLICY.txt": "e34e11088792814bcfd68dfc477b1cc615c07d42d4ecece7fe7a06f405aa964d",
+    "runtime/finite_checks.py": "2e50e00ba1485f9d22e71bd4d01fd6b9eadd09bed0422cd73c7b5e0c7ac34e1d",
+    "runtime/run_development_batch.py": "9a680f548499905cd0f2745902f9dabdbc984b5e5b682fb644ccd7ecf89f781a",
+    "runtime/check_model.py": "bf0000df89f7186ef08b86cc78aa75943dbee156c55288637a4c58ce9384f2b2",
+    "runtime/container_tools.py": "feb0d0b5ca177dd87e044b2622e0befdb6f58a9883c52af9dce642c742068346",
+    "runtime/preflight.py": "2b29c793bb211f768edfaf95706fae441c6afea6463d3b6ad6a37b90a5d8ec37",
+    "cases/T4L/04_acs.jcim.6c02044.md": "95ef6544e6c6b470549003d9fab088e7719604642041011620086163c6d78edc",
+    "cases/T4L/05_ci6c02044_si_001.pdf": "af88fc29d3066fdbb632fd9c9574762f5161451ac302e3be52d357903e76d349",
+    "cases/T4L/CHECK_SCOPE.txt": "22ae3e527d0e5bfa0cee19a29d09907b816e9c33173e42c0c9661dd174cebe7a",
+    "cases/T4L/QUESTION.txt": "5a076e57347f363fa1d29c0a2c7b38fbaa77e9d7b3e6892f89104122031171ab",
+    "cases/T4L/03_acs.jcim.6c02044.pdf": "e82b8ffe22526a7615b7c7c3d8ad3f7df9bb43b5484076e71f6939c99ab52dc0",
+    "cases/T4L/SOURCE_INVENTORY.json": "273193ee76b1963c66b7a2007b0e3ae3d71913bae8ea51d215b9081346f5cf75",
+    "cases/T4L/PUBLIC_FACTS.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cases/Q05/paper.pdf": "4ad57beeb7366b969745597a252e6b37005e5880b49064c03c9419462a7a9abf",
+    "cases/Q05/paper.txt": "3b2be57eadd62723662253390be67333da0e43bd2bc4a6de2e09520723745bf3",
+    "cases/Q05/CHECK_SCOPE.txt": "22ae3e527d0e5bfa0cee19a29d09907b816e9c33173e42c0c9661dd174cebe7a",
+    "cases/Q05/QUESTION.txt": "8529c3366784c5b11b5769d795ddea29ab49cd09a9315865d320ecfd86bbf4f2",
+    "cases/Q05/SOURCE_INVENTORY.json": "81a7580ff38542eb8a9612bba3e020c2224cc8816b0936fa9fc4fd3beae15bb1",
+    "cases/Q05/PUBLIC_FACTS.json": "e43dface3d27510c6f32b6e4523535572d1b383dbf3aab1940b04d85ddf69d82",
+    "cases/Q05/PUBLIC_FACTS_README.txt": "7b63089f4f3943e8a71ae881a30f1d35a6ed5d9dd000194a55a105c707bc9fcb",
+    "cases/Q05/bme_source/LICENSE.md": "2fcbc59fd6474f7451a53b73bb38648034eeb71fcd3613330b0ffd6296d94784",
+    "cases/Q05/bme_source/BME.py": "ed39d4c9a955fd2ce58f6d2c57634a60cb2bca7172fe77c89846cec773a5dbd1",
+    "cases/Q05/bme_source/BME_tools.py": "7183dc3a01f18220057dfc7232672b61a9e00cd7eabdf73faf8ca0bb3765ff8f",
+    "cases/Q05/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat": "482b3163afdeb9c66c4c63d45f0fc67b37bc5e650699924841ebde0ab9d2413b",
+    "cases/Q05/SAXS_and_SANS/README.md": "70954c485b11277663ae8e2c5622ae3e725b7f01949a37a7e996e5313040ad81",
+    "cases/Q05/method_sources/SOURCE_MAP.txt": "b2efea4aa27e13b3d031af63e6ee8a2f543c0a73f9929cdbf9640016633d435a",
+    "cases/Q05/method_sources/ensemble_blog.md": "55b3bfb0da09e59b97915a8e3bbd8e327ebe1588d4fcd03a6d907a3910ec87e5",
+    "cases/Q05/method_sources/04_acs.jcim.6c02044.md": "95ef6544e6c6b470549003d9fab088e7719604642041011620086163c6d78edc",
+    "cases/Q05/method_sources/05_ci6c02044_si_001.pdf": "af88fc29d3066fdbb632fd9c9574762f5161451ac302e3be52d357903e76d349",
+    "cases/Q05/method_sources/03_acs.jcim.6c02044.pdf": "e82b8ffe22526a7615b7c7c3d8ad3f7df9bb43b5484076e71f6939c99ab52dc0",
+    "cases/Q05/method_sources/Bengtsen_2020.txt": "3b2be57eadd62723662253390be67333da0e43bd2bc4a6de2e09520723745bf3",
+    "cases/Q05/molecular_dynamics_simulations/inputs_and_method/README.md": "bcab392c98304fec7b639e5cc1fcba51a63139c48fc775c6e5864ca9f7e47c03",
+    "cases/Q05/molecular_dynamics_simulations/inputs_and_method/topology.pdb": "4b9ce55e71a2dde77e11600109dbf45778e96bb48ea393028290380b04651fc0",
+    "cases/Q05/BME_reweight/reference_only/BME_stats_methyl_NOE.dat": "ad9e80a816cf925d4bb220f8b7ed60e13ca179d39e68fbf91affe6847f474eb7",
+    "cases/Q05/BME_reweight/reference_only/BME_stats_SAXS.dat": "ce56e3ef5b4334d3a40a09bb6c3d41812afc36e2e5fb3ba4f2d731b2bee0bbc2",
+    "cases/Q05/BME_reweight/reference_only/BME_simulation_weights.dat": "2d5e01bb9a341f7422ce41ca92843efe26499e9cb6f4944c832c3a446c7857f1",
+    "cases/Q05/BME_reweight/reference_only/BME_stats_HN_NOE.dat": "60bbf73f6f0f105c14b3a1c474ab75704de6cb9291fa3e913cdc700ff24f04af",
+    "cases/Q05/BME_reweight/inputs_and_method/simulation_HN2_NOE.dat": "09f2b776f3cdefbbb01e3969f2dfdea5c47f243b65f864438ea49330332bf59a",
+    "cases/Q05/BME_reweight/inputs_and_method/hyperparameter_theta.dat": "569552c6f259406cca2884ceab859d4f6068bb37740eca027c4c1367593db68f",
+    "cases/Q05/BME_reweight/inputs_and_method/README.md": "465332b5564c61ca41c013cf50afbafb684869f41c3f4d7ac5d6e440e472077d",
+    "cases/Q05/BME_reweight/inputs_and_method/exp_HN2_NOE.dat": "4e58877abaca0a34ecdcfb75dc6e14a94989ed1f70e2104c827c5920f2a881fc",
+    "cases/Q05/BME_reweight/inputs_and_method/simulation_methyl_NOE.dat": "00f6adb3586e5af43bb3016c837b6df365e6e9c143ba0de53e199d26a6d9ffed",
+    "cases/Q05/BME_reweight/inputs_and_method/exp_methyl_NOE.dat": "4ee2c6dec44a359a4eac171bd3aea8c06ad11f9d9a4e0f2827f993dcb7478b50",
+    "cases/Q05/BME_reweight/inputs_and_method/simulation_SAXS.dat": "63f51f8e43a64c7dee01db0bfba28c3bc2ee4613d996b08a9aa6303acc4e2515",
+    "cases/T4L/method_sources/SOURCE_MAP.txt": "b2efea4aa27e13b3d031af63e6ee8a2f543c0a73f9929cdbf9640016633d435a",
+    "cases/T4L/method_sources/ensemble_blog.md": "55b3bfb0da09e59b97915a8e3bbd8e327ebe1588d4fcd03a6d907a3910ec87e5",
+    "cases/T4L/method_sources/04_acs.jcim.6c02044.md": "95ef6544e6c6b470549003d9fab088e7719604642041011620086163c6d78edc",
+    "cases/T4L/method_sources/05_ci6c02044_si_001.pdf": "af88fc29d3066fdbb632fd9c9574762f5161451ac302e3be52d357903e76d349",
+    "cases/T4L/method_sources/03_acs.jcim.6c02044.pdf": "e82b8ffe22526a7615b7c7c3d8ad3f7df9bb43b5484076e71f6939c99ab52dc0",
+    "cases/T4L/method_sources/Bengtsen_2020.txt": "3b2be57eadd62723662253390be67333da0e43bd2bc4a6de2e09520723745bf3"
+  }
+}

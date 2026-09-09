@@ -1,0 +1,18 @@
+{
+  "case": "Q05",
+  "arm": "B",
+  "status": "TOKEN_LIMIT",
+  "model": "openai/gpt-5.6-luna",
+  "reasoning": "medium",
+  "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+  "totals": {
+    "input": 81043,
+    "output": 2286,
+    "cost": 0.00978181,
+    "tools": 22
+  },
+  "wall_seconds": 31.61744900001213,
+  "submissions": 0,
+  "check_scope": "public source-bound fitting overlap only; static-rate check inactive",
+  "unknown_charge": false
+}

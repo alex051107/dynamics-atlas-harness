@@ -1,0 +1,19 @@
+{
+  "case": "T4L",
+  "arm": "B",
+  "development_revision": 1,
+  "status": "COMPLETE",
+  "model": "openai/gpt-5.6-luna",
+  "reasoning": "medium",
+  "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+  "totals": {
+    "input": 91885,
+    "output": 4802,
+    "cost": 0.01429814,
+    "tools": 13
+  },
+  "wall_seconds": 59.0986587080406,
+  "submissions": 2,
+  "check_scope": "public source-bound fitting overlap only; static-rate check inactive",
+  "unknown_charge": false
+}

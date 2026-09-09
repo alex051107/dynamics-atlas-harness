@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-09T16:54:21.954312+00:00",
+  "revision_number": 1,
+  "reason": "Five of six sessions prematurely stopped by repeated full-UTF8 prompt upper bound, preventing initial/final submissions despite usable scientific computation.",
+  "changes": [
+    "Estimate unchanged history from server-reported prior prompt token count; conservatively bound appended messages",
+    "Reserve same final submission/revision opportunity for all arms with budget-only closing notice"
+  ],
+  "unchanged": [
+    "Luna medium",
+    "provider",
+    "seven rules",
+    "finite check",
+    "source packets",
+    "scientific question"
+  ],
+  "scope": "one complete six-session rerun; no more development revisions or model upgrade",
+  "first_batch_scientific_cost_usd": 0.07042915
+}

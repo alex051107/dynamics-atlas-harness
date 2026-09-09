@@ -1,0 +1,37 @@
+{
+  "scope": "Post-run developer source audit, not an Evaluation Agent result",
+  "rows": [
+    {
+      "channel": "methyl",
+      "matched_count": 40,
+      "violations_vs_experiment": 8,
+      "max_excess_vs_experiment": 2.750489999999999,
+      "violations_vs_stats_column": 8,
+      "max_excess_vs_stats_column": 2.750489999999999,
+      "bound_disagreements": []
+    },
+    {
+      "channel": "amide",
+      "matched_count": 292,
+      "violations_vs_experiment": 47,
+      "max_excess_vs_experiment": 4.91112,
+      "violations_vs_stats_column": 47,
+      "max_excess_vs_stats_column": 4.91112,
+      "bound_disagreements": []
+    }
+  ],
+  "row_alignment": [
+    {
+      "experimental_file": "exp_methyl_NOE.dat",
+      "stats_file": "BME_stats_methyl_NOE.dat",
+      "row_identity_mismatches": 0,
+      "row_count": 40
+    },
+    {
+      "experimental_file": "exp_HN2_NOE.dat",
+      "stats_file": "BME_stats_HN_NOE.dat",
+      "row_identity_mismatches": 0,
+      "row_count": 292
+    }
+  ]
+}

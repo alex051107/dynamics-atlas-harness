@@ -1,0 +1,75 @@
+## 结论
+
+在 T4 lysozyme（T4L）这个基准上，AMS 最有力的结果是：**将多个 GenAI 系综作为种子，接两轮无偏 MD，再用 MSM 加权后，能访问生成模型单独未能可靠访问的稀有构象，并在四状态宏观划分上接近 EMD。**
+
+但这不等于已经证明 AMS 普遍优于 EMD、完全恢复真实平衡分布，或证明多模型组合本身具有独立的协同增益。
+
+## 相对于单独生成模型
+
+### 作者报告
+
+- 论文将 AF-cluster、rMSA-AF2、ConforFold、AlphaFlow、ESMFlow、ConfRover、BioEmu 的结构投影到 d1/d2 等 CV。作者报告多数 GenAI 方法主要集中于 exposed/open，不能覆盖 transient closed/buried 区域（主论文图 2C–E、图 3及相关正文）。
+- AMS 采到四个状态。作者给出的 AMS/EMD 比例为：
+
+| 状态 | AMS | EMD |
+|---|---:|---:|
+| exposed/open | 38.3% | 39.1% |
+| buried/open | 58.7% | 54.0% |
+| buried/closed | 2.3% | 2.9% |
+| exposed/closed | 0.7% | 3.9% |
+
+前三个状态接近，exposed/closed 明显低估；作者称后者仍是最难访问的状态（主论文第 2 页）。
+
+- AMS 的 MSM 加权 Ser44–Ile150 FRET 分布捕获了实验 smFRET 中的 closed 宏观信号（主论文第 4 页；SI Figure S1）。
+- 相同数量级的对照中，20 条从晶体结构 5LZM 出发、各 1 μs 的无偏 MD 未采到 closed state，而 AMS Round 1 为 100×200 ns、总计 20 μs，并采到了该状态（主论文图 4及第 4–6 页）。
+- SI S2–S4显示，改变 lag time、cluster-center 数量，以及使用 RMSD 或 TICA 特征，AMS 的总体 FES/相对群体较稳定；SI S6给出 AMS 群体的 Bayesian 95% 区间。
+
+### 依据材料作出的判断
+
+这些结果支持的是“**GenAI 结构作为物理模拟种子**”优于“把 GenAI 结构直接当最终 ensemble”，而不是证明生成模型本身生成了正确的平衡概率。
+
+去掉 AF-cluster 后，作者报告 AMS 不能采样 closed state（主论文图 5、第 4及第 6 页；SI S9）。因此本例明显依赖关键种子。该消融支持种子依赖性，但不足以证明所有模型都有边际贡献，或证明模型组合存在已定量的协同效应。
+
+## 相对于 EMD
+
+### 作者报告
+
+- AMS 与 EMD 都在 d1/d2 和 p 投影中覆盖 open/closed 以及 exposed/buried 的组合；上表四态比例是论文给出的直接数值比较。
+- AMS 在不显式以 closed state 为目标进行增强采样的条件下，得到与 EMD 相近的 closed-state 信号；作者将此视为 AMS 的实践优势（主论文第 4–6 页）。
+- SI S8 报告，在 lag=500 steps、K=200 的诊断中，AMS Round 1 的 MSM 最大连通部分覆盖 state fraction=1.00、count fraction=1.00；EMD 有与主网络断开的状态块（state fraction=0.99、count fraction=1.00）。
+
+### 依据材料作出的判断
+
+这证明的是：**在作者使用的两套轨迹和 MSM 设置下，AMS 的状态网络连通性诊断更好，且宏观群体与 EMD 参考相近。**
+
+它不自动证明 AMS 动力学更真实或整体准确；MSM 连通性不能代替转移速率验证。EMD 本身也不是实验真值，而是特定增强采样协议的参考。论文还明确说，EMD 原始数据不可得，无法重算 Miller 等人的完整预测 FRET 分布，也无法进行严格的逐点 population-weighted 比较（主论文第 7 页）。
+
+## 更强但未获支持的结论
+
+1. **“AMS 完全恢复真实四态平衡分布”不成立。**  
+   exposed/closed 为 0.7%，而 EMD 为 3.9%；且没有独立实验逐一验证四态概率。smFRET 主要约束 open/closed 相关观测，不能单独验证 p 划分的全部四态。
+
+2. **“AMS 普遍优于 EMD”没有建立。**  
+   现有证据是单一 T4L 案例、特定协议下的群体接近与连通性结果；缺少同一原始数据基础上的完整误差和效率比较。
+
+3. **“AMS 已被实验全面定量验证”没有建立。**  
+   作者承认在两个宏观区域之外，AMS FRET 分布与实验有偏离；模拟 FRET 还受 cluster 数、MSM 特征、力场和水模型影响（主论文第 7 页；SI S1）。
+
+4. **“多模型集成消除了单模型缺陷”没有建立。**  
+   AF-cluster 消融反而表明结果依赖特定种子；缺少逐模型、等计算量、多次重复的消融。
+
+5. **“AMS 普遍可迁移、无需调参、恢复正确动力学”没有建立。**  
+   只有一个小体系；力场、水模型、feature space 的影响被作者列为 future work，也没有实验速率或独立动力学参考验证。
+
+## 最准确的归纳
+
+**作者报告：** AMS 在 T4L 上比单独 GenAI 结构集扩大了可访问构象范围，采到了 GenAI 单独遗漏的 closed/buried 区域；四态群体总体接近 EMD，并再现实验 smFRET 的 closed 宏观信号；其 Round 1 MSM 在作者的诊断中比 EMD 更连通。
+
+**材料内判断：** 最稳妥的结论是“一个依赖初始种子多样性、由无偏 MD 和 MSM 完成物理细化的 T4L 混合协议有效”，而不是“AMS 已证明普遍优于 EMD、完全准确、由多模型协同驱动，或恢复了真实动力学”。
+
+## 未解决部分与高信息价值下一步
+
+- 公开 AMS/EMD 原始轨迹，并统一力场、水模型、CV、features、K、lag 和 MSM 估计，进行 block/bootstrap 或 Bayesian 比较。
+- 对 AF-cluster、各单模型、随机种子和晶体结构种子做等规模、多次重复消融。
+- 用多对 smFRET、NMR 或动力学数据分别检验 d1、d2、p 和转移速率。
+- 在多个不同能垒蛋白上复现，才可评估 AMS 的一般可迁移性及其相对 EMD 的优势。

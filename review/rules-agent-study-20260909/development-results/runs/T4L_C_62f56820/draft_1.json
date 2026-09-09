@@ -1,0 +1,102 @@
+{
+  "answer": "## 结论范围与比较条件\n这里的 AMS 是：把多个 GenAI 生成的野生型、apo T4L 结构合并，经 K-center 选 100 个种子；每个做 200 ns 无偏 MD（Round 1），再从物理精炼的 80 个结构各做 200 ns（Round 2），最后用合并轨迹建 MSM 并投影到 d1/d2 与锁定坐标 p。论文中的 EMD 是另一套物理参考：Miller 等人的 5 μs 无偏 MD 加 metadynamics-seeded 无偏 MD。两者都讨论同一宏观对象：wild-type apo T4L；GenAI 单独结果则是各生成模型的结构集合，而不是经 MD/MSM 重加权后的动力学分布（主文 pp. 2, 5–6；SI S1–S9）。因此以下“相对于”严格限于该构建体、CV 定义、力场/水模型、候选池和 MSM 分析条件，不能自动推广到其他突变、配体或环境。\n\n## 有证据支持的结果\n\n### 1. 结构覆盖：AMS 明确超过单独 GenAI 集合\n**作者报告。** 四态由 d1（Ser44–Ile150，<2.5 nm 为 closed，>2.5 nm 为 open）和 p（Phe4 暴露/埋藏）定义：exposed/open、exposed/closed、buried/open、buried/closed。合并的 GenAI 集合主要停留在 exposed/open；论文称它们没有单独采到 buried/open、transient closed 等完整物理状态。相反，AMS 在 d1/d2 与 p 投影中覆盖四态，包含 closed 以及 Phe4 的 exposed/buried 两种状态（主文 pp. 2–4，图 2–3）。不过作者也报告 AF-cluster 单独比其他 GenAI 模型覆盖更宽，说明“单独生成模型”并非同质；去掉 AF-cluster 后，AMS 也不能采到 closed（主文 pp. 4、6，图 5；SI S9）。\n\n**依据材料作出的判断。** 最稳妥的表述是“AMS 的物理传播和多轮 MD 把候选结构覆盖转化为在所用 CV 上更完整的可达/被采样状态覆盖”，而不是“AMS 从零发现了所有状态”：closed 的成功依赖初始池中 AF-cluster 提供的高能/过渡种子。重新加权或延长已有候选不会创造候选池完全没有的构象；本研究恰好有 AF-cluster 消融支持这一条件性结论。\n\n### 2. 相对于单独生成模型，AMS 获得了物理上可用的跨态轨迹证据\n**作者报告。** 单独 GenAI 集合是静态结构，主要展现 exposed/open；它们不能给出从一个状态到另一个状态的 MD 轨迹或 MSM 动力学网络。AMS Round 1 的 MSM 被报告为全连接，而 EMD 的计数矩阵有断开的状态块（SI S8）。因此在本实验中，AMS 不只是增加了静态结构种类，还提供了在给定无偏 MD、聚类和 MSM 设定下可连接的状态网络（主文 pp. 3、6；SI S8）。\n\n**依据材料作出的判断。** “全连接”是模型/采样诊断，不等于已证明真实体系的所有转换都发生，也不等于给出了实验转换速率；大量 MD 帧也不能当作同数量独立实验。论文和 SI 展示的是模型条件下的连接性与平衡投影，不是时间分辨动力学验证。\n\n### 3. 与 EMD 的宏观平衡投影相近，但不是全面相同\n**作者报告。** AMS 的 MSM 权重与 EMD 的四态百分比为：\n- exposed/open：38.3% vs 39.1%；\n- buried/open：58.7% vs 54.0%；\n- buried/closed：2.3% vs 2.9%；\n- exposed/closed：0.7% vs 3.9%。\n所以三项（尤其两个主导态和 buried/closed）相近；最稀有的 exposed/closed 在 AMS 中低估。论文因此说 AMS 的总体/主要人口与 EMD quantitatively comparable，但也明确指出该 transient state 仍最难获得（主文 pp. 2–4）。\n\n**依据材料作出的判断。** 用这些数字可计算的差异为绝对百分点：0.8、4.7、0.6、3.2；但不能据此宣称 AMS 已“复制 EMD 的真实平衡分布”。这是两个模拟协议各自 MSM/力场下的模型估计，且作者说明缺少 EMD 原始数据，不能做 AMS–EMD 的精确逐样本 FRET/人口重算（主文 p. 7）。SI S6/S7 给出 AMS 与 EMD 的 Bayesian MSM 95% 区间，适合把差异理解为带不确定度的比较，而非精确真值。\n\n### 4. 与 smFRET 的观测层面有支持，但仅限宏观信号/状态\n**作者报告。** AMS MSM 加权的 Ser44–Ile150 smFRET 距离/效率分布显示 open 和 closed 两个宏观部分，并捕获实验中 closed 的稀有峰；SI S1 将其描述为与实验 closed-state probability 一致。作者还报告 AMS 在不显式针对 closed state 加偏置的情况下得到该信号，而 EMD 的历史方案使用了更专门的增强/自适应流程（主文 pp. 4、6；SI S1）。\n\n**依据材料作出的判断。** 这支持“在该 FRET 前向映射、CV、MSM 和误差处理下，AMS 可再现实验可见的宏观状态信号”，不支持“AMS 唯一确定了真实每个构象的占比”。作者自己指出模拟 FRET 受聚类中心数、MSM 特征、力场和水模型影响，且在两个宏观区域之外仍有与实验分布不一致的 transitional regions（主文 p. 7）。按 ensemble-resolution 的原则，观测到的是前向模型后的信号；平均/处理后的信号不能单独反演出唯一三维分布。\n\n### 5. 相对于从单一晶体结构开始的同长度无偏 MD，AMS 有效率优势的个案证据\n**作者报告。** 20 条从 PDB 5LZM 晶体结构出发、每条 1 μs 的无偏 MD（总 20 μs）在其比较中没有采到 closed；AMS Round 1 为 100×200 ns、总 20 μs，却覆盖了更宽的景观并采到 closed（主文图 4及 pp. 4–5）。这说明多样种子在这个 T4L 测试中比单一晶体起点更有利。\n\n**依据材料作出的判断。** 这是控制条件下的初始化/采样效率比较，不是“AMS 普遍优于所有 EMD 或所有 MD”的定理；总模拟时间相同不等于独立有效样本数相同，也没有给出跨体系的成本—精度曲线。\n\n## 更强、目前不受支持的结论\n\n1. **不能说 AMS 已证明真实平衡占比或优于 EMD 的真实准确度。** EMD 被论文用作定量参考，但不是无误差实验真值；AMS 与 EMD 的差异尤其集中在 0.7% 对 3.9% 的稀有态，而且缺少 EMD 原始轨迹，无法进行完全对称的原始观测重分析。smFRET 宏观一致性是独立的观测支持，但仍受前向模型、实验误差和可分辨性限制。\n2. **不能说 AMS 给出了真实转换速率、时间尺度或唯一机制。** MSM 全连接、lag-time 稳定和状态出现都只是当前模拟/特征/聚类条件下的诊断；静态候选的出现频率不是平衡概率，无序结构本身也不提供交换速率。SI S2–S5 支持某些模型稳健性检查，不是实验动力学验证。\n3. **不能说多模型集成必然优于每一个生成模型，或 AMS 完全不依赖生成模型。** AF-cluster 消融直接表明 closed 的覆盖依赖初始候选池；因此更准确的是“多模型池加物理 MD 在本例中有效”，不是“GenAI 只是可有可无的初始化”。\n4. **不能把四个 CV 分区当成唯一、完备的构象本体。** 它们是物理上有意义的粗粒化分类；同一分区仍可有连续构象差异，分区外的过渡区在模拟 FRET 中已出现偏差。因而不存在由本文单独建立的唯一结构分布、唯一自由能面或完整机制。\n5. **不能由 T4L wild-type apo 结果推出突变、配体结合、其他温度/溶剂或其他蛋白上的可转移定量性能。** 主文虽提出框架可推广，但那是前瞻性主张而非本研究证据。\n\n## 未解决部分与最有信息价值的下一步\n- 仍未解决：exposed/closed 稀有态的占比；AMS 与 EMD 差异是否超出不确定度；非宏观 FRET 区域的偏差来源；力场/水模型和特征空间对 MSM 权重的影响；以及真实转换速率。\n- 最有信息价值的下一步不是简单增加相关帧，而是预注册同一构建体/环境下的独立重复模拟，并公开 EMD 原始轨迹与 AMS 原始轨迹；用未参与建模的 smFRET（最好带时间相关函数，而不只是直方图）和其他独立观测，以同一前向模型联合检验四态人口及动力学。对 rare exposed/closed，重点应是多次独立种子、置信区间和收敛/有效样本诊断，而不是只报告单次 MSM 点估计。\n\n## 证据位置\n主文：PDF/Markdown pp. 2–4（CV、四态、人口与 GenAI/AMS 对比），pp. 4–6（AF-cluster 消融、MD 对照、结论与 EMD MSM 连接性），p. 7（FRET、模型依赖、偏差与缺少 EMD 原始数据）。SI：S1（smFRET）、S2–S5（lag/聚类/特征稳健性）、S6–S7（95% CI）、S8（连接性）、S9（去 AF-cluster 后的覆盖）。方法性限制依据 S1 ensemble_blog.md，特别是关于 source/target 分布、前向观测、后处理和 ensemble resolution 的第 36–54、58–76、130–146 行。",
+  "claims": [
+    {
+      "text": "在 wild-type apo T4L、给定 CV 和 MSM 条件下，AMS 覆盖四个定义状态，而多数单独 GenAI 集合主要集中于 exposed/open。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "四态；GenAI 主要单态",
+      "origin": "author_report",
+      "evidence_role": "sampling/structural coverage",
+      "result_id": "AMS_four_state_coverage",
+      "observation_subset": "d1,d2,p projections; GenAI ensembles",
+      "analysis_id": "paper_fig2_fig3",
+      "evidence": "主文 Markdown lines 109-129, 146-181"
+    },
+    {
+      "text": "AF-cluster 对 AMS 的 closed-state 覆盖是重要条件；去掉 AF-cluster 后该状态未采到。",
+      "type": "limitation",
+      "polarity": "affirmative",
+      "quantity": "AF-cluster included vs excluded",
+      "origin": "author_report",
+      "evidence_role": "ablation/candidate-pool dependence",
+      "result_id": "AMS_AFcluster_ablation",
+      "observation_subset": "d1,d2 FES; closed state",
+      "analysis_id": "paper_fig5_S9",
+      "evidence": "主文 lines 193-201, 253-278; SI S9"
+    },
+    {
+      "text": "AMS 四态 MSM 人口与 EMD 报告值分别为 exposed/open 38.3/39.1%、buried/open 58.7/54.0%、buried/closed 2.3/2.9%、exposed/closed 0.7/3.9%。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "百分比及差异",
+      "origin": "author_report",
+      "evidence_role": "model-based population comparison",
+      "result_id": "AMS_vs_EMD_populations",
+      "observation_subset": "four d1-p macrostates",
+      "analysis_id": "paper_four_state_MSM",
+      "evidence": "主文 lines 120-129"
+    },
+    {
+      "text": "AMS 与 EMD 的人口接近不等于真实唯一平衡分布已被证明；EMD 原始数据缺失且模拟 FRET 依赖前向模型、MSM 特征、聚类、力场和水模型。",
+      "type": "limitation",
+      "polarity": "negative",
+      "quantity": "",
+      "origin": "current_calculation",
+      "evidence_role": "interpretation limitation",
+      "result_id": "AMS_vs_EMD_populations",
+      "observation_subset": "four-state populations and smFRET mapping",
+      "analysis_id": "ensemble_resolution_assessment",
+      "evidence": "主文 lines 287-318; ensemble_blog lines 66-76, 130-146"
+    },
+    {
+      "text": "AMS MSM 的连接性是模型/采样诊断，不是实验转换速率或机制的证据。",
+      "type": "limitation",
+      "polarity": "negative",
+      "quantity": "SI S8 connectedness",
+      "origin": "inference",
+      "evidence_role": "dynamics limitation",
+      "result_id": "AMS_MSM_connectivity",
+      "observation_subset": "transition count matrices",
+      "analysis_id": "static_vs_dynamic_assessment",
+      "evidence": "SI S8；ensemble_blog lines 80-102, 130-146"
+    },
+    {
+      "text": "AMS MSM 加权 smFRET 在宏观 open/closed 区域捕获实验 closed-state 信号，但 transitional regions 存在偏差。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "macrostate-level agreement; residual transitional divergence",
+      "origin": "author_report",
+      "evidence_role": "experimental observation prediction",
+      "result_id": "AMS_smFRET_prediction",
+      "observation_subset": "Ser44-Ile150 smFRET; macrostate regions",
+      "analysis_id": "paper_S1_FRET",
+      "evidence": "主文 lines 188-201, 287-318; SI S1"
+    },
+    {
+      "text": "在总模拟时长均为20 μs的特定比较中，100×200 ns AMS 从多样种子采到 closed，而20×1 μs从单一晶体结构起始的无偏MD未采到。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "20 μs vs 20 μs",
+      "origin": "author_report",
+      "evidence_role": "controlled sampling-efficiency comparison",
+      "result_id": "AMS_vs_single_start_MD",
+      "observation_subset": "wild-type apo T4L; d1/d2/p",
+      "analysis_id": "paper_fig4",
+      "evidence": "主文 lines 184-187, 214-217"
+    },
+    {
+      "text": "不能据此推出 AMS 普遍优于所有 EMD/MD，也不能推出跨体系可转移的定量性能。",
+      "type": "limitation",
+      "polarity": "negative",
+      "quantity": "",
+      "origin": "inference",
+      "evidence_role": "scope limitation",
+      "result_id": "AMS_vs_single_start_MD",
+      "observation_subset": "T4L-specific comparison",
+      "analysis_id": "scope_generalization_assessment",
+      "evidence": "主文 lines 219-240, 304-319; ensemble_blog lines 36-54"
+    }
+  ],
+  "conflicts": []
+}
