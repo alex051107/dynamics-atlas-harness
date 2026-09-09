@@ -1,7 +1,11 @@
-# Luna开发试跑结果
+# Luna开发结果与下一项科学比较
 
-先读[结果报告](DEVELOPMENT_REPORT_ZH.md)。本包保留十二次运行的真实最终答复、提交初稿、回执和工具执行记录。首次批次两份没有提交答案，因此没有answer.md。第二批T4L B/C的初稿与最终交付必须分开阅读，不能用初稿冒充最终结果。
+先读[下一阶段行动计划](NEXT_SCIENTIFIC_STEP_ZH.md)，再读[修订报告](DEVELOPMENT_REPORT_ZH.md)。需要转交Pro时可复制[完整审查提示](PRO_NEXT_STEP_PROMPT_ZH.md)。[领域核对简报](DOMAIN_REVIEW_BRIEF_ZH.md)列出专家需要确认的具体科学边界。
 
-[全部运行与费用](development_results.json) · [科学核对](SCIENTIFIC_AUDIT_ZH.md) · [低成本计划](LOW_COST_EXECUTION_PLAN_ZH.md)
+本次采纳[Pro返回审查](PRO_DEVELOPMENT_REVIEW_ZH.md)的归因纠正，完成一次[离线答案保存修复](post_development_review/README.md)。没有新增模型会话、科学拟合、规则或正式题。
 
-执行记录省略每次重复发送的request正文，保留模型返回、真实工具输出、来源访问、提交与错误。完整原始请求保留本地。源资料见父目录references及原论文；此包不包含全部Q05矩阵，不是完整离线复现环境。正式四来源试验未开始。
+十二次历史运行的初稿、终稿、回执和执行记录均保留。第二批T4L B/C初稿和终稿分别展示，离线回放不会替代真实终稿计分。
+
+[运行费用](development_results.json) · [科学核对](SCIENTIFIC_AUDIT_ZH.md) · [原低成本计划](LOW_COST_EXECUTION_PLAN_ZH.md)
+
+原DEVELOPMENT_REVIEW_PACKET.zip保留最初开发交付，未包含本次报告修订。阅读当前计划和结论请使用本目录最新Markdown。执行记录省略重复request，保留模型响应、工具结果和错误。完整原始请求保留本地，来源见父目录references；此包未包括全部矩阵，不是完整离线复现环境。
