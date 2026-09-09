@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-09-09 (v1 → v2)** → 见 `HSP90_FIRST_ROUND_PLAN_V2_ZH.md`。Pro 审查见 `PRO_REVIEW_OF_OPERATIONAL_PLAN_V1_ZH.md`。本文保留为记录。
+
 # 三体系操作计划：建系统 → 跑 HSP90 → 结果包交 Pro → 第二、第三体系
 
 Dynamics Atlas · 2026-09-09 · 供 Codex 逐步执行、GPT Pro 审查结果 · 版本 v1

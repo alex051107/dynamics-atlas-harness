@@ -15,3 +15,10 @@
 - [THREE_SYSTEMS_OPERATIONAL_PLAN_ZH.md](THREE_SYSTEMS_OPERATIONAL_PLAN_ZH.md)：建 Rules 回路系统 → HSP90 四站 → 结果包交 Pro → ADK/DHFR 只读盘点按规则选一个 → 第二、第三体系。每步含输入、动作、输出、完成标准、停止条件。暂不等领域专家，Pro 审结果包；结论保持"开发暴露、未领域确认"。
 - [PRO_CONFIRM_THREE_SYSTEMS_PROMPT_ZH.md](PRO_CONFIRM_THREE_SYSTEMS_PROMPT_ZH.md)：请 Pro 审查该计划的提示。
 - `NEXT_SCIENTIFIC_STEP_ZH.md` 中的"四来源 × 3 组 × 2 次 = 24 份"比较停放，未启动。
+
+## 2026-09-09 深夜：Pro 审查 v1 → HSP90 首轮有界计划 v2（供 Codex 执行）
+
+- [PRO_REVIEW_OF_OPERATIONAL_PLAN_V1_ZH.md](PRO_REVIEW_OF_OPERATIONAL_PLAN_V1_ZH.md)：Pro 对 v1 的完整审查（CHANGES_REQUESTED_BOUNDED）。两处事实纠错已本地复核为真。
+- [HSP90_FIRST_ROUND_PLAN_V2_ZH.md](HSP90_FIRST_ROUND_PLAN_V2_ZH.md)：v2。一个问题（Q01）、同一 Agent、A/B 各两次共四份、C 停、7 个工作日、≤ $0.20；评分依据独立于规则选择；`common/ arm_B/ hidden/` 三分隔离；三列核对；两层报告；四结果表由 PM 决定下一步。§11 逐条处置 Pro 意见。
+- [REVIEW_PROMPT_HSP90_FIRST_ROUND_V2_ZH.md](REVIEW_PROMPT_HSP90_FIRST_ROUND_V2_ZH.md)：给审阅者的提示（十问，强调执行者是 Codex）。
+- `THREE_SYSTEMS_OPERATIONAL_PLAN_ZH.md`（v1）已标 superseded，保留为记录。
