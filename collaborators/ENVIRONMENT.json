@@ -1,0 +1,15 @@
+{
+  "runtime": "Python 3.11.16",
+  "base_image": "python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534",
+  "third_party_python_dependencies": [],
+  "tested_platform": "linux/arm64",
+  "verification": {
+    "three_science_summaries": "PASS",
+    "isolated_copy_with_spaces_in_path": "PASS",
+    "network_disabled": "PASS",
+    "read_only_container_filesystem": "PASS",
+    "missing_input_rejected": "PASS",
+    "native_python_vs_container_numeric_results": "identical"
+  },
+  "scope": "Analysed-table replay; raw-coordinate reconstruction and new Agent calls are not performed"
+}

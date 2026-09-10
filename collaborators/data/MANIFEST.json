@@ -1,0 +1,76 @@
+{
+  "source_archive": "review/four-layer-20260910/archives/E2_frozen_evidence.tar.gz",
+  "source_commit": "1beb385d59fd2a4ae46bf654ac4b38d71468cc8d",
+  "source_archive_sha256": "2c9ae38aaed0b0e897b1720acb39b1b83ce3864897057a20e86e3b897d0a44ef",
+  "scope": "Selected numerical columns from frozen analysed tables; no new coordinate analysis",
+  "files": [
+    {
+      "file": "adk_open.csv",
+      "rows": 2253,
+      "columns": [
+        "frame_index",
+        "time_ns",
+        "NMP_CORE_mean_CA_distance_A",
+        "LID_CORE_mean_CA_distance_A"
+      ],
+      "source_members": [
+        "E2/cases/Q-A1/common/data/open_domain_distances.tsv"
+      ],
+      "operation": "Delimiter normalization only; all four columns unchanged",
+      "sha256": "872c7af528c8c42726e6c34ed117c87f617cc9ea16e913255ed6516d09bead20"
+    },
+    {
+      "file": "adk_closed.csv",
+      "rows": 1678,
+      "columns": [
+        "frame_index",
+        "time_ns",
+        "NMP_CORE_mean_CA_distance_A",
+        "LID_CORE_mean_CA_distance_A"
+      ],
+      "source_members": [
+        "E2/cases/Q-A1/common/data/closed_domain_distances.tsv"
+      ],
+      "operation": "Delimiter normalization only; all four columns unchanged",
+      "sha256": "f9dad14c51cefd138c836b2167dad24e4640553c66db5a86c2b94825301a9e1a"
+    },
+    {
+      "file": "dhfr_m20.csv",
+      "rows": 4004,
+      "columns": [
+        "condition",
+        "frame_index",
+        "M20_O3P_A"
+      ],
+      "source_members": [
+        "E2/cases/Q-D-fixed/common/data/tmpp-wt_distances.tsv",
+        "E2/cases/Q-D-fixed/common/data/tmpp-l28r_distances.tsv",
+        "E2/cases/Q-D-fixed/common/data/d4tmpp-wt_distances.tsv",
+        "E2/cases/Q-D-fixed/common/data/d4tmpp-l28r_distances.tsv"
+      ],
+      "operation": "Select r20_N_O3P from corrected tables; rename to M20_O3P_A; retain frame index and explicit condition",
+      "sha256": "04b5082cfc7e5dd6965c926b2c70120460ebd20f42729e3fa59c46af59b5f75c"
+    },
+    {
+      "file": "hsp90_frames.csv.gz",
+      "rows": 40040,
+      "columns": [
+        "trajectory",
+        "seed",
+        "time_ns",
+        "geometry_delta_A",
+        "contact_margin_A",
+        "V_open_A",
+        "V_closed_A",
+        "partition_5"
+      ],
+      "source_members": [
+        "E2/cases/Q-H2/common/frame_state_assignments.tsv",
+        "E2/cases/Q-H2/common/trajectory_time_anatomy.tsv",
+        "E2/cases/Q-H2/common/native_noe/*/*_contact_violation.dat"
+      ],
+      "operation": "Join on trajectory and checked 1-ns frame order; use native column2 for violations, column3 only to verify old contact margin; retain derived geometry and five-point anatomy category; strip author workstation headers",
+      "sha256": "43ca898f857fae6a223c5cbdfc93d944f695af142eff8d5bef3dc12d564d16b3"
+    }
+  ]
+}

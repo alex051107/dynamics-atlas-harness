@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dynamics Atlas</title><style>body{margin:0;background:#f2f5f7;color:#20384a;font:17px/1.75 system-ui,sans-serif}header{background:#20384a;color:white;padding:18px 6%}header a{color:white;text-decoration:none}main{max-width:960px;margin:32px auto;padding:38px 48px;background:white;border-radius:10px}h1{font-size:36px;line-height:1.2}h2{font-size:25px;margin-top:36px}a{color:#246b96;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border-bottom:1px solid #d8e0e5;text-align:left;padding:12px;vertical-align:top}th{background:#edf3f7}pre{overflow:auto;padding:20px;background:#edf3f7;font-size:13px}code{font-size:.9em}footer{font-size:13px;color:#617482;margin-top:36px}@media(max-width:700px){main{margin:0;padding:22px}h1{font-size:28px}table{font-size:13px}}@media print{header{display:none}main{margin:0;padding:0}body{background:white}}</style><header><a href="index.html">Dynamics Atlas / Research group</a></header><main><h1>Dynamics Atlas</h1>
+<p><strong>Interpreting heterogeneous protein-dynamics evidence with reproducible analysis.</strong></p>
+<p>We compare what molecular simulations and experiments actually support, including where their interpretations differ. The current results cover HSP90, DHFR and adenylate kinase (ADK). A source-linked Rules Table records scientific prerequisites and conclusion limits; its contribution to automated analysis is a separate research question.</p>
+<h2>Start here</h2>
+<table>
+<thead>
+<tr>
+<th>Your goal</th>
+<th>Read or run</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Understand the project and current findings</td>
+<td><a href="docs/RESULTS.html">Scientific results</a></td>
+</tr>
+<tr>
+<td>Understand the measurements and assumptions</td>
+<td><a href="docs/METHODS.html">Methods and boundaries</a></td>
+</tr>
+<tr>
+<td>Reproduce the main numerical results</td>
+<td><a href="docs/REPRODUCE.html">Reproduction guide</a></td>
+</tr>
+<tr>
+<td>Understand the Rules Table&#39;s research role</td>
+<td><a href="docs/RULES.html">Rules and analysis protocol</a></td>
+</tr>
+<tr>
+<td>Find papers and data sources</td>
+<td><a href="docs/SOURCES.html">Sources and data provenance</a></td>
+</tr>
+</tbody></table>
+<h2>What we have learned</h2>
+<ul>
+<li><strong>HSP90:</strong> moving in an open direction is different from agreeing with an open-state NOE reference.</li>
+<li><strong>DHFR:</strong> corrected local distances distinguish the two inhibitors in these trajectories; coordinate representation must be checked before interpretation.</li>
+<li><strong>ADK:</strong> the selected domain-distance descriptors do not show joint closure over the first-to-last-window comparison in either apo trajectory.</li>
+</ul>
+<p>The calculations below reproduce those numerical summaries from the provided analysed tables. They do not generate new MD trajectories or repeat raw-coordinate preparation.</p>
+<h2>Reproduce in a fixed environment</h2>
+<p>From this directory, with Docker installed:</p>
+<pre><code class="language-bash">docker build -t dynamics-atlas-group:20260910 .
+mkdir -p results
+docker run --rm --network none --read-only --tmpfs /tmp \
+  --mount &quot;type=bind,source=$(pwd)/results,target=/output&quot; \
+  dynamics-atlas-group:20260910
+</code></pre>
+<p>Open <code>results/REPORT.html</code>. A successful run prints <code>PASS</code> and writes the report plus <code>results.json</code>. The base image is pinned by digest. Building downloads that public base image; the calculation itself runs without network access or an API key. The Python-only alternative and Windows instructions are in the <a href="docs/REPRODUCE.html">reproduction guide</a>.</p>
+<p>You can also inspect the <a href="example-results/REPORT.html">tested example output</a> before running the calculation.</p>
+<h2>Package layout</h2>
+<pre><code class="language-text">README.md           Project entrypoint
+index.html          Offline reading page
+Dockerfile          Digest-pinned public Python environment
+docs/               Scientific results, methods, reproduction and sources
+data/               Small numerical inputs and their provenance manifest
+reproduce/          Deterministic analysis script
+example-results/    Output from the tested container run
+results/            Your regenerated outputs
+</code></pre>
+<p>This group package is self-contained. Its numerical inputs come from the recorded September 2026 analyses. Exact source archive identities and transformations are documented in <code>data/MANIFEST.json</code>.</p>
+<footer>Scientific results and reproducible calculations · September 2026</footer></main></html>

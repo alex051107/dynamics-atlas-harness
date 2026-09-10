@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Primary sources and data provenance</title><style>body{margin:0;background:#f2f5f7;color:#20384a;font:17px/1.75 system-ui,sans-serif}header{background:#20384a;color:white;padding:18px 6%}header a{color:white;text-decoration:none}main{max-width:960px;margin:32px auto;padding:38px 48px;background:white;border-radius:10px}h1{font-size:36px;line-height:1.2}h2{font-size:25px;margin-top:36px}a{color:#246b96;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border-bottom:1px solid #d8e0e5;text-align:left;padding:12px;vertical-align:top}th{background:#edf3f7}pre{overflow:auto;padding:20px;background:#edf3f7;font-size:13px}code{font-size:.9em}footer{font-size:13px;color:#617482;margin-top:36px}@media(max-width:700px){main{margin:0;padding:22px}h1{font-size:28px}table{font-size:13px}}@media print{header{display:none}main{margin:0;padding:0}body{background:white}}</style><header><a href="../index.html">Dynamics Atlas / Research group</a></header><main><h1>Primary sources and data provenance</h1>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Primary paper</th>
+<th>Data and use in this package</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HSP90</td>
+<td><a href="https://doi.org/10.1038/s41467-022-35399-8">Henot et al. (2022), Visualizing the transiently populated closed-state of human HSP90 ATP binding domain</a></td>
+<td>Native NOE violation series and previously derived trajectory descriptors; source data availability is identified in the paper</td>
+</tr>
+<tr>
+<td>DHFR</td>
+<td><a href="https://doi.org/10.1021/acs.jcim.3c00818">Cetin et al. (2023), Kinetic Barrier to Enzyme Inhibition Is Manipulated by Dynamical Local Interactions in E. coli DHFR</a></td>
+<td><a href="https://zenodo.org/records/7966540">Zenodo 7966540</a>; selected corrected local distances, not raw trajectories</td>
+</tr>
+<tr>
+<td>ADK</td>
+<td><a href="https://doi.org/10.1126/sciadv.abi5514">Orädd et al. (2021), Tracking the ATP-binding response in adenylate kinase in real time</a></td>
+<td><a href="https://zenodo.org/records/5583119">Zenodo 5583119</a>; project-defined domain-distance tables</td>
+</tr>
+<tr>
+<td>Nanodisc</td>
+<td><a href="https://doi.org/10.7554/eLife.56518">Bengtsen et al. (2020), Structure and dynamics of a nanodisc by integrating NMR, SAXS and SANS experiments with molecular dynamics simulations</a></td>
+<td>Prior development case for observable-specific fitting and validation; not rerun in this package</td>
+</tr>
+</tbody></table>
+<p>Two recent conceptual sources sharpened the distinction between structural coverage and measurement-supported distributions: <a href="https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html">Are We Capturing the Ensemble?</a>, by Li, Thomasen and Cossio (2026), and <a href="https://doi.org/10.1021/acs.jcim.6c02044">Bhakat&#39;s T4 lysozyme study</a>. Their role is to organize questions about what a measurement can distinguish, not to supply extra mandatory checks for every analysis.</p>
+<h2>Exact numerical input lineage</h2>
+<p><code>data/MANIFEST.json</code> records each included file, its original archive member, selected columns, row count, transformation and checksum. The source archive belongs to the frozen E2 evidence package at commit <code>1beb385d59fd2a4ae46bf654ac4b38d71468cc8d</code> of <code>alex051107/dynamics-atlas-harness</code>.</p>
+<p>The portable files project only the columns required for these demonstrations. Numerical values are preserved; delimiters and field labels are normalized where documented. HSP90 author workstation paths in comment headers are not included. The notebook-style scientific acceptance checks retain the original analysis windows and tolerances.</p>
+<p>No paper PDFs, raw MD trajectories, model prompts or meeting transcripts are included. This package is a research analysis derivative, not a relicense of source data. Cite the original papers and observe the deposit terms when acquiring or redistributing their full data.</p>
+<footer>Scientific results and reproducible calculations · September 2026</footer></main></html>

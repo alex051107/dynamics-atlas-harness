@@ -1,0 +1,2 @@
+# No third-party Python packages are needed for the portable table replay.
+# Python 3.11+; use the digest-pinned Dockerfile for a fixed runtime.
