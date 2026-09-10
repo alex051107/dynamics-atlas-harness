@@ -1,0 +1,279 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dynamics Atlas 计划表 2026-09-10</title><style>*{box-sizing:border-box}body{margin:0;background:#f3f5f3;color:#243634;font:16px/1.8 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:1180px;margin:24px auto;padding:40px 52px;background:#fff}h1{font-size:28px;line-height:1.4}h2{font-size:22px;border-top:1px solid #d7e2dc;padding-top:22px;margin:40px 0 16px}h3{font-size:18px;margin:26px 0 12px}table{font-size:13px;line-height:1.65;border-collapse:collapse;width:100%}th,td{padding:8px;border-bottom:1px solid #d7e2dc;vertical-align:top;text-align:left}th{background:#ecf3ee}.tw{overflow-x:auto;margin:16px 0}.toc{display:grid;gap:4px;padding:14px;background:#eef4ef;font-size:14px}code{font-size:.85em;overflow-wrap:anywhere}blockquote{border-left:3px solid #a5bcae;padding:6px 16px;margin:16px 0;background:#f5f8f5}@media print{body{background:#fff;font-size:10.5pt}main{max-width:none;margin:0;padding:0}table{font-size:8.5pt}tr{break-inside:avoid}}</style></head><body><main><h1>Dynamics Atlas 完整计划表（截至 2026-09-10，汇报用）</h1><nav class="toc"><a href="#s1">一、按最初目标看进度</a><a href="#s2">二、时间线（只留改变判断的节点）</a><a href="#s3">三、今天汇报够不够：够，但要按下面的口径讲</a><a href="#s4">四、下一步总表（一次授权，Codex 自动推进）</a></nav>
+<p>一句主线：<strong>我们要从异质蛋白动力学资料得到有用、可复核、不过度的科学回答；Rules Table 是为此提出的一种方法，现在已经在真实数据上试过一轮，科学回答拿到了，方法本身的价值还没证明。</strong> 下面每一行都回到最初的四个目标（G1–G4）上说清楚：做了什么、证据在哪、下一步是什么、谁来定。</p>
+<h2 id="s1">一、按最初目标看进度</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>当初要做什么</th>
+<th>已完成（证据）</th>
+<th>进行中 / 未完成</th>
+<th>下一步</th>
+<th>停止条件</th>
+<th>谁决定</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>G1 可靠性科学</strong>：说清哪些 ensemble 量可信</td>
+<td>在明确表示、条件、时间语义、统计单位后回答具体问题</td>
+<td><strong>HSP90</strong>：闭合起始 20 条中 10 条在 1 μs 内出现持续开放方向（5 条几乎一开始就开、5 条先闭后开），开放起始 0 条反向；原生 NOE 对照：1 Å 容差下这 10 条里 9 条仍同时偏离两套 NOE 参照，只有 ES04、ES15 进入开放参照带（对应论文&quot;almost compatible&quot;，不是到达开态）。证据：PR #27 <code>review/hsp90_q01-round-20260910/</code>，<code>v4_native_noe/</code></td>
+<td>原生读数支持&quot;近闭 / 漂离两者皆非 / 趋开&quot;三类描述，比双读出符号规则更接近论文的 7/9/4，尚未按预注册阈值正式做</td>
+<td>一次预注册的小步骤：三类阈值先定死，做逐轨迹三类表，不为凑 7/9/4 调阈值</td>
+<td>阈值一旦调整即停并记录</td>
+<td>PM</td>
+</tr>
+<tr>
+<td><strong>G2 跨模态 landscape</strong>：公平比较不同来源</td>
+<td>识别 shared / unique / unresolved 区域</td>
+<td>HSP90 的 MD 派生量与 NMR 结构参照、作者 NOE 违例序列已在同一张逐帧表上对齐（40 条 × 1001 点）</td>
+<td>覆盖题（PCA 投影只有投影没有坐标矩阵）、收敛题停放</td>
+<td>只在 G1 的三类表做完后再决定是否开覆盖题</td>
+<td>缺坐标与变换矩阵即不做</td>
+<td>PM</td>
+</tr>
+<tr>
+<td><strong>G3 可复用 workflow</strong>：换数据能复跑</td>
+<td>固化方法、输入、参数、来源、执行与审核</td>
+<td><strong>DHFR</strong> 一轮证明流程可以换数据复用：下载 1.02 GB 作者沉积轨迹、两次普通 Agent、核对、汇报包；科学结果：4′-DTMP 比 TMP 更靠近 M20 环与 R28（O4P/O5P），WT 与 L28R 都成立，每条件一条轨迹（n=1，MD 单一来源）</td>
+<td>DHFR 建包在冻结前漏了坐标周期性检查，Agent 拿到带假大距离的表；成果只在本机，未入库推送。<strong>ADK</strong> 只有盘点，数据 1.37 GB 可下</td>
+<td>先把 DHFR 入库并补边界句；ADK 按&quot;冻结前物理语义硬门&quot;重做建包，两次普通 Agent，三体系总记录</td>
+<td>5 个工作日、ADK ≤ $0.15、追加下载 ≤ 1.5 GB；物理硬门两次不过即停</td>
+<td>PM 授权 8–10</td>
+</tr>
+<tr>
+<td><strong>G4 有限 Agent 自动化</strong>：Agent 能否减少整理成本而不增加不安全 claim</td>
+<td>在冻结基线上检验 Agent，Rules 是其中一种约束方法</td>
+<td>12 次开发运行（9/9）+ HSP90 四次（9/10）+ DHFR 两次：Agent 能自主读表、算数、交答复；HSP90 四份里三份主计数对、一份混阈值；DHFR 两份都没识别输入缺陷。<strong>Rules</strong>：规则提示把 FRET 专用条件带进了答复，选择器把通用检查绑到了带专用条件的原条款上；渲染层已修，未重测</td>
+<td>Rules 增益未建立，也未被否定；自动扩展已按预定规则暂停</td>
+<td>不重跑同题求胜负；ADK 只跑普通 Agent；Rules 是否重测由三体系结果后 PM 决定</td>
+<td>任一轮出现为好看重跑、改评分、补造答复即判无效</td>
+<td>PM</td>
+</tr>
+<tr>
+<td><strong>治理与交付</strong></td>
+<td>对外可读、可批评</td>
+<td>进度报告（10 页 deck）、HSP90 报告（12 页）、NOE 对照（7 页）、DHFR（9 页）、每周五自动一页周报</td>
+<td>8/25–9/04 两周只有内部产物；DHFR 未推送；无领域专家独立评审</td>
+<td>每轮结束必须过汇报包检查并推送；每周五一页对外更新</td>
+<td>没有交付物不出新版计划</td>
+<td>Codex 执行，PM 看</td>
+</tr>
+</tbody></table></div>
+<h2 id="s2">二、时间线（只留改变判断的节点）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>节点</th>
+<th>得到了什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>07-25 → 07-30</td>
+<td>HSP90 数据接入、v1 科学分析、时间解剖</td>
+<td>逐帧派生量、三阈值方向表；两处文档差异（力场、帧数）分别保留</td>
+</tr>
+<tr>
+<td>07-28、08-24</td>
+<td>与 Soojung 两次会</td>
+<td>先把已有 HSP90 讲清楚；原型先小后大；HSP90、DHFR、ADK 为候选，不同时做</td>
+</tr>
+<tr>
+<td>08-05 → 08-16</td>
+<td>Rules Table v0.1（12 篇论文 33 条）、选择器、Pro 审查</td>
+<td>条款可追溯到文献；数量不等于正确率</td>
+</tr>
+<tr>
+<td>08-25 → 09-04</td>
+<td>原型、PR #1–#24、基准、交接</td>
+<td>工程证据积累快，对外叙事停滞</td>
+</tr>
+<tr>
+<td>09-09</td>
+<td>12 次 Luna 开发运行</td>
+<td>Agent 能算；交付会被覆盖；有限检查防不住具体错误</td>
+</tr>
+<tr>
+<td>09-09 → 09-10</td>
+<td>计划 v1 → v3.4（Pro 三轮）</td>
+<td>缩到一题四答复，评分独立于规则，自动判定与停止线</td>
+</tr>
+<tr>
+<td>09-10</td>
+<td>HSP90 首轮四次运行（45 分钟，$0.076）</td>
+<td>5/5/10 分区；A1 B1 B2 对、A2 错；规则专用条件迁移；暂停扩展</td>
+</tr>
+<tr>
+<td>09-10</td>
+<td>v4：进度报告、首轮收口、NOE 对照、渲染修复</td>
+<td>&quot;出现开放方向 ≠ 接近开态&quot;；两条进入开放参照带</td>
+</tr>
+<tr>
+<td>09-10</td>
+<td>DHFR 一轮（$0.032，1.02 GB）</td>
+<td>4′-DTMP 更近 M20 环；冻结前漏了周期性检查</td>
+</tr>
+<tr>
+<td>下一步</td>
+<td>DHFR 入库 → ADK → 三体系总记录</td>
+<td>见收官令</td>
+</tr>
+</tbody></table></div>
+<h2 id="s3">三、今天汇报够不够：够，但要按下面的口径讲</h2>
+<p><strong>结论：足够做一次组会进度汇报。</strong> 有两项经过独立复算的 HSP90 科学结果、一项有边界的 DHFR 结果、一个关于 Rules 的具体发现、四份现成 deck。不够的地方要明说，不要藏。</p>
+<h3>15 分钟的页序（全部从现成 deck 抽，不用新做）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>页</th>
+<th>来源 deck</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>进度 deck 1</td>
+<td>Dynamics Atlas: a scientific answer comes first</td>
+</tr>
+<tr>
+<td>2</td>
+<td>进度 deck 2</td>
+<td>The goal: connect evidence to a bounded answer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>进度 deck 4</td>
+<td>The path: data → rules → agent answers</td>
+</tr>
+<tr>
+<td>4</td>
+<td>HSP90 deck 3</td>
+<td>We ask whether closed-seeded trajectories show opening</td>
+</tr>
+<tr>
+<td>5</td>
+<td>进度 deck 6</td>
+<td>Half show open direction, through two different histories</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HSP90 deck 8</td>
+<td>A sustained open segment is not the same as a transition</td>
+</tr>
+<tr>
+<td>7</td>
+<td>NOE deck 1</td>
+<td>Open direction does not guarantee near-open NOE agreement</td>
+</tr>
+<tr>
+<td>8</td>
+<td>NOE deck 6</td>
+<td>Two closed-start traces enter the open-start reference band</td>
+</tr>
+<tr>
+<td>9</td>
+<td>HSP90 deck 9</td>
+<td>Three answers recover the counts; one confuses thresholds</td>
+</tr>
+<tr>
+<td>10</td>
+<td>HSP90 deck 10</td>
+<td>Selected rules carried method conditions into the wrong context</td>
+</tr>
+<tr>
+<td>11</td>
+<td>DHFR deck 5</td>
+<td>六项指定环区比较均显示 4′-DTMP 更近（讲明 n=1、MD 单一来源、流程复用测试）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>DHFR deck 4</td>
+<td>存储坐标的大距离主要来自周期性包装（讲成&quot;建包流程的教训&quot;）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>进度 deck 9</td>
+<td>The bottleneck: turn work into usable delivery</td>
+</tr>
+<tr>
+<td>14</td>
+<td>新加一页（用本表第一节）</td>
+<td>按 G1–G4 的下一步与需要决定的事</td>
+</tr>
+</tbody></table></div>
+<h3>可以说的话</h3>
+<ul>
+<li>HSP90 闭合起始一半轨迹在 1 μs 内出现持续开放方向读数，开放起始零条反向；这是派生判据下的方向不对称。</li>
+<li>原生 NOE 对照表明多数&quot;开放方向&quot;片段仍未接近开态定义，只有两条进入开放参照带；与论文&quot;almost compatible&quot;一致。</li>
+<li>Agent 能自主完成真实计算并交付答复；四份里三份主计数正确。</li>
+<li>规则提示存在具体的方法适用性问题：通用检查被绑到带 FRET 专用条件的条款上。这是本轮对 Rules 最有价值的发现。</li>
+<li>同一流程换到 DHFR 数据能复跑，得到一个有边界的局部接触结果。</li>
+</ul>
+<h3>不能说的话</h3>
+<ul>
+<li>不说&quot;Rules 有效&quot;或&quot;Rules 无效&quot;；说&quot;增益未建立，问题已定位&quot;。</li>
+<li>不说&quot;复现了论文的 7/9/4&quot;；说&quot;方向相容，统计对象不同&quot;。</li>
+<li>不说 DHFR 是跨来源结果；它是 MD 单一来源、每条件一条轨迹的复用测试，且科学数字是开发者修正后算的。</li>
+<li>不说&quot;已经过独立评审&quot;；目前只有开发者核对与 Pro 的咨询审阅。</li>
+<li>不说 ADK 已做；只有盘点。</li>
+</ul>
+<h3>汇报前要做的两件小事</h3>
+<ol>
+<li>把 DHFR 推送到 PR #27（收官令第 1 步），否则链接点不开。</li>
+<li>第 14 页用本表第一节做一张&quot;目标 × 下一步 × 谁决定&quot;的表。</li>
+</ol>
+<h2 id="s4">四、下一步总表（一次授权，Codex 自动推进）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>做什么</th>
+<th>天</th>
+<th>费用 / 下载</th>
+<th>完成证据</th>
+<th>停止条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>DHFR 入库、补边界句、更新状态面板</td>
+<td>0.5</td>
+<td>0</td>
+<td>PR #27 <code>review/dhfr_q01-round-20260910/</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ADK 建包：下载 Zenodo 5583119（1.37 GB），冻结前物理语义硬门（帧数、盒子与周期性、单位、原子映射、条件对应）</td>
+<td>1.5</td>
+<td>≤ 1.5 GB</td>
+<td><code>PREFREEZE_PHYSICAL_CHECK.json</code> 全 PASS，<code>FREEZE.json</code> 早于首份答复</td>
+<td>硬门两次不过即停</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADK 两次普通 Agent、核对、独立复算、汇报包、入库</td>
+<td>2</td>
+<td>≤ $0.15</td>
+<td><code>independent_recompute.json</code>、<code>report_bundle_check.py</code> PASS</td>
+<td><code>UNKNOWN_CHARGE</code> 即停</td>
+</tr>
+<tr>
+<td>4</td>
+<td>三体系总记录 + 工作证据表 + 偏离自述</td>
+<td>1</td>
+<td>0</td>
+<td><code>THREE_SYSTEMS_RECORD_ZH.html</code>、<code>WORK_EVIDENCE_LEDGER.json</code>、<code>DEVIATIONS.md</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>5（之后，PM 定）</td>
+<td>HSP90 三类表（预注册）；Rules 修复后的一次重测；是否请领域专家看</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<p>授权句：<strong>&quot;授权 8–10，按 THREE_SYSTEMS_COMPLETION_ORDER_ZH.md 执行。&quot;</strong> 总预算已用 $0.108 / $0.30，下载 1.02 GB / 2 GB（ADK 追加 1.5 GB）。</p>
+</main></body></html>

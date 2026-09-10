@@ -59,3 +59,4 @@
 ## 2026-09-10：三体系收官令
 
 - [THREE_SYSTEMS_COMPLETION_ORDER_ZH.md](THREE_SYSTEMS_COMPLETION_ORDER_ZH.md)：现状表（HSP90 两轮完成、DHFR 一轮完成未入库、ADK 只有盘点）、偏离审查、授权 8–10、DHFR 入库 → ADK 建包（冻结前物理硬门）→ 两次普通 Agent → 三体系总记录 + 工作证据表与红旗清单。
+- [DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md](DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md)（[HTML](DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.html)）：按 G1–G4 的完整计划表、时间线、今天汇报的 14 页页序与可说/不可说清单、下一步总表。
