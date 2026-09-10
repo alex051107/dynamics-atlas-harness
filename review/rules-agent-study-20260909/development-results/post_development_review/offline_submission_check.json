@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "actual submission handler under mocked network and container; not a model rerun",
+  "checks": [
+    "ordinary confirmation preserves explicit answer and claims",
+    "explicit valid shorter revision replaces prior answer without quality ranking",
+    "empty malformed or missing claim records preserve last valid result and do not pass a check",
+    "token and wall-clock limits preserve answer while recording incomplete termination",
+    "unmatched explicit target is unverified, never whole-answer pass"
+  ],
+  "saved_event_replays": [
+    {
+      "run_id": "T4L_B_3ee1d874",
+      "original_final_characters": 660,
+      "retained_submission_characters_in_replay": 4066,
+      "retained_claims_in_replay": 8,
+      "original_files_modified": false
+    },
+    {
+      "run_id": "T4L_C_be4d6c40",
+      "original_final_characters": 209,
+      "retained_submission_characters_in_replay": 3707,
+      "retained_claims_in_replay": 7,
+      "original_files_modified": false
+    }
+  ],
+  "real_model_calls": 0,
+  "real_scientific_calculations": 0,
+  "campaign_closed": true,
+  "historical_run_statuses_unchanged": true
+}

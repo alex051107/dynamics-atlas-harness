@@ -1,0 +1,97 @@
+--- executed/runtime/agent_run.py
++++ maintenance/runtime/agent_run.py
+@@ -1,4 +1,8 @@
+-"""One isolated development session. Sequential batch; no case-specific action plan."""
++"""Offline maintenance candidate. The completed development campaign is closed.
++
++The executed version is preserved under outputs/post_development_review/before.
++This candidate has not been evaluated by another live model session.
++"""
+ import json,subprocess,time,urllib.request,urllib.error,uuid,argparse,fcntl,os
+ from pathlib import Path
+ from finite_checks import check
+@@ -24,6 +28,21 @@
+                 if p.get('type')=='image_url':estimate+=12000-len(p['image_url']['url'].encode())
+     return estimate
+ 
++def submission_error(a):
++    """Validate delivery structure only; never rank scientific answer quality."""
++    if not isinstance(a,dict) or not isinstance(a.get('answer'),str) or not a['answer'].strip():
++        return 'submit requires a nonempty answer string'
++    claims=a.get('claims')
++    if not isinstance(claims,list) or not claims or any(not isinstance(c,dict) or not isinstance(c.get('text'),str) or not c['text'].strip() for c in claims):
++        return 'submit requires at least one claim record with nonempty text; unknown scientific fields may remain empty'
++    return None
++
++def fitting_check_scope(claims,facts):
++    """Report only structured matching coverage, never whole-answer acceptance."""
++    targets=[c for c in claims if c.get('type')=='conclusion' and c.get('polarity')=='affirmative' and c.get('evidence_role')=='independent_validation']
++    matched=sum(any(f.get('relation')=='used_in_fitting' and all(c.get(k) and c.get(k)==f.get(k) for k in ('result_id','observation_subset','analysis_id')) for f in facts) for c in targets)
++    return {'scope':'source-indexed fitting overlap only','structured_targets':len(targets),'matched_fitting_relations':matched,'unverified_targets':len(targets)-matched,'status':'matched_fitting_conflict' if matched else ('no_matching_public_relation' if targets else 'no_applicable_structured_claim'),'whole_answer_scientifically_validated':False}
++
+ def main():
+     ap=argparse.ArgumentParser();ap.add_argument('case');ap.add_argument('arm',choices=['A','B','C']);ap.add_argument('--image',required=True);args=ap.parse_args()
+     lock=(ROOT/'runtime/batch.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+@@ -44,13 +63,19 @@
+         with (out/'events.jsonl').open('a') as f:f.write(json.dumps({'kind':kind,'elapsed':time.monotonic()-started,'value':v},ensure_ascii=False)+'\n')
+     def remaining():return max(0,1500-(time.monotonic()-started))
+     def accept(a):
+-        if not isinstance(a.get('answer'),str) or not isinstance(a.get('claims'),list):return {'error':'submit requires answer string and claims list'}
++        error=submission_error(a)
++        if error:
++            rejected={'error':error,'previous_submission_preserved':bool(submits),'check_status':'not_checked_invalid_submission'}
++            log('submission_rejected',rejected)
++            return rejected
+         conflicts=check(a['claims'],facts) if args.arm=='C' else []
+-        submits.append({'answer':a['answer'],'claims':a['claims'],'conflicts':conflicts});log('submission',submits[-1])
++        record={'answer':a['answer'],'claims':a['claims'],'conflicts':conflicts}
++        if args.arm=='C':record['check_scope']=fitting_check_scope(a['claims'],facts)
++        submits.append(record);log('submission',submits[-1])
+         (out/f'draft_{len(submits)}.json').write_text(json.dumps(submits[-1],ensure_ascii=False,indent=2))
+         if len(submits)==1:
+             result={'message':'One optional revision remains in the same budget. Re-submit unchanged if no revision needed.'}
+-            if args.arm=='C':result['conflicts']=conflicts
++            if args.arm=='C':result.update(conflicts=conflicts,check_scope=record['check_scope'])
+             return result
+         return {'message':'Final submission saved.'}
+     try:
+@@ -79,9 +104,9 @@
+             previous_prompt_tokens=u['prompt_tokens'];previous_message_count=len(messages)
+             m=response['choices'][0]['message'];messages.append({k:v for k,v in m.items() if k in ['role','content','tool_calls']});calls=m.get('tool_calls',[])
+             if not calls:
+-                feedback=accept({'answer':m.get('content') or '', 'claims':[]})
+-                if len(submits)>=2:status='COMPLETE';break
+-                messages.append({'role':'user','content':json.dumps(feedback)});continue
++                log('unsubmitted_message',{'content':m.get('content') or '', 'previous_submission_preserved':bool(submits)})
++                if submits:status='SUBMITTED_NO_EXPLICIT_REVISION';break
++                messages.append({'role':'user','content':'No answer has been submitted. Use the submit tool with a nonempty answer and claim records; ordinary conversation text is not a submission.'});continue
+             pending_images=[];submitted_this_batch=False
+             for tc in calls:
+                 image=None
+@@ -117,5 +142,5 @@
+         subprocess.run(['docker','rm','-f',name],capture_output=True)
+         if submits:
+             last=submits[-1];(out/'answer.md').write_text(last['answer']+ ('\n\n以下具名主张暂不受支持（其余答案保留）：\n'+'\n'.join(str(last['claims'][c['claim_index']].get('text','Claim '+str(c['claim_index'])))+' — '+c['message']+' ['+c['evidence']+']' for c in last['conflicts']) if last['conflicts'] else ''))
+-        (out/'receipt.json').write_text(json.dumps({'case':args.case,'arm':args.arm,'development_revision':1,'status':status,'model':'openai/gpt-5.6-luna','reasoning':'medium','image':args.image,'totals':totals,'wall_seconds':time.monotonic()-started,'submissions':len(submits),'check_scope':'public source-bound fitting overlap only; static-rate check inactive','unknown_charge':unknown.exists()},indent=2));print(out,status,totals,flush=True)
++        (out/'receipt.json').write_text(json.dumps({'case':args.case,'arm':args.arm,'development_revision':None,'runner_stage':'post_development_maintenance_candidate','status':status,'model':'openai/gpt-5.6-luna','reasoning':'medium','image':args.image,'totals':totals,'wall_seconds':time.monotonic()-started,'submissions':len(submits),'check_scope':'public source-bound fitting overlap only; static-rate check inactive','unknown_charge':unknown.exists()},indent=2));print(out,status,totals,flush=True)
+ if __name__=='__main__':main()
+--- executed/runtime/common_prompt.txt
++++ maintenance/runtime/common_prompt.txt
+@@ -2,4 +2,6 @@
+ 交付中文答案：结论及条件、证据位置、实际分析、未解决部分、有信息价值的下一步。submit附claims数组，每个关键主张可记录text、type(conclusion/limitation/suggestion)、polarity(affirmative/negative/unknown)、quantity、origin(author_report/current_calculation/inference)、evidence_role、result_id、observation_subset、analysis_id和evidence。字段不知道或不适用可留空，勿编造。
+ 最多40次工具调用、25分钟、累计160000输入及30000输出token，提交后至多一次预算内修订。Python单次85秒、2CPU、4GB。
+ 
++交付协议要求用submit明确提交非空正文及至少一条含非空text的主张记录，记录也可以说明未解决部分。未知科学字段仍可留空。普通确认文字不会替换已经提交的答案；明确且结构有效的新提交会替换旧稿，即使更短。程序不判断哪份科学上更好。
++
+ 公开来源目录/source中包含完整文件清单及公开事实索引，均可自行读取。需要绑定已索引结果时使用其公开ID；新计算使用自己的ID，不应冒充已发表结果。方法来源见method_sources/SOURCE_MAP.txt。
+--- executed/runtime/test_runner_offline.py
++++ maintenance/runtime/test_runner_offline.py
+@@ -9,7 +9,7 @@
+  root=Path(tmp);(root/'runtime').mkdir();(root/'outputs').mkdir();s=root/'cases/test';s.mkdir(parents=True)
+  (root/'runtime/readiness.json').write_text('{"approved_for_development":true}')
+  (s/'QUESTION.txt').write_text('test');(s/'PUBLIC_FACTS.json').write_text('[]')
+- rs=[response({'content':None,'tool_calls':[tc('i','workspace',{'kind':'image'}),tc('r','workspace',{'kind':'read'})]},0),response({'content':None,'tool_calls':[tc('s','submit',{'answer':'draft','claims':[]}),tc('d','submit',{'answer':'duplicate','claims':[]})]},1),response({'content':None,'tool_calls':[tc('f','submit',{'answer':'final','claims':[]})]},2)]
++ rs=[response({'content':None,'tool_calls':[tc('i','workspace',{'kind':'image'}),tc('r','workspace',{'kind':'read'})]},0),response({'content':None,'tool_calls':[tc('s','submit',{'answer':'draft','claims':[{'text':'fixture claim'}]}),tc('d','submit',{'answer':'duplicate','claims':[{'text':'fixture claim'}]})]},1),response({'content':None,'tool_calls':[tc('f','submit',{'answer':'final','claims':[{'text':'fixture claim'}]})]},2)]
+  requests=[]
+  def network(req,**kw):
+   requests.append(json.loads(req.data));return io.BytesIO(json.dumps(rs.pop(0)).encode())
