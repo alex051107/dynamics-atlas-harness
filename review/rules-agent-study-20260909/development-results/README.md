@@ -69,3 +69,4 @@
 - [PRO_FORM_REVIEW_PACKET_20260910/](PRO_FORM_REVIEW_PACKET_20260910/)：给 Pro 的"形式与下一步"审查包：00 提示（C1–C11、S1–S4）、01 四层设计、02 四层验证计划 v2（不限天数）、03 形式问题汇总、04 计划表、05 博文摘要、06 T4L 论文摘要、07 博文原文；论文 PDF 与 SI 在 references/03、05。
 - [WHERE_WE_ARE_ZH.html](WHERE_WE_ARE_ZH.html)：给负责人的说明书。最初的科学问题、博文与 T4L 论文带来的设计指令、已跑出的证据、四层系统最终形态、Rules Table 的归宿、当前进度、四个实验各自在证明什么。
 - [DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.html](DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.html)（[Markdown](DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.md)）：全程说明与问答。13 个阶段的逻辑表、三个转折点、四层系统与实测进展、中途纠正过的判断、合作者/方法审查/大厂面试三类问答（含英文 90 秒版本）、数字速查与术语。WHERE_WE_ARE_ZH.html 同步修正了过时进度和混用的错误计数。
+- [SOOJUNG_DISCUSSION_20260910_EN.pptx](SOOJUNG_DISCUSSION_20260910_EN.pptx)：与 Soojung 1 对 1 讨论用 deck（16 页正文 + 附录；备注含讲稿与追问预案）。计划见 [SOOJUNG_DECK_PLAN_ZH.md](SOOJUNG_DECK_PLAN_ZH.md)，中英对照讲稿见 [SOOJUNG_SPEAKER_SCRIPT_BILINGUAL.md](SOOJUNG_SPEAKER_SCRIPT_BILINGUAL.md)，生成脚本 build_soojung_deck.cjs（依赖 pptxgenjs）。
