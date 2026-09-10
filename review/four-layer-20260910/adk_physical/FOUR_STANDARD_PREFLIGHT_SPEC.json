@@ -1,0 +1,34 @@
+{
+  "frozen_before_calls": "2026-09-10T11:34:20.286013+00:00",
+  "pairs_residue_numbers": [
+    [
+      30,
+      1
+    ],
+    [
+      67,
+      115
+    ],
+    [
+      118,
+      68
+    ],
+    [
+      160,
+      214
+    ],
+    [
+      144,
+      189
+    ],
+    [
+      149,
+      188
+    ]
+  ],
+  "preset_frames": "first, floor(n/2),last; additionally ALL frames evaluated, including every extent trigger",
+  "neighbor_max_A": 4.5,
+  "crosscheck_max_abs_error_A": 0.01,
+  "extent": "record extent/L and extent/(L/2); conservative literal trigger extent/(L/2)>.5; intramolecular MIC prohibited in every case",
+  "representation": "contiguous CA chain validated; no image shifts required in these trajectories"
+}

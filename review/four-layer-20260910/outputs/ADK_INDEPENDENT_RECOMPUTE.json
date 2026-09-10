@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "method": "SciPy cdist independent implementation on original extracted CA; statistics.fmean windows; original derives numpy broadcasting",
+  "results": {
+    "open": {
+      "frames": 2253,
+      "window_n": 225,
+      "time_ns": [
+        0.0,
+        450.4
+      ],
+      "domains": {
+        "NMP": {
+          "first_mean_A": 26.215698262030003,
+          "last_mean_A": 26.28641938042394,
+          "delta_A": 0.07072111839393713,
+          "median_A": 26.63789669466775,
+          "q05_A": 25.801142801883287,
+          "q95_A": 27.419187239358198,
+          "max_table_difference_A": 0.0
+        },
+        "LID": {
+          "first_mean_A": 34.39272106287392,
+          "last_mean_A": 36.683131762367466,
+          "delta_A": 2.290410699493549,
+          "median_A": 33.568051842729716,
+          "q05_A": 30.207390604589285,
+          "q95_A": 37.4860047916693,
+          "max_table_difference_A": 0.0
+        }
+      }
+    },
+    "closed": {
+      "frames": 1678,
+      "window_n": 167,
+      "time_ns": [
+        0.0,
+        335.4
+      ],
+      "domains": {
+        "NMP": {
+          "first_mean_A": 25.252348631804583,
+          "last_mean_A": 26.343243475931413,
+          "delta_A": 1.0908948441268294,
+          "median_A": 26.036330238177126,
+          "q05_A": 25.100163123747286,
+          "q95_A": 26.85934384701614,
+          "max_table_difference_A": 0.0
+        },
+        "LID": {
+          "first_mean_A": 30.23082988063092,
+          "last_mean_A": 31.40725109926365,
+          "delta_A": 1.1764212186327292,
+          "median_A": 30.63805144423395,
+          "q05_A": 28.935502144042836,
+          "q95_A": 33.267244506686815,
+          "max_table_difference_A": 0.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "time": "2026-09-10T11:38:15.280006+00:00",
+  "rule": "globalmaximum pair in each within-domain and interdomain block, before gmx call; allframes for each selected pair",
+  "extremes": {
+    "CORE_CORE": {
+      "max_A": 43.74049022748721,
+      "frame": 1177,
+      "residues": [
+        75,
+        114
+      ]
+    },
+    "NMP_NMP": {
+      "max_A": 25.09348496938895,
+      "frame": 5,
+      "residues": [
+        30,
+        55
+      ]
+    },
+    "LID_LID": {
+      "max_A": 47.9115828080085,
+      "frame": 2200,
+      "residues": [
+        118,
+        144
+      ]
+    },
+    "CORE_NMP": {
+      "max_A": 51.93959289711157,
+      "frame": 1584,
+      "residues": [
+        114,
+        43
+      ]
+    },
+    "CORE_LID": {
+      "max_A": 71.17227073908275,
+      "frame": 2125,
+      "residues": [
+        214,
+        144
+      ]
+    },
+    "NMP_LID": {
+      "max_A": 68.6518793349113,
+      "frame": 1267,
+      "residues": [
+        43,
+        148
+      ]
+    }
+  }
+}

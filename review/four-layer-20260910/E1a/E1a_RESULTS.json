@@ -1,0 +1,337 @@
+{
+  "time": "2026-09-10T11:38:35.554610+00:00",
+  "results": [
+    {
+      "status": "PASS",
+      "flags": [],
+      "details": [
+        {
+          "file": "data/frame_state_assignments.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "clean_HSP90",
+      "is_planted_defect": false
+    },
+    {
+      "status": "PASS",
+      "flags": [],
+      "details": [
+        {
+          "file": "data/d4tmpp-l28r_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/d4tmpp-wt_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/tmpp-l28r_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/tmpp-wt_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "clean_DHFR",
+      "is_planted_defect": false
+    },
+    {
+      "status": "PASS",
+      "flags": [],
+      "details": [
+        {
+          "file": "data/closed_domain_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/open_domain_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "clean_ADK",
+      "is_planted_defect": false
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "observable_differs_from_validated_representation"
+      ],
+      "details": [
+        {
+          "file": "data/d4tmpp-l28r_distances.tsv",
+          "flags": [
+            "observable_differs_from_validated_representation"
+          ],
+          "max_absolute_discrepancy_A": 87.89640099,
+          "columns_above_tolerance": 33
+        },
+        {
+          "file": "data/d4tmpp-wt_distances.tsv",
+          "flags": [
+            "observable_differs_from_validated_representation"
+          ],
+          "max_absolute_discrepancy_A": 57.26331943,
+          "columns_above_tolerance": 24
+        },
+        {
+          "file": "data/tmpp-l28r_distances.tsv",
+          "flags": [
+            "observable_differs_from_validated_representation"
+          ],
+          "max_absolute_discrepancy_A": 86.70758783,
+          "columns_above_tolerance": 33
+        },
+        {
+          "file": "data/tmpp-wt_distances.tsv",
+          "flags": [
+            "observable_differs_from_validated_representation"
+          ],
+          "max_absolute_discrepancy_A": 64.96259570999999,
+          "columns_above_tolerance": 24
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_1",
+      "is_planted_defect": true
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "unit"
+      ],
+      "details": [
+        {
+          "file": "data/closed_domain_distances.tsv",
+          "flags": [
+            "unit"
+          ],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/open_domain_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_2",
+      "is_planted_defect": true
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "frame_count"
+      ],
+      "details": [
+        {
+          "file": "data/closed_domain_distances.tsv",
+          "flags": [
+            "frame_count"
+          ],
+          "max_absolute_discrepancy_A": null,
+          "columns_above_tolerance": null
+        },
+        {
+          "file": "data/open_domain_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_3",
+      "is_planted_defect": true
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "time_order",
+        "time_source_alignment"
+      ],
+      "details": [
+        {
+          "file": "data/closed_domain_distances.tsv",
+          "flags": [
+            "time_order",
+            "time_source_alignment"
+          ],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/open_domain_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_4",
+      "is_planted_defect": true
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "condition"
+      ],
+      "details": [
+        {
+          "file": "data/d4tmpp-l28r_distances.tsv",
+          "flags": [
+            "condition"
+          ],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/d4tmpp-wt_distances.tsv",
+          "flags": [
+            "condition"
+          ],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/tmpp-l28r_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        },
+        {
+          "file": "data/tmpp-wt_distances.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_5",
+      "is_planted_defect": true
+    },
+    {
+      "status": "FAIL",
+      "flags": [
+        "evidence_role"
+      ],
+      "details": [
+        {
+          "file": "data/frame_state_assignments.tsv",
+          "flags": [],
+          "max_absolute_discrepancy_A": 0.0,
+          "columns_above_tolerance": 0
+        }
+      ],
+      "checks": [
+        "object_conditions",
+        "time_semantics",
+        "statistical_unit",
+        "observation_window",
+        "evidence_role",
+        "candidate_pool_lineage",
+        "physical_source_consistency"
+      ],
+      "scope": "Verified source-consistency; no biological validity claim; missing authorities are execution error, not automatic PASS",
+      "packet": "defect_6",
+      "is_planted_defect": true
+    }
+  ],
+  "clean_falsepositives": 0,
+  "caught": 6,
+  "defects": 6,
+  "real_defect_caught": true,
+  "code_criterion": "MET",
+  "agent_behavior_not_tested": true
+}
