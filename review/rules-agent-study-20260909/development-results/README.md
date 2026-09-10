@@ -49,3 +49,9 @@
 
 - [POST_RUN_REPORTING_PROTOCOL_ZH.md](POST_RUN_REPORTING_PROTOCOL_ZH.md)：跑完自动出报告的协议。轮末：PM 简报 HTML + 深度读本 HTML/PDF + 组会 slides PPTX + 索引；停止：只出停止简报；周末：一页周报。指定 skill 顺序（atlas-science-report → plain-project-reporting-zh / storytelling-narrative → academic-pptx → academic-ppt / data-visualization → nature-figure → matplotlib / human-writing → humanizer-zh-plus），明确不用 weekly-report、scholar-slides、nature-paper2ppt。
 - [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：v3.4 = v3.3 + §15 汇报协议；每轮加 1 天汇报，HSP90 首轮上限 8 天，总停止线 21 天不变。
+
+## 2026-09-10：首轮结果的本机审查 → v4 计划 + 报告写作指南
+
+- [REVIEW_HSP90_ROUND1_LOCAL_ZH.md](REVIEW_HSP90_ROUND1_LOCAL_ZH.md)：对 PR #27 `3ba975e` 的独立审查。用冻结源表重算全部计数（一致）；row 3 动作保留、理由改；补出 5/5/10 分区表；核出 §15 汇报包缺失、REPLAY/HTML/STATUS 未更新、论文关系表为模板、凭证启动例外；确认作者 NOE 违例序列在本机。
+- [HSP90_ROUND2_PLAN_V4_ZH.md](HSP90_ROUND2_PLAN_V4_ZH.md)：接首轮之后的执行计划。A0 进度报告 → A 首轮收口 → B 派生方向 vs 原生 NOE 对照（本机数据，预注册规则）→ C 规则渲染层窄修复 → D 第二体系普通 Agent。一次授权 1–7，15 个工作日 / $0.30 / 2 GB。
+- [REPORT_WRITING_GUIDE_ZH.md](REPORT_WRITING_GUIDE_ZH.md)：怎样写逻辑严密、别人看得懂的报告：一句主线、五拍结构、固定骨架、段落写法、边界句、deck 写法、冷读检查、项目时间线骨架、节奏规则。
