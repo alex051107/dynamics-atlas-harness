@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我们在做什么，现在到哪了</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f2f4f2;color:#1f2d2a;font:17px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}
+main{max-width:960px;margin:0 auto;padding:48px 60px;background:#fff;min-height:100vh}
+.brand{font-size:12px;letter-spacing:.12em;color:#6b7d73;margin-bottom:8px}
+h1{font-size:32px;line-height:1.35;margin:0 0 8px}
+.sub{color:#5d6f66;font-size:15px;margin-bottom:32px}
+h2{font-size:24px;line-height:1.4;border-top:1px solid #dbe4de;padding-top:26px;margin:46px 0 18px}
+h3{font-size:19px;margin:30px 0 12px}
+p{margin:0 0 16px}
+.lead{font-size:19px;line-height:1.85;background:#eef4ef;border-left:4px solid #2f7355;padding:18px 22px;margin:0 0 32px}
+.lead strong{color:#1d5c40}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.7;margin:18px 0}
+th,td{padding:10px 11px;border-bottom:1px solid #dbe4de;vertical-align:top;text-align:left}
+th{background:#eef4ef;font-weight:600}
+.tw{overflow-x:auto}
+.layers{display:grid;gap:12px;margin:24px 0}
+.layer{display:grid;grid-template-columns:92px 1fr;gap:16px;border:1px solid #cfded6;border-radius:6px;padding:14px 16px;background:#fbfdfb}
+.layer .tag{font-weight:700;color:#1d5c40;font-size:15px;line-height:1.5}
+.layer .tag small{display:block;font-weight:400;color:#6b7d73;font-size:12px}
+.layer .body{font-size:15px;line-height:1.75}
+.layer .body b{color:#1d5c40}
+.who{display:inline-block;font-size:12px;background:#e3ede7;color:#2f5f4a;padding:2px 8px;border-radius:3px;margin-right:6px}
+.who.agent{background:#fdf0e0;color:#8a5a1c}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;margin:20px 0;padding:16px;background:#f6f9f7;border:1px solid #dbe4de;border-radius:6px}
+.flow span{background:#fff;border:1px solid #cfded6;padding:7px 12px;border-radius:4px}
+.flow span.hi{background:#fdf0e0;border-color:#e8c99b}
+.flow i{color:#8fa89b;font-style:normal}
+.status{display:grid;gap:8px;margin:20px 0}
+.status div{display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:15px;padding:9px 12px;border-radius:4px}
+.done{background:#eaf4ee}
+.doing{background:#fdf6e8}
+.todo{background:#f4f5f4;color:#5d6f66}
+.status b{font-size:13px;letter-spacing:.04em}
+blockquote{border-left:3px solid #a8c3b4;padding:8px 20px;margin:20px 0;background:#f6f9f7;color:#33574a}
+.note{font-size:14px;color:#5d6f66;background:#f6f7f6;padding:12px 16px;border-radius:4px;margin:16px 0}
+footer{border-top:1px solid #dbe4de;margin-top:52px;padding-top:18px;color:#6b7d73;font-size:13px}
+code{font-size:.86em;background:#eef2ef;padding:1px 5px;border-radius:3px}
+ul{margin:0 0 16px;padding-left:22px}li{margin-bottom:8px}
+@media(max-width:680px){main{padding:26px 20px}h1{font-size:26px}.layer,.status div{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<div class="brand">DYNAMICS ATLAS · 2026-09-10</div>
+<h1>我们在做什么，现在到哪了</h1>
+<div class="sub">写给项目负责人。从最初的科学问题讲到今天的进度，不用系统内部名词。</div>
+
+<div class="lead">
+<strong>一句话：</strong>我们要解决的是"同一个蛋白的不同实验和模拟数据，到底能一起回答什么问题"。Rules Table 是为此提出的一种办法，现在已经知道它不该是一张塞给 AI 的提示文本，而应该拆成四件事，其中大部分是代码和模板，不是文字。我们正在逐件测这四件事有没有用；<strong>不是在证明 AI 有用</strong>。
+</div>
+
+<h2>1. 最初要解决什么问题</h2>
+
+<p>蛋白质会动。同一个蛋白在不同时刻是不同形状，这些形状加上各自出现的概率，叫构象系综。研究者手上常常同时有：分子动力学模拟给出的原子坐标随时间变化，核磁共振给出的原子间距离约束，散射实验给出的整体形状信号，荧光实验给出的两点距离。</p>
+
+<p>困难在于这些资料看的是不同侧面。模拟给的是每一帧的真实几何；实验给的是受结构影响的信号，要通过一个测量模型反推。两份数据都写着"距离"，探针、平均方式和误差定义可能完全不同。</p>
+
+<p>所以同一个"这个蛋白是不是更倾向于闭合"的问题，其实是三个难度不同的问题：</p>
+
+<div class="tw"><table>
+<tr><th>想知道什么</th><th>需要什么证据</th></tr>
+<tr><td>是否出现过闭合形状</td><td>结构几何，加上一个说得清的开/闭定义</td></tr>
+<tr><td>闭合形状占多大比例</td><td>有代表性的采样或实验约束，加上恰当的权重推断</td></tr>
+<tr><td>开合转换有多快</td><td>时间信息、足够多的转换事件、适合估速率的方法</td></tr>
+</table></div>
+
+<p>一个没有时间顺序的结构列表可以找相似形状，但列表里某种形状多，不等于它在真实样品里比例高。项目的四个目标就是围绕这个展开的：</p>
+
+<ul>
+<li><b>G1</b> 说清哪些量可信、哪些不可信。</li>
+<li><b>G2</b> 公平比较不同来源看到的构象空间。</li>
+<li><b>G3</b> 把有效的分析过程固化成别人能复跑的流程。</li>
+<li><b>G4</b> 在前三个有了冻结基线之后，才检验 AI 助手能不能降低整理成本而不增加不安全的结论。</li>
+</ul>
+
+<div class="note"><b>关键：</b>G4 是最后一个，而且是允许独立失败的假设。"AI 有没有用"从来不是这个项目的父目标，它是四个目标里排最后的那个。</div>
+
+<h2>2. 那篇博文和那篇论文改变了什么</h2>
+
+<h3>博文《Are We Capturing the Ensemble?》</h3>
+
+<p>作者纠正了两种相反的错觉：一种是看到冷冻电镜图里模糊的区域，就当成"这里有系综"的证据；另一种是因为 X 射线衍射是很多分子的平均，就断定它不能约束系综。两者犯的是同一个错——从最终图像的样子去猜实验能告诉我们什么。</p>
+
+<blockquote>作者提出的正确问法：<b>经过测量和后续处理之后，分子分布之间的哪些差异还能被区分出来？</b></blockquote>
+
+<p>三个具体认识：</p>
+
+<ul>
+<li><b>平均发生在信号空间，不是构象空间。</b>两个构象各自产生的信号按比例相加，不等于把两个构象几何平均之后再算信号。所以平均实验仍然能分别约束多个状态，"平均"不等于"只知道一个平均结构"。</li>
+<li><b>处理会第二次丢信息。</b>筛选、分类、共识重建都可能把群体差异抹掉。信息在两处流失：分布变成测量时，测量变成处理后数据时。</li>
+<li><b>"系综分辨率"不是一个数。</b>比例不同、有没有稀有态、两个部位是否协同运动，是三种不同的差异；一份数据可能分得清一种而对另一种完全失明。</li>
+</ul>
+
+<p>我们自己就撞上过这件事：HSP90 用两个差值读数的符号判断"开放方向"，这一步处理丢掉了绝对吻合度，所以"出现开放方向"根本分不出"接近开态"。后来用作者沉积的核磁违例绝对值才分得出来。</p>
+
+<h3>那篇 T4 溶菌酶论文</h3>
+
+<p>作者用生成式 AI 产生的构象当种子，再跑分子动力学，最后采到了四个状态，占比和物理增强采样接近。最扎实的贡献是：<b>起始结构的选择决定了有限时间内能采到什么</b>。但要分开读的边界也很清楚——进入四个区域不等于恢复了四个实验确认的状态，占比"大体接近"不等于定量一致，单一荧光对照只验证了一个信号特征。</p>
+
+<h3>两篇合起来给我们的设计指令</h3>
+
+<blockquote>先确定当前这份数据承担的是候选生成、采样启动、概率预测还是实验解释哪一种角色；再问"我们要区分的那个差异，是否还留在可用的证据里"；<b>然后</b>才选推断方法。</blockquote>
+
+<p>这句话直接决定了系统该长什么样：真正要管住的不是"AI 有没有读过注意事项"，而是<b>问题问得对不对、数据进来时干不干净、算法用得对不对、结论说得过不过头</b>。</p>
+
+<h2>3. 我们自己跑出来的证据</h2>
+
+<div class="tw"><table>
+<tr><th>观察到的事实</th><th>它说明什么</th></tr>
+<tr><td>HSP90 四份答复：三份主计数正确，一份把不同阈值的结果混在一起、零次计算</td><td>AI 能真的读表、算数、交答案，但也会犯可定位的错</td></tr>
+<tr><td>加了规则提示的两份，把荧光实验专用的前提条件（染料几何、校准参数）当成本题必填带进了核磁问题的答复</td><td>把整段规则贴进提示，会引入不适用的条件，这是提示形式本身的害处</td></tr>
+<tr><td>DHFR 两份答复都没发现输入表里有 60 到 90 Å 的假距离（周期性边界造成），其中一份还用"构象切换"解释这个长尾</td><td>输入数据有物理错误时，再多提醒也救不回来；这是数据进来那一步的问题</td></tr>
+<tr><td>回溯已发生的 13 处错误：提示文字能防住 0 处，代码能防 5 处，问题拆得更清楚能防 2 处</td><td>规则的价值不在"给 AI 看"，在"变成代码执行"</td></tr>
+</table></div>
+
+<h2>4. 所以系统最后应该长什么样</h2>
+
+<p>不是一个规则引擎。33 条规则其实是四种性质完全不同的知识，各自该在流程的不同位置起作用：</p>
+
+<div class="layers">
+<div class="layer"><div class="tag">A 框题<small>6 条规则</small></div><div class="body">
+<span class="who">人 + 模板</span><b>这道题要区分的到底是哪种差异？</b>覆盖、比例、实验预测、机制，要分成四个子问题分别问。竞争解释由人来定。<br>产物是题目本身和评分依据，<b>不给 AI 看</b>。
+</div></div>
+
+<div class="layer"><div class="tag">B 准入<small>10 条规则</small></div><div class="body">
+<span class="who">代码，冻结之前</span><b>这份数据能不能回答这个问题？</b>对象和条件对得上吗、时间语义是什么、统计单位是什么、这份数据是用来拟合还是验证、坐标物理上合理吗。<br>输出一张"准入卡"；不通过就不许冻结，更不许开跑。DHFR 那次事故就卡在这一层。
+</div></div>
+
+<div class="layer"><div class="tag">C 分析<small>11 条规则</small></div><div class="body">
+<span class="who agent">唯一给 AI 看的一层</span><b>这类数据该怎么算？</b>前向模型、平均律、重加权的先验和正则、误差分解。<br>按方法族检索，每张卡不超过十行，带来源和适用范围。做核磁的题就不会拿到荧光的卡。
+</div></div>
+
+<div class="layer"><div class="tag">D 结论<small>6 条规则</small></div><div class="body">
+<span class="who">代码，提交之后</span><b>这个结果能说到哪？</b>帧数不能直接变成占比，拟合吻合不能变成独立验证，几何接近不能变成状态判定。<br>提交后检查一次并反馈，AI 可以修订一次；同时决定报告里的允许措辞。
+</div></div>
+</div>
+
+<div class="flow">
+<span>人定要区分什么</span><i>→</i><span>代码查数据合不合格</span><i>→</i><span class="hi">AI 拿方法卡去分析</span><i>→</i><span>代码查结论过不过头</span><i>→</i><span>人审科学结果</span>
+</div>
+
+<p>真正的数值计算由成熟方法完成（重加权、贝叶斯推断这些已有工具），不由规则完成。规则负责的是"什么条件下该用它、结果能承担什么解释"。</p>
+
+<h2>5. 那 Rules Table 最后的作用是什么</h2>
+
+<p>它变成一份<b>有来源的文献知识账本</b>，不是运行时的收费站。具体分成三张：论文事实、有来源的候选规则、可以重建的检索索引。每条规则记录的是"适用条件、科学理由、对应方法、结论边界"四句话，而不是编号加通过与否。</p>
+
+<p>四层里哪几层被证明有用，就落成对应的代码或模板；没被证明有用的，留在账本里当文献索引和检查清单。<b>你花几个月整理的东西不会白费</b>——最坏的情况下它也是一份可追溯到原文的方法学清单，最好的情况下其中两三层进入系统天天在跑。</p>
+
+<h2>6. 现在到了哪一步</h2>
+
+<div class="status">
+<div class="done"><b>已完成</b><span>三个蛋白的科学交付：HSP90（两轮，含与作者核磁数据的对照）、DHFR（一轮）、ADK（一轮）。这些是真的科学结果，与测试无关，本身有价值。</span></div>
+<div class="done"><b>已完成</b><span>E0 回溯审计：从 8 份历史答复整理出 13 处有定位的错误观察，分清"已经重放检出"和"理论上可防"。</span></div>
+<div class="done"><b>已完成</b><span>E1a 准入层纯代码测试：六类人为植入的数据缺陷全部检出，三个干净数据包零误报。</span></div>
+<div class="done"><b>已完成</b><span>E1b：给 AI 一张"准入不通过"的卡和不给卡，各跑四次，看它会不会因此降级结论。答复已生成，尚未盲评。</span></div>
+<div class="doing"><b>已冻结</b><span>E2（结论层：提交后检查一次反馈值不值）、E3（分析层：方法卡 vs 整段规则 vs 手写协议）、E4（框题层：拆题 vs 原题）。题目、评分依据、运行顺序都已冻结加哈希，<b>尚未第一次调用模型</b>。</span></div>
+<div class="todo"><b>未开始</b><span>盲评、独立复算、四层判定、总报告。</span></div>
+</div>
+
+<p>钱的情况：历史全部工作累计 0.2855 美元，四层新工作上限 1.85 美元，账户余额还有约 3.6 美元。这不是瓶颈，人的时间才是。</p>
+
+<h2>7. 我刚才在检查什么</h2>
+
+<p>我在做一件很具体的事：<b>看这些实验会不会自己骗自己</b>。四个问题：</p>
+
+<ul>
+<li><b>"六类缺陷全部检出"是不是假胜利？</b>部分是。检查器的六次命中里，有四次靠的是"和一份已经核对过的参照表逐个数字比对"。可当初 DHFR 出事的时候，那份参照表还不存在。所以这个结果证明的是"和参照不符能查出来"，不是"没有参照时能发现问题"。真正救得了 DHFR 的是生成参照的那道工序。这一点要在结果里写清楚，不能含糊过去。</li>
+<li><b>13 行错误是不是拆开凑数？</b>不是。有两处可以合并，但整体是诚实的，而且它已经把"实际重放检出"和"理论上可防"分开了。</li>
+<li><b>ADK 那份科学读本准不准？</b>准。它老实写了：沉积的坐标里没有 ATP 和 AMP，是空载模拟，而论文实验是有配体的，所以我们看到的"两个结构域没有协同闭合"根本不构成对论文的检验。数值也用第二套实现独立复算过。</li>
+<li><b>提交后的检查器会不会误报？</b>会，而且可预见。它要求答复里的每个数字都能在工具输出里找到，但百分比（41.66 对 0.4166）、单位换算、心算的加减都会被误判。这个要在第一次调用前修。</li>
+</ul>
+
+<h2>8. 我们到底在证明什么</h2>
+
+<p>不是在证明 AI 有用。四个实验各自问的是：</p>
+
+<div class="tw"><table>
+<tr><th>实验</th><th>问题</th><th>如果答案是"没用"</th></tr>
+<tr><td>E4 框题</td><td>把问题拆成"要区分什么"，答案会不会更准</td><td>题目照原样问，省一道工序</td></tr>
+<tr><td>E1 准入</td><td>用代码在数据进来时检查，能不能拦住 DHFR 那种事故</td><td>拦不住就不建这层，改靠人工核对</td></tr>
+<tr><td>E3 方法卡</td><td>按方法族给的短卡，比整段规则、比一段手写协议好在哪</td><td>那这张表不值得配检索器，留作文献索引</td></tr>
+<tr><td>E2 结论层</td><td>提交后查一次并反馈，能不能减少说过头的结论</td><td>不要这个环节，靠人工审报告</td></tr>
+</table></div>
+
+<p>每一个的"有用"和"没用"标准都在跑之前写死了，评分的人看不到哪份属于哪组。<b>四个全部无效也是一个有价值的结论</b>：那意味着整理好的数据加成熟方法就够了，工程投入应该停，科学工作照常做。</p>
+
+<h2>9. 做这套系统的意义</h2>
+
+<p>这个领域最常见的失败不是算错，是<b>说得比数据支持的多</b>。把帧数当成占比，把拟合吻合当成独立验证，把几何接近当成状态转换，把一个信号特征对上了说成整个分布对上了。博文和那篇论文讲的都是这件事。</p>
+
+<p>所以系统的价值不在"自动化"，在于<b>让边界可见、可查、可复核</b>：这份数据能回答什么，不能回答什么，为什么，下一步补什么证据才可能改变判断。谁来执行这套流程（人、脚本、还是 AI）是次要问题，而且是最后才该问的问题。</p>
+
+<footer>
+本文只重述已有的结果和已冻结的设计，没有新的科学主张。数值来自各任务目录的结果文件与账本；四层实验的判定标准在首次调用前已冻结，尚未产生结论。
+</footer>
+</main>
+</body>
+</html>
