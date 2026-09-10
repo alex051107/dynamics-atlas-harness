@@ -1,107 +1,104 @@
-# Author claims, project questions and supported results
+# Authors' claims and our findings
 
-[Back to the research brief](../README.md)
+[Briefing](../README.md) · [Research stages](PROGRESS.md) · [Methods](METHODS.md) · [Sources](SOURCES.md)
 
-These are completed, selected-case analyses, not a full reproduction of each paper. Author claims below are paraphrases of the cited sources. Project results come from the saved analyses and audits linked in each section; this documentation edit did not rerun the science. A narrower result does not by itself refute a paper whose conclusion used additional evidence.
+**Author statements, our calculations and our interpretations are separate kinds of evidence.** Author statements below are paraphrases of the cited papers, not quotations or reference answers that an Agent must reproduce. Project numbers come from the deposited analyses and recorded checks linked below; reorganizing this page does not constitute a new scientific replication.
 
-## HSP90: direction is not the same as reference agreement
+## The comparison at a glance
 
-**What the authors argued.** Henot and colleagues used solution NMR, mutagenesis and MD to characterize a transient closed ATP-lid conformation in the isolated human HSP90α N-terminal domain and interpret it as a metastable state. NMR relaxation supplied kinetic and thermodynamic information. The connection between the exchange-detected excited state and the closed structural model remains part of the authors' interpretation. [Original paper, Results, Fig. 4 and Discussion](https://www.nature.com/articles/s41467-022-35399-8)
+| Case | What the paper argues | What we analysed | Our bounded conclusion |
+|---|---|---|---|
+| HSP90 | NMR-guided modelling and MD support an interpretation involving a transiently populated closed state of the ATP-binding domain. | Persistent direction labels and deposited open/closed NOE-violation series. | Moving toward the open reference is not the same as satisfying its distance restraints or observing a complete physical transition. |
+| DHFR | Experimental inhibition differences are discussed together with local inhibitor interactions, hydrogen-bond networks and molecular simulations. | Specified protein–ligand distances after correcting their periodic representation. | Selected proximity differences are consistent with part of the proposed local-interaction picture, but do not independently establish an inhibition mechanism. |
+| ADK | Time-resolved scattering and structural modelling describe the response to ATP photorelease in the presence of AMP. | Project-defined domain-distance descriptors in two deposited apo trajectories. | The finite MD window comparisons do not reproduce or refute the ATP-triggered experimental intermediate. |
+| Nanodisc, earlier development | MD, SAXS and NMR information can be integrated through ensemble refinement. | Cross-observable prediction and source-specific treatment of supplied predictions, bounds and weights. | Fitting one observable is not evidence of agreement with every other observable or of a unique ensemble. This case is not part of the portable three-system replay. |
 
-**What we tested.** Do the saved trajectories move toward an open reference, and do the corresponding frames also agree with the deposited open-state NOE reference under a specified tolerance? NOE here refers to distance-sensitive NMR restraints; the native series records positive violations of upper-distance bounds. We did not estimate new kinetic rates from these derived labels.
+Original sources and relevant locations: [Henot et al., Results/Fig. 4 and Methods](https://doi.org/10.1038/s41467-022-35399-8); [Çetin et al., Table 1, Figs. 3–4 and analysis methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC10428214/); [Orädd et al., Results/Fig. 4 and Methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC8597995/); [Bengtsen et al., Table 2 and Methods](https://doi.org/10.7554/eLife.56518).
 
-**Observed result.** There are 40 trajectories, 20 per starting group, with 1,001 saved points per trajectory over 20–1020 ns. At a five-saved-point persistence threshold, 10/20 closed-start trajectories show a sustained open-direction segment: five have open as their **first qualifying segment**, and five reach it later. This is not a claim that the first five were open at simulation time zero. After the first qualifying direction, opposite-direction candidates number 5/20, 4/20 and 1/20 at thresholds of 5, 20 and 50 saved points; the open-start group has none. These thresholds alter the reference segment as well as the persistence requirement.
+## HSP90: direction, reference agreement and transition are different claims
 
-At a 1 Å project tolerance, among the ten closed-start candidates, nine are classified as relative-direction only, one as partially consistent, and none as consistent with the open reference. Of the twenty open-start controls, eighteen are consistent, one partial and one relative-only. The denominator is **10 selected candidates versus 20 controls**; neither number is a count of independent experiments. Classification changes with tolerance.
+### What the author analysis supplies
 
-**What we can say.** Some closed-start trajectories move relatively toward open while remaining substantially outside the two native reference sets under the chosen criterion. Direction, absolute reference agreement and a complete physical state transition are different claims. The author's 7/about 9/4 trajectory grouping uses native NOE and structural judgments, not our 5/4/1 operational event definition. This is a method-specific comparison, not a reproduction or rejection of the full population or metastability argument.
+Henot and colleagues combined solution NMR, restrained structural modelling and MD to study an otherwise sparsely populated closed state. The correspondence between the state detected by CPMG relaxation dispersion and a particular closed structure remains a model interpretation; it is not a direct identity measurement. The authors' trajectory groups are based on their native NOE and structural criteria, not our later persistence-count definition.
 
-**Who produced it.** The first Agent pilot computed and summarized some direction counts. The later native-NOE crosswalk and corrected interpretation were developer analyses; subsequent Agents received prepared evidence. They are not all attributable to rule guidance.
+### What our analysis establishes
 
-[First-round records](../../review/hsp90_q01-round-20260910/HSP90_Q01_VERIFIED_REPORT_ZH.md) · [Native-NOE analysis, thresholds and trajectory-level sources](../../review/hsp90_q01-round-20260910/v4_native_noe/outputs/report/DEEP_READER_ZH.md) · [Portable input provenance](../data/MANIFEST.json)
+The deposited analysis comprises 40 trajectories, 20 closed-start and 20 open-start. Each contributes 1001 saved points from 20 to 1020 ns. At the five-saved-point threshold, 10 closed-start trajectories ever exhibit a sustained open direction: five have an open direction in their **first qualifying persistent segment**, and five acquire it after an earlier qualifying direction. This is not a statement that five simulations began physically open.
 
-## Nanodisc: a better scattering fit did not improve both NOE readouts
+Counting an opposite persistent direction after the first qualifying direction gives 5, 4 and 1 closed-start candidates at thresholds of 5, 20 and 50 saved points; the open-start counts are zero. Changing the threshold can change the first qualifying direction itself. These are definition-dependent event counts, not estimates of transition rates.
 
-**What the authors argued.** Bengtsen and colleagues combined NMR, SAXS, SANS, MD and other measurements to describe a nanodisc ensemble with heterogeneous elliptical shapes. They compared separately and jointly reweighted ensembles and evaluated additional observables. The original paper already contains SAXS-only/NOE-only/joint comparisons. [Original paper](https://doi.org/10.7554/eLife.56518) · [Open-access full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7426092/)
+The native series then asks a different question: how far are the predictions from the two reference sets of NOE upper-distance bounds? At the project tolerance of 1 Å, nine of the ten closed-start trajectories with open-direction points have at least half of those points outside both reference tolerances. One is partially consistent, and none meets the project's trajectory-level open-reference agreement criterion. Among the open-start controls, 18 of 20 meet the agreement criterion.
 
-**What we tested.** Using the deposited candidate pool, does changing weights to fit SAXS alone also improve NOE predictions when both old and new weights are scored on the same fixed constraints? BME reweighting changes the contributions of existing conformations; it does not generate missing structures.
+The result does not erase improvement within a trajectory. For example, ES15's mean open-reference violation decreases from 9.0741 Å in the first 100 points to 1.1154 Å in the last 100. The 1 Å classification and the size of this decrease describe different properties.
 
-**Observed result.** The analysis uses 1,195 candidate frames, 90 SAXS points, 292 amide-labelled and 40 methyl NOE constraints. The main result is a within-channel comparison of one-sided, error-scaled NOE penalties, averaged over a fixed constraint set; smaller means less discrepancy under that definition.
+### What remains unresolved, and who did what
 
-| Weights | SAXS mean penalty | Amide NOE mean penalty | Methyl NOE mean penalty |
-|---|---:|---:|---:|
-| Uniform | 10.0188 | 0.9334 | 3.8931 |
-| SAXS-only, θ = 6 | 1.1707 | 0.9647 | 4.4695 |
-| SAXS-only, θ = 60 | 2.1178 | 0.9710 | 3.9275 |
+These are analyses of deposited, partly derived quantities. The absolute-series comparison was prepared by the developer after correcting an input-column interpretation; it was not discovered by the initial A/B Agent experiment. The first-round Agent answers and later native-data analysis remain separate records.
 
-NOE was not used in these two optimizations. Both NOE penalties rise at both settings, but the magnitude differs; for methyl NOE it is approximately 14.81% and 0.88%, respectively. These are descriptive changes, not significance tests. Author and older joint-fit weights remain reference results, not independent NOE validation.
+The 0.5, 1 and 2 Å tolerances are project operating definitions. At 2 Å, three of the ten candidates meet the agreement criterion; at 0.5 Å, none do. Neither choice establishes a uniquely calibrated physical state. We have not fully reproduced the paper's 7/about-9/4 structural grouping, equilibrium populations or complete transition pathways.
 
-**What we can say.** Improving SAXS does not automatically improve the tested NOE predictions. This does not establish physical inconsistency between experiments, a unique ensemble or a shape distribution. Candidate construction and earlier method development used NMR-related information, so withholding NOE from this particular optimizer is not a fully independent validation of the entire workflow. The project's statistic is not silently substituted for the paper's differently reported NOE summary.
+Evidence: [first-round report](../../review/hsp90_q01-round-20260910/HSP90_Q01_VERIFIED_REPORT_ZH.md); [native-NOE analysis, definitions, sensitivity and reading correction](../../review/hsp90_q01-round-20260910/v4_native_noe/outputs/report/DEEP_READER_ZH.md). The [portable replay](REPRODUCE.md) starts from supplied analysed tables, not raw coordinates.
 
-**Who produced it.** Developers specified and performed the cross-observable comparison. A later narrow adapter passed saved scores to the prototype. The direct and Rules paths shared the numerical core and answer formatter; their agreement did not demonstrate independent reasoning or rule-specific accuracy gain.
+## DHFR: corrected distances support proximity, not a unique inhibition mechanism
 
-[Deposited methods and inputs](https://github.com/KULL-Centre/papers/tree/main/2020/nanodisc-bengtsen-et-al/BME_reweight) · [Saved project report](https://github.com/alex051107/dynamics-atlas-harness/blob/316471a135a95032f8726999e807393f55f6ceb5/review/rules-agent-study-20260909/references/07_REPORT_ZH.md) · [Q05's separate role in the completed method-guidance comparison](../../review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md#6-retrieved-method-cards-did-not-outperform-the-short-protocol-consistently)
+### What the paper argues
 
-The portable three-system replay in this folder does not rerun this nanodisc calculation. Do not conflate the new SAXS-only analysis with the later Agent task on supplied author predictions and weights.
+Çetin and colleagues relate inhibitor behaviour in WT and L28R DHFR to local interactions and dynamical barriers. Experimental affinity/inhibition results, atom-pair distances, hydrogen-bond geometry and broader interaction analyses are different evidence types. Our distance comparison addresses only part of that argument.
 
-## DHFR: corrected proximity is not a kinetic mechanism
+### What our analysis establishes
 
-**What the authors argued.** Cetin and colleagues linked the improved performance of 4′-DTMP relative to TMP to local interactions and protein-wide dynamical networks, supporting a kinetic rather than a simple thermodynamic explanation. Their study included experimental information, free-energy calculations, hydrogen-bond geometry and network analysis. [Original paper, Abstract, Figs. 4–8 and Conclusions](https://pubs.acs.org/doi/10.1021/acs.jcim.3c00818) · [PubMed record](https://pubmed.ncbi.nlm.nih.gov/37491825/)
+One deposited trajectory per condition covers WT/L28R with trimethoprim (TMP) or 4′-DTMP. The analysis uses frames 11–1000, 990 frames per condition. Direct distances from an inappropriate wrapped representation produced apparent separations above 70 Å in some frames. The developer corrected the periodic representation and cross-checked selected distances with VMD; the recorded maximum difference was 0.00001132 Å.
 
-**What we tested.** After appropriate coordinate preparation, how do selected protein–ligand distances differ between the two inhibitors in the deposited WT and L28R trajectories?
-
-**Observed result.** An inappropriate wrapped representation initially created apparent large separations. The first two Agents did not identify that input defect. Developers corrected the local periodic representation and cross-checked selected distances with VMD to approximately 0.00001 Å. The reported window uses 990 frames, frames 11–1000, from one selected trajectory per condition.
-
-| Variant | TMP mean M20–O3P / Å | 4′-DTMP mean M20–O3P / Å |
+| Protein background | TMP: mean M20–O3P / Å | 4′-DTMP: mean M20–O3P / Å |
 |---|---:|---:|
 | WT | 8.687677 | 4.622056 |
 | L28R | 10.435783 | 4.808910 |
 
-**What we can say.** The chosen local distance is smaller for 4′-DTMP in both variants in these trajectories. That is a local proximity observation, not a test of hydrogen-bond angles, an independent kinetic estimate or a unique inhibition mechanism. The single-trajectory scope belongs to this project subset, not a claim that the original paper had no other simulations. O3P is the deposited atom label, not evidence of a phosphate group in TMP.
+The corrected distance is smaller with 4′-DTMP in both backgrounds for this specified atom pair. O3P is the author's atom label; it does not imply that TMP contains a phosphate group. Other atom pairs need their own comparisons: the result must not be generalized to every contact.
 
-**Who produced it.** The correction and cross-check were developer work. Original Agent answers on the defective table remain preserved; corrected numbers are not substituted into their scores.
+### What remains unresolved, and who did what
 
-[Scientific report and correction trail](../../review/dhfr_q01-round-20260910/report/DEEP_READER_ZH.md) · [Original data](https://zenodo.org/records/7966540) · [Reproduction scope](REPRODUCE.md)
+The two original plain-Agent runs did not identify the defective input representation. Their answers are preserved and are not retrospectively improved by the developer's correction. Later evaluations using the corrected table are separate runs.
 
-## ADK: apo domain motion does not reproduce an ATP-triggered experiment
+One trajectory per condition does not provide between-trajectory uncertainty. A short distance alone is not a hydrogen-bond definition, a dissociation rate or proof that one interaction causes the inhibition difference. Our finding is a local proximity result that can be discussed alongside the author's experiments, not independent validation of the whole mechanism.
 
-**What the authors argued.** Orädd and colleagues studied the ATP-binding response of adenylate kinase using time-resolved X-ray solution scattering, with ATP photorelease in the presence of AMP. The reported experimental response is not an observation from the apo trajectories used here. [Original paper](https://doi.org/10.1126/sciadv.abi5514)
+Evidence: [complete DHFR reader, sections 2–7](../../review/dhfr_q01-round-20260910/report/DEEP_READER_ZH.md), including the original failure, correction, physical cross-check and paper relationship. The portable replay reproduces table summaries; it does not repeat the periodic-coordinate preparation.
 
-**What we tested.** In two deposited apo trajectories, how do project-defined LID–CORE and NMP–CORE Cα distance descriptors change between the first and last 10% of saved frames?
+## ADK: the deposited apo trajectories do not test the ATP-triggered experiment
 
-**Observed result.** A generic half-box rejection initially misclassified legitimate distances within a complete protein. The analysis instead used a complete molecular representation, checked continuity and atom mapping, and cross-checked specified pairs against GROMACS (approximately 0.005 Å difference). Another implementation agreed on the domain descriptors to within 10⁻¹⁰ Å. The open-start trajectory covers 0–450.4 ns and the closed-start trajectory 0–335.4 ns, with one trajectory per start.
+### What the paper argues
 
-| Start | NMP–CORE change / Å | LID–CORE change / Å |
+Orädd and colleagues used time-resolved X-ray solution scattering after ATP photorelease, in the presence of AMP, together with structural modelling to interpret the response. The reported experimental transient and structural intermediate cannot be inferred from arbitrary MD distance curves alone.
+
+### What our analysis establishes
+
+The two deposited apo trajectories start from open and closed structures. They contain 2253 and 1678 frames over 0–450.4 ns and 0–335.4 ns, respectively. Domain separation is the average Cα-pair distance between declared project regions, not a reproduction of every descriptor used in the paper. We compare each trajectory's first and last 10% of frames.
+
+| Starting structure | NMP–CORE change / Å | LID–CORE change / Å |
 |---|---:|---:|
 | Open | +0.070721 | +2.290411 |
 | Closed | +1.090895 | +1.176421 |
 
-**What we can say.** Both descriptors increase in each endpoint-window comparison; neither comparison shows joint net closure. Overlapping distributions and local events remain possible. Different ligands, timescales and observables prevent treating this result as a reproduction or refutation of the experimental ATP-triggered intermediate.
+Positive changes mean greater separation for these descriptors. Neither endpoint-window comparison shows both distances decreasing. This does not exclude closure in a shorter interval, and the distance distributions overlap.
 
-**Who produced it.** Developers prepared and validated the distance representation. The two ordinary Agent runs correctly reported the four endpoint changes; that does not mean they discovered the coordinate treatment independently.
+A generic half-box threshold initially rejected valid intramolecular distances. The corrected analysis uses a complete molecule rather than shortening every atom-pair distance to its nearest periodic image. Recorded GROMACS checks agreed at about 0.005 Å; a separate numerical implementation checked domain averages. These checks support the declared calculation, not the truth of a biological model.
 
-[Analysis and condition comparison](../../review/four-layer-20260910/outputs/ADK_SCIENCE_ZH.md) · [Original data](https://zenodo.org/records/5583119) · [Agent–paper relationship record](../../review/four-layer-20260910/outputs/ADK_PAPER_RELATIONSHIPS.md)
+### What remains unresolved, and who did what
 
-## The Rules experiment is a separate claim
+The input preparation and physical cross-checks were developer work. The two subsequent plain-Agent answers correctly reported the four endpoint-window changes; one omitted part of the experimental-condition comparison. Those answer-level observations are distinct from the validity of the prepared data.
 
-Our hypothesis was that source-linked guidance or limited checks could improve supported answers over an Agent with the same prepared data and tools. The hypothesis was not that agreement with an author's wording, successful execution or more references to rules would establish scientific correctness.
+The MD structures are apo; the experimental ligand conditions, temperatures and timescales differ. Our descriptors therefore neither reproduce nor refute the ATP-triggered scattering intermediate. There is one trajectory per starting condition, not hundreds of independent molecular experiments.
 
-The method-guidance medians below summarize four runs per question and condition, using five frozen content units. They are not percentages of general scientific accuracy.
+Evidence: [ADK scientific reader](../../review/four-layer-20260910/outputs/ADK_SCIENCE_ZH.md); [answer–paper comparison](../../review/four-layer-20260910/outputs/ADK_PAPER_RELATIONSHIPS.md).
 
-| Guidance | HSP90: correct units / 5 | Nanodisc: correct units / 5 |
-|---|---:|---:|
-| Short protocol | 4.5 | 4.5 |
-| Full selected rules | 2.0 | 5.0 |
-| Method cards | 2.5 | 4.5 |
+## The nanodisc case remains a cross-observable development example
 
-Full rules' Q05 benefit is retained, alongside the HSP90 loss. The evidence does not separate all effects of knowledge content, retrieval, text length, task difficulty and baseline ability.
+Bengtsen and colleagues had already studied SAXS-only, NOE-only and joint ensemble refinement. Our earlier work reused published conformers, predictions and observations to investigate what changes when weights are fitted to one observable and another is evaluated afterward. It is a conditional method application, not a newly discovered biological problem.
 
-The other tests found that the warning-card file was not read in any of four card runs; none of nine numeric-trace warnings targeted a core scientific error; and none of twelve feedback answers reduced its initial core-error count. Explicit subquestions raised median supported coverage from 2 to 2.5 out of 3 in HSP90 and from 2 to 3 out of 3 in ADK, but HSP90 core errors totaled one before and two after the framing change. The questions added explicit requests; this is not proof of improved autonomous reasoning.
+The later Agent task also used supplied author predictions and NOE bounds. It required keeping SAXS and NOE definitions separate, distinguishing a bound from a point target, and not calling data used in fitting independent validation. Full selected rules performed well on that particular task; this positive result remains part of the pilot, alongside the poorer HSP90 performance.
 
-[Sealed individual scores, now unblinded](../../review/four-layer-20260910/outputs/UNBLINDED_SCORES.csv) · [Evaluation and intervention limits](../../review/four-layer-20260910/outputs/METHODS_AND_LIMITS_ZH.md) · [Feedback audit](../../review/four-layer-20260910/outputs/E2_CHECKER_EFFECT_REVIEW_ZH.md)
+Evidence: [original nanodisc paper, Table 2](https://doi.org/10.7554/eLife.56518); [completed pilot report, section 6](../../review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md#6-retrieved-method-cards-did-not-outperform-the-short-protocol-consistently). Nanodisc calculations and Agent experiments are **not** rerun by the three-system portable reproduction script.
 
-## What has not been established
+## The distinction to retain
 
-There is no overall scientific accuracy estimate, independent domain-expert evaluation of the full pilot, or measured reduction in researcher preparation/correction time. Successful numerical reproduction supports the declared calculations, not their complete biological interpretation. The component pilot has finished; this page proposes no rerun or post-unblinding score change.
-
-[Return to the decisions for discussion](../README.md#5-four-decisions-on-which-we-need-guidance)
+**A numerical check can confirm that a declared calculation was reproduced. A scientific claim additionally needs a suitable observable, sample, comparison and interpretation.** Developer-corrected analyses, author reports, Agent outputs and future proposals are kept separate so that a polished report does not overstate what the Agent or the data established.

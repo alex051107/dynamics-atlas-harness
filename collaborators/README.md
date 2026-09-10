@@ -2,90 +2,88 @@
 
 *Research-group brief · 10 September 2026*
 
-**We now have useful, bounded analyses of real protein data. What we have not established is that a Rules Table should organize the whole analysis, or that adding more rules will make the Agent more reliable.** This brief separates those two questions so that the next step can be chosen for its scientific value.
+**We have useful, bounded analyses of real protein data. We have not established that a Rules Table should organize the whole analysis, or that adding more rules will make the Agent more reliable.** The next decision is which scientific result to pursue and what assistance is worth retaining.
 
-Read this page first. The [claim-by-claim results](docs/RESULTS.md) supply numbers, original-paper links and the limits of each comparison. The [existing English results slides](../review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pptx) are an optional visual companion, not an additional reading requirement. The slides retain the earlier result presentation; the framing and open decisions below are the current discussion brief.
+Start with this page. [Authors' claims and our findings](docs/RESULTS.md) provides the detailed comparisons; [the existing 12-slide deck (PDF)](../review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pdf) is a visual companion, with an [editable PowerPoint version](../review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pptx). No installation or code review is needed for this discussion.
 
 ## 1. The problem we set out to solve
 
-A researcher may have simulation trajectories, nuclear magnetic resonance (NMR) measurements, scattering and fluorescence data for the same protein. These sources do not necessarily measure the same quantity or describe the same conditions. We want to identify what they can support together, what remains unresolved, and which further analysis would actually help.
+A researcher may have simulation trajectories, nuclear magnetic resonance (NMR), scattering and fluorescence data for the same protein. These sources do not necessarily measure the same quantity or describe the same conditions. We want to identify what they can support together, what remains unresolved, and which further analysis would help.
 
-For example, a simulation can move toward an open reference without closely matching that reference, and neither result alone establishes an equilibrium population or transition rate. A useful answer should preserve the supported structural observation rather than either overstate it or discard it because the stronger questions remain open.
-
-The intended workflow is **a concrete scientific question → source and measurement interpretation → an appropriate established analysis → an evidence-linked answer**. Rules are a proposed aid to this workflow, not its scientific endpoint.
+The intended workflow is **a concrete scientific question → source and measurement interpretation → an appropriate established analysis → an evidence-linked answer**. Reliable quantities and cross-source comparison are the scientific goals. Reusable workflows serve them; AI assistance is a separate hypothesis that may fail without invalidating the scientific result.
 
 ## 2. Where the work stands
 
-| Stage | What was done | What it established |
+| Stage | Actual work and its result |
+|---|---|
+| Literature to candidate checks | 33 candidate rules from 11 papers recorded source assumptions and limits. This is a reviewable knowledge resource, not 33 validated universal laws. |
+| Selected-rule prototype | Metadata led to review obligations and rendered guidance. HSP90 exposed transfer of method-specific requirements without an established need. |
+| Scientific case analyses | HSP90 distinguished direction from native reference agreement; DHFR and ADK exposed different coordinate-representation requirements; nanodisc analysis compared scattering and NOE predictions. Developers performed substantial preparation and checking. |
+| Component pilot — complete | Warning-card availability, one-round feedback, method guidance and explicit subquestions were tested. Results were scored and unblinded; effects were mixed. |
+| Next stage — undecided | Select a scientific milestone and the specific assistance worth retaining. Another experiment is not an automatic next step. |
+
+[Stage-by-stage evidence](docs/PROGRESS.md)
+
+## 3. What our results mean relative to the papers
+
+**HSP90.** The paper combines NMR, structural modelling and MD to support a transient closed ATP-lid interpretation. We tested a narrower relation: does moving toward open imply agreement with the native open reference? Ten of twenty closed-start trajectories displayed sustained open-direction segments under the chosen definition. At a 1 Å project tolerance, nine of those ten were predominantly outside both reference tolerances. This separates direction from reference agreement; it does not refute the paper's full argument. [Results and original paper](docs/RESULTS.md#hsp90-direction-reference-agreement-and-transition-are-different-claims)
+
+**Nanodisc.** The authors had already studied integration of scattering and NMR using an ensemble. Our earlier SAXS-only analysis reduced the scattering penalty from 10.0188 to 1.1707, while the two NOE mean penalties increased from 0.9334 to 0.9647 and from 3.8931 to 4.4695. These are within-channel comparisons under a fixed candidate pool and error model, not proof that the experiments are physically inconsistent. The later Agent task on supplied author weights was a separate experiment. [Saved project result](https://github.com/alex051107/dynamics-atlas-harness/blob/316471a135a95032f8726999e807393f55f6ceb5/review/rules-agent-study-20260909/references/07_REPORT_ZH.md) · [Paper and scope](docs/RESULTS.md#the-nanodisc-case-remains-a-cross-observable-development-example)
+
+**DHFR and ADK.** The original papers make broader kinetic or experimentally triggered structural arguments. Our work describes selected local distances and finite-window domain changes. DHFR needed corrected local periodic coordinates; a blanket half-box rule then wrongly rejected legitimate ADK intramolecular geometry. The corrections were developer work, not discoveries by the original tested Agents. [DHFR claim comparison](docs/RESULTS.md#dhfr-corrected-distances-support-proximity-not-a-unique-inhibition-mechanism) · [ADK claim comparison](docs/RESULTS.md#adk-the-deposited-apo-trajectories-do-not-test-the-atp-triggered-experiment)
+
+## 4. What the assistance tests tell us
+
+| Intervention | Observed result | Limit of the conclusion |
 |---|---|---|
-| Literature to candidate checks | Recorded 33 candidate rules from 11 papers, with source-specific assumptions and limits | A reviewable knowledge resource, not 33 validated universal laws |
-| Selected-rule prototype | Converted case metadata into review obligations and rendered the selected text for an Agent | The path ran, but HSP90 also exposed inappropriate transfer of method-specific wording |
-| Scientific case analyses | Compared HSP90 direction with native NOE references, corrected DHFR coordinates, analysed ADK domain distances, and performed a nanodisc cross-observable comparison | Concrete results below, with substantial developer preparation and checking |
-| Component pilot — complete | Tested warning-card availability, one round of feedback, method guidance and explicit subquestions | Mixed effects; no stable benefit from the current selector or checker |
-| Next stage — not decided here | Choose a scientific milestone and the specific assistance worth retaining | This requires a research decision, not another automatic rollout |
+| An input-warning file | All four card runs listed it; none read it | We did not test what happens when the Agent actually reads the warning |
+| A checker after the first answer | Nine numeric-trace warnings targeted no core scientific error; none of twelve feedback runs reduced its initial core-error count | This implementation was not a general scientific judge; an untested evidence-role branch cannot be judged by these results |
+| Guidance during analysis | Full rules did better on nanodisc but worse on HSP90; short cards missed the two-case criterion | Content, applicability, retrieval and reading burden were not independently separated |
+| Explicit subquestions | Supported coverage improved in both cases; HSP90 core errors across four runs increased from one to two | More complete delivery is not uniform accuracy improvement or autonomous question discovery |
 
-[History and source trail](docs/RULES.md#how-the-rules-entered-the-analysis) · [Completed pilot](../review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md#3-what-was-held-constant-what-changed-and-how-answers-were-scored)
-
-## 3. What the scientific work actually says
-
-**HSP90:** of 20 closed-start trajectories, 10 displayed sustained open-direction segments under the specified definition. At a 1 Å project tolerance, nine of those ten were classified as moving relatively toward open while still predominantly departing from both native NOE reference sets. This distinguishes direction from reference agreement; it neither reproduces nor refutes the paper's complete transition interpretation. [Author claim, result and scope](docs/RESULTS.md#hsp90-direction-is-not-the-same-as-reference-agreement)
-
-**Nanodisc:** fitting only the scattering observations reduced their mean penalty from 10.0188 to 1.1707, while the two NOE mean penalties increased from 0.9334 to 0.9647 and from 3.8931 to 4.4695. These are within-channel comparisons under a fixed candidate pool and error model, not proof that the experiments are physically inconsistent. [Author claim, result and scope](docs/RESULTS.md#nanodisc-a-better-scattering-fit-did-not-improve-both-noe-readouts)
-
-**DHFR and ADK:** coordinate handling changed what a distance meant. DHFR required a corrected local periodic representation; a blanket half-box rule then wrongly rejected legitimate ADK intramolecular geometry. Their corrected analyses describe local proximity and finite-window domain changes, not the source papers' complete kinetic mechanisms. These corrections were developer work, not discoveries by the original tested Agents. [DHFR](docs/RESULTS.md#dhfr-corrected-proximity-is-not-a-kinetic-mechanism) · [ADK](docs/RESULTS.md#adk-apo-domain-motion-does-not-reproduce-an-atp-triggered-experiment)
-
-## 4. What the assistance tests did — and did not — establish
-
-| Assistance tested | Observed result | What remains unresolved |
-|---|---|---|
-| A file warning about a defective input | All four card-condition runs listed the file; none read its contents | Whether actually delivering the warning would help; this was not a test of an Agent reading and rejecting it |
-| A checker after the first answer | All nine warnings were numerical trace warnings; none targeted a core scientific error. None of 12 feedback runs reduced its initial core-error count | Whether a different, scientifically appropriate checker would help; the tested checker was not a general scientific judge |
-| Guidance during analysis | Full rules performed better on the nanodisc task but worse on HSP90; short method cards did not meet the two-case comparison criterion | Content, applicability, retrieval, reading burden and case dependence were not independently separated |
-| More explicit subquestions | Supported coverage increased in both cases; HSP90 core errors across four runs increased from one to two | More complete delivery is not uniform accuracy improvement or autonomous question discovery |
-
-[Individual scores](../review/four-layer-20260910/outputs/UNBLINDED_SCORES.csv) · [Warning access](../review/four-layer-20260910/outputs/E1B_CARD_ACCESS_AUDIT.json) · [Feedback analysis](../review/four-layer-20260910/outputs/E2_CHECKER_EFFECT_REVIEW_ZH.md)
-
-There were 72 controlled final answers plus two ordinary ADK answers, and 24 saved feedback initial answers. Scores were sealed before condition labels were revealed, but the scorer also helped prepare the cases. Most cases were exposed development material; there were four runs per question and condition, not four independent proteins. These results do not estimate general scientific accuracy or savings in researcher time. [Evaluation scope](../review/four-layer-20260910/outputs/METHODS_AND_LIMITS_ZH.md)
+The pilot comprised 72 controlled final answers plus two ordinary ADK answers, with 24 saved feedback initial answers. Scores were sealed before revealing group labels, but the scorer also helped prepare the cases. Most materials had been used in development; four runs per condition are not four independent proteins. There is no general accuracy estimate or measured saving in researcher time. [Detailed results and limits](docs/RULES.md) · [Individual scores](../review/four-layer-20260910/outputs/UNBLINDED_SCORES.csv)
 
 ## 5. Four decisions on which we need guidance
 
-### A. Is the main problem rule content, applicability, or the role assigned to rules?
+### A. Is the problem rule content, applicability, or the role assigned to rules?
 
-We have direct evidence of method-specific conditions reaching an inappropriate task, of an unread warning, and of a checker that did not target the relevant scientific errors. We do **not** have evidence that all rules are poor, or that better rules alone would fix the system.
+There is direct evidence of inapplicable conditions reaching a task, an unread warning, and a checker that did not address the relevant errors. There is no evidence that all scientific rules are poor, or that better rule wording alone would fix the system.
 
-**Decision requested:** should the next step repair one demonstrated applicability problem, or should we first work without automated rule selection until a scientific task establishes its need? Our proposal is to pause broad selector expansion while retaining the source-linked knowledge. This is an investment recommendation, not proof that a simpler system is universally superior.
+**Decision requested:** should we repair one demonstrated applicability problem, or first work without automated rule selection until a scientific task establishes its need? Our proposal is to pause broad selector expansion while retaining the source-linked knowledge. This is an investment recommendation, not proof that a simpler system is universally superior.
 
-### B. Where should guidance or enforcement enter the scientific work?
+### B. At what stage should guidance become an automatic check?
 
-A physical check needs the intended observable, not just a generic data-type label. Method advice must match the operation being performed. A post-answer warning is useful only when its claim-to-evidence check is meaningful.
+Input checks require a defined physical quantity; method advice must match the operation; post-answer checks need a meaningful claim-to-evidence relation.
 
-**Decision requested:** which requirements should be handled before analysis, which should remain optional method guidance, and which explicit contradictions are suitable for automatic feedback? Our proposal is a readable protocol with a few individually justified checks, not four mandatory software layers. [What each form means](docs/RULES.md)
+**Decision requested:** which requirements belong in data preparation, which should remain optional method guidance, and which explicit contradictions justify automatic feedback? Our proposal is a readable protocol with a few individually justified checks, not four mandatory software layers.
 
-### C. What level of scientific answer should define the next milestone?
+### C. What scientific answer should define the next milestone?
 
-The current work can establish selected structural differences or readout disagreements without identifying a unique ensemble or mechanism. That is narrower than several author-level claims, but it can still be useful.
+Current results identify selected structural differences and readout disagreements without identifying a unique ensemble or mechanism. They are narrower than several author-level claims but may still be useful.
 
-**Decision requested:** is a reproducible cross-observable comparison with a clearly defined interpretive limit a sufficient next milestone, or is a particular state, population or mechanistic inference required? In particular, which current HSP90 or nanodisc distinction is scientifically worth resolving next? A narrower project result is not, by itself, evidence against the original paper.
+**Decision requested:** is a reproducible cross-observable comparison with an explicit interpretive limit sufficient, or is a particular state, population or mechanism required? Which HSP90 or nanodisc distinction would be most useful to resolve next? A narrower project result is not evidence against a paper that used additional information.
 
-### D. What work should the Agent actually remove from the researcher?
+### D. What work should the Agent remove from the researcher?
 
-Developers currently prepare source correspondence, numerical inputs and some checks. The corrected science must not be credited to the Agent merely because it later reads the resulting tables.
+Developers currently prepare source correspondence, numerical inputs and some checks. An Agent reading the corrected tables does not inherit credit for that preparation.
 
-**Decision requested:** should the next evaluation start from checked tables, or require the Agent to identify measurement and preparation issues from less curated sources? Choose one boundary, then measure supported answers, material errors, unnecessary omissions and preparation/correction time. We should not change the task, tools, guidance and checker together and attribute the result to Rules.
+**Decision requested:** should the next evaluation start from checked tables, or require measurement and preparation issues to be identified from less curated sources? Choose one boundary, then evaluate supported answers, material errors, unnecessary omissions and preparation/correction time. Do not change the task, tools, guidance and checker together and attribute the result to Rules.
 
-## 6. How the two recommended readings change the design question
+## 6. Why the recommended readings matter
 
-[Li, Thomasen and Cossio — *Are We Capturing the Ensemble?*](https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html) asks which differences between molecular distributions survive measurement and processing. [Bhakat's T4 lysozyme paper](https://doi.org/10.1021/acs.jcim.6c02044) provides a concrete reason to evaluate structural coverage, estimated populations and experimental predictions separately. Neither source establishes a Rules architecture. Our design inference is to organize the work around the scientific distinction and the evidence that can resolve it. [Papers and specific uses](docs/SOURCES.md)
+[Li, Thomasen and Cossio — Are We Capturing the Ensemble?](https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html) asks which differences between molecular distributions survive measurement and processing. [Bhakat's T4 lysozyme paper](https://doi.org/10.1021/acs.jcim.6c02044), including its Supporting Information, shows why structural coverage, estimated populations and experimental predictions need separate evaluation. Neither source establishes a Rules architecture. Organizing our workflow around a scientific distinction is our design inference, not their experimental result. [All primary-paper links](docs/SOURCES.md)
 
-**Proposed next step, for discussion:** select one scientifically useful distinction from the completed analyses, confirm the method and interpretation needed to address it, and use the simplest existing workflow that can deliver that answer. Any new comparison of assistance should change one specific intervention. This briefing does not start new calculations, Agent runs or an expansion to another system.
+**Proposed next step, for discussion:** choose one scientifically useful distinction from the completed analyses, confirm the method and interpretation needed to address it, and use the simplest existing workflow that can deliver that answer. Any later comparison of assistance should change one specific intervention. This page starts no new calculation, Agent run or expansion to another system.
 
 <details>
-<summary>Optional: methods, reproduction and preserved evidence</summary>
+<summary>Optional: slide-version notes, methods and preserved evidence</summary>
 
-[Methods](docs/METHODS.md) · [Analysed-table reproduction](docs/REPRODUCE.md) · [Input provenance](data/MANIFEST.json) · [Original papers](docs/SOURCES.md) · [Full pilot report and evidence links](../review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md)
+The existing slides are retained unchanged. Their HSP90 phrase “initially open-direction” means the first qualifying persistent segment, not necessarily simulation time zero. Proposed upstream admission in the deck is not an experimentally established general validator.
 
-The replay package reproduces selected HSP90, DHFR and ADK summaries from supplied analysed tables; it is not a raw-coordinate reconstruction or independent biological validation. The earlier downloadable ZIP and offline HTML remain archived reproduction snapshots, not updated copies of this decision brief.
+[Methods](docs/METHODS.md) · [Analysed-table reproduction](docs/REPRODUCE.md) · [Input provenance](data/MANIFEST.json) · [Full pilot report and evidence links](../review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md)
 
-This presentation uses the source snapshot `c025a74ed8235ddde463572158c73458753780b0`. Reorganizing the reading path did not alter inputs, original answers, sealed scores or failed analyses. Superseded plans and raw execution detail stay outside the primary reading path, available through the historical evidence records.
+The replay regenerates selected summaries from supplied analysed tables; it does not rebuild raw coordinates or independently validate the biology. The earlier ZIP and offline HTML remain reproduction snapshots, not updated copies of this decision brief.
+
+This reading edit incorporates the collaborator update at `6dd3df59c328902774b3183c86027b57424a4d60`. It does not alter inputs, original answers, scores or failed analyses. Old plans and execution details remain in the audit record, outside the primary reading path. Access to this private repository is required.
 
 </details>
