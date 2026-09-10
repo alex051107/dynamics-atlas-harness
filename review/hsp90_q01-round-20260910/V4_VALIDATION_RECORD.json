@@ -1,0 +1,18 @@
+{
+  "A0": "9 headings initially,10slides withnotes,25claims; content updated afterB and final record included",
+  "A": "4relations21rows exactquotes PASS; round14headings12slides25claims PASS",
+  "B": "80nativehash matches;3tablefreeze matches; reader correction beforeclassification,40oldmargins exact;40040/40rows;primarycontrol18/20PASS; report changed after initialstop and rechecked",
+  "C": "single real-probe bridge set and positive/negative applicability PASS; no Agent regression",
+  "D": "no paidruns; credential env/keychain absent; sourceadmission notcomplete; blockerpack structurePASS",
+  "reviews": "single local final review; no new independent provider review",
+  "full_suite": "231 unchanged-core tests reused; no repeated fullsuite",
+  "hashes": "nativeimport identity;3tableidentity;one final computation script/output manifest. No repeated scientific rerun after pass.",
+  "prose": "hard banned reversal removed;remaining punctuation and numeric-range flags retained for technical precision;no jargon/roadmap/hardstop words",
+  "limitations": [
+    "D scientific answer notcompleted",
+    "no C behavior improvement measurement",
+    "SI trajectory mapping unavailable",
+    "figurecontract recorded retrospectively",
+    "Docker clean-machine public rebuild notverified"
+  ]
+}

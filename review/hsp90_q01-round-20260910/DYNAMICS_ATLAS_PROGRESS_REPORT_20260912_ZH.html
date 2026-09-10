@@ -1,0 +1,191 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dynamics Atlas：从科学规则整理到可复核的蛋白动力学回答</title><style>body{margin:0;background:#f5f6f8;color:#22303d;font:16px/1.85 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:920px;margin:36px auto;background:white;padding:44px 56px}h1{font-size:30px;line-height:1.35;color:#1e3a5f}h2{font-size:23px;line-height:1.5;margin-top:38px;color:#1e3a5f}h3{font-size:19px;margin-top:25px}p{margin:14px 0}a{color:#275782;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0;table-layout:fixed;overflow-wrap:anywhere}th,td{border:1px solid #d5dbe1;padding:8px;vertical-align:top}th{background:#edf2f6}img{max-width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f4f7;padding:14px;font-size:12px}code{font-size:.88em;overflow-wrap:anywhere}nav{border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;padding:12px 0}nav a{display:block;font-size:14px}blockquote{border-left:3px solid #1e3a5f;padding-left:16px;margin-left:0}@media(max-width:650px){main{padding:22px 18px;margin:0}h1{font-size:25px}table{font-size:11px}th,td{padding:5px}}@media print{body{background:white;font-size:11px;line-height:1.65}main{padding:0;margin:0;max-width:none}h1{font-size:24px}h2{font-size:18px;break-after:avoid}h3{font-size:14px;break-after:avoid}table{font-size:9px}tr,img,pre{break-inside:avoid}nav{display:none}a{color:inherit;text-decoration:none}p{orphans:3;widows:3}}</style><main><h1>Dynamics Atlas：从科学规则整理到可复核的蛋白动力学回答</h1><nav><a href="#section-1">1. 一开始想解决什么问题</a><a href="#section-2">2. 实际走过的路：哪些节点改变了判断</a><a href="#section-3">3. HSP90 这一轮具体问了什么、做了什么</a><a href="#section-4">4. 科学结果：一半出现开放方向，里面有两种过程</a><a href="#section-5">5. Agent 和规则分别表现怎样</a><a href="#section-6">6. 新文献对设计的具体影响</a><a href="#section-7">7. 节奏是否过慢，以及怎样推进才严谨</a><a href="#section-8">8. 已获授权的下一步与停止条件</a><a href="#section-9">9. 来源与核查入口</a><a href="#section-10">执行后更新：NOE 对照已把解释进一步收窄</a></nav>
+<p>截至 2026 年 9 月 10 日。文件名沿用 v4 的 20260912 交付命名，不代表未来已经发生的进展。</p>
+<p>我们已经能让使用工具的 Agent 回答一个真实蛋白问题，并从原始答复追查它哪里算对、哪里算错。当前最明确的结果来自 HSP90：闭合起始的 20 条轨迹中，有 10 条出现持续开放方向读数；这一半又分成两种不同过程。规则提示的独立收益仍未确定，因此下一步同时推进科学解释和提示适用性的修正，科学工作不再等候 Rules 胜出。</p>
+<h2 id="section-1">1. 一开始想解决什么问题</h2>
+<p>同一个蛋白可以有多个构象，也会随时间改变形状。晶体结构、核磁共振、分子模拟和荧光实验各自提供一部分信息：有的告诉我们出现过什么形状，有的约束分子间距离，有的反映交换时间。项目想知道这些资料放在一起，究竟支持什么科学解释，缺什么证据。</p>
+<p>项目有四个相互连接的目标：可靠估计分子结构与动态量；比较不同观测提供的信息；把有效分析做成可复用流程；让 Agent 帮助研究者完成分析。Rules Table 服务于这些目标：把论文中影响结论成立的条件写成可追溯检查，例如“拟合时用过的数据不能再称为独立验证”。表格是知识载体；工具产生计算证据；Agent 选择分析并组织答案。三者的价值要分别验证。</p>
+<p>7 月 28 日会议的核心要求是先把已有 HSP90 数据的科学信息展示清楚，再固化分析流程。8 月 24 日进一步明确：用成熟方法，先做能让专家具体批评的最小原型，再考虑扩大覆盖范围。这两次会议都把科学问题放在软件结构之前。[会议依据见文末 S1–S2。]</p>
+<h2 id="section-2">2. 实际走过的路：哪些节点改变了判断</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>已发生的工作</th>
+<th>带来的认识与仍缺的证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7 月 25–30 日</td>
+<td>接入 HSP90 资料；开展结构与轨迹读数分析；整理会议要求和时间语义</td>
+<td>已有可计算的真实问题。文件接入和工作流跑通还不足以说明科学结论成立。</td>
+</tr>
+<tr>
+<td>8 月初至中旬</td>
+<td>建立文献卡、候选规则及来源定位，形成 33 条候选规则的知识档案</td>
+<td>条款能追溯到文献，但整理数量不等于正确率，也不代表每条可以跨方法直接使用。</td>
+</tr>
+<tr>
+<td>8 月 24 日</td>
+<td>会议确认 HSP90 最小原型、成熟分析工具和分层专家反馈</td>
+<td>需要可读、可批评的实例。尚未指定一个覆盖所有方法的自动系统。</td>
+</tr>
+<tr>
+<td>8 月末至 9 月初</td>
+<td>大量推进选择器、接入、规则绑定、覆盖测试和内部状态记录</td>
+<td>工程证据积累快；对外叙事没有同步。覆盖测试回答“有没有触发”，不能替代“科学答对了吗”。</td>
+</tr>
+<tr>
+<td>9 月上旬</td>
+<td>Q05 纳米盘的 SAXS / NOE 对照，以及新的 ensemble 与 T4L 材料分析</td>
+<td>不同观测拟合变好是不同的证据；开发者安排出的分析，不自动证明 Agent 自主选择有价值。</td>
+</tr>
+<tr>
+<td>9 月 9 日</td>
+<td>Q05 与 T4L 的 Luna 开发运行及一次共同修订，共 12 次运行</td>
+<td>暴露数值错误、末尾文字覆盖科学答复和有限 enforcement 的作用边界；不是新来源正式比较。</td>
+</tr>
+<tr>
+<td>9 月 10 日</td>
+<td>HSP90 一题四答复、逐项源表核对、9 次原代码重放及 Pro 审阅</td>
+<td>得到有限时间方向差异；三份主计数正确、一份混淆阈值。发现规则正文迁移了原实验专用条件。</td>
+</tr>
+<tr>
+<td>本次 v4</td>
+<td>用户授权报告先交付，再做原生 NOE 对照、渲染层修复与第二体系普通 Agent 分析</td>
+<td>路线已获授权；下文明确哪些尚未执行。新的科学结果以轨道报告为准。</td>
+</tr>
+</tbody></table>
+<p>时间线记录的是本地有证据的工作和会议内容，不能据文件存在推断已经发送给合作者。9 月 8 日已有技术报告，9 月 10 日后续提交已有简报、读本和 slides；“完全没有报告”只适用于早先审查快照的首轮汇报包，不能描述现在。当前新增的是把这些分散成果连成完整项目解释。</p>
+<h2 id="section-3">3. HSP90 这一轮具体问了什么、做了什么</h2>
+<p>HSP90 是帮助其他蛋白正确工作的分子伴侣。这里研究其 N 端 ATP 结合结构域；ATP-lid 是覆盖结合口袋的活动片段。问题是：从闭合构象出发的模拟，是否比从开放构象出发的模拟更容易出现开放方向变化。</p>
+<p>输入是两个起始组，每组 20 条轨迹；每条保留 20–1020 ns 的 1,001 个保存点。起始组描述模拟从哪里出发，不是平衡总体，也不是当前突变分组。模型获得论文、字段说明和派生数据表；原子坐标及完整原生 NOE 序列不在首轮模型输入里。资料中的力场记载差异仍分开保留。</p>
+<p>普通 Agent 与额外阅读规则提示的 Agent 各回答两次，四次使用独立上下文，顺序为普通、规则、规则、普通。资料、工具与模型相同。模型能自己读文件、写计算并根据工具报错调整；开发者没有在运行中告诉它答案。输入整理、科学题面和评分依据仍由开发者事先准备，因此这是已暴露案例的开发观察。</p>
+<h2 id="section-4">4. 科学结果：一半出现开放方向，里面有两种过程</h2>
+<p>“开放方向”由两个派生读数共同判断：几何上更接近哪一端，以及哪一套 NOE 参照的平均违例更低。NOE 是核磁共振中对原子近距离敏感的观测。平均违例表示结构距离超过参照上限的程度；相对违例较小不一定表示绝对违例已经小。</p>
+<table>
+<thead>
+<tr>
+<th>连续保存点门槛</th>
+<th align="right">首个合格方向就是开放</th>
+<th align="right">先闭合、后开放</th>
+<th align="right">只有闭合方向</th>
+<th align="right">没有合格方向</th>
+<th align="right">合计</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5 点</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>20 点</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">9</td>
+<td align="right">2</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>50 点</td>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">10</td>
+<td align="right">2</td>
+<td align="right">20</td>
+</tr>
+</tbody></table>
+<p>五点门槛下，10/20 = 5 + 5。前五条的第一个合格方向已经是开放，后五条才是先出现持续闭合方向、再出现持续开放方向。不能把十条都叫作同一类转变。第一个合格开放段开始于观察窗口内，也不表示模拟 t=0 已经开放。另一组 20 条开放起始轨迹在三档门槛下均保持开放方向。</p>
+<p>门槛从 5 提高到 50 点时，会排除较短片段，也可能改变“第一个合格方向”。例如 ES15 从 115 ns 到 1020 ns 有 906 个开放方向点；在 50 点门槛下，它的第一个合格方向已经是开放，所以不再计入“先闭后开”。5/4/1 不是转变持续时间分布。</p>
+<p>更严格的核心区域标签只覆盖闭合组的 1 个点、开放组的 2 个点，两组各有 20,020 点。它对这批数据几乎不提供分类信息。由此不能说没有分子变化；应检查严格标签和资料是否匹配。</p>
+<p>给组会的三句话：闭合起始组一半轨迹在保留的一微秒窗口内出现持续开放方向读数，开放起始组没有相反变化。这支持派生判据下的方向不对称，尚未复现作者的完整构象分类。下一步比较方向片段中的绝对 NOE 违例，区分“更偏好开放参照”和“已经接近开放参照”。</p>
+<h2 id="section-5">5. Agent 和规则分别表现怎样</h2>
+<table>
+<thead>
+<tr>
+<th>答复</th>
+<th>核对后的表现</th>
+<th>对下一步的影响</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>普通 Agent 第一次</td>
+<td>主要计数正确，报告了核心标签覆盖问题；从工具错误中恢复</td>
+<td>普通 Agent 已经具备有用分析能力，是必要基线。</td>
+</tr>
+<tr>
+<td>规则 Agent 第一次</td>
+<td>主要计数正确；把不等长度分箱称为常规箱</td>
+<td>局部措辞错误需要纠正，不应放大成核心科学失败。</td>
+</tr>
+<tr>
+<td>规则 Agent 第二次</td>
+<td>主要计数正确，另算出 10/20；没有报告核心覆盖数值</td>
+<td>补充有内容。未报告另一份答案的所有诊断，不等于丢失了正确结论。</td>
+</tr>
+<tr>
+<td>普通 Agent 第二次</td>
+<td>首方向与阈值计数出错，部分数字相互矛盾</td>
+<td>需要逐项核验科学主张，不能只检查答复是否完整提交。</td>
+</tr>
+</tbody></table>
+<p>四次模型费用合计 0.0757458 美元；这只是 API 费用，不包括开发、审核与报告的人力。9 个 Python 请求按原样重放并核对输出，原始错误也保留。三份答复主计数正确是本批观察，不能转换成系统总体 75% 正确率。</p>
+<p>两份规则答复都带入了尚未建立本题适用性的 RMP 等建模条件。提示包中还包含 FRET 的 R0 与染料可及体积条件；这些条件属于荧光测量与前向模型。提示中出现与答案中实际使用必须分开记录。问题位于把通用检查与原论文专用条款一起展示的环节；当前证据不足以判定全部 Rules 无效。</p>
+<h2 id="section-6">6. 新文献对设计的具体影响</h2>
+<p>Ensemble 博客要求我们问：分子分布中的哪些差异，经过测量和数据处理以后仍然能够区分。因此报告不能笼统说“捕获了 ensemble”，要写明所区分的性质，以及观测对它是否敏感。比如方向读数增加可以支持结构偏好变化，未必区分绝对近开放状态与仍偏离两端的结构。</p>
+<p>新的 T4L 工作比较生成结构、物理采样及相关分析。进入某个结构区域、给出 MSM 状态权重、预测 FRET 分布分别属于不同证据层级。MSM 是根据状态间转移构建的马尔可夫模型；FRET 是距离敏感的荧光能量转移实验。覆盖更多结构区域，不自动证明平衡占比和动态过程正确。已完成的逐篇分析继续作为来源，当前不重复把它们改写成新的蛋白专用规则。[S5–S6]</p>
+<p>这两份材料使我们的检查围绕“当前要辨别什么科学差异”组织。是否最终需要更强的 harness，要看系统在工具选择、证据使用与结论限制上出现的具体失败。先让同一 Agent 有规则和没有规则作比较，有助于把知识的收益与软件强制执行的收益分开。</p>
+<h2 id="section-7">7. 节奏是否过慢，以及怎样推进才严谨</h2>
+<p>当前瓶颈是结果转成可用交付的速度。首轮科学运行很快，而接入、状态和审阅记录多次先于清楚的项目解释完成。继续增加内部流程不能解决这个问题。每条轨道结束应当有一个可读答案、一张能定位依据的表和一套组会材料；检查围绕真实风险进行，已验证且未改动的计算不重复跑。</p>
+<p>同时要守住三点：保留原答复和冻结数据，避免事后修成正确；运行前写下分类与比较规则，避免追逐论文数字；模型回答错误时记录错误，不在正式运行里提示它。这些约束保护科学解释，报告存在与否则保护交付。</p>
+<p>尚缺的关键证据有三类：方向读数与绝对 NOE 违例的关系；规则提示修正后是否仍引入不适用条件；第二体系能否用现成资料与成熟方法产生有用答案。第一类现在可用本机数据回答；后两类分别由窄修复和新案例承担，不再都压在 HSP90 上反复修。</p>
+<h2 id="section-8">8. 已获授权的下一步与停止条件</h2>
+<table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>交付与要验证的事</th>
+<th>完成或停止条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>先交项目报告</td>
+<td>本文、时间线、证据表、8–10 页组会材料</td>
+<td>读者能解释项目目标、结果和缺口；材料检查通过。</td>
+</tr>
+<tr>
+<td>首轮收口</td>
+<td>将格式条件、科学质量、管理决定分开；逐答复引文关系表；完整汇报包</td>
+<td>保留原数值与答复；修正评价理由，不重跑同题 A/B。</td>
+</tr>
+<tr>
+<td>原生 NOE 对照</td>
+<td>对齐本机 80 份作者序列，三档固定阈值与逐轨迹结果</td>
+<td>不调参追 7/9/4；阳性对照失败则停止解释并交报告。</td>
+</tr>
+<tr>
+<td>提示渲染修复</td>
+<td>保留条款来源与方法范围，把项目归纳检查单独展示</td>
+<td>不改 33 条注册表与选择器；两处专用条件不再无条件当必填。</td>
+</tr>
+<tr>
+<td>第二体系</td>
+<td>盘点 ADK / DHFR，选一题，普通 Agent 两次分析</td>
+<td>下载总量不超过 2 GB，模型新费用不超过 0.30 美元；不合格或凭证缺失则交具体缺口，停止相应运行。</td>
+</tr>
+</tbody></table>
+<p>上述轨道自动衔接，无需每一步重新请求许可。总上限为启动后的 15 个工作日。结束后不进入第三体系。每周五提供一页更新，说明新结果、证据和下一步，不以又一份计划代替交付。</p>
+<h2 id="section-9">9. 来源与核查入口</h2>
+<p>S1：7 月 28 日会议纪要，问题与流程关系；S2：8 月 24 日会议共识，13:41–16:50、25:49–30:10。</p>
+<p>S3：首轮冻结源表的直接核对结果，见 <a href="evidence/direct_source_check.json">证据目录</a>，以及 <a href="HSP90_Q01_VERIFIED_REPORT_ZH.md">科学报告</a>。分区表由已核对的首方向、离开与无合格段计数得到，与本机审查一致。</p>
+<p>S4：<a href="claim_source_map.jsonl">逐项主张与来源</a>、<a href="PRO_REVIEW_DISPOSITION_ZH.md">Pro 审阅处置</a>。本报告沿用真实答复核对；未新增模型运行。</p>
+<p>S5：<a href="https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html">Are we capturing the ensemble?</a>，详细解读沿用项目既有笔记；S6：<a href="https://doi.org/10.1021/acs.jcim.6c02044">T4L 新论文</a>，本文只复述已核查的证据层级，不新增论文数值结论。</p>
+<p>内部时间线的逐项路径及会议段落保存在 <a href="PROJECT_TIMELINE_EVIDENCE.json">时间线证据</a>。文件存在证明材料已编写，不证明外部收件人收到或认可。</p>
+<h2 id="section-10">执行后更新：NOE 对照已把解释进一步收窄</h2>
+<p>旧差值实际读取第三列伪距离违例，计划却将它当成第二列平均距离违例。分类前修订了这一读取前提，保持所有阈值不变；第三列复现旧值的误差为0，再用第二列完成40040点、40条轨迹的对照。</p>
+<p>1 Å主容差下，10条有开放方向的闭合起始轨迹中9条的这些点至少一半同时偏离两套参照，另1条部分一致；开放起始组18/20一致。ES15的开态违例由前100点平均9.07降到末100点1.12 Å，说明确有改善；判读对容差敏感，不等于论文分类错误。</p>
+<p>规则渲染层已修复并通过测试，尚未新跑Agent验证行为效果。第二体系已有ADK/DHFR候选，准入未完成且允许来源中无API凭证，尚未运行。新模型费用为0美元。</p>
+</main></html>

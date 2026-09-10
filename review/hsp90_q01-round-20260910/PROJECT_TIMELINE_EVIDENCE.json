@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-07-28",
+    "claim": "会议要求先分析已有数据",
+    "source": "autoresearch/tasks/dynamics_atlas_meeting_followup_20260728/outputs/01_MEETING_MINUTES_AND_ACTIONS_ZH.md",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  },
+  {
+    "date": "2026-08-24",
+    "claim": "最小原型与成熟方法",
+    "source": "autoresearch/tasks/dynamics_atlas_soojung_meeting_transcript_prototype_20260824/outputs/02_MEETING_DECISIONS_AND_ACTIONS_ZH.md",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  },
+  {
+    "date": "2026-08-05 onward",
+    "claim": "33条候选规则档案",
+    "source": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/ruleset/v0_1/rule_registry.tsv",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  },
+  {
+    "date": "2026-09-08",
+    "claim": "技术报告存在不代表发送",
+    "source": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/REPORT_ZH.md",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  },
+  {
+    "date": "2026-09-09",
+    "claim": "12次开发运行报告",
+    "source": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/DEVELOPMENT_REPORT_ZH.md",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  },
+  {
+    "date": "2026-09-10",
+    "claim": "HSP90四答复与审查",
+    "source": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/outputs/PRO_REVIEW_DISPOSITION_ZH.md",
+    "exists": true,
+    "delivery_to_collaborator": "not_verified"
+  }
+]

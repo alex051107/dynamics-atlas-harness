@@ -1,3 +1,9 @@
+[本轮v4统一入口](V4_EXECUTION_INDEX_ZH.md)
+
+我们已能得到可复核的 HSP90 有限时间方向差异。规则的独立收益仍未建立，原方法条件迁移是明确问题。下一步已授权做绝对 NOE 对照、提示窄修复和第二体系普通 Agent 分析。
+
+[项目全程报告](DYNAMICS_ATLAS_PROGRESS_REPORT_20260912_ZH.html) · [项目组会材料](DYNAMICS_ATLAS_PROGRESS_REPORT_20260912.pptx)
+
 # HSP90 首轮报告索引
 
 阅读顺序：[一页速读](ROUND_BRIEF_ZH.html) → [十二页会议PDF](render/deck.pdf) → [详细读本](DYNAMICS_ATLAS_HSP90_Q01_DEEP_READER_ZH.html)。

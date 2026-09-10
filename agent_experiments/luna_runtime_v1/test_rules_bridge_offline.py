@@ -22,3 +22,13 @@ if os.environ.get('ATLAS_SELECTOR_PROBE'):
         parsed=[json.loads(line[2:]) for line in block.splitlines() if line.startswith('- ')]
         assert any(all(record[k]==o.get(k) for k in ('obligation_id','target','required_check','reason_from_input','claim_scope')) for record in parsed)
 print('Original rule grouping and intact per-target checks, empty/unmapped branches, optional real selector probe: PASS')
+
+# Missing metadata must not silently activate method-specific conditions.
+for rid in ('C003-RULE-002','C001-RULE-002'):
+    fixture={rid:dict(registry.get(rid,{}), proposed_project_rule='source original', required_fields='source field', abstain_route='source abstain',paper_id='dimura_2020_fret_assisted_modeling' if rid.startswith('C003') else 'hellenkamp_2018_smfret_benchmark',rule_class='reweighting',transfer_scope='preserve source scope')}
+    out,_,_=render({'obligations':[dict(items[0],rule_id=rid)],'method_families':['MD','NMR']},fixture)
+    assert '本题适用性未确认' in out and 'source original' in out
+# Positive method match activates original conditions; empty metadata does not.
+out,_,_=render({'obligations':[dict(items[0],rule_id=rid)],'method_families':['smFRET']},fixture)
+assert '必填：source field' in out
+print('Method applicability negative and positive controls: PASS')

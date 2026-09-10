@@ -1,3 +1,5 @@
+> Historical inventory from the e2bfa35 first-round package. For v4 see V4_FILE_INVENTORY.json. These hashes do not describe revised files.
+
 # 交付文件清单
 
 每个文件仅在本次交付归档时计算一次SHA-256；本清单自身不哈希。原始数据身份另见任务冻结记录。
