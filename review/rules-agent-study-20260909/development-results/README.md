@@ -62,3 +62,5 @@
 - [DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md](DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md)（[HTML](DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.html)）：按 G1–G4 的完整计划表、时间线、今天汇报的 14 页页序与可说/不可说清单、下一步总表。
 - [RULES_HARNESS_INCREMENT_ROUNDS_2_3_ZH.md](RULES_HARNESS_INCREMENT_ROUNDS_2_3_ZH.md)：增量效益测试第二、三轮。A/B/C 三组（普通 / Rules / Rules+Harness 确定性检查一次反馈），每组每题 4 次；第二轮 3 题（HSP90 原生对照、DHFR 缺陷表、DHFR 修正表），第三轮 ADK 2 题（Rules 未见过）；评分依据与检查器运行前冻结，盲评，预注册判定表；≤ $1.50、7 个工作日。
 - [ONE_SHOT_ORDER_ZH.md](ONE_SHOT_ORDER_ZH.md)：一口气跑完的总令：DHFR 入库 → 第二轮增量测试 → ADK 收官 → 第三轮 → 总报告 + 一页 RULES_TABLE_VERDICT（第一行三选一）。授权 8–14，11 个工作日，≤ $1.55。
+- [FORM_QUESTION_ANSWERED_ZH.md](FORM_QUESTION_ANSWERED_ZH.md)：9 月 8 日报告与 Pro 三轮分析对"该不该做 Rules Table"的结论汇总，与 9 月 9–10 日实际工作的对照；结论：形式已收敛，要改的是测试设计（D/P/R，R−P 才是问题）。
+- 增量测试与一口气总令改为 v2：三组 D（整理资料）/ P（七条手写协议）/ R（注册表规则），不设 Harness 组；判定改用 Pro 的质量/效率两条路径。
