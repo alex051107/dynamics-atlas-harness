@@ -1,0 +1,15 @@
+{
+  "source_checksum": "8/8",
+  "freeze_isolation": "PASS",
+  "python_replay": "4/4 identical stdout",
+  "true_quote_tables": "2 tables,16rows PASS",
+  "PBC_crosscheck": "max1.132e-5Å <1e-4Å",
+  "frozen_input_integrity": "unchanged",
+  "bundle": "PASS9slides15claims",
+  "pptx_xml": "PASS",
+  "visual_review": "9slide PDF rendered and contact sheet inspected; no clipping found",
+  "prose": "technical report retained necessary colons,atom-pair hyphens and URL punctuation; checker flagged punctuation only, zero jargon/turnaround/stop terms",
+  "additional_check_risk": "PBC crosscheck added after newly identified coordinate representation defect",
+  "skipped": "unchanged runtime fullsuite, no provider/domain review",
+  "science_status": "post-freeze developer corrected analysis; raw Agent inputs physically limited"
+}

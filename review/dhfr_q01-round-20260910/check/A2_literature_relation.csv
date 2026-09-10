@@ -1,0 +1,9 @@
+agent_claim,answer_locator,paper_locator,relation,input_checked,note
+局部接近在 WT 中很明确，在 L28R 中只对 O3P、较弱地对 O4P成立；对 O5P 则不成立。因此“4,AGENT_RAW/A2/answer.md:L5,Fig4a,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,正确汇总原表不等于物理接触验证
+N18 和 W22**：WT 中多数相应距离变短或 <6 Å 帧比例增加；L28R 中变化较弱且混合。它们支持,AGENT_RAW/A2/answer.md:L6,Fig4a,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,泛化三个氧的混合变化未紧扣作者指定O3P，且原表示受周期性影响
+R28–O4P/O5P**，而不是 R28 与三个配体氧全部增强。,AGENT_RAW/A2/answer.md:L7,Fig4b,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,方向相容但原输入不能直接解释为强氢键
+L28R-TMP 65.0±7.5 nM、L28R-4′-DTMP 34.3±2.9 nM。故 4′-DTMP,AGENT_RAW/A2/answer.md:L9,Table1,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,四项Ki正确
+约比 TMP 强 1.9 倍，但两者都仍是纳摩尔级。图3/正文所述 500 nM、初始 DHF 12.5 μM,AGENT_RAW/A2/answer.md:L9,Table1,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,Ki比值约1.90，精度适当
+WT 加任一抑制剂均观察不到 DHF 消耗；L28R 中两者都减慢反应，而 4′-DTMP 比 TMP 更明显,AGENT_RAW/A2/answer.md:L9,Fig3,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,与作者正文一致
+不能给出严格氢键占有率；也没有把持续时间、接触状态转换或不同构象分群量化。,AGENT_RAW/A2/answer.md:L60,HbondMethods,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,保留角度界限
+明显的长尾/构象切换；均值和 <6 Å 比例有时给出不同印象，说明“接触增强”依赖于采用均值还是状态占有率。,AGENT_RAW/A2/answer.md:L62,Fig4/local data,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,把坐标包装伪跳变解读为构象变化，证据不足

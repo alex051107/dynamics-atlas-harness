@@ -1,0 +1,5 @@
+# DHFR coordinate representation issue
+
+After A1 began, developer numeric verification found very large unwrapped Euclidean distances. Common values remain valid literal coordinate measurements, but their physical contact interpretation is not admitted until periodic imaging is resolved. Frozen files are unchanged. A2 uses exactly the same files, no hints; this fulfills the two-output descriptive record, not a validated scientific repeatability result. Both answers must be judged against this developer input failure rather than blame the model for inaccessible original coordinates. No corrected-case paid repeat or further model runs are authorized in this task. Developer diagnostic outputs are separate and never attributed to the Agent.
+
+Practical deviation: freeze occurred before magnitude/periodic-coordinate validation. This is a curator preprocessing/admission defect; successful topology and checksum tests did not validate scientific representation. Record in final report and do not count the original distance means as native contacts or paper disagreement.

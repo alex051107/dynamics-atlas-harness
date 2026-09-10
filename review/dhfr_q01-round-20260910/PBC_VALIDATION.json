@@ -1,0 +1,26 @@
+{
+  "comparison": "componentwise minimum image vs VMD pbctools wrap then measure bond",
+  "tolerance_A": 0.0001,
+  "results": [
+    {
+      "system": "tmpp-wt_distances",
+      "maximum_distance_error_A": 1.1320000000480945e-05,
+      "pass": true
+    },
+    {
+      "system": "d4tmpp-l28r_distances",
+      "maximum_distance_error_A": 9.649999999084002e-06,
+      "pass": true
+    },
+    {
+      "system": "tmpp-l28r_distances",
+      "maximum_distance_error_A": 1.102000000052783e-05,
+      "pass": true
+    },
+    {
+      "system": "d4tmpp-wt_distances",
+      "maximum_distance_error_A": 8.189999999963504e-06,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+system	natoms	nframes	ligand_resid	ligand_resname	protein_residues	res28
+tmpp-wt	21652	1001	300	TMPP	159	LEU
+tmpp-l28r	21647	1001	300	TMPP	159	ARG
+d4tmpp-wt	20332	1001	303	D4PP	159	LEU
+d4tmpp-l28r	20534	1001	303	D4PP	159	ARG
