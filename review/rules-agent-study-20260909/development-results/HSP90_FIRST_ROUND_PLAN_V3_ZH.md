@@ -1,8 +1,8 @@
-# HSP90 首轮：一个科学问题、四份答复、有界交付（v3）
+# HSP90 首轮：一个科学问题、四份答复、有界交付（v3.1）
 
-Dynamics Atlas · 2026-09-09 · v3 · **供 Codex 逐步执行** · 本版是交付版，开工不再等下一轮 Pro 批准
+Dynamics Atlas · 2026-09-10 · v3.1 · **供 Codex 逐步执行** · 本版是交付版，开工不再等下一轮 Pro 批准
 
-> v3 替代 v2（`HSP90_FIRST_ROUND_PLAN_V2_ZH.md`）。范围、规模、四结果表不变。改动来自两处：Pro 对 v2 的审查（`PRO_REVIEW_OF_PLAN_V2_ZH.md`，结论 CHANGES_REQUESTED_BOUNDED，"改几处后执行"）和 2026-09-09 深夜对 v2 引用的每个路径、脚本参数、字段名的本机核实。逐条处置见 §11。v1 意见的处置沿用 v2 §11，不再重复。
+> v3.1 在 v3 上合并了 Pro 对 v3 的五项局部修正（`PRO_REVIEW_OF_PLAN_V3_ZH.md`，处置见 §11.3）：A1 先于 A0、规则渲染保留对象与检查配对、B0 来源差异分别保留、字段定义移出汇总结果、A-only 分支贯穿 §5–§7。v3 替代 v2（`HSP90_FIRST_ROUND_PLAN_V2_ZH.md`）。范围、规模、四结果表不变。改动来自两处：Pro 对 v2 的审查（`PRO_REVIEW_OF_PLAN_V2_ZH.md`，结论 CHANGES_REQUESTED_BOUNDED，"改几处后执行"）和 2026-09-09 深夜对 v2 引用的每个路径、脚本参数、字段名的本机核实。逐条处置见 §11。v1 意见的处置沿用 v2 §11，不再重复。
 >
 > 路径约定：`WS` = 本地工作区根目录（不在 git 内）；`HARNESS` = `WS/dynamics-atlas-harness`；`HARNESS_LUNA` = `WS/dynamics-atlas-harness-luna-runtime-v1`（A2 建）；`RT` = `HARNESS_LUNA/agent_experiments/luna_runtime_v1`（代码，入库）；`TASK0` = `WS/autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909`；`TASK2` = `WS/autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910`（案例、运行、账本，不入库，A1 建）。**代码目录和任务目录分开，运行器不再从代码位置推断任务根目录。**
 
@@ -22,11 +22,11 @@ Dynamics Atlas · 2026-09-09 · v3 · **供 Codex 逐步执行** · 本版是交
 
 | 项 | 内容 |
 |---|---|
-| 1 | 模型费用上限 **$0.20**（四次分析 ≤ $0.15，余量给失败重试与 A0 的一次接口探测）；这是停止线，不是四份必成的成本预测；`TASK2/outputs/UNKNOWN_CHARGE.json` 出现即停 |
+| 1 | 模型费用上限 **$0.20**（四次分析 ≤ $0.15，余量给失败重试）；这是停止线，不是四份必成的成本预测；`TASK2/outputs/UNKNOWN_CHARGE.json` 出现即停 |
 | 2 | 在运行 shell 提供 `OPENROUTER_API_KEY`；Codex 不从任何文件读 key |
 | 3 | 允许 `feature/luna-runtime-v1` 分支 commit / push / Draft PR；`runs/`、案例数据、账本、凭证不入库 |
 | 4 | 允许把 `MD_TRAJECTORY` 方法档作为开发 proposal 经**副本** method scope 送入选择器；原文件不改；标签 `DEVELOPMENT_PROPOSAL_NOT_HUMAN_REVIEWED` |
-| 5 | 允许为本轮写一份新的 `TASK2/runtime/readiness.json`（`approved_for_development: true`，注明本轮授权日期与费用上限）。旧 `TASK0/runtime/readiness.json` 保持 `false`，不改 |
+| 5 | 允许为本轮写一份新的 `TASK2/runtime/readiness.json`（`approved_for_development: true`，注明本轮授权日期与费用上限），**写入时机在 A1 初始化与 A0 共同运行环境检查都满足之后**，并附检查结果。旧 `TASK0/runtime/readiness.json` 保持 `false`，不改 |
 
 PM 回复"授权 1–5"后，Codex 在 `WS/autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl` 追加一条并开工。本轮不下载任何外部数据。
 
@@ -60,17 +60,7 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
 
 格式：输入 → 动作 → 输出 → 完成标准 → 停止条件。
 
-### A0 环境预检（半小时，不花钱除非注明）
-- 动作：
-  1. `docker info` 成功（2026-09-09 深夜本机 Docker 守护进程未运行，需先启动 Docker Desktop）。
-  2. `docker image inspect atlas-luna-development:20260909 --format '{{.Id}}'` 输出等于 `TASK0/runtime/frozen_development.json` 的 `image`（`sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29`）。镜像不存在 → 停：本机没有 Dockerfile 或构建记录，重建不在本轮范围，写失败账本交 PM。
-  3. 容器内导入检查（改自 `TASK0/runtime/preflight.py` 第 9–27 行，只保留 `import numpy,scipy,matplotlib,PIL,fitz,pandas,sklearn` 和只读/无网断言；**去掉**它后半段的模型图像调用）。注意容器内没有 MDAnalysis，宿主机也没有。
-  4. 选择器探测（零费用）：对 `WS/autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json` 运行 `select_review_obligations.py`，输出应含 `obligations`（本机探测：51 条，`unresolved_inputs` 17）。
-  5. `python3 -c "import jsonschema"` 成功（选择器测试依赖）。
-- 输出：`TASK2/outputs/preflight_env.json`
-- 停止：1–3 任一失败即停，写失败账本。
-
-### A1 建任务
+### A1 建任务（先于 A0；不含模型调用，不提前写 readiness）
 - 动作：
   ```bash
   cd "$WS"
@@ -79,7 +69,22 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
   python3 autoresearch/scripts/validate_dynamics_atlas_context_receipt.py --task-id dynamics_atlas_hsp90_first_round_v3_20260910
   mkdir -p "$TASK2"/{cases/HSP90_Q01/{common,arm_B,hidden},runs,outputs,runtime,inputs}
   ```
-- 完成：验证器 PASS。停止：不 PASS 不进 A2。
+- 完成：验证器 PASS，`TASK2` 目录已建。停止：不 PASS 不进 A0。
+
+### A0 环境预检（在 A1 之后；不花钱）
+- 动作：
+  1. `docker info` 成功（2026-09-09 深夜本机 Docker 守护进程未运行，需先启动 Docker Desktop）。
+  2. `docker image inspect atlas-luna-development:20260909 --format '{{.Id}}'` 输出等于 `TASK0/runtime/frozen_development.json` 的 `image`（`sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29`）。
+  3. 容器内导入检查（改自 `TASK0/runtime/preflight.py` 第 9–27 行，只保留 `import numpy,scipy,matplotlib,PIL,fitz,pandas,sklearn` 和只读/无网断言；**去掉**它后半段的模型图像调用）。容器内没有 MDAnalysis，宿主机也没有。
+  4. 选择器探测（零费用）：对 `WS/autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/case_inputs/selector_repair/lincoff_2020_xeisd_metadata_v0_3.json` 运行 `select_review_obligations.py`，输出应含 `obligations`（本机探测：51 条，`unresolved_inputs` 17；这是该样例的记录，不是 HSP90 的目标输出）。
+  5. `python3 -c "import jsonschema"` 成功（选择器与其测试的依赖）。
+- 输出：`TASK2/outputs/preflight_env.json`（五项各自的结果）。
+- 分支：
+  - 第 1–3 项任一失败 → 停止模型运行，写失败账本（§12）保存环境失败原因；镜像缺失时本机没有 Dockerfile 或构建记录，重建不在本轮范围，交 PM。**不得改到可见整个工作区的宿主环境里跑比较。**
+  - 第 4 项失败 → 记录选择路径失败，按 A5 / B3 进入 A-only 分支，共同运行器部分照常。
+  - 第 5 项失败 → 只影响选择路径则同第 4 项处理；影响共同运行器则停止。
+- 第 1–3 项通过后，按授权 5 写 `TASK2/runtime/readiness.json`，附本文件的检查结果。
+- 批处理从冻结文件读取镜像，并显式向运行器传必填的 `--image`。
 
 ### A2 分支与搬运
 - 动作：
@@ -119,12 +124,12 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
       --method-scope "$CASE/hidden/method_scope_dev_copy.json"
     ```
     `method_scope_dev_copy.json` = 原 method scope 的副本，`MD_TRAJECTORY` 的 `status` 改为 `REGISTERED_FOR_METADATA_REVIEW`，七字段取值引用 B0 卡，加 `"development_proposal": "DEVELOPMENT_PROPOSAL_NOT_HUMAN_REVIEWED"`。
-  - `render_active_rules.py`：读 `review_obligations.json` 的 `obligations[]`（每条含 `obligation_id, rule_id, target, required_check, claim_scope, reason_from_input`）。**按 `rule_id` 分组**，每个不同的 `rule_id` 渲染一块：`**[<rule_id>]** <proposed_project_rule>　必填：<required_fields>　弃权路线：<abstain_route>　本案触发对象：<target.source_ids 或 comparison_ids 去重>　检查：<required_check 去重>`。查不到 `rule_id` 的写 `hidden/unmapped_obligations.json`，不渲染。文首固定一句："以下为分析提醒，可质疑；与资料冲突时以资料为准并说明。"
+  - `render_active_rules.py`：读 `review_obligations.json` 的 `obligations[]`（每条含 `obligation_id, rule_id, target, required_check, claim_scope, reason_from_input`）。相同 `rule_id` 的规则正文只渲染一次：`**[<rule_id>]** <proposed_project_rule>　必填：<required_fields>　弃权路线：<abstain_route>`；其下**逐条保留**可映射义务的 `obligation_id`、`target`、`required_check`、`reason_from_input` 和适用的 `claim_scope`。可以去除完全相同的重复记录，**不得分别合并对象集合与检查集合而丢失"哪个检查适用于哪个对象"的配对**。查不到 `rule_id` 的写 `hidden/unmapped_obligations.json`，不临时补写规则。文首固定一句："以下为分析提醒，可质疑；与资料冲突时以资料为准并说明。"
   - 七条指导与注册表对照表 `TASK2/outputs/seven_rules_registry_mapping.tsv`（七条来自 `TASK0/runtime/ACTIVE_RULES_ZH.md`）只作记录。
 - 输出：`arm_B/ACTIVE_RULES.md`
-- **分支（冻结前写清，不临时补救）：** 选择器抛错 / `obligations` 为空 / 渲染后为空 → 记录属于技术失败、没有适用规则、还是映射未覆盖；仍完成 A 组两次科学回答；**不手挑规则补出 B**，不把相同输入的两组称为有处理差异的 A/B 比较。
-- 完成：`test_rules_bridge_offline.py` 对 lincoff 样例：obligations 非空，渲染每块含 `rule_id`，块数 = 不同 `rule_id` 数。
-- 说明：B 组规则来自旧注册表 + 旧选择器，是复用选择，不是它比 9 月 9 日的七条指导更科学的证明。
+- **分支（冻结前写清，不临时补救）：** 进程异常或输出格式无效记 `FAILED`；有效输出中没有义务记 `EMPTY`；有义务但全部无法映射记 `UNMAPPED`。三者都进 A-only 分支：仍完成 A 组两次科学回答，**不手挑规则补出 B**，不把相同输入的两组称为有处理差异的 A/B 比较。存在部分未映射时保存缺口，B 只使用实际可渲染部分，报告不宣称规则覆盖完整。
+- 完成：`test_rules_bridge_offline.py` 对 lincoff 样例：obligations 非空；块数 = 可映射的不同 `rule_id` 数；每条可映射义务的 `obligation_id`、`target`、`required_check` 在其 `rule_id` 块下同行出现（配对被保留）。
+- 说明：B 组规则来自旧注册表 + 旧选择器，是复用选择，不是它比 9 月 9 日的七条指导更科学的证明。副本里的 `REGISTERED_FOR_METADATA_REVIEW` 只表示"允许进入这个元数据审查选择器"；选择器有输出不证明方法定义正确，也不等于正式 method scope 已放行。七字段按 B0、B1 的公开说明填，找不到来源的保持未知，不为通过选择器补写。
 
 ### A6 任务根目录、预算参数化、批处理
 - 动作：`--task-root`、`--budget-usd`；`run_batch.py --freeze <json> --task-root <dir> --budget-usd <x>`：读冻结文件的 `run_order`，每次前检查 `task_root/outputs/UNKNOWN_CHARGE.json`，每次后追加 `task_root/outputs/results.json`；`arm == 'C'` 直接拒绝。`readiness.json` 从 `task_root/runtime/` 读（授权 5）。
@@ -147,8 +152,8 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
 - 动作：写 `TASK2/outputs/HSP90_SOURCE_AND_RUN_CARD.json`，两层：
   - `paper_statement`：ff14SB、显式水、~170 mM NaCl、1020 ns、前 20 ns 平衡、后 1000 ns 分析、每 1 ns 快照；每项带 locator。
   - `local_inputs_checked`：
-    - `force_field`：目录 `amber14sb_OL15.ff` 与原文一致；Zenodo 描述写 AMBER99SB，记为资源描述与论文不一致，**不再称为分析阻碍**；7/28 的"力场存疑"据此更新。
-    - `frames`：README 名义 1020 帧；旧报告实测 1021 帧（含 t=0）；派生表 1001 点。三者对应全程含零帧 / 全程名义 / 后 1000 ns 含端点，**不是冲突**。
+    - `force_field`：论文 Methods 报告 ff14SB；本机保存的 Zenodo 描述写 AMBER99SB，旧报告据此转述，并非已证实的误抄。两处文档记载不一致，分别保留；目录名 `amber14sb_OL15.ff` 与论文一致，但目录名不单独用于确认实际生产参数。该差异不阻止本轮对已保存派生量作有限描述。7/28 的"力场存疑"据此更新为"两处文档不一致，分别保留"。
+    - `frames`：作者 README 名义帧数（1020）、旧报告的 XTC 实测帧数（1021）和派生表点数（1001）分别记录。全程含端点与裁剪后窗口可以解释部分差异，但只有已有时间列或处理记录支持的对应才标 `VERIFIED`；其余保留为 `TO_CHECK` 说明。本轮以实际交付的派生表时间范围为准，不为消除这项文档差异新增依赖或重跑模拟。
     - `time_axis_of_round_inputs`（本轮真正交给 Agent 的表）：读 `frame_state_assignments.tsv`（B1）的 `time_ns` 列。本机核实：40 条轨迹、每条 1001 行、20.0–1020.0 ns、步长 1.0 ns。写明"派生表时间零点沿用原轨迹，窗口 20–1020 ns"。
     - `xtc_spot_check`：可选，一条 R46A、一条 R60A。宿主机与容器都没有 MDAnalysis，本轮**不为此安装依赖**；若 `gmx check` 可用就记首末帧与帧数，否则记 `NOT_ATTEMPTED`。标为抽查，不用于声称 40 条都已核对。
     - `lineage`：R46A/R60A 文件来源（上面提取清单）；seed lineage 与目录名的对应。
@@ -172,14 +177,14 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
   | `WS/autoresearch/tasks/dynamics_atlas_hsp90_paper_comparison_20260729/outputs/HSP90_PAPER_ATLAS_CLAIM_COMPARISON.md`（224 行，HPA-01…14；v2 写的 `…CLAIM_MATRIX.md` 只是 302 字节的指针文件） | 项目结论 | `hidden/` |
 
   seed lineage 从 `trajectory_time_anatomy.tsv` 的 `seed_lineage` 列取，不需要 `route_predictions.tsv` 进 `common/`。
-- `common/FIELD_DEFINITIONS.md` 必须写清（从脚本抽出，**不复制历史文件里的"建议怎样回答"和允许/禁止措辞**）：
+- `common/FIELD_DEFINITIONS.md` 必须写清（从脚本抽出，**不复制历史文件里的"建议怎样回答"和允许/禁止措辞，也不放任何算好的汇总结果或对题目的答题提示**）：
   1. 统计单位是轨迹（n = 40：`closed_seeded` 20、`open_seeded` 20）；帧是轨迹内的描述对象。
-  2. 逐帧标签规则：`geometry_delta_A > 0 且 contact_margin_A > 0` → `OPEN_CONSENSUS`；两者 `< 0` → `CLOSED_CONSENSUS`；否则 `READOUT_CONFLICT`（零符号规则，未优化）。`state_core` 另按 `state_core_definition.json` 的 `assignment` 判 `C/O/U`（本机核实：40 037 帧 U、2 帧 O、1 帧 C）。
-  3. `trajectory_time_anatomy.tsv` **每条轨迹三行**，对应持续性阈值 5、20、50 个保存帧（`persistence_saved_frames`）；120 行是 40 × 3，不是 120 条轨迹。按阈值分别统计再比较敏感性，不合并。
-  4. `first_persistent_direction` = 第一个长度 ≥ 阈值且不是 `READOUT_CONFLICT` 的连续段的标签；`opposite_direction_departure_candidate` = 其后出现的与它**相反**的持续段；`return_candidate` = departure 之后再出现与第一个持续方向相同的持续段。**departure 相对于第一个持续方向，不相对于起始结构标签**：若某条轨迹的第一个持续方向已不同于 seed lineage，直接累计 departure 会答错 Q01。
+  2. 逐帧标签规则：`geometry_delta_A > 0 且 contact_margin_A > 0` → `OPEN_CONSENSUS`；两者 `< 0` → `CLOSED_CONSENSUS`；否则 `READOUT_CONFLICT`（零符号规则，未优化）。`state_core` 另按 `state_core_definition.json` 的 `assignment` 判 `C/O/U`。实际分类计数不写进定义文件，放 `hidden/reference_values.json`。
+  3. `trajectory_time_anatomy.tsv` **每条轨迹三行**，对应持续性阈值 5、20、50 个保存帧（`persistence_saved_frames`）。三行是同一轨迹在三种持续阈值下的记录，不能视为新增的独立轨迹。
+  4. `first_persistent_direction` = 第一个长度 ≥ 阈值且不是 `READOUT_CONFLICT` 的连续段的标签；`opposite_direction_departure_candidate` = 其后出现的与它**相反**的持续段；`return_candidate` = departure 之后再出现与第一个持续方向相同的持续段。departure 的参考是第一个满足持续阈值的方向段，该方向可能与 `seed_lineage` 所描述的起始构象类别不同；两者分别记录。
   5. 时间量约定：`length_ns`、`persistence_ns` 等于保存帧数（帧数式约定）；连续 5 个间隔 1 ns 的点首末相差 4 ns。区分保存帧数、采样窗口约定和首末时间差；不把帧数式长度称为精确驻留时间。
   6. 50 ns 分箱用箱内中位数判方向，是显示用的另一时间分辨率汇总，不能恢复逐帧连续段。
-  7. 时间窗口 20–1020 ns，每条 1001 点（引 B0 卡）。
+  7. 时间窗口 20–1020 ns，每条 1001 点（来自本轮输入核对，引 B0 卡的 `time_axis_of_round_inputs`）。
 - 输出：`common/`、`common/SOURCE_INVENTORY.json`（`files[]`, `provenance[]{origin_task, origin_path, sha256}`, `missing[]`）。
 - 完成：`provenance[]` 每条 sha256 与源一致（1 次检查）；A4 的断言对 `common/` 通过；`diff` 冻结脚本与本机脚本的结果写入 `SOURCE_INVENTORY.json`。
 - **覆盖题准入检查**（只查不做）：同目录 `landscape_projection.tsv`（80 160 行，`NMR_ANCHOR`/`SOURCE_BALANCED` 两视图的 PC1/PC2 投影）、`nmr_anchor_pca.json`、`source_balanced_pca.json`（`weights`、`k90`，无原子坐标矩阵）。记 `coverage_inputs: PROJECTION_ONLY`；覆盖题不进本轮，§9 记条件。
@@ -206,7 +211,7 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
 
 ### B3 冻结
 - `freeze_hsp90_q01.py`：`common/`、`arm_B/`、`hidden/`、`RT/` 的 SHA-256 → `TASK2/outputs/frozen_hsp90_q01_v3.json`，含 `model: openai/gpt-5.6-luna, reasoning: medium, image: sha256:d99fa29f…, run_order: 随机化的 [A,A,B,B], budget_usd: 0.15, system_prompt_sha256, arm_B_rules_sha256, selector_branch: OK | EMPTY | FAILED`。唯一一次哈希。
-- 冻结前把 A5 的分支结果写进冻结文件；`selector_branch != OK` 时 `run_order` 只含 A×2，报告按"无处理差异"写。
+- 冻结前把 A5 的分支结果写进冻结文件（`OK | EMPTY | FAILED | UNMAPPED`）；`selector_branch != OK` 时 `run_order` 只含 A×2。**冻结文件的 `run_order` 是本轮实际运行清单，§5–§7 的数量都服从它。**
 
 ### B4 元数据起草：本轮跳过
 - v2 的可选项需要新加 `--stage profile`（现有 `agent_run.py` 没有）、准备 schema、字段对照，且不影响本轮下游。跳过，记 `SKIPPED_BY_PLAN_V3`。自动元数据提取的价值另行判断。
@@ -216,15 +221,15 @@ TASK2/runtime/   → readiness.json、batch.lock（本轮状态，不是代码�
 export OPENROUTER_API_KEY=…        # PM 注入当前 shell
 python3 "$RT/run_batch.py" --freeze "$TASK2/outputs/frozen_hsp90_q01_v3.json" --task-root "$TASK2" --budget-usd 0.15
 ```
-- 4 次：A×2、B×2，顺序按冻结文件。
-- 输出：每次 `answer.md, draft_*.json, receipt.json, events.jsonl`；`TASK2/outputs/results.json`
-- 完成：4 份 receipt 齐；`results.json` 与 receipt 交叉一致（1 次检查）
+- 以冻结文件的 `run_order` 为实际运行清单：正常分支 A×2、B×2；选择器或渲染不可用时仅 A×2。
+- 输出：每次尝试 `answer.md, draft_*.json, receipt.json, events.jsonl`；未能形成答复时保存未完成原因；`TASK2/outputs/results.json`
+- 完成：`run_order` 里每个尝试都有 receipt 或未完成记录；`results.json` 与 receipt 交叉一致（1 次检查）；未安排的 B 在 `results.json` 明确记 `NOT_RUN_RULES_PATH_UNAVAILABLE`，不伪造答复或成功记录
 - 停止：`UNKNOWN_CHARGE.json` → 停不重试；累计 > $0.15 → 停；模型算错/弃权/预算截停 → **保存为结果，不补跑**。
 - **运行器 bug 分支：** 修一次。若修复只影响失败的那一次，只补跑该次；若修复会改变其他已完成运行的行为（提示、挂载、提交协议），保留原结果，写明受影响范围，预算内不能得到同版本的完整对照就交付不完整比较，不强行补齐。已跑不删。
 
 ## 6. 阶段 D：核对（Codex，1 天）：三件事分开记，看全文
 
-先按同一份 `grading_rubric.md` 完成四份答复的科学判断，再看规则覆盖和组间差异。
+先按同一份 `grading_rubric.md` 完成**实际生成的**每份答复的科学判断，再看规则覆盖和组间差异。A-only 分支只核对 A 的两份，不生成 B−A 记录。
 
 **主张范围：** `answer.md` 全文里的重要主张（含没有数字的过强结论，例如"所有轨迹已收敛"）都进核对表，并核对与 `claims[]` 是否一致；正文有、数组没有的主张照样记。
 
@@ -246,14 +251,14 @@ python3 "$RT/run_batch.py" --freeze "$TASK2/outputs/frozen_hsp90_q01_v3.json" --
 
 ## 7. 阶段 E：两层报告（Codex，1 天）
 
-- `TASK2/outputs/AGENT_RAW/`：4 份 `answer.md` + `draft_*.json` + `receipt.json` 原样。
+- `TASK2/outputs/AGENT_RAW/`：`run_order` 中每个实际尝试的 `answer.md` + `draft_*.json` + `receipt.json` 原样（正常分支 4 份，A-only 分支 2 份，外加未完成记录）。
 - `TASK2/outputs/HSP90_Q01_VERIFIED_REPORT_ZH.md`（+ HTML）：
   1. 元数据：论文声明 vs 本轮输入已核对（引 B0 卡）
   2. 问题与数据能回答的范围；本轮测到的是什么（§0 第二段原话）
   3. 逐轨迹观测变化：发生了什么、判据、按阈值的敏感性、与原文定义的关系、仍相容的解释（引 `status=VERIFIED` 的数字；`NOT_INDEPENDENTLY_VERIFIED` 可引但标注）
   4. 与 Henot 2022 的关系表（§6）
-  5. Agent 原始交付的评价：四份各自答对/过强/弃权/未完成，引 `claims_check.csv`，含全文主张
-  6. 规则提示改变了什么：B 相对 A 逐条记：多说、少说、说错、引用了哪个 `rule_id`、是否对应实际分析动作；不计数、不设阈值、不下因果结论
+  5. Agent 原始交付的评价：实际生成的每份各自答对/过强/弃权/未完成，引 `claims_check.csv`，含全文主张
+  6. 规则提示改变了什么：B 相对 A 逐条记：多说、少说、说错、引用了哪个 `rule_id`、是否对应实际分析动作；不计数、不设阈值、不下因果结论。A-only 分支本节只写"规则路径不可用，未运行 B"及原因分类，不生成效果结论
   7. 人工介入清单：报告中每一处非 Agent 产出的修正、补充、重述
   8. 未解决与下一步（覆盖题、收敛题的输入状态；选择器分支或运行器修改分支的影响范围）
 - `REPLAY.md`：命令、哈希、系统提示与两组用户提示原文、确定性/LLM 边界、换问题要改哪些文件。
@@ -344,9 +349,26 @@ Pro 审阅 §7 报告；意见按条记 `disposition.json`（`FIX/RECORD/REJECT`
 | 覆盖题输入只有投影 | B1 `PROJECTION_ONLY` |
 | `check_model.py` 也从会话记录抠 key | A3 同改 |
 
+### 11.3 对 Pro 审查意见（v3）的处置
+
+Pro 结论：CHANGES_REQUESTED_BOUNDED，主要处置已到位，改五处局部文字后执行。
+
+| Pro 意见 | 处置 | 落在 |
+|---|---|---|
+| A0 在 A1 之前就往 `TASK2` 写文件；第 4、5 项失败没接到 A-only 分支；readiness 写入时机不明；§1 残留"A0 接口探测" | FIX：A1 先于 A0；A0 五项各自的分支；readiness 在 A1 与 A0 第 1–3 项之后写；删 §1 残留；批处理显式传 `--image` | §1 第 1、5 项；A1；A0 |
+| 规则按 `rule_id` 分组时分别对对象和检查去重，丢失配对 | FIX：正文只渲染一次，义务逐条保留 `obligation_id/target/required_check/reason_from_input/claim_scope`；测试检查配对 | A5 |
+| 选择器失败分类要一句话定死 | FIX：`FAILED / EMPTY / UNMAPPED`；部分未映射时保存缺口 | A5 分支、B3 |
+| `REGISTERED_FOR_METADATA_REVIEW` 只是允许进入选择器，不是科学批准；七字段不为通过选择器补写 | FIX | A5 说明 |
+| B0 把"1020/1021/1001 不是冲突"和 AMBER99SB 写成已核实事实；Pro 撤回"旧报告写错"的判断 | FIX：两处文档记载分别保留；只有时间列或处理记录支持的对应标 `VERIFIED`，其余 `TO_CHECK`；目录名不单独确认生产参数 | B0 |
+| 字段定义混入结果（`state_core` 计数）和答题指导（"会答错 Q01"） | FIX：计数移到 `hidden/reference_values.json`；第 3、4 条改中性表述；第 7 条标明来自本轮输入核对 | B1 |
+| A-only 分支没贯穿 §5–§7（仍写四份） | FIX：以冻结 `run_order` 为实际运行清单；未安排的 B 记 `NOT_RUN_RULES_PATH_UNAVAILABLE`；核对与报告只处理实际生成的文件，A-only 不生成 B−A 结论 | B3、§5、§6、§7 |
+| 题面与评分、§6 三列、§7 两层、§8 混合行、运行器修改分支 | KEEP：Pro 判定已到位 | — |
+
 ## 12. 失败账本
 任一步两次修补仍失败：停止编辑，写 `TASK2/outputs/failure_ledger_<step>.md`（尝试的修法、预期机制、实际结果、假设为何变弱、重复了什么假设、下一个替代假设），进 §7 报告的"未解决"节。
 
 ## 13. 给 Codex 的一句话
 
-采用 v2 的一题四答复范围，按本版补齐任务路径与旧依赖、数据字段说明、输入隔离、全文核对和混合结果处理；跳过 B4，不扩框架。负责人授权 1–5 落实、A0 预检通过后直接执行；七个工作日内交科学结果或具体失败原因，不追加同题运行来追求通过，也不等待下一轮 Pro 批准。
+采用 v2 的一题四答复范围，按本版补齐任务路径与旧依赖、数据字段说明、输入隔离、全文核对和混合结果处理；跳过 B4，不扩框架。负责人授权 1–5 落实、A1 初始化与 A0 预检通过后直接执行；七个工作日内交科学结果或具体失败原因，不追加同题运行来追求通过，也不等待下一轮 Pro 批准。
+
+本版已合并 Pro 对 v3 的五项局部修正，不扩大研究范围：任务初始化先于预检结果落盘；规则正文分组但保留对象与检查配对；来源差异不强行解释为已解决；字段定义不混入关键汇总答案；实际运行与交付数量服从冻结的正常或 A-only 分支。KEEP NOW：现有工具循环、共同数据说明、必要隔离、窄规则提示、分层核对。DEFER：C、B4、第二体系、通用框架。AVOID：为凑齐四份答复补造 B、为得到好结果追加同题运行、把审阅通过写成科学验证。

@@ -29,3 +29,8 @@
 - [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：v3 交付版。范围、规模、费用上限、七天到期与 v2 相同。改动：运行器显式 `--task-root`、A/B 去掉公开事实依赖、共同提示改指实际文件、挂载断言按实际可读范围、`FIELD_DEFINITIONS.md` 七条字段含义（每轨迹三行、departure 相对第一个持续方向、帧数式时间约定）、B0 分"论文声明 / 本轮输入已核对"、元数据角色改为"开发者整理未经领域确认"、核对看全文、§8 加"混合/负面/不稳定"行、选择器失败与运行器修改两个分支、B4 跳过。§11.1 逐条处置 Pro 意见；§11.2 列本机核实 v2 引用后新增的修正（注册表实为逗号分隔、选择器状态门槛、旧 readiness 为 false、Docker 镜像无构建记录、无 MDAnalysis、AMBER99SB 出自 Zenodo 描述、主张矩阵是指针文件、收敛题输入的真实位置等）。
 - [REVIEW_PROMPT_HSP90_FIRST_ROUND_V3_ZH.md](REVIEW_PROMPT_HSP90_FIRST_ROUND_V3_ZH.md)：给审阅者的核对提示（六问，只核对处置是否到位，不再审路线）。
 - `HSP90_FIRST_ROUND_PLAN_V2_ZH.md` 已标 superseded，保留为记录。
+
+## 2026-09-10：Pro 审查 v3 → v3.1（交付版，直接交 Codex）
+
+- [PRO_REVIEW_OF_PLAN_V3_ZH.md](PRO_REVIEW_OF_PLAN_V3_ZH.md)：Pro 对 v3 的审查（CHANGES_REQUESTED_BOUNDED，主要处置已到位，五处局部文字修正后执行）。
+- [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：已就地更新为 v3.1，§11.3 逐条处置：A1 先于 A0、规则渲染保留对象与检查配对、B0 来源差异分别保留、字段定义移出汇总结果与答题提示、A-only 分支贯穿 §5–§7。这是交 Codex 执行的版本。
