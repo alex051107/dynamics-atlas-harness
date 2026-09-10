@@ -1,3 +1,9 @@
+# English meeting deliverables
+
+- [Full report](FOUR_LAYER_VALIDATION_REPORT_EN.md) · [PDF](FOUR_LAYER_VALIDATION_REPORT_EN.pdf)
+- [One-page verdict](RULES_TABLE_VERDICT_EN.pdf)
+- [12-slide deck](COLLABORATOR_REPORT_EN.pptx) · [PDF](COLLABORATOR_REPORT_EN.pdf)
+
 # 交付入口
 
 - [一页结论](ROUND_BRIEF_ZH.md)
