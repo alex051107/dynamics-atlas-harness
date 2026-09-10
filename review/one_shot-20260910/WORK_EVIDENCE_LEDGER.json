@@ -41,7 +41,7 @@
       "step": 7,
       "status": "PARTIAL_STOP_DELIVERY",
       "evidence": "readable report, verdict, sources, deck, ledger; no effect claim",
-      "commit": null
+      "commit": "08dc5a67fc64946519159a45edbfecdc36b1f720"
     }
   ],
   "prior_answer_hashes_file": "round2/outputs/private_run_manifest.json",
@@ -54,5 +54,10 @@
   "gromacs_crosscheck": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/GROMACS_GATE_CROSSCHECK.json",
   "deviations": "DEVIATIONS.md",
   "historical_DHFR_physical_gate": "FAIL_AFTER_FREEZE",
-  "historical_answer_receipt_hashes": "not recorded in original HSP90/DHFR receipts; no retrospective identity claims"
+  "historical_answer_receipt_hashes": "not recorded in original HSP90/DHFR receipts; no retrospective identity claims",
+  "delivery_commit": "08dc5a67fc64946519159a45edbfecdc36b1f720",
+  "remote_branch_verified": true,
+  "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/27",
+  "report_bundle_check": "outputs/report/REPORT_BUNDLE_CHECK.json",
+  "final_delivery_check": "outputs/report/FINAL_DELIVERY_CHECK.json"
 }
