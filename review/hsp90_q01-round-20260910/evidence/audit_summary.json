@@ -1,0 +1,59 @@
+{
+  "labels": {
+    "A1": "HSP90_Q01_A_8bb1da99",
+    "B1": "HSP90_Q01_B_b909c96b",
+    "B2": "HSP90_Q01_B_8813dc0f",
+    "A2": "HSP90_Q01_A_9ff587f6"
+  },
+  "cost_usd": 0.0757458,
+  "by_run": [
+    {
+      "label": "A1",
+      "run": "HSP90_Q01_A_8bb1da99",
+      "status": "COMPLETE",
+      "input": 145424,
+      "output": 8074,
+      "cost": 0.019187990000000002,
+      "tools": 23,
+      "wall_seconds": 108.3394738750012,
+      "python_requests": 4
+    },
+    {
+      "label": "B1",
+      "run": "HSP90_Q01_B_b909c96b",
+      "status": "COMPLETE",
+      "input": 136359,
+      "output": 11667,
+      "cost": 0.02332255,
+      "tools": 22,
+      "wall_seconds": 134.1196527079992,
+      "python_requests": 3
+    },
+    {
+      "label": "B2",
+      "run": "HSP90_Q01_B_8813dc0f",
+      "status": "COMPLETE",
+      "input": 145945,
+      "output": 8390,
+      "cost": 0.02065144,
+      "tools": 20,
+      "wall_seconds": 94.40735649999988,
+      "python_requests": 2
+    },
+    {
+      "label": "A2",
+      "run": "HSP90_Q01_A_9ff587f6",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "input": 56351,
+      "output": 4107,
+      "cost": 0.012583819999999999,
+      "tools": 11,
+      "wall_seconds": 52.893289749999894,
+      "python_requests": 0
+    }
+  ],
+  "original_answer_edits": 0,
+  "human_scientific_hints_during_runs": 0,
+  "replay_requests": 9,
+  "replay_exact_output_matches": 9
+}

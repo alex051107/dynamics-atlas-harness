@@ -1,0 +1,37 @@
+{
+  "row": 3,
+  "proceed": false,
+  "judgment": "DEVELOPER_JUDGMENT",
+  "reason": "Mixed development outcome: B main counts reproducible, one A incorrect; no qualifying extra conclusion shared without losses; B imports method-specific rule text. Strict predeclared continuation predicates not met.",
+  "criteria": {
+    "a": {
+      "value": false,
+      "locator": "B2 analysis has10/20 open-run statistic, but conclusion adds no distinct verified answer absent from both A; A1 already gives correct main result"
+    },
+    "b": {
+      "value": false,
+      "locator": "Neither final B answer cites an explicit rule_id; internal abstention labels occur but do not satisfy frozen rule_id-to-action requirement"
+    },
+    "c": {
+      "value": false,
+      "locator": "B1 420 regular-bin wording mismatch; B2 omits A1 near-empty core check; check/*_claims_check.csv"
+    },
+    "d": {
+      "value": false,
+      "locator": "Two B answers do not both preserve A1 answerable core evidence; a,c not met"
+    },
+    "e": {
+      "value": true,
+      "locator": "AGENT_RAW contains unchanged answers; no live human hints or runner edits"
+    },
+    "f": {
+      "value": true,
+      "locator": "selector_branch OK; four receipts same version; no runtime-repair branch"
+    }
+  },
+  "complete_original_answers": 4,
+  "cost_usd": 0.0757458,
+  "new_science_download_bytes": 0,
+  "scientific_inference": "No independent Rules effect or generalization claim; no C arm",
+  "next_action": "Stop expansion; deliver audited report and Pro review. No ADK/DHFR run without a revised plan."
+}

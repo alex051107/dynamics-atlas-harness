@@ -1,0 +1,94 @@
+{
+  "paper_statement": {
+    "force_field": {
+      "value": "ff14SB",
+      "source": "henot_2022_article.txt:560",
+      "status": "DOCUMENTED"
+    },
+    "solvent": {
+      "value": "explicit TIP3P water",
+      "source": "henot_2022_article.txt:560-562",
+      "status": "DOCUMENTED"
+    },
+    "ions": {
+      "value": "approximately 170 mM NaCl",
+      "source": "henot_2022_article.txt:570",
+      "status": "DOCUMENTED"
+    },
+    "temperature": {
+      "value": "300 K",
+      "source": "henot_2022_article.txt:573-584",
+      "status": "DOCUMENTED"
+    },
+    "duration": {
+      "value": "1020 ns; first 20 ns equilibration, last 1000 ns analysis",
+      "source": "henot_2022_article.txt:584-587",
+      "status": "DOCUMENTED"
+    },
+    "snapshot_stride": {
+      "value": "1 ns",
+      "source": "henot_2022_article.txt:301,603",
+      "status": "DOCUMENTED"
+    }
+  },
+  "local_inputs_checked": {
+    "force_field": {
+      "value": "Paper ff14SB; preserved Zenodo description AMBER99SB. The older report follows Zenodo. Archive directory amber14sb_OL15.ff agrees with paper naming but does not establish the production configuration.",
+      "source": [
+        "henot_2022_article.txt:560",
+        "autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/zenodo_6606744_record.json",
+        "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md"
+      ],
+      "status": "DOCUMENT_DISCREPANCY"
+    },
+    "frames": {
+      "value": {
+        "author_README_nominal": 1020,
+        "older_report_XTC_measured": 1021,
+        "current_table_points_per_trajectory": 1001,
+        "mapping": "20–1020 ns inclusive verified in this table. Exact nominal README to XTC convention remains TO_CHECK."
+      },
+      "source": [
+        "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/README",
+        "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md",
+        "frame_state_assignments.tsv"
+      ],
+      "status": "DOCUMENTED"
+    },
+    "time_axis_of_round_inputs": {
+      "value": {
+        "trajectories": 40,
+        "points_per_trajectory": 1001,
+        "minimum_ns": 20,
+        "maximum_ns": 1020,
+        "stride_ns": 1,
+        "origin": "time zero retained from original trajectory"
+      },
+      "source": "frame_state_assignments.tsv: all time_ns values",
+      "status": "VERIFIED"
+    },
+    "xtc_spot_check": {
+      "value": "NOT_ATTEMPTED; no new trajectory reader installed. Current check is on delivered derived tables.",
+      "source": "current preparation",
+      "status": "NOT_ATTEMPTED"
+    },
+    "lineage": {
+      "value": {
+        "closed_seeded": "R46A_ES directory, extracted md_0-10_evert1ns_fitBB_protonly.xtc",
+        "open_seeded": "R60A_GS directory; corresponding author link resolves to md_all_prot_fit.xtc",
+        "meaning": "NMR seed lineage; directory names alone are not proof of mutated MD sequences. Prior deposited-coordinate audit reports ARG at residues 46 and 60."
+      },
+      "source": [
+        "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest.json",
+        "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest_r60a.json",
+        "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/input_audit.json"
+      ],
+      "status": "DOCUMENTED"
+    },
+    "analysis_window_note": {
+      "value": "Delivered derived table starts at 20 ns, with 1001 points through 1020 ns.",
+      "source": "frame_state_assignments.tsv",
+      "status": "VERIFIED"
+    }
+  }
+}
