@@ -1,5 +1,8 @@
 # HSP90 首轮：一个科学问题、四份答复、有界交付
 
+> **SUPERSEDED BY v3（2026-09-09 深夜）。** Pro 对本版的审查见 `PRO_REVIEW_OF_PLAN_V2_ZH.md`；交付版见 `HSP90_FIRST_ROUND_PLAN_V3_ZH.md`。本文件保留为记录，不再执行。
+
+
 Dynamics Atlas · 2026-09-09 · v2 · **供 Codex 逐步执行** · 审阅者见文末 `REVIEW_PROMPT_HSP90_FIRST_ROUND_V2_ZH.md`
 
 > v2 替代 `THREE_SYSTEMS_OPERATIONAL_PLAN_ZH.md`（v1）。v1 的三体系六周承诺、通用评分生成、通用文献比对、V2a 旧记录汇总、`drift_check.py` 全部停放。修改依据是 `PRO_REVIEW_OF_OPERATIONAL_PLAN_V1_ZH.md`，逐条处置见 §11。
