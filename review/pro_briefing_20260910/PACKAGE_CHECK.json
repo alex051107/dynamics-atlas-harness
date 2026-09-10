@@ -12,5 +12,6 @@
   "raw_transcripts": 0,
   "run_directories": 0,
   "note": "original registry extension tsv but CSV encoding preserved; no new evaluation or scoring",
-  "validation": "One package check; metadata pathname repair; affected check repeated once"
+  "validation": "One package check; metadata pathname repair; affected check repeated once",
+  "whitespace": "Original Markdown hard-break spaces and trailing blank lines retained intentionally; no semantic error"
 }

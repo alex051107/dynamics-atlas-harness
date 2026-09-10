@@ -1,6 +1,6 @@
 # Dynamics Atlas：完整研究梳理与15分钟组会主线审查
 
-材料唯一入口：[INDEX_ZH.md](INDEX_ZH.md)。请从入口访问原始规则、会议决定、原始外部审查、文献分析、计划演变、科学报告及最新四层结果。你可调整阅读顺序、检查更广泛的来源，独立推翻已有解释；不必认同Codex或此前Pro的结论。
+材料唯一入口：[INDEX_ZH.md](https://github.com/alex051107/dynamics-atlas-harness/blob/3b68f83b911cf6066edb6384ec3373344cb237ac/review/pro_briefing_20260910/INDEX_ZH.md)。请从入口访问原始规则、会议决定、原始外部审查、文献分析、计划演变、科学报告及最新四层结果。你可调整阅读顺序、检查更广泛的来源，独立推翻已有解释；不必认同Codex或此前Pro的结论。
 
 ## Goal
 
