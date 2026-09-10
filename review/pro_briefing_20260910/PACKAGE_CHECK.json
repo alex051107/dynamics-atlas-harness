@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "new pro_briefing package only; existing archives untouched",
+  "rule_rows": 33,
+  "rule_paper_ids": 11,
+  "documents_copied": 100,
+  "copy_notes": "originals unchanged; link/path-only edits declared",
+  "files_over_20MB": 0,
+  "credentials": 0,
+  "absolute_host_paths": 0,
+  "raw_trajectory_files": 0,
+  "raw_transcripts": 0,
+  "run_directories": 0,
+  "note": "original registry extension tsv but CSV encoding preserved; no new evaluation or scoring",
+  "validation": "One package check; metadata pathname repair; affected check repeated once"
+}
