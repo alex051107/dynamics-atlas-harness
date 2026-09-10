@@ -2,6 +2,8 @@
 
 Migrated from the closed September 9 development maintenance candidate. The original development logs remain frozen outside this repository.
 
+The HSP90 v3.4 round has completed: four original answers, $0.0757458 model cost, and no automatic expansion. See [the report index](../../review/hsp90_q01-round-20260910/REPORT_INDEX.md). The executed code was frozen at 430c13e; later reporting/docstring edits do not change its logic.
+
 The runner executes autonomous source reading, Python analysis and explicit answer submission. This campaign compares A (common sources) with B (the same sources plus selector-rendered rules). No C arm is run.
 
 Supply the task directory explicitly with `--task-root`; it contains `cases/HSP90_Q01/common`, `cases/HSP90_Q01/arm_B`, `cases/HSP90_Q01/hidden`, `runtime` and `outputs`. Only common material is mounted at `/source`, the current run output at `/work`, and the tool at `/tool.py`. Hidden scoring files and the treatment directory are never mounted. B rules are appended to B's input message.

@@ -1,7 +1,8 @@
-"""Offline maintenance candidate. The completed development campaign is closed.
+"""Task-scoped autonomous Luna runner.
 
-The executed version is preserved under outputs/post_development_review/before.
-This candidate has not been evaluated by another live model session.
+Four HSP90 v3.4 A/B sessions completed at commit 430c13e.
+The original campaign is closed to automatic expansion; see the round report.
+This post-run documentation update does not change executed logic.
 """
 import json,subprocess,time,urllib.request,urllib.error,uuid,argparse,fcntl,os
 from pathlib import Path

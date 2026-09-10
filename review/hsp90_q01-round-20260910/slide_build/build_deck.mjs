@@ -1,0 +1,34 @@
+import { createRequire } from 'node:module';
+import os from 'node:os';import path from 'node:path';import {fileURLToPath} from 'node:url';import fs from 'node:fs';
+const req=createRequire(import.meta.url);const mods=process.env.NODE_MODULES||path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules');
+const pptxgen=req(path.join(mods,'pptxgenjs'));const p=new pptxgen();p.layout='LAYOUT_WIDE';p.author='Dynamics Atlas';p.subject='HSP90 exposed development round';p.title='HSP90: scientific answer and rule applicability';p.company='Dynamics Atlas';p.lang='en-US';p.theme={headFontFace:'Arial',bodyFontFace:'Arial',lang:'en-US'};
+const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'), navy='1E3A5F',gray='48545E';
+function slide(title,body,notes,ids,source='Audited HSP90 v3.4 report; developer verification'){
+ const s=p.addSlide();s.background={color:'FFFFFF'};
+ s.addText(title,{x:.65,y:.38,w:12.05,h:.85,fontFace:'Arial',fontSize:29,bold:true,color:navy,margin:0,breakLine:false});
+ s.addShape(p.ShapeType.line,{x:.65,y:1.37,w:12.05,h:0,line:{color:navy,width:1}});
+ if(body)s.addText(body,{x:.85,y:1.8,w:11.6,h:4.8,fontFace:'Arial',fontSize:25,color:gray,margin:0,paraSpaceAfterPt:20,breakLine:false,valign:'top'});
+ s.addText(source+' | '+ids,{x:.65,y:7.05,w:11.4,h:.2,fontSize:9,color:'666666',margin:0});
+ s.addText(String(p._slides.length),{x:12.1,y:7.03,w:.55,h:.23,fontSize:11,color:gray,align:'right',margin:0});
+ s.addNotes(notes+'\nClaim IDs: '+ids);return s;
+}
+slide('HSP90 gives a scientific answer; rule value remains open', 'Can scientific reminders improve an autonomous agent’s answer?\n\nOne exposed question. Four original answers.\nA finite-time result, plus a concrete applicability problem.', '项目目标是理解异质蛋白资料。先介绍科学问题，再讨论规则是否帮助了回答。这里是开发观察，不能给总体正确率。','H07 H13 H18');
+slide('Different data describe different aspects of molecular behavior', 'Structure references → geometry\n\nTrajectory readouts → sampled changes over time\n\nNMR measurements → model-dependent experimental evidence', '异质资料不是简单投票。几何位置、轨迹变化和核磁交换拟合回答不同问题。当前没有把这些量合成一个总分。NOE对原子近距离敏感，CPMG用于研究交换。','H14 H15 H20');
+slide('We ask whether closed-seeded trajectories show opening', 'In apo human HSP90α NTD, do closed-lid starts leave their initial conformation more readily than open-lid starts?\n\nWhich observed changes support that interpretation?', '这是公开中文题目的英文摘要。原题还要求检查字段与论文状态定义的关系、实际计算、条件、时间和统计单位。NTD是N端ATP结合结构域，apo为无配体。','H01 H07 H20');
+slide('Henot et al. connect structure, NMR and finite trajectories', 'The ATP lid can adopt open-like and closed-like structures.\n\nThe paper reports stable open starts and heterogeneous closed starts.\n\nA directional label is not the paper’s full state definition.', 'Henot论文结合结构、NOE、CPMG及模拟，研究暂时出现的闭合状态。本题是现成且已暴露案例，适合开发诊断。作者开放稳定、闭合异质的判断来自其原生分析。','H14 H15 H18','Henot et al., Nat Commun 13:7601 (2022), pp.5–6, Fig.4; doi:10.1038/s41467-022-35399-8');
+slide('Both arms received the same finite trajectory evidence', '20 trajectories per starting group\n20–1020 ns; 1,001 saved points per trajectory\n\nDerived geometry, contacts, summaries and paper sources\nOriginal coordinates and full native NOE inputs were absent.', '单位是轨迹，保存点存在时间相关性。起始来源不是当前突变身份。论文ff14SB与存档Zenodo AMBER99SB分开保留，名义帧数与实测、派生点数也分开。没有借目录名确定生产参数。','H01 H16 H20');
+slide('The comparison changes reminders, not agent autonomy', 'A: common data + tools + autonomous analysis\nB: the same setup + selected rule text\n\nFour fresh contexts: A1 → B1 → B2 → A2\nNo live scientific hints; no deterministic enforcement arm.', '开发者在运行前整理了字段、元数据和评价依据。模型自己选阅读与计算，收到真实工具返回后可以纠错。科学评价先看全文和来源，之后才看规则对应；这仍是开发者评价而非独立领域评分。','H07 H18');
+let s=slide('Closed starts show more directional departure candidates', '', '每点是二十条轨迹中的候选数，5/20/50指保存点门槛。候选参考首个持续方向，并非必然参考起始结构。两组回返候选均零。线只是连接同一组，不代表拟合或置信区间。','H01 H02 H19');
+s.addImage({path:path.join(R,'figures/fig_01.png'),x:1.02,y:1.65,w:11.2,h:5.1});
+s=slide('A sustained open segment is not the same as a transition', '', '左侧10/20指曾出现至少五点开放段；5/20是后来相对首方向改变。右侧是保存点计数，核心覆盖极低。ES15有906点开放段，但50点门槛的首段已经开放。三个定义不能混成一个转换概率。','H03 H04 H05');
+s.addImage({path:path.join(R,'figures/fig_02.png'),x:.75,y:1.8,w:11.85,h:4.86});
+s=slide('Three answers recover the counts; one confuses thresholds', '', '两份规则组及A1主要计数正确。A2没有Python汇总，50点写0实际1，5点首方向写11/9实际15/5。B2补充10/20，B1有分箱措辞问题。原答案全部未修改；费用只是API费用。','H08 H09 H10 H11');
+s.addTable([['Answer','Observed behavior','Limitation'],['A1','Main counts + core coverage','Recovered from a failed request'],['B1','Main counts + core coverage','Unequal-bin wording; RMP terms'],['B2','Recomputed runs; added 10/20','No numeric core audit; RMP terms'],['A2','Conditions + some counts','Contradictory threshold counts']],{x:.7,y:1.8,w:11.95,h:3.95,border:{type:'solid',pt:.5,color:'CCCCCC'},fontFace:'Arial',fontSize:20,color:gray,margin:.13,rowH:.68,autoFit:false,colW:[1.25,5.1,5.6],bold:false,fill:'FFFFFF'});
+s.addText('Four original outputs; total model cost $0.0757458',{x:.85,y:6.1,w:11,h:.4,fontSize:22,color:navy,margin:0});
+slide('Selected rules carried method conditions into the wrong context', 'Generic provenance and uncertainty checks carried RMP and dye-model requirements.\n\nBoth B answers imported RMP wording.\n\nMissing rule IDs are an output-design issue, not a scientific error.', '选择器输出七条规则、八项义务，配对被保留，但规则原文可能不适用于本题。R0和染料可及体积是荧光模型条件。未明确适用关系就带入，会增加误导性限制。不能仅靠成功映射判断科学适用性。','H09 H12 H13');
+s=slide('Our result is compatible with the paper, but not a full replication', '', '作者约7/9/4是同一分类下的构象类别；本轮5/4/1是三种门槛的方向事件。CPMG少数态3.2%是293K作者模型拟合，不能拿当前轨迹频率代替。没有原生输入就没有完整原生状态复现。','H02 H14 H15 H20','Henot et al. (2022), Fig.4f–g and pp.5–6; audited paper crosswalk');
+s.addTable([['Paper statement','This round supports'],['Open starts remain stable','No opposite sustained-direction candidates'],['Closed starts: about 7 / 9 / 4','Different event definitions; no numeric match claimed'],['Minor state from CPMG','Author-reported background, not a new MD estimate'],['Non-ergodic simulation','Finite-window, start-conditioned interpretation']],{x:.7,y:1.9,w:11.95,h:4.2,fontSize:21,fontFace:'Arial',color:gray,margin:.15,border:{type:'solid',pt:.5,color:'CCCCCC'},colW:[4.4,7.55],rowH:.8,fill:'FFFFFF'});
+slide('Keep the result; resolve applicability before expanding', 'The scientific answer is auditable.\nThe incremental rule benefit is not established.\n\nCurrent decision: stop automatic expansion.\nNext science: compare directional segments with native NOE evidence.', '结论停留在有限窗口方向变化及规则适用性问题。按预定条件停止自动进入ADK或DHFR；这是开发投入决定。Pro已支持停止动作，过严的评价理由已修正。下一项科学建议先核查原生NOE对应，数据齐备性未确认。未修改冻结规则、未追加同题测试。下一版先明确科学问题与评价，不以保持规则架构为目标。','H13 H17 H18 H21');
+await p.writeFile({fileName:path.join(R,'DYNAMICS_ATLAS_HSP90_Q01_COLLABORATOR_REPORT.pptx')});
+fs.writeFileSync(path.join(R,'slide_build/ghost_deck.json'),JSON.stringify(p._slides.map((_,i)=>({slide:i+1})),null,2));
+console.log('Wrote 12-slide deck');
