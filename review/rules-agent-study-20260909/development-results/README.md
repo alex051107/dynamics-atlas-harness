@@ -38,3 +38,4 @@
 ## 2026-09-10：v3.2 一次授权、条件推进（明天开工版）
 
 - [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：v3.2 = v3.1 + §1 授权 1–9 + §8A 自动判定规则 + §14 第二、第三体系的条件推进（顺序、不并行；只读盘点后按写死规则选 ADK 或 DHFR；总停止线 21 个工作日 / $0.60 / 4 GB）。PM 贴一句"授权 1–9，按 v3.2 执行"即可开工。
+- [REVIEW_PROMPT_HSP90_PLAN_V3_2_ZH.md](REVIEW_PROMPT_HSP90_PLAN_V3_2_ZH.md)：给 Pro 审 v3.2 新增部分（§8A、§14、授权 6–9）的提示，九条待核主张加两个选项题。
