@@ -70,3 +70,4 @@
 - [WHERE_WE_ARE_ZH.html](WHERE_WE_ARE_ZH.html)：给负责人的说明书。最初的科学问题、博文与 T4L 论文带来的设计指令、已跑出的证据、四层系统最终形态、Rules Table 的归宿、当前进度、四个实验各自在证明什么。
 - [DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.html](DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.html)（[Markdown](DYNAMICS_ATLAS_FULL_LOGIC_AND_QA_ZH.md)）：全程说明与问答。13 个阶段的逻辑表、三个转折点、四层系统与实测进展、中途纠正过的判断、合作者/方法审查/大厂面试三类问答（含英文 90 秒版本）、数字速查与术语。WHERE_WE_ARE_ZH.html 同步修正了过时进度和混用的错误计数。
 - [SOOJUNG_DISCUSSION_20260910_EN.pptx](SOOJUNG_DISCUSSION_20260910_EN.pptx)：与 Soojung 1 对 1 讨论用 deck v2（18 页正文 + 附录；每个体系页带科学图；备注含讲稿与追问预案）。逐页计划 [SOOJUNG_DECK_PLAN_ZH.md](SOOJUNG_DECK_PLAN_ZH.md)；逐页念的中英对照讲稿 [SOOJUNG_SLIDE_SCRIPT_BILINGUAL.md](SOOJUNG_SLIDE_SCRIPT_BILINGUAL.md)；不按页的详细扫盲讲解 [SOOJUNG_FULL_EXPLANATION_ZH.md](SOOJUNG_FULL_EXPLANATION_ZH.md)；图在 deck_figures/，生成脚本 build_soojung_deck.cjs（pptxgenjs，参数：输出路径、图目录）。
+- [RULES_TABLE_NOW_ZH.html](RULES_TABLE_NOW_ZH.html)：Rules Table 现在长什么样。33 条全文（可按四种用途筛选），标出是否进运行索引、有无方法卡、是否进 HSP90 首轮提示；最初打算与实际完成对照；四个案例的原文主张与我们的主张。
