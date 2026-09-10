@@ -1,0 +1,85 @@
+{
+  "core_units": [
+    "open NMP+0.071A,LID+2.290A",
+    "closed NMP+1.091A,LID+1.176A",
+    "both distances increase by finite-window comparison; unequal amplitudes, cannot infer synchronized closing order",
+    "ligand-free deposited MD not ATP response experiment; distinct temperatures/times and one trajectory each",
+    "paper4.3ms transient from TR-XSS and MD candidate comparison; no independent experimental validation from these distance summaries"
+  ],
+  "tolerances": {
+    "distance_A": 0.02
+  },
+  "source": "Native deposited trajectories; predeclared scalar; author main and SI",
+  "reference": {
+    "open": {
+      "n_saved_frames": 2253,
+      "time_start_ns": 0.0,
+      "time_end_ns": 450.4,
+      "interval_ns": 0.2,
+      "first_window_ns": [
+        0.0,
+        44.8
+      ],
+      "last_window_ns": [
+        405.6,
+        450.4
+      ],
+      "n_window": 225,
+      "NMP": {
+        "first_mean_A": 26.21569826203,
+        "last_mean_A": 26.286419380423936,
+        "change_A": 0.07072111839393713,
+        "median_A": 26.63789669466775,
+        "q05_A": 25.801142801883287,
+        "q95_A": 27.419187239358198,
+        "min_A": 25.279453624733822,
+        "max_A": 27.993286235340587
+      },
+      "LID": {
+        "first_mean_A": 34.39272106287391,
+        "last_mean_A": 36.683131762367466,
+        "change_A": 2.290410699493556,
+        "median_A": 33.568051842729716,
+        "q05_A": 30.207390604589285,
+        "q95_A": 37.4860047916693,
+        "min_A": 27.67971625760474,
+        "max_A": 41.99249705999525
+      }
+    },
+    "closed": {
+      "n_saved_frames": 1678,
+      "time_start_ns": 0.0,
+      "time_end_ns": 335.4,
+      "interval_ns": 0.2,
+      "first_window_ns": [
+        0.0,
+        33.2
+      ],
+      "last_window_ns": [
+        302.2,
+        335.4
+      ],
+      "n_window": 167,
+      "NMP": {
+        "first_mean_A": 25.252348631804583,
+        "last_mean_A": 26.343243475931413,
+        "change_A": 1.0908948441268294,
+        "median_A": 26.036330238177126,
+        "q05_A": 25.100163123747286,
+        "q95_A": 26.85934384701614,
+        "min_A": 24.28874844676412,
+        "max_A": 27.381167744834062
+      },
+      "LID": {
+        "first_mean_A": 30.23082988063092,
+        "last_mean_A": 31.407251099263654,
+        "change_A": 1.1764212186327327,
+        "median_A": 30.63805144423395,
+        "q05_A": 28.935502144042836,
+        "q95_A": 33.267244506686815,
+        "min_A": 26.236007983671612,
+        "max_A": 36.82836938498648
+      }
+    }
+  }
+}

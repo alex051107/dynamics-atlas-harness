@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V011",
+    "units": [
+      "C",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "10everO和5/4/1、开放0正确；有起始5O但未完整5+5+10；明确未完成原生NOE计算。方向/物理状态与有限窗清楚，覆盖方向和完整转变边界。"
+  },
+  {
+    "blind_id": "V012",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类9/1与18/1/1正确；p95及ES04/15存在但漏188/690时刻；敏感性只报pooled比例而未完成7/19与闭合3/2/5轨迹分类。"
+  },
+  {
+    "blind_id": "V013",
+    "units": [
+      "M",
+      "M",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "10everO和0/10、18/20正确但未给主阈值相对/部分分类；p95及ES04@188、ES15@690完整；敏感性给7/19与3一致但漏2部分5相对。无肯定不适用术语。"
+  },
+  {
+    "blind_id": "V014",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分组分类完整正确；p95有，闭合进入时刻未报；0.5/2Å一致数有，闭合2部分5相对未完整拆分。pooled19369是两组合计，正确。"
+  },
+  {
+    "blind_id": "V015",
+    "units": [
+      "C",
+      "E",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主总数正确但GS08(0.327 FAR)误称相对、GS18(0.886 FAR)误称其余；2Å闭合2/open20错应3/19。漏闭合参照进入时刻。"
+  },
+  {
+    "blind_id": "V016",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六个O3P均值、M20两背景、R28选择性、Ki/Fig3都正确；结论段“通过特定…网络…获得…更强抑制表型”作因果升级，虽前文称不能证明因果，未取消该正面断言。另把配体氧叫磷酸基团为非主评分化学命名问题。"
+  }
+]

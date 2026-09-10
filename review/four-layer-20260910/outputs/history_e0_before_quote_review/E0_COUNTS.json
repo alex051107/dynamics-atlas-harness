@@ -1,0 +1,14 @@
+{
+  "rows": 13,
+  "unique_original_answers": 7,
+  "candidate_code_rows": 3,
+  "candidate_guidance_rows": 2,
+  "candidate_framing_rows": 0,
+  "actual_replay_detected_rows": 3,
+  "not_causal_prevention_counts": true,
+  "unit": "observations in exposed output artifacts; correlated errors, not independent science cases",
+  "framing_gap": "5/5/10 subdivision absent is not retroactively scored an error because original question did not require it",
+  "time": "2026-09-10T11:41:14.683088+00:00",
+  "reviewed_answer_count": 8,
+  "additional_reviewed_answer_with_no_error_record": "dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_8bb1da99/answer.md"
+}

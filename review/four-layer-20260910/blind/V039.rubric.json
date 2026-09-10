@@ -1,0 +1,14 @@
+{
+  "core_units": [
+    "sixN18/M20/W22O3P meansdecrease",
+    "M20WT8.69→4.62L28R10.44→4.81",
+    "sixR28O4/O5decrease;O3Pmixed",
+    "KiandFig3directioncorrect",
+    "singletrajectorywindowandnoHbond/koff/uniquecause"
+  ],
+  "tolerances": {
+    "distance_A": 0.02,
+    "ratio": 0.02
+  },
+  "source": "originalpaper; source tables; developer reference independent of arms"
+}

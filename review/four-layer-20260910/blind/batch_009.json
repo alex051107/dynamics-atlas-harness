@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V047",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、准确窗口与方向/幅度、apo和4.3ms实验来源正确；未交303.15/294K温度差，条件单元按缺失，不作核心事实错误。"
+  },
+  {
+    "blind_id": "V048",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS90点χ²1.915及NOE47/292、8/40正确；作者权重与新优化分开，上界和独立预测边界正确。正文正相对熵配exp(−Srel)数值自洽，与作者负Srel约定不同，次要记号问题。"
+  },
+  {
+    "blind_id": "V049",
+    "units": [
+      "M",
+      "M",
+      "E",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4/1方向事件正确，但未交10everO及5+5+10。把开放起始18/20误写为BOTH_FAR相对偏好，实际18/20为OPEN_NOE一致，属于核心科学结论反转。方向与完整状态边界仍正确。"
+  },
+  {
+    "blind_id": "V050",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四首末差值与方向、幅度、有限单轨迹及4.3ms实验边界正确；未交全分布中心与重叠。配体文字在无配体与未注明之间摇摆，已避免归因ATP，列次要证据使用不充分。"
+  },
+  {
+    "blind_id": "V051",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、两组分母、0.5/2Å敏感性正确，p95=1.32但未交ES04@188/ES15@690；90.75%对精确90.744%为微小舍入，不另计核心错误。原生列与非动力学边界正确。"
+  },
+  {
+    "blind_id": "V052",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "M",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "最终简短正文将缺陷距离表的均值差作为真实接触增强，未检测/降级。Ki正确；图3仅称相容，没有交WT两药抑制/L28R4DTMP更强的具体依据，记缺失。无坐标不能修表的边界也缺失。仅声称完整答案已列明不替代当前正文交付。"
+  }
+]

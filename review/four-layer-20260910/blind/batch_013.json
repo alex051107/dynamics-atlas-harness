@@ -1,0 +1,78 @@
+[
+  {
+    "blind_id": "V071",
+    "units": [
+      "C",
+      "M",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "5/4/1、10everO、开放0正确。分列5初始开放和5后开放，但未完整交10从未开放分解，unit2缺失。原生9相对与10ever、开放18一致足以保留正确有限答案，11不适用/其他是明确合并标签而非错误分类。"
+  },
+  {
+    "blind_id": "V072",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类正确；p95及188/690有但未把两entry定位到ES04/ES15。敏感性轨迹类别正确，帧池化比例却在0.5/2Å采用轨迹平均0.80%/46.52%，实际1.12%/58.44%，一类统计汇总错误。"
+  },
+  {
+    "blind_id": "V073",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 2,
+    "overclaim": 2,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "把缺陷表距离/近接比例当真实局部支持，未检测降级；合并结论称通过这些接触产生动力学耦合从而解释优势，超出关联，末尾因果限制未使该主张成立。Ki和Fig3正确；无明确长尾物理切换主张，unit2正确。"
+  },
+  {
+    "blind_id": "V074",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20数值、R28六对/O3P混合、Ki/Fig3正确；N18 O3P结果缺失。结论“利用新增的动态局部接触…使…抑制表现改善”把相关性升级成因果，边界只说不能确定哪项速率，仍未支持该因果。"
+  }
+]

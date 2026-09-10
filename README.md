@@ -1,6 +1,18 @@
+> **English results package (10 September 2026):** [Full report](review/four-layer-20260910/outputs/FOUR_LAYER_VALIDATION_REPORT_EN.md) · [One-page verdict](review/four-layer-20260910/outputs/RULES_TABLE_VERDICT_EN.md) · [Meeting deck](review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pptx). 74 completed outputs, $1.20292179. Mixed Rules results; no stable selector/checker increment established.
+
 # dynamics-atlas-harness
 
-## Current execution status
+## Current research: scientific results and four-layer evaluation (2026-09-10)
+
+Dynamics Atlas tests whether explicit, source-grounded scientific rules improve a tool-using LLM agent’s ability to produce useful, evidence-bounded answers from heterogeneous protein-dynamics data.
+
+当前研究以具体科学问题、成熟分析方法和可核查报告为中心。HSP90、DHFR和ADK已产生描述性科学分析；四层实验分别评价框题、资料准入、方法卡和提交检查。74份答复已完成盲评：拆题增加覆盖，当前方法卡和结论检查未达到继续标准；独立领域专家复评仍未完成。
+
+**最新入口：[四层执行与科学交付](review/four-layer-20260910/README.md)。** 旧的A/B/C和D/P/R批次保留为历史证据，不混入当前比较。候选规则注册表未扩展。
+
+以下PR #18/#19内容记录早期工程实现，不是9月10日研究实验的当前状态或重开授权。
+
+## Historical engine execution status (PR #19)
 
 当前仓库状态、当前授权和下一允许动作以
 [仓库执行状态快照](docs/CURRENT_EXECUTION_STATUS_ZH.md) 与
@@ -38,7 +50,7 @@ closure、source-science approval、transfer、Agent value 或 production readin
 [LIVE_AGENT_COMMON_FLOWS_V1.md](docs/LIVE_AGENT_COMMON_FLOWS_V1.md)。旧的
 [ENGINEERING_V1_COMPLETION.md](docs/ENGINEERING_V1_COMPLETION.md) 仍保留为 PR #18 工程基线记录。
 
-## Canonical development path
+## Historical engine development commands
 
 `run-agent-case` 是当前主入口。默认模式仍是 recorded replay，不读凭据、不联网，也不计算 public-case
 terminal scientific state：

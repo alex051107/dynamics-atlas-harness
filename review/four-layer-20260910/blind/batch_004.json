@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V017",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "工具输出23确实计算SAXS实验/预测RMSE0.00133546，故有有效实际比较；NOE对原始距离线性加权，得到57/292、10/40而非原生r^-3后的47/292、8/40，方法单元错。拟合角色及有限候选清楚。"
+  },
+  {
+    "blind_id": "V018",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类与2Å分组正确；0.5Å闭合误写0/10/10并称三类，使无开放方向10条进入其余；p95与ES04/15有，缺188/690。"
+  },
+  {
+    "blind_id": "V019",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "用原始包装表18–21Å均值与接触比例得出“确实增强”物理结论，没有识别或降级输入异常。Ki/Fig3及距离非氢键/因果限制正确，但无修理须坐标说明。"
+  },
+  {
+    "blind_id": "V020",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 4,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "明确因合并字段冲突未完成计数；四项数值/参照结果均缺失，未把未算结果冒充科学结论；第二列和方向/状态边界正确，给出具体修复下一步。"
+  },
+  {
+    "blind_id": "V021",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主9/1、18/1/1，0.5/2Å全分类，p95=1.32与ES04@188/ES15@690完整正确。旁支state_core“其余39997”应40037为非核心转述错误，未据此升级结论，保留备注。"
+  },
+  {
+    "blind_id": "V022",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别包装假距离，仍称M20/R28接触增强及动态稳定模式；Ki/Fig3与无唯一因果界限正确，不能挽救输入未准入。未提出须坐标修复。"
+  }
+]

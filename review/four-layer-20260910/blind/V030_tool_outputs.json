@@ -1,0 +1,373 @@
+[
+  {
+    "files": [
+      "/source/DOWNLOAD_MANIFEST.json",
+      "/source/FIELD_DEFINITIONS.md",
+      "/source/INPUT_CHECK_FACTS.json",
+      "/source/QUESTION.txt",
+      "/source/SOURCE_CARD.md",
+      "/source/SOURCE_INVENTORY.json",
+      "/source/author_code/Figure_2_config.py",
+      "/source/author_code/Figure_2_parsing.py",
+      "/source/author_code/Figure_2_pdb_prep.py",
+      "/source/author_code/Figure_4_distances_average.py",
+      "/source/author_code/Figure_4_distances_paper.tcl",
+      "/source/author_code/Figure_4_r28_distances.tcl",
+      "/source/author_code/Figure_6_hbond-measuring-code.tcl",
+      "/source/author_code/Figure_6_index_extraction.tcl",
+      "/source/author_code/Figure_6_occupancy&barcode.py",
+      "/source/author_code/Figure_8_S5_hydrogen_bond_enzyme.py",
+      "/source/author_code/Figure_8_S5_index_extraction.tcl",
+      "/source/author_code/Figure_S4_rmsf.tcl",
+      "/source/author_code/Figure_S6_4DTMP_cross_corr.py",
+      "/source/author_code/Figure_S6_TMPP_cross_corr.py",
+      "/source/author_code/README.md",
+      "/source/author_code/SOURCE.json",
+      "/source/data/atom_mapping.tsv",
+      "/source/data/d4tmpp-l28r_distances.tsv",
+      "/source/data/d4tmpp-wt_distances.tsv",
+      "/source/data/tmpp-l28r_distances.tsv",
+      "/source/data/tmpp-wt_distances.tsv",
+      "/source/data/trajectory_metadata.tsv",
+      "/source/experimental_table1.tsv",
+      "/source/figure3.jpg",
+      "/source/figure4.jpg",
+      "/source/paper.md",
+      "/source/paper.xml"
+    ]
+  },
+  {
+    "total_lines": 9,
+    "text": "1: # Source field definitions\n2: \n3: Four files data/*_distances.tsv contain frame_index plus r<resid>_<protein atom>_<ligand atom> columns. Every distance is in Å, computed using nearest periodic image, crosschecked by VMD pbctools wrap + measure bond from the paired deposited PSF/DCD; atom_mapping.tsv gives exact resolved topology indices. tmp and d4tmp filenames encode TMP+ and 4′-DTMP+ bound conditions; wt versus l28r denotes residue28 identity. R28 sidechain columns exist only for L28R. No summaries are provided. Coordinates and unit cells are not mounted; source-card geometric bounds are supplied.\n4: \n5: Author Github README assigns these all-atom trajectories to Figure4/6. All four have1001frames if verified metadata agrees. Deposit says1μs; frame0..1000 -> nominal0..1000ns is inferred from duration and count, not independently calibrated by rewritten DCD timestep. Analysis window frame11..1000 implements removal of initial10ns under that mapping. Full-window comparison is optional. The four files are four condition-specific trajectories, not1001 independent replicates. Duplicate210ns simulations mentioned in paper are not this deposit subset.\n6: \n7: The operator measures Euclidean heavy-atom distances only, as Figure4. It does not measure angle-qualified hydrogen-bond occupancy, koff, or inhibition rate. Paper hydrogen-bond criterion additionally includes3.2Å and20°; Figure4 average-distance statements have a different role. No discretized state labels are supplied.\n8: \n9: experimental_table1.tsv transcribes published Table1 rows (which attribute Ki to ref25), not new laboratory data. Figure3 image is the published duplicate-assay graphic; raw numerical kinetic curves are not provided. Paper.xml is the authoritative full JATS source; paper.md is a searchable XML text derivative whose math/read-order may be incomplete. Verify tables in XML and figures in images when needed."
+  },
+  {
+    "total_lines": 5,
+    "text": "1: system\tnatoms\tnframes\tligand_resid\tligand_resname\tprotein_residues\tres28\n2: tmpp-wt\t21652\t1001\t300\tTMPP\t159\tLEU\n3: tmpp-l28r\t21647\t1001\t300\tTMPP\t159\tARG\n4: d4tmpp-wt\t20332\t1001\t303\tD4PP\t159\tLEU\n5: d4tmpp-l28r\t20534\t1001\t303\tD4PP\t159\tARG"
+  },
+  {
+    "total_lines": 1002,
+    "text": "1: frame_index\tr18_O_O3P\tr18_O_O4P\tr18_O_O5P\tr20_N_O3P\tr20_N_O4P\tr20_N_O5P\tr22_O_O3P\tr22_O_O4P\tr22_O_O5P\tr27_OD1_O3P\tr27_OD1_O4P\tr27_OD1_O5P\tr27_OD2_O3P\tr27_OD2_O4P\tr27_OD2_O5P\tr49_O_O3P\tr49_O_O4P\tr49_O_O5P\tr52_NH1_O3P\tr52_NH1_O4P\tr52_NH1_O5P\tr52_NH2_O3P\tr52_NH2_O4P\tr52_NH2_O5P\n2: 0\t5.70995895\t7.33132293\t10.04734801\t4.85391158\t6.42508640\t8.42593441\t8.90575659\t8.64882999\t9.09666303\t10.51162112\t10.69881084\t9.23073254\t8.60311226\t8.73612544\t7.54038275\t5.13043231\t4.43921559\t6.89296118\t10.88594163\t8.12722213\t7.81703545\t9.95073855\t7.14728418\t6.16487042\n3: 1\t7.16540711\t9.42079520\t11.91131177\t5.31981722\t7.58005146\t9.76455634\t7.91781420\t8.59497529\t9.62854231\t10.05700246\t9.98018800\t8.56256570\t8.10453467\t8.15822878\t7.19942431\t4.43543916\t5.29317412\t7.95841854\t11.16449040\t8.58888476\t8.63133531\t9.53112242\t6.83507706\t6.43797482\n4: 2\t6.73900208\t8.57062862\t10.75448245\t5.43113865\t7.34768668\t9.79819066\t8.65259389\t9.33792251\t11.39544996\t10.09177233\t10.17502038\t9.75356994\t8.03317757\t8.09503313\t7.98460273\t5.13762332\t4.98816785\t6.58195254\t11.60190643\t9.03805716\t8.36237878\t11.42500404\t8.90023347\t8.88513789\n5: 3\t5.76968734\t7.39704425\t10.12792831\t5.17314745\t6.93723161\t9.29282161\t8.74171963\t9.00271226\t10.35685423\t9.53885149\t9.81336943\t8.77286845\t7.61675263\t7.86716360\t7.20834853\t5.38372464\t4.46958050\t6.59174474\t11.23249511\t8.75210415\t6.97841635\t9.13435592\t6.66218261\t4.77373155\n6: 4\t7.28060335\t8.84605037\t11.43815596\t4.93573273\t6.58148926\t9.11305900\t6.96799426\t6.64706653\t7.96639376\t9.75618738\t9.85107265\t8.64401655\t7.68282128\t7.75890815\t6.84375247\t5.22886435\t5.30462251\t7.44821668\t12.92827115\t10.58367505\t9.50895535\t12.04510822\t9.57640885\t8.92086256\n7: 5\t5.76472520\t7.84738902\t10.40169227\t4.80068252\t6.54751351\t9.10034620\t7.86424217\t7.58666868\t9.33666218\t10.20533198\t9.94470806\t9.16141094\t8.29913137\t7.95527100\t7.53028233\t5.12647073\t5.36532638\t7.29738716\t12.51307762\t10.24630750\t9.34517124\t11.76083190\t9.59844892\t9.34856732\n8: 6\t5.17255879\t6.77437626\t9.23824765\t4.18536260\t6.20005094\t8.75979655\t8.19025159\t8.61865698\t10.53051511\t8.73938272\t9.09433180\t8.71490447\t7.02776061\t7.29490367\t7.39561332\t6.38530322\t5.43270485\t6.70193531\t13.13469838\t10.55889137\t8.97243831\t14.52378746\t12.11074121\t10.26464530"
+  },
+  {
+    "total_lines": 1002,
+    "text": "1: frame_index\tr18_O_O3P\tr18_O_O4P\tr18_O_O5P\tr20_N_O3P\tr20_N_O4P\tr20_N_O5P\tr22_O_O3P\tr22_O_O4P\tr22_O_O5P\tr27_OD1_O3P\tr27_OD1_O4P\tr27_OD1_O5P\tr27_OD2_O3P\tr27_OD2_O4P\tr27_OD2_O5P\tr49_O_O3P\tr49_O_O4P\tr49_O_O5P\tr52_NH1_O3P\tr52_NH1_O4P\tr52_NH1_O5P\tr52_NH2_O3P\tr52_NH2_O4P\tr52_NH2_O5P\tr28_NE_O3P\tr28_NE_O4P\tr28_NE_O5P\tr28_NH1_O3P\tr28_NH1_O4P\tr28_NH1_O5P\tr28_NH2_O3P\tr28_NH2_O4P\tr28_NH2_O5P\n2: 0\t6.14066114\t7.63758488\t10.39652088\t4.74441724\t6.21015543\t8.27994072\t8.57896262\t7.99035970\t8.04487763\t10.05699057\t10.28371875\t8.88348661\t8.25873407\t8.26990802\t7.02741133\t5.27623015\t4.76898081\t7.24044998\t10.35188241\t7.72660103\t7.42141932\t10.22976837\t7.53192209\t6.42079171\t7.50870977\t5.92858419\t4.89796963\t7.41581086\t5.27361354\t4.83236301\t7.17425397\t5.80770387\t5.88284142\n3: 1\t6.40262121\t7.59190366\t10.09892704\t4.57885562\t6.03633528\t8.65707385\t7.67090524\t7.42818128\t9.11512022\t10.12029860\t10.35114706\t9.80448467\t8.26504114\t8.23437046\t7.71114685\t5.12760183\t4.73464720\t6.02237425\t7.93479659\t5.88696073\t4.65790105\t9.36194544\t7.06466722\t5.19816326\t8.78024680\t6.88749284\t6.63489581\t7.12908808\t4.85187112\t4.68977553\t7.47561089\t5.71294063\t6.39584382\n4: 2\t9.64498935\t12.19228767\t13.93632064\t7.63470855\t10.41169516\t11.98613431\t8.19432165\t10.23144908\t11.85320496\t8.81618786\t9.04143301\t7.79150423\t6.87279967\t7.45662286\t6.78504821\t7.48351936\t9.17226727\t11.42407745\t5.47234333\t5.40896097\t7.90207450\t5.32758692\t4.28643260\t6.71338244\t5.91086795\t5.65407137\t7.06612776\t8.05044951\t7.87866667\t9.29651864\t6.54344430\t7.07692682\t8.85960280\n5: 3\t9.35281714\t11.48668113\t13.57633359\t6.47369452\t8.97881230\t11.20749557\t6.03894859\t7.63034579\t9.23417058\t8.94250527\t9.64403025\t8.98735705\t6.89469194\t7.66887123\t7.41924032\t5.25617019\t5.46869666\t7.41312762\t10.72113511\t8.09586463\t7.79710142\t8.67321372\t5.96804274\t5.63078787\t4.97508201\t3.38621499\t3.94796888\t6.07321590\t3.84031124\t4.73114640\t4.49259309\t3.20460609\t5.08615894\n6: 4\t8.64591366\t11.09479556\t13.13900199\t6.51824477\t8.98826014\t11.35701006\t6.12408702\t7.01012458\t9.28284306\t9.26164513\t9.47172921\t9.32293216\t7.14518228\t7.41749334\t7.70356306\t5.77255098\t6.27917600\t8.02276156\t10.80700634\t8.29472589\t7.58636289\t8.69205599\t6.07690753\t5.47258387\t5.81767940\t3.82638664\t4.67838548\t6.54605080\t3.92297547\t4.41657693\t5.15350617\t3.09979109\t5.02364529\n7: 5\t8.44846076\t10.53041574\t13.09022325\t6.89043090\t9.00119426\t11.18494694\t8.52171665\t9.39548424\t10.64921626\t9.99747917\t10.64488803\t9.59189215\t8.12433524\t8.65404337\t7.82860495\t5.80450792\t5.32400596\t7.57010555\t10.03612934\t7.73100713\t7.13018367\t11.02594794\t8.43088053\t7.56857841\t5.98291842\t4.83656640\t4.24251311\t7.11416905\t5.42173305\t5.28993925\t5.63471511\t4.69595000\t5.38774572\n8: 6\t7.21812244\t9.40336411\t11.74236232\t5.26484690\t7.21728449\t9.64806966\t7.63520720\t7.81782696\t9.56062105\t9.69733254\t9.78575615\t9.05377783\t7.78569795\t7.81893350\t7.47669257\t5.48597639\t5.75981295\t7.74339409\t12.08384246\t9.80873326\t9.27619661\t12.43212529\t10.36656505\t10.39111244\t7.95479968\t5.72282300\t4.92405584\t8.84552663\t6.34367510\t6.04090778\t7.36923702\t4.74853084\t3.84972033"
+  },
+  {
+    "total_lines": 1002,
+    "text": "1: frame_index\tr18_O_O3P\tr18_O_O4P\tr18_O_O5P\tr20_N_O3P\tr20_N_O4P\tr20_N_O5P\tr22_O_O3P\tr22_O_O4P\tr22_O_O5P\tr27_OD1_O3P\tr27_OD1_O4P\tr27_OD1_O5P\tr27_OD2_O3P\tr27_OD2_O4P\tr27_OD2_O5P\tr49_O_O3P\tr49_O_O4P\tr49_O_O5P\tr52_NH1_O3P\tr52_NH1_O4P\tr52_NH1_O5P\tr52_NH2_O3P\tr52_NH2_O4P\tr52_NH2_O5P\n2: 0\t6.88727077\t9.18694990\t11.46054715\t5.29237374\t7.66235122\t9.86695876\t7.32688713\t7.91907622\t9.80373694\t9.91299840\t9.89984474\t9.21748048\t7.88662687\t7.99241522\t7.74172472\t4.58313298\t5.79828985\t7.96746514\t6.06124859\t3.42930552\t2.93972182\t4.83349978\t2.78488148\t3.93584131\n3: 1\t9.21727599\t9.97567814\t11.19163890\t6.51554877\t8.48061160\t10.33977953\t4.85749108\t7.28703866\t9.69400740\t7.82303893\t9.28113858\t9.09566398\t5.79883585\t7.57509520\t7.93249990\t8.20140224\t7.07340969\t7.70828835\t9.36425522\t6.55480296\t5.35805117\t10.07669880\t7.40458688\t6.03151406\n4: 2\t10.64041760\t12.20907705\t12.86609334\t6.66691553\t9.02295443\t10.30946462\t4.81097049\t7.24596366\t9.60797342\t7.51479625\t8.38010843\t8.55106280\t5.29816400\t6.43918656\t7.09073720\t8.93944715\t8.54891939\t8.56459286\t8.51550991\t5.99253971\t5.11746961\t8.50663466\t6.50434457\t5.96703093\n5: 3\t10.01839785\t10.78845865\t11.85504352\t6.63079405\t8.54044547\t10.24332748\t4.53027821\t6.94016841\t9.30678069\t7.13811614\t8.58366478\t8.77330592\t5.20193670\t6.99480835\t7.78170347\t8.66674310\t7.70601725\t7.96771912\t8.88675983\t6.17264965\t5.41527959\t8.53570586\t6.11402415\t5.24475047\n6: 4\t6.87334213\t9.06106779\t11.41461073\t5.55301576\t7.84056076\t10.06227758\t8.16727163\t8.93833893\t10.61151372\t9.91490476\t10.11143626\t9.21788373\t8.02377983\t8.20943567\t7.66480916\t4.67017417\t5.11607488\t7.30838576\t6.67956824\t3.92509770\t2.99408863\t5.26353432\t2.86403003\t3.23509483\n7: 5\t6.18510094\t8.39668024\t10.78914915\t5.55046293\t8.16300785\t10.24317563\t8.19296654\t9.40128858\t10.84284560\t9.75681748\t10.59091060\t9.70221330\t7.80825259\t8.51790867\t7.84315340\t5.01645537\t4.72372231\t7.09732261\t7.14718542\t4.24095926\t2.93760674\t5.95818734\t3.10146009\t3.23522759\n8: 6\t6.52940271\t8.41788933\t10.97896388\t4.97769294\t7.56403530\t9.46639532\t8.27596855\t9.55594118\t10.52444284\t10.38049250\t11.14887290\t10.05784201\t8.39304221\t9.03074966\t8.06232440\t5.19760191\t5.05364750\t7.51061641\t6.80999032\t4.06986126\t2.84726968\t5.49630634\t2.90472089\t3.32132444"
+  },
+  {
+    "total_lines": 1002,
+    "text": "1: frame_index\tr18_O_O3P\tr18_O_O4P\tr18_O_O5P\tr20_N_O3P\tr20_N_O4P\tr20_N_O5P\tr22_O_O3P\tr22_O_O4P\tr22_O_O5P\tr27_OD1_O3P\tr27_OD1_O4P\tr27_OD1_O5P\tr27_OD2_O3P\tr27_OD2_O4P\tr27_OD2_O5P\tr49_O_O3P\tr49_O_O4P\tr49_O_O5P\tr52_NH1_O3P\tr52_NH1_O4P\tr52_NH1_O5P\tr52_NH2_O3P\tr52_NH2_O4P\tr52_NH2_O5P\tr28_NE_O3P\tr28_NE_O4P\tr28_NE_O5P\tr28_NH1_O3P\tr28_NH1_O4P\tr28_NH1_O5P\tr28_NH2_O3P\tr28_NH2_O4P\tr28_NH2_O5P\n2: 0\t6.49733126\t8.35796666\t11.02534282\t4.82468694\t6.25308810\t8.53648603\t8.28365060\t7.44938712\t8.34682255\t10.43100848\t9.93960119\t8.61211251\t8.48423283\t8.01173856\t7.08217747\t5.42153399\t5.64246733\t7.80770343\t10.16824667\t7.98606064\t7.19679223\t12.10049805\t10.09743653\t9.30357200\t8.19488050\t5.63246787\t4.80286315\t8.32844199\t6.16854470\t6.18137804\t9.85877742\t7.35427192\t6.99489181\n3: 1\t8.08054129\t10.07813858\t12.67044191\t6.63199832\t9.10110332\t11.30837633\t7.65142156\t9.40936626\t10.75014168\t9.98658213\t10.90601763\t9.69829774\t7.96176580\t8.83860908\t7.86919227\t5.56403073\t5.71369787\t8.39560593\t9.22613920\t6.48439737\t5.31007702\t10.74533128\t7.98485692\t7.34359909\t9.35723363\t8.01432921\t6.68681489\t10.53273046\t9.50043927\t8.63920722\t11.59025002\t10.15465116\t8.78246501\n4: 2\t9.57593264\t10.62050314\t12.39173146\t6.49438502\t8.47147432\t10.65527072\t5.04144968\t7.11721144\t9.61641704\t7.18248124\t8.55656710\t8.07660497\t5.21137340\t6.91205947\t7.06612806\t9.80065753\t8.87130069\t9.65486540\t10.74250310\t8.10722566\t7.06980484\t12.95397880\t10.29503936\t9.21699026\t5.90223225\t4.68885547\t5.38117801\t5.61496846\t5.28195083\t6.89650353\t7.54210613\t6.52894504\t7.61434026\n5: 3\t10.27464226\t11.42781526\t12.06204129\t6.88235694\t8.81892960\t10.40232857\t4.20443171\t6.19761399\t8.81584488\t6.78655374\t8.15184621\t8.58568101\t4.78947599\t6.31318719\t7.29875287\t9.38208466\t8.68250902\t8.50818522\t9.42670035\t6.94585358\t4.72406661\t11.43918467\t8.82471857\t6.86795575\t6.63546888\t4.84057035\t5.94584453\t5.90435642\t4.93858650\t6.95301254\t7.96759414\t6.52953529\t8.07584894\n6: 4\t10.93092100\t12.81888987\t13.65498204\t7.23674140\t9.66790373\t11.24754982\t4.43233721\t6.58084466\t9.14435365\t7.79794260\t8.54385833\t8.98905522\t5.70028109\t6.40525706\t7.08589963\t7.97403229\t8.03104684\t8.15340905\t8.84215330\t6.37610846\t4.56883832\t11.04695133\t8.57044086\t6.78883113\t7.28668142\t5.53072094\t7.01299897\t7.07080620\t5.96236734\t8.19026494\t8.98672978\t7.46097969\t9.18748528\n7: 5\t10.06661395\t11.57570954\t12.61961147\t7.39541998\t9.79550823\t11.53184256\t6.30610371\t8.61321338\t11.08428880\t7.80463882\t9.22890113\t9.57288444\t5.65875416\t7.26494309\t7.97275906\t8.07451211\t7.25112273\t7.49571486\t8.98880721\t6.21776120\t5.11737534\t11.16963275\t8.40621175\t7.01182355\t5.74686149\t4.85580203\t6.67624695\t5.26820517\t5.40867353\t7.80608069\t7.21358424\t6.65142171\t8.75391443\n8: 6\t9.68800027\t10.94263075\t12.11510537\t6.40250879\t8.65389266\t10.38672147\t4.29192489\t6.61531840\t8.90206205\t8.01649215\t9.33535569\t9.31876012\t5.83984353\t7.41664055\t7.76282178\t8.32699021\t7.13111488\t7.42177647\t9.43061846\t6.73055895\t4.76185792\t11.56133396\t8.86567284\t6.89744254\t6.24848559\t4.53692932\t4.94562389\t5.06397842\t4.26487664\t5.77244842\t6.97897154\t5.45532170\t6.61354519"
+  },
+  {
+    "total_lines": 725,
+    "text": "1: b.dedeoglu@gtu.edu.tr.\n2: \n3: canan@sabanciuniv.edu.\n4: \n5: Abstract\n6: \n7: Dihydrofolate reductase (DHFR) is an important drug target\n8: and\n9: a highly studied model protein for understanding enzyme dynamics.\n10: DHFR’s crucial role in folate synthesis renders it an ideal"
+  },
+  {
+    "total_lines": 31,
+    "text": "1: from collections import defaultdict\n2: from collections import OrderedDict\n3: import matplotlib.pyplot as plt \n4: import itertools\n5: import numpy as np\n6: import os\n7: \n8: for file in os.listdir():\n9: \tfile_name_wh_ex = str(os.path.splitext(file)[0])\n10: \to3p=[]\n11: \to4p=[]\n12: \to4p=[]\n13: \n14: \twith open(file) as g:\n15: \t\tfor line in g:\n16: \t\t\tline=line.split(' ')\n17: \t\t\to3p.append(line[1])\n18: \t\t\to4p.append(line[2])\n19: \t\t\to5p.append(line[3])\n20: \n21: \taverage_o3p=np.average(o3p)\n22: \taverage_o4p=np.average(o4p)\n23: \taverage_o5p=np.average(o5p)\n24: \n25: \tstd_o3p=np.std(o3p)\n26: \tstd_o4p=np.std(o4p)\n27: \tstd_o5p=np.std(o5p)\n28: \n29: \twtc_file=str(file_name_wh_ex)+\".txt\"\n30: \twith open(wtc_file,'w') as f:\n31:         f.write('Average & STD:    %s %s %s %s %s %s\\n' % (average_o3p,average_o4p,average_o5p,std_o4p,std_o4p,std_o5p))"
+  },
+  {
+    "total_lines": 139,
+    "text": "1: set nf [molinfo top get numframes]\n2: set outfile [open O3P_O4P_O5P_R52_NH1.dat w]\n3: set outfile2 [open O3P_O4P_O5P_R52_NH2.dat w]\n4: set outfile3 [open O3P_O4P_O5P_S49_O.dat w]\n5: set outfile4 [open O3P_O4P_O5P_M20_N.dat w]\n6: set outfile5 [open O3P_O4P_O5P_N18_O.dat w]\n7: set outfile6 [open O3P_O4P_O5P_W22_O.dat w]\t\n8: set outfile7 [open O3P_O4P_O5P_D27_OD1.dat w]\n9: set outfile8 [open O3P_O4P_O5P_D27_OD2.dat w]\n10: \t\t#1\n11: set o3p [atomselect top \"resid 303 and name O3P\"]\n12: set o4p [atomselect top \"resid 303 and name O4P\"]\n13: set o5p [atomselect top \"resid 303 and name O5P\"]\n14: \t\t\n15: \t\t#R52\n16: set r52_nh1 [atomselect top \"resid 52 and name NH1\"]\n17: \n18: set r52_nh2 [atomselect top \"resid 52 and name NH2\"]\n19: \n20: \t\t#S49\n21: set s49 [atomselect top \"protein and resid 49 and name O\"]\n22: \t\t\n23: \t\t#M20\n24: set m20 [atomselect top \"protein and resid 20 and name N\"]\n25: \t\t\n26: \t\t#N18\n27: \t\t\n28: set n18 [atomselect top \"protein and resid 18 and name O\"]\n29: \t\t\n30: \t\t#W22\n31: \t\t\n32: set w22 [atomselect top \"protein and resid 22 and name O\"]\n33: \t\t\n34: \t\t#D27\n35: \t\t\n36: set d27_od1 [atomselect top \"protein and resid 27 and name OD1\"]\n37: set d27_od2 [atomselect top \"protein and resid 27 and name OD2\"]\n38: \t\t\n39: \t\t\n40: \t\t\n41: set o3p_1 [$o3p get index]\n42: set o4p_1 [$o4p get index]\n43: set o5p_1 [$o5p get index]\n44: \t\t\n45: set r52_nh1_1 [$r52_nh1 get index]\n46: set r52_nh2_1 [$r52_nh2 get index]\n47: \t\t\n48: set s49_1 [$s49 get index]\n49: \t\t\n50: set m20_1 [$m20 get index]\n51: \t\t\n52: set n18_1 [$n18 get index]\n53: \t\t\n54: set w22_1 [$w22 get index]\n55: \t\t\n56: set d27_od1_1 [$d27_od1 get index]\n57: set d27_od2_1 [$d27_od2 get index]\n58: \t\t\n59: \t\t#distances measured and written\n60: for {set i 0} {$i<$nf} {incr i} {\n61: \t\tset dist_o3p [measure bond \"$r52_nh1_1 $o3p_1\"  molid 3 frame $i]\n62: \t\tset dist_o4p [measure bond \"$r52_nh1_1 $o4p_1\"  molid 3 frame $i] \n63: \t\tset dist_o5p [measure bond \"$r52_nh1_1 $o5p_1\"  molid 3 frame $i] \n64: \t\t\n65: \t\tputs $outfile [format \"%8d %8f %8f %8f\" $i $dist_o3p $dist_o4p $dist_o5p]\n66: \t\t\t\t\n67: }\t\n68: \tclose $outfile\n69: \t\t\n70: for {set i 0} {$i<$nf} {incr i} {\n71: \t\tset dist_o3p_1 [measure bond \"$r52_nh2_1 $o3p_1\"  molid 3 frame $i]\n72: \t\tset dist_o4p_1 [measure bond \"$r52_nh2_1 $o4p_1\"  molid 3 frame $i] \n73: \t\tset dist_o5p_1 [measure bond \"$r52_nh2_1 $o5p_1\"  molid 3 frame $i] \n74: \t\t\n75: \t\tputs $outfile2 [format \"%8d %8f %8f %8f\" $i $dist_o3p_1 $dist_o4p_1 $dist_o5p_1]\n76: \t\t\n77: }\t\n78: \tclose $outfile2\n79: \t\t\n80: for {set i 0} {$i<$nf} {incr i} {\n81: \t\tset dist_o3p_2 [measure bond \"$s49_1 $o3p_1\"  molid 3 frame $i]\n82: \t\tset dist_o4p_2 [measure bond \"$s49_1 $o4p_1\"  molid 3 frame $i] \n83: \t\tset dist_o5p_2 [measure bond \"$s49_1 $o5p_1\"  molid 3 frame $i] \n84: \t\t\n85: \t\tputs $outfile3 [format \"%8d %8f %8f %8f\" $i $dist_o3p_2 $dist_o4p_2 $dist_o5p_2]\n86: \t\t\n87: }\t\n88: \tclose $outfile3\n89: \t\t\n90: for {set i 0} {$i<$nf} {incr i} {\n91: \t\tset dist_o3p_3 [measure bond \"$m20_1 $o3p_1\"  molid 3 frame $i]\n92: \t\tset dist_o4p_3 [measure bond \"$m20_1 $o4p_1\"  molid 3 frame $i] \n93: \t\tset dist_o5p_3 [measure bond \"$m20_1 $o5p_1\"  molid 3 frame $i] \n94: \t\t\n95: \t\tputs $outfile4 [format \"%8d %8f %8f %8f\" $i $dist_o3p_3 $dist_o4p_3 $dist_o5p_3]\n96: \t\t\n97: }\t\n98: \tclose $outfile4\n99: \t\n100: for {set i 0} {$i<$nf} {incr i} {\n101: \t\tset dist_o3p_4 [measure bond \"$n18_1 $o3p_1\"  molid 3 frame $i]\n102: \t\tset dist_o4p_4 [measure bond \"$n18_1 $o4p_1\"  molid 3 frame $i] \n103: \t\tset dist_o5p_4 [measure bond \"$n18_1 $o5p_1\"  molid 3 frame $i] \n104: \t\t\n105: \t\tputs $outfile5 [format \"%8d %8f %8f %8f\" $i $dist_o3p_4 $dist_o4p_4 $dist_o5p_4]\n106: \t\t\n107: }\t\n108: \tclose $outfile5\n109: \t\t\n110: for {set i 0} {$i<$nf} {incr i} {\n111: \t\tset dist_o3p_5 [measure bond \"$w22_1 $o3p_1\"  molid 3 frame $i]\n112: \t\tset dist_o4p_5 [measure bond \"$w22_1 $o4p_1\"  molid 3 frame $i] \n113: \t\tset dist_o5p_5 [measure bond \"$w22_1 $o5p_1\"  molid 3 frame $i] \n114: \t\t\n115: \t\tputs $outfile6 [format \"%8d %8f %8f %8f\" $i $dist_o3p_5 $dist_o4p_5 $dist_o5p_5]\n116: \t\t\n117: }\t\n118: \tclose $outfile6\n119: \t\t\n120: for {set i 0} {$i<$nf} {incr i} {\n121: \t\tset dist_o3p_6 [measure bond \"$d27_od1_1 $o3p_1\"  molid 3 frame $i]\n122: \t\tset dist_o4p_6 [measure bond \"$d27_od1_1 $o4p_1\"  molid 3 frame $i] \n123: \t\tset dist_o5p_6 [measure bond \"$d27_od1_1 $o5p_1\"  molid 3 frame $i] \n124: \t\t\n125: \t\tputs $outfile7 [format \"%8d %8f %8f %8f\" $i $dist_o3p_6 $dist_o4p_6 $dist_o5p_6]\n126: \t\t\n127: }\t\n128: \tclose $outfile7\n129: \t\t\n130: \t\t\n131: for {set i 0} {$i<$nf} {incr i} {\n132: \t\tset dist_o3p_7 [measure bond \"$d27_od2_1 $o3p_1\"  molid 3 frame $i]\n133: \t\tset dist_o4p_7 [measure bond \"$d27_od2_1 $o4p_1\"  molid 3 frame $i] \n134: \t\tset dist_o5p_7 [measure bond \"$d27_od2_1 $o5p_1\"  molid 3 frame $i] \n135: \t\t\n136: \t\tputs $outfile8 [format \"%8d %8f %8f %8f\" $i $dist_o3p_7 $dist_o4p_7 $dist_o5p_7]\n137: \n138: }\t\n139: \tclose $outfile8"
+  },
+  {
+    "total_lines": 60,
+    "text": "1: set nf [molinfo top get numframes]\n2: set outfile [open O3P_O4P_O5P_R28_NH1.dat w]\n3: set outfile2 [open O3P_O4P_O5P_R28_NH2.dat w]\n4: set outfile3 [open O3P_O4P_O5P_R28_NE.dat w]\n5: \n6: \t\t#1\n7: set o3p [atomselect top \"resid 300 and name O3P\"]\n8: set o4p [atomselect top \"resid 300 and name O4P\"]\n9: set o5p [atomselect top \"resid 300 and name O5P\"]\n10: \t\t\n11: \t\t#28\n12: set r28_nh1 [atomselect top \"resid 28 and name NH1\"]\n13: \n14: set r28_nh2 [atomselect top \"resid 28 and name NH2\"]\n15: \n16: \t\t#NE\n17: set r28_ne [atomselect top \"protein and resid 28 and name NE\"]\n18: \t\t\n19: \t\t\n20: \t\t\n21: set o3p_1 [$o3p get index]\n22: set o4p_1 [$o4p get index]\n23: set o5p_1 [$o5p get index]\n24: \t\t\n25: set r28_nh1_1 [$r28_nh1 get index]\n26: set r28_nh2_1 [$r28_nh2 get index]\n27: set r28_ne_1 [$r28_ne get index]\n28: \t\t\n29: \t\t\n30: \t\t#distances measured and written\n31: for {set i 0} {$i<$nf} {incr i} {\n32: \t\tset dist_o3p [measure bond \"$r28_nh1_1 $o3p_1\"  molid 4 frame $i]\n33: \t\tset dist_o4p [measure bond \"$r28_nh1_1 $o4p_1\"  molid 4 frame $i] \n34: \t\tset dist_o5p [measure bond \"$r28_nh1_1 $o5p_1\"  molid 4 frame $i] \n35: \t\t\n36: \t\tputs $outfile [format \"%8d %8f %8f %8f\" $i $dist_o3p $dist_o4p $dist_o5p]\n37: \t\t\t\t\n38: }\t\n39: \tclose $outfile\n40: \t\t\n41: for {set i 0} {$i<$nf} {incr i} {\n42: \t\tset dist_o3p_1 [measure bond \"$r28_nh2_1 $o3p_1\"  molid 4 frame $i]\n43: \t\tset dist_o4p_1 [measure bond \"$r28_nh2_1 $o4p_1\"  molid 4 frame $i] \n44: \t\tset dist_o5p_1 [measure bond \"$r28_nh2_1 $o5p_1\"  molid 4 frame $i] \n45: \t\t\n46: \t\tputs $outfile2 [format \"%8d %8f %8f %8f\" $i $dist_o3p_1 $dist_o4p_1 $dist_o5p_1]\n47: \t\t\n48: }\t\n49: \tclose $outfile2\n50: \t\t\n51: for {set i 0} {$i<$nf} {incr i} {\n52: \t\tset dist_o3p_2 [measure bond \"$r28_ne_1 $o3p_1\"  molid 4 frame $i]\n53: \t\tset dist_o4p_2 [measure bond \"$r28_ne_1 $o4p_1\"  molid 4 frame $i] \n54: \t\tset dist_o5p_2 [measure bond \"$r28_ne_1 $o5p_1\"  molid 4 frame $i] \n55: \t\t\n56: \t\tputs $outfile3 [format \"%8d %8f %8f %8f\" $i $dist_o3p_2 $dist_o4p_2 $dist_o5p_2]\n57: \t\t\n58: }\t\n59: \tclose $outfile3\n60: \t\t"
+  },
+  {
+    "total_lines": 5,
+    "text": "1: protein\tinhibitor\tKi_nM\tKi_reported_error_nM\tDeltaG_kcal_mol\tDeltaG_reported_error\n2: WT\tTMP\t4.2\t0.5\t-11.5\t0.1\n3: WT\t4DTMP\t5.1\t1.0\t-11.4\t0.1\n4: L28R\tTMP\t65.0\t7.5\t-9.9\t0.1\n5: L28R\t4DTMP\t34.3\t2.9\t-10.3\t0.1"
+  },
+  [
+    {
+      "file": "/source/paper.md",
+      "line": 113,
+      "text": "mutant specific inhibitor (see Figure 4c in ref (25)). Therein, TMP-bound WT"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 422,
+      "text": "(Figure 4a). On the"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 426,
+      "text": "are formed with 4′-DTMP, which do not form with TMP (Figure 4b)."
+    }
+  ],
+  [
+    {
+      "file": "/source/paper.md",
+      "line": 323,
+      "text": "affinities using the relation ΔG = −RT ln Ki (Table 1). The horizontal"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 337,
+      "text": "Table 1Experimental Binding Affinities and"
+    }
+  ],
+  [
+    {
+      "file": "/source/paper.md",
+      "line": 13,
+      "text": "4′-deoxy methyl trimethoprim (4′-DTMP), alters evolutionary"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 16,
+      "text": "of 4′-DTMP, we first confirmed, both computationally and experimentally,"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 18,
+      "text": "and 4′-DTMP is the same, pointing the origin of the characteristic"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 22,
+      "text": "in 4′-DTMP induces additional local interactions with the enzyme,"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 104,
+      "text": "4′-DTMP) was the only TMP derivative that was effective on"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 106,
+      "text": "4′-DTMP selection, the L28R mutation is largely eliminated,"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 125,
+      "text": "we study TMP and 4′-DTMP in the WT and L28R mutant protein"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 136,
+      "text": "Parametrization of 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 152,
+      "text": "neutral and protonated states of 4′-DTMP structures were parametrized"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 153,
+      "text": "in this work, and the resulting parameters are given in Table S1. We find the protonation state of 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 215,
+      "text": "TMP+ to 4′-DTMP+ conversions. Initial"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 234,
+      "text": "atoms were taken as nodes for the amino acids. C2 atom (Table S1) was used as a node for TMP and 4′-DTMP."
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 294,
+      "text": "plateau. To observe the effect of TMP and 4′-DTMP on the reactions,"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 297,
+      "text": "mutant in the presence of either TMP or 4′-DTMP. The inhibitor"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 304,
+      "text": "4′-DTMP and TMP Binding to WT and L28R Mutant"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 306,
+      "text": "4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 316,
+      "text": "in the structures of TMP and 4′-DTMP, here we can calculate"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 322,
+      "text": "the vertical energy differences (ΔGbind, TMP/4′-DTMPWT/L28R) can be obtained from experimental binding"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 324,
+      "text": "ones (ΔGTMP→4′-DTMPWT/L28R) are the theoretical values obtained"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 330,
+      "text": "binding of ligands TMP and 4′-DTMP to WT and L28R, respectively."
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 334,
+      "text": "for TMP (burgundy) and 4′-DTMP (fuchsia). Vertical values are"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 338,
+      "text": "Corresponding Calculated Binding Free EnergiesproteininhibitorKi(nM)aΔG (kcal/mol)labelWTTMP4.2 ± 0.5–11.5 ± 0.1ΔGbind, TMPWTWT4′-DTMP5.1 ± 1.0–11.4 ± 0.1ΔGbind, 4′-DTMPWTL28RTMP65.0 ± 7.5–9.9 ± 0.1ΔGbind,TMPL28RL28R4′-DTMP34.3 ± 2.9–10.3 ± 0.1ΔGbind, 4′-DTMPL28RaFrom ref (25)."
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 361,
+      "text": "in the inhibition of the L28R mutant by 4′-DTMP we previously"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 365,
+      "text": "for TMP and 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 373,
+      "text": "nM TMP and 4′-DTMP molecules were added, we did not observe"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 383,
+      "text": "in product release, more so for 4′-DTMP than for TMP. Thus,"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 384,
+      "text": "the slight edge introduced by 4′-DTMP on the L28R mutant finds"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 411,
+      "text": "and its derivative 4′-DTMP. The hydrogen bonds established"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 421,
+      "text": "in hydrogen bonding distances in both WT and L28R for 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 426,
+      "text": "are formed with 4′-DTMP, which do not form with TMP (Figure 4b)."
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 430,
+      "text": "with 4′-DTMP compared to TMP. Average distances between the"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 445,
+      "text": "hydrogen bond contacts. Conversely, 4′-DTMP is lodged in place"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 452,
+      "text": "and 4′-DTMP (pink) in both WT and L28R at the end of one of"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 455,
+      "text": "is held in place by the 4′-DTMP. Also, TMP has alternative"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 456,
+      "text": "conformations, while 4′-DTMP has a single stable pose. (b)"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 465,
+      "text": "that interactions are slightly decreased for D27 in 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 467,
+      "text": "mutant, there are additional interactions of the tail of 4′-DTMP"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 469,
+      "text": "stabilization of the tail of the ligand for 4′-DTMP, the pyrimidine"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 472,
+      "text": "33–35%). In the presence of 4′-DTMP, there is a significant"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 481,
+      "text": "binding cavity residues and TMP and 4′-DTMP for WT and L28R"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 499,
+      "text": "from TMP to 4′-DTMP substantially increases the negative correlations"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 502,
+      "text": "maps). In fact, 4′-DTMP suppresses correlations occurring elsewhere"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 537,
+      "text": "for WT and L28R bound forms with TMP and 4′-DTMP."
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 619,
+      "text": "bond occupancy of 4′-DTMP with N18, M20, and W22 in the M20"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 632,
+      "text": "residues.46−48 The effective TMP derivative, 4′-DTMP, developed"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 669,
+      "text": "of action of the 4′-DTMP that is effective on a high resistance-conferring"
+    },
+    {
+      "file": "/source/paper.md",
+      "line": 699,
+      "text": "Force field parameters for 4′-DTMP derivatives"
+    }
+  ],
+  {
+    "returncode": 0,
+    "stdout": "\n WT\nr18_O_O3P TMP 7.654 D4 5.971 delta -1.683 occ3.2 0.000->0.000\nr18_O_O4P TMP 7.854 D4 7.665 delta -0.189 occ3.2 0.000->0.000\nr18_O_O5P TMP 7.500 D4 8.418 delta 0.918 occ3.2 0.000->0.000\nr20_N_O3P TMP 8.688 D4 4.622 delta -4.066 occ3.2 0.000->0.011\nr20_N_O4P TMP 9.925 D4 7.263 delta -2.662 occ3.2 0.000->0.000\nr20_N_O5P TMP 9.927 D4 9.176 delta -0.752 occ3.2 0.000->0.000\nr22_O_O3P TMP 9.199 D4 5.051 delta -4.148 occ3.2 0.000->0.000\nr22_O_O4P TMP 11.261 D4 6.597 delta -4.664 occ3.2 0.000->0.000\nr22_O_O5P TMP 12.055 D4 9.060 delta -2.996 occ3.2 0.000->0.000\nr27_OD1_O3P TMP 9.054 D4 7.042 delta -2.012 occ3.2 0.000->0.000\nr27_OD1_O4P TMP 10.631 D4 7.969 delta -2.662 occ3.2 0.000->0.000\nr27_OD1_O5P TMP 10.438 D4 8.161 delta -2.277 occ3.2 0.000->0.000\nr27_OD2_O3P TMP 7.841 D4 6.365 delta -1.476 occ3.2 0.000->0.000\nr27_OD2_O4P TMP 9.612 D4 7.333 delta -2.279 occ3.2 0.000->0.000\nr27_OD2_O5P TMP 9.607 D4 7.675 delta -1.932 occ3.2 0.000->0.000\nr49_O_O3P TMP 8.319 D4 7.264 delta -1.055 occ3.2 0.000->0.000\nr49_O_O4P TMP 6.959 D4 6.609 delta -0.351 occ3.2 0.001->0.000\nr49_O_O5P TMP 7.656 D4 6.696 delta -0.960 occ3.2 0.000->0.000\nr52_NH1_O3P TMP 11.764 D4 11.991 delta 0.227 occ3.2 0.000->0.000\nr52_NH1_O4P TMP 10.736 D4 9.571 delta -1.165 occ3.2 0.000->0.000\nr52_NH1_O5P TMP 12.420 D4 8.238 delta -4.182 occ3.2 0.000->0.006\nr52_NH2_O3P TMP 11.666 D4 11.761 delta 0.095 occ3.2 0.000->0.000\nr52_NH2_O4P TMP 10.744 D4 9.457 delta -1.286 occ3.2 0.000->0.001\nr52_NH2_O5P TMP 12.474 D4 8.236 delta -4.238 occ3.2 0.000->0.017\n\n L28R\nr18_O_O3P TMP 9.553 D4 6.189 delta -3.364 occ3.2 0.000->0.000\nr18_O_O4P TMP 8.901 D4 8.124 delta -0.777 occ3.2 0.000->0.000\nr18_O_O5P TMP 7.410 D4 9.140 delta 1.731 occ3.2 0.000->0.000\nr20_N_O3P TMP 10.436 D4 4.809 delta -5.627 occ3.2 0.000->0.001\nr20_N_O4P TMP 10.847 D4 7.482 delta -3.365 occ3.2 0.000->0.000\nr20_N_O5P TMP 9.828 D4 9.443 delta -0.385 occ3.2 0.000->0.000\nr22_O_O3P TMP 10.071 D4 5.058 delta -5.013 occ3.2 0.000->0.000\nr22_O_O4P TMP 11.733 D4 6.452 delta -5.280 occ3.2 0.000->0.000\nr22_O_O5P TMP 11.853 D4 8.853 delta -2.999 occ3.2 0.000->0.000\nr27_OD1_O3P TMP 8.745 D4 6.989 delta -1.756 occ3.2 0.000->0.000\nr27_OD1_O4P TMP 10.552 D4 7.647 delta -2.906 occ3.2 0.000->0.000\nr27_OD1_O5P TMP 10.420 D4 7.567 delta -2.853 occ3.2 0.000->0.000\nr27_OD2_O3P TMP 8.009 D4 6.307 delta -1.702 occ3.2 0.000->0.000\nr27_OD2_O4P TMP 9.841 D4 7.071 delta -2.771 occ3.2 0.000->0.000\nr27_OD2_O5P TMP 9.698 D4 7.187 delta -2.511 occ3.2 0.000->0.000\nr49_O_O3P TMP 9.042 D4 7.515 delta -1.527 occ3.2 0.000->0.000\nr49_O_O4P TMP 7.248 D4 7.216 delta -0.032 occ3.2 0.000->0.000\nr49_O_O5P TMP 7.109 D4 7.555 delta 0.446 occ3.2 0.000->0.000\nr52_NH1_O3P TMP 11.936 D4 13.603 delta 1.667 occ3.2 0.002->0.000\nr52_NH1_O4P TMP 11.384 D4 11.509 delta 0.125 occ3.2 0.000->0.000\nr52_NH1_O5P TMP 13.415 D4 10.486 delta -2.929 occ3.2 0.000->0.006\nr52_NH2_O3P TMP 12.011 D4 13.423 delta 1.412 occ3.2 0.000->0.000\nr52_NH2_O4P TMP 11.547 D4 11.416 delta -0.131 occ3.2 0.000->0.000\nr52_NH2_O5P TMP 13.590 D4 10.470 delta -3.119 occ3.2 0.000->0.000\nr28_NE_O3P TMP 5.798 D4 5.933 delta 0.135 occ3.2 0.000->0.010\nr28_NE_O4P TMP 8.213 D4 3.597 delta -4.616 occ3.2 0.000->0.300\nr28_NE_O5P TMP 9.835 D4 3.727 delta -6.108 occ3.2 0.000->0.515\nr28_NH1_O3P TMP 6.785 D4 7.172 delta 0.387 occ3.2 0.016->0.000\nr28_NH1_O4P TMP 8.960 D4 4.851 delta -4.108 occ3.2 0.000->0.007\nr28_NH1_O5P TMP 10.573 D4 5.402 delta -5.171 occ3.2 0.000->0.031\nr28_NH2_O3P TMP 6.939 D4 6.226 delta -0.714 occ3.2 0.004->0.010\nr28_NH2_O4P TMP 9.015 D4 4.034 delta -4.981 occ3.2 0.000->0.232\nr28_NH2_O5P TMP 10.612 D4 4.508 delta -6.104 occ3.2 0.000->0.252\n\nL28R-WT per ligand selected\nTMP r20_N_O3P 8.6876774370101 10.435783036464645\nTMP r20_N_O4P 9.925133533858586 10.846977181747475\nTMP r20_N_O5P 9.92713615041414 9.828293915929292\nTMP r28_NE_O3P None 5.798057581474747\nTMP r28_NE_O4P None 8.213239867525253\nTMP r28_NE_O5P None 9.835108611838384\nTMP r28_NH1_O3P None 6.785366585565656\nTMP r28_NH1_O4P None 8.95960985180808\nTMP r28_NH1_O5P None 10.573371279242423\nTMP r28_NH2_O3P None 6.93914149250505\nTMP r28_NH2_O4P None 9.014880673616162\nTMP r28_NH2_O5P None 10.611764346080808\nD4 r20_N_O3P 4.622056235181818 4.808909664414142\nD4 r20_N_O4P 7.263064430868688 7.481953183424243\nD4 r20_N_O5P 9.175612312686868 9.443041793040402\nD4 r28_NE_O3P None 5.932569273111111\nD4 r28_NE_O4P None 3.5970857943434345\nD4 r28_NE_O5P None 3.7272237473535355\nD4 r28_NH1_O3P None 7.172074526959595\nD4 r28_NH1_O4P None 4.851159147868687\nD4 r28_NH1_O5P None 5.40245925150505\nD4 r28_NH2_O3P None 6.225502504090909\nD4 r28_NH2_O4P None 4.033763128454546\nD4 r28_NH2_O5P None 4.508221987111111\nWT_TMP M20 minmean 8.590567339191919 min<3.2 0.0\nWT_TMP R28 minmean nan min<3.2 0.0\nL28R_TMP M20 minmean 9.706733064272727 min<3.2 0.0\nL28R_TMP R28 minmean 5.611766935242424 min<3.2 0.020202020202020204\nWT_D4 M20 minmean 4.622056235181818 min<3.2 0.011111111111111112\nWT_D4 R28 minmean nan min<3.2 0.0\nL28R_D4 M20 minmean 4.808909664414142 min<3.2 0.00101010101010101\nL28R_D4 R28 minmean 3.1286904967676765 min<3.2 0.8171717171717172\n",
+    "stderr": ""
+  },
+  {
+    "total_lines": 725,
+    "text": "350: 0.3 kcal/mol and ΔGTMP→4'-DTMPL28R = −3.4 ± 0.4 kcal/mol.\n351: \n352: The relative effect of the inhibitors may be obtained from the\n353: difference: ΔΔG = ΔGWT→L28RTMP bound – ΔGWT→L28R4'-DTMP bound. Employing\n354: the\n355: outermost and the innermost cycles from Figure 2, and plugging in the measured/calculated\n356: values we get,\n357: \n358: Thus, both the experiments of ref (25) and our calculations point\n359: out that the effect of the mutation is thermodynamically similar for\n360: the two inhibitors. Therefore, the 30–90-fold enhanced activity\n361: in the inhibition of the L28R mutant by 4′-DTMP we previously\n362: observed25 must have kinetic origins.\n363: \n364: Steady-State Kinetic Measurements Point out an Inhibitory Difference\n365: for TMP and 4′-DTMP\n366: \n367: In kinetic assays, we measured\n368: the consumption of DHF in the absence and presence of the inhibitors\n369: (Figure 3). The initial\n370: DHF concentration was 12.5 μM, and these assays were performed\n371: for WT and L28R mutant enzymes. DHF was consumed in 30 s in control\n372: experiments in the absence of any inhibitor for WT DHFR. When 500\n373: nM TMP and 4′-DTMP molecules were added, we did not observe\n374: any DHF consumption; i.e., the enzyme is completely\n375: inhibited. This is in accordance with the 4–5 nM Ki values of these drugs for the WT. On\n376: the other hand, in the DHF consumption control experiment for the\n377: L28R mutant, we observed a slower trend continuing for a few minutes.\n378: Since WT protein is optimized for the environmental conditions, the\n379: slower reaction kinetics for L28R is expected; in fact, the more resistant\n380: mutants of bacteria are likely to grow slower than WT, introducing\n381: a resistance cost.42 When 500 nM inhibitors\n382: are added to the mutants, both are able to introduce a slowing down\n383: in product release, more so for 4′-DTMP than for TMP. Thus,\n384: the slight edge introduced by 4′-DTMP on the L28R mutant finds\n385: its origins in these kinetic differences. We next explore the modified\n386: interactions in the dynamics of inhibitor bound DHFR to illuminate\n387: this point.\n388: \n389: Kinetic assays for WT and L28R mutant enzyme. Initial DHF concentration\n390: in each case is 12.5 μM (dotted lines). Gray curves are the\n391: controls in the absence of inhibitors; colored curves are for the\n392: systems under competitive inhibition of the 500 nM drug. Experiments\n393: are done in duplicate; raw data are shown in circles; lines guide\n394: the eye.\n395: \n396: Hydrogen Bond Occupancies Differentiate Binding Modes of the\n397: Two Inhibitors\n398: \n399: To elucidate the mechanism of binding of the\n400: new inhibitor and thus to highlight the interactions responsible for\n401: its enzymatic activity, a detailed hydrogen bond analysis in the WT\n402: and L28R mutant of E. coli DHFR\n403: with TMP derivatives has been conducted by analyzing the MD simulations\n404: for each system.\n405: \n406: In the crystal structure of WTTMP and L28RTMP (PDB codes 6XG5 and 6XG4(25)), the pyrimidine\n407: ring of TMP is stabilized by the backbone oxygen atoms of I5 and I94\n408: and the side chains of D27, Y100, and T113, whereas the trimethoxybenzene\n409: ring is stabilized via the side chain of S49 (also see Figure S1). We monitored the average hydrogen\n410: bond distances in the WT and the L28R mutant in the presence of TMP\n411: and its derivative 4′-DTMP. The hydrogen bonds established\n412: between the 2,4-diamino pyrimidine ring of the ligand and the active\n413: site residues of the protein are highly conserved, contributing to\n414: the stabilization of the ligand within the active site of DHFR (Figure S1). While the pyrimidine ring of the\n415: ligand is stabilized with strong hydrogen bonds both in WT and in\n416: L28R, we observe a dynamic stabilization of the trimethoxybenzene\n417: ring of the ligand. Residues N18, M20, W22, D27, S49, and R52 come\n418: in proximity occasionally and sometimes lose their contact resulting\n419: in larger average values for the contacts determining hydrogen bond\n420: distances. In particular, N18, M20, and W22 show significant changes\n421: in hydrogen bonding distances in both WT and L28R for 4′-DTMP\n422: (Figure 4a). On the\n423: other hand, for the L28R mutant, the most fundamental difference is\n424: the interactions of oxygen atoms at the 4′ and 5′ positions\n425: on the inhibitors with the R28 atoms whereby frequent strong interactions\n426: are formed with 4′-DTMP, which do not form with TMP (Figure 4b).\n427: \n428: L28R variant of DHFR\n429: forms additional and stronger hydrogen bonds\n430: with 4′-DTMP compared to TMP. Average distances between the\n431: ligands and the binding site of WT and L28R for selected atom pairs;\n432: since the hydrogen bond distance definition is 3.2 Å, values\n433: less than 6 Å imply formation of frequent hydrogen bonds in the\n434: dynamical trajectories. (a) Trimethoxybenzene tail and the surrounding\n435: loop interactions; (b) R28 interactions with the ligand. Zoomed-in\n436: representations of these interactions are also displayed on the structures\n437: on the right, with the same color code for the inhibitors.\n438: \n439: That the pyrimidine ring in both WT and L28R shares\n440: the same binding\n441: partners while the trimethoxybenzene ring is stabilized by dynamic\n442: interactions in the latter is depicted in Figure 5. We observe a highly dynamic trimethoxy\n443: tail for TMP, even displaying rotational jumps between two ring conformations\n444: during a given 200 ns-long trajectory, constantly making and breaking\n445: hydrogen bond contacts. Conversely, 4′-DTMP is lodged in place\n446: due to the effect of the N18, M20, W22 and, in the case of L28R, R28\n447: interactions.\n448: \n449: Inhibitors share enzyme interactions but prefer different\n450: dynamic\n451: conformations. (a) Interactions of active site residues with TMP (purple)\n452: and 4′-DTMP (pink) in both WT and L28R at the end of one of\n453: the replicated 210 ns trajectories. Note how the R52 side chain that\n454: turns away from the binding cavity in the L28RTMP system\n455: is held in place by the 4′-DTMP. Also, TMP has alternative\n456: conformations, while 4′-DTMP has a single stable pose. (b)\n457: Superposition of the interactions of the inhibitors with the WT (top)\n458: and L28R variant (bottom).\n459: \n460: Figure 6 displays\n461: the time trace of residues that are hydrogen bonded to the inhibitors\n462: for more than 10% of the time in any one of the trajectories. In all\n463: systems, the pyrimidine ring is stabilized predominantly by D27 supported\n464: by the dynamical interplay with I5, A6, and T113 residues. We observe\n465: that interactions are slightly decreased for D27 in 4′-DTMP\n466: proteins due to inclusion of additional binding partners. In the L28R\n467: mutant, there are additional interactions of the tail of 4′-DTMP\n468: due to positively charged arginine residue in the vicinity. With the\n469: stabilization of the tail of the ligand for 4′-DTMP, the pyrimidine\n470: ring is further immobilized in the active site, quantified with an\n471: increase in the occupancies, particularly for A6 (from 16 to 20% to\n472: 33–35%). In the presence of 4′-DTMP, there is a significant\n473: enhancement of the T113–inhibitor interactions, from 9 to 21%\n474: in the WT and from 30 to 42% in L28R. T113 engages the pyrimidine\n475: ring (Figure S1), and additional stabilization\n476: of the trimethoxy tail ensures further stabilization of this portion\n477: of the inhibitor.\n478: \n479: Enhancement of pyrimidine ring interactions through trimethoxy\n480: tail stabilization. Barcode graphs for the hydrogen bonds between\n481: binding cavity residues and TMP and 4′-DTMP for WT and L28R\n482: were obtained from the 1 μs-long MD trajectory; similar statistics\n483: hold for the duplicated 210 ns-long trajectories. A value of one is\n484: assigned if there is at least one hydrogen bond between any atom of"
+  },
+  {
+    "mime": "image/png",
+    "source": "/source/figure3.jpg",
+    "page": 0
+  },
+  {
+    "total_lines": 7,
+    "text": "1: # Matched DHFR sources\n2: \n3: Paper DOI10.1021/acs.jcim.3c00818 (2023), PMC10428214 full JATS via EuropePMC. CC-BY4.0. Dataset10.5281/zenodo.7966540, CC-BY4.0. Author code commit eba9948e57f25cec9eb9bdb50cfdb234fc23fffc; no repository license declared, preserved as local scientific source reference.\n4: \n5: Paper-reported: E.coli DHFR, WT and L28R; closed starting templates6XG5/6XG4; cofactorNADPH in all simulations; protonated TMP/4DTMP; CHARMM36, TIP3P,0.15M KCl,NPT1atm,2fs; duplicated210ns and1μs production. Temperature numeric value not found in consulted System Preparation text, do not invent. His6-tagged experimental protein, MTENpH7,100mMNaCl versus untagged simulated construct and0.15MKCl; solvent and preparation are not identical. Paper prints200mM NADPH in assay method; retained as printed, not silently corrected. These sources support qualitative comparison of local structural interactions and condition-specific experimental response; no direct equality between distance and inhibition.\n6: \n7: Input-verified facts are in trajectory_metadata.tsv, atom_mapping.tsv and DOWNLOAD_MANIFEST.json. Nominal time derives from deposit description; regenerated DCDheader is not a physical timestep authority. Ligand residue IDs are resolved from three uniquely named oxygens rather than copied from hardcoded author script residue300/303."
+  },
+  {
+    "message": "One optional revision remains in the same budget. Re-submit unchanged if no revision needed."
+  },
+  {
+    "message": "Final submission saved."
+  }
+]

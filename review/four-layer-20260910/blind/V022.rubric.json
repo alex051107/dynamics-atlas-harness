@@ -1,0 +1,14 @@
+{
+  "core_units": [
+    "detect input large-distance anomaly and downgradecontactinterpretation",
+    "do not interpretunresolvedlongtailasphysicalswitch",
+    "experimentalKi4.2/5.1and65/34.3nM",
+    "Fig3WTbothsuppress,L28R4DTMPstronger",
+    "distance notHbondoruniquekinetics;cannotrepairwithoutcoordinates"
+  ],
+  "tolerances": {
+    "distance_A": 0.02,
+    "ratio": 0.02
+  },
+  "source": "originalpaper; source tables; developer reference independent of arms"
+}

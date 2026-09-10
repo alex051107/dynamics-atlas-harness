@@ -1,0 +1,29 @@
+{
+  "time": "2026-09-10T13:32:40.343401+00:00",
+  "report_bundle": {
+    "pass": true,
+    "profile": "four-layer",
+    "headings": 12,
+    "slides": 12,
+    "claims": 12
+  },
+  "pptx_xml": "PASS",
+  "pdf_render": "12 pages inspected as montage; chart axis formatting repaired and affected page8 rechecked",
+  "scores": "74 finals and24 initial scores sealed before reveal; unchanged after reveal",
+  "scientific_scope": "source checks plus current curator blind scoring; independent expert scoring NOT DONE",
+  "validation_budget": {
+    "report_bundle_runs": 1,
+    "pptx_xml_runs": 1,
+    "deck_render_runs": 2,
+    "affected_page_review": 1,
+    "paid_reruns": 0
+  },
+  "pending": "publication receipt",
+  "english_edition": {
+    "report_and_brief": "PASS: English prose, links, unchanged numerical tables",
+    "pptx_xml": "PASS",
+    "deck_render": "12 pages visually inspected; no clipped or overlapping content",
+    "brief_pdf": "1 page",
+    "new_experiments": 0
+  }
+}

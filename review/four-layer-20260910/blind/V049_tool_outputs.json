@@ -1,0 +1,583 @@
+[
+  {
+    "files": [
+      "/source/FIELD_DEFINITIONS.md",
+      "/source/HSP90_SOURCE_AND_RUN_CARD.json",
+      "/source/INPUT_CHECK_FACTS.json",
+      "/source/QUESTION.txt",
+      "/source/SOURCE_INVENTORY.json",
+      "/source/directional_runs.tsv",
+      "/source/frame_state_assignments.tsv",
+      "/source/henot_2022_article.txt",
+      "/source/henot_2022_hsp90_article.pdf",
+      "/source/henot_2022_hsp90_supplement.pdf",
+      "/source/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/state_core_definition.json",
+      "/source/trajectory_time_anatomy.tsv",
+      "/source/trajectory_time_bins_50ns.tsv"
+    ]
+  },
+  {
+    "total_lines": 72,
+    "text": "1: {\n2:   \"files\": [\n3:     \"FIELD_DEFINITIONS.md\",\n4:     \"henot_2022_article.txt\",\n5:     \"henot_2022_hsp90_article.pdf\",\n6:     \"trajectory_time_bins_50ns.tsv\",\n7:     \"henot_2022_hsp90_supplement.pdf\",\n8:     \"state_core_definition.json\",\n9:     \"QUESTION.txt\",\n10:     \"frame_state_assignments.tsv\",\n11:     \"HSP90_SOURCE_AND_RUN_CARD.json\",\n12:     \"trajectory_time_anatomy.tsv\",\n13:     \"directional_runs.tsv\",\n14:     \"SOURCE_INVENTORY.json\"\n15:   ],\n16:   \"provenance\": [\n17:     {\n18:       \"file\": \"common/frame_state_assignments.tsv\",\n19:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv\",\n20:       \"origin_task\": \"dynamics_atlas_hsp90_v1_science_20260728\",\n21:       \"sha256\": \"80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46\"\n22:     },\n23:     {\n24:       \"file\": \"common/state_core_definition.json\",\n25:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/state_core_definition.json\",\n26:       \"origin_task\": \"dynamics_atlas_hsp90_v1_science_20260728\",\n27:       \"sha256\": \"dfbb5d576efea37a4a7317ea0baffef3ab6cfd3914adc456e3de82b6858eac00\"\n28:     },\n29:     {\n30:       \"file\": \"common/trajectory_time_anatomy.tsv\",\n31:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/trajectory_time_anatomy.tsv\",\n32:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n33:       \"sha256\": \"fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb\"\n34:     },\n35:     {\n36:       \"file\": \"common/trajectory_time_bins_50ns.tsv\",\n37:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/trajectory_time_bins_50ns.tsv\",\n38:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n39:       \"sha256\": \"1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c\"\n40:     },\n41:     {\n42:       \"file\": \"common/directional_runs.tsv\",\n43:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/directional_runs.tsv\",\n44:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n45:       \"sha256\": \"9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666\"\n46:     },\n47:     {\n48:       \"file\": \"common/henot_2022_hsp90_article.pdf\",\n49:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_article.pdf\",\n50:       \"origin_task\": \"dynamics_atlas_hsp90_feasibility_20260725\",\n51:       \"sha256\": \"2a37d00b43c167cd0e80a8e7c75083cc910b6b57648565f3db8023b44ed067a3\"\n52:     },\n53:     {\n54:       \"file\": \"common/henot_2022_hsp90_supplement.pdf\",\n55:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_supplement.pdf\",\n56:       \"origin_task\": \"dynamics_atlas_hsp90_feasibility_20260725\",\n57:       \"sha256\": \"41fae3f5b7ad78d8afa504bfe13bf5befb71bd01d236159294c4a436f5153d41\"\n58:     },\n59:     {\n60:       \"file\": \"common/henot_2022_article.txt\",\n61:       \"origin_path\": \"tmp/pdfs/henot_2022_article.txt\",\n62:       \"origin_task\": \"local\",\n63:       \"sha256\": \"30c46266c956e5cad76e5f3d4027d38c8de07d59fc08756eea014592cd40c549\"\n64:     }\n65:   ],\n66:   \"missing\": [\n67:     \"Raw coordinate arrays and complete source-native NOE restraint calculation inputs are not included in this derived-table packet\"\n68:   ],\n69:   \"producer_provenance\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/scripts/run_hsp90_v1.py\",\n70:   \"time_anatomy_producer_diff\": \"DIFFERENT; exact diff retained outside analysis workspace\",\n71:   \"coverage_inputs\": \"PROJECTION_ONLY; not part of this question\"\n72: }"
+  },
+  {
+    "total_lines": 24,
+    "text": "1: # Field definitions for the delivered HSP90 tables\n2: \n3: The reporting unit is trajectory: 40 trajectories, 20 closed_seeded and 20 open_seeded. Frames describe the time course within each trajectory. Seed lineage is recorded in trajectory_time_anatomy.tsv. The names R46A/R60A refer to the starting-structure lineage; see the source card for the sequence audit and its provenance.\n4: \n5: The delivered time window is 20–1020 ns, 1001 points per trajectory, at 1 ns intervals. Time zero follows the original simulation. See HSP90_SOURCE_AND_RUN_CARD.json.\n6: \n7: `d_open_medoid_A` and `d_closed_medoid_A` are lid RMSD values after core alignment relative to the open/closed reference medoids. `geometry_delta_A = d_closed_medoid_A - d_open_medoid_A`. `nearest_open_A` and `nearest_closed_A` instead use the nearest member of each reference ensemble. They are separate fields. `contact_margin_A` is the deposited closed-state contact-violation readout minus the open-state readout. Distances/margins are in angstroms. The historical producer is run_hsp90_v1.py, lines 1110–1145 (provenance recorded in the inventory).\n8: \n9: For the time-anatomy tables, a frame has direction OPEN_CONSENSUS when geometry_delta_A > 0 and contact_margin_A > 0; CLOSED_CONSENSUS when both are < 0; otherwise READOUT_CONFLICT. Zeros enter the conflict category. These are the existing zero-sign criteria, with no tuning in this preparation.\n10: \n11: `state_core` is a separate assignment: C when delta <= theta_closed and d_closed <= radius_closed; O when delta >= theta_open and d_open <= radius_open; otherwise U. Exact medoid indices, thresholds and radii are in state_core_definition.json. Its recorded meaning is anchor-relative structural support core.\n12: \n13: A contiguous run contains consecutive frames with one direction label. trajectory_time_anatomy.tsv contains three rows per trajectory, using persistence_saved_frames thresholds 5, 20 and 50. These are repeated summaries of one trajectory, not 120 trajectories.\n14: \n15: first_persistent_direction is the first non-conflict run with at least the specified number of saved frames. opposite_direction_departure_candidate records a later persistent run with the opposite direction. return_candidate records a persistent run in the initial persistent direction after that departure. The reference direction is the first persistent run, which may differ from the starting-structure category represented by seed_lineage.\n16: \n17: persistence_ns and length_ns use the historical saved-frame-count convention: five consecutive points sampled 1 ns apart span 4 ns between their endpoints. start_time_ns/end_time_ns give the endpoints separately.\n18: \n19: The nominal 50 ns display bins contain 50 saved frames, classified from the within-bin median geometry and contact margins using the same sign rule. The final bin contains the last single point. This different aggregation does not recover the individual consecutive runs. The table stores n_saved_frames and endpoints for each bin.\n20: \n21: Definitions derive from the unchanged run_time_anatomy_v0.py and run_hsp90_v1.py producer scripts. The original tables are retained without editing. The paper PDF is the source of record; the existing article text extraction is supplied for searching, with original line numbers retained. Verify equations and figure details in the PDF.\n22: \n23: ## 原生NOE对应判据\n24: native_noe每轨迹open/closed_contact_violation.dat第一列保存序号1..1001，对应time_ns20..1020；第二列平均正上限违例Å（Vopen/Vclosed），第三列历史pseudo-distance。后者差值用于原contact_margin，不当原生违例。开放方向为geometry_delta_A>0且contact_margin_A>0。主容差τ=1Å，敏感性0.5/2Å；OPEN_NOE=Vopen≤τ<Vclosed，CLOSED_NOE反之，BOTH_FAR两者>τ，BOTH_NEAR两者≤τ。在开放方向帧中OPEN_NOE比例≥0.8为一致；否则BOTH_FAR比例≥0.5为只相对偏好；其余部分；无开放方向为不适用。另以开放起始组Vopen所有帧的95分位为参照带，连续50个保存点进入为entry；该同数据参照不是独立验证。"
+  },
+  {
+    "total_lines": 94,
+    "text": "1: {\n2:   \"paper_statement\": {\n3:     \"force_field\": {\n4:       \"value\": \"ff14SB\",\n5:       \"source\": \"henot_2022_article.txt:560\",\n6:       \"status\": \"DOCUMENTED\"\n7:     },\n8:     \"solvent\": {\n9:       \"value\": \"explicit TIP3P water\",\n10:       \"source\": \"henot_2022_article.txt:560-562\",\n11:       \"status\": \"DOCUMENTED\"\n12:     },\n13:     \"ions\": {\n14:       \"value\": \"approximately 170 mM NaCl\",\n15:       \"source\": \"henot_2022_article.txt:570\",\n16:       \"status\": \"DOCUMENTED\"\n17:     },\n18:     \"temperature\": {\n19:       \"value\": \"300 K\",\n20:       \"source\": \"henot_2022_article.txt:573-584\",\n21:       \"status\": \"DOCUMENTED\"\n22:     },\n23:     \"duration\": {\n24:       \"value\": \"1020 ns; first 20 ns equilibration, last 1000 ns analysis\",\n25:       \"source\": \"henot_2022_article.txt:584-587\",\n26:       \"status\": \"DOCUMENTED\"\n27:     },\n28:     \"snapshot_stride\": {\n29:       \"value\": \"1 ns\",\n30:       \"source\": \"henot_2022_article.txt:301,603\",\n31:       \"status\": \"DOCUMENTED\"\n32:     }\n33:   },\n34:   \"local_inputs_checked\": {\n35:     \"force_field\": {\n36:       \"value\": \"Paper ff14SB; preserved Zenodo description AMBER99SB. The older report follows Zenodo. Archive directory amber14sb_OL15.ff agrees with paper naming but does not establish the production configuration.\",\n37:       \"source\": [\n38:         \"henot_2022_article.txt:560\",\n39:         \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/zenodo_6606744_record.json\",\n40:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md\"\n41:       ],\n42:       \"status\": \"DOCUMENT_DISCREPANCY\"\n43:     },\n44:     \"frames\": {\n45:       \"value\": {\n46:         \"author_README_nominal\": 1020,\n47:         \"older_report_XTC_measured\": 1021,\n48:         \"current_table_points_per_trajectory\": 1001,\n49:         \"mapping\": \"20–1020 ns inclusive verified in this table. Exact nominal README to XTC convention remains TO_CHECK.\"\n50:       },\n51:       \"source\": [\n52:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/README\",\n53:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md\",\n54:         \"frame_state_assignments.tsv\"\n55:       ],\n56:       \"status\": \"DOCUMENTED\"\n57:     },\n58:     \"time_axis_of_round_inputs\": {\n59:       \"value\": {\n60:         \"trajectories\": 40,\n61:         \"points_per_trajectory\": 1001,\n62:         \"minimum_ns\": 20,\n63:         \"maximum_ns\": 1020,\n64:         \"stride_ns\": 1,\n65:         \"origin\": \"time zero retained from original trajectory\"\n66:       },\n67:       \"source\": \"frame_state_assignments.tsv: all time_ns values\",\n68:       \"status\": \"VERIFIED\"\n69:     },\n70:     \"xtc_spot_check\": {\n71:       \"value\": \"NOT_ATTEMPTED; no new trajectory reader installed. Current check is on delivered derived tables.\",\n72:       \"source\": \"current preparation\",\n73:       \"status\": \"NOT_ATTEMPTED\"\n74:     },\n75:     \"lineage\": {\n76:       \"value\": {\n77:         \"closed_seeded\": \"R46A_ES directory, extracted md_0-10_evert1ns_fitBB_protonly.xtc\",\n78:         \"open_seeded\": \"R60A_GS directory; corresponding author link resolves to md_all_prot_fit.xtc\",\n79:         \"meaning\": \"NMR seed lineage; directory names alone are not proof of mutated MD sequences. Prior deposited-coordinate audit reports ARG at residues 46 and 60.\"\n80:       },\n81:       \"source\": [\n82:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest.json\",\n83:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest_r60a.json\",\n84:         \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/input_audit.json\"\n85:       ],\n86:       \"status\": \"DOCUMENTED\"\n87:     },\n88:     \"analysis_window_note\": {\n89:       \"value\": \"Delivered derived table starts at 20 ns, with 1001 points through 1020 ns.\",\n90:       \"source\": \"frame_state_assignments.tsv\",\n91:       \"status\": \"VERIFIED\"\n92:     }\n93:   }\n94: }"
+  },
+  {
+    "total_lines": 18,
+    "text": "1: {\n2:   \"anchor_diagnostics\": {\n3:     \"between_min_A\": 17.75330554027526,\n4:     \"closed_within_pairwise_max_A\": 5.028670998080444,\n5:     \"closed_within_pairwise_mean_A\": 2.839546537473871,\n6:     \"open_within_pairwise_max_A\": 2.6539267748119078,\n7:     \"open_within_pairwise_mean_A\": 1.7070120187797748\n8:   },\n9:   \"assignment\": \"C if delta<=theta_closed and d_closed<=radius_closed; O if delta>=theta_open and d_open<=radius_open; else U\",\n10:   \"closed_medoid_index_zero_based\": 6,\n11:   \"coverage\": 0.95,\n12:   \"meaning\": \"anchor-relative structural support core, not kinetic state\",\n13:   \"open_medoid_index_zero_based\": 11,\n14:   \"radius_closed_A\": 3.2996743743089176,\n15:   \"radius_open_A\": 1.790308095019388,\n16:   \"theta_closed\": -15.96402224217195,\n17:   \"theta_open\": 17.02190913038431\n18: }"
+  },
+  {
+    "total_lines": 121,
+    "text": "1: trajectory\tseed_lineage\tpersistence_saved_frames\tpersistence_ns\tfirst_persistent_direction\tfirst_persistent_start_ns\topposite_direction_departure_candidate\topposite_departure_start_ns\treturn_candidate\treturn_start_ns\tstrict_core_frames\n2: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n3: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tCLOSED_CONSENSUS\t77.0\tFalse\t\tFalse\t\t0\n4: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tCLOSED_CONSENSUS\t582.0\tFalse\t\tFalse\t\t0\n5: R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n6: R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n7: R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n8: R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tOPEN_CONSENSUS\t37.0\tFalse\t\tFalse\t\t0\n9: R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tOPEN_CONSENSUS\t82.0\tFalse\t\tFalse\t\t0\n10: R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tOPEN_CONSENSUS\t82.0\tFalse\t\tFalse\t\t0\n11: R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tOPEN_CONSENSUS\t53.0\tFalse\t\tFalse\t\t0\n12: R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tOPEN_CONSENSUS\t53.0\tFalse\t\tFalse\t\t0\n13: R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tOPEN_CONSENSUS\t53.0\tFalse\t\tFalse\t\t0\n14: R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tOPEN_CONSENSUS\t114.0\tFalse\t\tFalse\t\t0\n15: R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tOPEN_CONSENSUS\t537.0\tFalse\t\tFalse\t\t0\n16: R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tOPEN_CONSENSUS\t537.0\tFalse\t\tFalse\t\t0\n17: R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tTrue\t179.0\tFalse\t\t0\n18: R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tNO_PERSISTENT_CONSENSUS\t\tFalse\t\tFalse\t\t0\n19: R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tNO_PERSISTENT_CONSENSUS\t\tFalse\t\tFalse\t\t0\n20: R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t537.0\tFalse\t\tFalse\t\t0\n21: R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tNO_PERSISTENT_CONSENSUS\t\tFalse\t\tFalse\t\t0\n22: R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tNO_PERSISTENT_CONSENSUS\t\tFalse\t\tFalse\t\t0\n23: R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n24: R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n25: R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n26: R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t1\n27: R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t1\n28: R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t50\t50\tCLOSED_CONSENSUS\t61.0\tFalse\t\tFalse\t\t1\n29: R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t5\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0\n30: R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t20\t20\tCLOSED_CONSENSUS\t20.0\tFalse\t\tFalse\t\t0"
+  },
+  {
+    "total_lines": 1176,
+    "text": "1: trajectory\tseed_lineage\tlabel\tstart_time_ns\tend_time_ns\tlength_saved_frames\tlength_ns\n2: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t20.0\t28.0\t9\t9\n3: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t29.0\t29.0\t1\t1\n4: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t30.0\t30.0\t1\t1\n5: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t31.0\t63.0\t33\t33\n6: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t64.0\t68.0\t5\t5\n7: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t69.0\t71.0\t3\t3\n8: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t72.0\t73.0\t2\t2\n9: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t74.0\t76.0\t3\t3\n10: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t77.0\t108.0\t32\t32\n11: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t109.0\t109.0\t1\t1\n12: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t110.0\t110.0\t1\t1\n13: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t111.0\t111.0\t1\t1\n14: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t112.0\t151.0\t40\t40\n15: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t152.0\t152.0\t1\t1\n16: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t153.0\t153.0\t1\t1\n17: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t154.0\t155.0\t2\t2\n18: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t156.0\t156.0\t1\t1\n19: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t157.0\t159.0\t3\t3\n20: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t160.0\t169.0\t10\t10\n21: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t170.0\t170.0\t1\t1\n22: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t171.0\t172.0\t2\t2\n23: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t173.0\t173.0\t1\t1\n24: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t174.0\t184.0\t11\t11\n25: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t185.0\t185.0\t1\t1\n26: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t186.0\t189.0\t4\t4\n27: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t190.0\t190.0\t1\t1\n28: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t191.0\t193.0\t3\t3\n29: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t194.0\t198.0\t5\t5\n30: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t199.0\t199.0\t1\t1\n31: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t200.0\t221.0\t22\t22\n32: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t222.0\t222.0\t1\t1\n33: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t223.0\t239.0\t17\t17\n34: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t240.0\t240.0\t1\t1\n35: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t241.0\t267.0\t27\t27\n36: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t268.0\t268.0\t1\t1\n37: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t269.0\t272.0\t4\t4\n38: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t273.0\t273.0\t1\t1\n39: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t274.0\t274.0\t1\t1\n40: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t275.0\t306.0\t32\t32\n41: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t307.0\t307.0\t1\t1\n42: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t308.0\t309.0\t2\t2\n43: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t310.0\t310.0\t1\t1\n44: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t311.0\t315.0\t5\t5\n45: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t316.0\t316.0\t1\t1\n46: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t317.0\t319.0\t3\t3\n47: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t320.0\t320.0\t1\t1\n48: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t321.0\t327.0\t7\t7\n49: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t328.0\t328.0\t1\t1\n50: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t329.0\t329.0\t1\t1\n51: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t330.0\t337.0\t8\t8\n52: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t338.0\t338.0\t1\t1\n53: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t339.0\t346.0\t8\t8\n54: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t347.0\t347.0\t1\t1\n55: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t348.0\t374.0\t27\t27\n56: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t375.0\t375.0\t1\t1\n57: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t376.0\t378.0\t3\t3\n58: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t379.0\t379.0\t1\t1\n59: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t380.0\t380.0\t1\t1\n60: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t381.0\t386.0\t6\t6"
+  },
+  [],
+  {
+    "total_lines": 836,
+    "text": "1:                                     Article                                                                                                 https://doi.org/10.1038/s41467-022-35399-8\n2: \n3: \n4:                                     Visualizing the transiently populated closed-\n5:                                     state of human HSP90 ATP binding domain\n6: \n7:                                     Received: 28 March 2022                            Faustine Henot1,5, Elisa Rioual1,2,5, Adrien Favier 1, Pavel Macek1,3,\n8:                                                                                        Elodie Crublet3, Pierre Josso2, Bernhard Brutscher1, Matthias Frech                    4\n9:                                                                                                                                                                                ,\n10:                                     Accepted: 29 November 2022\n11:                                                                                        Pierre Gans1, Claire Loison 2 & Jerome Boisbouvier 1\n12: \n13: \n14:                                         Check for updates                              HSP90 are abundant molecular chaperones, assisting the folding of several\n15:                                                                                        hundred client proteins, including substrates involved in tumor growth or\n16: \n17: \n18:                   1234567890():,;\n19:                                                                                        neurodegenerative diseases. A complex set of large ATP-driven structural\n20: \n21: 1234567890():,;\n22:                                                                                        changes occurs during HSP90 functional cycle. However, the existence of such\n23:                                                                                        structural rearrangements in apo HSP90 has remained unclear. Here, we\n24:                                                                                        identify a metastable excited state in the isolated human HSP90α ATP binding\n25:                                                                                        domain. We use solution NMR and mutagenesis to characterize structures of\n26:                                                                                        both ground and excited states. We demonstrate that in solution the HSP90α\n27:                                                                                        ATP binding domain transiently samples a functionally relevant ATP-lid closed\n28:                                                                                        state, distant by more than 30 Å from the ground state. NMR relaxation\n29:                                                                                        enables to derive information on the kinetics and thermodynamics of this\n30:                                                                                        interconversion, while molecular dynamics simulations establish that the ATP-\n31:                                                                                        lid in closed conformation is a metastable exited state. The precise description\n32:                                                                                        of the dynamics and structures sampled by human HSP90α ATP binding\n33:                                                                                        domain provides information for the future design of new therapeutic ligands.\n34: \n35: \n36: \n37:                                     Heat Shock Protein 90 (HSP90) is a ubiquitous ATP-dependant mole-            While GRP94 and TRAP1 are respectively found in endoplasmic\n38:                                     cular chaperone involved in the folding of a plethora of client proteins,    reticulum13 or mitochondria14, respectively, both HSP90α and HSP90β\n39:                                     also modulating their cellular activities. HSP90’s activity is itself        isoforms are highly abundant in the cytoplasm, representing 1 to 2 % of\n40:                                     regulated by post-translational modiﬁcations such as phosphorylation,        cellular proteins15–17. Under stress conditions or in tumor cells, the level\n41:                                     nitration, methylation, or acetylation1 as well as a large number of         of expression of HSP90 increases up to 7% of the total amount of\n42:                                     different co-chaperones2–7, including Hop, PP5, p23, Sgt1, FKBP51/52,        expressed proteins10.\n43:                                     Cyp40, NudC, and Cdc37. During its functional cycle, in order to fold             HSP90 is a homodimeric chaperone of ca. 170 kDa. Each mono-\n44:                                     client proteins, the chaperone HSP90 undergoes complex structural            mer is composed of 3 domains: C-terminal domain (CTD), middle\n45:                                     rearrangements driven by both ATP binding and hydrolysis8,9. Among           domain, and N-terminal domain (NTD). The 13 kDa CTD is responsible\n46:                                     the identiﬁed HSP90-client proteins, a large fraction is related to          for HSP90 dimerization, and harbours a MEEVD motif mediating the\n47:                                     cancer, such as steroid hormone receptors, tumor suppressor p53,             binding of various co-chaperones with tetratricopeptide repeat (TPR)\n48:                                     telomerase, hypoxia-inducible factor 1α, and kinases10. Furthermore,         domains18–20. The middle domain (ca. 40 kDa) is involved in binding of\n49:                                     high cellular HSP90 expression levels are often associated with poor         both client proteins and co-chaperones and, additionally, modulates\n50:                                     prognoses in many cancer types11. Therefore, human HSP90 has been            hydrolysis of ATP bound to the NTD3,21,22. A long charged linker con-\n51:                                     identiﬁed as a major anti-cancer drug target. There are four HSP90           nects the middle domain and the NTD and modulates molecular\n52:                                     homologues in human cells: GRP94, TRAP1, HSP90α, and HSP90β12.               interactions with client proteins23. Finally, the NTD (ca. 25 kDa) is\n53: \n54: \n55:                                     1\n56:                                      Univ. Grenoble Alpes, CNRS, CEA, Institut de Biologie Structurale (IBS), 71, avenue des martyrs, F-38044 Grenoble, France. 2Institut Lumière Matière,\n57:                                     University of Lyon, Université Claude Bernard Lyon 1, CNRS, F-69622 Villeurbanne, France. 3NMR-Bio, 5 place Robert Schuman, F-38025 Grenoble, France.\n58:                                     4\n59:                                      Discovery Technologies, Merck KGaA, Frankfurter Straße 250, 64293 Darmstadt, Germany. 5These authors contributed equally: Faustine Henot, Elisa Rioual.\n60:                                        e-mail: claire.loison@univ-lyon1.fr; jerome.boisbouvier@ibs.fr\n61: \n62: \n63:                                     Nature Communications | (2022)13:7601                                                                                                                  1\n64: \n65: Article                                                                                                    https://doi.org/10.1038/s41467-022-35399-8\n66: \n67: \n68: implicated in client protein and co-chaperone binding3. HSP90-NTD\n69: possesses an ATP binding site with an unusual structure named Ber-\n70: gerat fold24. The particular environment of the ATP binding site offers\n71: the possibility to develop HSP90-speciﬁc inhibitors that are not\n72: affecting the activity of most other ATP-binding proteins. The HSP90α\n73: ATP binding site is the target of most therapeutic ligands developed so\n74: far, and more than 300 crystal structures of HSP90α-NTD, bound to\n75: different ligands, are available in the PDB. A particular challenge for the\n76: design of new inhibitors against this important cancer target is the\n77: presence of a highly ﬂexible ATP-lid segment that can cover the\n78: nucleotide/drug binding site in HSP9025,26. Large changes of the ATP-\n79: lid conformation also occur during the functional cycle27. Changes in\n80: the lid conformational dynamics are linked to chaperone activity28 and\n81: nucleotide binding27,29–34. But there is no consensus yet regarding the\n82: driving forces modulating the conformational changes during the\n83: chaperone cycle28,35. It was proposed that the lid acts as a nucleotide-\n84: sensitive conformational switch of the molecular chaperone activity36.\n85: There would be a strong correlation between the chaperone activity\n86: and the ATP vs. ADP binding30,37,38. In contrast, it was also reported that\n87: the transitions between the conformational states and the nucleotide\n88: binding/unbinding are mainly thermally driven, with large conforma-\n89: tional ﬂuctuations on timescales faster than the rate of ATP\n90: hydrolysis39,40. Last, Southworth et al. mentioned that rather than\n91: being irreversibly determined by nucleotide binding, a conformational\n92: equilibrium exists between different states41.\n93:       In this article, we report atomic-resolution structural and\n94: dynamics information on HSP90α-NTD ATP-lid in solution. We\n95: demonstrate that the ATP-lid segment of this crucial human chaper-\n96: one, in addition to the well-characterized open state, also transiently\n97: populates a closed conformation that requires structural rearrange-           Fig. 1 | Analysis of available structures of human HSP90α-NTD.\n98: ment of peptide segments over a distance of up to 30 Å. Using solution        a Superimposition of 8 centroids representing the 8 clusters describing the\n99: NMR spectroscopy, we determine atomic-resolution models of the                334 structures of isolated HSP90α-NTD available in the Protein Data Bank (on\n100: open- and closed-ATP-lid state conformations, as well as derive kinetic       January the 5th of 2021). Clustering was performed using the MaxCluster program"
+  },
+  {
+    "returncode": 1,
+    "stdout": "(40040, 9) ['trajectory', 'time_ns', 'state_core', 'd_open_medoid_A', 'd_closed_medoid_A', 'geometry_delta_A', 'nearest_open_A', 'nearest_closed_A', 'contact_margin_A']\n                                   trajectory  time_ns state_core  d_open_medoid_A  d_closed_medoid_A  geometry_delta_A  nearest_open_A  nearest_closed_A  contact_margin_A\n0  R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay     20.0          U        17.633463           5.814215        -11.819248       16.785311          4.314468             -6.50\n1  R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay     21.0          U        17.739671           5.714488        -12.025183       16.891527          4.292862             -6.29\n2  R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay     22.0          U        18.005055           6.181068        -11.823987       17.182573          4.692461             -5.37\n3  R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay     23.0          U        17.393768           5.845918        -11.547850       16.530678          4.503700             -1.60\n4  R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay     24.0          U        17.259079           6.050600        -11.208479       16.449364          4.552698             -3.43\nan shape (120, 11)\nseed_lineage   persistence_saved_frames  first_persistent_direction\nclosed_seeded  5                         CLOSED_CONSENSUS              15\n                                         OPEN_CONSENSUS                 5\n               20                        CLOSED_CONSENSUS              13\n                                         NO_PERSISTENT_CONSENSUS        2\n                                         OPEN_CONSENSUS                 5\n               50                        CLOSED_CONSENSUS              11\n                                         NO_PERSISTENT_CONSENSUS        2\n                                         OPEN_CONSENSUS                 7\nopen_seeded    5                         OPEN_CONSENSUS                20\n               20                        OPEN_CONSENSUS                20\n               50                        OPEN_CONSENSUS                20\n\nopp/return by seed thresh\n                                        opposite_direction_departure_candidate  return_candidate\nseed_lineage  persistence_saved_frames                                                          \nclosed_seeded 5                                                              5                 0\n              20                                                             4                 0\n              50                                                             1                 0\nopen_seeded   5                                                              0                 0\n              20                                                             0                 0\n              50                                                             0                 0\nstrict core\n                                        sum  mean  median\nseed_lineage  persistence_saved_frames                   \nclosed_seeded 5                           1  0.05     0.0\n              20                          1  0.05     0.0\n              50                          1  0.05     0.0\nopen_seeded   5                           2  0.10     0.0\n              20                          2  0.10     0.0\n              50                          2  0.10     0.0\n\nframe cols ['trajectory', 'time_ns', 'state_core', 'd_open_medoid_A', 'd_closed_medoid_A', 'geometry_delta_A', 'nearest_open_A', 'nearest_closed_A', 'contact_margin_A']\n",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 14, in <module>\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 9210, in groupby\n    return DataFrameGroupBy(\n           ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/groupby.py\", line 1331, in __init__\n    grouper, exclusions, obj = get_grouper(\n                               ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/grouper.py\", line 1043, in get_grouper\n    raise KeyError(gpr)\nKeyError: 'seed_lineage'\n"
+  },
+  [
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 103,
+      "text": "tion reveals that the conformation of the closed state is metastable on       [98–136] and in red the nucleotide. b Histogram of the averaged pairwise RMSD"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 153,
+      "text": "two states of HSP90α-NTD calculated simultaneously74 to satisfy all NMR restraints   open and closed states (Supplementary Table 2)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 214,
+      "text": "to the ATP-lid closed state (Supplementary Table 2), and the remaining"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 218,
+      "text": "Our structural model of the ATP-lid closed state points toward a salt"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 236,
+      "text": "closed state were no longer detected for this mutant (Supplementary          restraints obtained using R60A-HSP90α-NTD sample. b Structure ensemble for"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 238,
+      "text": "decreases the population of the ATP-lid closed state to a level that is no   obtained using R46A-HSP90α-NTD sample. Helices 3, 4, and 5 correspond to ATP-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 240,
+      "text": "      In a similar way, our structural model of the ATP-lid open state       the unfolded α5 helix in the closed state is also indicated (between 128 and 136)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 245,
+      "text": "of the closed state. For both mutants, homogeneous 1H-13C correlation        mental restraints57, the structures of the ATP-lid segment can be"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 247,
+      "text": "characteristic of both the ATP-lid open and closed states were detec-        ture of 0.83 Å (Fig. 3a, Supplementary Table 3). The calculated ATP-lid"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 249,
+      "text": "ATP-lid open to closed state, as the intensities of NOE correlation peaks    [128–135]) separated by short loop segments. As the backbone signals"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 250,
+      "text": "speciﬁc for the ATP-lid closed state were enhanced by a factor of ca. 2.8    were not detectable for the segment [105–115], this part of the ATP-lid"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 255,
+      "text": "model and the existence of an ATP-lid closed state in WT-HSP90α-NTD          with a backbone rmsd higher than 2.3 Å (Fig. 1c, d)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 256,
+      "text": "in solution.                                                                       To reﬁne the ATP-lid closed state, we based our structure calcu-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 258,
+      "text": "NMR reﬁnement of structural models for the ATP-lid open and                  this mutation is located far away from ATP-lid in closed state contrary"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 259,
+      "text": "closed states                                                                to S129A mutant which may affect ATP-lid structure. For R46A mutant,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 266,
+      "text": "acquired using 13CH3-labeled sample of R60A-HSP90α-NTD. As the               lid segment in the closed state on the rigid HSP90α -NTD scaffold. The"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 280,
+      "text": "closed states. a Pairwise RMSD among the 4000 ATP-lid structures obtained in the           Blue and orange indices correspond to the clusters presented in (b) and (c) issued"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 281,
+      "text": "forty Molecular Dynamics simulations of 1 µs. From blue to yellow, the RMSD values         from the simulations starting from open and closed states, respectively."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 283,
+      "text": "structures (see Fig. 3a, b). The ﬁrst and second half of the 4000 frames are               closed states, on the corresponding structures. f Violations of characteristics NOEs"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 285,
+      "text": "or in the closed state (orange square), respectively. b Superimposition of the 4           restraints, for the 20 simulations starting with the ATP-lid in the open state (see"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 288,
+      "text": "centroids are represented in b.1, b.2, b.3, and b.4 with the total number of members       (blue curves) or for closed states (orange curves) (Supplementary Table 2). g As (f),"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 289,
+      "text": "for each cluster. Below, the circle radii are proportional to the spreading of the         for three typical simulations starting with the ATP-lid in the closed state: one"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 298,
+      "text": "structure, the segment corresponding to helix−5 in the ATP-lid open                        ensembles obtained for the ATP-lid open and closed states were used"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 299,
+      "text": "state is in an extended conformation in the closed state, thus enabling                    as starting models for forty 1 μs-molecular dynamics simulations."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 304,
+      "text": "The ATP-lid closed state is a metastable excited state                                     square), with an average of 4.0 Å. A clustering procedure performed on"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 305,
+      "text": "To study the stability of both HSP90 ATP-lid open and closed states, we                    20 020 snapshots of the trajectories (every 1 ns) yielded four repre-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 321,
+      "text": "in the closed state showed a larger averaged pairwise RMSD (9.3 Å, see         sponds to half-life times of 8.6 ± 0.4 ms for the ground state, and"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 327,
+      "text": "around an excited state, and/or from the uncertainties of the initial          CPMG relaxation-dispersion is indeed the HSP90α-NTD closed state"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 330,
+      "text": "conformational ﬂuctuations of the ATP-lid in the closed state does not         model where the excited state detected by the CPMG relaxation-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 331,
+      "text": "seem to modify the dynamics of the rest of the protein. Analyzing the          dispersion is indeed the HSP90α-NTD closed state (Fig. 3b)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 338,
+      "text": "that are characteristic of ATP-lid in the closed state during the whole 1      compared to WT HSP90α-NTD (kex = 2994 ± 83 s−1). However, such fast"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 342,
+      "text": "restraints. They are represented in Fig. 4c by clusters 1 to 3. In contrast,   closed state) by mutagenesis is expected to increase k1 (respectively"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 351,
+      "text": "closed to the open state, and the stability of the MD trajectories             closed state with the ATP-lid covering the nucleotide/drug binding site"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 354,
+      "text": "of HSP90-NTD, while the ATP-lid closed state is a metastable, less             addition to our NMR data, we have used mutagenesis and molecular"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 356,
+      "text": "observation of a small number (5) of characteristic NOEs for the closed        metastable, low populated closed state in human HSP90α -NTD."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 359,
+      "text": "                                                                               that in both cases, the NOEs speciﬁc of the ATP-lid closed state are"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 360,
+      "text": "ATP-lid open and closed states exchange on the millisecond                     observed with intensities similar to HSP90α -NTD apo state (Supple-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 364,
+      "text": "closed states are in fast exchange with respect to the NMR time scale          dispersion experiments, we could establish that the ATP-lid in the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 366,
+      "text": "resonances in the ATP-lid segment also points toward exchange                  in the closed state, and that the population of the exited (closed) state"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 411,
+      "text": "                                                                           closed states are the reorientation of helix-3 and helix-4, as well as the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 443,
+      "text": "                                                                           NTDs, indicating that the ATP-lid closed state of HSP90α-NTD stays"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 447,
+      "text": "human HSP90α-NTD. The transition pathway between open and                       The NMR-derived ATP-lid structure in the closed state of HSP90α-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 451,
+      "text": "exclude that intermediate states could also be involved in the broad-      protein66. The ATP-lid closed state of apo-HSP90α-NTD can be super-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 481,
+      "text": "closed state of HSP90 ATP-lid pre-exists in apo HSP90 before dimer-                  nity chromatography step followed by a size exclusion chromato-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 618,
+      "text": "ones starting with the ATP-lid in the closed state. Clustering analysis                 characterization of human HSP90-NTD have been deposited in BMRB"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 621,
+      "text": "lid in either the open or the closed states. First, structures were                     NTD in ATP-Lid open (R60A mutant) and closed (R46A mutant) have"
+    }
+  ],
+  [
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 30,
+      "text": "                                                                                       interconversion, while molecular dynamics simulations establish that the ATP-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 102,
+      "text": "occurring in solution. Complementary molecular dynamics investiga-            archical clustering and a threshold value of 1.05. In blue is depicted the segment"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 229,
+      "text": "                                                                             restrained molecular dynamics reﬁnement in explicit water. For each panel, the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 244,
+      "text": "order to destabilize the ATP-lid open state and increase the population      molecular dynamics in explicit water and in the presence of experi-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 281,
+      "text": "forty Molecular Dynamics simulations of 1 µs. From blue to yellow, the RMSD values         from the simulations starting from open and closed states, respectively."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 284,
+      "text": "extracted from simulations starting with the ATP-lid in the open state (blue square)       monitored during the molecular dynamics simulations performed without"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 296,
+      "text": "switch from an open to a closed conformation are residues [109–111]                        families of conformers using molecular dynamics simulations (without"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 299,
+      "text": "state is in an extended conformation in the closed state, thus enabling                    as starting models for forty 1 μs-molecular dynamics simulations."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 363,
+      "text": "(WT, R60A and R46A mutants) indicates that the ATP-lid open and                     Using Molecular Dynamics simulations and NMR relaxation-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 563,
+      "text": "case of the mutant HSP90-NTD-R46A, intermethyl distance                         Molecular dynamics simulations"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 625,
+      "text": "(residues 98 to 136), and used to calculate a hierarchical linkage matrix               molecular dynamics trajectories and analysis have been deposited on"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 766,
+      "text": "    6, 5960 (2015).                                                                tals: a new molecular dynamics method. J. Appl. Phys. 52,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 774,
+      "text": "    Independent ATPase activity of Hsp90 subunits creates a ﬂexible                MDAnalysis: a toolkit for the analysis of molecular dynamics simu-"
+    }
+  ],
+  [
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 96,
+      "text": "one, in addition to the well-characterized open state, also transiently"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 134,
+      "text": "open state33 and does not cover the ATPase site and corresponding             Previous NMR investigations reported that human HSP90α-NTD"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 136,
+      "text": "structures indicates that the ATP-lid, in the open state, can adopt           ment were undetectable47–49 (Fig. 1b). This observation suggests that"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 213,
+      "text": "only by the ATP-lid open state, while 5 distance restraints are speciﬁc"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 217,
+      "text": "Stabilization of ATP-lid closed and open states by mutagenesis"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 240,
+      "text": "      In a similar way, our structural model of the ATP-lid open state       the unfolded α5 helix in the closed state is also indicated (between 128 and 136)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 244,
+      "text": "order to destabilize the ATP-lid open state and increase the population      molecular dynamics in explicit water and in the presence of experi-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 254,
+      "text": "ATP-lid closed and open states also strongly supports our 2-states           and 8 (Cα rmsd 1.65 Å in average), while other clusters superimpose"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 260,
+      "text": "Since the HSP90α-NTD mutants possess populations of the two ATP-             as NOEs that are speciﬁc to the ATP-lid open state can still be detected,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 262,
+      "text": "state (Fig. 2e), they provide an opportunity to further reﬁne structural     ATP-lid open state to identify and ﬁlter-out restraints speciﬁc to this"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 263,
+      "text": "models. For structure calculation of the ATP-lid open state, a set of 114    conformation (Supplementary Table 2). The remaining 81 inter-methyl"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 268,
+      "text": "were performed assuming a single ATP-lid open state for each calcu-          with a backbone RMSD of 1.5 Å (Fig. 3b), did not show any violation of"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 284,
+      "text": "extracted from simulations starting with the ATP-lid in the open state (blue square)       monitored during the molecular dynamics simulations performed without"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 285,
+      "text": "or in the closed state (orange square), respectively. b Superimposition of the 4           restraints, for the 20 simulations starting with the ATP-lid in the open state (see"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 287,
+      "text": "from the simulations starting with ATP-lid open-state conformers. The ATP-lid              the speciﬁc distance restraints depicted in (e), either for the ATP-lid open states"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 300,
+      "text": "formation of a salt-bridge between R60 and D127 as well as methyl-                         Simulations starting from an ATP-lid in the open state remained stable"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 317,
+      "text": "the NOE contacts characteristic of the ATP-lid in the open state (Fig. 4e      tary Fig. 8A). A global ﬁt of the 13CH3-CPMG relaxation dispersion,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 341,
+      "text": "in the microsecond timescale, even in absence of experimental                  zation of only the ground ATP lid open state (or the excited ATP-lid"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 345,
+      "text": "istic of the ATP-lid open state (Fig. 4g (II)). They are characterized by"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 349,
+      "text": "clearly the ATP-lid closed, nor the open state (Fig. 4g (III)). The            solved the solution structures of this important anti-cancer drug target"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 351,
+      "text": "closed to the open state, and the stability of the MD trajectories             closed state with the ATP-lid covering the nucleotide/drug binding site"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 352,
+      "text": "starting from the open state, indicate that the ATP-lid open state (the        has never been observed before for isolated HSP90α -NTD, neither in"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 413,
+      "text": "                                                                           transition of ATP-lid from the closed to the open state show that the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 567,
+      "text": "NOE cross-peaks were ﬁxed to 2–6 Å. For R60-D127 and R46-S129                   and open states. First, the systems were setup. The all-atom Amber"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 617,
+      "text": "the 20 μs simulations starting with the ATP-lid in the open state, or the               All the experimental NMR data used for the structural and dynamics"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 628,
+      "text": "closed or for the open state, the speciﬁc NOEs are deﬁned by an"
+    }
+  ],
+  {
+    "total_lines": 841,
+    "text": "1: trajectory\tseed_lineage\tbin_index\tstart_time_ns\tend_time_ns\tn_saved_frames\tbin_route\n2: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t1\t20.0\t69.0\t50\tREADOUT_CONFLICT\n3: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t2\t70.0\t119.0\t50\tCLOSED_CONSENSUS\n4: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t3\t120.0\t169.0\t50\tCLOSED_CONSENSUS\n5: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t4\t170.0\t219.0\t50\tREADOUT_CONFLICT\n6: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t5\t220.0\t269.0\t50\tREADOUT_CONFLICT\n7: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t6\t270.0\t319.0\t50\tCLOSED_CONSENSUS\n8: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\t7\t320.0\t369.0\t50\tREADOUT_CONFLICT"
+  },
+  {
+    "total_lines": 836,
+    "text": "296: switch from an open to a closed conformation are residues [109–111]                        families of conformers using molecular dynamics simulations (without\n297: and [135–136]. While the helix-3 and helix-4 are conserved in this                         experimental restraints). Representative conformers of the structural\n298: structure, the segment corresponding to helix−5 in the ATP-lid open                        ensembles obtained for the ATP-lid open and closed states were used\n299: state is in an extended conformation in the closed state, thus enabling                    as starting models for forty 1 μs-molecular dynamics simulations.\n300: formation of a salt-bridge between R60 and D127 as well as methyl-                         Simulations starting from an ATP-lid in the open state remained stable\n301: methyl contacts between ATP-lid A121, A124, A126, M130 side-chains                         over the whole 1-μs trajectory. More quantitatively, the pairwise Cα-\n302: and methyl moieties L64 and T65.                                                           RMSD over 2000 conformations extracted every 10 ns from the twenty\n303:                                                                                            1-μs long trajectories remains low (Fig. 4a bottom left corner in a blue\n304: The ATP-lid closed state is a metastable excited state                                     square), with an average of 4.0 Å. A clustering procedure performed on\n305: To study the stability of both HSP90 ATP-lid open and closed states, we                    20 020 snapshots of the trajectories (every 1 ns) yielded four repre-\n306: have explored the conformational landscape around these two                                sentative conformations depicted in Fig. 4b, with their respective\n307: \n308: \n309: Nature Communications | (2022)13:7601                                                                                                                                         5\n310: \n311: Article                                                                                                  https://doi.org/10.1038/s41467-022-35399-8\n312: \n313: \n314: population and spreading. As expected, the pairwise RMSD between               backbone and methyl probes was performed. A single minimum was\n315: these four clusters remains low (see Fig. 4d), similar to the RMSD with        identiﬁed, indicating that the experimental data can be interpreted\n316: known X-Ray structures (see Supplementary Table 4). Furthermore,               with the presence of a single low-populated minor state (Supplemen-\n317: the NOE contacts characteristic of the ATP-lid in the open state (Fig. 4e      tary Fig. 8A). A global ﬁt of the 13CH3-CPMG relaxation dispersion,\n318: and the blue curves of Fig. 4f) are respected during the whole simu-           characterized by a higher signal-to-noise ratio, enabled us to deter-\n319: lations, even if no restraints were applied. In contrast, the 2000 con-        mine the global exchange rate kex = k1 + k−1 = 2490 ± 61 s−1 and relative\n320: formations extracted from the 20 trajectories starting with the ATP-lid        populations of the 2 states of 96.8 ± 0.1 % and 3.2 ± 0.1 %. This corre-\n321: in the closed state showed a larger averaged pairwise RMSD (9.3 Å, see         sponds to half-life times of 8.6 ± 0.4 ms for the ground state, and\n322: the top right corner of Fig. 4a in an orange square). The ﬁve clusters         0.29 ± 0.01 ms for the excited state. These populations and exchange\n323: obtained from these simulations and their respective population and            rates correspond to a difference of Gibbs free energy of\n324: spreading are depicted in Fig. 4c. The pairwise RMSD among these               8.3 ± 0.2 kJ.mol−1 between the 2 states, with activation energy (from the\n325: clusters, and between these clusters (Fig. 4d), show a structural              ground to the transition state) of 61.0 ± 0.2 kJ.mol−158. While there is no\n326: diversity that may originate either from a complex energy landscape            direct experimental evidence that the excited state detected by the\n327: around an excited state, and/or from the uncertainties of the initial          CPMG relaxation-dispersion is indeed the HSP90α-NTD closed state\n328: experimental structures. According to the Root-Mean-Square-                    structure determined combining 13CH3-NOESY and mutagenesis, the\n329: Fluctuations (RMSF) proﬁles (Supplementary Fig. 6), the increased              simplest model explaining all the experimental data is the two-state\n330: conformational ﬂuctuations of the ATP-lid in the closed state does not         model where the excited state detected by the CPMG relaxation-\n331: seem to modify the dynamics of the rest of the protein. Analyzing the          dispersion is indeed the HSP90α-NTD closed state (Fig. 3b).\n332: dynamics of the ATP-lid in individual trajectories reveals three differ-            A similar strategy was used to assess how R46A- and R60A-\n333: ent behaviors that demonstrate that the simulations are not ergodic.           mutations modify the kinetics of ATP-lid transition using available\n334: The ﬁrst scenario is represented by 7 trajectories (among 20) that were        13\n335:                                                                                  CH3-labeled samples (Supplementary Fig. 9). Global ﬁts of relaxation-\n336: considered as stable, i.e., they explore conformational space around           dispersion data collected at 288 K revealed an increase in exchange\n337: the starting conformation without large violations of the NOE contacts         kinetics for R60A (kex = 3764 ± 132 s−1) and R46A (kex = 4192 ± 175 s−1)\n338: that are characteristic of ATP-lid in the closed state during the whole 1      compared to WT HSP90α-NTD (kex = 2994 ± 83 s−1). However, such fast\n339: μs-simulations (Fig. 4g (I) and Supplementary Fig. 7). This indicates          exchange regimes preclude reliable extraction of state\n340: that the reﬁnement procedure has provided a state that is metastable           populations59,60. Nevertheless, it is interesting to note that destabili-\n341: in the microsecond timescale, even in absence of experimental                  zation of only the ground ATP lid open state (or the excited ATP-lid\n342: restraints. They are represented in Fig. 4c by clusters 1 to 3. In contrast,   closed state) by mutagenesis is expected to increase k1 (respectively\n343: among the unstable trajectories, about 9 show a transition toward              k−1) and, therefore, the global exchange rate kex, as experimentally\n344: conformations almost compatible with the NOE restraints character-             observed.\n345: istic of the ATP-lid open state (Fig. 4g (II)). They are characterized by\n346: RMSD values, in the anti-diagonal corners of Fig. 4a, as low as 1.5 Å and      Discussion\n347: correspond to the clusters 4 and 5 in Fig. 4c. Finally, in 20 % of the         In this work, we have demonstrated that the ATP-lid segment of human\n348: trajectories, the ATP-lid populates conformations that are neither             HSP90α-NTD samples two distant conformations in solution. We have\n349: clearly the ATP-lid closed, nor the open state (Fig. 4g (III)). The            solved the solution structures of this important anti-cancer drug target\n350: observation of several spontaneous transitions of the ATP-lid from the         with the ATP-lid either in an open or in a closed conformation. Such a\n351: closed to the open state, and the stability of the MD trajectories             closed state with the ATP-lid covering the nucleotide/drug binding site\n352: starting from the open state, indicate that the ATP-lid open state (the        has never been observed before for isolated HSP90α -NTD, neither in\n353: only state observed by X-ray crystallography, Fig. 1), is the ground state     the apo state nor in complex with nucleotides or drugs (Fig. 1). In\n354: of HSP90-NTD, while the ATP-lid closed state is a metastable, less             addition to our NMR data, we have used mutagenesis and molecular\n355: populated excited state. This conclusion is also supported by the              dynamics simulation to independently validate the existence of this\n356: observation of a small number (5) of characteristic NOEs for the closed        metastable, low populated closed state in human HSP90α -NTD.\n357: ATP-lid state compared to a larger number (22) detected for the open           Acquisition of 3D-NOESY spectra using methyl-labeled samples of\n358: ATP-lid ground state (Supplementary Table 2).                                  HSP90α -NTD in the presence of ADP or a resorcinol inhibitor reveals\n359:                                                                                that in both cases, the NOEs speciﬁc of the ATP-lid closed state are\n360: ATP-lid open and closed states exchange on the millisecond                     observed with intensities similar to HSP90α -NTD apo state (Supple-"
+  },
+  {
+    "returncode": 0,
+    "stdout": "core counts\nstate_core     C  O      U\nseed_lineage              \nclosed_seeded  1  0  20019\nopen_seeded    0  2  20018\ntrajectory core presence\nstate_core     C  O   U\nseed_lineage           \nclosed_seeded  1  0  20\nopen_seeded    0  2  20\nclosed_seeded O traj 2 total target frames 0\n                                                           min    max  count\nseed_lineage trajectory                                                     \nopen_seeded  R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay  818.0  818.0      1\n             R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay   72.0   72.0      1\nopen_seeded C traj 1 total target frames 0\n                                                            min    max  count\nseed_lineage  trajectory                                                     \nclosed_seeded R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay  102.0  102.0      1\n\nTH 5\nfirst_persistent_direction  CLOSED_CONSENSUS  OPEN_CONSENSUS\nseed_lineage                                                \nclosed_seeded                             15               5\nopen_seeded                                0              20\n                                trajectory  seed_lineage  opposite_departure_start_ns\nR46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        179.0\nR46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        621.0\nR46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        115.0\nR46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        402.0\nR46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        580.0\n\nTH 20\nfirst_persistent_direction  CLOSED_CONSENSUS  ...  OPEN_CONSENSUS\nseed_lineage                                  ...                \nclosed_seeded                             13  ...               5\nopen_seeded                                0  ...              20\n\n[2 rows x 3 columns]\n                                trajectory  seed_lineage  opposite_departure_start_ns\nR46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        671.0\nR46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        115.0\nR46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        402.0\nR46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        605.0\n\nTH 50\nfirst_persistent_direction  CLOSED_CONSENSUS  ...  OPEN_CONSENSUS\nseed_lineage                                  ...                \nclosed_seeded                             11  ...               7\nopen_seeded                                0  ...              20\n\n[2 rows x 3 columns]\n                                trajectory  seed_lineage  opposite_departure_start_ns\nR46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded                        402.0\n\nNOE direction summary\n               ndir                  ... bothfar_prop                    \n              count    mean  median  ...        count      mean    median\nseed                                 ...                                 \nclosed_seeded    20   338.2    47.5  ...           10  0.872334  0.987261\nopen_seeded      20  1001.0  1001.0  ...           20  0.092557  0.006993\n\n[2 rows x 9 columns]\nseed\nclosed_seeded     0\nopen_seeded      18\ndtype: int64\n",
+    "stderr": "<string>:28: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n"
+  },
+  {
+    "message": "One optional revision remains in the same budget. Re-submit unchanged if no revision needed."
+  },
+  {
+    "message": "Final submission saved."
+  }
+]

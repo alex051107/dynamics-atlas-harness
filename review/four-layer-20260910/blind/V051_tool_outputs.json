@@ -1,0 +1,396 @@
+[
+  {
+    "files": [
+      "/source/FIELD_DEFINITIONS.md",
+      "/source/HSP90_SOURCE_AND_RUN_CARD.json",
+      "/source/INPUT_CHECK_FACTS.json",
+      "/source/QUESTION.txt",
+      "/source/SOURCE_INVENTORY.json",
+      "/source/directional_runs.tsv",
+      "/source/frame_state_assignments.tsv",
+      "/source/henot_2022_article.txt",
+      "/source/henot_2022_hsp90_article.pdf",
+      "/source/henot_2022_hsp90_supplement.pdf",
+      "/source/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat",
+      "/source/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat",
+      "/source/state_core_definition.json",
+      "/source/trajectory_time_anatomy.tsv",
+      "/source/trajectory_time_bins_50ns.tsv"
+    ]
+  },
+  {
+    "total_lines": 1,
+    "text": "1: 在人HSP90α NTD的40条轨迹中，已有几何/接触派生量所显示的开放方向，是否也得到作者原生NOE违例读数的支持？请比较闭合起始与开放起始，按所给原生读数判据计算同源对应、给出计数、代表轨迹与敏感性；说明方向变化、靠近参照与物理状态转换之间的区别。说明条件、窗口、统计单位及有信息价值的下一步。"
+  },
+  {
+    "total_lines": 24,
+    "text": "1: # Field definitions for the delivered HSP90 tables\n2: \n3: The reporting unit is trajectory: 40 trajectories, 20 closed_seeded and 20 open_seeded. Frames describe the time course within each trajectory. Seed lineage is recorded in trajectory_time_anatomy.tsv. The names R46A/R60A refer to the starting-structure lineage; see the source card for the sequence audit and its provenance.\n4: \n5: The delivered time window is 20–1020 ns, 1001 points per trajectory, at 1 ns intervals. Time zero follows the original simulation. See HSP90_SOURCE_AND_RUN_CARD.json.\n6: \n7: `d_open_medoid_A` and `d_closed_medoid_A` are lid RMSD values after core alignment relative to the open/closed reference medoids. `geometry_delta_A = d_closed_medoid_A - d_open_medoid_A`. `nearest_open_A` and `nearest_closed_A` instead use the nearest member of each reference ensemble. They are separate fields. `contact_margin_A` is the deposited closed-state contact-violation readout minus the open-state readout. Distances/margins are in angstroms. The historical producer is run_hsp90_v1.py, lines 1110–1145 (provenance recorded in the inventory).\n8: \n9: For the time-anatomy tables, a frame has direction OPEN_CONSENSUS when geometry_delta_A > 0 and contact_margin_A > 0; CLOSED_CONSENSUS when both are < 0; otherwise READOUT_CONFLICT. Zeros enter the conflict category. These are the existing zero-sign criteria, with no tuning in this preparation.\n10: \n11: `state_core` is a separate assignment: C when delta <= theta_closed and d_closed <= radius_closed; O when delta >= theta_open and d_open <= radius_open; otherwise U. Exact medoid indices, thresholds and radii are in state_core_definition.json. Its recorded meaning is anchor-relative structural support core.\n12: \n13: A contiguous run contains consecutive frames with one direction label. trajectory_time_anatomy.tsv contains three rows per trajectory, using persistence_saved_frames thresholds 5, 20 and 50. These are repeated summaries of one trajectory, not 120 trajectories.\n14: \n15: first_persistent_direction is the first non-conflict run with at least the specified number of saved frames. opposite_direction_departure_candidate records a later persistent run with the opposite direction. return_candidate records a persistent run in the initial persistent direction after that departure. The reference direction is the first persistent run, which may differ from the starting-structure category represented by seed_lineage.\n16: \n17: persistence_ns and length_ns use the historical saved-frame-count convention: five consecutive points sampled 1 ns apart span 4 ns between their endpoints. start_time_ns/end_time_ns give the endpoints separately.\n18: \n19: The nominal 50 ns display bins contain 50 saved frames, classified from the within-bin median geometry and contact margins using the same sign rule. The final bin contains the last single point. This different aggregation does not recover the individual consecutive runs. The table stores n_saved_frames and endpoints for each bin.\n20: \n21: Definitions derive from the unchanged run_time_anatomy_v0.py and run_hsp90_v1.py producer scripts. The original tables are retained without editing. The paper PDF is the source of record; the existing article text extraction is supplied for searching, with original line numbers retained. Verify equations and figure details in the PDF.\n22: \n23: ## 原生NOE对应判据\n24: native_noe每轨迹open/closed_contact_violation.dat第一列保存序号1..1001，对应time_ns20..1020；第二列平均正上限违例Å（Vopen/Vclosed），第三列历史pseudo-distance。后者差值用于原contact_margin，不当原生违例。开放方向为geometry_delta_A>0且contact_margin_A>0。主容差τ=1Å，敏感性0.5/2Å；OPEN_NOE=Vopen≤τ<Vclosed，CLOSED_NOE反之，BOTH_FAR两者>τ，BOTH_NEAR两者≤τ。在开放方向帧中OPEN_NOE比例≥0.8为一致；否则BOTH_FAR比例≥0.5为只相对偏好；其余部分；无开放方向为不适用。另以开放起始组Vopen所有帧的95分位为参照带，连续50个保存点进入为entry；该同数据参照不是独立验证。"
+  },
+  {
+    "total_lines": 94,
+    "text": "1: {\n2:   \"paper_statement\": {\n3:     \"force_field\": {\n4:       \"value\": \"ff14SB\",\n5:       \"source\": \"henot_2022_article.txt:560\",\n6:       \"status\": \"DOCUMENTED\"\n7:     },\n8:     \"solvent\": {\n9:       \"value\": \"explicit TIP3P water\",\n10:       \"source\": \"henot_2022_article.txt:560-562\",\n11:       \"status\": \"DOCUMENTED\"\n12:     },\n13:     \"ions\": {\n14:       \"value\": \"approximately 170 mM NaCl\",\n15:       \"source\": \"henot_2022_article.txt:570\",\n16:       \"status\": \"DOCUMENTED\"\n17:     },\n18:     \"temperature\": {\n19:       \"value\": \"300 K\",\n20:       \"source\": \"henot_2022_article.txt:573-584\",\n21:       \"status\": \"DOCUMENTED\"\n22:     },\n23:     \"duration\": {\n24:       \"value\": \"1020 ns; first 20 ns equilibration, last 1000 ns analysis\",\n25:       \"source\": \"henot_2022_article.txt:584-587\",\n26:       \"status\": \"DOCUMENTED\"\n27:     },\n28:     \"snapshot_stride\": {\n29:       \"value\": \"1 ns\",\n30:       \"source\": \"henot_2022_article.txt:301,603\",\n31:       \"status\": \"DOCUMENTED\"\n32:     }\n33:   },\n34:   \"local_inputs_checked\": {\n35:     \"force_field\": {\n36:       \"value\": \"Paper ff14SB; preserved Zenodo description AMBER99SB. The older report follows Zenodo. Archive directory amber14sb_OL15.ff agrees with paper naming but does not establish the production configuration.\",\n37:       \"source\": [\n38:         \"henot_2022_article.txt:560\",\n39:         \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/zenodo_6606744_record.json\",\n40:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md\"\n41:       ],\n42:       \"status\": \"DOCUMENT_DISCREPANCY\"\n43:     },\n44:     \"frames\": {\n45:       \"value\": {\n46:         \"author_README_nominal\": 1020,\n47:         \"older_report_XTC_measured\": 1021,\n48:         \"current_table_points_per_trajectory\": 1001,\n49:         \"mapping\": \"20–1020 ns inclusive verified in this table. Exact nominal README to XTC convention remains TO_CHECK.\"\n50:       },\n51:       \"source\": [\n52:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/contract/MD/README\",\n53:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/outputs/HSP90_END_TO_END_REPORT.md\",\n54:         \"frame_state_assignments.tsv\"\n55:       ],\n56:       \"status\": \"DOCUMENTED\"\n57:     },\n58:     \"time_axis_of_round_inputs\": {\n59:       \"value\": {\n60:         \"trajectories\": 40,\n61:         \"points_per_trajectory\": 1001,\n62:         \"minimum_ns\": 20,\n63:         \"maximum_ns\": 1020,\n64:         \"stride_ns\": 1,\n65:         \"origin\": \"time zero retained from original trajectory\"\n66:       },\n67:       \"source\": \"frame_state_assignments.tsv: all time_ns values\",\n68:       \"status\": \"VERIFIED\"\n69:     },\n70:     \"xtc_spot_check\": {\n71:       \"value\": \"NOT_ATTEMPTED; no new trajectory reader installed. Current check is on delivered derived tables.\",\n72:       \"source\": \"current preparation\",\n73:       \"status\": \"NOT_ATTEMPTED\"\n74:     },\n75:     \"lineage\": {\n76:       \"value\": {\n77:         \"closed_seeded\": \"R46A_ES directory, extracted md_0-10_evert1ns_fitBB_protonly.xtc\",\n78:         \"open_seeded\": \"R60A_GS directory; corresponding author link resolves to md_all_prot_fit.xtc\",\n79:         \"meaning\": \"NMR seed lineage; directory names alone are not proof of mutated MD sequences. Prior deposited-coordinate audit reports ARG at residues 46 and 60.\"\n80:       },\n81:       \"source\": [\n82:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest.json\",\n83:         \"autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/data/trajectories/extraction_manifest_r60a.json\",\n84:         \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/input_audit.json\"\n85:       ],\n86:       \"status\": \"DOCUMENTED\"\n87:     },\n88:     \"analysis_window_note\": {\n89:       \"value\": \"Delivered derived table starts at 20 ns, with 1001 points through 1020 ns.\",\n90:       \"source\": \"frame_state_assignments.tsv\",\n91:       \"status\": \"VERIFIED\"\n92:     }\n93:   }\n94: }"
+  },
+  {
+    "total_lines": 1176,
+    "text": "1: trajectory\tseed_lineage\tlabel\tstart_time_ns\tend_time_ns\tlength_saved_frames\tlength_ns\n2: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t20.0\t28.0\t9\t9\n3: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t29.0\t29.0\t1\t1\n4: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t30.0\t30.0\t1\t1\n5: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t31.0\t63.0\t33\t33\n6: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t64.0\t68.0\t5\t5\n7: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t69.0\t71.0\t3\t3\n8: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t72.0\t73.0\t2\t2\n9: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t74.0\t76.0\t3\t3\n10: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t77.0\t108.0\t32\t32\n11: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t109.0\t109.0\t1\t1\n12: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t110.0\t110.0\t1\t1\n13: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t111.0\t111.0\t1\t1\n14: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t112.0\t151.0\t40\t40\n15: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t152.0\t152.0\t1\t1\n16: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t153.0\t153.0\t1\t1\n17: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t154.0\t155.0\t2\t2\n18: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t156.0\t156.0\t1\t1\n19: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t157.0\t159.0\t3\t3\n20: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t160.0\t169.0\t10\t10\n21: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t170.0\t170.0\t1\t1\n22: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t171.0\t172.0\t2\t2\n23: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t173.0\t173.0\t1\t1\n24: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t174.0\t184.0\t11\t11\n25: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t185.0\t185.0\t1\t1\n26: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t186.0\t189.0\t4\t4\n27: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t190.0\t190.0\t1\t1\n28: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t191.0\t193.0\t3\t3\n29: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t194.0\t198.0\t5\t5\n30: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t199.0\t199.0\t1\t1\n31: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t200.0\t221.0\t22\t22\n32: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t222.0\t222.0\t1\t1\n33: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t223.0\t239.0\t17\t17\n34: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t240.0\t240.0\t1\t1\n35: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t241.0\t267.0\t27\t27\n36: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t268.0\t268.0\t1\t1\n37: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t269.0\t272.0\t4\t4\n38: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t273.0\t273.0\t1\t1\n39: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t274.0\t274.0\t1\t1\n40: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t275.0\t306.0\t32\t32\n41: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t307.0\t307.0\t1\t1\n42: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t308.0\t309.0\t2\t2\n43: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t310.0\t310.0\t1\t1\n44: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t311.0\t315.0\t5\t5\n45: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t316.0\t316.0\t1\t1\n46: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t317.0\t319.0\t3\t3\n47: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t320.0\t320.0\t1\t1\n48: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t321.0\t327.0\t7\t7\n49: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t328.0\t328.0\t1\t1\n50: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t329.0\t329.0\t1\t1\n51: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t330.0\t337.0\t8\t8\n52: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t338.0\t338.0\t1\t1\n53: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t339.0\t346.0\t8\t8\n54: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t347.0\t347.0\t1\t1\n55: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t348.0\t374.0\t27\t27\n56: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t375.0\t375.0\t1\t1\n57: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t376.0\t378.0\t3\t3\n58: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t379.0\t379.0\t1\t1\n59: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t380.0\t380.0\t1\t1\n60: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t381.0\t386.0\t6\t6\n61: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t387.0\t399.0\t13\t13\n62: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t400.0\t400.0\t1\t1\n63: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t401.0\t409.0\t9\t9\n64: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t410.0\t412.0\t3\t3\n65: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t413.0\t413.0\t1\t1\n66: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t414.0\t418.0\t5\t5\n67: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t419.0\t419.0\t1\t1\n68: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t420.0\t424.0\t5\t5\n69: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t425.0\t429.0\t5\t5\n70: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t430.0\t438.0\t9\t9\n71: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t439.0\t439.0\t1\t1\n72: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t440.0\t443.0\t4\t4\n73: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t444.0\t446.0\t3\t3\n74: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t447.0\t447.0\t1\t1\n75: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t448.0\t457.0\t10\t10\n76: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t458.0\t459.0\t2\t2\n77: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t460.0\t467.0\t8\t8\n78: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t468.0\t468.0\t1\t1\n79: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t469.0\t480.0\t12\t12\n80: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t481.0\t481.0\t1\t1\n81: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t482.0\t558.0\t77\t77\n82: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t559.0\t560.0\t2\t2\n83: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t561.0\t566.0\t6\t6\n84: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t567.0\t569.0\t3\t3\n85: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t570.0\t570.0\t1\t1\n86: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t571.0\t571.0\t1\t1\n87: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t572.0\t573.0\t2\t2\n88: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t574.0\t575.0\t2\t2\n89: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t576.0\t576.0\t1\t1\n90: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t577.0\t577.0\t1\t1\n91: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t578.0\t579.0\t2\t2\n92: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t580.0\t580.0\t1\t1\n93: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t581.0\t581.0\t1\t1\n94: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t582.0\t651.0\t70\t70\n95: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t652.0\t652.0\t1\t1\n96: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t653.0\t676.0\t24\t24\n97: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t677.0\t678.0\t2\t2\n98: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t679.0\t679.0\t1\t1\n99: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tREADOUT_CONFLICT\t680.0\t682.0\t3\t3\n100: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\tclosed_seeded\tCLOSED_CONSENSUS\t683.0\t683.0\t1\t1"
+  },
+  {
+    "total_lines": 40041,
+    "text": "1: trajectory\ttime_ns\tstate_core\td_open_medoid_A\td_closed_medoid_A\tgeometry_delta_A\tnearest_open_A\tnearest_closed_A\tcontact_margin_A\n2: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t20.0\tU\t17.633463470369183\t5.814215112145354\t-11.819248358223827\t16.785310745239258\t4.3144683837890625\t-6.5\n3: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t21.0\tU\t17.739671228411417\t5.714488496033401\t-12.025182732378017\t16.89152717590332\t4.292862415313721\t-6.290000000000001\n4: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t22.0\tU\t18.00505486596783\t6.181068267397711\t-11.823986598570118\t17.182573318481445\t4.692460536956787\t-5.37\n5: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t23.0\tU\t17.393767851059092\t5.845917702422417\t-11.547850148636675\t16.530677795410156\t4.503699779510498\t-1.5999999999999996\n6: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t24.0\tU\t17.259078970853363\t6.050600015149579\t-11.208478955703784\t16.449363708496094\t4.552698135375977\t-3.4299999999999997\n7: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t25.0\tU\t17.592519010963663\t5.737355116944441\t-11.855163894019222\t16.756610870361328\t4.273383140563965\t-4.44\n8: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t26.0\tU\t17.446673337916035\t5.230749351043699\t-12.215923986872337\t16.54894256591797\t4.2118377685546875\t-3.839999999999999\n9: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t27.0\tU\t16.73958833480594\t5.287875825988533\t-11.451712508817408\t15.87452220916748\t4.235350131988525\t-1.9600000000000009\n10: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t28.0\tU\t18.139710487874826\t5.044244158116295\t-13.09546632975853\t17.344879150390625\t3.887488603591919\t-5.630000000000001\n11: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t29.0\tU\t15.364372280069675\t5.870373618470942\t-9.493998661598734\t14.370478630065918\t5.675363063812256\t2.960000000000001\n12: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t30.0\tU\t16.517129173023953\t5.000097739398119\t-11.517031433625835\t15.552311897277832\t4.696167945861816\t-1.1099999999999994\n13: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t31.0\tU\t15.907625549261045\t5.862803339425175\t-10.044822209835871\t14.9406156539917\t5.786503791809082\t2.1999999999999993\n14: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t32.0\tU\t15.06266802705903\t6.027323735799603\t-9.035344291259428\t14.043829917907715\t5.8611674308776855\t1.8000000000000007\n15: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t33.0\tU\t15.386691519632889\t5.786528885404885\t-9.600162634228003\t14.352422714233398\t5.570333957672119\t2.0700000000000003\n16: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t34.0\tU\t12.640005338061556\t8.79729250391704\t-3.842712834144516\t11.778517723083496\t8.60030460357666\t6.6499999999999995\n17: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t35.0\tU\t12.55993933080421\t8.812649546687028\t-3.747289784117182\t11.661460876464844\t8.60689926147461\t7.530000000000001\n18: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t36.0\tU\t13.457918862509462\t7.823945303833692\t-5.633973558675771\t12.535534858703613\t7.694623947143555\t6.94\n19: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t37.0\tU\t12.437386192569875\t8.856997297856612\t-3.5803888947132627\t11.552599906921387\t8.676058769226074\t8.18\n20: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t38.0\tU\t13.405541383951064\t7.892267948556137\t-5.513273435394927\t12.461686134338379\t7.641639232635498\t7.25\n21: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t39.0\tU\t15.525206124445193\t6.066831313991766\t-9.458374810453428\t14.494380950927734\t5.852484226226807\t0.030000000000001137\n22: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t40.0\tU\t14.367094416697833\t7.6860922883093385\t-6.681002128388495\t13.423198699951172\t7.473296165466309\t4.989999999999999\n23: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t41.0\tU\t15.67517820352449\t7.025452012323002\t-8.649726191201488\t14.748346328735352\t6.729166030883789\t1.6799999999999997\n24: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t42.0\tU\t16.20742510124269\t6.17325788680774\t-10.034167214434952\t15.206907272338867\t5.980828285217285\t2.1999999999999993\n25: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t43.0\tU\t13.994232126120695\t8.310179531463147\t-5.6840525946575475\t13.139846801757812\t7.809968948364258\t3.7200000000000006\n26: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t44.0\tU\t14.39391657158959\t8.134318002113925\t-6.259598569475665\t13.557562828063965\t7.757473468780518\t1.83\n27: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t45.0\tU\t11.46071328972884\t9.72481727883912\t-1.7358960108897197\t10.657308578491211\t9.43506908416748\t8.39\n28: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t46.0\tU\t12.7889789897892\t9.078634687165005\t-3.710344302624195\t11.997471809387207\t8.625754356384277\t5.29\n29: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t47.0\tU\t13.185665625816908\t8.536048386923133\t-4.649617238893775\t12.285130500793457\t8.199039459228516\t3.8900000000000006\n30: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t48.0\tU\t13.647762786222126\t8.639027646763873\t-5.008735139458253\t12.797725677490234\t8.364901542663574\t2.66\n31: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t49.0\tU\t15.190089078366597\t7.593771567608923\t-7.596317510757674\t14.29004955291748\t7.225701332092285\t1.9100000000000001\n32: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t50.0\tU\t15.746415767140851\t6.856263673594775\t-8.890152093546076\t14.766709327697754\t6.612821102142334\t0.7799999999999994\n33: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t51.0\tU\t15.6243990065346\t7.11279703701432\t-8.511601969520282\t14.664831161499023\t6.805500030517578\t1.25\n34: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t52.0\tU\t13.706168985600852\t8.383433149169791\t-5.322735836431061\t12.735987663269043\t8.090583801269531\t3.49\n35: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t53.0\tU\t14.198009449123944\t7.556887996439169\t-6.641121452684775\t13.213491439819336\t7.346251964569092\t3.5\n36: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t54.0\tU\t13.590364434383684\t8.384945327266092\t-5.205419107117592\t12.777039527893066\t7.928320407867432\t4.669999999999999\n37: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t55.0\tU\t13.333470221074109\t8.12980976136929\t-5.203660459704819\t12.49315357208252\t7.626357078552246\t3.58\n38: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t56.0\tU\t13.037919295272408\t8.736679205196825\t-4.3012400900755825\t12.19128131866455\t8.356258392333984\t3.9400000000000013\n39: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t57.0\tU\t13.908866697268875\t7.7143409967740135\t-6.194525700494862\t12.972639083862305\t7.404627799987793\t3.3100000000000005\n40: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t58.0\tU\t14.89594566159478\t7.001367345614632\t-7.894578315980148\t13.950613975524902\t6.732410430908203\t1.4700000000000006\n41: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t59.0\tU\t13.458098534896052\t8.224215045878154\t-5.233883489017899\t12.599688529968262\t7.967691421508789\t3.869999999999999\n42: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t60.0\tU\t13.482066999522283\t8.309613842955017\t-5.172453156567267\t12.630556106567383\t7.9874138832092285\t2.5600000000000005\n43: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t61.0\tU\t13.665049068747871\t7.775437842596097\t-5.889611226151774\t12.752525329589844\t7.589034557342529\t2.790000000000001\n44: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t62.0\tU\t15.425781645395093\t6.9653815135207235\t-8.46040013187437\t14.548709869384766\t6.550193786621094\t0.1800000000000015\n45: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t63.0\tU\t15.029143359654359\t6.888109751570144\t-8.141033608084214\t14.130614280700684\t6.583492755889893\t1.0199999999999996\n46: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t64.0\tU\t16.35160654552584\t5.841228517560453\t-10.510378027965388\t15.448427200317383\t5.671297073364258\t-3.58\n47: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t65.0\tU\t16.382275742217498\t6.0743043698340795\t-10.307971372383419\t15.451949119567871\t5.848433017730713\t-3.459999999999999\n48: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t66.0\tU\t16.266371601969148\t6.419043015133736\t-9.847328586835411\t15.394637107849121\t5.982325553894043\t-2.8199999999999985\n49: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t67.0\tU\t16.861522086323074\t5.648726180985429\t-11.212795905337645\t15.937163352966309\t5.382575988769531\t-1.2599999999999998\n50: R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay\t68.0\tU\t14.583020242080353\t7.090094219910434\t-7.492926022169919\t13.67928409576416\t6.829177379608154\t-1.0600000000000005"
+  },
+  {
+    "total_lines": 1005,
+    "text": "1: # trajectory analysed : processed.gro + md_1-10_evert1ns_fitBB_protonly.xtc \n2: # output directory : /Users/elisarioual/Desktop/DepData/MD/R46A/ANALYSEcop/VIOLATION/ES/ES01 \n3: # constraint file : /Users/elisarioual/Desktop/DepData/MD/Toolscopie/VIOLATION/NOE_specific_ES_2022-01-07_distances.itp \n4: # frame number  \t  up violation averaged on 5 constraints \t same with pseudo distances  (Angstrom)\n5: 1\t\t   3.41\t\t   4.91\n6: 2\t\t   3.43\t\t   4.84\n7: 3\t\t   4.73\t\t   6.20\n8: 4\t\t   8.00\t\t   9.30\n9: 5\t\t   5.38\t\t   6.82\n10: 6\t\t   5.99\t\t   7.19\n11: 7\t\t   5.23\t\t   6.44\n12: 8\t\t   6.65\t\t   8.01\n13: 9\t\t   3.68\t\t   5.02\n14: 10\t\t   9.85\t\t  11.14\n15: 11\t\t   8.13\t\t   9.21\n16: 12\t\t   9.83\t\t  11.20\n17: 13\t\t  10.92\t\t  11.99\n18: 14\t\t  10.82\t\t  11.99\n19: 15\t\t  12.90\t\t  14.10\n20: 16\t\t  12.44\t\t  13.38\n21: 17\t\t  12.46\t\t  13.73\n22: 18\t\t  13.11\t\t  14.27\n23: 19\t\t  12.90\t\t  14.10\n24: 20\t\t   8.98\t\t  10.56\n25: 21\t\t  11.62\t\t  12.93\n26: 22\t\t  10.36\t\t  11.56\n27: 23\t\t  11.00\t\t  12.10\n28: 24\t\t  11.47\t\t  12.74\n29: 25\t\t  10.79\t\t  11.80\n30: 26\t\t  14.02\t\t  15.41"
+  },
+  {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 16, in <module>\n  File \"/usr/local/lib/python3.11/site-packages/numpy/lib/_function_base_impl.py\", line 887, in select\n    raise TypeError(msg) from None\nTypeError: Choicelist and default value do not have a common dtype: The DType <class 'numpy.dtypes._PyLongDType'> could not be promoted by <class 'numpy.dtypes.StrDType'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtypes.StrDType'>, <class 'numpy.dtypes.StrDType'>, <class 'numpy.dtypes.StrDType'>, <class 'numpy.dtypes.StrDType'>, <class 'numpy.dtypes._PyLongDType'>)\n"
+  },
+  {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 9210, in groupby\n    return DataFrameGroupBy(\n           ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/groupby.py\", line 1331, in __init__\n    grouper, exclusions, obj = get_grouper(\n                               ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/grouper.py\", line 1043, in get_grouper\n    raise KeyError(gpr)\nKeyError: 'seed_lineage'\n"
+  },
+  {
+    "returncode": -9,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "returncode": 0,
+    "stdout": "\nTAU 0.5\nseed           class              \nclosed_seeded  relative_preference    10\nopen_seeded    consistent              7\n               other                   8\n               relative_preference     5\ndtype: int64\n                   n   open  closed   far  near\nseed                                           \nclosed_seeded   6764     76       0  6688     0\nopen_seeded    20020  13111       0  6909     0\n\nTAU 1\nseed           class              \nclosed_seeded  other                   1\n               relative_preference     9\nopen_seeded    consistent             18\n               other                   1\n               relative_preference     1\ndtype: int64\n                   n   open  closed   far  near\nseed                                           \nclosed_seeded   6764   1202       0  5562     0\nopen_seeded    20020  18167       0  1853     0\n                                trajectory          seed    n  open  closed  far  near     prop  farprop               class\nR46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  968   562       0  406     0 0.580579 0.419421               other\nR46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  906   349       0  557     0 0.385210 0.614790 relative_preference\nR46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  959   211       0  748     0 0.220021 0.779979 relative_preference\nR46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  979    64       0  915     0 0.065373 0.934627 relative_preference\nR46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  628    16       0  612     0 0.025478 0.974522 relative_preference\nR46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  600     0       0  600     0 0.000000 1.000000 relative_preference\nR46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded   95     0       0   95     0 0.000000 1.000000 relative_preference\nR46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  412     0       0  412     0 0.000000 1.000000 relative_preference\nR46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  254     0       0  254     0 0.000000 1.000000 relative_preference\nR46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay closed_seeded  963     0       0  963     0 0.000000 1.000000 relative_preference\nR60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001  1001       0    0     0 1.000000 0.000000          consistent\nR60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001  1001       0    0     0 1.000000 0.000000          consistent\nR60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001  1001       0    0     0 1.000000 0.000000          consistent\nR60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001  1000       0    1     0 0.999001 0.000999          consistent\nR60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001  1000       0    1     0 0.999001 0.000999          consistent\nR60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   999       0    2     0 0.998002 0.001998          consistent\nR60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   999       0    2     0 0.998002 0.001998          consistent\nR60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   998       0    3     0 0.997003 0.002997          consistent\nR60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   994       0    7     0 0.993007 0.006993          consistent\nR60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   994       0    7     0 0.993007 0.006993          consistent\nR60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   994       0    7     0 0.993007 0.006993          consistent\nR60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   990       0   11     0 0.989011 0.010989          consistent\nR60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   951       0   50     0 0.950050 0.049950          consistent\nR60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   943       0   58     0 0.942058 0.057942          consistent\nR60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   943       0   58     0 0.942058 0.057942          consistent\nR60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   890       0  111     0 0.889111 0.110889          consistent\nR60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   875       0  126     0 0.874126 0.125874          consistent\nR60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   806       0  195     0 0.805195 0.194805          consistent\nR60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   674       0  327     0 0.673327 0.326673               other\nR60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay   open_seeded 1001   114       0  887     0 0.113886 0.886114 relative_preference\n\nTAU 2\nseed           class              \nclosed_seeded  consistent              3\n               other                   2\n               relative_preference     5\nopen_seeded    consistent             19\n               relative_preference     1\ndtype: int64\n                   n   open  closed   far  near\nseed                                           \nclosed_seeded   6764   3953       0  2811     0\nopen_seeded    20020  19477       0   543     0\nQ95 1.32\nentries\nR60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay [(49, 208, 160), (215, 269, 55), (343, 532, 190), (562, 1020, 459)]\nR60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 826, 807), (828, 975, 148)]\nR60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 127, 108), (129, 439, 311), (441, 804, 364), (809, 1020, 212)]\nR60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay [(42, 169, 128), (171, 392, 222), (452, 508, 57), (510, 592, 83), (732, 790, 59), (930, 1020, 91)]\nR60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 187, 168), (189, 255, 67), (321, 1020, 700)]\nR60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\nR60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 762, 743), (814, 872, 59), (936, 988, 53)]\nR60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay [(107, 577, 471)]\nR60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 295, 276), (297, 1020, 724)]\nR60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay []\nR60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 918, 899), (920, 1020, 101)]\nR60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay [(20, 1020, 1001)]\ndirection trajectories\nseed_lineage   direction\nclosed_seeded  CLOSED       18\n               CONFLICT     16\n               OPEN         10\nopen_seeded    OPEN         20\nName: trajectory, dtype: int64\n",
+    "stderr": ""
+  },
+  [
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 148,
+      "text": "  CH3-edited 3D NOESY, at 13C frequencies of M130, I131 and L29 methyl groups of     interactions stabilizing the conformation of the ATP-lid either in closed (orange) or"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 149,
+      "text": "WT-HSP90α-NTD. The 3D HMQC-NOESY-HMQC experiment was acquired at 25 °C               open conformation (blue) d Variation of average CYANA target function for the 20"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 151,
+      "text": "3D structure of HSP90α-NTD (PDB 1YES) of examples of intermethyl NOEs invol-         former. e Table summarizing intensity increases (+), decreases (−), or dis-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 152,
+      "text": "ving M130 and I131 with methyl groups distant by more than 30 Å. c Representatives   appearance (Ø) of characteristic NOEs corresponding to HSP90α-NTD ATP-lid"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 160,
+      "text": "HSP90α-NTD sample. In order to overcome this problem, we deci-                       (Fig. 1a). As an example, a pair of inter-methyl NOEs is detected"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 162,
+      "text": "on the Aβ, Iδ1, Lδ2, Mε, Tγ and Vγ2 methyl positions50. The resulting 87             methyl moiety of L29-δ2 in helix−1, while another set of NOE correla-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 173,
+      "text": "     Next, we recorded methyl NOESY spectra to derive a set of inter-                driven assignment of 23 additional key methyl probes51 (Supplemen-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 174,
+      "text": "methyl distance restraints. The applied labeling scheme that yields                  tary Fig. 2) allowing us to exclude misassignment of these NOEs. As the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 178,
+      "text": "For HSP90α-NTD, 597 inter-methyl NOEs (Supplementary Fig. 3a and                     tions was performed55 assuming two co-existing conformations of the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 185,
+      "text": "plementary Table 1) derived from a 3D 15N-edited NOESY spectrum,                     ment of the target energy (Fig. 2d). To assess in an automated unbiased"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 212,
+      "text": "structures showed that 22 NOE-derived distance restraints are satisﬁed"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 234,
+      "text": "a 13CH3-edited NOESY spectrum recorded for this R60A mutant                  and was superimposed on the coordinate of the centroid conformers. a structure"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 235,
+      "text": "revealed that all expected NOE correlation peaks speciﬁc of the ATP-lid      ensemble for ATP-lid open/ground-state calculated using NMR structural distance"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 239,
+      "text": "longer detected by NOESY-type NMR experiments.                               lid helices. The positions of residues 98 and 136 are also indicated. The location of"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 246,
+      "text": "spectra were obtained (Supplementary Fig. 4b), and methyl NOEs               superimposed on backbone atoms with a RMSD to the average struc-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 249,
+      "text": "ATP-lid open to closed state, as the intensities of NOE correlation peaks    [128–135]) separated by short loop segments. As the backbone signals"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 257,
+      "text": "                                                                             lation on NOE-derived distance restraints from the R46A mutant, as"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 260,
+      "text": "Since the HSP90α-NTD mutants possess populations of the two ATP-             as NOEs that are speciﬁc to the ATP-lid open state can still be detected,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 264,
+      "text": "distance restraints, involving at least one methyl group of the ATP-lid      NOEs, completed with 36 dihedral and 41 backbone distance restraints"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 265,
+      "text": "segment, was derived from the 3D 13CH3-edited NOESY spectrum                 (Supplementary Table 1), were used to reﬁne the structure of the ATP-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 282,
+      "text": "increase. The initial models are the two ensembles of experimentally reﬁned                e Representation of NOE distance restraints characteristics of ATP-lid open and"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 283,
+      "text": "structures (see Fig. 3a, b). The ﬁrst and second half of the 4000 frames are               closed states, on the corresponding structures. f Violations of characteristics NOEs"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 317,
+      "text": "the NOE contacts characteristic of the ATP-lid in the open state (Fig. 4e      tary Fig. 8A). A global ﬁt of the 13CH3-CPMG relaxation dispersion,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 328,
+      "text": "experimental structures. According to the Root-Mean-Square-                    structure determined combining 13CH3-NOESY and mutagenesis, the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 337,
+      "text": "the starting conformation without large violations of the NOE contacts         kinetics for R60A (kex = 3764 ± 132 s−1) and R46A (kex = 4192 ± 175 s−1)"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 344,
+      "text": "conformations almost compatible with the NOE restraints character-             observed."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 356,
+      "text": "observation of a small number (5) of characteristic NOEs for the closed        metastable, low populated closed state in human HSP90α -NTD."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 357,
+      "text": "ATP-lid state compared to a larger number (22) detected for the open           Acquisition of 3D-NOESY spectra using methyl-labeled samples of"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 359,
+      "text": "                                                                               that in both cases, the NOEs speciﬁc of the ATP-lid closed state are"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 439,
+      "text": "                                                                           plementary Table 5). However, investigation of the inter-methyl NOEs"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 442,
+      "text": "                                                                           of all the putative NOEs characteristic of dimerization of HSP90α-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 512,
+      "text": "      3D HNH- and NNH-edited NOESY experiments were recorded at                       For the structure reﬁnement of R46A-HSP90-NTD excited state,"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 515,
+      "text": "buffer. 3D CCH-edited HMQC-NOESY-HMQC NMR experiments68,69                      account the lower population of this transiently sampled state, while"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 521,
+      "text": " H2O buffer. 3D CCH-edited NOESY were also acquired with wild type              initial structure calculation that helix−3 and helix−4 are preserved"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 523,
+      "text": "Each 3D CCH-edited NOESY experiment was recorded over ca.                       total number and distribution of structural restraints can be found in"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 543,
+      "text": "dispersion proﬁles comprised 11 different υcpmg and were ranging from           ensemble (Fig. 3a). Conversely, the intermethyl NOE data set acquired"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 553,
+      "text": "M98 to V136: (i) HN—HN restraints derived from 15N-edited NOESY                 the ﬁve following steps: (i) immersion in a 7.0 Å shell of water mole-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 554,
+      "text": "spectra acquired using a NOE mixing time of 240 ms; and (ii) methyl             cules and energy minimization; (ii) slow heating from 100 to 500 K in"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 555,
+      "text": "—methyl restraints from 13C-edited NOESY spectra. A qualitative                 100 K temperature steps with 200 MD steps per temperature step"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 559,
+      "text": "and 4–6 Å for strong and weak cross-peaks detected in 3D-NOESY                  cooling from 500 K to 25 K in 25 K temperature steps with 200 MD"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 562,
+      "text": "acquired with longer NOE mixing time (ca. 300 to 400 ms). In the"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 565,
+      "text": "plets with distance bound of 2–8 Å as no short mixing 3D-NOESY                  MD simulations. Forty separate simulations were run for 1 µs, for the 20"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 567,
+      "text": "NOE cross-peaks were ﬁxed to 2–6 Å. For R60-D127 and R46-S129                   and open states. First, the systems were setup. The all-atom Amber"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 628,
+      "text": "closed or for the open state, the speciﬁc NOEs are deﬁned by an"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 742,
+      "text": "    method for predicting protein backbone torsion angles from NMR                 using exact NOEs. J. Magn. Reson. 241, 53–59 (2014)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 786,
+      "text": "    resolution four-dimensional 1H-13C NOE spectroscopy using                      gbouvignies/ChemEx (Accessed 2nd September 2021)."
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 790,
+      "text": "    Spectral editing of intra- and inter-chain methyl–methyl NOEs in           and advices. This work used the high ﬁeld NMR, biophysics character-"
+    },
+    {
+      "file": "/source/henot_2022_article.txt",
+      "line": 817,
+      "text": "NMR experiments; E.R., F.H., J.B., and P.G. analyzed the NOESY experi-      Attribution 4.0 International License, which permits use, sharing,"
+    }
+  ],
+  {
+    "total_lines": 72,
+    "text": "1: {\n2:   \"files\": [\n3:     \"FIELD_DEFINITIONS.md\",\n4:     \"henot_2022_article.txt\",\n5:     \"henot_2022_hsp90_article.pdf\",\n6:     \"trajectory_time_bins_50ns.tsv\",\n7:     \"henot_2022_hsp90_supplement.pdf\",\n8:     \"state_core_definition.json\",\n9:     \"QUESTION.txt\",\n10:     \"frame_state_assignments.tsv\",\n11:     \"HSP90_SOURCE_AND_RUN_CARD.json\",\n12:     \"trajectory_time_anatomy.tsv\",\n13:     \"directional_runs.tsv\",\n14:     \"SOURCE_INVENTORY.json\"\n15:   ],\n16:   \"provenance\": [\n17:     {\n18:       \"file\": \"common/frame_state_assignments.tsv\",\n19:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/frame_state_assignments.tsv\",\n20:       \"origin_task\": \"dynamics_atlas_hsp90_v1_science_20260728\",\n21:       \"sha256\": \"80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46\"\n22:     },\n23:     {\n24:       \"file\": \"common/state_core_definition.json\",\n25:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/results/round2/state_core_definition.json\",\n26:       \"origin_task\": \"dynamics_atlas_hsp90_v1_science_20260728\",\n27:       \"sha256\": \"dfbb5d576efea37a4a7317ea0baffef3ab6cfd3914adc456e3de82b6858eac00\"\n28:     },\n29:     {\n30:       \"file\": \"common/trajectory_time_anatomy.tsv\",\n31:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/trajectory_time_anatomy.tsv\",\n32:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n33:       \"sha256\": \"fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb\"\n34:     },\n35:     {\n36:       \"file\": \"common/trajectory_time_bins_50ns.tsv\",\n37:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/trajectory_time_bins_50ns.tsv\",\n38:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n39:       \"sha256\": \"1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c\"\n40:     },\n41:     {\n42:       \"file\": \"common/directional_runs.tsv\",\n43:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_time_anatomy_v0_20260730/outputs/directional_runs.tsv\",\n44:       \"origin_task\": \"dynamics_atlas_hsp90_time_anatomy_v0_20260730\",\n45:       \"sha256\": \"9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666\"\n46:     },\n47:     {\n48:       \"file\": \"common/henot_2022_hsp90_article.pdf\",\n49:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_article.pdf\",\n50:       \"origin_task\": \"dynamics_atlas_hsp90_feasibility_20260725\",\n51:       \"sha256\": \"2a37d00b43c167cd0e80a8e7c75083cc910b6b57648565f3db8023b44ed067a3\"\n52:     },\n53:     {\n54:       \"file\": \"common/henot_2022_hsp90_supplement.pdf\",\n55:       \"origin_path\": \"autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_supplement.pdf\",\n56:       \"origin_task\": \"dynamics_atlas_hsp90_feasibility_20260725\",\n57:       \"sha256\": \"41fae3f5b7ad78d8afa504bfe13bf5befb71bd01d236159294c4a436f5153d41\"\n58:     },\n59:     {\n60:       \"file\": \"common/henot_2022_article.txt\",\n61:       \"origin_path\": \"tmp/pdfs/henot_2022_article.txt\",\n62:       \"origin_task\": \"local\",\n63:       \"sha256\": \"30c46266c956e5cad76e5f3d4027d38c8de07d59fc08756eea014592cd40c549\"\n64:     }\n65:   ],\n66:   \"missing\": [\n67:     \"Raw coordinate arrays and complete source-native NOE restraint calculation inputs are not included in this derived-table packet\"\n68:   ],\n69:   \"producer_provenance\": \"autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/scripts/run_hsp90_v1.py\",\n70:   \"time_anatomy_producer_diff\": \"DIFFERENT; exact diff retained outside analysis workspace\",\n71:   \"coverage_inputs\": \"PROJECTION_ONLY; not part of this question\"\n72: }"
+  },
+  {
+    "total_lines": 18,
+    "text": "1: {\n2:   \"anchor_diagnostics\": {\n3:     \"between_min_A\": 17.75330554027526,\n4:     \"closed_within_pairwise_max_A\": 5.028670998080444,\n5:     \"closed_within_pairwise_mean_A\": 2.839546537473871,\n6:     \"open_within_pairwise_max_A\": 2.6539267748119078,\n7:     \"open_within_pairwise_mean_A\": 1.7070120187797748\n8:   },\n9:   \"assignment\": \"C if delta<=theta_closed and d_closed<=radius_closed; O if delta>=theta_open and d_open<=radius_open; else U\",\n10:   \"closed_medoid_index_zero_based\": 6,\n11:   \"coverage\": 0.95,\n12:   \"meaning\": \"anchor-relative structural support core, not kinetic state\",\n13:   \"open_medoid_index_zero_based\": 11,\n14:   \"radius_closed_A\": 3.2996743743089176,\n15:   \"radius_open_A\": 1.790308095019388,\n16:   \"theta_closed\": -15.96402224217195,\n17:   \"theta_open\": 17.02190913038431\n18: }"
+  },
+  {
+    "message": "One optional revision remains in the same budget. Re-submit unchanged if no revision needed."
+  }
+]
