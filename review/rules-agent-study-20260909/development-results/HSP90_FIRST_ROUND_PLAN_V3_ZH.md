@@ -1,20 +1,22 @@
-# HSP90 首轮：一个科学问题、四份答复、有界交付（v3.1）
+# HSP90 首轮与条件推进：一个科学问题、四份答复、一次授权（v3.2）
 
-Dynamics Atlas · 2026-09-10 · v3.1 · **供 Codex 逐步执行** · 本版是交付版，开工不再等下一轮 Pro 批准
+Dynamics Atlas · 2026-09-10 · v3.2 · **供 Codex 逐步执行** · PM 一次授权 1–9 后 Codex 自行推进，任何停止条件触发即停并交报告
 
+> v3.2 = v3.1 + §14：PM 一次性授权后，HSP90 首轮结束时由 Codex 按 §8A 的自动判定规则决定是否进入第二体系（ADK 或 DHFR，只读盘点后按写死的规则选一个），第二体系也满足同一规则才进第三体系。三个体系**顺序做，不并行**（Soojung 8/24：不同时做两者）。每一步的停止条件都是自动的，停下来就交报告，由 PM 重新打计划。
+>
 > v3.1 在 v3 上合并了 Pro 对 v3 的五项局部修正（`PRO_REVIEW_OF_PLAN_V3_ZH.md`，处置见 §11.3）：A1 先于 A0、规则渲染保留对象与检查配对、B0 来源差异分别保留、字段定义移出汇总结果、A-only 分支贯穿 §5–§7。v3 替代 v2（`HSP90_FIRST_ROUND_PLAN_V2_ZH.md`）。范围、规模、四结果表不变。改动来自两处：Pro 对 v2 的审查（`PRO_REVIEW_OF_PLAN_V2_ZH.md`，结论 CHANGES_REQUESTED_BOUNDED，"改几处后执行"）和 2026-09-09 深夜对 v2 引用的每个路径、脚本参数、字段名的本机核实。逐条处置见 §11。v1 意见的处置沿用 v2 §11，不再重复。
 >
 > 路径约定：`WS` = 本地工作区根目录（不在 git 内）；`HARNESS` = `WS/dynamics-atlas-harness`；`HARNESS_LUNA` = `WS/dynamics-atlas-harness-luna-runtime-v1`（A2 建）；`RT` = `HARNESS_LUNA/agent_experiments/luna_runtime_v1`（代码，入库）；`TASK0` = `WS/autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909`；`TASK2` = `WS/autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910`（案例、运行、账本，不入库，A1 建）。**代码目录和任务目录分开，运行器不再从代码位置推断任务根目录。**
 
 ## 0. 本阶段做什么，测到的是什么
 
-本阶段先利用现有 Agent 和已保存的 HSP90 资料，完成一项有明确方法与来源的科学分析，并观察加入现有规则提示后，答案是否得到实质改善。科学评价独立于规则选择结果。完成后由负责人根据科学结果、人工介入和复用成本决定是否进入第二体系；第三体系不作承诺。Pro 提供咨询审阅，不替代领域结论或负责人的投入决定。
+本阶段先利用现有 Agent 和已保存的 HSP90 资料，完成一项有明确方法与来源的科学分析，并观察加入现有规则提示后，答案是否得到实质改善。科学评价独立于规则选择结果。完成后按 §8A 的自动判定规则决定是否进入第二体系（PM 已在 §1 一次性授权，随时可叫停或改判）；第三体系只在第二体系也满足同一规则时进入。Pro 提供咨询审阅，不替代领域结论或负责人的投入决定。
 
 **本轮测到的是：** 在一份人工预整理、已经暴露过的 HSP90 派生资料上，同一个 Agent 得到额外的、按当前资料选出的规则提示后，答复发生了什么变化。它不验证原始轨迹处理、自动元数据提取、规则引擎强制执行或跨来源泛化。共同题面已经提醒两组不要把字段名当物理转换，所以 A 不是"毫无科学指导"的裸模型；B−A 测的是这份共同指导之上的额外提示效果。
 
 **一句话交付物：** 一份 HSP90 ATP-lid 有限时间构象变化的科学答复（Q01），来自同一个已有 Agent 在同一份资料上的四次运行（A 组无规则提示 ×2，B 组附注册表选出的规则提示 ×2），附原始交付、核对记录、与 Henot 2022 的逐主张关系表，以及"规则提示改变了什么"的逐条记录。
 
-**明确不做：** C 组；B4 元数据起草（v2 的可选项，本版跳过）；第二、第三体系；PCA 覆盖题；通用评分/比对脚本；从模型元数据推公开事实；V2a 旧记录汇总；换模型、充值、新 MD、改 33 条注册表、新题库；修改历史结果文件。
+**明确不做：** C 组；B4 元数据起草（v2 的可选项，本版跳过）；并行做第二、第三体系（只按 §14 顺序、条件推进）；PCA 覆盖题；通用评分/比对脚本；从模型元数据推公开事实；V2a 旧记录汇总；换模型、充值、新 MD、改 33 条注册表、新题库；修改历史结果文件。
 
 **到期规则：** Codex 开工后 **7 个工作日**内交出 §7 的报告，或交出失败原因。框架未完善不是续期理由。首轮必须能交出的是：一份 HSP90 有限时间行为的科学回答、四份原始答复或未完成记录、以及额外规则提示帮助、损害或没有明显作用的具体证据；不是一套标记齐全的目录。
 
@@ -27,8 +29,12 @@ Dynamics Atlas · 2026-09-10 · v3.1 · **供 Codex 逐步执行** · 本版是�
 | 3 | 允许 `feature/luna-runtime-v1` 分支 commit / push / Draft PR；`runs/`、案例数据、账本、凭证不入库 |
 | 4 | 允许把 `MD_TRAJECTORY` 方法档作为开发 proposal 经**副本** method scope 送入选择器；原文件不改；标签 `DEVELOPMENT_PROPOSAL_NOT_HUMAN_REVIEWED` |
 | 5 | 允许为本轮写一份新的 `TASK2/runtime/readiness.json`（`approved_for_development: true`，注明本轮授权日期与费用上限），**写入时机在 A1 初始化与 A0 共同运行环境检查都满足之后**，并附检查结果。旧 `TASK0/runtime/readiness.json` 保持 `false`，不改 |
+| 6 | HSP90 首轮按 §8A 判定为"进入下一体系"时，允许对 ADK 与 DHFR 做**只读盘点**（§14.2）：只查元数据页与本机已有资产，本步下载总量 ≤ 50 MB，不分析、不调模型 |
+| 7 | 第二体系（§14.2 选出的那个）：允许从 PDB / BMRB / Zenodo / ATLAS / mdCATH 只读下载公开数据 ≤ 2 GB（记 sha256、许可证），不跑新模拟；模型费用另计 ≤ $0.20；工作日 ≤ 7；同一分支 commit / push |
+| 8 | 第三体系：只在第二体系也按 §8A 判定为"进入下一体系"且 §14.4 的复用成本条件满足时进入，边界同第 7 项 |
+| 9 | §8A 的判定由 Codex 执行并记为 `DEVELOPER_JUDGMENT`，不等 PM 确认；PM 随时可叫停或改判。总停止线（§14.5）：自开工起 ≤ 21 个工作日、模型费用总计 ≤ $0.60、下载总计 ≤ 4 GB；任一体系停止即交报告，不自动进入下一个 |
 
-PM 回复"授权 1–5"后，Codex 在 `WS/autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl` 追加一条并开工。本轮不下载任何外部数据。
+PM 回复"授权 1–9，按 v3.2 执行"后，Codex 在 `WS/autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl` 追加一条并开工。HSP90 首轮不下载任何外部数据；下载只在第 6–8 项的边界内发生。
 
 ## 2. 系统：只补首轮必需的四件事
 
@@ -263,7 +269,7 @@ python3 "$RT/run_batch.py" --freeze "$TASK2/outputs/frozen_hsp90_q01_v3.json" --
   8. 未解决与下一步（覆盖题、收敛题的输入状态；选择器分支或运行器修改分支的影响范围）
 - `REPLAY.md`：命令、哈希、系统提示与两组用户提示原文、确定性/LLM 边界、换问题要改哪些文件。
 
-## 8. 交付后：由 PM 用五结果表决定，不自动推进
+## 8. 交付后：五结果表，按 §8A 自动判定是否进入下一体系
 
 | 首轮结果 | 下一步 |
 |---|---|
@@ -273,13 +279,28 @@ python3 "$RT/run_batch.py" --freeze "$TASK2/outputs/frozen_hsp90_q01_v3.json" --
 | 关键错误来自元数据、输入缺失或工具未返回 | 按实际失败归因；不算成规则效果，也不修到答案必然正确 |
 | 必须不断新增题目专用代码或核对器才能交付 | 停止系统扩展；先交付已有科学结果与真实限制 |
 
-Pro 审阅 §7 报告；意见按条记 `disposition.json`（`FIX/RECORD/REJECT` + 理由），处置完成不构成进入下一阶段的条件。
+Pro 审阅 §7 报告；意见按条记 `disposition.json`（`FIX/RECORD/REJECT` + 理由），处置完成不构成进入下一阶段的条件，也不阻止 §8A 已判定的推进。
+
+### 8A. 自动判定规则（Codex 执行，记 `DEVELOPER_JUDGMENT`，有疑问一律判"停"）
+
+写 `TASK2/outputs/round_decision.json`：`row ∈ {1,2,3,4,5,UNCLASSIFIED}`、每条判据的取值与 locator、`proceed: true|false`。**只有 `row == 2` 才 `proceed: true`。** 判 2 必须同时满足：
+
+| 判据 | 取值来源 |
+|---|---|
+| (a) 至少一份 B 含一条 `status=VERIFIED` 的主张，两份 A 都没有，且它改变了对问题的回答内容（结论及条件节），不是措辞 | `claims_check.csv`、`answer.md` |
+| (b) 该主张在 B 的 `events.jsonl` 中对应一个实际分析动作，且 B 答复引用的某个 `rule_id` 的 `required_check` 与该动作对应 | `events.jsonl`、`rule_coverage_record.md` |
+| (c) 两份 B 都没有 A 所没有的 `MISMATCH` 或过强结论（rubric 过强清单） | `claims_check.csv` |
+| (d) 两份 B 方向一致：都满足 (a)(c)，或一份满足 (a)(c) 且另一份没有新增错误 | 同上 |
+| (e) `HSP90_Q01_VERIFIED_REPORT_ZH.md` 第 7 节的人工介入清单里，没有改动"结论及条件""证据位置"两节内容的介入 | 报告第 7 节 |
+| (f) 冻结文件 `selector_branch == OK`，且 §5 的运行器修改分支未触发 | 冻结文件、`results.json` |
+
+任一不满足：按定义归入第 1、3、4、5 行；分不清记 `UNCLASSIFIED`。这些全部 `proceed: false`：交报告，停，等 PM 重新打计划。这条规则只决定 Codex 是否不问人继续；它不是科学结论，报告仍完整呈现五行的证据。
 
 ## 9. 停放项与后续条件（不在本轮）
 
 - 收敛题：输入在 `WS/autoresearch/tasks/dynamics_atlas_hsp90_coverage_stability_v0_20260730/outputs/`（`prefix_horizon_routes.tsv`、`trajectory_anchor_proximity.tsv`；v2 写错了任务目录）；若进入，须允许"某量在前缀窗口内变化小"与"不足以估计平衡比例"两结论并存；CPMG 交换态与 MD 几何类别的对应不自动成立。
 - 覆盖题：现有 `landscape_projection.tsv` 只有投影，无坐标矩阵与变换（B1 `PROJECTION_ONLY`）；要做需先确认坐标与对齐方式在本机，对已有轨迹做后处理不算新 MD。
-- 第二体系（ADK / DHFR）：只在 PM 按 §8 决定后开始（Soojung 8/24："根据反馈决定下一案例是 DHFR 还是 ADK；不同时做两者"，`WS/autoresearch/tasks/dynamics_atlas_soojung_meeting_transcript_prototype_20260824/outputs/03_FIXED_RESEARCH_PLAN_AND_PROTOTYPE_BUILD_ZH.md` 第 124 行）；选择时须写明两类资料的构建体与条件、具体可比性质、现有方法能给出哪项有用答案；"方法最多新增一个定义"只是工程成本上限。第三体系不承诺。
+- 第二体系（ADK / DHFR）：只在 §8A 判为第 2 行后按 §14 开始，不并行（Soojung 8/24："根据反馈决定下一案例是 DHFR 还是 ADK；不同时做两者"，`WS/autoresearch/tasks/dynamics_atlas_soojung_meeting_transcript_prototype_20260824/outputs/03_FIXED_RESEARCH_PLAN_AND_PROTOTYPE_BUILD_ZH.md` 第 124 行）；选择时须写明两类资料的构建体与条件、具体可比性质、现有方法能给出哪项有用答案；"方法最多新增一个定义"只是工程成本上限。第三体系只按 §14.4 的条件进入。
 - B4 元数据起草、V2a 旧记录汇总、从元数据推公开事实、通用评分模板、通用文献比对、`drift_check.py`：不做。
 
 ## 10. 预算（执行记录，不是硬性科学标准）
@@ -369,6 +390,55 @@ Pro 结论：CHANGES_REQUESTED_BOUNDED，主要处置已到位，改五处局部
 
 ## 13. 给 Codex 的一句话
 
-采用 v2 的一题四答复范围，按本版补齐任务路径与旧依赖、数据字段说明、输入隔离、全文核对和混合结果处理；跳过 B4，不扩框架。负责人授权 1–5 落实、A1 初始化与 A0 预检通过后直接执行；七个工作日内交科学结果或具体失败原因，不追加同题运行来追求通过，也不等待下一轮 Pro 批准。
+采用 v2 的一题四答复范围，按本版补齐任务路径与旧依赖、数据字段说明、输入隔离、全文核对和混合结果处理；跳过 B4，不扩框架。负责人授权 1–9 落实、A1 初始化与 A0 预检通过后直接执行；七个工作日内交 HSP90 科学结果或具体失败原因，不追加同题运行来追求通过，也不等待下一轮 Pro 批准。首轮结束按 §8A 判定：判 2 就按 §14 进第二体系，否则停下交报告。
 
 本版已合并 Pro 对 v3 的五项局部修正，不扩大研究范围：任务初始化先于预检结果落盘；规则正文分组但保留对象与检查配对；来源差异不强行解释为已解决；字段定义不混入关键汇总答案；实际运行与交付数量服从冻结的正常或 A-only 分支。KEEP NOW：现有工具循环、共同数据说明、必要隔离、窄规则提示、分层核对。DEFER：C、B4、第二体系、通用框架。AVOID：为凑齐四份答复补造 B、为得到好结果追加同题运行、把审阅通过写成科学验证。
+
+## 14. 一次授权后的条件推进：第二、第三体系（顺序做，不并行）
+
+### 14.0 原则
+- 顺序：HSP90 首轮 → §8A 判定 → （判 2）第二体系只读盘点与选择 → 第二体系四份答复 → §8A 判定 → （判 2 且 §14.4 满足）第三体系 → 三体系记录。任何一次判定不是 2，或任何停止条件触发，就停在那里交报告；PM 重新打计划。
+- 每个体系都是 v3.1 §3–§7 的同一套流程换数据：B0 来源卡、B1 盘点与 `common/`、B2 题面与评分、B3 冻结、C 运行、D 核对、E 两层报告、§8A 判定。运行器代码 `RT` 不为新体系改逻辑，只允许改配置与案例包；需要改逻辑即 §8 第 5 行，停。
+- 三个体系合起来只是三份独立记录，不汇总成"Engine 有效"或准确率；报告里不出现这类措辞。
+
+### 14.1 每周一页状态（不需要 PM 批）
+每个工作周末写 `TASK2/outputs/WEEKLY_STATUS_<YYYYMMDD>.md`：当前体系与阶段、已花费用与下载量、触发过的分支、下周动作、还剩几天到总停止线。PM 看到不满意随时叫停。
+
+### 14.2 第二体系只读盘点与选择（授权 6；1.5 个工作日；$0）
+- 对 ADK 与 DHFR **各**写 `TASK2/outputs/<SYS>_DATA_LANDSCAPE.md`，字段固定：
+
+  | 类 | 查什么 | 每行记录 |
+  |---|---|---|
+  | D0 本机已有 | ADK：`WS/dynamics-atlas-harness-live-agent-common-flows-v1/evidence/paper_blind_exposed_v1/frozen_inputs/adk/{1AKE,4AKE}_chain_A_ca.npy`、`public/adk_public_packet_v1.json`、`sealed_references/adk_development_reference_draft_v1.json`（历史开发资产，含项目结论，进 `hidden/`）；`WS/Dynamics_Atlas_System_Audit_20260710_115646_CST/pilot_adk/`。DHFR：本机核实为无 | `path, what, contains_project_conclusions(bool)` |
+  | D1 结构 | RCSB 元数据：ADK `adenylate kinase Escherichia coli`（1AKE 闭、4AKE 开、1E4V）；DHFR `dihydrofolate reductase Escherichia coli`（候选 1RX2、1RA9、5DFR，需核实） | `pdb_id, ligand, resolution, state_label_from_paper, locator` |
+  | D2 MD 数据集 | ATLAS 按 PDB ID；mdCATH 按 CATH domain；Zenodo 关键词 `adenylate kinase molecular dynamics` / `DHFR molecular dynamics trajectory`。只读条目页 | `dataset, id, n_traj, length, interval, solvent, size, license, per_frame_data(bool)` |
+  | D3 NMR / 其他实验 | BMRB 检索；文献候选（需核实）：ADK Henzler-Wildman 2007、Wolf-Watz 2004；DHFR Boehr 2006（CPMG）、Bhabha 2011；DHFR HDX-MS（Soojung 点名） | `source, observable, construct, condition, raw_data_available(bool), locator` |
+  | D4 比较论文 | 至少一篇同时用两类资料、对同一构建体/条件给出可比较性质的论文 | `paper, property, resource_types, construct_match(bool), locator` |
+
+- **选择规则（写死，Codex 不另判）：** 一个体系"合格"须同时满足：
+  (a) D4 里有一篇论文对同一构建体与条件定义了一个具体可比较的性质，或明确报告了两类资料的差异；
+  (b) D2 或 D3 里至少一个数据集可直接下载（≤ 2 GB）、无需新模拟、含逐帧或逐残基数据（不只是汇总图）；
+  (c) 用该论文方法节里已有的分析就能回答（(a) 的性质），不需要新的分析范式；"所需 method 最多新增一个定义"只作工程成本上限。
+  两个都合格 → 取 D0 资产多的（现状是 ADK）；只一个合格 → 那个；都不合格 → `second_system_decision.json` 记 `NEITHER_QUALIFIES`，停，交报告。
+- 输出：`second_system_decision.json`（每条判据的取值与 locator）；`<SYS>_QUESTION_DRAFT.md`：题面必须是论文自己陈述的一个可比较性质（作者报告，带 locator），按 Q01 的写法"检查并综合已有资料"，不是新假说；同时写下"公开数据能回答什么 / 不能回答什么"两段，作为该体系 rubric 的第 1 条。
+- 本步不下载数据文件（条目页与 JSON 元数据 ≤ 50 MB 总量），不调模型。
+
+### 14.3 第二体系执行（授权 7；≤ 7 个工作日；≤ $0.20；下载 ≤ 2 GB）
+- 任务：`TASK3 = WS/autoresearch/tasks/dynamics_atlas_<sys>_second_round_v1_<date>`，A1 同款初始化与回执验证；`TASK3/cases/<SYS>_Q01/{common,arm_B,hidden}` 同 v3.1 §2。
+- 下载：只从授权 7 列出的来源；每个文件记 `url, sha256, size, license` 到 `TASK3/inputs/DOWNLOAD_MANIFEST.json`；超 2 GB 或来源不在列表 → 停。
+- B0：来源卡分"论文声明 / 本轮输入已核对"两层，同 v3.1 B0；方法若不在 method scope（如 `STATIC_ENDPOINT_STRUCTURES`、`HDX_MS`）→ 同 A5 方式走副本开发 proposal，最多 1 个；需要 2 个 → §8 第 5 行，停。
+- B1：`FIELD_DEFINITIONS.md` 只写字段判据，不放汇总结果与答题提示；历史开发资产（D0 中 `contains_project_conclusions=true` 的）进 `hidden/`。
+- B2：题面用 `<SYS>_QUESTION_DRAFT.md`；rubric 从公开问题 + 数据 + 论文写，独立于选择器；`literature_claims.json` 从 D4 论文手抽 6–10 条。
+- B3、C、D、E：同 v3.1。预处理脚本只允许"论文方法节已有的既定分析"（距离、RMSD、接触、逐残基比较等，numpy/pandas 级），且每个脚本 ≤ 1 个；需要更多 → §8 第 5 行，停。
+- 结束：§8A 判定，写 `TASK3/outputs/round_decision.json`。
+
+### 14.4 第三体系（授权 8）
+- 进入条件（同时满足）：第二体系 §8A 判 2；第二体系的复用成本小，定义为：`RT` 代码零逻辑改动（只有配置与案例包）、方法开发 proposal ≤ 1 个、案例包（B0–B3）在 ≤ 2 个工作日内建成。任一不满足 → 停，交报告，不进第三体系。
+- 边界同 §14.3。结束后无论结果都停：写三体系记录 `THREE_SYSTEMS_RECORD_ZH.md`（三份 §7 报告的索引 + 每个体系"规则提示帮助 / 无作用 / 有害 / 未运行 B"的一行 + 复用成本一行），不做汇总结论。
+
+### 14.5 总停止线（授权 9）
+- 自开工起 ≤ 21 个工作日；模型费用总计 ≤ $0.60；下载总计 ≤ 4 GB。任一到线 → 停，交现有报告。
+- 任一任务出现 `UNKNOWN_CHARGE.json` → 全部停。
+- 任一失败账本（§12）两次修补后仍未解决 → 该体系停，交报告，不进下一体系。
+- PM 任何时候一句"停"即停；已跑的结果全部保留。
+
