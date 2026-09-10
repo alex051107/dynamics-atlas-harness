@@ -6,7 +6,7 @@
 
 - **体系与四态模型。** 野生型 T4 溶菌酶（164 残基）作为基准，因为它有 smFRET 验证过的瞬态状态、成熟的集体变量和大量 PDB 结构。四态由两个物理可解释的集体变量定义：d1（Ser44–Ser?/Glu22–Gln141 一类的 Cα 距离，d1 < 2.5 nm 为闭、> 2.5 nm 为开）和 Phe4 的"锁定坐标" p（p > 0 溶剂暴露，p < 0 埋入疏水腔），组合成 exposed/open、exposed/closed、buried/open、buried/closed。
 - **三类方法比较。** 生成式 AI（AF-cluster、AlphaFold2 MSA 子采样、ConforFold、AlphaFlow、ESMFlow、ConfRover、BioEmu）；作者提出的 AMS（AI 加速模拟：把多种生成式集合合并、k-center 聚类取 100 个中心做种子，各跑 200 ns 无偏 MD，第二轮再从物理精修的集合出发，两轮合建 MSM，用 MSM 权重投影到集体变量上）；物理增强采样 EMD（元动力学播种的无偏 MD，作为参照）。
-- **主要结果。** 大多数生成式方法只采到主态 exposed/open；AF-cluster 覆盖明显更广。AMS 采到了全部四态，MSM 权重下的占比与 EMD 相近：exposed/open 38.3% vs 39.1%，buried/open 58.7% vs 54.0%，buried/closed 2.3% vs 2.9%；exposed/closed 明显偏低（0.7% vs 3.9%）。去掉 AF-cluster 再跑 AMS 就采不到闭态（消融）。从晶体结构起的同长度无偏 MD 采不到闭态。AMS 的 MSM 权重 smFRET 效率分布与实验 smFRET 对比（SI 图 S1）显示两个状态都被采到；AMS 第一轮就得到连通的转移矩阵，而 EMD 的转移矩阵存在不连通。
+- **主要结果。** 大多数生成式方法只采到主态 exposed/open；AF-cluster 覆盖明显更广。AMS 采到了全部四态，MSM 权重下的占比与 EMD 相近：exposed/open 38.3% vs 39.1%，buried/open 58.7% vs 54.0%，buried/closed 2.3% vs 2.9%；exposed/closed 明显偏低（0.7% vs 3.9%）。去掉 AF-cluster 再跑 AMS，闭合区域几乎没有覆盖（主文图 5：Buried/Closed 约 0.04%，Exposed/Closed 0.00%），不是绝对为零（消融）。从晶体结构起的同长度无偏 MD 采不到闭态。AMS 的 MSM 权重 smFRET 效率分布与实验 smFRET 对比（SI 图 S1）显示两个状态都被采到；AMS 第一轮就得到连通的转移矩阵，而 EMD 的转移矩阵存在不连通。
 - **作者结论。** 生成式模型在当前形式下大多不能采到瞬态闭态；把它们当种子而不是终产物，加两轮无偏 MD，就能在不预设目标态、不加偏置的情况下得到与 EMD 定量相当的占比；T4L 四态分类可作为社区基准的可迁移打分方案。
 
 ## 评价边界（读结果时要分开的几件事）
