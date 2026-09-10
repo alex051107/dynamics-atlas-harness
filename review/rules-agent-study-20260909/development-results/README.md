@@ -55,3 +55,7 @@
 - [REVIEW_HSP90_ROUND1_LOCAL_ZH.md](REVIEW_HSP90_ROUND1_LOCAL_ZH.md)：对 PR #27 `3ba975e` 的独立审查。用冻结源表重算全部计数（一致）；row 3 动作保留、理由改；补出 5/5/10 分区表；核出 §15 汇报包缺失、REPLAY/HTML/STATUS 未更新、论文关系表为模板、凭证启动例外；确认作者 NOE 违例序列在本机。
 - [HSP90_ROUND2_PLAN_V4_ZH.md](HSP90_ROUND2_PLAN_V4_ZH.md)：接首轮之后的执行计划。A0 进度报告 → A 首轮收口 → B 派生方向 vs 原生 NOE 对照（本机数据，预注册规则）→ C 规则渲染层窄修复 → D 第二体系普通 Agent。一次授权 1–7，15 个工作日 / $0.30 / 2 GB。
 - [REPORT_WRITING_GUIDE_ZH.md](REPORT_WRITING_GUIDE_ZH.md)：怎样写逻辑严密、别人看得懂的报告：一句主线、五拍结构、固定骨架、段落写法、边界句、deck 写法、冷读检查、项目时间线骨架、节奏规则。
+
+## 2026-09-10：三体系收官令
+
+- [THREE_SYSTEMS_COMPLETION_ORDER_ZH.md](THREE_SYSTEMS_COMPLETION_ORDER_ZH.md)：现状表（HSP90 两轮完成、DHFR 一轮完成未入库、ADK 只有盘点）、偏离审查、授权 8–10、DHFR 入库 → ADK 建包（冻结前物理硬门）→ 两次普通 Agent → 三体系总记录 + 工作证据表与红旗清单。
