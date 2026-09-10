@@ -64,3 +64,4 @@
 - [ONE_SHOT_ORDER_ZH.md](ONE_SHOT_ORDER_ZH.md)：一口气跑完的总令：DHFR 入库 → 第二轮增量测试 → ADK 收官 → 第三轮 → 总报告 + 一页 RULES_TABLE_VERDICT（第一行三选一）。授权 8–14，11 个工作日，≤ $1.55。
 - [FORM_QUESTION_ANSWERED_ZH.md](FORM_QUESTION_ANSWERED_ZH.md)：9 月 8 日报告与 Pro 三轮分析对"该不该做 Rules Table"的结论汇总，与 9 月 9–10 日实际工作的对照；结论：形式已收敛，要改的是测试设计（D/P/R，R−P 才是问题）。
 - 增量测试与一口气总令改为 v2：三组 D（整理资料）/ P（七条手写协议）/ R（注册表规则），不设 Harness 组；判定改用 Pro 的质量/效率两条路径。
+- [RULES_TABLE_ROLE_DESIGN_ZH.md](RULES_TABLE_ROLE_DESIGN_ZH.md)：Rules Table 在系统里该放在哪的四层设计（框题 / 准入 / 分析 / 结论），33 条按层归类，六个已发生错误的回溯审计表，每层最小实现，对 D/P/R 测试的含义。
