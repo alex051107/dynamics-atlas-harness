@@ -1,0 +1,52 @@
+{
+  "open": {
+    "worst_minimum_image_pair": {
+      "frame": 2125,
+      "time_ps": 425000.0,
+      "domain": "LID",
+      "residue1": 144,
+      "residue2": 189,
+      "distance_A": 69.80277860007998,
+      "minimum_image_delta_A": [
+        22.000001907348633,
+        48.85447846594238,
+        44.7400016784668
+      ],
+      "box_A": [
+        98.044479,
+        98.044479,
+        98.044479
+      ],
+      "half_min_box_A": 49.0222395,
+      "gromacs_atom1": 2230,
+      "gromacs_atom2": 2944
+    },
+    "breach_frame_domain_count": 2756,
+    "interpretation": "Euclidean vector length can exceed half box while each minimum-image component stays within half its cell edge; half-box radial bound is not a universal validity test."
+  },
+  "closed": {
+    "worst_minimum_image_pair": {
+      "frame": 903,
+      "time_ps": 180600.0,
+      "domain": "LID",
+      "residue1": 149,
+      "residue2": 188,
+      "distance_A": 62.175790707139264,
+      "minimum_image_delta_A": [
+        46.93000030517578,
+        -39.54999923706055,
+        9.959999084472656
+      ],
+      "box_A": [
+        98.133766,
+        98.133766,
+        98.133766
+      ],
+      "half_min_box_A": 49.066883,
+      "gromacs_atom1": 2299,
+      "gromacs_atom2": 2934
+    },
+    "breach_frame_domain_count": 1694,
+    "interpretation": "Euclidean vector length can exceed half box while each minimum-image component stays within half its cell edge; half-box radial bound is not a universal validity test."
+  }
+}

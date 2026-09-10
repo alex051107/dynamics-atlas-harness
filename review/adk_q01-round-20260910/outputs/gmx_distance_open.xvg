@@ -1,0 +1,18 @@
+# This file was created Thu Sep 10 07:05:45 2026
+# Created by:
+#                :-) GROMACS - gmx distance, 2025.1-Homebrew (-:
+# 
+# Executable:   /opt/homebrew/bin/../Cellar/gromacs/2025.1/bin/gmx
+# Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2025.1
+# Working dir:  /Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data
+# Command line:
+#   gmx distance -s autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state.gro -f autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state_traj.xtc -b 425000.0 -e 425000.0 -select 'atomnr 2230 2944' -oall autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_distance_open.xvg -oxyz autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_components_open.xvg
+# gmx distance is part of G R O M A C S:
+#
+# Good gRace! Old Maple Actually Chews Slate
+#
+@    title "Distance"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Distance (nm)"
+@TYPE xy
+ 425000.000    6.980

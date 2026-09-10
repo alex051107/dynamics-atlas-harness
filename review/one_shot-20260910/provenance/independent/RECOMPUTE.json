@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "hsp90_summary": {
+    "0.5": {
+      "closed": {
+        "NA": 10,
+        "relative_only": 10
+      },
+      "open": {
+        "partial": 8,
+        "agreement": 7,
+        "relative_only": 5
+      }
+    },
+    "1.0": {
+      "closed": {
+        "NA": 10,
+        "relative_only": 9,
+        "partial": 1
+      },
+      "open": {
+        "agreement": 18,
+        "partial": 1,
+        "relative_only": 1
+      }
+    },
+    "2.0": {
+      "closed": {
+        "NA": 10,
+        "agreement": 3,
+        "relative_only": 5,
+        "partial": 2
+      },
+      "open": {
+        "agreement": 19,
+        "relative_only": 1
+      }
+    }
+  },
+  "open_seed_p95_A": 1.32,
+  "closed_entries_start_ns": {
+    "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay": 188,
+    "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay": 690
+  },
+  "dhfr_rows": 228,
+  "method": "Fresh independent numpy calculation from frozen source tables; no model outputs consumed"
+}

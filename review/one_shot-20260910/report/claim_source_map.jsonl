@@ -1,0 +1,9 @@
+{"claim_id": "C01", "claim": "Rules scientific-position agreement", "source": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_strategy/reply.md", "status": "observed"}
+{"claim_id": "C02", "claim": "seven-rule protocol exists", "source": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/runtime/ACTIVE_RULES_ZH.md", "status": "observed"}
+{"claim_id": "C03", "claim": "eight prior answers, settled cost", "source": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2/outputs/private_run_manifest.json", "status": "observed"}
+{"claim_id": "C04", "claim": "HSP90 and DHFR recompute PASS", "source": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2/outputs/independent/RECOMPUTE.json", "status": "observed"}
+{"claim_id": "C05", "claim": "ADK four downloads verified", "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/DOWNLOAD_MANIFEST.json", "status": "observed"}
+{"claim_id": "C06", "claim": "ADK physical gate FAIL", "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/PREFREEZE_PHYSICAL_CHECK.json", "status": "observed"}
+{"claim_id": "C07", "claim": "minimum-image counterexamples", "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/HALF_BOX_GATE_DIAGNOSIS.json", "status": "observed"}
+{"claim_id": "C08", "claim": "GROMACS confirms counterexamples", "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/GROMACS_GATE_CROSSCHECK.json", "status": "observed"}
+{"claim_id": "C09", "claim": "VMD physical-time repair", "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/TIME_INTAKE_REPAIR.md", "status": "observed"}

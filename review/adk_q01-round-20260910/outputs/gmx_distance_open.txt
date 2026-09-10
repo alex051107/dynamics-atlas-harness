@@ -1,0 +1,30 @@
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary. Note, that this functionality may
+         be removed in a future GROMACS version. Please, consider
+         using another file format for your input.
+
+atomnr 2230 2944:
+  Number of samples:  1
+  Average distance:   6.98028  nm
+  Standard deviation: 0.00000  nm
+                :-) GROMACS - gmx distance, 2025.1-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2025.1/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2025.1
+Working dir:  /Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data
+Command line:
+  gmx distance -s autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state.gro -f autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state_traj.xtc -b 425000.0 -e 425000.0 -select 'atomnr 2230 2944' -oall autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_distance_open.xvg -oxyz autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_components_open.xvg
+
+
+Reading frame       0 time    0.000   
+Reading frame       0 time 425000.000   
+Last frame          0 time 425000.000   
+Analyzed 1 frames, last time 425200.000
+
+GROMACS reminds you: "Jesus Built My Hotrod" (Ministry)
+

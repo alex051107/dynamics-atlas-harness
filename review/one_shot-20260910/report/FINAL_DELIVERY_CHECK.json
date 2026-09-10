@@ -1,0 +1,12 @@
+{
+  "time": "2026-09-10T11:15:20.891346+00:00",
+  "report_bundle": "PASS",
+  "deck_pages": 12,
+  "rendered_pages_reviewed": 12,
+  "visual_findings": "No clipping or missing glyphs observed at overview; clear text and source-bounded notes",
+  "source_claims": 9,
+  "science_status": "No new DPR effect; ADK gate retained FAIL",
+  "unknown_charge": false,
+  "planned_checks": "one report structure, one deck render/view, one primary-link check; no duplicate runtime suite",
+  "missing_primary_links": []
+}

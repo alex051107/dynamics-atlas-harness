@@ -1,0 +1,89 @@
+{
+  "status": "FAIL",
+  "time": "2026-09-10T11:03:47.969592+00:00",
+  "systems": {
+    "open": {
+      "n_atoms": 95175,
+      "XTC_matches_GRO_atom_count": true,
+      "n_CA": 214,
+      "residues_1_to_214": true,
+      "frame_time_checked": true,
+      "box_min_A": 97.81765,
+      "orthorhombic": true,
+      "CA_neighbor_distance_range_A": [
+        2.7825352542980455,
+        4.107859968317095
+      ],
+      "max_contributing_residue_pair_A": 71.17227073908275,
+      "half_box_breach_frame_domain_count": 2758,
+      "unit_conversion": "GRO nm / XTC nm -> VMD A; XTC ps -> ns",
+      "composition_atom_counts": {
+        "MET": 104,
+        "ARG": 312,
+        "ILE": 266,
+        "LEU": 304,
+        "GLY": 141,
+        "ALA": 190,
+        "PRO": 140,
+        "LYS": 396,
+        "THR": 154,
+        "GLN": 136,
+        "PHE": 100,
+        "GLU": 270,
+        "TYR": 147,
+        "SER": 55,
+        "ASP": 204,
+        "VAL": 304,
+        "CYS": 11,
+        "ASN": 56,
+        "HSD": 51,
+        "TIP3": 91830,
+        "POT": 4
+      },
+      "status": "FAIL"
+    },
+    "closed": {
+      "n_atoms": 95196,
+      "XTC_matches_GRO_atom_count": true,
+      "n_CA": 214,
+      "residues_1_to_214": true,
+      "frame_time_checked": true,
+      "box_min_A": 97.861877,
+      "orthorhombic": true,
+      "CA_neighbor_distance_range_A": [
+        2.865673400141194,
+        4.087760440478993
+      ],
+      "max_contributing_residue_pair_A": 62.175790707139264,
+      "half_box_breach_frame_domain_count": 1694,
+      "unit_conversion": "GRO nm / XTC nm -> VMD A; XTC ps -> ns",
+      "composition_atom_counts": {
+        "MET": 104,
+        "ARG": 312,
+        "ILE": 266,
+        "LEU": 304,
+        "GLY": 141,
+        "ALA": 190,
+        "PRO": 140,
+        "LYS": 396,
+        "THR": 154,
+        "GLN": 136,
+        "PHE": 100,
+        "GLU": 270,
+        "TYR": 147,
+        "SER": 55,
+        "ASP": 204,
+        "VAL": 304,
+        "CYS": 11,
+        "ASN": 56,
+        "HSD": 51,
+        "TIP3": 91851,
+        "POT": 4
+      },
+      "status": "FAIL"
+    }
+  },
+  "source_scope": "Single-source ligand-free MD. Article experiment uses AMP and released ATP; experiment is context, not condition-matched validation.",
+  "domain_definition": "Predetermined unambiguous interior subsets; project scalar summary, not exact author RMSD or fitted scattering ensemble",
+  "gate": "All contributing pair distances <=half minimum cell; all CA neighbors <5A"
+}
