@@ -7,7 +7,16 @@
 - 此后实际发生：9/10 HSP90 一题四答复（A 普通 ×2、B 注册表规则提示 ×2）判 row 3 暂停扩展；v4 收口、原生 NOE 对照（1 Å 容差下 10 条开放方向轨迹中 9 条仍同时偏离两套 NOE 参照）、渲染修复；DHFR 一轮普通 Agent ×2（冻结后才发现坐标周期性缺陷，两份 Agent 均未识别）；ADK 只有盘点。费用累计 $0.108。
 - 新提出的设计（附件 1）：33 条规则按性质拆成四层，框题（6 条，模板 + 人）、准入（10 条，冻结前代码检查）、分析（11 条，按方法族检索的短方法卡，唯一以文字给 Agent 的一层）、结论（6 条，提交后确定性检查一次反馈 + 报告措辞）。回溯本项目六个已发生错误：零个能靠提示文字防住，五个能靠准入或结论层代码防住，两个要靠框题层。
 - 验证实验（附件 2）：E0 回溯审计（$0）；E1 准入检查器 + 六类植入缺陷 + Agent 拿卡/不拿卡；E2 提交后上限检查反馈 D vs D+检查；E3 按族方法卡 vs 整段规则 vs 七条手写协议；E4 拆题 vs 原题。每层跑前冻结有效/无效标准，盲评，72 次运行 ≤ $1.85，不限天数。
-- 附件：1 `RULES_TABLE_ROLE_DESIGN_ZH.md`；2 `FOUR_LAYER_VALIDATION_PLAN_ZH.md`（v2，不限天数）；3 `FORM_QUESTION_ANSWERED_ZH.md`（你三份分析的结论汇总与实际工作对照）；4 `DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md`（按 G1–G4 的现状）；5 `BLOG_SUMMARY_ZH.md`（博文原文摘要及对表形式的推论）；6 `PAPER_SUMMARY_T4L_JCIM_ZH.md`（T4L 论文摘要与评价边界）；7 博文原文 `01_are-we-capturing-the-ensemble.md`（Li, Thomasen, Cossio, RS Station 2026-08-31，https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html ）；8 论文原文 `03_acs.jcim.6c02044.pdf` 与 SI `05_ci6c02044_si_001.pdf`（Bhakat, JCIM 2026, DOI 10.1021/acs.jcim.6c02044）。附件 5、6 是我的摘要，附件 7、8 是原文；有出入以原文为准。
+- 材料（GitHub，提交 `c2fefbc`，PR #26 所在分支 `review/rules-agent-study-plan-20260909`）：
+  1 四层角色设计 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/01_RULES_TABLE_ROLE_DESIGN_ZH.md
+  2 四层验证计划 v2（不限天数） https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/02_FOUR_LAYER_VALIDATION_PLAN_ZH.md
+  3 你三份分析的结论汇总与实际工作对照 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/03_FORM_QUESTION_ANSWERED_ZH.md
+  4 按 G1–G4 的现状计划表 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/04_DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md
+  5 博文摘要 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/05_BLOG_SUMMARY_ZH.md
+  6 T4L 论文摘要与评价边界 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/06_PAPER_SUMMARY_T4L_JCIM_ZH.md
+  7 博文原文 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/development-results/PRO_FORM_REVIEW_PACKET_20260910/07_are-we-capturing-the-ensemble.md （Li, Thomasen, Cossio, RS Station 2026-08-31，https://rs-station.github.io/2026/08/31/are-we-capturing-the-ensemble.html ）
+  8 论文原文 PDF https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/references/03_acs.jcim.6c02044.pdf 与 SI https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/references/05_ci6c02044_si_001.pdf （Bhakat, JCIM 2026, DOI 10.1021/acs.jcim.6c02044；文本版 https://github.com/alex051107/dynamics-atlas-harness/blob/c2fefbc3afa93f9d4204b2ebffb63b987cfdd21b/review/rules-agent-study-20260909/references/04_acs.jcim.6c02044.md ）
+  你此前三份分析的原文在本机，未上传；以你自己的记录为准。5、6 是我的摘要，7、8 是原文；有出入以原文为准。若连接器读不到某个文件，写明哪些结论只依据本消息，不要把未见文件说成已审阅。
 
 ### Claims to verify
 C1. 四层拆分与你 9 月 8 日"规则围绕待区分的科学差异组织、约束推断关系"的建议一致：框题层对应"要区分什么"，准入层对应"对象与条件、处理记录"，分析层对应"前向模型与平均律"，结论层对应"这份数据能说到哪"。
@@ -30,14 +39,14 @@ S4. 对负责人"我不知道这个东西要做成什么形式"的回答，应�
 
 ### Output contract
 C1–C11 每条恰好一个标签：
-- VERIFIED <附件与节号>
-- WRONG <替换文字：可直接粘贴进附件对应节的中文，Codex 拿到不用再问人>
+- VERIFIED <材料编号与节号>
+- WRONG <替换文字：可直接粘贴进材料对应节的中文，Codex 拿到不用再问人>
 - DATA_INSUFFICIENT <缺什么>
 S1–S4 各给一个选项加一句理由。
 最后用一段话回答负责人的两个问题：现在该做什么、Rules Table 该是什么形式；每句都要能对应到附件的节号或你之前审查的节号。
-标签之间不加议论。不用置信度词。不复述附件。
+标签之间不加议论。不用置信度词。不复述材料。
 
 ### Stop conditions
 - C1–C11、S1–S4 与最后一段全部作答后停止。总长 ≤ 1800 字。
 - 不要求恢复三体系并行、24 份比较、五组六测试组的大实验或 Rules + Agent 组合组；不把再一轮审批设为开工条件。
-- 引用博文给节名，引用你此前审查给节号，引用附件给节号；无法核实的写 DATA_INSUFFICIENT，不推断。
+- 引用博文给节名，引用你此前审查给节号，引用材料给编号与节号；无法核实的写 DATA_INSUFFICIENT，不推断。
