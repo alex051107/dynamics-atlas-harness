@@ -66,3 +66,4 @@
 - 增量测试与一口气总令改为 v2：三组 D（整理资料）/ P（七条手写协议）/ R（注册表规则），不设 Harness 组；判定改用 Pro 的质量/效率两条路径。
 - [RULES_TABLE_ROLE_DESIGN_ZH.md](RULES_TABLE_ROLE_DESIGN_ZH.md)：Rules Table 在系统里该放在哪的四层设计（框题 / 准入 / 分析 / 结论），33 条按层归类，六个已发生错误的回溯审计表，每层最小实现，对 D/P/R 测试的含义。
 - [FOUR_LAYER_VALIDATION_PLAN_ZH.md](FOUR_LAYER_VALIDATION_PLAN_ZH.md)：四层设计的验证实验：E0 回溯审计（$0）、E1 准入检查器 + 植入缺陷、E2 提交后上限检查反馈、E3 按族方法卡 vs 整段规则 vs 协议、E4 拆题 vs 原题；每层跑前冻结有效/无效标准；72 次运行、≤ $1.85、14 个工作日。替代一口气总令的 D/P/R 两轮。
+- [PRO_FORM_REVIEW_PACKET_20260910/](PRO_FORM_REVIEW_PACKET_20260910/)：给 Pro 的"形式与下一步"审查包：00 提示（C1–C11、S1–S4）、01 四层设计、02 四层验证计划 v2（不限天数）、03 形式问题汇总、04 计划表、05 博文摘要、06 T4L 论文摘要、07 博文原文；论文 PDF 与 SI 在 references/03、05。
