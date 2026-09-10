@@ -1,7 +1,9 @@
-# HSP90 首轮与条件推进：一个科学问题、四份答复、一次授权（v3.3，交付版）
+# HSP90 首轮与条件推进：一个科学问题、四份答复、一次授权（v3.4，交付版）
 
-Dynamics Atlas · 2026-09-10 · v3.3 · **供 Codex 逐步执行** · PM 一次授权 1–9 后 Codex 自行推进，任何停止条件触发即停并交报告
+Dynamics Atlas · 2026-09-10 · v3.4 · **供 Codex 逐步执行** · PM 一次授权 1–9 后 Codex 自行推进，任何停止条件触发即停并交报告
 
+> v3.4 = v3.3 + §15 汇报协议：每轮结束、每次停止、每周末，Codex 按 `POST_RUN_REPORTING_PROTOCOL_ZH.md` 用本机指定的 skill 自动出 PM 简报 HTML、深度读本 HTML/PDF 和组会 slides PPTX。汇报计 1 个工作日，HSP90 首轮上限由 7 天改为 8 天；其余数字不变。
+>
 > v3.3 = v3.2 + Pro 对 v3.2 新增部分的七处替换文字（§8A 总则与取值规则、(e) 替换、§14.2 准入复核、题目冻结、§14.3 预处理限制改为限内容不限文件数、§14.1/14.4/14.5 期限与累计核对）。处置见 §11.4。Pro 结论：改这几条后执行；§8A 由 Codex 判并记 DEVELOPER_JUDGMENT，PM 可叫停。
 >
 > v3.2 = v3.1 + §14：PM 一次性授权后，HSP90 首轮结束时由 Codex 按 §8A 的自动判定规则决定是否进入第二体系（ADK 或 DHFR，只读盘点后按写死的规则选一个），第二体系也满足同一规则才进第三体系。三个体系**顺序做，不并行**（Soojung 8/24：不同时做两者）。每一步的停止条件都是自动的，停下来就交报告，由 PM 重新打计划。
@@ -20,7 +22,7 @@ Dynamics Atlas · 2026-09-10 · v3.3 · **供 Codex 逐步执行** · PM 一次�
 
 **明确不做：** C 组；B4 元数据起草（v2 的可选项，本版跳过）；并行做第二、第三体系（只按 §14 顺序、条件推进）；PCA 覆盖题；通用评分/比对脚本；从模型元数据推公开事实；V2a 旧记录汇总；换模型、充值、新 MD、改 33 条注册表、新题库；修改历史结果文件。
 
-**到期规则：** Codex 开工后 **7 个工作日**内交出 §7 的报告，或交出失败原因。框架未完善不是续期理由。首轮必须能交出的是：一份 HSP90 有限时间行为的科学回答、四份原始答复或未完成记录、以及额外规则提示帮助、损害或没有明显作用的具体证据；不是一套标记齐全的目录。
+**到期规则：** Codex 开工后 **8 个工作日**内交出 §7 的报告和 §15 的汇报包，或交出失败原因。框架未完善不是续期理由。首轮必须能交出的是：一份 HSP90 有限时间行为的科学回答、四份原始答复或未完成记录、以及额外规则提示帮助、损害或没有明显作用的具体证据；不是一套标记齐全的目录。
 
 ## 1. PM 一次性授权 **[开工前一次签]**
 
@@ -32,11 +34,11 @@ Dynamics Atlas · 2026-09-10 · v3.3 · **供 Codex 逐步执行** · PM 一次�
 | 4 | 允许把 `MD_TRAJECTORY` 方法档作为开发 proposal 经**副本** method scope 送入选择器；原文件不改；标签 `DEVELOPMENT_PROPOSAL_NOT_HUMAN_REVIEWED` |
 | 5 | 允许为本轮写一份新的 `TASK2/runtime/readiness.json`（`approved_for_development: true`，注明本轮授权日期与费用上限），**写入时机在 A1 初始化与 A0 共同运行环境检查都满足之后**，并附检查结果。旧 `TASK0/runtime/readiness.json` 保持 `false`，不改 |
 | 6 | HSP90 首轮按 §8A 判定为"进入下一体系"时，允许对 ADK 与 DHFR 做**只读盘点**（§14.2）：只查元数据页与本机已有资产，本步下载总量 ≤ 50 MB，不分析、不调模型 |
-| 7 | 第二体系（§14.2 选出的那个）：允许从 PDB / BMRB / Zenodo / ATLAS / mdCATH 只读下载公开数据 ≤ 2 GB（记 sha256、许可证），不跑新模拟；模型费用另计 ≤ $0.20；工作日 ≤ 7；同一分支 commit / push |
+| 7 | 第二体系（§14.2 选出的那个）：允许从 PDB / BMRB / Zenodo / ATLAS / mdCATH 只读下载公开数据 ≤ 2 GB（记 sha256、许可证），不跑新模拟；模型费用另计 ≤ $0.20；工作日 ≤ 8（含 1 天汇报）；同一分支 commit / push |
 | 8 | 第三体系：只在第二体系也按 §8A 判定为"进入下一体系"且 §14.4 的复用成本条件满足时进入，边界同第 7 项 |
 | 9 | §8A 的判定由 Codex 执行并记为 `DEVELOPER_JUDGMENT`，不等 PM 确认；PM 随时可叫停或改判。总停止线（§14.5）：自开工起 ≤ 21 个工作日、模型费用总计 ≤ $0.60、下载总计 ≤ 4 GB；任一体系停止即交报告，不自动进入下一个 |
 
-PM 回复"授权 1–9，按 v3.3 执行"后，Codex 在 `WS/autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl` 追加一条并开工。HSP90 首轮不下载任何外部数据；下载只在第 6–8 项的边界内发生。
+PM 回复"授权 1–9，按 v3.4 执行"后，Codex 在 `WS/autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl` 追加一条并开工。HSP90 首轮不下载任何外部数据；下载只在第 6–8 项的边界内发生。
 
 ## 2. 系统：只补首轮必需的四件事
 
@@ -257,7 +259,7 @@ python3 "$RT/run_batch.py" --freeze "$TASK2/outputs/frozen_hsp90_q01_v3.json" --
 
 验证记录：复现脚本 1 次；其余为人工表格。
 
-## 7. 阶段 E：两层报告（Codex，1 天）
+## 7. 阶段 E：两层报告（Codex，1 天）+ §15 汇报包（1 天）
 
 - `TASK2/outputs/AGENT_RAW/`：`run_order` 中每个实际尝试的 `answer.md` + `draft_*.json` + `receipt.json` 原样（正常分支 4 份，A-only 分支 2 份，外加未完成记录）。
 - `TASK2/outputs/HSP90_Q01_VERIFIED_REPORT_ZH.md`（+ HTML）：
@@ -319,8 +321,8 @@ Pro 审阅 §7 报告；意见按条记 `disposition.json`（`FIX/RECORD/REJECT`
 | B 案例 | 2 | 0 | 2 | 1 | 0 |
 | C 运行 | 0.5 | ≤ $0.15 | 1 | 0 | 0 |
 | D 核对 | 1 | 0 | 1 | 0 | 0 |
-| E 报告 | 1 | 0 | 0 | 0 | 1（Pro） |
-| **合计** | **6.5（上限 7）** | **≤ $0.15（上限 $0.20）** | **8** | **1** | **1** |
+| E 报告 + §15 汇报包 | 2 | 0 | 2（deck 结构校验、渲染 QA） | 0 | 1（Pro） |
+| **合计** | **7.5（上限 8）** | **≤ $0.15（上限 $0.20）** | **10** | **1** | **1** |
 
 七天内完成必要验证即可。一次确有必要的核对不因"只检查一次"被挡；没有信息增益的检查也不为凑表重复。每阶段结束写 `TASK2/state/validation_ledger.jsonl`：计划的检查、实际跑的、跳过的及理由。
 
@@ -426,7 +428,7 @@ Pro 结论：改这几条后执行；S2 选"Codex 判并记 DEVELOPER_JUDGMENT�
 - 三个体系合起来只是三份独立记录，不汇总成"Engine 有效"或准确率；报告里不出现这类措辞。
 
 ### 14.1 每周一页状态（不需要 PM 批）
-每个工作周末写 `TASK2/outputs/WEEKLY_STATUS_<YYYYMMDD>.md`：当前体系与阶段、已花费用与下载量、Codex 与人工耗时、触发过的分支、下周动作、距绝对截止日还剩几天。PM 看到不满意随时叫停。周报不替代 §14.5 的停止条件。
+用 `plain-project-reporting-zh` 写（见 §15），每个工作周末写 `TASK2/outputs/WEEKLY_STATUS_<YYYYMMDD>.md`（+ HTML）：当前体系与阶段、已花费用与下载量、Codex 与人工耗时、触发过的分支、下周动作、距绝对截止日还剩几天。PM 看到不满意随时叫停。周报不替代 §14.5 的停止条件。
 
 ### 14.2 第二体系只读盘点与选择（授权 6；1.5 个工作日；$0）
 - 对 ADK 与 DHFR **各**写 `TASK2/outputs/<SYS>_DATA_LANDSCAPE.md`，字段固定：
@@ -461,11 +463,22 @@ Pro 结论：改这几条后执行；S2 选"Codex 判并记 DEVELOPER_JUDGMENT�
 - 边界同 §14.3。结束后无论结果都停：写三体系记录 `THREE_SYSTEMS_RECORD_ZH.md`（三份 §7 报告的索引 + 每个体系"规则提示帮助 / 无作用 / 有害 / 未运行 B"的一行 + 复用成本一行），不做汇总结论。
 
 ### 14.5 总停止线（授权 9）
-- 自开工起 ≤ 21 个工作日；模型费用总计 ≤ $0.60；下载总计 ≤ 4 GB。任一到线 → 停，交现有报告。
+- 自开工起 ≤ 21 个工作日（含每轮 1 天汇报；HSP90 8 + 第二 8 = 16，第三体系只剩 5 天，装不下就在 §14.4 判"不进"）；模型费用总计 ≤ $0.60；下载总计 ≤ 4 GB。任一到线 → 停，交现有报告。
 - 期限涵盖盘点、准备、核对和修补；开工当天把绝对截止日期写进 `TASK2/outputs/DEADLINE.json`，不因停机、等待或重试重置；另记 Codex 与人工耗时。
 - 每次模型请求和每次下载前核对全局累计与预留（三个任务目录的账本与下载清单合计）；盘点、失败和重试均计入。
 - 需交互登录、额外授权，或环境、隔离、关键数据准入不满足时即停，不绕过。
 - 任一任务出现 `UNKNOWN_CHARGE.json` → 全部停。
 - 任一失败账本（§12）两次修补后仍未解决 → 该体系停，交报告，不进下一体系。
 - PM 任何时候一句"停"即停；已跑的结果全部保留。
+
+## 15. 跑完自动出报告（每轮末、每次停止、每周末）
+
+按同目录 `POST_RUN_REPORTING_PROTOCOL_ZH.md` 执行，要点：
+
+- **顺序：** 先写 `round_decision.json`（§8A），再做汇报；汇报做不完不推迟判定、不阻止下一体系。
+- **权威 skill：** `WS/.agents/skills/atlas-science-report`（scientific-case 路线），先冻结 `claim_source_map.jsonl`；PM 简报与周报用 `~/.codex/skills/plain-project-reporting-zh`；slides 用 `storytelling-narrative` → `academic-pptx` → `academic-ppt`（PptxGenJS，pptxgenjs 在 `~/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules`）；图用 `data-visualization` → `nature-figure(backend=python)` → `matplotlib`；中文最后过 `human-writing`，再用 `humanizer-zh-plus` 的 `scan_ai_prose.py` 诊断一次。**不用** `weekly-report`（别的项目）、`scholar-slides`、`nature-paper2ppt`。
+- **产出（`TASKn/outputs/report/`）：** `REPORT_INDEX.md`、`ROUND_BRIEF_ZH.html`（一页人话）、`DYNAMICS_ATLAS_<CASE>_DEEP_READER_ZH.html/.pdf`、`DYNAMICS_ATLAS_<CASE>_COLLABORATOR_REPORT.pptx` + 源码 + 渲染 PNG + `deck_qa.json`、≤ 4 张图、`ARCHIVE_MANIFEST.md`、`review_report.md`。HTML 用 `TASK0/scripts/render_plan.mjs` 的方式生成（marked + Chromium），slides 渲染用 `/opt/homebrew/bin/soffice`，结构校验用 python-pptx。
+- **停止时：** 只出 `STOP_BRIEF_ZH.html` + 索引。**每周末：** `WEEKLY_STATUS_<日期>.html` 一页。
+- **硬边界：** 汇报只引用已冻结的数字，不补跑分析；"推进"不写成"Rules 有效"，"VERIFIED"不写成"科学正确"；超时先交简报和索引。
+- 完成后把 `report/` 复制到 `HARNESS_LUNA/review/<case>-round-<日期>/` 提交（授权 3），提交前 `grep -rn "/Users/\|sk-or-v1"` 为空。
 

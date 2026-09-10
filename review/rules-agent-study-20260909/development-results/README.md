@@ -44,3 +44,8 @@
 
 - [PRO_REVIEW_OF_PLAN_V3_2_ZH.md](PRO_REVIEW_OF_PLAN_V3_2_ZH.md)：Pro 对 v3.2 新增部分的审查（C1–C6、C8 WRONG 附替换文字；C7、C9 VERIFIED；S1 改后执行；S2 Codex 判、PM 可叫停）。
 - [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：v3.3，§11.4 逐条处置。PM 贴"授权 1–9，按 v3.3 执行"即开工。
+
+## 2026-09-10：v3.4 + 汇报协议
+
+- [POST_RUN_REPORTING_PROTOCOL_ZH.md](POST_RUN_REPORTING_PROTOCOL_ZH.md)：跑完自动出报告的协议。轮末：PM 简报 HTML + 深度读本 HTML/PDF + 组会 slides PPTX + 索引；停止：只出停止简报；周末：一页周报。指定 skill 顺序（atlas-science-report → plain-project-reporting-zh / storytelling-narrative → academic-pptx → academic-ppt / data-visualization → nature-figure → matplotlib / human-writing → humanizer-zh-plus），明确不用 weekly-report、scholar-slides、nature-paper2ppt。
+- [HSP90_FIRST_ROUND_PLAN_V3_ZH.md](HSP90_FIRST_ROUND_PLAN_V3_ZH.md)：v3.4 = v3.3 + §15 汇报协议；每轮加 1 天汇报，HSP90 首轮上限 8 天，总停止线 21 天不变。
