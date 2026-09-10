@@ -1,39 +1,28 @@
 # Dynamics Atlas
 
-**Reproducible analysis of heterogeneous protein-dynamics evidence.**
+**What can simulations and experiments jointly tell us about protein dynamics?**
 
-Dynamics Atlas compares what simulations and experiments support about a protein's conformations and dynamics. The goal is a useful scientific answer with explicit assumptions, traceable calculations and clear limits.
+We aim to produce useful, checkable scientific answers from heterogeneous protein data. Reliable quantities and cross-source comparisons are the scientific goals; reusable workflows and AI assistance are means to those goals.
 
-## For the research group
+## For Soojung and the research group
 
-**Start with the [clean collaborator package](collaborators/README.md).** It contains English scientific results, methods, primary sources and a small offline reproduction environment.
+**[Read the findings and decisions brief](collaborators/README.md).** It explains the original goal, what each stage actually tested, the current results, and four questions on which we need scientific guidance.
 
-| Read | Purpose |
-|---|---|
-| [Scientific results](collaborators/docs/RESULTS.md) | HSP90, DHFR and ADK findings and their interpretation |
-| [Methods](collaborators/docs/METHODS.md) | Observables, statistical units, windows and physical representation |
-| [Reproduce the results](collaborators/docs/REPRODUCE.md) | Fixed Docker environment or dependency-free Python |
-| [Rules Table research](collaborators/docs/RULES.md) | The scientific role of rules and what the pilot established |
-| [Primary sources](collaborators/docs/SOURCES.md) | Papers, deposits and numerical provenance |
+The brief links the [author-claim / project-result comparisons](collaborators/docs/RESULTS.md) and the existing English slides. No installation or code review is needed to understand the discussion.
 
-The tested reproduction route recalculates the main report numbers from supplied analysed tables. It does not generate new MD or rebuild coordinates from raw trajectories. This distinction is explicit in the instructions.
+**Current stage:** the selected-case analyses and the component pilot are complete. Some guidance helped on one case but not another. The pilot did not establish that a rule-centered system is necessary or that more rules would solve the remaining failures. The next scientific milestone and the role of automated rule selection remain decisions, not completed work.
 
-Download the [standalone group package](collaborators/downloads/Dynamics_Atlas_Group_Package_20260910.zip) to read and reproduce the results without navigating the development repository.
+## Optional technical material
 
-## Current scientific findings
+[Methods and boundaries](collaborators/docs/METHODS.md) · [Numerical reproduction](collaborators/docs/REPRODUCE.md) · [Primary sources](collaborators/docs/SOURCES.md)
 
-- HSP90 open-direction motion and agreement with native NOE references are different outcomes.
-- Corrected DHFR local distances show an inhibitor-dependent proximity difference within the deposited trajectories.
-- ADK endpoint-window domain descriptors do not show joint closure in either apo trajectory.
+The reproduction package starts from supplied analysed tables. It does not rebuild raw coordinates or independently validate the biological interpretations.
 
-Rules remain an auditable scientific knowledge resource. Their automated use showed mixed results in the pilot; a stable incremental benefit has not been established.
+<details>
+<summary>For maintainers: code, frozen evidence and earlier work</summary>
 
-## Repository organization
+`src/`, `tests/` and `agent_experiments/` contain implementation work. [Research records](research/README.md) retain prior plans, reviews, failed runs and frozen evidence. They are supporting records, not the reading path for the group.
 
-| Area | Audience and contents |
-|---|---|
-| `collaborators/` | Self-contained group-facing scientific package, entirely in English |
-| `src/`, `tests/`, `pyproject.toml` | Prototype implementation and engineering tests |
-| [Research records](research/README.md) | Maintainer-only navigation to historical experiments and review evidence |
+This documentation branch is based on `feature/luna-runtime-v1` at `c025a74ed8235ddde463572158c73458753780b0`. It changes presentation and interpretation notes only. It does not change scientific inputs, scores, experiment outputs or `main`, and it does not authorize further runs.
 
-Historical files retain their original paths and languages to preserve citations and frozen inputs. They are not the group-facing documentation. The current delivery is on the feature branch under draft PR #27; it has not been merged into `main`.
+</details>
