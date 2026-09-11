@@ -1,0 +1,14 @@
+# Plan for the Rules Table
+
+Updated 11 September 2026. Six steps, in order. Each depends on the one before it. The first three are ours to do; the fourth needs a domain expert; the last two wait on that.
+
+| Step | What | Why | Status |
+|---|---|---|---|
+| 1 | Settle the HSP90 definitions. For each one (near the open state, settled fraction, reference neighbourhood, completed transition), write the candidates, run a positive and a negative control on the data, and put the results next to the authors' own classification of the 20 closed-start runs (7 stable, about 9 toward open, 4 neither). | A wrong definition is executed as faithfully as a right one, and the scoring key inherits it. Nothing built on top can be judged before this | Candidates listed in [DEFINITIONS.md](DEFINITIONS.md); controls to run |
+| 2 | Rewrite each rule that bears on the cases as a four-part relation: the difference it helps resolve, the measurement and processing it concerns, the conditions under which the difference is preserved, and the claim limit. Assign each a layer (coverage, weights, kinetics, experimental identification). | This is the form the two readings point to, and it is what a fixed analysis step can carry. Version 2 has the first pass; the four parts are not yet explicit in every row | Version 2 done; 22 rows to rewrite |
+| 3 | Separate the two kinds of rule. Rules about trusting an MD quantity (convergence, populations, states reached) are written from the sampling-quality and kinetics literature. Rules about combining experiments (the 33 originals) stay as a second table for questions that have such data. | None of the 33 says when an MD quantity can be trusted; the four cases needed exactly that | 4 sampling rules added; the split not yet made |
+| 4 | Review by a domain expert: the definitions from step 1, the roughly ten rules that govern HSP90, and the state boundaries, atoms and alignment behind them. Each item gets keep, rewrite or drop, with a reason. | No rule or definition has been reviewed. This was agreed in August | Not started |
+| 5 | Every rule that enters a fixed analysis step gets a control on a case before its result is used; a step that fails its control is withdrawn, as OP5 and OP6 were. | The 11 September failure would have been caught before scoring | Rule written (P-05); not yet applied to all steps |
+| 6 | Only then, the repaired AI comparison: free analysis, the same rules as text, steps with the rules, and steps without them. Two questions, four runs each, two scorers. | Until the definitions are right, a comparison measures whether the AI copies us, not whether it helps | Designed; waiting on steps 1 and 4 |
+
+What we can do without the expert: steps 1 to 3, and the setup of 5 and 6. What we cannot: decide that a definition is right. Step 4 is where that happens.
