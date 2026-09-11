@@ -20,4 +20,4 @@ The completed pilot produced mixed case-dependent results. Retrieved method card
 
 The practical implication is to retain the scientific protocol and literature knowledge while requiring additional evidence before expanding automated rule selection or enforcement. Most evaluated cases were exposed development materials; one new source group and four runs per condition do not establish general effectiveness. The scorer also curated the cases, so independent domain review remains outstanding.
 
-This group package presents the research meaning of those results. Internal prompts, provider exchanges and execution-management records are omitted.
+This group package presents the research meaning of those results and keeps the focus on the evidence, methods and conclusions.

@@ -15,4 +15,4 @@ Two recent conceptual sources sharpened the distinction between structural cover
 
 The portable files project only the columns required for these demonstrations. Numerical values are preserved; delimiters and field labels are normalized where documented. HSP90 author workstation paths in comment headers are not included. The notebook-style scientific acceptance checks retain the original analysis windows and tolerances.
 
-No paper PDFs, raw MD trajectories, model prompts or meeting transcripts are included. This package is a research analysis derivative, not a relicense of source data. Cite the original papers and observe the deposit terms when acquiring or redistributing their full data.
+This package is a research analysis derivative, not a relicense of source data. Cite the original papers and observe the deposit terms when acquiring or redistributing their full data.
