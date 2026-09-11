@@ -49,6 +49,6 @@ The [10 September numerical replay ZIP](collaborators/downloads/Dynamics_Atlas_G
 
 ## Evidence without the clutter
 
-The collaborator pages are the reading path. [Research records](research/README.md) provide the audit path to raw answers, frozen inputs, scores, source history and earlier reviews. Superseded plans and failed results remain at their original paths so that citations and comparisons are not broken. They are not presented as current instructions or current conclusions.
+The collaborator pages are the reading path. Historical development material remains separated from the group-facing package so that the published route stays focused on the scientific question, evidence and reproducibility.
 
 This delivery is on `feature/luna-runtime-v1` in [Draft PR #27](https://github.com/alex051107/dynamics-atlas-harness/pull/27), not on `main`. Share this branch's README or the collaborator briefing, rather than the repository's default-branch homepage. The repository is public, so collaborators can read the package without repository membership.

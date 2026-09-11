@@ -51,4 +51,4 @@ Most materials had already been used in development. The scorer also helped prep
 
 The [offline replay](docs/REPRODUCE.md) recalculates selected HSP90, DHFR and ADK summaries from provided analysed tables. Coordinate preparation and Agent experiments are outside that replay. The [existing replay ZIP](downloads/Dynamics_Atlas_Group_Package_20260910.zip) remains a fixed numerical package; it does not include these later briefing edits or the linked slide files.
 
-The current reading set is deliberately small: **this briefing, Results, Progress, Rules, Methods, Sources and the reproduction guide**. Detailed failures, raw answers and old plans remain in the repository's [research records](../research/README.md), outside the recommended reading sequence. Nothing in the presentation cleanup changes frozen inputs, scores or scientific results.
+The current reading set is deliberately small: **this briefing, Results, Progress, Rules, Methods, Sources and the reproduction guide**. Nothing in the presentation cleanup changes frozen inputs, scores or scientific results.
