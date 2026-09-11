@@ -1,0 +1,15 @@
+claim_id,history_error_id,control_type,binding_status,result_id,field_path,expected_value,tolerance_kind,source_path
+ERR-01,1,target_error,BOUND,OP1_direction_runs__p7286bda5__i60bac79f,group_summary.closed_seeded.first_CLOSED,11,count,autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_9ff587f6/answer.md:8
+ERR-02,2,target_error,BOUND,OP1_direction_runs__p7286bda5__i60bac79f,group_summary.closed_seeded.opposite_candidate,4,count,autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_9ff587f6/answer.md:8
+ERR-03,3,target_error,BOUND,OP1_direction_runs__p8705a961__i60bac79f,group_summary.closed_seeded.opposite_candidate,0,count,autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_9ff587f6/answer.md:8
+ERR-08,8,target_error,BOUND,HIST_DHFR_Q01__pmanual01__ihistory01,outputs.wt_n18_near_fraction_end,0.4424,proportion,autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/outputs/E0_RETROSPECTIVE_AUDIT.csv:8
+ERR-09,9,target_error,BOUND,HIST_DHFR_Q01__pmanual01__ihistory01,outputs.wt_w22_near_fraction_end,0.803,proportion,autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/outputs/E0_RETROSPECTIVE_AUDIT.csv:9
+ERR-11,11,target_error,BOUND,HIST_DHFR_Q01__pmanual01__ihistory01,outputs.l28r_n18_mean_end_A,19.64772281,distance,autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/outputs/E0_RETROSPECTIVE_AUDIT.csv:11
+ERR-12,12,target_error,NO_OPERATOR,,,,,autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/outputs/E0_RETROSPECTIVE_AUDIT.csv:12
+CTRL-01,,correct_control,BOUND,OP1_direction_runs__p7286bda5__i60bac79f,group_summary.closed_seeded.first_CLOSED,15,count,
+CTRL-02,,correct_control,BOUND,OP1_direction_runs__pcc97f5f0__i60bac79f,group_summary.closed_seeded.opposite_candidate,4,count,
+CTRL-03,,correct_control,BOUND,OP1_direction_runs__p8705a961__i60bac79f,group_summary.closed_seeded.opposite_candidate,1,count,
+CTRL-04,,correct_control,BOUND,OP2_noe_reference_crosswalk__p61ec8ada__i60bac79f,summary_by_tau.1.trajectory_judgment_counts.open_seeded.AGREEMENT,18,count,
+CTRL-05,,correct_control,BOUND,OP4_transition_count__p1faa5dbf__i60bac79f,summary.tracks_with_event,5,count,
+CTRL-06,,correct_control,BOUND,OP5_excursion_detection__p637f0522__i60bac79f,summary.accepted_count,3,count,
+CTRL-07,,correct_control,BOUND,OP6_coverage_vs_reference__p891435f0__i60bac79f,group_summary.closed_seeded.NONE,1.0,proportion,

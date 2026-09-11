@@ -145,3 +145,33 @@ Median over four runs of each question and condition; every answer is in [`data/
 | Method guidance | HSP90: correct parts (of 5) | protocol 4.5 | full rules 2 · cards 2.5 |
 | Method guidance | Nanodisc: correct parts (of 5) | protocol 4.5 | full rules 5 · cards 4.5 |
 | Check after answer | Questions with fewer errors | — | 1 of 3 |
+
+---
+
+## Rules as operators (11 September)
+
+What an operator is and why we tried it is in [README section 8](README.md#8-11-september-rules-turned-into-analysis-operators). Every number below is in [`data/operators/`](data/operators/).
+
+**The HSP90 trust table.** Produced by the fixed pipeline, without any AI. The last column is our reading after an external review of the same day.
+
+| Quantity | Operator result | Trust as stated by the operator | Status after review |
+|---|---|---|---|
+| Sustained direction and reversals (OP1) | closed start: 5, 4, 1 reversals at 5, 20, 50 points; open start: 20 of 20 stay open; no returns | within the 20–1020 ns window | usable |
+| Agreement with the NOE references (OP2) | open start: 7, 18, 19 of 20 at 0.5, 1, 2 Å; closed start at 1 Å: 0 agree, 1 partly, 9 relative only | sensitive to the tolerance | usable; same-source, not independent validation |
+| State fractions over time (OP3) | window-against-full differences below 0.05; about half of all points assigned to neither state; 0 of 40 runs return | not a population | fixed-window comparison only; the 0.05 criterion is not calibrated |
+| Persistent changes (OP4) | 5 closed-to-open direction events in 5 runs; 0 returns | events exist | the same events as OP1; not completed transitions |
+| Excursions (OP5) | 3 accepted of 42 candidates | descriptive | withdrawn: the reference radius fails the control below |
+| Reference neighbourhoods (OP6) | open start: 99.99 % of frames outside both references | descriptive | withdrawn: 18 of these 20 runs agree with the open NOE references |
+
+**AI runs.** Four answers per arm, one scorer, share of rubric points.
+
+| Question | Fixed pipeline | Free analysis | Operator-bound |
+|---|---:|---:|---:|
+| HSP90 | 60 / 60 | 140 / 240 (58 %) | 236 / 240 (98 %) |
+| ADK | 36 / 36 | 106 / 144 (74 %) | 144 / 144 (100 %) |
+
+Seven of the eight free-analysis answers state that they could not read the question files and give no numbers; limits on tool calls and read length, added during setup to stop runs from exhausting their budget, cut them off. Operator coverage and numerical binding are two of the six scoring dimensions and favour the operator arm by construction. The scores show that the operator arm answered the questions and bound its numbers. They do not measure how much operators help.
+
+**Checking numbers.** On the eight earlier answers, comparing each number with the operator result it should come from caught 6 of 7 numerical errors, and flagged none of 7 correct statements. Errors 1–3 are the threshold mix-ups in one HSP90 answer; 8, 9 and 11 are transcription errors in one DHFR answer; error 12, the nanodisc NOE bound array, has no operator to check against. The earlier check caught none of the seven.
+
+**What it showed about the rules.** Rules placed inside operators reach the analysis every time, which text never did. But the definitions inside the operators decide the answer, and a wrong one is executed faithfully: the OP6 radius compares the spread of the NMR models with the distance of MD frames to those models, two different quantities. The rule table already holds this lesson (C005-RULE-001: quantities with different spatial support are not directly comparable); it was not applied to our own definitions.

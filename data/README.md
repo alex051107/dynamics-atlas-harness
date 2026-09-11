@@ -10,6 +10,7 @@ Every number in [README.md](../README.md), [RESULTS.md](../RESULTS.md) and the s
 | [`adk/`](adk/) | Domain distances along the two deposited trajectories |
 | [`rules/`](rules/) | The 33 candidate rules |
 | [`rules_test/`](rules_test/) | Scores for every answer in the tests of the rules |
+| [`operators/`](operators/) | The 11 September operator round: cards, fixed results, the HSP90 trust table, the number-check replay and scores |
 
 All distances are in ångström (Å). Times are in nanoseconds (ns). The primary data are the authors' depositions listed in [SOURCES.md](../SOURCES.md); the files here are our derived tables and results.
 
@@ -159,3 +160,27 @@ One row per answer: 74 answers across the four tests plus two plain runs.
 | `cost_usd` | model cost of the answer |
 
 The tables in the text are medians over the four repeats of each question and condition.
+
+---
+
+## operators/
+
+The operator round of 11 September. Operator code, every AI run and the scoring sheets are on the branch `feature/operator-plan-review-20260911`; this folder keeps what is needed to check the numbers quoted in the text.
+
+| File | What it holds |
+|---|---|
+| `cards/OP1.md` … `OP6.md` | one card per operator: purpose, inputs, allowed parameters, preconditions, output, claim limit |
+| `results/*.json` | the fixed-pipeline result of each operator; `OP1_p5`, `_p20`, `_p50` are the three persistence thresholds; `OP3_state_core` uses the older state labels; two ADK results |
+| `D1_TABLE_HSP90.md`, `.json` | the trust table as produced by the pipeline, one row per quantity, with the result ids behind it |
+| `binding_replay_claims.csv` | the 14 statements from earlier AI answers used to test the number check: 7 known errors (`ERR-`) and 7 correct statements (`CTRL-`), each with the operator result and field it is compared against |
+| `binding_replay_result.json` | the outcome: 6 errors flagged, 7 correct statements passed, 1 error (`ERR-12`) with no operator |
+| `scores_by_group.csv` | rubric points per question and arm (`F` fixed pipeline, `D` free analysis, `O` operator-bound); six dimensions scored 0–2 per core unit |
+| `runs_summary.csv` | one row per run: operators used, times sent back, unbound numbers, tool calls, cost |
+
+How to check the quoted numbers:
+
+- 5 / 4 / 1 reversals: `results/OP1_p5.json`, `_p20`, `_p50`, field `group_summary.closed_seeded.opposite_candidate`.
+- 18 of 20 open-start runs agree at 1 Å: `results/OP2.json`, field `summary_by_tau["1"].trajectory_judgment_counts.open_seeded.AGREEMENT`; the same block gives the closed-start counts (1 `PARTIAL`, 9 `RELATIVE_ONLY`), and keys `"0.5"` and `"2"` give 7 and 19.
+- 99.99 % of open-start frames outside both references: `results/OP6.json`, `group_summary.open_seeded.NONE` = 0.99985. The radii are in `results/OP5.json`, `parameters.r_open_A` = 1.354 and `r_closed_A` = 2.625.
+- 58 % and 98 % (HSP90), 74 % and 100 % (ADK): column `percent` in `scores_by_group.csv`.
+- 6 of 7: `binding_replay_result.json`, `checker.summary`.

@@ -1,0 +1,46 @@
+{
+  "claim_boundary": "finite-window descriptor change only; no universal order, rate, or mechanism claim",
+  "input": {
+    "identity": "ADK_Q02_FIXED_LOCAL_INPUTS_v1",
+    "statistical_unit": "correlated stored frame",
+    "trajectory_count": 2
+  },
+  "input_hash": "3fee6dce",
+  "operator": "window_change",
+  "parameter_hash": "44136fa3",
+  "parameters": {
+    "window_fraction": 0.1,
+    "window_rule": "floor(n_frames*0.10), minimum 1"
+  },
+  "result_id": "ADK_window_change__p44136fa3__i3fee6dce",
+  "summaries": {
+    "closed": {
+      "LID_CORE_mean_CA_distance_A": {
+        "first10_mean_A": 30.23082988063092,
+        "last10_mean_A": 31.407251099263654,
+        "last_minus_first_A": 1.1764212186327327,
+        "window_frames": 167
+      },
+      "NMP_CORE_mean_CA_distance_A": {
+        "first10_mean_A": 25.252348631804583,
+        "last10_mean_A": 26.343243475931413,
+        "last_minus_first_A": 1.0908948441268294,
+        "window_frames": 167
+      }
+    },
+    "open": {
+      "LID_CORE_mean_CA_distance_A": {
+        "first10_mean_A": 34.39272106287391,
+        "last10_mean_A": 36.683131762367466,
+        "last_minus_first_A": 2.290410699493556,
+        "window_frames": 225
+      },
+      "NMP_CORE_mean_CA_distance_A": {
+        "first10_mean_A": 26.21569826203,
+        "last10_mean_A": 26.286419380423936,
+        "last_minus_first_A": 0.07072111839393713,
+        "window_frames": 225
+      }
+    }
+  }
+}

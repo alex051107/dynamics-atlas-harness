@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "fixed ADK descriptor distribution only; no independent replicate or mechanism claim",
+  "input": {
+    "identity": "ADK_Q02_FIXED_LOCAL_INPUTS_v1",
+    "statistical_unit": "correlated stored frame",
+    "trajectory_count": 2
+  },
+  "input_hash": "3fee6dce",
+  "operator": "domain_distance_distribution",
+  "parameter_hash": "44136fa3",
+  "parameters": {},
+  "result_id": "ADK_domain_distance_distribution__p44136fa3__i3fee6dce",
+  "summaries": {
+    "closed": {
+      "LID_CORE_mean_CA_distance_A": {
+        "mean_A": 30.79354829484519,
+        "median_A": 30.63805144423395,
+        "n_frames": 1678,
+        "p05_A": 28.935502144042836,
+        "p95_A": 33.267244506686815
+      },
+      "NMP_CORE_mean_CA_distance_A": {
+        "mean_A": 26.022579496257627,
+        "median_A": 26.036330238177126,
+        "n_frames": 1678,
+        "p05_A": 25.100163123747286,
+        "p95_A": 26.85934384701614
+      }
+    },
+    "open": {
+      "LID_CORE_mean_CA_distance_A": {
+        "mean_A": 33.75317312592417,
+        "median_A": 33.568051842729716,
+        "n_frames": 2253,
+        "p05_A": 30.207390604589285,
+        "p95_A": 37.4860047916693
+      },
+      "NMP_CORE_mean_CA_distance_A": {
+        "mean_A": 26.622899996452258,
+        "median_A": 26.63789669466775,
+        "n_frames": 2253,
+        "p05_A": 25.801142801883287,
+        "p95_A": 27.419187239358198
+      }
+    }
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "checker": {
+    "checked": [
+      {
+        "claim_id": "ERR-01",
+        "claim_index": 0,
+        "flags": [
+          {
+            "actual": 15.0,
+            "difference": 4.0,
+            "expected": 11.0,
+            "kind": "count",
+            "path": "group_summary.closed_seeded.first_CLOSED",
+            "reason": "value_mismatch",
+            "tolerance": 0.0
+          }
+        ],
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p5.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "ERR-02",
+        "claim_index": 1,
+        "flags": [
+          {
+            "actual": 5.0,
+            "difference": 1.0,
+            "expected": 4.0,
+            "kind": "count",
+            "path": "group_summary.closed_seeded.opposite_candidate",
+            "reason": "value_mismatch",
+            "tolerance": 0.0
+          }
+        ],
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p5.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "ERR-03",
+        "claim_index": 2,
+        "flags": [
+          {
+            "actual": 1.0,
+            "difference": 1.0,
+            "expected": 0.0,
+            "kind": "count",
+            "path": "group_summary.closed_seeded.opposite_candidate",
+            "reason": "value_mismatch",
+            "tolerance": 0.0
+          }
+        ],
+        "result_id": "OP1_direction_runs__p8705a961__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p50.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "ERR-08",
+        "claim_index": 3,
+        "flags": [
+          {
+            "actual": 0.157,
+            "difference": 0.2854,
+            "expected": 0.4424,
+            "kind": "proportion",
+            "path": "outputs.wt_n18_near_fraction_end",
+            "reason": "value_mismatch",
+            "tolerance": 0.005
+          }
+        ],
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "result_path": "history_binding_results/HIST_DHFR_Q01.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "ERR-09",
+        "claim_index": 4,
+        "flags": [
+          {
+            "actual": 0.331,
+            "difference": 0.47200000000000003,
+            "expected": 0.803,
+            "kind": "proportion",
+            "path": "outputs.wt_w22_near_fraction_end",
+            "reason": "value_mismatch",
+            "tolerance": 0.005
+          }
+        ],
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "result_path": "history_binding_results/HIST_DHFR_Q01.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "ERR-11",
+        "claim_index": 5,
+        "flags": [
+          {
+            "actual": 18.50047205,
+            "difference": 1.1472507600000021,
+            "expected": 19.64772281,
+            "kind": "distance",
+            "path": "outputs.l28r_n18_mean_end_A",
+            "reason": "value_mismatch",
+            "tolerance": 0.02
+          }
+        ],
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "result_path": "history_binding_results/HIST_DHFR_Q01.json",
+        "status": "FLAG"
+      },
+      {
+        "claim_id": "CTRL-01",
+        "claim_index": 7,
+        "flags": [],
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p5.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-02",
+        "claim_index": 8,
+        "flags": [],
+        "result_id": "OP1_direction_runs__pcc97f5f0__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p20.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-03",
+        "claim_index": 9,
+        "flags": [],
+        "result_id": "OP1_direction_runs__p8705a961__i60bac79f",
+        "result_path": "fixed_operator_results/OP1_p50.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-04",
+        "claim_index": 10,
+        "flags": [],
+        "result_id": "OP2_noe_reference_crosswalk__p61ec8ada__i60bac79f",
+        "result_path": "fixed_operator_results/OP2.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-05",
+        "claim_index": 11,
+        "flags": [],
+        "result_id": "OP4_transition_count__p1faa5dbf__i60bac79f",
+        "result_path": "fixed_operator_results/OP4.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-06",
+        "claim_index": 12,
+        "flags": [],
+        "result_id": "OP5_excursion_detection__p637f0522__i60bac79f",
+        "result_path": "fixed_operator_results/OP5.json",
+        "status": "PASS"
+      },
+      {
+        "claim_id": "CTRL-07",
+        "claim_index": 13,
+        "flags": [],
+        "result_id": "OP6_coverage_vs_reference__p891435f0__i60bac79f",
+        "result_path": "fixed_operator_results/OP6.json",
+        "status": "PASS"
+      }
+    ],
+    "flags": [
+      {
+        "actual": 15.0,
+        "claim_id": "ERR-01",
+        "claim_index": 0,
+        "difference": 4.0,
+        "expected": 11.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.first_CLOSED",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 5.0,
+        "claim_id": "ERR-02",
+        "claim_index": 1,
+        "difference": 1.0,
+        "expected": 4.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.opposite_candidate",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 1.0,
+        "claim_id": "ERR-03",
+        "claim_index": 2,
+        "difference": 1.0,
+        "expected": 0.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.opposite_candidate",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p8705a961__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 0.157,
+        "claim_id": "ERR-08",
+        "claim_index": 3,
+        "difference": 0.2854,
+        "expected": 0.4424,
+        "kind": "proportion",
+        "path": "outputs.wt_n18_near_fraction_end",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.005
+      },
+      {
+        "actual": 0.331,
+        "claim_id": "ERR-09",
+        "claim_index": 4,
+        "difference": 0.47200000000000003,
+        "expected": 0.803,
+        "kind": "proportion",
+        "path": "outputs.wt_w22_near_fraction_end",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.005
+      },
+      {
+        "actual": 18.50047205,
+        "claim_id": "ERR-11",
+        "claim_index": 5,
+        "difference": 1.1472507600000021,
+        "expected": 19.64772281,
+        "kind": "distance",
+        "path": "outputs.l28r_n18_mean_end_A",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.02
+      }
+    ],
+    "status": "FLAGGED",
+    "summary": {
+      "checked": 13,
+      "claims": 14,
+      "flag_count": 6,
+      "passed": 7,
+      "unbound_count": 1
+    },
+    "unbound": [
+      {
+        "claim_id": "ERR-12",
+        "claim_index": 6,
+        "reason": "NO_OPERATOR"
+      }
+    ]
+  },
+  "observed": {
+    "checked_claim_count": 13,
+    "checker_flags": [
+      {
+        "actual": 15.0,
+        "claim_id": "ERR-01",
+        "claim_index": 0,
+        "difference": 4.0,
+        "expected": 11.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.first_CLOSED",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 5.0,
+        "claim_id": "ERR-02",
+        "claim_index": 1,
+        "difference": 1.0,
+        "expected": 4.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.opposite_candidate",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p7286bda5__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 1.0,
+        "claim_id": "ERR-03",
+        "claim_index": 2,
+        "difference": 1.0,
+        "expected": 0.0,
+        "kind": "count",
+        "path": "group_summary.closed_seeded.opposite_candidate",
+        "reason": "value_mismatch",
+        "result_id": "OP1_direction_runs__p8705a961__i60bac79f",
+        "tolerance": 0.0
+      },
+      {
+        "actual": 0.157,
+        "claim_id": "ERR-08",
+        "claim_index": 3,
+        "difference": 0.2854,
+        "expected": 0.4424,
+        "kind": "proportion",
+        "path": "outputs.wt_n18_near_fraction_end",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.005
+      },
+      {
+        "actual": 0.331,
+        "claim_id": "ERR-09",
+        "claim_index": 4,
+        "difference": 0.47200000000000003,
+        "expected": 0.803,
+        "kind": "proportion",
+        "path": "outputs.wt_w22_near_fraction_end",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.005
+      },
+      {
+        "actual": 18.50047205,
+        "claim_id": "ERR-11",
+        "claim_index": 5,
+        "difference": 1.1472507600000021,
+        "expected": 19.64772281,
+        "kind": "distance",
+        "path": "outputs.l28r_n18_mean_end_A",
+        "reason": "value_mismatch",
+        "result_id": "HIST_DHFR_Q01__pmanual01__ihistory01",
+        "tolerance": 0.02
+      }
+    ],
+    "checker_unbound": [
+      {
+        "claim_id": "ERR-12",
+        "claim_index": 6,
+        "reason": "NO_OPERATOR"
+      }
+    ],
+    "detected_error_claims": [
+      "ERR-01",
+      "ERR-02",
+      "ERR-03",
+      "ERR-08",
+      "ERR-09",
+      "ERR-11"
+    ],
+    "detected_error_count": 6,
+    "false_positive_correct_claims": [],
+    "false_positive_count": 0,
+    "unbound_error_claims": [
+      {
+        "claim_id": "ERR-12",
+        "claim_index": 6,
+        "reason": "NO_OPERATOR"
+      }
+    ]
+  },
+  "scope": "manual binding replay tests comparison logic only; automatic binding is evaluated by O-arm unbound_claims",
+  "status": "PASS",
+  "target": {
+    "correct_control_claims": 7,
+    "maximum_false_positive": 0,
+    "minimum_detected": 5,
+    "target_error_claims": 7
+  }
+}

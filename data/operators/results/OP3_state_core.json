@@ -1,0 +1,205 @@
+{
+  "claim_boundary": "trajectory-level descriptive state fractions; no equilibrium population, rate, mechanism, or claim upgrade when single-direction/no-return evidence remains",
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP3_state_population_convergence",
+  "parameter_hash": "cd0b3328",
+  "parameters": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260911,
+    "state_definition": "state_core",
+    "window_ns": [
+      100,
+      250,
+      500,
+      1000
+    ]
+  },
+  "population_credibility": {
+    "credible": false,
+    "reason": "requires a converged window and returns in at least 50% of tracks",
+    "single_direction_warning": true
+  },
+  "result_id": "OP3_state_population_convergence__pcd0b3328__i60bac79f",
+  "transition_gate": {
+    "required_fraction": 0.5,
+    "return_fraction": 0.0,
+    "single_direction_warning": true,
+    "track_count": 40,
+    "tracks_with_return": 0
+  },
+  "windows": [
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.00022254972750022255,
+        "OPEN": 0.00019757470252519758,
+        "UNKNOWN": -0.00042012443002537037
+      },
+      "full_trajectory_population": {
+        "CLOSED": 2.4975024975024975e-05,
+        "OPEN": 4.995004995004995e-05,
+        "UNKNOWN": 0.9999250749250749
+      },
+      "max_absolute_difference": 0.00042012443002537037,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.0007425742574257426,
+          "ci95_low": 0.0,
+          "mean": 0.00024183168316831684,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.0007425742574257426,
+          "ci95_low": 0.0,
+          "mean": 0.00024034653465346533,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 1.0,
+          "ci95_low": 0.9987623762376238,
+          "mean": 0.9995178217821782,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 0.00024752475247524753,
+        "OPEN": 0.00024752475247524753,
+        "UNKNOWN": 0.9995049504950495
+      },
+      "window_end_ns": 120.0,
+      "window_length_ns": 100,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 7.462656865047304e-05,
+        "OPEN": 4.965154367544806e-05,
+        "UNKNOWN": -0.0001242781123258485
+      },
+      "full_trajectory_population": {
+        "CLOSED": 2.4975024975024975e-05,
+        "OPEN": 4.995004995004995e-05,
+        "UNKNOWN": 0.9999250749250749
+      },
+      "max_absolute_difference": 0.0001242781123258485,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.000298804780876494,
+          "ci95_low": 0.0,
+          "mean": 0.00010149402390438248,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.000298804780876494,
+          "ci95_low": 0.0,
+          "mean": 0.00010298804780876495,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 1.0,
+          "ci95_low": 0.9995019920318725,
+          "mean": 0.9997955179282868,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 9.960159362549801e-05,
+        "OPEN": 9.960159362549801e-05,
+        "UNKNOWN": 0.999800796812749
+      },
+      "window_end_ns": 270.0,
+      "window_length_ns": 250,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 2.4925174625773425e-05,
+        "OPEN": -4.9850349251549656e-08,
+        "UNKNOWN": -2.487532427652983e-05
+      },
+      "full_trajectory_population": {
+        "CLOSED": 2.4975024975024975e-05,
+        "OPEN": 4.995004995004995e-05,
+        "UNKNOWN": 0.9999250749250749
+      },
+      "max_absolute_difference": 2.4925174625773425e-05,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.0001497005988023952,
+          "ci95_low": 0.0,
+          "mean": 4.8203592814371254e-05,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.0001497005988023952,
+          "ci95_low": 0.0,
+          "mean": 5.104790419161676e-05,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 1.0,
+          "ci95_low": 0.9997504990019961,
+          "mean": 0.999900748502994,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 4.99001996007984e-05,
+        "OPEN": 4.99001996007984e-05,
+        "UNKNOWN": 0.9999001996007983
+      },
+      "window_end_ns": 520.0,
+      "window_length_ns": 500,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.0,
+        "OPEN": 0.0,
+        "UNKNOWN": 0.0
+      },
+      "full_trajectory_population": {
+        "CLOSED": 2.4975024975024975e-05,
+        "OPEN": 4.995004995004995e-05,
+        "UNKNOWN": 0.9999250749250749
+      },
+      "max_absolute_difference": 0.0,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 7.492507492507493e-05,
+          "ci95_low": 0.0,
+          "mean": 2.3476523476523474e-05,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.00012487512487512488,
+          "ci95_low": 0.0,
+          "mean": 5.097402597402598e-05,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 1.0,
+          "ci95_low": 0.9998251748251749,
+          "mean": 0.9999255494505493,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 2.4975024975024975e-05,
+        "OPEN": 4.995004995004995e-05,
+        "UNKNOWN": 0.9999250749250749
+      },
+      "window_end_ns": 1020.0,
+      "window_length_ns": 1000,
+      "window_start_ns": 20.0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+case,arm,source,answer_count,unit_count,mean_source_fidelity,mean_operator_coverage,mean_numerical_binding,mean_claim_boundary,mean_question_completeness,mean_clarity,mean_unit_total,total,total_max,percent
+ADK_Q02,D,D,4,12,1.5,0.666667,1.333333,2.0,1.333333,2.0,8.833333,106,144,73.611111
+ADK_Q02,F,F,1,3,2.0,2.0,2.0,2.0,2.0,2.0,12.0,36,36,100.0
+ADK_Q02,O,O,4,12,2.0,2.0,2.0,2.0,2.0,2.0,12.0,144,144,100.0
+HSP90_Q02,D,D,4,20,1.0,0.4,1.2,2.0,0.4,2.0,7.0,140,240,58.333333
+HSP90_Q02,F,F,1,5,2.0,2.0,2.0,2.0,2.0,2.0,12.0,60,60,100.0
+HSP90_Q02,O,O,4,20,2.0,1.9,2.0,2.0,1.9,2.0,11.8,236,240,98.333333

@@ -1,0 +1,710 @@
+{
+  "claim_boundary": "descriptive four-class coverage of the fixed reference geometry; MD-only coverage is not a new state or independent validation",
+  "class_definition": {
+    "BOTH": "within both radii",
+    "NONE": "outside both radii",
+    "ONLY_CLOSED": "within closed radius and outside open radius",
+    "ONLY_OPEN": "within open radius and outside closed radius"
+  },
+  "group_summary": {
+    "closed_seeded": {
+      "BOTH": 0.0,
+      "NONE": 1.0,
+      "ONLY_CLOSED": 0.0,
+      "ONLY_OPEN": 0.0
+    },
+    "open_seeded": {
+      "BOTH": 0.0,
+      "NONE": 0.9998501498501499,
+      "ONLY_CLOSED": 0.0,
+      "ONLY_OPEN": 0.00014985014985014985
+    }
+  },
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP6_coverage_vs_reference",
+  "parameter_hash": "891435f0",
+  "parameters": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260911,
+    "r_closed_A": 2.624527200397874,
+    "r_open_A": 1.3538825899417475,
+    "reference_radius_method": "member-to-coordinate-median lid RMSD p95"
+  },
+  "reference_radii": {
+    "closed": {
+      "member_lid_rmsd_A": [
+        1.5370814129676298,
+        1.9625136990590848,
+        1.9349908632544874,
+        2.5833777000599563,
+        1.7477222729013409,
+        3.176327175381278,
+        1.3855383184195011,
+        1.4449493378548641,
+        2.0228560642916262,
+        1.9503929346973237,
+        2.314095836651556,
+        1.853939010726268,
+        2.5954850964513785,
+        2.0108943176958625,
+        1.5823082941286362,
+        2.1985976341636326,
+        1.8212606305983385,
+        1.903025817443554,
+        2.13217216157702,
+        1.7150366443684177
+      ],
+      "radius_p95_A": 2.624527200397874,
+      "reference_definition": "coordinate-wise median of aligned NMR members; direct lid RMSD"
+    },
+    "open": {
+      "member_lid_rmsd_A": [
+        0.7726695405753906,
+        1.253330882820059,
+        1.3176609481080332,
+        1.1866727306659732,
+        1.2846960385486583,
+        1.1309762968063948,
+        1.2429050272146784,
+        0.9557356572658974,
+        1.9705942310876803,
+        1.1412174693567347,
+        1.3214240825130137,
+        0.7830457806050763,
+        1.2148406505236111,
+        1.134520320948573,
+        1.1679696901817036,
+        1.2432753475760516,
+        1.0853968826023757,
+        1.3095605114094264,
+        1.1667134389439227,
+        1.1452224089800902
+      ],
+      "radius_p95_A": 1.3538825899417475,
+      "reference_definition": "coordinate-wise median of aligned NMR members; direct lid RMSD"
+    }
+  },
+  "result_id": "OP6_coverage_vs_reference__p891435f0__i60bac79f",
+  "trajectory_bootstrap": {
+    "closed_seeded": {
+      "BOTH": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "replicates": 1000
+      },
+      "NONE": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "replicates": 1000
+      },
+      "ONLY_CLOSED": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "replicates": 1000
+      },
+      "ONLY_OPEN": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "replicates": 1000
+      }
+    },
+    "open_seeded": {
+      "BOTH": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "replicates": 1000
+      },
+      "NONE": {
+        "ci95_high": 1.0,
+        "ci95_low": 0.9995504495504495,
+        "mean": 0.9998564435564435,
+        "replicates": 1000
+      },
+      "ONLY_CLOSED": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "replicates": 1000
+      },
+      "ONLY_OPEN": {
+        "ci95_high": 0.0004495504495504496,
+        "ci95_low": 0.0,
+        "mean": 0.00014355644355644356,
+        "replicates": 1000
+      }
+    }
+  },
+  "trajectory_records": [
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 998,
+        "ONLY_OPEN": 3
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 0.997002997002997,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.002997002997002997
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "class_counts": {
+        "NONE": 1001
+      },
+      "class_fractions": {
+        "BOTH": 0.0,
+        "NONE": 1.0,
+        "ONLY_CLOSED": 0.0,
+        "ONLY_OPEN": 0.0
+      },
+      "frame_count": 1001,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    }
+  ]
+}
