@@ -18,7 +18,7 @@ All distances are in ångström (Å). Times are in nanoseconds (ns). The primary
 
 ## hsp90/
 
-Source: trajectories and NOE violation series deposited with Henot et al. 2022. 40 trajectories, 20 started from the open crystal structure and 20 from a closed model; window 20 to 1020 ns, 1001 saved points each.
+Source: trajectories and NOE violation series deposited with Henot et al. 2022. 40 trajectories, 20 started from representative open-state conformers and 20 from closed-state conformers of the authors' structural ensembles; window 20 to 1020 ns, 1001 saved points each.
 
 ### `direction_event_counts.csv`
 
@@ -134,8 +134,12 @@ Change between the first and last 10 % of frames, recomputed independently: open
 
 ## rules/
 
-- [`RULES_TABLE.md`](rules/RULES_TABLE.md): the 33 rules in a readable table.
-- `rule_registry_v0.1.csv`: the original table, 33 rows × 20 columns. The file uses commas even though earlier copies were named `.tsv`. Key columns: `paper_finding` (what the paper showed), `proposed_project_rule` and `required_fields` (what we ask to be checked), `abstain_route` (where to stop), `transfer_scope` (how far it carries).
+Two versions, both kept.
+
+- **Version 1 (7 August 2026).** [`RULES_TABLE.md`](rules/RULES_TABLE.md) is the readable table of the 33 rules; `rule_registry_v0.1.csv` is the original, 33 rows × 20 columns. The file uses commas even though earlier copies were named `.tsv`. Key columns: `paper_finding` (what the paper showed), `proposed_project_rule` and `required_fields` (what we ask to be checked), `abstain_route` (where to stop), `transfer_scope` (how far it carries).
+- **Version 2 (11 September 2026).** [`RULES_TABLE_V2.md`](rules/RULES_TABLE_V2.md) is the readable table with the comparison to version 1; `rules_v2.csv` has one row per rule (42). Columns: `question` (the question the rule helps answer), `layer`, `applies_when`, `acts_through` (the operator or check), `must_hold`, `claim_limit`, `stop`, `source`, `finding`, `status` (what has happened to the rule so far), `evidence` (the file that shows it), `v1_use` (the group in version 1, empty for new rules).
+
+Check: `rules_v2.csv` has 42 rows; 13 rows with a `C` rule ID sit outside the group "Rules with no case in this project", and 20 inside it.
 
 ---
 

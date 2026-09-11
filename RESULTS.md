@@ -15,7 +15,7 @@ For each case: the paper, what the authors claim, what we tested, what we found,
 
 **Paper.** Henot et al. 2022, *Nature Communications* 13, 7601. [doi:10.1038/s41467-022-35399-8](https://doi.org/10.1038/s41467-022-35399-8)
 
-**What the authors claim.** The closed state of the N-terminal domain is transiently populated. NMR relaxation shows exchange on the millisecond scale. In 40 MD trajectories of 1 µs, 20 started from the open crystal structure and 20 from a closed model, the authors use NOE violations to classify the closed-start runs as 7 near-closed, about 9 moving toward open, and 4 neither.
+**What the authors claim.** The closed state of the N-terminal domain is transiently populated. NMR relaxation shows exchange on the millisecond scale. In 40 MD trajectories of 1 µs, 20 started from representative open-state conformers and 20 from closed-state conformers of the authors' structural ensembles, the authors use NOE violations and clustering to classify the closed-start runs as 7 stable near the closed state, about 9 moving toward open, and 4 neither.
 
 **What we tested.** If a trajectory moves toward the open state by a relative measure, does it also agree with the open-state NMR restraints?
 
@@ -150,7 +150,7 @@ Median over four runs of each question and condition; every answer is in [`data/
 
 ## Rules as operators (11 September)
 
-What an operator is and why we tried it is in [README section 8](README.md#8-11-september-rules-turned-into-analysis-operators). Every number below is in [`data/operators/`](data/operators/).
+What an operator is and why we tried it is in [WORKFLOW.md](WORKFLOW.md#8-rules-inside-analysis-operators-11-september). The definition behind each row, with its control, is in [DEFINITIONS.md](DEFINITIONS.md); the rules each operator carries are in [Rules Table version 2](data/rules/RULES_TABLE_V2.md). Every number below is in [`data/operators/`](data/operators/).
 
 **The HSP90 trust table.** Produced by the fixed pipeline, without any AI. The last column is our reading after an external review of the same day.
 

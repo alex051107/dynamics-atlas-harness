@@ -29,3 +29,10 @@
 | Sanabria H. et al. (2020) Resolving dynamics and function of transient states in single enzyme molecules. *Nat Commun*. [doi:10.1038/s41467-020-14886-w](https://doi.org/10.1038/s41467-020-14886-w) | Transient states |
 | Steffen F. D. et al. (2021) FRETraj: integrating single-molecule spectroscopy with molecular dynamics. *Bioinformatics*. [doi:10.1093/bioinformatics/btab615](https://doi.org/10.1093/bioinformatics/btab615) | FRET from MD |
 | Wankowicz S. A., Bonomi M. (2026) From possibility to precision in macromolecular ensemble prediction. *Nat Methods*. [doi:10.1038/s41592-026-03084-z](https://doi.org/10.1038/s41592-026-03084-z) | Ensemble prediction |
+
+## Added in Rules Table version 2 (11 September 2026)
+
+| Paper | Topic |
+|---|---|
+| Grossfield A. et al. (2019) Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations [Article v1.0]. *Living Journal of Computational Molecular Science* 1, 5067. [doi:10.33011/livecoms.1.1.5067](https://doi.org/10.33011/livecoms.1.1.5067) | Uncertainty and sampling quality in MD |
+| Prinz J.-H. et al. (2011) Markov models of molecular kinetics: generation and validation. *J. Chem. Phys.* [doi:10.1063/1.3565032](https://doi.org/10.1063/1.3565032) | Validating kinetic models before rates are used |
