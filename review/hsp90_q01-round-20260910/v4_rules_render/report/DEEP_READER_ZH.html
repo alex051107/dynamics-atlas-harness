@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>规则提示保留来源范围：渲染层修复与仍未验证的效果</title><style>body{margin:0;background:#f5f6f8;color:#22303d;font:16px/1.85 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:920px;margin:36px auto;background:white;padding:44px 56px}h1{font-size:30px;line-height:1.35;color:#1e3a5f}h2{font-size:23px;line-height:1.5;margin-top:38px;color:#1e3a5f}h3{font-size:19px;margin-top:25px}p{margin:14px 0}a{color:#275782;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0;table-layout:fixed;overflow-wrap:anywhere}th,td{border:1px solid #d5dbe1;padding:8px;vertical-align:top}th{background:#edf2f6}img{max-width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f4f7;padding:14px;font-size:12px}code{font-size:.88em;overflow-wrap:anywhere}nav{border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;padding:12px 0}nav a{display:block;font-size:14px}blockquote{border-left:3px solid #1e3a5f;padding-left:16px;margin-left:0}@media(max-width:650px){main{padding:22px 18px;margin:0}h1{font-size:25px}table{font-size:11px}th,td{padding:5px}}@media print{body{background:white;font-size:11px;line-height:1.65}main{padding:0;margin:0;max-width:none}h1{font-size:24px}h2{font-size:18px;break-after:avoid}h3{font-size:14px;break-after:avoid}table{font-size:9px}tr,img,pre{break-inside:avoid}nav{display:none}a{color:inherit;text-decoration:none}p{orphans:3;widows:3}}</style><main><h1>规则提示保留来源范围：渲染层修复与仍未验证的效果</h1><nav><a href="#section-1">1. 修复结果</a><a href="#section-2">2. 为什么这样改</a><a href="#section-3">3. 实际改动范围</a><a href="#section-4">4. 测试和 v4 内部冲突的处理</a><a href="#section-5">5. 这是否已经改善 Agent 答案</a><a href="#section-6">6. 交付与检查</a></nav>
+<h2 id="section-1">1. 修复结果</h2>
+<p>通用的本题检查现在先展示；来源论文的原条款随后展示，带论文身份、方法家族和原文适用范围。缺少匹配方法证据时，原条款的专用字段不再无条件显示为本题必填或弃权理由。</p>
+<h2 id="section-2">2. 为什么这样改</h2>
+<p>HSP90 两份 B 答案带入 RMP 条件。问题不在于原 FRET 条款错误，而在于把一个方法内的条件迁移成另一个问题的要求。保留原文，同时将项目归纳与文献原条款分开，才能让读者判断这种迁移是否合理。</p>
+<h2 id="section-3">3. 实际改动范围</h2>
+<p>只调整渲染函数，新增来源方法映射及针对性测试。33 条注册表、选择器和原运行输入未改。映射实际覆盖注册表中的 11 个 paper_id；编号延伸到 C012 不代表有 12 篇，不虚构缺失来源。</p>
+<h2 id="section-4">4. 测试和 v4 内部冲突的处理</h2>
+<p>既有分组、目标—检查配对、空选择及未映射路径通过。真实 HSP90 义务包仍有 7 个规则块；两处方法专用条款在缺少 FRET 适用证据时被标为适用性未确认。正向测试确认有匹配 smFRET 元数据时仍能显示原条件。</p>
+<p>v4 一处要求普遍按方法匹配，另一处要求其余五条不变；这两项不完全兼容。代码遵循前者：没有方法元数据的非通用类都不会默认为适用，不只处理两个点名条款。通用类豁免按 v4 指定保留，不能因此扩大原文的 transfer_scope。测试保护文本与配对，不声称其他所有块完全相同。</p>
+<h2 id="section-5">5. 这是否已经改善 Agent 答案</h2>
+<p>尚未运行新 B 答复。当前完成的是提示表达与作用范围的代码修复，行为收益未验证。可选付费回归跳过，不改变首轮原答案、不作前后增益比较。</p>
+<p>三种“规则”继续分开：标记数据方向的数值判据、提供给 Agent 的科学提醒、管理下一轮投入的继续条件。</p>
+<h2 id="section-6">6. 交付与检查</h2>
+<p>源码在 <code>agent_experiments/luna_runtime_v1/render_active_rules.py</code>，映射在同目录 <code>paper_method_family.json</code>，测试在 <code>test_rules_bridge_offline.py</code>。一次有真实冻结义务输入的桥接测试通过。完整套件此前已在未改核心版本通过231项，这次没有为渲染局部改动重复全套测试。</p>
+</main></html>

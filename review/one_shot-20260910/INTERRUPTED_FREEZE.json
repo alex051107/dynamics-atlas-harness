@@ -1,0 +1,380 @@
+{
+  "frozen_at": "2026-09-10T10:33:37.570351+00:00",
+  "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+  "seed": 2026091014,
+  "run_order": [
+    {
+      "case": "Q-H2",
+      "arm": "C",
+      "replicate": 3
+    },
+    {
+      "case": "Q-H2",
+      "arm": "B",
+      "replicate": 4
+    },
+    {
+      "case": "Q-H2",
+      "arm": "B",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "A",
+      "replicate": 4
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "A",
+      "replicate": 4
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "B",
+      "replicate": 4
+    },
+    {
+      "case": "Q-H2",
+      "arm": "A",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "A",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "B",
+      "replicate": 4
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "B",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "C",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "A",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "C",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "B",
+      "replicate": 2
+    },
+    {
+      "case": "Q-H2",
+      "arm": "C",
+      "replicate": 4
+    },
+    {
+      "case": "Q-H2",
+      "arm": "C",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "A",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "B",
+      "replicate": 1
+    },
+    {
+      "case": "Q-H2",
+      "arm": "A",
+      "replicate": 4
+    },
+    {
+      "case": "Q-H2",
+      "arm": "A",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "A",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "C",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "C",
+      "replicate": 4
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "B",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "C",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "A",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "B",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "A",
+      "replicate": 3
+    },
+    {
+      "case": "Q-H2",
+      "arm": "B",
+      "replicate": 1
+    },
+    {
+      "case": "Q-H2",
+      "arm": "A",
+      "replicate": 1
+    },
+    {
+      "case": "Q-H2",
+      "arm": "C",
+      "replicate": 1
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "C",
+      "replicate": 2
+    },
+    {
+      "case": "Q-H2",
+      "arm": "B",
+      "replicate": 2
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "B",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-fixed",
+      "arm": "C",
+      "replicate": 3
+    },
+    {
+      "case": "Q-D-defect",
+      "arm": "C",
+      "replicate": 4
+    }
+  ],
+  "case_hashes": {
+    "cases/Q-D-fixed/hidden/metadata.json": "955abd9b0d366b23ca71a225df87038aeebcafde0977d8f71f3c9139b41459b4",
+    "cases/Q-D-fixed/hidden/rubric.json": "37833673f205a892f55619e3729b481d11ea69b58325a66e9cfb2f605eee3c2f",
+    "cases/Q-D-fixed/hidden/obligations.json": "4e5eff262cbed685aa9a503996dfb49db81eb48d32e9137dd5c537ce65fe55fd",
+    "cases/Q-D-fixed/hidden/render_receipt.json": "7517a4c2b212e17216ff7b2b9e60e52829328b7b4a657c508d96bc664c7189c0",
+    "cases/Q-D-fixed/hidden/selector_receipt.json": "ec241c4ad6cbc903b35fac43c22ab121bf73b7f61f9837ce60a77129e7a9b2b1",
+    "cases/Q-D-fixed/common/experimental_table1.tsv": "09292ac09d010d295bf35a7c298a29be682acdcbc273abddd19765e26253b2d3",
+    "cases/Q-D-fixed/common/paper.xml": "244e7d063445e98316403b28fcb96a37eb4a49f28be27de5aaf42ccc30ca270f",
+    "cases/Q-D-fixed/common/INPUT_CHECK_FACTS.json": "92af5f94a63ad3ff7c44bba4c2f280dc98cf4a435313cab9158a3a1464cbfbff",
+    "cases/Q-D-fixed/common/FIELD_DEFINITIONS.md": "1862ac335a241c96312d04cbdeef28507330a4eb5ebd31057cb37da48406a896",
+    "cases/Q-D-fixed/common/DOWNLOAD_MANIFEST.json": "c60915608901f828747cce8ee39c8b10834d9b4db954c77ce917457c84a3a54c",
+    "cases/Q-D-fixed/common/SOURCE_CARD.md": "2e4a81399cf86ed6c5cba4c8c0e05a87464991993775ebc5a333de15411c770b",
+    "cases/Q-D-fixed/common/QUESTION.txt": "c80e526d7faf76f9093067e403f247a3179d993a9117cd72ad8e10b3392ed96b",
+    "cases/Q-D-fixed/common/SOURCE_INVENTORY.json": "acdb7769ff0346bd7c18be232d19ec21759b36b484463b7b06271e2a906fafab",
+    "cases/Q-D-fixed/common/figure3.jpg": "37026e19db841b623c89c416c1931cd33b056dc56636f184ed1df8cfce9173af",
+    "cases/Q-D-fixed/common/paper.md": "0f305f96bc001fc080eca5f9827fac953858b8817ad82805deeae219a1a2ba5b",
+    "cases/Q-D-fixed/common/figure4.jpg": "690e678f667ba83b2e4ecaa78c437072e4773f64ca108afd3dcf201a001233cd",
+    "cases/Q-D-fixed/arm_B/ACTIVE_RULES.md": "940a7090325cad7a0c7bab7467d348607069efee546ad495810ee9066d8e7935",
+    "cases/Q-D-fixed/common/author_code/Figure_4_distances_average.py": "a2aa36a845ada37c994cf1826c4916eae11009cad77d5642001941aec95d9879",
+    "cases/Q-D-fixed/common/author_code/Figure_6_hbond-measuring-code.tcl": "f8beb5b04f41bee08aef1d60821af356b30559ca1c0ddcb757c58ec31eb893d3",
+    "cases/Q-D-fixed/common/author_code/SOURCE.json": "69cfb8d4f9902eef6d0c14fde75ea21a9c5e71e0b698df3a38e79c8293ec6289",
+    "cases/Q-D-fixed/common/author_code/Figure_6_occupancy&barcode.py": "44f2f518a25983fde2155a5ba4fa6b338f77d17cf0d5216c212a1c9a70b18f17",
+    "cases/Q-D-fixed/common/author_code/Figure_2_config.py": "074271bf2779086d7e61939c61a3f75730ba733918807d7da6d27f983a31e202",
+    "cases/Q-D-fixed/common/author_code/Figure_2_pdb_prep.py": "f19ae4ec01739813a84125250ec4c0a14a6c81038f5bb192ddbb6ecb64f5601b",
+    "cases/Q-D-fixed/common/author_code/Figure_S4_rmsf.tcl": "e68dac0b72eaf5a07555c0e5fefa266ff35ab14ed4dd23549931f0f38ee295ee",
+    "cases/Q-D-fixed/common/author_code/Figure_8_S5_index_extraction.tcl": "58abd95208d1c1804b1ddccb62c1dc5e64611228ce3a636dc9de5c9f46f196f7",
+    "cases/Q-D-fixed/common/author_code/Figure_S6_4DTMP_cross_corr.py": "8e6e77500c92644a37f7d3aa4938ed0593dd3a9de19c62d885afbfa615bf19d8",
+    "cases/Q-D-fixed/common/author_code/Figure_8_S5_hydrogen_bond_enzyme.py": "f2c9a736c167174a2f59c9200614ae1461061a2e56e1b9db82775edb44b7b3cf",
+    "cases/Q-D-fixed/common/author_code/README.md": "6e7322d28cd714e1f81ee68bc7fddf99227b19ba137d3cdfc98baf40c27e9dbe",
+    "cases/Q-D-fixed/common/author_code/Figure_2_parsing.py": "7f9ec48d3f7fa9541f6bb5c36560b5a4ab2217f3acec544ed04ef4c355f21f83",
+    "cases/Q-D-fixed/common/author_code/Figure_4_distances_paper.tcl": "3d6dd0ae941d553c2021c360b23c290b59b87e87acbe59975f6f790408bb71c5",
+    "cases/Q-D-fixed/common/author_code/Figure_S6_TMPP_cross_corr.py": "0d10a361fc7d7cabee86d36c57496b6bd48a6cf4c47f238435151a8e59f7ce3c",
+    "cases/Q-D-fixed/common/author_code/Figure_6_index_extraction.tcl": "58abd95208d1c1804b1ddccb62c1dc5e64611228ce3a636dc9de5c9f46f196f7",
+    "cases/Q-D-fixed/common/author_code/Figure_4_r28_distances.tcl": "542a6bf5807d49a95cea7614066ab38830909b744de5c55b6cb765b4cd96018d",
+    "cases/Q-D-fixed/common/data/tmpp-wt_distances.tsv": "c790833d050f3368dd706459a2b7534781f99f380d92f502d9bad54d066513b1",
+    "cases/Q-D-fixed/common/data/d4tmpp-l28r_distances.tsv": "861810afc01f455955280e58613ae0e5e6c840cdbd7ca307bf28309966075222",
+    "cases/Q-D-fixed/common/data/tmpp-l28r_distances.tsv": "99fdc525c535254fb2cf3d01cd8c04c2d0309c7433c1db3ecb9ecc98282c4db2",
+    "cases/Q-D-fixed/common/data/d4tmpp-wt_distances.tsv": "6ca4a71bda232cff2cf8ed843186d004e93d47ad5c8e863015dbc001d83a1e05",
+    "cases/Q-D-fixed/common/data/trajectory_metadata.tsv": "2e91e443a613b8929c27de6cf1fcd1a5dab75e77b83742629b3a366afc4a5374",
+    "cases/Q-D-fixed/common/data/atom_mapping.tsv": "99d27046ad5b01078bb47889c1c5f5eea85fbf85fc155fc64be3bcf713bc2945",
+    "cases/Q-H2/hidden/metadata.json": "aeb3de8db8e0d66bb05e70fd06451a763bbcbdc15271ace8b8a5a4dcde6bdd25",
+    "cases/Q-H2/hidden/rubric.json": "e39bf87f6ccdc0cd90a8d7a56e0b154da260eec12bf5d3a24a0a1ea65bae3c02",
+    "cases/Q-H2/hidden/obligations.json": "89f564d6775ce7ffd241a062211f8fc6a053cb198092eac7b9b25ecabe8217d0",
+    "cases/Q-H2/hidden/render_receipt.json": "dee8e1e386a1a0d2582a60dcc5e7bb3e20f3088bdbf12dd50e643625e056c7e7",
+    "cases/Q-H2/hidden/selector_receipt.json": "bf0ed1c0704714f9adc15065a86814c0c5913ae2ef4db3e2337e9951da4968c5",
+    "cases/Q-H2/common/INPUT_CHECK_FACTS.json": "217c93b1a25f7355da6fad27dd2185805c4e705b274e3f62d0a0fa86d97027a1",
+    "cases/Q-H2/common/FIELD_DEFINITIONS.md": "feafa3d71ff635944aa92c343e1031cf84bea13aa849534ea2f0dee5c90f78d8",
+    "cases/Q-H2/common/henot_2022_article.txt": "30c46266c956e5cad76e5f3d4027d38c8de07d59fc08756eea014592cd40c549",
+    "cases/Q-H2/common/henot_2022_hsp90_article.pdf": "2a37d00b43c167cd0e80a8e7c75083cc910b6b57648565f3db8023b44ed067a3",
+    "cases/Q-H2/common/trajectory_time_bins_50ns.tsv": "1cdbe525b288f231c9f4bbecfa2ee0873ac3e2c4e7f30879db43759fc1d3cf8c",
+    "cases/Q-H2/common/henot_2022_hsp90_supplement.pdf": "41fae3f5b7ad78d8afa504bfe13bf5befb71bd01d236159294c4a436f5153d41",
+    "cases/Q-H2/common/state_core_definition.json": "dfbb5d576efea37a4a7317ea0baffef3ab6cfd3914adc456e3de82b6858eac00",
+    "cases/Q-H2/common/QUESTION.txt": "f2502a064cb65a4cfdf1ef56c3ab1aa74826e6dcdf7eb70f62308d39db44c236",
+    "cases/Q-H2/common/frame_state_assignments.tsv": "80334c79a2c6c0d6073f1910086eac5670aa38105ed03d83d12330e54da13e46",
+    "cases/Q-H2/common/HSP90_SOURCE_AND_RUN_CARD.json": "4d8611bb9286bdc208da43ea5207bea2fd052a4c133d371b1e35e5aa392d2b5a",
+    "cases/Q-H2/common/SOURCE_INVENTORY.json": "c5a47083ec3768f3df8f4d049e027d76fda68d197988887044453f88d94250da",
+    "cases/Q-H2/common/trajectory_time_anatomy.tsv": "fc841ea76a8ff061797690fb29cbffb119e3bd824a816c7c1885b6dca6ce86cb",
+    "cases/Q-H2/common/directional_runs.tsv": "9650bc5beb3ab4dd7163b256e317459e64f524d0803ba8c985ff6bdec6047666",
+    "cases/Q-H2/arm_B/ACTIVE_RULES.md": "e6a89b8484eb1feab2405c91fb80a8ec7ace85f4f606b6db277a7a9d4d5abb0a",
+    "cases/Q-H2/common/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "7607c5bfabe3740e4355a6ae576b95e273a89dbf212dc0c8e964bfbc0e2ce479",
+    "cases/Q-H2/common/native_noe/R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "b9de335d6a2c0edb5b8f0e94a4e7f257a8ea3c8f2582767e25b7c45c9e9bc178",
+    "cases/Q-H2/common/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "f9836cb2445b73426191b7490872c24235e71872686a511f72b38c3af7367aac",
+    "cases/Q-H2/common/native_noe/R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0b139920ec5e48b7e5b67d47ca607d55f92f7381dc2fff6f3dd457324087c2c6",
+    "cases/Q-H2/common/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6e4e12740ac36da99c91232acd8d11c50d13132d146b1831a0c3c027e6bde4bb",
+    "cases/Q-H2/common/native_noe/R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "8e8ad46ee2026106d333dbc8a4cb6bb0a07d022468910a0d83d96debef7d47bb",
+    "cases/Q-H2/common/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6c1442c44af91f49238bf382df46cb870648b1bb1eb381ffaa951e4db06f8eb6",
+    "cases/Q-H2/common/native_noe/R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "b29d4ed777f3995c49fa1da1a2f7c2dd08a8db2ec06d5fac261fbac331dbf5fc",
+    "cases/Q-H2/common/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "b4358854e0926f5130ac14e70ed5349c1e4717aae76c6269cbbd3a33debbb873",
+    "cases/Q-H2/common/native_noe/R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "cd0bc5bd2475a98d99bc857c9aec8266e08b12b5fdc10f35cdf58bbce20eb251",
+    "cases/Q-H2/common/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "d6bd53c3456b245336b4d3acebf71f5353093763a4e0112b9f0bae262bcf746e",
+    "cases/Q-H2/common/native_noe/R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "047d4939ddaea1d5ac04400fe69539352ffb7fb8be94da10ac0c5be22f44e0bf",
+    "cases/Q-H2/common/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "dd56468e2561c6d9a4f0e3169ba99190b4c9450b54c328e41481758482a6c3de",
+    "cases/Q-H2/common/native_noe/R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "e76e5e508234e5b49da76958cbd62d2636fca5e866989910df6fbcaed3ec7da9",
+    "cases/Q-H2/common/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "fcab86c620574577b5110b6293253516c8b123258503248ceb0c87dfb1d4d69b",
+    "cases/Q-H2/common/native_noe/R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "6ac8192723ebfc89030e4dda1d68fc7fe9db91fcdca19abc9dd9dc7a167adcaa",
+    "cases/Q-H2/common/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "93f88f16d8bd46297a42dd5c244c6ae79b3e5df67da2e41d14de6f478c059736",
+    "cases/Q-H2/common/native_noe/R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "a46fe022e909f674ad1426f0a2f39538783a44842e8074225e863ea1b06cfa08",
+    "cases/Q-H2/common/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "c2fb61988b924a96de3eb2727524aad4e79096d895b66939b9e5d49fb0827208",
+    "cases/Q-H2/common/native_noe/R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "211484aac9a9516b017340c6fba5b5ce1d418fd49d90af4a44e90dac06acb2df",
+    "cases/Q-H2/common/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "bbad8ea44220eabf4243849885c04e26db350d45f52c1ec1671526277105db2a",
+    "cases/Q-H2/common/native_noe/R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "f9b4a8584f2261b49c332fbba3991438d355fad289e052da4248382250f3f8f9",
+    "cases/Q-H2/common/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "e68b2319490d833505cd360f71e47783b445f3e3a1cb7880ccf5b18b5666579a",
+    "cases/Q-H2/common/native_noe/R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "47eed4363a43477bfa0e4f40e46976ae96ea24a4f21193e63fb78239dbec6b30",
+    "cases/Q-H2/common/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "25d5108e9f56508f20adcad93348de0f615e97c7bc553b5fff7dd7fcdc37301c",
+    "cases/Q-H2/common/native_noe/R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "18bb6b7642b3e94a9bfdadd1fb84a10d982a82e649e2030e5b4c28d54e63f8d3",
+    "cases/Q-H2/common/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "afdba3d56f333fac96f64233cc9d9be990761170c476a4457435e5f7ff2a5d1d",
+    "cases/Q-H2/common/native_noe/R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "1ff37e708e4c6b8eb90ae2a48b34c8fd06e9bdbd9fc3c0b60f47b93010e8d456",
+    "cases/Q-H2/common/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "70fd256c1627347533a5616b610bc46de8e2f4eb102aae2f1dc69a6c7372a6c8",
+    "cases/Q-H2/common/native_noe/R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0c39a8e662436545056cce325356837b9b8664d6ad870f402d0495a130ccbc42",
+    "cases/Q-H2/common/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "15cdf68b6910c803430634f28f2c7a107ddd5d7aa27938ad88a34afeb0019f0b",
+    "cases/Q-H2/common/native_noe/R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "3d6a35b8f70b204fff62061bdd31a487fc114d098e1496cb2fee5597956e23dc",
+    "cases/Q-H2/common/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "b087625770a402c1831a074392bf1e682aca3905926651651316790ea0f68ffd",
+    "cases/Q-H2/common/native_noe/R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0134a53ef18905380b3702c5751718f962ef33b3ed95206eebc16cdff70403fd",
+    "cases/Q-H2/common/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "9b3503fb38e267f6fd14f84ebed80f8b2377fde14d9e0fcb69e99191d5e4ad57",
+    "cases/Q-H2/common/native_noe/R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "89723a579889b9c7f023b2a4196d57ee90e4e47f3bb6cff55ca800f406faace6",
+    "cases/Q-H2/common/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "5f0b1cc0a80ec1a73055e63f745861545961b5f43e6a0e72c385dc95369c5931",
+    "cases/Q-H2/common/native_noe/R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "a58a20561cfcbeb8511db777e903107b67b10870bd3ba0f63f716c7befb1eef3",
+    "cases/Q-H2/common/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "525daa964a160af317c096ca54a28b7bcee6338c26350cdb18546dc802484687",
+    "cases/Q-H2/common/native_noe/R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "fd5adc67bacd5dc820d15e72a4b797ae256c13ee4155c5fb8bbbc56c77a80bcd",
+    "cases/Q-H2/common/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "b74cd11286fcaa52ef327bfd6f73cdbf0589b700752791c80b803c85cd8a2c03",
+    "cases/Q-H2/common/native_noe/R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "73d617964d24a26f40a3de9532421bfbb5e2d25b32c35bf9183795a07d7edfb4",
+    "cases/Q-H2/common/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "e1705736ab60bb00de679a3300f69c7963d079fc1b01bb10ce7655fc57962024",
+    "cases/Q-H2/common/native_noe/R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "8279bf4f77e3360b302c325511cc7faf1af4748df6ab6acd38f202b7d1542380",
+    "cases/Q-H2/common/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6937a921255acf78490b99287132539c61b918f7d85145a456b2c36fc06a9183",
+    "cases/Q-H2/common/native_noe/R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "83878bfa1f235bad82749485d7893b45af89212e6b9288bb8c0130cc7c9d3533",
+    "cases/Q-H2/common/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "95687e06eb0f56ca1db8eb965f085bc7f3fc9d8cea53f086553014d6164b141d",
+    "cases/Q-H2/common/native_noe/R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "56656eedfd5082e08591ae83e0d19db823aa7363cb1cf3cea4e3b4567a04b18d",
+    "cases/Q-H2/common/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6b9978033884f3a04aa282825e69815540c536f61b9570df6029c51168d637b7",
+    "cases/Q-H2/common/native_noe/R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "6b4eb239c9853cb3280472b1a4e321d594e6bf27f87df8418058a526023a9ae4",
+    "cases/Q-H2/common/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "a160399782ed502b1ab172fb4e43eb616fa7f9f48898b55f819a0c19a8c33afc",
+    "cases/Q-H2/common/native_noe/R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "e782e491cf9190d555c598487ce1de4240ca744bb63f5273e89a288a9aba3268",
+    "cases/Q-H2/common/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "acae416dd84d3253affdc50b0023ea64f7cae8c129a2824fb2e196b132274b34",
+    "cases/Q-H2/common/native_noe/R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "4eeb006850935533c03b73e32bb4fd55a7d5e8509d0a10ffaf988dfefc8f83a6",
+    "cases/Q-H2/common/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "3ab2844775bad10d43680df6a5c9d78e320357b64d15f231410f0eef40a0152e",
+    "cases/Q-H2/common/native_noe/R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0a70a4c9867c23cf1ed0e779bc2d1fc6516ad8ce01c3b33daa8d205863fa6b03",
+    "cases/Q-H2/common/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "14da0906b452ce6a79470b8422eb3c314aa51c1465dd92f6e15d34b5936da38c",
+    "cases/Q-H2/common/native_noe/R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "cafcd5234e2349a2ef363e8e8d959b12bf3f36bd24c2454c557593c7840d28fc",
+    "cases/Q-H2/common/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "67f3dbf4fdd75e3248b967a61258c0faf90228261f381a395d8cd217b0c8b525",
+    "cases/Q-H2/common/native_noe/R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "3b2875dce42eef4e964d03d57103cd0a7d0c94e99126d1a7dd0d6402ff397797",
+    "cases/Q-H2/common/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6de535ff667d243c7fc29987ee0bfb0e9690b097f07eb3c3bab5c47734c1a154",
+    "cases/Q-H2/common/native_noe/R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0fe4f92220ac9b09b2cdb767686c3fb632650ee7666c7f477e19701ccd4f1d7b",
+    "cases/Q-H2/common/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "54c8945963c6b729620a629e55dfb3a84f76d5e18eb838cc83a94f1eae519948",
+    "cases/Q-H2/common/native_noe/R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "ec05bfda071cb7860667591f02426c47791d57da53069fbadaee7020ea00e2b4",
+    "cases/Q-H2/common/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "8b772a6de7af18732528af500532dd7f3f126042d8de7b4c94b27a88384932eb",
+    "cases/Q-H2/common/native_noe/R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "c539a1379a16308f0bf5f0194ceaee58b036318214fbc8c919fb5e70ca18b2fe",
+    "cases/Q-H2/common/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "9f0eae44a2b8a54196bbaa82b3d33b5d4665f8d1acfabd3370bd877f8636238e",
+    "cases/Q-H2/common/native_noe/R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "a220385c9df244d142d981d0aba86adab080c522bf18ea0d50a839c349f540ec",
+    "cases/Q-H2/common/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "6d3f797f10e1a5fbbae328af7a18d075b9909bbcf6a76f0123b71e897ca90d41",
+    "cases/Q-H2/common/native_noe/R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "d7c1f497f6b5eb88fe55ad5f27c3562924ecdde5e55c08a3775210105fa7a764",
+    "cases/Q-H2/common/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "36fc8e99faafe957c6b1a648ffdd52447f14885e3cfdafc13c5ff20a593b596e",
+    "cases/Q-H2/common/native_noe/R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "b6d7b70cc7a9e98085ac24ca8f7ddbd6e9f2b049fa54727210d2c41d16c861c7",
+    "cases/Q-H2/common/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "db8e97d4bb49de53961abac99e206dc88b09d6c500fa2872a41924928b610546",
+    "cases/Q-H2/common/native_noe/R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "0b92bc296dc574412e3699ff85ff82f62beaebe5a72e65fc5ecdb9d749cffca1",
+    "cases/Q-H2/common/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "9550decff5603ce14c9d0bc93de6f920725a8f24293955ee374c45ff966548f6",
+    "cases/Q-H2/common/native_noe/R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "2ffb76989a2a7ba1167964f414afefa1fe5aa31371e82175854f5064ebb06c56",
+    "cases/Q-H2/common/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "04a61f53083480989f88f06eea0aece7520a3f03514735f07a9b0b57a9d8c32f",
+    "cases/Q-H2/common/native_noe/R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "103f16f5927d50f949c632ee34d762c3ed559066d9d7e691fcdf72f7f265aea8",
+    "cases/Q-H2/common/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/open_contact_violation.dat": "178216bf00adfec694c75c951b2b7a451119f4d6af9fddb3930b588a13817e4e",
+    "cases/Q-H2/common/native_noe/R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay/closed_contact_violation.dat": "dc67420d187a94635ecc9c79750395b6cd20209531df8be2ebe87cda4157a19a",
+    "cases/Q-D-defect/hidden/metadata.json": "432f5dff0a560e6ff109410720ab290b331e4dd2079ca390341f4b1f2ddc0b48",
+    "cases/Q-D-defect/hidden/rubric.json": "50d155154e5f884cf38556caf7d238f2e1aeecb45b2a25a6039e928630ebb3a8",
+    "cases/Q-D-defect/hidden/obligations.json": "549a18d0312a06a25ef85bfc6d47ee85993fba84da99b752cf392c68f7b18bc4",
+    "cases/Q-D-defect/hidden/render_receipt.json": "7517a4c2b212e17216ff7b2b9e60e52829328b7b4a657c508d96bc664c7189c0",
+    "cases/Q-D-defect/hidden/selector_receipt.json": "45814c5e5b553c17eeaf6338f740470ff713ba477c161488acf5670a5f1612c2",
+    "cases/Q-D-defect/common/experimental_table1.tsv": "09292ac09d010d295bf35a7c298a29be682acdcbc273abddd19765e26253b2d3",
+    "cases/Q-D-defect/common/paper.xml": "244e7d063445e98316403b28fcb96a37eb4a49f28be27de5aaf42ccc30ca270f",
+    "cases/Q-D-defect/common/INPUT_CHECK_FACTS.json": "d749782aa42a702b7b808c811fc3988ad4b37cee7abea707829cec2e340bee64",
+    "cases/Q-D-defect/common/FIELD_DEFINITIONS.md": "c7cdc44554b3eb5d96e898d62b0d5750940a8b6be9b25792412a9eaddae4b5ba",
+    "cases/Q-D-defect/common/DOWNLOAD_MANIFEST.json": "c60915608901f828747cce8ee39c8b10834d9b4db954c77ce917457c84a3a54c",
+    "cases/Q-D-defect/common/SOURCE_CARD.md": "2e4a81399cf86ed6c5cba4c8c0e05a87464991993775ebc5a333de15411c770b",
+    "cases/Q-D-defect/common/QUESTION.txt": "c80e526d7faf76f9093067e403f247a3179d993a9117cd72ad8e10b3392ed96b",
+    "cases/Q-D-defect/common/SOURCE_INVENTORY.json": "acdb7769ff0346bd7c18be232d19ec21759b36b484463b7b06271e2a906fafab",
+    "cases/Q-D-defect/common/figure3.jpg": "37026e19db841b623c89c416c1931cd33b056dc56636f184ed1df8cfce9173af",
+    "cases/Q-D-defect/common/paper.md": "0f305f96bc001fc080eca5f9827fac953858b8817ad82805deeae219a1a2ba5b",
+    "cases/Q-D-defect/common/figure4.jpg": "690e678f667ba83b2e4ecaa78c437072e4773f64ca108afd3dcf201a001233cd",
+    "cases/Q-D-defect/arm_B/ACTIVE_RULES.md": "609e80415a9d8e7860f957e88a69af70db865aba9c6c2ee003f27a7db24a7fe2",
+    "cases/Q-D-defect/common/author_code/Figure_4_distances_average.py": "a2aa36a845ada37c994cf1826c4916eae11009cad77d5642001941aec95d9879",
+    "cases/Q-D-defect/common/author_code/Figure_6_hbond-measuring-code.tcl": "f8beb5b04f41bee08aef1d60821af356b30559ca1c0ddcb757c58ec31eb893d3",
+    "cases/Q-D-defect/common/author_code/SOURCE.json": "69cfb8d4f9902eef6d0c14fde75ea21a9c5e71e0b698df3a38e79c8293ec6289",
+    "cases/Q-D-defect/common/author_code/Figure_6_occupancy&barcode.py": "44f2f518a25983fde2155a5ba4fa6b338f77d17cf0d5216c212a1c9a70b18f17",
+    "cases/Q-D-defect/common/author_code/Figure_2_config.py": "074271bf2779086d7e61939c61a3f75730ba733918807d7da6d27f983a31e202",
+    "cases/Q-D-defect/common/author_code/Figure_2_pdb_prep.py": "f19ae4ec01739813a84125250ec4c0a14a6c81038f5bb192ddbb6ecb64f5601b",
+    "cases/Q-D-defect/common/author_code/Figure_S4_rmsf.tcl": "e68dac0b72eaf5a07555c0e5fefa266ff35ab14ed4dd23549931f0f38ee295ee",
+    "cases/Q-D-defect/common/author_code/Figure_8_S5_index_extraction.tcl": "58abd95208d1c1804b1ddccb62c1dc5e64611228ce3a636dc9de5c9f46f196f7",
+    "cases/Q-D-defect/common/author_code/Figure_S6_4DTMP_cross_corr.py": "8e6e77500c92644a37f7d3aa4938ed0593dd3a9de19c62d885afbfa615bf19d8",
+    "cases/Q-D-defect/common/author_code/Figure_8_S5_hydrogen_bond_enzyme.py": "f2c9a736c167174a2f59c9200614ae1461061a2e56e1b9db82775edb44b7b3cf",
+    "cases/Q-D-defect/common/author_code/README.md": "6e7322d28cd714e1f81ee68bc7fddf99227b19ba137d3cdfc98baf40c27e9dbe",
+    "cases/Q-D-defect/common/author_code/Figure_2_parsing.py": "7f9ec48d3f7fa9541f6bb5c36560b5a4ab2217f3acec544ed04ef4c355f21f83",
+    "cases/Q-D-defect/common/author_code/Figure_4_distances_paper.tcl": "3d6dd0ae941d553c2021c360b23c290b59b87e87acbe59975f6f790408bb71c5",
+    "cases/Q-D-defect/common/author_code/Figure_S6_TMPP_cross_corr.py": "0d10a361fc7d7cabee86d36c57496b6bd48a6cf4c47f238435151a8e59f7ce3c",
+    "cases/Q-D-defect/common/author_code/Figure_6_index_extraction.tcl": "58abd95208d1c1804b1ddccb62c1dc5e64611228ce3a636dc9de5c9f46f196f7",
+    "cases/Q-D-defect/common/author_code/Figure_4_r28_distances.tcl": "542a6bf5807d49a95cea7614066ab38830909b744de5c55b6cb765b4cd96018d",
+    "cases/Q-D-defect/common/data/tmpp-wt_distances.tsv": "18a5cc57f71836f0b32fba0d581aa8b259517fd177d5d3fc28839fd729b7a4a0",
+    "cases/Q-D-defect/common/data/d4tmpp-l28r_distances.tsv": "1880027daa649645d4bccd7ca616b9a254425d981efa9ee187fc58612999116e",
+    "cases/Q-D-defect/common/data/tmpp-l28r_distances.tsv": "e476f93519f41f0af27f11af2898ca369bb5a3b1210f2ad690fd194d78a0dcd9",
+    "cases/Q-D-defect/common/data/d4tmpp-wt_distances.tsv": "fd7f83acae0549f36ea2eb20d219707c620540a676dad76d551cf6428b21ecbb",
+    "cases/Q-D-defect/common/data/trajectory_metadata.tsv": "2e91e443a613b8929c27de6cf1fcd1a5dab75e77b83742629b3a366afc4a5374",
+    "cases/Q-D-defect/common/data/atom_mapping.tsv": "99d27046ad5b01078bb47889c1c5f5eea85fbf85fc155fc64be3bcf713bc2945"
+  },
+  "runtime_hashes": {
+    "common_prompt.txt": "e22e610fa0368617f83e7c75da52fefa8f5fea39ea0b949225a3ddc4864f04c2",
+    "agent_run.py": "5ae06a63af6a0f320e5aa41f8ae0fa3a4937e9ca155b85c2fb31301c17b021d3",
+    "C_POLICY.txt": "32e3f5650e5d58bbe950bb0d6ca6acecd5719f8e6b3608017878ea5ace3e5002",
+    "harness_checks.py": "cba778cbee0fe16e29ede95d1d3c4e9c9518b397f8ad4065d144dda5ddb1ec90",
+    "container_tools.py": "feb0d0b5ca177dd87e044b2622e0befdb6f58a9883c52af9dce642c742068346",
+    "test_checks.py": "5918b1e14eb24a8c1758debb3742ddf6fcea0d60a65403df15d895d56bf580d0"
+  },
+  "preregistration_sha256": "24f5a928eee8cb6647723b0ebe06721a3f5e0b51399e443918b9d90e8b601d4d",
+  "model": "openai/gpt-5.6-luna",
+  "reasoning": "medium",
+  "cap_usd": 0.8,
+  "source_isolation": "actualDockerPASS",
+  "pre_run_revision": "First freeze superseded before any model call: enforcechecks only firstsubmission, nosecondcheck; zero paid outputs invalidated"
+}

@@ -1,0 +1,112 @@
+{
+  "status": "INTERRUPTED_BY_USER_DESIGN_CHANGE",
+  "answers": 8,
+  "settled_cost_usd": 0.13830195,
+  "unknown_charge": false,
+  "receipts_without_arm_mapping": [
+    {
+      "status": "COMPLETE",
+      "answer_sha256": "fcdab33ea236b324e0c23d61bf35cb5da758f99fb274ec341b22675d86331894",
+      "started_at_utc": "2026-09-10T10:33:45.364079+00:00",
+      "totals": {
+        "input": 133369,
+        "output": 10657,
+        "cost": 0.021053509999999998,
+        "tools": 15
+      },
+      "submissions": 2,
+      "unknown_charge": false
+    },
+    {
+      "status": "TOKEN_LIMIT",
+      "answer_sha256": "4da03e003e83c2e43669373add75161d265a882f5e870a7a0d98886d984dd979",
+      "started_at_utc": "2026-09-10T10:35:45.008513+00:00",
+      "totals": {
+        "input": 126782,
+        "output": 7408,
+        "cost": 0.01719033,
+        "tools": 15
+      },
+      "submissions": 1,
+      "unknown_charge": false
+    },
+    {
+      "status": "TOKEN_LIMIT",
+      "answer_sha256": "e5670568e9a2f4fb11f863fc36688dde48503ace82a37921a7874f223ae3763d",
+      "started_at_utc": "2026-09-10T10:41:58.629638+00:00",
+      "totals": {
+        "input": 137298,
+        "output": 6363,
+        "cost": 0.01560009,
+        "tools": 13
+      },
+      "submissions": 1,
+      "unknown_charge": false
+    },
+    {
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "answer_sha256": "08104354802b9715b1b82f8c2ceb7048a5e3bccbae5eb38577aa67ca03ee4469",
+      "started_at_utc": "2026-09-10T10:42:59.486806+00:00",
+      "totals": {
+        "input": 80532,
+        "output": 5552,
+        "cost": 0.01390192,
+        "tools": 21
+      },
+      "submissions": 1,
+      "unknown_charge": false
+    },
+    {
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "answer_sha256": "df98b97d23650eceac35daa572162f1a3b3b6d741b5243ca477a6705e4aa967e",
+      "started_at_utc": "2026-09-10T10:44:00.288190+00:00",
+      "totals": {
+        "input": 109861,
+        "output": 8290,
+        "cost": 0.01819056,
+        "tools": 24
+      },
+      "submissions": 1,
+      "unknown_charge": false
+    },
+    {
+      "status": "COMPLETE",
+      "answer_sha256": "8ce32944aa7958833171c306bb638d6521d6046a9592d235c42bee6bd0cdb296",
+      "started_at_utc": "2026-09-10T10:45:29.822644+00:00",
+      "totals": {
+        "input": 138421,
+        "output": 8835,
+        "cost": 0.01950298,
+        "tools": 27
+      },
+      "submissions": 2,
+      "unknown_charge": false
+    },
+    {
+      "status": "COMPLETE",
+      "answer_sha256": "ac63f167897e15aa6bd266f69d0928b0d5f7b6cbd0fb15cbf6c267721890560f",
+      "started_at_utc": "2026-09-10T10:47:05.579937+00:00",
+      "totals": {
+        "input": 113342,
+        "output": 9224,
+        "cost": 0.018654360000000002,
+        "tools": 15
+      },
+      "submissions": 2,
+      "unknown_charge": false
+    },
+    {
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "answer_sha256": "cbc57f556cbcad0c1ceecd57cc34aaa3a41f08724c49bd7afee105919efeffb7",
+      "started_at_utc": "2026-09-10T10:48:31.276241+00:00",
+      "totals": {
+        "input": 75934,
+        "output": 6258,
+        "cost": 0.014208199999999999,
+        "tools": 18
+      },
+      "submissions": 1,
+      "unknown_charge": false
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>四层验证：哪些辅助机制值得进入 Dynamics Atlas</title><style>body{margin:0;background:#f5f6f8;color:#22303d;font:16px/1.85 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:920px;margin:36px auto;background:white;padding:44px 56px}h1{font-size:30px;line-height:1.35;color:#1e3a5f}h2{font-size:23px;line-height:1.5;margin-top:38px;color:#1e3a5f}h3{font-size:19px;margin-top:25px}p{margin:14px 0}a{color:#275782;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0;table-layout:fixed;overflow-wrap:anywhere}th,td{border:1px solid #d5dbe1;padding:8px;vertical-align:top}th{background:#edf2f6}img{max-width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f4f7;padding:14px;font-size:12px}code{font-size:.88em;overflow-wrap:anywhere}nav{border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;padding:12px 0}nav a{display:block;font-size:14px}blockquote{border-left:3px solid #1e3a5f;padding-left:16px;margin-left:0}@media(max-width:650px){main{padding:22px 18px;margin:0}h1{font-size:25px}table{font-size:11px}th,td{padding:5px}}@media print{body{background:white;font-size:14px;line-height:1.75}main{padding:0;margin:0;max-width:none}h1{font-size:24px}h2{font-size:18px;break-after:avoid}h3{font-size:14px;break-after:avoid}table{font-size:12px}tr,img,pre{break-inside:avoid}nav{display:none}a{color:inherit;text-decoration:none}p{orphans:3;widows:3}}</style><main><h1>四层验证：哪些辅助机制值得进入 Dynamics Atlas</h1><nav><a href="#section-1">现在最重要的判断</a><a href="#section-2">一、从 Rules Table 起步，到当前真正得到什么</a><a href="#section-3">二、历史错误怎样约束这次设计</a><a href="#section-4">三、共同实验条件与评分边界</a><a href="#section-5">四、B准入层：自动核对与可信参照的贡献分开</a><a href="#section-6">五、D结论层：一次反馈实际改好了什么</a><a href="#section-7">六、C方法卡层：检索命中能否带来科学收益</a><a href="#section-8">七、A框题层：明确需求后多回答了什么</a><a href="#section-9">八、ADK普通答复与三个科学结果怎样交付</a><a href="#section-10">九、费用、时间与完整性</a><a href="#section-11">十、下一步的投入决定</a><a href="#section-12">复核入口</a></nav>
+<p><strong>A 框题层：达到本轮覆盖标准。</strong> 拆题后两题的子问题覆盖中位数均提高，过强结论未增加。</p>
+<p><strong>B 准入层：文件可用性方案未奏效。</strong> 自动检查6/6；但给Agent放入准入卡后，缺陷检测和降级仍为0/4。</p>
+<p><strong>C 方法卡层：未达非劣与增量标准。</strong> 方法卡没有稳定优于七条协议；HSP90核心正确中位数2.5/5，对照协议4.5/5。</p>
+<p><strong>D 结论上限层：未达继续标准。</strong> 仅ADK的组间错误中位数改善；HSP90与DHFR未改善，DHFR遗漏增加。</p>
+<h2 id="section-1">现在最重要的判断</h2>
+<p>保留科学问题与分析协议为中心；本轮只支持明确拆题带来的覆盖收益，未证明规则选择器或当前结论检查器有稳定增量。</p>
+<p>方法卡在Q05与HSP90上的表现不同：旧规则在Q05较好，在HSP90较差。限定方法族检索没有消除操作不匹配。当前结果支持简化架构，不支持继续扩Rules来追逐同题表现。</p>
+<h2 id="section-2">一、从 Rules Table 起步，到当前真正得到什么</h2>
+<p>最初目标是从模拟、核磁和散射等不同来源资料得到有用、可核查、不过度的科学回答。早期整理33条候选规则，积累了分析前提与结论边界；Q05开发则暴露出关键方案仍主要由开发者安排。9月8日的项目报告与战略审查据此把科学问题和分析协议放回中心。</p>
+<p>HSP90随后得到原生NOE与派生方向的实际对照；DHFR修正了包装坐标带来的假距离；ADK完成了完整分子距离准入和结构域描述。这些是科学资料与计算工作的成果。当前比较进一步检验：把哪些指导、检查或框题方式交给Agent，能在相同资料和工具上改变回答。</p>
+<p>三个体系的来龙去脉、专业概念和数值见<a href="THREE_SYSTEMS_SCIENCE_ZH.md">科学读本</a>。这份报告集中说明四层比较与投入决定。</p>
+<h2 id="section-3">二、历史错误怎样约束这次设计</h2>
+<p>检查了8份原答，其中7份出现了本次记录的问题；保留13条相关观察、7个原因组。行数不是独立样本数，也不是Rules可以防住的错误数。最初表中一条证据不足的归因已经撤回，原稿和更正原因都保留。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>实际观察</th>
+<th>原因组</th>
+<th>当前结论检查回放</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>wrong threshold-specific initial direction counts</td>
+<td>HSP_threshold_linkage</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4/20 vs5/20 internal inconsistency</td>
+<td>HSP_threshold_linkage</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>3</td>
+<td>50point opposite candidate falsely zero</td>
+<td>HSP_threshold_linkage</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>RMP special-method prerequisite transferred</td>
+<td>RMP_scope_transfer</td>
+<td>OUTSIDE_THIS_CHECKER_SCOPE</td>
+</tr>
+<tr>
+<td>5</td>
+<td>RMP prerequisite transferred in another output</td>
+<td>RMP_scope_transfer</td>
+<td>OUTSIDE_THIS_CHECKER_SCOPE</td>
+</tr>
+<tr>
+<td>6</td>
+<td>endpoint bins called regular</td>
+<td>endpoint_wording</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A1 analyzes physically mismatched wrapped distances</td>
+<td>DHFR_wrapped_input</td>
+<td>OUTSIDE_THIS_CHECKER_SCOPE</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A1 N18 near-distance percentage mistranscription</td>
+<td>DHFR_A1_numeric_transcription</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>9</td>
+<td>A1 W22 near-distance percentage mistranscription</td>
+<td>DHFR_A1_numeric_transcription</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>10</td>
+<td>A2 interprets erroneous large-distance tail as switching</td>
+<td>DHFR_wrapped_input</td>
+<td>OUTSIDE_THIS_CHECKER_SCOPE</td>
+</tr>
+<tr>
+<td>11</td>
+<td>A1 L28R N18 mean mistranscription reverses original-table direction</td>
+<td>DHFR_A1_numeric_transcription</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>12</td>
+<td>constructed NOE bounds misaligned by atom pair</td>
+<td>Q05_wrong_NOE_bounds</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>13</td>
+<td>acknowledgment overwrites scientific submitted answer</td>
+<td>submission_preservation</td>
+<td>OUTSIDE_THIS_CHECKER_SCOPE</td>
+</tr>
+</tbody></table>
+<p><strong>最有信息量的零费用结果是：当前结论检查器在历史8份原答的回放中，未检出7处目标核心数值错误，唯一一条提示是误报。</strong> 正确单位Å⁻¹的指数−1被当作未匹配数字。另一个错误计算已经出现在工具日志中，所以可以通过“数字出现过”检查。原先3条“已回放检出”指两份DHFR输入检查和一份交付问题回放，不是这次结论检查器检出。</p>
+<p>原答定位、具体引文和不同回放的范围见<a href="E0_RETROSPECTIVE_AUDIT.csv">E0审计表</a>与<a href="E0_CEILING_REPLAY_REVIEW_ZH.md">回放审查</a>。</p>
+<h2 id="section-4">三、共同实验条件与评分边界</h2>
+<p>本轮计划72次四层对照，加2次ADK普通答复。实际完成74次尝试，保存74份合法答复。所有条件使用Luna medium、同一冻结容器与成熟工具，每题每条件4次，顺序预先随机化。ADK普通答复单列，不并入四次一组的效果比较。</p>
+<p>普通组已经获得整理好的来源说明与派生表。当前测的是辅助组件在这一基线上的变化，不包括从原始论文自动发现问题、自动修理坏坐标和自动构建工具的总体能力。HSP90、DHFR和Q05已暴露；ADK仅一个新来源。</p>
+<p>全部运行结束后统一隐藏条件，按五个冻结核心单元逐份评分；随后封存评分，再揭盲。以下正确、错误、过强结论与遗漏均为每题四次的中位数，原始分数全部保留。遗漏不等同于明确说错；不必要弃权沿原计划操作定义包括可回答内容未覆盖。E2首次与最终提交另作对照。</p>
+<p>当前评分者也参与建包，条件标签隐藏但不等于独立领域专家双盲。Claude核对了材料与设计，未替代这批答复的独立专家评分。详细过程、TOKEN_LIMIT处理和冻结后意见处置见<a href="METHODS_AND_LIMITS_ZH.md">方法与局限</a>。</p>
+<h2 id="section-5">四、B准入层：自动核对与可信参照的贡献分开</h2>
+<p>普通组与卡组均为0/4检测、0/4降级。进一步查工具日志：四次卡组都列到了ADMISSION_CARD文件名，却没有读取其内容；故失败定位在准入结果未进入分析，不能据此断言Agent读懂卡后仍忽略。应由建包准入直接阻止坏表流入，不依赖Agent主动找卡。</p>
+<p>纯代码检查检出6/6植入缺陷，3个干净包零误报。实际能力包括元数据与受信声明比对、行数和时间检查、矩阵与参照比对，以及读取上游物理检查结果。七个名称并不等于七种完整科学检查。三个干净包与参照完全相同，零误报是较弱的自一致性控制。</p>
+<p>①包装坐标、②单位、⑤条件标签和⑥证据角色依赖数值或来源参照；③缺行也需要可信预期行数。④的时间单调可从表内检查，但对齐仍需参照。ADK全帧GROMACS核对提供独立数值证据，却不是另一份独立生成表上的误报试验。覆盖与容差见<a href="E1A_CHECK_COVERAGE_AUDIT.json">E1a能力审计</a>。</p>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>条件</th>
+<th align="right">n</th>
+<th align="right">核心正确 /5</th>
+<th align="right">核心错误</th>
+<th align="right">过强结论</th>
+<th align="right">遗漏 /5</th>
+<th align="right">新增费用 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DHFR缺陷表</td>
+<td>准入卡</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">2.5</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0.06495</td>
+</tr>
+<tr>
+<td>DHFR缺陷表</td>
+<td>普通资料</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.08190</td>
+</tr>
+</tbody></table>
+<h2 id="section-6">五、D结论层：一次反馈实际改好了什么</h2>
+<p>三题中只有ADK达到错误中位数降低且遗漏不增加，少于预定2/3。</p>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>条件</th>
+<th align="right">n</th>
+<th align="right">核心正确 /5</th>
+<th align="right">核心错误</th>
+<th align="right">过强结论</th>
+<th align="right">遗漏 /5</th>
+<th align="right">新增费用 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ADK结构域</td>
+<td>普通资料</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.04915</td>
+</tr>
+<tr>
+<td>ADK结构域</td>
+<td>一次反馈</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.05112</td>
+</tr>
+<tr>
+<td>DHFR修正表</td>
+<td>普通资料</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.5</td>
+<td align="right">0.07312</td>
+</tr>
+<tr>
+<td>DHFR修正表</td>
+<td>一次反馈</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">1.5</td>
+<td align="right">0.08047</td>
+</tr>
+<tr>
+<td>HSP90原生NOE</td>
+<td>普通资料</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.06485</td>
+</tr>
+<tr>
+<td>HSP90原生NOE</td>
+<td>一次反馈</td>
+<td align="right">4</td>
+<td align="right">3.5</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">0.5</td>
+<td align="right">0.06709</td>
+</tr>
+</tbody></table>
+<p>9条实际提示均为数字追溯，未指向真实核心科学错误；反馈组12份初稿到终稿没有核心错误数减少。3份丢失可回答内容，其中一份同时删弱原错误并新增错误。ADK组间差异在初稿已存在，不能说由检查器纠错产生。</p>
+<p>E2三题均没有PUBLIC_FACTS输入，证据角色分支未实际被测。数字出现、宽泛否定词和全文出现时间单位，都不能单独保证某一科学主张的来源、上限或统计解释正确。已运行后的意见没有用于回改检查器再测同题。实际提示及独立语义判断见<a href="E2_FLAG_REVIEW.json">E2提示逐条审查</a>，首次/终稿分数见<a href="E2_REVISION_COMPARISON.json">修订比较</a>。</p>
+<h2 id="section-7">六、C方法卡层：检索命中能否带来科学收益</h2>
+<p>HSP90协议/旧规则/方法卡正确中位数4.5/2/2.5；Q05为4.5/5/4.5。方法卡未达到两个题都不劣于另外两组的冻结标准。</p>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>条件</th>
+<th align="right">n</th>
+<th align="right">核心正确 /5</th>
+<th align="right">核心错误</th>
+<th align="right">过强结论</th>
+<th align="right">遗漏 /5</th>
+<th align="right">新增费用 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HSP90原生NOE</td>
+<td>七条协议</td>
+<td align="right">4</td>
+<td align="right">4.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.5</td>
+<td align="right">0.07958</td>
+</tr>
+<tr>
+<td>HSP90原生NOE</td>
+<td>整段规则</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">1.5</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.07713</td>
+</tr>
+<tr>
+<td>HSP90原生NOE</td>
+<td>方法卡</td>
+<td align="right">4</td>
+<td align="right">2.5</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">0.5</td>
+<td align="right">0.07765</td>
+</tr>
+<tr>
+<td>Q05纳米盘</td>
+<td>七条协议</td>
+<td align="right">4</td>
+<td align="right">4.5</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.07105</td>
+</tr>
+<tr>
+<td>Q05纳米盘</td>
+<td>整段规则</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.05261</td>
+</tr>
+<tr>
+<td>Q05纳米盘</td>
+<td>方法卡</td>
+<td align="right">4</td>
+<td align="right">4.5</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.05776</td>
+</tr>
+</tbody></table>
+<p>三组全部没有肯定采用R0/dye/AV/RMP作为必要条件，零不适用术语无法区分它们。HSP90中BME重加权检查仍反复出现，但该项未在冻结词表内，只列探索性证据。Q05旧规则4份均覆盖五核心单元，必须保留这一收益，不能把混合结果概括为规则普遍有害。</p>
+<p>HSP90按NMR方法族只取到1张BME重加权卡，Q05取到4张，DHFR和ADK的MD内部分析取到0张。HSP90当前NOE违例对照无需重新拟合权重。Q05因SAXS匹配还取到了针对平均FRET与聚合物分布的卡。实验方法相同，不代表当前操作相同。</p>
+<p>冻结的主判据只统计肯定采用R0、dye、AV、RMP作为本题必要条件，否定或忠实介绍来源不计入。审查后提出的BME等词不追加入主判据；若有不当迁移，在<a href="E3_EXPLORATORY_REVIEW_ZH.md">逐句探索性分析</a>单列。更完整的设计解释见<a href="METHOD_CARD_DESIGN_ANALYSIS_ZH.md">方法卡适用性分析</a>。</p>
+<h2 id="section-8">七、A框题层：明确需求后多回答了什么</h2>
+<p>HSP90覆盖从2/3提高到2.5/3，ADK从2/3提高到3/3，达到冻结的2/2条件。</p>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>条件</th>
+<th align="right">n</th>
+<th align="right">核心正确 /5</th>
+<th align="right">核心错误</th>
+<th align="right">过强结论</th>
+<th align="right">遗漏 /5</th>
+<th align="right">新增费用 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HSP90方向与参照</td>
+<td>原题</td>
+<td align="right">4</td>
+<td align="right">2.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0.06881</td>
+</tr>
+<tr>
+<td>HSP90方向与参照</td>
+<td>拆题</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1.5</td>
+<td align="right">0.06479</td>
+</tr>
+<tr>
+<td>ADK结构域</td>
+<td>原题</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.04785</td>
+</tr>
+<tr>
+<td>ADK结构域</td>
+<td>拆题</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.04974</td>
+</tr>
+</tbody></table>
+<p>HSP90核心错误总数仍从1增加到2，虽中位数同为0；拆题提高了交付覆盖，不保证每份答案更准确。ADK拆题版完整交出分布中心与重叠。此比较增加了明确要求，不能解释为自主发现能力提高。</p>
+<p>E4最终冻结按两道题的子问题覆盖改善判断，不按计划概览中的泛写三题。两版共用评分依据；拆题版要求更多内容，因此这是框题包的效果。正确覆盖更多要求值得记录，但不能据此宣称Agent自主发现问题的能力提高。</p>
+<h2 id="section-9">八、ADK普通答复与三个科学结果怎样交付</h2>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>条件</th>
+<th align="right">n</th>
+<th align="right">核心正确 /5</th>
+<th align="right">核心错误</th>
+<th align="right">过强结论</th>
+<th align="right">遗漏 /5</th>
+<th align="right">新增费用 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ADK结构域</td>
+<td>普通资料</td>
+<td align="right">2</td>
+<td align="right">4.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.5</td>
+<td align="right">0.02329</td>
+</tr>
+</tbody></table>
+<p>ADK的独立复算支持：开态起始NMP–CORE首末变化+0.071 Å、LID–CORE +2.290 Å；闭态起始分别+1.091与+1.176 Å。全帧指定原子对与GROMACS差约0.005 Å；域间描述量由SciPy独立实现复算，差小于1e−10 Å。两个首末窗口都没有共同闭合，分布仍重叠。</p>
+<p>这些来自项目预定的完整分子Cα距离，不是作者前向散射复现。沉积结构无ATP/AMP；实验为光释放ATP加AMP，温度和时钟不同。两份普通Agent到底做对哪些内容、与原文逐句是什么关系，见<a href="ADK_PAPER_RELATIONSHIPS.md">ADK原答与论文关系</a>。</p>
+<p>HSP90的10/20曾出现开放方向与原生NOE下9条仅相对趋开并不矛盾；DHFR的修正局部距离是开发者计算，旧原答未发现输入缺陷。这些边界在<a href="THREE_SYSTEMS_SCIENCE_ZH.md">三个体系科学读本</a>保留。</p>
+<h2 id="section-10">九、费用、时间与完整性</h2>
+<table>
+<thead>
+<tr>
+<th>批次</th>
+<th align="right">实际尝试 / 计划</th>
+<th align="right">合法答复</th>
+<th align="right">费用 $</th>
+<th align="right">上限 $</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E1b</td>
+<td align="right">8/8</td>
+<td align="right">8</td>
+<td align="right">0.14685032</td>
+<td align="right">0.20</td>
+</tr>
+<tr>
+<td>ADK_plain</td>
+<td align="right">2/2</td>
+<td align="right">2</td>
+<td align="right">0.02328782</td>
+<td align="right">0.15</td>
+</tr>
+<tr>
+<td>E2</td>
+<td align="right">24/24</td>
+<td align="right">24</td>
+<td align="right">0.38581429</td>
+<td align="right">0.55</td>
+</tr>
+<tr>
+<td>E3</td>
+<td align="right">24/24</td>
+<td align="right">24</td>
+<td align="right">0.41578250</td>
+<td align="right">0.55</td>
+</tr>
+<tr>
+<td>E4</td>
+<td align="right">16/16</td>
+<td align="right">16</td>
+<td align="right">0.23118686</td>
+<td align="right">0.40</td>
+</tr>
+</tbody></table>
+<p>新增合计 <strong>$1.20292179</strong>，总上限$1.85。对账的历史四批16份答复共$0.28550861另列；它不是项目全部历史消费。ADK两份只在本轮ADK_plain记一次。没有以模型墙钟时间代替人工纠错时间，25%人工节省未测。</p>
+<p>74份答复均完成并结清，无未知扣费。运行约90分钟；随后逐份盲评和交付整理单独计时。当前机器锁屏，未能再通过Claude完成最终独立答复抽查；已有两轮Claude材料/设计审查均保存，独立领域评分仍未完成。</p>
+<h2 id="section-11">十、下一步的投入决定</h2>
+<p>保留可审阅的七条协议与文献规则库，停止扩充选择器和通用结论拦截层。
+继续用明确科学问题、成熟计算和可复核报告交付结果；把问题拆成观测、幅度和结论边界。
+将准入结果接到建包流程本身，方法卡按具体操作适用性整理；新实现另做小型新题检验，不覆盖本轮原答。</p>
+<p>不扩大33条注册表，不用同题修订后的重跑冲掉本轮失败，也不以本次小样本推算总体正确率。科学工作继续按具体问题、成熟方法、逐项证据和有限结论推进。组件若需要修正，只能作为明确的新版本，在新的问题与预先确定的判据下检验。</p>
+<h2 id="section-12">复核入口</h2>
+<ul>
+<li><a href="ROUND_BRIEF_ZH.md">一页结论</a> · <a href="THREE_SYSTEMS_SCIENCE_ZH.md">完整三体系读本</a> · <a href="COLLABORATOR_REPORT.pptx">12页组会材料</a></li>
+<li><a href="UNBLINDED_SCORES.csv">逐份原始分数与条件</a> · <a href="WORK_EVIDENCE_LEDGER.json">工作证据账本</a> · <a href="DEVIATIONS.md">偏离说明</a></li>
+<li><a href="REPLAY_GUIDE_ZH.md">如何查看原答和冻结输入</a> · <a href="claim_source_map.jsonl">来源对应表</a> · <a href="review_report.md">最终审查记录</a></li>
+<li><a href="https://github.com/alex051107/dynamics-atlas-harness/pull/27">PR #27</a>，保留原答、首次提交、工具输出、运行回执与费用。未合并。</li>
+</ul>
+</main></html>

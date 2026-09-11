@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "software": "GROMACS2025.1-Homebrew",
+  "comparison": "exact agreement after rounding local nm value to GROMACS output3decimal nm precision; initial1e-4A test was too strict for text formatting, no scientific data changed",
+  "comparisons": [
+    {
+      "state": "open",
+      "time_ps": 425000.0,
+      "residues": [
+        144,
+        189
+      ],
+      "local_minimum_image_A": 69.80277860007998,
+      "gromacs_minimum_image_A": 69.80000000000001,
+      "error_A": 0.0027786000799636668,
+      "half_box_A": 49.0222395,
+      "command": [
+        "gmx",
+        "distance",
+        "-s",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state.gro",
+        "-f",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_open_state_traj.xtc",
+        "-b",
+        "425000.0",
+        "-e",
+        "425000.0",
+        "-select",
+        "atomnr 2230 2944",
+        "-oall",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_distance_open.xvg",
+        "-oxyz",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_components_open.xvg"
+      ],
+      "status": "PASS_AT_GROMACS_TEXT_PRECISION"
+    },
+    {
+      "state": "closed",
+      "time_ps": 180600.0,
+      "residues": [
+        149,
+        188
+      ],
+      "local_minimum_image_A": 62.175790707139264,
+      "gromacs_minimum_image_A": 62.18,
+      "error_A": 0.004209292860736014,
+      "half_box_A": 49.066883,
+      "command": [
+        "gmx",
+        "distance",
+        "-s",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_closed_state.gro",
+        "-f",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_closed_state_traj.xtc",
+        "-b",
+        "180600.0",
+        "-e",
+        "180600.0",
+        "-select",
+        "atomnr 2299 2934",
+        "-oall",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_distance_closed.xvg",
+        "-oxyz",
+        "/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_components_closed.xvg"
+      ],
+      "status": "PASS_AT_GROMACS_TEXT_PRECISION"
+    }
+  ]
+}

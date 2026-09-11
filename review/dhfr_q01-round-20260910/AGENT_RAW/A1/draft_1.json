@@ -1,0 +1,66 @@
+{
+  "answer": "## 结论\n\n在作者沉积的四条**单条、1 μs条件轨迹**中，逐帧距离对“4′-DTMP使尾部靠近M20”的描述有条件支持；对“L28R中R28相互作用增强”的支持更直接，但不是每个R28原子对都支持。距离证据支持局部结合构象变化，不能单独证明氢键、结合自由能或抑制动力学的因果关系。\n\n## 条件、窗口、统计单位与计算\n\n比较 `tmpp-wt`、`d4tmpp-wt`、`tmpp-l28r`、`d4tmpp-l28r`。每条TSV为frame 0–1000、1001帧；按来源给出的1 μs映射，去除初始10 ns，采用**frame 11–1000（990帧，名义11–1000 ns）**。统计单位是“原子对×帧”，不是独立重复；每个原子对计算平均距离，以及距离<6 Å和<3.2 Å的帧比例。6 Å是论文图4采用的宽松频繁接触指标；3.2 Å未加氢键角度，不能当作严格氢键占有率。\n\n我读取了四个`*_distances.tsv`，按`atom_mapping.tsv`核对原子，并实际对窗口逐列计算均值和阈值比例；距离定义为VMD `measure bond`的重原子欧氏距离。没有新模拟或自由能复算。\n\n## M20结果\n\n最清楚的支持是 **M20-N–4′-DTMP O3P**：\n\n|背景|TMP均值；<6 Å|4′-DTMP均值；<6 Å|\n|---|---:|---:|\n|WT|18.88 Å；7.0%|**11.09 Å；85.6%**|\n|L28R|20.29 Å；0%|**17.85 Å；70.1%**|\n\n因此，若作者的“增加M20相互作用”指图4中画出的M20-N–O3P，WT和L28R都支持。若泛指M20-N与三个配体氧都增强，则不支持：\n\n- WT：O4P 19.95→13.23 Å、<6 Å 1.0→2.4%；O5P 20.22→15.01 Å、0→0%。\n- L28R：O4P 20.80→19.71 Å、0→0.2%；O5P 20.32→21.46 Å、0→0%。\n\n同一尾部中，WT的N18-O3P（18.14→12.16 Å；<6 Å约9.2→15.7%）和W22-O3P（19.41→11.83 Å；约0.9→33.1%）也支持4′-DTMP更近；但L28R中N18总平均约19.10→19.69 Å、W22约21.75→20.09 Å，不能概括为整个N18/M20/W22环在两种背景都一致增强。\n\n## R28结果\n\nWT没有R28，故检验方式是L28R内TMP→4′-DTMP。强支持集中在O4P/O5P：\n\n|R28原子对|TMP：均值；<6 Å；<3.2 Å|4′-DTMP：均值；<6 Å；<3.2 Å|\n|---|---:|---:|\n|NE–O3P|17.51；45.6%；0%|19.54；38.1%；1.0%|\n|**NE–O4P**|19.65；0.5%；0%|**17.52；75.1%；21.9%**|\n|**NE–O5P**|21.32；0%；0%|**17.81；73.1%；39.4%**|\n|NH1–O3P|18.45；22.0%；1.6%|20.78；3.7%；0%|\n|**NH1–O4P**|20.40；7.1%；0%|**18.76；72.9%；0.6%**|\n|**NH1–O5P**|22.08；0.9%；0%|**19.38；53.7%；2.0%**|\n|NH2–O3P|18.66；23.2%；0.3%|19.84；36.4%；1.0%|\n|**NH2–O4P**|20.52；6.7%；0%|**17.91；70.0%；17.5%**|\n|**NH2–O5P**|22.16；0%；0%|**18.47；61.2%；20.0%|\n\n所以R28结论是**原子对特异性的**：主要支持NE/NH1/NH2–O4P/O5P，尤其NE–O4P、NE–O5P、NH2–O4P、NH2–O5P；三组O3P对不一致，NE–O3P和NH1–O3P在4′-DTMP下甚至平均更远。即使<3.2 Å的帧比例增加，也没有氢键角度，不能据此确认氢键。\n\n## 与表1和图3合并\n\n表1（作者注明Ki来自ref.25）为：WT-TMP 4.2±0.5 nM、WT-4′-DTMP 5.1±1.0 nM；L28R-TMP 65.0±7.5 nM、L28R-4′-DTMP 34.3±2.9 nM。L28R对两种抑制剂都较弱，但在L28R中4′-DTMP相对TMP的Ki改善约**65.0/34.3=1.90倍**；WT中4′-DTMP则略差（4.2/5.1=0.82）。这与L28R中O4P/O5P–R28近接触增强相容，但距离不能推出Ki贡献的大小。\n\n图3条件为DHF 12.5 μM、抑制剂500 nM、重复两次。WT加任一抑制剂几乎不消耗DHF，符合4–5 nM Ki；L28R本底反应较慢，加药后两者都减慢产物释放，且4′-DTMP比TMP更慢。共同允许的科学结论是：**L28R改变了尾部的局部动态结合模式；4′-DTMP可利用R28形成选择性的O4P/O5P近接触，并在L28R中改善相对TMP的亲和力和抑制表现。**但不能说局部接触是动力学优势的唯一原因，也不能把更多接触等同于普遍更强结合：WT总体仍明显强于L28R，且WT两药在该实验浓度都已完全抑制。\n\n## 未解决部分与下一步\n\n1. 四条数据是四个条件轨迹，不是重复；没有跨重复置信区间，帧自相关也未处理。\n2. 只有重原子距离，没有角度/质子信息；需独立重复轨迹和角度合格氢键占有率，特别检验M20–O3P、R28–O4P/O5P。\n3. 图3只有图像和定性曲线，不能可靠拟合L28R两药的速率差；局部距离与Ki/产物释放之间仍缺少受控因果检验。\n\n可追溯依据：`/source/data/*_distances.tsv`、`trajectory_metadata.tsv`、`atom_mapping.tsv`、`FIELD_DEFINITIONS.md`；`author_code/README.md`和`Figure_4_distances_average.py`；`paper.md`第406–447、337–362、367–394行；`figure3.jpg`、`figure4.jpg`。本回答的均值和比例是对TSV frame 11–1000的新计算，不是作者发表的汇总值。",
+  "claims": [
+    {
+      "text": "M20-N–O3P在WT和L28R中均支持4′-DTMP相对TMP增加近接触，但M20-O4P/O5P不一致。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "WT 18.88→11.09 Å、<6 Å 7.0→85.6%；L28R 20.29→17.85 Å、0→70.1%",
+      "origin": "current_calculation",
+      "evidence_role": "direct",
+      "result_id": "R1",
+      "observation_subset": "r20_N_O3P/O4P/O5P; frames 11..1000",
+      "analysis_id": "A1",
+      "evidence": "/source/data/*_distances.tsv; /source/FIELD_DEFINITIONS.md"
+    },
+    {
+      "text": "L28R的R28增强具有原子对选择性，主要是R28 NE/NH1/NH2与O4P/O5P；O3P对不一致。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "NE-O4P 19.65→17.52 Å、<6 Å 0.5→75.1%；NE-O5P 21.32→17.81 Å、0→73.1%；NH2-O4P 20.52→17.91 Å、6.7→70.0%",
+      "origin": "current_calculation",
+      "evidence_role": "direct",
+      "result_id": "R2",
+      "observation_subset": "L28R r28_NE/NH1/NH2 with O3P/O4P/O5P; frames 11..1000",
+      "analysis_id": "A1",
+      "evidence": "/source/data/tmpp-l28r_distances.tsv; /source/data/d4tmpp-l28r_distances.tsv; /source/data/atom_mapping.tsv"
+    },
+    {
+      "text": "表1显示L28R对两种抑制剂结合较弱，但4′-DTMP在L28R中相对TMP的Ki改善约1.90倍；WT中略差。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "WT Ki 4.2±0.5 vs 5.1±1.0 nM；L28R 65.0±7.5 vs 34.3±2.9 nM；65.0/34.3=1.90",
+      "origin": "author_report",
+      "evidence_role": "direct",
+      "result_id": "R3",
+      "observation_subset": "Table 1",
+      "analysis_id": "",
+      "evidence": "/source/experimental_table1.tsv; /source/paper.md lines 337-362"
+    },
+    {
+      "text": "图3支持4′-DTMP在L28R中的抑制/产物释放减慢比TMP更明显，但不能由图像给出可靠定量速率差。",
+      "type": "limitation",
+      "polarity": "affirmative",
+      "quantity": "DHF 12.5 μM；药物500 nM；重复两次",
+      "origin": "author_report",
+      "evidence_role": "direct",
+      "result_id": "R4",
+      "observation_subset": "Figure 3 WT/L28R curves",
+      "analysis_id": "",
+      "evidence": "/source/paper.md lines 367-394; /source/figure3.jpg"
+    },
+    {
+      "text": "四条轨迹不是独立重复，距离也不是角度合格氢键占有率，因此局部距离与Ki和动力学之间的因果关系未解决。",
+      "type": "limitation",
+      "polarity": "negative",
+      "quantity": "4 condition-specific trajectories; 990 analyzed frames per trajectory",
+      "origin": "inference",
+      "evidence_role": "methodological",
+      "result_id": "R5",
+      "observation_subset": "all four trajectories",
+      "analysis_id": "A1",
+      "evidence": "/source/FIELD_DEFINITIONS.md lines 3-7; /source/data/trajectory_metadata.tsv"
+    }
+  ],
+  "conflicts": []
+}

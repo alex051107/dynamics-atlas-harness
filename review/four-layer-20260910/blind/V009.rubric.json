@@ -1,0 +1,20 @@
+{
+  "core_units": [
+    "LIDmedian33.568/30.638;NMP26.638/26.036, overlap documented",
+    "openNMP+.071LID+2.290;closedNMP+1.091LID+1.176 first/last10%",
+    "distances do not show a universal closing order; effects descriptor/finitewindowdependent",
+    "ligandfreeMD vsATP experiment;4.3ms experimentaltransient notMD inferredtime",
+    "n1perstart,correlatedframes,concrete next method withoutuniqueequilibriumclaim"
+  ],
+  "tolerances": {
+    "distance_A": 0.02,
+    "count": 0
+  },
+  "subquestions": [
+    "direction or separation",
+    "amplitude or absolute state proximity",
+    "full transition or order boundary"
+  ],
+  "source": "already independentlycheckedHSP/ADK native readouts",
+  "omission_boundary": "Split asks more explicit content; report coverage gain as task framing not improved latent reasoning"
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V029",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS1.915及47/292、8/40上限计数真实正确；但从双侧RMSE2.231>1.088推出methyl“更明显未消除残差”，尽管承认UPPER，仍错误比较超限强度。拟合角色与候选边界正确。"
+  },
+  {
+    "blind_id": "V030",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六O3P、M20均值、六R28O4/O5及O3P的2升1降明确列出；Ki/Fig3正确；机制称“很可能参与”并明确非唯一因果。O3P概括措辞过宽但具体数列保留混合，非新增核心错误。"
+  },
+  {
+    "blind_id": "V031",
+    "units": [
+      "C",
+      "M",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "5/4/1与开放0、9相对+ES04其余=10everO可核；未汇成完整5+5+10子类。原生18/20与9/1正确，三子问题都获有界回答。NOE段“20点版本”表述与实际全OPEN帧不一致，作为方法说明问题保留。"
+  },
+  {
+    "blind_id": "V032",
+    "units": [
+      "C",
+      "E",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "开放组两非一致均称相对偏好，GS08实际FAR0.327应部分；主单位2错。p95/188/690、敏感性7/19与闭合3一致5相对余2、原生列与边界正确。"
+  },
+  {
+    "blind_id": "V033",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "已实际修复SAXS q匹配得到1.91284，却保留修复前1σ覆盖58.9%；正确应48/90=53.33%。至少有正确RMSE/chi²比较；NOE原生UPPER/r^-3限制及拟合角色明确。"
+  },
+  {
+    "blind_id": "V034",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四增量、项目域定义、apo/4.3ms与n=1限制正确；仅首窗口绝对值不同，没有全分布/重叠比较，覆盖幅度与顺序边界。"
+  }
+]

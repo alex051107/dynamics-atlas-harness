@@ -1,0 +1,43 @@
+{
+  "row": 3,
+  "proceed": false,
+  "judgment": "DEVELOPER_JUDGMENT",
+  "reason": {
+    "format_conditions": "Both B omit rule IDs; common output did not require them. Evaluation-design limitation, not scientific failure.",
+    "science_quality": "A1/B1/B2 primary counts correct; B2 10/20 useful addition; missing numerical core audit is content difference. B1 unequal-bin wording LOCAL. A2-08/09/10 CORE mismatches.",
+    "management_decision": "Historical row 3/proceed false retained: method-specific RMP conditions imported into both B answers, incremental gain not stable. R0/dye conditions appeared in prompts; do not falsely attribute their use to both answers. v4 independently authorizes science track D, not a reversal of historical Rules continuation verdict."
+  },
+  "criteria": {
+    "a": {
+      "value": true,
+      "locator": "v4 authorized reevaluation; see structured reason and unchanged claim audits"
+    },
+    "b": {
+      "value": false,
+      "locator": "Original final B answers omit explicit rule IDs; shared output did not require them. Historical continuation predicate unmet, not a scientific error or causal test."
+    },
+    "c": {
+      "value": "true_with_local_wording_issue",
+      "locator": "v4 authorized reevaluation; see structured reason and unchanged claim audits"
+    },
+    "d": {
+      "value": true,
+      "locator": "v4 authorized reevaluation; see structured reason and unchanged claim audits"
+    },
+    "e": {
+      "value": true,
+      "locator": "AGENT_RAW contains unchanged answers; no live human hints or runner edits"
+    },
+    "f": {
+      "value": true,
+      "locator": "selector_branch OK; four receipts same version; no runtime-repair branch"
+    }
+  },
+  "complete_original_answers": 4,
+  "cost_usd": 0.0757458,
+  "new_science_download_bytes": 0,
+  "scientific_inference": "No independent Rules effect or generalization claim; no C arm",
+  "next_action": "Execute v4 A/B/C/D under separate user authorization; no repeat HSP90 A/B",
+  "review_revision": "v4 evaluation correction; originals unchanged",
+  "pro_review": "PRO_REVIEW_RESPONSE_ZH.md"
+}

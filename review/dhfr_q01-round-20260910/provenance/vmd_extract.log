@@ -1,0 +1,107 @@
+Info) VMD for MACOSXARM64, version 2.0b1 (February 18, 2026)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 15 CPUs.
+Info) Dynamically loaded 3 plugins in directory:
+Info) /Applications/VMD2b1.app/Contents/MacOS/../vmd2b1/plugins/MACOSXARM64/molfile
+Info) Duplicate resname "4YS" for glycanReader.
+Info) Duplicate resname "YGA" for glycanReader.
+Info) The duplication indicates a conflict with residue names in the PDB, GLYCAM, or CHARMM databases. If you're not working with glycans that use these residue names, you can safely ignore this warning.
+TASK_ROOT
+TASK_ROOT/derived
+file6
+file7
+psfplugin) Detected a Charmm PSF file
+psfplugin) Detected a Charmm PSF EXTEnded file
+Info) Using plugin psf for structure file TASK_ROOT/data/tmpp-wt.psf
+Info) Analyzing structure ...
+Info)    Atoms: 21652
+Info)    Bonds: 15309
+Info)    Angles: 11100  Dihedrals: 6980  Impropers: 441  Cross-terms: 157
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 6543
+Info)    Waters: 6333
+Info)    Segments: 6
+Info)    Fragments: 6385   Protein: 1   Nucleic: 0
+Info) Residue name "NDPH" not found in glycan file.
+Info)    Appeared 2 times.
+Info) Residue name "TMPP" not found in glycan file.
+Info)    Appeared 2 times.
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+Info) Using plugin dcd for coordinates from file TASK_ROOT/data/tmpp-wt.dcd
+Info) Finished with coordinate file TASK_ROOT/data/tmpp-wt.dcd.
+EXTRACTED tmpp-wt 1001 frames
+psfplugin) Detected a Charmm PSF file
+psfplugin) Detected a Charmm PSF EXTEnded file
+Info) Using plugin psf for structure file TASK_ROOT/data/tmpp-l28r.psf
+Info) Analyzing structure ...
+Info)    Atoms: 21647
+Info)    Bonds: 15308
+Info)    Angles: 11103  Dihedrals: 6989  Impropers: 444  Cross-terms: 157
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 6539
+Info)    Waters: 6330
+Info)    Segments: 6
+Info)    Fragments: 6381   Protein: 1   Nucleic: 0
+Info) Residue name "NDPH" not found in glycan file.
+Info)    Appeared 4 times.
+Info) Residue name "TMPP" not found in glycan file.
+Info)    Appeared 4 times.
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+Info) Using plugin dcd for coordinates from file TASK_ROOT/data/tmpp-l28r.dcd
+Info) Finished with coordinate file TASK_ROOT/data/tmpp-l28r.dcd.
+EXTRACTED tmpp-l28r 1001 frames
+psfplugin) Detected a Charmm PSF file
+psfplugin) Detected a Charmm PSF EXTEnded file
+Info) Using plugin psf for structure file TASK_ROOT/data/d4tmpp-WT.psf
+Info) Analyzing structure ...
+Info)    Atoms: 20332
+Info)    Bonds: 14430
+Info)    Angles: 10658  Dihedrals: 6981  Impropers: 444  Cross-terms: 157
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 6102
+Info)    Waters: 5894
+Info)    Segments: 6
+Info)    Fragments: 5944   Protein: 1   Nucleic: 0
+Info) Residue name "NDPH" not found in glycan file.
+Info)    Appeared 6 times.
+Info) Residue name "TMPP" not found in glycan file.
+Info)    Appeared 4 times.
+Info) Residue name "D4PP" not found in glycan file.
+Info)    Appeared 2 times.
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+Info) Using plugin dcd for coordinates from file TASK_ROOT/data/d4tmpp-wt.dcd
+Info) Finished with coordinate file TASK_ROOT/data/d4tmpp-wt.dcd.
+EXTRACTED d4tmpp-wt 1001 frames
+psfplugin) Detected a Charmm PSF file
+psfplugin) Detected a Charmm PSF EXTEnded file
+Info) Using plugin psf for structure file TASK_ROOT/data/d4tmpp-l28r.psf
+Info) Analyzing structure ...
+Info)    Atoms: 20534
+Info)    Bonds: 14567
+Info)    Angles: 10730  Dihedrals: 6990  Impropers: 447  Cross-terms: 157
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 6167
+Info)    Waters: 5960
+Info)    Segments: 6
+Info)    Fragments: 6009   Protein: 1   Nucleic: 0
+Info) Residue name "NDPH" not found in glycan file.
+Info)    Appeared 8 times.
+Info) Residue name "TMPP" not found in glycan file.
+Info)    Appeared 4 times.
+Info) Residue name "D4PP" not found in glycan file.
+Info)    Appeared 4 times.
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+Info) Using plugin dcd for coordinates from file TASK_ROOT/data/d4tmpp-l28r.dcd
+Info) Finished with coordinate file TASK_ROOT/data/d4tmpp-l28r.dcd.
+EXTRACTED d4tmpp-l28r 1001 frames
+Info) VMD for MACOSXARM64, version 2.0b1 (February 18, 2026)
+Info) Exiting normally.

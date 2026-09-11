@@ -1,0 +1,25 @@
+{
+  "status": "STOP_ALIGNMENT_MISMATCH",
+  "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+  "max_error_A": 0.870000000000001,
+  "row_index": 654,
+  "time_ns": "674.0",
+  "derived_margin_A": -4.3100000000000005,
+  "native_closed_A": 6.1,
+  "native_open_A": 9.54,
+  "first_5_derived": [
+    -6.5,
+    -6.290000000000001,
+    -5.37,
+    -1.5999999999999996,
+    -3.4299999999999997
+  ],
+  "first_5_native_difference": [
+    -6.789999999999999,
+    -6.390000000000001,
+    -5.23,
+    -1.3699999999999992,
+    -3.6800000000000006
+  ],
+  "no_threshold_changed": true
+}

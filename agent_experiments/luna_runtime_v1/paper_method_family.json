@@ -1,0 +1,93 @@
+{
+  "hellenkamp_2018_smfret_benchmark": {
+    "method_families": [
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Hellenkamp 2018 smFRET benchmark",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "agam_2023_smfret_reliability": {
+    "method_families": [
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Agam 2023 protein smFRET reliability",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "dimura_2020_fret_assisted_modeling": {
+    "method_families": [
+      "FRET_ASSISTED_MODELING"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Dimura 2020 FRET-assisted modeling",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "fuertes_2017_saxs_smfret_non_equivalence": {
+    "method_families": [
+      "SAXS",
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Fuertes 2017 SAXS-smFRET non-equivalence",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "shevchuk_2017_bayesian_saxs_refinement": {
+    "method_families": [
+      "SAXS"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Shevchuk 2017 Bayesian SAXS refinement",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "bengtsen_2020_multimodal_nanodisc": {
+    "method_families": [
+      "NMR",
+      "SAXS"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Bengtsen 2020 multimodal nanodisc",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "hoff_2024_emmivox_cryoem": {
+    "method_families": [
+      "CRYO_EM"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Hoff 2024 EMMIVox cryo-EM",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "peter_2022_deer_smfret_crossvalidation": {
+    "method_families": [
+      "DEER",
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Peter 2022 DEER-smFRET cross-validation",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "sanabria_2020_transient_states": {
+    "method_families": [
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Sanabria 2020 transient-state evidence ladder",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "steffen_2021_fretraj": {
+    "method_families": [
+      "smFRET"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Steffen 2021 FRETraj",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  },
+  "wankowicz_bonomi_2026_ensemble_prediction": {
+    "method_families": [
+      "GENERAL_ENSEMBLE"
+    ],
+    "source": "rule_registry.tsv paper_title",
+    "paper_title": "Wankowicz and Bonomi 2026 ensemble infrastructure",
+    "classification": "project-curated scope hint; not new scientific evidence"
+  }
+}

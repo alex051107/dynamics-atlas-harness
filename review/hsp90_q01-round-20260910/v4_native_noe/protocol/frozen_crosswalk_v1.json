@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "514311e2a6dc51cf26a657811ffd88f225b473f4ddc9bb00e61cbafe20ba7d9f",
+  "native_files": 80,
+  "native_hash_matches": 80,
+  "source_reader_correction": {
+    "timestamp": "2026-09-10T03:12:06.055501+00:00",
+    "old_column": 3,
+    "native_comparison_column": 2,
+    "classification_observed_before_correction": false,
+    "tau_changed": false,
+    "protocol_sha256": "0c34eca692d283088b7763385185d57359b83bad146cfd98f9bfd8112f16d60b"
+  }
+}

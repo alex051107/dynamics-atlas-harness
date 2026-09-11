@@ -1,0 +1,12 @@
+{"claim_id": "N01", "claim": "80文件身份匹配", "source": "inputs/MANIFEST.json", "status": "observed"}
+{"claim_id": "N02", "claim": "旧差值第三列复现最大误差0", "source": "outputs/group_summary.json", "status": "observed"}
+{"claim_id": "N03", "claim": "40040点、40轨迹", "source": "outputs/group_summary.json", "status": "observed"}
+{"claim_id": "N04", "claim": "1A闭合组0一致1部分9相对10不适用", "source": "outputs/group_summary.json sensitivity 1.0", "status": "observed"}
+{"claim_id": "N05", "claim": "开放组18/20一致", "source": "outputs/group_summary.json", "status": "observed"}
+{"claim_id": "N06", "claim": "p95=1.32A闭合2开放19进入", "source": "outputs/group_summary.json", "status": "observed"}
+{"claim_id": "N07", "claim": "ES15前末9.0741/1.1154A", "source": "outputs/per_trajectory_crosswalk.tsv", "status": "observed"}
+{"claim_id": "N08", "claim": "ES03前末2.8076/1.8157A", "source": "outputs/per_trajectory_crosswalk.tsv", "status": "observed"}
+{"claim_id": "N09", "claim": "ES04前末4.4381/.6340A", "source": "outputs/per_trajectory_crosswalk.tsv", "status": "observed"}
+{"claim_id": "N10", "claim": "0.5/2A敏感性", "source": "outputs/group_summary.json", "status": "observed"}
+{"claim_id": "N11", "claim": "面板只标字母无ES编号", "source": "SI rendered pages16-17 inspected", "status": "observed"}
+{"claim_id": "N12", "claim": "无模型调用或新实验", "source": "state/progress.json", "status": "observed"}

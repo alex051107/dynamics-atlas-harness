@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reproduce the main scientific numbers</title><style>body{margin:0;background:#f2f5f7;color:#20384a;font:17px/1.75 system-ui,sans-serif}header{background:#20384a;color:white;padding:18px 6%}header a{color:white;text-decoration:none}main{max-width:960px;margin:32px auto;padding:38px 48px;background:white;border-radius:10px}h1{font-size:36px;line-height:1.2}h2{font-size:25px;margin-top:36px}a{color:#246b96;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border-bottom:1px solid #d8e0e5;text-align:left;padding:12px;vertical-align:top}th{background:#edf3f7}pre{overflow:auto;padding:20px;background:#edf3f7;font-size:13px}code{font-size:.9em}footer{font-size:13px;color:#617482;margin-top:36px}@media(max-width:700px){main{margin:0;padding:22px}h1{font-size:28px}table{font-size:13px}}@media print{header{display:none}main{margin:0;padding:0}body{background:white}}</style><header><a href="../index.html">Dynamics Atlas / Research group</a></header><main><h1>Reproduce the main scientific numbers</h1>
+<h2>Requirements</h2>
+<p>Use Docker Desktop or Docker Engine, or an existing Python 3.11+ installation. The calculation uses only the Python standard library: there is no package installation, API key, provider account, GPU or paid model call. Inputs are included and total about 1.1 MB. The first Docker build requires internet access to obtain the public base image; execution can remain offline.</p>
+<h2>Docker: the fixed environment</h2>
+<p>From the <code>collaborators</code> directory, or the root of the standalone group ZIP:</p>
+<pre><code class="language-bash">docker build -t dynamics-atlas-group:20260910 .
+mkdir -p results
+docker run --rm --network none --read-only --tmpfs /tmp \
+  --mount &quot;type=bind,source=$(pwd)/results,target=/output&quot; \
+  dynamics-atlas-group:20260910
+</code></pre>
+<p>The Dockerfile uses a public Python image pinned by digest. It does not depend on the developer&#39;s local image name or filesystem. The container reads <code>/app/data</code> and writes <code>/output</code>; only your chosen results directory is mounted. No privileged mode or Docker socket is needed.</p>
+<p>On Windows PowerShell:</p>
+<pre><code class="language-powershell">docker build -t dynamics-atlas-group:20260910 .
+New-Item -ItemType Directory -Force results
+docker run --rm --network none --read-only --tmpfs /tmp --mount &quot;type=bind,source=$($PWD.Path)/results,target=/output&quot; dynamics-atlas-group:20260910
+</code></pre>
+<h2>Existing Python: no installation</h2>
+<pre><code class="language-bash">python3 reproduce/reproduce.py --data data --output results
+</code></pre>
+<p>On Windows use <code>py -3</code> instead of <code>python3</code> if that is your installed interpreter. The fixed Docker environment is preferred when sharing a runtime identity; the Python alternative is tested separately and uses the same script and data.</p>
+<h2>Expected outputs</h2>
+<p>The command must print <code>PASS: HSP90, DHFR and ADK table-to-report reproduction</code> and exit with code 0. It creates:</p>
+<ul>
+<li><code>results/REPORT.html</code>: a standalone readable result page.</li>
+<li><code>results/REPORT.md</code>: the same result in Markdown.</li>
+<li><code>results/results.json</code>: exact values, window definitions and per-trajectory HSP90 classifications.</li>
+</ul>
+<p>Main checks are HSP90&#39;s 5/5/10 direction partition and 9/1/0 versus 1/1/18 native-reference classifications; four DHFR M20 means; and four ADK domain-distance changes. See the methods for denominators and windows. Repeated execution replaces files only in the output directory.</p>
+<h2>Troubleshooting</h2>
+<p>A failed checksum means an input differs from the delivered package. Restore that input rather than changing an expected number. A missing-file error usually means the command was run outside the package root; pass <code>--data</code> explicitly. A Docker pull failure affects environment acquisition, not the scientific computation; an existing Python 3.11+ installation can run it without downloads.</p>
+<p>If a bind mount cannot be written on Linux, run Docker with your user&#39;s IDs (<code>--user &quot;$(id -u):$(id -g)&quot;</code>) after creating the results directory. Do not mount your home directory or credentials.</p>
+<h2>Raw-coordinate reconstruction is a separate task</h2>
+<p>The source deposits and prior physical checks are identified in SOURCES.md. This portable route starts from the corrected and frozen analysed tables. It does not install GROMACS or VMD and does not claim to regenerate the tables from raw coordinates. Those extra tools and the original full trajectories would be required for that broader reproduction.</p>
+<footer>Scientific results and reproducible calculations · September 2026</footer></main></html>

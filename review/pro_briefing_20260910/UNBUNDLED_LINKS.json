@@ -1,0 +1,2767 @@
+[
+  {
+    "copy": "reviews_0817/20260817_ChatGPT_Pro_审查裁决与执行影响.md",
+    "label": "两篇论文 baseline 的完整语义裁决",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/baseline/20260816_maintext_baseline_semantic_adjudication.md"
+  },
+  {
+    "copy": "reviews_0817/20260817_ChatGPT_Pro_审查裁决与执行影响.md",
+    "label": "baseline 之后的两层最小计划",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/20260816_baseline之后怎样继续_两层系统最小计划.md"
+  },
+  {
+    "copy": "reviews_0817/20260817_ChatGPT_Pro_审查裁决与执行影响.md",
+    "label": "逐来源 metadata contract v0.2",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/contracts/protein_dynamics_metadata_contract_v1.json"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "当前20题盘点",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/questions_20_current_audit.csv"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "论文到规则的历史报告",
+    "target": "autoresearch/tasks/dynamics_atlas_meeting_progress_rules_report_20260823/outputs/Dynamics_Atlas_Paper_to_Rules_Progress_Report_2026-08-24.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "基础规则说明",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/docs/RULES_PROTOTYPE_V1_REVIEW_PACKET.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "工具注册表",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/config/registered_operators.json"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "后续共同计算阶段",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/forward_bridge_use_real_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "40条轨迹的方法与结果",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q01_absolute_paths_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "结构身份核对",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/q01_source_identity_readback.json"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "作者权重回算",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_author_weight_audit_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "真实规则反应",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_active_rules_probe_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "原有HiSiaP答复",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q15_question_answer_v3/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "58/134局部运行",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_58_134_v3_producer_binding_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "完整答案与交付比较",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_same_evidence_delivery_reconciliation_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Q09数值记录",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q09_current_d24_continuation_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Q14误差分析",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q14_correlation_sensitivity_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Q16候选检查",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q16_saved_tail_audit_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Q17局部图比较",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q17_local_map_comparison_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "博客深入分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "逐篇分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L44.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "5页速读导览",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/QUICK_READ_ZH.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "59项学术来源的逐篇档案",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/INDEX.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "综合文献综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "完整审阅意见与采用记录",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/REVIEW_DISPOSITION_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "主论文与SI的详细分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L44.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "运行报告",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/forward_bridge_use_real_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "逐篇文献档案",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/INDEX.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "术语解释",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/GLOSSARY_ZH.html"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "送交Pro的完整技术稿",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/REPORT_SUBMITTED_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Pro完整回复",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/reply.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "意见核对与采用记录",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/REVIEW_DISPOSITION_ZH.md"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "本轮图表和文件检查",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/FINAL_CHECK.json"
+  },
+  {
+    "copy": "reset_0908/REPORT_ZH.md",
+    "label": "Pro随后完成的可读性改写全文",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_document/PRO_HUMAN_READABLE_REWRITE.md"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "离线检查结果",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/post_development_review/offline_submission_check.json"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "下一阶段行动计划",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/NEXT_SCIENTIFIC_STEP_ZH.md"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "领域核对简报",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/DOMAIN_REVIEW_BRIEF_ZH.md"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "数值与来源审计",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/SCIENTIFIC_AUDIT_ZH.md"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "运行费用记录",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/development_results.json"
+  },
+  {
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "label": "原子对后验核对",
+    "target": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/q05_development_source_check.json"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L45.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "主文XML",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L45.xml"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "L45",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "L45",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "L45",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L45.md",
+    "label": "L45",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L14.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/01_Lincoff_2020_XEISD_main.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "L14",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "L14",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L14.md",
+    "label": "L14",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L20.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L20.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L20.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/ChemCrow_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L20.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L20.md",
+    "label": "L20",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L30.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L30.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L30.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/PED_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L30.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L30.md",
+    "label": "L30",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L30.md",
+    "label": "L23",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L04.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Bengtsen_2020_eLife_NMR_SAXS_SANS_MD.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L48",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L04.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L55.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L55.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "L55",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "L55",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L55.md",
+    "label": "L55",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L24.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L24.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L24.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/GeneGPT_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L24.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L24.md",
+    "label": "L24",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L10.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L10.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L10.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Peter_2022_NatureCommunications_DEER_smFRET_crossvalidation.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L10.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L10.md",
+    "label": "L10",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L10.md",
+    "label": "L10",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L41.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L41.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L41.md",
+    "label": "主文PDF",
+    "target": "Park 等 - 2026 - LEARNING COLLECTIVE VARIABLES FROM BIOEMU WITH TIME-LAGGED GENERATION.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L41.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L41.md",
+    "label": "L41",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L51.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L51.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L51.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L51.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L51.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L51.md",
+    "label": "L51",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L51.md",
+    "label": "L51",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L34.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L34.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L34.md",
+    "label": "主文PDF",
+    "target": "literature/analyzed_papers/mdcath_scidata/paper.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L34.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L34.md",
+    "label": "L40",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L34.md",
+    "label": "L34",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L25.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/LAB_Bench_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "L25",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "L21",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L25.md",
+    "label": "L36",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L11.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L11.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L11.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Sanabria_2020_NatureCommunications_transient_states.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L11.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L11.md",
+    "label": "L11",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L40.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L40.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L40.md",
+    "label": "主文PDF",
+    "target": "Vander Meersche 等 - 2024 - ATLAS protein flexibility description from atomistic molecular dynamics simulations.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L40.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L40.md",
+    "label": "L40",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L40.md",
+    "label": "L34",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L50.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L50.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L50.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L50.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L50.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L50.md",
+    "label": "L50",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L01.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L01.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L01.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_article.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L01.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L01.md",
+    "label": "L01",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L01.md",
+    "label": "L01",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L35.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L35.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L35.md",
+    "label": "主文PDF",
+    "target": "literature/analyzed_papers/qfit_elife/paper.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L35.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L35.md",
+    "label": "L35",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L44.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/inputs/sources/acs.jcim.6c02044.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "Supporting Information",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/inputs/sources/ci6c02044_si_001.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "L44",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "L44",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "L44",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "L44",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L44.md",
+    "label": "L44",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L15.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L15.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L15.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/02_Silvestre_Ryan_2013_PRE_main.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L15.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L15.md",
+    "label": "L15",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L15.md",
+    "label": "L15",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L21.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/CORE_Bench_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "L25",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "L21",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L21.md",
+    "label": "L36",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L31.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L31.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L31.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/ToolUniverse_2025.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L31.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L31.md",
+    "label": "L31",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L05.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L05.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L05.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Bonvin_1995_JMB_Conformational_variability_complete_cross_validation.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L05.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L05.md",
+    "label": "L05",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L54.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "主文XML",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L54.xml"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "L54",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L54.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L26.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/MaxEnt_Pitera_Chodera_2012.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "L48",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L26.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L43.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L43.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L43.md",
+    "label": "主文PDF",
+    "target": "Scherer 等 - 2015 - PyEMMA 2 A Software Package for Estimation, Validation, and Analysis of Markov Models.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L43.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L43.md",
+    "label": "L28",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L43.md",
+    "label": "L43",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L12.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Shevchuk_2017_PLOSCB_Bayesian_SAXS_refinement.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "L27",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "L12",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L12.md",
+    "label": "L49",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L02.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/candidate_cases/Sic1_Gomes_2020/sources/gomes2020_primary.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "L02",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "L02",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "L02",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L02.md",
+    "label": "L02",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L53.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L53.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L53.md",
+    "label": "主文XML",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L53.xml"
+  },
+  {
+    "copy": "literature/paper_analyses/L53.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L53.md",
+    "label": "L53",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L53.md",
+    "label": "L53",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L36.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "主文PDF",
+    "target": "paper_readers/harness_bench_2605_27922/source.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "L25",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "L21",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L36.md",
+    "label": "L36",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L16.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/03_Thomasen_2022_Ensemble_Review.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "L16",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "L37",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "L16",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "L37",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L16.md",
+    "label": "B01",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L47.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L47.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L47.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L47.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L47.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L47.md",
+    "label": "L47",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L22.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L22.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L22.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/cryoDRGN_2021_NatMethods.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L22.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L22.md",
+    "label": "L22",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L22.md",
+    "label": "L22",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L32.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L32.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L32.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_System_Audit_20260710_115646_CST/sources/DynaMune_rs-8999467_v1.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L32.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L32.md",
+    "label": "L32",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L57.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L57.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "L56",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "L56",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "L57",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L57.md",
+    "label": "L57",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L06.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L06.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L06.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Dimura_2020_NatureCommunications_FRET_assisted_modeling.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L06.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L06.md",
+    "label": "L06",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/INDEX.md",
+    "label": "保留版本",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/versions/v2_59_sources/REVIEW_ZH.md"
+  },
+  {
+    "copy": "literature/paper_analyses/INDEX.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/INDEX.md",
+    "label": "阅读范围表",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/READING_COVERAGE.csv"
+  },
+  {
+    "copy": "literature/paper_analyses/L17.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L17.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L17.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/04_Grossfield_2018_MD_Sampling_Best_Practices.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L17.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L17.md",
+    "label": "L17",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L46.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L46.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L46.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L46.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L46.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L46.md",
+    "label": "L46",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L23.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L23.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L23.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/FAIR_MD_2025_NatMethods.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L23.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L23.md",
+    "label": "L30",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L23.md",
+    "label": "L23",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L33.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L33.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L33.md",
+    "label": "主文PDF",
+    "target": "literature/analyzed_papers/markov_plasticity_natcomm/paper.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L33.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L33.md",
+    "label": "L33",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L33.md",
+    "label": "L33",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L56.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "主文XML",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L56.xml"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "L56",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "L56",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "L57",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L56.md",
+    "label": "L57",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L07.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L07.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L07.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Fuertes_2017_PNAS_SAXS_FRET_discrepancy.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L07.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L07.md",
+    "label": "L07",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L07.md",
+    "label": "L07",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L27.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/Metainference_2016.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "L27",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "L12",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L27.md",
+    "label": "L49",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/B01.md",
+    "label": "Ensemble 博客 Deep Analysis",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/B01.md",
+    "label": "本地完整检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/are-we-capturing-the-ensemble.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L42.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L42.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L42.md",
+    "label": "主文PDF",
+    "target": "Wayment-Steele 等 - 2024 - Predicting multiple conformations via sequence clustering and AlphaFold2.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L42.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L42.md",
+    "label": "L42",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L13.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L13.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L13.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Steffen_2021_Bioinformatics_FRETraj.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L13.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L13.md",
+    "label": "L13",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L03.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Agam_2023_NatureMethods_smFRET_protein_reliability.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "L03",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "L03",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L03.md",
+    "label": "L03",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L52.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L52.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "L52",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "L52",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L52.md",
+    "label": "L52",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L37.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "主文PDF",
+    "target": "Wankowicz和Bonomi - 2026 - From possibility to precision in macromolecular ensemble prediction.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "L16",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "L37",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "L16",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "L37",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L37.md",
+    "label": "B01",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L49.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L49.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "L27",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "L12",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L49.md",
+    "label": "L49",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L18.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L18.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L18.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/BioEmu_2025_bioRxiv.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L18.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L18.md",
+    "label": "L18",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L08.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L08.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L08.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Hellenkamp_2018_NatureMethods_smFRET_benchmark.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L08.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L08.md",
+    "label": "L08",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L08.md",
+    "label": "L08",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L59.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L59.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L59.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L59.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L59.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L59.md",
+    "label": "L59",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L59.md",
+    "label": "L59",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L28.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L28.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L28.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/MSM_Prinz_2011.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L28.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L28.md",
+    "label": "L28",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L28.md",
+    "label": "L43",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L38.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "主文PDF",
+    "target": "Proteins - 2025 - McBride - Predicting Pose Distribution of Protein Domains Connected by Flexible Linkers Is an Unsolved.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "L38",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "L38",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L38.md",
+    "label": "L38",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L29.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L29.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L29.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/PaperQA2_2024.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L29.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L29.md",
+    "label": "L29",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L39.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L39.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L39.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L39.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L39.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L39.md",
+    "label": "L39",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L48.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L48.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "L26",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "L48",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L48.md",
+    "label": "L04",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L19.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L19.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L19.md",
+    "label": "主文PDF",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/Biomni_2025.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L19.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L19.md",
+    "label": "L19",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L09.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L09.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L09.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Hoff_2024_PLOSCB_cryoEM_Bayesian_refinement.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L09.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L09.md",
+    "label": "L09",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L09.md",
+    "label": "L09",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L58.md",
+    "label": "全文检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L58.md"
+  },
+  {
+    "copy": "literature/paper_analyses/L58.md",
+    "label": "主文PDF",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L58.pdf"
+  },
+  {
+    "copy": "literature/paper_analyses/L58.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/paper_analyses/L58.md",
+    "label": "L58",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/QUICK_READ_ZH.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/QUICK_READ_ZH.md",
+    "label": "当前综合综述的项目设计",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/QUICK_READ_ZH.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/GLOSSARY_ZH.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "本轮检索记录",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/recent_search_20260908/SEARCH_UPDATE_ZH.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "逐项阅读与设计覆盖表",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/READING_COVERAGE.csv"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "机器可读来源记录",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/corpus.json"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L01.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_hsp90_feasibility_20260725/inputs/henot_2022_hsp90_article.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L02.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/candidate_cases/Sic1_Gomes_2020/sources/gomes2020_primary.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L03.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Agam_2023_NatureMethods_smFRET_protein_reliability.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L04.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Bengtsen_2020_eLife_NMR_SAXS_SANS_MD.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L05.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Bonvin_1995_JMB_Conformational_variability_complete_cross_validation.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L06.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Dimura_2020_NatureCommunications_FRET_assisted_modeling.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L07.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Fuertes_2017_PNAS_SAXS_FRET_discrepancy.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L08.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Hellenkamp_2018_NatureMethods_smFRET_benchmark.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L09.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Hoff_2024_PLOSCB_cryoEM_Bayesian_refinement.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L10.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Peter_2022_NatureCommunications_DEER_smFRET_crossvalidation.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L11.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Sanabria_2020_NatureCommunications_transient_states.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L12.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Shevchuk_2017_PLOSCB_Bayesian_SAXS_refinement.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L13.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/fulltext/PDFs/Steffen_2021_Bioinformatics_FRETraj.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L14.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/01_Lincoff_2020_XEISD_main.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L15.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/02_Silvestre_Ryan_2013_PRE_main.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L16.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/03_Thomasen_2022_Ensemble_Review.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L17.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/inputs/paper_intake_20260816/04_Grossfield_2018_MD_Sampling_Best_Practices.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L18.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/BioEmu_2025_bioRxiv.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L19.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/Biomni_2025.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L20.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/ChemCrow_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L21.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/CORE_Bench_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L22.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/cryoDRGN_2021_NatMethods.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L23.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/FAIR_MD_2025_NatMethods.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L24.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/GeneGPT_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L25.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/LAB_Bench_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L26.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/MaxEnt_Pitera_Chodera_2012.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L27.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/Metainference_2016.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L28.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/MSM_Prinz_2011.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L29.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/PaperQA2_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L30.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/PED_2024.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L31.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_Data_and_Agent_System_Review_20260710_122546_CST/sources/ToolUniverse_2025.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L32.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Dynamics_Atlas_System_Audit_20260710_115646_CST/sources/DynaMune_rs-8999467_v1.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L33.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "literature/analyzed_papers/markov_plasticity_natcomm/paper.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L34.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "literature/analyzed_papers/mdcath_scidata/paper.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L35.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "literature/analyzed_papers/qfit_elife/paper.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L36.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "paper_readers/harness_bench_2605_27922/source.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L37.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Wankowicz和Bonomi - 2026 - From possibility to precision in macromolecular ensemble prediction.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L38.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Proteins - 2025 - McBride - Predicting Pose Distribution of Protein Domains Connected by Flexible Linkers Is an Unsolved.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L39.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L39.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L40.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Vander Meersche 等 - 2024 - ATLAS protein flexibility description from atomistic molecular dynamics simulations.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L41.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Park 等 - 2026 - LEARNING COLLECTIVE VARIABLES FROM BIOEMU WITH TIME-LAGGED GENERATION.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L42.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Wayment-Steele 等 - 2024 - Predicting multiple conformations via sequence clustering and AlphaFold2.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L43.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "Scherer 等 - 2015 - PyEMMA 2 A Software Package for Estimation, Validation, and Analysis of Markov Models.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L44.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/inputs/sources/acs.jcim.6c02044.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "SI",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/inputs/sources/ci6c02044_si_001.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L45.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L45.xml"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L46.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L46.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L47.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L47.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L48.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L48.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L49.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L49.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L50.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/L50.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L51.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L51.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L52.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L52.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L53.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L53.xml"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L54.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L54.xml"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L55.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L55.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L56.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L56.xml"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L57.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L57.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L58.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L58.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/sources/L59.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "原文",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/inputs/recent/L59.pdf"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "本地记录",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/are-we-capturing-the-ensemble.md"
+  },
+  {
+    "copy": "literature/REVIEW_ZH.md",
+    "label": "本地记录",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/questions_20_current_audit.csv"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "带编号的完整检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/blog_deep_source/source_numbered.md"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "本次带位置编号的完整检索稿",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/blog_deep_source/source_numbered.md"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "网页快照",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/blog_deep_source/source.html"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "此前简要解读",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/versions/blog_before_deep_analysis/B01.md"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "Fuertes 的逐篇分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L07.html"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "Mattingly 的逐篇分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L46.html"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "Clark 的逐篇分析",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L51.html"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "综合综述",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.html"
+  },
+  {
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "label": "术语解释",
+    "target": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/GLOSSARY_ZH.html"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-23_DynaMune_2026_ENM_NMA.md",
+    "label": "本地 PDF",
+    "target": "Dynamics_Atlas_System_Audit_20260710_115646_CST/sources/DynaMune_rs-8999467_v1.pdf"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-23_DynaMune_2026_ENM_NMA.md",
+    "label": "Markdown derivative",
+    "target": "autoresearch/tasks/dynamics_atlas_dynamune_multi_system_selectivity_20260823/outputs/sources/DynaMune_rs-8999467_v1.md"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-23_DynaMune_2026_ENM_NMA.md",
+    "label": "任务 Context Receipt",
+    "target": "autoresearch/tasks/dynamics_atlas_dynamune_multi_system_selectivity_20260823/state/context_receipt.md"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2022_HENOT_HSP90.md",
+    "label": "claim matrix",
+    "target": "autoresearch/tasks/dynamics_atlas_hsp90_paper_comparison_20260729/outputs/HSP90_PAPER_ATLAS_CLAIM_MATRIX.md"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "label": "主文 PDF",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "label": "Supporting Information",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "label": "Sic1 来源记录",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "label": "Sic1 Claim Seal 草案说明",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "label": "逐行抽取文本",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "label": "来源记录",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "label": "source observations",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "label": "可定位抽取文本",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "label": "用户提供的 PDF",
+    "target": "[host-local target omitted]"
+  },
+  {
+    "copy": "rules/ORIGINAL_DEEP_READ_INDEX.md",
+    "label": "formal_corpus_20260806.tsv",
+    "target": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/formal_corpus_20260806.tsv"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "PROJECT_MEMORY.md",
+    "target": "PROJECT_MEMORY.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "02_原始转写_后半段_Zoom重连.txt",
+    "target": "会议纪要/28号会议纪要/2026-07-28_Soojung_会议材料/02_原始转写_后半段_Zoom重连.txt"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "Soojung_Meeting_2026-08-24_whisper_raw.txt",
+    "target": "autoresearch/tasks/dynamics_atlas_soojung_meeting_transcript_prototype_20260824/inputs/transcript/Soojung_Meeting_2026-08-24_whisper_raw.txt"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "Dynamics_Atlas_Paper_to_Rules_Progress_Report_2026-08-24.md",
+    "target": "autoresearch/tasks/dynamics_atlas_meeting_progress_rules_report_20260823/outputs/Dynamics_Atlas_Paper_to_Rules_Progress_Report_2026-08-24.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "RULES_PROTOTYPE_V1_REVIEW_PACKET.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/docs/RULES_PROTOTYPE_V1_REVIEW_PACKET.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "rules_prototype_v1.py",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/src/dynamics_atlas_harness/rules_prototype_v1.py"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "questions_20.csv",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/questions_20.csv"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "question_progress_v2.json",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/question_progress_v2.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q01_question_answer_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_active_rules_probe_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_fixed_weight_audit_v0/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_author_weight_audit_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q05_joint_numeric_v2/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q09_current_d24_continuation_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q14_correlation_sensitivity_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q15_question_answer_v3/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "reply.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/chatgpt_pro/round24/reply.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_same_evidence_comparison_result_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "direct_P_corrected_reply.json",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_corrected_delivery_v1/direct_P_corrected_reply.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q16_saved_tail_audit_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/q17_local_map_comparison_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "registered_operators.json",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/config/registered_operators.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "dynamics-atlas-harness-rules-prototype-acceptance-v1/research/paper_result_reproduction_screen_v1/forward_bridge_use_real_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "are-we-capturing-the-ensemble.md",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/are-we-capturing-the-ensemble.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "acs.jcim.6c02044.pdf",
+    "target": "acs.jcim.6c02044.pdf"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "acs.jcim.6c02044.md",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/acs.jcim.6c02044.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "ci6c02044_si_001.pdf",
+    "target": "ci6c02044_si_001.pdf"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "ci6c02044_si_001.md",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/ci6c02044_si_001.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "automation.toml",
+    "target": "automation.toml"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "DYNAMICS_ATLAS_DECISION_LOG.jsonl",
+    "target": "autoresearch/DYNAMICS_ATLAS_DECISION_LOG.jsonl"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "PROJECT_AUDIT_FOR_PRO_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/PROJECT_AUDIT_FOR_PRO_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "direct_P_corrected_reply.json",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_corrected_delivery_v1/direct_P_corrected_reply.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "source_verification.md",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/source_verification.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "REPORT_ZH.md",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_58_134_v3_producer_binding_v1/REPORT_ZH.md"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "report.json",
+    "target": "autoresearch/tasks/dynamics_atlas_paper_result_reproduction_screen_20260904/outputs/q15_58_134_forward_bridge_v3/report.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "submission_receipt.json",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_strategy/submission_receipt.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "q01_source_identity_readback.json",
+    "target": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/q01_source_identity_readback.json"
+  },
+  {
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "label": "run_contract_audit.json",
+    "target": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/results/run_contract_audit.json"
+  }
+]

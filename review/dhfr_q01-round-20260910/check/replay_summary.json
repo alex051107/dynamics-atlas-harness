@@ -1,0 +1,14 @@
+[
+  {
+    "run": "DHFR_Q01_A_07534f46",
+    "python_requests": 2,
+    "exact_stdout_matches": 2,
+    "note": "Mismatch alone is not a scientific error; inspect outputs."
+  },
+  {
+    "run": "DHFR_Q01_A_ef5da470",
+    "python_requests": 2,
+    "exact_stdout_matches": 2,
+    "note": "Mismatch alone is not a scientific error; inspect outputs."
+  }
+]

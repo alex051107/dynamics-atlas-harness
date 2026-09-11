@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V041",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类0/9/1、18/1/1、p95=1.32和ES04@188/ES15@690、敏感性全部给对；第二列、轨迹统计单位和参照带非独立验证明确。"
+  },
+  {
+    "blind_id": "V042",
+    "units": [
+      "C",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4/1、10everO、开放0相反持续正确；未交5初始开放+5后开放+10未开放分解及原生NOE数值。方向、参照、非动力学转变边界充分，未将未完成的NOE分析冒充结果。"
+  },
+  {
+    "blind_id": "V043",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际SAXS指定点残差和两项methyl上界违反是允许的有效比较；分别解释观测、作者联合拟合及非唯一分布。明确当前并非FRET反演，未采用R0/dye/AV/RMP为必要条件；额外Bayesian状态数/先验检查负担另列探索性问题。"
+  },
+  {
+    "blind_id": "V044",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "E",
+      "M"
+    ],
+    "core_errors": 2,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "将未修复大距离表解释为M20/R28真实接触支持，未发现或降级周期性异常；又把图3底物下降更慢误读为与Ki方向不一致，形成第二核心错误。Ki正确；未声称尾部是物理切换，unit2保留；虽有无角度和因果边界，未指出缺坐标不能修表，unit5缺失。"
+  },
+  {
+    "blind_id": "V045",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个增量及方向/幅度、无配体与ATP实验、4.3ms非MD结论正确。已说明轨迹时间、n=1及相关帧，未报告303.15K与294K温度差，合并条件单元按缺失记，不计事实错误。"
+  },
+  {
+    "blind_id": "V046",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "全分布中位数、重叠范围及四个首末增量正确；KS仅描述，不当独立显著性。apo、时间温度、域定义、实验4.3ms与先后顺序边界清楚。"
+  }
+]

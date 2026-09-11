@@ -1,0 +1,21 @@
+{
+  "rows": 13,
+  "unique_original_answers": 7,
+  "candidate_code_rows": 3,
+  "candidate_guidance_rows": 2,
+  "candidate_framing_rows": 0,
+  "actual_replay_detected_rows": 3,
+  "not_causal_prevention_counts": true,
+  "unit": "observations in exposed output artifacts; correlated errors, not independent science cases",
+  "framing_gap": "5/5/10 subdivision absent is not retroactively scored an error because original question did not require it",
+  "reviewed_answer_count": 8,
+  "time": "2026-09-10T12:24:54.649537+00:00",
+  "same_cause_groups": 7,
+  "ceiling_replay_runs": 8,
+  "ceiling_target_core_numeric_observations": 7,
+  "ceiling_correctly_detected_target_observations": 0,
+  "ceiling_flags": 1,
+  "ceiling_false_positive_flags": 1,
+  "ceiling_false_positive_reason": "Q05 SAXS quantity unit Angstrom^-1 parsed as numeric value -1; actual scientific values match tools",
+  "original_replay_three_scope": "2 DHFR input checks plus1 delivery replay; not current ceiling replay"
+}

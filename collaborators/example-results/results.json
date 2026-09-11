@@ -1,0 +1,443 @@
+{
+  "status": "PASS",
+  "scope": "Recalculation from frozen analysed tables; no new MD or coordinate reconstruction",
+  "python": "3.11.16",
+  "HSP90": {
+    "five_point_partition": {
+      "ONLY_CLOSED": 10,
+      "FIRST_OPEN": 5,
+      "CLOSED_THEN_OPEN": 5
+    },
+    "sensitivity_A": {
+      "0.5": {
+        "closed_seeded": {
+          "NOT_APPLICABLE": 10,
+          "RELATIVE_ONLY": 10
+        },
+        "open_seeded": {
+          "PARTIAL": 8,
+          "AGREEMENT": 7,
+          "RELATIVE_ONLY": 5
+        }
+      },
+      "1.0": {
+        "closed_seeded": {
+          "NOT_APPLICABLE": 10,
+          "RELATIVE_ONLY": 9,
+          "PARTIAL": 1
+        },
+        "open_seeded": {
+          "AGREEMENT": 18,
+          "PARTIAL": 1,
+          "RELATIVE_ONLY": 1
+        }
+      },
+      "2.0": {
+        "closed_seeded": {
+          "NOT_APPLICABLE": 10,
+          "AGREEMENT": 3,
+          "RELATIVE_ONLY": 5,
+          "PARTIAL": 2
+        },
+        "open_seeded": {
+          "AGREEMENT": 19,
+          "RELATIVE_ONLY": 1
+        }
+      }
+    },
+    "trajectories": [
+      {
+        "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 959,
+        "open_NOE_fraction_within_direction": 0.22002085505735142,
+        "both_far_fraction_within_direction": 0.7799791449426486,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 968,
+        "open_NOE_fraction_within_direction": 0.5805785123966942,
+        "both_far_fraction_within_direction": 0.4194214876033058,
+        "judgment": "PARTIAL"
+      },
+      {
+        "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 600,
+        "open_NOE_fraction_within_direction": 0.0,
+        "both_far_fraction_within_direction": 1.0,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 95,
+        "open_NOE_fraction_within_direction": 0.0,
+        "both_far_fraction_within_direction": 1.0,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 412,
+        "open_NOE_fraction_within_direction": 0.0,
+        "both_far_fraction_within_direction": 1.0,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 906,
+        "open_NOE_fraction_within_direction": 0.3852097130242826,
+        "both_far_fraction_within_direction": 0.6147902869757175,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 628,
+        "open_NOE_fraction_within_direction": 0.025477707006369428,
+        "both_far_fraction_within_direction": 0.9745222929936306,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 254,
+        "open_NOE_fraction_within_direction": 0.0,
+        "both_far_fraction_within_direction": 1.0,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 0,
+        "open_NOE_fraction_within_direction": null,
+        "both_far_fraction_within_direction": null,
+        "judgment": "NOT_APPLICABLE"
+      },
+      {
+        "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 963,
+        "open_NOE_fraction_within_direction": 0.0,
+        "both_far_fraction_within_direction": 1.0,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+        "seed": "closed_seeded",
+        "open_direction_frames": 979,
+        "open_NOE_fraction_within_direction": 0.06537282941777324,
+        "both_far_fraction_within_direction": 0.9346271705822268,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.998001998001998,
+        "both_far_fraction_within_direction": 0.001998001998001998,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.999000999000999,
+        "both_far_fraction_within_direction": 0.000999000999000999,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 1.0,
+        "both_far_fraction_within_direction": 0.0,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.8741258741258742,
+        "both_far_fraction_within_direction": 0.1258741258741259,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.942057942057942,
+        "both_far_fraction_within_direction": 0.057942057942057944,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.989010989010989,
+        "both_far_fraction_within_direction": 0.01098901098901099,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.9500499500499501,
+        "both_far_fraction_within_direction": 0.04995004995004995,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.6733266733266733,
+        "both_far_fraction_within_direction": 0.32667332667332666,
+        "judgment": "PARTIAL"
+      },
+      {
+        "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.993006993006993,
+        "both_far_fraction_within_direction": 0.006993006993006993,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.998001998001998,
+        "both_far_fraction_within_direction": 0.001998001998001998,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.997002997002997,
+        "both_far_fraction_within_direction": 0.002997002997002997,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.942057942057942,
+        "both_far_fraction_within_direction": 0.057942057942057944,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 1.0,
+        "both_far_fraction_within_direction": 0.0,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.993006993006993,
+        "both_far_fraction_within_direction": 0.006993006993006993,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.8891108891108891,
+        "both_far_fraction_within_direction": 0.1108891108891109,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.8051948051948052,
+        "both_far_fraction_within_direction": 0.19480519480519481,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.993006993006993,
+        "both_far_fraction_within_direction": 0.006993006993006993,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.11388611388611389,
+        "both_far_fraction_within_direction": 0.8861138861138861,
+        "judgment": "RELATIVE_ONLY"
+      },
+      {
+        "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 0.999000999000999,
+        "both_far_fraction_within_direction": 0.000999000999000999,
+        "judgment": "AGREEMENT"
+      },
+      {
+        "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+        "seed": "open_seeded",
+        "open_direction_frames": 1001,
+        "open_NOE_fraction_within_direction": 1.0,
+        "both_far_fraction_within_direction": 0.0,
+        "judgment": "AGREEMENT"
+      }
+    ]
+  },
+  "DHFR": {
+    "tmpp-wt": {
+      "frames": 990,
+      "M20_O3P_mean_A": 8.687677437010102
+    },
+    "d4tmpp-wt": {
+      "frames": 990,
+      "M20_O3P_mean_A": 4.622056235181818
+    },
+    "tmpp-l28r": {
+      "frames": 990,
+      "M20_O3P_mean_A": 10.435783036464647
+    },
+    "d4tmpp-l28r": {
+      "frames": 990,
+      "M20_O3P_mean_A": 4.808909664414141
+    }
+  },
+  "ADK": {
+    "open": {
+      "frames": 2253,
+      "window_frames": 225,
+      "first_window_ns": [
+        0.0,
+        44.8
+      ],
+      "last_window_ns": [
+        405.6,
+        450.4
+      ],
+      "domains": {
+        "NMP": {
+          "first_mean_A": 26.215698262030003,
+          "last_mean_A": 26.28641938042394,
+          "change_A": 0.07072111839393713,
+          "median_A": 26.63789669466775
+        },
+        "LID": {
+          "first_mean_A": 34.39272106287392,
+          "last_mean_A": 36.683131762367466,
+          "change_A": 2.290410699493549,
+          "median_A": 33.568051842729716
+        }
+      }
+    },
+    "closed": {
+      "frames": 1678,
+      "window_frames": 167,
+      "first_window_ns": [
+        0.0,
+        33.2
+      ],
+      "last_window_ns": [
+        302.2,
+        335.4
+      ],
+      "domains": {
+        "NMP": {
+          "first_mean_A": 25.252348631804583,
+          "last_mean_A": 26.343243475931413,
+          "change_A": 1.0908948441268294,
+          "median_A": 26.036330238177126
+        },
+        "LID": {
+          "first_mean_A": 30.23082988063092,
+          "last_mean_A": 31.40725109926365,
+          "change_A": 1.1764212186327292,
+          "median_A": 30.63805144423395
+        }
+      }
+    }
+  }
+}

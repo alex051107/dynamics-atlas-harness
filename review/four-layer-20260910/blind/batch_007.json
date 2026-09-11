@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V035",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际90点SAXS比较及40项methyl上限比较提供有效分析；HN明确限定为读到的257项，不当作全292项计数。双侧距离差仅作描述，未据其排序冲突。作者联合拟合与独立预测、有限候选支持分开。TOKEN_LIMIT单列。"
+  },
+  {
+    "blind_id": "V036",
+    "units": [
+      "E",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "20点首次方向同时把ES06/07列入15条闭向又称无持久共识，正确为13/5/2；未给50点相反持续1条。NOE候选集合又仅列7条ES而漏3条已识别开放方向者，形成第二个核心集合错误。未交5+5+10分解及原生NOE9/1、18/20；明确未计算，按缺失计。方向/绝对参照/完整转变边界及有限窗口正确。"
+  },
+  {
+    "blind_id": "V037",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个首末增量及225/167帧窗口正确；标量外移与三维路径分开。apo、每条n=1、303.15K与294K、数百ns与4.3ms及TR-XSS精修来源明确，不把域距离当实验复现。"
+  },
+  {
+    "blind_id": "V038",
+    "units": [
+      "M",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "给出M20 O3P均值差WT−4.066、L28R−5.627，与两套绝对均值等价的比较量，计核心单元2正确。没有完整六个N18/M20/W22 O3P下降结论，也没有六个R28 O4/O5下降及O3P两升一降的充分说明，计两项缺失。Ki/Fig3、窗口及无角度/因果边界正确。"
+  },
+  {
+    "blind_id": "V039",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六个N18/M20/W22 O3P变化、M20绝对均值、六个R28 O4/O5及O3P混合方向、Ki/Fig3均正确，有限帧和氢键/机制边界明确。把配体氧称磷酸氧为次要化学命名错误，保留旁注，不改预定核心计分。"
+  },
+  {
+    "blind_id": "V040",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS90点标准化平方差1.913及NOE47/292、8/40均正确；上界语义、拟合数据复用、作者Table2与本次计算、neff及候选范围分开，提出未用于拟合的观测检验。"
+  }
+]

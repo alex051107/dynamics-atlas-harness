@@ -1,0 +1,27 @@
+{
+  "core_units": [
+    "at least one actual correctly calculated informative comparison using native experimental and predicted data; any established equivalent method accepted",
+    "source-local SAXS/NOE compatibility described separately without a universal all-observables success claim",
+    "fitted versus prediction evidence correctly separated, author weights or reference stats not claimed as own new optimization",
+    "proper native averaging/uncertainty interpretation for whichever comparison performed; e.g.NOEmethyl truepairbounds not fabricated array",
+    "finite candidate support, uncertainty/identifiability and concrete next discriminating analysis; no unique equilibrium/dynamics validation"
+  ],
+  "reference_examples": {
+    "SAXS_mean_standardized_residual_squared_author_joint": 1.915230735,
+    "HN_upper_violations": [
+      47,
+      292
+    ],
+    "methyl_upper_violations": [
+      8,
+      40
+    ],
+    "methyl_max_excess_A": 2.75049
+  },
+  "tolerances": {
+    "distance_A": 0.02,
+    "chi_squared_mean": 0.02
+  },
+  "source": "SCIENCE_AUDIT_ZH.md plus independent source_check json; developer references not mounted",
+  "alternatives": "No requirement to choose reweighting or any expected operator; correct alternate useful calculation earns unit1"
+}

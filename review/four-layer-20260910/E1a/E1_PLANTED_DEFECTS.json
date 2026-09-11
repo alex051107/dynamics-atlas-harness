@@ -1,0 +1,49 @@
+{
+  "freeze_time": "2026-09-10T11:37:30.864285+00:00",
+  "clean": [
+    "clean_HSP90",
+    "clean_DHFR",
+    "clean_ADK"
+  ],
+  "defects": [
+    {
+      "packet": "defect_1",
+      "source": "DHFR",
+      "single_mutation": "Original wrapped-coordinate protein-ligand distance arrays replace corrected arrays; raw original preserved",
+      "expected_defect": true
+    },
+    {
+      "packet": "defect_2",
+      "source": "ADK",
+      "single_mutation": "Only declared unit changed Angstrom to nm; numerical array unchanged",
+      "expected_defect": true
+    },
+    {
+      "packet": "defect_3",
+      "source": "ADK",
+      "single_mutation": "Remove last20saved rows; declared/source count unchanged",
+      "expected_defect": true
+    },
+    {
+      "packet": "defect_4",
+      "source": "ADK",
+      "single_mutation": "Exchange adjacent timestamps only, rows11 and12; coordinate-derived values unchanged",
+      "expected_defect": true
+    },
+    {
+      "packet": "defect_5",
+      "source": "DHFR",
+      "single_mutation": "Swap two condition labels, arrays unchanged",
+      "expected_defect": true
+    },
+    {
+      "packet": "defect_6",
+      "source": "HSP90",
+      "single_mutation": "Label fitted/reused NMR reference as independent validation; authority remains source Methods",
+      "expected_defect": true
+    }
+  ],
+  "success": ">=5/6 defects including realperiodic01;0/3 falsepositives",
+  "scope": "Consistency with independently curated source authority and validated numerical reference; not autonomous literature interpretation",
+  "hidden_reference_not_in_agent_workspace": true
+}

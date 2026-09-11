@@ -1,0 +1,9 @@
+agent_claim,answer_locator,paper_locator,relation,input_checked,note
+M20-N–4′-DTMP O3P**：,AGENT_RAW/A1/answer.md:L13,Fig4a,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,原表计算确有方向差；周期性输入缺口使均值的物理解释未准入
+WT的N18-O3P（18.14→12.16 Å；<6 Å约9.2→15.7%）和W22-O3P（19.41→,AGENT_RAW/A1/answer.md:L25,Fig4a,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,原表百分数另有错误；不把作者图作为该比例真值
+主要支持NE/NH1/NH2–O4P/O5P，尤其NE–O4P、NE–O5P、NH2–O4P、NH2–O5P；,AGENT_RAW/A1/answer.md:L43,Fig4b,UNDETERMINED,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,方向与论文相容；原坐标占比/均值不直接作物理接触
+WT-TMP 4.2±0.5 nM、WT-4′-DTMP 5.1±1.0 nM；L28R-TMP 65.0±7,AGENT_RAW/A1/answer.md:L47,Table1,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,四项Ki与公开表一致
+65.0/34.3=1.90倍**；WT中4′-DTMP则略差（4.2/5.1=0.82）。这与L28R中O4,AGENT_RAW/A1/answer.md:L47,Table1,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,同表比值算术正确，非作者原报倍数
+WT加任一抑制剂几乎不消耗DHF，符合4–5 nM Ki；L28R本底反应较慢，加药后两者都减慢产物释放，且4,AGENT_RAW/A1/answer.md:L49,Fig3,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,定性转述符合正文
+不能据此确认氢键。,AGENT_RAW/A1/answer.md:L43,HbondMethods,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,保持角度条件边界
+没有跨重复置信区间，帧自相关也未处理。,AGENT_RAW/A1/answer.md:L53,SystemPreparation/Deposit,AGREE,See check/replay_summary.json and reference_statistics.json; coordinate limitation POST_FREEZE_ISSUE.md,本轮只有每条件一条沉积轨迹

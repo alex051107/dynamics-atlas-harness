@@ -1,0 +1,12 @@
+{"claim_id": "A", "claim": "拆题在2/2题提高覆盖中位数且过强结论未增", "source": "GROUP_RESULTS.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "B", "claim": "准入卡组与普通组检测和降级均0/4", "source": "GROUP_RESULTS.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "B-access", "claim": "四个CARD运行只列到文件名未取得卡内容", "source": "E1B_CARD_ACCESS_AUDIT.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "C", "claim": "方法卡未达逐题不劣于协议与旧规则标准", "source": "GROUP_RESULTS.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "D", "claim": "一次反馈仅1/3题错误中位数改善", "source": "GROUP_RESULTS.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "D-flags", "claim": "9条提示未命中核心科学错误", "source": "E2_FLAG_REVIEW.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "D-revision", "claim": "12份反馈答复初终稿无核心错误数减少", "source": "E2_REVISION_COMPARISON.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "E0", "claim": "历史8份回放7处目标错未检出", "source": "E0_CEILING_REPLAY_REVIEW_ZH.md", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "ADK", "claim": "四个首末增量独立实现复算一致", "source": "ADK_INDEPENDENT_RECOMPUTE.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "Cost", "claim": "74份答复总费用1.20292179美元", "source": "CAMPAIGN_PROGRESS.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "Freeze", "claim": "先冻结再运行，先封存再揭盲", "source": "WORK_EVIDENCE_LEDGER.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}
+{"claim_id": "Q05", "claim": "48/90点在1个实验误差内", "source": "Q05_ONE_SIGMA_INDEPENDENT_CHECK.json", "evidence_level": "local_execution_or_audit", "limit": "小样本/来源和具体操作内，不推总体正确率"}

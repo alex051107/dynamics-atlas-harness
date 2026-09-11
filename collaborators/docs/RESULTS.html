@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What the current data support</title><style>body{margin:0;background:#f2f5f7;color:#20384a;font:17px/1.75 system-ui,sans-serif}header{background:#20384a;color:white;padding:18px 6%}header a{color:white;text-decoration:none}main{max-width:960px;margin:32px auto;padding:38px 48px;background:white;border-radius:10px}h1{font-size:36px;line-height:1.2}h2{font-size:25px;margin-top:36px}a{color:#246b96;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border-bottom:1px solid #d8e0e5;text-align:left;padding:12px;vertical-align:top}th{background:#edf3f7}pre{overflow:auto;padding:20px;background:#edf3f7;font-size:13px}code{font-size:.9em}footer{font-size:13px;color:#617482;margin-top:36px}@media(max-width:700px){main{margin:0;padding:22px}h1{font-size:28px}table{font-size:13px}}@media print{header{display:none}main{margin:0;padding:0}body{background:white}}</style><header><a href="../index.html">Dynamics Atlas / Research group</a></header><main><h1>What the current data support</h1>
+<p>Dynamics Atlas aims to make differences between protein-dynamics evidence interpretable and reproducible. Its scientific results concern specific observables under specified conditions. A structural change, a state population and a transition rate are different quantities and require different evidence.</p>
+<h2>HSP90: direction and reference agreement answer different questions</h2>
+<p>The analysis covered 40 trajectories: 20 from closed-start structures and 20 from open-start structures. Each contributed 1001 saved points from 20 to 1020 ns. Under the five-point persistence definition, the closed-start set split into five initially open-direction trajectories, five that later entered an open direction and ten that never did. Thus, 10/20 does not mean ten newly observed opening events.</p>
+<p>The native NOE series measures positive violations of experimental upper-distance bounds. At a 1 Å project tolerance, among the ten closed-start trajectories with open-direction frames, nine met the relative-direction-only criterion, one was partially consistent, and none met the open-reference agreement criterion. Among the 20 open-start controls, 18 were consistent, one partial and one relative-only.</p>
+<p>This is a comparison with the deposited reference analysis, not an independent experimental replication. The tolerance changes the classifications, so the replay also reports 0.5 and 2 Å results. Movement away from a closed reference does not by itself establish an equilibrium population or transition rate. <a href="https://doi.org/10.1038/s41467-022-35399-8">Henot et al., 2022</a>.</p>
+<h2>DHFR: a local proximity difference after correcting periodic coordinates</h2>
+<p>Four trajectories compared wild type (WT) and L28R with trimethoprim (TMP) and 4′-DTMP. The report used 990 frames per trajectory, corresponding to frames 11–1000, not all 1001 saved frames.</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th align="right">TMP: mean M20–O3P / Å</th>
+<th align="right">4′-DTMP: mean M20–O3P / Å</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WT</td>
+<td align="right">8.687677</td>
+<td align="right">4.622056</td>
+</tr>
+<tr>
+<td>L28R</td>
+<td align="right">10.435783</td>
+<td align="right">4.808910</td>
+</tr>
+</tbody></table>
+<p>The corrected local distance is smaller with 4′-DTMP in both variants. Initial coordinate handling had produced apparent distances of roughly 60–90 Å from an inappropriate periodic representation. After correction, VMD reproduced the selected distances to approximately 0.00001 Å.</p>
+<p>Each condition has one trajectory. These means describe local proximity, not independent replicate variability. A distance alone does not establish a hydrogen bond, which also depends on geometry, or a unique inhibition mechanism. O3P is the historical atom label, not a statement that TMP contains phosphate. <a href="https://doi.org/10.1021/acs.jcim.3c00818">Cetin et al., 2023</a>.</p>
+<h2>ADK: neither endpoint comparison shows joint domain closure</h2>
+<p>The open-start trajectory contained 2253 frames over 0–450.4 ns; the closed-start trajectory contained 1678 frames over 0–335.4 ns. Domain separation was calculated as the average Cα-pair distance between project-defined regions. The first and last 10% of frames were compared.</p>
+<table>
+<thead>
+<tr>
+<th>Starting structure</th>
+<th align="right">NMP–CORE change / Å</th>
+<th align="right">LID–CORE change / Å</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Open</td>
+<td align="right">+0.070721</td>
+<td align="right">+2.290411</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td align="right">+1.090895</td>
+<td align="right">+1.176421</td>
+</tr>
+</tbody></table>
+<p>Positive changes indicate greater separation for these descriptors. Neither comparison therefore shows both regions closing together. Distance distributions still overlap; endpoint-window changes do not describe every event in the trajectories.</p>
+<p>The original physical checks reconstructed a complete molecule and compared selected atom-pair distances with GROMACS over all frames, with differences around 0.005 Å. An independent numerical implementation also checked the domain averages. The small replay package starts after this coordinate-preparation stage.</p>
+<p>These deposited simulations are apo, with no ATP or AMP in the deposited structures. The source experiment examined ATP photorelease in the presence of AMP using time-resolved X-ray scattering. Different conditions and timescales prevent treating these descriptors as a reproduction or refutation of the paper&#39;s experimental intermediate. <a href="https://doi.org/10.1126/sciadv.abi5514">Orädd et al., 2021</a>.</p>
+<h2>What comes next scientifically</h2>
+<p>The next useful comparison should specify the molecular distinction of interest, establish whether the inputs describe compatible objects and conditions, and select a mature forward model when comparing structures with experimental observables. A forward model predicts an observable from a structural model. A better fit to one observable need not identify a unique ensemble.</p>
+<p>The current work supports a reproducible analysis workflow and a source-linked account of its assumptions. Broader biological generalization and independent domain review remain open.</p>
+<footer>Scientific results and reproducible calculations · September 2026</footer></main></html>

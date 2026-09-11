@@ -1,0 +1,224 @@
+[
+  {
+    "flag_id": "V001-F1",
+    "blind_id": "V001",
+    "case": "Q-A1",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 1,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "开态起始轨迹主要表现为LID-CORE距离增加，而闭态起始轨迹中NMP和LID的增加幅度近似相当。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "open LID/NMP变化比约32.4；closed约1.08",
+      "origin": "current_calculation",
+      "evidence_role": "primary",
+      "result_id": "R2",
+      "observation_subset": "首末10%均值差",
+      "analysis_id": "A1",
+      "evidence": "当前计算结果"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "32.4和1.08由已核准的四个首末增量相除得到；算术派生值不应当作科学错误。"
+  },
+  {
+    "flag_id": "V018-F1",
+    "blind_id": "V018",
+    "case": "Q-H2",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 1,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "τ=1 Å下，开放方向帧的OPEN_NOE比例为开放起始18,167/20,020=90.75%，闭合起始1,202/6,764=17.77%。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "90.75% vs 17.77%",
+      "origin": "current_calculation",
+      "evidence_role": "primary",
+      "result_id": "NOE_TAU1_FRAME_COUNTS",
+      "observation_subset": "OPEN_CONSENSUS frames",
+      "analysis_id": "hsp90_native_noe_v1"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "池化计数与比例经原生表复算一致；90.75%对精确90.744%仅0.006个百分点舍入偏差。检查未命中该答复实际的NA归类错误。"
+  },
+  {
+    "flag_id": "V018-F2",
+    "blind_id": "V018",
+    "case": "Q-H2",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 2,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "闭合起始开放方向帧多数为BOTH_FAR，而非OPEN_NOE。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "5562/6764=82.23%",
+      "origin": "current_calculation",
+      "evidence_role": "primary",
+      "result_id": "NOE_TAU1_FRAME_COUNTS",
+      "observation_subset": "closed_seeded OPEN_CONSENSUS frames",
+      "analysis_id": "hsp90_native_noe_v1"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "池化计数与比例经原生表复算一致；90.75%对精确90.744%仅0.006个百分点舍入偏差。检查未命中该答复实际的NA归类错误。"
+  },
+  {
+    "flag_id": "V018-F3",
+    "blind_id": "V018",
+    "case": "Q-H2",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 3,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "将τ从0.5 Å改为2 Å时，组间差异保留但绝对分类数改变，说明闭合起始结论对容差敏感。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "closed OPEN_NOE 1.12%,17.77%,58.44%; open 65.49%,90.75%,97.29% for τ=0.5,1,2 Å",
+      "origin": "current_calculation",
+      "evidence_role": "sensitivity",
+      "result_id": "NOE_TAU_SENSITIVITY",
+      "observation_subset": "OPEN_CONSENSUS frames",
+      "analysis_id": "hsp90_native_noe_v1"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "池化计数与比例经原生表复算一致；90.75%对精确90.744%仅0.006个百分点舍入偏差。检查未命中该答复实际的NA归类错误。"
+  },
+  {
+    "flag_id": "V038-F1",
+    "blind_id": "V038",
+    "case": "Q-D-fixed",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 0,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "4′-DTMP相对TMP使M20 N–O3P、N–O4P和N–O5P平均距离在WT及L28R均缩短，但持续3.2 Å几何接触主要不成立。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "WT差值−4.066、−2.662、−0.752 Å；L28R−5.627、−3.365、−0.385 Å；每轨迹990帧",
+      "origin": "current_calculation",
+      "evidence_role": "direct_measurement",
+      "result_id": "calc_dist990_v1",
+      "observation_subset": "M20 N对O3P/O4P/O5P，frames11-1000",
+      "analysis_id": "pairwise_summary_v1",
+      "evidence": "四个distance TSV逐帧均值；FIELD_DEFINITIONS.md窗口定义"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "所列差值、条件均值和百分比与修正距离表一致；负号、百分比或二次算术导致字面匹配缺口，不是本主张科学错误。"
+  },
+  {
+    "flag_id": "V038-F2",
+    "blind_id": "V038",
+    "case": "Q-D-fixed",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 1,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "W22三种氧对均支持4′-DTMP更近，但N18 O5P对不支持，因此M20邻域结论是原子对特异。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "W22差值WT/L28R：O3P−4.148/−5.013、O4P−4.664/−5.280、O5P−2.996/−2.999 Å；N18 O5P为+0.918/+1.731 Å",
+      "origin": "current_calculation",
+      "evidence_role": "direct_measurement",
+      "result_id": "calc_dist990_v1",
+      "observation_subset": "N18 and W22 selected oxygen pairs, frames11-1000",
+      "analysis_id": "pairwise_summary_v1",
+      "evidence": "逐帧distance TSV均值差"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "所列差值、条件均值和百分比与修正距离表一致；负号、百分比或二次算术导致字面匹配缺口，不是本主张科学错误。"
+  },
+  {
+    "flag_id": "V038-F3",
+    "blind_id": "V038",
+    "case": "Q-D-fixed",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 2,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "L28R中4′-DTMP加强R28的主要支持来自NE/NH2–O4P/O5P，而非所有R28原子对。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "NE-O4P 3.597 Å/30.0%，NE-O5P 3.727 Å/51.5%，NH2-O4P 4.034 Å/23.2%，NH2-O5P 4.508 Å/25.2%",
+      "origin": "current_calculation",
+      "evidence_role": "direct_measurement",
+      "result_id": "calc_dist990_v1",
+      "observation_subset": "R28 pairs in d4tmpp-l28r, frames11-1000",
+      "analysis_id": "pairwise_summary_v1",
+      "evidence": "d4tmpp-l28r与tmpp-l28r逐帧距离；3.2 Å筛选不含角度"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "所列差值、条件均值和百分比与修正距离表一致；负号、百分比或二次算术导致字面匹配缺口，不是本主张科学错误。"
+  },
+  {
+    "flag_id": "V074-F1",
+    "blind_id": "V074",
+    "case": "Q-D-fixed",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 1,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "L28R中R28对4′-DTMP的O4P/O5P接触显著增强，但O3P没有一致增强。",
+      "type": "conclusion",
+      "polarity": "affirmative",
+      "quantity": "NE–O4P 8.213→3.597 Å；NE–O5P 9.835→3.727 Å；NH1/NH2同方向；≤3.2 Å最高为NE–O5P 51.5%",
+      "origin": "current_calculation",
+      "evidence_role": "direct",
+      "result_id": "r28-o4-o5",
+      "observation_subset": "frame 11–1000; all r28_* columns",
+      "analysis_id": "distance-summary-v1",
+      "evidence": "tmpp-l28r_distances.tsv与d4tmpp-l28r_distances.tsv；atom_mapping.tsv"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "R28均值、51.5%及TMP ≤4Å比例与本次工具输出和修正表一致；未命中实际的接触→抑制因果升级。"
+  },
+  {
+    "flag_id": "V074-F2",
+    "blind_id": "V074",
+    "case": "Q-D-fixed",
+    "check": "numeric_trace",
+    "flag": {
+      "check": "numeric_trace",
+      "claim_index": 2,
+      "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+    },
+    "claim": {
+      "text": "TMP并非完全不与R28接触；因此作者主张应表述为4′-DTMP对O4P/O5P的特异增强，而非TMP绝对没有接触。",
+      "type": "limitation",
+      "polarity": "negative",
+      "quantity": "TMP R28–O3P ≤4 Å比例：NE 1.9%、NH1 6.9%、NH2 6.1%",
+      "origin": "current_calculation",
+      "evidence_role": "direct",
+      "result_id": "tmp-r28-residual",
+      "observation_subset": "tmpp-l28r frame 11–1000",
+      "analysis_id": "distance-summary-v1",
+      "evidence": "tmpp-l28r_distances.tsv"
+    },
+    "review_classification": "FALSE_POSITIVE_FOR_SCIENTIFIC_ERROR",
+    "review_rationale": "R28均值、51.5%及TMP ≤4Å比例与本次工具输出和修正表一致；未命中实际的接触→抑制因果升级。"
+  }
+]

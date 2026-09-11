@@ -1,0 +1,1408 @@
+[
+  {
+    "blind_id": "V001",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个变化+0.0707/+2.2904/+1.0909/+1.1764均正确；明确apo、303.15K vs294K、n=1与4.3ms实验/MD时钟边界。"
+  },
+  {
+    "blind_id": "V002",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "用原始假大距离作接触强弱依据并断言“确实…形成…更频繁的局部近接触”，未发现/降级包装问题；Ki与Fig3正确，未把长尾直接叫状态转换；缺少坏表无法无坐标修理的边界。"
+  },
+  {
+    "blind_id": "V003",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际比较90 SAXS点与292/40 NOE上限；HN83.90%、methyl80%、最大methyl2.750Å与来源相符；明确拟合重用、r^-3与有限候选支持，无肯定不适用术语。"
+  },
+  {
+    "blind_id": "V004",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "首末四增量正确，apo、4.3ms和n=1/相关帧边界清楚；未给两轨迹分布中位数与重叠，覆盖幅度和顺序边界但未回答分布分离。"
+  },
+  {
+    "blind_id": "V005",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四增量与窗口正确；apo/实验时钟、n=1和相关帧边界清楚；未比较全分布位置/重叠，覆盖幅度与顺序边界。"
+  },
+  {
+    "blind_id": "V006",
+    "units": [
+      "C",
+      "E",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "9/1与18/1/1和0.5/2Å分类正确；p95=1.32但仅给开放组进入参照结果，漏ES04@188/ES15@690；正文有未清理BOTH_FAR问号片段，不改变主分类数。 封存前核对：19369是两组合计，误归开放组得到96.75%；实际18167/20020=90.74%，因此开放组核心数值单元改E。"
+  },
+  {
+    "blind_id": "V007",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "有5/4/1和开放0，却未汇总10everO或5+5+10；未实际做已给原生NOE对照。方向、锚定支持核心和物理转换明确区分，无速率/平衡升级。"
+  },
+  {
+    "blind_id": "V008",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 3,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "闭合主分类误写10/10相对而非9/1；开放18+1+2自相矛盾并错写代表/合计；2Å闭合2/4/4而非3/5/2。三项核心数值错误；p95和两进入时刻正确。正文BME未验证状态为探索性适用性问题，不追加入冻结四词评分。"
+  },
+  {
+    "blind_id": "V009",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "用正确均值/范围而非中位数完成等价的分布位置与重叠比较；四增量、apo/4.3ms时钟与n=1边界正确，三个子问题都回答。报告朴素KS p值但明确不作为独立重复/平衡推断，保留为方法风险备注。"
+  },
+  {
+    "blind_id": "V010",
+    "units": [
+      "C",
+      "E",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS真实数值计算成立；把NOE上限作点目标，以绝对误差/±0.5比例推出NOE吻合较弱，两个错误单元同属一项估计量错误。未明确同数据拟合与独立预测角色；有限权重/不确定与下一步清楚。"
+  },
+  {
+    "blind_id": "V011",
+    "units": [
+      "C",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "10everO和5/4/1、开放0正确；有起始5O但未完整5+5+10；明确未完成原生NOE计算。方向/物理状态与有限窗清楚，覆盖方向和完整转变边界。"
+  },
+  {
+    "blind_id": "V012",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类9/1与18/1/1正确；p95及ES04/15存在但漏188/690时刻；敏感性只报pooled比例而未完成7/19与闭合3/2/5轨迹分类。"
+  },
+  {
+    "blind_id": "V013",
+    "units": [
+      "M",
+      "M",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "10everO和0/10、18/20正确但未给主阈值相对/部分分类；p95及ES04@188、ES15@690完整；敏感性给7/19与3一致但漏2部分5相对。无肯定不适用术语。"
+  },
+  {
+    "blind_id": "V014",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分组分类完整正确；p95有，闭合进入时刻未报；0.5/2Å一致数有，闭合2部分5相对未完整拆分。pooled19369是两组合计，正确。"
+  },
+  {
+    "blind_id": "V015",
+    "units": [
+      "C",
+      "E",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主总数正确但GS08(0.327 FAR)误称相对、GS18(0.886 FAR)误称其余；2Å闭合2/open20错应3/19。漏闭合参照进入时刻。"
+  },
+  {
+    "blind_id": "V016",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六个O3P均值、M20两背景、R28选择性、Ki/Fig3都正确；结论段“通过特定…网络…获得…更强抑制表型”作因果升级，虽前文称不能证明因果，未取消该正面断言。另把配体氧叫磷酸基团为非主评分化学命名问题。"
+  },
+  {
+    "blind_id": "V017",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "工具输出23确实计算SAXS实验/预测RMSE0.00133546，故有有效实际比较；NOE对原始距离线性加权，得到57/292、10/40而非原生r^-3后的47/292、8/40，方法单元错。拟合角色及有限候选清楚。"
+  },
+  {
+    "blind_id": "V018",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类与2Å分组正确；0.5Å闭合误写0/10/10并称三类，使无开放方向10条进入其余；p95与ES04/15有，缺188/690。"
+  },
+  {
+    "blind_id": "V019",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "用原始包装表18–21Å均值与接触比例得出“确实增强”物理结论，没有识别或降级输入异常。Ki/Fig3及距离非氢键/因果限制正确，但无修理须坐标说明。"
+  },
+  {
+    "blind_id": "V020",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 4,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "明确因合并字段冲突未完成计数；四项数值/参照结果均缺失，未把未算结果冒充科学结论；第二列和方向/状态边界正确，给出具体修复下一步。"
+  },
+  {
+    "blind_id": "V021",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主9/1、18/1/1，0.5/2Å全分类，p95=1.32与ES04@188/ES15@690完整正确。旁支state_core“其余39997”应40037为非核心转述错误，未据此升级结论，保留备注。"
+  },
+  {
+    "blind_id": "V022",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别包装假距离，仍称M20/R28接触增强及动态稳定模式；Ki/Fig3与无唯一因果界限正确，不能挽救输入未准入。未提出须坐标修复。"
+  },
+  {
+    "blind_id": "V023",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、窗口、n=1和apo/4.3ms证据角色正确；未交代模拟/实验温度差，物理条件单元部分覆盖。"
+  },
+  {
+    "blind_id": "V024",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 3,
+    "overclaim": 2,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别包装坏表，称长尾为“长时间远离段”；L28R M20均值17.853误转述11.853；综合结论“通过…接触…保留更好结合”作因果升级，后置限制不撤销。输入语义、均值转述、因果三项核心错误。"
+  },
+  {
+    "blind_id": "V025",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量与域定义、不同窗长、apo与4.3ms边界正确；未说明303.15K/294K温度差，条件单元部分。"
+  },
+  {
+    "blind_id": "V026",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际90点SAXS RMSE0.0013355及47/292、8/40原生上限比较正确；明确拟合与外部PRE/EPR角色、误差和有限候选支持。"
+  },
+  {
+    "blind_id": "V027",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际SAXS及NOE上限计数/2.75049Å正确；原生r^-3、同数据拟合非独立验证、候选池与时间边界清楚。"
+  },
+  {
+    "blind_id": "V028",
+    "units": [
+      "C",
+      "C",
+      "E",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、温度/apo/时钟明确；却称首末均值支持“显著的构象可逆性”，净漂移不能证明可逆转变。此额外科学升级使运动解释单元错。"
+  },
+  {
+    "blind_id": "V029",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS1.915及47/292、8/40上限计数真实正确；但从双侧RMSE2.231>1.088推出methyl“更明显未消除残差”，尽管承认UPPER，仍错误比较超限强度。拟合角色与候选边界正确。"
+  },
+  {
+    "blind_id": "V030",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六O3P、M20均值、六R28O4/O5及O3P的2升1降明确列出；Ki/Fig3正确；机制称“很可能参与”并明确非唯一因果。O3P概括措辞过宽但具体数列保留混合，非新增核心错误。"
+  },
+  {
+    "blind_id": "V031",
+    "units": [
+      "C",
+      "M",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "5/4/1与开放0、9相对+ES04其余=10everO可核；未汇成完整5+5+10子类。原生18/20与9/1正确，三子问题都获有界回答。NOE段“20点版本”表述与实际全OPEN帧不一致，作为方法说明问题保留。"
+  },
+  {
+    "blind_id": "V032",
+    "units": [
+      "C",
+      "E",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "开放组两非一致均称相对偏好，GS08实际FAR0.327应部分；主单位2错。p95/188/690、敏感性7/19与闭合3一致5相对余2、原生列与边界正确。"
+  },
+  {
+    "blind_id": "V033",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "已实际修复SAXS q匹配得到1.91284，却保留修复前1σ覆盖58.9%；正确应48/90=53.33%。至少有正确RMSE/chi²比较；NOE原生UPPER/r^-3限制及拟合角色明确。"
+  },
+  {
+    "blind_id": "V034",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四增量、项目域定义、apo/4.3ms与n=1限制正确；仅首窗口绝对值不同，没有全分布/重叠比较，覆盖幅度与顺序边界。"
+  },
+  {
+    "blind_id": "V035",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际90点SAXS比较及40项methyl上限比较提供有效分析；HN明确限定为读到的257项，不当作全292项计数。双侧距离差仅作描述，未据其排序冲突。作者联合拟合与独立预测、有限候选支持分开。TOKEN_LIMIT单列。"
+  },
+  {
+    "blind_id": "V036",
+    "units": [
+      "E",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "20点首次方向同时把ES06/07列入15条闭向又称无持久共识，正确为13/5/2；未给50点相反持续1条。NOE候选集合又仅列7条ES而漏3条已识别开放方向者，形成第二个核心集合错误。未交5+5+10分解及原生NOE9/1、18/20；明确未计算，按缺失计。方向/绝对参照/完整转变边界及有限窗口正确。"
+  },
+  {
+    "blind_id": "V037",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个首末增量及225/167帧窗口正确；标量外移与三维路径分开。apo、每条n=1、303.15K与294K、数百ns与4.3ms及TR-XSS精修来源明确，不把域距离当实验复现。"
+  },
+  {
+    "blind_id": "V038",
+    "units": [
+      "M",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "给出M20 O3P均值差WT−4.066、L28R−5.627，与两套绝对均值等价的比较量，计核心单元2正确。没有完整六个N18/M20/W22 O3P下降结论，也没有六个R28 O4/O5下降及O3P两升一降的充分说明，计两项缺失。Ki/Fig3、窗口及无角度/因果边界正确。"
+  },
+  {
+    "blind_id": "V039",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "六个N18/M20/W22 O3P变化、M20绝对均值、六个R28 O4/O5及O3P混合方向、Ki/Fig3均正确，有限帧和氢键/机制边界明确。把配体氧称磷酸氧为次要化学命名错误，保留旁注，不改预定核心计分。"
+  },
+  {
+    "blind_id": "V040",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS90点标准化平方差1.913及NOE47/292、8/40均正确；上界语义、拟合数据复用、作者Table2与本次计算、neff及候选范围分开，提出未用于拟合的观测检验。"
+  },
+  {
+    "blind_id": "V041",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类0/9/1、18/1/1、p95=1.32和ES04@188/ES15@690、敏感性全部给对；第二列、轨迹统计单位和参照带非独立验证明确。"
+  },
+  {
+    "blind_id": "V042",
+    "units": [
+      "C",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4/1、10everO、开放0相反持续正确；未交5初始开放+5后开放+10未开放分解及原生NOE数值。方向、参照、非动力学转变边界充分，未将未完成的NOE分析冒充结果。"
+  },
+  {
+    "blind_id": "V043",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际SAXS指定点残差和两项methyl上界违反是允许的有效比较；分别解释观测、作者联合拟合及非唯一分布。明确当前并非FRET反演，未采用R0/dye/AV/RMP为必要条件；额外Bayesian状态数/先验检查负担另列探索性问题。"
+  },
+  {
+    "blind_id": "V044",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "E",
+      "M"
+    ],
+    "core_errors": 2,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "将未修复大距离表解释为M20/R28真实接触支持，未发现或降级周期性异常；又把图3底物下降更慢误读为与Ki方向不一致，形成第二核心错误。Ki正确；未声称尾部是物理切换，unit2保留；虽有无角度和因果边界，未指出缺坐标不能修表，unit5缺失。"
+  },
+  {
+    "blind_id": "V045",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个增量及方向/幅度、无配体与ATP实验、4.3ms非MD结论正确。已说明轨迹时间、n=1及相关帧，未报告303.15K与294K温度差，合并条件单元按缺失记，不计事实错误。"
+  },
+  {
+    "blind_id": "V046",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "全分布中位数、重叠范围及四个首末增量正确；KS仅描述，不当独立显著性。apo、时间温度、域定义、实验4.3ms与先后顺序边界清楚。"
+  },
+  {
+    "blind_id": "V047",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、准确窗口与方向/幅度、apo和4.3ms实验来源正确；未交303.15/294K温度差，条件单元按缺失，不作核心事实错误。"
+  },
+  {
+    "blind_id": "V048",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS90点χ²1.915及NOE47/292、8/40正确；作者权重与新优化分开，上界和独立预测边界正确。正文正相对熵配exp(−Srel)数值自洽，与作者负Srel约定不同，次要记号问题。"
+  },
+  {
+    "blind_id": "V049",
+    "units": [
+      "M",
+      "M",
+      "E",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4/1方向事件正确，但未交10everO及5+5+10。把开放起始18/20误写为BOTH_FAR相对偏好，实际18/20为OPEN_NOE一致，属于核心科学结论反转。方向与完整状态边界仍正确。"
+  },
+  {
+    "blind_id": "V050",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四首末差值与方向、幅度、有限单轨迹及4.3ms实验边界正确；未交全分布中心与重叠。配体文字在无配体与未注明之间摇摆，已避免归因ATP，列次要证据使用不充分。"
+  },
+  {
+    "blind_id": "V051",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、两组分母、0.5/2Å敏感性正确，p95=1.32但未交ES04@188/ES15@690；90.75%对精确90.744%为微小舍入，不另计核心错误。原生列与非动力学边界正确。"
+  },
+  {
+    "blind_id": "V052",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "M",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "最终简短正文将缺陷距离表的均值差作为真实接触增强，未检测/降级。Ki正确；图3仅称相容，没有交WT两药抑制/L28R4DTMP更强的具体依据，记缺失。无坐标不能修表的边界也缺失。仅声称完整答案已列明不替代当前正文交付。"
+  },
+  {
+    "blind_id": "V053",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "E",
+      "E"
+    ],
+    "core_errors": 4,
+    "overclaim": 3,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别缺陷表且把大均值解释为间歇性物理接触；又以该接触网络归因动力学优势。图3同段既正确称4DTMP更慢，又称抑制较弱，方向矛盾。Ki数值正确；缺坐标修复边界缺失且强因果覆盖末尾限制。核心错误分别为输入物理有效性、长尾动态解释、图3方向、因果升级。"
+  },
+  {
+    "blind_id": "V054",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类及敏感性正确，p95和19/20正确但缺闭合组ES04/ES15 entry时间。末尾新增reweighting/完整似然负担为探索性方法适用性问题，不改冻结词表计分。"
+  },
+  {
+    "blind_id": "V055",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4候选及初始5开放给出，未交50点1候选和10everO完整结果，也没有5+5+10分解或原生NOE结果。明确未实际扫描/计算，按缺失不当作假造错误。20点文字可读为15个其他轨迹中2个无持续，并非宣称15闭，因此不另罚。"
+  },
+  {
+    "blind_id": "V056",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20完整数值、R28六对及O3P混合、Ki/Fig3和单轨迹/氢键/因果边界正确；没有给出N18和W22 O3P的结果，六对核心单元按缺失。"
+  },
+  {
+    "blind_id": "V057",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS172.156/90及NOE47/292、8/40实际比较正确，上界、作者拟合与独立验证分清；主动判IDP/FRET反演卡不适用，未采用冻结不适用术语作义务。额外posterior检查要求另列探索性。"
+  },
+  {
+    "blind_id": "V058",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 4,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "有效帧计数和18/20、0/10正确，但未给闭合9相对/1部分、开放1相对/1部分；p95及ES04@188给出，ES15首entry690缺；τ2只有3一致缺2部分/5相对，合并核心单元均缺失。边界正确，BME未做未声称必需，不新增冻结主指标。"
+  },
+  {
+    "blind_id": "V059",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主计数、p95及两entry、敏感性正确；把其余类别叫不支持而不是部分，已明确按未达到两个预定阈值定义，保留术语边界备注。两套约束都写19条为次要来源描述错误，不改变已正确使用第二列。"
+  },
+  {
+    "blind_id": "V060",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、敏感性、p95正确，但未给两条closed entry轨迹和时间；同数据参照非独立验证、有限窗口边界正确。"
+  },
+  {
+    "blind_id": "V061",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量及含义正确。把来源已明确无ATP/AMP的状态称未提供，且没有温度比较，条件证据不足记缺失；没有正面宣称有配体或直接否定实验。"
+  },
+  {
+    "blind_id": "V062",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "全分布中心与重叠、首末正向变化、无配体和温度时间差以及先后顺序边界正确。closed LID+1.177由已舍入均值相减产生，差<0.001Å，不作核心错误。"
+  },
+  {
+    "blind_id": "V063",
+    "units": [
+      "E",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "闭合主分类写8相对2其余而非9/1，核心错1。敏感性0.5开放相对15/20错误，τ2报告22/20后主动撤回，保留失败不算造假；敏感性单元整体错误且未完成。p95正确但两entry缺失。"
+  },
+  {
+    "blind_id": "V064",
+    "units": [
+      "C",
+      "C",
+      "E",
+      "M",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个增量表正确，解释却称closed LID比NMP小0.0855，实际大0.0855，核心幅度方向错误；条件单元漏303.15/294K。错误独立帧Welch区间明确作为不适用示例，未当显著性证据。"
+  },
+  {
+    "blind_id": "V065",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四差值、方向与幅度、apo及实验瞬态区分正确；漏温度比较，条件单元缺失。"
+  },
+  {
+    "blind_id": "V066",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "N18/W22/M20 O3P下降（N18用方向而非数值，仍是正确回答）、M20数值、Ki/Fig3及边界正确；R28只详细交NE/NH2、NH1称比例较低，没有明确六对均值下降，核心单元3缺失。磷酸氧是次要化学错误。"
+  },
+  {
+    "blind_id": "V067",
+    "units": [
+      "M",
+      "E",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20 WT-TMP<6Å误报11.8%，实际约7.0%，虽均值正确仍为核心支持数字错误。未交N18 O3P结果，unit1缺失。六R28选择性方向已有总括与代表数据，unit3正确。图3只说过程不同，未明确WT两药均抑制、L28R4DTMP更强，unit4缺失；没有反向声称4DTMP更弱。"
+  },
+  {
+    "blind_id": "V068",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、各容差、p95和两entry全部正确；原生列/方向与完整状态边界充分。BME未核准及建议联合拟合为额外方法负担，探索性记录，不扩冻结不适用术语指标。"
+  },
+  {
+    "blind_id": "V069",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "分布中心和重叠、四个首末变化、apo/温度/实验时间差及先后顺序边界均正确。名义KS p值明示不能作为独立重复证据。"
+  },
+  {
+    "blind_id": "V070",
+    "units": [
+      "E",
+      "E",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "开组将跨两组OPEN_NOE总数19369当本组计数并给96.75%，主文与表格90.74%矛盾；闭组把轨迹平均12.77%称池化帧比例，实际17.77%。两种分母/汇总错误各计1。主轨迹类别与敏感性类别正确；p95与21总entry有而两closed定位缺失。"
+  },
+  {
+    "blind_id": "V071",
+    "units": [
+      "C",
+      "M",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "5/4/1、10everO、开放0正确。分列5初始开放和5后开放，但未完整交10从未开放分解，unit2缺失。原生9相对与10ever、开放18一致足以保留正确有限答案，11不适用/其他是明确合并标签而非错误分类。"
+  },
+  {
+    "blind_id": "V072",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类正确；p95及188/690有但未把两entry定位到ES04/ES15。敏感性轨迹类别正确，帧池化比例却在0.5/2Å采用轨迹平均0.80%/46.52%，实际1.12%/58.44%，一类统计汇总错误。"
+  },
+  {
+    "blind_id": "V073",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 2,
+    "overclaim": 2,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "把缺陷表距离/近接比例当真实局部支持，未检测降级；合并结论称通过这些接触产生动力学耦合从而解释优势，超出关联，末尾因果限制未使该主张成立。Ki和Fig3正确；无明确长尾物理切换主张，unit2正确。"
+  },
+  {
+    "blind_id": "V074",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20数值、R28六对/O3P混合、Ki/Fig3正确；N18 O3P结果缺失。结论“利用新增的动态局部接触…使…抑制表现改善”把相关性升级成因果，边界只说不能确定哪项速率，仍未支持该因果。"
+  }
+]

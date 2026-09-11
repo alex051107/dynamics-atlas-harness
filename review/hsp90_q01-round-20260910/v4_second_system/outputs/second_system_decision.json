@@ -1,0 +1,15 @@
+{
+  "status": "NOT_DETERMINED_BLOCKED",
+  "selected_system": null,
+  "candidates": [
+    "ADK",
+    "DHFR"
+  ],
+  "scientific_admission": "not complete; neither_qualifies not asserted",
+  "blockers": [
+    "credential unavailable",
+    "local Zenodo metadata timeouts; two-source correspondence unresolved"
+  ],
+  "model_calls": 0,
+  "cost_usd": 0
+}

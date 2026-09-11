@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>这轮比较实际检验了什么</title><style>body{margin:0;background:#f5f6f8;color:#22303d;font:16px/1.85 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:920px;margin:36px auto;background:white;padding:44px 56px}h1{font-size:30px;line-height:1.35;color:#1e3a5f}h2{font-size:23px;line-height:1.5;margin-top:38px;color:#1e3a5f}h3{font-size:19px;margin-top:25px}p{margin:14px 0}a{color:#275782;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0;table-layout:fixed;overflow-wrap:anywhere}th,td{border:1px solid #d5dbe1;padding:8px;vertical-align:top}th{background:#edf2f6}img{max-width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f4f7;padding:14px;font-size:12px}code{font-size:.88em;overflow-wrap:anywhere}nav{border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;padding:12px 0}nav a{display:block;font-size:14px}blockquote{border-left:3px solid #1e3a5f;padding-left:16px;margin-left:0}@media(max-width:650px){main{padding:22px 18px;margin:0}h1{font-size:25px}table{font-size:11px}th,td{padding:5px}}@media print{body{background:white;font-size:14px;line-height:1.75}main{padding:0;margin:0;max-width:none}h1{font-size:24px}h2{font-size:18px;break-after:avoid}h3{font-size:14px;break-after:avoid}table{font-size:12px}tr,img,pre{break-inside:avoid}nav{display:none}a{color:inherit;text-decoration:none}p{orphans:3;widows:3}}</style><main><h1>这轮比较实际检验了什么</h1><nav><a href="#section-1">资料、模型和公平比较</a><a href="#section-2">为什么检查器通过还不等于科学问题解决</a><a href="#section-3">如何评分，什么算收益</a><a href="#section-4">冻结后发现的问题怎样处理</a><a href="#section-5">能做出的投入决定</a></nav>
+<p>这轮把“Rules Table 有没有用”拆成四个可分别失败的问题：输入核对结果能否改变 Agent 的判断；一次提交后反馈能否减少错误；方法卡是否比原有协议更适用；把科学问题拆明确能否增加有证据的回答。它们共同服务于最初目标：从蛋白动力学资料得到正确、有用、可以复核的科学回答。它们不是一项通用 Rules Engine 的验证。</p>
+<h2 id="section-1">资料、模型和公平比较</h2>
+<p>实验使用同一个 Luna 模型、medium 推理设置、同一个冻结容器和工具接口。每个条件每题运行四次，顺序在首次调用前随机化并保存。每次运行使用新的容器和上下文；评价 Agent 看不到评分依据、预期工具或开发对话。HSP90、DHFR和Q05属于已经研究过的材料；ADK是这轮新加入的一个来源体系。多个问题共享同一论文和数据，不能按题数当作独立来源数。</p>
+<p>普通组已经拿到了整理好的来源说明和派生表。因此，它是“在相同整理资料上进行自主分析”的基线。数据整理、物理核对和准备工具所作的贡献不归入 Rules 的效果。修正表中的答案可以来自开发者的计算；只有评价 Agent 在运行日志中实际做出的分析，才能计入其分析行为。</p>
+<p>每次运行最多40次工具调用、25分钟、累计160,000输入token和30,000输出token，容器无网络、只读资料目录和可写工作目录。各条件使用相同上限。达到token上限但已有合法提交的答复仍按正文评分，同时记录未完成状态；这不是无效样本，也不能仅凭个别上限事件认定某种提示导致能力下降。</p>
+<h2 id="section-2">为什么检查器通过还不等于科学问题解决</h2>
+<p>准入检查器实际比较来源声明、行数和时间、数值矩阵与受信参照，并读取外部物理检查结果。六种植入缺陷全部检出，是参照一致性测试的结果。三个干净包与参照完全一致，所以零误报主要是自一致性控制。独立坐标重算和GROMACS/VMD核对属于生成可信参照的上游工序，应单独展示。</p>
+<p>七个检查名称没有对应七种完整科学推断：统计单位只是标签比对，时间单调不等于时间语义正确，观测窗口没有单独实现。多表或缺表的未覆盖输入还会触发断言异常。这些事实限制了当前检查器的用途：它适合冻结资料的回归核对，尚不适合单独承担陌生数据的科学准入。</p>
+<p>结论检查器的数字匹配只证明某个数字出现在工具输出中，不证明它由正确原始量、单位和公式得到。历史回放已经给出反例：错误计算先写入工具日志后，数字仍能通过匹配；正确单位Å⁻¹的指数−1反而会被误报。将任意两个已有数字做加减除法来“放行”会扩大这个问题。未来的可追溯计算应把具体主张绑定到原始量和明确变换。</p>
+<h2 id="section-3">如何评分，什么算收益</h2>
+<p>全部运行结束后，最终答复去除条件名称、规则编号和运行编号，随机编码。评分先逐项记录五个冻结核心单元，再分开记录实际错误、过强结论、可回答内容遗漏、缺陷识别、下一步价值和成本。遗漏没有被说出的内容，与明确说错一个科学结果，是两类情况。原计划把“可回答但未回答”称为不必要弃权；报告保留这一指标，并说明它包括一般遗漏，不全是明确拒答。</p>
+<p>每题按四次的中位数比较，同时给出逐份原始分数。E2首次提交与最终提交分别评分，先封存评分和时间，再揭示条件，随后核对每条检查提示是否真正指向科学错误。主评分不因揭盲后的期待而修改。若发现后续分歧，另列敏感性或审查意见。</p>
+<p>评分人是当前Codex，也参与了建包。条件标签隐藏可以降低直接按组打分的风险，但不能消除建包者与评分者重合，也不能保证文本不透露是否收到了卡片或反馈。用户转交的Claude审查核对了方法与材料；它没有替代这批答复的独立领域专家评分。没有第二位评分者的结果，就不宣称双人一致性。</p>
+<h2 id="section-4">冻结后发现的问题怎样处理</h2>
+<p>第二次外部审查到达时，E2已经完成，E3已经运行。所有原题、评分依据、卡片、运行顺序和检查器保持不变。BME/MaxEnt等额外不适用术语不补进已经冻结的E3主判据；若答复把它们错误地当作本题前提，会以探索性逐句分析单列。E2三题没有PUBLIC_FACTS输入，证据角色分支不计作已测试功能。图像来源、单位缩放和心算的误报风险按实际发生情况报告。</p>
+<p>E4的冻结文件按两道题的有支持子问题覆盖判断，与方案总表泛写的三题不同。两版共用评分依据，拆题版明确要求更多内容，所以可解释的是“框题包”的效果，不能直接解释为同样问题下推理能力提高。报告同时列核心正确和子问题覆盖，避免只用有利指标。</p>
+<h2 id="section-5">能做出的投入决定</h2>
+<p>四个每题四次的小比较可以支持保留、简化或暂不投入某个具体组件的决定。它们不提供跨蛋白总体正确率、稳定统计显著性或通用引擎必要性。没有前瞻记录人工纠错时间，就不宣称节省25%。计算费用、模型token、工具次数与墙钟时间分别列出。</p>
+<p>科学结果继续按“问题—来源—方法—数值—结论边界”交付。若一个组件没有产生可见收益，它仍可作为文献或教学材料保存，但不继续占据系统核心。下一步由实际结果决定，不通过扩充规则数量延续架构。</p>
+</main></html>

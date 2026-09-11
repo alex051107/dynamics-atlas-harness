@@ -1,0 +1,63 @@
+{
+  "as_of": "2026-09-10T11:10:58.576725+00:00",
+  "steps": [
+    {
+      "step": 1,
+      "status": "DONE",
+      "evidence": "DHFR report and log pushed",
+      "commit": "7acd841"
+    },
+    {
+      "step": 2,
+      "status": "SUPERSEDED",
+      "evidence": "ABC freeze retained; DPR prepared not frozen",
+      "commit": null
+    },
+    {
+      "step": 3,
+      "status": "INTERRUPTED_BY_USER",
+      "evidence": "8 original answers; no blind scores; cost .13830195",
+      "commit": null
+    },
+    {
+      "step": 4,
+      "status": "DATA_DOWNLOADED_GATE_FAIL",
+      "evidence": "ADK 4files verified; half-box rule false-positive diagnosed",
+      "commit": null
+    },
+    {
+      "step": 5,
+      "status": "NOT_RUN",
+      "evidence": "ADK ordinary Agent held at explicit admission gate",
+      "commit": null
+    },
+    {
+      "step": 6,
+      "status": "NOT_RUN",
+      "evidence": "new DPR paid comparison not started",
+      "commit": null
+    },
+    {
+      "step": 7,
+      "status": "PARTIAL_STOP_DELIVERY",
+      "evidence": "readable report, verdict, sources, deck, ledger; no effect claim",
+      "commit": "08dc5a67fc64946519159a45edbfecdc36b1f720"
+    }
+  ],
+  "prior_answer_hashes_file": "round2/outputs/private_run_manifest.json",
+  "blind_score_hash": null,
+  "unblinding_time": null,
+  "settled_model_cost_usd": 0.13830195,
+  "unknown_charge": false,
+  "ADK_download_manifest": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/DOWNLOAD_MANIFEST.json",
+  "independent_recompute": "round2/outputs/independent/RECOMPUTE.json",
+  "gromacs_crosscheck": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/GROMACS_GATE_CROSSCHECK.json",
+  "deviations": "DEVIATIONS.md",
+  "historical_DHFR_physical_gate": "FAIL_AFTER_FREEZE",
+  "historical_answer_receipt_hashes": "not recorded in original HSP90/DHFR receipts; no retrospective identity claims",
+  "delivery_commit": "08dc5a67fc64946519159a45edbfecdc36b1f720",
+  "remote_branch_verified": true,
+  "pull_request": "https://github.com/alex051107/dynamics-atlas-harness/pull/27",
+  "report_bundle_check": "outputs/report/REPORT_BUNDLE_CHECK.json",
+  "final_delivery_check": "outputs/report/FINAL_DELIVERY_CHECK.json"
+}

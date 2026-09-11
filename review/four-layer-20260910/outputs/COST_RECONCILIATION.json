@@ -1,0 +1,71 @@
+{
+  "time": "2026-09-10T11:32:46.946532+00:00",
+  "batches": [
+    {
+      "batch": "HSP90first",
+      "task": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910",
+      "ledger_paths": [
+        "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/outputs/paid_usage.jsonl"
+      ],
+      "receipts": 4,
+      "requests": 30,
+      "cost_usd": 0.0757458,
+      "run_ids": [
+        "HSP90_Q01_A_9ff587f6",
+        "HSP90_Q01_B_b909c96b",
+        "HSP90_Q01_B_8813dc0f",
+        "HSP90_Q01_A_8bb1da99"
+      ]
+    },
+    {
+      "batch": "DHFRfirst",
+      "task": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910",
+      "ledger_paths": [
+        "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910/outputs/paid_usage.jsonl"
+      ],
+      "receipts": 2,
+      "requests": 17,
+      "cost_usd": 0.03226009,
+      "run_ids": [
+        "DHFR_Q01_A_07534f46",
+        "DHFR_Q01_A_ef5da470"
+      ]
+    },
+    {
+      "batch": "interruptedABC",
+      "task": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2",
+      "ledger_paths": [
+        "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2/outputs/paid_usage.jsonl"
+      ],
+      "receipts": 8,
+      "requests": 66,
+      "cost_usd": 0.13830195,
+      "run_ids": [
+        "Q-H2_B_7d16caee",
+        "Q-H2_A_1712a812",
+        "Q-H2_B_1f968d58",
+        "Q-D-defect_A_358fc0f0",
+        "Q-D-defect_A_04358c84",
+        "Q-H2_C_bcad3836",
+        "Q-D-fixed_A_29fc9942",
+        "Q-D-defect_B_8a141353"
+      ]
+    },
+    {
+      "batch": "interruptedDPR",
+      "task": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2_dpr",
+      "ledger_paths": [
+        "autoresearch/tasks/dynamics_atlas_one_shot_20260910/round2_dpr/outputs/paid_usage.jsonl"
+      ],
+      "receipts": 2,
+      "requests": 15,
+      "cost_usd": 0.03920077,
+      "run_ids": [
+        "Q-D-defect_D_54965b3c",
+        "Q-D-fixed_P_69bfd7fe"
+      ]
+    }
+  ],
+  "total_listed_cost_usd": 0.28550861,
+  "interpretation": "First two batches are6outputs .10800589; interruptedABC is separate8outputs .13830195; DPR separate2outputs .03920077. No missing2 or .03delta between comparable totals."
+}

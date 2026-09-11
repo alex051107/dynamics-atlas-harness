@@ -1,0 +1,643 @@
+{
+  "time": "2026-09-10T12:34:58.186571+00:00",
+  "checker": "E2/runtime/ceiling_check.py, frozen current implementation",
+  "runs": [
+    {
+      "run": "DHFR_Q01_A_07534f46",
+      "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910/cases/DHFR_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910/runs/DHFR_Q01_A_07534f46/draft_1.json",
+      "workspace_outputs_before_submission": 19,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "M20-N–O3P在WT和L28R中均支持4′-DTMP相对TMP增加近接触，但M20-O4P/O5P不一致。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "WT 18.88→11.09 Å、<6 Å 7.0→85.6%；L28R 20.29→17.85 Å、0→70.1%",
+          "origin": "current_calculation",
+          "evidence_role": "direct",
+          "result_id": "R1",
+          "observation_subset": "r20_N_O3P/O4P/O5P; frames 11..1000",
+          "analysis_id": "A1",
+          "evidence": "/source/data/*_distances.tsv; /source/FIELD_DEFINITIONS.md"
+        },
+        {
+          "text": "L28R的R28增强具有原子对选择性，主要是R28 NE/NH1/NH2与O4P/O5P；O3P对不一致。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "NE-O4P 19.65→17.52 Å、<6 Å 0.5→75.1%；NE-O5P 21.32→17.81 Å、0→73.1%；NH2-O4P 20.52→17.91 Å、6.7→70.0%",
+          "origin": "current_calculation",
+          "evidence_role": "direct",
+          "result_id": "R2",
+          "observation_subset": "L28R r28_NE/NH1/NH2 with O3P/O4P/O5P; frames 11..1000",
+          "analysis_id": "A1",
+          "evidence": "/source/data/tmpp-l28r_distances.tsv; /source/data/d4tmpp-l28r_distances.tsv; /source/data/atom_mapping.tsv"
+        },
+        {
+          "text": "表1显示L28R对两种抑制剂结合较弱，但4′-DTMP在L28R中相对TMP的Ki改善约1.90倍；WT中略差。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "WT Ki 4.2±0.5 vs 5.1±1.0 nM；L28R 65.0±7.5 vs 34.3±2.9 nM；65.0/34.3=1.90",
+          "origin": "author_report",
+          "evidence_role": "direct",
+          "result_id": "R3",
+          "observation_subset": "Table 1",
+          "analysis_id": "",
+          "evidence": "/source/experimental_table1.tsv; /source/paper.md lines 337-362"
+        },
+        {
+          "text": "图3支持4′-DTMP在L28R中的抑制/产物释放减慢比TMP更明显，但不能由图像给出可靠定量速率差。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "DHF 12.5 μM；药物500 nM；重复两次",
+          "origin": "author_report",
+          "evidence_role": "direct",
+          "result_id": "R4",
+          "observation_subset": "Figure 3 WT/L28R curves",
+          "analysis_id": "",
+          "evidence": "/source/paper.md lines 367-394; /source/figure3.jpg"
+        },
+        {
+          "text": "四条轨迹不是独立重复，距离也不是角度合格氢键占有率，因此局部距离与Ki和动力学之间的因果关系未解决。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "4 condition-specific trajectories; 990 analyzed frames per trajectory",
+          "origin": "inference",
+          "evidence_role": "methodological",
+          "result_id": "R5",
+          "observation_subset": "all four trajectories",
+          "analysis_id": "A1",
+          "evidence": "/source/FIELD_DEFINITIONS.md lines 3-7; /source/data/trajectory_metadata.tsv"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "DHFR_Q01_A_ef5da470",
+      "source": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910/cases/DHFR_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_adk_plain_agent_v1_20260910/runs/DHFR_Q01_A_ef5da470/draft_1.json",
+      "workspace_outputs_before_submission": 16,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "四条轨迹支持4′-DTMP增强M20相关接近，但支持限于特定配体氧；WT最明确，L28R主要是M20–O3P，M20–O5P不支持。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "WT M20-O3P 18.880→11.085 Å、<6 Å 0.070→0.856；L28R 20.289→17.853 Å、0→0.701；L28R M20-O5P 20.315→21.464 Å、0→0",
+          "origin": "current_calculation",
+          "evidence_role": "primary",
+          "result_id": "analysis_distances_window11_1000_v1",
+          "observation_subset": "frame 11..1000; r20_N_O3P/O4P/O5P in tmpp/d4tmpp WT and L28R",
+          "analysis_id": "analysis_distances_window11_1000_v1",
+          "evidence": "source/data/*_distances.tsv; source/FIELD_DEFINITIONS.md"
+        },
+        {
+          "text": "L28R中R28与4′-DTMP的增强主要由R28–O4P和R28–O5P支持，而R28–O3P并不一致。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "NE O4P <6 Å 0.005→0.751、O5P 0→0.731；NH1 O4P 0.071→0.729、O5P 0.009→0.537；O3P分别下降或混合",
+          "origin": "current_calculation",
+          "evidence_role": "primary",
+          "result_id": "analysis_distances_window11_1000_v1",
+          "observation_subset": "frame 11..1000; all r28_NE/NH1/NH2_* columns in L28R",
+          "analysis_id": "analysis_distances_window11_1000_v1",
+          "evidence": "source/data/tmpp-l28r_distances.tsv; source/data/d4tmpp-l28r_distances.tsv; source/data/atom_mapping.tsv"
+        },
+        {
+          "text": "实验亲和力显示4′-DTMP相对TMP对WT略弱、对L28R约增强1.9倍，但两种配体均为纳摩尔级。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "WT Ki 4.2±0.5→5.1±1.0 nM；L28R 65.0±7.5→34.3±2.9 nM；L28R比值约65.0/34.3=1.90",
+          "origin": "author_report",
+          "evidence_role": "primary",
+          "result_id": "table1_transcription",
+          "observation_subset": "Table 1 four protein-inhibitor rows",
+          "analysis_id": "",
+          "evidence": "source/experimental_table1.tsv; source/paper.md lines 337-362"
+        },
+        {
+          "text": "500 nM抑制实验中WT任一配体均无可见DHF消耗；L28R中4′-DTMP比TMP更明显地减慢反应。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "初始DHF 12.5 μM；抑制剂500 nM；实验重复两次（作者报告）",
+          "origin": "author_report",
+          "evidence_role": "primary",
+          "result_id": "figure3_report",
+          "observation_subset": "WT and L28R steady-state DHF consumption assays",
+          "analysis_id": "",
+          "evidence": "source/paper.md lines 367-384; source/figure3.jpg"
+        },
+        {
+          "text": "不能仅凭这些逐帧距离、Ki和图3建立R28/M20接触导致抑制增强的因果关系，也不能估计koff或严格氢键占有率。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "limitation",
+          "result_id": "analysis_distances_window11_1000_v1",
+          "observation_subset": "all four trajectories and reported experiments",
+          "analysis_id": "analysis_distances_window11_1000_v1",
+          "evidence": "source/FIELD_DEFINITIONS.md; source/paper.md lines 367-384"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "HSP90_Q01_A_8bb1da99",
+      "source": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_8bb1da99/draft_2.json",
+      "workspace_outputs_before_submission": 21,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "在几何/接触共识判据、5个连续保存点门槛下，闭合起始有5/20条首个持久方向为OPEN且5/20条出现后续相反持久段；开放起始为20/20首个方向OPEN且0/20相反段。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "5/20, 5/20 versus 20/20, 0/20",
+          "origin": "current_calculation",
+          "evidence_role": "direct_observation",
+          "result_id": "calc_anatomy_persistence_5",
+          "observation_subset": "trajectory_time_anatomy.tsv; 20 closed_seeded + 20 open_seeded; 20-1020 ns",
+          "analysis_id": "grouped_trajectory_counts_v1",
+          "evidence": "FIELD_DEFINITIONS.md:9,13-17; trajectory_time_anatomy.tsv:1"
+        },
+        {
+          "text": "opposite_direction_departure_candidate不能单独证明闭合到开放转变，因为其参考方向是首个持久方向而非必然的起始结构类别，且共识读数不是论文完整open/closed定义。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "interpretation_limit",
+          "result_id": "interpretation_direction_candidates",
+          "observation_subset": "trajectory_time_anatomy.tsv; persistence 5,20,50",
+          "analysis_id": "definition_crosswalk_v1",
+          "evidence": "FIELD_DEFINITIONS.md:9,15; henot_2022_article.txt:332-349,447-453"
+        },
+        {
+          "text": "严格state_core判据下，在20-1020 ns没有任何轨迹出现C后续O；闭合起始总计C=1、O=0，开放起始C=0、O=2，其余几乎为U。",
+          "type": "conclusion",
+          "polarity": "negative",
+          "quantity": "closed_seeded C=1,O=0,U=20019; open_seeded C=0,O=2,U=20018",
+          "origin": "current_calculation",
+          "evidence_role": "direct_observation",
+          "result_id": "calc_state_core_counts_v1",
+          "observation_subset": "frame_state_assignments.tsv; 40 trajectories; 1001 points each",
+          "analysis_id": "per_trajectory_state_sequence_v1",
+          "evidence": "FIELD_DEFINITIONS.md:5,11; state_core_definition.json:9-17; frame_state_assignments.tsv:1"
+        },
+        {
+          "text": "原论文报告开放起始轨迹稳定，闭合起始轨迹包含稳定、趋向开放兼容构象及中间区域等行为，并报告若干闭合到开放自发变化。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "20 open-start trajectories; about 9 closed-start trajectories toward open-compatible conformations; 20% intermediate",
+          "origin": "author_report",
+          "evidence_role": "contextual_reference",
+          "result_id": "paper_fig4_behavior",
+          "observation_subset": "paper MD analysis",
+          "analysis_id": "",
+          "evidence": "henot_2022_article.txt:300-305,332-355"
+        },
+        {
+          "text": "缺少原始坐标和完整NOE输入，不能按论文原生结构/NOE判据复核open、closed或完整transition，也不能从现有方向计数估计转变速率。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "author_report",
+          "evidence_role": "missing_input",
+          "result_id": "missing_native_inputs",
+          "observation_subset": "derived-table packet",
+          "analysis_id": "",
+          "evidence": "SOURCE_INVENTORY.json:66-71"
+        },
+        {
+          "text": "下一步应在原始坐标上采用论文相关结构判据、预注册滞后和驻留规则，以轨迹为单位比较closed→open首达并处理删失。",
+          "type": "suggestion",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "recommended_followup",
+          "result_id": "next_step_native_state_validation",
+          "observation_subset": "all 40 trajectories",
+          "analysis_id": "",
+          "evidence": "FIELD_DEFINITIONS.md:7-11; henot_2022_article.txt:409-420,447-453"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "HSP90_Q01_A_9ff587f6",
+      "source": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_A_9ff587f6/draft_1.json",
+      "workspace_outputs_before_submission": 10,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "闭合起始组相较开放起始组显示更多从闭合方向到开放方向的持久性代理变化；该结论限于20条对20条、20–1020 ns窗口和当前双读出判据，不等同于动力学速率。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "closed_seeded 5-frame opposite-direction candidates 5/20；20-frame 4/20；open_seeded 0/20；50-frame 0/20",
+          "origin": "current_calculation",
+          "evidence_role": "group_comparison",
+          "result_id": "hsp90_current_submission_01",
+          "observation_subset": "20 closed_seeded and 20 open_seeded trajectories; trajectory_time_anatomy persistence thresholds 5,20,50",
+          "analysis_id": "trajectory_level_persistence_comparison_v1",
+          "evidence": "FIELD_DEFINITIONS.md:3-19; trajectory_time_anatomy.tsv:2-100; SOURCE_INVENTORY.json:30-45"
+        },
+        {
+          "text": "OPEN_CONSENSUS和CLOSED_CONSENSUS仅表示geometry_delta_A与contact_margin_A同时同号，属于两个代理读出的方向一致性分类，不是论文原生构象或动力学状态定义。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "author_report",
+          "evidence_role": "definition_boundary",
+          "result_id": "hsp90_current_submission_02",
+          "observation_subset": "all delivered time-anatomy and directional-run rows",
+          "analysis_id": "field_definition_audit_v1",
+          "evidence": "FIELD_DEFINITIONS.md:7-10"
+        },
+        {
+          "text": "state_core是锚点相对的结构支持核心而非动力学状态；departure/return字段按首个持久方向及后续相反/回返运行定义，不能仅凭字段名解释为真实离开或回返。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "state_core thresholds theta_closed=-15.964 Å, theta_open=17.022 Å",
+          "origin": "author_report",
+          "evidence_role": "definition_boundary",
+          "result_id": "hsp90_current_submission_03",
+          "observation_subset": "state_core and trajectory_time_anatomy definitions",
+          "analysis_id": "field_definition_audit_v1",
+          "evidence": "FIELD_DEFINITIONS.md:11-17; state_core_definition.json:9-17"
+        },
+        {
+          "text": "原论文报告40条、每条1 μs的开放/闭合起始MD，并描述闭合起始轨迹可向开放方向转变、开放起始总体稳定，同时允许进入既非明确开放也非明确闭合的区域。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "40 trajectories; 20 per starting state; 1 μs each",
+          "origin": "author_report",
+          "evidence_role": "literature_context",
+          "result_id": "hsp90_current_submission_04",
+          "observation_subset": "paper MD stability/transition discussion",
+          "analysis_id": "paper_definition_comparison_v1",
+          "evidence": "henot_2022_article.txt:279-305, 338-352"
+        },
+        {
+          "text": "当前数据不能确证论文原生NOE/结构簇定义下的转变概率、速率或自由能，因为原始坐标和完整源生NOE计算输入不在派生表数据包中。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "missing_evidence",
+          "result_id": "hsp90_current_submission_05",
+          "observation_subset": "delivered derived-table packet",
+          "analysis_id": "evidence_completeness_audit_v1",
+          "evidence": "SOURCE_INVENTORY.json:66-71"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "HSP90_Q01_B_8813dc0f",
+      "source": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_B_8813dc0f/draft_2.json",
+      "workspace_outputs_before_submission": 18,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "在20–1020 ns窗口，以geometry_delta_A>0且contact_margin_A>0定义OPEN_CONSENSUS时，闭合起始组出现方向性读数变化，而开放起始组未出现相反方向读数。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "闭合组O=6764/20020，开放组O=20020/20020；闭合组C=8341，开放组C=0",
+          "origin": "current_calculation",
+          "evidence_role": "DIAGNOSTIC",
+          "result_id": "R-HSP90-DIR-001",
+          "observation_subset": "40 trajectories, 1001 frames each, 20–1020 ns",
+          "analysis_id": "A-HSP90-SIGN-001",
+          "evidence": "frame_state_assignments.tsv; FIELD_DEFINITIONS.md:7–10"
+        },
+        {
+          "text": "按至少5、20、50个连续保存帧的相反持续方向判据，闭合起始组的departure-like轨迹数分别为5/20、4/20、1/20，开放起始组均为0/20；结果依赖持续性阈值。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "5/20、4/20、1/20 versus 0/20",
+          "origin": "current_calculation",
+          "evidence_role": "DIAGNOSTIC",
+          "result_id": "R-HSP90-PERSIST-001",
+          "observation_subset": "trajectory-level; 5/20/50 consecutive frames; 20 trajectories per seed",
+          "analysis_id": "A-HSP90-RUN-001",
+          "evidence": "trajectory_time_anatomy.tsv:1–120; frame_state_assignments.tsv"
+        },
+        {
+          "text": "不能仅凭departure/return字段名证明离开起始态、到达论文定义的相反状态或发生可逆转变；参考方向是第一持续run，且return_candidate在这些摘要中均为False。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "return_candidate=0/40 under reported thresholds",
+          "origin": "inference",
+          "evidence_role": "LIMITATION",
+          "result_id": "R-HSP90-SEM-001",
+          "observation_subset": "all trajectory summaries, thresholds 5/20/50",
+          "analysis_id": "A-HSP90-SEM-001",
+          "evidence": "FIELD_DEFINITIONS.md:13–17; trajectory_time_anatomy.tsv:1–120"
+        },
+        {
+          "text": "state_core是anchor-relative structural support core而非kinetic state，不能直接用于转换速率或状态转换计数。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "",
+          "origin": "author_report",
+          "evidence_role": "SEMANTIC_CONSTRAINT",
+          "result_id": "R-HSP90-CORE-001",
+          "observation_subset": "state_core assignments",
+          "analysis_id": "A-HSP90-CORE-001",
+          "evidence": "state_core_definition.json:9–17"
+        },
+        {
+          "text": "严格的论文意义open/closed/transition验证仍缺少原始坐标和完整NOE输入，因此不能把代理读数提升为完整结构转换、速率或平衡结论。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "VALIDATION_BOUNDARY",
+          "result_id": "R-HSP90-VALID-001",
+          "observation_subset": "delivered derived tables",
+          "analysis_id": "A-HSP90-VALID-001",
+          "evidence": "SOURCE_INVENTORY.json:66–71; FIELD_DEFINITIONS.md:7–11"
+        },
+        {
+          "text": "候选NMR ensemble的RMP restraint、prior ensemble、fit objective、model uncertainty及MD-NMR forward bridge无法由当前包完整核验，因此跨来源ensemble支持和直接可比性不作强结论。",
+          "type": "limitation",
+          "polarity": "unknown",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "UNCERTAINTY_AND_BRIDGE_LIMITATION",
+          "result_id": "R-HSP90-CROSS-001",
+          "observation_subset": "MD-derived tables and NMR-reference context",
+          "analysis_id": "A-HSP90-CROSS-001",
+          "evidence": "SOURCE_INVENTORY.json:66–71; HSP90_SOURCE_AND_RUN_CARD.json:34–42,70–72; henot_2022_article.txt:610–638"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "HSP90_Q01_B_b909c96b",
+      "source": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common",
+      "submission": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/runs/HSP90_Q01_B_b909c96b/draft_2.json",
+      "workspace_outputs_before_submission": 19,
+      "public_facts_present": false,
+      "claims": [
+        {
+          "text": "在20–1020 ns窗口、以轨迹为统计单位并以5、20、50个连续保存帧定义持久性时，闭合起始相反方向departure分别为5/20、4/20、1/20，开放起始均为0/20。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "5/20, 4/20, 1/20 versus 0/20, 0/20, 0/20",
+          "origin": "current_calculation",
+          "evidence_role": "diagnostic",
+          "result_id": "R_direction_persistence_001",
+          "observation_subset": "trajectory_time_anatomy.tsv; persistence_saved_frames=5,20,50",
+          "analysis_id": "A_group_persistence_001",
+          "evidence": "FIELD_DEFINITIONS.md:13-17; trajectory_time_anatomy.tsv"
+        },
+        {
+          "text": "严格state_core标签不支持已证实的C到O转变：全40条轨迹没有相邻C↔O帧，且核心标签极少、绝大多数帧为U。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "0 adjacent C↔O transitions; closed-seeded C=1/O=0, open-seeded C=0/O=2 frames",
+          "origin": "current_calculation",
+          "evidence_role": "diagnostic",
+          "result_id": "R_state_core_001",
+          "observation_subset": "frame_state_assignments.tsv; all trajectories; 20–1020 ns",
+          "analysis_id": "A_state_core_transition_001",
+          "evidence": "state_core_definition.json:9-17; frame_state_assignments.tsv"
+        },
+        {
+          "text": "50-ns分箱是箱内中位数分类，不是连续run恢复，不能把分箱数当作独立转变事件。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "closed-seeded 169 CLOSED/143 OPEN/108 CONFLICT; open-seeded 420 OPEN",
+          "origin": "current_calculation",
+          "evidence_role": "diagnostic",
+          "result_id": "R_bins_001",
+          "observation_subset": "trajectory_time_bins_50ns.tsv; all bins",
+          "analysis_id": "A_bins_crosscheck_001",
+          "evidence": "FIELD_DEFINITIONS.md:19; trajectory_time_bins_50ns.tsv"
+        },
+        {
+          "text": "派生几何/接触共识与论文所称open/closed方向相容，但不是同一观测量；缺少原始坐标和完整NOE输入，不能升级为论文意义的已证实构象转变。",
+          "type": "limitation",
+          "polarity": "unknown",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "interpretation",
+          "result_id": "R_semantic_bridge_001",
+          "observation_subset": "geometry_delta_A/contact_margin_A versus paper NOE compatibility",
+          "analysis_id": "A_definition_bridge_001",
+          "evidence": "FIELD_DEFINITIONS.md:7-11; SOURCE_INVENTORY.json:66-71; henot_2022_article.txt:317-353"
+        },
+        {
+          "text": "原论文报告开放起始MD在1微秒内稳定，并将闭合起始轨迹分为稳定、向开放近似构象和neither行为；这与当前代理结果相容，但不是本次表格的独立验证。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "paper reports 20 open-start trajectories stable; closed-start includes stable, open-like and neither behaviors",
+          "origin": "author_report",
+          "evidence_role": "context",
+          "result_id": "R_paper_context_001",
+          "observation_subset": "Henot 2022 MD discussion",
+          "analysis_id": "A_paper_comparison_001",
+          "evidence": "henot_2022_article.txt:296-305,332-353"
+        },
+        {
+          "text": "不能从当前派生表估计平衡占比、微秒外速率或因果机制；应保持PRIOR_OR_MODEL_UNRESOLVED和GROUND_TRUTH_OR_VALIDATION_MISSING。",
+          "type": "limitation",
+          "polarity": "negative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "scope",
+          "result_id": "R_validation_scope_001",
+          "observation_subset": "derived tables and missing source-native NOE inputs",
+          "analysis_id": "A_validation_boundary_001",
+          "evidence": "SOURCE_INVENTORY.json:66-71; henot_2022_article.txt:360-369,545-578"
+        },
+        {
+          "text": "下一步应对原始坐标计算论文特征NOE兼容性并逐轨迹对照派生读出，保留neither/冲突类别。",
+          "type": "suggestion",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "validation",
+          "result_id": "R_next_step_001",
+          "observation_subset": "all trajectories; source-native NOE observables",
+          "analysis_id": "A_next_step_001",
+          "evidence": "henot_2022_article.txt:317-345,545-578; SOURCE_INVENTORY.json:66-71"
+        }
+      ],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "Q05_C_4a249b26",
+      "source": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/cases/Q05",
+      "submission": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/runs/Q05_C_4a249b26/draft_1.json",
+      "workspace_outputs_before_submission": 22,
+      "public_facts_present": true,
+      "claims": [
+        {
+          "text": "在给定前向模型和候选池下，纳米盘构象对SAXS与NOE总体具有跨观测一致性，但不是完美一致。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "synthesis",
+          "result_id": "current_cross_observation_synthesis",
+          "observation_subset": "paper_saxs;paper_noe",
+          "analysis_id": "current_data_review",
+          "evidence": "/source/paper.txt:298-318, 326-338; /source/BME_reweight/reference_only/BME_stats_SAXS.dat; /source/BME_reweight/reference_only/BME_stats_methyl_NOE.dat"
+        },
+        {
+          "text": "联合BME后的逐点SAXS核对给出90个q点、chi2=172.37，按点数归一化为1.92，最大标准化残差绝对值4.37位于q=0.1954 Å^-1。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "n=90; chi2=172.37; mean normalized squared residual=1.9152; max abs standardized residual=4.3705 at q=0.19543456667 Å^-1",
+          "origin": "current_calculation",
+          "evidence_role": "direct_comparison",
+          "result_id": "current_saxs_pointwise_check",
+          "observation_subset": "provided_30C_SAXS_vs_joint_BME_SAXS",
+          "analysis_id": "current_saxs_chi2_with_file_errors",
+          "evidence": "/source/SAXS_and_SANS/Delta_H5_no_tag_Static_SAXS_30C_RB_subtracted.dat; /source/BME_reweight/reference_only/BME_stats_SAXS.dat"
+        },
+        {
+          "text": "论文报告未重加权MD的SAXS chi2为10.0、NOE chi2为8.2；联合重加权后的SAXS chi2为1.9、NOE chi2为6.0。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "MD: SAXS chi2=10.0, NOE chi2=8.2; MD+SAXS+NOE: SAXS chi2=1.9, NOE chi2=6.0",
+          "origin": "author_report",
+          "evidence_role": "reported_fit",
+          "result_id": "paper_table2_joint",
+          "observation_subset": "paper_saxs;paper_noe",
+          "analysis_id": "Bengtsen2020_Table2",
+          "evidence": "/source/paper.txt:326-338"
+        },
+        {
+          "text": "联合BME后的40条甲基NOE预测中有8条超过给定upper bound，最大超出约4.35 Å。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "40 restraints; 8 upper-bound exceedances; maximum excess≈4.34657 Å",
+          "origin": "current_calculation",
+          "evidence_role": "direct_screening",
+          "result_id": "current_methyl_NOE_upper_bound_screen",
+          "observation_subset": "provided_methyl_NOE",
+          "analysis_id": "current_upper_bound_screen",
+          "evidence": "/source/BME_reweight/reference_only/BME_stats_methyl_NOE.dat; /source/BME_reweight/inputs_and_method/exp_methyl_NOE.dat"
+        },
+        {
+          "text": "BME重新分配已有模拟帧权重，不会产生候选池之外的新构象。",
+          "type": "conclusion",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "author_report",
+          "evidence_role": "method_constraint",
+          "result_id": "BME_reweighting_definition",
+          "observation_subset": "simulation_frames",
+          "analysis_id": "Bengtsen2020_BME",
+          "evidence": "/source/paper.txt:357-375"
+        },
+        {
+          "text": "不能由当前静态候选结构、SAXS/NOE拟合或簇出现次数确定真实平衡占比、交换速率或唯一机制。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "scope_limit",
+          "result_id": "ensemble_scope_limits",
+          "observation_subset": "simulation_frames;paper_saxs;paper_noe",
+          "analysis_id": "ensemble_resolution_scope",
+          "evidence": "/source/method_sources/ensemble_blog.md:130-146; /source/paper.txt:250-253, 357-375"
+        },
+        {
+          "text": "联合SAXS和NOE结果不能被称为对这两类观测的独立验证，因为这两类观测都参与了该结果的拟合。",
+          "type": "limitation",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "fit_reuse_check",
+          "result_id": "paper_table2_joint",
+          "observation_subset": "paper_saxs;paper_noe",
+          "analysis_id": "Bengtsen2020_Table2",
+          "evidence": "/source/PUBLIC_FACTS.json; /source/CHECK_SCOPE.txt"
+        },
+        {
+          "text": "最有信息价值的后续是使用未参与BME且条件匹配的独立观测进行前向预测并报告不确定度。",
+          "type": "suggestion",
+          "polarity": "affirmative",
+          "quantity": "",
+          "origin": "inference",
+          "evidence_role": "next_experiment",
+          "result_id": "next_step_independent_prediction",
+          "observation_subset": "unseen_condition_matched_observations",
+          "analysis_id": "information_value_assessment",
+          "evidence": "/source/paper.txt:396-401; /source/method_sources/ensemble_blog.md:130-146"
+        }
+      ],
+      "result": {
+        "flags": [
+          {
+            "check": "numeric_trace",
+            "claim_index": 1,
+            "message": "所声明数值未全部匹配本次可见工具输出；请核对计算或转述。此检查不判定数字真伪。"
+          }
+        ],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    },
+    {
+      "run": "T4L_C_be4d6c40",
+      "source": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/cases/T4L",
+      "submission": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/runs/T4L_C_be4d6c40/draft_2.json",
+      "workspace_outputs_before_submission": 14,
+      "public_facts_present": true,
+      "claims": [],
+      "result": {
+        "flags": [],
+        "unverified": [],
+        "scope": "Only trace/explicit-language checks; no scientific answer supplied, no correction imposed",
+        "message": "请自行核对这些提示；可保留原答案并解释误报。仅一次预算内修订。"
+      },
+      "scope": "offline replay with existing original claim representation; not a new agent response or causal prevention test"
+    }
+  ]
+}

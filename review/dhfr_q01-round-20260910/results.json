@@ -1,0 +1,50 @@
+{
+  "attempts": [
+    {
+      "run": "DHFR_Q01_A_07534f46",
+      "receipt": {
+        "case": "DHFR_Q01",
+        "arm": "A",
+        "development_revision": null,
+        "runner_stage": "hsp90_v3_4_frozen_task_runtime",
+        "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+        "model": "openai/gpt-5.6-luna",
+        "reasoning": "medium",
+        "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+        "totals": {
+          "input": 106713,
+          "output": 8534,
+          "cost": 0.01803592,
+          "tools": 21
+        },
+        "wall_seconds": 77.1907910000009,
+        "submissions": 1,
+        "check_scope": "no deterministic scientific checks",
+        "unknown_charge": false
+      }
+    },
+    {
+      "run": "DHFR_Q01_A_ef5da470",
+      "receipt": {
+        "case": "DHFR_Q01",
+        "arm": "A",
+        "development_revision": null,
+        "runner_stage": "hsp90_v3_4_frozen_task_runtime",
+        "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+        "model": "openai/gpt-5.6-luna",
+        "reasoning": "medium",
+        "image": "sha256:d99fa29fcffbf7de8dce05abf1c71a7002c39acf8e19276328582a5556c84e29",
+        "totals": {
+          "input": 75833,
+          "output": 5753,
+          "cost": 0.01422417,
+          "tools": 17
+        },
+        "wall_seconds": 50.40636291699775,
+        "submissions": 1,
+        "check_scope": "no deterministic scientific checks",
+        "unknown_charge": false
+      }
+    }
+  ]
+}

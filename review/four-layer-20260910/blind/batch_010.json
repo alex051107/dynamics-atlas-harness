@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V053",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "E",
+      "E"
+    ],
+    "core_errors": 4,
+    "overclaim": 3,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别缺陷表且把大均值解释为间歇性物理接触；又以该接触网络归因动力学优势。图3同段既正确称4DTMP更慢，又称抑制较弱，方向矛盾。Ki数值正确；缺坐标修复边界缺失且强因果覆盖末尾限制。核心错误分别为输入物理有效性、长尾动态解释、图3方向、因果升级。"
+  },
+  {
+    "blind_id": "V054",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类及敏感性正确，p95和19/20正确但缺闭合组ES04/ES15 entry时间。末尾新增reweighting/完整似然负担为探索性方法适用性问题，不改冻结词表计分。"
+  },
+  {
+    "blind_id": "V055",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "5/4候选及初始5开放给出，未交50点1候选和10everO完整结果，也没有5+5+10分解或原生NOE结果。明确未实际扫描/计算，按缺失不当作假造错误。20点文字可读为15个其他轨迹中2个无持续，并非宣称15闭，因此不另罚。"
+  },
+  {
+    "blind_id": "V056",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20完整数值、R28六对及O3P混合、Ki/Fig3和单轨迹/氢键/因果边界正确；没有给出N18和W22 O3P的结果，六对核心单元按缺失。"
+  },
+  {
+    "blind_id": "V057",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS172.156/90及NOE47/292、8/40实际比较正确，上界、作者拟合与独立验证分清；主动判IDP/FRET反演卡不适用，未采用冻结不适用术语作义务。额外posterior检查要求另列探索性。"
+  },
+  {
+    "blind_id": "V058",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 4,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "有效帧计数和18/20、0/10正确，但未给闭合9相对/1部分、开放1相对/1部分；p95及ES04@188给出，ES15首entry690缺；τ2只有3一致缺2部分/5相对，合并核心单元均缺失。边界正确，BME未做未声称必需，不新增冻结主指标。"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "record": 5583119,
+  "files": [
+    {
+      "name": "ORADD_closed_state.gro",
+      "bytes": 6568567,
+      "sha256": "4d05b0d3767e1f5e948b2c038a42e9b1a2132e3085c5b50899f4bf797e9f16e4",
+      "zenodo_checksum": "md5:541635b532a85a5e98ff14a7228c6a2b",
+      "url": "https://zenodo.org/api/records/5583119/files/ORADD_closed_state.gro/content",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "verified_at": "2026-09-10T10:52:27.548464+00:00"
+    },
+    {
+      "name": "ORADD_open_state_traj.xtc",
+      "bytes": 780301896,
+      "sha256": "39e77b58ded7279d27b9e331b2ff9e6d39a803183689612856df0aa800a40019",
+      "zenodo_checksum": "md5:05de6fa777dd5c86ba3e4c32b2c9080f",
+      "url": "https://zenodo.org/api/records/5583119/files/ORADD_open_state_traj.xtc/content",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "verified_at": "2026-09-10T10:56:45.668213+00:00"
+    },
+    {
+      "name": "ORADD_closed_state_traj.xtc",
+      "bytes": 580049352,
+      "sha256": "f950ff0a7beadab0992d9c1cffaea540675b62d06ed9d1eadcc988f20f6f3cc9",
+      "zenodo_checksum": "md5:014063067a9617dd89a39e35f7350d25",
+      "url": "https://zenodo.org/api/records/5583119/files/ORADD_closed_state_traj.xtc/content",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "verified_at": "2026-09-10T11:00:48.947773+00:00"
+    },
+    {
+      "name": "ORADD_open_state.gro",
+      "bytes": 6567118,
+      "sha256": "25c90e78f549d97ed61814950efcdf9b859a0320734bd15bd09003677608a40f",
+      "zenodo_checksum": "md5:a73df3d6a60e69515bb7a7758af59f17",
+      "url": "https://zenodo.org/api/records/5583119/files/ORADD_open_state.gro/content",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "verified_at": "2026-09-10T11:00:57.461992+00:00"
+    }
+  ],
+  "total_bytes": 1373486933,
+  "complete": true
+}

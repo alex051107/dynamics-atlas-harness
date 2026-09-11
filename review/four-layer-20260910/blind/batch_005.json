@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V023",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、窗口、n=1和apo/4.3ms证据角色正确；未交代模拟/实验温度差，物理条件单元部分覆盖。"
+  },
+  {
+    "blind_id": "V024",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "C",
+      "E"
+    ],
+    "core_errors": 3,
+    "overclaim": 2,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "未识别包装坏表，称长尾为“长时间远离段”；L28R M20均值17.853误转述11.853；综合结论“通过…接触…保留更好结合”作因果升级，后置限制不撤销。输入语义、均值转述、因果三项核心错误。"
+  },
+  {
+    "blind_id": "V025",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量与域定义、不同窗长、apo与4.3ms边界正确；未说明303.15K/294K温度差，条件单元部分。"
+  },
+  {
+    "blind_id": "V026",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际90点SAXS RMSE0.0013355及47/292、8/40原生上限比较正确；明确拟合与外部PRE/EPR角色、误差和有限候选支持。"
+  },
+  {
+    "blind_id": "V027",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际SAXS及NOE上限计数/2.75049Å正确；原生r^-3、同数据拟合非独立验证、候选池与时间边界清楚。"
+  },
+  {
+    "blind_id": "V028",
+    "units": [
+      "C",
+      "C",
+      "E",
+      "C",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量、温度/apo/时钟明确；却称首末均值支持“显著的构象可逆性”，净漂移不能证明可逆转变。此额外科学升级使运动解释单元错。"
+  }
+]

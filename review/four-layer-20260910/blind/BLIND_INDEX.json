@@ -1,0 +1,550 @@
+{
+  "time": "2026-09-10T13:10:43.988745+00:00",
+  "completeness": {
+    "E1b": {
+      "completed_attempts": 8,
+      "planned": 8,
+      "complete": true
+    },
+    "ADK_plain": {
+      "completed_attempts": 2,
+      "planned": 2,
+      "complete": true
+    },
+    "E2": {
+      "completed_attempts": 24,
+      "planned": 24,
+      "complete": true
+    },
+    "E3": {
+      "completed_attempts": 24,
+      "planned": 24,
+      "complete": true
+    },
+    "E4": {
+      "completed_attempts": 16,
+      "planned": 16,
+      "complete": true
+    }
+  },
+  "index": [
+    {
+      "blind_id": "V001",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V002",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V003",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V004",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V005",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V006",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V007",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V008",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V009",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V010",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V011",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V012",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V013",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V014",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V015",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V016",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V017",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V018",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V019",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V020",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V021",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V022",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V023",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V024",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V025",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V026",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V027",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V028",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V029",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V030",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V031",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V032",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V033",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V034",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V035",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V036",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V037",
+      "experiment": "ADK_plain",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V038",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V039",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V040",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V041",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V042",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V043",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V044",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V045",
+      "experiment": "ADK_plain",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V046",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V047",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V048",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V049",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V050",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V051",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V052",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V053",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V054",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V055",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V056",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V057",
+      "experiment": "E3",
+      "case": "Q05",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V058",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V059",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V060",
+      "experiment": "E2",
+      "case": "Q-H2",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V061",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V062",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V063",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V064",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V065",
+      "experiment": "E2",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V066",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V067",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V068",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V069",
+      "experiment": "E4",
+      "case": "Q-A1",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V070",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V071",
+      "experiment": "E4",
+      "case": "HSP90_Q01",
+      "status": "TOKEN_LIMIT",
+      "submitted": true
+    },
+    {
+      "blind_id": "V072",
+      "experiment": "E3",
+      "case": "Q-H2",
+      "status": "COMPLETE",
+      "submitted": true
+    },
+    {
+      "blind_id": "V073",
+      "experiment": "E1b",
+      "case": "Q-D-defect",
+      "status": "SUBMITTED_NO_EXPLICIT_REVISION",
+      "submitted": true
+    },
+    {
+      "blind_id": "V074",
+      "experiment": "E2",
+      "case": "Q-D-fixed",
+      "status": "COMPLETE",
+      "submitted": true
+    }
+  ]
+}

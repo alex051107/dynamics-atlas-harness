@@ -1,0 +1,78 @@
+[
+  {
+    "blind_id": "V001",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个变化+0.0707/+2.2904/+1.0909/+1.1764均正确；明确apo、303.15K vs294K、n=1与4.3ms实验/MD时钟边界。"
+  },
+  {
+    "blind_id": "V002",
+    "units": [
+      "E",
+      "C",
+      "C",
+      "C",
+      "M"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "用原始假大距离作接触强弱依据并断言“确实…形成…更频繁的局部近接触”，未发现/降级包装问题；Ki与Fig3正确，未把长尾直接叫状态转换；缺少坏表无法无坐标修理的边界。"
+  },
+  {
+    "blind_id": "V003",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "实际比较90 SAXS点与292/40 NOE上限；HN83.90%、methyl80%、最大methyl2.750Å与来源相符；明确拟合重用、r^-3与有限候选支持，无肯定不适用术语。"
+  },
+  {
+    "blind_id": "V004",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "首末四增量正确，apo、4.3ms和n=1/相关帧边界清楚；未给两轨迹分布中位数与重叠，覆盖幅度和顺序边界但未回答分布分离。"
+  }
+]

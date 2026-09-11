@@ -1,0 +1,16 @@
+{
+  "correct_definition": "E_axis/L_axis >0.5 (equivalent E_axis/(L_axis/2)>1)",
+  "all_checked": "Earlier conservative literal rule checked ALLframes anyway; no scientific output or frozen experiment changed",
+  "counts": {
+    "open": {
+      "E_over_L_above_half_frames": 1912,
+      "total_frames": 2253,
+      "all_frames_crosschecked": true
+    },
+    "closed": {
+      "E_over_L_above_half_frames": 704,
+      "total_frames": 1678,
+      "all_frames_crosschecked": true
+    }
+  }
+}

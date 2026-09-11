@@ -1,0 +1,22 @@
+[
+  {
+    "path": "scripts/noe_crosswalk_v1.py",
+    "sha256": "ebce95a5b053cdd4b49ada742535c207a80aaa0d3ea7d4456a50285c0aabfe3b",
+    "bytes": 6212
+  },
+  {
+    "path": "outputs/per_frame_native_class.tsv",
+    "sha256": "d7c74a00e493796a188cac1fbc7606e661177719be73efda06fbd126bd6296a1",
+    "bytes": 3003954
+  },
+  {
+    "path": "outputs/per_trajectory_crosswalk.tsv",
+    "sha256": "442e006a33c785033344391265c671f3511413396221f14cd48d29eecd1ea185",
+    "bytes": 9703
+  },
+  {
+    "path": "outputs/group_summary.json",
+    "sha256": "e751b647ae4314e9dd8e671305e49cf34dc2611552b0c2a9bf51ed766f0bedbe",
+    "bytes": 1118
+  }
+]

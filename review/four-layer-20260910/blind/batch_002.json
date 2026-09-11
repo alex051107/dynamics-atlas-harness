@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V005",
+    "units": [
+      "M",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "四增量与窗口正确；apo/实验时钟、n=1和相关帧边界清楚；未比较全分布位置/重叠，覆盖幅度与顺序边界。"
+  },
+  {
+    "blind_id": "V006",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "9/1与18/1/1和0.5/2Å分类正确；p95=1.32但仅给开放组进入参照结果，漏ES04@188/ES15@690；正文有未清理BOTH_FAR问号片段，不改变主分类数。"
+  },
+  {
+    "blind_id": "V007",
+    "units": [
+      "M",
+      "M",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 3,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 2,
+    "rationale": "有5/4/1和开放0，却未汇总10everO或5+5+10；未实际做已给原生NOE对照。方向、锚定支持核心和物理转换明确区分，无速率/平衡升级。"
+  },
+  {
+    "blind_id": "V008",
+    "units": [
+      "E",
+      "E",
+      "C",
+      "E",
+      "C"
+    ],
+    "core_errors": 3,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "闭合主分类误写10/10相对而非9/1；开放18+1+2自相矛盾并错写代表/合计；2Å闭合2/4/4而非3/5/2。三项核心数值错误；p95和两进入时刻正确。正文BME未验证状态为探索性适用性问题，不追加入冻结四词评分。"
+  },
+  {
+    "blind_id": "V009",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "用正确均值/范围而非中位数完成等价的分布位置与重叠比较；四增量、apo/4.3ms时钟与n=1边界正确，三个子问题都回答。报告朴素KS p值但明确不作为独立重复/平衡推断，保留为方法风险备注。"
+  },
+  {
+    "blind_id": "V010",
+    "units": [
+      "C",
+      "E",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 1,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "SAXS真实数值计算成立；把NOE上限作点目标，以绝对误差/±0.5比例推出NOE吻合较弱，两个错误单元同属一项估计量错误。未明确同数据拟合与独立预测角色；有限权重/不确定与下一步清楚。"
+  }
+]

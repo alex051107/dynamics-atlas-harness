@@ -1,0 +1,702 @@
+[
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/ruleset/v0_1/rule_registry.tsv",
+    "copy": "rules/rule_registry.tsv",
+    "source_sha256": "5ac5b7602d3601b4c7505538c962f2bc1ec38f20179f1d1f1e19015d450fb01a",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/external_reviews/20260817_ChatGPT_Pro_Rules_Table_原始审查.md",
+    "copy": "reviews_0817/20260817_ChatGPT_Pro_Rules_Table_原始审查.md",
+    "source_sha256": "3dbd6c169f6c072a2547a02bf5ec2f13f9c3e14624db37568177a65bd9441c98",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_metadata_selector_validation_20260813/outputs/external_reviews/20260817_ChatGPT_Pro_审查裁决与执行影响.md",
+    "copy": "reviews_0817/20260817_ChatGPT_Pro_审查裁决与执行影响.md",
+    "source_sha256": "1a3dfd80a2e49c4425ef77aee342285ce6ef70d85db9f64c8df268d290188448",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/REPORT_ZH.md",
+    "copy": "reset_0908/REPORT_ZH.md",
+    "source_sha256": "12af45a9975152ef76d2e2df4d92ace61d231ef0616f9c45650674785c5531e0",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/RULES_ALTERNATIVES_RESEARCH_ZH.md",
+    "copy": "reset_0908/RULES_ALTERNATIVES_RESEARCH_ZH.md",
+    "source_sha256": "f9e099f5324d6169c53c1d4b0ff5efdd905ed1ce2b5978a6d5592bdb91045e09",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_concept/reply.md",
+    "copy": "reset_0908/pro_concept/reply.md",
+    "source_sha256": "04d935765416d537906fabd87c60662e7bc15df068b0a5238c40bd278da80be1",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/pro_strategy/reply.md",
+    "copy": "reset_0908/pro_strategy/reply.md",
+    "source_sha256": "4546e86a8e88c013badd9f74e4ac0341eeabc59bc794bd20a4190d0afe5cd943",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "会议纪要/28号会议纪要/01_MEETING_MINUTES_AND_ACTIONS_ZH.md",
+    "copy": "meetings/20260728_DECISIONS_ZH.md",
+    "source_sha256": "748bbc828f957feb29a2d1d3bc8e1cf7ce391af98f913acf22ea591440558db6",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_soojung_meeting_transcript_prototype_20260824/outputs/02_MEETING_DECISIONS_AND_ACTIONS_ZH.md",
+    "copy": "meetings/20260824_DECISIONS_ZH.md",
+    "source_sha256": "b4d010950566d064c344e5cdb82633cc117f1c74e4c73e1be9c3077cfb68bc0d",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/DEVELOPMENT_REPORT_ZH.md",
+    "copy": "development_0909/DEVELOPMENT_REPORT_ZH.md",
+    "source_sha256": "ce3eac13a637de8d9d3806ff8a1de46ddcb2f4fbdf8d6b9188973b68d554f5f6",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/PRO_DEVELOPMENT_REVIEW_ZH.md",
+    "copy": "development_0909/PRO_DEVELOPMENT_REVIEW_ZH.md",
+    "source_sha256": "5267e96865a28992ed37fdad2d2480e127007878afac4eb7f8db0a842765cab1",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L45.md",
+    "copy": "literature/paper_analyses/L45.md",
+    "source_sha256": "4c0ce7f268dbd02cc515ebabf34dae1212f238316122df3c15a62d1d5a704d48",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L14.md",
+    "copy": "literature/paper_analyses/L14.md",
+    "source_sha256": "1a6c267c23b81b36cd18185af80cd8df1348e935c367c629f5714bbc3c204611",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L20.md",
+    "copy": "literature/paper_analyses/L20.md",
+    "source_sha256": "63045eca23d056b4ba7b328dd70c77dc921eafbdc54fe5ebe55d935c42957d7d",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L30.md",
+    "copy": "literature/paper_analyses/L30.md",
+    "source_sha256": "6c6e7a6ad80801e2e88be0635705a7db945b11705262b489aa2a56ff2ad9e9e9",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L04.md",
+    "copy": "literature/paper_analyses/L04.md",
+    "source_sha256": "9d74c7a1a164f8ffe01d995f85bfda07f7a88cacd46426e31d9edad882d3abc4",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L55.md",
+    "copy": "literature/paper_analyses/L55.md",
+    "source_sha256": "8c82bde9c36881e9c5be6a02d059b8fae2960af7d066d8a60ce0264f5751b0aa",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L24.md",
+    "copy": "literature/paper_analyses/L24.md",
+    "source_sha256": "1973788e7ee5299f34ac58e9ab67d1fa9e3aec573d01e1f79bf8888367cb8abd",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L10.md",
+    "copy": "literature/paper_analyses/L10.md",
+    "source_sha256": "7be8b6f7e718f7cde629fa1d63cb5d294885719ba399b6cab8e0918ee0f60e4e",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L41.md",
+    "copy": "literature/paper_analyses/L41.md",
+    "source_sha256": "754b79f4cc8d7c1251612824c2cea3b22ee1fa994edc59fb7e4662640787ea6d",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L51.md",
+    "copy": "literature/paper_analyses/L51.md",
+    "source_sha256": "8303ed38495c67ea4174674f6b34e4749815b402cbfae88f708a7b2e00835695",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L34.md",
+    "copy": "literature/paper_analyses/L34.md",
+    "source_sha256": "8926819c949b5629889532241bc62f17e2ac30edeb7f6d29bfc9fdb48c8a4544",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L25.md",
+    "copy": "literature/paper_analyses/L25.md",
+    "source_sha256": "100354500814b1d286eb8eea16a81376c65d25ed7a2b9b25ffa005a1f6ce6fae",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L11.md",
+    "copy": "literature/paper_analyses/L11.md",
+    "source_sha256": "194d6ff049ff161305d547b626cd05c3b95d0c09f07e9e6db46d3b18537a08dc",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L40.md",
+    "copy": "literature/paper_analyses/L40.md",
+    "source_sha256": "59d3e5cee91aff1f58550d783b5401668bf24a61d433ab57dba60f7e8d3d3a20",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L50.md",
+    "copy": "literature/paper_analyses/L50.md",
+    "source_sha256": "12fca84169a5ebd57ca4309ea96681bc715a9a1e87724c2a46a20ec03393a4d3",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L01.md",
+    "copy": "literature/paper_analyses/L01.md",
+    "source_sha256": "713451357109f54c8397edbc72ba18b19b02270434381719e92ecd48c00cd222",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L35.md",
+    "copy": "literature/paper_analyses/L35.md",
+    "source_sha256": "f29fd8b95a801635957ea33b9c07c3492beac0251046749433d7b790dc6aac5b",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L44.md",
+    "copy": "literature/paper_analyses/L44.md",
+    "source_sha256": "6450dd46025c98934499a558d1daa657ba4bdb130f96cbb72e75a0df36723362",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L15.md",
+    "copy": "literature/paper_analyses/L15.md",
+    "source_sha256": "70d715616ddf590a2b104fcbf9904ed88d8c4c721b896c12290d06a7de3c6aba",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L21.md",
+    "copy": "literature/paper_analyses/L21.md",
+    "source_sha256": "b6c06658647bfad2b7e2eb70b0d1c8f907cc796fbf23e6d5c5b733f0c99a0d0d",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L31.md",
+    "copy": "literature/paper_analyses/L31.md",
+    "source_sha256": "37f1b44018fa2413efaba48ad6a2644e5f38484ed0c215870393dd25200a8b48",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L05.md",
+    "copy": "literature/paper_analyses/L05.md",
+    "source_sha256": "d5edca02c5268fff2e9cce38c8025a1e73413fc15e0c80d79f44e2df529d8cca",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L54.md",
+    "copy": "literature/paper_analyses/L54.md",
+    "source_sha256": "d6a1ccb06a40b807d87afe3775d1a5f221fac2a5f568baa38c196e8bd3da650b",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L26.md",
+    "copy": "literature/paper_analyses/L26.md",
+    "source_sha256": "594169a85fbad3ac189b5a7e15ea9c31adc5a60a8a47df137f647946ff09987c",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L43.md",
+    "copy": "literature/paper_analyses/L43.md",
+    "source_sha256": "4d9ecf138f5614dd301021205fe9919d8c51b208b80409a414bd2074bf11a3b9",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L12.md",
+    "copy": "literature/paper_analyses/L12.md",
+    "source_sha256": "748f38a4248338ca9dab855523307669c287647190558b8ff1db761631c07edc",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L02.md",
+    "copy": "literature/paper_analyses/L02.md",
+    "source_sha256": "98ab4309355aa74b65a9747eaa27a6c3c4758f09c18a7b24732bebd51a6d50c1",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L53.md",
+    "copy": "literature/paper_analyses/L53.md",
+    "source_sha256": "d6cefc792d12ef7f3d902ffe0bbb1af67f9bde342b3c41e8e338b8f03706e79c",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L36.md",
+    "copy": "literature/paper_analyses/L36.md",
+    "source_sha256": "4ab2b671ba022059d91f94638e65f4932a7b311e4081916faf0c55c7974ce72e",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L16.md",
+    "copy": "literature/paper_analyses/L16.md",
+    "source_sha256": "c7f88c4e958d94c1f99d53d2657296927905ff4c7459d925f7c57f6ea747b462",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L47.md",
+    "copy": "literature/paper_analyses/L47.md",
+    "source_sha256": "b210dcdfaca7467af7ab06b343e7770c46d5126e3b00a79dabe3885a0bbc4133",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L22.md",
+    "copy": "literature/paper_analyses/L22.md",
+    "source_sha256": "bcb1c674f213206991eee14777c8f3e777047575f76800668079bf56960c0cb7",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L32.md",
+    "copy": "literature/paper_analyses/L32.md",
+    "source_sha256": "b1a881159c8457f8fc36871b05e2b6de8e9715ad456280adec0b18db61eeb6f9",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L57.md",
+    "copy": "literature/paper_analyses/L57.md",
+    "source_sha256": "7d74b9a6afc728eb5176a15241c5dce964892d7e9addf0b84e63e3f3674abc09",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L06.md",
+    "copy": "literature/paper_analyses/L06.md",
+    "source_sha256": "7c3838ac94eba49afb084fd6adbb52c6d9f8c7c42f471030c59caf25cb50663f",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/INDEX.md",
+    "copy": "literature/paper_analyses/INDEX.md",
+    "source_sha256": "51b13319cca3d26c5076fd1d10ccc1479ada8b1ce2fbc8a58396e99bdf6ffd47",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L17.md",
+    "copy": "literature/paper_analyses/L17.md",
+    "source_sha256": "c85fbc3e41c272615584abd09884bc9ff00d0fbda8faadd0a441b993ee533d06",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L46.md",
+    "copy": "literature/paper_analyses/L46.md",
+    "source_sha256": "a62080114bb4b98abcd475a965da29ef925b84097b06006df7ebcc5a0390d328",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L23.md",
+    "copy": "literature/paper_analyses/L23.md",
+    "source_sha256": "cc5a55dae61d86049a067211eaa2222f2355c16fb5aa189c0b75d1da3e77cb27",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L33.md",
+    "copy": "literature/paper_analyses/L33.md",
+    "source_sha256": "7156b578840dc1cccaace35ec68987f69eb64e6609672577bd35a459146063e4",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L56.md",
+    "copy": "literature/paper_analyses/L56.md",
+    "source_sha256": "3e6b09028a168340a914de5ba4d875a560c5f6a5bacdd36de567399ac126f583",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L07.md",
+    "copy": "literature/paper_analyses/L07.md",
+    "source_sha256": "2b4114b1e9b6b9cb1408726386f23718b8188d6da3d542e2bed67bc7c1261dcc",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L27.md",
+    "copy": "literature/paper_analyses/L27.md",
+    "source_sha256": "559d1b3968031ce54ca9951063af5506530a0923abc7916f69666c68d072be82",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/B01.md",
+    "copy": "literature/paper_analyses/B01.md",
+    "source_sha256": "de0fbf2ab45e1e86a225f6d34048b979ba90d946ec27dcb61d2efe5897099c56",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L42.md",
+    "copy": "literature/paper_analyses/L42.md",
+    "source_sha256": "2f5d450884cac244a0cf7a72b4e56270dcb431ade83cf492b728976c83d82ede",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L13.md",
+    "copy": "literature/paper_analyses/L13.md",
+    "source_sha256": "177885379e99cf7a20d49a31946b0d78b8737bf4d068a5797a98b4f85bba7c0a",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L03.md",
+    "copy": "literature/paper_analyses/L03.md",
+    "source_sha256": "50e264ab8910e728a256ec20c8c8fd0b39c5371541baa7555b0a2e505bd02d98",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L52.md",
+    "copy": "literature/paper_analyses/L52.md",
+    "source_sha256": "b4221707cad4e3c4c55fffbf3d501cd8688199a8539540f827e6c878b080948a",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L37.md",
+    "copy": "literature/paper_analyses/L37.md",
+    "source_sha256": "306f06a3f7d0310786ab0f797dedb3898dfe7279e3bda33d7819cb7363b3e1ee",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L49.md",
+    "copy": "literature/paper_analyses/L49.md",
+    "source_sha256": "96005c338f510b16bfce6070d8f241eb8e25161f8789268f34248b32373cca20",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L18.md",
+    "copy": "literature/paper_analyses/L18.md",
+    "source_sha256": "825a88fcf486f5134e420c62ff0afbcb24fbf221f52414beb3838721be6731f1",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L08.md",
+    "copy": "literature/paper_analyses/L08.md",
+    "source_sha256": "24396534bff0afb0e4078a8035b8d80493a6c26ccbf78019df9bb26b3708b99e",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L59.md",
+    "copy": "literature/paper_analyses/L59.md",
+    "source_sha256": "81232b14a7503c0f8058e05d6bdf57e69dba7d8c02ab6b78435a865aae0ca38b",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/CORRECTIONS_ZH.md",
+    "copy": "literature/paper_analyses/CORRECTIONS_ZH.md",
+    "source_sha256": "1ac25d4c83b1ae25ff0010cb01898ff54af33626e46c25c93d2104f42bb1260b",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L28.md",
+    "copy": "literature/paper_analyses/L28.md",
+    "source_sha256": "f992be8dd239c0635f18458c69ed16f5c898076f48aa23dd10e957eee3e897b4",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L38.md",
+    "copy": "literature/paper_analyses/L38.md",
+    "source_sha256": "09b05622e5bfcc31e780c54dace05f7eaedfa8b367054bd630c7e741c07253fa",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L29.md",
+    "copy": "literature/paper_analyses/L29.md",
+    "source_sha256": "eec2b640d70b24a68ea92cf2e4cb2ce45dfb94c8275665fa5ff766d900e50f79",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L39.md",
+    "copy": "literature/paper_analyses/L39.md",
+    "source_sha256": "c62f64b48866955c2e2116daf4637dd78106888b5339b566290f5a3ba07a6d64",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L48.md",
+    "copy": "literature/paper_analyses/L48.md",
+    "source_sha256": "eddd56b4b52dc20f6cfa77dbfeffa9cb929bc83b8a743feccdaf1a8142562217",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L19.md",
+    "copy": "literature/paper_analyses/L19.md",
+    "source_sha256": "7953d0f39f7f94311d2d85959faa79d81bdbf4f02305c5f5fbf027febdd7f5eb",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L09.md",
+    "copy": "literature/paper_analyses/L09.md",
+    "source_sha256": "4cfae90780645cfc764cc5f052ae5d6cfa7155c80fd1e4de6c5787549872c9a8",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/paper_analyses/L58.md",
+    "copy": "literature/paper_analyses/L58.md",
+    "source_sha256": "7e410ca26135a25c9d8938fb993915c9bf75d79e2e8bf143d64e884f3c309e6c",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/QUICK_READ_ZH.md",
+    "copy": "literature/QUICK_READ_ZH.md",
+    "source_sha256": "e4dfa4fc31f40192cd2da8301803258177e834c3527426c9cae52b5e2e5d4cd3",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/GLOSSARY_ZH.md",
+    "copy": "literature/GLOSSARY_ZH.md",
+    "source_sha256": "7b6489ab8319fed2d2c04a7a1c1dbe7708cc1697ff851ddb678837a64e4b4e5d",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/REVIEW_ZH.md",
+    "copy": "literature/REVIEW_ZH.md",
+    "source_sha256": "f5f8e238342c5e7f20cf36c5fc27335bde3510e33598413349cf3ebb8af22f9a",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_comprehensive_literature_review_20260908/outputs/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "copy": "literature/ENSEMBLE_BLOG_DEEP_ANALYSIS_ZH.md",
+    "source_sha256": "9172df11bc342d76fdb46f01246bb782bed5a016a6a5b241534fd0fbae6e9773",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Steffen_2021_FRETraj.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Steffen_2021_FRETraj.md",
+    "source_sha256": "ab9d3610866f19d18c8db6e40e82c6560040c31ced4d1535a97c4ebb4d2c6713",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Wankowicz_Bonomi_2026_ensemble_prediction.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Wankowicz_Bonomi_2026_ensemble_prediction.md",
+    "source_sha256": "e1f2645aa0e2d5ae9b4aa030e9d863a0cfb5ba517ea84502528f474d08cab7f1",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-07_Bonvin_1995_complete_cross_validation.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-07_Bonvin_1995_complete_cross_validation.md",
+    "source_sha256": "19fc6bcf5beb90ece42b7acc385c5377f0251231076b9f9abe10ceb7202be232",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Sanabria_2020_transient_states.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Sanabria_2020_transient_states.md",
+    "source_sha256": "8559780f83ddd2ff4cca9360149fec51aabfa66d6daf27bd2a35d3451468d21b",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Fuertes_2017_SAXS_smFRET_non_equivalence.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Fuertes_2017_SAXS_smFRET_non_equivalence.md",
+    "source_sha256": "b83262244b45eac15755059e2a664759bf3a248c92f3092ec0606f0d59fa8e47",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-23_DynaMune_2026_ENM_NMA.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-23_DynaMune_2026_ENM_NMA.md",
+    "source_sha256": "21afd71692d8b407a31bfc1040a5cc8038ff12bc7f01904b1540fb5e368e8126",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2022_HENOT_HSP90.md",
+    "copy": "literature/original_notes/PAPERFORGE_2022_HENOT_HSP90.md",
+    "source_sha256": "00e254e90f8763aea474902a47828bf5ffffd8651a36833dfde586cb5179cf00",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026_STREIT_ACTR_OPES.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026_STREIT_ACTR_OPES.md",
+    "source_sha256": "ab3f00c8be027cf66f927704d1c720e40ad33808955f97f94f3fedad1ced2bad",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Peter_2022_DEER_smFRET_crossvalidation.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Peter_2022_DEER_smFRET_crossvalidation.md",
+    "source_sha256": "8e1e1efb3970b089bcc5e5565a7fb903a963e82a0d1cf0b7dcbefda5b74de432",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-07-03_mdcath_scidata.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-07-03_mdcath_scidata.md",
+    "source_sha256": "9c4c8e5475ab36509cff0fb5bbf816096136cd5ea6dcab967fe13bf4890d7dd2",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Agam_2023_smFRET_reliability.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Agam_2023_smFRET_reliability.md",
+    "source_sha256": "3812fa55832c8a3ca06b84a5e9dfd6e3b1aa87f6876925a719472b6cc3045f1b",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Dimura_2020_FRET_assisted_modeling.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Dimura_2020_FRET_assisted_modeling.md",
+    "source_sha256": "f80feb0309597e082c7da5829fc913110bf116d05f28b1390de3b24153c4eebd",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-10_Gomes_2020_Sic1_NMR_SAXS_smFRET.md",
+    "source_sha256": "ec5554488ca7e0b5654adfc0fdb893273b82a09cdb14c76115178796eb9a7617",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Hoff_2024_EMMIVox_cryoEM.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Hoff_2024_EMMIVox_cryoEM.md",
+    "source_sha256": "5bba20a65cb3a5224c7644db23bd8631991e21eb70d593ba99aa9e359b8c60c4",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Bengtsen_2020_NMR_SAXS_SANS_MD.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Bengtsen_2020_NMR_SAXS_SANS_MD.md",
+    "source_sha256": "c692d69ca5bfb6d1c0d285154f2c9d359302be3896e7922dfe08bb763a965d6f",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Hellenkamp_2018_smFRET_benchmark.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Hellenkamp_2018_smFRET_benchmark.md",
+    "source_sha256": "74edad51b62b71670b5b8daea83f02fb0464211870c50b2cf1045e30a4a7d827",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-09_McBride_2025_RDC_SAXS_pose_prediction.md",
+    "source_sha256": "fd0c6eb6cc7452ad2e48ce646f5696b6284d24640cffc7ae8d0c764769d1b73f",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-07-03_mdcath_arxiv_duplicate.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-07-03_mdcath_arxiv_duplicate.md",
+    "source_sha256": "9f0c816042d24e0d76f1b1d2d5a2e36c093de8a1f193b3d259b407b1f6e4e7dd",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-08-06_Shevchuk_2017_Bayesian_SAXS_refinement.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-08-06_Shevchuk_2017_Bayesian_SAXS_refinement.md",
+    "source_sha256": "475644ea6c156844b81886171dc601772ef078c6e8ca42ac7ab5369e1faba21a",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-07-03_markov_plasticity_natcomm.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-07-03_markov_plasticity_natcomm.md",
+    "source_sha256": "b064c950285ecafdb3ad16f2ab3ef140e838c20392fc65a8ffb0b01a8615d294",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "literature/reading_notes/PAPERFORGE_2026-07-03_qfit_elife.md",
+    "copy": "literature/original_notes/PAPERFORGE_2026-07-03_qfit_elife.md",
+    "source_sha256": "d7deea29afb9580373e61a4d67b587e065d05882d26330917bc408a36a69cb3c",
+    "copied_verbatim": true,
+    "edits": "none"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_literature_card_male_pilot_20260805/outputs/literature/deep_read_index.md",
+    "copy": "rules/ORIGINAL_DEEP_READ_INDEX.md",
+    "source_sha256": "719c87194a429e2e6562483f54b898e6cf93a3412b691d46c4cd9e7c2dd1b023",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  },
+  {
+    "source_workspace_relative": "autoresearch/tasks/dynamics_atlas_research_reset_review_20260908/outputs/SOURCE_INDEX.md",
+    "copy": "reset_0908/SOURCE_INDEX.md",
+    "source_sha256": "204db7bbc8c06e828d2fe45f7824d9ef9f20c20d104c40881b37a15698d2720f",
+    "copied_verbatim": false,
+    "edits": "link relocation / unavailable local-link labels / host-path removal only"
+  }
+]

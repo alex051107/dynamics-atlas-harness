@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V065",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四差值、方向与幅度、apo及实验瞬态区分正确；漏温度比较，条件单元缺失。"
+  },
+  {
+    "blind_id": "V066",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "N18/W22/M20 O3P下降（N18用方向而非数值，仍是正确回答）、M20数值、Ki/Fig3及边界正确；R28只详细交NE/NH2、NH1称比例较低，没有明确六对均值下降，核心单元3缺失。磷酸氧是次要化学错误。"
+  },
+  {
+    "blind_id": "V067",
+    "units": [
+      "M",
+      "E",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 2,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "M20 WT-TMP<6Å误报11.8%，实际约7.0%，虽均值正确仍为核心支持数字错误。未交N18 O3P结果，unit1缺失。六R28选择性方向已有总括与代表数据，unit3正确。图3只说过程不同，未明确WT两药均抑制、L28R4DTMP更强，unit4缺失；没有反向声称4DTMP更弱。"
+  },
+  {
+    "blind_id": "V068",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、各容差、p95和两entry全部正确；原生列/方向与完整状态边界充分。BME未核准及建议联合拟合为额外方法负担，探索性记录，不扩冻结不适用术语指标。"
+  },
+  {
+    "blind_id": "V069",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "分布中心和重叠、四个首末变化、apo/温度/实验时间差及先后顺序边界均正确。名义KS p值明示不能作为独立重复证据。"
+  },
+  {
+    "blind_id": "V070",
+    "units": [
+      "E",
+      "E",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "开组将跨两组OPEN_NOE总数19369当本组计数并给96.75%，主文与表格90.74%矛盾；闭组把轨迹平均12.77%称池化帧比例，实际17.77%。两种分母/汇总错误各计1。主轨迹类别与敏感性类别正确；p95与21总entry有而两closed定位缺失。"
+  }
+]

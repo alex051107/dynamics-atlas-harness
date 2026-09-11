@@ -1,0 +1,116 @@
+[
+  {
+    "blind_id": "V059",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主计数、p95及两entry、敏感性正确；把其余类别叫不支持而不是部分，已明确按未达到两个预定阈值定义，保留术语边界备注。两套约束都写19条为次要来源描述错误，不改变已正确使用第二列。"
+  },
+  {
+    "blind_id": "V060",
+    "units": [
+      "C",
+      "C",
+      "M",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "主分类、敏感性、p95正确，但未给两条closed entry轨迹和时间；同数据参照非独立验证、有限窗口边界正确。"
+  },
+  {
+    "blind_id": "V061",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "M",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四增量及含义正确。把来源已明确无ATP/AMP的状态称未提供，且没有温度比较，条件证据不足记缺失；没有正面宣称有配体或直接否定实验。"
+  },
+  {
+    "blind_id": "V062",
+    "units": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "core_errors": 0,
+    "overclaim": 0,
+    "unnecessary_abstention": 0,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 3,
+    "rationale": "全分布中心与重叠、首末正向变化、无配体和温度时间差以及先后顺序边界正确。closed LID+1.177由已舍入均值相减产生，差<0.001Å，不作核心错误。"
+  },
+  {
+    "blind_id": "V063",
+    "units": [
+      "E",
+      "C",
+      "M",
+      "E",
+      "C"
+    ],
+    "core_errors": 2,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "闭合主分类写8相对2其余而非9/1，核心错1。敏感性0.5开放相对15/20错误，τ2报告22/20后主动撤回，保留失败不算造假；敏感性单元整体错误且未完成。p95正确但两entry缺失。"
+  },
+  {
+    "blind_id": "V064",
+    "units": [
+      "C",
+      "C",
+      "E",
+      "M",
+      "C"
+    ],
+    "core_errors": 1,
+    "overclaim": 0,
+    "unnecessary_abstention": 1,
+    "defect_detected": 0,
+    "defect_downgraded": 0,
+    "next_action": 1,
+    "inapplicable_adoption": 0,
+    "subquestion_coverage": 0,
+    "rationale": "四个增量表正确，解释却称closed LID比NMP小0.0855，实际大0.0855，核心幅度方向错误；条件单元漏303.15/294K。错误独立帧Welch区间明确作为不适用示例，未当显著性证据。"
+  }
+]

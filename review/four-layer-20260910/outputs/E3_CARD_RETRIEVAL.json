@@ -1,0 +1,54 @@
+{
+  "Q-H2": {
+    "methods": [
+      "MD_TRAJECTORY",
+      "NMR"
+    ],
+    "selected": [
+      "C007-RULE-002"
+    ],
+    "count": 1,
+    "P_chars": 953,
+    "R_old_chars": 7617,
+    "R_scoped_chars": 536,
+    "P_bytes": 2483,
+    "R_old_bytes": 8849,
+    "R_scoped_bytes": 692
+  },
+  "Q05": {
+    "methods": [
+      "MD_TRAJECTORY",
+      "NMR",
+      "SAXS"
+    ],
+    "selected": [
+      "C005-RULE-003",
+      "C006-RULE-001",
+      "C006-RULE-002",
+      "C007-RULE-002"
+    ],
+    "count": 4,
+    "P_chars": 953,
+    "R_old_chars": 5076,
+    "R_scoped_chars": 2181,
+    "P_bytes": 2483,
+    "R_old_bytes": 5636,
+    "R_scoped_bytes": 2805
+  },
+  "DHFR": {
+    "methods": [
+      "MD_TRAJECTORY"
+    ],
+    "selected": [],
+    "count": 0,
+    "scope": "MD analysis only; experimental paper context does not imply quantitative forward analysis"
+  },
+  "ADK": {
+    "methods": [
+      "MD_TRAJECTORY"
+    ],
+    "selected": [],
+    "count": 0,
+    "scope": "MD analysis only; experimental paper context does not imply quantitative forward analysis"
+  }
+}

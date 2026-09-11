@@ -1,0 +1,48 @@
+{
+  "created": "2026-09-10T13:32:48.435687+00:00",
+  "archives": [
+    {
+      "experiment": "E1a",
+      "archive": "archives/E1a_frozen_evidence.tar.gz",
+      "bytes": 9037454,
+      "sha256": "28794bda062208239444299179d003b35dc7aa226c9896f67020ffc00ab90f02",
+      "files": 46
+    },
+    {
+      "experiment": "E1b",
+      "archive": "archives/E1b_frozen_evidence.tar.gz",
+      "bytes": 17286007,
+      "sha256": "9faaa234ed865baa51882b2a62c6cf97510dc5bfeb1f843b0eaae9bfc8ece9d0",
+      "files": 86
+    },
+    {
+      "experiment": "ADK_plain",
+      "archive": "archives/ADK_plain_frozen_evidence.tar.gz",
+      "bytes": 7351590,
+      "sha256": "1697a6e2fc195f8e94ad904d45959c97fa2292b5e3ce0963d2607f314dadec23",
+      "files": 36
+    },
+    {
+      "experiment": "E2",
+      "archive": "archives/E2_frozen_evidence.tar.gz",
+      "bytes": 31098142,
+      "sha256": "2c9ae38aaed0b0e897b1720acb39b1b83ce3864897057a20e86e3b897d0a44ef",
+      "files": 273
+    },
+    {
+      "experiment": "E3",
+      "archive": "archives/E3_frozen_evidence.tar.gz",
+      "bytes": 28295711,
+      "sha256": "67997f5182f755035dad3229eb3a4ad6c14be6784a2396e762ec7584c350f4ee",
+      "files": 263
+    },
+    {
+      "experiment": "E4",
+      "archive": "archives/E4_frozen_evidence.tar.gz",
+      "bytes": 20905859,
+      "sha256": "61969a8429694b553c969baa7e4efa840912de53cab1d23397f384610e09665d",
+      "files": 188
+    }
+  ],
+  "scope": "Frozen analysis packets, runtime, original submissions, tool logs, receipts and costs; raw trajectory downloads remain at cited source URLs."
+}

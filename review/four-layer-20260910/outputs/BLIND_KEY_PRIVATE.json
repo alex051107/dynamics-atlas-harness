@@ -1,0 +1,668 @@
+[
+  {
+    "blind_id": "V001",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "FEEDBACK",
+    "replicate": 4,
+    "run": "Q-A1_FEEDBACK_d883c665",
+    "answer_sha256": "53238a45769cc29ef642dbbf1c5b97100191b539a29a887ed62b4db7127bce71"
+  },
+  {
+    "blind_id": "V002",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "D",
+    "replicate": 1,
+    "run": "Q-D-defect_D_292d1cc1",
+    "answer_sha256": "78bb16862b7e6e379cef49082e308687cc74ddfe5f473dc7b030b9546399cae0"
+  },
+  {
+    "blind_id": "V003",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_old",
+    "replicate": 3,
+    "run": "Q05_R_old_e24bdb4e",
+    "answer_sha256": "363779805070d4333396acf3cf68105bba82e901596a9b0864a844c2ba9506f1"
+  },
+  {
+    "blind_id": "V004",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "ORIGINAL",
+    "replicate": 2,
+    "run": "Q-A1_ORIGINAL_24938022",
+    "answer_sha256": "0e40b528c8914fb7f92c287c6bcac154a9e7d78946c5b8c97849e5490b03b733"
+  },
+  {
+    "blind_id": "V005",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "ORIGINAL",
+    "replicate": 1,
+    "run": "Q-A1_ORIGINAL_4cfd3c77",
+    "answer_sha256": "e852b9c4e512a560246de42c2d1d4513d419a9f4433f374297985d06c071a449"
+  },
+  {
+    "blind_id": "V006",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_old",
+    "replicate": 1,
+    "run": "Q-H2_R_old_c1871039",
+    "answer_sha256": "bce12843338e138983297cca3df21cbea91b6904c08d93f5ff7d8a725669924e"
+  },
+  {
+    "blind_id": "V007",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "ORIGINAL",
+    "replicate": 2,
+    "run": "HSP90_Q01_ORIGINAL_e5efd9b5",
+    "answer_sha256": "62913a7c3f93cce7ffd0c6b5ea064aeb67a85b77ca68e673eb9c9b903f3df8ad"
+  },
+  {
+    "blind_id": "V008",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_scoped",
+    "replicate": 1,
+    "run": "Q-H2_R_scoped_fd66bb04",
+    "answer_sha256": "da1b5e0175ba5e7b4460148b8e4a64ded51370e62dd5e6bc5d2a711585f75ca5"
+  },
+  {
+    "blind_id": "V009",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "SPLIT",
+    "replicate": 4,
+    "run": "Q-A1_SPLIT_77afea46",
+    "answer_sha256": "ed81615d1ed428c0a1c74884f4438a6ba9685d67304546c2fe4420559f7f5be7"
+  },
+  {
+    "blind_id": "V010",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_scoped",
+    "replicate": 3,
+    "run": "Q05_R_scoped_df542070",
+    "answer_sha256": "47e5531b59535033c61fc3bd1dcfaf8193e337f27cf15684be5263a948b51a40"
+  },
+  {
+    "blind_id": "V011",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "ORIGINAL",
+    "replicate": 3,
+    "run": "HSP90_Q01_ORIGINAL_1644009c",
+    "answer_sha256": "d4e25a0353d37694cd9399b7bc036fc34f0110b2bda60fe5349ca7feb862bcd4"
+  },
+  {
+    "blind_id": "V012",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "P",
+    "replicate": 4,
+    "run": "Q-H2_P_daf53251",
+    "answer_sha256": "b5d55a3b1780d21c49792482a000e7368027c013ea3c448ccedbd353795d605a"
+  },
+  {
+    "blind_id": "V013",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_old",
+    "replicate": 3,
+    "run": "Q-H2_R_old_23d36689",
+    "answer_sha256": "e7248ad78b21e66857573e90bd6f40bcf3a8fc26e2ad6b5c6ce5a9e8c540cacc"
+  },
+  {
+    "blind_id": "V014",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "FEEDBACK",
+    "replicate": 4,
+    "run": "Q-H2_FEEDBACK_eae4e88e",
+    "answer_sha256": "5502dd03f61af0757f96b4d3e0f3fd5da9208e300e950d2da0c5e8ccd567323d"
+  },
+  {
+    "blind_id": "V015",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "D",
+    "replicate": 3,
+    "run": "Q-H2_D_19d7a254",
+    "answer_sha256": "94d421c804e2e5f30e76d346cba08b7f5ea21b0c8462cf87d52a836c57094d52"
+  },
+  {
+    "blind_id": "V016",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "D",
+    "replicate": 4,
+    "run": "Q-D-fixed_D_bde8a030",
+    "answer_sha256": "9fbf0d55c410749d3c83a47337ebb48ef434108fba13c81d8bbcb6a488c73d46"
+  },
+  {
+    "blind_id": "V017",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "P",
+    "replicate": 3,
+    "run": "Q05_P_393b022b",
+    "answer_sha256": "3d1d5efba02b4fc444695db6cfd237ed08634c634dfe779f81882eb9eef2cd04"
+  },
+  {
+    "blind_id": "V018",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "FEEDBACK",
+    "replicate": 1,
+    "run": "Q-H2_FEEDBACK_990baaa9",
+    "answer_sha256": "4cc6d0cb91e25bdec0143f49205d83982711f98930320b87d6b8a68e554c9099"
+  },
+  {
+    "blind_id": "V019",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "D",
+    "replicate": 4,
+    "run": "Q-D-defect_D_98c6ddd3",
+    "answer_sha256": "c42673cd61e6a3100ea84aae4fbb2710becf147a9cb632cf76bb850237c8b6e9"
+  },
+  {
+    "blind_id": "V020",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "D",
+    "replicate": 2,
+    "run": "Q-H2_D_d5b2852f",
+    "answer_sha256": "2efa4d8cbdd890ee8ac8fd9ce0ad5454ebbc0a8b1b3b3a5c4f25410b8cd056f2"
+  },
+  {
+    "blind_id": "V021",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "FEEDBACK",
+    "replicate": 3,
+    "run": "Q-H2_FEEDBACK_08e25205",
+    "answer_sha256": "9f87ed13d5b684366ac975e54cd4c88c46fcb17f806678c938e1257e8eff2ddb"
+  },
+  {
+    "blind_id": "V022",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "D",
+    "replicate": 3,
+    "run": "Q-D-defect_D_142e2ab4",
+    "answer_sha256": "6684d959b17237b676b7aa5f95d09854654024ef878b520088ff63c1435d495e"
+  },
+  {
+    "blind_id": "V023",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "FEEDBACK",
+    "replicate": 2,
+    "run": "Q-A1_FEEDBACK_344df76b",
+    "answer_sha256": "0d3eed5cf0a189e9febf9a54efc91ca21b0ce1cb207deea36910d8def5c4e859"
+  },
+  {
+    "blind_id": "V024",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "CARD",
+    "replicate": 3,
+    "run": "Q-D-defect_CARD_7464cf29",
+    "answer_sha256": "13751939c73623518b43afcf365f32c02d897f961c1e4729dd9f00dae365ad85"
+  },
+  {
+    "blind_id": "V025",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 1,
+    "run": "Q-A1_D_8e82ab1e",
+    "answer_sha256": "3cfd059bac104b74a47fc8f750d1d8e476ba7e94876663e0a6ea41547ad15d95"
+  },
+  {
+    "blind_id": "V026",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_old",
+    "replicate": 2,
+    "run": "Q05_R_old_f34da788",
+    "answer_sha256": "c09b70766cdbfb4b08381cf4629d19e21826f40f9dfd221c776e1f0d12514263"
+  },
+  {
+    "blind_id": "V027",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "P",
+    "replicate": 2,
+    "run": "Q05_P_7a23ff31",
+    "answer_sha256": "45fee83f04356019f7e3f27e4f6399cfc13515b92d13404f9457d4b1d913c0a2"
+  },
+  {
+    "blind_id": "V028",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 3,
+    "run": "Q-A1_D_89f631c0",
+    "answer_sha256": "6e82b2f7237a1a54dbde14a812da81f01e4c7416d517027ce0b4c70b6e6672b8"
+  },
+  {
+    "blind_id": "V029",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_scoped",
+    "replicate": 4,
+    "run": "Q05_R_scoped_bfc4566c",
+    "answer_sha256": "2d1a867baea1b8ca15bcc5474e3968e0a9ad2564b90c937908f02f39e632a97b"
+  },
+  {
+    "blind_id": "V030",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "D",
+    "replicate": 1,
+    "run": "Q-D-fixed_D_b9e0ef0e",
+    "answer_sha256": "7d2b0d90107e8d569333c632cab16a52ba13edf64bc30f1dbb0e77cb9cf53082"
+  },
+  {
+    "blind_id": "V031",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "SPLIT",
+    "replicate": 3,
+    "run": "HSP90_Q01_SPLIT_f6a46943",
+    "answer_sha256": "1bf6560db3a68af252cf860e54a6cc5c4801268d08f1427b1a2aebdc3da7fef4"
+  },
+  {
+    "blind_id": "V032",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "FEEDBACK",
+    "replicate": 2,
+    "run": "Q-H2_FEEDBACK_4b8eb29d",
+    "answer_sha256": "38b9118b78d3956f239dd58f1213271c9f3ad507279580d72768b418c9cfa1a4"
+  },
+  {
+    "blind_id": "V033",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "P",
+    "replicate": 1,
+    "run": "Q05_P_9c3eab27",
+    "answer_sha256": "6c17b8ad12989962f69f190e38e4219a594007cd876f7a0db9568e2863829e06"
+  },
+  {
+    "blind_id": "V034",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "ORIGINAL",
+    "replicate": 4,
+    "run": "Q-A1_ORIGINAL_6918eaa1",
+    "answer_sha256": "439aa0c9f6ebf733baf9adc4f512893ccf53a92c598f7decfd9ee9f22a387226"
+  },
+  {
+    "blind_id": "V035",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "P",
+    "replicate": 4,
+    "run": "Q05_P_33a711c5",
+    "answer_sha256": "16704cf1d4b760631efc33c137e53fde83c803b9b87ae2be4301e583c0832ef8"
+  },
+  {
+    "blind_id": "V036",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "SPLIT",
+    "replicate": 1,
+    "run": "HSP90_Q01_SPLIT_da1d8ee8",
+    "answer_sha256": "4e311070a6eb86fbb26eb2c908e743871730b64abdf9197913db9141f29f8200"
+  },
+  {
+    "blind_id": "V037",
+    "experiment": "ADK_plain",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 1,
+    "run": "Q-A1_D_d6d1ffac",
+    "answer_sha256": "18792de17ad936d6e0505970ac7ee887bb5c4971231f0b58c60caf99e016c79b"
+  },
+  {
+    "blind_id": "V038",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "FEEDBACK",
+    "replicate": 4,
+    "run": "Q-D-fixed_FEEDBACK_4073818c",
+    "answer_sha256": "0349c740616294aac2281d3118626b17511c9ff12dfe4caf7af4c3c7b9dcd2e5"
+  },
+  {
+    "blind_id": "V039",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "FEEDBACK",
+    "replicate": 2,
+    "run": "Q-D-fixed_FEEDBACK_88907103",
+    "answer_sha256": "0dbb2b898f64b81339d74a8b578b18b7e899dc2c38418dc93631097593d48267"
+  },
+  {
+    "blind_id": "V040",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_old",
+    "replicate": 4,
+    "run": "Q05_R_old_d81a7f8c",
+    "answer_sha256": "54081aba56f25cfa049a687c992a299a2773c32c1542bef855002733a189d0d3"
+  },
+  {
+    "blind_id": "V041",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "P",
+    "replicate": 2,
+    "run": "Q-H2_P_9df5c2a1",
+    "answer_sha256": "1d3ba17546c0d688c40e4e849546204e2408fb9c76c14b670ee5821903bd549c"
+  },
+  {
+    "blind_id": "V042",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "ORIGINAL",
+    "replicate": 1,
+    "run": "HSP90_Q01_ORIGINAL_4d49c416",
+    "answer_sha256": "b790b8daff55360f0c93e1941f1e6a027cbd5697b3f5c94e2d2543811161c10a"
+  },
+  {
+    "blind_id": "V043",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_scoped",
+    "replicate": 2,
+    "run": "Q05_R_scoped_7641e7a4",
+    "answer_sha256": "9c5419ec911bda39931c8d96ffcb29ce5243f92dd85f623683d51c7d3412b4bf"
+  },
+  {
+    "blind_id": "V044",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "CARD",
+    "replicate": 1,
+    "run": "Q-D-defect_CARD_9c143a86",
+    "answer_sha256": "19a3210100ed26dad9c2773baec94fb0d0caef933dec24bf6f4c66e2e0534ba0"
+  },
+  {
+    "blind_id": "V045",
+    "experiment": "ADK_plain",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 2,
+    "run": "Q-A1_D_b99546c6",
+    "answer_sha256": "2979081fbdc365c883f3d35f9baca0b2b2498e3398cd54216b5d9453cf28d765"
+  },
+  {
+    "blind_id": "V046",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "SPLIT",
+    "replicate": 3,
+    "run": "Q-A1_SPLIT_8801d36a",
+    "answer_sha256": "f9453df51f1e4037396eaddb03b732b57b2d51fcf8863c4d8ef00c4988eaab87"
+  },
+  {
+    "blind_id": "V047",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "FEEDBACK",
+    "replicate": 3,
+    "run": "Q-A1_FEEDBACK_b9774074",
+    "answer_sha256": "186047bb42e72e072665714c4655761e62850062f1561776fa91b907d603542d"
+  },
+  {
+    "blind_id": "V048",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_old",
+    "replicate": 1,
+    "run": "Q05_R_old_414da90c",
+    "answer_sha256": "2da2d167e1b7e2b75f43c47470e7a5c1bf434a8400a51a7d87cc9ad77c6a703d"
+  },
+  {
+    "blind_id": "V049",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "ORIGINAL",
+    "replicate": 4,
+    "run": "HSP90_Q01_ORIGINAL_f752e80c",
+    "answer_sha256": "c65a0b88aea9d2b3a47e0fa8f3fe69b30ce8ef2bb1fa3bc8864921cf1154f67a"
+  },
+  {
+    "blind_id": "V050",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "ORIGINAL",
+    "replicate": 3,
+    "run": "Q-A1_ORIGINAL_8ae726bf",
+    "answer_sha256": "9b8acd76c59816e4b3a781f7c6e510d6eba9beeadd5d71255fe774de0d93a2bb"
+  },
+  {
+    "blind_id": "V051",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "D",
+    "replicate": 4,
+    "run": "Q-H2_D_ccaf47c5",
+    "answer_sha256": "a4175ea2ec370bfd207d38c91a8167f4c12bc84b7d724aaba67d03d0debeff3e"
+  },
+  {
+    "blind_id": "V052",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "D",
+    "replicate": 2,
+    "run": "Q-D-defect_D_72e1c7a2",
+    "answer_sha256": "baa049ce360ba3df51a303eccc642bc80e4630d8cf3ec83b0624d5f9770b0550"
+  },
+  {
+    "blind_id": "V053",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "CARD",
+    "replicate": 2,
+    "run": "Q-D-defect_CARD_d09f7e09",
+    "answer_sha256": "196074ea10d8486e764d9483571d5aba85444c7d2c823ec69eb12e40a175c4a5"
+  },
+  {
+    "blind_id": "V054",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "P",
+    "replicate": 1,
+    "run": "Q-H2_P_fc404dfa",
+    "answer_sha256": "6a3e39d38030b3142f28496fb2f14cc4fb4181947517a29c23d97d9fedabb739"
+  },
+  {
+    "blind_id": "V055",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "SPLIT",
+    "replicate": 4,
+    "run": "HSP90_Q01_SPLIT_0248b83c",
+    "answer_sha256": "9787b0ac85544e9d5277c229f93d1121df5b48ae6c1e19058bb51af40a79cd18"
+  },
+  {
+    "blind_id": "V056",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "D",
+    "replicate": 2,
+    "run": "Q-D-fixed_D_790f0340",
+    "answer_sha256": "8d8fb641cddb1bd29402a17e8081704f3d621ac90e9e191f81fb829e3fa0463b"
+  },
+  {
+    "blind_id": "V057",
+    "experiment": "E3",
+    "case": "Q05",
+    "arm": "R_scoped",
+    "replicate": 1,
+    "run": "Q05_R_scoped_2940c042",
+    "answer_sha256": "f5f16232a65b3bf50945c136bcffedc1e98989bda232e251ba48406d5dd6c841"
+  },
+  {
+    "blind_id": "V058",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_scoped",
+    "replicate": 3,
+    "run": "Q-H2_R_scoped_15a7aa35",
+    "answer_sha256": "8a8e2072356201cb89db0a8bfb9eac4750518035e53fb1a974bab340b4d2876b"
+  },
+  {
+    "blind_id": "V059",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "P",
+    "replicate": 3,
+    "run": "Q-H2_P_60ea3242",
+    "answer_sha256": "2fa2926160f905f06b2dfbbebeae274f3f4c3ea5fc08c1d6cf4baa7befe914ac"
+  },
+  {
+    "blind_id": "V060",
+    "experiment": "E2",
+    "case": "Q-H2",
+    "arm": "D",
+    "replicate": 1,
+    "run": "Q-H2_D_b98abf95",
+    "answer_sha256": "9a3ad118c69b08f0eabbf4853e7bb7d0b9a9f9c7df79fdb00c4a856173104dd6"
+  },
+  {
+    "blind_id": "V061",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 4,
+    "run": "Q-A1_D_7bf40d1f",
+    "answer_sha256": "d6ba6ed7cf1ebbea676f1ab6059eea8aeba4da6990d2235d5d96141601ade8f0"
+  },
+  {
+    "blind_id": "V062",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "SPLIT",
+    "replicate": 1,
+    "run": "Q-A1_SPLIT_795f7644",
+    "answer_sha256": "ac668487421ba7dbee9cbd909481328ea11904a936d064bda88b985a27f38488"
+  },
+  {
+    "blind_id": "V063",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_old",
+    "replicate": 2,
+    "run": "Q-H2_R_old_2a6a8f9b",
+    "answer_sha256": "8f832c08057901ac320d9067ab756771240edb8bcb5521407a96f1dabe155f8f"
+  },
+  {
+    "blind_id": "V064",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "D",
+    "replicate": 2,
+    "run": "Q-A1_D_5fdbf027",
+    "answer_sha256": "0df63ffa519ddbcb516e4af8d4bef1567d8058eff282e48797d7c1348dac67ec"
+  },
+  {
+    "blind_id": "V065",
+    "experiment": "E2",
+    "case": "Q-A1",
+    "arm": "FEEDBACK",
+    "replicate": 1,
+    "run": "Q-A1_FEEDBACK_6d4828a8",
+    "answer_sha256": "d6dbb84f6c184eec1066aac616742a28d6f5cdf0ec564d24ccd3ec6a112d8cd8"
+  },
+  {
+    "blind_id": "V066",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "D",
+    "replicate": 3,
+    "run": "Q-D-fixed_D_60950bfc",
+    "answer_sha256": "4add1d72b1d86be4b4df09ede35f1add4088a2f938ddd046b37dd20addeb2cc0"
+  },
+  {
+    "blind_id": "V067",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "FEEDBACK",
+    "replicate": 1,
+    "run": "Q-D-fixed_FEEDBACK_5a26da52",
+    "answer_sha256": "b995448ceca57d7654d20852b52356abf23457c36cc2063b6d3bc8dbf8d943bd"
+  },
+  {
+    "blind_id": "V068",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_scoped",
+    "replicate": 4,
+    "run": "Q-H2_R_scoped_71657c46",
+    "answer_sha256": "4215e2305741b013be8e09884b46c07c5aa8c5bdcb453886eeacbca9ecfd9ba7"
+  },
+  {
+    "blind_id": "V069",
+    "experiment": "E4",
+    "case": "Q-A1",
+    "arm": "SPLIT",
+    "replicate": 2,
+    "run": "Q-A1_SPLIT_7155aa84",
+    "answer_sha256": "d2ab4219bb46cb19f5f5bd7bdafe600801cd9f6196231b6ecf1d47fcba9c79fd"
+  },
+  {
+    "blind_id": "V070",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_old",
+    "replicate": 4,
+    "run": "Q-H2_R_old_fd6dd552",
+    "answer_sha256": "caad865be387bdd4ba2cef3384d220f8dbf806a8260fc6c270d0171f55f648ec"
+  },
+  {
+    "blind_id": "V071",
+    "experiment": "E4",
+    "case": "HSP90_Q01",
+    "arm": "SPLIT",
+    "replicate": 2,
+    "run": "HSP90_Q01_SPLIT_2b5619af",
+    "answer_sha256": "bdd6e7b88e0a2ce93c6b86a93e064cb918e0ac32060b1a40582ecc771b68f255"
+  },
+  {
+    "blind_id": "V072",
+    "experiment": "E3",
+    "case": "Q-H2",
+    "arm": "R_scoped",
+    "replicate": 2,
+    "run": "Q-H2_R_scoped_f1a03c8e",
+    "answer_sha256": "6fa9924194ee7ff805b36e4b22f80aba408999d040e5486575b84624ddbadbd8"
+  },
+  {
+    "blind_id": "V073",
+    "experiment": "E1b",
+    "case": "Q-D-defect",
+    "arm": "CARD",
+    "replicate": 4,
+    "run": "Q-D-defect_CARD_10e796d4",
+    "answer_sha256": "2c173079886f5b5331714e2d6eedeae12f40586a987bd547836091fff67afaab"
+  },
+  {
+    "blind_id": "V074",
+    "experiment": "E2",
+    "case": "Q-D-fixed",
+    "arm": "FEEDBACK",
+    "replicate": 3,
+    "run": "Q-D-fixed_FEEDBACK_1223b39e",
+    "answer_sha256": "409395f76cf5d2e0af4893ecdb75e25bd3d6963318a65c0e98e2306995c2bc3b"
+  }
+]

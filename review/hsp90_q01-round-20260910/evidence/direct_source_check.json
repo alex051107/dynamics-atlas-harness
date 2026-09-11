@@ -1,0 +1,86 @@
+{
+  "core_counts": {
+    "closed_seeded/U": 20019,
+    "closed_seeded/C": 1,
+    "open_seeded/U": 20018,
+    "open_seeded/O": 2
+  },
+  "direction_counts": {
+    "closed_seeded/C": 8341,
+    "closed_seeded/X": 4915,
+    "closed_seeded/O": 6764,
+    "open_seeded/O": 20020
+  },
+  "bin_sizes": {
+    "50": 800,
+    "1": 40
+  },
+  "threshold_counts": [
+    {
+      "threshold": 5,
+      "lineage": "closed_seeded",
+      "n": 20,
+      "departures": 5,
+      "returns": 0,
+      "initial_directions": {
+        "CLOSED_CONSENSUS": 15,
+        "OPEN_CONSENSUS": 5
+      }
+    },
+    {
+      "threshold": 5,
+      "lineage": "open_seeded",
+      "n": 20,
+      "departures": 0,
+      "returns": 0,
+      "initial_directions": {
+        "OPEN_CONSENSUS": 20
+      }
+    },
+    {
+      "threshold": 20,
+      "lineage": "closed_seeded",
+      "n": 20,
+      "departures": 4,
+      "returns": 0,
+      "initial_directions": {
+        "CLOSED_CONSENSUS": 13,
+        "OPEN_CONSENSUS": 5,
+        "NO_PERSISTENT_CONSENSUS": 2
+      }
+    },
+    {
+      "threshold": 20,
+      "lineage": "open_seeded",
+      "n": 20,
+      "departures": 0,
+      "returns": 0,
+      "initial_directions": {
+        "OPEN_CONSENSUS": 20
+      }
+    },
+    {
+      "threshold": 50,
+      "lineage": "closed_seeded",
+      "n": 20,
+      "departures": 1,
+      "returns": 0,
+      "initial_directions": {
+        "CLOSED_CONSENSUS": 11,
+        "OPEN_CONSENSUS": 7,
+        "NO_PERSISTENT_CONSENSUS": 2
+      }
+    },
+    {
+      "threshold": 50,
+      "lineage": "open_seeded",
+      "n": 20,
+      "departures": 0,
+      "returns": 0,
+      "initial_directions": {
+        "OPEN_CONSENSUS": 20
+      }
+    }
+  ],
+  "method": "Group by source-table seed_lineage; direct source counts; developer audit only"
+}

@@ -1,0 +1,88 @@
+{
+  "actual_capabilities": [
+    "declared metadata equality to trusted source facts",
+    "row count/time order/time alignment",
+    "numeric equality within declared tolerance to validated matrices",
+    "optional externally generated physical status readback"
+  ],
+  "not_implemented_as_scientific_checks": {
+    "observation_window": "no separate window compatibility check",
+    "statistical_unit": "label equality, not independent-sample inference",
+    "time_semantics": "order and alignment, not kinetic interpretability",
+    "candidate_pool_lineage": "label equality, not reconstruction of provenance"
+  },
+  "defect_mechanisms": [
+    {
+      "defect": 1,
+      "detected_by": "numeric matrix discrepancy",
+      "depends_on_numeric_reference": true,
+      "other_dependency": "independently validated coordinate representation"
+    },
+    {
+      "defect": 2,
+      "detected_by": "unit label mismatch",
+      "depends_on_numeric_reference": false,
+      "other_dependency": "trusted source unit metadata"
+    },
+    {
+      "defect": 3,
+      "detected_by": "row count mismatch",
+      "depends_on_numeric_reference": false,
+      "other_dependency": "trusted expected row count plus declared row count; not reference-free"
+    },
+    {
+      "defect": 4,
+      "detected_by": "nonmonotonic time and source time misalignment",
+      "depends_on_numeric_reference": true,
+      "other_dependency": "monotonicity itself is internal; alignment requires source time sequence"
+    },
+    {
+      "defect": 5,
+      "detected_by": "condition label mismatch",
+      "depends_on_numeric_reference": false,
+      "other_dependency": "trusted condition-to-file identity"
+    },
+    {
+      "defect": 6,
+      "detected_by": "evidence-role label mismatch",
+      "depends_on_numeric_reference": false,
+      "other_dependency": "curated source evidence role"
+    }
+  ],
+  "sources": [
+    {
+      "system": "HSP90",
+      "source_authority": "reference/HSP90/SOURCE_AUTHORITY.json",
+      "numeric_tolerance": 0.01,
+      "tolerance_field_in_frozen_code": "reference_tolerance_A",
+      "physical_status_file": null,
+      "physical_status_sha256_from_freeze": null,
+      "physical_scope": "not a coordinate table; no molecular physical file required in this test"
+    },
+    {
+      "system": "DHFR",
+      "source_authority": "reference/DHFR/SOURCE_AUTHORITY.json",
+      "numeric_tolerance": 0.0001,
+      "tolerance_field_in_frozen_code": "reference_tolerance_A",
+      "physical_status_file": "reference/DHFR/PHYSICAL_SOURCE_CHECK.json",
+      "physical_status_sha256_from_freeze": "ef6fdc9f3c4d3df6aee2b704721ea38e6bac447775b08dd9ee96c251705e0069",
+      "physical_scope": "external coordinate validation readback, not recalculated by admission_check"
+    },
+    {
+      "system": "ADK",
+      "source_authority": "reference/ADK/SOURCE_AUTHORITY.json",
+      "numeric_tolerance": 0.01,
+      "tolerance_field_in_frozen_code": "reference_tolerance_A",
+      "physical_status_file": "reference/ADK/PHYSICAL_SOURCE_CHECK.json",
+      "physical_status_sha256_from_freeze": "0467f0fc02e07ac195af72acf021fb100581fefb15b44d467f326e42253e0267",
+      "physical_scope": "external coordinate validation readback, not recalculated by admission_check"
+    }
+  ],
+  "clean_control_limit": "All3 clean numerical matrices equal their trusted copies (maximum discrepancy0); zero false positives is self-consistency evidence, not independent-pipeline specificity",
+  "independent_physical_evidence": "ADK GROMACS full-frame and extreme-pair crosschecks are separate upstream evidence; they were not substituted as alternate E1a tables",
+  "untested_edges": [
+    "table-set mismatch raises AssertionError, not a structured FAIL",
+    "missing physical file is skipped by the bare checker; applicability and existence are not established by that function"
+  ],
+  "unchanged_frozen_result": "E1a/E1a_RESULTS.json remains original; this file is a review annotation"
+}

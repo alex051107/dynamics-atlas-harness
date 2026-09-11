@@ -1,0 +1,18 @@
+# This file was created Thu Sep 10 07:06:47 2026
+# Created by:
+#                :-) GROMACS - gmx distance, 2025.1-Homebrew (-:
+# 
+# Executable:   /opt/homebrew/bin/../Cellar/gromacs/2025.1/bin/gmx
+# Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2025.1
+# Working dir:  /Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data
+# Command line:
+#   gmx distance -s '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_closed_state.gro' -f '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/inputs/ORADD_closed_state_traj.xtc' -b 180600.0 -e 180600.0 -select 'atomnr 2299 2934' -oall '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_distance_closed.xvg' -oxyz '/Users/liuzhenpeng/Desktop/UNC/Soojung-Dynamic data/autoresearch/tasks/dynamics_atlas_adk_plain_agent_v2_20260910/outputs/gmx_components_closed.xvg'
+# gmx distance is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "Distance"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Distance (nm)"
+@TYPE xy
+ 180600.000   -4.693    3.955   -0.996
