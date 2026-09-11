@@ -1,0 +1,51 @@
+{
+  "frame_rows": 40040,
+  "trajectory_rows": 40,
+  "tau_primary_A": 1.0,
+  "p95_open_A": 1.32,
+  "max_margin_alignment_error": 0,
+  "positive_control_pass": true,
+  "sensitivity": {
+    "0.5": {
+      "closed_seeded": {
+        "NOT_APPLICABLE": 10,
+        "RELATIVE_ONLY": 10
+      },
+      "open_seeded": {
+        "PARTIAL": 8,
+        "AGREEMENT": 7,
+        "RELATIVE_ONLY": 5
+      }
+    },
+    "1.0": {
+      "closed_seeded": {
+        "NOT_APPLICABLE": 10,
+        "RELATIVE_ONLY": 9,
+        "PARTIAL": 1
+      },
+      "open_seeded": {
+        "AGREEMENT": 18,
+        "PARTIAL": 1,
+        "RELATIVE_ONLY": 1
+      }
+    },
+    "2.0": {
+      "closed_seeded": {
+        "NOT_APPLICABLE": 10,
+        "AGREEMENT": 3,
+        "RELATIVE_ONLY": 5,
+        "PARTIAL": 2
+      },
+      "open_seeded": {
+        "AGREEMENT": 19,
+        "RELATIVE_ONLY": 1
+      }
+    }
+  },
+  "reference_entry_counts": {
+    "closed_seeded": 2,
+    "open_seeded": 19
+  },
+  "claim_ceiling": "Same-source decomposition, not independent experimental validation; tau is a project tolerance",
+  "interpretation_status": "CONTINUE"
+}

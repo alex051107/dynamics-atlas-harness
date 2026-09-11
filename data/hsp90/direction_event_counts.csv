@@ -1,0 +1,7 @@
+persistence_threshold_points,start,n_trajectories,first_sustained_direction_open,first_sustained_direction_closed,no_sustained_direction,departures_from_first_direction,returns
+5,closed_start,20,5,15,0,5,0
+5,open_start,20,20,0,0,0,0
+20,closed_start,20,5,13,2,4,0
+20,open_start,20,20,0,0,0,0
+50,closed_start,20,7,11,2,1,0
+50,open_start,20,20,0,0,0,0

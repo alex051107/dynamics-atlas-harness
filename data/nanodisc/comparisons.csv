@@ -1,0 +1,13 @@
+scheme,channel,delta_fixed_mean_loss,improved_constraints,worsened_constraints,unchanged_constraints
+saxs_theta6,saxs,-8.848078598058459,65,25,0
+saxs_theta6,amide,0.03131596391493738,16,37,239
+saxs_theta6,methyl,0.5764049170608768,3,5,32
+saxs_theta60,saxs,-7.9009193889411184,66,24,0
+saxs_theta60,amide,0.03758086920091519,17,32,243
+saxs_theta60,methyl,0.0344061711994166,3,7,30
+local_joint_v2,saxs,-8.48820668002289,67,23,0
+local_joint_v2,amide,-0.10556787003524641,26,27,239
+local_joint_v2,methyl,-2.35413594181548,8,1,31
+author_joint,saxs,-8.098038312169844,66,24,0
+author_joint,amide,-0.044981961317943436,24,24,244
+author_joint,methyl,-1.4336316158549913,8,1,31
