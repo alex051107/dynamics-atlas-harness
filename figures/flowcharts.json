@@ -1,0 +1,140 @@
+{
+  "canvas": { "w": 10.0, "h": 5.625 },
+  "style": {
+    "font": "Arial",
+    "heading": "1F4E79",
+    "body": "2D2D2D",
+    "muted": "6B6B6B",
+    "box": "E8EEF5",
+    "box_line": "C5D3E3",
+    "grey": "F2F2F2",
+    "grey_line": "D9D9D9",
+    "current": "FFF2CC",
+    "current_line": "E6D48A",
+    "arrow": "9AA5B1",
+    "empty_line": "C8C8C8"
+  },
+  "footer": "Dynamics Atlas · 11 September 2026",
+  "figures": {
+    "fig_project_map": {
+      "kind": "project_map",
+      "title": "Project map",
+      "row_labels": {
+        "rule": "Where a rule can enter",
+        "happened": "What happened"
+      },
+      "steps": [
+        {
+          "name": "1 Choose the question",
+          "by": "person",
+          "rule": "no rule",
+          "rule_kind": "none",
+          "happened": "HSP90: first question asked only about direction"
+        },
+        {
+          "name": "2 Prepare the data",
+          "by": "person + code",
+          "rule": "a data check written as code",
+          "rule_kind": "rule",
+          "happened": "DHFR: periodic-image error"
+        },
+        {
+          "name": "3 Frame the question",
+          "by": "person",
+          "rule": "which difference to resolve",
+          "rule_kind": "rule",
+          "happened": "splitting the question helped"
+        },
+        {
+          "name": "4 Analysis",
+          "by": "AI analyst, or fixed analysis steps",
+          "rule": "a precondition or claim limit of a fixed analysis step",
+          "rule_kind": "rule",
+          "happened": "rules as text: no gain (10 Sep); rules inside steps: numbers became checkable (11 Sep)"
+        },
+        {
+          "name": "5 Check the answer",
+          "by": "code",
+          "rule": "each number checked against the step that produced it",
+          "rule_kind": "rule",
+          "happened": "checking that a number appears: failed; checking against the step: caught 6 of 7 errors"
+        },
+        {
+          "name": "6 Report",
+          "by": "person",
+          "rule": "no rule",
+          "rule_kind": "none",
+          "happened": "trust table for HSP90, two of six rows usable"
+        }
+      ]
+    },
+    "fig_where_we_are": {
+      "kind": "timeline",
+      "title": "Where we are",
+      "nodes": [
+        {
+          "date": "24 June",
+          "text": "goal set: which quantities in a dynamics dataset can be trusted",
+          "current": false
+        },
+        {
+          "date": "7 August",
+          "text": "Rules Table version 1, 33 rules from 11 methods papers",
+          "current": false
+        },
+        {
+          "date": "10 September",
+          "text": "rules given to the AI as text; no stable gain",
+          "current": false
+        },
+        {
+          "date": "11 September",
+          "text": "rules built into fixed analysis steps; numbers became checkable; two definitions failed a control",
+          "current": false
+        },
+        {
+          "date": "Now",
+          "text": "settle the definitions; review the rules with a domain expert",
+          "current": true
+        }
+      ],
+      "caption": "Four cases: HSP90 · nanodisc · DHFR · ADK"
+    },
+    "fig_rule_selection": {
+      "kind": "vertical_flow",
+      "title": "How a rule is chosen",
+      "boxes": [
+        {
+          "lead": "The question:",
+          "text": "which difference must be resolved? (a population, a state reached, a rate, a local fluctuation)"
+        },
+        {
+          "lead": "The data:",
+          "text": "which measurement and which processing, and do they still preserve that difference?"
+        },
+        {
+          "lead": "The rule:",
+          "text": "a relation with four parts: difference, measurement and processing, conditions, claim limit"
+        },
+        {
+          "lead": "",
+          "text": "A fixed analysis step carries the rule as a precondition and a claim limit; the AI calls the step and attaches every number to it"
+        },
+        {
+          "lead": "",
+          "text": "A control on the data must pass before the result enters the trust table"
+        }
+      ],
+      "side_notes": [
+        {
+          "box": 3,
+          "text": "Not: rule text pasted into the AI's prompt (tested 10 September, no gain)"
+        },
+        {
+          "box": 4,
+          "text": "Two steps withdrawn on 11 September after failing their control"
+        }
+      ]
+    }
+  }
+}

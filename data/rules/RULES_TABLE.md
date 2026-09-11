@@ -2,7 +2,7 @@
 
 Three rules were drawn from each of 11 methods papers (links in [SOURCES.md](../../SOURCES.md)). Each row gives what the paper showed, what we asked to be checked before using that kind of data, where the analysis should stop if the check cannot be made, and how far the lesson carries. None of these rules has been reviewed by a domain expert.
 
-"Use" is how we later grouped the rules for testing: framing the question, checking the data, method guidance during analysis, or limits on the conclusion. The last three columns show which rules were compiled into the selection index, turned into short method cards, or pasted into the HSP90 prompt.
+"Use" is how we grouped the rules for the tests of 10 September 2026: framing the question, checking the data, method guidance during analysis, or limits on the conclusion. The last three columns show which rules were compiled into the selection index, turned into short method cards, or pasted into the HSP90 prompt.
 
 | Rule | Paper | Use | Paper finding | Checks we require | Stop route if unverifiable | Transfer scope | Index | Card | HSP90 prompt |
 |---|---|---|---|---|---|---|:-:|:-:|:-:|

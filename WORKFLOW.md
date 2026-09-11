@@ -1,6 +1,6 @@
 # How the project got here
 
-Updated 11 September 2026. The starting idea, the Rules Table, the workflow a new system goes through, and the tests of the rules on 10 and 11 September. The front page ([README.md](README.md)) says where this leaves us; [DEFINITIONS.md](DEFINITIONS.md) lists the definitions now under review.
+Updated 11 September 2026. The starting idea, the Rules Table, the workflow a new system goes through, and the tests of the rules on 10 and 11 September. The front page ([README.md](README.md)) says where this leaves us; [DEFINITIONS.md](DEFINITIONS.md) lists the definitions under review as of 11 September 2026.
 
 ## 1. The scientific problem
 
@@ -82,7 +82,7 @@ The rules used to be the centre:
 rules → organize the analysis → the AI follows the rules
 ```
 
-The scientific distinction now comes first, with the rules as supporting knowledge at the step where they apply:
+As of 11 September 2026, the scientific distinction comes first, with the rules as supporting knowledge at the step where they apply:
 
 ```text
 what difference must be resolved (structure, population, rate)?

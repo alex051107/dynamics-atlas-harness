@@ -2,7 +2,7 @@
 
 Updated 11 September 2026. Version 1 (7 August 2026) is kept unchanged in [RULES_TABLE.md](RULES_TABLE.md) and [rule_registry_v0.1.csv](rule_registry_v0.1.csv). The machine-readable version 2 is [rules_v2.csv](rules_v2.csv).
 
-Version 1 listed what 11 methods papers warn about, three rules per paper. Version 2 is organized the way the table was meant to work from the start: each rule names the question it helps answer, the situation that triggers it, the analysis (operator) it acts through, what must hold, what the result may claim, and where to stop. Each row also records what has happened to the rule so far and the file that shows it. The table keeps all 33 original rules and adds four rules from the literature on sampling quality and kinetics in MD, and five rules we learned from our own data.
+Version 1 listed what 11 methods papers warn about, three rules per paper. Version 2 is organized the way the table was meant to work from the start: each rule names the question it helps answer, the situation that triggers it, the analysis (operator) it acts through, what must hold, what the result may claim, and where to stop. Each row also records what has happened to the rule as of 11 September 2026 and the file that shows it. The table keeps all 33 original rules and adds four rules from the literature on sampling quality and kinetics in MD, and five rules we learned from our own data.
 
 ## Version 1 and version 2
 
@@ -12,7 +12,7 @@ Version 1 listed what 11 methods papers warn about, three rules per paper. Versi
 | Rules | 33, from 11 methods papers on smFRET, SAXS, cryo-EM, DEER and ensemble modelling | 42: the same 33, 4 from the MD sampling-quality and kinetics literature, 5 learned from our own data |
 | One row holds | What the paper showed, what to check, where to stop, how far the lesson carries | When the rule applies, the operator or check it acts through, what must hold, what may be claimed, where to stop, and its status |
 | How a rule reaches an analysis | A selector matched rules by data type, and the text was pasted into the AI's prompt | Through operator preconditions, claim limits and the answer check; the AI does not read rule text |
-| Tested so far | As prompt text, method cards, a warning file and a post-answer check (10 September): no stable gain, and FRET conditions leaked into an NMR question | Inside operators with an answer check (11 September): numbers became checkable, and two definitions failed a control. The same content given as text has not been compared yet |
+| Tested, as of 11 September 2026 | As prompt text, method cards, a warning file and a post-answer check (10 September): no stable gain, and FRET conditions leaked into an NMR question | Inside operators with an answer check (11 September): numbers became checkable, and two definitions failed a control. The same content given as text has not been compared yet |
 
 ## What version 2 shows
 
@@ -26,7 +26,7 @@ Version 1 listed what 11 methods papers warn about, three rules per paper. Versi
 - **Applies when**: the situation in the analysis that triggers the rule.
 - **Acts through**: the operator or check that carries the rule. "None" means no analysis in this project uses it yet. The indented line says what must hold before the result is used.
 - **What may be claimed**: the strongest statement allowed, and the label reported when the rule's check cannot be made.
-- **Status**: what has happened to the rule so far, with the file that shows it. S- rules come from the sampling-quality and kinetics literature, P- rules from our own data, C- rules from version 1.
+- **Status**: what has happened to the rule as of 11 September 2026, with the file that shows it. S- rules come from the sampling-quality and kinetics literature, P- rules from our own data, C- rules from version 1.
 
 
 ## Can a population, a transition or a rate be stated?
