@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "boundary_scan": {
+      "absolute_path_hits": [],
+      "credential_hits": [],
+      "status": "PASS"
+    },
+    "cardinality": {
+      "answer_score_rows": 18,
+      "blind_score_rows": 64,
+      "completed_do_runs": 16,
+      "group_score_rows": 6,
+      "receipt_summary_rows": 18,
+      "status": "PASS"
+    },
+    "harness_git_readback": {
+      "claim_boundary": "read-only confirmation that the external harness was not modified by this task",
+      "status": "PASS",
+      "status_lines": [
+        "## research/rules-pattern-batch20-v1...origin/research/rules-pattern-batch20-v1",
+        "?? research/rules_benchmark/"
+      ]
+    },
+    "json_parse": {
+      "checked": 14,
+      "failures": [],
+      "status": "PASS"
+    },
+    "report_render_and_content": {
+      "html_bytes": 13798,
+      "markdown_bytes": 10983,
+      "status": "PASS"
+    },
+    "required_files": {
+      "missing": [],
+      "status": "PASS"
+    }
+  },
+  "claim_boundary": "final local artifact integrity and boundary check; not a scientific validation or PR/CI result",
+  "failed_checks": [],
+  "status": "PASS"
+}

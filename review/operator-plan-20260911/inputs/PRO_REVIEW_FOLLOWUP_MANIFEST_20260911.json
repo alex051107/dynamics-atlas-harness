@@ -1,0 +1,67 @@
+{
+  "manifest_id": "PRO_REVIEW_FOLLOWUP_20260911",
+  "task_id": "dynamics_atlas_operator_plan_20260911",
+  "created_at": "2026-09-11",
+  "purpose": "Follow up with ChatGPT Pro using the original 20260911 plan, the local operator-plan result, and the imported 20260910 Pro packet.",
+  "user_request_scope": "Copy the previous ChatGPT materials, combine them with the current result, and send a Pro review follow-up through Computer Use.",
+  "plan_role": "The attached PLAN_FOR_PRO_REVIEW_20260911_ZH.md defines the external review questions, output contract, and review limits; it is not scientific evidence or permission to bypass project gates.",
+  "prior_packet": {
+    "source": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/PRO_FORM_REVIEW_PACKET_20260910/",
+    "destination": "inputs/pro_review_followup/prior_chatgpt_packet_20260910/",
+    "copied_files": [
+      {
+        "name": "00_PROMPT.md",
+        "sha256": "d6f80f7e23e692ddedfb70e6270917f324210601e3edbf715d6ca4940c733073"
+      },
+      {
+        "name": "01_RULES_TABLE_ROLE_DESIGN_ZH.md",
+        "sha256": "2820d39529d44e9a8037e078094f15decbc0353f32fc655cfd11b1c49ed61a87"
+      },
+      {
+        "name": "02_FOUR_LAYER_VALIDATION_PLAN_ZH.md",
+        "sha256": "6c4fabd79322062e4fe793477486f5798137d7ef321c754945149877feafb2f6"
+      },
+      {
+        "name": "03_FORM_QUESTION_ANSWERED_ZH.md",
+        "sha256": "ad25da309f62b77eb80d8cb33fd8e7f1c2badadb6fdd5ba5891bd1dbfac41295"
+      },
+      {
+        "name": "04_DYNAMICS_ATLAS_PLAN_TABLE_20260910_ZH.md",
+        "sha256": "84425207d63fbdeeb2a7a7109558955708f9d737107e83ad9c32920e1c652578"
+      },
+      {
+        "name": "05_BLOG_SUMMARY_ZH.md",
+        "sha256": "09276c1e958397afec62dd43e0c950fe315e0fdb6ad2390665b660d28d4a3c26"
+      },
+      {
+        "name": "06_PAPER_SUMMARY_T4L_JCIM_ZH.md",
+        "sha256": "1147c69d40f2782f6eeb2b284f81c1fac3a83d7fe033c528316044e379c40ef1"
+      },
+      {
+        "name": "07_are-we-capturing-the-ensemble.md",
+        "sha256": "55b3bfb0da09e59b97915a8e3bbd8e327ebe1588d4fcd03a6d907a3910ec87e5"
+      },
+      {
+        "name": "08_acs.jcim.6c02044.pdf",
+        "sha256": "e82b8ffe22526a7615b7c7c3d8ad3f7df9bb43b5484076e71f6939c99ab52dc0"
+      },
+      {
+        "name": "08b_ci6c02044_si_001.pdf",
+        "sha256": "af88fc29d3066fdbb632fd9c9574762f5161451ac302e3be52d357903e76d349"
+      }
+    ]
+  },
+  "current_materials": [
+    "outputs/PRO_REVIEW_FOLLOWUP_PACKET_20260911_ZH.md",
+    "outputs/OPERATOR_PLAN_REPORT_ZH.md",
+    "outputs/DEVIATIONS.md",
+    "outputs/WORK_EVIDENCE_LEDGER.json",
+    "outputs/E_CAMPAIGN_RESULT.json",
+    "outputs/blind/GROUP_SCORES.json",
+    "outputs/blind/SCORE_SEAL.json",
+    "outputs/INDEPENDENT_RECOMPUTE_MODEL.json",
+    "outputs/FINAL_ARTIFACT_CHECK.json"
+  ],
+  "external_review_status": "PENDING_SEND",
+  "claim_ceiling": "The packet requests an external design review only. It does not establish scientific correctness, independent validation, second-scorer agreement, external PR creation, or source-science approval."
+}

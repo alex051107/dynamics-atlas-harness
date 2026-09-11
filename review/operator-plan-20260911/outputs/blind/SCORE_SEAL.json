@@ -1,0 +1,18 @@
+{
+  "status": "SEALED_BEFORE_KEY_READ",
+  "score_file": "outputs/blind/blind_scores.csv",
+  "score_sha256": "83b75670851dc4ab4880edb7a14b48591c3a0735c04c803ce28e42754bef05af",
+  "blind_answer_count": 16,
+  "score_row_count": 64,
+  "metrics": [
+    "source_fidelity",
+    "operator_coverage",
+    "numerical_binding",
+    "claim_boundary",
+    "question_completeness",
+    "clarity"
+  ],
+  "scale": "each core unit receives 0-2 on each metric",
+  "private_key_read": false,
+  "claim_boundary": "first anonymous scoring pass; no group assignment or scientific conclusion"
+}

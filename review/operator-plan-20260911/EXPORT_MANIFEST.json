@@ -1,0 +1,28 @@
+{
+  "manifest_id": "DYNAMICS_ATLAS_OPERATOR_PLAN_PRO_REVIEW_EXPORT_20260911",
+  "purpose": "GitHub review-only transfer for ChatGPT Pro",
+  "source_task": "dynamics_atlas_operator_plan_20260911",
+  "source_head": "b1b52c7",
+  "source_branch": "feature/luna-runtime-v1",
+  "destination_branch": "feature/operator-plan-review-20260911",
+  "file_count_before_manifest": 58,
+  "payload_digest_sha256": "befb361dfae664b03f217aed12d3141e7357cfa00064c6a4e28bc7268b7c0dbf",
+  "digest_scope": "SHA-256 of sorted per-file SHA-256 lines for all files under this directory except EXPORT_MANIFEST.json",
+  "included": [
+    "review plan and follow-up prompt",
+    "previous 20260910 Pro Markdown context",
+    "operator-plan report, deviations and evidence ledger",
+    "D1 table, operator definitions and fixed operator results",
+    "runtime/admission/binding/freeze summaries",
+    "primary score aggregation, seal and second-scorer status",
+    "independent numerical recompute and source audit"
+  ],
+  "excluded": [
+    "blind private key and private scoring files",
+    "raw run directories and full trajectory inputs",
+    "original paper PDFs from the prior packet",
+    "credentials, tokens and local environment secrets",
+    "main branch changes and scientific PR merge"
+  ],
+  "claim_ceiling": "Remote review materials are available; this does not establish a Pro conclusion, scientific validity, second-scorer agreement, CI result, PR acceptance or source-science approval."
+}

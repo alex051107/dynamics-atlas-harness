@@ -1,0 +1,192 @@
+{
+  "claim_boundary": "independent implementation checks arithmetic consistency, not scientific independence of the source data",
+  "comparison_count": 24,
+  "differences": [
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 5,
+      "metric": "OP1_opposite_candidate_k5",
+      "operator": 5
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 0,
+      "metric": "OP1_opposite_candidate_k5",
+      "operator": 0
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 4,
+      "metric": "OP1_opposite_candidate_k20",
+      "operator": 4
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 0,
+      "metric": "OP1_opposite_candidate_k20",
+      "operator": 0
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 1,
+      "metric": "OP1_opposite_candidate_k50",
+      "operator": 1
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 0,
+      "metric": "OP1_opposite_candidate_k50",
+      "operator": 0
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 10,
+      "judgment": "NOT_APPLICABLE",
+      "metric": "OP2_judgment_tau0.5",
+      "operator": 10
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 10,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau0.5",
+      "operator": 10
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 8,
+      "judgment": "PARTIAL",
+      "metric": "OP2_judgment_tau0.5",
+      "operator": 8
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 7,
+      "judgment": "AGREEMENT",
+      "metric": "OP2_judgment_tau0.5",
+      "operator": 7
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 5,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau0.5",
+      "operator": 5
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 10,
+      "judgment": "NOT_APPLICABLE",
+      "metric": "OP2_judgment_tau1",
+      "operator": 10
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 9,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau1",
+      "operator": 9
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 1,
+      "judgment": "PARTIAL",
+      "metric": "OP2_judgment_tau1",
+      "operator": 1
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 18,
+      "judgment": "AGREEMENT",
+      "metric": "OP2_judgment_tau1",
+      "operator": 18
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 1,
+      "judgment": "PARTIAL",
+      "metric": "OP2_judgment_tau1",
+      "operator": 1
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 1,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau1",
+      "operator": 1
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 10,
+      "judgment": "NOT_APPLICABLE",
+      "metric": "OP2_judgment_tau2",
+      "operator": 10
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 3,
+      "judgment": "AGREEMENT",
+      "metric": "OP2_judgment_tau2",
+      "operator": 3
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 5,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau2",
+      "operator": 5
+    },
+    {
+      "absolute_difference": 0,
+      "group": "closed_seeded",
+      "independent": 2,
+      "judgment": "PARTIAL",
+      "metric": "OP2_judgment_tau2",
+      "operator": 2
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 19,
+      "judgment": "AGREEMENT",
+      "metric": "OP2_judgment_tau2",
+      "operator": 19
+    },
+    {
+      "absolute_difference": 0,
+      "group": "open_seeded",
+      "independent": 1,
+      "judgment": "RELATIVE_ONLY",
+      "metric": "OP2_judgment_tau2",
+      "operator": 1
+    },
+    {
+      "absolute_difference": 0,
+      "independent": 0,
+      "metric": "OP4_tracks_with_return_k5",
+      "operator": 0
+    }
+  ],
+  "max_abs_diff": 0.0,
+  "status": "PASS"
+}

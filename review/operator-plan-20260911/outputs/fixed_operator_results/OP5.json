@@ -1,0 +1,912 @@
+{
+  "claim_boundary": "descriptive outside-reference excursions only; no new state, rate, mechanism, or independent validation claim",
+  "events": [
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": true,
+      "censoring": null,
+      "claim_type": "descriptive_excursion",
+      "end_index": 542,
+      "end_ns": 562.0,
+      "frame_count": 543,
+      "right_censored": false,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": true,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": true,
+      "censoring": null,
+      "claim_type": "descriptive_excursion",
+      "end_index": 551,
+      "end_ns": 571.0,
+      "frame_count": 6,
+      "right_censored": false,
+      "start_index": 546,
+      "start_ns": 566.0,
+      "touches_cluster": true,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": true,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 448,
+      "right_censored": true,
+      "start_index": 553,
+      "start_ns": 573.0,
+      "touches_cluster": true,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted": false,
+      "censoring": "right_tail",
+      "claim_type": "descriptive_excursion",
+      "end_index": 1000,
+      "end_ns": 1020.0,
+      "frame_count": 1001,
+      "right_censored": true,
+      "start_index": 0,
+      "start_ns": 20.0,
+      "touches_cluster": false,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    }
+  ],
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "nearest_distance_fields": [
+      "nearest_open_A",
+      "nearest_closed_A"
+    ],
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP5_excursion_detection",
+  "parameter_hash": "637f0522",
+  "parameters": {
+    "k": 5,
+    "r_closed_A": 2.624527200397874,
+    "r_open_A": 1.3538825899417475,
+    "reference_radius_method": "member-to-coordinate-median lid RMSD p95"
+  },
+  "reference_radii": {
+    "closed": {
+      "member_lid_rmsd_A": [
+        1.5370814129676298,
+        1.9625136990590848,
+        1.9349908632544874,
+        2.5833777000599563,
+        1.7477222729013409,
+        3.176327175381278,
+        1.3855383184195011,
+        1.4449493378548641,
+        2.0228560642916262,
+        1.9503929346973237,
+        2.314095836651556,
+        1.853939010726268,
+        2.5954850964513785,
+        2.0108943176958625,
+        1.5823082941286362,
+        2.1985976341636326,
+        1.8212606305983385,
+        1.903025817443554,
+        2.13217216157702,
+        1.7150366443684177
+      ],
+      "radius_p95_A": 2.624527200397874,
+      "reference_definition": "coordinate-wise median of aligned NMR members; direct lid RMSD"
+    },
+    "open": {
+      "member_lid_rmsd_A": [
+        0.7726695405753906,
+        1.253330882820059,
+        1.3176609481080332,
+        1.1866727306659732,
+        1.2846960385486583,
+        1.1309762968063948,
+        1.2429050272146784,
+        0.9557356572658974,
+        1.9705942310876803,
+        1.1412174693567347,
+        1.3214240825130137,
+        0.7830457806050763,
+        1.2148406505236111,
+        1.134520320948573,
+        1.1679696901817036,
+        1.2432753475760516,
+        1.0853968826023757,
+        1.3095605114094264,
+        1.1667134389439227,
+        1.1452224089800902
+      ],
+      "radius_p95_A": 1.3538825899417475,
+      "reference_definition": "coordinate-wise median of aligned NMR members; direct lid RMSD"
+    }
+  },
+  "result_id": "OP5_excursion_detection__p637f0522__i60bac79f",
+  "summary": {
+    "accepted_count": 3,
+    "accepted_frame_count": 997,
+    "candidate_count": 42,
+    "right_censored_count": 1
+  },
+  "trajectory_summary": [
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 3,
+      "candidate_count": 3,
+      "outside_fraction": 0.997002997002997,
+      "outside_frame_count": 998,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "accepted_count": 0,
+      "candidate_count": 1,
+      "outside_fraction": 1.0,
+      "outside_frame_count": 1001,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source_registry": "dynamics-atlas-harness-showcase/data/rules/rule_registry_v0.1.csv",
+  "source_registry_rows": 33,
+  "source_registry_columns": 20,
+  "papers": 11,
+  "source_rules": 33,
+  "rule_index": 33,
+  "layers": {
+    "A": 6,
+    "B": 10,
+    "C": 11,
+    "D": 6
+  },
+  "project_rules": 3,
+  "outputs": [
+    "autoresearch/tasks/dynamics_atlas_operator_plan_20260911/outputs/rules_v0_2/P-RULES.tsv",
+    "autoresearch/tasks/dynamics_atlas_operator_plan_20260911/outputs/rules_v0_2/REWRITE_DIFF.md",
+    "autoresearch/tasks/dynamics_atlas_operator_plan_20260911/outputs/rules_v0_2/papers.tsv",
+    "autoresearch/tasks/dynamics_atlas_operator_plan_20260911/outputs/rules_v0_2/rule_index.tsv",
+    "autoresearch/tasks/dynamics_atlas_operator_plan_20260911/outputs/rules_v0_2/source_rules.tsv"
+  ]
+}

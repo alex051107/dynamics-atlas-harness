@@ -1,0 +1,20 @@
+{
+  "model_calls": 0,
+  "runs": [
+    {
+      "answer": "runs/F_HSP90_Q02/answer.md",
+      "arm": "F",
+      "case": "HSP90_Q02",
+      "receipt": "runs/F_HSP90_Q02/receipt.json",
+      "run_id": "F_HSP90_Q02"
+    },
+    {
+      "answer": "runs/F_ADK_Q02/answer.md",
+      "arm": "F",
+      "case": "ADK_Q02",
+      "receipt": "runs/F_ADK_Q02/receipt.json",
+      "run_id": "F_ADK_Q02"
+    }
+  ],
+  "status": "PASS"
+}

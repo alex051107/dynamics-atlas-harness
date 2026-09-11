@@ -1,0 +1,101 @@
+{
+  "runs": [
+    {
+      "arm": "O",
+      "case": "HSP90_Q02",
+      "replicate": 1,
+      "sequence": 1
+    },
+    {
+      "arm": "O",
+      "case": "ADK_Q02",
+      "replicate": 3,
+      "sequence": 2
+    },
+    {
+      "arm": "D",
+      "case": "ADK_Q02",
+      "replicate": 2,
+      "sequence": 3
+    },
+    {
+      "arm": "O",
+      "case": "ADK_Q02",
+      "replicate": 2,
+      "sequence": 4
+    },
+    {
+      "arm": "O",
+      "case": "ADK_Q02",
+      "replicate": 1,
+      "sequence": 5
+    },
+    {
+      "arm": "O",
+      "case": "ADK_Q02",
+      "replicate": 4,
+      "sequence": 6
+    },
+    {
+      "arm": "D",
+      "case": "HSP90_Q02",
+      "replicate": 4,
+      "sequence": 7
+    },
+    {
+      "arm": "O",
+      "case": "HSP90_Q02",
+      "replicate": 2,
+      "sequence": 8
+    },
+    {
+      "arm": "O",
+      "case": "HSP90_Q02",
+      "replicate": 3,
+      "sequence": 9
+    },
+    {
+      "arm": "D",
+      "case": "ADK_Q02",
+      "replicate": 1,
+      "sequence": 10
+    },
+    {
+      "arm": "D",
+      "case": "HSP90_Q02",
+      "replicate": 3,
+      "sequence": 11
+    },
+    {
+      "arm": "D",
+      "case": "ADK_Q02",
+      "replicate": 3,
+      "sequence": 12
+    },
+    {
+      "arm": "D",
+      "case": "HSP90_Q02",
+      "replicate": 2,
+      "sequence": 13
+    },
+    {
+      "arm": "O",
+      "case": "HSP90_Q02",
+      "replicate": 4,
+      "sequence": 14
+    },
+    {
+      "arm": "D",
+      "case": "HSP90_Q02",
+      "replicate": 1,
+      "sequence": 15
+    },
+    {
+      "arm": "D",
+      "case": "ADK_Q02",
+      "replicate": 4,
+      "sequence": 16
+    }
+  ],
+  "seed": 20260911
+}

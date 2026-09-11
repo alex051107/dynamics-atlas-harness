@@ -1,0 +1,94 @@
+{
+  "admission_id": "OPERATOR_PLAN_ADMISSION_20260911",
+  "cases": [
+    {
+      "authority_match": true,
+      "case": "HSP90_Q02",
+      "claim_boundary": "same-source fixed-window descriptive analysis; no equilibrium, rate, mechanism, new-state or independent-validation upgrade",
+      "native_1001_rows_each": true,
+      "native_file_count": 80,
+      "nmr_reference_schema": true,
+      "status": "PASS",
+      "tables": [
+        {
+          "columns": [
+            "trajectory",
+            "time_ns",
+            "state_core",
+            "d_open_medoid_A",
+            "d_closed_medoid_A",
+            "geometry_delta_A",
+            "nearest_open_A",
+            "nearest_closed_A",
+            "contact_margin_A"
+          ],
+          "expected_rows": 40040,
+          "file": "frame_state_assignments.tsv",
+          "rows": 40040,
+          "status": "PASS"
+        },
+        {
+          "columns": [
+            "trajectory",
+            "seed_lineage",
+            "persistence_saved_frames",
+            "persistence_ns",
+            "first_persistent_direction",
+            "first_persistent_start_ns",
+            "opposite_direction_departure_candidate",
+            "opposite_departure_start_ns",
+            "return_candidate",
+            "return_start_ns",
+            "strict_core_frames"
+          ],
+          "expected_rows": 120,
+          "file": "trajectory_time_anatomy.tsv",
+          "rows": 120,
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "authority_match": true,
+      "case": "ADK_Q02",
+      "claim_boundary": "fixed ligand-free MD descriptor comparison; no independent experimental validation or mechanism upgrade",
+      "required_documents": {
+        "ADMISSION_CARD.json": true,
+        "FIELD_DEFINITIONS.md": true,
+        "QUESTION.txt": true,
+        "SOURCE_CARD.md": true,
+        "SOURCE_INVENTORY.json": true
+      },
+      "status": "PASS",
+      "tables": [
+        {
+          "columns": [
+            "frame_index",
+            "time_ns",
+            "NMP_CORE_mean_CA_distance_A",
+            "LID_CORE_mean_CA_distance_A"
+          ],
+          "expected_rows": 2253,
+          "file": "data/open_domain_distances.tsv",
+          "rows": 2253,
+          "status": "PASS"
+        },
+        {
+          "columns": [
+            "frame_index",
+            "time_ns",
+            "NMP_CORE_mean_CA_distance_A",
+            "LID_CORE_mean_CA_distance_A"
+          ],
+          "expected_rows": 1678,
+          "file": "data/closed_domain_distances.tsv",
+          "rows": 1678,
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "admission is a source/packet gate; it is not scientific validation",
+  "scope": "packet identity, schema, row counts, native-file cardinality and NMR archive shape",
+  "status": "PASS"
+}

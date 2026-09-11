@@ -1,0 +1,2953 @@
+{
+  "claim_boundary": "same-source native-NOE/reference decomposition and threshold sensitivity only; not independent validation or kinetic evidence",
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "native_value_column": "second data column",
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP2_noe_reference_crosswalk",
+  "parameter_hash": "61ec8ada",
+  "parameters": {
+    "agreement_threshold": 0.8,
+    "primary_tau_A": 1.0,
+    "relative_threshold": 0.5,
+    "taus_A": [
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "result_id": "OP2_noe_reference_crosswalk__p61ec8ada__i60bac79f",
+  "summary_by_tau": {
+    "0.5": {
+      "frame_class_counts": {
+        "closed_seeded": {
+          "BOTH_FAR": 19837,
+          "CLOSED_NOE": 107,
+          "OPEN_NOE": 76
+        },
+        "open_seeded": {
+          "BOTH_FAR": 6909,
+          "OPEN_NOE": 13111
+        }
+      },
+      "open_start_positive_control_ge_18_of_20": false,
+      "trajectory_judgment_counts": {
+        "closed_seeded": {
+          "NOT_APPLICABLE": 10,
+          "RELATIVE_ONLY": 10
+        },
+        "open_seeded": {
+          "AGREEMENT": 7,
+          "PARTIAL": 8,
+          "RELATIVE_ONLY": 5
+        }
+      }
+    },
+    "1": {
+      "frame_class_counts": {
+        "closed_seeded": {
+          "BOTH_FAR": 18486,
+          "CLOSED_NOE": 332,
+          "OPEN_NOE": 1202
+        },
+        "open_seeded": {
+          "BOTH_FAR": 1853,
+          "OPEN_NOE": 18167
+        }
+      },
+      "open_start_positive_control_ge_18_of_20": true,
+      "trajectory_judgment_counts": {
+        "closed_seeded": {
+          "NOT_APPLICABLE": 10,
+          "PARTIAL": 1,
+          "RELATIVE_ONLY": 9
+        },
+        "open_seeded": {
+          "AGREEMENT": 18,
+          "PARTIAL": 1,
+          "RELATIVE_ONLY": 1
+        }
+      }
+    },
+    "2": {
+      "frame_class_counts": {
+        "closed_seeded": {
+          "BOTH_FAR": 14412,
+          "CLOSED_NOE": 1645,
+          "OPEN_NOE": 3963
+        },
+        "open_seeded": {
+          "BOTH_FAR": 543,
+          "OPEN_NOE": 19477
+        }
+      },
+      "open_start_positive_control_ge_18_of_20": true,
+      "trajectory_judgment_counts": {
+        "closed_seeded": {
+          "AGREEMENT": 3,
+          "NOT_APPLICABLE": 10,
+          "PARTIAL": 2,
+          "RELATIVE_ONLY": 5
+        },
+        "open_seeded": {
+          "AGREEMENT": 19,
+          "RELATIVE_ONLY": 1
+        }
+      }
+    }
+  },
+  "trajectory_records": [
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1000,
+        "CLOSED_NOE": 1
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9947862356621481,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.005213764337851929
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 996,
+        "OPEN_NOE": 5
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.995004995004995,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.004995004995004995
+      },
+      "open_direction_fraction": 0.958041958041958,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9524793388429752,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.047520661157024795
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 955,
+        "OPEN_NOE": 46
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.954045954045954,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.04595404595404595
+      },
+      "open_direction_fraction": 0.967032967032967,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.5994005994005994,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.09490509490509491,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 943,
+        "CLOSED_NOE": 58
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.942057942057942,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.057942057942057944,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 999,
+        "CLOSED_NOE": 2
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.001998001998001998,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 993,
+        "CLOSED_NOE": 8
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9920079920079921,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.007992007992007992,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1000,
+        "CLOSED_NOE": 1
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1000,
+        "CLOSED_NOE": 1
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 983,
+        "CLOSED_NOE": 18
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9820179820179821,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.017982017982017984,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.4115884115884116,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9768211920529801,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.023178807947019868
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 980,
+        "OPEN_NOE": 21
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9790209790209791,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.02097902097902098
+      },
+      "open_direction_fraction": 0.9050949050949051,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.6273726273726273,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1000,
+        "CLOSED_NOE": 1
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.25374625374625376,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 984,
+        "CLOSED_NOE": 17
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.983016983016983,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.016983016983016984,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.962037962037962,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9959141981613892,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0040858018386108275
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 997,
+        "OPEN_NOE": 4
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.996003996003996,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.003996003996003996
+      },
+      "open_direction_fraction": 0.978021978021978,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.45854145854145856,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5414585414585414
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 459,
+        "OPEN_NOE": 542
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.45854145854145856,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5414585414585414
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.09490509490509491,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9050949050949051
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 95,
+        "OPEN_NOE": 906
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.09490509490509491,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9050949050949051
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.06793206793206794,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.932067932067932
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 68,
+        "OPEN_NOE": 933
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.06793206793206794,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.932067932067932
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.6623376623376623,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.33766233766233766
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 663,
+        "OPEN_NOE": 338
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6623376623376623,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.33766233766233766
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.5054945054945055,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.4945054945054945
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 506,
+        "OPEN_NOE": 495
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.5054945054945055,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.4945054945054945
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.07892107892107893,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9210789210789211
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 79,
+        "OPEN_NOE": 922
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.07892107892107893,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9210789210789211
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.42857142857142855,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5714285714285714
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 429,
+        "OPEN_NOE": 572
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.42857142857142855,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5714285714285714
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.6673326673326674,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.33266733266733267
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 668,
+        "OPEN_NOE": 333
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6673326673326674,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.33266733266733267
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.38161838161838163,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.6183816183816184
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 382,
+        "OPEN_NOE": 619
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.38161838161838163,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.6183816183816184
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.07992007992007992,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9200799200799201
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 80,
+        "OPEN_NOE": 921
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.07992007992007992,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9200799200799201
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.18081918081918083,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8191808191808192
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 181,
+        "OPEN_NOE": 820
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.18081918081918083,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8191808191808192
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.21578421578421578,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7842157842157842
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 216,
+        "OPEN_NOE": 785
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.21578421578421578,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7842157842157842
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.027972027972027972,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.972027972027972
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 28,
+        "OPEN_NOE": 973
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.027972027972027972,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.972027972027972
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.4825174825174825,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5174825174825175
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 483,
+        "OPEN_NOE": 518
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.4825174825174825,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5174825174825175
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.46053946053946054,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5394605394605395
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 461,
+        "OPEN_NOE": 540
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.46053946053946054,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5394605394605395
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.6523476523476524,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.34765234765234765
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 653,
+        "OPEN_NOE": 348
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6523476523476524,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.34765234765234765
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.23076923076923078,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7692307692307693
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 231,
+        "OPEN_NOE": 770
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.23076923076923078,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7692307692307693
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.972027972027972,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.027972027972027972
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 973,
+        "OPEN_NOE": 28
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.972027972027972,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.027972027972027972
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.2127872127872128,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7872127872127872
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 213,
+        "OPEN_NOE": 788
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.2127872127872128,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7872127872127872
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.04095904095904096,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9590409590409591
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 41,
+        "OPEN_NOE": 960
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.04095904095904096,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9590409590409591
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 0.5,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 990,
+        "CLOSED_NOE": 11
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.989010989010989,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.01098901098901099,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.7799791449426486,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.22002085505735142
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 790,
+        "OPEN_NOE": 211
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.7892107892107892,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.21078921078921078
+      },
+      "open_direction_fraction": 0.958041958041958,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.4194214876033058,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5805785123966942
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 439,
+        "OPEN_NOE": 562
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.4385614385614386,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5614385614385614
+      },
+      "open_direction_fraction": 0.967032967032967,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.5994005994005994,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.09490509490509491,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 875,
+        "CLOSED_NOE": 126
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.8741258741258742,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.1258741258741259,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 998,
+        "CLOSED_NOE": 3
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.997002997002997,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.002997002997002997,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 973,
+        "CLOSED_NOE": 28
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.972027972027972,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.027972027972027972,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 998,
+        "CLOSED_NOE": 3
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.997002997002997,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.002997002997002997,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 994,
+        "CLOSED_NOE": 7
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.006993006993006993,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 921,
+        "CLOSED_NOE": 80
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9200799200799201,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.07992007992007992,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.4115884115884116,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.6147902869757175,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.3852097130242826
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 652,
+        "OPEN_NOE": 349
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6513486513486514,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.34865134865134867
+      },
+      "open_direction_fraction": 0.9050949050949051,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9745222929936306,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.025477707006369428
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 984,
+        "CLOSED_NOE": 1,
+        "OPEN_NOE": 16
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.983016983016983,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.015984015984015984
+      },
+      "open_direction_fraction": 0.6273726273726273,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 997,
+        "CLOSED_NOE": 4
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.996003996003996,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.003996003996003996,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.25374625374625376,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 932,
+        "CLOSED_NOE": 69
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9310689310689311,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.06893106893106893,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.962037962037962,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9346271705822268,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.06537282941777324
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 937,
+        "OPEN_NOE": 64
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.936063936063936,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.06393606393606394
+      },
+      "open_direction_fraction": 0.978021978021978,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 2,
+        "OPEN_NOE": 999
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 1,
+        "OPEN_NOE": 1000
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.1258741258741259,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8741258741258742
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 126,
+        "OPEN_NOE": 875
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.1258741258741259,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8741258741258742
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.057942057942057944,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.942057942057942
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 58,
+        "OPEN_NOE": 943
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.057942057942057944,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.942057942057942
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.01098901098901099,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.989010989010989
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 11,
+        "OPEN_NOE": 990
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.01098901098901099,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.989010989010989
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.04995004995004995,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9500499500499501
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 50,
+        "OPEN_NOE": 951
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.04995004995004995,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9500499500499501
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.32667332667332666,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.6733266733266733
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 327,
+        "OPEN_NOE": 674
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.32667332667332666,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.6733266733266733
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 7,
+        "OPEN_NOE": 994
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 2,
+        "OPEN_NOE": 999
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.002997002997002997,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.997002997002997
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 3,
+        "OPEN_NOE": 998
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.002997002997002997,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.997002997002997
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.057942057942057944,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.942057942057942
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 58,
+        "OPEN_NOE": 943
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.057942057942057944,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.942057942057942
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 7,
+        "OPEN_NOE": 994
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.1108891108891109,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8891108891108891
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 111,
+        "OPEN_NOE": 890
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.1108891108891109,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8891108891108891
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.19480519480519481,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8051948051948052
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 195,
+        "OPEN_NOE": 806
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.19480519480519481,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8051948051948052
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 7,
+        "OPEN_NOE": 994
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.006993006993006993,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.993006993006993
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.8861138861138861,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.11388611388611389
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 887,
+        "OPEN_NOE": 114
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.8861138861138861,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.11388611388611389
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 1,
+        "OPEN_NOE": 1000
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 1.0,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 956,
+        "CLOSED_NOE": 45
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.955044955044955,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.04495504495504495,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.07194994786235662,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9280500521376434
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 111,
+        "OPEN_NOE": 890
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.1108891108891109,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.8891108891108891
+      },
+      "open_direction_fraction": 0.958041958041958,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.03409090909090909,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9659090909090909
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 66,
+        "OPEN_NOE": 935
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.06593406593406594,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9340659340659341
+      },
+      "open_direction_fraction": 0.967032967032967,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9783333333333334,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.021666666666666667
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 988,
+        "OPEN_NOE": 13
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.987012987012987,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.012987012987012988
+      },
+      "open_direction_fraction": 0.5994005994005994,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.09490509490509491,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 1.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 714,
+        "CLOSED_NOE": 287
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.7132867132867133,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.2867132867132867,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 936,
+        "CLOSED_NOE": 65
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.935064935064935,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.06493506493506493,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 628,
+        "CLOSED_NOE": 373
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6273726273726273,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.3726273726273726,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 995,
+        "CLOSED_NOE": 6
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.994005994005994,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.005994005994005994,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 961,
+        "CLOSED_NOE": 40
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.9600399600399601,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.03996003996003996,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 593,
+        "CLOSED_NOE": 408
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.5924075924075924,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.4075924075924076,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.47815533980582525,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.5218446601941747
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 781,
+        "OPEN_NOE": 220
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.7802197802197802,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.21978021978021978
+      },
+      "open_direction_fraction": 0.4115884115884116,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.024282560706401765,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.9757174392935982
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 116,
+        "CLOSED_NOE": 1,
+        "OPEN_NOE": 884
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.11588411588411589,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.000999000999000999,
+        "OPEN_NOE": 0.8831168831168831
+      },
+      "open_direction_fraction": 0.9050949050949051,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.7006369426751592,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.29936305732484075
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 789,
+        "CLOSED_NOE": 24,
+        "OPEN_NOE": 188
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.7882117882117882,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.023976023976023976,
+        "OPEN_NOE": 0.1878121878121878
+      },
+      "open_direction_fraction": 0.6273726273726273,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.8740157480314961,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.12598425196850394
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 937,
+        "CLOSED_NOE": 27,
+        "OPEN_NOE": 37
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.936063936063936,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.026973026973026972,
+        "OPEN_NOE": 0.03696303696303696
+      },
+      "open_direction_fraction": 0.25374625374625376,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": null,
+        "BOTH_NEAR": null,
+        "CLOSED_NOE": null,
+        "OPEN_NOE": null
+      },
+      "frame_count": 1001,
+      "judgment": "NOT_APPLICABLE",
+      "native_class_counts": {
+        "BOTH_FAR": 632,
+        "CLOSED_NOE": 369
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.6313686313686314,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.36863136863136864,
+        "OPEN_NOE": 0.0
+      },
+      "open_direction_fraction": 0.0,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.9833852544132918,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.016614745586708203
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 985,
+        "OPEN_NOE": 16
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.984015984015984,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.015984015984015984
+      },
+      "open_direction_fraction": 0.962037962037962,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.20326864147088866,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7967313585291114
+      },
+      "frame_count": 1001,
+      "judgment": "PARTIAL",
+      "native_class_counts": {
+        "BOTH_FAR": 221,
+        "OPEN_NOE": 780
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.22077922077922077,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.7792207792207793
+      },
+      "open_direction_fraction": 0.978021978021978,
+      "seed_lineage": "closed_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 1,
+        "OPEN_NOE": 1000
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 2,
+        "OPEN_NOE": 999
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.001998001998001998,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.998001998001998
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "BOTH_FAR": 1,
+        "OPEN_NOE": 1000
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.000999000999000999,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.999000999000999
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.5384615384615384,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.46153846153846156
+      },
+      "frame_count": 1001,
+      "judgment": "RELATIVE_ONLY",
+      "native_class_counts": {
+        "BOTH_FAR": 539,
+        "OPEN_NOE": 462
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.5384615384615384,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 0.46153846153846156
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "conditional_on_open_direction": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "frame_count": 1001,
+      "judgment": "AGREEMENT",
+      "native_class_counts": {
+        "OPEN_NOE": 1001
+      },
+      "native_class_fractions": {
+        "BOTH_FAR": 0.0,
+        "BOTH_NEAR": 0.0,
+        "CLOSED_NOE": 0.0,
+        "OPEN_NOE": 1.0
+      },
+      "open_direction_fraction": 1.0,
+      "seed_lineage": "open_seeded",
+      "tau_A": 2.0,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "claim_boundary": "trajectory-level descriptive state fractions; no equilibrium population, rate, mechanism, or claim upgrade when single-direction/no-return evidence remains",
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned__noe_tau1",
+    "trajectory_count": 40
+  },
+  "input_hash": "f92cde8b",
+  "operator": "OP3_state_population_convergence",
+  "parameter_hash": "73102ba2",
+  "parameters": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260911,
+    "state_definition": "noe_tau1",
+    "window_ns": [
+      100,
+      250,
+      500,
+      1000
+    ]
+  },
+  "population_credibility": {
+    "credible": false,
+    "reason": "requires a converged window and returns in at least 50% of tracks",
+    "single_direction_warning": true
+  },
+  "result_id": "OP3_state_population_convergence__p73102ba2__if92cde8b",
+  "transition_gate": {
+    "required_fraction": 0.5,
+    "return_fraction": 0.0,
+    "single_direction_warning": true,
+    "track_count": 40,
+    "tracks_with_return": 0
+  },
+  "windows": [
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.013737994678588737,
+        "OPEN": 0.0026448798726026457,
+        "UNKNOWN": -0.016382874551191307
+      },
+      "full_trajectory_population": {
+        "CLOSED": 0.008291708291708291,
+        "OPEN": 0.48374125874125873,
+        "UNKNOWN": 0.5079670329670329
+      },
+      "max_absolute_difference": 0.016382874551191307,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.05000618811881188,
+          "ci95_low": 0.0032116336633663373,
+          "mean": 0.02152970297029703,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.6317326732673266,
+          "ci95_low": 0.3371163366336633,
+          "mean": 0.4876435643564357,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 0.634690594059406,
+          "ci95_low": 0.34948019801980196,
+          "mean": 0.4908267326732673,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 0.02202970297029703,
+        "OPEN": 0.4863861386138614,
+        "UNKNOWN": 0.49158415841584163
+      },
+      "window_end_ns": 120.0,
+      "window_length_ns": 100,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.004756100473231948,
+        "OPEN": 0.0005216894659125781,
+        "UNKNOWN": -0.005277789939144517
+      },
+      "full_trajectory_population": {
+        "CLOSED": 0.008291708291708291,
+        "OPEN": 0.48374125874125873,
+        "UNKNOWN": 0.5079670329670329
+      },
+      "max_absolute_difference": 0.005277789939144517,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.02819472111553784,
+          "ci95_low": 0.002390438247011952,
+          "mean": 0.01274003984063745,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.6396513944223108,
+          "ci95_low": 0.3411005976095617,
+          "mean": 0.4853699203187251,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 0.6436777888446215,
+          "ci95_low": 0.3472086653386454,
+          "mean": 0.5018900398406374,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 0.013047808764940239,
+        "OPEN": 0.4842629482071713,
+        "UNKNOWN": 0.5026892430278884
+      },
+      "window_end_ns": 270.0,
+      "window_length_ns": 250,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.001887932426854583,
+        "OPEN": -0.0013560292003405028,
+        "UNKNOWN": -0.0005319032265139745
+      },
+      "full_trajectory_population": {
+        "CLOSED": 0.008291708291708291,
+        "OPEN": 0.48374125874125873,
+        "UNKNOWN": 0.5079670329670329
+      },
+      "max_absolute_difference": 0.001887932426854583,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.020508982035928144,
+          "ci95_low": 0.0022941616766467064,
+          "mean": 0.010154590818363273,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.6317602295409182,
+          "ci95_low": 0.34141467065868264,
+          "mean": 0.4812458083832335,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 0.6427482534930139,
+          "ci95_low": 0.3607272954091817,
+          "mean": 0.5085996007984032,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 0.010179640718562874,
+        "OPEN": 0.4823852295409182,
+        "UNKNOWN": 0.507435129740519
+      },
+      "window_end_ns": 520.0,
+      "window_length_ns": 500,
+      "window_start_ns": 20.0
+    },
+    {
+      "converged_all_states_diff_lt_0_05": true,
+      "difference_window_minus_full": {
+        "CLOSED": 0.0,
+        "OPEN": 0.0,
+        "UNKNOWN": 0.0
+      },
+      "full_trajectory_population": {
+        "CLOSED": 0.008291708291708291,
+        "OPEN": 0.48374125874125873,
+        "UNKNOWN": 0.5079670329670329
+      },
+      "max_absolute_difference": 0.0,
+      "trajectory_bootstrap": {
+        "CLOSED": {
+          "ci95_high": 0.01673389110889111,
+          "ci95_low": 0.0017201548451548454,
+          "mean": 0.008207117882117882,
+          "replicates": 1000
+        },
+        "OPEN": {
+          "ci95_high": 0.6214953796203796,
+          "ci95_low": 0.34020854145854146,
+          "mean": 0.485672002997003,
+          "replicates": 1000
+        },
+        "UNKNOWN": {
+          "ci95_high": 0.6469617882117882,
+          "ci95_low": 0.37125187312687313,
+          "mean": 0.5061208791208791,
+          "replicates": 1000
+        }
+      },
+      "trajectory_population": {
+        "CLOSED": 0.008291708291708291,
+        "OPEN": 0.48374125874125873,
+        "UNKNOWN": 0.5079670329670329
+      },
+      "window_end_ns": 1020.0,
+      "window_length_ns": 1000,
+      "window_start_ns": 20.0
+    }
+  ]
+}

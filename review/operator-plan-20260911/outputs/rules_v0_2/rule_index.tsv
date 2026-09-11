@@ -1,0 +1,34 @@
+rule_id	paper_id	layer	source_rule_row	source_locator	source_rules_path
+C001-RULE-001	hellenkamp_2018_smfret_benchmark	B	2	HEL-S03; HEL-S04	outputs/rules_v0_2/source_rules.tsv
+C001-RULE-002	hellenkamp_2018_smfret_benchmark	B	3	HEL-S01; HEL-S03; HEL-S05	outputs/rules_v0_2/source_rules.tsv
+C001-RULE-003	hellenkamp_2018_smfret_benchmark	B	4	HEL-S01; HEL-S02; HEL-S05	outputs/rules_v0_2/source_rules.tsv
+C002-RULE-001	agam_2023_smfret_reliability	B	5	AGAM-S01; AGAM-S03; AGAM-S04; AGAM-S06	outputs/rules_v0_2/source_rules.tsv
+C002-RULE-002	agam_2023_smfret_reliability	C	6	AGAM-S04; AGAM-S05; AGAM-S06	outputs/rules_v0_2/source_rules.tsv
+C002-RULE-003	agam_2023_smfret_reliability	C	7	AGAM-S04; AGAM-S05; AGAM-S06	outputs/rules_v0_2/source_rules.tsv
+C003-RULE-001	dimura_2020_fret_assisted_modeling	B	8	DIM-S02; DIM-S03; DIM-S04	outputs/rules_v0_2/source_rules.tsv
+C003-RULE-002	dimura_2020_fret_assisted_modeling	C	9	DIM-S03; DIM-S05	outputs/rules_v0_2/source_rules.tsv
+C003-RULE-003	dimura_2020_fret_assisted_modeling	B	10	DIM-S03; DIM-S04; DIM-S05	outputs/rules_v0_2/source_rules.tsv
+C005-RULE-001	fuertes_2017_saxs_smfret_non_equivalence	A	11	FUE-S01; FUE-S02; FUE-S04	outputs/rules_v0_2/source_rules.tsv
+C005-RULE-002	fuertes_2017_saxs_smfret_non_equivalence	D	12	FUE-S03; FUE-S04; FUE-S05	outputs/rules_v0_2/source_rules.tsv
+C005-RULE-003	fuertes_2017_saxs_smfret_non_equivalence	C	13	FUE-S02; FUE-S03; FUE-S04	outputs/rules_v0_2/source_rules.tsv
+C006-RULE-001	shevchuk_2017_bayesian_saxs_refinement	C	14	SH-S02; SH-S04	outputs/rules_v0_2/source_rules.tsv
+C006-RULE-002	shevchuk_2017_bayesian_saxs_refinement	C	15	SH-S03; SH-S05	outputs/rules_v0_2/source_rules.tsv
+C006-RULE-003	shevchuk_2017_bayesian_saxs_refinement	D	16	SH-S02; SH-S05	outputs/rules_v0_2/source_rules.tsv
+C007-RULE-001	bengtsen_2020_multimodal_nanodisc	B	17	BEN-S02; BEN-S03; BEN-S04	outputs/rules_v0_2/source_rules.tsv
+C007-RULE-002	bengtsen_2020_multimodal_nanodisc	C	18	BEN-S03; BEN-S05	outputs/rules_v0_2/source_rules.tsv
+C007-RULE-003	bengtsen_2020_multimodal_nanodisc	D	19	BEN-S03; BEN-S05	outputs/rules_v0_2/source_rules.tsv
+C008-RULE-001	hoff_2024_emmivox_cryoem	B	20	HOF-S02; HOF-S03; HOF-S04	outputs/rules_v0_2/source_rules.tsv
+C008-RULE-002	hoff_2024_emmivox_cryoem	C	21	HOF-S03; HOF-S05	outputs/rules_v0_2/source_rules.tsv
+C008-RULE-003	hoff_2024_emmivox_cryoem	C	22	HOF-S03; HOF-S04; HOF-S05	outputs/rules_v0_2/source_rules.tsv
+C009-RULE-001	peter_2022_deer_smfret_crossvalidation	B	23	PET-S01; PET-S02; PET-S05	outputs/rules_v0_2/source_rules.tsv
+C009-RULE-002	peter_2022_deer_smfret_crossvalidation	B	24	PET-S03; PET-S04	outputs/rules_v0_2/source_rules.tsv
+C009-RULE-003	peter_2022_deer_smfret_crossvalidation	A	25	PET-S03; PET-S05	outputs/rules_v0_2/source_rules.tsv
+C010-RULE-001	sanabria_2020_transient_states	A	26	SAN-S02; SAN-S03; SAN-S04	outputs/rules_v0_2/source_rules.tsv
+C010-RULE-002	sanabria_2020_transient_states	A	27	SAN-S03; SAN-S04	outputs/rules_v0_2/source_rules.tsv
+C010-RULE-003	sanabria_2020_transient_states	D	28	SAN-S04; SAN-S05	outputs/rules_v0_2/source_rules.tsv
+C011-RULE-001	steffen_2021_fretraj	C	29	STF-S01; STF-S02	outputs/rules_v0_2/source_rules.tsv
+C011-RULE-002	steffen_2021_fretraj	C	30	STF-S02; STF-S03	outputs/rules_v0_2/source_rules.tsv
+C011-RULE-003	steffen_2021_fretraj	D	31	STF-S01; STF-S03	outputs/rules_v0_2/source_rules.tsv
+C012-RULE-001	wankowicz_bonomi_2026_ensemble_prediction	A	32	WAN-S02; WAN-S03; WAN-S04	outputs/rules_v0_2/source_rules.tsv
+C012-RULE-002	wankowicz_bonomi_2026_ensemble_prediction	A	33	WAN-S04; WAN-S05	outputs/rules_v0_2/source_rules.tsv
+C012-RULE-003	wankowicz_bonomi_2026_ensemble_prediction	D	34	WAN-S03; WAN-S05	outputs/rules_v0_2/source_rules.tsv

@@ -1,0 +1,51 @@
+{
+  "schema_version": "operator-plan-2026-09-11-v1",
+  "result_identity": {
+    "result_id": "<operator>__p<first-8-sha256-of-parameters>__i<first-8-sha256-of-input-identity>",
+    "required_fields": ["result_id", "operator", "parameters", "input", "claim_boundary"]
+  },
+  "operators": {
+    "OP1_direction_runs": {
+      "module": "operators/op1_direction_runs.py",
+      "required_input": ["frames[trajectory,time_ns,geometry_delta_A,contact_margin_A]"],
+      "parameters": {"persistence_ns": "integer 5..50"},
+      "primary_output": "trajectory_records and group_summary"
+    },
+    "OP2_noe_reference_crosswalk": {
+      "module": "operators/op2_noe_reference_crosswalk.py",
+      "required_input": ["frames", "native_by_trajectory[trajectory].open", "native_by_trajectory[trajectory].closed"],
+      "parameters": {"taus": "positive sorted unique values; default [0.5,1,2]", "agreement_threshold": "default 0.8", "relative_threshold": "default 0.5"},
+      "primary_output": "trajectory_records and summary_by_tau"
+    },
+    "OP3_state_population_convergence": {
+      "module": "operators/op3_state_population_convergence.py",
+      "required_input": ["frames[trajectory,time_ns,state_core]"],
+      "parameters": {"state_definition": "state_core or noe_tau1", "window_ns": "integer list 100..1000", "bootstrap_replicates": "default 1000"},
+      "primary_output": "windows and population_credibility"
+    },
+    "OP4_transition_count": {
+      "module": "operators/op4_transition_count.py",
+      "required_input": ["frames[trajectory,time_ns,geometry_delta_A,contact_margin_A]"],
+      "parameters": {"hysteresis_k": "integer 5..50; default 5"},
+      "primary_output": "trajectory_records and summary"
+    },
+    "OP5_excursion_detection": {
+      "module": "operators/op5_excursion_detection.py",
+      "required_input": ["frames[trajectory,time_ns,nearest_open_A,nearest_closed_A]", "reference_arrays"],
+      "parameters": {"k": "integer 5..50; default 5", "r_open_A": "computed p95 unless explicitly recorded", "r_closed_A": "computed p95 unless explicitly recorded"},
+      "primary_output": "reference_radii, events, trajectory_summary"
+    },
+    "OP6_coverage_vs_reference": {
+      "module": "operators/op6_coverage_vs_reference.py",
+      "required_input": ["frames[trajectory,nearest_open_A,nearest_closed_A]", "reference_arrays"],
+      "parameters": {"r_open_A": "computed p95 unless explicitly recorded", "r_closed_A": "computed p95 unless explicitly recorded", "bootstrap_replicates": "default 1000"},
+      "primary_output": "trajectory_records, group_summary, trajectory_bootstrap"
+    }
+  },
+  "claim_rules": [
+    "persistent direction and event existence may be reported in the observed window",
+    "population credibility requires convergence and OP4 returns in at least half of tracks",
+    "rate claims are disallowed when returns are zero",
+    "OP5 and OP6 are descriptive reference comparisons; MD-only evidence is not a new state"
+  ]
+}

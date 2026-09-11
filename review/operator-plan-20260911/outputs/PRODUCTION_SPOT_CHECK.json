@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "threshold_A": 0.01,
+  "production_script": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/scripts/run_hsp90_v1.py",
+  "frames": [
+    {
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "time_ns": 20.0,
+      "raw_index": 20,
+      "differences": {
+        "d_open_medoid_A": 1.4210854715202004e-14,
+        "d_closed_medoid_A": 7.993605777301127e-15,
+        "nearest_open_A": 3.48942420913545e-06,
+        "nearest_closed_A": 1.6798930566608306e-06
+      },
+      "max_abs_diff": 3.48942420913545e-06
+    },
+    {
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "time_ns": 500.0,
+      "raw_index": 500,
+      "differences": {
+        "d_open_medoid_A": 2.6645352591003757e-15,
+        "d_closed_medoid_A": 0.0,
+        "nearest_open_A": 2.8646731742298925e-07,
+        "nearest_closed_A": 2.0272271079591064e-06
+      },
+      "max_abs_diff": 2.0272271079591064e-06
+    },
+    {
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "time_ns": 20.0,
+      "raw_index": 20,
+      "differences": {
+        "d_open_medoid_A": 8.881784197001252e-16,
+        "d_closed_medoid_A": 0.0,
+        "nearest_open_A": 1.401943326762023e-06,
+        "nearest_closed_A": 5.1411399333289864e-06
+      },
+      "max_abs_diff": 5.1411399333289864e-06
+    }
+  ],
+  "max_abs_diff": 5.1411399333289864e-06,
+  "claim_boundary": "three-frame implementation spot check only; not a complete raw-coordinate rerun"
+}

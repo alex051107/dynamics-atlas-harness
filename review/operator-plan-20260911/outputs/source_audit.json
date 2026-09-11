@@ -1,0 +1,307 @@
+{
+  "task_id": "dynamics_atlas_operator_plan_20260911",
+  "audit_type": "read_only_source_and_schema_audit",
+  "hashes_computed": 0,
+  "model_calls": 0,
+  "simulation_calls": 0,
+  "checks": [
+    {
+      "name": "rules.registry_schema",
+      "status": "PASS",
+      "details": {
+        "path": "dynamics-atlas-harness-showcase/data/rules/rule_registry_v0.1.csv",
+        "columns": 20,
+        "expected_columns": 20
+      }
+    },
+    {
+      "name": "rules.registry_cardinality",
+      "status": "PASS",
+      "details": {
+        "rows": 33,
+        "unique_rule_ids": 33,
+        "papers": 11
+      }
+    },
+    {
+      "name": "rules.registry_source_fields",
+      "status": "PASS",
+      "details": {
+        "rows_with_source_and_rule_text": 33
+      }
+    },
+    {
+      "name": "rules.layer_mapping",
+      "status": "PASS",
+      "details": {
+        "A": {
+          "expected": 6,
+          "present": 6,
+          "missing": []
+        },
+        "B": {
+          "expected": 10,
+          "present": 10,
+          "missing": []
+        },
+        "C": {
+          "expected": 11,
+          "present": 11,
+          "missing": []
+        },
+        "D": {
+          "expected": 6,
+          "present": 6,
+          "missing": []
+        }
+      }
+    },
+    {
+      "name": "rules.design_source_exists",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/RULES_TABLE_ROLE_DESIGN_ZH.md",
+        "size": 11389
+      }
+    },
+    {
+      "name": "hsp90.frame_schema",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common/frame_state_assignments.tsv",
+        "columns": [
+          "trajectory",
+          "time_ns",
+          "state_core",
+          "d_open_medoid_A",
+          "d_closed_medoid_A",
+          "geometry_delta_A",
+          "nearest_open_A",
+          "nearest_closed_A",
+          "contact_margin_A"
+        ]
+      }
+    },
+    {
+      "name": "hsp90.frame_cardinality",
+      "status": "PASS",
+      "details": {
+        "trajectories": 40,
+        "rows": 40040,
+        "rows_per_trajectory": [
+          1001
+        ],
+        "time_range_ns": [
+          20.0,
+          1020.0
+        ]
+      }
+    },
+    {
+      "name": "hsp90.frame_numeric_finite",
+      "status": "PASS",
+      "details": {
+        "numeric_columns": [
+          "d_open_medoid_A",
+          "d_closed_medoid_A",
+          "geometry_delta_A",
+          "nearest_open_A",
+          "nearest_closed_A",
+          "contact_margin_A"
+        ]
+      }
+    },
+    {
+      "name": "hsp90.anatomy_cardinality",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common/trajectory_time_anatomy.tsv",
+        "rows": 120,
+        "expected_rows": 120,
+        "persistence_values": [
+          "20",
+          "5",
+          "50"
+        ],
+        "columns": [
+          "trajectory",
+          "seed_lineage",
+          "persistence_saved_frames",
+          "persistence_ns",
+          "first_persistent_direction",
+          "first_persistent_start_ns",
+          "opposite_direction_departure_candidate",
+          "opposite_departure_start_ns",
+          "return_candidate",
+          "return_start_ns",
+          "strict_core_frames"
+        ]
+      }
+    },
+    {
+      "name": "hsp90.state_definition",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common/state_core_definition.json",
+        "size": 745
+      }
+    },
+    {
+      "name": "hsp90.native_noe_cardinality",
+      "status": "PASS",
+      "details": {
+        "directories": 40,
+        "files": 80,
+        "row_counts": [
+          1001
+        ]
+      }
+    },
+    {
+      "name": "hsp90.nmr_ensemble_schema",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_hsp90_acquisition_20260725/results/nmr_ensemble_aligned.npz",
+        "keys": [
+          "open_aligned",
+          "closed_aligned",
+          "shared_resids",
+          "lid_mask",
+          "core_mask"
+        ],
+        "shapes": {
+          "open_aligned": [
+            20,
+            213,
+            3
+          ],
+          "closed_aligned": [
+            20,
+            213,
+            3
+          ],
+          "shared_resids": [
+            213
+          ],
+          "lid_mask": [
+            213
+          ],
+          "core_mask": [
+            213
+          ]
+        }
+      }
+    },
+    {
+      "name": "adk.common_schema",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/E4/cases/Q-A1/common/data",
+        "files": {
+          "open_domain_distances.tsv": {
+            "rows": 2253,
+            "columns": [
+              "frame_index",
+              "time_ns",
+              "NMP_CORE_mean_CA_distance_A",
+              "LID_CORE_mean_CA_distance_A"
+            ],
+            "expected_rows": 2253,
+            "time_range_ns": [
+              0.0,
+              450.4
+            ]
+          },
+          "closed_domain_distances.tsv": {
+            "rows": 1678,
+            "columns": [
+              "frame_index",
+              "time_ns",
+              "NMP_CORE_mean_CA_distance_A",
+              "LID_CORE_mean_CA_distance_A"
+            ],
+            "expected_rows": 1678,
+            "time_range_ns": [
+              0.0,
+              335.4
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "adk.QUESTION.txt.exists",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/E4/cases/Q-A1/common/QUESTION.txt",
+        "size": 414
+      }
+    },
+    {
+      "name": "adk.FIELD_DEFINITIONS.md.exists",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/E4/cases/Q-A1/common/FIELD_DEFINITIONS.md",
+        "size": 1083
+      }
+    },
+    {
+      "name": "adk.SOURCE_CARD.md.exists",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/E4/cases/Q-A1/common/SOURCE_CARD.md",
+        "size": 954
+      }
+    },
+    {
+      "name": "adk.ADMISSION_CARD.json.exists",
+      "status": "PASS",
+      "details": {
+        "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/E4/cases/Q-A1/common/ADMISSION_CARD.json",
+        "size": 4505
+      }
+    },
+    {
+      "name": "operational.references_exist",
+      "status": "PASS",
+      "details": {
+        "plan": {
+          "path": "autoresearch/tasks/dynamics_atlas_rules_incremental_value_protocol_20260909/outputs/CODEX_EXECUTION_ORDER_OPERATOR_PLAN_20260911_ZH.md",
+          "exists": true,
+          "size": 19776
+        },
+        "production_script": {
+          "path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/scripts/run_hsp90_v1.py",
+          "exists": true,
+          "size": 61413
+        },
+        "production_protocol": {
+          "path": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/protocol/hsp90_v1_protocol.json",
+          "exists": true,
+          "size": 13808
+        },
+        "admission_script": {
+          "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/scripts/admission_check.py",
+          "exists": true,
+          "size": 2909
+        },
+        "old_runtime": {
+          "path": "autoresearch/tasks/dynamics_atlas_one_shot_20260910/four_layer/runtime/agent_run.py",
+          "exists": true,
+          "size": 15709
+        },
+        "hsp90_question": {
+          "path": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common/QUESTION.txt",
+          "exists": true,
+          "size": 971
+        },
+        "hsp90_source_inventory": {
+          "path": "autoresearch/tasks/dynamics_atlas_hsp90_first_round_v3_20260910/cases/HSP90_Q01/common/SOURCE_INVENTORY.json",
+          "exists": true,
+          "size": 3461
+        }
+      }
+    }
+  ],
+  "status": "PASS"
+}

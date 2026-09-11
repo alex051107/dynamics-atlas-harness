@@ -1,0 +1,735 @@
+{
+  "claim_boundary": "persistent directional runs and limited-window reversals only; no equilibrium, rate, mechanism, or new-state claim",
+  "group_summary": {
+    "closed_seeded": {
+      "first_CLOSED": 13,
+      "first_OPEN": 5,
+      "no_persistent": 2,
+      "opposite_candidate": 4,
+      "return_candidate": 0,
+      "trajectories": 20
+    },
+    "open_seeded": {
+      "first_CLOSED": 0,
+      "first_OPEN": 20,
+      "no_persistent": 0,
+      "opposite_candidate": 0,
+      "return_candidate": 0,
+      "trajectories": 20
+    }
+  },
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP1_direction_runs",
+  "parameter_hash": "cc97f5f0",
+  "parameters": {
+    "persistence_ns": 20
+  },
+  "result_id": "OP1_direction_runs__pcc97f5f0__i60bac79f",
+  "trajectory_records": [
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 77.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 5,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 82.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 53.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 537.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [],
+      "first_persistent_direction": "NO_PERSISTENT_CONSENSUS",
+      "first_persistent_start_ns": null,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 0,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [],
+      "first_persistent_direction": "NO_PERSISTENT_CONSENSUS",
+      "first_persistent_start_ns": null,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 0,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 2,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 216.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 5,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 7,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "OPEN"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 25.0,
+      "opposite_departure_start_ns": 671.0,
+      "opposite_direction_departure_candidate": true,
+      "opposite_run_count": 1,
+      "persistence_ns": 20,
+      "persistent_run_count": 2,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "OPEN"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 21.0,
+      "opposite_departure_start_ns": 115.0,
+      "opposite_direction_departure_candidate": true,
+      "opposite_run_count": 1,
+      "persistence_ns": 20,
+      "persistent_run_count": 3,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "OPEN",
+        "OPEN"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": 402.0,
+      "opposite_direction_departure_candidate": true,
+      "opposite_run_count": 2,
+      "persistence_ns": 20,
+      "persistent_run_count": 3,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "OPEN",
+        "OPEN",
+        "OPEN"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": 605.0,
+      "opposite_direction_departure_candidate": true,
+      "opposite_run_count": 3,
+      "persistence_ns": 20,
+      "persistent_run_count": 5,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "CLOSED"
+      ],
+      "first_persistent_direction": "CLOSED_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 59.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 45.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "closed_seeded",
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay"
+    },
+    {
+      "direction_sequence": [
+        "OPEN"
+      ],
+      "first_persistent_direction": "OPEN_CONSENSUS",
+      "first_persistent_start_ns": 20.0,
+      "opposite_departure_start_ns": null,
+      "opposite_direction_departure_candidate": false,
+      "opposite_run_count": 0,
+      "persistence_ns": 20,
+      "persistent_run_count": 1,
+      "return_candidate": false,
+      "return_count": 0,
+      "return_start_ns": null,
+      "seed_lineage": "open_seeded",
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay"
+    }
+  ]
+}

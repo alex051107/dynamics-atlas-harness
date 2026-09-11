@@ -1,0 +1,343 @@
+{
+  "claim_boundary": "numerical consistency and result-payload reproduction only; not independent scientific validation",
+  "direct_recompute": [
+    {
+      "check_count": 24,
+      "differences": [],
+      "scope": "ADK_Q02 raw TSV recomputation",
+      "status": "PASS"
+    }
+  ],
+  "model_operator_payload_checks": {
+    "result_file_count": 36,
+    "rows": [
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "7286bda5",
+        "result": "OP1_direction_runs__p7286bda5__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "8705a961",
+        "result": "OP1_direction_runs__p8705a961__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "cc97f5f0",
+        "result": "OP1_direction_runs__pcc97f5f0__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP2_noe_reference_crosswalk",
+        "parameter_hash": "61ec8ada",
+        "result": "OP2_noe_reference_crosswalk__p61ec8ada__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP3_state_population_convergence",
+        "parameter_hash": "cd0b3328",
+        "result": "OP3_state_population_convergence__pcd0b3328__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP4_transition_count",
+        "parameter_hash": "1faa5dbf",
+        "result": "OP4_transition_count__p1faa5dbf__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP5_excursion_detection",
+        "parameter_hash": "637f0522",
+        "result": "OP5_excursion_detection__p637f0522__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_01",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP6_coverage_vs_reference",
+        "parameter_hash": "891435f0",
+        "result": "OP6_coverage_vs_reference__p891435f0__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_02",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "domain_distance_distribution",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_domain_distance_distribution__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_02",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "window_change",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_window_change__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_04",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "domain_distance_distribution",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_domain_distance_distribution__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_04",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "window_change",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_window_change__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_05",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "domain_distance_distribution",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_domain_distance_distribution__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_05",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "window_change",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_window_change__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_06",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "domain_distance_distribution",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_domain_distance_distribution__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_06",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "window_change",
+        "parameter_hash": "44136fa3",
+        "result": "ADK_window_change__p44136fa3__i3fee6dce.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "7286bda5",
+        "result": "OP1_direction_runs__p7286bda5__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP2_noe_reference_crosswalk",
+        "parameter_hash": "61ec8ada",
+        "result": "OP2_noe_reference_crosswalk__p61ec8ada__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP3_state_population_convergence",
+        "parameter_hash": "cd0b3328",
+        "result": "OP3_state_population_convergence__pcd0b3328__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP4_transition_count",
+        "parameter_hash": "1faa5dbf",
+        "result": "OP4_transition_count__p1faa5dbf__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP5_excursion_detection",
+        "parameter_hash": "637f0522",
+        "result": "OP5_excursion_detection__p637f0522__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_08",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP6_coverage_vs_reference",
+        "parameter_hash": "891435f0",
+        "result": "OP6_coverage_vs_reference__p891435f0__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "7286bda5",
+        "result": "OP1_direction_runs__p7286bda5__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP2_noe_reference_crosswalk",
+        "parameter_hash": "61ec8ada",
+        "result": "OP2_noe_reference_crosswalk__p61ec8ada__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP3_state_population_convergence",
+        "parameter_hash": "cd0b3328",
+        "result": "OP3_state_population_convergence__pcd0b3328__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP4_transition_count",
+        "parameter_hash": "1faa5dbf",
+        "result": "OP4_transition_count__p1faa5dbf__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP5_excursion_detection",
+        "parameter_hash": "637f0522",
+        "result": "OP5_excursion_detection__p637f0522__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_09",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP6_coverage_vs_reference",
+        "parameter_hash": "891435f0",
+        "result": "OP6_coverage_vs_reference__p891435f0__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "7286bda5",
+        "result": "OP1_direction_runs__p7286bda5__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "8705a961",
+        "result": "OP1_direction_runs__p8705a961__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP1_direction_runs",
+        "parameter_hash": "cc97f5f0",
+        "result": "OP1_direction_runs__pcc97f5f0__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP2_noe_reference_crosswalk",
+        "parameter_hash": "61ec8ada",
+        "result": "OP2_noe_reference_crosswalk__p61ec8ada__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP3_state_population_convergence",
+        "parameter_hash": "cd0b3328",
+        "result": "OP3_state_population_convergence__pcd0b3328__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP4_transition_count",
+        "parameter_hash": "1faa5dbf",
+        "result": "OP4_transition_count__p1faa5dbf__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP5_excursion_detection",
+        "parameter_hash": "637f0522",
+        "result": "OP5_excursion_detection__p637f0522__i48b0ca3d.json",
+        "status": "PASS"
+      },
+      {
+        "blind_id": "blind_14",
+        "difference_count": 0,
+        "differences": [],
+        "operator": "OP6_coverage_vs_reference",
+        "parameter_hash": "891435f0",
+        "result": "OP6_coverage_vs_reference__p891435f0__i48b0ca3d.json",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "tolerance": 1e-10
+}

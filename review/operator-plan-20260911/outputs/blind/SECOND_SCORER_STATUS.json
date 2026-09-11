@@ -1,0 +1,9 @@
+{
+  "agreement_rate": null,
+  "claim_boundary": "primary scoring is complete; inter-scorer agreement remains unmeasured",
+  "disagreement_count": null,
+  "reason": "The current execution is Codex-only and no independent second scorer was available or authorized; no second score table is fabricated.",
+  "required_by_rubric": true,
+  "score_file": null,
+  "status": "NOT_AVAILABLE"
+}

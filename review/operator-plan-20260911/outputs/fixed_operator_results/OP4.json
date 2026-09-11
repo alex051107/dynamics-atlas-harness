@@ -1,0 +1,783 @@
+{
+  "claim_boundary": "persistent event existence and return counts only; rate is not credible when returns are zero",
+  "group_summary": {
+    "closed_seeded": {
+      "tracks": 20,
+      "tracks_with_event": 5,
+      "tracks_with_return": 0,
+      "transitions": 5
+    },
+    "open_seeded": {
+      "tracks": 20,
+      "tracks_with_event": 0,
+      "tracks_with_return": 0,
+      "transitions": 0
+    }
+  },
+  "input": {
+    "frame_count": 40040,
+    "identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+    "trajectory_count": 40
+  },
+  "input_hash": "60bac79f",
+  "operator": "OP4_transition_count",
+  "parameter_hash": "1faa5dbf",
+  "parameters": {
+    "allowed_range": [
+      5,
+      50
+    ],
+    "hysteresis_k": 5
+  },
+  "result_id": "OP4_transition_count__p1faa5dbf__i60bac79f",
+  "summary": {
+    "event_existence_credible": true,
+    "rate_claim_allowed": false,
+    "return_fraction": 0.0,
+    "tracks": 40,
+    "tracks_with_event": 5,
+    "tracks_with_return": 0,
+    "transition_counts": {
+      "C_TO_O": 5
+    }
+  },
+  "trajectory_records": [
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 15,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES01_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 8,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES02_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 37.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 2,
+      "persistent_sequence": [
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES03_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 53.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES04_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 114.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 10,
+      "persistent_sequence": [
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES05_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 179.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 3,
+      "persistent_sequence": [
+        "CLOSED",
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES06_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {
+        "C_TO_O": 1
+      }
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 7,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES07_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES08_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 2,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES09_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES10_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 10,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES11_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 17,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES12_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES13_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 621.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 5,
+      "persistent_sequence": [
+        "CLOSED",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES14_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {
+        "C_TO_O": 1
+      }
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 115.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 4,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "CLOSED",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {
+        "C_TO_O": 1
+      }
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 402.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 4,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES16_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {
+        "C_TO_O": 1
+      }
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 580.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 13,
+      "persistent_sequence": [
+        "CLOSED",
+        "CLOSED",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN",
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES17_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {
+        "C_TO_O": 1
+      }
+    },
+    {
+      "endpoint_state": "CLOSED",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "CLOSED"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES18_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 59.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES19_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": 45.0,
+      "first_arrival_state": "OPEN",
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "closed_seeded",
+      "track_has_return": false,
+      "trajectory": "R46A_ES20_2021_11_08_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS02_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS03_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS04_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS05_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS06_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS07_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS08_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS09_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS10_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS11_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS12_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS13_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS14_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS15_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS16_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS17_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS18_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS19_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    },
+    {
+      "endpoint_state": "OPEN",
+      "first_arrival_ns": null,
+      "first_arrival_state": null,
+      "first_return_ns": null,
+      "hysteresis_k": 5,
+      "persistent_segment_count": 1,
+      "persistent_sequence": [
+        "OPEN"
+      ],
+      "returns": 0,
+      "seed_lineage": "open_seeded",
+      "track_has_return": false,
+      "trajectory": "R60A_GS20_2021_11_19_NaCl170mM_GMX_JeanZay",
+      "transition_counts": {}
+    }
+  ]
+}

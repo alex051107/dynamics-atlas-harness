@@ -1,0 +1,155 @@
+{
+  "admission": {
+    "admission_id": "OPERATOR_PLAN_ADMISSION_20260911",
+    "cases": [
+      {
+        "authority_match": true,
+        "case": "HSP90_Q02",
+        "claim_boundary": "same-source fixed-window descriptive analysis; no equilibrium, rate, mechanism, new-state or independent-validation upgrade",
+        "native_1001_rows_each": true,
+        "native_file_count": 80,
+        "nmr_reference_schema": true,
+        "status": "PASS",
+        "tables": [
+          {
+            "columns": [
+              "trajectory",
+              "time_ns",
+              "state_core",
+              "d_open_medoid_A",
+              "d_closed_medoid_A",
+              "geometry_delta_A",
+              "nearest_open_A",
+              "nearest_closed_A",
+              "contact_margin_A"
+            ],
+            "expected_rows": 40040,
+            "file": "frame_state_assignments.tsv",
+            "rows": 40040,
+            "status": "PASS"
+          },
+          {
+            "columns": [
+              "trajectory",
+              "seed_lineage",
+              "persistence_saved_frames",
+              "persistence_ns",
+              "first_persistent_direction",
+              "first_persistent_start_ns",
+              "opposite_direction_departure_candidate",
+              "opposite_departure_start_ns",
+              "return_candidate",
+              "return_start_ns",
+              "strict_core_frames"
+            ],
+            "expected_rows": 120,
+            "file": "trajectory_time_anatomy.tsv",
+            "rows": 120,
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "authority_match": true,
+        "case": "ADK_Q02",
+        "claim_boundary": "fixed ligand-free MD descriptor comparison; no independent experimental validation or mechanism upgrade",
+        "required_documents": {
+          "ADMISSION_CARD.json": true,
+          "FIELD_DEFINITIONS.md": true,
+          "QUESTION.txt": true,
+          "SOURCE_CARD.md": true,
+          "SOURCE_INVENTORY.json": true
+        },
+        "status": "PASS",
+        "tables": [
+          {
+            "columns": [
+              "frame_index",
+              "time_ns",
+              "NMP_CORE_mean_CA_distance_A",
+              "LID_CORE_mean_CA_distance_A"
+            ],
+            "expected_rows": 2253,
+            "file": "data/open_domain_distances.tsv",
+            "rows": 2253,
+            "status": "PASS"
+          },
+          {
+            "columns": [
+              "frame_index",
+              "time_ns",
+              "NMP_CORE_mean_CA_distance_A",
+              "LID_CORE_mean_CA_distance_A"
+            ],
+            "expected_rows": 1678,
+            "file": "data/closed_domain_distances.tsv",
+            "rows": 1678,
+            "status": "PASS"
+          }
+        ]
+      }
+    ],
+    "claim_boundary": "admission is a source/packet gate; it is not scientific validation",
+    "scope": "packet identity, schema, row counts, native-file cardinality and NMR archive shape",
+    "status": "PASS"
+  },
+  "binding": {
+    "detected_error_count": 6,
+    "false_positive_count": 0,
+    "status": "PASS"
+  },
+  "freeze": {
+    "created_before_model_calls": true,
+    "path": "outputs/FREEZE.json",
+    "reopened_after_runner_failure": true,
+    "run_count": 16,
+    "sha256": "f58e2a20d9f892cf9bd600eadc5a0102986b9f133a855ab227648b3ec56e779a"
+  },
+  "model_calls": 0,
+  "spot_check": {
+    "claim_boundary": "three-frame implementation spot check only; not a complete raw-coordinate rerun",
+    "frames": [
+      {
+        "differences": {
+          "d_closed_medoid_A": 7.993605777301127e-15,
+          "d_open_medoid_A": 1.4210854715202004e-14,
+          "nearest_closed_A": 1.6798930566608306e-06,
+          "nearest_open_A": 3.48942420913545e-06
+        },
+        "max_abs_diff": 3.48942420913545e-06,
+        "raw_index": 20,
+        "time_ns": 20.0,
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+      },
+      {
+        "differences": {
+          "d_closed_medoid_A": 0.0,
+          "d_open_medoid_A": 2.6645352591003757e-15,
+          "nearest_closed_A": 2.0272271079591064e-06,
+          "nearest_open_A": 2.8646731742298925e-07
+        },
+        "max_abs_diff": 2.0272271079591064e-06,
+        "raw_index": 500,
+        "time_ns": 500.0,
+        "trajectory": "R46A_ES15_2021_11_08_NaCl170mM_GMX_JeanZay"
+      },
+      {
+        "differences": {
+          "d_closed_medoid_A": 0.0,
+          "d_open_medoid_A": 8.881784197001252e-16,
+          "nearest_closed_A": 5.1411399333289864e-06,
+          "nearest_open_A": 1.401943326762023e-06
+        },
+        "max_abs_diff": 5.1411399333289864e-06,
+        "raw_index": 20,
+        "time_ns": 20.0,
+        "trajectory": "R60A_GS01_2021_11_19_NaCl170mM_GMX_JeanZay"
+      }
+    ],
+    "max_abs_diff": 5.1411399333289864e-06,
+    "production_script": "autoresearch/tasks/dynamics_atlas_hsp90_v1_science_20260728/scripts/run_hsp90_v1.py",
+    "status": "PASS",
+    "threshold_A": 0.01
+  },
+  "status": "PASS"
+}

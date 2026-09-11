@@ -1,0 +1,94 @@
+{
+  "attempted_do_runs": 16,
+  "attempted_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "claim_boundary": "run receipts and cost accounting only; not a score or scientific conclusion",
+  "completed_do_runs": 16,
+  "completed_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "cost_cap_usd": 0.6,
+  "f_runs": [
+    {
+      "arm": "F",
+      "case": "HSP90_Q02",
+      "claim_boundary": "fixed local operator output; no model or simulation call",
+      "cost_usd": 0.0,
+      "model_calls": 0,
+      "operators_run": [
+        "OP1_direction_runs__p7286bda5__i60bac79f",
+        "OP1_direction_runs__pcc97f5f0__i60bac79f",
+        "OP1_direction_runs__p8705a961__i60bac79f",
+        "OP2_noe_reference_crosswalk__p61ec8ada__i60bac79f",
+        "OP3_state_population_convergence__p73102ba2__if92cde8b",
+        "OP4_transition_count__p1faa5dbf__i60bac79f",
+        "OP5_excursion_detection__p637f0522__i60bac79f",
+        "OP6_coverage_vs_reference__p891435f0__i60bac79f"
+      ],
+      "rejections": [],
+      "run_id": "F_HSP90_Q02",
+      "status": "COMPLETE",
+      "unbound_claims": 0
+    },
+    {
+      "arm": "F",
+      "case": "ADK_Q02",
+      "claim_boundary": "fixed local operator output; no model or simulation call",
+      "cost_usd": 0.0,
+      "model_calls": 0,
+      "operators_run": [
+        "ADK_domain_distance_distribution__p44136fa3__i3fee6dce",
+        "ADK_window_change__p44136fa3__i3fee6dce"
+      ],
+      "rejections": [],
+      "run_id": "F_ADK_Q02",
+      "status": "COMPLETE",
+      "unbound_claims": 0
+    }
+  ],
+  "model": "openai/gpt-5.6-luna",
+  "pilot_excluded_from_scoring": [
+    "runs/HSP90_Q02_O_rep1_00efb07f",
+    "runs/HSP90_Q02_O_rep1_173e8db8",
+    "runs/ADK_Q02_O_rep3_6fba9c43"
+  ],
+  "planned_do_runs": 16,
+  "reasoning": "medium",
+  "restart_after_runner_failure": false,
+  "resume_after_runtime_repair": true,
+  "spent_usd": 0.18989771,
+  "status": "PASS",
+  "stop": null,
+  "unknown_charge": false
+}

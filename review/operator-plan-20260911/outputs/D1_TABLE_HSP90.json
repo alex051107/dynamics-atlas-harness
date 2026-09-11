@@ -1,0 +1,563 @@
+{
+  "claim_ceiling": "same-source HSP90 analysis in the observed 20–1020 ns window; no equilibrium, rate, mechanism, new-state, or independent-validation upgrade",
+  "independent_recompute": {
+    "max_abs_diff": 0.0,
+    "status": "PASS"
+  },
+  "rows": [
+    {
+      "allowed_claim": "report direction and limited-window reverse candidates",
+      "evidence": [
+        {
+          "group_summary": {
+            "closed_seeded": {
+              "first_CLOSED": 15,
+              "first_OPEN": 5,
+              "no_persistent": 0,
+              "opposite_candidate": 5,
+              "return_candidate": 0,
+              "trajectories": 20
+            },
+            "open_seeded": {
+              "first_CLOSED": 0,
+              "first_OPEN": 20,
+              "no_persistent": 0,
+              "opposite_candidate": 0,
+              "return_candidate": 0,
+              "trajectories": 20
+            }
+          },
+          "persistence_ns": 5,
+          "result_id": "OP1_direction_runs__p7286bda5__i60bac79f"
+        },
+        {
+          "group_summary": {
+            "closed_seeded": {
+              "first_CLOSED": 13,
+              "first_OPEN": 5,
+              "no_persistent": 2,
+              "opposite_candidate": 4,
+              "return_candidate": 0,
+              "trajectories": 20
+            },
+            "open_seeded": {
+              "first_CLOSED": 0,
+              "first_OPEN": 20,
+              "no_persistent": 0,
+              "opposite_candidate": 0,
+              "return_candidate": 0,
+              "trajectories": 20
+            }
+          },
+          "persistence_ns": 20,
+          "result_id": "OP1_direction_runs__pcc97f5f0__i60bac79f"
+        },
+        {
+          "group_summary": {
+            "closed_seeded": {
+              "first_CLOSED": 11,
+              "first_OPEN": 7,
+              "no_persistent": 2,
+              "opposite_candidate": 1,
+              "return_candidate": 0,
+              "trajectories": 20
+            },
+            "open_seeded": {
+              "first_CLOSED": 0,
+              "first_OPEN": 20,
+              "no_persistent": 0,
+              "opposite_candidate": 0,
+              "return_candidate": 0,
+              "trajectories": 20
+            }
+          },
+          "persistence_ns": 50,
+          "result_id": "OP1_direction_runs__p8705a961__i60bac79f"
+        }
+      ],
+      "forbidden_claim": "equilibrium, exchange rate, mechanism",
+      "metric_id": "D1-01-direction-runs",
+      "quantity": "persistent directional runs and opposite-direction candidates",
+      "trust": "credible_limited_window"
+    },
+    {
+      "allowed_claim": "same-source agreement decomposition and threshold sensitivity",
+      "evidence": {
+        "result_id": "OP2_noe_reference_crosswalk__p61ec8ada__i60bac79f",
+        "summary_by_tau": {
+          "0.5": {
+            "closed_seeded": {
+              "NOT_APPLICABLE": 10,
+              "RELATIVE_ONLY": 10
+            },
+            "open_seeded": {
+              "AGREEMENT": 7,
+              "PARTIAL": 8,
+              "RELATIVE_ONLY": 5
+            }
+          },
+          "1.0": {
+            "closed_seeded": {
+              "NOT_APPLICABLE": 10,
+              "PARTIAL": 1,
+              "RELATIVE_ONLY": 9
+            },
+            "open_seeded": {
+              "AGREEMENT": 18,
+              "PARTIAL": 1,
+              "RELATIVE_ONLY": 1
+            }
+          },
+          "2.0": {
+            "closed_seeded": {
+              "AGREEMENT": 3,
+              "NOT_APPLICABLE": 10,
+              "PARTIAL": 2,
+              "RELATIVE_ONLY": 5
+            },
+            "open_seeded": {
+              "AGREEMENT": 19,
+              "RELATIVE_ONLY": 1
+            }
+          }
+        }
+      },
+      "forbidden_claim": "independent experimental validation or kinetic arrival",
+      "metric_id": "D1-02-noe-reference-arrival",
+      "quantity": "open-direction/native-NOE agreement and tau sensitivity",
+      "sensitivity_triggered": true,
+      "trust": "credible_but_tolerance_sensitive"
+    },
+    {
+      "allowed_claim": "descriptive window comparison; no-return gate remains open",
+      "evidence": {
+        "primary_noe_tau1": {
+          "result_id": "OP3_state_population_convergence__p73102ba2__if92cde8b",
+          "transition_gate": {
+            "required_fraction": 0.5,
+            "return_fraction": 0.0,
+            "single_direction_warning": true,
+            "track_count": 40,
+            "tracks_with_return": 0
+          },
+          "windows": [
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.013737994678588737,
+                "OPEN": 0.0026448798726026457,
+                "UNKNOWN": -0.016382874551191307
+              },
+              "full_trajectory_population": {
+                "CLOSED": 0.008291708291708291,
+                "OPEN": 0.48374125874125873,
+                "UNKNOWN": 0.5079670329670329
+              },
+              "max_absolute_difference": 0.016382874551191307,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.05000618811881188,
+                  "ci95_low": 0.0032116336633663373,
+                  "mean": 0.02152970297029703,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.6317326732673266,
+                  "ci95_low": 0.3371163366336633,
+                  "mean": 0.4876435643564357,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 0.634690594059406,
+                  "ci95_low": 0.34948019801980196,
+                  "mean": 0.4908267326732673,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 0.02202970297029703,
+                "OPEN": 0.4863861386138614,
+                "UNKNOWN": 0.49158415841584163
+              },
+              "window_end_ns": 120.0,
+              "window_length_ns": 100,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.004756100473231948,
+                "OPEN": 0.0005216894659125781,
+                "UNKNOWN": -0.005277789939144517
+              },
+              "full_trajectory_population": {
+                "CLOSED": 0.008291708291708291,
+                "OPEN": 0.48374125874125873,
+                "UNKNOWN": 0.5079670329670329
+              },
+              "max_absolute_difference": 0.005277789939144517,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.02819472111553784,
+                  "ci95_low": 0.002390438247011952,
+                  "mean": 0.01274003984063745,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.6396513944223108,
+                  "ci95_low": 0.3411005976095617,
+                  "mean": 0.4853699203187251,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 0.6436777888446215,
+                  "ci95_low": 0.3472086653386454,
+                  "mean": 0.5018900398406374,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 0.013047808764940239,
+                "OPEN": 0.4842629482071713,
+                "UNKNOWN": 0.5026892430278884
+              },
+              "window_end_ns": 270.0,
+              "window_length_ns": 250,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.001887932426854583,
+                "OPEN": -0.0013560292003405028,
+                "UNKNOWN": -0.0005319032265139745
+              },
+              "full_trajectory_population": {
+                "CLOSED": 0.008291708291708291,
+                "OPEN": 0.48374125874125873,
+                "UNKNOWN": 0.5079670329670329
+              },
+              "max_absolute_difference": 0.001887932426854583,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.020508982035928144,
+                  "ci95_low": 0.0022941616766467064,
+                  "mean": 0.010154590818363273,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.6317602295409182,
+                  "ci95_low": 0.34141467065868264,
+                  "mean": 0.4812458083832335,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 0.6427482534930139,
+                  "ci95_low": 0.3607272954091817,
+                  "mean": 0.5085996007984032,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 0.010179640718562874,
+                "OPEN": 0.4823852295409182,
+                "UNKNOWN": 0.507435129740519
+              },
+              "window_end_ns": 520.0,
+              "window_length_ns": 500,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.0,
+                "OPEN": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "full_trajectory_population": {
+                "CLOSED": 0.008291708291708291,
+                "OPEN": 0.48374125874125873,
+                "UNKNOWN": 0.5079670329670329
+              },
+              "max_absolute_difference": 0.0,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.01673389110889111,
+                  "ci95_low": 0.0017201548451548454,
+                  "mean": 0.008207117882117882,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.6214953796203796,
+                  "ci95_low": 0.34020854145854146,
+                  "mean": 0.485672002997003,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 0.6469617882117882,
+                  "ci95_low": 0.37125187312687313,
+                  "mean": 0.5061208791208791,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 0.008291708291708291,
+                "OPEN": 0.48374125874125873,
+                "UNKNOWN": 0.5079670329670329
+              },
+              "window_end_ns": 1020.0,
+              "window_length_ns": 1000,
+              "window_start_ns": 20.0
+            }
+          ]
+        },
+        "state_core_sensitivity": {
+          "result_id": "OP3_state_population_convergence__pcd0b3328__i60bac79f",
+          "windows": [
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.00022254972750022255,
+                "OPEN": 0.00019757470252519758,
+                "UNKNOWN": -0.00042012443002537037
+              },
+              "full_trajectory_population": {
+                "CLOSED": 2.4975024975024975e-05,
+                "OPEN": 4.995004995004995e-05,
+                "UNKNOWN": 0.9999250749250749
+              },
+              "max_absolute_difference": 0.00042012443002537037,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.0007425742574257426,
+                  "ci95_low": 0.0,
+                  "mean": 0.00024183168316831684,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.0007425742574257426,
+                  "ci95_low": 0.0,
+                  "mean": 0.00024034653465346533,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 1.0,
+                  "ci95_low": 0.9987623762376238,
+                  "mean": 0.9995178217821782,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 0.00024752475247524753,
+                "OPEN": 0.00024752475247524753,
+                "UNKNOWN": 0.9995049504950495
+              },
+              "window_end_ns": 120.0,
+              "window_length_ns": 100,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 7.462656865047304e-05,
+                "OPEN": 4.965154367544806e-05,
+                "UNKNOWN": -0.0001242781123258485
+              },
+              "full_trajectory_population": {
+                "CLOSED": 2.4975024975024975e-05,
+                "OPEN": 4.995004995004995e-05,
+                "UNKNOWN": 0.9999250749250749
+              },
+              "max_absolute_difference": 0.0001242781123258485,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.000298804780876494,
+                  "ci95_low": 0.0,
+                  "mean": 0.00010149402390438248,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.000298804780876494,
+                  "ci95_low": 0.0,
+                  "mean": 0.00010298804780876495,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 1.0,
+                  "ci95_low": 0.9995019920318725,
+                  "mean": 0.9997955179282868,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 9.960159362549801e-05,
+                "OPEN": 9.960159362549801e-05,
+                "UNKNOWN": 0.999800796812749
+              },
+              "window_end_ns": 270.0,
+              "window_length_ns": 250,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 2.4925174625773425e-05,
+                "OPEN": -4.9850349251549656e-08,
+                "UNKNOWN": -2.487532427652983e-05
+              },
+              "full_trajectory_population": {
+                "CLOSED": 2.4975024975024975e-05,
+                "OPEN": 4.995004995004995e-05,
+                "UNKNOWN": 0.9999250749250749
+              },
+              "max_absolute_difference": 2.4925174625773425e-05,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 0.0001497005988023952,
+                  "ci95_low": 0.0,
+                  "mean": 4.8203592814371254e-05,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.0001497005988023952,
+                  "ci95_low": 0.0,
+                  "mean": 5.104790419161676e-05,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 1.0,
+                  "ci95_low": 0.9997504990019961,
+                  "mean": 0.999900748502994,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 4.99001996007984e-05,
+                "OPEN": 4.99001996007984e-05,
+                "UNKNOWN": 0.9999001996007983
+              },
+              "window_end_ns": 520.0,
+              "window_length_ns": 500,
+              "window_start_ns": 20.0
+            },
+            {
+              "converged_all_states_diff_lt_0_05": true,
+              "difference_window_minus_full": {
+                "CLOSED": 0.0,
+                "OPEN": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "full_trajectory_population": {
+                "CLOSED": 2.4975024975024975e-05,
+                "OPEN": 4.995004995004995e-05,
+                "UNKNOWN": 0.9999250749250749
+              },
+              "max_absolute_difference": 0.0,
+              "trajectory_bootstrap": {
+                "CLOSED": {
+                  "ci95_high": 7.492507492507493e-05,
+                  "ci95_low": 0.0,
+                  "mean": 2.3476523476523474e-05,
+                  "replicates": 1000
+                },
+                "OPEN": {
+                  "ci95_high": 0.00012487512487512488,
+                  "ci95_low": 0.0,
+                  "mean": 5.097402597402598e-05,
+                  "replicates": 1000
+                },
+                "UNKNOWN": {
+                  "ci95_high": 1.0,
+                  "ci95_low": 0.9998251748251749,
+                  "mean": 0.9999255494505493,
+                  "replicates": 1000
+                }
+              },
+              "trajectory_population": {
+                "CLOSED": 2.4975024975024975e-05,
+                "OPEN": 4.995004995004995e-05,
+                "UNKNOWN": 0.9999250749250749
+              },
+              "window_end_ns": 1020.0,
+              "window_length_ns": 1000,
+              "window_start_ns": 20.0
+            }
+          ]
+        }
+      },
+      "forbidden_claim": "equilibrium population or thermodynamic weight",
+      "metric_id": "D1-03-population-convergence",
+      "quantity": "trajectory-level state fractions in 100/250/500/1000 ns windows",
+      "trust": "not_credible_as_population"
+    },
+    {
+      "allowed_claim": "observed persistent event existence",
+      "evidence": {
+        "result_id": "OP4_transition_count__p1faa5dbf__i60bac79f",
+        "summary": {
+          "event_existence_credible": true,
+          "rate_claim_allowed": false,
+          "return_fraction": 0.0,
+          "tracks": 40,
+          "tracks_with_event": 5,
+          "tracks_with_return": 0,
+          "transition_counts": {
+            "C_TO_O": 5
+          }
+        }
+      },
+      "forbidden_claim": "rate when returns are zero",
+      "metric_id": "D1-04-transition-count",
+      "quantity": "persistent C-to-O/O-to-C event and return counts",
+      "trust": "event_existence_only"
+    },
+    {
+      "allowed_claim": "descriptive excursions with censoring",
+      "evidence": {
+        "radii": {
+          "k": 5,
+          "r_closed_A": 2.624527200397874,
+          "r_open_A": 1.3538825899417475,
+          "reference_radius_method": "member-to-coordinate-median lid RMSD p95"
+        },
+        "result_id": "OP5_excursion_detection__p637f0522__i60bac79f",
+        "summary": {
+          "accepted_count": 3,
+          "accepted_frame_count": 997,
+          "candidate_count": 42,
+          "right_censored_count": 1
+        }
+      },
+      "forbidden_claim": "new state, mechanism, independent validation",
+      "metric_id": "D1-05-excursions",
+      "quantity": "outside-both-reference-radius contiguous stretches",
+      "trust": "descriptive_only"
+    },
+    {
+      "allowed_claim": "four-class coverage relative to selected NMR reference",
+      "evidence": {
+        "group_summary": {
+          "closed_seeded": {
+            "BOTH": 0.0,
+            "NONE": 1.0,
+            "ONLY_CLOSED": 0.0,
+            "ONLY_OPEN": 0.0
+          },
+          "open_seeded": {
+            "BOTH": 0.0,
+            "NONE": 0.9998501498501499,
+            "ONLY_CLOSED": 0.0,
+            "ONLY_OPEN": 0.00014985014985014985
+          }
+        },
+        "result_id": "OP6_coverage_vs_reference__p891435f0__i60bac79f"
+      },
+      "forbidden_claim": "MD-only new state or independent validation",
+      "metric_id": "D1-06-coverage",
+      "quantity": "ONLY_OPEN/ONLY_CLOSED/BOTH/NONE frame coverage",
+      "trust": "descriptive_only"
+    }
+  ],
+  "source_identity": "HSP90_Q02_FIXED_LOCAL_INPUTS_v1__frame_state_assignments__native_noe_second_column__nmr_ensemble_aligned",
+  "table_id": "D1_TABLE_HSP90_OPERATOR_PLAN_20260911"
+}

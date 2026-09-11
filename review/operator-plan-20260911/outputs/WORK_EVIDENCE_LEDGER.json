@@ -1,0 +1,77 @@
+{
+  "ledger_id": "OPERATOR_PLAN_WORK_EVIDENCE_LEDGER_20260911",
+  "task_id": "dynamics_atlas_operator_plan_20260911",
+  "authorization": "DA-20260911-001",
+  "status": "CAPSULE_COMPLETE_EXTERNAL_PR_BLOCKED_SECOND_SCORER_MISSING",
+  "claim_ceiling": "Task-local development and same-source/fixed-protocol evidence; no equilibrium, rate, mechanism, new state, independent validation, generalization, production, or scientific approval claim.",
+  "entries": [
+    {
+      "step": "1-2",
+      "status": "PASS",
+      "evidence": ["outputs/source_audit.json", "outputs/rules_v0_2/BUILD_SUMMARY.json", "outputs/rules_v0_2/REWRITE_DIFF.md", "outputs/RULE_REVIEW_SHEET_EN.md"],
+      "validation": "18 source checks; rules schema/prose/link check; original registry unchanged",
+      "allowed_claim": "auditable 33-rule executable copy and project execution rules",
+      "forbidden_upgrade": "source-paper validation or scientific rule validation"
+    },
+    {
+      "step": "3-5",
+      "status": "PASS",
+      "evidence": ["outputs/operators/SCHEMA.json", "outputs/fixed_operator_results/", "outputs/D1_TABLE_HSP90.json", "outputs/D1_TABLE_HSP90.md", "outputs/INDEPENDENT_RECOMPUTE.json"],
+      "validation": "5 operator tests; fixed F/D1 plus independent implementation recompute; combined inline review score 8.5/10",
+      "allowed_claim": "fixed HSP90 D1 quantities with explicit trust/claim ceilings",
+      "forbidden_upgrade": "equilibrium, kinetics, mechanism, new state or independent validation"
+    },
+    {
+      "step": "6-8",
+      "status": "PASS",
+      "evidence": ["runtime_v3/", "outputs/ADMISSION_CARD.json", "outputs/PRODUCTION_SPOT_CHECK.json", "outputs/E0_BINDING_RESULT.json", "outputs/E0_MANUAL_BINDING_FREEZE.json"],
+      "validation": "11 runtime tests; admission PASS; 3-frame production spot check PASS; binding replay 6/7 detected and 0 false positives",
+      "allowed_claim": "bounded operator surface, packet gate and binding checker behavior",
+      "forbidden_upgrade": "runtime completion as scientific validity"
+    },
+    {
+      "step": "9",
+      "status": "PASS",
+      "evidence": ["cases/HSP90_Q02/hidden/question_frame.md", "cases/HSP90_Q02/hidden/question_plan.json", "cases/HSP90_Q02/hidden/rubric.json", "cases/ADK_Q02/hidden/question_frame.md", "cases/ADK_Q02/hidden/question_plan.json", "cases/ADK_Q02/hidden/rubric.json", "outputs/FREEZE.json", "outputs/FREEZE_HASH.json"],
+      "validation": "questions, rubrics, operator registry, runtime and shuffled order frozen before first model call",
+      "allowed_claim": "two-question development comparison under the frozen protocol",
+      "forbidden_upgrade": "general benchmark or scientific validation"
+    },
+    {
+      "step": "10",
+      "status": "PASS",
+      "evidence": ["runs/F_HSP90_Q02/", "runs/F_ADK_Q02/", "outputs/E_CAMPAIGN_RESULT.json", "outputs/RUN_RECEIPTS_SUMMARY.csv", "outputs/paid_usage.jsonl"],
+      "validation": "F x2 and D/O 16 successful current campaign receipts; no UNKNOWN_CHARGE; total paid usage $0.18989771 <= $0.60",
+      "allowed_claim": "runtime-level completion and bounded answer comparison inputs",
+      "forbidden_upgrade": "model quality or scientific correctness from receipts alone"
+    },
+    {
+      "step": "11",
+      "status": "PARTIAL_WITH_LIMITATION",
+      "evidence": ["outputs/blind/manifest.json", "outputs/blind/blind_scores.csv", "outputs/blind/SCORE_SEAL.json", "outputs/blind/REVEAL.json", "outputs/blind/RESULT_BINDING_VALIDATION.json", "outputs/blind/group_scores.csv", "outputs/INDEPENDENT_RECOMPUTE_MODEL.json"],
+      "validation": "64 primary score rows sealed before reveal; result bindings PASS; ADK raw TSV recompute 24 checks PASS; 36 model operator payload checks PASS",
+      "allowed_claim": "primary rubric scores and numerical consistency check",
+      "forbidden_upgrade": "inter-scorer agreement or scientific conclusion"
+    },
+    {
+      "step": "12",
+      "status": "LOCAL_DELIVERY_COMPLETE_EXTERNAL_PR_BLOCKED",
+      "evidence": ["outputs/OPERATOR_PLAN_REPORT_ZH.md", "outputs/OPERATOR_PLAN_REPORT_ZH.html", "outputs/DEVIATIONS.md", "outputs/WORK_EVIDENCE_LEDGER.json", "operators_package/README.md", "outputs/PR_DRAFT.md"],
+      "validation": "final static artifact/schema/link/render/git readback check PASS after one scoped prose repair; final state check remains recorded in task logs",
+      "allowed_claim": "local task capsule is auditable and ready for separately authorized transfer",
+      "forbidden_upgrade": "PR created, merged, source-science approved or production-ready"
+    }
+  ],
+  "external_actions": {
+    "repository": "dynamics-atlas-harness",
+    "requested_branch": "review/operator-plan-20260911",
+    "actual_status": "NOT_CREATED",
+    "reason": "live status and repository CONTRIBUTING.md prohibit automatic code changes at the current gate",
+    "local_pr_body": "outputs/PR_DRAFT.md"
+  },
+  "manual_time": {
+    "write_cards": "NOT_INSTRUMENTED",
+    "write_scoring_basis": "NOT_INSTRUMENTED",
+    "posthoc_check": "NOT_INSTRUMENTED"
+  }
+}
