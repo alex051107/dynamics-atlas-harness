@@ -1,61 +1,170 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dynamics Atlas</title><style>body{margin:0;background:#f2f5f7;color:#20384a;font:17px/1.75 system-ui,sans-serif}header{background:#20384a;color:white;padding:18px 6%}header a{color:white;text-decoration:none}main{max-width:960px;margin:32px auto;padding:38px 48px;background:white;border-radius:10px}h1{font-size:36px;line-height:1.2}h2{font-size:25px;margin-top:36px}a{color:#246b96;text-underline-offset:3px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border-bottom:1px solid #d8e0e5;text-align:left;padding:12px;vertical-align:top}th{background:#edf3f7}pre{overflow:auto;padding:20px;background:#edf3f7;font-size:13px}code{font-size:.9em}footer{font-size:13px;color:#617482;margin-top:36px}@media(max-width:700px){main{margin:0;padding:22px}h1{font-size:28px}table{font-size:13px}}@media print{header{display:none}main{margin:0;padding:0}body{background:white}}</style><header><a href="index.html">Dynamics Atlas / Research group</a></header><main><h1>Dynamics Atlas</h1>
-<p><strong>Interpreting heterogeneous protein-dynamics evidence with reproducible analysis.</strong></p>
-<p>We compare what molecular simulations and experiments actually support, including where their interpretations differ. The current results cover HSP90, DHFR and adenylate kinase (ADK). A source-linked Rules Table records scientific prerequisites and conclusion limits; its contribution to automated analysis is a separate research question.</p>
-<h2>Start here</h2>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Dynamics Atlas — collaborator briefing</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
+</head>
+<body><article class="markdown-body" style="max-width:980px;margin:40px auto;padding:0 24px">
+<header id="title-block-header">
+<h1 class="title">Dynamics Atlas — collaborator briefing</h1>
+</header>
+<h1 id="dynamics-atlas-collaborator-briefing">Dynamics Atlas —
+collaborator briefing</h1>
+<p><strong>We want to help a researcher say what different
+protein-dynamics data support, without confusing a useful observation
+with a complete molecular explanation.</strong></p>
+<p>This page is designed to be read without a meeting or a local
+software setup. Start with the question and current findings; use the
+methods and evidence links only as deeply as needed.</p>
+<h2 id="a-short-reading-route">A short reading route</h2>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr>
-<th>Your goal</th>
-<th>Read or run</th>
+<th>Time available</th>
+<th>Read</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>Understand the project and current findings</td>
-<td><a href="docs/RESULTS.html">Scientific results</a></td>
+<tbody>
+<tr>
+<td>A few minutes</td>
+<td>This page, then the summary table in <a
+href="docs/RESULTS.md">Authors’ claims and our findings</a></td>
 </tr>
 <tr>
-<td>Understand the measurements and assumptions</td>
-<td><a href="docs/METHODS.html">Methods and boundaries</a></td>
+<td>About 15 minutes</td>
+<td><a
+href="../review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pdf">Results
+slides — PDF</a>, alongside <a href="docs/PROGRESS.md">Research
+stages</a></td>
 </tr>
 <tr>
-<td>Reproduce the main numerical results</td>
-<td><a href="docs/REPRODUCE.html">Reproduction guide</a></td>
+<td>Detailed review</td>
+<td><a href="docs/RESULTS.md">Results</a>, <a href="docs/RULES.md">Rules
+experiments</a>, <a href="docs/METHODS.md">Methods</a> and <a
+href="docs/SOURCES.md">Sources</a></td>
 </tr>
 <tr>
-<td>Understand the Rules Table&#39;s research role</td>
-<td><a href="docs/RULES.html">Rules and analysis protocol</a></td>
+<td>Numerical verification</td>
+<td><a href="docs/REPRODUCE.md">Reproduction instructions</a>; no model
+API key is required</td>
 </tr>
-<tr>
-<td>Find papers and data sources</td>
-<td><a href="docs/SOURCES.html">Sources and data provenance</a></td>
-</tr>
-</tbody></table>
-<h2>What we have learned</h2>
-<ul>
-<li><strong>HSP90:</strong> moving in an open direction is different from agreeing with an open-state NOE reference.</li>
-<li><strong>DHFR:</strong> corrected local distances distinguish the two inhibitors in these trajectories; coordinate representation must be checked before interpretation.</li>
-<li><strong>ADK:</strong> the selected domain-distance descriptors do not show joint closure over the first-to-last-window comparison in either apo trajectory.</li>
-</ul>
-<p>The calculations below reproduce those numerical summaries from the provided analysed tables. They do not generate new MD trajectories or repeat raw-coordinate preparation.</p>
-<h2>Reproduce in a fixed environment</h2>
-<p>From this directory, with Docker installed:</p>
-<pre><code class="language-bash">docker build -t dynamics-atlas-group:20260910 .
-mkdir -p results
-docker run --rm --network none --read-only --tmpfs /tmp \
-  --mount &quot;type=bind,source=$(pwd)/results,target=/output&quot; \
-  dynamics-atlas-group:20260910
-</code></pre>
-<p>Open <code>results/REPORT.html</code>. A successful run prints <code>PASS</code> and writes the report plus <code>results.json</code>. The base image is pinned by digest. Building downloads that public base image; the calculation itself runs without network access or an API key. The Python-only alternative and Windows instructions are in the <a href="docs/REPRODUCE.html">reproduction guide</a>.</p>
-<p>You can also inspect the <a href="example-results/REPORT.html">tested example output</a> before running the calculation.</p>
-<h2>Package layout</h2>
-<pre><code class="language-text">README.md           Project entrypoint
-index.html          Offline reading page
-Dockerfile          Digest-pinned public Python environment
-docs/               Scientific results, methods, reproduction and sources
-data/               Small numerical inputs and their provenance manifest
-reproduce/          Deterministic analysis script
-example-results/    Output from the tested container run
-results/            Your regenerated outputs
-</code></pre>
-<p>This group package is self-contained. Its numerical inputs come from the recorded September 2026 analyses. Exact source archive identities and transformations are documented in <code>data/MANIFEST.json</code>.</p>
-<footer>Scientific results and reproducible calculations · September 2026</footer></main></html>
+</tbody>
+</table>
+<p><a
+href="../review/four-layer-20260910/outputs/COLLABORATOR_REPORT_EN.pptx">Editable
+slides — PowerPoint</a>. The existing 12-slide results deck is retained
+unchanged as a presentation snapshot. In its HSP90 discussion,
+“initially open-direction” means <strong>the first qualifying persistent
+segment</strong>, not necessarily the simulation’s initial time.
+Admission enforcement described in the slides is a proposed response to
+observed defects, not a proven general-purpose validator. The prose
+below and the results page make these boundaries explicit.</p>
+<h2 id="the-question-that-started-the-project">The question that started
+the project</h2>
+<p>A researcher may have a simulation, NMR measurements and a scattering
+or fluorescence experiment for the same protein. The task is not simply
+to combine files. It is to identify the quantity each source constrains,
+determine whether the samples and conditions can be compared, perform
+the necessary analysis and give a conclusion at the level supported by
+the evidence.</p>
+<p>Our scientific priorities are reliable quantities and meaningful
+cross-source comparisons. Reusable analysis comes next. Agent automation
+is a separate hypothesis: an Agent completing a task is not itself
+evidence that the scientific interpretation is correct.</p>
+<h2 id="what-we-have-learned">What we have learned</h2>
+<p><strong>HSP90:</strong> ten of the twenty closed-start trajectories
+contain sustained open-direction segments under the five-saved-point
+definition. This does not mean ten complete opening events. At the
+project’s 1 Å NOE tolerance, nine of these ten trajectories fall into
+the relative-direction-only category, while one is partially consistent.
+Some individual segments nevertheless approach the open reference. <a
+href="docs/RESULTS.md#hsp90-direction-reference-agreement-and-transition-are-different-claims">Definitions
+and source records</a>.</p>
+<p><strong>DHFR:</strong> correcting periodic-coordinate representation
+changes the local distance analysis. Selected M20–ligand distances are
+smaller with 4′-DTMP in both WT and L28R. This is a developer-corrected
+result; the two original Agents did not discover the bad input
+representation. <a
+href="docs/RESULTS.md#dhfr-corrected-distances-support-proximity-not-a-unique-inhibition-mechanism">Numbers
+and ownership</a>.</p>
+<p><strong>ADK:</strong> neither first-to-last-window comparison shows
+both selected domain distances decreasing. The simulations are apo and
+do not reproduce the paper’s ATP-triggered scattering experiment. <a
+href="docs/RESULTS.md#adk-the-deposited-apo-trajectories-do-not-test-the-atp-triggered-experiment">Conditions
+and limits</a>.</p>
+<p>These are bounded scientific results. They are not interchangeable
+with software tests or Agent performance scores.</p>
+<h2 id="where-we-are-now">Where we are now</h2>
+<p><strong>The component pilot is complete and unblinded.</strong> It
+compared input-warning cards, one round of answer feedback, different
+method guidance, and explicit subquestions. The evidence supports
+task-dependent findings, not a generally successful four-layer
+harness.</p>
+<p>Full selected rules helped on the nanodisc task but not on HSP90.
+More explicit questions improved answer coverage in both tested cases,
+although HSP90 acquired one additional core error across the four runs.
+Four warning-card runs listed the file but did not read it; the tested
+feedback checker did not reduce any of its twelve answers’ core-error
+counts. <a href="docs/RULES.md">What each experiment actually
+changed</a>.</p>
+<p>Most materials had already been used in development. The scorer also
+helped prepare the cases; masking condition labels was not independent
+domain-expert review. The original and revised answers are preserved,
+and no completed experiment is rerun by opening this package.</p>
+<h2 id="what-would-be-useful-to-discuss">What would be useful to
+discuss</h2>
+<p><strong>Scientific interpretation:</strong> are the current
+observables and limits sufficient for the intended question—particularly
+the connection between HSP90’s direction labels, native NOE violations
+and a structural-state interpretation?</p>
+<p><strong>Next scientific deliverable:</strong> which unresolved
+comparison would change a biological interpretation, rather than merely
+add another plotted quantity? This needs a specific question and
+available evidence; it does not require completing every historical
+task.</p>
+<p><strong>Role of Rules:</strong> the current working recommendation is
+to keep the literature record and concise, applicable guidance, while
+pausing expansion of the selector and generic conclusion checker. A
+useful ordinary analysis is allowed to remain ordinary. These are
+discussion points, not authorization for another experimental
+campaign.</p>
+<h2 id="reproduction-and-audit-trail">Reproduction and audit trail</h2>
+<p>The <a href="docs/REPRODUCE.md">offline replay</a> recalculates
+selected HSP90, DHFR and ADK summaries from provided analysed tables.
+Coordinate preparation and Agent experiments are outside that replay.
+The <a
+href="downloads/Dynamics_Atlas_Group_Package_20260910.zip">existing
+replay ZIP</a> remains a fixed numerical package; it does not include
+these later briefing edits or the linked slide files.</p>
+<p>The current reading set is deliberately small: <strong>this briefing,
+Results, Progress, Rules, Methods, Sources and the reproduction
+guide</strong>. Detailed failures, raw answers and old plans remain in
+the repository’s <a href="../research/README.md">research records</a>,
+outside the recommended reading sequence. Nothing in the presentation
+cleanup changes frozen inputs, scores or scientific results.</p>
+</article></body>
+</html>
