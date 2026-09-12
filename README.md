@@ -15,6 +15,7 @@ Given a protein-dynamics dataset (MD trajectories, plus NMR, SAXS or FRET where 
 | [DEFINITIONS.md](DEFINITIONS.md) | Every definition behind the HSP90 judgments, with its control | 10 min |
 | [data/rules/RULES_TABLE_V2.md](data/rules/RULES_TABLE_V2.md) | The rules, routed to the analyses they govern, with version 1 alongside | 15 min |
 | [PLAN.md](PLAN.md) | What happens to the rules next | 5 min |
+| [literature/](literature/README.md) | The 63 papers behind the rules review, 46 of them as full-text Markdown, with an index and per-group bundles | reference |
 | [WORKFLOW.md](WORKFLOW.md) | History: the starting idea, the workflow, the tests of 10 and 11 September 2026 | as needed |
 | [data/README.md](data/README.md) | The tables behind every number and how to check them | as needed |
 | [slides/](slides/) | Slides of 10 September 2026 with notes, and the flowcharts ([`slides/Dynamics_Atlas_flowcharts.pptx`](slides/Dynamics_Atlas_flowcharts.pptx)) | as needed |
