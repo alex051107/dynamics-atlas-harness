@@ -1,0 +1,787 @@
+TY  - JOUR
+AU  - Gu, Ken
+AU  - Shang, Ruoxi
+AU  - Jiang, Ruien
+AU  - Kuang, Keying
+AU  - Lin, Richard-John
+AU  - Lyu, Donghe
+AU  - Mao, Yue
+AU  - Pan, Youran
+AU  - Wu, Teng
+AU  - Yu, Jiaqian
+AU  - Zhang, Yikun
+AU  - Zhang, Tianmai M.
+AU  - Zhu, Lanyi
+AU  - Merrill, Mike A.
+AU  - Heer, Jeffrey
+AU  - Althoff, Tim
+TI  - BLADE: Benchmarking Language Model Agents for Data-Driven Science
+PY  - 2024
+DA  - 2024/08/19
+PB  - arXiv
+UR  - https://arxiv.org/abs/2408.09667
+N1  - EMNLP 2024
+ER  -
+
+TY  - CONF
+AU  - Chen, Ziru
+AU  - Chen, Shijie
+AU  - Ning, Yuting
+AU  - Zhang, Qianheng
+AU  - Wang, Boshi
+AU  - Yu, Botao
+AU  - Li, Yifei
+AU  - Liao, Zeyi
+AU  - Wei, Chen
+AU  - Lu, Zitong
+AU  - Dey, Vishal
+AU  - Xue, Mingyi
+AU  - Baker, Frazier N.
+AU  - Burns, Benjamin
+AU  - Adu-Ampratwum, Daniel
+AU  - Huang, Xuhui
+AU  - Ning, Xia
+AU  - Gao, Song
+AU  - Su, Yu
+AU  - Sun, Huan
+TI  - ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery
+PY  - 2025
+DA  - 2024/10/07
+PB  - arXiv
+UR  - https://arxiv.org/abs/2410.05080
+N1  - ICLR 2025
+ER  -
+
+TY  - CONF
+AU  - Majumder, Bodhisattwa Prasad
+AU  - Surana, Harshit
+AU  - Agarwal, Dhruv
+AU  - Mishra, Bhavana Dalvi
+AU  - Meena, Abhijeetsingh
+AU  - Prakhar, Aryan
+AU  - Vora, Tirth
+AU  - Khot, Tushar
+AU  - Sabharwal, Ashish
+AU  - Clark, Peter
+TI  - DiscoveryBench: Towards Data-Driven Discovery with Large Language Models
+PY  - 2025
+DA  - 2024/07/01
+PB  - arXiv
+UR  - https://arxiv.org/abs/2407.01725
+N1  - ICLR 2025
+ER  -
+
+TY  - CONF
+AU  - Jing, Liqiang
+AU  - Huang, Zhehui
+AU  - Wang, Xiaoyang
+AU  - Yao, Wenlin
+AU  - Yu, Wenhao
+AU  - Ma, Kaixin
+AU  - Zhang, Hongming
+AU  - Du, Xinya
+AU  - Yu, Dong
+TI  - DSBench: How Far Are Data Science Agents from Becoming Data Science Experts?
+PY  - 2025
+DA  - 2024/09/12
+PB  - arXiv
+UR  - https://arxiv.org/abs/2409.07703
+N1  - ICLR 2025
+ER  -
+
+TY  - JOUR
+AU  - Mitchener, Ludovico
+AU  - Laurent, Jon M.
+AU  - Andonian, Alex
+AU  - Tenmann, Benjamin
+AU  - Narayanan, Siddharth
+AU  - Wellawatte, Geemi P.
+AU  - White, Andrew
+AU  - Sani, Lorenzo
+AU  - Rodriques, Samuel G.
+TI  - BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology
+PY  - 2025
+DA  - 2025/02/28
+PB  - arXiv
+UR  - https://arxiv.org/abs/2503.00096
+ER  -
+
+TY  - JOUR
+AU  - Cemri, Mert
+AU  - Pan, Melissa Z.
+AU  - Yang, Shuyi
+AU  - Agrawal, Lakshya A.
+AU  - Chopra, Bhavya
+AU  - Tiwari, Rishabh
+AU  - Keutzer, Kurt
+AU  - Parameswaran, Aditya
+AU  - Klein, Dan
+AU  - Ramchandran, Kannan
+AU  - Zaharia, Matei
+AU  - Gonzalez, Joseph E.
+AU  - Stoica, Ion
+TI  - Why Do Multi-Agent LLM Systems Fail?
+PY  - 2025
+DA  - 2025/03/17
+PB  - arXiv
+UR  - https://arxiv.org/abs/2503.13657
+ER  -
+
+TY  - JOUR
+AU  - Zhu, Kunlun
+AU  - Liu, Zijia
+AU  - Li, Bingxuan
+AU  - Tian, Muxin
+AU  - Yang, Yingxuan
+AU  - Zhang, Jiaxun
+AU  - Han, Pengrui
+AU  - Xie, Qipeng
+AU  - Cui, Fuyang
+AU  - Zhang, Weijia
+AU  - Ma, Xiaoteng
+AU  - Yu, Xiaodong
+AU  - Ramesh, Gowtham
+AU  - Wu, Jialian
+AU  - Liu, Zicheng
+AU  - Lu, Pan
+AU  - Zou, James
+AU  - You, Jiaxuan
+TI  - Where LLM Agents Fail and How They can Learn From Failures
+PY  - 2025
+DA  - 2025/09/29
+PB  - arXiv
+UR  - https://arxiv.org/abs/2509.25370
+ER  -
+
+TY  - JOUR
+AU  - Zhang, Dan
+AU  - Zhoubian, Sining
+AU  - Cai, Min
+AU  - Li, Fengzu
+AU  - Yang, Lekang
+AU  - Wang, Wei
+AU  - Dong, Tianjiao
+AU  - Hu, Ziniu
+AU  - Tang, Jie
+AU  - Yue, Yisong
+TI  - DataSciBench: An LLM Agent Benchmark for Data Science
+PY  - 2025
+DA  - 2025/02/19
+PB  - arXiv
+UR  - https://arxiv.org/abs/2502.13897
+ER  -
+
+TY  - CONF
+AU  - Dutta, Avik
+AU  - Gupta, Priyanshu
+AU  - Hasanbeig, Hosein
+AU  - Singh, Rahul Pratap
+AU  - Nigam, Harshit
+AU  - Gulwani, Sumit
+AU  - Radhakrishna, Arjun
+AU  - Soares, Gustavo
+AU  - Tiwari, Ashish
+TI  - ConDABench: Interactive Evaluation of Language Models for Data Analysis
+PY  - 2025
+DA  - 2025/10/10
+PB  - arXiv
+UR  - https://arxiv.org/abs/2510.13835
+DO  - 10.1145/3788853.3803099
+N1  - Companion of the International Conference on Management of Data
+ER  -
+
+TY  - CONF
+AU  - Acharya, Sawal
+AU  - Zhang, Terry J.
+AU  - Kim, Andrew
+AU  - Shrestha, Rahul B.
+AU  - Sun, Xianlin
+AU  - Cobben, Pepijn
+AU  - Mordig, Maximilian
+AU  - Emmerson, Jacob
+AU  - Haghighat, Anahita
+AU  - Danisman, Furkan
+AU  - Chen, Yuen
+AU  - Jose, Clijo
+AU  - Muresanu, Andrei
+AU  - Cui, Justin
+AU  - Liu, Jiarui
+AU  - Qi, Yahang
+AU  - Pandey, Punya
+AU  - Huang, Yinya
+AU  - Scholkopf, Bernhard
+AU  - Jin, Zhijing
+TI  - CauSciBench: Assessing LLM Causal Reasoning for Scientific Research
+PY  - 2025
+PB  - NeurIPS 2025 Workshop on CauScien
+UR  - https://openreview.net/forum?id=EO8mTLqDuT
+N1  - Also presented as ICML 2026 poster 60944; OpenReview PDF not directly opened this session
+ER  -
+
+TY  - JOUR
+AU  - Thaman, Kunvar
+TI  - Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use
+PY  - 2026
+DA  - 2026/05/03
+PB  - arXiv
+UR  - https://arxiv.org/abs/2605.02964
+N1  - ICML 2026
+ER  -
+
+TY  - JOUR
+AU  - Horstmann, Kai A.
+TI  - A case study of evaluating AI agents on a neuroscience data-to-discovery pipeline
+PY  - 2026
+DA  - 2026/06/05
+PB  - arXiv
+UR  - https://arxiv.org/abs/2606.07718
+ER  -
+
+TY  - JOUR
+AU  - Fei, Yanlin
+AU  - Liu, Nazhou
+AU  - Yu, Xinmiao
+AU  - Chen, Shaolong
+AU  - Li, Lei
+AU  - Thapa, Rahul
+AU  - Ciobanu, Madalina
+AU  - Singh, Navan Preet
+AU  - Mao, Qingqing
+AU  - Das, Ritankar
+TI  - How Do Agents Fail on AutoResearch: End-to-End Diagnostic Evaluation on 100 Real-World Frontier Research Tasks
+PY  - 2026
+DA  - 2026/08/14
+PB  - arXiv
+UR  - https://arxiv.org/abs/2608.14905
+ER  -
+
+TY  - JOUR
+AU  - Albayaydh, Wael
+AU  - Zhao, Rui
+AU  - Flechais, Ivan
+TI  - Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents
+PY  - 2026
+DA  - 2026/07/07
+PB  - arXiv
+UR  - https://arxiv.org/abs/2607.05775
+ER  -
+
+TY  - JOUR
+AU  - Sun, Zhaoyan
+AU  - Zhong, Shan
+AU  - Wen, Daizhou
+AU  - Han, Jiaxing
+AU  - Li, Guoliang
+AU  - Yan, Ying
+AU  - Zhang, Peng
+AU  - Su, Yu
+AU  - Qi, Xiang
+AU  - Sun, Baolin
+AU  - Yang, Chengyuan
+AU  - Fang, Tao
+AU  - Ruan, Huaiyu
+TI  - AgenticDataBench: A Comprehensive Benchmark for Data Agents
+PY  - 2026
+DA  - 2026/07/02
+PB  - arXiv
+UR  - https://arxiv.org/abs/2607.01647
+ER  -
+
+TY  - JOUR
+AU  - Leban, Andrej
+AU  - Sun, Yuekai
+TI  - CausalDS: Benchmarking Causal Reasoning in Data-Science Agents
+PY  - 2026
+DA  - 2026/07/09
+PB  - arXiv
+UR  - https://arxiv.org/abs/2607.08093
+ER  -
+
+TY  - JOUR
+AU  - Li, Zongrng
+AU  - Yang, Mingzheng
+AU  - Zou, Lei
+AU  - Ma, Hongxu
+AU  - Tian, Hao
+AU  - Zhou, Siqi
+AU  - Gong, Wenjing
+AU  - Zhang, Kaili
+AU  - Chen, Bingqian
+AU  - Zhang, Mitch
+AU  - Yang, Yifan
+TI  - GIScholarBench: Benchmarking LLM Overconfidence in GIS Research
+PY  - 2026
+DA  - 2026/06/06
+PB  - arXiv
+UR  - https://arxiv.org/abs/2606.08036
+ER  -
+
+TY  - JOUR
+AU  - Liu, Yang
+AU  - Zhou, Lu
+AU  - Du, Xiawei
+AU  - He, Ruikun
+AU  - Zhang, Xuguang
+AU  - Shen, Rongbo
+AU  - Li, Yixue
+TI  - Benchmarking LLM-based agents for single-cell omics analysis
+PY  - 2025
+DA  - 2025/08/16
+PB  - arXiv
+UR  - https://arxiv.org/abs/2508.13201
+N1  - Reported by search results as also appearing in Genome Biology; not independently verified this session
+ER  -
+
+TY  - JOUR
+AU  - Sun, Lin
+AU  - Lin, Weihong
+AU  - Wu, Jinzhu
+AU  - Zhu, Yongfu
+AU  - Jian, Xiaoqi
+AU  - Zhao, Guangxiang
+AU  - Jia, Change
+AU  - Zhang, Linglin
+AU  - Hu, Sai-er
+AU  - Wu, Yuhan
+AU  - Zhang, Xiangzheng
+TI  - Evaluation is All You Need: Strategic Overclaiming of LLM Reasoning Capabilities Through Evaluation Design
+PY  - 2025
+DA  - 2025/06/05
+PB  - arXiv
+UR  - https://arxiv.org/abs/2506.04734
+ER  -
+
+TY  - JOUR
+AU  - Campbell, Quintina
+AU  - Cox, Sam
+AU  - Medina, Jorge
+AU  - Watterson, Brittany
+AU  - White, Andrew D.
+TI  - MDCrow: Automating Molecular Dynamics Workflows with Large Language Models
+PY  - 2025
+DA  - 2025/02/13
+JO  - Machine Learning: Science and Technology
+DO  - 10.1088/2632-2153/ae4b07
+UR  - https://arxiv.org/abs/2502.09565
+ER  -
+
+TY  - JOUR
+AU  - Kumar, Vinay
+AU  - Rajput, Satyendra
+AU  - Mausam
+AU  - Krishnan, N. M. Anoop
+TI  - MDGYM: Benchmarking AI Agents on Molecular Simulations
+PY  - 2026
+DA  - 2026/05/09
+JO  - arXiv preprint arXiv:2605.08941
+UR  - https://arxiv.org/abs/2605.08941
+ER  -
+
+TY  - JOUR
+AU  - Anand, Nithishwer Mouroug
+AU  - Hsu, Wei-Tse
+AU  - Biggin, Philip C.
+TI  - MDArena: Evaluating Coding Agents on Realistic Molecular Dynamics Workflows
+PY  - 2026
+DA  - 2026/07/31
+JO  - arXiv preprint arXiv:2608.02642
+UR  - https://arxiv.org/abs/2608.02642
+ER  -
+
+TY  - JOUR
+AU  - Bhakat, Soumendranath
+TI  - Benchmarking generative AI and physics based molecular simulation for sampling conformational heterogeneity in T4 Lysozyme
+PY  - 2026
+DA  - 2026/05/13
+JO  - bioRxiv
+DO  - 10.64898/2026.05.10.724101
+UR  - https://www.biorxiv.org/content/10.64898/2026.05.10.724101v1
+ER  -
+
+TY  - JOUR
+AU  - Xu, Yaxin
+AU  - Zhou, Yue
+AU  - Zhao, Tianyu
+AU  - An, Fengwei
+AU  - Ren, Zhixiang
+TI  - The limits of bio-molecular modeling with large language models: a cross-scale evaluation
+PY  - 2026
+DA  - 2026/04/03
+JO  - arXiv preprint arXiv:2604.03361
+UR  - https://arxiv.org/abs/2604.03361
+ER  -
+
+TY  - JOUR
+AU  - Guilbert, Salome
+AU  - Masschelein, Cassandra
+AU  - Goumaz, Jeremy
+AU  - Naida, Bohdan
+AU  - Schwaller, Philippe
+TI  - DynaMate: An Autonomous Agent for Protein-Ligand Molecular Dynamics Simulations
+PY  - 2025
+DA  - 2025/12/10
+JO  - arXiv preprint arXiv:2512.10034
+UR  - https://arxiv.org/abs/2512.10034
+ER  -
+
+TY  - JOUR
+AU  - Wang, Zehong
+AU  - Ma, Yijun
+AU  - Schmidt, Connor R.
+AU  - Ma, Tianyi
+AU  - Sun, Weixiang
+AU  - Li, Ziming
+AU  - Guo, Xiaoguang
+AU  - Zhang, Chuxu
+AU  - Webber, Matthew J.
+AU  - Ye, Yanfang
+TI  - MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback
+PY  - 2026
+DA  - 2026/06/11
+JO  - arXiv preprint arXiv:2606.12916
+UR  - https://arxiv.org/abs/2606.12916
+ER  -
+
+TY  - JOUR
+AU  - Chandrasekhar, Achuth
+AU  - Barati Farimani, Amir
+TI  - NAMD-Agent: Automating MD simulations for Proteins using Large Language Models
+PY  - 2025
+DA  - 2025/07/10
+JO  - arXiv preprint arXiv:2507.07887
+UR  - https://arxiv.org/abs/2507.07887
+ER  -
+
+TY  - JOUR
+AU  - Petkovic, Marko
+AU  - Menkovski, Vlado
+AU  - Calero, Sofia
+TI  - Towards Fully Automated Molecular Simulations: Multi-Agent Framework for Simulation Setup and Force Field Extraction
+PY  - 2025
+DA  - 2025/09/12
+JO  - arXiv preprint arXiv:2509.10210
+UR  - https://arxiv.org/abs/2509.10210
+ER  -
+
+TY  - JOUR
+AU  - Park, Yutack
+AU  - Chung, Yeonwoo
+AU  - You, Jinmu
+AU  - Kim, Jisu
+AU  - Ju, Suyeon
+AU  - Han, Seungwu
+TI  - A Robust Agentic Framework for Expert-Level Automation of Atomistic Simulations
+PY  - 2026
+DA  - 2026/06/08
+JO  - arXiv preprint arXiv:2606.09422
+UR  - https://arxiv.org/abs/2606.09422
+ER  -
+
+TY  - JOUR
+AU  - Mitchener, Ludovico
+AU  - Laurent, Jon M.
+AU  - Andonian, Alex
+AU  - Tenmann, Benjamin
+AU  - Narayanan, Siddharth
+AU  - Wellawatte, Geemi P.
+AU  - White, Andrew
+AU  - Sani, Lorenzo
+AU  - Rodriques, Samuel G.
+TI  - BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology
+PY  - 2025
+DA  - 2025/02/28
+JO  - arXiv preprint arXiv:2503.00096
+UR  - https://arxiv.org/abs/2503.00096
+ER  -
+
+TY  - JOUR
+AU  - Zou, Yunheng
+AU  - Cheng, Austin H.
+AU  - Aldossary, Abdulrahman
+AU  - Bai, Jiaru
+AU  - Leong, Shi Xuan
+AU  - Campos-Gonzalez-Angulo, Jorge Arturo
+AU  - Choi, Changhyeok
+AU  - Ser, Cher Tian
+AU  - Tom, Gary
+AU  - Wang, Andrew
+AU  - Zhang, Zijian
+AU  - Yakavets, Ilya
+AU  - Hao, Han
+AU  - Crebolder, Chris
+AU  - Bernales, Varinia
+AU  - Aspuru-Guzik, Alan
+TI  - El Agente: An Autonomous Agent for Quantum Chemistry
+PY  - 2025
+DA  - 2025/05/05
+JO  - Matter
+DO  - 10.1016/j.matt.2025.102399
+UR  - https://arxiv.org/abs/2505.02484
+ER  -
+
+TY  - JOUR
+AU  - Mohammadzadeh, Saeed
+AU  - Hamdi, Erfan
+AU  - Shor, Joel
+AU  - Lejeune, Emma
+TI  - FEM-Bench: A Structured Scientific Reasoning Benchmark for Evaluating Code-Generating LLMs
+PY  - 2025
+DA  - 2025/12/01
+JO  - arXiv preprint arXiv:2512.20732
+UR  - https://arxiv.org/abs/2512.20732
+ER  -
+
+TY  - JOUR
+AU  - Rawat, Shivam
+AU  - Flek, Lucie
+TI  - Plausible but Wrong: A case study on Agentic Failures in Astrophysical Workflows
+PY  - 2026
+DA  - 2026/04/28
+JO  - arXiv preprint arXiv:2604.25345
+UR  - https://arxiv.org/abs/2604.25345
+ER  -
+
+TY  - JOUR
+AU  - Eulig, Steven Young
+TI  - Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend General Claims Their Own Data Contradicts
+PY  - 2026
+DA  - 2026/06/22
+JO  - arXiv preprint arXiv:2606.23175
+UR  - https://arxiv.org/abs/2606.23175
+ER  -
+
+TY  - JOUR
+AU  - Bran, Andres M.
+AU  - Cox, Sam
+AU  - Schilter, Oliver
+AU  - Baldassari, Carlo
+AU  - White, Andrew D.
+AU  - Schwaller, Philippe
+TI  - Augmenting large-language models with chemistry tools
+PY  - 2024
+JO  - Nature Machine Intelligence
+DO  - 10.1038/s42256-024-00832-8
+UR  - https://arxiv.org/abs/2304.05376
+ER  -
+
+TY  - JOUR
+AU  - Boiko, Daniil A.
+AU  - MacKnight, Robert
+AU  - Kline, Ben
+AU  - Gomes, Gabe
+TI  - Autonomous chemical research with large language models
+PY  - 2023
+JO  - Nature
+VL  - 624
+SP  - 570
+EP  - 578
+DO  - 10.1038/s41586-023-06792-0
+UR  - https://www.nature.com/articles/s41586-023-06792-0
+ER  -
+
+TY  - JOUR
+AU  - Braun, Efrem
+AU  - Gilmer, Justin
+AU  - Mayes, Heather B.
+AU  - Mobley, David L.
+AU  - Monroe, Jacob I.
+AU  - Prasad, Samarjeet
+AU  - Zuckerman, Daniel M.
+PY  - 2019
+TI  - Best Practices for Foundations in Molecular Simulations [Article v1.0]
+JO  - Living Journal of Computational Molecular Science
+VL  - 1
+IS  - 1
+SP  - 5957
+DO  - 10.33011/livecoms.1.1.5957
+ER  -
+
+TY  - JOUR
+AU  - ,
+PY  - 2023
+TI  - Reliability and reproducibility checklist for molecular dynamics simulations
+JO  - Communications Biology
+VL  - 6
+SP  - 268
+DO  - 10.1038/s42003-023-04653-0
+ER  -
+
+TY  - JOUR
+AU  - Song, Jianhui
+AU  - Li, Jichen
+AU  - Chan, Hue Sun
+PY  - 2021
+TI  - Small-Angle X-ray Scattering Signatures of Conformational Heterogeneity and Homogeneity of Disordered Protein Ensembles
+JO  - Journal of Physical Chemistry B
+VL  - 125
+IS  - 24
+SP  - 6451
+EP  - 6478
+DO  - 10.1021/acs.jpcb.1c02453
+ER  -
+
+TY  - JOUR
+AU  - Shevchuk, Roman
+AU  - Hub, Jochen S.
+PY  - 2017
+TI  - Bayesian refinement of protein structures and ensembles against SAXS data using molecular dynamics
+JO  - PLOS Computational Biology
+VL  - 13
+IS  - 10
+SP  - e1005800
+DO  - 10.1371/journal.pcbi.1005800
+ER  -
+
+TY  - JOUR
+AU  - Singh, Bhumika
+AU  - Martinez-Noa, Yenny
+AU  - Perez, Alberto
+PY  - 2026
+TI  - How Well Do Molecular Dynamics Force Fields Model Peptides? A Systematic Benchmark Across Diverse Folding Behaviors
+JO  - Journal of Physical Chemistry B
+VL  - 130
+IS  - 16
+SP  - 4344
+EP  - 4357
+DO  - 10.1021/acs.jpcb.6c01176
+ER  -
+
+TY  - JOUR
+AU  - Falkner, Beata
+AU  - Schroder, Gunnar F.
+PY  - 2013
+TI  - Cross-validation in cryo-EM-based structural modeling
+JO  - Proceedings of the National Academy of Sciences
+VL  - 110
+IS  - 22
+SP  - 8930
+EP  - 8935
+DO  - 10.1073/pnas.1119041110
+ER  -
+
+TY  - JOUR
+AU  - Wlodarski, Tomasz
+AU  - Streit, Judith Ottilie
+AU  - Mitropoulou, Anastasia
+AU  - Cabrita, Lisa D.
+AU  - Vendruscolo, Michele
+AU  - Christodoulou, John
+PY  - 2024
+TI  - Bayesian reweighting of biomolecular structural ensembles using heterogeneous cryo-EM maps with the cryoENsemble method
+JO  - Scientific Reports
+DO  - 10.1038/s41598-024-68468-7
+ER  -
+
+TY  - CPAPER
+AU  - Hoff, Sarah E.
+AU  - Bonomi, Massimiliano
+AU  - Fraser, James S.
+AU  - Greene, Eric M.
+PY  - 2024
+TI  - Extracting conformational heterogeneity from 2D and 3D cryo-EM data
+JO  - Biophysical Journal
+VL  - 123
+IS  - 3
+SP  - 50a
+EP  - 51a
+ER  -
+
+TY  - JOUR
+AU  - Cheng, Yifan
+PY  - 2026
+TI  - Making sense of invisible densities in single-particle cryo-EM
+JO  - IUCrJ
+VL  - 13
+IS  - 3
+ER  -
+
+TY  - JOUR
+AU  - Lerner, Eitan
+AU  - Barth, Anders
+AU  - Hendrix, Jelle
+AU  - Ambrose, Benjamin
+AU  - Birkedal, Victoria
+AU  - Blanchard, Scott C.
+PY  - 2021
+TI  - FRET-based dynamic structural biology: challenges, perspectives and an appeal for open-science practices
+JO  - eLife
+VL  - 10
+SP  - e60416
+DO  - 10.7554/eLife.60416
+ER  -
+
+TY  - JOUR
+AU  - Agam, Ganesh
+AU  - Gebhardt, Christian
+AU  - Popara, Milana
+PY  - 2023
+TI  - Reliability and accuracy of single-molecule FRET studies for characterization of structural dynamics and distances in proteins
+JO  - Nature Methods
+VL  - 20
+SP  - 523
+EP  - 535
+DO  - 10.1038/s41592-023-01807-0
+ER  -
+
+TY  - JOUR
+AU  - Smith, Lorna J.
+AU  - van Gunsteren, Wilfred F.
+AU  - Hansen, Niels
+PY  - 2021
+TI  - On the Use of Side-Chain NMR Relaxation Data to Derive Structural and Dynamical Information on Proteins: A Case Study Using Hen Lysozyme
+JO  - ChemBioChem
+VL  - 22
+IS  - 6
+SP  - 1049
+EP  - 1064
+DO  - 10.1002/cbic.202000674
+ER  -
+
+TY  - JOUR
+AU  - Erman, Burak
+PY  - 2024
+TI  - Dynamically driven correlations in elastic net models reveal sequence of events and causality in proteins
+JO  - Proteins
+VL  - 92
+IS  - 9
+SP  - 1113
+EP  - 1126
+DO  - 10.1002/prot.26697
+ER  -
+
+TY  - JOUR
+AU  - Sharma, Mrinank
+AU  - Tong, Meg
+AU  - Korbak, Tomasz
+AU  - Duvenaud, David
+AU  - Askell, Amanda
+AU  - Bowman, Samuel R.
+PY  - 2023
+TI  - Towards Understanding Sycophancy in Language Models
+JO  - arXiv:2310.13548
+ER  -
+
+TY  - JOUR
+AU  - Chhikara, Prateek
+PY  - 2025
+TI  - Mind the Confidence Gap: Overconfidence, Calibration, and Distractor Effects in Large Language Models
+JO  - Transactions on Machine Learning Research
+ER  -
+
+TY  - JOUR
+AU  - Javaji, Shashidhar Reddy
+AU  - Cao, Yupeng
+AU  - Li, Haohang
+AU  - Yu, Yangyang
+AU  - Muralidhar, Nikhil
+AU  - Zhu, Zining
+PY  - 2025
+TI  - Can AI Validate Science? Benchmarking LLMs for Accurate Scientific Claim to Evidence Reasoning
+JO  - arXiv:2506.08235
+ER  -
+
+TY  - JOUR
+PY  - 2025
+TI  - Large Language Models Hallucination: A Comprehensive Survey
+JO  - arXiv:2510.06265
+ER  -

@@ -80,3 +80,7 @@ Bundles: `bundles/group_<G>.md` concatenates every paper of a group (for upload 
 | F | Rauscher et al. (2015). Structural Ensembles of Intrinsically Disordered Proteins Depend Strongly on Force Field: A Comparison to Experiment. Journal of Chemical Theory and Computation. | 10.1021/acs.jctc.5b00736 | DOWNLOADED | papers/Rauscher2015_Structural-Ensembles-of-Intrinsically-Disorde.md |
 | F | Schneidman-Duhovny et al. (2014). Uncertainty in integrative structural modeling. Current Opinion in Structural Biology. | 10.1016/j.sbi.2014.08.001 | DOWNLOADED | papers/Schneidman-Duhovny2014_Uncertainty-in-integrative-structural-modelin.md |
 | F | Piana et al. (2011). How Robust Are Protein Folding Simulations with Respect to Force Field Parameterization?. Biophysical Journal. | 10.1016/j.bpj.2011.03.051 | DOWNLOADED | papers/Piana2011_How-Robust-Are-Protein-Folding-Simulations-wi.md |
+
+## ai_failure_modes_20260911/
+
+Three literature searches run on 11 September 2026 on what AI agents get wrong in scientific data analysis, in molecular simulation, and in reading ensemble data (53 papers, 2013 to 2026), a Chinese synthesis, and one RIS file for import. Single pass, unreviewed; about a quarter of the entries were read from abstracts only, marked in each report.
