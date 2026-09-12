@@ -139,7 +139,15 @@ Two versions, both kept.
 - **Version 1 (7 August 2026).** [`RULES_TABLE.md`](rules/RULES_TABLE.md) is the readable table of the 33 rules; `rule_registry_v0.1.csv` is the original, 33 rows × 20 columns. The file uses commas even though earlier copies were named `.tsv`. Key columns: `paper_finding` (what the paper showed), `proposed_project_rule` and `required_fields` (what we ask to be checked), `abstain_route` (where to stop), `transfer_scope` (how far it carries).
 - **Version 2 (11 September 2026).** [`RULES_TABLE_V2.md`](rules/RULES_TABLE_V2.md) is the readable table with the comparison to version 1; `rules_v2.csv` has one row per rule (42). Columns: `question` (the question the rule helps answer), `layer`, `applies_when`, `acts_through` (the operator or check), `must_hold`, `claim_limit`, `stop`, `source`, `finding`, `status` (what has happened to the rule as of 11 September 2026), `evidence` (the file that shows it), `v1_use` (the group in version 1, empty for new rules).
 
+- **Candidates from the literature (11 September 2026).** [`candidates/RULES_CANDIDATES_V3_20260911.md`](rules/candidates/RULES_CANDIDATES_V3_20260911.md) holds 58 candidate rules written in the version 2 columns from 200 relations extracted from 47 methods papers, grouped by the decision the analyst is making (framing, admission, definition, sampling, processing, comparison, artifact, claim, conflict, role). `rules_candidates_v3.csv` is the same table; `relation_to_rule_map.json` records what happened to each of the 295 extracted relations. [`candidates/HARNESS_RULES_CANDIDATES_20260911.md`](rules/candidates/HARNESS_RULES_CANDIDATES_20260911.md) holds 12 rules about the AI harness itself, from 16 AI-agent papers. Every row is a single-pass model extraction with status `candidate`; none has been reviewed, and none has yet been shown to prevent a catalogued failure.
+
 Check: `rules_v2.csv` has 42 rows; 13 rows with a `C` rule ID sit outside the group "Rules with no case in this project", and 20 inside it.
+
+---
+
+## literature_relations/
+
+`RELATION_EXTRACTION_20260911.md` and `.json`: 295 relations of the form "under condition C, evidence E supports (or cannot distinguish) X", extracted from 63 papers on 11 September 2026 by a model in a single pass, with counts by kind and by paper group. Source material for the candidate rules; not reviewed.
 
 ---
 

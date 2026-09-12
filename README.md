@@ -28,10 +28,11 @@ Given a protein-dynamics dataset (MD trajectories, plus NMR, SAXS or FRET where 
 | Rules given to the AI as text | No stable gain; one harm, when a FRET rule was applied to an NMR question | 10 September 2026 |
 | Rules built into fixed analysis steps | The AI's numbers became checkable: 6 of 7 known numerical errors caught, against none with the earlier check | 11 September 2026 |
 | The definitions inside those steps, and the HSP90 trust table | Two definitions failed a basic control; they are listed with the open questions in [DEFINITIONS.md](DEFINITIONS.md). Two of six trust-table rows usable | 11 September 2026 |
-| Rules Table | Version 1 (33 rules) and version 2 (the same rules routed to the analyses they govern, plus 9 new ones) are both in [data/rules/](data/rules/RULES_TABLE_V2.md) | 7 August 2026 (version 1); 11 September 2026 (version 2) |
+| Rules Table | Version 1 (33 rules) and version 2 (the same rules routed to the analyses they govern, plus 9 new ones) are both in [data/rules/](data/rules/RULES_TABLE_V2.md); 58 unreviewed candidates from the literature, grouped by decision point, in [data/rules/candidates/](data/rules/candidates/RULES_CANDIDATES_V3_20260911.md) | 7 August 2026 (version 1); 11 September 2026 (version 2 and candidates) |
 
 ## Change log
 
+- **11 September 2026 (evening).** 295 relations extracted from 63 papers and rewritten as 58 candidate rules grouped by decision point, plus 12 harness rules from the AI-agent literature; all unreviewed. Literature index in [data/rules/candidates/](data/rules/candidates/) and [data/literature_relations/](data/literature_relations/).
 - **11 September 2026.** Rules built into fixed analysis steps; the AI's numbers became checkable, with 6 of 7 known errors caught. Two definitions failed a control. Rules Table version 2. DEFINITIONS.md and PLAN.md added.
 - **10 September 2026.** Four tests of the rules as text, cards, a warning file and a post-answer check; no stable gain.
 - **7 August 2026.** Rules Table version 1, 33 rules.
