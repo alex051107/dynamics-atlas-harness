@@ -4,18 +4,18 @@
   "files": [
     {
       "path": "PROMPT_ZH.md",
-      "bytes": 5342,
-      "sha256": "8aed73f816a82a69cabeb154238e8f074bcbd6837a1054606adfc3044be773ba"
+      "bytes": 5775,
+      "sha256": "e51785c3dbcabaf65371b1ab746ea56fe26f7d380f0ea3b266e1d768121bc968"
     },
     {
       "path": "PUBLICATION_SCOPE.md",
-      "bytes": 1168,
-      "sha256": "4a6878809b0a5035e1ce5d8a3c2000c5f9f1d4685e94726ecf5f5fa7bedbff9b"
+      "bytes": 1496,
+      "sha256": "a9958228ce8af46df3056337883d3a26a3c29ae99cf2daffe35e036c348a4026"
     },
     {
       "path": "README.md",
-      "bytes": 4131,
-      "sha256": "57ce00374200c14229d87c79334d6e2bdd2b31dc52d0a0f635ef5e3acd415841"
+      "bytes": 4743,
+      "sha256": "f92503faffd61d615a20208a788551c78abcb9accaf2e7585e21d393c7bd3829"
     },
     {
       "path": "RIGHTS_AND_PROVENANCE.md",
@@ -24,18 +24,28 @@
     },
     {
       "path": "SOURCE_STATUS.md",
-      "bytes": 5115,
-      "sha256": "1339e65bbe285c106042b5b89bba4f6c5238dc15fe01e65fdf019228b50c83b2"
+      "bytes": 5384,
+      "sha256": "e4015e96580fc2f67e0cdcb5650dab9fa04293d37c0d7a765e5625a1d4f7ba17"
     },
     {
       "path": "documents/ARCHITECTURE_EARLIER_DRAFT_ZH.md",
       "bytes": 19306,
-      "sha256": "bd1da6d2b2404f45d0efdad4e77cec06dda3f60bca35cf4ad1bbd2b436f9a850"
+      "sha256": "7c2f786d6b38f54b983832daa41b90aa0d6eecc8e3cf967db70b296f9c541ce7"
+    },
+    {
+      "path": "documents/CASE_CARDS_ZH.md",
+      "bytes": 8593,
+      "sha256": "2edfc9075a2e8a5695817e55f02a73432abe2f6de0df766d6dc264264b987647"
     },
     {
       "path": "documents/PLAN_ZH.md",
-      "bytes": 25392,
-      "sha256": "afa11c194a55eb56902c1dd382225a78d6090b2472e46038f0774a03964e5a9c"
+      "bytes": 32217,
+      "sha256": "64bad361dbfcdf0b57b8eb0f50d47c1f9cdd946d672d2d00eae7c7d1ed035dc4"
+    },
+    {
+      "path": "documents/REVIEW_RESOLUTION_ZH.md",
+      "bytes": 4955,
+      "sha256": "b17839e0f48dfbaeb1b49e31f2b846684b7e562310e3d74cdd2aad6b2b673a34"
     },
     {
       "path": "history/FOUR_LAYER_REPORT_ZH.md",
@@ -77,5 +87,18 @@
       "bytes": 181579,
       "sha256": "66dd8ab49b71d8ed1d08383070fa9e67d342d9380250e85d877a6a9c2909444a"
     }
-  ]
+  ],
+  "updated_at": "2026-09-22T12:55:08.144555+00:00",
+  "plan_version": "v1.0",
+  "hash_update_scope": [
+    "PROMPT_ZH.md",
+    "PUBLICATION_SCOPE.md",
+    "README.md",
+    "SOURCE_STATUS.md",
+    "documents/ARCHITECTURE_EARLIER_DRAFT_ZH.md",
+    "documents/CASE_CARDS_ZH.md",
+    "documents/PLAN_ZH.md",
+    "documents/REVIEW_RESOLUTION_ZH.md"
+  ],
+  "unchanged_hashes_reused": 9
 }

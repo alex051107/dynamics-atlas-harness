@@ -11,3 +11,5 @@ Included: the review prompt, plan, earlier architecture draft, meeting notes and
 Excluded: raw audio, credentials, account configuration, local absolute paths, unrelated personal material, raw scientific datasets, new model runs and production-code changes. No PR merge or automatic submission to a ChatGPT conversation is authorized by this publication step.
 
 The original repository's no-upload defaults are superseded only for the review materials explicitly requested here. Scientific execution and validation gates remain unchanged.
+
+On 2026-09-22 the user explicitly requested self-review and discussion among several subagents, then a clear stable plan with minimal further changes. This revision synchronizes that review outcome, the clarified plan and case cards within the same already-authorized review packet; it adds no scientific runs or code changes.

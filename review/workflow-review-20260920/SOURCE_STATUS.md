@@ -1,6 +1,6 @@
 # Source acquisition and review status
 
-Status at packet preparation, 2026-09-20. Acquisition, text extraction, scientific reading, reanalysis and validation are separate states.
+Status at revision, 2026-09-22. Acquisition, text extraction, scientific reading, reanalysis and validation are separate states.
 
 ## Five user-supplied papers
 
@@ -11,6 +11,8 @@ Status at packet preparation, 2026-09-20. Acquisition, text extraction, scientif
 | KRAS2023 | Hansen et al., Excited-state observation of active K-Ras reveals differential structural dynamics of wild-type versus oncogenic G12D and G12C mutants. [DOI 10.1038/s41594-023-01070-z](https://www.nature.com/articles/s41594-023-01070-z) | [Original PDF](papers/pdf/KRAS2023.pdf), [page-marked text](papers/text/KRAS2023.md) | SI/source-data package not included; no completed deep read, workflow reconstruction or reanalysis |
 | RFAH2012 | Burmann et al., An α-helix to β-barrel domain switch transforms the transcription factor RfaH into a translation factor. [PMID 22817892](https://pubmed.ncbi.nlm.nih.gov/22817892/) · [DOI 10.1016/j.cell.2012.05.042](https://doi.org/10.1016/j.cell.2012.05.042) | Source links | Main/SI PDF requests returned non-PDF responses; no completed deep read or reanalysis |
 | RFAH2025 | Cai et al., Unraveling structural transitions and kinetics along the fold-switching pathway of the RfaH C-terminal domain using exchange-based NMR. [DOI 10.1073/pnas.2506441122](https://www.pnas.org/doi/10.1073/pnas.2506441122) · [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12107155/) | Source links | Main/SI PDF requests returned non-PDF responses; no completed deep read or reanalysis |
+
+K-Ras Fig.3, Table 2 and Data availability were checked in bounded excerpts for the execution card. The paper lists https://doi.org/10.5061/dryad.j6q573nm0 as a data entry; this does not mean its files have been downloaded or validated. No new numerical analysis was performed.
 
 The initial references were forwarded by the user from Soojung. They are development sources already exposed to the planning assistant, not held-out evaluation material.
 
