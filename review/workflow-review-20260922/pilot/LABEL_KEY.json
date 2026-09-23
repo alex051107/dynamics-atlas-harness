@@ -1,0 +1,29 @@
+{
+  "seed": 20260922,
+  "papers": {
+    "XIE20": {
+      "E1": "XIE20_CTRL_R2",
+      "E2": "XIE20_FLOW_R2",
+      "E3": "XIE20_CTRL_R1",
+      "E4": "XIE20_FLOW_R1"
+    },
+    "STILLER22": {
+      "E1": "STILLER22_CTRL_R2",
+      "E2": "STILLER22_FLOW_R2",
+      "E3": "STILLER22_FLOW_R1",
+      "E4": "STILLER22_CTRL_R1"
+    },
+    "PONT15": {
+      "E1": "PONT15_FLOW_R2",
+      "E2": "PONT15_CTRL_R2",
+      "E3": "PONT15_FLOW_R1",
+      "E4": "PONT15_CTRL_R1"
+    },
+    "WHIT13": {
+      "E1": "WHIT13_CTRL_R2",
+      "E2": "WHIT13_CTRL_R1",
+      "E3": "WHIT13_FLOW_R1",
+      "E4": "WHIT13_FLOW_R2"
+    }
+  }
+}

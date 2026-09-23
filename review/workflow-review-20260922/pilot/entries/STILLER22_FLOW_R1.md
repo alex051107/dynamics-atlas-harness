@@ -1,0 +1,29 @@
+1. **Protein** — Adenylate kinase (Adk), *Geobacillus stearothermophilus* (syn. *Bacillus stearothermophilus* in older literature). UniProt: not stated [paper].
+
+2. **Construct and conditions** — Full-length wild type; uses Adk's native tetra-Cys ATP-lid site with diamagnetic Zn2+ or paramagnetic Co2+ (similar ionic radii, structurally/enzymatically equivalent) [paper, Methods]. Buffer: 2 mM protein, 50 mM MOPS, 2 mM TCEP, pH 7.0. Three conditions: turnover (20 mM MgCl2 + 20 mM ADP), ADP-only (20 mM ADP, no Mg2+), apo (no nucleotide) [paper, §"PCS–CPMG of Adk"; Ext. Data Figs. 2–4]. Assignment 40 °C; PCS/CPMG 25 °C; 600 MHz [paper, Methods].
+
+3. **Apo relative to** — ADP, Adk's substrate/product (reaction ATP + AMP ⇌ 2 ADP) [inference, from conditions compared].
+
+4. **Verdict** — Not included: the solved state was measured at saturating Mg2+-ADP and is stated to necessarily be occupied by substrate or product; the only ligand-free (apo) data are steady-state shift observations, with no exchange fit, rate, population or structure [paper, §"PCS–CPMG of Adk"; Ext. Data Fig. 2c].
+
+5. **Major state** — Under Mg2+-ADP turnover, PCS approximate the closed, catalytically competent conformation (Q = 11.6% fit to PDB 4QBH); under ADP alone (slow exchange) fit improves (Q = 7.6%) [paper, Fig. 1d,e; Ext. Data Fig. 2a,b]. 4QBH is Ap5A-bound, a thermostabilized variant ("AKlse5"), 1.67 Å [our reading of the paper's data, PDB 4QBH].
+
+6. **Alternative state(s)** — Partially open "high-energy" state, population 12.6 ± 2.5%, newly solved: AMP lid opens ~15° (~50% of closed→open range); ATP-lid metal shifts only ~1.8 Å; closer to closed (r.m.s.d. 2.67 Å) than to open (r.m.s.d. 7.03 Å; ref. PDB 4AKE) [paper, Fig. 3c,d]. 4AKE is apo *E. coli* Adk, 2.2 Å — different species from the protein studied [our reading of the paper's data, PDB 4AKE]. No PDB code deposited [paper, Data availability].
+
+7. **Evidence type** — Amide 1HN CPMG relaxation dispersion combined with pseudocontact shifts (PCS) from a paramagnetic Co2+ probe vs. diamagnetic Zn2+ control ("PCS–CPMG") [paper, §"PCS–CPMG of Adk"; Methods].
+
+8. **Exchange parameters** — Global two-state (Carver–Richards) fit under Mg2+-ADP, Zn2+ and Co2+ samples combined (individual fits equivalent): kex = 1,428 ± 83 s⁻¹, pB = 12.6 ± 2.5%, kopen = 180 ± 36 s⁻¹; without Mg2+, kopen = 2.6 ± 0.3 s⁻¹ [paper, §"PCS–CPMG of Adk"; Ext. Data Fig. 3]. Dispersion is largest in the AMP lid/core but smaller than expected from open/closed or apo-vs-bound differences (>0.1 ppm at many residues); no single Δδ range given [paper, §"PCS–CPMG of Adk"; Ext. Data Fig. 4b,g].
+
+9. **Residues or regions** — 103/186 assigned residues show R2,ex > 3 Hz; 93 used for refinement. Largest changes in the AMP lid (32–55) and ATP lid (128–157); core and hinge regions relatively rigid [paper, Methods; Fig. 3b,d].
+
+10. **Identity basis** — Not shift-pattern matching to a reference state: structure calculated de novo from PCS restraints (orientation + r⁻³) via expectation-maximization/simulated annealing, benchmarked on 12 Adk structures (90 ± 8% restraints correct), checked by leave-one-out (N = 93) and convergence from open/closed starts [paper, Methods; Fig. 2; Ext. Data Figs. 5–7].
+
+11. **Structural mapping and simulations** — Mapped to a newly calculated coordinate ensemble, not one deposited PDB entry. Closed reference PDB 4QBH; open reference PDB 4AKE (cross-species — field 6) fits the high-energy data poorly, i.e. does not represent the observed state [paper, Ext. Data Fig. 4d–g]. No MD was run; a metadynamics study and a transition-state NMR study are cited (not reproduced) as consistent [paper, §"Discussion"].
+
+12. **Functional relevance** — Partially open lids expose a tunnel for nucleotide escape while the enzyme stays largely closed; authors propose conformational selection then induced-fit closure, with lid opening (kopen = 180 ± 36 s⁻¹) rate-limiting for kcat (≈100 s⁻¹) [paper, §"High-energy state"; Fig. 3e,f]. Model built from structure and rates only, not an independent binding or activity assay — proposed, not directly tested [inference; no such assay reported].
+
+13. **Competing explanations addressed** — (a) Metal artifact: equal Zn2+/Co2+ kex shows dispersion tracks lid motion, not metal chemistry [paper, §"PCS–CPMG of Adk"]. (b) Slow- vs. no-exchange in the Mg-free sample tested by F-statistic comparison at 95% confidence [Ext. Data Fig. 3]. (c) Fitting bias: annealing from open or closed starts converges equivalently [Ext. Data Fig. 6]; leave-one-out bounds single-residue sensitivity [Methods]. (d) Single-molecule FRET (refs. 27,32) and the authors' earlier chemical-shift study (ref. 25) proposed fuller lid opening than found; PCS shows only ~1.8 Å ATP-lid movement, since shifts detect dissociation, not movement extent [§"Discussion"].
+
+14. **What this evidence cannot support** — No rate, population, shift magnitude or structure for a genuinely ligand-free Adk state: apo data are qualitative only (weaker, broadened PCS; Q = 47.9% fit to closed state), with no CPMG fit under apo conditions [Ext. Data Fig. 2c]. The solved high-energy state is not open/apo — it is substrate/product-occupied, closer to closed than open [paper, §"High-energy state"]; its only open-state comparator (4AKE) is cross-species (field 6). No mutant binding or activity data tie this state's population to function [inference; not reported anywhere in the paper].
+
+15. **Provenance** — DOI 10.1038/s41586-022-04468-9; PMID 35236984; PMC9126080; Nature 603, 528–535 (2022). Loci: Figs. 1–4, Ext. Data Figs. 1–4 (incl. apo PCS), Supp. Fig. 1, Supp. Table 1, Methods. BMRB 51232 (Zn2+) and 51233 (Co2+), G. stearothermophilus Adk assignments (Stiller/Otten/Kern) [our reading of the paper's data, BMRB]. Reference structures PDB 4QBH, PDB 4AKE [our reading of the paper's data, PDB]. No PDB code deposited for the new structure [paper, Data availability].

@@ -1,0 +1,474 @@
+### 2026-09-17 Alex × Soojung 会议 原始转写
+
+录音：iPad 语音备忘录，2026-09-17 14:31 开始，时长 64 分 22 秒，单声道。
+转写：whisper.cpp large-v3-turbo，本地离线，未做任何人工校对。
+说话人：本次是单麦克风录整个房间，转写工具不做说话人分离，因此下文只有时间戳，没有说话人标签。
+     发言人的区分见 02 号会议纪要（那是根据内容判断的，不是机器标注）。
+
+已知转写错误（听写工具的同音误识，阅读时请自行换回）：
+  APL / April      -> APO（无配体状态）
+  hollow / hollo   -> HOLO（结合配体状态）
+  mnr / MNR        -> NMR
+  reg              -> RAG
+  Gino / Jina      -> Gina
+  stock            -> 应为 stunt / hamper（"拖累、限制"）
+  aims             -> 指课题的 specific aims
+
+第一段（00:00:00–00:00:30）是录音开头的静音，转写工具在静音上产生了一段重复的幻觉文本，
+已按原样保留在下面并标注，内容无意义。
+
+----------------------------------------------------------------------
+
+[00:00:00] 【静音段，以下为转写工具幻觉，非真实内容】I don't know how to do this, but I'm not sure how to do this, but I'm not sure how to do this, but I'm not sure how to do this, but I'm not sure how to do this, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it, but I'm not sure how to do it.
+
+[00:00:30] Hi.
+[00:01:00] Hey, Alex.
+[00:01:01] Hi, can you hear me now?
+[00:01:03] Yeah, can you hear me?
+[00:01:05] Yes, yes, yes, I can.
+[00:01:07] Okay, cool.
+[00:01:08] How are you?
+[00:01:09] Good, good.
+[00:01:10] It's been a while.
+[00:01:11] It's been a while.
+[00:01:12] It's been a while.
+[00:01:13] I'm sorry for not being very responsive and slack.
+[00:01:17] No, you're good, you're good.
+[00:01:18] I think, yeah, it's been a while, and I think, you know, sometimes the aims may, you know, distract because, you know, there are new problems that, you know,
+[00:01:30] coming up, uh, during this process.
+[00:01:33] So, uh, did you like, uh, maybe get over my questions and slack, or I can like quickly?
+[00:01:39] Yeah, yeah, yeah.
+[00:01:41] So, uh, I read your slides, and then I also read the questions, but it would be nice if you can go through it.
+[00:01:49] Um, and also, uh, some updates from my side is, uh, so I started, um, like, Future House Fellowship, and then I pitched this idea, and, like, they're very, you know, open, they like the idea, um, and I have a research budget that is allocated to me.
+[00:02:13] Oh, uh, that we can use, so, yeah, that's, uh, uh, it's very nice, and also we can use their agent tech system, agent tech platform, uh, called Cosmos for free, uh, but I also have other, like, compute budget we can use, so, yeah, that's, uh, good news.
+[00:02:32] And then also, I talked to, uh, some domain experts, and, uh, I think our main, uh, collaborator will be, yeah, of course, Stephanie that we, I kept meeting before, and then also Gina.
+[00:02:46] Okay.
+[00:02:47] Um, yeah, Gina is NMR expert, NMR and protein dynamics expert. And, um, uh, yeah, I, I met with her yesterday and then we, uh, I think she'll be very, very helpful, uh, like for better framing of this, uh, work and, uh, uh, for like defining the aims.
+[00:03:12] Mm hmm. So we are like still in discussions, um, for, you know, uh, for the details. Um, and I think, yeah, I plan to like show your slides to Gina and then like get comments. Um, right now, I think, uh, like the goal.
+[00:03:38] Um, is it's, I think our like goal makes sense, but, um, a little like difference in framing is, um, we want to like, of course, like the agent workflow that we develop will be useful for people.
+[00:03:57] But I think our primary deliverable will be the data set itself, the database itself. Um, because now we have a large compute, uh, to actually like run through all the literature and database, uh, with the workflow that we developed.
+[00:04:15] So yeah, we want to do that. And then, uh, have this like dynamic Atlas as both as a, a source of data, uh, database that people can use.
+[00:04:24] And also as a benchmark, uh, where people can, you know, evaluate their, uh, like ensemble generated model performance or MD simulation, you know, agreement with experimental data.
+[00:04:42] And, uh, uh, uh, I read your slides and then it was a nice, uh, study of, you know, like how different experimental measurements like agree with each other or not agree how like MD trajectories, uh, agree with, uh, experimental measurements.
+[00:05:00] But I think the reason why we got, uh, negative results, like we didn't see much agreement between experiments is because we were, um, like lacking of, uh, details.
+[00:05:18] So maybe, uh, you know, uh, uh, I think we need to go from like easier task to more difficult task.
+[00:05:30] And, um, yeah, with your HSP study, um, I think, uh, it is true that HSP is well known and like well measured protein.
+[00:05:43] But, uh, uh, I think we should have more clear idea of what kind of states we want to, um, identify.
+[00:05:52] And then, uh, like have a better knowledge of what kind of experiments can distinguish the, uh, those states.
+[00:06:01] Uh, I think like, uh, this will be, yeah, yeah, I, I totally understand your point.
+[00:06:06] And I think, uh, and I think the things that actually, uh, stock the performance of the system is, is the scientific side is, is how to define those like questions at a clear start.
+[00:06:24] Yeah.
+[00:06:25] So, uh, I think maybe it can, can you like elaborate a little more on what, what do you mean by the dataset itself?
+[00:06:33] Like.
+[00:06:34] Uh, so, um, I think the initial goal was a bit like too broad.
+[00:06:42] Um, because we cannot, like, for example, like our goal is to identify like functionally relevant, uh, conformational states and then see if the experimental measurements, uh, support that.
+[00:07:01] Um, and, uh, it was a bit broad because like we, there are, there can be many different definition of like functionally, uh, relevant states.
+[00:07:21] Uh, and, um, if we like try to like for some proteins that is, uh, some loops open and closed for, uh, for some other proteins, binding sites open versus closed or active versus inactive.
+[00:07:35] And then they all have different definition of states.
+[00:07:39] Uh, so it's hard maybe, yeah, it's hard to, you know, come up with all the rules, uh, at once and then apply them to like all data.
+[00:07:52] Um, so, like me and Gina, uh, would think, uh, maybe we can start from like something, uh, like we can start from, yeah, discussing how to define those functional states that we are interested in.
+[00:08:10] It could be like searching for APL versus HOLO states.
+[00:08:14] APL is, you know, without ligand, HOLO is, yeah, with ligand.
+[00:08:18] Yeah.
+[00:08:19] And, uh, maybe we can try to find functionally relevant alternative APL states.
+[00:08:24] Um, and, uh, we need like more discussion how to actually define that because yeah, even that is a little vague.
+[00:08:31] Like, uh, Gina's definition, one definition is, um, it's like APL states, but with slow motions and a slow motion, uh, for this, you know, timescale.
+[00:08:45] Uh, we, we let like NMR, uh, define this time scale.
+[00:08:50] Like if it's slow enough, then, uh, we'll see like two distinct NMR peaks, uh, while it's fast and we'll just do like one peak.
+[00:08:59] Um, so yeah, some definitions like that, we, we can like define that first.
+[00:09:06] And then based on that same definition, we can go through, uh, PDB and BMRB.
+[00:09:13] BMRB is NMR deposit like database.
+[00:09:16] And, um, yeah.
+[00:09:18] Um, yeah.
+[00:09:19] And we can also do literature search, uh, whether like those database have overlap with, uh, those data database proteins have like any reported literature showing some MD simulation or other type of, uh, experiments.
+[00:09:37] And then like, you know, uh, and then like doing this search and hydropon with agents and then, you know, uh, like publishing this search result as a database.
+[00:09:52] So, so for, I'm still confused and sorry.
+[00:09:56] So, uh, for database, you mean like, well, uh, our final goal is to try to, I mean, there are different definitions for functional, like posts, uh, for a different system.
+[00:10:12] Do you mean like we, we, we, we tries to use, I dunno, use some, somehow the ways to come up with a somehow unified rules or I dunno, like unified.
+[00:10:31] Uh, yeah.
+[00:10:32] Yeah.
+[00:10:33] Basically that, but because like functionally relevant confirmation states are very broad term.
+[00:10:41] Yeah.
+[00:10:42] Uh, so we want to like narrow it down and then, uh, tackle like one at a time.
+[00:10:48] Um, and, uh, yeah, maybe we can start from like finding alternative APO states, uh, for example.
+[00:10:56] Um, and that, and then, you know, this can be extended to other definition of functional states, like inactive versus active and enzymes.
+[00:11:08] Uh, which will require another definition.
+[00:11:12] Uh, but we can start from one task and, uh, like doing this is, uh, like itself useful because, you know, like the PDB data that people all use for their structural model.
+[00:11:29] Uh, it is biased towards hollow structures.
+[00:11:31] Uh, it is biased towards hollow structures.
+[00:11:32] So like PD, you know, if you look at PDB protein structures, they always have some ligand binding to it.
+[00:11:38] Uh, because that, that's the only way they can get crystallized.
+[00:11:42] Um, but when we target proteins for like with drugs, we target their APO state and not their hollow states.
+[00:11:52] And, um, uh, and then like some of them have alternative APO states where the drug can easily bind to only one state and not to another.
+[00:12:03] Um, but because this information is not in PDB, uh, like, you know, like the current co-folding model structure based models.
+[00:12:13] They are not really trained with, uh, these alternative APO states, but our hypothesis is, yeah, this kind of, um, alternative APO states, uh, like should be, um, like reflected in NMR data or like small angle X-ray scattering data.
+[00:12:35] Uh, so yeah, and then like, yeah, maybe, you know, in some literature, they might have some MD based, uh, studies.
+[00:12:44] So yeah.
+[00:12:45] So, um, okay.
+[00:12:49] So my understanding is, um, you mean like for current analysis, they using somehow biased data for ensembles, which is definitely like.
+[00:13:04] Definitely like not like accurate enough, but since it's hard to actually gather some useful, like useful state for, for, for, for the system.
+[00:13:19] Uh, we tries to, based on like current data or literature report or anything, we, we tries to, um, come up with a efficient way to.
+[00:13:33] Yeah.
+[00:13:34] Yeah.
+[00:13:34] Yeah.
+[00:13:34] Yeah.
+[00:13:35] Yeah.
+[00:13:35] Yeah.
+[00:13:36] Yeah.
+[00:13:36] Yeah.
+[00:13:37] Yeah.
+[00:13:37] Yeah.
+[00:13:38] Yeah.
+[00:13:38] Yeah.
+[00:13:39] Uh, like find a state and then put it into a, uh, like data link.
+[00:13:41] Uh, and then so, so these data, it can be, can be used for, you know, further, no matter like, uh, model training or discovery or.
+[00:13:55] Yeah.
+[00:13:56] Right.
+[00:13:57] yeah yeah yeah exactly okay i see and so but like how because because yeah yeah how because i think
+[00:14:06] uh if if if like it's hard as you said to crystallize those things it's it's we can be
+[00:14:18] we can just like use computer based tools to simulate right do you mean like
+[00:14:27] we try to find a high accuracy way to like simulate those states but the state that we
+[00:14:37] we try to find out a way to simulate those states in high accuracy or do you mean which tries to
+[00:14:48] like i don't know summarize the
+[00:14:53] um so we don't want to simulate anything we don't want to like do experiments
+[00:15:00] uh our hypothesis is these alternative states can be identified from experimental measurements
+[00:15:08] um and uh and there are like hidden alternative states that are deposited in literature or uh
+[00:15:17] uh like database like bmrb that like it's just there but people couldn't find it or aggregate
+[00:15:25] it because like they didn't have the agents um so for example yeah like the nmr example uh if the peak
+[00:15:34] is like split then that means there is some slow motion that they are there but people don't collect it
+[00:15:40] for yeah yeah yeah exactly so yeah yeah we we can do this like more yeah yeah yeah setting rules
+[00:15:48] beforehand uh yeah exactly yeah i think yeah i think that's reasonable because okay okay uh so you
+[00:15:57] mean like for the database that that you just said it seems like it at least it seems to me like they're
+[00:16:06] already state information do you mean like uh that that database is is something that we want to
+[00:16:16] the format that we want to collect data to or like what what is the function for for that you
+[00:16:22] know a database that just says that uh so that those databases that already exist they don't have
+[00:16:31] uh state annotation it's just like raw data raw nmr peaks okay yeah uh extracting potential alternative states from
+[00:16:41] there uh and then like annotating you know different states like that is undone and then uh like by
+[00:16:52] cross-cross referencing what uh yeah maybe pdb maybe like with md data data set uh maybe we'll be able to
+[00:17:01] find like how those alternatives uh confirmations actually look like uh so if we can find that then yeah
+[00:17:09] we can just like map them or if we cannot find them then we just annotate like this protein might have some
+[00:17:17] alternative confirmations and then uh the alternative confirmations are different in like these residues uh
+[00:17:25] based on this nmr measurements um and then like they might uh be differing and uh like this angle
+[00:17:35] distortions uh something like that um yeah so you mean like uh there are some raw data but people still
+[00:17:46] annihilate the state but like yeah using informations from existing paper we can like in an hour or something
+[00:17:55] like that uh yeah we can combining those raw data and the yeah yeah data yeah yeah my problem is
+[00:18:06] you mean like you mean like we don't need to like do the simulation again right but why can't we like
+[00:18:15] use the mnr from papers to to annotate like what state that uh raw data is why can't we yeah why can't we do
+[00:18:28] that like i i think i didn't like understand how how we can like based on the literature
+[00:18:35] data we can tell um what residuals it might change for it's like corresponding another alternative state
+[00:18:47] oh why you mean why can't we i mean like yeah
+[00:18:57] um okay so so can you just like explain again how how how might be a way we we can like do this like
+[00:19:05] uh huh um so yeah there might be some literature uh like explicitly annotating that based on our nmr
+[00:19:16] measurements we observe these alternative states and uh they might look like this then like it's uh
+[00:19:23] we just yeah aggregate we just like collect that data and then aggregate it to our database
+[00:19:30] um and then there would be other literature where they like present and their nmr data but they never
+[00:19:37] like annotate alternative states or like never state that possibility then like we need you know like
+[00:19:44] based on our definition uh we we like based on our analysis of this raw nmr data we find uh some
+[00:19:53] possibility of alternative states um that yeah might have like this kind of properties and then there are
+[00:20:01] uh larger scale nmr deposit like bmrb and uh there yeah we might be able to find more examples like that
+[00:20:11] i think i think i need to like look at that database too because because it seems like counterintuitive to me
+[00:20:18] because um i mean do you mean like do some extra analysis on existing mnr data
+[00:20:28] uh yeah uh so so so what kind of analysis that we need to do is based on um like paper's experience
+[00:20:43] or uh oh what kind of analysis so that um
+[00:20:53] what kind of analysis we do with raw nmr data i think uh uh uh for that like you know gino will help
+[00:21:04] i mean uh i mean yeah i mean there will be a way to analyze it but so if our final uh final
+[00:21:12] purpose is to to to try it out to uh come up with alternative states and collect those data into a database
+[00:21:22] with the with the genetic help so i think maybe the things is how to efficiently
+[00:21:30] so i think my problem is uh there of course there will be like so many ways to analyze a raw nmr data
+[00:21:38] right so yeah do you mean it it's it will be helpful to come up with a set of
+[00:21:52] uh rules or or like rules to to to to to pick the most useful analysis based on maybe the the type
+[00:22:05] or the the features of the mnr data we have and then to more efficiently
+[00:22:13] do this analysis and then we can have the uh alternative state that we want with accuracy
+[00:22:22] what you mean uh yeah yeah so i think first we need to discuss the rules um like which is like
+[00:22:31] science how to like interpret the nmr data and then how we can uh identify alternative states from it
+[00:22:38] um and that like we need a lot of help with uh from jina so she will take a look at uh the literature she
+[00:22:46] will take a look at raw data from the deposit and then um and then like teach us how how to interpret
+[00:22:54] and like analyze this this data um so we can like learn from her and then uh have this conversation
+[00:23:01] together and then and then uh that will be like you know like so she will be showing how humans can
+[00:23:12] understand the data and then maybe you know humans can analyze it and then like now then our job is to
+[00:23:20] turn that into like agentic workflow um and i am pretty sure that there might be a lot of like failure
+[00:23:27] modes where like uh you know like for some literature maybe you know agents cannot parse it properly
+[00:23:35] and um and she also mentioned to me that there are many literature where they just did like wrong experiments
+[00:23:45] uh they their experimental procedure they don't make sense and it doesn't support their you know their
+[00:23:53] results uh so like we might also have to like filter out uh those literature or you know like compare uh
+[00:24:03] the experimental condition or simulation condition um to see if they can agree at all or not and for that
+[00:24:12] like we also have to come up with some extra roles and uh um you know things like that so uh yeah i think
+[00:24:20] that'll be uh the roles and then for the scientific part for like how to understand nmr data uh like we can
+[00:24:29] rely on gina and then uh yeah from like your analysis of hsp like one failure mode there was uh the md
+[00:24:37] trajectory it didn't really like show any state transition uh something like that and uh that is
+[00:24:44] like one yeah use uh failure mode that is good to know uh because yeah that tells us about you know
+[00:24:52] maybe their md trajectory was too short um uh yeah things like that yeah because so yeah yeah i think
+[00:25:02] what i'm asking this question is is i think it's somehow different at least from my experience that
+[00:25:09] the rules is important like the information that we put into the workflow is important comparing to
+[00:25:17] um it actually has a additive effect on the on on on the analysis i want to do that we want to do because
+[00:25:26] yeah yeah could well like from from your perspective do you think there is a at least some general rules that
+[00:25:39] uh may need to be followed when we try to uh come up with a like the alternative state when we try to
+[00:25:52] analyze the mnr data or do you think it's solely like really really system dependent or for yeah i think that's the
+[00:26:02] the problem because if it's solely like system dependent it will be super super inefficient to
+[00:26:11] collecting or or or or like we can at least like separate some some system and then try to gather
+[00:26:22] literature i think there will be general rules after yeah but as i said like rules can be important and
+[00:26:29] rules can be like has additive effect it yeah super like which which i think that the the barrier is
+[00:26:38] somehow ambiguous but because from my experience yeah yeah it if you put like important information
+[00:26:43] but not like really additive information sometimes it will mislead the agent to do unnecessary analysis and
+[00:26:51] and the i think the scoring criteria for the agent it will stop like unnecessarily because we give him like
+[00:27:00] too many too many things that we even like limit its original ability to do the analysis itself so i think
+[00:27:10] it's so so so if this is the case theoretically we want the rules to be big like not to to to to to uh
+[00:27:23] to specify to a really really small system we want it to be big but also like can has additive effect i
+[00:27:32] think well what what i'm saying is um i think yeah i think gina will be super helpful in in helping us
+[00:27:41] setting this standards and this and this is actually the problems that i have is what will be a suitable
+[00:27:50] standards that we may try to like think about beforehand because i i think well that would be like too
+[00:27:59] complicated because because it would also depends on the scientific questions that we have right and yeah
+[00:28:05] and they may come up with um differences different things and speaking about the workflow um it may also
+[00:28:14] be super useful at least from the experience that i have uh to is at what stage that we want to add
+[00:28:24] those additional information to the agent is it is that as a prompt do you like before we uh do do the
+[00:28:32] analysis or that's something uh that we may add after the agent itself already do the initial analysis but
+[00:28:44] uh it cannot come up with a i don't know come up with a 100 sure result and then the animations can
+[00:28:53] come up into the workflow i don't know whether as a prompt which i think like for from the experimental
+[00:29:04] result i have is not somehow um useful because sometimes it will even limits as i said limits agent's
+[00:29:14] own judge judgment like ability because we we set like too many limits to to its own yeah so yeah
+[00:29:23] yeah yeah yeah so i think as i said the the rules cannot be like small it needs to be big at least
+[00:29:31] at some yeah at some sense um so it would not like bother its own ability to to judge yeah i think the
+[00:29:41] when the when the rules i i even like judge like like question about what the rules itself is a useful
+[00:29:52] useful format to add extra layers of information to the analysis workflow
+[00:30:00] uh but yeah yeah i think that's also the questions that i want to ask but i think
+[00:30:08] because theoretically i like ideally we want the agents to uh like if we give it a nr like data it will
+[00:30:17] follow some house of rules i mean like follow some house of workflow and then come up with specific
+[00:30:26] residuals or you know come up with a alternative state yeah yeah yeah more accurate than uh or at least like
+[00:30:38] as same accurate as human like ideally in doing this kind of like analysis right so yeah so um
+[00:30:52] how i think what kind of information is will be will have like additive effect in this analysis and when if if
+[00:31:03] if if there are well if there are like informations like this that will be additive during the analysis
+[00:31:09] process when should we inject those information and in what format will be a really important questions
+[00:31:16] because because yeah because i mean rules itself are still like prompt right like or yeah yeah or a really
+[00:31:26] obvious way will be like setting some rules well first mnr cannot like compare into you know this system
+[00:31:32] into that system and that you you should not like do analysis without blah blah blah blah blah blah that's
+[00:31:39] a really obvious way to at least yeah to to help the agent to better do judgment right but that yeah
+[00:31:46] sometimes as i said might not be helpful uh so maybe we should like use another way not as pure text or
+[00:31:58] but other than pure text it's you know not that obvious what kind of format that we can inject
+[00:32:06] those information into the workflow i think that's also the question that i have okay okay i i think
+[00:32:13] i get your points i thought those are very good points um i think what is what would be helpful is
+[00:32:20] um like me and jina doing some like human based uh hands-on data analysis for like five to ten examples
+[00:32:30] and then uh and then like we can yeah start from our current method just like you know having them as a
+[00:32:39] rules and then uh applying them to like some small number of uh data and then we see like uh if they
+[00:32:47] succeed or if they fail uh we can like humans can evaluate like whether they failed or not right and then
+[00:32:54] uh we record uh like their failure modes and then uh maybe from there maybe we can have like more uh
+[00:33:04] concrete thoughts of like how to fix this whether we should add like more details to the rules or whether
+[00:33:11] we need like a different structure um yeah i think that yeah but um
+[00:33:21] i think well first i think if the rules itself is
+[00:33:27] let's say it's the rules uh if the rules itself it's is like um it's good enough or
+[00:33:35] it can at least have some effect and helping a like uh non uh area specific agent to do analysis that would be great
+[00:33:46] uh i mean but yeah i think that's that's that's my problem um because because from the
+[00:33:53] experiment that i did i think i did similar things but you know without yeah yeah yeah human judging the rules i
+[00:34:00] basically yeah um basically collects papers and tries to uh gather their like how how they did the
+[00:34:09] analysis and what kind of result they have and what kind of like conditions
+[00:34:13] did they use to to do this experiment and yeah somehow to figure out some you know somehow
+[00:34:19] useless information and then come up with uh like rules which classify basically like uh different
+[00:34:27] layers like uh what conditions are they like doing the experimental on and what kind of procedures
+[00:34:36] do you have but you know something like that uh yeah it seems not useful because i thought it will be
+[00:34:43] useful but i think um i think that's uh well speaking about this uh by the way uh for for the agentex
+[00:34:56] system that future house has how is it like different to to the to the to the available like open like
+[00:35:03] like open ai or cloud or things like that do they like i mean i'm guessing they're they're like
+[00:35:10] doing doing some fine tuning with existing papers and maybe they are connected to existing scientific
+[00:35:16] operators or i don't know because i think if because i think rules itself is not that useful because
+[00:35:26] you know lm they're already like theoretically training on all the human existing data i think they can
+[00:35:35] it's more about its own reasoning ability to do those judgments instead of our giving them like
+[00:35:44] uh which might even stock their own performance you know because uh so you you're saying the reasoning model's
+[00:35:55] capability is uh the like current bottleneck i think uh i think um um i think maybe a
+[00:36:09] better way yeah i think the reasoning model itself can be yeah the reason what i said is uh what i'm
+[00:36:14] saying this is um it's somehow hard especially in biochemistry world to find a really generalized
+[00:36:23] uh rules that we we think may have like additive effect on different system analysis right so
+[00:36:33] so uh somehow if the system the if the rules that we collect it may have like a slight slightly
+[00:36:43] difference uh than the than the system that the that we actually want to analyze uh given it as a rule
+[00:36:53] may stop the performance of the agent or the models itself i think it's same for human because
+[00:37:01] uh well imagine like a scientist doing it's only analysis but someone told him that okay i i did like
+[00:37:10] similar things so here's my result it might also like degrade his performance because he may like think
+[00:37:19] like some extra unnecessary thought on on the things that that he did right i think it's the same for for for for for
+[00:37:27] agent so if it's hard to come up with a a set of generalized rules maybe
+[00:37:38] rules itself is not like a useful format to helping the agent to do this kind of workflow
+[00:37:45] you did did you get like what i'm saying because um because um because if we have to consider like
+[00:37:53] generalizability and usefulness and add to the fact the rules can be super super super like um
+[00:38:04] hard to find because okay yeah i mean like i mean like it's obvious that if the if the rules itself
+[00:38:11] is really really specific to a small system it would definitely have like a much more additive effect
+[00:38:17] because of the context right but if the rules itself is too small it cannot be like generalized
+[00:38:26] well it can become like impossible to collect all those rules from millions of existing system and that
+[00:38:36] uh and that the agent can do like match to the rules that we collect and then
+[00:38:41] uh has a additive effect on its own analysis right so yeah yeah yeah yeah so you're saying uh like
+[00:38:49] but is this difficulty coming from uh diversity of how literature present their data and result or is it
+[00:38:58] like coming from diversity of the protein systems like is it you know hard because like all the different
+[00:39:07] papers they they you know they have like different figure style different like table style or different
+[00:39:15] like data uh repository style or is it because you know like not uh it's difficult to apply the same
+[00:39:24] uh for example like state identification role uh for different protein systems uh i think that's
+[00:39:32] that that that's both the case because because like well you know if the conditions is a little bit
+[00:39:38] different the the rules that we collect from two similar papers can be different right so yeah yeah if we
+[00:39:46] apply apply apply those rules to the agent it might have negative effect because uh-huh because because
+[00:39:58] maybe the system that the agent is analyzed may also be the third different system so uh-huh since there
+[00:40:07] are so many variables it's it would be at least from my side it would be like not efficient enough
+[00:40:17] to or not not it's i don't know maybe it's not impossible to to to you know gather all the uh rules
+[00:40:26] from all different kinds of like conditions like temperature or you know all the things like that yeah
+[00:40:32] yeah yeah so i think maybe the rules itself should not be something that we inject during the analysis
+[00:40:41] process uh-huh uh okay yeah yeah so yeah so that's what i'm saying like because so a better overall
+[00:40:50] model model like maybe six like gbt6 astra will have a general better performance than 5.6 it's not
+[00:40:59] because we give them like more rules it's because like it's not because like uh six astra use like more
+[00:41:10] more rules during this analysis it's because it has a general overall much better reasoning
+[00:41:17] ability in all the process so i think as human we may not understand like how a lot do do those like
+[00:41:27] it's on you know you know internal like analysis right so i think yeah yeah the rules itself cannot
+[00:41:34] may may not be an efficient way to let the workflow be more efficient because uh okay okay because the
+[00:41:43] rules itself may not be generalizable okay okay yeah i i got your point yeah um
+[00:41:52] yeah i think i do think the task will be like easier if we constrain ourselves to this like
+[00:41:58] alternative april state or april holo pair identification and then if we restrict ourselves to
+[00:42:06] nmr and md data uh but i think yeah still like the points that you mentioned will occur uh that you
+[00:42:16] know like different literature they have a very diverse style and different proteins they have like
+[00:42:21] diverse uh definitions so uh and i agree that like better reasoning model uh might be able to like you know
+[00:42:31] figure out this and i think in uh use cases like ours um like we can have we can decide between whether it's
+[00:42:42] better to have false positives or better to help have like false negatives so if we uh like if if our agents
+[00:42:53] like miss like miss some details and then they end up like adding some data that is not like clean or that
+[00:43:00] not supposed to be added uh would that be better or uh like you know like the rules being too strict
+[00:43:09] and uh like the agents not really adding the data that they should have added like is that better like
+[00:43:15] that's the question that we we want to ask ourselves and i think yeah right now like yeah we will try
+[00:43:23] to find a balance but i think at least initially we can try to find uh do exhaustive search maybe we can
+[00:43:31] do filtering later um so i think yeah in that case maybe having a smaller role um so that like we give
+[00:43:40] agents more freedom um uh that could be better and uh i think i really think it'll be helpful if um if we
+[00:43:50] have like some human based yeah analysis information extraction example so that we can you know really
+[00:43:58] and then like we can also run uh agents with like small roles versus large roles and uh see how the
+[00:44:04] behavior uh gets different and i think we then we can uh figure out you know uh how to go from there
+[00:44:13] uh i think uh yeah i think by the way so so what how how is the things that future house do like
+[00:44:20] different how are their models i think they are like training on fine-tuning doing fine-tuning or
+[00:44:28] training on existing model right yeah so no no no no so they're not they're not uh training llms uh
+[00:44:37] they're using existing like harness yeah yeah yeah yeah yeah yeah cause no no they're they're using
+[00:44:45] existing llms but they are building different harness and different like agentive workflow so they're
+[00:44:51] building their own agents and then they're like orchestrating it in a different way and uh we can
+[00:44:57] either build on top yeah yeah yeah i think uh i think the workflow itself i think the harness itself
+[00:45:09] is can be useful because i think maybe the rules cannot be generalizable but the overall workflow for
+[00:45:16] human scientists to do analysis on existing mnr data is limited it it can be like it's also collected
+[00:45:23] right right so yeah yeah i think it will be helpful uh like rather than um collecting rules
+[00:45:34] in my opinion it yeah it will be much more useful to collect how they're actually like what kinds of
+[00:45:43] workflow human scientists yeah are doing analysis other than like yeah yeah collecting scientific rules
+[00:45:50] because i think how it will it will be much more efficient to wait those large ai companies to
+[00:45:58] come up with a new model and then we just like use their api with our own harness to have a much more
+[00:46:05] higher performance than collecting rules because after we collect the rules for like two or three months
+[00:46:11] there will be a new models that will have a higher reasoning effort which can definitely
+[00:46:16] uh well at least from my experience when i use like five five point six soul to do analysis compared to
+[00:46:24] like using luna given them same rules uh 5.6 so we'll have like a much much more
+[00:46:32] higher performance than doing and in doing all those so so that's yeah yeah i totally agree yeah so
+[00:46:40] i think we should not connect uh collect the rules because i think the the reason is um
+[00:46:48] as i said the the variables are too much for for scientists to do an experiment if we if we like
+[00:46:58] collect those rules in large proportion of the experiment uh at least putting it as a prompt or somehow as a
+[00:47:08] i don't know a side note to the to the to the to the agent will have negative effect yeah because
+[00:47:14] it will stop their own analysis process so but but the workflow is is like useful because um i think
+[00:47:24] uh all of them can do an experiment but usually it will not perform experiment as
+[00:47:34] holistic as a uh human scientist so uh i think we can replicate or yeah we can replicate uh and collect the
+[00:47:46] mode of of of human scientists to do analysis in different scenarios and then tries to replicate
+[00:47:58] human scientists uh workflow in in in using use an agent somehow like simulate a a human scientist that
+[00:48:07] would be much more like yeah like possible because the mode are yeah are limited but the rules
+[00:48:17] i think it's infinite because there are millions of different systems it's basically i think impossible to
+[00:48:23] collect all the scientific rules but the scientific workflow itself is useful and yeah i think yeah
+[00:48:30] i totally agree yeah yeah i think what might be useful is how human scientists doing decisions when they're
+[00:48:37] facing some something that stalk their analysis process yeah i think because because we want the agent to
+[00:48:47] to give us results non-stop right so it would the agent itself will definitely face some scenarios that
+[00:48:55] they need to stop because because the data we provide are not sufficient to let him like directly
+[00:49:04] given the result right so i think collecting mode like this for example maybe gina when when when when she
+[00:49:12] like doing its own analysis uh when when when she like facing two different uh data that she cannot like
+[00:49:20] give decisions directly she may do some extra analysis i think what kinds of analysis she will do
+[00:49:30] in different scenarios this kind of mode is is like useful for collections it should be the things that we
+[00:49:37] collect uh should be the first thing that we want to collect uh should be the first thing that we want to
+[00:49:41] collect instead of the scientific rules yeah because we yeah yeah we want the loop to to to to to like
+[00:49:53] we want the agentic loop to be continued
+[00:50:00] so yeah that's i think that that's the things we can collect um for example we can uh set some
+[00:50:11] i don't know set some system um for example mainly focus on the april system and then tries to
+[00:50:21] whether ask scientists or collect uh how scientists actually doing analysis collect a mode and then try to
+[00:50:30] see whether i think it would definitely be have some additive effect on agents doing only for example
+[00:50:40] analysis once because well it's it's a more holistic and and scientific way to analyze and
+[00:50:48] and we're not data right so yeah i think i think that's that's at least what what we should do
+[00:50:57] yeah yeah yeah i think we're in the same uh wavelengths of understanding and um yeah i will
+[00:51:06] uh talk to jina and then i think we will try to read like some papers uh to like learn more about human
+[00:51:15] workflow and um yeah and uh uh then we will you know uh like create a little report of like the human
+[00:51:28] workflow um and then like maybe you can uh try to apply that to like some uh example systems maybe like
+[00:51:37] try to uh replicate the results of uh that paper those papers and uh we can see where it breaks or where
+[00:51:44] it works yeah i think yeah i think that that that might be useful because um i'm just like curious
+[00:51:52] how how future house did they like their their like authentic harnesses because i think for for for
+[00:51:59] for scientific agent i don't know how how they are doing doing doing a genetic system are they just like
+[00:52:07] i think they did things similar to to what what what what we discussed tries to yeah yeah yeah yeah right
+[00:52:13] yeah i think it's pretty similar so they uh like they have clients uh some of the clients they want to do
+[00:52:22] like single cell rna sick data analysis yeah yeah and then like to build that agent they uh they talk to
+[00:52:30] people they read some papers and then you know like try to replicate uh their human workflow uh and then i
+[00:52:37] think yeah they use uh harness they use like they generate multiple uh tools yeah uh and then basically
+[00:52:48] what we are trying to do yeah yeah so i think yeah because they're not focusing on maybe nmr like a
+[00:52:56] protein dynamic area we can did similar things on like protein dynamic area yeah i think yeah i think that's
+[00:53:06] that's that's that's that's a workable way uh i think maybe the things that will be the most important
+[00:53:14] things to do is well of course like selling what will be some important stages for analysis
+[00:53:26] and at each stages what kinds of um
+[00:53:31] normal normal uh normal workflow the scientists will do and and what are their unusual way or like some
+[00:53:41] special i don't know like specific ways when they're facing failures in analysis what kind of
+[00:53:47] analysis they will do ah yeah i think that that that will be useful because
+[00:53:55] gina will definitely know much more better in in in in things like this uh and after
+[00:54:02] we like at least like have a initial plan for the stages and what kind of normal workflow human scientists
+[00:54:13] will do in each stages we will we can come up with rules that uh
+[00:54:22] llm can collect information from existing papers and then i think if we settling down the rules
+[00:54:30] it will be super super fast to like you know collecting existing like informations and then
+[00:54:37] uh ideally the agent will collect maybe hundreds or hundreds of papers and then
+[00:54:45] uh we can come up with uh you know do doing classifications or things like that can come up with
+[00:54:54] uh well of course a most simple workflow and then this simple workflow may have some branches when
+[00:55:04] they're facing different uh different like analysis failure and this yeah i think it will be
+[00:55:14] and then uh after building this like analysis workflow we may consider other hundreds like contacts things
+[00:55:24] uh those kind of you know engineering uh size of of considerations and then yeah we may try to see
+[00:55:33] uh put to to put like agent or a second agent as a judge or as a somehow in in this workflow
+[00:55:42] uh where yeah maybe gina think or other scientists think will be an important uh point of yeah stage to
+[00:55:51] to to to have a you know second analysis on the existing analysis that the first agent did and then
+[00:56:00] yeah i think that that would that would be that would be good yeah i fully agree and uh actually future
+[00:56:08] house has a public github uh and the not all their uh like systems are public but i think yeah most of
+[00:56:20] uh the things are already public so uh i just sent you the link okay um yeah if you're curious then you
+[00:56:28] can like also see how they construct uh things i think it has like the current system that they use is
+[00:56:35] a little changed from what they have uh publicly released um they now they're using my world model
+[00:56:44] um and uh yeah i like they explained it to me but i didn't fully understand but i think yeah at the
+[00:56:51] distance it's pretty uh useful to to look into this okay i see yeah i think that's the that's the way
+[00:57:01] of approaching this problem because i think collecting scientific rules it's it's impossible too so yeah it would be
+[00:57:09] better to rely on llm its own ability of reasoning but given it a harness environment yeah yeah build
+[00:57:21] yeah yeah i think that's yeah we should approach it instead of like collecting yeah because collecting
+[00:57:25] rules from my experiment like 80 percent of time it it it will have like negative effects because okay yeah yeah
+[00:57:35] so and because um i think maybe uh i can like maybe like before next meeting i think it will be
+[00:57:46] uh helpful if if well of course gina can come up with one normal workflow of her own analysis and i can
+[00:57:57] do it do things uh you know based on uh existing literatures but of course uh let us i just set the areas
+[00:58:08] or the first first first first area of interest do you think we should study uh what kind of system do
+[00:58:15] you think we we should study for now so gina just sent me a bunch of papers that i will also share with
+[00:58:23] you and then yeah uh let me uh create a group chat at some point um yeah okay you see i think future house
+[00:58:33] they're doing like reg or things like that which is basically yeah yeah i mean i mean is it that necessary
+[00:58:44] for doing reg because because because reg is basically like inputting extra prompt right but to be
+[00:58:53] honest i think i think the reason enough for element itself it's it's much much much more higher and it's
+[00:59:01] involving in a really really really fast pace i think even anthropic itself is not using reg
+[00:59:07] anymore because oh really okay they're using they are using text they're not using reg because
+[00:59:17] i mean reg may be useful for a really really really tiny area which they may not like like
+[00:59:24] even like training the models on but for i think for protein dynamics
+[00:59:32] i don't know whether do do do you think it's a small small small area of interest but i think it's
+[00:59:39] generally a big area is just right yeah yeah i'm not sure because because i think reg is definitely not
+[00:59:46] that useful for for it because i think that that would be the internal information that the model is
+[00:59:54] already being trained on i don't know yeah i guess like with the previous smaller size smaller
+[01:00:01] smaller capability models reg was necessary because you know the modal weights cannot really yeah you know
+[01:00:08] understand everything but now uh yeah because yeah the reason left for the system model i mean like deep
+[01:00:14] seek it's super super cheap and its performance i think it's high enough to do 95 of the analysis but
+[01:00:22] i think the problems for all models now it's not it's single step reasoning ability it's how it can stay on
+[01:00:30] track when right when i face a really really long term of analysis which might be the reasons why we need
+[01:00:39] to build a harness system instead of collecting papers and build a rag database for the models to reference into
+[01:00:51] yeah because i'm really heavily like using using using those like models
+[01:00:56] if they can give really i think really useful short short term analysis but because of the mechanism of
+[01:01:08] agentic models itself 90 percent of the time the bad result comes from it distract from the track
+[01:01:16] that we want to analysis at first so yeah i think that's maybe another reason why we should build
+[01:01:24] harnesses instead of collecting rules yeah yeah yeah that makes sense okay so like back back to our
+[01:01:34] problem so what what system uh do you think we should analysis for oh i just sent you a bunch of papers
+[01:01:43] that uh gina sent me and uh i yeah me and gina will uh for the coming week uh look into this and then
+[01:01:52] uh come up with the workflow the normal workflow um and then maybe yeah you can apply try applying that
+[01:01:59] to uh like these papers and then uh try to see if we can replicate the conclusions
+[01:02:07] uh yeah uh are do you mean do you do you like classify system based on the protein of interest or
+[01:02:13] based on the uh how it how it how it how it how it like classifies alternative uh state uh that we we need
+[01:02:26] to like look into it okay okay yeah yeah okay okay i see i see i see i see okay uh yeah i think i can also
+[01:02:34] try to try to see see see how how how the papers you know come up with a normal normal workflow and
+[01:02:43] tries to replicate the result yeah yeah that'd be great cool cool cool cool cool all right thank you so
+[01:02:51] much no thank you uh yeah i think it it's good to selling down the aims and yeah and i will keep up the update in
+[01:02:59] in slack and then slack and maybe do what when do you think it will be available for uh next meeting
+[01:03:06] um how about next thursday friday thursday yeah next thursday same time should work
+[01:03:15] uh can we do it can we do like uh one o'clock or yeah yeah that works too like at your time zone
+[01:03:25] uh yeah yeah well let me quickly check though like uh it doesn't have to be like one one o'clock
+[01:03:32] whole afternoon anyway oh um wait actually wednesday is better wednesday wednesday yeah anytime
+[01:03:44] in the afternoon is okay for me but i can but i can do like wednesday morning and thursday afternoon
+[01:03:53] oh okay i see i see um yeah then yeah yeah thursday at 1 p.m yeah that works okay thursday one okay
+[01:04:03] yeah cool cool okay cool sounds good sounds good cool uh i will keep up the end thank you for you know
+[01:04:08] not having a meeting cool thank you thank you thank you see ya bye
+[01:04:21] you

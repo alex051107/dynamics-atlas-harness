@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-09-21T01:31:26.625367+00:00",
+  "scope": "review-only; no scientific reproduction or new model experiment completed",
+  "files": [
+    {
+      "path": "PROMPT_ZH.md",
+      "bytes": 5775,
+      "sha256": "e51785c3dbcabaf65371b1ab746ea56fe26f7d380f0ea3b266e1d768121bc968"
+    },
+    {
+      "path": "PUBLICATION_SCOPE.md",
+      "bytes": 1496,
+      "sha256": "a9958228ce8af46df3056337883d3a26a3c29ae99cf2daffe35e036c348a4026"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4743,
+      "sha256": "f92503faffd61d615a20208a788551c78abcb9accaf2e7585e21d393c7bd3829"
+    },
+    {
+      "path": "RIGHTS_AND_PROVENANCE.md",
+      "bytes": 2637,
+      "sha256": "d9624782dd2e407e15a652484cab5e5a780b4fe2467b2d5ee801199e388653d9"
+    },
+    {
+      "path": "SOURCE_STATUS.md",
+      "bytes": 5384,
+      "sha256": "e4015e96580fc2f67e0cdcb5650dab9fa04293d37c0d7a765e5625a1d4f7ba17"
+    },
+    {
+      "path": "documents/ARCHITECTURE_EARLIER_DRAFT_ZH.md",
+      "bytes": 19306,
+      "sha256": "7c2f786d6b38f54b983832daa41b90aa0d6eecc8e3cf967db70b296f9c541ce7"
+    },
+    {
+      "path": "documents/CASE_CARDS_ZH.md",
+      "bytes": 8593,
+      "sha256": "2edfc9075a2e8a5695817e55f02a73432abe2f6de0df766d6dc264264b987647"
+    },
+    {
+      "path": "documents/PLAN_ZH.md",
+      "bytes": 32217,
+      "sha256": "64bad361dbfcdf0b57b8eb0f50d47c1f9cdd946d672d2d00eae7c7d1ed035dc4"
+    },
+    {
+      "path": "documents/REVIEW_RESOLUTION_ZH.md",
+      "bytes": 4955,
+      "sha256": "b17839e0f48dfbaeb1b49e31f2b846684b7e562310e3d74cdd2aad6b2b673a34"
+    },
+    {
+      "path": "history/FOUR_LAYER_REPORT_ZH.md",
+      "bytes": 15006,
+      "sha256": "cf2dcc514e84760dffa266f1a39819cc5a669182cde8223d3c445ab80e779389"
+    },
+    {
+      "path": "history/OPERATOR_REPORT_ZH.md",
+      "bytes": 11228,
+      "sha256": "4e6d5f1d85422e89f76c7935c01225d490a59c86693b67bcb423d7b238cb36d9"
+    },
+    {
+      "path": "meeting/MEETING_NOTES_ZH.md",
+      "bytes": 8045,
+      "sha256": "147951d7dcd52535ef7e87b9669ac01c0ea27dc30ecc96340f29f171aa987df0"
+    },
+    {
+      "path": "meeting/TRANSCRIPT_RAW.txt",
+      "bytes": 49745,
+      "sha256": "0809a3c69178c2a53df108e2fcf5593c12ecc59af21d93966a013bada3bd7d46"
+    },
+    {
+      "path": "papers/pdf/KRAS2023.pdf",
+      "bytes": 3547459,
+      "sha256": "280a88b8d5e6de9d845d373256d1763ac706660446cbd113bd835efb61d2751c"
+    },
+    {
+      "path": "papers/pdf/Uncertainty2019.pdf",
+      "bytes": 1261399,
+      "sha256": "9e11c8c6908411ef7d67c9f93e4a7eab7de26c660400283c8a148fd2f75c61a9"
+    },
+    {
+      "path": "papers/text/KRAS2023.md",
+      "bytes": 97843,
+      "sha256": "26a2446c5a5f5aedccbd687eca10671a513516c5f11abfcb8fbaaac613de1711"
+    },
+    {
+      "path": "papers/text/Uncertainty2019.md",
+      "bytes": 181579,
+      "sha256": "66dd8ab49b71d8ed1d08383070fa9e67d342d9380250e85d877a6a9c2909444a"
+    }
+  ],
+  "updated_at": "2026-09-22T12:55:08.144555+00:00",
+  "plan_version": "v1.0",
+  "hash_update_scope": [
+    "PROMPT_ZH.md",
+    "PUBLICATION_SCOPE.md",
+    "README.md",
+    "SOURCE_STATUS.md",
+    "documents/ARCHITECTURE_EARLIER_DRAFT_ZH.md",
+    "documents/CASE_CARDS_ZH.md",
+    "documents/PLAN_ZH.md",
+    "documents/REVIEW_RESOLUTION_ZH.md"
+  ],
+  "unchanged_hashes_reused": 9
+}
