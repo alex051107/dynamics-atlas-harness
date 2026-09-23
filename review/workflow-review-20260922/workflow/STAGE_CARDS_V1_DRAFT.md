@@ -1,5 +1,7 @@
 # Finding alternative APO states: stage cards, draft v1
 
+Dynamics Atlas collects functionally relevant conformational states of all kinds. Alternative APO states are the first type we work on; other types, such as active versus inactive, will get their own definition card later. Stages 2 to 8 below are meant to carry over to those types; stage 1 and the definitions are specific to this first type.
+
 Prepared for the 24 Sept meeting with Soojung and Gina · 2026-09-22 · built from nine papers
 
 **Sources.** Gina's five papers (Kerns 2015 AdK, De Paula 2020 IL-2, Hansen 2023 K-Ras, Burmann 2012 and Cai 2025 RfaH) and four we added to cover other kinds of evidence (Fraser 2009 cyclophilin A, Bouvignies 2011 T4 lysozyme L99A, Spoerner 2001 H-Ras, Woodward 2025 IL-2 superkines). An item tagged with papers, for example [De Paula 2020; Woodward 2025], is something those papers actually do. Items tagged [ours] are our inference. The [evidence table](11_Workflow_evidence_table.md) lists the location of every item in every paper. Locations and numbers are still being checked against the originals.

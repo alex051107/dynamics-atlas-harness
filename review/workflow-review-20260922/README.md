@@ -1,18 +1,18 @@
-# Review packet, 22 September 2026: stage cards, per-turn context and a first pilot
+# Review packet, 22–23 September 2026: stage cards, per-turn context and a first pilot
 
 This folder is for outside review of the Dynamics Atlas plan as it stood on 22 September 2026. The earlier packet, `review/workflow-review-20260920`, stays as it was; it holds the v1.0 plan, the meeting transcript and the meeting notes.
 
 ## What the project is building
 
-Dynamics Atlas is a database of alternative apo states: conformations a protein visits on its own when a given ligand is not bound. Most of the evidence comes from NMR, either two resolved peaks in slow exchange or a minor state fitted from relaxation dispersion (CPMG, CEST, R1ρ). Each entry records the protein and conditions, the ligand relative to which the protein counts as apo, the two states, the exchange parameters, the residues involved, why the minor state is thought to resemble a known state, the functional evidence, what the evidence cannot support, and a tier (strong, weak, candidate, not included).
+Dynamics Atlas is a database of functionally relevant conformational states of proteins, identified from experimental data that is already published, and a benchmark for ensemble-generation models and MD. The first type of state it covers is the alternative apo state: a conformation a protein visits on its own when a given ligand is not bound. Other types, such as active versus inactive, come later. Most of the evidence comes from NMR, either two resolved peaks in slow exchange or a minor state fitted from relaxation dispersion (CPMG, CEST, R1ρ). Each entry records the protein and conditions, the ligand relative to which the protein counts as apo, the two states, the exchange parameters, the residues involved, why the minor state is thought to resemble a known state, the functional evidence, what the evidence cannot support, and a tier (strong, weak, candidate, not included).
 
 A strong model writes each entry by following eight stage cards. A program around it decides what the model sees each turn, checks every action before it runs, records every result with its provenance, and moves the analysis from stage to stage. People own the definitions, the tiers and the final acceptance of an entry.
 
 ## Where to start
 
-Read `HARNESS_EXPLAINER_FOR_PRO_ZH.md` first. It is written in Chinese for a reader who has never seen the project, and it opens with the review request for ChatGPT Pro. It covers three questions in detail:
+Read `HARNESS_EXPLAINER_FOR_PRO_ZH.md` first (version 2, 23 September). It is written in Chinese for a reader who has never seen the project, and it opens with the review request for ChatGPT Pro. It starts with the chain of reasoning from the project goal to the pilot, then covers these questions in detail, and ends with the full plan and the current status:
 
-1. How the scientists' workflow was turned into stage cards: paper-by-paper traces, an evidence table counted by protein, a saturation rule, expert review, then a versioned freeze.
+1. How NMR and protein-dynamics scientists usually work, step by step, with examples from the nine papers, and how that workflow was turned into stage cards: paper-by-paper traces, an evidence table counted by protein, a saturation rule, expert review, then a versioned freeze.
 2. How the harness builds the model's context each turn. The program keeps the run state and rebuilds a bounded view every turn instead of resending the chat history. The view has a fixed prefix (system rules, definitions, tool contracts) and a rolling part (the current card, what changed since the last turn, stuck status, recent observations, the evidence index, budget).
 3. How tools and registered operators are defined, admitted, executed and recorded.
 
