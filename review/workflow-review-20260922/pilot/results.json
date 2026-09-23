@@ -1,0 +1,563 @@
+{
+ "papers": {
+  "XIE20": {
+   "entries": [
+    {
+     "label": "E1",
+     "run": "XIE20_CTRL_R2",
+     "group": "CTRL",
+     "rep": "R2",
+     "items": [
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 15,
+     "n_scored": 9,
+     "norm": 0.833,
+     "over_claims": 1,
+     "factual_errors": 0
+    },
+    {
+     "label": "E2",
+     "run": "XIE20_FLOW_R2",
+     "group": "FLOW",
+     "rep": "R2",
+     "items": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2
+     ],
+     "total": 17,
+     "n_scored": 9,
+     "norm": 0.944,
+     "over_claims": 3,
+     "factual_errors": 0
+    },
+    {
+     "label": "E3",
+     "run": "XIE20_CTRL_R1",
+     "group": "CTRL",
+     "rep": "R1",
+     "items": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2
+     ],
+     "total": 13,
+     "n_scored": 9,
+     "norm": 0.722,
+     "over_claims": 3,
+     "factual_errors": 1
+    },
+    {
+     "label": "E4",
+     "run": "XIE20_FLOW_R1",
+     "group": "FLOW",
+     "rep": "R1",
+     "items": [
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      1,
+      2,
+      2
+     ],
+     "total": 16,
+     "n_scored": 9,
+     "norm": 0.889,
+     "over_claims": 0,
+     "factual_errors": 0
+    }
+   ],
+   "groups": {
+    "CTRL": {
+     "mean_total": 14,
+     "mean_norm": 0.777,
+     "spread_total": 2,
+     "over_claims": 4,
+     "factual_errors": 1,
+     "item_means": [
+      1,
+      1.5,
+      1.5,
+      2,
+      1,
+      2,
+      1.5,
+      1.5,
+      2
+     ]
+    },
+    "FLOW": {
+     "mean_total": 16.5,
+     "mean_norm": 0.916,
+     "spread_total": 1,
+     "over_claims": 3,
+     "factual_errors": 0,
+     "item_means": [
+      2,
+      2,
+      2,
+      1.5,
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   }
+  },
+  "STILLER22": {
+   "entries": [
+    {
+     "label": "E1",
+     "run": "STILLER22_CTRL_R2",
+     "group": "CTRL",
+     "rep": "R2",
+     "items": [
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2
+     ],
+     "total": 14,
+     "n_scored": 9,
+     "norm": 0.778,
+     "over_claims": 1,
+     "factual_errors": 0
+    },
+    {
+     "label": "E2",
+     "run": "STILLER22_FLOW_R2",
+     "group": "FLOW",
+     "rep": "R2",
+     "items": [
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 16,
+     "n_scored": 9,
+     "norm": 0.889,
+     "over_claims": 0,
+     "factual_errors": 1
+    },
+    {
+     "label": "E3",
+     "run": "STILLER22_FLOW_R1",
+     "group": "FLOW",
+     "rep": "R1",
+     "items": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 15,
+     "n_scored": 9,
+     "norm": 0.833,
+     "over_claims": 0,
+     "factual_errors": 0
+    },
+    {
+     "label": "E4",
+     "run": "STILLER22_CTRL_R1",
+     "group": "CTRL",
+     "rep": "R1",
+     "items": [
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 17,
+     "n_scored": 9,
+     "norm": 0.944,
+     "over_claims": 0,
+     "factual_errors": 0
+    }
+   ],
+   "groups": {
+    "CTRL": {
+     "mean_total": 15.5,
+     "mean_norm": 0.861,
+     "spread_total": 3,
+     "over_claims": 1,
+     "factual_errors": 0,
+     "item_means": [
+      2,
+      2,
+      1,
+      2,
+      1.5,
+      1.5,
+      1.5,
+      2,
+      2
+     ]
+    },
+    "FLOW": {
+     "mean_total": 15.5,
+     "mean_norm": 0.861,
+     "spread_total": 1,
+     "over_claims": 0,
+     "factual_errors": 1,
+     "item_means": [
+      2,
+      1,
+      1,
+      1.5,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   }
+  },
+  "PONT15": {
+   "entries": [
+    {
+     "label": "E1",
+     "run": "PONT15_FLOW_R2",
+     "group": "FLOW",
+     "rep": "R2",
+     "items": [
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 17,
+     "n_scored": 9,
+     "norm": 0.944,
+     "over_claims": 0,
+     "factual_errors": 0
+    },
+    {
+     "label": "E2",
+     "run": "PONT15_CTRL_R2",
+     "group": "CTRL",
+     "rep": "R2",
+     "items": [
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 15,
+     "n_scored": 9,
+     "norm": 0.833,
+     "over_claims": 1,
+     "factual_errors": 0
+    },
+    {
+     "label": "E3",
+     "run": "PONT15_FLOW_R1",
+     "group": "FLOW",
+     "rep": "R1",
+     "items": [
+      2,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1
+     ],
+     "total": 13,
+     "n_scored": 9,
+     "norm": 0.722,
+     "over_claims": 3,
+     "factual_errors": 0
+    },
+    {
+     "label": "E4",
+     "run": "PONT15_CTRL_R1",
+     "group": "CTRL",
+     "rep": "R1",
+     "items": [
+      2,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total": 16,
+     "n_scored": 9,
+     "norm": 0.889,
+     "over_claims": 2,
+     "factual_errors": 0
+    }
+   ],
+   "groups": {
+    "CTRL": {
+     "mean_total": 15.5,
+     "mean_norm": 0.861,
+     "spread_total": 1,
+     "over_claims": 3,
+     "factual_errors": 0,
+     "item_means": [
+      2,
+      1.5,
+      1.5,
+      1,
+      1.5,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    "FLOW": {
+     "mean_total": 15,
+     "mean_norm": 0.833,
+     "spread_total": 4,
+     "over_claims": 3,
+     "factual_errors": 0,
+     "item_means": [
+      2,
+      2,
+      1.5,
+      1.5,
+      1.5,
+      2,
+      1.5,
+      1.5,
+      1.5
+     ]
+    }
+   }
+  },
+  "WHIT13": {
+   "entries": [
+    {
+     "label": "E1",
+     "run": "WHIT13_CTRL_R2",
+     "group": "CTRL",
+     "rep": "R2",
+     "items": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1
+     ],
+     "total": 11,
+     "n_scored": 9,
+     "norm": 0.611,
+     "over_claims": 1,
+     "factual_errors": 0
+    },
+    {
+     "label": "E2",
+     "run": "WHIT13_CTRL_R1",
+     "group": "CTRL",
+     "rep": "R1",
+     "items": [
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1
+     ],
+     "total": 14,
+     "n_scored": 9,
+     "norm": 0.778,
+     "over_claims": 2,
+     "factual_errors": 0
+    },
+    {
+     "label": "E3",
+     "run": "WHIT13_FLOW_R1",
+     "group": "FLOW",
+     "rep": "R1",
+     "items": [
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     "total": 15,
+     "n_scored": 9,
+     "norm": 0.833,
+     "over_claims": 0,
+     "factual_errors": 1
+    },
+    {
+     "label": "E4",
+     "run": "WHIT13_FLOW_R2",
+     "group": "FLOW",
+     "rep": "R2",
+     "items": [
+      2,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1
+     ],
+     "total": 13,
+     "n_scored": 9,
+     "norm": 0.722,
+     "over_claims": 2,
+     "factual_errors": 1
+    }
+   ],
+   "groups": {
+    "CTRL": {
+     "mean_total": 12.5,
+     "mean_norm": 0.695,
+     "spread_total": 3,
+     "over_claims": 3,
+     "factual_errors": 0,
+     "item_means": [
+      2,
+      1.5,
+      1.5,
+      1.5,
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    },
+    "FLOW": {
+     "mean_total": 14,
+     "mean_norm": 0.777,
+     "spread_total": 2,
+     "over_claims": 2,
+     "factual_errors": 2,
+     "item_means": [
+      2,
+      1.5,
+      1.5,
+      2,
+      1.5,
+      2,
+      1.5,
+      1,
+      1
+     ]
+    }
+   }
+  }
+ },
+ "preregistered": {
+  "flow_higher": [
+   "XIE20",
+   "WHIT13"
+  ],
+  "flow_lower": [
+   "PONT15"
+  ],
+  "over_claims": {
+   "CTRL": 11,
+   "FLOW": 8
+  },
+  "factual_errors": {
+   "CTRL": 1,
+   "FLOW": 3
+  }
+ },
+ "rule": "NO DEMONSTRATED HELP (check over-claims for harm)",
+ "post_hoc_without_STILLER22": {
+  "flow_higher": [
+   "XIE20",
+   "WHIT13"
+  ],
+  "flow_lower": [
+   "PONT15"
+  ],
+  "over_claims": {
+   "CTRL": 10,
+   "FLOW": 8
+  },
+  "factual_errors": {
+   "CTRL": 1,
+   "FLOW": 2
+  }
+ },
+ "descriptive_state_items_2to6": {
+  "CTRL": "62/80",
+  "FLOW": "68/80"
+ }
+}
