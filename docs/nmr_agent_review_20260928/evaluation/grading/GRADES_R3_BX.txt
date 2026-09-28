@@ -1,0 +1,60 @@
+
+## runs/R3_A_opus55
+{'fit': 'F001', 'variant': 'WT', 'n_res': 20, 'cest': True, 'kex': 388.4, 'kex_dev_%': -2.9, 'p1_%': 10.15, 'p1_dev_%': -0.0, 'k21': 39.4, 'sign_agree': '20/20', 'abs_dw_r': 1.0, 'red_chi2': 0.549}
+{'fit': 'F003', 'variant': 'G12D', 'n_res': 22, 'cest': True, 'kex': 278.9, 'kex_dev_%': -7.4, 'p1_%': 9.65, 'p1_dev_%': 7.2, 'k21': 26.9, 'sign_agree': '22/22', 'abs_dw_r': 1.0, 'red_chi2': 0.81}
+{'fit': 'F004', 'variant': 'G12C', 'n_res': 21, 'cest': True, 'kex': 340.5, 'kex_dev_%': 4.4, 'p1_%': 6.89, 'p1_dev_%': -1.1, 'k21': 23.5, 'sign_agree': '21/21', 'abs_dw_r': 1.0, 'red_chi2': 0.442}
+{'fit': 'F008', 'variant': 'WT', 'n_res': 8, 'cest': True, 'kex': 401.9, 'kex_dev_%': 0.5, 'p1_%': 10.49, 'p1_dev_%': 3.3, 'k21': 42.1, 'sign_agree': '8/8', 'abs_dw_r': 1.0, 'red_chi2': 0.591}
+{'fit': 'F009', 'variant': 'WT', 'n_res': 12, 'cest': True, 'kex': 362.7, 'kex_dev_%': -9.3, 'p1_%': 9.7, 'p1_dev_%': -4.4, 'k21': 35.2, 'sign_agree': '12/12', 'abs_dw_r': 0.999, 'red_chi2': 0.504}
+
+## runs/R3_B_opus55
+{'fit': 'F007', 'variant': 'WT', 'n_res': 24, 'cest': False, 'kex': 364.6, 'kex_dev_%': -8.8, 'p1_%': 10.62, 'p1_dev_%': 4.6, 'k21': 38.7, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.997, 'red_chi2': 0.556}
+{'fit': 'F008', 'variant': 'WT', 'n_res': 24, 'cest': True, 'kex': 389.9, 'kex_dev_%': -2.5, 'p1_%': 10.26, 'p1_dev_%': 1.1, 'k21': 40.0, 'sign_agree': '24/24', 'abs_dw_r': 1.0, 'red_chi2': 0.508}
+{'fit': 'F011', 'variant': 'G12D', 'n_res': 31, 'cest': False, 'kex': 244.9, 'kex_dev_%': -18.7, 'p1_%': 10.77, 'p1_dev_%': 19.7, 'k21': 26.4, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.986, 'red_chi2': 0.593}
+{'fit': 'F012', 'variant': 'G12D', 'n_res': 31, 'cest': True, 'kex': 271.9, 'kex_dev_%': -9.7, 'p1_%': 9.93, 'p1_dev_%': 10.4, 'k21': 27.0, 'sign_agree': '31/31', 'abs_dw_r': 1.0, 'red_chi2': 0.711}
+{'fit': 'F014', 'variant': 'G12C', 'n_res': 27, 'cest': False, 'kex': 343.6, 'kex_dev_%': 5.4, 'p1_%': 7.2, 'p1_dev_%': 3.2, 'k21': 24.7, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.962, 'red_chi2': 0.173}
+{'fit': 'F015', 'variant': 'G12C', 'n_res': 27, 'cest': True, 'kex': 338.9, 'kex_dev_%': 3.9, 'p1_%': 7.08, 'p1_dev_%': 1.5, 'k21': 24.0, 'sign_agree': '27/27', 'abs_dw_r': 0.999, 'red_chi2': 0.451}
+{'fit': 'F016', 'variant': 'WT', 'n_res': 7, 'cest': True, 'kex': 415.2, 'kex_dev_%': 3.8, 'p1_%': 10.4, 'p1_dev_%': 2.5, 'k21': 43.2, 'sign_agree': '7/7', 'abs_dw_r': 1.0, 'red_chi2': 0.62}
+{'fit': 'F017', 'variant': 'WT', 'n_res': 10, 'cest': True, 'kex': 371.4, 'kex_dev_%': -7.1, 'p1_%': 9.59, 'p1_dev_%': -5.5, 'k21': 35.6, 'sign_agree': '10/10', 'abs_dw_r': 0.998, 'red_chi2': 0.397}
+{'fit': 'F018', 'variant': 'WT', 'n_res': 7, 'cest': True, 'kex': 367.4, 'kex_dev_%': -8.1, 'p1_%': 11.51, 'p1_dev_%': 13.4, 'k21': 42.3, 'sign_agree': '7/7', 'abs_dw_r': 0.998, 'red_chi2': 0.522}
+
+## runs/R3_C_opus55
+{'fit': 'F002', 'variant': 'WT', 'n_res': 39, 'cest': True, 'kex': 382.2, 'kex_dev_%': -4.5, 'p1_%': 9.94, 'p1_dev_%': -2.0, 'k21': 38.0, 'sign_agree': '34/39', 'abs_dw_r': 0.999, 'red_chi2': 0.888}
+{'fit': 'F003', 'variant': 'WT', 'n_res': 39, 'cest': True, 'kex': 375.9, 'kex_dev_%': -6.0, 'p1_%': 10.0, 'p1_dev_%': -1.5, 'k21': 37.6, 'sign_agree': '39/39', 'abs_dw_r': 1.0, 'red_chi2': 0.84}
+{'fit': 'F005', 'variant': 'G12D', 'n_res': 42, 'cest': True, 'kex': 302.6, 'kex_dev_%': 0.5, 'p1_%': 8.9, 'p1_dev_%': -1.2, 'k21': 26.9, 'sign_agree': '40/42', 'abs_dw_r': 1.0, 'red_chi2': 0.747}
+{'fit': 'F006', 'variant': 'G12C', 'n_res': 36, 'cest': True, 'kex': 337.7, 'kex_dev_%': 3.6, 'p1_%': 7.06, 'p1_dev_%': 1.2, 'k21': 23.8, 'sign_agree': '36/36', 'abs_dw_r': 1.0, 'red_chi2': 0.485}
+{'fit': 'F007', 'variant': 'WT', 'n_res': 33, 'cest': True, 'kex': 365.7, 'kex_dev_%': -8.6, 'p1_%': 10.42, 'p1_dev_%': 2.7, 'k21': 38.1, 'sign_agree': '33/33', 'abs_dw_r': 1.0, 'red_chi2': 0.464}
+{'fit': 'F008', 'variant': 'G12D', 'n_res': 33, 'cest': True, 'kex': 272.0, 'kex_dev_%': -9.6, 'p1_%': 10.21, 'p1_dev_%': 13.4, 'k21': 27.8, 'sign_agree': '32/33', 'abs_dw_r': 1.0, 'red_chi2': 0.623}
+{'fit': 'F009', 'variant': 'G12C', 'n_res': 33, 'cest': True, 'kex': 342.4, 'kex_dev_%': 5.0, 'p1_%': 6.93, 'p1_dev_%': -0.6, 'k21': 23.7, 'sign_agree': '33/33', 'abs_dw_r': 1.0, 'red_chi2': 0.478}
+{'fit': 'F010', 'variant': 'WT', 'n_res': 8, 'cest': True, 'kex': 375.4, 'kex_dev_%': -6.1, 'p1_%': 10.23, 'p1_dev_%': 0.8, 'k21': 38.4, 'sign_agree': '8/8', 'abs_dw_r': 1.0, 'red_chi2': 0.407}
+{'fit': 'F011', 'variant': 'WT', 'n_res': 9, 'cest': True, 'kex': 377.5, 'kex_dev_%': -5.6, 'p1_%': 9.44, 'p1_dev_%': -7.0, 'k21': 35.7, 'sign_agree': '9/9', 'abs_dw_r': 0.999, 'red_chi2': 0.413}
+{'fit': 'F012', 'variant': 'WT', 'n_res': 16, 'cest': True, 'kex': 369.2, 'kex_dev_%': -7.7, 'p1_%': 11.85, 'p1_dev_%': 16.7, 'k21': 43.7, 'sign_agree': '16/16', 'abs_dw_r': 0.999, 'red_chi2': 0.509}
+
+## runs/BX_nosign_C_opus55
+{'fit': 'F002', 'variant': 'WT', 'n_res': 35, 'cest': False, 'kex': 374.7, 'kex_dev_%': -6.3, 'p1_%': 10.64, 'p1_dev_%': 4.8, 'k21': 39.9, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.998, 'red_chi2': 0.536}
+{'fit': 'F003', 'variant': 'WT', 'n_res': 35, 'cest': False, 'kex': 365.8, 'kex_dev_%': -8.6, 'p1_%': 10.41, 'p1_dev_%': 2.6, 'k21': 38.1, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.999, 'red_chi2': 1.493}
+{'fit': 'F004', 'variant': 'WT', 'n_res': 9, 'cest': False, 'kex': 481.8, 'kex_dev_%': 20.5, 'p1_%': 8.19, 'p1_dev_%': -19.4, 'k21': 39.4, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.999, 'red_chi2': 0.385}
+{'fit': 'F005', 'variant': 'G12D', 'n_res': 35, 'cest': False, 'kex': 307.2, 'kex_dev_%': 2.1, 'p1_%': 9.35, 'p1_dev_%': 3.8, 'k21': 28.7, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.993, 'red_chi2': 0.651}
+{'fit': 'F006', 'variant': 'G12C', 'n_res': 31, 'cest': False, 'kex': 359.2, 'kex_dev_%': 10.2, 'p1_%': 7.05, 'p1_dev_%': 1.1, 'k21': 25.3, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.998, 'red_chi2': 0.198}
+{'fit': 'F007', 'variant': 'WT', 'n_res': 19, 'cest': False, 'kex': 378.6, 'kex_dev_%': -5.4, 'p1_%': 10.88, 'p1_dev_%': 7.2, 'k21': 41.2, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.993, 'red_chi2': 0.614}
+{'fit': 'F008', 'variant': 'G12C', 'n_res': 16, 'cest': False, 'kex': 354.9, 'kex_dev_%': 8.9, 'p1_%': 7.16, 'p1_dev_%': 2.7, 'k21': 25.4, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.985, 'red_chi2': 0.225}
+{'fit': 'F009', 'variant': 'G12D', 'n_res': 19, 'cest': False, 'kex': 325.0, 'kex_dev_%': 8.0, 'p1_%': 9.17, 'p1_dev_%': 1.9, 'k21': 29.8, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.994, 'red_chi2': 0.704}
+
+## runs/BX_renum200_C_opus55
+{'fit': 'F002', 'variant': 'WT', 'n_res': 33, 'cest': False, 'kex': 369.6, 'kex_dev_%': -7.6, 'p1_%': 10.79, 'p1_dev_%': 6.3, 'k21': 39.9, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.998, 'red_chi2': 0.512}
+{'fit': 'F003', 'variant': 'WT', 'n_res': 31, 'cest': True, 'kex': 390.6, 'kex_dev_%': -2.3, 'p1_%': 10.45, 'p1_dev_%': 2.9, 'k21': 40.8, 'sign_agree': '31/31', 'abs_dw_r': 1.0, 'red_chi2': 0.505}
+{'fit': 'F004', 'variant': 'G12D', 'n_res': 31, 'cest': False, 'kex': 303.6, 'kex_dev_%': 0.9, 'p1_%': 9.39, 'p1_dev_%': 4.3, 'k21': 28.5, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.992, 'red_chi2': 0.616}
+{'fit': 'F005', 'variant': 'G12C', 'n_res': 28, 'cest': False, 'kex': 350.4, 'kex_dev_%': 7.5, 'p1_%': 7.16, 'p1_dev_%': 2.7, 'k21': 25.1, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.998, 'red_chi2': 0.167}
+{'fit': 'F006', 'variant': 'G12D', 'n_res': 31, 'cest': True, 'kex': 301.3, 'kex_dev_%': 0.1, 'p1_%': 9.38, 'p1_dev_%': 4.2, 'k21': 28.3, 'sign_agree': '31/31', 'abs_dw_r': 1.0, 'red_chi2': 0.765}
+{'fit': 'F007', 'variant': 'G12C', 'n_res': 28, 'cest': True, 'kex': 340.8, 'kex_dev_%': 4.5, 'p1_%': 7.15, 'p1_dev_%': 2.5, 'k21': 24.4, 'sign_agree': '28/28', 'abs_dw_r': 1.0, 'red_chi2': 0.446}
+{'fit': 'F008', 'variant': 'WT', 'n_res': 8, 'cest': True, 'kex': 410.6, 'kex_dev_%': 2.7, 'p1_%': 10.53, 'p1_dev_%': 3.7, 'k21': 43.2, 'sign_agree': '8/8', 'abs_dw_r': 1.0, 'red_chi2': 0.574}
+{'fit': 'F009', 'variant': 'WT', 'n_res': 12, 'cest': True, 'kex': 377.7, 'kex_dev_%': -5.6, 'p1_%': 9.61, 'p1_dev_%': -5.3, 'k21': 36.3, 'sign_agree': '12/12', 'abs_dw_r': 0.999, 'red_chi2': 0.366}
+{'fit': 'F010', 'variant': 'G12D', 'n_res': 8, 'cest': True, 'kex': 290.0, 'kex_dev_%': -3.6, 'p1_%': 9.81, 'p1_dev_%': 9.0, 'k21': 28.4, 'sign_agree': '8/8', 'abs_dw_r': 1.0, 'red_chi2': 0.801}
+{'fit': 'F011', 'variant': 'G12D', 'n_res': 12, 'cest': True, 'kex': 364.8, 'kex_dev_%': 21.2, 'p1_%': 7.68, 'p1_dev_%': -14.7, 'k21': 28.0, 'sign_agree': '12/12', 'abs_dw_r': 1.0, 'red_chi2': 0.846}
+{'fit': 'F012', 'variant': 'G12D', 'n_res': 20, 'cest': True, 'kex': 320.6, 'kex_dev_%': 6.5, 'p1_%': 8.86, 'p1_dev_%': -1.5, 'k21': 28.4, 'sign_agree': '20/20', 'abs_dw_r': 1.0, 'red_chi2': 0.84}
+{'fit': 'F013', 'variant': 'WT', 'n_res': 20, 'cest': True, 'kex': 401.0, 'kex_dev_%': 0.2, 'p1_%': 10.15, 'p1_dev_%': 0.0, 'k21': 40.7, 'sign_agree': '20/20', 'abs_dw_r': 1.0, 'red_chi2': 0.457}
+{'fit': 'F019', 'variant': 'WT', 'n_res': 31, 'cest': True, 'kex': 385.7, 'kex_dev_%': -3.6, 'p1_%': 10.29, 'p1_dev_%': 1.4, 'k21': 39.7, 'sign_agree': '31/31', 'abs_dw_r': 1.0, 'red_chi2': 0.824}
+
+## runs/R1_C_opus55
+{'fit': 'F004', 'variant': 'WT', 'n_res': 23, 'cest': False, 'kex': 382.6, 'kex_dev_%': -4.4, 'p1_%': 10.69, 'p1_dev_%': 5.3, 'k21': 40.9, 'sign_agree': 'n/a (no CEST)', 'abs_dw_r': 0.649, 'red_chi2': 0.602}
+{'fit': 'F005', 'variant': 'WT', 'n_res': 22, 'cest': True, 'kex': 399.9, 'kex_dev_%': -0.0, 'p1_%': 10.13, 'p1_dev_%': -0.2, 'k21': 40.5, 'sign_agree': '22/22', 'abs_dw_r': 1.0, 'red_chi2': 0.74}
+{'fit': 'F006', 'variant': 'WT', 'n_res': 6, 'cest': True, 'kex': 394.9, 'kex_dev_%': -1.3, 'p1_%': 11.19, 'p1_dev_%': 10.2, 'k21': 44.2, 'sign_agree': '6/6', 'abs_dw_r': 1.0, 'red_chi2': 1.321}

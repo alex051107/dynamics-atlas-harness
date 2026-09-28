@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-Ras Agent 第二轮报告</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5b55;--line:#e2ded5;--accent:#1f5f8b;--ok:#2d7a3e;--warn:#9a5b00;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#e8e6e0;--muted:#a19e96;--line:#34322e;--accent:#7fb6de;--ok:#7cc48b;--warn:#e0a653;--card:#1e1d1b}}
+body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB",sans-serif;margin:0}
+main{max-width:940px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:1.6em;margin:.2em 0}h2{font-size:1.25em;margin-top:2.2em;border-bottom:1px solid var(--line);padding-bottom:.3em}h3{font-size:1.05em;margin-top:1.4em}
+.meta{color:var(--muted);font-size:.9em}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.88em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+code{font-size:.88em;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.box{background:var(--card);border-left:3px solid var(--accent);padding:10px 14px;margin:14px 0}
+.warn{border-left-color:var(--warn)}
+</style>
+</head>
+<body><main>
+<h1>K-Ras Agent 第二轮报告：流程固定、框架补齐、按登记检验</h1>
+<p class="meta">2026-09-26 · 任务目录 <code>autoresearch/tasks/dynamics_atlas_nmr_agent_kras_20260925/</code> · 代码 <code>feature/nmr-agent-v0</code>（本地，未提交）· 全部解题运行返回模型 <code>claude-opus-5-5</code></p>
+
+<h2>1 结论</h2>
+<p>这一轮按"先拆作者卡点 → 固定流程 → 补框架 → 预先登记 → 运行"做完了一轮。对照上一轮的四处偏离：</p>
+<ul>
+<li><b>作者卡点已翻译成动作</b>：八个决策片段（<code>KRAS_DECISION_FRAGMENTS_ZH.md</code>），每个标明作者做了什么、工作区有没有数据、Agent 该做什么。</li>
+<li><b>状态数由 Agent 判断</b>：工具提供两态、分组独立过程、三态（星形/线性）。9 条真实数据运行（C1、C2、C2.1）全部实际拟合了三态模型，全部选两态，理由是 BIC 反对，且没有任何 CEST 曲线出现第二个次级凹陷。这是作者的论证，这次由 Agent 自己在数据上得出。</li>
+<li><b>证据补齐到接近作者</b>：GDP 结合样品的 CEST 对照、同缓冲液的 GDP 态位移、POTENCI 无规卷曲预测（与作者表格 r = 0.9999）、PDB 配体距离。每条运行都分析了 GDP 对照，并据此排除"次要态是 GDP 污染"。</li>
+<li><b>输出连回数据库</b>：每条运行都给出 Atlas 状态条目，写明模型选择、参数、逐区参照比较、对照、不能支持的内容；外部知识单独标出，证据等级只作提议。</li>
+</ul>
+<p>结构结论：登记的主判据是逐区比较两类参照，并得出"Switch I 更接近无规卷曲、Switch II 更接近 GDP"。v2 提示为 1/3，未通过；只改一处比较工具的 v2.1 为 2/3，通过。v2.1 的第 3 条没按判据走，但走出了一条更强的路：自己在 BMRB 找到 K-Ras G12C/T35S·GppNHp 的 state 1 参照（条目 52072，另一课题组），核查偏移后逐区比较，Switch II 与 Switch I 36–40 同它的 RMSD 为 0.2–1.0 ppm，同 GDP 为 1.8–3.9 ppm。论文只能借外部 ³¹P 文献把激发态对应到 state 1，这条运行在数据层面支持了这一对应。</p>
+<div class="box warn">结论边界：K-Ras 是开发案例，论文参与了流程设计，结果不是留出验证。每组 3 条运行只能作为开发诊断，不能证明机制有统计增益。评分由主会话完成，另有一份独立核查（见第 6 节）；都不是领域专家判断。Atlas 条目是候选，没有入库。</div>
+
+<h2>2 检验设计与版本</h2>
+<table>
+<tr><th>组</th><th>提示</th><th>工具/工作区</th><th>代码指纹</th><th>运行</th></tr>
+<tr><td>C1</td><td>v1（上一轮 C 组）</td><td>v3 工具 + 工作区 v3</td><td>b3583d10</td><td>3</td></tr>
+<tr><td>C2</td><td>v2（按决策片段修订）</td><td>同上</td><td>b3583d10</td><td>3</td></tr>
+<tr><td>N2</td><td>v2</td><td>负对照工作区</td><td>b3583d10</td><td>3</td></tr>
+<tr><td>C2.1</td><td>v2</td><td>比较工具增加逐区参数</td><td>5c1230f4</td><td>3</td></tr>
+<tr><td>N2.1</td><td>v2</td><td>负对照；含独立核查的源码修复</td><td>69dbc8fe</td><td>3</td></tr>
+</table>
+<p class="meta">判据登记在运行前写入 <code>PREREG_V2_TEST_ZH.md</code>，v2.1 补充登记也在运行前写入。C2.1 的工具进程启动于 00:52:41，比核查修复的首次写入（00:52:54）早 13 秒，因此它用的是冻结的 v2.1。</p>
+
+<h2>3 数值与模型</h2>
+<table>
+<tr><th>运行</th><th>WT kex / p1</th><th>G12D kex / p1</th><th>G12C kex / p1</th><th>符号一致</th></tr>
+<tr><td>论文</td><td>400 / 10.15%</td><td>301 / 9.00%</td><td>326 / 6.97%</td><td>—</td></tr>
+<tr><td>C1-1/2/3</td><td>392–396 / 10.2–10.3%</td><td>273–309 / 9.2–10.1%</td><td>336–354 / 7.0–7.1%</td><td>全部或仅差 1</td></tr>
+<tr><td>C2-1/2/3</td><td>387–395 / 10.1–10.2%</td><td>279–315 / 9.0–10.1%</td><td>342–345 / 6.9–7.2%</td><td>全部或仅差 2</td></tr>
+</table>
+<p>全部在论文 ±10% 内。C2-1、C2-2 和 C1-3 还给出了 G12D 布居低于 WT（9.0–9.2% vs 10.1–10.3%），与论文一致；上一轮三组都判为"相近"。</p>
+
+<h2>4 结构解释（登记主判据）</h2>
+<table>
+<tr><th>运行</th><th>逐区两类参照</th><th>Switch I</th><th>Switch II</th><th>判定</th></tr>
+<tr><td>C1-1</td><td>否</td><td>T35–D38 在无规卷曲 0.6 ppm 内，"可能松散或无序"</td><td>"介于两者之间"</td><td>未命中</td></tr>
+<tr><td>C1-2</td><td>否</td><td>写"不是无序"</td><td>部分像 GDP</td><td>未命中</td></tr>
+<tr><td>C1-3</td><td>否</td><td>"没有局部去折叠的证据"</td><td>偏向 GDP</td><td>未命中</td></tr>
+<tr><td>C2-1</td><td>否（逐区只比 GDP）</td><td>36–38 区"局部化学 vs 无序"两解释未决</td><td>像 GDP</td><td>未命中</td></tr>
+<tr><td>C2-2</td><td>是</td><td>T35–Y40：无规卷曲 RMSD 1.20，GDP 3.51 ppm</td><td>更近 GDP</td><td>命中</td></tr>
+<tr><td>C2-3</td><td>否（Switch II 只比 GDP）</td><td>"重排或部分无序"</td><td>像 GDP</td><td>未命中</td></tr>
+<tr><td>C2.1-1</td><td>是</td><td>无规卷曲 RMSD 1.8，GDP 3.0；T35 与无规卷曲吻合</td><td>按 RMSD 像 GDP（1.6 vs 3.0）</td><td>命中</td></tr>
+<tr><td>C2.1-2</td><td>是</td><td>1.84 vs 2.87，"可能部分无序"</td><td>更像 GDP（1.72 vs 3.36）</td><td>命中</td></tr>
+<tr><td>C2.1-3</td><td>否（无规卷曲只有合并值）</td><td>与 state 1 参照最接近</td><td>与 state 1 参照最接近（0.2–0.6 ppm）</td><td>未命中，但见第 1 节</td></tr>
+</table>
+<p>两个观察：</p>
+<ul>
+<li>C1 与 C2 的差别集中在两处：配体距离检查 C2 为 3/3、C1 为 0/3；C1 有两条明确写了"不是无序"。</li>
+<li>无规卷曲比较在两组都是 3/3，说明上一轮的主要缺口是工具与数据。本轮剩下的问题是比较粒度，v2.1 把"每个区域、每类参照"合进一次调用后，命中升到 2/3。</li>
+</ul>
+<p>判据 c 原写作"Switch II 有序但不同于 GDP"。独立核查指出这不忠实于论文：Table 2 里 Switch II 的两项指标都更支持 GDP。按修正后的读法（Switch II 更接近 GDP），表中命中判定不变。</p>
+
+<h2>5 负对照</h2>
+<p>合成数据里 WT 的次要态位移严格等于同条件 GDP 态。N2 三条都没有把 WT 判为无序：都算出与 GDP 一致到 0.05 ppm；并且都指出这对仍结合 GTP 的构象在物理上不合理（离 γ-磷酸 3 Å 的残基也完全一致），于是标为"可能是伪影，待核实"。它们识破了合成数据本身的不现实之处。N2.1 结果见第 7 节。</p>
+<p>独立核查指出了这份负对照的缺陷：WT 的 HSQC/HMQC 符号文件仍是真实数据，与合成态不一致。下一版要么移除，要么由合成模型生成。</p>
+
+<h2>6 独立核查（另一会话完成）及采纳</h2>
+<p>另一会话对本轮代码和前九条运行做了独立核查（<code>resumption_20260926/independent_audit/REVIEW_ZH.md</code>），修复直接写进了共享源码。我全部复核后采纳：</p>
+<ul>
+<li><b>安全</b>：参照工具可读取工作区外文件（用无害探测文件实测读回）、BMRB 屏蔽可用非规范编号绕过。均已修复。已有运行中没有被利用的记录，但这不等于当时入口安全。</li>
+<li><b>覆盖</b>：第二轮 6 条真实运行中 4 条没把 WT T35 放进任何拟合。"报告最大 |Δϖ| 残基"只检查已选残基，关键曲线可能根本没被选入。C2.1 三条都纳入了 T35。</li>
+<li><b>判据与表述</b>：判据 c 修正（见第 4 节）；"GDP 样"与"局部柔性"不互斥；γ-磷酸距离只支持化学环境解释，不构成因果证明；GDP 对照无凹陷只适用于所测残基和噪声范围。</li>
+<li><b>工具</b>：筛选输出的峰数改称"残差峰候选"，不等于状态数；拟合返回优化器收敛状态；分组必须是完整不重叠的划分；数据跳过原因逐条返回；Atlas 条目必须引用已发出的观察编号。</li>
+</ul>
+<p>核查所说"Fable 不可用、以独立上下文审查替代"是那个会话自己的情况。本会话第一轮结果节点做过一次 Fable 评审（见第一轮报告）。</p>
+
+<h2>7 N2.1 负对照（修复后代码）</h2>
+<p id="n21">三条都没有把 WT 判为无序：都算出次要态与 GDP 态逐区一致（第 1 条各区 RMSD 0.012–0.060 ppm，无规卷曲 2.9–4.9 ppm），都把这种一致标为"未解决的异常，不作为已确认状态"，并提出核查实验（³¹P NMR 与 HPLC 核苷酸分析、p 是否随样品存放时间变化、GppNHp/GTPγS 样品、有意混合的 GDP/GTP 对照）。负对照通过。与 N2 一样，这份负对照仍保留了真实的 HSQC/HMQC 文件，按核查意见下一版修正。</p>
+
+<h2>8 下一步</h2>
+<ol>
+<li><b>覆盖与局部解释检查</b>：从数据清单出发列出每个样品的可用曲线、选入拟合的集合、遗漏理由，对可分析但未选入的强弥散或 CEST 残基补做复查。这一步写进第四段，作为结束前的必做检查。</li>
+<li><b>修正负对照</b>：合成 WT 的 HSQC/HMQC 与合成态一致，主终点只看被替换的 WT。</li>
+<li><b>state 1 参照入流程</b>：C2.1-3 的路线（找与目标状态对应的突变体参照、先查偏移、再逐区比较）写进第五段的方法经验，作为通用动作，不写本案例数值。</li>
+<li>三态可辨识性检查（多初值、模拟恢复），然后冻结 v2.2，迁移到 RfaH 2025 作为新案例。RfaH 不参与本次流程编写。</li>
+</ol>
+
+<h2>9 待你决定</h2>
+<ul>
+<li>工作树在桌面 iCloud 同步目录里，已经出现冲突副本 <code>references 2.py</code>。建议把 <code>dynamics-atlas-harness-nmr-agent-v0</code> 迁到非同步目录或关闭该目录同步；我没有删除任何文件。</li>
+<li>代码仍未提交。提交需要你同意；另一会话也在改同一工作树，提交前最好先确认它已停手。</li>
+</ul>
+</main></body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-Ras 案例收尾</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5b55;--line:#e2ded5;--accent:#1f5f8b;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#e8e6e0;--muted:#a19e96;--line:#34322e;--accent:#7fb6de;--card:#1e1d1b}}
+body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,"PingFang SC",sans-serif;margin:0}
+main{max-width:900px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:1.55em}h2{font-size:1.2em;margin-top:2em;border-bottom:1px solid var(--line);padding-bottom:.3em}
+.meta{color:var(--muted);font-size:.9em}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.9em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.box{background:var(--card);border-left:3px solid var(--accent);padding:10px 14px;margin:14px 0}
+code{font-size:.88em}
+</style>
+</head>
+<body><main>
+<h1>K-Ras 案例收尾</h1>
+<p class="meta">2026-09-26 · 按计划 v3.1 第 2–5 步 · K-Ras 线到此停止，不再启动解题运行；重开条件只有 Gina 提出新的科学问题</p>
+
+<h2>结论</h2>
+<p>在 K-Ras 这个开发案例上，隔离的 Agent 从作者存档的原始 CPMG/CEST 数据出发，在 9 条独立运行里恢复了论文 Table 1 的交换参数。中位数与论文的对比：WT 392 vs 400 s⁻¹、10.2 vs 10.15%；G12D 309 vs 301 s⁻¹、9.1 vs 9.0%；G12C 343 vs 326 s⁻¹、7.1 vs 6.97%。带符号的 Δϖ 与作者最终值 715/720 同号。每条运行都自行比较了两态、分组和三态模型并选定两态，也都分析了 GDP 对照样品。结构层面，给了逐区比较工具之后，多数运行得到"Switch I 核心更接近无规卷曲、Switch II 与远端更接近 GDP"，与论文 Table 2 的读法一致。</p>
+<p>还没做好的有三处：一是 Agent 选残基有偏差，D33 从未被拟合；二是本地引擎相对标准软件 ChemEx 系统偏低约 4%；三是拓扑和 ≲1% 的第二过程超出了本工具的辨识能力。条目已交 Gina 定级，全部标为候选。</p>
+<div class="box">边界：K-Ras 论文参与了流程设计，模型也可能在预训练中见过它，所以这是开发复现，不是留出验证。评分由主会话完成，另有 Codex 的独立核查，都不是领域专家判断。</div>
+
+<h2>四项确定性检查</h2>
+<table>
+<tr><th>检查</th><th>结果</th><th>对结论的影响</th><th>文件</th></tr>
+<tr><td>引擎交叉验证（ChemEx 2026.1.0，Longleaf）</td><td>ChemEx 用作者配置复现 Table 1（394 s⁻¹、10.17%）；本地引擎同条件 380 s⁻¹、9.98%，Δϖ 27/27 同号、r 0.9996</td><td>数值结论成立；报告与条目统一注明本地引擎 kex 偏低约 4%。Agent 工具保留本地引擎（数秒 vs ChemEx 约 4 小时），正式数值用 ChemEx 复算</td><td><code>engine_xval/CHEMEX_VS_LOCAL_WT.md</code></td></tr>
+<tr><td>覆盖审计（从数据清单出发）</td><td>高信号残基 WT 48、G12D 60、G12C 32 个；作者 |Δϖ| 前五中 D33 在 WT、G12D 的所有运行里都未进入拟合；G12、K16、N26 常被漏掉</td><td>覆盖成为评测协议的主指标之一；问题出在选择偏差，不在工具能力</td><td><code>coverage_audit/COVERAGE_V3.json</code></td></tr>
+<tr><td>负对照修正</td><td>移除合成 WT 工作区里残留的真实 HSQC/HMQC 文件（v3b）；¹⁵N 数据未变，原自检仍成立</td><td>之前 6 条负对照运行（0/6 误判为无序）结论不变，但当时的对照不完全自洽</td><td><code><local-work>/negctl_v3b_truth_note.json</code></td></tr>
+<tr><td>三态可辨识性（Longleaf，225 次拟合）</td><td>真两态时 BIC 3/3 选两态；第三态 ≥1% 时 12/12 被识别；星形与线性拓扑分不出，星形拟合初值敏感</td><td>状态数结论写成"检测下限约 1% 内未见第三态"；实测 WT 上三态使 χ² 多降 163，≲1% 的第二过程不能排除（候选）</td><td><code>identifiability/THREE_STATE_ID_CHECK.md</code></td></tr>
+</table>
+
+<h2>与论文的差异</h2>
+<table>
+<tr><th>项</th><th>论文</th><th>Agent（9 条运行）</th><th>判断</th></tr>
+<tr><td>交换参数</td><td>Table 1</td><td>中位数均在 ±6% 内</td><td>恢复；偏差约一半可由引擎解释</td></tr>
+<tr><td>G12D 布居低于 WT</td><td>9.00 vs 10.15%</td><td>中位数 9.1 vs 10.2%；单条运行间 8.1–10.1%</td><td>方向恢复，单条运行不稳定；交 Gina 判断是否写入</td></tr>
+<tr><td>状态数</td><td>两态（依据：单一 CEST 次级凹陷）</td><td>两态（依据：BIC、无第二凹陷）</td><td>恢复，且是 Agent 在给定多模型选项后自己选的</td></tr>
+<tr><td>Switch I 近无规卷曲</td><td>Table 2</td><td>给逐区工具后多数运行得到；早期运行未得到</td><td>依赖工具粒度</td></tr>
+<tr><td>state 1 对应</td><td>借 ³¹P 文献</td><td>一条运行用 BMRB 52072（T35S 参照）在数据层面检查一致</td><td>外部知识驱动的检索；交 Gina 判断</td></tr>
+</table>
+
+<h2>交付</h2>
+<ul>
+<li>给 Gina 的审阅包（英文）：<code>gina_review/KRAS_ATLAS_CANDIDATES_EN.html</code> 与 <code>KRAS_ATLAS_CANDIDATES.json</code>，5 个待她决定的问题。</li>
+<li>给 Codex 的沉淀：<code>handoff/</code> 下的五篇决策片段、跨论文索引（10 条段合同修改建议）、教训账本、评测协议、工具合同。</li>
+</ul>
+</main></body></html>

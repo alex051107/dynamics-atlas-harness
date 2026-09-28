@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-Ras NMR 分析 Agent 首轮报告</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5b55;--line:#e2ded5;--accent:#1f5f8b;--ok:#2d7a3e;--warn:#9a5b00;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#e8e6e0;--muted:#a19e96;--line:#34322e;--accent:#7fb6de;--ok:#7cc48b;--warn:#e0a653;--card:#1e1d1b}}
+body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB",sans-serif;margin:0}
+main{max-width:920px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:1.6em;margin:.2em 0}h2{font-size:1.25em;margin-top:2.2em;border-bottom:1px solid var(--line);padding-bottom:.3em}h3{font-size:1.05em;margin-top:1.5em}
+.meta{color:var(--muted);font-size:.9em}
+nav{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:18px 0;font-size:.92em}
+nav a{color:var(--accent);text-decoration:none}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.9em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+code{font-size:.88em;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px;overflow-x:auto;font-size:.85em;line-height:1.5}
+.tag{display:inline-block;font-size:.75em;border-radius:4px;padding:0 6px;margin-right:4px;border:1px solid var(--line)}
+.obs{color:var(--ok)}.inf{color:var(--accent)}.pro{color:var(--warn)}
+.box{background:var(--card);border-left:3px solid var(--accent);padding:10px 14px;margin:14px 0}
+</style>
+</head>
+<body><main>
+<h1>K-Ras NMR 分析 Agent 首轮报告</h1>
+<p class="meta">2026-09-26 · 任务目录 <code>autoresearch/tasks/dynamics_atlas_nmr_agent_kras_20260925/</code> · 代码分支 <code>feature/nmr-agent-v0</code>（本地，未提交）· 标注：<span class="tag obs">观察</span>命令实际产出；<span class="tag inf">推断</span>；<span class="tag pro">提案</span></p>
+
+<nav><b>目录</b>：<a href="#s1">1 结论</a> · <a href="#s2">2 背景与起点</a> · <a href="#s3">3 数据、泄露与隔离</a> · <a href="#s4">4 方法复现正控</a> · <a href="#s5">5 Agent 怎么工作</a> · <a href="#s6">6 首轮结果：科学恢复</a> · <a href="#s7">7 A/B/C 机制对照</a> · <a href="#s8">8 行为检查</a> · <a href="#s9">9 逐段故障与修订</a> · <a href="#s10">10 Fable 评审</a> · <a href="#s11">11 待决事项</a> · <a href="#s12">12 重跑</a></nav>
+
+<h2 id="s1">1 结论</h2>
+<p><span class="tag obs">观察</span>在提供两态拟合引擎、已归属的 CPMG/CEST 强度、基态位移与 R1 等辅助数据的条件下，解题 Agent 自选残基、符号初始化与分析顺序。运行时未向它提供目标论文及拟合答案；首轮评分所选的最终拟合恢复了 Table 1 的交换参数：kex 与论文偏差在 ±10% 以内，次要态布居大多在 ±5% 以内，带符号的 Δϖ 与作者最终值几乎全部同号（最终联合拟合共 20+22+21、24+31+27、39+40+36 个残基里只有 2 个不同号）。三组都找到了 P-loop、Switch I、Switch II 以及远端 α3 的交换，都得到 kex 排序 WT &gt; G12C &gt; G12D、布居 G12C 最低，都完成了次要态与 GDP 态的位移比较；结构解释及限制见下文。</p>
+<p><span class="tag obs">观察</span>结构解释仍不完整：三组都没有做无规卷曲参照比较；C 组还写了"次要态不是无序的"，这句超出了它检验过的证据。论文中 Switch I 的 GDP 相关性更高、无规卷曲 RMSD 更低，Switch II 的两项指标都更支持 GDP 参照；GDP 样与局部柔性不是互斥标签。<span class="tag obs">观察</span>事后用 C 组自己的 Δϖ 配作者的无规卷曲值计算：Switch I 对无规卷曲 RMSD 1.86 ppm、对 GDP 3.5 ppm；Switch II 对 GDP R² 0.86、对无规卷曲 0.66。这表明旧拟合输出包含可进一步解释的信息，但事后计算不是 Agent 的成果，也不能证明唯一瓶颈是参照工具。2026-09-26 的独立复算与修订见 <a href="resumption_20260926/independent_audit/REVIEW_ZH.md">纠偏核查</a>。</p>
+<p><span class="tag obs">观察</span>三种设计都能完成数值部分。加入流程和方法经验（B）带来了"同残基集合比较变体"和"参照数据先做偏移检查"两个动作；再加反思（C）修正了两处真实错误（逐残基拟合落入符号初值造成的局部极小；残基选择带来的偏差大于 bootstrap 误差），代价是调用数从 29 增到 54。每组只跑了一次，还不能区分机制效应和运行间波动。</p>
+<p><span class="tag obs">观察</span>两项行为检查的表现符合预期：删掉 CEST 和 HSQC/HMQC 后，Agent 写明所有符号未知，把结构结论收窄为"至多部分像 GDP、不是 GDP 构象"；把全部残基号加 200 并给出映射后，参数和符号与原编号时一致。</p>
+<div class="box"><b>2026-09-26 更正</b>：本轮有三点在初版里没讲清。(1) 拟合工具只提供两态模型，题面也问"次要态的布居"，状态数实际上是给定的；"单一全局两态过程可以描述数据"只是给定模型下的比较，不是 Agent 自主判断的状态数。(2) 数值能恢复，主要靠我写好的确定性拟合工具；Agent 负责的是残基选择、分析顺序和比较。(3) 作者处理卡点的几个动作（同时比较 GDP 与无规卷曲参照、GDP 结合样品无交换的对照、离群残基与 γ-磷酸距离的核对）没有翻译成 Agent 可执行的动作，相应数据和工具也没提供，所以结构结论只恢复一半有相当部分是输入设计的问题。v2 已增加相应输入和工具，科学效果仍须按修订后的证据标准核查，见 <code>KRAS_DECISION_FRAGMENTS_ZH.md</code>、<code>WORKFLOW_V2_ZH.md</code>、<code>PREREG_V2_TEST_ZH.md</code>。</div>
+<div class="box">结论边界：K-Ras 论文参与了方法经验的编写，这是<b>开发复现</b>，不是留出验证；Opus 5.5 可能在预训练中见过这篇 2023 年论文，隔离只能保证运行时没有提供答案。结构结论只到"位移层面的相似"，不是三维结构。所有评分是我按封存参照做的确定性核对和阅读判断，没有领域专家复核。</div>
+
+<h2 id="s2">2 背景与起点</h2>
+<p>项目的交付物是 Dynamics Atlas 数据库：从已发表实验数据（主要是 NMR）里识别出有功能意义的构象状态。9 月 17 日的会议把方法从收集规则（Rules Tables）转向收集科学家的分析动作，因为把规则塞进提示反而降低了表现。合作方在 Slack 给的五篇论文（AdK、IL-2、K-Ras、两篇 RfaH）是学习"作者怎样从数据推到结论、卡住时做了什么"的起点。</p>
+<p>本轮开始前实际存在的东西：9-22 评审包里的读文记录、阶段卡草稿、数据可用性探针和一次 16 份条目的提示级试验（让模型读论文写条目，比较给不给阶段卡）；Compass 运行时代码（有状态循环框架，但策略是脚本替身，没有接真实模型）。<b>没有</b>任何"真实数据 → 模型选动作 → 工具执行 → 结果进下一轮 → 结论"的闭环，试验比的是读论文，不是分析数据。</p>
+<p>首个案例选 K-Ras（Hansen 2023）：五篇里只有它把原始弛豫色散和 CEST 数据连同实验参数一起公开（Dryad/Zenodo，CC0），可以从原始强度重新拟合；论文 Table 1、Table 2 给了可核对的数值目标。RfaH 2025 也有原始数据和 MATLAB 脚本，列为下一个案例。</p>
+<p>实现方向只比较了两个：复用 Compass（2.4k 行，子目标/产物图等抽象按 HSP90 设计，接真实模型和 NMR 工具需要大量改造）与写一个最小的原生工具调用循环。选了后者，借用 Compass 的思路（工具回执、错误作为观察返回）而不借代码。LangGraph 已安装但没用：当前只有一个线性分段流程加段内循环，显式图还没有带来收益。</p>
+
+<h2 id="s3">3 数据、泄露与隔离</h2>
+<p><span class="tag obs">观察</span>数据取自 Zenodo 10.5281/zenodo.8187159（Dryad j6q573nm0 的镜像；Dryad 接口现在需要令牌），三个文件的 md5 与记录一致。作者 Source Data 从 Europe PMC 取得，只放在封存目录用于评分。</p>
+<p><span class="tag obs">观察</span>公开数据里藏着答案，必须剥离：</p>
+<ul>
+<li>WT 参数目录的 <code>global.toml</code> 写着 KEX_AB 403.1、PB 0.1006（作者 CPMG 全局拟合值）；<code>shift_dw.toml</code> 有逐残基 Δϖ 和误差；突变体目录也有同类文件。</li>
+<li>每个实验配置的残基列表后面带着作者的分类注释（"SlowEx : dR2 ~ 23.07"）。</li>
+<li>BMRB 52021/52023/52024 的引文标题就是论文标题（"Excited-state observation…differential structural dynamics…"）。</li>
+</ul>
+<p>盲测工作区只保留实测输入：原始强度曲线、实验参数、基态化学位移、实测 R1、HSQC−HMQC 峰位差、纳米颗粒弛豫表。剥离清单在 <code>blind_workspace_v1_LEAK_AUDIT.json</code>。BMRB 工具去掉所有标题和引文，并拦截上述三个条目。</p>
+<p><span class="tag obs">观察</span>隔离实测：解题会话由无头 Claude Code 启动，关闭全部内置工具、设置来源、技能和其他 MCP 连接器，只能调用 14 个分析工具；探针确认上下文里没有 CLAUDE.md、记忆或项目内容。沙箱里的 Python 读取原始参数文件和论文都被拒绝，网络不可用，工作区只读。</p>
+
+<h2 id="s4">4 方法复现正控</h2>
+<p>正控用作者的残基选择和我写的两态 Bloch–McConnell 拟合引擎（numpy/scipy，未安装新依赖）重跑，目的是确认数据和计算链可用，不算 Agent 的发现。</p>
+<table><tr><th>内容</th><th>本次复算</th><th>论文</th></tr>
+<tr><td>WT 联合拟合（CPMG+CEST，逐残基 CEST 定符号后）</td><td>kex 380 ± 8 s⁻¹，p 9.98 ± 0.19%</td><td>400 ± 12，10.15 ± 0.47%</td></tr>
+<tr><td>Table 2（用 Source Data 的 Δϖ）Switch I 对无规卷曲 / 对 GDP</td><td>R² 0.885 / 0.974</td><td>0.875 / 0.951</td></tr>
+<tr><td>Switch II 对无规卷曲 / 对 GDP</td><td>0.474 / 0.750</td><td>0.473 / 0.686</td></tr>
+</table>
+<p>正控里遇到的两个卡点后来都成了 Agent 要处理的问题：</p>
+<ul>
+<li><span class="tag obs">观察</span>CEST 联合拟合对符号初值敏感：全部从正号起步会落到 kex 463 的局部极小；逐残基扫描符号后恢复正常。原始曲线显示作者 WT 参数文件里的符号不是 CEST 定出的（V29 的次级凹陷在 125.9 ppm，文件写 +2.73）；<span class="tag inf">推断</span>该文件是只用 CPMG 的拟合（文件头如此注明），CPMG 本身不含符号。</li>
+<li><span class="tag obs">观察</span>作者的 GDP 态位移没有公开，公开的 BMRB 27720（pH 7.4、含盐）与作者值中位差只有 0.046 ppm，可以直接用。但同条件的 GTP 条目 BMRB 28021 与本研究 GTP 位移中位绝对偏差 3.75 ppm、最大 27 ppm，拿它做条件校正会把 Switch I 与 GDP 的 R² 从 0.97 毁到 0.38。这个陷阱本轮没有 Agent 去取，所以没被检验。</li>
+</ul>
+
+<h2 id="s5">5 Agent 怎么工作</h2>
+<p>结构是"分段科学流程 + 段内由模型选工具的行动循环 + 触发式反思 + 小型研究状态"。</p>
+<ul>
+<li><b>流程</b>：六段——问题与样品、数据盘点、基础分析、歧义与卡点、构象解释、核查收尾；每段的输入、判断、动作、输出和回访条件写在 <code>outputs/WORKFLOW_V1_ZH.md</code>，给模型的英文原文在 <code>prompts.py</code>。</li>
+<li><b>动作</b>：筛选弥散、看原始曲线、两态全局/逐残基拟合、CEST 多起点定符号、残基重抽样 bootstrap、BMRB 检索（去引文）、沙箱 Python、记录研究状态、提出新实验（与已执行分析分开）、提交报告。每次分析调用必须填"为解决什么、预期结果各意味着什么"，执行器只执行模型选的那个动作。</li>
+<li><b>反思</b>（C 组）：工具报错、拟合出现标志（参数贴边界、相对误差 &gt; 30%、约化 χ² &gt; 2）或连续 4 次分析未反思时，下一步必须调用 reflect，写出预期、观察、差异、可疑环节和决定；允许维持计划。</li>
+<li><b>记忆</b>：研究状态（样品事实、假设及支持/反对证据、未决问题、计划、撤回的陈述、建议实验）由运行框架保存，模型只能通过工具改写；所有调用连同目的、预期和结果写入 <code>actions.jsonl</code>，拟合结果按编号落盘，报告引用编号。</li>
+<li><b>借用的外部机制</b>：工具异常作为观察返回（aviary <code>env.py:284-343</code>）、旧观察用占位符隐藏（ldp <code>simple_agent.py:36-89</code>）、可执行代码环境（finch <code>notebook_env.py</code>），代码定位见 9-22 评审包的研究笔记。"失败信号触发文字反思"取自 Reflexion 的思路，本次没有核对其代码，属于设计推断。</li>
+</ul>
+
+<h2 id="s6">6 首轮结果：科学恢复</h2>
+<table><tr><th>组</th><th>WT kex / p1</th><th>G12D kex / p1</th><th>G12C kex / p1</th><th>符号与作者一致</th></tr>
+<tr><td>论文 Table 1</td><td>400 ± 12 / 10.15%</td><td>301 ± 17 / 9.00%</td><td>326 ± 11 / 6.97%</td><td>—</td></tr>
+<tr><td>A（基础说明）</td><td>388 / 10.15%</td><td>279 / 9.65%</td><td>340 / 6.89%</td><td>20/20、22/22、21/21</td></tr>
+<tr><td>B（+流程与经验）</td><td>390 / 10.26%</td><td>272 / 9.93%</td><td>339 / 7.08%</td><td>24/24、31/31、27/27</td></tr>
+<tr><td>C（+反思）</td><td>376 / 10.00%</td><td>303 / 8.90%</td><td>338 / 7.06%</td><td>39/39、40/42、36/36</td></tr>
+</table>
+<p class="meta">每组取其报告中的主拟合；全部拟合的逐条评分见 <code>outputs/grading/GRADES_R3_BX.txt</code>。</p>
+<h3>和论文一致的部分</h3>
+<ul>
+<li>存在毫秒级交换，区域是 P-loop、Switch I、Switch II，外加 α3 等远端残基（论文也提到 92–98 区的次要效应）。</li>
+<li>单一全局两态过程可以描述数据：三组都用 BIC 比较逐残基与全局模型，BIC 支持全局；都分区拟合检查了 Switch I 与 Switch II 是否同一过程。</li>
+<li>T35、E37 的大 Δϖ（−11.5 / +10.3 ppm）由 CEST 确定（A、C）。</li>
+<li>G12C 布居最低；突变体在 G13 和 Switch II 的 Δϖ 与 WT 不同。</li>
+<li>次要态在 Switch I 与 GDP 态方向一致、只走了部分距离（约 60–80%）；Switch II 有反号残基，不是 GDP 构象。</li>
+</ul>
+<h3>与论文不同或没达到的部分</h3>
+<ul>
+<li><b>G12D 与 WT 的布居</b>：论文 10.15 vs 9.00%，三组都判为"相近"（C 在匹配残基集合下 10.4 vs 10.2%）。C 组量化出残基选择带来约 10% 的系统偏差，这个差别落在该范围内。<span class="tag inf">推断</span>这是合理的不确定性，不是分析错误；论文的差别也只有约 2σ。</li>
+<li><b>Switch I 是否接近无序</b>：没有 Agent 做无规卷曲比较（见第 1 节）。这是本轮唯一改变科学结论的缺口。</li>
+<li><b>"state 1"</b>：三组都把次要态称为 Ras 的 state 1，题面没有提这个词。<span class="tag inf">推断</span>来自模型对 Ras 的先验知识；论文也把激发态对应到 state 1，但依据是另一项 ³¹P 研究，不是这批数据。</li>
+</ul>
+
+<h2 id="s7">7 A/B/C 机制对照</h2>
+<table><tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+<tr><td>工具调用 / 名义成本</td><td>29 / $1.09</td><td>43 / $1.70</td><td>54 / $2.07</td></tr>
+<tr><td>同残基集合比较变体并 bootstrap</td><td>否</td><td>是（来自流程卡）</td><td>是（反思 #25 触发）</td></tr>
+<tr><td>参照数据偏移检查</td><td>处理了编号偏移</td><td>用非交换残基查偏移</td><td>用非交换残基查偏移</td></tr>
+<tr><td>T35/E37 大 Δϖ 纳入结构比较</td><td>是</td><td>否，符号记为未知</td><td>是</td></tr>
+<tr><td>残基选择敏感性（约 10%）</td><td>否</td><td>否</td><td>是，报告为实际不确定度</td></tr>
+<tr><td>反思</td><td>—</td><td>—</td><td>10 次，4 次改计划，2 次纠正真实错误，4 次调用被闸门拦截</td></tr>
+<tr><td>无规卷曲参照</td><td>否</td><td>否</td><td>否（且写了"不是无序"）</td></tr>
+</table>
+<p><span class="tag inf">推断</span>在这个案例上，普通工具循环已经能完成数值部分；流程和经验主要改变了比较的规范性（匹配残基集合、偏移检查）；反思带来了两处真实纠错和一处过度结论，以及约 25% 的额外调用。每组一次运行，差异可能来自运行间波动，这里不宣称任何机制增益。</p>
+
+<h2 id="s8">8 行为检查（均用 C 组流程）</h2>
+<table><tr><th>检查</th><th>改动</th><th>结果</th></tr>
+<tr><td>删除决定性证据</td><td>去掉全部 CEST 与 HSQC/HMQC</td><td>参数仍在论文 ±10% 内（WT 375/10.6%，G12D 307/9.3%，G12C 359/7.1%）；报告写明所有符号未知，只用 |Δϖ| 比较，结构结论收窄为"至多部分像 GDP，不是 GDP 构象"，并提议补做 CEST 与 HSQC/HMQC</td></tr>
+<tr><td>改编号但给映射</td><td>全部残基号 +200，题面说明</td><td>正确换回天然编号并与 BMRB 对齐；参数 391/10.4%、301/9.4%、341/7.1%，符号 31/31、31/31、28/28；结论与原编号一致</td></tr>
+</table>
+<p>这两项只说明 Agent 的结论会随证据变化、不受编号表面形式影响，不代表方法能迁移到其他蛋白。</p>
+
+<h2 id="s9">9 逐段故障与修订</h2>
+<table><tr><th>出问题的环节</th><th>真实现象</th><th>改了什么</th><th>怎么验证</th></tr>
+<tr><td>数据读取</td><td>G12D 文件用三字母名（ASP012N），被读成 A12</td><td>解析支持三字母码</td><td>三个样品的标签与 K-Ras4B 序列逐一核对</td></tr>
+<tr><td>工作区</td><td>桌面 iCloud 在重建时生成冲突副本（"G12C 2"）</td><td>工作区移到非同步目录，构建时拒绝意外条目</td><td>R1 首次 inventory 确认当时干净；v2 内容指纹 b4b0546…</td></tr>
+<tr><td>工具（R1）</td><td>Python 工具路径拼错，Agent 失败两次后记下"只用内置工具"，此后放弃自定义计算</td><td>路径改为绝对路径</td><td>沙箱内读写权限实测</td></tr>
+<tr><td>上下文（R1）</td><td>每轮裁剪旧输出改写历史，提示缓存失效，成本升高</td><td>超过 6 万字符时一次性批量裁剪，并注入研究状态</td><td>—（R3 起改用订阅通道）</td></tr>
+<tr><td>模型通道</td><td>OpenRouter 余额耗尽（R1 在第 15 轮中断，$0.88）；PATH 上的 CLI 2.1.268 不支持 Opus 5.5</td><td>按你的选择改用订阅通道，使用桌面 App 自带的 2.1.281</td><td>每轮返回模型标识均为 <code>claude-opus-5-5</code></td></tr>
+<tr><td>工具速度（R2）</td><td>含 CEST 的联合拟合和 bootstrap 每次数分钟，三组并行互抢线程；R2 中止</td><td>CEST 传播改为批量特征分解，限制线程，bootstrap 并行</td><td>与原算法最大差 5.7×10⁻¹⁴；WT 联合拟合 1.6 s，复现 R1 结果到小数点后五位</td></tr>
+<tr><td>第四段：定符号</td><td>负对照中 |Δϖ| 15–17 ppm 的残基从小初值起步会停在局部极小；参数边界 ±15 ppm 也不够</td><td>多起点网格（给定值与 2/5/10/15/20 ppm，正负各一），边界放宽到 ±25 ppm</td><td>负对照找回 T35 −15.30（真值 −15.35）、E37 +17.04（+17.05）；真实数据结果不变</td></tr>
+<tr><td>第五段：参照态</td><td>三组只比较了 GDP，没有无规卷曲参照；C 过度断言"不是无序"</td><td><span class="tag pro">提案</span>v2 要求至少比较两类候选参照态且不点名，加通用参照库工具；报告须说明 |Δϖ| 最大的 5 个残基是否进入比较</td><td>见第 10 节预设检验；需要无规卷曲预测器（待批准）</td></tr>
+</table>
+<p class="meta">B、C 组共用的 v2 提示已写好（<code>prompts.py</code> 中的 C2），v1 的方法经验里原本写过"random coil predictions"，三组仍然没做，说明缺的主要是工具而不是提示；v2 改为中性措辞。</p>
+
+<h2 id="s10">10 Fable 评审（第一轮结果节点）</h2>
+<p>只带一个问题：v2 先改哪一处、怎样检验才可能失败。候选是加无规卷曲参照、改反思触发条件、强制大 |Δϖ| 残基定符号。</p>
+<ul>
+<li>采纳：先做参照态修订，把"大 |Δϖ| 残基覆盖"并入其报告要求；反思触发条件暂不改（单次运行分不清周期触发多余还是恰好没碰上问题）。</li>
+<li>采纳并已实现：<b>负对照</b>——合成一份"次要态就是 GDP 态"的数据（用 BMRB 27720 的 GDP 位移），若 v2 把它判为"无序"即失败，防止强制比较后一律偏向无序。生成器已写好并自检：恢复 kex 368（设定 380）、p 0.1005（0.10），约化 χ² 1.03。</li>
+<li>采纳：防泄漏措辞；无规卷曲值用独立来源，不用作者表格。</li>
+<li>预设检验：C（v1）对 C2（v2），同数据、同模型、70 次上限，各 3 次。命中 = Switch I 与 II 各报告两类参照的 R²/RMSD，且 Switch I 判为更近无规卷曲、Switch II 判为有序但不同于 GDP。通过：v2 ≥ 2/3 命中且负对照 0/3 判为无序；kex 仍在 ±10%、符号一致率不降、调用数增幅 ≤ 15。失败：v2 ≤ 1/3。</li>
+<li>没做到：执行 prompt 要求在"确定首个子任务前"也开一次讨论，这次没有开。</li>
+</ul>
+
+<h2 id="s11">11 待决事项</h2>
+<h3>需要你批准</h3>
+<ul>
+<li><b>下载 POTENCI</b>（Nielsen & Mulder 2018 的序列无规卷曲位移预测器，GitHub 上的单个 Python 脚本，依赖 numpy/pandas，已装）：v2 检验的前提。不批准的话，退而用文献表格值自己实现，但那是我凭记忆写的数值，可靠性低，我不建议。</li>
+<li><b>提交代码</b>到 <code>feature/nmr-agent-v0</code>（按项目规则，提交前需要你同意；提交信息不带 Claude 署名）。</li>
+</ul>
+<h3>需要领域专家（Gina）判断</h3>
+<ul>
+<li>G12D 与 WT 的布居差（论文 9.0 vs 10.15%）在残基选择约 10% 的系统偏差下是否仍应作为结论。</li>
+<li>次要态是"state 1"还是"部分 GDP 样但 Switch II 另有构象"：本数据只能给位移层面的相似，数据库条目的证据等级怎么定。</li>
+<li>拟合模型的简化（理想脉冲、忽略 B1 不均匀性、次要态 R2 等于主态）是否会系统性压低 kex（正控 380 vs 400）。</li>
+</ul>
+
+<h2 id="s12">12 重跑</h2>
+<pre># 在 dynamics-atlas-harness-nmr-agent-v0 下
+PYTHONPATH=src python3 -m dynamics_atlas_harness.nmr_agent.claude_runner \
+  --workspace <local-work>/kras_ws_v2 --run-dir <local-work>/runs/&lt;RUN&gt; \
+  --arm C --model claude-opus-5-5 --max-calls 70 --block-bmrb 52021,52023,52024
+# 评分（在任务目录下）
+python3 outputs/grading/grade_run.py runs/R3_A_opus55 runs/R3_B_opus55 runs/R3_C_opus55
+python3 outputs/grading/ref_tables.py WT</pre>
+<p>工作区构建：<code>workspace.build_workspace()</code>（剥离答案，写泄露审计）；行为检查工作区：<code>behavior_variants.py</code>。所有运行的完整记录（调用、反思、拟合、报告、转录）在任务目录 <code>runs/</code>。本轮模型身份：解题 Opus 5.5（R1 经 OpenRouter，其余经订阅）；读文、编程、评分为本主会话 Opus 5.5；评审为 Fable（子会话）。实际花费：OpenRouter $0.899（R1 与传输测试）；其余在订阅内，按列表价折算的名义成本约 $8.2（R3 三组 $4.86、两项行为检查 $3.23、冒烟测试 $0.10；中止的 R2 未计）。</p>
+</main></body></html>

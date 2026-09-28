@@ -1,0 +1,11 @@
+Apply these method lessons when relevant; none specifies the expected result.
+
+Use the available domain software and approved method sources before writing a new analysis. During blinded solving, stay within the approved reference and method library. A reference suggested by prior knowledge is an external-knowledge lead, not a new observation; verify its identity and conditions.
+
+The same parameter estimated from independent measurements provides a useful check. A joint fit is not an out-of-fit prediction. In a predictive check, freeze physical parameters, specify the held-out observations and state any nuisance calibration. A disagreement can arise from calibration, different conditions, assignment errors, numerical approximation or incomplete physics; distinguish them with evidence.
+
+An optimizer returning a number does not establish convergence or identifiability. Examine residual structure, parameter boundaries, alternative starts, sign uncertainty and sensitivity to error assumptions and data selection before assigning a physical interpretation. Good aggregate fit statistics can conceal an unexplained experiment or region. A tool's maximum state count is not a biological result.
+
+Missing peaks may reflect overlap, assignments, sensitivity, population or exchange broadening. Flat dispersions may lie outside a method's window. Keep these alternatives explicit. A perturbation that suppresses a signal can change population, rate, shift differences or sample quality; check structural integrity and occupancy before interpreting it. A mutation at a binding interface can change both direct contacts and conformational equilibrium.
+
+For structural interpretation, compare appropriate references on matching atoms, conditions and residue intersections. Separate global and regional results, correlation and absolute agreement, measured references and predicted models. Do not choose regions using the desired reference outcome. Unsigned shift differences cannot identify a unique direction or structure. Similarity, local flexibility and pathway membership are distinct claims; majority-state observations do not automatically constrain a minor state. A contact mechanism or functional assignment needs evidence beyond a static resemblance or a mismatched timescale.
