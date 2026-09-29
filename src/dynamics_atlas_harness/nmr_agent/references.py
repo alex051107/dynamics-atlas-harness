@@ -16,6 +16,7 @@ import math
 import re
 import shutil
 import subprocess
+import sys
 import textwrap
 import urllib.request
 from pathlib import Path
@@ -76,9 +77,13 @@ def potenci_random_coil(sequence: str, first_resnum: int, pH: float, temperature
     shutil.copy(potenci_path, work / "potenci.py")
     profile = textwrap.dedent(f"""(version 1)(allow default)(deny network*)
         (deny file-write* (subpath "{Path.home()}"))(allow file-write* (subpath "{work.resolve()}"))""")
-    p = subprocess.run(["/usr/bin/sandbox-exec", "-p", profile, "/opt/anaconda3/bin/python3", "potenci.py",
-                        sequence, f"{pH}", f"{temperature_k}", f"{ionic_m}"], cwd=work, capture_output=True,
-                       text=True, timeout=300)
+    if sys.platform == "darwin":
+        cmd = ["/usr/bin/sandbox-exec", "-p", profile, "/opt/anaconda3/bin/python3", "potenci.py",
+               sequence, f"{pH}", f"{temperature_k}", f"{ionic_m}"]
+    else:  # Linux (Longleaf node): bubblewrap, no network, only the work dir writable
+        from .sandbox import bwrap_cmd
+        cmd = bwrap_cmd([sys.executable, "potenci.py", sequence, f"{pH}", f"{temperature_k}", f"{ionic_m}"], ro=[], rw=[work], cwd=work)
+    p = subprocess.run(cmd, cwd=work, capture_output=True, text=True, timeout=300)
     outs = sorted(work.glob("outPOTENCI_*.txt"))
     if not outs:
         raise RuntimeError(f"POTENCI failed: {p.stdout[-500:]} {p.stderr[-500:]}")

@@ -10,6 +10,7 @@ import json
 import math
 import re
 import subprocess
+import sys
 import textwrap
 import time
 import urllib.parse
@@ -438,8 +439,12 @@ class ToolBox:
         env = {"PATH": "/usr/bin:/bin", "PYTHONPATH": str(self.ws / "lib"), "HOME": sc, "MPLBACKEND": "Agg",
                "PYTHONDONTWRITEBYTECODE": "1", "OMP_NUM_THREADS": "2"}
         try:
-            p = subprocess.run(["/usr/bin/sandbox-exec", "-p", profile, "/opt/anaconda3/bin/python3", str(script)],
-                               cwd=ws, capture_output=True, text=True, timeout=240, env=env)
+            if sys.platform == "darwin":
+                cmd = ["/usr/bin/sandbox-exec", "-p", profile, "/opt/anaconda3/bin/python3", str(script)]
+            else:  # Linux (Longleaf node): bubblewrap, same isolation
+                from .sandbox import bwrap_cmd
+                cmd = bwrap_cmd([sys.executable, str(script)], ro=[self.ws.resolve()], rw=[scratch], cwd=self.ws)
+            p = subprocess.run(cmd, cwd=ws, capture_output=True, text=True, timeout=240, env=env)
             out, err, rc = p.stdout, p.stderr, p.returncode
         except subprocess.TimeoutExpired:
             out, err, rc = "", "timeout after 240 s", -1

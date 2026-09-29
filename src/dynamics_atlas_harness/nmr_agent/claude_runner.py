@@ -17,6 +17,7 @@ import sys
 import time
 from pathlib import Path
 
+from . import remote_tools
 from .prompts import WORKFLOW_ENV, system_prompt, workflow_file_info
 
 TOOL_NOTE = ("\n\nYour tools come from the MCP server 'nmr' (names appear as mcp__nmr__<tool>). "
@@ -44,10 +45,15 @@ def main() -> None:
     cwd.mkdir(parents=True, exist_ok=True)
     src = Path(__file__).resolve().parents[2]
     wf_info = workflow_file_info() if a.arm in ("W", "S") and not a.prompt_file else {}
+    remote = remote_tools.enabled()  # REMOTE_TOOLS=1: tool server runs on Longleaf (default: local)
+    if remote:
+        remote_tools.prepare(a.workspace.resolve(), run, os.environ.get(WORKFLOW_ENV, ""))
     mcp_cfg = {"mcpServers": {"nmr": {"command": sys.executable, "args": [
         "-m", "dynamics_atlas_harness.nmr_agent.mcp_server", "--workspace", str(a.workspace.resolve()),
         "--run-dir", str(run), "--arm", a.arm, "--block-bmrb", a.block_bmrb, "--max-calls", str(a.max_calls)],
         "env": {"PYTHONPATH": str(src), "PYTHONWARNINGS": "ignore", "DYNAMICS_ATLAS_POTENCI": os.environ.get("DYNAMICS_ATLAS_POTENCI", ""), WORKFLOW_ENV: os.environ.get(WORKFLOW_ENV, ""), "OMP_NUM_THREADS": "2", "OPENBLAS_NUM_THREADS": "2", "MKL_NUM_THREADS": "2", "VECLIB_MAXIMUM_THREADS": "2"}}}}
+    if remote:
+        mcp_cfg = {"mcpServers": {"nmr": remote_tools.server_entry(a.workspace.resolve(), run, a.arm, a.block_bmrb, a.max_calls)}}
     (run / "mcp_config.json").write_text(json.dumps(mcp_cfg, indent=1))
     sp = (a.prompt_file.read_text() if a.prompt_file else system_prompt(a.arm)) + TOOL_NOTE
     (run / "system_prompt.txt").write_text(sp)
@@ -60,7 +66,8 @@ def main() -> None:
     t0 = time.time()
     timed_out = False
     with (run / "transcript.jsonl").open("w") as out, (run / "stderr.txt").open("w") as err:
-        proc = subprocess.Popen(cmd, cwd=cwd, stdout=out, stderr=err, stdin=subprocess.DEVNULL, start_new_session=True)
+        cenv = {**os.environ, "MCP_TIMEOUT": remote_tools.MCP_STARTUP_TIMEOUT_MS} if remote else None
+        proc = subprocess.Popen(cmd, cwd=cwd, stdout=out, stderr=err, stdin=subprocess.DEVNULL, start_new_session=True, env=cenv)
         try:
             rc = proc.wait(timeout=a.timeout_s)
         except subprocess.TimeoutExpired:
@@ -71,6 +78,7 @@ def main() -> None:
             except subprocess.TimeoutExpired:
                 os.killpg(proc.pid, signal.SIGKILL)
                 rc = proc.wait()
+    pull_rc = remote_tools.pull(run) if remote else None  # bring observations/fits/REPORT back before counting
     models, cost, turns, result = set(), None, None, None
     for line in (run / "transcript.jsonl").read_text().splitlines():
         try:
@@ -92,6 +100,9 @@ def main() -> None:
     summary["timed_out"] = timed_out
     summary.update(wf_info)
     summary["python"] = sys.executable
+    if remote:
+        nf = run / "remote_node.txt"
+        summary["remote_tools"] = {"node_info": nf.read_text().strip() if nf.exists() else None, "sync_back_rc": pull_rc}
     (run / "summary.json").write_text(json.dumps(summary, indent=1))
     print(json.dumps(summary, indent=1))
 
