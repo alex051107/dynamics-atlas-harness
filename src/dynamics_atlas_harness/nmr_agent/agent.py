@@ -24,6 +24,38 @@ from .prompts import (FINISH_GATE_INSTRUCTION, REFLECT_TOOL, WORKFLOW_CHECKPOINT
 from .tools import ANALYSIS_TOOLS, ToolBox, tool_specs
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+BASE_URL_ENV = "NMR_AGENT_BASE_URL"            # override the chat-completions endpoint (any OpenAI-compatible API)
+API_KEY_ENV_ENV = "NMR_AGENT_API_KEY_ENV"      # name of the environment variable holding the key
+DEFAULT_API_KEY_ENV = "OPENROUTER_API_KEY"
+
+# DeepSeek list prices, USD per 1M tokens (cache-hit input, cache-miss input, output), from
+# https://api-docs.deepseek.com/quick_start/pricing read 2026-09-29. Peak = 01-04 and 06-10 UTC Mon-Fri.
+DEEPSEEK_PRICES = {"deepseek-flash": {"peak": (0.006, 0.30, 1.20), "off": (0.003, 0.15, 0.60)},
+                   "deepseek-v4-pro": {"peak": (0.044, 1.32, 3.96), "off": (0.022, 0.66, 1.98)}}
+
+
+def endpoint_url() -> str:
+    return os.environ.get(BASE_URL_ENV, "").strip() or OPENROUTER_URL
+
+
+def api_key_env() -> str:
+    return os.environ.get(API_KEY_ENV_ENV, "").strip() or DEFAULT_API_KEY_ENV
+
+
+def usage_cost(usage: dict[str, Any], model: str, now: "time.struct_time | None" = None) -> float:
+    """Cost of one call in USD. OpenRouter reports `usage.cost`; DeepSeek reports only token counts
+    (`prompt_cache_hit_tokens` / `prompt_cache_miss_tokens` / `completion_tokens`), priced from the table above.
+    Unknown model without a reported cost -> 0.0 (tokens are still logged)."""
+    if usage.get("cost") is not None:
+        return float(usage["cost"])
+    prices = DEEPSEEK_PRICES.get(model)
+    if not prices or "prompt_cache_hit_tokens" not in usage:
+        return 0.0
+    t = now or time.gmtime()
+    peak = t.tm_wday < 5 and (1 <= t.tm_hour < 4 or 6 <= t.tm_hour < 10)
+    hit_p, miss_p, out_p = prices["peak" if peak else "off"]
+    return (usage.get("prompt_cache_hit_tokens", 0) * hit_p + usage.get("prompt_cache_miss_tokens", 0) * miss_p
+            + usage.get("completion_tokens", 0) * out_p) / 1e6
 
 
 @dataclass
@@ -79,14 +111,15 @@ class ResearchState:
 
 
 def call_openrouter(messages: list[dict[str, Any]], tools: list[dict[str, Any]], cfg: RunConfig) -> dict[str, Any]:
-    key = os.environ.get("OPENROUTER_API_KEY")
+    key_env = api_key_env()
+    key = os.environ.get(key_env)
     if not key:
-        raise RuntimeError("OPENROUTER_API_KEY not set (run under with-openrouter)")
+        raise RuntimeError(f"{key_env} not set (run under with-openrouter / with-deepseek)")
     body: dict[str, Any] = {"model": cfg.model, "messages": messages, "tools": tools, "max_tokens": cfg.max_tokens,
                             "usage": {"include": True}}
     if cfg.temperature is not None:
         body["temperature"] = cfg.temperature
-    req = urllib.request.Request(OPENROUTER_URL, data=json.dumps(body).encode(), method="POST",
+    req = urllib.request.Request(endpoint_url(), data=json.dumps(body).encode(), method="POST",
                                  headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
                                           "X-Title": "dynamics-atlas-nmr-agent-v0"})
     last_err = None
@@ -101,7 +134,7 @@ def call_openrouter(messages: list[dict[str, Any]], tools: list[dict[str, Any]],
         except (urllib.error.URLError, TimeoutError) as e:
             last_err = repr(e)
         time.sleep(5 * (attempt + 1))
-    raise RuntimeError(f"OpenRouter call failed: {last_err}")
+    raise RuntimeError(f"model call failed ({endpoint_url()}): {last_err}")
 
 
 def _cache_mark(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -141,6 +174,8 @@ class Agent:
              + "\n\nStart by calling inventory. Work until you can answer the questions, then call finish."},
         ]
         self.cost = 0.0
+        self.tok_in = self.tok_out = self.tok_cache_hit = 0
+        self.models_returned: set[str] = set()
         self.turn = 0
         self.resumed_from = None
         self.analysis_since_reflect = 0
@@ -289,12 +324,17 @@ class Agent:
                 warned = True
             self._trim()
             try:
-                resp = call_openrouter(_cache_mark(self.messages), self.specs, self.cfg)
+                msgs = self.messages if endpoint_url() != OPENROUTER_URL else _cache_mark(self.messages)   # cache_control is Anthropic-via-OpenRouter only
+                resp = call_openrouter(msgs, self.specs, self.cfg)
             except Exception as e:
                 stop_reason = f"transport_error: {e}"
                 break
             usage = resp.get("usage", {}) or {}
-            self.cost += float(usage.get("cost") or 0.0)
+            self.cost += usage_cost(usage, resp.get("model") or self.cfg.model)
+            self.tok_in += int(usage.get("prompt_tokens") or 0)
+            self.tok_out += int(usage.get("completion_tokens") or 0)
+            self.tok_cache_hit += int(usage.get("prompt_cache_hit_tokens") or (usage.get("prompt_tokens_details") or {}).get("cached_tokens") or 0)
+            self.models_returned.add(str(resp.get("model")))
             choice = resp["choices"][0]
             msg = choice["message"]
             self.calls.write(json.dumps({"turn": self.turn, "model": resp.get("model"), "provider": resp.get("provider"),
@@ -339,7 +379,8 @@ class Agent:
             if self.cost > self.cfg.max_cost_usd:
                 stop_reason = "budget"
                 break
-        summary = {"resumed_from": self.resumed_from, "arm": self.cfg.arm, "model_requested": self.cfg.model, "turns": self.turn, "cost_usd": round(self.cost, 5),
+        summary = {"resumed_from": self.resumed_from, "arm": self.cfg.arm, "model_requested": self.cfg.model, "models_returned": sorted(self.models_returned), "endpoint": endpoint_url(),
+                   "prompt_tokens": self.tok_in, "completion_tokens": self.tok_out, "cache_hit_tokens": self.tok_cache_hit, "turns": self.turn, "cost_usd": round(self.cost, 5),
                    "stop_reason": stop_reason, "seconds": round(time.time() - t0, 1),
                    "n_reflections": len(self.state.reflections), "finished": self.final_report is not None}
         (self.run_dir / "summary.json").write_text(json.dumps(summary, indent=1))
