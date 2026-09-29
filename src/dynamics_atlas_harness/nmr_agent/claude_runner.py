@@ -17,7 +17,7 @@ import sys
 import time
 from pathlib import Path
 
-from .prompts import system_prompt
+from .prompts import WORKFLOW_ENV, system_prompt, workflow_file_info
 
 TOOL_NOTE = ("\n\nYour tools come from the MCP server 'nmr' (names appear as mcp__nmr__<tool>). "
              "You have no other file, shell or web access.")
@@ -27,14 +27,14 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
     ap.add_argument("--model", default="claude-opus-5-5")
     ap.add_argument("--block-bmrb", default="")
     ap.add_argument("--max-calls", type=int, default=70)
     ap.add_argument("--prompt-file", type=Path, help="Frozen experimental system prompt override")
     ap.add_argument("--timeout-s", type=int, default=3600)
     ap.add_argument("--cwd", type=Path, default=Path("/tmp/nmr_solver"))
-    ap.add_argument("--claude-bin", default=str(Path.home() / "Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude"))
+    ap.add_argument("--claude-bin", default=os.environ.get("CLAUDE_BIN") or str(Path.home() / "Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude"))
     a = ap.parse_args()
     run = a.run_dir.resolve()
     if (run / "transcript.jsonl").exists():
@@ -43,10 +43,11 @@ def main() -> None:
     cwd = a.cwd / run.name
     cwd.mkdir(parents=True, exist_ok=True)
     src = Path(__file__).resolve().parents[2]
+    wf_info = workflow_file_info() if a.arm == "W" and not a.prompt_file else {}
     mcp_cfg = {"mcpServers": {"nmr": {"command": sys.executable, "args": [
         "-m", "dynamics_atlas_harness.nmr_agent.mcp_server", "--workspace", str(a.workspace.resolve()),
         "--run-dir", str(run), "--arm", a.arm, "--block-bmrb", a.block_bmrb, "--max-calls", str(a.max_calls)],
-        "env": {"PYTHONPATH": str(src), "PYTHONWARNINGS": "ignore", "DYNAMICS_ATLAS_POTENCI": os.environ.get("DYNAMICS_ATLAS_POTENCI", ""), "OMP_NUM_THREADS": "2", "OPENBLAS_NUM_THREADS": "2", "MKL_NUM_THREADS": "2", "VECLIB_MAXIMUM_THREADS": "2"}}}}
+        "env": {"PYTHONPATH": str(src), "PYTHONWARNINGS": "ignore", "DYNAMICS_ATLAS_POTENCI": os.environ.get("DYNAMICS_ATLAS_POTENCI", ""), WORKFLOW_ENV: os.environ.get(WORKFLOW_ENV, ""), "OMP_NUM_THREADS": "2", "OPENBLAS_NUM_THREADS": "2", "MKL_NUM_THREADS": "2", "VECLIB_MAXIMUM_THREADS": "2"}}}}
     (run / "mcp_config.json").write_text(json.dumps(mcp_cfg, indent=1))
     sp = (a.prompt_file.read_text() if a.prompt_file else system_prompt(a.arm)) + TOOL_NOTE
     (run / "system_prompt.txt").write_text(sp)
@@ -87,8 +88,10 @@ def main() -> None:
     summary = {"transport": "claude-code-headless (subscription)", "arm": a.arm, "model_requested": a.model,
                "models_returned": sorted(models), "notional_cost_usd": cost, "num_turns": turns, "tool_calls": n_calls,
                "result": result, "returncode": rc, "finished": (run / "REPORT.md").exists(),
-               "seconds": round(time.time() - t0, 1), "claude_bin": a.claude_bin, "isolation_flags": cmd[3:]}
+               "seconds": round(time.time() - t0, 1), "claude_bin": a.claude_bin, "block_bmrb": a.block_bmrb, "max_calls": a.max_calls, "isolation_flags": cmd[3:]}
     summary["timed_out"] = timed_out
+    summary.update(wf_info)
+    summary["python"] = sys.executable
     (run / "summary.json").write_text(json.dumps(summary, indent=1))
     print(json.dumps(summary, indent=1))
 

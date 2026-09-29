@@ -325,7 +325,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Run the NMR analysis agent on a sanitized workspace.")
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
     ap.add_argument("--model", default="anthropic/claude-opus-5.5")
     ap.add_argument("--max-turns", type=int, default=40)
     ap.add_argument("--max-cost", type=float, default=1.0)

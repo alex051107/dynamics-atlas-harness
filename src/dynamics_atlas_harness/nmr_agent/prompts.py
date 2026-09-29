@@ -1,11 +1,16 @@
 """Run prompts for the NMR analysis agent, v1 (2026-09-25).
 
 Arm A: base instructions only. Arm B: A + generalized method experience + six-stage
-scientific workflow. Arm C: B + harness-triggered reflection checkpoints.
+scientific workflow. Arm C: B + harness-triggered reflection checkpoints. Arm W: A + an external workflow note read from
+the file named by NMR_AGENT_WORKFLOW_FILE (2026-09-29).
 The method experience is written from the development paper traces (AdK, IL-2, K-Ras,
 RfaH, Bouvignies 2011, Fraser 2009) as generic moves; it contains no target values,
 residue sets, state counts or conclusions for the case being solved.
 """
+
+import hashlib
+import os
+from pathlib import Path
 
 BASE = """You are an NMR protein-dynamics scientist analysing a real dataset with computational tools.
 You decide which analysis to run next; the tools execute exactly what you request and return real results.
@@ -65,7 +70,30 @@ REFLECT_TOOL = {"type": "function", "function": {
         "required": ["expected", "observed", "discrepancy", "suspects", "decision", "next_action"]}}}
 
 
+WORKFLOW_ENV = "NMR_AGENT_WORKFLOW_FILE"
+WORKFLOW_INTRO = ("\n\nBelow is a working note distilled from how experienced protein-dynamics NMR scientists "
+                  "handle analysis stuck points. Use the parts that apply.\n\n")
+
+
+def workflow_file() -> Path:
+    """Path from NMR_AGENT_WORKFLOW_FILE; raises if unset or missing (no fallback)."""
+    raw = os.environ.get(WORKFLOW_ENV, "").strip()
+    if not raw:
+        raise FileNotFoundError(f"arm W requires the environment variable {WORKFLOW_ENV}")
+    path = Path(raw).expanduser()
+    if not path.is_file():
+        raise FileNotFoundError(f"arm W workflow file not found: {path}")
+    return path
+
+
+def workflow_file_info() -> dict:
+    path = workflow_file().resolve()
+    return {"workflow_file": str(path), "workflow_sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
 def system_prompt(arm: str) -> str:
+    if arm == "W":
+        return BASE + WORKFLOW_INTRO + workflow_file().read_text()
     if arm == "A":
         return BASE
     if arm == "B":

@@ -78,7 +78,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
     ap.add_argument("--block-bmrb", default="")
     ap.add_argument("--result-chars", type=int, default=6000)
     ap.add_argument("--max-calls", type=int, default=70)
