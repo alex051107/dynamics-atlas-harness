@@ -1,0 +1,15 @@
+# Arm A: base prompt and NMR tools only. No consult tools, no review node.
+name: A
+model: deepseek-flash
+base_url: https://api.deepseek.com
+api_key_env: DEEPSEEK_API_KEY
+arm: A
+include_base_prompt: true
+prompt_files: []
+methods_file: null
+cases_file: null
+review_prompt_file: null
+enable_consult_tools: false
+enable_review: false
+max_review_rounds: 2
+max_tool_calls: 70
