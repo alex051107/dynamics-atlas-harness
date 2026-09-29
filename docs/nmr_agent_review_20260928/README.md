@@ -5,7 +5,7 @@
 ## 先读这三份
 
 1. `IDEA_AND_FIT_ZH.md`：合作者（Soojung、Gina）要什么，该验证的 idea 是什么，现在的形式是否最合适。每条判断附会议转写行号。
-2. `PLAN_V5_ZH.md`：现行计划。先把识别 state 的工作流定下来，harness 只负责执行它。工作流 v1 草案在 `workflow/WORKFLOW_STATE_ID_v1.md`。
+2. `PLAN_V6_ZH.md`：现行方案。沉淀科学家在卡点上的额外分析，证明 Agent 能靠它把分析做出来。
 3. 本文件下面两节：做了什么、得到了什么。
 
 ## 要验证的 idea

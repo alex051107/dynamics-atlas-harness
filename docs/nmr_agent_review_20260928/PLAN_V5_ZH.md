@@ -1,3 +1,5 @@
+> 已被取代（2026-09-28）：现行方案为 `PLAN_V6_ZH.md`。八步判断清单降为最后写条目的格式要求。
+
 # 计划 v5：先把"识别 state 的工作流"定下来，harness 只负责执行它
 
 2026-09-28，按第二轮外部审查局部修订（第 1、2、3、4、5、6 节中标注处；工作流正文改动见 `workflow/WORKFLOW_STATE_ID_v1.md` 第 2 稿）。取代 `PLAN_V4_ZH.md` 的执行顺序，保留它的两层参照、八病例设计和 BMRB 读取器修复。依据：9-17 会议转写、`IDEA_AND_FIT_ZH.md`、`workflow/` 现有材料、K-Ras 收尾报告。Claude 设计，Codex 执行，用户与 Gina 决定。
