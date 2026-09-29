@@ -80,7 +80,7 @@ def make_model(cfg: GraphConfig, tracker: UsageTracker):
     if cfg.temperature is not None:
         kw["temperature"] = cfg.temperature
     return ChatOpenAI(model=cfg.model, base_url=cfg.base_url, api_key=key, callbacks=[tracker],
-                      max_retries=3, timeout=600, **kw)
+                      max_retries=8, timeout=600, **kw)
 
 
 async def run_graph(cfg: GraphConfig, workspace: Path, run_dir: Path, model, tracker: UsageTracker,
