@@ -7,7 +7,7 @@
 # On the node (internal):  remote_launch.sh --on-node <mcp_server args...>
 #
 # Env passed through from the caller: NMR_CORES, NMR_REMOTE_RUN_DIR, DYNAMICS_ATLAS_POTENCI, NMR_AGENT_WORKFLOW_FILE.
-B=/work/users/l/i/liualex/dynamics_atlas_nmr
+B="${NMR_REMOTE_ROOT:?set NMR_REMOTE_ROOT to the remote dynamics_atlas_nmr directory}"
 R=$B/agent_remote
 if [ "${1:-}" = "--on-node" ]; then
   shift

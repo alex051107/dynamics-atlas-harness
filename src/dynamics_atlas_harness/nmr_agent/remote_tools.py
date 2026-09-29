@@ -17,7 +17,7 @@ import subprocess
 from pathlib import Path
 
 HOST = os.environ.get("NMR_REMOTE_HOST", "longleaf")
-BASE = "/work/users/l/i/liualex/dynamics_atlas_nmr/agent_remote"
+BASE = os.environ.get("NMR_REMOTE_ROOT", "") + "/agent_remote"  # remote root must be set via NMR_REMOTE_ROOT
 LAUNCH = f"{BASE}/src/dynamics_atlas_harness/nmr_agent/remote_launch.sh"
 # Files the local runner writes itself; never overwritten by the sync back.
 RUNNER_OWNED = ("transcript.jsonl", "stderr.txt", "mcp_config.json", "system_prompt.txt", "user_prompt.txt",
@@ -49,7 +49,7 @@ def prepare(ws: Path, run: Path, workflow_file: str = "") -> None:
 def server_entry(ws: Path, run: Path, arm: str, block_bmrb: str, max_calls: int) -> dict:
     cores = os.environ.get("REMOTE_CORES", "8")
     mem = os.environ.get("REMOTE_MEM", "16G")
-    env = {"NMR_REMOTE_RUN_DIR": remote_run_dir(run), "DYNAMICS_ATLAS_POTENCI": f"{BASE}/POTENCI/potenci.py3",
+    env = {"NMR_REMOTE_ROOT": os.environ.get("NMR_REMOTE_ROOT", ""), "NMR_REMOTE_RUN_DIR": remote_run_dir(run), "DYNAMICS_ATLAS_POTENCI": f"{BASE}/POTENCI/potenci.py3",
            "NMR_AGENT_WORKFLOW_FILE": f"{remote_run_dir(run)}/workflow_used.md" if os.environ.get("NMR_AGENT_WORKFLOW_FILE") else ""}
     if os.environ.get("NMR_SERVE_NODE"):
         env["NMR_SERVE_NODE"] = os.environ["NMR_SERVE_NODE"]
