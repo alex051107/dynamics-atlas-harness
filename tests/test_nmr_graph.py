@@ -90,7 +90,7 @@ class GraphRuns(unittest.TestCase):
         return summary, run, model
 
     def cfg(self, **kw):
-        return GraphConfig(review_prompt_file=str(CONFIGS.parent / "content/review_prompt.md"), enable_review=True, **kw)
+        return GraphConfig(review_prompt_file=str(CONFIGS.parent / "content/layer4_reviewer.md"), enable_review=True, **kw)
 
     def test_review_passes(self):
         s, run, _ = self.run_it(self.cfg(), analysis_script(["Result from F1 and F2."]), [verdict("pass")])

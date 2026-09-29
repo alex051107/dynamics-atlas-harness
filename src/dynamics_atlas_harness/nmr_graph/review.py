@@ -95,11 +95,46 @@ def read_report(run_dir: Path, messages: list[BaseMessage]) -> str | None:
     return None
 
 
-def review_messages(review_prompt: str, report: str, inventory: dict[str, Any]) -> list[BaseMessage]:
-    return [SystemMessage(content=review_prompt),
-            HumanMessage(content="REPORT\n======\n" + report + "\n\nFIT INVENTORY (JSON, prepared by a program from the run directory)\n"
-                         "====================================================================\n"
-                         + json.dumps(inventory, ensure_ascii=False, indent=1))]
+def collect_action_log(run_dir: Path, text_chars: int = 220) -> list[dict[str, Any]]:
+    """Compact action log from actions.jsonl: call number, tool, stated purpose, short args, error flag, produced ids."""
+    p = Path(run_dir) / "actions.jsonl"
+    out: list[dict[str, Any]] = []
+    if not p.is_file():
+        return out
+    for line in p.read_text().splitlines():
+        try:
+            a = json.loads(line)
+        except ValueError:
+            continue
+        if a.get("tool") == "finish":
+            continue
+        args = a.get("args") or {}
+        short = {}
+        for k, v in args.items():
+            if k in ("purpose", "expectation"):
+                continue
+            s = json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v
+            short[k] = s if len(s) <= 120 else s[:120] + f"... [{len(s)} chars]"
+        res = a.get("result") if isinstance(a.get("result"), dict) else {}
+        entry = {"call": a.get("call"), "tool": a.get("tool"), "error": bool(a.get("error")),
+                 "purpose": str(args.get("purpose") or "")[:text_chars], "args": short,
+                 "observation_id": res.get("observation_id"), "fit_id": res.get("fit_id")}
+        if a.get("error") and isinstance(res.get("error"), str):
+            entry["error_text"] = res["error"][:120]
+        out.append({k: v for k, v in entry.items() if v not in (None, "", {})})
+    return out
+
+
+def review_messages(review_prompt: str, report: str, inventory: dict[str, Any],
+                    actions: list[dict[str, Any]] | None = None) -> list[BaseMessage]:
+    body = ("REPORT\n======\n" + report + "\n\nFIT INVENTORY (JSON, prepared by a program from the run directory)\n"
+            "====================================================================\n"
+            + json.dumps(inventory, ensure_ascii=False, indent=1))
+    if actions is not None:
+        body += ("\n\nACTION LOG (JSON, prepared by a program from the run directory)\n"
+                 "====================================================================\n"
+                 + json.dumps(actions, ensure_ascii=False))
+    return [SystemMessage(content=review_prompt), HumanMessage(content=body)]
 
 
 def parse_verdict(text: str) -> dict[str, Any] | None:

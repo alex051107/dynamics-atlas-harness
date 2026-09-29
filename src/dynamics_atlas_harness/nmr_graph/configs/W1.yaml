@@ -7,10 +7,10 @@ arm: A
 include_base_prompt: true
 prompt_files:
   - ../content/layer0_thinking.md
-  - ../content/layer1_requirements.md
-methods_file: ../content/methods_experience.md
-cases_file: ../content/stuck_point_cases.md
-review_prompt_file: ../content/review_prompt.md
+  - ../content/layer1_obligations.md
+methods_file: ../content/layer2_methods.md
+cases_file: ../content/layer3_cases.md
+review_prompt_file: ../content/layer4_reviewer.md
 enable_consult_tools: true
 enable_review: true
 max_review_rounds: 2

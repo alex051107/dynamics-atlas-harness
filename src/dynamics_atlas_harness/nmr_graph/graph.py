@@ -14,7 +14,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 
-from .review import (collect_fit_inventory, feedback_text, parse_verdict, read_report, review_messages)
+from .review import (collect_action_log, collect_fit_inventory, feedback_text, parse_verdict, read_report, review_messages)
 
 MODEL_CALL_SLACK = 15
 
@@ -71,7 +71,7 @@ def build_graph(model, tools: list, system_prompt: str, run_dir: Path, *, review
         inventory = collect_fit_inventory(run_dir, report, workspace)
         raw, error = "", None
         try:
-            resp = await rmodel.ainvoke(review_messages(review_prompt, report, inventory))
+            resp = await rmodel.ainvoke(review_messages(review_prompt, report, inventory, collect_action_log(run_dir)))
             raw = resp.content if isinstance(resp.content, str) else json.dumps(resp.content)
         except Exception as e:  # a failed review call must not discard the finished analysis
             error = f"{type(e).__name__}: {e}"
