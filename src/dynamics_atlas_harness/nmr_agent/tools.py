@@ -47,8 +47,9 @@ def _r(x: float, n: int = 3) -> float | None:
 
 class ToolBox:
     def __init__(self, workspace: Path, run_dir: Path, allow_network_bmrb: bool = True,
-                 blocked_bmrb_ids: tuple[str, ...] = ()):
+                 blocked_bmrb_ids: tuple[str, ...] = (), per_experiment_chi2: bool = False):
         self.ws = workspace.resolve()
+        self.per_experiment_chi2 = per_experiment_chi2   # arm S only: fit_exchange also reports chi2 per experiment type
         self.run_dir = run_dir.resolve()
         self.allow_bmrb = allow_network_bmrb
         self.blocked_bmrb = set(blocked_bmrb_ids)
@@ -281,6 +282,12 @@ class ToolBox:
                "aic": _r(f.aic, 1), "bic": _r(f.bic, 1), "per_residue": per, "worst_residues_chi2_per_point": worst,
                "flags": flags, "notes": f.notes, "optimization": f.optimization, "seconds": _r(time.time() - t0, 1),
                "sign_note": "CPMG alone does not determine the sign of dw; only CEST (or HSQC/HMQC data) does."}
+        if self.per_experiment_chi2 and len(f.per_kind) > 1:
+            dof_share = max(f.n_data - f.n_params, 1) / max(f.n_data, 1)
+            out["chi2_by_experiment_type"] = {
+                kind: {"chi2": _r(d["chi2"], 1), "n_data": d["n"],
+                       "reduced_chi2_prorata_dof": _r(d["chi2"] / max(d["n"] * dof_share, 1.0), 3)}
+                for kind, d in sorted(f.per_kind.items())}
         self.fits[fid] = out
         (self.run_dir / "fits").mkdir(parents=True, exist_ok=True)
         (self.run_dir / "fits" / f"{fid}.json").write_text(json.dumps(out, indent=1))

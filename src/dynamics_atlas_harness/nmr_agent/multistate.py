@@ -184,9 +184,12 @@ def fit_three_state(experiments, residues, topology: str = "star", *, cs_n=None,
         notes.append("covariance unavailable")
     params = {n: float(v) for n, v in zip(names, sol.x)}
     per_res = {}
+    per_kind = {}
     for b, sl in zip(blocks, slices):
         d = per_res.setdefault(b.res, {"chi2": 0.0, "n": 0})
         d["chi2"] += float(np.sum(sol.fun[sl] ** 2)); d["n"] += len(b.y)
+        k = per_kind.setdefault(b.exp.kind, {"chi2": 0.0, "n": 0})
+        k["chi2"] += float(np.sum(sol.fun[sl] ** 2)); k["n"] += len(b.y)
     for r in res_list:
         for k in ("dwN1", "dwN2", "dwH1", "dwH2"):
             if f"{k}[{r}]" in params:
@@ -197,4 +200,4 @@ def fit_three_state(experiments, residues, topology: str = "star", *, cs_n=None,
     optimization = {"success": bool(sol.success), "status": int(sol.status), "message": str(sol.message),
                     "nfev": int(sol.nfev), "optimality": float(sol.optimality),
                     "parameters_at_bounds": [n for n, active in zip(names, sol.active_mask) if active]}
-    return ex.FitResult(params, errors, chi2, n_data, len(names), res_list, per_res, notes, optimization)
+    return ex.FitResult(params, errors, chi2, n_data, len(names), res_list, per_res, notes, optimization, per_kind)

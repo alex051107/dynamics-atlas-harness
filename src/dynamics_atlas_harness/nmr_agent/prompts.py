@@ -1,5 +1,6 @@
 """Run prompts for the NMR analysis agent, v1 (2026-09-25).
 
+Arm S: BASE + a domain-free stuck-point method; workflow attached at checkpoints; two-stage finish (2026-09-29).
 Arm A: base instructions only. Arm B: A + generalized method experience + six-stage
 scientific workflow. Arm C: B + harness-triggered reflection checkpoints. Arm W: A + an external workflow note read from
 the file named by NMR_AGENT_WORKFLOW_FILE (2026-09-29).
@@ -91,7 +92,38 @@ def workflow_file_info() -> dict:
     return {"workflow_file": str(path), "workflow_sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
 
 
+STUCKPOINT = """
+# Working through an analysis stuck point
+
+A stuck point is a moment when an observation does not fit what the analysis so far predicted, or fits more than one explanation. Work through it in this order.
+
+1. Name two or three competing explanations for the observation. Put the mundane ones first (how the sample was prepared or has changed, instrument or acquisition problems, processing and fitting choices, a mismatch between the quantity measured and the quantity it is taken to report on), then the scientific ones. Identify which one you currently favour.
+
+2. For each explanation, write down what the next analysis would show if that explanation were true. Consider analyses on data you already have as well as new measurements.
+
+3. Choose the analysis whose predicted outcomes differ most across the explanations. Make sure at least one check you consider is designed to refute the explanation you currently favour: ask what result would count against it, and whether the analysis can produce that result.
+
+4. Write the predictions down before you act. For each possible outcome, say which explanations it would leave standing and which it would count against, including outcomes that do not separate them.
+
+5. Before stating conclusions, compare each one with the predictions you wrote. Say which explanations remain open, and state only what the evidence so far supports.
+"""
+
+# Arm S (2026-09-29): stuck-point thinking in the system prompt; the domain workflow (NMR_AGENT_WORKFLOW_FILE) is
+# attached to reflection checkpoints instead; finish is two-stage (see Agent._finish_gate).
+WORKFLOW_CHECKPOINT_FULL = ("\n\nThe note below is the experience of scientists working through analysis stuck points. "
+                            "Use it together with the specific result you just obtained.\n\n{text}")
+WORKFLOW_CHECKPOINT_REMINDER = ("\n\nThe scientists' stuck-point note was attached in full at the first checkpoint of this run; "
+                                "look back at that earlier message if you need it.")
+FINISH_GATE_INSTRUCTION = (
+    "FINISH CHECK. The report was not accepted yet. Below are the items from this run that call for a response: "
+    "fits that carried flags, and reflections where you kept the plan although you named a discrepancy. "
+    "For each item, state in the report which test separated the possible explanations (cite a fit id or an observation "
+    "id), or withdraw the conclusions that depend on it. Then call finish again with the complete report and atlas_entries; the second call is accepted.")
+
+
 def system_prompt(arm: str) -> str:
+    if arm == "S":
+        return BASE + "\n" + STUCKPOINT
     if arm == "W":
         return BASE + WORKFLOW_INTRO + workflow_file().read_text()
     if arm == "A":

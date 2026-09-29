@@ -50,10 +50,10 @@ def build(ws: Path, run_dir: Path, arm: str, blocked: tuple[str, ...], result_ch
         text = full if len(full) <= result_chars else full[:result_chars] + f"... [truncated {len(full) - result_chars} chars]"
         if reason:
             agent.reflection_pending = True
-            text += f"\n\nREFLECTION CHECKPOINT ({reason}). Your next call must be reflect."
+            text += agent.checkpoint_suffix(reason)
         if counter["n"] == int(0.85 * max_calls):
             text += f"\n\nBudget note: {counter['n']} of {max_calls} tool calls used. Plan to finish soon."
-        if name == "finish":
+        if name == "finish" and (arm != "S" or agent.final_report is not None):
             text += "\n\nReport recorded. The analysis is closed; reply with the single word DONE."
         agent.log.write(json.dumps({"call": counter["n"], "tool": name, "args": arguments, "error": is_err,
                                     "checkpoint": reason, "seconds": round(time.time() - t1, 2),
@@ -78,7 +78,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W", "S"])
     ap.add_argument("--block-bmrb", default="")
     ap.add_argument("--result-chars", type=int, default=6000)
     ap.add_argument("--max-calls", type=int, default=70)

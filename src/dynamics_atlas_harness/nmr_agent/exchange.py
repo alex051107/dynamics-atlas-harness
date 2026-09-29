@@ -285,6 +285,7 @@ class FitResult:
     per_residue: dict[str, dict[str, float]]
     notes: list[str] = field(default_factory=list)
     optimization: dict[str, Any] = field(default_factory=dict)
+    per_kind: dict[str, dict[str, float]] = field(default_factory=dict)   # experiment kind -> {chi2, n}
 
     @property
     def reduced_chi2(self) -> float:
@@ -485,10 +486,14 @@ def fit_two_state(experiments: list[Experiment], residues: list[str], *, cs_n: d
         notes.append("covariance unavailable")
     params = {n: float(v) for n, v in zip(names, sol.x)}
     per_res: dict[str, dict[str, float]] = {}
+    per_kind: dict[str, dict[str, float]] = {}
     for b, sl in zip(blocks, slices):
         d = per_res.setdefault(b.res, {"chi2": 0.0, "n": 0})
         d["chi2"] += float(np.sum(sol.fun[sl] ** 2))
         d["n"] += len(b.y)
+        k = per_kind.setdefault(b.exp.kind, {"chi2": 0.0, "n": 0})
+        k["chi2"] += float(np.sum(sol.fun[sl] ** 2))
+        k["n"] += len(b.y)
     for r in res_list:
         for key in ("dwN", "dwH"):
             if f"{key}[{r}]" in params:
@@ -499,7 +504,7 @@ def fit_two_state(experiments: list[Experiment], residues: list[str], *, cs_n: d
     optimization = {"success": bool(sol.success), "status": int(sol.status), "message": str(sol.message),
                     "nfev": int(sol.nfev), "optimality": float(sol.optimality),
                     "parameters_at_bounds": [n for n, active in zip(names, sol.active_mask) if active]}
-    return FitResult(params, errors, chi2, n_data, len(names), res_list, per_res, notes, optimization)
+    return FitResult(params, errors, chi2, n_data, len(names), res_list, per_res, notes, optimization, per_kind)
 
 
 def _boot_replicate(args):

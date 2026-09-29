@@ -27,7 +27,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W", "S"])
     ap.add_argument("--model", default="claude-opus-5-5")
     ap.add_argument("--block-bmrb", default="")
     ap.add_argument("--max-calls", type=int, default=70)
@@ -43,7 +43,7 @@ def main() -> None:
     cwd = a.cwd / run.name
     cwd.mkdir(parents=True, exist_ok=True)
     src = Path(__file__).resolve().parents[2]
-    wf_info = workflow_file_info() if a.arm == "W" and not a.prompt_file else {}
+    wf_info = workflow_file_info() if a.arm in ("W", "S") and not a.prompt_file else {}
     mcp_cfg = {"mcpServers": {"nmr": {"command": sys.executable, "args": [
         "-m", "dynamics_atlas_harness.nmr_agent.mcp_server", "--workspace", str(a.workspace.resolve()),
         "--run-dir", str(run), "--arm", a.arm, "--block-bmrb", a.block_bmrb, "--max-calls", str(a.max_calls)],

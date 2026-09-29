@@ -19,7 +19,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from .prompts import REFLECT_TOOL, system_prompt
+from .prompts import (FINISH_GATE_INSTRUCTION, REFLECT_TOOL, WORKFLOW_CHECKPOINT_FULL, WORKFLOW_CHECKPOINT_REMINDER,
+                      system_prompt, workflow_file)
 from .tools import ANALYSIS_TOOLS, ToolBox, tool_specs
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -120,12 +121,14 @@ class Agent:
         self.run_dir = run_dir
         self.cfg = cfg
         run_dir.mkdir(parents=True, exist_ok=True)
-        self.tools = ToolBox(workspace, run_dir, blocked_bmrb_ids=blocked_bmrb)
+        if cfg.arm == "S":
+            workflow_file()     # fail before the run starts if the checkpoint workflow is missing
+        self.tools = ToolBox(workspace, run_dir, blocked_bmrb_ids=blocked_bmrb, per_experiment_chi2=(cfg.arm == "S"))
         policy_path = workspace / "tool_policy.json"
         policy = json.loads(policy_path.read_text()) if policy_path.exists() else {}
         self.tools.allow_bmrb = policy.get("allow_network_bmrb", True)
         self.state = ResearchState()
-        self.specs = tool_specs() + ([REFLECT_TOOL] if cfg.arm.startswith("C") else [])
+        self.specs = tool_specs() + ([REFLECT_TOOL] if cfg.arm.startswith("C") or cfg.arm == "S" else [])
         if policy.get("allowed_tools") is not None:
             self.specs = [s for s in self.specs if s["function"]["name"] in policy["allowed_tools"]]
         self.allowed_tools = {s["function"]["name"] for s in self.specs}
@@ -143,6 +146,8 @@ class Agent:
         self.analysis_since_reflect = 0
         self.reflection_pending = False
         self.final_report: str | None = None
+        self._workflow_flag = run_dir / "workflow_attached.flag"     # arm S: full workflow already shown at a checkpoint
+        self._finish_gate_file = run_dir / "finish_checklist.json"   # arm S: first finish call already answered with a checklist
         if (run_dir / "messages.json").exists():
             self._resume()
         self.log = (run_dir / "actions.jsonl").open("a")
@@ -214,6 +219,8 @@ class Agent:
             self.state.proposed_experiments.append(args)
             return {"ok": True, "n_proposed": len(self.state.proposed_experiments)}, False
         if name == "finish":
+            if self.cfg.arm == "S" and not self._finish_gate_file.exists():
+                return self._finish_gate(), False
             from .atlas_candidate import validate
             problems = validate(args.get("atlas_entries"), self.observation_dir)
             if not isinstance(args.get("report"), str) or not args["report"].strip():
@@ -236,8 +243,31 @@ class Agent:
         except Exception as e:  # tool errors go back to the model as observations
             return {"error": f"{type(e).__name__}: {e}"}, True
 
+    def _finish_gate(self) -> dict[str, Any]:
+        """Arm S: the first finish call returns a checklist instead of closing the run. No judgement of content."""
+        flagged = [{"fit_id": fid, "flags": list(fit["flags"])} for fid, fit in sorted(self.tools.fits.items())
+                   if isinstance(fit, dict) and fit.get("flags")]
+        kept = [{"reflection_no": i + 1, "turn": r.get("turn"), "discrepancy": r.get("discrepancy"), "next_action": r.get("next_action")}
+                for i, r in enumerate(self.state.reflections)
+                if r.get("decision") == "keep_plan"
+                and str(r.get("discrepancy", "")).strip().rstrip(".").strip().lower() not in ("", "none")]
+        gate = {"finish_check": FINISH_GATE_INSTRUCTION, "fits_with_flags": flagged, "kept_plan_despite_discrepancy": kept}
+        self._finish_gate_file.write_text(json.dumps(gate, indent=1, ensure_ascii=False))
+        return gate
+
+    def checkpoint_suffix(self, reason: str) -> str:
+        """Text appended to a tool result that opens a reflection checkpoint (arm S also attaches the workflow)."""
+        text = f"\n\nREFLECTION CHECKPOINT ({reason}). Your next call must be reflect."
+        if self.cfg.arm == "S":
+            if self._workflow_flag.exists():
+                text += WORKFLOW_CHECKPOINT_REMINDER
+            else:
+                text += WORKFLOW_CHECKPOINT_FULL.format(text=workflow_file().read_text())
+                self._workflow_flag.write_text("attached\n")
+        return text
+
     def _checkpoint_reason(self, name: str, result: Any, is_err: bool) -> str | None:
-        if not self.cfg.arm.startswith("C") or name not in ANALYSIS_TOOLS:
+        if not (self.cfg.arm.startswith("C") or self.cfg.arm == "S") or name not in ANALYSIS_TOOLS:
             return None
         if is_err:
             return "the tool returned an error"
@@ -295,7 +325,7 @@ class Agent:
                     text = text[: self.cfg.tool_result_chars] + f"... [truncated {len(full) - self.cfg.tool_result_chars} chars]"
                 if reason:
                     self.reflection_pending = True
-                    text += f"\n\nREFLECTION CHECKPOINT ({reason}). Your next call must be reflect."
+                    text += self.checkpoint_suffix(reason)
                 self.messages.append({"role": "tool", "tool_call_id": tc["id"], "content": text})
                 self.log.write(json.dumps({"turn": self.turn, "tool": name, "args": args, "error": is_err,
                                            "checkpoint": reason, "seconds": round(time.time() - t1, 2),
@@ -325,7 +355,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Run the NMR analysis agent on a sanitized workspace.")
     ap.add_argument("--workspace", required=True, type=Path)
     ap.add_argument("--run-dir", required=True, type=Path)
-    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W"])
+    ap.add_argument("--arm", default="C", choices=["A", "B", "C", "C2", "W", "S"])
     ap.add_argument("--model", default="anthropic/claude-opus-5.5")
     ap.add_argument("--max-turns", type=int, default=40)
     ap.add_argument("--max-cost", type=float, default=1.0)
