@@ -1,3 +1,5 @@
+> 已被取代（2026-09-28）：现行计划为 `PLAN_V4_ZH.md`。
+
 > 2026-09-28 晚更新：本计划的两个新蛋白数值恢复降为分支（见 `NEXT_STEPS_ZH.md` 第 3 节）。主线改为 BMRB 条目分诊，理由见 `IDEA_AND_FIT_ZH.md`。
 
 # Back on track：Workflow 验证计划
