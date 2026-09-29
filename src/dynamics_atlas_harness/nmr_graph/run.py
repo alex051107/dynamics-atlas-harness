@@ -125,6 +125,17 @@ async def run_graph(cfg: GraphConfig, workspace: Path, run_dir: Path, model, tra
                 await go([as_text_tool(t) for t in await load_mcp_tools(session)])
     except Exception as e:
         error = f"{type(e).__name__}: {e}"
+        leaves: list[str] = []
+
+        def walk(x: BaseException) -> None:          # anyio TaskGroup wraps the real failure in an ExceptionGroup
+            if isinstance(x, BaseExceptionGroup):
+                for y in x.exceptions:
+                    walk(y)
+            else:
+                leaves.append(f"{type(x).__name__}: {str(x)[:500]}")
+        walk(e)
+        if leaves and leaves != [error]:
+            error += " | leaf: " + " ; ".join(leaves)
     msgs = result.get("messages", [])
     (run_dir / "messages.json").write_text(json.dumps(messages_to_dict(msgs), ensure_ascii=False, indent=1, default=str))
     reviews = result.get("review_feedback", [])
