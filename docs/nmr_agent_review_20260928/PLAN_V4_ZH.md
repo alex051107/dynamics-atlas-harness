@@ -1,3 +1,5 @@
+> 已被取代（2026-09-28）：现行计划为 `PLAN_V5_ZH.md`。本文的两层参照、八病例设计、读取器修复与措辞修正在 v5 中保留。
+
 # 计划 v4：把五篇论文的流程用到可审核的数据库条目上
 
 2026-09-28。依据：ChatGPT Pro 对本目录的审查意见（下称"审查"）、`IDEA_AND_FIT_ZH.md` 引述的会议原话。取代 `NEXT_STEPS_ZH.md` 与 `BACK_ON_TRACK_ZH.md`。Claude 设计与核对，Codex 执行，用户与 Gina 决定。
