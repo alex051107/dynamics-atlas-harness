@@ -1,0 +1,114 @@
+[
+ {
+  "kind": "state_pdb",
+  "value": "7MRC",
+  "sample": "BRDT-1 bound to bivalent GXH-II-052 (dimeric state)",
+  "quote": "BRDT-1 : GXH-II-052 (7MRC), GXH-IV-075 (8CZA), GXH-II-082 (7MRD), NC-II-153–1 (7MRG), NC-II-259–1 (7MRH).",
+  "where": "Accession codes",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "8CZA",
+  "sample": "BRDT-1 bound to unsymmetric bivalent GXH-IV-075 (dimeric state)",
+  "quote": "BRDT-1 : GXH-II-052 (7MRC), GXH-IV-075 (8CZA), GXH-II-082 (7MRD), NC-II-153–1 (7MRG), NC-II-259–1 (7MRH).",
+  "where": "Accession codes",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MRD",
+  "sample": "BRDT-1 bound to bivalent GXH-II-082 (dimeric state)",
+  "quote": "BRDT-1 : GXH-II-052 (7MRC), GXH-IV-075 (8CZA), GXH-II-082 (7MRD), NC-II-153–1 (7MRG), NC-II-259–1 (7MRH).",
+  "where": "Accession codes",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MRG",
+  "sample": "BRDT-1 bound to monovalent NC-II-153-1",
+  "quote": "BRDT-1 : GXH-II-052 (7MRC), GXH-IV-075 (8CZA), GXH-II-082 (7MRD), NC-II-153–1 (7MRG), NC-II-259–1 (7MRH).",
+  "where": "Accession codes (monovalent complex; may be a comparison structure)",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MRH",
+  "sample": "BRDT-1 bound to monovalent NC-II-259-1",
+  "quote": "BRDT-1 : GXH-II-052 (7MRC), GXH-IV-075 (8CZA), GXH-II-082 (7MRD), NC-II-153–1 (7MRG), NC-II-259–1 (7MRH).",
+  "where": "Accession codes (monovalent complex; may be a comparison structure)",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MR5",
+  "sample": "BRD4-1 bound to GXH-II-052 (dimeric state)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MR7",
+  "sample": "BRD4-1 bound to GXH-IV-075 (dimeric state)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MR6",
+  "sample": "BRD4-1 bound to GXH-II-082 (dimeric state)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7L9M",
+  "sample": "BRD4-1 bound to GXH-II-083 (dimeric state)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7LA9",
+  "sample": "BRD4-1 bound to NC-III-49-1 (dimeric state)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MR9",
+  "sample": "BRD4-1 bound to NC-II-153-1 (monovalent complex)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MRA",
+  "sample": "BRD4-1 bound to NC-II-259-1 (monovalent complex)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "7MRB",
+  "sample": "BRD4-1 bound to NC-III-53-1 (monovalent complex)",
+  "quote": "BRD4–1 : GXH-II-052 (7MR5), GXH-IV-075 (7MR7), GXH-II-082 (7MR6), GXH-II-083 (7L9M), NC-II-153–1 (7MR9), NC-II-259–1 (7MRA), NC-III-53–1 (7MRB), NC-III-49–1 (7LA9)",
+  "where": "Accession codes",
+  "target": "homolog"
+ },
+ {
+  "kind": "condition",
+  "value": "room temperature; 50 mM HEPES pH 7.5, 150 mM NaCl, 5% ethylene glycol, 2.5% DMSO, 2 mM DTT",
+  "sample": "BRDT-T (residues 2-416) SEC-SAXS, apo and with 5 uM NC-III-49-1",
+  "quote": "Experiments were conducted at room temperature in SAXS buffer: 50 mM HEPES (pH 7.5), 150 mM NaCl, 5% v/v ethylene glycol, 2.5% v/v DMSO and 2 mM DTT.",
+  "where": "Methods, SEC-SAXS",
+  "target": "target"
+ }
+]

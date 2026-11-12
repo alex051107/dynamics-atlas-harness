@@ -1,0 +1,16 @@
+Paper: 10.1074/jbc.m117.784074 (BMRB entry_id: 27011)
+Title: Solution structure of domain 1.1 of the sigmaA factor from Bacillus subtilis is preformed for binding to the RNA polymerase core (2017)
+
+Supplements attached:
+- supp_PMC5512058_10.1074_M117.784074_jbc.M117.784074-1.pdf (3,950 chars, local drop staged in paper.txt). Contains Supplemental Figures S1 and S2 comparing B. subtilis, E. coli, and T. maritima sigma1.1 (and B. subtilis RNAP delta subunit) docked to RNAP or structurally aligned; contains no tables or numerical relaxation/dispersion values.
+- Count of values from supplement only: 0 (qualitative structural docking/alignment details from Figs. S1-S2 cited in r3 and r4).
+
+Figure-only / untabulated data omitted from quantitative cells:
+- Per-residue 15N R1, R2, ssNOE, Gamma_x, Gamma_z, S2, Sf2, tau_e, tau_s, and Rex values are plotted only in Figure 2 (except the off-scale/SD values for L19, E21, V28, E33, R37, S45, D46 printed in the Fig. 2 caption); full relaxation rates and order parameters were deposited in BMRB 27011.
+- Per-residue CPMG dispersion values (kex, pB, delta_omega) are plotted in Figure 3, with global/summary values (~3,500 Hz, pB = 1.5%, delta_omega = 2-6 ppm, and pB SDs for E21 = 0.087 and D46 = 0.089) printed in text/caption.
+
+Discrepancies and notes:
+1. Paper vs BMRB 27011 deposit card (missing pH and buffer in paper): Neither the main text nor the supplemental PDF reports sample pH or buffer composition—only temperature (25 °C), protein concentrations (0.8 mM 13C,15N-labeled or 0.6 mM 15N-labeled), and 5% polyacrylamide gel for RDC alignment. By contrast, the BMRB 27011 card specifies 298.2 K (= 25 °C), pH 6.6, 600/850/950 MHz, and "sigma1.1 [U-100% 15N] 0.6 mM; sodium chloride natural abundance 10 mM; sodium azide natural abundance 6 mM; phosphate buffer natural abundance 20 mM". Note also that BMRB 27011 lists sequence_length = 73, corresponding to Ala1-Asp71 plus the two XhoI cloning residues Leu72-Glu73 preceding the C-terminal His6 tag (p. 11615; Fig. 2/3 sequence header also shows LEHHHH...). Chemical shifts for structure determination were deposited separately in BMRB 34089 (PDB 5MWW).
+2. Internal text vs Figure 2 panel/parameter discrepancies:
+   - Results text (p. 11612) cites Fig. 2B for slow internal correlation time tau_s and Fig. 2C for Rex, whereas in Figure 2 panel B is tau_e (ps), panel C is tau_s (ns), and panel D is Rex (s^-1).
+   - Figure 2B caption ("B, effective correlation time tau_e") writes "Standard deviations of tau_s of Ser45 was 334 ps. The values of the following residues, exceeding the plotted range, are not shown: Glu21, 1.2 ± 1.2 ns; Glu33, 0.8 ± 0.7 ns; Arg37, 0.7 ± 0.5 ns; and Asp46, 0.9 ± 0.2 ns." Writing "tau_s" for Ser45 inside the tau_e panel description appears to be a symbol typo for tau_e (334 ps exceeds the 0-100 ps y-axis of panel B).

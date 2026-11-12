@@ -1,0 +1,210 @@
+[
+ {
+  "kind": "rate",
+  "value": "k1 1.2 min-1",
+  "sample": "E. coli CheA + CheW, autophosphorylation, 25 C complex",
+  "quote": "the measured  k 1  value for first-order CheA–CheW autophosphorylation (1.2 min –1 ) is similar to that measured previously for CheA alone",
+  "where": "Results, Effects of Tar FO on CheA Kinase Activity",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1 1.5 min-1",
+  "sample": "E. coli CheA alone (literature, ref 75)",
+  "quote": "is similar to that measured previously for CheA alone (1.5 min –1 ).",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1 1.18 ± 0.05 min-1",
+  "sample": "CheA + CheW",
+  "quote": "Kinetic Parameters for Autophosphorylation Assays a components A 0  (CheA-P relative) k 1  (min –1 ) k 1 A 0  (CheA-P min –1 ) R 2 CheA and CheW 0.99 ± 0.01 1.18 ± 0.05 1.2 0.99 CheA, CheW, and",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1 0.09 ± 0.02 min-1",
+  "sample": "CheA + CheW + Tar SC 4Q",
+  "quote": "Tar SC  4Q 8 ± 1 0.09 ± 0.02 0.7 0.98 CheA, CheW, and Tar FO  4Q",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1 0.20 ± 0.06 min-1",
+  "sample": "CheA + CheW + Tar FO 4Q",
+  "quote": "Tar FO  4Q 6.7 ± 0.9 0.20 ± 0.06 1.3 0.95 CheA, CheW, and Tar FO  short",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1 0.073 ± 0.009 min-1",
+  "sample": "CheA + CheW + Tar FO short",
+  "quote": "Tar FO  4Q 6.7 ± 0.9 0.20 ± 0.06 1.3 0.95 CheA, CheW, and Tar FO  short 18 ± 1 0.073 ± 0.009 1.3 0.98",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "k1A0 initial rates 1.2, 0.7, 1.3, 1.3 CheA-P min-1",
+  "sample": "CheA+CheW; +Tar SC 4Q; +Tar FO 4Q; +Tar FO short",
+  "quote": "The initial rates of the time courses ( k 1 A 0 ) for the CheA–CheW complex alone, Tar SC , Tar FO  4Q, and Tar FO  short are all relatively similar",
+  "where": "Results; Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "CheA-P t1/2 >> 30 min",
+  "sample": "E. coli CheA-P after cold ATP chase",
+  "quote": "this experiment also then measures the stability of CheA-P, whose  t 1/2  ≫ 30 min).",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "nucleotide exchange approximately seconds",
+  "sample": "CheA (literature)",
+  "quote": "However, fast nucleotide exchange (approximately seconds) 75 − 77  competes with the internal equilibration between phospho-His and ATP.",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "faster phase at <1.5 min",
+  "sample": "CheA + CheW + Tar FO short",
+  "quote": "The Tar FO  short showed some indication of a faster phase at <1.5 min, which was evident in the 30 s time points",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "phosphotransfer to CheY rapid (<30 s)",
+  "sample": "CheA-P + Tar FO short to CheY",
+  "quote": "After CheA-P had accumulated, we found rapid (<30 s) quantitative transfer of phosphate to CheY",
+  "where": "Results; SI Figure 2",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "CheY-P decay t1/2 ~30 s; k ~1.3 min-1",
+  "sample": "CheY-P (partner protein)",
+  "quote": "the amount of CheY-P formed after CheA autophosphorylation for 30 min decayed rapidly [ t 1/2  ∼ 30 s;  k  ∼ 1.3 min –1",
+  "where": "Results; SI Figure 2",
+  "target": "other_construct"
+ },
+ {
+  "kind": "population",
+  "value": "A0 0.99 ± 0.01 (CheA-P relative saturation)",
+  "sample": "CheA + CheW",
+  "quote": "components A 0  (CheA-P relative) k 1  (min –1 ) k 1 A 0  (CheA-P min –1 ) R 2 CheA and CheW 0.99 ± 0.01 1.18 ± 0.05 1.2 0.99 CheA, CheW, and",
+  "where": "Table 2 (saturation level; abstract ties it to fraction of active kinase)",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "A0 8 ± 1",
+  "sample": "CheA + CheW + Tar SC 4Q",
+  "quote": "Tar SC  4Q 8 ± 1 0.09 ± 0.02 0.7 0.98 CheA, CheW, and Tar FO  4Q",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "A0 6.7 ± 0.9",
+  "sample": "CheA + CheW + Tar FO 4Q",
+  "quote": "Tar FO  4Q 6.7 ± 0.9 0.20 ± 0.06 1.3 0.95 CheA, CheW, and Tar FO  short",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "A0 18 ± 1",
+  "sample": "CheA + CheW + Tar FO short",
+  "quote": "Tar FO  4Q 6.7 ± 0.9 0.20 ± 0.06 1.3 0.95 CheA, CheW, and Tar FO  short 18 ± 1 0.073 ± 0.009 1.3 0.98",
+  "where": "Table 2",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "~20 times greater CheA-P saturation",
+  "sample": "CheA + CheW + Tar FO short vs CheA-CheW",
+  "quote": "Tar FO  short, which produces saturation levels of CheA-P ∼20 times greater than that of the CheA–CheW complex",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "small active fraction",
+  "sample": "free CheA",
+  "quote": "Free CheA is largely incapable of phosphorylation but contains a small active fraction.",
+  "where": "Abstract",
+  "target": "target"
+ },
+ {
+  "kind": "order",
+  "value": "P5 separation ~7 A increase; broader distribution, minor peak at Tm14 position",
+  "sample": "T. maritima CheA P3P4P5 (delta289) Q545C-R1 + CheW + Tar FO 4Q vs Tm14",
+  "quote": "revealed that Tar FO  induces an ∼7 Å increase in the separation of the P5 domains relative to that observed with Tm14",
+  "where": "Results, PDS; Figure 10",
+  "target": "other_construct"
+ },
+ {
+  "kind": "order",
+  "value": "broad distribution may reflect flexibility",
+  "sample": "T. maritima CheA P3P4P5 Q545C + CheW + Tar FO 4Q",
+  "quote": "The broadness of the distribution may reflect flexibility in the absence of the interlocking ring structures inherent to the arrays.",
+  "where": "Results, PDS; Figure 10",
+  "target": "other_construct"
+ },
+ {
+  "kind": "order",
+  "value": "Tar FO tip spin separations 28-35 A with ~45 A contribution",
+  "sample": "E. coli Tar FO 4Q E389C-R1 (receptor partner)",
+  "quote": "reveal a wide but well-defined distance distribution for spin–spin separations of 28–35 Å with contributions also at ∼45 Å",
+  "where": "Results, PDS; Figure 5",
+  "target": "other_construct"
+ },
+ {
+  "kind": "condition",
+  "value": "60 K; 17.3 GHz; 50 mM Tris pH 7.5, 150 mM NaCl; 38-50 uM",
+  "sample": "T. maritima CheA P3P4P5 Q545C-R1 and E. coli Tar FO 4Q E389C-R1, DEER",
+  "quote": "four pulse double electron–electron resonance (DEER) experiments were conducted at 60 K on a 17.3 GHz FT EPR spectrometer",
+  "where": "Methods, PDS",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "GFB 50 mM Tris pH 7.5, 150 mM NaCl; 38-50 uM spin-labeled protein",
+  "sample": "PDS samples",
+  "quote": "concentrated in GFB [50 mM Tris (pH 7.5) and 150 mM NaCl]. Samples contained 50–100 μL of 38–50 μM spin-labeled protein",
+  "where": "Methods, PDS",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "TKEDM: 50 mM KCl, 10 mM MgCl2, 0.5 mM DTT, 0.5 mM EDTA, 5 mM Tris pH 7.5; room temperature complex 1 h",
+  "sample": "E. coli CheA autophosphorylation assays",
+  "quote": "left to form a complex for 1 h at room temperature in TKEDM buffer [50 mM KCl, 10 mM MgCl 2 , 0.5 mM DTT, 0.5 mM EDTA, and 5 mM Tris (pH 7.5)].",
+  "where": "Methods, Autophosphorylation",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "25 C complex 1 h; 1:1:3 ratio, 1 uM CheA",
+  "sample": "E. coli CheA kinetics (Figure 8)",
+  "quote": "were allowed to complex at 25 °C for 1 h prior to exposure to [γ- 32 P]ATP for the indicated time points.",
+  "where": "Figure 8 legend",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "50 mM HEPES pH 7.5, 150 mM NaCl, 2 mM DTT, 5% glycerol; 4 C tray",
+  "sample": "Tar FO / Tar SC SAXS",
+  "quote": "Protein buffer was exchanged with 50 mM HEPES (pH 7.5), 150 mM NaCl, 2 mM DTT, and 5% glycerol.",
+  "where": "Methods, SAXS",
+  "target": "other_construct"
+ }
+]

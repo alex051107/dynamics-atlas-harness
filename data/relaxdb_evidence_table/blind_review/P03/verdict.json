@@ -1,0 +1,80 @@
+{
+ "rows": [
+  {
+   "row_id": "r19",
+   "fields": {
+    "method_class": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r20",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r19 timescale: 30-40 s continuous sliding for full-length TRBP"
+  },
+  {
+   "index": 1,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "10-20 s sliding is for Staufen1, a different protein; reader tagged it as target"
+  },
+  {
+   "index": 2,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Paper reports 80-90% RNA-bound fraction (~50% tRNA) for TRBP-EYFP in SiMPull; no row records it"
+  },
+  {
+   "index": 3,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "20-40% occupancy is for Staufen1, ADAR1 and ADAD2, not TRBP"
+  },
+  {
+   "index": 4,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r19 population: ~70% of TRBP sliding except tRNA"
+  },
+  {
+   "index": 5,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "20-30% sliding fraction is for Staufen1, not TRBP"
+  }
+ ]
+}

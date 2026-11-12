@@ -1,0 +1,24 @@
+Paper: 27888__10.1128_aac.02025-19
+DOI: 10.1128/aac.02025-19
+Entry ID: 27888 (Mycobacterium tuberculosis BlaC, UniProt P9WKD3)
+
+1. Supplement files attached in paper.txt:
+- supp_PMC7038250_AAC.02025-19-s0001.pdf (9,220 chars extracted; contains Figs. S1-S11 and supplementary references S1-S3).
+
+2. Supplement-only facts/values incorporated:
+- Construct sequence and numbering map (Fig. S11): cleaved BlaC residues 1-266 (G1 linker residue + UniProt P9WKD3-1 residues 43-307) mapped to Ambler standard beta-lactamase numbering (30-290, with BlaC-specific GGGT insertion between Ambler 145 and 146).
+- Fig. S6: Glu166 (E166) named as the example resting-state CEST curve at 298 K (8 Hz and 25 Hz) showing no secondary dips (noted in r4 other_conditions/caveat_note).
+- Fig. S7: TITAN two-state binding best-fit values apparent KD = 0.14 uM and apparent koff = 2.4 s^-1 (main text p. 5 reports only upper limits KD <= 10 uM and koff <= 10 s^-1; noted in r6 other_conditions).
+- Fig. S8: NOE < 0.75 vs >= 0.75 threshold used in structural mapping of fast motions in clavulanate-bound BlaC (noted in r10 other_conditions).
+- Fig. S10: 0.3 s^-1 minimum R2,eff error for avibactam-bound CPMG fit and explicit warning that single-field fit is indicative (noted in r8 caveat_note).
+
+3. Figure-only data omitted from residue lists / numeric fields:
+- Per-residue T1, T2, 15N-{1H} NOE, and Lipari-Szabo S2 values are plotted only in Figs. S2-S4 and S8-S9 (and deposited to BMRB 27888, 27890, 27929) without a printed table; only V80 (S2 = 0.57 ± 0.02, Sf2 = 0.79 ± 0.03) is numerically given in text.
+- Specific identities of the 8 active-site residues in the free-state two-field CPMG global fit (Fig. 4, Fig. S5), the 19 backbone amides in the avibactam-bound single-field CPMG global fit (Fig. S10), the residues with Rex > 3 s^-1 (Fig. 3), the inhibitor-broadened active-site amides (Fig. 2, Fig. 5), the >=21 split-peak amides in clavulanate-bound BlaC (Fig. 5), and the 6 hydrophobic-interface residues between helices 2 and 7 with T2 > 60 ms / low NOE (Fig. 5, Fig. S8) appear only inside figure graphics, not in extracted text.
+- TITAN 2D lineshape titration of avibactam binding (KD <= 10 uM, koff <= 10 s^-1; best fit 0.14 uM, 2.4 s^-1 over C69, R161, L162, E168, Y241, A274) measures bimolecular inhibitor binding/unbinding rather than intramolecular conformational exchange, so it is recorded as supporting context in r6 rather than as a separate conformational-dynamics row.
+
+4. Discrepancies and uncertainties:
+- Sample concentration discrepancy for CPMG: Results (p. 5) and general Methods (p. 10) state inhibitor-bound experiments used 0.38 mM BlaC with 2 mM avibactam or 100 mM clavulanic acid, whereas the CPMG paragraph in Methods (p. 11) states "1.0, 0.8, or 0.4 mM 15N-enriched BlaC samples for free protein at 20 T and at 14 T or with 100 mM inhibitor at 20 T, respectively" (applying 100 mM inhibitor without distinguishing 2 mM avibactam from 100 mM clavulanic acid).
+- Minimum R2,eff error discrepancy: Methods (p. 11) states CATIA grouped fits used a minimum R2,eff standard deviation of 0.8 s^-1, whereas Fig. S10 caption states a user-defined minimum of 0.3 s^-1 for the avibactam-bound fit.
+- Deposit card vs relaxation sample concentration: BMRB 27888 card lists the 0.7 mM [U-100% 13C; U-100% 15N] assignment sample, whereas free-state spin relaxation used 0.38 mM 15N-enriched BlaC, free-state CPMG used 1.0 mM (20 T) and 0.8 mM (14 T) 15N-enriched BlaC, and CEST used 0.8 mM 15N-enriched BlaC (static field for CEST not specified between 600 and 850 MHz).
+- Numbering: All residue numbers in the paper use the Ambler class A beta-lactamase scheme rather than 1-266 construct numbering (see Fig. S11).

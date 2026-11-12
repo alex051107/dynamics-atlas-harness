@@ -1,0 +1,5 @@
+Supplement: supp_acs_10.1021_bi060414q_1.pdf (local), appended to paper.txt. Tables S1-S6 give per-residue R1, R2, NOE at 500/600/800 MHz; S7-S10 give model, S2, S2f, tau_e, Rex per residue.
+Rex values in rows r2 and r3 come only from the SI (count: 12 residue values in r2, 3 in r3).
+Not put in rows: per-residue S2/tau_e; tau_e values per residue (e.g. G218 782.96 ± 335.90 ps) are in SI only.
+Doubts: construct is E28G (BMRB 6357 holds the wild-type assignment per the text; the construct of BMRB 16392 is not stated). Text Rex list names L254 but SI shows Lys254 model 1 and Gly253 with Rex; text names Arg94 as model 4 but SI shows model 2.
+The paper counts 12 Rex residues but lists 12 names including L254.

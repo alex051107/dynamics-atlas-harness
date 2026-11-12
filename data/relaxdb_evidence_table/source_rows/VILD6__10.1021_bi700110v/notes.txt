@@ -1,0 +1,20 @@
+Folder: VILD6__10.1021_bi700110v
+Entry ID: VILD6 (Manifest entries: ["VILD6"])
+DOI: 10.1021/bi700110v
+
+1. Supplements attached in paper.txt:
+- supp_PMC2674016_suppfig.pdf (1626 chars, origin: drop): Supporting Figure legend and panel descriptions showing negative-stain transmission electron micrographs verifying that isolated villin headpiece (HP67, 5 uM) does not bundle F-actin (5 uM) with or without 5 mM CaCl2, whereas positive-control D6-HP (10 uM, 1:2 ratio) bundles F-actin in 5 mM CaCl2. No NMR or dynamics values come from this supplement (0 supplement-only row values).
+
+2. Figure-only content and items omitted from rows:
+- Per-residue numerical values of 15N R1 (Fig. 4A), R2 (Fig. 4B), {1H-15N}-NOE (Fig. 4C), FAST-Modelfree Lipari-Szabo S2 order parameters (Fig. 4D), and 1HN chemical shifts (Fig. 4E) across 144 analyzed backbone amides (out of 176 assigned) are only plotted in Figure 4 (and deposited in BMRB 15097), not tabulated in text.
+- The full 208-residue D6-HP amino-acid sequence and lowercase map of all 17 unassigned residues (including the exact identity of the remaining 2 unassigned internal positions in 60-85 beyond A60, Q61, E62, P68-D72, and E85) are embedded in the Figure 5 graphic and not present in extracted text (marked 仅图示).
+- 15N-HSQC chemical shift comparison between isolated headpiece HP67 (500 MHz, 25 °C, pH 7.0; matched to BMRB 4428) and D6-HP (800 MHz, 25 °C, pH 7.0; Fig. 3) was omitted as a static chemical-shift fold-comparison experiment on HP67 (lacking the D6 domain).
+- Superdex GL-200 size-exclusion chromatography (Fig. 2) and negative-stain EM F-actin bundling assays (Fig. 6 and supp_PMC2674016_suppfig.pdf) were omitted as oligomerization/functional assays (SEC aggregation is noted as a confound in r3).
+
+3. Discrepancies and doubts:
+- Paper-vs-manifest-card construct mismatch: All D6 NMR and 15N relaxation experiments in this paper (deposited under BMRB 15097 at 750 MHz, 25 °C = 298.15 K) were performed on the 208-residue modular fragment D6-HP (C-terminal 208 residues of chicken villin P02640: D6 domain 1-105 + 40-residue linker 105-145 + headpiece HP 145-206), whereas the manifest card lists protein_name = "Villin-1 D6 domain", sequence_length = "107", sheet_temperature_K = "298.0", sheet_field_MHz = "750", and bmrb_id = "". Thus species_relation is recorded as "same_protein_other_construct" and same_sample_as_deposit as "unclear" for r1/r2 (RelaxDB likely sliced the N-terminal 107-residue D6 portion from BMRB 15097).
+- Internal text discrepancies:
+  (a) Linker residue numbering is given both as "positions 105-145" (pp. 6, 9; overlapping domain boundaries 1-105 and 145-206) and as "residues 104-144" (p. 6).
+  (b) Discussion p. 9 (line 587) cites "low R2 value (Figure 4C)" for Phe84, whereas Figure 4B shows R2 rates and Figure 4C shows {1H-15N}-NOE ratios (correctly cited on p. 6 line 413 as "Figure 4 B, C").
+  (c) F-actin bundling incubation temperature is 4 °C for 45 min in main text Methods and Fig. 6 (pp. 4, 18), versus room temperature for 45 min in supp_PMC2674016_suppfig.pdf.
+  (d) For the Ca2+-free 15N-HSQC comparison (r3), the text does not state separately whether the Ca2+-free sample was in Ca2+-free 20 mM d18-PIPES pH 7.0 or purification A-buffer (20 mM sodium phosphate, 50 mM NaCl, 5 mM DTT, 0.01% NaN3, pH 7.0), and notes that without >1 mM Ca2+ D6-HP undergoes both partial unfolding (residues 1-80) and oligomerization/aggregation over hours.

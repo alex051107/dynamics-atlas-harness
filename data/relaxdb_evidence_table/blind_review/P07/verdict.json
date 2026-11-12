@@ -1,0 +1,104 @@
+{
+ "rows": [
+  {
+   "row_id": "r22",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r23",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r24",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Paper cites ref 14: barstar folds to an intermediate in ~1 ms (T-jump fluorescence); literature value, not in any row"
+  },
+  {
+   "index": 1,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r22/r23 timescale: intermediate represented by structure at 2 ms"
+  },
+  {
+   "index": 2,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r22/r23 timescale: intermediate at 2 ms"
+  },
+  {
+   "index": 3,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r22 timescale: first 0.1-1 ms"
+  },
+  {
+   "index": 4,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "50% buried surface area (literature) is a burial fraction, not a state population"
+  },
+  {
+   "index": 11,
+   "kind": "state_pdb",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r22-r24 other_conditions list 1BTA as native reference structure"
+  }
+ ]
+}

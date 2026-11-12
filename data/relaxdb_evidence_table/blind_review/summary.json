@@ -1,0 +1,219 @@
+{
+ "papers": 15,
+ "rows": 71,
+ "fields_judged": 716,
+ "contradicted_fields": 5,
+ "rows_with_a_contradiction": 5,
+ "field_error_rate": [
+  5,
+  716,
+  0.003,
+  0.016
+ ],
+ "row_error_rate": [
+  5,
+  71,
+  0.03,
+  0.154
+ ],
+ "not_in_paper_fields": 0,
+ "contradicted_by_field": {
+  "stance": 2,
+  "method_class": 2,
+  "residues_author": 1
+ },
+ "contradicted_list": [
+  [
+   "P01",
+   "r129",
+   "stance"
+  ],
+  [
+   "P08",
+   "r3",
+   "stance"
+  ],
+  [
+   "P11",
+   "r6",
+   "method_class"
+  ],
+  [
+   "P11",
+   "r7",
+   "method_class"
+  ],
+  [
+   "P15",
+   "r23",
+   "residues_author"
+  ]
+ ],
+ "items_covered": 56,
+ "items_missing_real": 22,
+ "reader_errors": 6,
+ "item_recall": [
+  56,
+  78,
+  0.61,
+  0.806
+ ],
+ "recall_by_kind": {
+  "state_pdb": {
+   "covered": 19,
+   "missing_real": 2
+  },
+  "rate": {
+   "covered": 23,
+   "missing_real": 14
+  },
+  "population": {
+   "missing_real": 6,
+   "covered": 14
+  }
+ },
+ "missing_real_list": [
+  [
+   "P03",
+   "population",
+   "80–90% RNA-bound (∼50% for tRNA)",
+   "Paper reports 80-90% RNA-bound fraction (~50% tRNA) for TRBP-EYFP in SiMPull; no"
+  ],
+  [
+   "P06",
+   "state_pdb",
+   "7MRG",
+   "BRDT-1 complex with monovalent NC-II-153-1 (7MRG) is listed in Accession codes; "
+  ],
+  [
+   "P06",
+   "state_pdb",
+   "7MRH",
+   "BRDT-1 complex with monovalent NC-II-259-1 (7MRH) is listed in Accession codes; "
+  ],
+  [
+   "P07",
+   "rate",
+   "approximately 1 ms",
+   "Paper cites ref 14: barstar folds to an intermediate in ~1 ms (T-jump fluorescen"
+  ],
+  [
+   "P09",
+   "rate",
+   "k1 1.5 min-1",
+   "Paper cites k1 1.5 min-1 for CheA alone (ref 75); literature value, no row"
+  ],
+  [
+   "P09",
+   "rate",
+   "CheA-P t1/2 >> 30 min",
+   "Cold-ATP chase shows CheA-P t1/2 >> 30 min for E. coli CheA; no row"
+  ],
+  [
+   "P09",
+   "rate",
+   "nucleotide exchange approximately seconds",
+   "Paper cites fast nucleotide exchange (~seconds, refs 75-77) for CheA; literature"
+  ],
+  [
+   "P09",
+   "rate",
+   "phosphotransfer to CheY rapid (<30 s)",
+   "Rapid (<30 s) phosphotransfer from CheA-P (TarFO short) to CheY reported; no row"
+  ],
+  [
+   "P10",
+   "rate",
+   "dissociation half-life ~ten minutes (prior assumpt",
+   "Discussion cites prior in vitro dissociation half-life ~10 min (refs 28, 43); li"
+  ],
+  [
+   "P10",
+   "rate",
+   "over 30 minutes (prior estimate)",
+   "Discussion cites prior estimate >30 min (ref 29); literature value, no row"
+  ],
+  [
+   "P10",
+   "rate",
+   "FRAP exchange half-life 12 minutes at 20 C",
+   "Discussion cites FRAP exchange half-life 12 min in live cells at 20 C (ref 62); "
+  ],
+  [
+   "P10",
+   "rate",
+   "3H-CheA association over 30 minutes (previous)",
+   "Prior 30-min 3H-CheA association with pre-assembled complexes (ref 28), reinterp"
+  ],
+  [
+   "P10",
+   "population",
+   "surviving CheA mostly active",
+   "Low-salt challenge: surviving CheA mostly active (activity loss proportional to "
+  ],
+  [
+   "P11",
+   "rate",
+   "~ 1 min −1",
+   "Discussion states ~1 min-1 CheA autophosphorylation rate without CheW/receptors;"
+  ],
+  [
+   "P11",
+   "population",
+   "less than 10%",
+   "Discussion: P1-P4 interacting population <10% in full-length CheA (upper bound f"
+  ],
+  [
+   "P11",
+   "population",
+   "< 50%",
+   "Signaling assay: phospho-CheY/I20A <50% of wild type; a functional assay readout"
+  ],
+  [
+   "P12",
+   "rate",
+   "t 1/2 of approximately 2 h",
+   "P1 dimer-interface peptide 91-104 t1/2 ~2 h in free CheA; reported, but for P1, "
+  ],
+  [
+   "P12",
+   "rate",
+   "t 1/2 of approximately 7 min",
+   "P3 peptide 304-322 t1/2 ~7 min; reported for CheA P3, no row."
+  ],
+  [
+   "P12",
+   "rate",
+   "t 1/2 goes from about 7 min to 3 min",
+   "P3 interface peptide t1/2 7 to 3 min in CF4E complexes; reported, no row."
+  ],
+  [
+   "P12",
+   "rate",
+   "t 1/2 of EX2 goes from 2 h to >16 h",
+   "P1 interface EX2 t1/2 2 h to >16 h in CF4Q complexes; reported, no row."
+  ],
+  [
+   "P12",
+   "population",
+   "50% dimer; 91% dimer",
+   "0.5 uM (50% dimer) and 30 uM (91% dimer) HDX samples are reported; no row."
+  ],
+  [
+   "P12",
+   "population",
+   "94% dimer; 91% dimer",
+   "Estimated 94% (CF4Q) and 91% (CF4E) dimer CheA in complex samples; no row."
+  ]
+ ],
+ "missing_split": {
+  "cited_from_earlier_work_or_not_dynamics": 10,
+  "measured_in_the_paper": 12
+ },
+ "item_recall_if_cited_values_excluded": [
+  56,
+  68,
+  0.716,
+  0.896
+ ]
+}

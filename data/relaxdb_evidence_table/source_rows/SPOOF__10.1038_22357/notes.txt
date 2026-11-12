@@ -1,0 +1,18 @@
+Folder: SPOOF__10.1038_22357
+Entry ID: SPOOF (Manifest entries: ["SPOOF"])
+DOI: 10.1038/22357
+
+1. Supplements attached in paper.txt:
+- None (pmcid is empty; si_manifest.json lists 0 supplements, epmc_status: "not queried (no PMCID)").
+- Note: The paper states (pp. 292-293) that per-residue relaxation data (R1, R2, NOE, S2, te, Rex, SSE, and selected Modelfree models) were available as Nature Supplementary Information and deposited in the Indiana Dynamics Database (http://pooh.chem.indiana.edu/IDD), neither of which is attached in paper.txt.
+
+2. Figure-only content and items omitted from rows:
+- Per-residue numerical values of 15N R1 (Fig. 1a), R2 (Fig. 1b), steady-state 1H-15N NOE (Fig. 1c), R2/R1 (Fig. 1d), S2 (Fig. 2a), te (Fig. 2b), and Rex (Fig. 2c) across the 108 analyzed backbone amides are only plotted graphically in Figs. 1-2 (and in unavailable SI / IDD), not tabulated in the main text; only text-explicit residue names/ranges and summary statistics were placed in r1.
+- Previously published 500 MHz relaxation averages and slow conformational exchange of beta-strand 5 / H101 imidazole ring at pH 6.85 from Feher et al. 1997 (ref. 10, PDB 2fsp) are cited background/comparison rather than new measurements in this paper, so they were recorded in r1/r2 context and caveat_note rather than as separate rows.
+- Alanine-scanning mutagenesis phenotypes for KinA, RapB, and Spo0B interactions (refs. 8, 9; mapped in Fig. 3c) are functional mutagenesis data from prior studies, not dynamics experiments.
+- Control biophysical checks (DLS showing monomer at Mr ~14K, CD thermal denaturation check, and tryptic-digest mass spectrometry ruling out deamidation/oxidation) were omitted as static sample-quality controls, and noted in r1 caveat_note.
+
+3. Discrepancies and doubts:
+- Paper-vs-manifest-card temperature and deposit discrepancy: Methods (p. 292) states NMR relaxation data were collected at 300 K on a Bruker DRX 600 MHz spectrometer (and deposited at the Indiana Dynamics Database), whereas the manifest card has blank BMRB fields and lists sheet_temperature_K = "298.5" and sheet_field_MHz = "600" (marked same_sample_as_deposit = "unclear").
+- PDF font encoding in paper.txt: Mathematical decimal points, plus-minus signs, and minus signs in certain font runs were extracted by pdftotext as ":", "6", and "2" (e.g., "pH 6:80 6 0:05" = pH 6.80 ± 0.05; "1:49 6 0:02 s 2 1" = 1.49 ± 0.02 s^-1; "tm of 7:72 6 0:3 ns" = 7.72 ± 0.3 ns), and en-dashes were extracted as "±" (e.g., "5±30 s-1" = 5–30 s^-1, matching the 0–30 s^-1 axis in Fig. 2c). Values in ph and timescale were copied verbatim as printed in paper.txt and explained in caveat_note.
+- Minor R2 duplicate time-point typo in Methods (p. 292): R2 delay times are listed as "9, 16, 32, 48, 72, 104, 160, 368 and 528 ms with duplicate spectra of time points 8, 72 and 160 ms" ("9" vs "8" ms).

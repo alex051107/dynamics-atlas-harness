@@ -1,0 +1,9 @@
+Supplement used: si/supp_PMC2711454_mmc1.pdf (Supporting Material: Tables S1-S4, Figs S1-S10). Values taken only from SI: all per-residue Rex values and model-free models (Table S3), per-residue kex/Kop/dGHX (Table S4; E166, R161, R164, L169, R178 values in r4/r5), Tyr105 alternative-model details are in main text.
+Figure-only values: per-residue S2, te, ts (Fig. 1A, Fig. S6), relaxation profiles (Fig. S2), dGHX map (Fig. 3, Fig. S9).
+Discrepancies (not resolved):
+- Main text p. 4689 gives Rex 7.5 (Ser235) and 4.5 (Gly236) s-1; Table S3 lists 4.529 ± 1.951 (S235) and 2.901 ± 0.818 (G236).
+- Temperature: paper 31.5 C and BMRB 304.65 K agree; entry sheet lists 303.15 K.
+- Main text prints the kex range as "2 x 10^-3 to 3 x 10^-8 s-1" (low end first); characters for minus signs and mu are garbled in the extracted PDF text (mu-ms appears as ms-ms in main text; supplement text shows mu-s-ms).
+- Authors' first Arg234 fit (all R2 data, model m2) differs from the reported m3 after excluding R2 at 50.6 MHz.
+Not put in rows: Ile165/Thr69/Gly240/Asn276/Arg275 S2 comparisons with TEM-1 (SI, resistance mutation discussion); TEM-1 comparison of S2 (Fig. S8); CSA/N-H bond-length sensitivity tests (SI); concentration test at 0.25 and 0.125 mM (<5% change in tm); Ser130 side-chain two alternative positions (occupancy 0.5) in crystal structure 1G68; stability/thermal precipitation >41 C (data not shown).
+Doubts: Table S2 and S3 per-residue tables were skimmed for the entries cited (not every row read); R2 at 81.0 MHz was excluded by the authors; residue one-letter codes are derived from three-letter codes printed in tables.

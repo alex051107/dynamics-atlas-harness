@@ -1,0 +1,130 @@
+[
+ {
+  "kind": "rate",
+  "value": "approximately 1 ms",
+  "sample": "barstar, T-jump folding to intermediate (literature, ref 14)",
+  "quote": "the combination of temperature-jump pump coupled with a fluorescence probe revealed that barstar folds to an intermediate in approximately 1 ms with 50% of the surface area buried",
+  "where": "Introduction",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "with-in 2 ms",
+  "sample": "barstar C82A, 1.2 M GdnCl, T-jump from ~0 C",
+  "quote": "the protein structure moves with-in 2 ms to an intermediate possessing moderate structure",
+  "where": "Figure 10 legend",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "2 ms",
+  "sample": "barstar C82A intermediate state definition",
+  "quote": "The intermediate state of barstar folding can be represented by the structure formed 2 ms after initiation of folding.",
+  "where": "Results, Characterization of the Intermediate State",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "first 0.1-1 ms",
+  "sample": "barstar C82A helix 1 protection time range",
+  "quote": "helix 1  shows a decreasing trend of oxidative modification during the first 0.1-1 ms of folding while others do not change in this time range.",
+  "where": "Abstract",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "50% of the surface area buried",
+  "sample": "barstar intermediate (literature, ref 14)",
+  "quote": "barstar folds to an intermediate in approximately 1 ms with 50% of the surface area buried compared to the denatured state",
+  "where": "Introduction (buried surface fraction, not a state population)",
+  "target": "target"
+ },
+ {
+  "kind": "order",
+  "value": "L20 degree of folding > 0.8 (intermediate)",
+  "sample": "barstar C82A intermediate state, helix 1",
+  "quote": "L20, a residue in helix 1 , has the largest degree of folding (> 0.8) in the intermediate state, indicating the formation of a partially solvent-excluded core.",
+  "where": "Results, Figure 8 (degree-of-folding, FPOP)",
+  "target": "target"
+ },
+ {
+  "kind": "order",
+  "value": "I5 0.57; F74 0.29 (degree of folding, intermediate)",
+  "sample": "barstar C82A intermediate state, beta-sheet 1 and helix 4",
+  "quote": "I5 and F74, residues in β-sheet 1  and helix 4 , have degrees of folding of 0.57 and 0.29, respectively.",
+  "where": "Results, Figure 8",
+  "target": "target"
+ },
+ {
+  "kind": "order",
+  "value": "W53, L88 degree of folding nearly 0",
+  "sample": "barstar C82A intermediate state, beta-sheet 2 and 3",
+  "quote": "W53 and L88, residues in β-sheet 2  and β-sheet 3 , have degrees of folding that are nearly 0, indicating that these are as exposed residues",
+  "where": "Results, Figure 8",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "I5, H17, L20, L24, F74",
+  "sample": "barstar C82A folding intermediate (protected)",
+  "quote": "Residues I5, H17, L20, L24 and F74 are modified less in the intermediate state than the denatured state, likely due to full or partial protection",
+  "where": "Abstract",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "E57, L62, R75 (no change)",
+  "sample": "barstar C82A",
+  "quote": "According to barstar’s NMR structure (PDB ID: 1BTA), E57 and L62 are located in helix 3 , and R75 is in helix 4",
+  "where": "Results, Figure 4",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "W53, L88 (late folding)",
+  "sample": "barstar C82A",
+  "quote": "Both W53 and L88 are buried in the hydrophobic core in the native state; that is, they are more protected when folded.",
+  "where": "Results, Figure 5",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "1BTA",
+  "sample": "barstar native state (NMR structure, used as reference)",
+  "quote": "According to barstar’s NMR structure (PDB ID: 1BTA), E57 and L62 are located in helix 3",
+  "where": "Results (reference native structure)",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "10 uM barstar, 1.2 M GdnCl, 15 mM glutamine, PBS pH 7.4; incubated 0 C; chamber < 3 C; T-jump to ~room temperature",
+  "sample": "barstar C82A two-color FPOP",
+  "quote": "Each protein sample contained 10 μM barstar, 1.2 M GdnCl, and 15 mM glutamine in PBS buffer, incubated at 0 °C for 3 h prior to the experiment.",
+  "where": "Experimental, Two-color FPOP",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "T jump from ~0 C to ~room temperature",
+  "sample": "barstar C82A",
+  "quote": "The folding of a test protein, barstar, can be triggered by a laserinduced temperature jump (T jump) from ~0 °C to ~ room temperature.",
+  "where": "Abstract",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "PBS pH 7.4",
+  "sample": "barstar C82A buffer",
+  "quote": "guanidinium chloride (GdnCl), phosphate buffered saline (PBS, pH = 7.4) and proteomic-grade trypsin were purchased from Sigma-Aldrich",
+  "where": "Experimental, Materials",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "PBS with 1.2 M GdnCl, 0 C incubation, CD scan to 30 then 70 C",
+  "sample": "barstar C82A CD equilibrium",
+  "quote": "The barstar sample in PBS buffer with 1.2 M GdnCl was incubated at 0 °C for 1 h before CD measurement.",
+  "where": "Experimental, Equilibrium Studies",
+  "target": "target"
+ }
+]

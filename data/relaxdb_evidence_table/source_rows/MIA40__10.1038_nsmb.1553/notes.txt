@@ -1,0 +1,20 @@
+Paper: MIA40__10.1038_nsmb.1553
+DOI: 10.1038/nsmb.1553
+Entry ID: MIA40
+
+1. Supplement files attached:
+- None (si_manifest.json: pmcid = "", supplements = [], epmc_status = "not queried (no PMCID)").
+- Supplement-only values extracted into rows.jsonl: 0.
+- Unavailable online-only supplementary items referenced in main text: Supplementary Methods online and Supplementary Figs. 1-6 online (Supplementary Fig. 1 contains static MALS and per-residue 15N R2/R1 data; Supplementary Fig. 2 contains 100 mM DTT HSQC and AMS thiol-trapping assays; Supplementary Fig. 3 shows the folded MIA402S-S structure ensemble; Supplementary Fig. 4 shows SPC mutant dimerization; Supplementary Fig. 5 shows human MIA40 GST-pulldown binding of COX17 and yTim10; Supplementary Fig. 6 shows a HADDOCK model of the covalently linked MIA40-COX17 intermediate).
+
+2. Figure-only data and non-dynamics assays omitted from rows.jsonl:
+- Figure-only quantitative per-residue data: Fig. 4b plots heteronuclear 15N{1H} NOE versus residue number for full-length MIA402S-S at 600 MHz without a numerical residue table in the main text (text summarizes regions 1-41 and 107-142 as having negative or low [<0.5] 15N{1H} NOE and lower R2/R1, with residues 109-118 excluded due to cross-peak overlap). Fig. 2a plots weighted-average amide chemical shift differences Delta_HN between MIA402S-S and MIA403S-S across residues ~41-106 without a numerical table.
+- Biochemical, redox, and functional assays omitted from intrinsic dynamics rows:
+  * Trp fluorescence GSH/GSSG redox titration of the CPC disulfide in MIA40 (50 mM phosphate, pH 7.0): Keq = 68.4 ± 7.9 mM, standard redox potential = -200 ± 5 mV (Fig. 3, p. 200; Methods p. 205 at 25 °C).
+  * NMR-monitored intermolecular disulfide transfer reaction from MIA403S-S to substrate COX176SH (and Cys-to-Ser COX17 mutants CX9S/SX9C and SX9C/CX9S) at 298 K / 25 °C (Fig. 6a-d, pp. 200-202, 205): chemical oxidation reaction completing in < 30 min (not an equilibrium conformational-exchange rate of MIA40).
+  * Radiolabeled mitochondrial import-competition assays (Tim10, Porin, Su9-DHFR at 30 °C; Fig. 1b), in organello time-course trapping of Mia40-COX17 mixed disulfide intermediates (Fig. 7a,b), yeast complementation and GST-pulldown assays of CPC mutants (CPS, SPC, SPS) and hydrophobic cleft mutants (Fig. 7c-h).
+
+3. Discrepancies, PDF extraction artifacts, and uncertainties:
+- Paper vs. RelaxDB deposit card: The RelaxDB card lists sequence_length = 66, sheet_temperature_K = 298.5, sheet_field_MHz = 600, and empty bmrb_id/sample components. In the paper, all NMR samples are full-length 142-residue human MIA40 (BMRB 15763) measured at 298 K in 50 mM phosphate buffer, pH 7.0 (printed as pH 7 in Fig. 4b legend), 10% (v/v) D2O (plus 2 mM DTT for MIA402S-S), while the folded central domain solved in PDB 2K3J spans 66 residues (Abstract p. 198; lid 41-64 + core 65-100/106). Thus species_relation is recorded as "same_protein_other_construct", and same_sample_as_deposit for r1 (600 MHz spin relaxation) is "unclear".
+- Internal NMR ensemble count discrepancy: Results p. 199 (line 141) states Pro54 and Cys55 show alpha-helical propensity in "~40% of 30 energy-minimized structures", whereas Methods p. 205 (lines 767, 773) and Table 1 (line 756) report 20 conformers / 20 refined structures.
+- PDF symbol extraction artifacts in paper.txt (noted for auditability; not copied as corrupted digits): '<' extracted as 'o' ('o0.5' on line 122 = '<0.5'), '>' extracted as '4' ('450%' on line 45 = '>50%'), '~' extracted as 'B' ('B40%' on line 141 = '~40%'), '°C' extracted as '1C' ('25 1C', '30 1C', '4 1C' in Methods), and minus signs dropped before redox potentials (' 200 ± 5 mV' = '-200 ± 5 mV'). Temperature for NMR rows uses the clean verbatim printed string "298 K".

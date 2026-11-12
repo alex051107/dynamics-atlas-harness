@@ -1,0 +1,21 @@
+Paper: 10.1074/jbc.m112.399261 (BMRB entry_id: 26513)
+Title: The apo-structure of the low molecular weight protein-tyrosine phosphatase A (MptpA) from Mycobacterium tuberculosis allows for better target-specific drug development (2012)
+
+Supplements attached:
+- None. The article footnote (p. 34569) states "This article contains supplemental Table S1 and Figs. S1-S5", and the text cites supplemental Table S1 and Fig. S3 for full 15N S2 and (1H)-15N hetNOE data, but si_manifest.json reports supplements=[] with epmc_status="non-zip reply (no supplement)".
+- Count of values from supplement only: 0.
+
+Figure-only / missing-SI data omitted from quantitative cells:
+- Per-residue 15N R1/T1, R2/T2, (1H)-15N hetNOE, S2 order parameters (beyond M1, S2, N14, G118, V124, D126, G161, S163 reported in text), and any model-free internal correlation times or Rex parameters are only in unavailable supplemental Table S1 / Fig. S3 or color-mapped qualitatively in Fig. 2C.
+- Quantitative per-residue CSP values for inorganic phosphate titration and PtkA titration (beyond threshold CSP >= 0.015 ppm in Fig. 7B) are only in plots / text summaries.
+- Biochemical phosphatase assay (pNPP, Fig. S2), Kinase-Glo luciferase autophosphorylation assay (Fig. 6), and MALDI-MS / 31P NMR verification of Tyr128/Tyr129 phosphorylation by PtkA (Figs. S4-S5) do not measure conformational dynamics parameters of MptpA and were not added as dynamics rows.
+
+Discrepancies and notes:
+1. Internal temperature discrepancy vs BMRB 26513 deposit card: Experimental Procedures (p. 34571) reports 15N relaxation (T1, T2, hetNOE) on 1.0 mM 15N-labeled MptpA in 150 mM NaCl, 50 mM HEPES (pH 7.0), 10 mM DTT at T = 298 K on a 600 MHz spectrometer—matching the BMRB 26513 card word-for-word (including sequence length 167 = subcloning G(-3)-G(0) + Rv2234 Met1-Ser163). However, Fig. 2C caption (p. 34574) states "backbone dynamics of MptpA measured at 600 MHz and T = 303 K" (303 K was the temperature of the 1.2 mM 50 mM Arg/Glu, 25 mM HEPES structure-determination sample deposited under BMRB 18533). Both temperatures are preserved with locators.
+2. Pro127 listed under amide exchange broadening: On p. 34576, the authors state "residues Thr119-Ala121 as well as Glu125 and Pro127 located in the D-loop are not observable due to exchange broadening", although Pro127 lacks a backbone amide proton.
+3. Phosphate formula typo and residue-name typos in text:
+   - On p. 34576 ("Interaction with Phosphate Ions"), inorganic phosphate (Pi) is printed once as "20 mM NaH2PO3" (phosphite formula).
+   - Residue 89 is Leu89 in the sequence/structure (beta3 Leu85-Leu89, p. 34572; PtkA CSP list Leu89, p. 34577) but printed twice as "Lys89" on p. 34576.
+   - W-loop boundaries are given as Gly44-Asp55 (p. 34572) vs Ser44-Glu55 (Fig. 2B caption, p. 34574).
+   - D-loop boundaries are given as Arg111-Asp131 (p. 34572, Fig. 2B) vs Arg111-Gly131 (p. 34576), and the superimposed D-loop segment as Leu122-Asp131 (p. 34574) vs Lys122-Asp131 (Table 2, p. 34575).
+4. Unit of tau_c: On p. 34572, overall rotational correlation time in diffusion anisotropy refinement is printed as "tau_c = 12.12" without explicit "ns" unit.

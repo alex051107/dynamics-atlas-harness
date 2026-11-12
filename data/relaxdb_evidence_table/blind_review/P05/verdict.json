@@ -1,0 +1,53 @@
+{
+ "rows": [
+  {
+   "row_id": "r33",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r34",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "state_pdb",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r33 other_conditions lists deposited complex 36IV (BRD4-S/acetylated nucleosome)"
+  },
+  {
+   "index": 1,
+   "kind": "state_pdb",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r33 other_conditions lists 36IU (basic patch 1 model)"
+  }
+ ]
+}

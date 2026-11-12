@@ -1,0 +1,22 @@
+Folder: SPRY__10.1038_nsmb1034
+Entry ID: SPRY (Manifest entries: ["SPRY"])
+DOI: 10.1038/nsmb1034
+
+1. Supplements attached in paper.txt:
+- None (pmcid is empty; si_manifest.json lists 0 supplements, epmc_status: "not queried (no PMCID)").
+- Note: The paper cites Supplementary Fig. 1 (sequence/assignment summary), Supplementary Fig. 2 (20-structure NMR ensemble), Supplementary Table 1 (mutational scan summary), and Supplementary Table 2 (PCR primers) online, which are not present in paper.txt.
+
+2. Figure-only content and items omitted from rows:
+- Per-residue numerical values of steady-state 15N-{1H} NOE, 15N R1, and 15N R2, as well as residue-by-residue fast/slow water-amide exchange rectangles, are plotted only in Figure 2 without numerical tables in the text (marked 仅图示 in r1 and r3).
+- Preliminary NMR check of triple mutant SSB-2 (Y141A H142A Q143A) (Discussion, p. 81) reporting minor chemical-shift/structural perturbations while retaining the overall fold was omitted from rows because no dynamics parameter or exchange measurement was reported for that mutant.
+- Co-immunoprecipitation, far-western blotting, mass spectrometry peptide identification, phylogenetic analysis, and homology modeling of pyrin and MID1 SPRY domains were omitted as non-dynamics experiments.
+
+3. Discrepancies and doubts:
+- Paper-vs-manifest-card discrepancies:
+  (a) Temperature: Methods (p. 81) states NMR spectra and 15N relaxation measurements were recorded at 22 °C (extracted as "22 1C" in paper.txt, ~295.15 K) on a Bruker Avance500, whereas the manifest card lists sheet_temperature_K = "298.5" and sheet_field_MHz = "500".
+  (b) Construct length and BMRB ID: Paper reports murine SSB-2 residues 12-224 (213 native residues; UniProt O88838) and deposits chemical shifts under BMRB-6311 and coordinates under PDB 2AFJ, whereas the manifest card has bmrb_id = "" and sequence_length = "226" (likely reflecting a 13-residue expression tag in the sample described in cited ref. 33, Yao et al. 2005).
+  (c) Missing NMR buffer/pH in text: Methods (p. 81) refers NMR sample preparation to ref. 33 ("Protein samples used in the structural studies have been described previously33") without restating NMR pH or buffer composition (except "100% 2H2O under the same buffer conditions" for slow H/D exchange in r3). TBST pH 7.5 in Methods is for far-western blotting, not NMR.
+- Internal loop-boundary variations in the paper:
+  - Missing-assignment region in loop CD is stated as "residues 119-125" in Results (p. 78), whereas Methods (p. 82) excludes "three loops that contain residues with missing backbone assignments (residues 69-77, 96-104 and 119-129)" from Ramachandran statistics and notes His103, His119, and Tyr120 lacked backbone assignments.
+  - Loop DE boundaries are cited as 135-165 in Results (p. 78), 145-165 in Fig. 3b legend (p. 79), and 141-161 for the aligned mutational scan window in Fig. 5a (p. 81).
+- PDF glyph extraction quirk: Degree symbols ("°") in paper.txt were extracted as "1" (e.g., "22 1C" for 22 °C, "901" for 90°). Figure 5b also prints a minor OCR/typesetting typo "Gin143" for Gln143.

@@ -1,0 +1,90 @@
+[
+ {
+  "kind": "rate",
+  "value": "kex ~1250 ± 100 s-1",
+  "sample": "T. maritima CheA P4l (residues 346-540), 50 C, global two-state fit",
+  "quote": "all the data could be fit to a single two-state process (reduced χ 2  = 1.2) with an exchange rate constant  k ex  of ∼1250 ± 100 s –1 .",
+  "where": "Results, CPMG",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "minor state population not defined (fast exchange)",
+  "sample": "CheA P4l, 50 C",
+  "quote": "The population of the minor state could not be defined because exchange is fast compared to the change in the chemical shift",
+  "where": "Results, CPMG",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "1H: 360, 390-398, 400, 401, 403, 439; 15N: 391-395, 517, 518",
+  "sample": "CheA P4l (with P3-P4 linker), CPMG dispersion",
+  "quote": "for several amide protons (residues 360, 390–398, 400, 401, 403, and 439) and a few amide nitrogens (residues 391–395, 517, and 518), the transverse relaxation rate",
+  "where": "Results, CPMG; Figure 2, Figure S5",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "360, 390-398, 400, 401, 403, 439, 517, 518",
+  "sample": "CheA P4l, combined exchanging set",
+  "quote": "all of these residues (residues 360, 390–398, 400, 401, 403, 439, 517, and 518) are either in the helix or near it",
+  "where": "Results, CPMG",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "dispersion significantly reduced",
+  "sample": "CheA P4 (residues 356-540, no linker)",
+  "quote": "both  1 H and  15 N relaxation dispersion profiles were significantly reduced in the P4 construct, as illustrated in Figures S6 and S7",
+  "where": "Results; Figures S6, S7",
+  "target": "other_construct"
+ },
+ {
+  "kind": "residues",
+  "value": "P3-P4 linker and ATP lid (residues 490-510) exchange-broadened",
+  "sample": "CheA P4l, 50 C",
+  "quote": "[the P3–P4 linker and the ATP lid (residues 490–510)] that appeared to be exchange-broadened, a total of 142 of 154 non-proline",
+  "where": "Methods, NMR Spectroscopy",
+  "target": "target"
+ },
+ {
+  "kind": "residues",
+  "value": "R354D: missing peaks and line broadening in P4 and P3 resonances",
+  "sample": "CheA P3P4 R354D mutant",
+  "quote": "the replacement of Arg354 with Asp dramatically changes the dynamics of the same resonances of the P4 domain as well as some resonances of the P3 domain",
+  "where": "Results; Figure S8",
+  "target": "other_construct"
+ },
+ {
+  "kind": "condition",
+  "value": "50 C; 500 and 800 MHz; ~1.5 mM U-[15N,2H], ILV 13CH3",
+  "sample": "CheA P4l CPMG",
+  "quote": "Relaxation dispersion (CPMG) experiments were performed at 50 °C using an ∼1.5 mM U-[ 15 N, 2 H], ILV  13 CH 3  sample on 500 and 800 MHz Varian Inova spectrometers",
+  "where": "Methods, CPMG",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "50 mM Na2HPO4 pH 7.4, 20 mM NaCl",
+  "sample": "T. maritima CheA P4, P4l, P3P4 NMR samples",
+  "quote": "Purified proteins were dialyzed against the buffer containing 50 mM Na 2 HPO 4  (pH7.4) and 20 mM NaCl and concentrated to a final concentration of 0.5–1.5 mM.",
+  "where": "Methods, Protein Preparation",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "50 C; 600 or 800 MHz",
+  "sample": "CheA constructs TROSY-HSQC and assignment",
+  "quote": "TROSY-HSQC spectra were collected at 50 °C on a Varian 600 MHz or Bruker 800 MHz spectrometer.",
+  "where": "Methods, NMR Spectroscopy",
+  "target": "target"
+ },
+ {
+  "kind": "state_pdb",
+  "value": "1B3Q",
+  "sample": "T. maritima CheA P3P4P5 crystal structure (linker in two conformations)",
+  "quote": "These residues (green) are mapped onto the structure of P3P4P5 (Protein Data Bank entry 1B3Q).",
+  "where": "Figure 1 legend (mapping structure; linker two conformations described in text)",
+  "target": "target"
+ }
+]

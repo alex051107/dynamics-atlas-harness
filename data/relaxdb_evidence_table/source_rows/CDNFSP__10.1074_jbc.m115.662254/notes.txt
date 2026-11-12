@@ -1,0 +1,22 @@
+Paper: CDNFSP__10.1074_jbc.m115.662254
+DOI: 10.1074/jbc.m115.662254
+PMCID: PMC4536457
+Entry ID: CDNFSP
+
+1. Supplement status
+- No supplementary files available (`si_manifest.json`: `supplements = []`, `epmc_status = "non-zip reply (no supplement)"`). All values in `rows.jsonl` came from the main text (0 supplement-only values).
+
+2. Figure-only or omitted non-dynamics content
+- Per-residue values of backbone average local displacement (Fig. 2A), 1H amide line width at 1 GHz (Fig. 2B), 15N R2/R1 (Fig. 2C), steady-state 15N{1H}-NOE (Fig. 2D), and per-residue solvent-exposure differences between 4BIT and 2W50 (Fig. 3C, 19 residues exceeding 1 SD, of which only A66, T67, K68, and L70 are explicitly discussed in the text; any additional labeled points in Fig. 3C are figure-only) are plotted graphically without per-residue numerical tables.
+- Table 1 (structural statistics of 4BIT) was stripped of its tabular body during source text extraction except for its title and footnotes a/b (pp. 20531-20532), though key statistics (1,902 NOEs, 159 dihedral restraints, target function 2.6 A^2, ~77% most favorable / 1.6% disallowed Ramachandran, global backbone r.m.s.d. 7.16 ± 1.51 A, N-terminal 10-100 r.m.s.d. ~1.1 / 1.6 A, C-terminal 110-150 r.m.s.d. ~0.7 / 1.3 A) are stated in the main text.
+- SAXS at 20 °C (2 mg/ml FL-CDNF in 20 mM sodium phosphate, pH 6, 100 mM NaCl, 3 mM NaN3, 1 mM EDTA; DAMMIN/DAMAVER NSD = 1.066 ± 0.354; Fig. 1D) cross-validated the monomeric two-domain envelope in solution without reporting internal dynamics or state populations, so no separate SAXS dynamics row was created.
+- Prior CDNF1-105 NMR assignment data (Ref. 22, BMRB 18269) are cited for HN chemical shift comparison with FL-CDNF residues 2-100 (average combined delta-Delta = 0.005 ± 0.005 ppm, max 0.040 ppm) and similar absence of alpha-helix 4 HN signals; noted in r2 `caveat_note` rather than as a separate row because sample conditions for CDNF1-105 are not reported in this paper.
+- Alpha-synuclein (WT and A30P) oligomerization assays (ThT fluorescence, AFM, dot blot; Fig. 5), neuronal protection assays in E14 mouse dopaminergic neurons and differentiated N2a cells (Figs. 6-7), and negative CDNF/alpha-synuclein binding tests (tryptophan fluorescence polarization and far dot blot, data not shown) are biological/functional assays and not CDNF conformational dynamics rows.
+
+3. Discrepancies and doubts
+- Spectrometer field discrepancy: Experimental Procedures (p. 20529) states R1 and R2 were measured at 800 MHz and steady-state 15N{1H}-NOE at 600 MHz (at 25 °C), whereas Fig. 2 legend (p. 20533) states that the dynamics data were collected at 600 MHz at 298 K except for 1H line width at 1 GHz.
+- Construct vs RelaxDB card (`CDNFSP`): The manifest card lists `"Cerebral dopamine neurotrophic factor, saposin-like domain"`, `sequence_length = "101"`, `sheet_temperature_K = "298.0"`, `sheet_field_MHz = "800"`, with empty BMRB fields. All experiments reported in this paper use full-length human CDNF-(1-161) (BMRB 19164). Because the N- and C-terminal domains tumble semi-independently, RelaxDB's `CDNFSP` entry likely extracted the N-terminal saposin-like domain subset of this 800 MHz dataset, or else came from an isolated N-terminal construct; hence `species_relation = "same_protein_other_construct"` and `same_sample_as_deposit = "unclear"` on r1.
+- Dimensionless R2/R1 domain averages on p. 20532 are printed with `s-1` units (`14.4 ± 5.7 and 10.7 ± 3.2 s-1`).
+- Minor differences in broadened/unassigned residue boundaries across p. 20529 (unassigned HN: C11, E12, C14-E16, I69-E72, T74-R75, K101, C132-A134, K138), pp. 20532-20533 (broadened amide line widths: 11-16, 68-73, 88, 99-101, 132-133, 138), and p. 20535 (absent HN due to intermediate exchange: 68-75).
+- PDB 2W50 crystal construct is referred to as `residues 9-107` in the Abstract (p. 20527) and `residues 1-107` in Introduction/Results (pp. 20528, 20534).
+- Typo on p. 20537 line 581: `10 mM CDNF` in text vs `10 uM CDNF` in Fig. 7C,D legend (line 574) for N2a cell pretreatment.

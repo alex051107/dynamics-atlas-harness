@@ -1,0 +1,18 @@
+Paper: 10.1074/jbc.m110.202739 (Gentile et al., J. Biol. Chem. 2011, 286:14588-14597; PMCID: PMC3077656)
+Entry ID: 17246 (other entry IDs: none)
+
+Supplements attached:
+- None. si_manifest.json reports epmc_status = "non-zip reply (no supplement)" and supplements = [].
+- Note that the article footnote states online supplemental material existed at JBC ("Materials and Methods, supplemental Tables S1-S6, and supplemental Figs. S1-S6"), which was not returned by Europe PMC. Values that came only from the supplement: 0.
+
+Material only in figures/unavailable SI or omitted from rows:
+- Per-residue 15N R1, R2, 15N{1H} NOE, and Lipari-Szabo model-free (TENSOR2) parameters including fitted internal correlation times (tau_e) for loops 56-69 and 148-162 are plotted only in unavailable supplemental Fig. S2 (not printed numerically per residue in main text).
+- Exact NMR buffer, pH, and recombinant D1 construct boundaries/primers are in unavailable supplemental Materials and Methods and supplemental Tables S1 and S3 (note: PepScan wash buffer TTBS at pH 7.0 in main text is for peptide membranes, not NMR).
+- Per-residue ensemble r.m.s.d. (supplemental Fig. S1) and NOE distribution (supplemental Fig. S5): main text states the 20-conformer NMR ensemble of D1 (PDB 2L40) has backbone r.m.s.d. 0.71 ± 0.19 Å over residues 28-183, disorder in loops 56-69, 148-162 (r.m.s.d. ~2 Å), and 173-177, a transient short beta-sheet (161-163 and 184-187) present in 50% of 20 conformers, and partial burial of pilin-motif Lys-183 (relative solvent accessibility 27.2% ± 4.8%).
+- Rigid-body CHIMERA fitting of isolated D1 NMR coordinates (2L40) + RrgB D2-D4 crystal coordinates (Ref. 24; PDB code not printed in paper.txt) into the native pilus cryo-EM density map (supplemental Fig. S6, supplemental Table S6) left portions of D1 outside the apical EM volume, leading authors to propose D1 undergoes conformational rearrangement (involving K183 and nearby flexible regions 49-69, 152-167, 183-193) during sortase-mediated intermolecular isopeptide polymerization; omitted as a separate row because cryo-EM fitting uses no alternate-state atomic PDB.
+- Backbone amide H/D exchange (1H-15N HSQC after dialysis against deuterated buffer for 3 days) was used solely to generate beta-strand H-bond restraints for CYANA structure calculation; no exchange rates, protection factors, or residue lists are reported.
+- Mouse active/passive immunization, FACS, ELISA, PepScan linear epitope mapping (D1-1: 40-59; D4-1: 494-508), and TIGR4 delta_rrgB complementation/mutagenesis (K138A, K162A, K183A, K309A) omitted as non-dynamics functional assays.
+
+Discrepancies and doubts:
+- Paper vs deposit card (BMRB 17246): paper explicitly cites BMRB accession 17246 and matches temperature (298 K) and sheet field (500 MHz), but reports 0.8 mM protein concentration for 15N relaxation at 500 MHz whereas BMRB 17246 sample components list 0.5 mM ([U-95% 15N]), 0.9 mM (natural abundance), and 0.4 mM ([U-95% 13C; U-95% 15N]); BMRB card also lists bmrb_relaxation_field_MHz = "500/600" whereas main text mentions 900, 800, 700, and 500 MHz spectrometers (never 600 MHz), and card pH 7.2 / 20 mM phosphate buffer cannot be cross-checked in main text due to unavailable SI.
+- Internal loop-range wording: Results gives disordered/mobile loop ranges as 56-69, 148-162, and 173-177 (with elevated R2 in 155-164 and 174-178), whereas Discussion (p. 14595) refers to flexible regions spatially close to K183 as 49-69, 152-167, and 183-193.

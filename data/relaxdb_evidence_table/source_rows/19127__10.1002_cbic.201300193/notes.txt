@@ -1,0 +1,16 @@
+Paper: 10.1002/cbic.201300193 (BMRB entry_id: 19127)
+Title: The dynamics of lysozyme from bacteriophage lambda in solution probed by NMR and MD simulations (2013)
+
+Supplements attached:
+- None. si_manifest.json reports pmcid="" and supplements=[] ("not queried (no PMCID)"). No Supporting Information is mentioned in paper.txt.
+- Count of values from supplement only: 0.
+
+Figure-only / untabulated data omitted from quantitative cells:
+- Per-residue 15N T1/T2 ratios, {1H}15N heteronuclear NOEs, Lipari-Szabo S2 order parameters, internal correlation times (tau_e, tau_s), and exact per-residue Rex values are not tabulated in the paper text; Figure 2 plots T1/T2, {1H}15N NOE, and S2 across 128 analysed residues and classifies the 23 Rex-requiring residues only by symbol (< 1.0 s^-1 vs > 1.0 s^-1 at 500 MHz, scaled by 2.25 at 750 MHz). Only Gly133 has a numeric S2 printed in text (S2 = 0.82, Fig. 5 caption).
+- Full per-residue 15N-1HN RDC values (113 residues) and 3JHNHa couplings (104 residues) are deposited in BMRB 19127 and plotted in Fig. 5 / partially cited in text (Gly133 RDC = 9.8 Hz; L52, K58, K60, H137, K138, S141 3JHNHa values).
+- Several residue numbers in relaxation/RDC/MD sections (3-5, 22-28, 84, 85, 124, 128, 130, 131, 134, 140, 142, 144-149) are given in the text as sequence positions without amino-acid names; residue types were included only where explicitly named in paper.txt.
+
+Discrepancies and notes:
+1. Paper vs BMRB 19127 deposit card: The paper reports ~0.5 mM 15N-labelled lambda lysozyme in 95% H2O/5% D2O at pH 5.45 and 20 °C (rendered as "20 8C" by pdftotext from the Wiley symbol font) at 500.10 and 750.04 MHz, matching the BMRB 19127 card's 293 K, pH 5.45, 500/750 MHz, and 95% H2O/5% D2O, except that the BMRB card sample string lists placeholder "lambda_lysozyme natural abundance 0 mM" and omits the 5% C12E6/n-hexanol alignment medium used for the RDC dataset also deposited in BMRB 19127.
+2. Internal text discrepancy on helix alpha6 C-terminus in PDB 1AM7: Introduction (p. 1780-1781) states helix alpha6 spans residues 135-148 (open) and 139-148 (closed), whereas Results and Discussion (p. 1785) states 135-149 (molecule A, open) and 139-149 (molecule B, closed).
+3. Sample temperature offset between fields: Experimental Section (p. 1787) notes slightly different sample temperatures in the 500 and 750 MHz spectrometers, yielding tau_R = 10.8 ns (500 MHz) vs 11.3 ns (750 MHz), handled by field scaling factors during model-free fitting.

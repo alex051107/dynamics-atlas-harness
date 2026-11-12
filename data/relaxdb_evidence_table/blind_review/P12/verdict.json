@@ -1,0 +1,136 @@
+{
+ "rows": [
+  {
+   "row_id": "r12",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r13",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r14",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r15",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "P1 dimer-interface peptide 91-104 t1/2 ~2 h in free CheA; reported, but for P1, outside the P2 rows."
+  },
+  {
+   "index": 1,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "P3 peptide 304-322 t1/2 ~7 min; reported for CheA P3, no row."
+  },
+  {
+   "index": 2,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "P3 interface peptide t1/2 7 to 3 min in CF4E complexes; reported, no row."
+  },
+  {
+   "index": 3,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "P1 interface EX2 t1/2 2 h to >16 h in CF4Q complexes; reported, no row."
+  },
+  {
+   "index": 4,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r14 other_conditions: specific activity 23 s-1"
+  },
+  {
+   "index": 5,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r12 ligand_or_partner: about 75% dimeric at 3 uM"
+  },
+  {
+   "index": 6,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "0.5 uM (50% dimer) and 30 uM (91% dimer) HDX samples are reported; no row."
+  },
+  {
+   "index": 7,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r13 and r14: 80 to 90% of CheA bound"
+  },
+  {
+   "index": 8,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Estimated 94% (CF4Q) and 91% (CF4E) dimer CheA in complex samples; no row."
+  },
+  {
+   "index": 9,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r15 other_conditions: about 90% AMPPCP bound"
+  }
+ ]
+}

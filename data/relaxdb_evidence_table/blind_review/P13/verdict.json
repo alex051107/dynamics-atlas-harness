@@ -1,0 +1,35 @@
+{
+ "rows": [
+  {
+   "row_id": "r53",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r54",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": []
+}

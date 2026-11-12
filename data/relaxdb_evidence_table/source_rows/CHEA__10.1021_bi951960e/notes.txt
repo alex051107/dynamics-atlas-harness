@@ -1,0 +1,4 @@
+Paper serves two entries: CHEA (phosphotransfer domain, CheA1-134) and CHEAYBD (CheY-binding domain). All rows written under CHEA; row r2 is the CheY-binding domain (entry CHEAYBD).
+Supplement: local supp_acs_10.1021_bi951960e_1.pdf appended (Table S1 assignments at pH 6.3, 30 C; Table S2 per-residue T1, T2, NOE, tau_m, S2, tau_e, A). No row value comes only from the supplement; per-residue tau_e not copied.
+Not in rows: chemical shift comparison with CheA1-134/CheA124-257 (helices D and E, residues 90, 96, 97, 100), 3JHNalpha values, proposed regulation model.
+Main-session fix 2026-11-12: row r2 (CheY-binding domain) moved to entry CHEAYBD; original in rows.jsonl.bak_20261112.

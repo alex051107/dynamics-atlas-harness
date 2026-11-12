@@ -1,0 +1,17 @@
+Paper: 10.1074/jbc.m112.426858 (Garcia et al., J. Biol. Chem. 2013, 288:2870-2881; PMCID: PMC3554951)
+Entry ID: 18772 (other entry IDs: none)
+
+Supplements attached:
+- None. si_manifest.json reports epmc_status = "non-zip reply (no supplement)" and supplements = [].
+- Note that the article footnote states "This article contains supplemental Figs. S1-S9 and Table S1", which were not returned by Europe PMC. Values that came only from the supplement: 0.
+
+Material only in figures/unavailable SI or omitted from rows:
+- Per-residue 15N R1, R2, steady-state 15N-1H NOE, and R2/R1 values (and exact N-terminal residue numbers included in the N-terminal NOE averages 0.33 ± 0.08 for SCIN-A and 0.32 ± 0.01 for SCIN-B) are only in Fig. 2C,D and unavailable supplemental Table S1.
+- Full residue-by-residue mapping of 13Calpha random-coil chemical shift differences <= 0.50 ppm (beyond text landmarks N8, E25, G34, I73, Y74 for SCIN-A and E9, H13, K27, I74, Y75 for SCIN-B) is shown only graphically in Fig. 2A,B.
+- Per-residue crystallographic main-chain B-factor plots for SCIN-B (4H6I) and SCIN-B(4-85) (4H6H) are in unavailable supplemental Fig. S2 (overall mean B-factors 68.06 and 43.98 Å2 are in Table 1).
+- Intermolecular C3b binding and functional assays omitted from conformational dynamics rows: AlphaScreen competition KD values (Table 2: SCIN-A 74 nM, SCIN-B 310 nM, SCIN-A_BN 4.4 nM, SCIN-B_AN 13,000 nM [13 uM], SCIN-C MR252 12 nM, SCIN-C H19 21 nM; plus cited prior values SCIN-A(11-85) 11 uM and SCIN-B(18-85) 17 uM), qualitative SPR off-rate ranking on immobilized C3b (Fig. 3B, supplemental Fig. S6), fluid-phase C3bBb convertase inhibition assays (Fig. 3C,D), BS3 cross-linking of (SCIN·C3b)2 pseudodimers (Fig. 4A), neutrophil phagocytosis assays (Fig. 4B), and Biacore SPR ternary (SCIN·C3bBb)·C3 / CRIg blocking assays (Fig. 5).
+
+Discrepancies and doubts:
+- Major paper-vs-deposit-card temperature discrepancy for entry 18772 (SCIN-A): Experimental Procedures (p. 2872) explicitly states "All NMR data were collected at 30 °C from a 14.1 Tesla Varian Inova spectrometer (599.7 MHz for 1H)", whereas the manifest card for BMRB 18772 lists bmrb_temperature = "273 K" and sheet_temperature_K = "273.0" (0 °C). All other sample attributes match (SCIN-A, 85 residues, 800 uM, pH 6.9, 5% D2O, ~600 MHz), except BMRB sample components omit d13-MES, 0.2 mM DSS, and 1 mM NaN3 reported in the paper; BMRB accession 18772 is not printed in paper.txt. Recorded without picking sides (temperature = "30 °C" verbatim from paper, same_sample_as_deposit = "unclear").
+- Target vs paralog separation: Entry 18772 is SCIN-A (Q6GFB4). All SCIN-B and SCIN-B(4-85) NMR and X-ray data (including alternate-state PDBs 4H6I and 4H6H) are strictly separated into species_relation = "homolog" rows and not attached to target SCIN-A.
+- Internal text-vs-legend discrepancy in Fig. 2B: Results text (p. 2874) and Fig. 2 legend sentence 2 state low 13Calpha Delta_delta_rc values were mapped onto the crystal structure of SCIN-B(4-85) (4H6H), whereas Fig. 2 legend sentence 4 states "chain 'A' from Protein Data Bank code 4H6I was used for SCIN-B".

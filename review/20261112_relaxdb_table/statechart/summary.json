@@ -1,0 +1,87 @@
+{
+  "view": "customer",
+  "second": {
+    "role": "fix",
+    "label": "the fix",
+    "lacks": []
+  },
+  "modelStates": 89,
+  "modelTransitions": 176,
+  "chartStates": 71,
+  "chartTransitions": 136,
+  "chartStatus": {
+    "works": 39,
+    "wrong": 0,
+    "fixed": 32,
+    "mixed": 0,
+    "after": 0,
+    "worse": 0
+  },
+  "mixedStatus": [],
+  "chartGroups": [
+    {
+      "name": "封存",
+      "color": "#e5e7eb",
+      "states": 1
+    },
+    {
+      "name": "处理中",
+      "color": "#dbeafe",
+      "states": 16
+    },
+    {
+      "name": "已在总表",
+      "color": "#fef3c7",
+      "states": 12
+    },
+    {
+      "name": "已发给合作者",
+      "color": "#d1fae5",
+      "states": 24
+    },
+    {
+      "name": "被称完整",
+      "color": "#fee2e2",
+      "states": 18
+    }
+  ],
+  "mixedGroups": [],
+  "classes": [
+    {
+      "n": 1,
+      "end": "只有摘要；行已过原文核对；已并进总表（标注：未盲评）；主会话抽查过；表被写成“完整”",
+      "invariant": "NoCompleteWithoutGina",
+      "rule": "Gina 10-22: a few accurate examples do not show that extraction is complete. Only a scientist reading can say so.",
+      "cause": "没有科学家看过就能写“完整”：只要程序核对和抽查过了就放行，没有要求 Gina 看过",
+      "readerSteps": 6,
+      "modelSteps": 7,
+      "counterexamples": 18,
+      "lastSteps": [
+        "把表写成“完整”〔人；今天没有任何程序拦这一步〕"
+      ],
+      "startsHere": false,
+      "fix": "只有摘要；行已过原文核对；已并进总表（标注：未盲评）；主会话抽查过"
+    },
+    {
+      "n": 2,
+      "end": "只有摘要；行已过原文核对；已并进总表（标注：未盲评）；已发出",
+      "invariant": "NoSendUnreviewed",
+      "rule": "Rows leave the team only after a blind reader checked a sample (decision 2026-11-11).",
+      "cause": "没做盲评就能发出：发出前只要求项目负责人同意，没有要求盲评通过",
+      "readerSteps": 6,
+      "modelSteps": 7,
+      "counterexamples": 12,
+      "lastSteps": [
+        "发给 Gina、Soojung〔人：项目负责人〕"
+      ],
+      "startsHere": false,
+      "fix": "只有摘要；行已过原文核对；已并进总表（标注：未盲评）"
+    }
+  ],
+  "codeLike": [],
+  "uncited": {
+    "FillTable.tla": [],
+    "fix/FillTableFixed.tla": []
+  },
+  "brokenProperties": []
+}

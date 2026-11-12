@@ -1,0 +1,77 @@
+{
+ "rows": [
+  {
+   "row_id": "r2",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "buffer": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r3",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "buffer": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "contradicted",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": [
+    {
+     "field": "stance",
+     "quote": "both  1 H and  15 N relaxation dispersion profiles were significantly reduced in the P4 construct",
+     "note": "Paper says dispersion was significantly reduced (damped), not absent; no_dynamics_in_window overstates the absence of exchange."
+    }
+   ]
+  },
+  {
+   "row_id": "r4",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "buffer": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r2 timescale kex ~1250 +/- 100 s-1"
+  },
+  {
+   "index": 1,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r2 records that the minor-state population could not be defined (fast exchange)"
+  },
+  {
+   "index": 10,
+   "kind": "state_pdb",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r2/r4 other_conditions cite 1B3Q"
+  }
+ ]
+}

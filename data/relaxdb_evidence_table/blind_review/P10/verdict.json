@@ -1,0 +1,224 @@
+{
+ "rows": [
+  {
+   "row_id": "r51",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r52",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r53",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r54",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r55",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r56",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r57",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r51 anchor/author_claim half-life of days or longer"
+  },
+  {
+   "index": 1,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r57 timescale ~125 h"
+  },
+  {
+   "index": 2,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r57 other_conditions onset 36-100 h"
+  },
+  {
+   "index": 3,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r57 other_conditions 12-24 h"
+  },
+  {
+   "index": 4,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r57 timescale onset 1.5-4 days"
+  },
+  {
+   "index": 5,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r51/r53 up to 23 h, no loss"
+  },
+  {
+   "index": 6,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r55 dissociates within minutes"
+  },
+  {
+   "index": 7,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r52/r54 little or no exchange"
+  },
+  {
+   "index": 8,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Discussion cites prior in vitro dissociation half-life ~10 min (refs 28, 43); literature value, no row"
+  },
+  {
+   "index": 9,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Discussion cites prior estimate >30 min (ref 29); literature value, no row"
+  },
+  {
+   "index": 10,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Discussion cites FRAP exchange half-life 12 min in live cells at 20 C (ref 62); no row"
+  },
+  {
+   "index": 11,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Prior 30-min 3H-CheA association with pre-assembled complexes (ref 28), reinterpreted as empty-site binding; no row"
+  },
+  {
+   "index": 12,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "CheR-accessible receptor fraction is a receptor property, not a CheA state population"
+  },
+  {
+   "index": 13,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r53 1:9-1:5 (Tsr-IM) and r51 1:8-1:4 (Tsr-ex vivo); Tar-SM 1:9-1:6 not recorded"
+  },
+  {
+   "index": 14,
+   "kind": "population",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Low-salt challenge: surviving CheA mostly active (activity loss proportional to CheA loss, Fig. 6A); r56 omits it"
+  }
+ ]
+}

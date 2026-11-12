@@ -1,0 +1,222 @@
+{
+ "rows": [
+  {
+   "row_id": "r46",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r47",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r48",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r49",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "timescale": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  },
+  {
+   "row_id": "r50",
+   "fields": {
+    "method_class": "supported",
+    "temperature": "supported",
+    "ph": "supported",
+    "buffer": "supported",
+    "ligand_or_partner": "supported",
+    "construct_or_mutation": "supported",
+    "residues_author": "supported",
+    "population": "supported",
+    "alt_state_structure": "supported",
+    "stance": "supported",
+    "species_relation": "supported",
+    "anchor": "supported"
+   },
+   "contradictions": []
+  }
+ ],
+ "items": [
+  {
+   "index": 0,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r46 k1 1.18 min-1 (1.2 in text)"
+  },
+  {
+   "index": 1,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Paper cites k1 1.5 min-1 for CheA alone (ref 75); literature value, no row"
+  },
+  {
+   "index": 2,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r46"
+  },
+  {
+   "index": 3,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r47"
+  },
+  {
+   "index": 4,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r48"
+  },
+  {
+   "index": 5,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r49"
+  },
+  {
+   "index": 6,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "k1A0 values in r46-r49 timescale"
+  },
+  {
+   "index": 7,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Cold-ATP chase shows CheA-P t1/2 >> 30 min for E. coli CheA; no row"
+  },
+  {
+   "index": 8,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Paper cites fast nucleotide exchange (~seconds, refs 75-77) for CheA; literature value, no row"
+  },
+  {
+   "index": 9,
+   "kind": "rate",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r49 timescale notes faster phase <1.5 min"
+  },
+  {
+   "index": 10,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "real",
+   "reason": "Rapid (<30 s) phosphotransfer from CheA-P (TarFO short) to CheY reported; no row"
+  },
+  {
+   "index": 11,
+   "kind": "rate",
+   "covered": "missing",
+   "missing_is": "reader_error",
+   "reason": "CheY-P decay t1/2 ~30 s belongs to CheY, not CheA"
+  },
+  {
+   "index": 12,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r46 population A0 0.99"
+  },
+  {
+   "index": 13,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r47 A0 8"
+  },
+  {
+   "index": 14,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r48 A0 6.7"
+  },
+  {
+   "index": 15,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r49 A0 18"
+  },
+  {
+   "index": 16,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r49 population ~20 times"
+  },
+  {
+   "index": 17,
+   "kind": "population",
+   "covered": "covered",
+   "missing_is": null,
+   "reason": "r46 author_claim: free CheA largely inactive with small active fraction"
+  }
+ ]
+}

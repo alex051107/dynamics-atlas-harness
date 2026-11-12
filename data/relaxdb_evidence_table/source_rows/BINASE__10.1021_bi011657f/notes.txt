@@ -1,0 +1,4 @@
+No supplement (no pmcid, local_supplements empty).
+The milli/microsecond dispersion data for binase are in the authors' companion paper (Wang et al., PNAS 2001, 98, 7684-7689), quoted here: kex 3000 s-1 and a 300 us site-opening time. Rows quote these as attributed.
+Not in rows: MD RMSD/RMSF values, X-ray B-factor comparison details, 15N R1 numbers for helices 6-16 (2.32 ± 0.04 / 1.55 ± 0.06 s-1) and 25-32 (2.21 ± 0.07 / 1.42 ± 0.07 s-1).
+Doubts: no buffer named; pH 5.5 and the 2.0 mM sample are not checkable against the sparse entry card; MD length 1.1 ns (abstract) versus 1.6 ns (methods).

@@ -1,0 +1,170 @@
+[
+ {
+  "kind": "rate",
+  "value": "half-life of days or longer",
+  "sample": "membrane-associated CheA-CheW-receptor signaling complexes, 22 C, 150 mM NaCl, pH 7.5",
+  "quote": "Thus, the assembled signaling complex is ultrastable, with a half-life of days or longer regardless of whether assembly occurs in live cells or  in vitro.",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "~125 hours (5.2 days) longest activity half-life",
+  "sample": "Tsr-IM-in vitro complex",
+  "quote": "Overall, the longest half-life of activity observed thus far is approximately 125 hours (5.2 days,  Fig. 8 ).",
+  "where": "Results, Studies of signaling complex half-life; Fig. 8",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "stable for first 24 hours; inactivation onset 36-100 hours",
+  "sample": "Tsr-IM-in vitro complex",
+  "quote": "Subsequently, as soon as 36 hours following assembly or as late as 100 hours following assembly, the kinase activity begins to decrease.",
+  "where": "Results; Fig. 8",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "inactivation process 12 to 24 hours",
+  "sample": "Tsr-IM-in vitro complex",
+  "quote": "Once inactivation begins, the inactivation process takes 12 to 24 hours.",
+  "where": "Results; Fig. 8",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "inactivation from 1.5 to 4 days after assembly",
+  "sample": "Tsr-IM-in vitro complex population",
+  "quote": "the population of complexes within a given sample eventually begins to inactivate from 1.5 to 4 days after assembly",
+  "where": "Discussion; Fig. 8",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "no measurable loss over 23 hours",
+  "sample": "Tsr-IM-in vitro, Tar-SM-in vitro, Tsr-ex vivo complexes, 100-fold dilution, 22 C",
+  "quote": "Each membrane-associated signaling complex was diluted 100-fold and incubated for up to 23 hours at 22 °C",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "binary complex dissociates within minutes",
+  "sample": "Tsr-IM complex assembled without CheW",
+  "quote": "The resulting binary complex dissociates within minutes of dilution, leading to rapid loss of CheA from the membranes",
+  "where": "Results; Fig. 3",
+  "target": "other_construct"
+ },
+ {
+  "kind": "rate",
+  "value": "little or no exchange of bound CheA with free CheA",
+  "sample": "preformed complexes challenged with 100-fold excess CheA H68Q/G470K, 22 C",
+  "quote": "preformed complexes exhibit little or no exchange of their bound CheA with free CheA under near-physiological buffer conditions at 22° C.",
+  "where": "Results; Fig. 4B",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "dissociation half-life ~ten minutes (prior assumption)",
+  "sample": "signaling complex in vitro (literature refs 28, 43)",
+  "quote": "this supermolecular signaling complex is moderately stable, with a dissociation half-life on the order of ten minutes  in vitro",
+  "where": "Discussion",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "over 30 minutes (prior estimate)",
+  "sample": "signaling complex in vitro (literature ref 29)",
+  "quote": "with a dissociation half-life on the order of ten minutes  in vitro  ( 28 ,  43 ), or even over 30 minutes ( 29 ).",
+  "where": "Discussion",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "FRAP exchange half-life 12 minutes at 20 C",
+  "sample": "live cells (literature ref 62)",
+  "quote": "a recent FRAP analysis suggesting that the half-life of fluorescent component exchange is 12 minutes in live cells at 20° C",
+  "where": "Discussion",
+  "target": "target"
+ },
+ {
+  "kind": "rate",
+  "value": "3H-CheA association over 30 minutes (previous)",
+  "sample": "pre-assembled complexes (literature ref 28)",
+  "quote": "the previously observed association of  3 H-leucine-labeled CheA with pre-assembled complexes over a period of 30 minutes ( 28 ) arose from binding to empty binding sites",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "80% of receptor population accessible (Tsr-IM); 50% (Tar-SM, Tsr-ex vivo)",
+  "sample": "receptor accessibility to CheR methylation",
+  "quote": "the accessibility was 80% of the receptor population in the Tsr-IM- in vitro  preparations and 50% of the receptor population in the Tar-SM- in vitro  and Tsr- ex-vivo  preparations.",
+  "where": "Methods",
+  "target": "other_construct"
+ },
+ {
+  "kind": "population",
+  "value": "CheA:receptor 1:9-1:5, 1:9-1:6, 1:8-1:4",
+  "sample": "Tsr-IM-in vitro; Tar-SM-in vitro; Tsr-ex vivo",
+  "quote": "Tsr-IM- in vitro His-tagged, Cys free  S. typh . Tsr  E.coli ++++ in vitro , osmotic 1:9 − 1:5 100% ± 5% ± 2%",
+  "where": "Table 1 (stoichiometry, partly garbled)",
+  "target": "target"
+ },
+ {
+  "kind": "population",
+  "value": "surviving CheA mostly active",
+  "sample": "complexes challenged with low ionic strength",
+  "quote": "they generally lost kinase activity approximately in proportion to the amount of CheA lost from the complex, indicating that most of the surviving CheA was active",
+  "where": "Results; Fig. 6A",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "standard: 160 mM NaCl, 5 mM MgCl2, pH 7.5, 22 C, 45 min",
+  "sample": "Tsr-IM-in vitro complexes stability challenge",
+  "quote": "normalized to that observed for the corresponding complex under standard conditions (160 mM NaCl, 5 mM MgCl 2 , pH 7.5, 22° C, 45 min incubation).",
+  "where": "Figure 7 legend",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "activity buffer: 50 mM Tris-HCl pH 7.5, 10% glycerol, 0.5 mM EDTA, 160 mM NaCl, 5 mM MgCl2, 0.5 mM PMSF",
+  "sample": "membrane-associated complexes",
+  "quote": "resuspended in activity buffer (50 mM Tris-HCl, pH 7.5, 10% glycerol, 0.5 mM EDTA, 160 mM NaCl, 5 mM MgCl 2  and 0.5 mM PMSF)",
+  "where": "Methods, Ex vivo isolation",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "physiological ionic strength 150 mM NaCl, 5 mM MgCl2, pH 7.5; 22 C",
+  "sample": "kinetic stability test, all three complexes",
+  "quote": "First we tested the kinetic stability of the three signaling complexes in a buffer approximating physiological ionic strength (150 mM NaCl, 5 mM MgCl 2 , pH 7.5).",
+  "where": "Results",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "pH 5.0 rescued; pH 8.6 destabilized (20 mM NaCl)",
+  "sample": "pH challenge",
+  "quote": "Low pH (5.0) rescued stability while high pH (8.6) yielded additional destabilization ( Fig. 6B ), strongly supporting the importance of negative surface charges",
+  "where": "Results; Fig. 6B",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "stable at 4 C; unstable at 40 C; >35 C partial inactivation",
+  "sample": "temperature challenge",
+  "quote": "all three complexes were stable at a low temperature (4 °C), but became unstable at a higher than physiological temperature (40 °C)",
+  "where": "Results; Fig. 6C",
+  "target": "target"
+ },
+ {
+  "kind": "condition",
+  "value": "reconstitution 45 min at 22 C; 6.7 uM receptor, 5 uM CheA, 10 uM CheW",
+  "sample": "in vitro reconstitution",
+  "quote": "6.7 µM receptor in membranes was mixed with 5 µM CheA and 10 µM CheW in activity buffer with fresh PMSF and incubated for 45 min at 22 °C",
+  "where": "Methods",
+  "target": "target"
+ }
+]

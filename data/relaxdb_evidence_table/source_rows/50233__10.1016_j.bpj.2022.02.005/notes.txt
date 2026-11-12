@@ -1,0 +1,28 @@
+Paper: 50233__10.1016_j.bpj.2022.02.005
+DOI: 10.1016/j.bpj.2022.02.005
+Entry ID: 50233 (Human TARBP2 / TRBP2-dsRBD1, UniProt Q15633)
+
+1. Supplement files attached in paper.txt:
+- supp_PMC8943759_mmc1.pdf (26,335 chars extracted; 32-page Supporting Information PDF with Figs. S1-S25 and Tables S1-S4).
+- supp_PMC8943759_mmc2.pdf (158,609 chars extracted; combined PDF duplicating the main article plus supp_PMC8943759_mmc1.pdf verbatim).
+
+2. Supplement-only facts/values incorporated:
+- Table S1 & Table S2: All 22 dsRBD-dsRNA complex PDB IDs (including human TRBP2 structures 3ADL, 5N8L, 5N8M) and 44 apo-dsRBD PDB IDs (including human TRBP2 structures 2CPN, 3LLH) used in the cross-family distance-distribution analysis; none of these PDB codes are printed in the main text.
+- Table S3: Exact guide and passenger RNA sequences, notably D10RNA (5'-UUAUAAAUGC-3' / 5'-GCAUUUAUGA-3'), which is not shown in main-text Fig. 1B.
+- Fig. S22: Static field conversion 14.1 Tesla (600 MHz) vs 22.3 Tesla (950 MHz) and exact 0.1:1 RNA:protein ratio for the high-field HSQC intermediate-exchange test.
+- Fig. S23: Additional 307 K apo 1H-15N HSQC comparison temperature alongside 283 K and 298 K.
+- Fig. S25: Core RMSD = 0.59 Å between CS-Rosetta chemical-shift models of apo and D10RNA-bound TRBP2-dsRBD1.
+- Fig. S3 & Table S4 (RNA-only MD statistics): Kruskal-Wallis Euler-angle H-values (Alpha 1132.3, Beta 4464.9, Gamma 5766.8, all p < 0.001) and intermediate pairwise RNA RMSDs (1.5 Å and 1.6 Å).
+
+3. Figure-only or non-protein-dynamics items omitted from row numeric fields:
+- Per-residue R1, R2, and [1H]-15N nOe values for apo (69 residues) and D10RNA-bound (58 residues) TRBP2-dsRBD1, and partial R1/R2/nOe in the 4 miR-16-1 complexes, are plotted only in Figs. S6 and S15 without a numerical table; the quadric_diffusion rotational correlation time tau_c used in HARD analysis is not printed.
+- Per-residue fitted HARD kex, excited-state population pB, and delta_omega values are plotted only as sphere sizes/colors in Fig. 6 and bar/scatter plots in Figs. 7A, S18, and S24; no numerical pB values are printed anywhere in text or SI.
+- Full residue-by-residue line-broadening barcodes and CSP profiles for the five dsRNA titrations are plotted only in Figs. 3, 4, and S4-S9 (text-named subsets are captured in r5-r9).
+- Far-UV CD thermal denaturation of apo TRBP2-dsRBD1 (20 uM in Buffer A, 10 to 80 °C; unfolding onset at 25 °C, TM = 45 °C, Fig. S19) and triplicate 200-ns RNA-only MD simulations of the four miR-16-1 duplexes (Fig. 1C-D, Fig. S3, Table S4) are recorded as supporting context/confounds rather than separate protein-dynamics rows.
+
+4. Discrepancies and uncertainties:
+- Internal text contradiction on miR-16-1-D first titration point (1:0.05 protein:RNA): p. 1044 states peaks for 34L, 39G, 42I and 74T, 75G, 77G broadened to invisibility after the first addition of miR-16-1-D, whereas p. 1045 states "In the case of miR-16-1-D, the broadening did not appear for any residue at 1:0.05 ratio" and that A25, G28, D49, T74, G75, and G77 broadened at 1:0.1 (recorded in r6 caveat_note without picking sides).
+- Supplement sequence typo in Table S3: The passenger strand printed for miR-16-1-B (5'-CCAGUAUUAACGUGCUGCUGAA-3') is identical to miR-16-1-M (missing the bulged U and A-to-U substitution shown for miR-16-1-B in main-text Fig. 1B).
+- Minor text swap on p. 1045: "residues F62 and K80 ... belong to the a2 helix and b2 strand, respectively" reverses the secondary-structure order (F62 is in beta2 and K80 is in alpha2).
+- Supplement footnote typo in Tables S1 and S2: Both footnotes state excluded structures were omitted from "supplementary figure S17", whereas the residue-pair distance histograms are in Figure S21 (Figure S17 is apo CPMG).
+- Paper vs deposit card details: Paper states construct TRBP2-dsRBD1 (1-105 aa) and does not mention D2O %, whereas BMRB 50233 card lists sequence_length 108 and 10% D2O, and lists 600/750 MHz (apo CPMG used 600 and 750 MHz; R1/R2/nOe and HARD used 600 MHz). Exact protein concentration for the 1:0.5 D10RNA-bound dynamics sample is not explicitly stated in Methods.

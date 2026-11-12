@@ -1,0 +1,22 @@
+Paper: 10.1002/pro.2067 (Polshakov et al., Protein Sci. 2012, 21:896-903; PMCID: PMC3403424)
+Entry ID: 18092 (other entry IDs: none)
+
+Supplements attached:
+- supp_PMC3403424_pro0021-0896-SD1.pdf (origin: drop, 10642 chars; appended to paper.txt). Contains "NMR dynamics analysis" methods/parameters and legends for Supporting Information Figs. S1-S6.
+- Values that came only from the supplement (4 distinct parameter values/ranges used in rows, plus relaxation delay lists):
+  1. S2_slow range ("between 0.3 and 1.0", p. 2 and Fig. S5)
+  2. S2_fast value/range ("0.9 ± 0.1" on p. 2; "between 0.8 and 1.0" in Fig. S5)
+  3. tau_fast explicit range ("between 0 and 50 ps", p. 2 and Fig. S5; main text prints "<50 ps")
+  4. tau_slow range in Fig. S5 ("between 1 and 1.1 ns"; main text and SI p. 2 print "1.05 ± 0.05 ns", with main text rendering '±' as '6')
+  (Supplement also exclusively provides the 11 R1 delays [8.63-2995.79 ms], 11 R2 delays [8.65-147.05 ms], 4.0 s NOE proton irradiation time, and 500 Monte-Carlo error cycles.)
+
+Material only in figures or omitted from rows:
+- Per-residue R1 (s-1), R2 (s-1), 15N{1H} NOE, Lipari-Szabo order parameters S2, and conformational exchange terms Rex (s-1) are plotted only in Supporting Information Figs. S4 and S6A (and color-mapped in Fig. 2A as yellow for S2 < 0.75 and red for Rex) rather than tabulated in text; per-residue R1, R2, and NOE were deposited in BMRB-18092.
+- Identities of the residues showing duplicate major/minor conformer peaks (other than Asn111 named in Discussion) are shown only graphically in Fig. 2B (blue side chains) and Supporting Information Fig. S1 (red HSQC peaks).
+- 69 backbone NH residual dipolar couplings (1DNH) measured in ~5% v/w C12E5/hexanol (corresponding to BMRB 18092 sample S5) were used solely as static orientation restraints in CNS structure refinement (Table I, ESANI = 1.84 ± 0.14 kcal mol-1), with no RDC-based dynamics analysis reported; noted in r4 conditions/caveat rather than as an RDC dynamics row.
+
+Discrepancies and doubts:
+- Manifest card UniProt field: manifest card for 18092 lists uniprot = "P03355", whereas the paper and BMRB-18092 sample components ("NeRF1") clearly describe Homo sapiens eukaryotic polypeptide chain release factor 1 (eRF1) N-terminal domain (residues 1-142 + C-terminal His6-tag).
+- Main text PDF encoding glitch: main text prints '6' in place of '±' (e.g., "11.04 6 0.16 ns", "1.6 6 0.1", "1.05 6 0.05 ns", "1.8 6 0.1 Å"); the attached supplement PDF confirms standard '±'. Also line 89 has a control character ('\x01') before '5:1' where '~' was dropped in main text (and '~' is dropped before '1 mM', '2 mM', '5% v/w' in main text Materials and Methods, while preserved as '~1 mM' in the supplement).
+- Internal text comparison: Results (p. 897) lists loops with smallest S2 as (30-33, 64, 106-108, 122-123), whereas Discussion (p. 900) highlights residues 30-31, 64, and 122-123 as undergoing ~1 ns motions.
+- Materials and Methods (p. 901) states "The best 20 structures out of 50 ... were accepted as the final ensemble for each protein conformer" and cites "(see Supporting Information Table S1)" for restraint counts, but only one PDB accession (2LLX) and main-text Table I are present (no Table S1 in the attached SD1 PDF).
